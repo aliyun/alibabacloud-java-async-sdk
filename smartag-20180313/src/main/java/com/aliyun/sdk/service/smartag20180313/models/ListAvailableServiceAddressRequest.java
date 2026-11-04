@@ -104,17 +104,7 @@ public class ListAvailableServiceAddressRequest extends Request {
         } 
 
         /**
-         * <p>The type of service address. Valid values:</p>
-         * <ul>
-         * <li><strong>ProbeTask</strong>: probes the source IP address.</li>
-         * <li><strong>RemoteWeb</strong>: probes the IP address for remote logon.</li>
-         * </ul>
-         * <blockquote>
-         * <p>If you do not specify a value, all service IP addresses are queried.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>ProbeTask</p>
+         * AddressType.
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -123,12 +113,7 @@ public class ListAvailableServiceAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -137,11 +122,7 @@ public class ListAvailableServiceAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sag-****</p>
          */
         public Builder sagId(String sagId) {
             this.putQueryParameter("SagId", sagId);
@@ -150,11 +131,7 @@ public class ListAvailableServiceAddressRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sag****</p>
          */
         public Builder sn(String sn) {
             this.putQueryParameter("Sn", sn);

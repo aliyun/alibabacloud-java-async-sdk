@@ -186,7 +186,7 @@ public class DescribeCloudConnectNetworksRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CCN instance.</p>
+         * <p>The Cloud Connect Network (CCN) instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ccn-l9340rlu5enst*****</p>
@@ -198,8 +198,8 @@ public class DescribeCloudConnectNetworksRequest extends Request {
         }
 
         /**
-         * <p>The name of the CCN instance.</p>
-         * <p>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_),and hyphens (-). The name must start with a letter.</p>
+         * <p>The name of the Cloud Connect Network (CCN) instance.</p>
+         * <p>The name must be 2 to 100 characters in length, and must start with a letter or a Chinese character. It can contain digits, underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>ccnname</p>
@@ -229,7 +229,7 @@ public class DescribeCloudConnectNetworksRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -241,7 +241,7 @@ public class DescribeCloudConnectNetworksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
+         * <p>The number of entries to return on each page during paging in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -253,7 +253,7 @@ public class DescribeCloudConnectNetworksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the CCN instances are deployed.</p>
+         * <p>The region ID of the Cloud Connect Network (CCN) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +284,10 @@ public class DescribeCloudConnectNetworksRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The label information used to query Cloud Connect Network (CCN) instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DescribeCloudConnectNetworks</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -352,7 +355,7 @@ public class DescribeCloudConnectNetworksRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag that is bound to the CCN instance.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -363,7 +366,7 @@ public class DescribeCloudConnectNetworksRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag that is bound to the CCN instance.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

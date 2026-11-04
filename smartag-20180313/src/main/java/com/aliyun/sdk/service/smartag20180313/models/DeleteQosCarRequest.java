@@ -164,7 +164,7 @@ public class DeleteQosCarRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the QoS speed limiting rule.</p>
+         * <p>The instance ID of the QoS bandwidth throttling rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class DeleteQosCarRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the QoS policy belongs.</p>
+         * <p>The region ID of the quality of service (QoS) policy instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

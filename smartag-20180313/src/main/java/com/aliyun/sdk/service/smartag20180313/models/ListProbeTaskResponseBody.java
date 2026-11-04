@@ -132,10 +132,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -143,10 +140,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the probe task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>probe-xxx</p>
+         * Data.
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -154,10 +148,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>successful</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,10 +156,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -176,10 +164,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -187,10 +172,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>324223F3-93D3-4CE4-B26F-66C0C3809922</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,10 +180,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -410,10 +389,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The domain name that is probed by the task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://www.example.com">www.example.com</a></p>
+             * Domain.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -421,14 +397,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the probe task is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: enabled</li>
-             * <li><strong>false</strong>: disabled</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -436,10 +405,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the probe task was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-11-23 14:09</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -447,10 +413,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the probe task was modified.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-11-23 14:09</p>
+             * GmtModify.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -458,10 +421,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of probe packets transmitted by the probe task per minute.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * PacketNumber.
              */
             public Builder packetNumber(Integer packetNumber) {
                 this.packetNumber = packetNumber;
@@ -469,10 +429,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port that is probed by the task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -480,10 +437,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the probe task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>probe-****</p>
+             * ProbeTaskId.
              */
             public Builder probeTaskId(String probeTaskId) {
                 this.probeTaskId = probeTaskId;
@@ -491,10 +445,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source address of the probe task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.1.1</p>
+             * ProbeTaskSourceAddress.
              */
             public Builder probeTaskSourceAddress(String probeTaskSourceAddress) {
                 this.probeTaskSourceAddress = probeTaskSourceAddress;
@@ -502,18 +453,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol of the probe task. Valid values:</p>
-             * <ul>
-             * <li><strong>ICMP</strong></li>
-             * <li><strong>TCP</strong></li>
-             * <li><strong>HTTP</strong></li>
-             * </ul>
-             * <blockquote>
-             * <p>Tasks that probe private networks support only ICMP and TCP.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>ICMP</p>
+             * Protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -521,10 +461,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-asdfz6ac74oj5v****</p>
+             * SagId.
              */
             public Builder sagId(String sagId) {
                 this.sagId = sagId;
@@ -532,10 +469,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the SAG device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag****</p>
+             * Sn.
              */
             public Builder sn(String sn) {
                 this.sn = sn;
@@ -543,10 +477,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the probe task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test-ping</p>
+             * TaskName.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -554,14 +485,7 @@ public class ListProbeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the probe task. Valid values:</p>
-             * <ul>
-             * <li><strong>Internet</strong>: probes a public network.</li>
-             * <li><strong>Intranet</strong>: probes a private network.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Internet</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

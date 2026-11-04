@@ -130,7 +130,7 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time interval at which keep-alive packets are sent. Unit: seconds.</p>
+         * <p>The keepalive interval. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -141,7 +141,7 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The autonomous system (AS) number to which the SAG device belongs.</p>
+         * <p>The autonomous system (AS) number of the Smart Access Gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>65536</p>
@@ -152,7 +152,7 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2F39E4FE-B45C-47FF-9921-95780486F52D</p>
@@ -163,7 +163,7 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the BGP router.</p>
+         * <p>The BGP router ID.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.1</p>
@@ -174,7 +174,7 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the query task.</p>
+         * <p>The status of the query task.</p>
          */
         public Builder taskStates(java.util.List<TaskStates> taskStates) {
             this.taskStates = taskStates;
@@ -266,7 +266,7 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the task was created.</p>
+             * <p>The timestamp when the query task was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1586765938000</p>
@@ -277,7 +277,7 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned. A value of 200 indicates that the query task is successful.</p>
+             * <p>The error code. 200 indicates that the query task succeeded.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -288,7 +288,7 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned. A value of Successful indicates that the query task is successful.</p>
+             * <p>The error message. Successful indicates that the query task succeeded.</p>
              * 
              * <strong>example:</strong>
              * <p>Successful</p>
@@ -299,17 +299,17 @@ public class DescribeSagRouteProtocolBgpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the query task. Valid values:</p>
+             * <p>The status of the asynchronous task. Valid values:</p>
              * <ul>
              * <li><strong>Initialized</strong>: The query task is initialized.</li>
-             * <li><strong>Offline</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. After the SAG device is connected to Alibaba Cloud, Alibaba Cloud assigns the query task to the SAG device.</li>
-             * <li><strong>Succeed</strong>: Alibaba Cloud has assigned the query task to the SAG device.</li>
-             * <li><strong>Processing</strong>: Alibaba Cloud is assigning the query task to the SAG device.</li>
-             * <li><strong>VersionNotSupport</strong>: The query task is not supported by the current version of the SAG device.</li>
-             * <li><strong>BuildRequestError</strong>: The query task is not supported by the controller of the SAG device.</li>
-             * <li><strong>HardwareError</strong>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</li>
+             * <li><strong>Offline</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device comes online.</li>
+             * <li><strong>Succeed</strong>: The query task succeeded.</li>
+             * <li><strong>Processing</strong>: The query task is being delivered.</li>
+             * <li><strong>VersionNotSupport</strong>: The current version of the Smart Access Gateway device does not support this feature.</li>
+             * <li><strong>BuildRequestError</strong>: The management and control system does not support the operation.</li>
+             * <li><strong>HardwareError</strong>: The query task failed to be delivered due to a device error.</li>
              * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
-             * <li><strong>OfflineNotConfiged</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. Alibaba Cloud does not assign the query task to the SAG device even after the SAG device is connected to Alibaba Cloud.</li>
+             * <li><strong>OfflineNotConfiged</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered after the device comes online.</li>
              * </ul>
              * 
              * <strong>example:</strong>

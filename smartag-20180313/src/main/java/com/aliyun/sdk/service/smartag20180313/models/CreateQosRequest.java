@@ -163,8 +163,8 @@ public class CreateQosRequest extends Request {
         }
 
         /**
-         * <p>The description of the QoS policy.</p>
-         * <p>The description must be 1 to 512 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The description of the QoS policy instance.</p>
+         * <p>The description must be 1 to 512 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testdesc</p>
@@ -176,8 +176,8 @@ public class CreateQosRequest extends Request {
         }
 
         /**
-         * <p>The name of the QoS policy.</p>
-         * <p>The name must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name of the QoS policy instance.</p>
+         * <p>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class CreateQosRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the QoS policy is deployed.</p>
+         * <p>The region ID of the QoS policy instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

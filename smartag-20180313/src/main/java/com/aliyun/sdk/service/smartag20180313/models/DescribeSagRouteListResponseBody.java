@@ -67,7 +67,7 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CE6642D4-21EB-4168-9BF9-F217953F9892</p>
@@ -78,7 +78,7 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The routes.</p>
+         * <p>The route list.</p>
          */
         public Builder routes(java.util.List<Routes> routes) {
             this.routes = routes;
@@ -196,7 +196,7 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of CIDR blocks that overlap with each other.</p>
+             * <p>The list of conflicting CIDR blocks.</p>
              */
             public Builder conflictCidrs(java.util.List<String> conflictCidrs) {
                 this.conflictCidrs = conflictCidrs;
@@ -204,9 +204,7 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost of the route.</p>
-             * <p>The number on the left side of the forward slash (/) indicates the administrative distance (AD) of the routing protocol.</p>
-             * <p>The number on the right side of the forward slash (/) indicates the metric value.</p>
+             * <p>The routing cost value. The number to the left of the forward slash (/) represents the administrative distance (AD) of the routable protocol. The number to the right of the forward slash (/) represents the metric.</p>
              * 
              * <strong>example:</strong>
              * <p>[110/11]</p>
@@ -239,7 +237,7 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the port. If the port name is -1, data is transferred through a VPN tunnel to Alibaba Cloud.</p>
+             * <p>The port name. A port name of -1 indicates that data traffic enters Alibaba Cloud through a VPN connection.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -250,11 +248,11 @@ public class DescribeSagRouteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing protocol. Valid values:</p>
+             * <p>The routable protocol type. Valid values:</p>
              * <ul>
-             * <li><strong>STATIC</strong>: a static routing protocol.</li>
-             * <li><strong>OSPF</strong>: the Open Shortest Path First (OSPF) dynamic routing protocol.</li>
-             * <li><strong>BGP</strong>: the Border Gateway Protocol (BGP) dynamic routing protocol.</li>
+             * <li><strong>STATIC</strong>: Static routable protocol.</li>
+             * <li><strong>OSPF</strong>: OSPF dynamic routable protocol.</li>
+             * <li><strong>BGP</strong>: BGP dynamic routable protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>

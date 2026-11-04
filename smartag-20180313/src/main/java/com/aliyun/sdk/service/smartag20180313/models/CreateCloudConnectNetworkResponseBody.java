@@ -145,7 +145,7 @@ public class CreateCloudConnectNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the CCN instance.</p>
+         * <p>The instance ID of the Cloud Connect Network (CCN).</p>
          * 
          * <strong>example:</strong>
          * <p>ccn-l9340rlu5ens*****</p>
@@ -167,7 +167,7 @@ public class CreateCloudConnectNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description about the CCN instance.</p>
+         * <p>The description of the Cloud Connect Network (CCN) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ccndesc</p>
@@ -178,7 +178,7 @@ public class CreateCloudConnectNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the CCN instance.</p>
+         * <p>The name of the Cloud Connect Network (CCN) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ccnname</p>
@@ -189,7 +189,7 @@ public class CreateCloudConnectNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C48E8EB2-37A4-495B-A95C-29CA1FD26C82</p>
@@ -200,7 +200,7 @@ public class CreateCloudConnectNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the CCN instance belongs.</p>
+         * <p>The ID of the resource group to which the Cloud Connect Network (CCN) instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2iu4fnc****</p>
@@ -211,7 +211,7 @@ public class CreateCloudConnectNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private CIDR block used for SNAT.</p>
+         * <p>The SNAT private CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>172.XX.XX.0/25</p>
@@ -222,10 +222,10 @@ public class CreateCloudConnectNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the CCN instance. Valid values:</p>
+         * <p>The instance status of the Cloud Connect Network (CCN). Valid values:</p>
          * <ul>
-         * <li><strong>Active</strong>: indicates the CNN instance running as expected.</li>
-         * <li><strong>Pending</strong>: indicates the CCN instance is to be created.</li>
+         * <li><strong>Active</strong>: Normal.</li>
+         * <li><strong>Pending</strong>: Pending creation.</li>
          * </ul>
          * 
          * <strong>example:</strong>

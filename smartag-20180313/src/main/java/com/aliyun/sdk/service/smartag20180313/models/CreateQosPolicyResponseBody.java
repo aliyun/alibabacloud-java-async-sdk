@@ -269,7 +269,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the application group.</p>
+         * DpiGroupIds.
          */
         public Builder dpiGroupIds(DpiGroupIds dpiGroupIds) {
             this.dpiGroupIds = dpiGroupIds;
@@ -277,7 +277,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of applications.</p>
+         * DpiSignatureIds.
          */
         public Builder dpiSignatureIds(DpiSignatureIds dpiSignatureIds) {
             this.dpiSignatureIds = dpiSignatureIds;
@@ -285,7 +285,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the traffic classification rule expires.</p>
+         * <p>The end time when the traffic classification rule of the quality of service (QoS) policy takes effect. The time follows the ISO 8601 standard and uses the UTC+8 time zone, in the YYYY-MM-DDThh:mm:ss+0800 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-14T16:41:33+0800</p>
@@ -296,7 +296,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The protocol that applies to the traffic classification rule.</p>
+         * <p>The protocol type applied to the traffic classification rule.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -318,7 +318,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The priority of the traffic throttling policy to which the traffic classification rule belongs.</p>
+         * <p>The priority of the bandwidth throttling rule to which the traffic classification rule belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -329,7 +329,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the QoS policy.</p>
+         * <p>The instance ID of the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-xitd8690ucu8ro****</p>
@@ -340,7 +340,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the traffic classification rule.</p>
+         * <p>The instance ID of the traffic classification rule for the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qospy-xhwhyuo43l********</p>
@@ -351,7 +351,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>97862812-2C7E-4D25-B0D5-B26DAC7FA293</p>
@@ -384,7 +384,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the traffic classification rule takes effect.</p>
+         * <p>The effective start time of the traffic classification rule for the QoS policy. The time is expressed in the ISO 8601 standard and uses the UTC+8 time zone in the YYYY-MM-DDThh:mm:ss+0800 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-14T16:41:33+0800</p>

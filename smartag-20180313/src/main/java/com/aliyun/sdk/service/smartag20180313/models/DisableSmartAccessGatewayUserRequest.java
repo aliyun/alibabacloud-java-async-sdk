@@ -164,7 +164,7 @@ public class DisableSmartAccessGatewayUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG APP instance is deployed.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class DisableSmartAccessGatewayUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG APP instance.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class DisableSmartAccessGatewayUserRequest extends Request {
         }
 
         /**
-         * <p>The username of the client account.</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

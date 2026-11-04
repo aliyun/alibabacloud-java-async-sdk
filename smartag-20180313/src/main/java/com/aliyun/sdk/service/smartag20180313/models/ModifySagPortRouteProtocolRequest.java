@@ -264,7 +264,7 @@ public class ModifySagPortRouteProtocolRequest extends Request {
         /**
          * <p>The BGP autonomous system number (ASN) of the peer device.</p>
          * <blockquote>
-         * <p> You must set this parameter when you enable BGP.</p>
+         * <p>You must set this parameter when you enable BGP.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -279,7 +279,7 @@ public class ModifySagPortRouteProtocolRequest extends Request {
         /**
          * <p>The IP address of the peer device.</p>
          * <blockquote>
-         * <p> You must set this parameter when you enable BGP.</p>
+         * <p>You must set this parameter when you enable BGP.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -312,9 +312,12 @@ public class ModifySagPortRouteProtocolRequest extends Request {
         /**
          * <p>The routing protocol. Valid values:</p>
          * <ul>
-         * <li><strong>STATIC</strong>: uses a static routing protocol.</li>
-         * <li><strong>OSPF</strong>: uses the Open Shortest Path First protocol (OSPF).</li>
-         * <li><strong>BGP</strong>: uses the Border Gateway Protocol (BGP).</li>
+         * <li><p><strong>STATIC</strong>: uses a static routing protocol.</p>
+         * </li>
+         * <li><p><strong>OSPF</strong>: uses the Open Shortest Path First protocol (OSPF).</p>
+         * </li>
+         * <li><p><strong>BGP</strong>: uses the Border Gateway Protocol (BGP).</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

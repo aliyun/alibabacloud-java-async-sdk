@@ -106,7 +106,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of details about the health checks.</p>
+         * HealthChecks.
          */
         public Builder healthChecks(HealthChecks healthChecks) {
             this.healthChecks = healthChecks;
@@ -411,10 +411,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the health check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Health Check</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -422,10 +419,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination IP address of the health check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>110.XX.XX.1</p>
+             * DstIpAddr.
              */
             public Builder dstIpAddr(String dstIpAddr) {
                 this.dstIpAddr = dstIpAddr;
@@ -433,13 +427,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination port of the health check.</p>
-             * <blockquote>
-             * <p> This feature is not supported.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>33</p>
+             * DstPort.
              */
             public Builder dstPort(Integer dstPort) {
                 this.dstPort = dstPort;
@@ -447,12 +435,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of failed probes before a health check is declared failed.</p>
-             * <p>Valid values: <strong>1</strong> to <strong>15</strong>.</p>
-             * <p>Default value: <strong>3</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * FailCountThreshold.
              */
             public Builder failCountThreshold(Integer failCountThreshold) {
                 this.failCountThreshold = failCountThreshold;
@@ -460,10 +443,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the health check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hc-ifflm5ygj3diwi****</p>
+             * HcInstanceId.
              */
             public Builder hcInstanceId(String hcInstanceId) {
                 this.hcInstanceId = hcInstanceId;
@@ -471,10 +451,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the health check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>doctest</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -482,12 +459,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of probes performed per health check.</p>
-             * <p>Valid values: <strong>1</strong> to <strong>20</strong>.</p>
-             * <p>Default value: <strong>1</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * ProbeCount.
              */
             public Builder probeCount(Integer probeCount) {
                 this.probeCount = probeCount;
@@ -495,13 +467,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time interval at which probes are performed. The next probe does not start before the current one is complete.</p>
-             * <p>Valid values: <strong>1000</strong> to <strong>60000</strong>.</p>
-             * <p>Default value: <strong>2000</strong>.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2000</p>
+             * ProbeInterval.
              */
             public Builder probeInterval(Integer probeInterval) {
                 this.probeInterval = probeInterval;
@@ -509,13 +475,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of a probe.</p>
-             * <p>Valid values: <strong>10</strong> to <strong>30000</strong>.</p>
-             * <p>Default value: <strong>1000</strong>.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * ProbeTimeout.
              */
             public Builder probeTimeout(Integer probeTimeout) {
                 this.probeTimeout = probeTimeout;
@@ -523,10 +483,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of routes that are associated with the health check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * RelationCount.
              */
             public Builder relationCount(Integer relationCount) {
                 this.relationCount = relationCount;
@@ -534,12 +491,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the maximum round-trip time (RTT) is exceeded before an alert is triggered.</p>
-             * <p>Valid values: <strong>1</strong> to <strong>15</strong>.</p>
-             * <p>Default value: <strong>3</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * RttFailThreshold.
              */
             public Builder rttFailThreshold(Integer rttFailThreshold) {
                 this.rttFailThreshold = rttFailThreshold;
@@ -547,13 +499,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum RTT.</p>
-             * <p>Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>5000</strong>.</p>
-             * <p>Default value: <strong>-1</strong>. This value indicates that the RTT threshold is not specified.</p>
-             * <p>Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>45</p>
+             * RttThreshold.
              */
             public Builder rttThreshold(Integer rttThreshold) {
                 this.rttThreshold = rttThreshold;
@@ -561,10 +507,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-qi0p07ld5q86k3****</p>
+             * SmartAGId.
              */
             public Builder smartAGId(String smartAGId) {
                 this.smartAGId = smartAGId;
@@ -572,10 +515,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source IP address of the health check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.XX.XX.1</p>
+             * SrcIpAddr.
              */
             public Builder srcIpAddr(String srcIpAddr) {
                 this.srcIpAddr = srcIpAddr;
@@ -583,13 +523,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source port of the health check.</p>
-             * <blockquote>
-             * <p> This feature is not supported.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>334</p>
+             * SrcPort.
              */
             public Builder srcPort(Integer srcPort) {
                 this.srcPort = srcPort;
@@ -597,15 +531,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the health check. Valid values:</p>
-             * <ul>
-             * <li><strong>success</strong>: The health check was successful.</li>
-             * <li><strong>failed</strong>: The health check failed.</li>
-             * <li><strong>unknown</strong>: The health check was not started.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>unknown</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -613,10 +539,7 @@ public class DescribeHealthChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the packet used in the health check. Only <strong>ICMP_ECHO</strong> is supported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ICMP_ECHO</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

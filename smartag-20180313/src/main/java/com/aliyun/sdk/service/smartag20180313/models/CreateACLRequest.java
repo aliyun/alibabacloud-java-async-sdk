@@ -145,10 +145,10 @@ public class CreateACLRequest extends Request {
         } 
 
         /**
-         * <p>The type of SAG instance to be associated with the ACL. Valid values:</p>
+         * <p>The type of the Smart Access Gateway (SAG) instance to be associated with the access control instance. Valid values:</p>
          * <ul>
-         * <li><strong>acl-hardware</strong> (default): SAG CPE instance</li>
-         * <li><strong>acl-software</strong>: SAG app instance</li>
+         * <li><strong>acl-hardware</strong> (default): Smart Access Gateway hardware instance.</li>
+         * <li><strong>acl-software</strong>: SAG app instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,8 +161,7 @@ public class CreateACLRequest extends Request {
         }
 
         /**
-         * <p>The name of the ACL.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name of the access control instance. The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,8 +192,7 @@ public class CreateACLRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where you want to create the ACL.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the access control instance. You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

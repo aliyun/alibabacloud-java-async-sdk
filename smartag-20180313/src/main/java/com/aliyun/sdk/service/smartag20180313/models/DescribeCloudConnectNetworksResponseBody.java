@@ -106,7 +106,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of CCN instances.</p>
+         * CloudConnectNetworks.
          */
         public Builder cloudConnectNetworks(CloudConnectNetworks cloudConnectNetworks) {
             this.cloudConnectNetworks = cloudConnectNetworks;
@@ -114,7 +114,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries returned on each page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3F2A0B80-D6D1-4764-8D77-38067DBBA345</p>
@@ -147,7 +147,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the CCN instances.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -216,10 +216,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag that is bound to the CCN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,10 +224,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag that is bound to the CCN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -304,6 +298,582 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
      *
      * <p>DescribeCloudConnectNetworksResponseBody</p>
      */
+    public static class RegionBinding extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
+        private String cidrBlock;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("RelayCidrBlock")
+        private String relayCidrBlock;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
+        private String transitRouterId;
+
+        private RegionBinding(Builder builder) {
+            this.cidrBlock = builder.cidrBlock;
+            this.regionId = builder.regionId;
+            this.relayCidrBlock = builder.relayCidrBlock;
+            this.status = builder.status;
+            this.transitRouterId = builder.transitRouterId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegionBinding create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cidrBlock
+         */
+        public String getCidrBlock() {
+            return this.cidrBlock;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return relayCidrBlock
+         */
+        public String getRelayCidrBlock() {
+            return this.relayCidrBlock;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return transitRouterId
+         */
+        public String getTransitRouterId() {
+            return this.transitRouterId;
+        }
+
+        public static final class Builder {
+            private String cidrBlock; 
+            private String regionId; 
+            private String relayCidrBlock; 
+            private String status; 
+            private String transitRouterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionBinding model) {
+                this.cidrBlock = model.cidrBlock;
+                this.regionId = model.regionId;
+                this.relayCidrBlock = model.relayCidrBlock;
+                this.status = model.status;
+                this.transitRouterId = model.transitRouterId;
+            } 
+
+            /**
+             * CidrBlock.
+             */
+            public Builder cidrBlock(String cidrBlock) {
+                this.cidrBlock = cidrBlock;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RelayCidrBlock.
+             */
+            public Builder relayCidrBlock(String relayCidrBlock) {
+                this.relayCidrBlock = relayCidrBlock;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * TransitRouterId.
+             */
+            public Builder transitRouterId(String transitRouterId) {
+                this.transitRouterId = transitRouterId;
+                return this;
+            }
+
+            public RegionBinding build() {
+                return new RegionBinding(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudConnectNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudConnectNetworksResponseBody</p>
+     */
+    public static class RegionBindingList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RegionBinding")
+        private java.util.List<RegionBinding> regionBinding;
+
+        private RegionBindingList(Builder builder) {
+            this.regionBinding = builder.regionBinding;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegionBindingList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionBinding
+         */
+        public java.util.List<RegionBinding> getRegionBinding() {
+            return this.regionBinding;
+        }
+
+        public static final class Builder {
+            private java.util.List<RegionBinding> regionBinding; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionBindingList model) {
+                this.regionBinding = model.regionBinding;
+            } 
+
+            /**
+             * RegionBinding.
+             */
+            public Builder regionBinding(java.util.List<RegionBinding> regionBinding) {
+                this.regionBinding = regionBinding;
+                return this;
+            }
+
+            public RegionBindingList build() {
+                return new RegionBindingList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudConnectNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudConnectNetworksResponseBody</p>
+     */
+    public static class TrNetworkConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CidrAllocationMode")
+        private String cidrAllocationMode;
+
+        @com.aliyun.core.annotation.NameInMap("RegionBindingList")
+        private RegionBindingList regionBindingList;
+
+        @com.aliyun.core.annotation.NameInMap("Subnet")
+        private String subnet;
+
+        private TrNetworkConfig(Builder builder) {
+            this.cidrAllocationMode = builder.cidrAllocationMode;
+            this.regionBindingList = builder.regionBindingList;
+            this.subnet = builder.subnet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TrNetworkConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cidrAllocationMode
+         */
+        public String getCidrAllocationMode() {
+            return this.cidrAllocationMode;
+        }
+
+        /**
+         * @return regionBindingList
+         */
+        public RegionBindingList getRegionBindingList() {
+            return this.regionBindingList;
+        }
+
+        /**
+         * @return subnet
+         */
+        public String getSubnet() {
+            return this.subnet;
+        }
+
+        public static final class Builder {
+            private String cidrAllocationMode; 
+            private RegionBindingList regionBindingList; 
+            private String subnet; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrNetworkConfig model) {
+                this.cidrAllocationMode = model.cidrAllocationMode;
+                this.regionBindingList = model.regionBindingList;
+                this.subnet = model.subnet;
+            } 
+
+            /**
+             * CidrAllocationMode.
+             */
+            public Builder cidrAllocationMode(String cidrAllocationMode) {
+                this.cidrAllocationMode = cidrAllocationMode;
+                return this;
+            }
+
+            /**
+             * RegionBindingList.
+             */
+            public Builder regionBindingList(RegionBindingList regionBindingList) {
+                this.regionBindingList = regionBindingList;
+                return this;
+            }
+
+            /**
+             * Subnet.
+             */
+            public Builder subnet(String subnet) {
+                this.subnet = subnet;
+                return this;
+            }
+
+            public TrNetworkConfig build() {
+                return new TrNetworkConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudConnectNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudConnectNetworksResponseBody</p>
+     */
+    public static class RegionBindingListRegionBinding extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("RelayCidrBlock")
+        private String relayCidrBlock;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("VpcCidrBlock")
+        private String vpcCidrBlock;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private RegionBindingListRegionBinding(Builder builder) {
+            this.regionId = builder.regionId;
+            this.relayCidrBlock = builder.relayCidrBlock;
+            this.status = builder.status;
+            this.vpcCidrBlock = builder.vpcCidrBlock;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegionBindingListRegionBinding create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return relayCidrBlock
+         */
+        public String getRelayCidrBlock() {
+            return this.relayCidrBlock;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return vpcCidrBlock
+         */
+        public String getVpcCidrBlock() {
+            return this.vpcCidrBlock;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String regionId; 
+            private String relayCidrBlock; 
+            private String status; 
+            private String vpcCidrBlock; 
+            private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionBindingListRegionBinding model) {
+                this.regionId = model.regionId;
+                this.relayCidrBlock = model.relayCidrBlock;
+                this.status = model.status;
+                this.vpcCidrBlock = model.vpcCidrBlock;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RelayCidrBlock.
+             */
+            public Builder relayCidrBlock(String relayCidrBlock) {
+                this.relayCidrBlock = relayCidrBlock;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * VpcCidrBlock.
+             */
+            public Builder vpcCidrBlock(String vpcCidrBlock) {
+                this.vpcCidrBlock = vpcCidrBlock;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public RegionBindingListRegionBinding build() {
+                return new RegionBindingListRegionBinding(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudConnectNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudConnectNetworksResponseBody</p>
+     */
+    public static class VpcNetworkConfigRegionBindingList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RegionBinding")
+        private java.util.List<RegionBindingListRegionBinding> regionBinding;
+
+        private VpcNetworkConfigRegionBindingList(Builder builder) {
+            this.regionBinding = builder.regionBinding;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcNetworkConfigRegionBindingList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionBinding
+         */
+        public java.util.List<RegionBindingListRegionBinding> getRegionBinding() {
+            return this.regionBinding;
+        }
+
+        public static final class Builder {
+            private java.util.List<RegionBindingListRegionBinding> regionBinding; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcNetworkConfigRegionBindingList model) {
+                this.regionBinding = model.regionBinding;
+            } 
+
+            /**
+             * RegionBinding.
+             */
+            public Builder regionBinding(java.util.List<RegionBindingListRegionBinding> regionBinding) {
+                this.regionBinding = regionBinding;
+                return this;
+            }
+
+            public VpcNetworkConfigRegionBindingList build() {
+                return new VpcNetworkConfigRegionBindingList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudConnectNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudConnectNetworksResponseBody</p>
+     */
+    public static class VpcNetworkConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CidrAllocationMode")
+        private String cidrAllocationMode;
+
+        @com.aliyun.core.annotation.NameInMap("RegionBindingList")
+        private VpcNetworkConfigRegionBindingList regionBindingList;
+
+        @com.aliyun.core.annotation.NameInMap("Subnet")
+        private String subnet;
+
+        private VpcNetworkConfig(Builder builder) {
+            this.cidrAllocationMode = builder.cidrAllocationMode;
+            this.regionBindingList = builder.regionBindingList;
+            this.subnet = builder.subnet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcNetworkConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cidrAllocationMode
+         */
+        public String getCidrAllocationMode() {
+            return this.cidrAllocationMode;
+        }
+
+        /**
+         * @return regionBindingList
+         */
+        public VpcNetworkConfigRegionBindingList getRegionBindingList() {
+            return this.regionBindingList;
+        }
+
+        /**
+         * @return subnet
+         */
+        public String getSubnet() {
+            return this.subnet;
+        }
+
+        public static final class Builder {
+            private String cidrAllocationMode; 
+            private VpcNetworkConfigRegionBindingList regionBindingList; 
+            private String subnet; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcNetworkConfig model) {
+                this.cidrAllocationMode = model.cidrAllocationMode;
+                this.regionBindingList = model.regionBindingList;
+                this.subnet = model.subnet;
+            } 
+
+            /**
+             * CidrAllocationMode.
+             */
+            public Builder cidrAllocationMode(String cidrAllocationMode) {
+                this.cidrAllocationMode = cidrAllocationMode;
+                return this;
+            }
+
+            /**
+             * RegionBindingList.
+             */
+            public Builder regionBindingList(VpcNetworkConfigRegionBindingList regionBindingList) {
+                this.regionBindingList = regionBindingList;
+                return this;
+            }
+
+            /**
+             * Subnet.
+             */
+            public Builder subnet(String subnet) {
+                this.subnet = subnet;
+                return this;
+            }
+
+            public VpcNetworkConfig build() {
+                return new VpcNetworkConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudConnectNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudConnectNetworksResponseBody</p>
+     */
     public static class CloudConnectNetwork extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedCenId")
         private String associatedCenId;
@@ -316,6 +886,9 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AssociatedCloudBoxCount")
         private String associatedCloudBoxCount;
+
+        @com.aliyun.core.annotation.NameInMap("AssociatedVpcStatus")
+        private String associatedVpcStatus;
 
         @com.aliyun.core.annotation.NameInMap("AvailableCloudBoxCount")
         private String availableCloudBoxCount;
@@ -362,11 +935,24 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
+        @com.aliyun.core.annotation.NameInMap("TrNetworkConfig")
+        private TrNetworkConfig trNetworkConfig;
+
+        @com.aliyun.core.annotation.NameInMap("VpcNetworkConfig")
+        private VpcNetworkConfig vpcNetworkConfig;
+
+        @com.aliyun.core.annotation.NameInMap("VpcStatusErrorCode")
+        private String vpcStatusErrorCode;
+
+        @com.aliyun.core.annotation.NameInMap("VpcStatusErrorMessage")
+        private String vpcStatusErrorMessage;
+
         private CloudConnectNetwork(Builder builder) {
             this.associatedCenId = builder.associatedCenId;
             this.associatedCenOwnerId = builder.associatedCenOwnerId;
             this.associatedCenStatus = builder.associatedCenStatus;
             this.associatedCloudBoxCount = builder.associatedCloudBoxCount;
+            this.associatedVpcStatus = builder.associatedVpcStatus;
             this.availableCloudBoxCount = builder.availableCloudBoxCount;
             this.ccnId = builder.ccnId;
             this.cenStatusErrorCode = builder.cenStatusErrorCode;
@@ -382,6 +968,10 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             this.snatCidrBlock = builder.snatCidrBlock;
             this.subnet = builder.subnet;
             this.tags = builder.tags;
+            this.trNetworkConfig = builder.trNetworkConfig;
+            this.vpcNetworkConfig = builder.vpcNetworkConfig;
+            this.vpcStatusErrorCode = builder.vpcStatusErrorCode;
+            this.vpcStatusErrorMessage = builder.vpcStatusErrorMessage;
         }
 
         public static Builder builder() {
@@ -418,6 +1008,13 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
          */
         public String getAssociatedCloudBoxCount() {
             return this.associatedCloudBoxCount;
+        }
+
+        /**
+         * @return associatedVpcStatus
+         */
+        public String getAssociatedVpcStatus() {
+            return this.associatedVpcStatus;
         }
 
         /**
@@ -525,11 +1122,40 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return trNetworkConfig
+         */
+        public TrNetworkConfig getTrNetworkConfig() {
+            return this.trNetworkConfig;
+        }
+
+        /**
+         * @return vpcNetworkConfig
+         */
+        public VpcNetworkConfig getVpcNetworkConfig() {
+            return this.vpcNetworkConfig;
+        }
+
+        /**
+         * @return vpcStatusErrorCode
+         */
+        public String getVpcStatusErrorCode() {
+            return this.vpcStatusErrorCode;
+        }
+
+        /**
+         * @return vpcStatusErrorMessage
+         */
+        public String getVpcStatusErrorMessage() {
+            return this.vpcStatusErrorMessage;
+        }
+
         public static final class Builder {
             private String associatedCenId; 
             private String associatedCenOwnerId; 
             private String associatedCenStatus; 
             private String associatedCloudBoxCount; 
+            private String associatedVpcStatus; 
             private String availableCloudBoxCount; 
             private String ccnId; 
             private String cenStatusErrorCode; 
@@ -545,6 +1171,10 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             private String snatCidrBlock; 
             private String subnet; 
             private Tags tags; 
+            private TrNetworkConfig trNetworkConfig; 
+            private VpcNetworkConfig vpcNetworkConfig; 
+            private String vpcStatusErrorCode; 
+            private String vpcStatusErrorMessage; 
 
             private Builder() {
             } 
@@ -554,6 +1184,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
                 this.associatedCenOwnerId = model.associatedCenOwnerId;
                 this.associatedCenStatus = model.associatedCenStatus;
                 this.associatedCloudBoxCount = model.associatedCloudBoxCount;
+                this.associatedVpcStatus = model.associatedVpcStatus;
                 this.availableCloudBoxCount = model.availableCloudBoxCount;
                 this.ccnId = model.ccnId;
                 this.cenStatusErrorCode = model.cenStatusErrorCode;
@@ -569,13 +1200,14 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
                 this.snatCidrBlock = model.snatCidrBlock;
                 this.subnet = model.subnet;
                 this.tags = model.tags;
+                this.trNetworkConfig = model.trNetworkConfig;
+                this.vpcNetworkConfig = model.vpcNetworkConfig;
+                this.vpcStatusErrorCode = model.vpcStatusErrorCode;
+                this.vpcStatusErrorMessage = model.vpcStatusErrorMessage;
             } 
 
             /**
-             * <p>The ID of the CEN instance to which the CCN instance is attached.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-0jtu0bcbika5b5****</p>
+             * AssociatedCenId.
              */
             public Builder associatedCenId(String associatedCenId) {
                 this.associatedCenId = associatedCenId;
@@ -583,10 +1215,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the Cloud Enterprise Network (CEN) instance to which the CCN instance is attached.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>168800000000****</p>
+             * AssociatedCenOwnerId.
              */
             public Builder associatedCenOwnerId(String associatedCenOwnerId) {
                 this.associatedCenOwnerId = associatedCenOwnerId;
@@ -602,10 +1231,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of Smart Access Gateway (SAG) instances that are associated with the CCN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AssociatedCloudBoxCount.
              */
             public Builder associatedCloudBoxCount(String associatedCloudBoxCount) {
                 this.associatedCloudBoxCount = associatedCloudBoxCount;
@@ -613,10 +1239,15 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of SAG instances in the <strong>Available</strong> state that are associated with the CCN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AssociatedVpcStatus.
+             */
+            public Builder associatedVpcStatus(String associatedVpcStatus) {
+                this.associatedVpcStatus = associatedVpcStatus;
+                return this;
+            }
+
+            /**
+             * AvailableCloudBoxCount.
              */
             public Builder availableCloudBoxCount(String availableCloudBoxCount) {
                 this.availableCloudBoxCount = availableCloudBoxCount;
@@ -624,10 +1255,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the CCN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn-l9340rlu5enst******</p>
+             * CcnId.
              */
             public Builder ccnId(String ccnId) {
                 this.ccnId = ccnId;
@@ -651,10 +1279,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private CIDR block.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.10.10.0/24</p>
+             * CidrBlock.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -662,10 +1287,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the CCN instance was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1523618639000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -673,10 +1295,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the CCN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccndesc</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -684,14 +1303,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SAG instances that are associated with the same CCN instance communicate with each other.  </p>
-             * <ul>
-             * <li><strong>enable</strong>: allows SAG instances that are associated with the same CCN instance to communicate with each other.</li>
-             * <li><strong>disable</strong>: does not allow SAG instances that are associated with the same CCN instance to communicate with each other.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>enable</p>
+             * InterworkingStatus.
              */
             public Builder interworkingStatus(String interworkingStatus) {
                 this.interworkingStatus = interworkingStatus;
@@ -699,10 +1311,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the CCN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccnname</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -726,10 +1335,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the CCN instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfm2iu4fnc****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -737,10 +1343,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block that is used in Source Network Address Translation (SNAT).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.10.10.0/25</p>
+             * SnatCidrBlock.
              */
             public Builder snatCidrBlock(String snatCidrBlock) {
                 this.snatCidrBlock = snatCidrBlock;
@@ -756,10 +1359,42 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TrNetworkConfig.
+             */
+            public Builder trNetworkConfig(TrNetworkConfig trNetworkConfig) {
+                this.trNetworkConfig = trNetworkConfig;
+                return this;
+            }
+
+            /**
+             * VpcNetworkConfig.
+             */
+            public Builder vpcNetworkConfig(VpcNetworkConfig vpcNetworkConfig) {
+                this.vpcNetworkConfig = vpcNetworkConfig;
+                return this;
+            }
+
+            /**
+             * VpcStatusErrorCode.
+             */
+            public Builder vpcStatusErrorCode(String vpcStatusErrorCode) {
+                this.vpcStatusErrorCode = vpcStatusErrorCode;
+                return this;
+            }
+
+            /**
+             * VpcStatusErrorMessage.
+             */
+            public Builder vpcStatusErrorMessage(String vpcStatusErrorMessage) {
+                this.vpcStatusErrorMessage = vpcStatusErrorMessage;
                 return this;
             }
 

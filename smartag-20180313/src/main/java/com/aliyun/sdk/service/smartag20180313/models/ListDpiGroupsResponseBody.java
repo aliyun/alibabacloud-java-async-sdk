@@ -93,7 +93,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the application group.</p>
+         * <p>The list of application groups.</p>
          */
         public Builder dpiGroup(java.util.List<DpiGroup> dpiGroup) {
             this.dpiGroup = dpiGroup;
@@ -101,7 +101,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token returned for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>FFPSpX59Ebw****</p>
@@ -112,7 +112,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EC184A86-3C93-49D6-BB34-6C193E14D37F</p>
@@ -123,7 +123,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of application groups returned by the current query.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -218,7 +218,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application group.</p>
+             * <p>The application group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -229,7 +229,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application group.</p>
+             * <p>The application group name.</p>
              * 
              * <strong>example:</strong>
              * <p>P2P</p>
@@ -240,7 +240,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The earliest version of engine that supports the application group.</p>
+             * <p>The minimum database engine version of the DPI engine that supports the application group.</p>
              * 
              * <strong>example:</strong>
              * <p>0-0.0.1</p>
@@ -251,7 +251,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The earliest version of signature database that supports the application group.</p>
+             * <p>The minimum signature database version that supports the application group.</p>
              * 
              * <strong>example:</strong>
              * <p>20201117_1_0-0.0.1</p>

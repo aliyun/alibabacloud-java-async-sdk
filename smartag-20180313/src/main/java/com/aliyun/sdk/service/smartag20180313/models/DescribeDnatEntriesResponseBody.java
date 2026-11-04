@@ -106,7 +106,7 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of DNAT entries.</p>
+         * DnatEntries.
          */
         public Builder dnatEntries(DnatEntries dnatEntries) {
             this.dnatEntries = dnatEntries;
@@ -294,10 +294,7 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the DNAT entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fwd-kxe4fq3xuzczze****</p>
+             * DnatEntryId.
              */
             public Builder dnatEntryId(String dnatEntryId) {
                 this.dnatEntryId = dnatEntryId;
@@ -305,10 +302,7 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><code>10.10.**.**</code></p>
+             * ExternalIp.
              */
             public Builder externalIp(String externalIp) {
                 this.externalIp = externalIp;
@@ -316,11 +310,7 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public port.</p>
-             * <p>Valid values: <strong>1 to 65535</strong> and <strong>any</strong>. The value any indicates all ports.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12</p>
+             * ExternalPort.
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -328,10 +318,7 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination private IP address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.0.1</p>
+             * InternalIp.
              */
             public Builder internalIp(String internalIp) {
                 this.internalIp = internalIp;
@@ -339,11 +326,7 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination private port.</p>
-             * <p>Valid values: <strong>1 to 65535</strong> and <strong>any</strong>. The value any indicates all ports.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * InternalPort.
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -351,15 +334,7 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol used in DNAT. Valid values:</p>
-             * <ul>
-             * <li><strong>tcp</strong>.</li>
-             * <li><strong>udp</strong>.</li>
-             * <li><strong>any</strong>: all protocols.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>tcp</p>
+             * IpProtocol.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -367,10 +342,7 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-jfh********</p>
+             * SagId.
              */
             public Builder sagId(String sagId) {
                 this.sagId = sagId;
@@ -378,14 +350,7 @@ public class DescribeDnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the DNAT entry. Valid values:</p>
-             * <ul>
-             * <li><strong>Intranet</strong>: the IP address was translated to a specific internal IP address. This is the default value.</li>
-             * <li><strong>Internet</strong>: the IP address was translated to a specific public IP address.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Intranet</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -93,7 +93,7 @@ public class UpdateSmartAccessGatewayAdminPasswordResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The response code. A value of 200 indicates that the task is successful.</p>
+         * <p>The response code. A value of 200 indicates that the query task is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UpdateSmartAccessGatewayAdminPasswordResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The response message. A value of Successful indicates that the task is successful.</p>
+         * <p>The response message. A value of Successful indicates that the query task is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -126,10 +126,12 @@ public class UpdateSmartAccessGatewayAdminPasswordResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the modification is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: yes.</p>
+         * </li>
+         * <li><p><strong>false</strong>: no.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

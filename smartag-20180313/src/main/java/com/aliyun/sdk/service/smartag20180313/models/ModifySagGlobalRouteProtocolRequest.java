@@ -179,7 +179,7 @@ public class ModifySagGlobalRouteProtocolRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the SAG instance.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,8 +213,8 @@ public class ModifySagGlobalRouteProtocolRequest extends Request {
          * <p>The routing protocol. Valid values:</p>
          * <ul>
          * <li><strong>STATIC</strong>: static routing protocol</li>
-         * <li><strong>OSPF</strong>: Open Shortest Path First protocol (OSPF)</li>
-         * <li><strong>BGP</strong>: Border Gateway Protocol (BGP)</li>
+         * <li><strong>OSPF</strong>: OSPF dynamic routing protocol</li>
+         * <li><strong>BGP</strong>: BGP dynamic routing protocol</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -228,7 +228,7 @@ public class ModifySagGlobalRouteProtocolRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class ModifySagGlobalRouteProtocolRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device that is associated with the SAG instance.</p>
+         * <p>The serial number of the associated Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

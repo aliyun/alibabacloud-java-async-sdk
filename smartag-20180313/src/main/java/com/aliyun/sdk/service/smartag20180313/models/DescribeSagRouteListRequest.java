@@ -164,7 +164,7 @@ public class DescribeSagRouteListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway (SAG) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class DescribeSagRouteListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class DescribeSagRouteListRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device associated with the SAG instance.</p>
+         * <p>The serial number of the attached Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

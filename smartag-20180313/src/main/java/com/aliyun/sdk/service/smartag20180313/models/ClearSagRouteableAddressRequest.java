@@ -148,7 +148,7 @@ public class ClearSagRouteableAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the SAG instance belongs.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -178,7 +178,7 @@ public class ClearSagRouteableAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

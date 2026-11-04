@@ -119,7 +119,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of Smart Access Gateway (SAG) instances that have exceptional configurations.</p>
+         * <p>The number of Smart Access Gateway instances with configuration errors.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The traffic throttling rule applied to the QoS policies that have exceptional configurations.</p>
+         * <p>The rate limiting rules with configuration errors in the QoS policy.</p>
          */
         public Builder qosCars(java.util.List<QosCars> qosCars) {
             this.qosCars = qosCars;
@@ -138,7 +138,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the QoS policy.</p>
+         * <p>The description of the QoS policy instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -149,7 +149,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the QoS policy.</p>
+         * <p>The name of the QoS policy instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -160,7 +160,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of QoS policies based on 5-tuple.</p>
+         * <p>The list of 5-tuple rules for the QoS policy instance.</p>
          */
         public Builder qosPolicies(java.util.List<QosPolicies> qosPolicies) {
             this.qosPolicies = qosPolicies;
@@ -168,7 +168,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91058E01-1806-45D5-B305-19E4D0A5CE04</p>
@@ -341,10 +341,10 @@ public class GetQosAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of traffic throttling. Valid values:</p>
+             * <p>The rate limiting type. Valid values:</p>
              * <ul>
-             * <li><strong>Absolute</strong>: throttles traffic based on a specific range of bandwidth.</li>
-             * <li><strong>Percent</strong>: throttles traffic based on a specific range of bandwidth percentage.</li>
+             * <li><strong>Absolute</strong>: by bandwidth value.</li>
+             * <li><strong>Percent</strong>: by percentage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -367,7 +367,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum bandwidth percentage that the traffic is throttled to.</p>
+             * <p>The maximum bandwidth percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -400,7 +400,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Bandwidth type when traffic is throttled to a percentage of the total bandwidth of the network.</p>
+             * <p>The bandwidth type when rate limiting is based on percentage. Valid values:</p>
              * <ul>
              * <li><strong>CcnBandwidth</strong>: Cloud Connect Network (CCN) bandwidth.</li>
              * <li><strong>InternetUpBandwidth</strong>: Internet upstream bandwidth.</li>
@@ -415,8 +415,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the traffic throttling rule.</p>
-             * <p>Valid values are from <strong>1</strong> to <strong>3</strong>. A smaller value indicates a higher priority.</p>
+             * <p>The priority of the rate limiting rule. Valid values: <strong>1</strong> to <strong>3</strong>. A smaller value indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -427,7 +426,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the traffic throttling rule.</p>
+             * <p>The description of the rate limiting rule.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -438,7 +437,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the traffic throttling rule.</p>
+             * <p>The ID of the rate limiting rule.</p>
              * 
              * <strong>example:</strong>
              * <p>qoscar-xir1apa8ayjp56ei****</p>
@@ -449,7 +448,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the traffic throttling rule.</p>
+             * <p>The name of the rate limiting rule.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -623,7 +622,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The range of the destination CIDR block.</p>
+             * <p>The destination CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0.0/0</p>
@@ -634,13 +633,12 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of destination ports.</p>
-             * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-             * <p>Examples of the format of the destination port range:</p>
+             * <p>The destination port range. Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+             * <p>Examples of the destination port range format:</p>
              * <ul>
-             * <li><strong>1/200</strong>: a port range from 1 to 200.</li>
-             * <li><strong>80/80</strong>: port 80.</li>
-             * <li><strong>-1/-1</strong>: all ports.</li>
+             * <li><strong>1/200</strong>: indicates ports 1 to 200.</li>
+             * <li><strong>80/80</strong>: indicates port 80.</li>
+             * <li><strong>-1/-1</strong>: indicates that ports are not restricted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -652,8 +650,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the valid time of the 5-tuple.</p>
-             * <p>The time must be in UTC+8.</p>
+             * <p>The expiration time of the 5-tuple rules. The time is displayed in Beijing time. Format: UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-29T00:00:00+0800</p>
@@ -664,7 +661,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the protocol that is applied to the 5-tuple rule.</p>
+             * <p>The protocol type applied to the 5-tuple rules.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -675,8 +672,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the traffic throttling rule that is applied to the 5-tuple.rule.</p>
-             * <p>A smaller value indicates a higher priority.</p>
+             * <p>The priority of the rate limiting rule to which the 5-tuple rules belong. A smaller value indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -687,7 +683,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the 5-tuple.</p>
+             * <p>The description of the 5-tuple rules.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -698,7 +694,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the 5-tuple.</p>
+             * <p>The name of the 5-tuple rules.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -709,7 +705,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of the source CIDR block.</p>
+             * <p>The source CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0.0/0</p>
@@ -720,13 +716,12 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of source ports.</p>
-             * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-             * <p>Examples of the format of the source port range:</p>
+             * <p>The source port range. Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+             * <p>Examples of the source port range format:</p>
              * <ul>
-             * <li><strong>1/200</strong>: a port range from 1 to 200.</li>
-             * <li><strong>80/80</strong>: port 80.</li>
-             * <li><strong>-1/-1</strong>: all ports.</li>
+             * <li><strong>1/200</strong>: indicates ports 1 to 200.</li>
+             * <li><strong>80/80</strong>: indicates port 80.</li>
+             * <li><strong>-1/-1</strong>: indicates that ports are not restricted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -738,7 +733,7 @@ public class GetQosAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the valid time of the 5-tuple.</p>
+             * <p>The start of the effective period for the 5-tuple rules. The time is displayed in Beijing time. Format: UTC+8.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-21T00:00:00+0800</p>

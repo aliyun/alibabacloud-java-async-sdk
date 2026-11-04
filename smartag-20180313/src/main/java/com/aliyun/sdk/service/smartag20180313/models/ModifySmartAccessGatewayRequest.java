@@ -230,8 +230,8 @@ public class ModifySmartAccessGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The CIDR blocks of terminals in the private network. Make sure that the CIDR blocks do not overlap with each other.</p>
-         * <p>If the LAN ports of the terminals use dynamic routing, the IP addresses within the first private CIDR block are allocated to the terminals that have Dynamic Host Configuration Protocol (DHCP) enabled.</p>
+         * <p>The private CIDR block used by clients at the on-premises site for communication. Make sure that private CIDR blocks do not conflict with each other. </p>
+         * <p>If the LAN port of the Smart Access Gateway device is configured in dynamic mode, the IP addresses used by on-premises clients with DHCP enabled are allocated from the first private CIDR block that you specify.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
@@ -243,8 +243,11 @@ public class ModifySmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The description of the SAG instance.</p>
-         * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the Smart Access Gateway instance. </p>
+         * <p>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAG description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -253,10 +256,12 @@ public class ModifySmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to audit the network connection logs of the SAS app instance.</p>
+         * <p>Specifies whether to enable connection log auditing for the SAG app. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: enables connection log auditing for the SAG app.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables connection log auditing for the SAG app.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,8 +274,8 @@ public class ModifySmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The name of the SAG instance.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name of the Smart Access Gateway instance. </p>
+         * <p>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>SAG</p>
@@ -300,7 +305,10 @@ public class ModifySmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The location where the SAG instance is deployed.</p>
+         * <p>The location where the Smart Access Gateway instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;adcode&quot;:&quot;&quot;, &quot;label&quot;:&quot;Hangzhou, Zhejiang xx zone xx Road xx number&quot;, &quot;value&quot;:&quot;B0FFGxxxx&quot;, &quot;center&quot;:&quot;120.190xxxx, 30.182xxxx&quot;, &quot;_new&quot;:&quot;true&quot; } ]</p>
          */
         public Builder position(String position) {
             this.putQueryParameter("Position", position);
@@ -309,7 +317,7 @@ public class ModifySmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,10 +348,12 @@ public class ModifySmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The policy that is used to advertise routes to Alibaba Cloud. Valid values:</p>
+         * <p>The route synchronization mode for the on-premises network. Valid values:</p>
          * <ul>
-         * <li><strong>static</strong>: static routing</li>
-         * <li><strong>dynamic</strong>: dynamic routing</li>
+         * <li><p><strong>static</strong>: static routing.</p>
+         * </li>
+         * <li><p><strong>dynamic</strong>: dynamic routing.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -356,7 +366,7 @@ public class ModifySmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The time during which the disconnected SAG instance remains locked. Valid values: an integer that is greater than or equal to 0.</p>
+         * <p>The threshold configured by the user for the offline lock feature. The value must be greater than or equal to 0.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -369,7 +379,7 @@ public class ModifySmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

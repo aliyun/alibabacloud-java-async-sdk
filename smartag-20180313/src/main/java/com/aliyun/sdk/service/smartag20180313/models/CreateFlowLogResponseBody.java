@@ -80,7 +80,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the flow log.</p>
+         * <p>The ID of the flow log instance.</p>
          * 
          * <strong>example:</strong>
          * <p>fl-7a56mar1kfw9vj****</p>
@@ -91,7 +91,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>650CB9E8-20F3-4538-A4FC-1DA1B36E42D9</p>
@@ -102,7 +102,7 @@ public class CreateFlowLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the flow log belongs.</p>
+         * <p>The ID of the resource group to which the flow log instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2iu4f****</p>

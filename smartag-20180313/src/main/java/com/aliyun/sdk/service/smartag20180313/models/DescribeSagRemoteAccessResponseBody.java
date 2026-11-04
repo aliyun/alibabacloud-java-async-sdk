@@ -119,7 +119,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. The 200 error code indicates that the query task is successful.</p>
+         * <p>The error code. 200 indicates that the query task succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. The Successful error message indicates that the query task is successful.</p>
+         * <p>The error message. Successful indicates that the query task succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -141,7 +141,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Remote logon information about the SAG device.</p>
+         * RemoteAccesses.
          */
         public Builder remoteAccesses(RemoteAccesses remoteAccesses) {
             this.remoteAccesses = remoteAccesses;
@@ -149,7 +149,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E38E950D-28A4-4C41-9428-A8908EC6AE5C</p>
@@ -160,7 +160,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The Smart Access Gateway instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-1um5x5nwhilymw****</p>
@@ -171,9 +171,9 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the query task is successful. Valid values:</p>
+         * <p>Indicates whether the query task succeeded.</p>
          * <ul>
-         * <li><strong>true</strong>: The query task is successful.</li>
+         * <li><strong>true</strong>: The query task succeeded.</li>
          * <li><strong>false</strong>: The query task failed.</li>
          * </ul>
          * 
@@ -244,10 +244,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The private IP address where the remote logon is initiated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.XX.XX.1</p>
+             * RemoteAccessIp.
              */
             public Builder remoteAccessIp(String remoteAccessIp) {
                 this.remoteAccessIp = remoteAccessIp;
@@ -255,10 +252,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the SAG device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sage62x022502****</p>
+             * SerialNumber.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

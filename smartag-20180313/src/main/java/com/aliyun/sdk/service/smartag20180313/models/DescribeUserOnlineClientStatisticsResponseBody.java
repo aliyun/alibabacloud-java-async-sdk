@@ -67,7 +67,7 @@ public class DescribeUserOnlineClientStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>14846A6A-2192-4F6A-B272-B8BD68EBC89B</p>
@@ -78,7 +78,7 @@ public class DescribeUserOnlineClientStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The connection information about the specified clients.</p>
+         * UserStatistics.
          */
         public Builder userStatistics(UserStatistics userStatistics) {
             this.userStatistics = userStatistics;
@@ -144,10 +144,7 @@ public class DescribeUserOnlineClientStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of clients that are connected to Alibaba Cloud.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * OnlineCount.
              */
             public Builder onlineCount(String onlineCount) {
                 this.onlineCount = onlineCount;
@@ -155,10 +152,7 @@ public class DescribeUserOnlineClientStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>doctest</p>
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

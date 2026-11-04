@@ -149,8 +149,7 @@ public class DescribeSmartAccessGatewayAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the Smart Access Gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +180,7 @@ public class DescribeSmartAccessGatewayAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

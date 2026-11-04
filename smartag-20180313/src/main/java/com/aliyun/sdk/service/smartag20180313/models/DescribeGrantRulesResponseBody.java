@@ -106,7 +106,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The permissions that are granted.</p>
+         * GrantRules.
          */
         public Builder grantRules(GrantRules grantRules) {
             this.grantRules = grantRules;
@@ -307,10 +307,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the CCN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn-n2935s1mnwv8i*****</p>
+             * CcnInstanceId.
              */
             public Builder ccnInstanceId(String ccnInstanceId) {
                 this.ccnInstanceId = ccnInstanceId;
@@ -318,10 +315,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the Alibaba Cloud account to which the CCN instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1220123456123456</p>
+             * CcnUid.
              */
             public Builder ccnUid(Long ccnUid) {
                 this.ccnUid = ccnUid;
@@ -329,10 +323,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cen-0jtu0bcbika5b5****</p>
+             * CenInstanceId.
              */
             public Builder cenInstanceId(String cenInstanceId) {
                 this.cenInstanceId = cenInstanceId;
@@ -340,10 +331,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the Alibaba Cloud account to which the CEN instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1250123456123456</p>
+             * CenUid.
              */
             public Builder cenUid(Long cenUid) {
                 this.cenUid = cenUid;
@@ -351,10 +339,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the permissions are granted.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1563439920000</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -362,10 +347,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the permissions are modified.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1563439920000</p>
+             * GmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -373,10 +355,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the authorization rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>18313265-d988-406c-965d-3e110ff*****</p>
+             * GrantRuleId.
              */
             public Builder grantRuleId(String grantRuleId) {
                 this.grantRuleId = grantRuleId;
@@ -384,14 +363,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the permissions to manage network traffic from the CCN instance are granted to a CEN instance that belongs to another account. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * GrantTrafficService.
              */
             public Builder grantTrafficService(Boolean grantTrafficService) {
                 this.grantTrafficService = grantTrafficService;
@@ -399,10 +371,7 @@ public class DescribeGrantRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the CCN instance is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shanghai</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -193,7 +193,7 @@ public class BindVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class BindVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class BindVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the SAG instance belongs.</p>
+         * <p>The Alibaba Cloud account ID that owns the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1250123456123456</p>
@@ -249,7 +249,7 @@ public class BindVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VBR that you want to associate with the SAG instance.</p>
+         * <p>The instance ID of the virtual border routing instance to bind.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class BindVbrRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>The region ID of the virtual border router (VBR) to bind.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

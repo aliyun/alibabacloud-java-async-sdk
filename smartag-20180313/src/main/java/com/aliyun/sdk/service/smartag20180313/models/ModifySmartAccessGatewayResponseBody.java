@@ -54,7 +54,7 @@ public class ModifySmartAccessGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CE6642D4-21EB-4168-9BF9-F217953F9892</p>

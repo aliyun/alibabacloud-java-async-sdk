@@ -218,7 +218,7 @@ public class CreateSagExpressConnectInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The subnet mask of the IP address.</p>
+         * <p>The IP address mask.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class CreateSagExpressConnectInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the Express Connect port.</p>
+         * <p>The name of the dedicated connection port.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class CreateSagExpressConnectInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the Smart Access Gateway (SAG) instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,7 @@ public class CreateSagExpressConnectInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class CreateSagExpressConnectInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device associated with the SAG instance.</p>
+         * <p>The serial number of the bound Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,14 +319,16 @@ public class CreateSagExpressConnectInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The VLAN ID of the subinterface.</p>
-         * <p>Value: <strong>0 to 4094</strong>.</p>
+         * <p>The VLAN ID of the dedicated connection sub-interface.</p>
+         * <p>Valid values: <strong>0 to 4094</strong>.</p>
          * <blockquote>
+         * <ul>
+         * <li>If the VLAN ID is 0, the port is a physical port and the VLAN sub-interface mode is not used.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li>If the VLAN ID is 0, this port is a physical port and does not support VLAN subinterfaces.</li>
-         * <li>If the VLAN ID is 1 to 4094, this port supports VLAN subinterfaces based on the Layer 3 protocols.</li>
-         * <li>You can create a maximum of 5 VLAN subinterfaces.</li>
+         * <li>If the VLAN ID is 1 to 4094, the port uses a VLAN-based Layer 3 sub-interface.</li>
+         * <li>You can create up to 5 VLANs.</li>
          * </ul>
          * 
          * <strong>example:</strong>

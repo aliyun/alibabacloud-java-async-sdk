@@ -80,7 +80,7 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
         } 
 
         /**
-         * Ports.
+         * <p>The list of port information.</p>
          */
         public Builder ports(java.util.List<Ports> ports) {
             this.ports = ports;
@@ -88,7 +88,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877F5673-FFD1-5168-99D1-1E8009FBFF7B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
         }
 
         /**
-         * TaskStates.
+         * <p>The status of the query task.</p>
          */
         public Builder taskStates(java.util.List<TaskStates> taskStates) {
             this.taskStates = taskStates;
@@ -227,7 +230,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             } 
 
             /**
-             * NeighborIp.
+             * <p>The IP address of the neighbor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.XX.XX.2</p>
              */
             public Builder neighborIp(String neighborIp) {
                 this.neighborIp = neighborIp;
@@ -235,7 +241,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             }
 
             /**
-             * PortName.
+             * <p>The name of the port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder portName(String portName) {
                 this.portName = portName;
@@ -243,7 +252,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             }
 
             /**
-             * RemoteAs.
+             * <p>The autonomous system (AS) number of the BGP peer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65535</p>
              */
             public Builder remoteAs(String remoteAs) {
                 this.remoteAs = remoteAs;
@@ -251,7 +263,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             }
 
             /**
-             * RemoteIp.
+             * <p>The IP address of the peer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.XX.XX.1</p>
              */
             public Builder remoteIp(String remoteIp) {
                 this.remoteIp = remoteIp;
@@ -259,7 +274,15 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             }
 
             /**
-             * RouteProtocol.
+             * <p>The routable protocol of the port. Valid values:</p>
+             * <ul>
+             * <li><strong>STATIC</strong>: static routing protocol.</li>
+             * <li><strong>OSPF</strong>: Open Shortest Path First (OSPF) dynamic routing protocol.</li>
+             * <li><strong>BGP</strong>: Border Gateway Protocol (BGP) dynamic routing protocol.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder routeProtocol(String routeProtocol) {
                 this.routeProtocol = routeProtocol;
@@ -267,7 +290,14 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             }
 
             /**
-             * Status.
+             * <p>The status of the port. Valid values:</p>
+             * <ul>
+             * <li><strong>UP</strong>: The port is enabled.</li>
+             * <li><strong>DOWN</strong>: The port is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UP</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,7 +305,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             }
 
             /**
-             * Vlan.
+             * <p>The VLAN ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder vlan(String vlan) {
                 this.vlan = vlan;
@@ -368,7 +401,11 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the query task was created.</p>
+             * <p>This is a UNIX timestamp that represents the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1586765938000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -376,7 +413,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code. \<code>200\\</code> indicates that the query task is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -384,7 +424,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message. \<code>Successful\\</code> indicates that the query task is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -392,7 +435,21 @@ public class ViewSmartAccessGatewayPortRouteProtocolResponseBody extends TeaMode
             }
 
             /**
-             * State.
+             * <p>The status of the asynchronous task:</p>
+             * <ul>
+             * <li><strong>Initialized</strong>: The query task is being initialized.</li>
+             * <li><strong>Offline</strong>: The SAG device is offline and the query task is not sent. The task will be sent after the device goes online.</li>
+             * <li><strong>Succeed</strong>: The query task is sent.</li>
+             * <li><strong>Processing</strong>: The query task is being sent.</li>
+             * <li><strong>VersionNotSupport</strong>: The current version of the SAG device is not supported.</li>
+             * <li><strong>BuildRequestError</strong>: The management plane does not support the operation.</li>
+             * <li><strong>HardwareError</strong>: The query task failed to be sent due to a device error.</li>
+             * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
+             * <li><strong>OfflineNotConfiged</strong>: The SAG device is offline and the query task is not sent. The task will not be sent even after the device goes online.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeed</p>
              */
             public Builder state(String state) {
                 this.state = state;

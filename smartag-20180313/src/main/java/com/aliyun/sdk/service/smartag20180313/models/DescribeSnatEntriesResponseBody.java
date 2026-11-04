@@ -106,7 +106,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the instance status list.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -117,7 +117,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -128,7 +128,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>674BC3B2-5828-41D5-830E-148EE6CF86C2</p>
@@ -139,7 +139,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the SNAT entries.</p>
+         * SnatEntries.
          */
         public Builder snatEntries(SnatEntries snatEntries) {
             this.snatEntries = snatEntries;
@@ -242,10 +242,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The destination CIDR block.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.169.10.0/24</p>
+             * CidrBlock.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -253,10 +250,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SNAT entry was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1523604565000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -264,10 +258,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SNAT entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>snat-sl7kb9cpgfds*****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -275,10 +266,7 @@ public class DescribeSnatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><code>10.10.**.**</code></p>
+             * SnatIp.
              */
             public Builder snatIp(String snatIp) {
                 this.snatIp = snatIp;

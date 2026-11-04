@@ -78,7 +78,7 @@ public class DescribeUserOnlineClientsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the client.</p>
+         * Users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -144,10 +144,7 @@ public class DescribeUserOnlineClientsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.<strong>.</strong>.**</p>
+             * ClientIp.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -155,10 +152,7 @@ public class DescribeUserOnlineClientsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the client was connected to Alibaba Cloud.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1559125519</p>
+             * OnlineTime.
              */
             public Builder onlineTime(String onlineTime) {
                 this.onlineTime = onlineTime;

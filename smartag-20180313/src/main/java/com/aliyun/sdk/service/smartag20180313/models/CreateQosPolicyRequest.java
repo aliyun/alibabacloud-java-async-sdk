@@ -305,8 +305,8 @@ public class CreateQosPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The description of the traffic classification rule.</p>
-         * <p>The description must be 1 to 512 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The description of the traffic classification rule for the QoS policy.</p>
+         * <p>The description must be 1 to 512 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter or a Chinese character.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -319,7 +319,7 @@ public class CreateQosPolicyRequest extends Request {
 
         /**
          * <p>The destination CIDR block.</p>
-         * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+         * <p>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,12 +333,12 @@ public class CreateQosPolicyRequest extends Request {
 
         /**
          * <p>The destination port range.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-         * <p>Examples:</p>
+         * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>Examples of the destination port range format:</p>
          * <ul>
-         * <li><strong>1/200</strong>: a port range from 1 to 200</li>
-         * <li><strong>80/80</strong>: port 80</li>
-         * <li><strong>-1/-1</strong>: all ports</li>
+         * <li><strong>1/200</strong>: specifies ports 1 to 200.</li>
+         * <li><strong>80/80</strong>: specifies port 80.</li>
+         * <li><strong>-1/-1</strong>: specifies all ports.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -352,7 +352,10 @@ public class CreateQosPolicyRequest extends Request {
         }
 
         /**
-         * DpiGroupIds.
+         * <p>The list of application group IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder dpiGroupIds(java.util.List<String> dpiGroupIds) {
             this.putQueryParameter("DpiGroupIds", dpiGroupIds);
@@ -361,7 +364,10 @@ public class CreateQosPolicyRequest extends Request {
         }
 
         /**
-         * DpiSignatureIds.
+         * <p>The list of application IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dpiSignatureIds(java.util.List<String> dpiSignatureIds) {
             this.putQueryParameter("DpiSignatureIds", dpiSignatureIds);
@@ -370,8 +376,8 @@ public class CreateQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time when the traffic classification rule expires.</p>
-         * <p>Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ss+0800</code> format. The time must be in UTC+8.</p>
+         * <p>The end time when the traffic classification rule of the quality of service policy takes effect.</p>
+         * <p>The time is specified in the ISO 8601 standard in the UTC+8 time zone. Format: <code>YYYY-MM-DDThh:mm:ss+0800</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-14T16:41:33+0800</p>
@@ -383,8 +389,8 @@ public class CreateQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the protocol that applies to the traffic classification rule.</p>
-         * <p>The supported protocols provided in this topic are for reference only. The actual protocols in the console shall prevail.</p>
+         * <p>The protocol type applied to the traffic classification rule.</p>
+         * <p>For the protocol types supported by traffic classification rules, refer to the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -397,8 +403,8 @@ public class CreateQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the traffic classification rule.</p>
-         * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name of the traffic classification rule for the QoS policy.</p>
+         * <p>The name must be 2 to 100 characters in length and start with a letter or a Chinese character. It can contain digits, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>nametest</p>
@@ -428,8 +434,8 @@ public class CreateQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The priority of the traffic throttling policy to which the traffic classification rule belongs.</p>
-         * <p>Valid values: <strong>1 to 3</strong>. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the bandwidth throttling rule to which the traffic classification rule belongs.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>3</strong>. A smaller value indicates a higher priority.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -442,7 +448,7 @@ public class CreateQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the QoS policy.</p>
+         * <p>The instance ID of the QoS policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -455,7 +461,7 @@ public class CreateQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the QoS policy belongs.</p>
+         * <p>The region ID of the QoS policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -487,7 +493,7 @@ public class CreateQosPolicyRequest extends Request {
 
         /**
          * <p>The source CIDR block.</p>
-         * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.1.0/24.</p>
+         * <p>The source CIDR block must be in CIDR format. Example: 192.168.1.0/24.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -501,12 +507,12 @@ public class CreateQosPolicyRequest extends Request {
 
         /**
          * <p>The source port range.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-         * <p>Examples:</p>
+         * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>Examples of the source port range format:</p>
          * <ul>
-         * <li><strong>1/200</strong>: a port range from 1 to 200</li>
-         * <li><strong>80/80</strong>: port 80</li>
-         * <li><strong>-1/-1</strong>: all ports</li>
+         * <li><strong>1/200</strong>: specifies ports 1 to 200.</li>
+         * <li><strong>80/80</strong>: specifies port 80.</li>
+         * <li><strong>-1/-1</strong>: specifies all ports.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -520,8 +526,8 @@ public class CreateQosPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time when the traffic classification rule takes effect.</p>
-         * <p>Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ss+0800</code> format. The time must be in UTC+8.</p>
+         * <p>The start time of the effective period for the traffic classification rule of the QoS policy.</p>
+         * <p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss+0800 format. The time must be in UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-14T16:41:33+0800</p>

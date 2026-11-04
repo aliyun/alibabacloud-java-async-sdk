@@ -163,8 +163,8 @@ public class DiscribeSmartAccessGatewayDiagnosisReportRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the Smart Access Gateway instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -194,7 +194,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class DiscribeSmartAccessGatewayDiagnosisReportRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device.</p>
+         * <p>The serial number of the Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

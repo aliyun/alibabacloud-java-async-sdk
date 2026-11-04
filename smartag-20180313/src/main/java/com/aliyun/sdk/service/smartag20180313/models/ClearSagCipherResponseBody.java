@@ -54,7 +54,7 @@ public class ClearSagCipherResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3712F0B2-721E-4FBF-BBEF-888E3BFE0A20</p>

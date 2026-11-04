@@ -131,7 +131,7 @@ public class DeleteHealthCheckRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the health check instance.</p>
+         * <p>The health check instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class DeleteHealthCheckRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the health check instance is deployed.</p>
+         * <p>The region ID of the health check instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

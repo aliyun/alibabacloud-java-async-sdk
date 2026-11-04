@@ -93,7 +93,10 @@ public class UpdateSmartAccessGatewayOspfRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateSmartAccessGatewayOspfRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class UpdateSmartAccessGatewayOspfRouteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CF52A9E-FC3C-5CC8-B5EB-90DC03E9A531</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,16 @@ public class UpdateSmartAccessGatewayOspfRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: yes.</p>
+         * </li>
+         * <li><p><strong>false</strong>: no.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

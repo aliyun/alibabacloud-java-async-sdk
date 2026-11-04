@@ -54,7 +54,7 @@ public class ActiveFlowLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CBBE5EBF-69C1-4395-B36B-26B7605F87EA</p>

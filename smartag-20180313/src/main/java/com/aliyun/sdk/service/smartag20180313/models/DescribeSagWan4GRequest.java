@@ -164,7 +164,7 @@ public class DescribeSagWan4GRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the SAG instance.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class DescribeSagWan4GRequest extends Request {
         }
 
         /**
-         * <p>The SAG instance ID.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class DescribeSagWan4GRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device associated with the SAG instance.</p>
+         * <p>The serial number of the associated Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

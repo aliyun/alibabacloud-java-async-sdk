@@ -128,7 +128,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of traffic throttling rules.</p>
+         * QosCars.
          */
         public Builder qosCars(QosCars qosCars) {
             this.qosCars = qosCars;
@@ -333,10 +333,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the traffic throttling rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>des</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -344,14 +341,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of traffic throttling. Valid values:</p>
-             * <ul>
-             * <li><strong>Absolute</strong>: throttles traffic based on a specific range of bandwidth.</li>
-             * <li><strong>Percent</strong>: throttles traffic based on a specific range of bandwidth percentage.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Absolute</p>
+             * LimitType.
              */
             public Builder limitType(String limitType) {
                 this.limitType = limitType;
@@ -359,10 +349,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum bandwidth. Unit: <strong>Mbit/s</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>6</p>
+             * MaxBandwidthAbs.
              */
             public Builder maxBandwidthAbs(Integer maxBandwidthAbs) {
                 this.maxBandwidthAbs = maxBandwidthAbs;
@@ -370,10 +357,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum bandwidth percentage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90</p>
+             * MaxBandwidthPercent.
              */
             public Builder maxBandwidthPercent(Integer maxBandwidthPercent) {
                 this.maxBandwidthPercent = maxBandwidthPercent;
@@ -381,10 +365,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum bandwidth. Unit: <strong>Mbit/s</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * MinBandwidthAbs.
              */
             public Builder minBandwidthAbs(Integer minBandwidthAbs) {
                 this.minBandwidthAbs = minBandwidthAbs;
@@ -392,10 +373,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum bandwidth percentage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * MinBandwidthPercent.
              */
             public Builder minBandwidthPercent(Integer minBandwidthPercent) {
                 this.minBandwidthPercent = minBandwidthPercent;
@@ -403,10 +381,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the traffic throttling rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>name</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -414,14 +389,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bandwidth type when traffic is throttled based on bandwidth percentage.</p>
-             * <ul>
-             * <li><strong>CcnBandwidth</strong>: Cloud Connect Network (CCN) bandwidth.</li>
-             * <li><strong>InternetUpBandwidth</strong>: Internet upstream bandwidth.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>CcnBandwidth</p>
+             * PercentSourceType.
              */
             public Builder percentSourceType(String percentSourceType) {
                 this.percentSourceType = percentSourceType;
@@ -429,10 +397,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -440,10 +405,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the traffic throttling rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qos-awfxl1adxeqyk****</p>
+             * QosCarId.
              */
             public Builder qosCarId(String qosCarId) {
                 this.qosCarId = qosCarId;
@@ -451,10 +413,7 @@ public class DescribeQosCarsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the QoS policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qos-awfxl1adxeqyk****</p>
+             * QosId.
              */
             public Builder qosId(String qosId) {
                 this.qosId = qosId;

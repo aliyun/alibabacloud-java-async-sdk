@@ -67,7 +67,7 @@ public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>765AB188-69BF-47C6-BEDD-B9FC72BFBB0</p>
@@ -78,7 +78,7 @@ public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the version of the SAG device.</p>
+         * SmartAGVersions.
          */
         public Builder smartAGVersions(SmartAGVersions smartAGVersions) {
             this.smartAGVersions = smartAGVersions;
@@ -170,10 +170,7 @@ public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the version was released.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1522744623000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -181,14 +178,7 @@ public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the version. Valid values:</p>
-             * <ul>
-             * <li><strong>beta</strong>: a preview version.</li>
-             * <li><strong>release</strong>: an officially released version.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>release</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -196,10 +186,7 @@ public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.0</p>
+             * VersionCode.
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
@@ -207,10 +194,7 @@ public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testpackage1</p>
+             * VersionName.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

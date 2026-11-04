@@ -118,7 +118,14 @@ public class ViewSmartAccessGatewayPortRouteProtocolRequest extends Request {
         } 
 
         /**
-         * CrossAccount.
+         * <p>Specifies whether to query only the Smart Access Gateway instances that belong to other accounts. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): No.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder crossAccount(Boolean crossAccount) {
             this.putQueryParameter("CrossAccount", crossAccount);
@@ -127,6 +134,8 @@ public class ViewSmartAccessGatewayPortRouteProtocolRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the Smart Access Gateway instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +148,10 @@ public class ViewSmartAccessGatewayPortRouteProtocolRequest extends Request {
         }
 
         /**
-         * ResourceUid.
+         * <p>The ID of the Alibaba Cloud account to which the Smart Access Gateway instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109790620697****</p>
          */
         public Builder resourceUid(String resourceUid) {
             this.putQueryParameter("ResourceUid", resourceUid);
@@ -148,6 +160,7 @@ public class ViewSmartAccessGatewayPortRouteProtocolRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +173,7 @@ public class ViewSmartAccessGatewayPortRouteProtocolRequest extends Request {
         }
 
         /**
+         * <p>The serial number (SN) of the Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

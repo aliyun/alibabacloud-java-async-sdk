@@ -106,7 +106,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the configuration errors.</p>
+         * <p>The list of DPI configuration exceptions.</p>
          */
         public Builder dpiConfigError(java.util.List<DpiConfigError> dpiConfigError) {
             this.dpiConfigError = dpiConfigError;
@@ -114,7 +114,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries allowed per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that was used to query the next page.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -136,7 +136,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F47B5293-27B6-48EF-A9C6-E90A41449813</p>
@@ -147,7 +147,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of DPI configuration exception entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,8 +229,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the application groups that have configuration errors.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/196754.html">ListDpiGroups</a> operation to query application group IDs and information about the applications.</p>
+             * <p>The IDs of the application groups that have configuration exceptions.</p>
              */
             public Builder dpiGroupIds(java.util.List<String> dpiGroupIds) {
                 this.dpiGroupIds = dpiGroupIds;
@@ -238,8 +237,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of applications that have configuration errors.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/196630.html">ListDpiSignatures</a> operation to query application IDs and information about the applications.</p>
+             * <p>The IDs of the applications that have configuration exceptions.</p>
              */
             public Builder dpiSignatureIds(java.util.List<String> dpiSignatureIds) {
                 this.dpiSignatureIds = dpiSignatureIds;
@@ -247,10 +245,10 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of rules that are applied to applications with configuration errors.</p>
+             * <p>The instance IDs of the rules associated with the applications that have configuration exceptions.</p>
              * <ul>
-             * <li>If you make the request to query configuration errors of ACLs, the IDs of ACL rules that have configuration errors are returned.</li>
-             * <li>If you make the request to query configuration errors of QoS polices, the IDs of the 5-tuples in the QoS polices that have configuration errors are returned.</li>
+             * <li>If you are querying the access control DPI configuration exception information, the instance ID of the access control rule instance that has a configuration exception is displayed.</li>
+             * <li>If you are querying the QoS policy DPI configuration exception information, the instance ID of the 5-tuple-based quintuple rules instance that has a configuration exception is displayed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -347,11 +345,11 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the configuration error. Valid values:</p>
+             * <p>The type of the configuration exception. Valid values:</p>
              * <ul>
-             * <li><strong>DeviceNotSupported</strong>: The SAG instance does not support the DPI feature.</li>
-             * <li><strong>VersionNotSupported</strong>: The version of the DPI feature is outdated.</li>
-             * <li><strong>NotEnable</strong>: The DPI feature is disabled on the SAG instance.</li>
+             * <li><strong>DeviceNotSupported</strong>: The SAG device does not support the DPI feature.</li>
+             * <li><strong>VersionNotSupported</strong>: The DPI version running Smart Access Gateway device is too low.</li>
+             * <li><strong>NotEnable</strong>: The DPI feature is not enabled Smart Access Gateway device.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -363,7 +361,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the configuration errors.</p>
+             * <p>The list of DPI configuration exceptions.</p>
              */
             public Builder ruleConfigErrorList(java.util.List<RuleConfigErrorList> ruleConfigErrorList) {
                 this.ruleConfigErrorList = ruleConfigErrorList;
@@ -371,7 +369,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the SAG instance.</p>
+             * <p>The serial number of the Smart Access Gateway device.</p>
              * 
              * <strong>example:</strong>
              * <p>sag-2160808****</p>
@@ -382,7 +380,7 @@ public class ListDpiConfigErrorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
+             * <p>The instance ID of the Smart Access Gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>sag-1e8sgws6b133b8****</p>

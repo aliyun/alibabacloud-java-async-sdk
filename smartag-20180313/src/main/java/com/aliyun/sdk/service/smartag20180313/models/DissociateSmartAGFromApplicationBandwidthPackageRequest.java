@@ -131,7 +131,7 @@ public class DissociateSmartAGFromApplicationBandwidthPackageRequest extends Req
         } 
 
         /**
-         * <p>The ID of the bandwidth plan for application acceleration.</p>
+         * <p>The instance ID of the bandwidth plan for application acceleration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,10 +144,9 @@ public class DissociateSmartAGFromApplicationBandwidthPackageRequest extends Req
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -160,10 +159,10 @@ public class DissociateSmartAGFromApplicationBandwidthPackageRequest extends Req
         }
 
         /**
-         * <p>Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:</p>
+         * <p>Specifies whether to perform a dry run on the disassociation request. The dry run includes checks on permissions and instance status. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): sends the request. After the request passes the check, the SAG instance is disassociated from the bandwidth plan for application acceleration.</li>
-         * <li><strong>true</strong>: prechecks the request but does not disassociate the SAG instance from the bandwidth plan for application acceleration. If you use this value, the system checks the required parameters and the request syntax. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the bandwidth plan for application acceleration is disassociated from the Smart Access Gateway instance.</li>
+         * <li><strong>true</strong>: Sends a dry run request. Only the check is performed, and the bandwidth plan for application acceleration is not disassociated from the Smart Access Gateway instance. Check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +176,7 @@ public class DissociateSmartAGFromApplicationBandwidthPackageRequest extends Req
 
         /**
          * <p>The region ID of the bandwidth plan for application acceleration.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +189,7 @@ public class DissociateSmartAGFromApplicationBandwidthPackageRequest extends Req
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-w11hk4bqxpakem****</p>
@@ -202,7 +201,8 @@ public class DissociateSmartAGFromApplicationBandwidthPackageRequest extends Req
         }
 
         /**
-         * <p>The list of the SAG instance id.</p>
+         * <p>The list of Smart Access Gateway instance IDs.</p>
+         * <p>You can enter up to 100 Smart Access Gateway instance IDs at a time.</p>
          */
         public Builder smartAGIdList(java.util.List<String> smartAGIdList) {
             this.putQueryParameter("SmartAGIdList", smartAGIdList);

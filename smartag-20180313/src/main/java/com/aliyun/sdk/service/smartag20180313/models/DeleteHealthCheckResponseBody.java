@@ -54,7 +54,7 @@ public class DeleteHealthCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7F0B079C-2D0E-4ABF-A970-C079F785A09C</p>

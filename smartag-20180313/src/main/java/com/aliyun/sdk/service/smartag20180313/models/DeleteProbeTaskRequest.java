@@ -105,11 +105,7 @@ public class DeleteProbeTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the probe task.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>probe-****</p>
          */
         public Builder probeTaskId(String probeTaskId) {
             this.putQueryParameter("ProbeTaskId", probeTaskId);
@@ -118,12 +114,7 @@ public class DeleteProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Smart Access Gateway (SAG) instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,11 +123,7 @@ public class DeleteProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sag-****</p>
          */
         public Builder sagId(String sagId) {
             this.putQueryParameter("SagId", sagId);
@@ -145,11 +132,7 @@ public class DeleteProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sag****</p>
          */
         public Builder sn(String sn) {
             this.putQueryParameter("Sn", sn);

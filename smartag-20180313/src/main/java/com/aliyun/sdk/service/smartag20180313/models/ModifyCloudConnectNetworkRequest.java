@@ -216,7 +216,7 @@ public class ModifyCloudConnectNetworkRequest extends Request {
          * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>Ccn description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -227,8 +227,10 @@ public class ModifyCloudConnectNetworkRequest extends Request {
         /**
          * <p>Specifies whether to allow the SAG instances associated with the same CCN instance to communicate with each other.</p>
          * <ul>
-         * <li><strong>enable</strong>: yes</li>
-         * <li><strong>disable</strong>: no</li>
+         * <li><p><strong>enable</strong>: yes</p>
+         * </li>
+         * <li><p><strong>disable</strong>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,7 +247,7 @@ public class ModifyCloudConnectNetworkRequest extends Request {
          * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>Name</p>
+         * <p>Ccn name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

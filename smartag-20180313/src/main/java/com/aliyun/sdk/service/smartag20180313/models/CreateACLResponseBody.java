@@ -93,7 +93,7 @@ public class CreateACLResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the ACL.</p>
+         * <p>The ID of the access control instance.</p>
          * 
          * <strong>example:</strong>
          * <p>acl-o6yol7zowii5n2****</p>
@@ -104,7 +104,7 @@ public class CreateACLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of SAG instance to be associated with the ACL.</p>
+         * <p>The type of the Smart Access Gateway (SAG) instance associated with the access control instance.</p>
          * 
          * <strong>example:</strong>
          * <p>acl-hardware</p>
@@ -115,7 +115,7 @@ public class CreateACLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE837E9F-BD50-4C2B-9E47-260F9D848480</p>
@@ -126,7 +126,7 @@ public class CreateACLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the resource group to which the ACL belongs.</p>
+         * <p>The ID of the resource group to which the access control instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2iu4fnc****</p>

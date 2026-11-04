@@ -173,7 +173,7 @@ public class ListDpiGroupsRequest extends Request {
         } 
 
         /**
-         * DpiGroupIds.
+         * <p>The list of application group IDs. You can specify one or more application group IDs to query their information. You can query up to 10 application groups at a time.</p>
          */
         public Builder dpiGroupIds(java.util.List<String> dpiGroupIds) {
             this.putQueryParameter("DpiGroupIds", dpiGroupIds);
@@ -182,7 +182,7 @@ public class ListDpiGroupsRequest extends Request {
         }
 
         /**
-         * DpiGroupNames.
+         * <p>The list of application group names. You can specify one or more application group names to query their information. You can query up to 10 application groups at a time.</p>
          */
         public Builder dpiGroupNames(java.util.List<String> dpiGroupNames) {
             this.putQueryParameter("DpiGroupNames", dpiGroupNames);
@@ -191,9 +191,7 @@ public class ListDpiGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>100</strong>.</p>
-         * <p>Default value: <strong>20</strong>.</p>
+         * <p>The number of application groups to return on each page in a paged query. This parameter is used for paging. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -205,7 +203,7 @@ public class ListDpiGroupsRequest extends Request {
         }
 
         /**
-         * <p>The token used to query the next page.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>FFPSpX59Eb****</p>
@@ -235,8 +233,7 @@ public class ListDpiGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the application groups belong.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the regions supported by Smart Access Gateway and their corresponding region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

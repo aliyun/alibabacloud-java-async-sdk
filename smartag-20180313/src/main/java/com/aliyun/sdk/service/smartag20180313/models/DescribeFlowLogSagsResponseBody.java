@@ -128,7 +128,7 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8D945945-85F2-4BD7-A144-7DC0E8B5A0DC</p>
@@ -139,7 +139,7 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of SAG instances.</p>
+         * Sags.
          */
         public Builder sags(Sags sags) {
             this.sags = sags;
@@ -229,10 +229,7 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-100wm</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,10 +237,7 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ruijie-test-2</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,10 +245,7 @@ public class DescribeFlowLogSagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-6rm1awijm3ktic****</p>
+             * SmartAGId.
              */
             public Builder smartAGId(String smartAGId) {
                 this.smartAGId = smartAGId;

@@ -149,7 +149,7 @@ public class ActivateSmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the SAG instance.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class ActivateSmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The Smart Access Gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

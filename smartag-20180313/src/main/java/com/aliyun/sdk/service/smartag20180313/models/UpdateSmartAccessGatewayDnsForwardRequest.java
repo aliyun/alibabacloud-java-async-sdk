@@ -209,9 +209,9 @@ public class UpdateSmartAccessGatewayDnsForwardRequest extends Request {
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li>Wildcard domain names are supported. You can use the wildcard character asterisk (*) to specify a wildcard domain name.</li>
+         * <li>Wildcard domain names are supported. You can use the wildcard character asterisk (\*) to specify a wildcard domain name.</li>
          * </ul>
-         * <p>For example, you can enter *.baidu.com to specify the domain name baidu.com.</p>
+         * <p>For example, you can enter \*.baidu.com to specify the domain name baidu.com.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

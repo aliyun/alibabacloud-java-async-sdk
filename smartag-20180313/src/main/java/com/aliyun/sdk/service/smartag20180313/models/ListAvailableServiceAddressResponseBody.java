@@ -93,10 +93,7 @@ public class ListAvailableServiceAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -112,10 +109,7 @@ public class ListAvailableServiceAddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -123,10 +117,7 @@ public class ListAvailableServiceAddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>324223F3-93D3-4CE4-B26F-66C0C3809922</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -192,10 +183,7 @@ public class ListAvailableServiceAddressResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.1.1</p>
+             * Address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -203,10 +191,7 @@ public class ListAvailableServiceAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of service address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ProbeTask</p>
+             * AddressType.
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;

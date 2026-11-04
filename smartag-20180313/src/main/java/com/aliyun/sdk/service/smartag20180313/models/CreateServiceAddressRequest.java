@@ -120,11 +120,7 @@ public class CreateServiceAddressRequest extends Request {
         } 
 
         /**
-         * <p>The service address. Example: <strong>192.168.1.1</strong>.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.1.1</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -133,11 +129,7 @@ public class CreateServiceAddressRequest extends Request {
         }
 
         /**
-         * <p>The type of service address. Set the value to <strong>ProbeTask</strong>.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ProbeTask</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -146,12 +138,7 @@ public class CreateServiceAddressRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the SAG instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -160,11 +147,7 @@ public class CreateServiceAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sag-****</p>
          */
         public Builder sagId(String sagId) {
             this.putQueryParameter("SagId", sagId);
@@ -173,11 +156,7 @@ public class CreateServiceAddressRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sag****</p>
          */
         public Builder sn(String sn) {
             this.putQueryParameter("Sn", sn);

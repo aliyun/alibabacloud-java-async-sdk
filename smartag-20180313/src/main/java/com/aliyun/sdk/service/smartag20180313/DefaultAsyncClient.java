@@ -30,18 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "Smartag";
         this.version = "2018-03-13";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("eu-central-1", "smartag.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "smartag.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "smartag.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "smartag.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "smartag.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "smartag.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "smartag.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "smartag.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "smartag.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "smartag.ap-northeast-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -214,13 +203,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</p>
+     * <p>Before you associate a bandwidth plan for application acceleration with a Smart Access Gateway instance, make sure that the following conditions are met:</p>
      * <ul>
-     * <li>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
-     * If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</li>
-     * <li>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
-     * If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</li>
-     * <li>The SAG instance to be associated is in the available state.</li>
+     * <li>If you want to associate the bandwidth plan with a Smart Access Gateway hardware instance, make sure that the version of the Smart Access Gateway device is 2.4.0 or later.
+     * If the version of your Smart Access Gateway device is earlier than 2.4.0, upgrade the device. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version</a>.</li>
+     * <li>If you want to associate the bandwidth plan with a SAG app instance, make sure that the version of the SAG app client you downloaded is 2.4.0 or later.
+     * If the version of your client is earlier than 2.4.0, upgrade the client. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the client</a>.</li>
+     * <li>The Smart Access Gateway instance that you want to associate is in the Available state.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateSmartAGWithApplicationBandwidthPackage  AssociateSmartAGWithApplicationBandwidthPackageRequest
@@ -241,6 +230,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</p>
+     * 
      * @param request the request parameters of AttachCcnInstanceToCen  AttachCcnInstanceToCenRequest
      * @return AttachCcnInstanceToCenResponse
      */
@@ -368,7 +360,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>CCN is a matrix consisting of Alibaba Cloud distributed access gateways. It is an important component of Smart Access Gateway (SAG). After you associate an SAG instance with a CCN instance, the SAG instance connects the private networks associated with Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/93667.html">Overview of Cloud Connect Network</a>.</p>
+     * <p>A Cloud Connect Network (CCN) is a device access matrix that consists of Alibaba Cloud distributed access gateways. CCN is another important component of Smart Access Gateway. After you attach Smart Access Gateway to a CCN, Smart Access Gateway can connect your on-premises network to Alibaba Cloud through the CCN via network connectivity. For more information, see <a href="https://help.aliyun.com/document_detail/93667.html">Cloud Connect Network overview</a>.</p>
      * 
      * @param request the request parameters of CreateCloudConnectNetwork  CreateCloudConnectNetworkRequest
      * @return CreateCloudConnectNetworkResponse
@@ -442,12 +434,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>  Only SAG-1000 devices whose software version is 2.7.0 or later support the probing feature.</p>
-     * <ul>
-     * <li>The SAG instance must have the deep packet inspection (DPI) feature enabled. You can call the <a href="https://help.aliyun.com/document_detail/476404.html">SetAdvancedMonitorState</a> operation to enable or disable the DPI feature.</li>
-     * </ul>
-     * 
      * @param request the request parameters of CreateProbeTask  CreateProbeTaskRequest
      * @return CreateProbeTaskResponse
      */
@@ -503,8 +489,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Prerequisites</h2>
-     * <p>A traffic throttling rule is created. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</p>
+     * <p>Before you create 5-tuple rules for a QoS policy, make sure that you have created a bandwidth throttling rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</p>
      * 
      * @param request the request parameters of CreateQosPolicy  CreateQosPolicyRequest
      * @return CreateQosPolicyResponse
@@ -728,12 +713,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following rules:</p>
+     * <p>Before you delete an enterprise code, note the following information:</p>
      * <ul>
-     * <li>You cannot delete default enterprise codes.
-     * To delete a default enterprise code, change it to a custom enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</li>
-     * <li>You cannot delete enterprise codes that are associated with a Smart Access Gateway (SAG) APP instance.
-     * To delete an enterprise code that is associated with an SAG APP instance, associate the SAG APP instance with another enterprise code, and then delete the enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</li>
+     * <li>You cannot delete the default enterprise code.
+     * If the enterprise code you want to delete is the default enterprise code, change the default enterprise code to a regular enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</li>
+     * <li>You cannot delete an enterprise code that is attached to a Smart Access Gateway app instance.
+     * If the enterprise code you want to delete has an attached Smart Access Gateway app instance, change the enterprise code of the Smart Access Gateway app instance to another enterprise code and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteEnterpriseCode  DeleteEnterpriseCodeRequest
@@ -935,10 +920,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</p>
      * <ul>
-     * <li>The SAG instance that you want to delete is locked due to overdue payments.</li>
-     * <li>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</li>
+     * <li>The Smart Access Gateway instance you want to delete is a hardware instance or a vCPE instance.</li>
+     * <li>The Smart Access Gateway instance you want to delete is in the financial lock state.</li>
+     * <li>The Smart Access Gateway instance you want to delete is not associated with any Cloud Connect Network (CCN) or Virtual Border Router (VBR) instances. If the instance is associated with network instances, disassociate them first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Disassociate a network instance</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteSmartAccessGateway  DeleteSmartAccessGatewayRequest
@@ -1949,6 +1934,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</p>
+     * 
      * @param request the request parameters of DetachCcnInstanceFromCen  DetachCcnInstanceFromCenRequest
      * @return DetachCcnInstanceFromCenResponse
      */
@@ -2094,7 +2082,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you call <strong>DissociateSmartAGFromApplicationBandwidthPackage</strong>, you can set the <strong>SmartAGId</strong> parameter to specify an SAG instance, or set the <strong>SmartAGIdList</strong> to specify multiple SAG instances.</p>
+     * <p>When you call the <strong>DissociateSmartAGFromApplicationBandwidthPackage</strong> operation, you can specify the <strong>SmartAGId</strong> parameter to disassociate a bandwidth plan for application acceleration from a specified Smart Access Gateway instance. You can also specify the <strong>SmartAGIdList</strong> parameter to disassociate the bandwidth plan for application acceleration from multiple Smart Access Gateway instances at the same time.</p>
      * 
      * @param request the request parameters of DissociateSmartAGFromApplicationBandwidthPackage  DissociateSmartAGFromApplicationBandwidthPackageRequest
      * @return DissociateSmartAGFromApplicationBandwidthPackageResponse
@@ -2436,8 +2424,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Background information</h2>
-     * <p>If you have configured an application-aware access control list (ACL) or a quality of service (QoS) policy and associated it with a Smart Access Gateway (SAG) instance, you can call this operation to query whether the ACL rules or 5-tuples in the QoS policy are applied to the SAG instance. If settings are not applied to the SAG instance, the error information is returned.</p>
+     * <p>If you have configured an application-based access control instance or a quality of service (QoS) policy instance and associated it with a Smart Access Gateway instance, you can invoke this operation to check whether the access control rules or 5-tuple rules of the QoS policy that you created are successfully applied to the destination Smart Access Gateway instance. If any configurations fail to be applied, this operation returns the configuration exception information.</p>
      * 
      * @param request the request parameters of ListDpiConfigError  ListDpiConfigErrorRequest
      * @return ListDpiConfigErrorResponse
@@ -2476,13 +2463,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports the following features:</p>
+     * <p>This operation lets you:</p>
      * <ul>
-     * <li>Queries the information about all applications supported by the SAG instance in a specified region.</li>
-     * <li>Queries the information about an application by application ID in a specified region.</li>
-     * <li>Queries the information about an application by application name in a specified region.</li>
-     * <li>Queries the information about an application group by group ID in a specified region.
-     * If this is the first time you call this operation, we recommend that you query all applications supported by the SAG instance in the specified region by region ID. Then, you can query the information about a specified application.</li>
+     * <li>Query all applications supported by SAG in a specified region.</li>
+     * <li>Query a specific application by its ID in a specified region.</li>
+     * <li>Query a specific application by its name in a specified region.</li>
+     * <li>Query all applications in a specific application group by the group ID in a specified region.
+     * If this is the first time you call this operation, we recommend that you query all applications supported by SAG in a region. This helps you obtain the information required for subsequent queries of specific applications.</li>
      * </ul>
      * 
      * @param request the request parameters of ListDpiSignatures  ListDpiSignaturesRequest
@@ -3257,7 +3244,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call <code>RoamClientUser</code>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</p>
+     * <p>Before you invoke the <code>RoamClientUser</code> operation, understand the SAG app roaming feature and its description. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure client roaming</a>.</p>
      * 
      * @param request the request parameters of RoamClientUser  RoamClientUserRequest
      * @return RoamClientUserResponse
@@ -3513,7 +3500,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</p>
+     * <p>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the administrator password of the Smart Access Gateway device.</p>
      * 
      * @param request the request parameters of UpdateSmartAccessGatewayAdminPassword  UpdateSmartAccessGatewayAdminPasswordRequest
      * @return UpdateSmartAccessGatewayAdminPasswordResponse
@@ -3614,6 +3601,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the OSPF dynamic routing protocol configurations of Smart Access Gateway devices.</p>
+     * 
      * @param request the request parameters of UpdateSmartAccessGatewayOspfRoute  UpdateSmartAccessGatewayOspfRouteRequest
      * @return UpdateSmartAccessGatewayOspfRouteResponse
      */
@@ -3750,7 +3740,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</p>
+     * <p>Currently, only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support querying the DNS information of Smart Access Gateway devices.</p>
      * 
      * @param request the request parameters of ViewSmartAccessGatewayDns  ViewSmartAccessGatewayDnsRequest
      * @return ViewSmartAccessGatewayDnsResponse
@@ -3789,7 +3779,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</p>
+     * <p>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support retrieving the global routing protocol of a Smart Access Gateway device.</p>
      * 
      * @param request the request parameters of ViewSmartAccessGatewayGlobalRouteProtocol  ViewSmartAccessGatewayGlobalRouteProtocolRequest
      * @return ViewSmartAccessGatewayGlobalRouteProtocolResponse
@@ -3830,6 +3820,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can query the list of ports that have a routable protocol enabled only on SCG5000 and SCG5000-5G devices of version 3.4.2 or later.</p>
+     * 
      * @param request the request parameters of ViewSmartAccessGatewayPortRouteProtocol  ViewSmartAccessGatewayPortRouteProtocolRequest
      * @return ViewSmartAccessGatewayPortRouteProtocolResponse
      */

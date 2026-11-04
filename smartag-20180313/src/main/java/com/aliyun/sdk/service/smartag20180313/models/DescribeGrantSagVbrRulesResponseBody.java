@@ -106,7 +106,7 @@ public class DescribeGrantSagVbrRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the authorization rule.</p>
+         * GrantRules.
          */
         public Builder grantRules(GrantRules grantRules) {
             this.grantRules = grantRules;
@@ -294,14 +294,7 @@ public class DescribeGrantSagVbrRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the SAG instance is associated with the VBR. Valid values:</p>
-             * <ul>
-             * <li><strong>false</strong>: not associated.</li>
-             * <li><strong>true</strong>: associated.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Bound.
              */
             public Builder bound(Boolean bound) {
                 this.bound = bound;
@@ -309,10 +302,7 @@ public class DescribeGrantSagVbrRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the rule was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1600743723000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -320,10 +310,7 @@ public class DescribeGrantSagVbrRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the authorization rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sgv-3x8djyem7vqh70****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -331,10 +318,7 @@ public class DescribeGrantSagVbrRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-0nnteglltw6z4b****</p>
+             * SmartAGId.
              */
             public Builder smartAGId(String smartAGId) {
                 this.smartAGId = smartAGId;
@@ -342,10 +326,7 @@ public class DescribeGrantSagVbrRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID (UID) of the account to which the SAG instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1231571212121212</p>
+             * SmartAGUid.
              */
             public Builder smartAGUid(Long smartAGUid) {
                 this.smartAGUid = smartAGUid;
@@ -353,10 +334,7 @@ public class DescribeGrantSagVbrRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VBR.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vbr-bp13gtbhdp0pfqg6s****</p>
+             * VbrInstanceId.
              */
             public Builder vbrInstanceId(String vbrInstanceId) {
                 this.vbrInstanceId = vbrInstanceId;
@@ -364,10 +342,7 @@ public class DescribeGrantSagVbrRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the VBR is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * VbrRegionId.
              */
             public Builder vbrRegionId(String vbrRegionId) {
                 this.vbrRegionId = vbrRegionId;
@@ -375,10 +350,7 @@ public class DescribeGrantSagVbrRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID (UID) of the VBR.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1231571212121212</p>
+             * VbrUid.
              */
             public Builder vbrUid(Long vbrUid) {
                 this.vbrUid = vbrUid;

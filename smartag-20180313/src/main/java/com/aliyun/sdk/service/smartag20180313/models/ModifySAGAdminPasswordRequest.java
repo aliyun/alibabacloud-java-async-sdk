@@ -179,10 +179,10 @@ public class ModifySAGAdminPasswordRequest extends Request {
         }
 
         /**
-         * <p>The new logon password for the SAG device.</p>
-         * <p>The password must be 8 to 30 characters in length and can contain letters, digits, and underscores (_).</p>
+         * <p>The new logon password of the Smart Access Gateway device.</p>
+         * <p>Password format requirements: The password must be 8 to 30 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (_).</p>
          * <blockquote>
-         * <p> In the example, asterisks (*) are used to conceal the real password. This does not mean that the password supports asterisks (*). The actual format requirement prevails.</p>
+         * <p>Asterisks (\<em>) are used in the sample value to mask the actual password. This does not mean that asterisks (\</em>) are supported in the password. Specify the password based on the format requirements.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -196,7 +196,7 @@ public class ModifySAGAdminPasswordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class ModifySAGAdminPasswordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The Smart Access Gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class ModifySAGAdminPasswordRequest extends Request {
         }
 
         /**
-         * <p>The serial number (SN) of the SAG device.</p>
+         * <p>The serial number of the Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -305,6 +305,8 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         } 
 
         /**
+         * <p>The OSPF area ID.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>2147483647</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -317,6 +319,15 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
+         * <p>The authentication type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NONE</strong>: disables authentication.</p>
+         * </li>
+         * <li><p><strong>CLEARTEXT</strong>: uses plaintext authentication.</p>
+         * </li>
+         * <li><p><strong>MD5</strong>: uses MD5 authentication.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,7 +340,16 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * CrossAccount.
+         * <p>Specifies whether to query only cross-account Smart Access Gateway instances. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong> (default): no.</p>
+         * </li>
+         * <li><p><strong>true</strong>: yes.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder crossAccount(Boolean crossAccount) {
             this.putQueryParameter("CrossAccount", crossAccount);
@@ -338,6 +358,8 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
+         * <p>The OSPF dead interval. Unit: seconds.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -350,6 +372,8 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
+         * <p>The interval at which Hello packets are sent. Unit: seconds.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -362,7 +386,13 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * InterfaceName.
+         * <p>The port name.</p>
+         * <blockquote>
+         * <p>This parameter does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder interfaceName(String interfaceName) {
             this.putQueryParameter("InterfaceName", interfaceName);
@@ -371,7 +401,14 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * Md5Key.
+         * <p>The value of the MD5 key.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>47</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>AuthenticationType</strong> is set to <strong>MD5</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder md5Key(String md5Key) {
             this.putQueryParameter("Md5Key", md5Key);
@@ -380,7 +417,14 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * Md5KeyId.
+         * <p>The ID of the MD5 key.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>2147483647</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>AuthenticationType</strong> is set to <strong>MD5</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder md5KeyId(Integer md5KeyId) {
             this.putQueryParameter("Md5KeyId", md5KeyId);
@@ -389,7 +433,13 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * Networks.
+         * <p>The CIDR block.</p>
+         * <blockquote>
+         * <p>This parameter does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.0/24</p>
          */
         public Builder networks(String networks) {
             this.putQueryParameter("Networks", networks);
@@ -398,7 +448,13 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * OspfCost.
+         * <p>The OSPF route cost.</p>
+         * <blockquote>
+         * <p>This parameter does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder ospfCost(Integer ospfCost) {
             this.putQueryParameter("OspfCost", ospfCost);
@@ -407,7 +463,13 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * OspfNetworkType.
+         * <p>The OSPF area type.</p>
+         * <blockquote>
+         * <p>This parameter does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NSSA</p>
          */
         public Builder ospfNetworkType(String ospfNetworkType) {
             this.putQueryParameter("OspfNetworkType", ospfNetworkType);
@@ -416,7 +478,14 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password for plaintext authentication.</p>
+         * <p>The password must be 1 to 8 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>AuthenticationType</strong> is set to <strong>CLEARTEXT</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>duuf****</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -425,7 +494,13 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * RedistributeProtocol.
+         * <p>The route redistribution protocol.</p>
+         * <blockquote>
+         * <p>This parameter does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>OSPF</p>
          */
         public Builder redistributeProtocol(String redistributeProtocol) {
             this.putQueryParameter("RedistributeProtocol", redistributeProtocol);
@@ -434,6 +509,8 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the Smart Access Gateway instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to obtain region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -446,7 +523,10 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
-         * ResourceUid.
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109790620697****</p>
          */
         public Builder resourceUid(String resourceUid) {
             this.putQueryParameter("ResourceUid", resourceUid);
@@ -455,6 +535,7 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
+         * <p>The OSPF router ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -467,6 +548,7 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
+         * <p>The Smart Access Gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -479,6 +561,7 @@ public class UpdateSmartAccessGatewayOspfRouteRequest extends Request {
         }
 
         /**
+         * <p>The serial number of the Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -149,7 +149,7 @@ public class DescribeClientUserDNSRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG app instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway app instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class DescribeClientUserDNSRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG app instance.</p>
+         * <p>The instance ID of the Smart Access Gateway app instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

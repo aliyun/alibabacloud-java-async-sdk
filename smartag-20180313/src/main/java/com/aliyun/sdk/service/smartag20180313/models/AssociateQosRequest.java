@@ -177,7 +177,7 @@ public class AssociateQosRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the QoS policy belongs.</p>
+         * <p>The region ID of the QoS policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class AssociateQosRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance to which the QoS policy is to be applied.</p>
+         * <p>The Smart Access Gateway instance ID to which the QoS policy is applied.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

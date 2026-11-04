@@ -67,7 +67,7 @@ public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9552AD68-18EA-4074-B27D-40040FBA9683</p>
@@ -78,7 +78,7 @@ public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics of data transfer.</p>
+         * SagStatistics.
          */
         public Builder sagStatistics(SagStatistics sagStatistics) {
             this.sagStatistics = sagStatistics;
@@ -157,10 +157,7 @@ public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The amount of data consumed. Unit: byte.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12</p>
+             * TotalBytes.
              */
             public Builder totalBytes(String totalBytes) {
                 this.totalBytes = totalBytes;
@@ -168,10 +165,7 @@ public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remaining quota of the free data transfer plan. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * TotalLeaveBytes.
              */
             public Builder totalLeaveBytes(String totalLeaveBytes) {
                 this.totalLeaveBytes = totalLeaveBytes;
@@ -179,10 +173,7 @@ public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the client account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>doctest</p>
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

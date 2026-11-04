@@ -159,7 +159,7 @@ public class BindSmartAccessGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CCN instance with which you want to associate the SAG instance.</p>
+         * <p>The ID of the Cloud Connect Network (CCN).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class BindSmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -220,7 +220,7 @@ public class BindSmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The ID of the Smart Access Gateway (SAG) instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +233,7 @@ public class BindSmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the SAG instance belongs.</p>
+         * <p>The user ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1250123456123456</p>

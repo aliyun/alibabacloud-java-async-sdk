@@ -139,7 +139,7 @@ public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the SAG instance.</p>
+         * SmartAccessGateways.
          */
         public Builder smartAccessGateways(SmartAccessGateways smartAccessGateways) {
             this.smartAccessGateways = smartAccessGateways;
@@ -229,10 +229,7 @@ public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sdggd111</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -240,10 +237,7 @@ public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-00uc4vgxch1zsu****</p>
+             * SmartAGId.
              */
             public Builder smartAGId(String smartAGId) {
                 this.smartAGId = smartAGId;
@@ -251,10 +245,7 @@ public class DescribeBindableSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID (UID) of the Alibaba Cloud account to which the SAG instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>168840159596****</p>
+             * SmartAGUid.
              */
             public Builder smartAGUid(Long smartAGUid) {
                 this.smartAGUid = smartAGUid;

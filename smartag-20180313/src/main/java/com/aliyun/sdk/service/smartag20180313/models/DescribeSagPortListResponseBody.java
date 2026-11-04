@@ -80,7 +80,7 @@ public class DescribeSagPortListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of the port information.</p>
+         * <p>The list of port information.</p>
          */
         public Builder ports(java.util.List<Ports> ports) {
             this.ports = ports;
@@ -88,7 +88,7 @@ public class DescribeSagPortListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CE6642D4-21EB-4168-9BF9-F217953F9892</p>
@@ -99,7 +99,7 @@ public class DescribeSagPortListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the query task.</p>
+         * <p>The status of the query task.</p>
          */
         public Builder taskStates(java.util.List<TaskStates> taskStates) {
             this.taskStates = taskStates;
@@ -191,7 +191,7 @@ public class DescribeSagPortListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Mac address of the port.</p>
+             * <p>The MAC address of the port.</p>
              * 
              * <strong>example:</strong>
              * <p>c4:00:ad:a2:f5:****</p>
@@ -202,7 +202,7 @@ public class DescribeSagPortListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the port.</p>
+             * <p>The port name.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -213,13 +213,14 @@ public class DescribeSagPortListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Port role:</p>
+             * <p>The port role. Valid values:</p>
              * <ul>
-             * <li><strong>NONE</strong>: No role is assigned to the port.</li>
-             * <li><strong>WAN</strong>: The port is used as a WAN port. The WAN port supports a Dynamic Host Configuration Protocol (DHCP) client, PPPoE, or a static IP address to access the Internet.</li>
-             * <li><strong>LAN</strong>: The port is used as a LAN port. The LAN port supports a DHCP server or a static IP address to connect to a local terminal or switch.</li>
-             * <li><strong>ECC</strong>: The port is used as a leased line port to connect to a leased line.</li>
-             * <li><strong>MGT</strong>: The port is used as the management port.</li>
+             * <li><strong>NONE</strong>: The port role is unassigned.</li>
+             * <li><strong>WAN</strong>: The port is a WAN port. A WAN port is used to connect to the Internet and supports DHCP client, PPPoE, and static IP access methods.</li>
+             * <li><strong>LAN</strong>: The port is a LAN port. A LAN port is used to connect to local clients or switches and supports DHCP server and static IP access methods.</li>
+             * <li><strong>ECC</strong>: The port is a dedicated connection port used to connect to a dedicated connection.</li>
+             * <li><strong>MGT</strong>: The port is a management port.</li>
+             * <li><strong>CELLULAR</strong>: The port is a 4G port.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -231,11 +232,11 @@ public class DescribeSagPortListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Port states:</p>
+             * <p>The port status. Valid values:</p>
              * <ul>
              * <li><strong>Up</strong>: The port is enabled.</li>
              * <li><strong>Down</strong>: The port is disabled.</li>
-             * <li><strong>Unavailable</strong>: The SAG device is disconnected from Alibaba Cloud.</li>
+             * <li><strong>Unavailable</strong>: The device is offline.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -343,7 +344,7 @@ public class DescribeSagPortListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code. 200 indicates that the query task is successful.</p>
+             * <p>The error code. A value of 200 indicates that the query task is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -354,7 +355,7 @@ public class DescribeSagPortListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. Successful indicates that the query task is successful.</p>
+             * <p>The error message. A value of Successful indicates that the query task is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>Successful</p>
@@ -365,17 +366,17 @@ public class DescribeSagPortListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Asynchronous task states:</p>
+             * <p>The status of the asynchronous task. Valid values:</p>
              * <ul>
              * <li><strong>Initialized</strong>: The query task is initialized.</li>
-             * <li><strong>Offline</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud continues to assign the query task to the SAG device.</li>
-             * <li><strong>Succeed</strong>: Alibaba Cloud has assigned the query task to the SAG device.</li>
-             * <li><strong>Processing</strong>: Alibaba Cloud is assigning the query task to the SAG device.</li>
-             * <li><strong>VersionNotSupport</strong>: not supported by the current version of the SAG device.</li>
-             * <li><strong>BuildRequestError</strong>: not supported by the control and management center in the cloud.</li>
-             * <li><strong>HardwareError</strong>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</li>
+             * <li><strong>Offline</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device goes online.</li>
+             * <li><strong>Succeed</strong>: The query task is delivered.</li>
+             * <li><strong>Processing</strong>: The query task is being delivered.</li>
+             * <li><strong>VersionNotSupport</strong>: The current version of the Smart Access Gateway device does not support this feature.</li>
+             * <li><strong>BuildRequestError</strong>: The management and control system does not support this operation.</li>
+             * <li><strong>HardwareError</strong>: The query task failed to be delivered due to a device error.</li>
              * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
-             * <li><strong>OfflineNotConfiged</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud does not assign the query task to the SAG device.</li>
+             * <li><strong>OfflineNotConfiged</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered after the device goes online.</li>
              * </ul>
              * 
              * <strong>example:</strong>

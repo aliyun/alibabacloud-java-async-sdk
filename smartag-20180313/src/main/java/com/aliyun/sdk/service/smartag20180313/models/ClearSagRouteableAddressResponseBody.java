@@ -54,7 +54,7 @@ public class ClearSagRouteableAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AEEC8A5A-360E-4865-82D4-38CDE46445FB</p>

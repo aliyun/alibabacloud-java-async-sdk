@@ -148,7 +148,7 @@ public class DescribeSagOnlineClientStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG app instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway app instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,10 @@ public class DescribeSagOnlineClientStatisticsRequest extends Request {
         }
 
         /**
-         * SmartAGIds.
+         * <p>The instance IDs of the Smart Access Gateway app instances. Maximum value of N: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag-va03wf4l4idaj*****</p>
          */
         public Builder smartAGIds(java.util.List<String> smartAGIds) {
             this.putQueryParameter("SmartAGIds", smartAGIds);

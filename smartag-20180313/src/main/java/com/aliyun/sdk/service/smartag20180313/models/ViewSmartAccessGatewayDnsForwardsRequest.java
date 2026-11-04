@@ -90,7 +90,7 @@ public class ViewSmartAccessGatewayDnsForwardsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region in which the SAG instance resides.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ViewSmartAccessGatewayDnsForwardsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ViewSmartAccessGatewayDnsForwardsRequest extends Request {
         }
 
         /**
-         * <p>The serial number (SN) of the device.</p>
+         * <p>The serial number of the device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

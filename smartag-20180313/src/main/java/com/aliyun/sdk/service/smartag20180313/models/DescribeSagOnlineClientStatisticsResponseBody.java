@@ -67,7 +67,7 @@ public class DescribeSagOnlineClientStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9EC839B6-0EA5-4F19-A4B7-A9E465D057AE</p>
@@ -78,7 +78,7 @@ public class DescribeSagOnlineClientStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the clients that are connected to Alibaba Cloud.</p>
+         * SagStatistics.
          */
         public Builder sagStatistics(SagStatistics sagStatistics) {
             this.sagStatistics = sagStatistics;
@@ -144,10 +144,7 @@ public class DescribeSagOnlineClientStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of clients that are connected to Alibaba Cloud through the specified SAG APP instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * OnlineCount.
              */
             public Builder onlineCount(String onlineCount) {
                 this.onlineCount = onlineCount;
@@ -155,10 +152,7 @@ public class DescribeSagOnlineClientStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG app instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-va03wf4l4idaj*****</p>
+             * SmartAGId.
              */
             public Builder smartAGId(String smartAGId) {
                 this.smartAGId = smartAGId;

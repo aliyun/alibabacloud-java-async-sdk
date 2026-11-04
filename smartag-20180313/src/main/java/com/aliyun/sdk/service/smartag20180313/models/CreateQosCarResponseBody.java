@@ -184,7 +184,7 @@ public class CreateQosCarResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The description of the traffic throttling rule.</p>
+         * <p>The description of the QoS rate limiting rule.</p>
          * 
          * <strong>example:</strong>
          * <p>Qosdesc</p>
@@ -195,10 +195,12 @@ public class CreateQosCarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the traffic throttling rule. Valid values:</p>
+         * <p>The type of rate limiting. Valid values:</p>
          * <ul>
-         * <li><strong>Absolute</strong>: throttles traffic based on a specific range of bandwidth.</li>
-         * <li><strong>Percent</strong>: throttles traffic based on a specific range of bandwidth percentage.</li>
+         * <li><p><strong>Absolute</strong>: by bandwidth value.</p>
+         * </li>
+         * <li><p><strong>Percent</strong>: by percentage.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +213,7 @@ public class CreateQosCarResponseBody extends TeaModel {
 
         /**
          * <p>The maximum bandwidth value. Unit: Mbit/s.</p>
-         * <p>This parameter is returned when <strong>LimitType</strong> is set to <strong>Absolute</strong>.</p>
+         * <p>This parameter is required when <strong>LimitType</strong> is set to <strong>Absolute</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -234,7 +236,7 @@ public class CreateQosCarResponseBody extends TeaModel {
 
         /**
          * <p>The minimum bandwidth value. Unit: Mbit/s.</p>
-         * <p>This parameter is returned when <strong>LimitType</strong> is set to <strong>Absolute</strong>.</p>
+         * <p>This parameter is required when <strong>LimitType</strong> is set to <strong>Absolute</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -256,10 +258,12 @@ public class CreateQosCarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of bandwidth when traffic is throttled based on bandwidth percentage. Valid values:</p>
+         * <p>The bandwidth type when rate limiting by percentage. Valid values:</p>
          * <ul>
-         * <li><strong>CcnBandwidth</strong>: CCN bandwidth</li>
-         * <li><strong>InternetUpBandwidth</strong>: total Internet bandwidth</li>
+         * <li><p><strong>CcnBandwidth</strong>: CCN bandwidth.</p>
+         * </li>
+         * <li><p><strong>InternetUpBandwidth</strong>: total Internet bandwidth.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +275,7 @@ public class CreateQosCarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The priority value of the traffic throttling rule.</p>
+         * <p>The priority of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -282,7 +286,7 @@ public class CreateQosCarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the traffic throttling rule.</p>
+         * <p>The instance ID of the QoS rate limiting rule.</p>
          * 
          * <strong>example:</strong>
          * <p>qoscar-n5k8g97lihlph****</p>
@@ -293,7 +297,7 @@ public class CreateQosCarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the QoS policy.</p>
+         * <p>The instance ID of the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-xitd8690ucu8ro****</p>
@@ -304,7 +308,7 @@ public class CreateQosCarResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AC13E8FF-4D61-40AD-868E-817F2D3AC86A</p>

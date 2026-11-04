@@ -248,7 +248,7 @@ public class DescribeDnatEntriesRequest extends Request {
         /**
          * <p>The ID of the SAG instance.</p>
          * <blockquote>
-         * <p> Only SAG customer-premises equipment (CPE) instances are supported.</p>
+         * <p>Only SAG customer-premises equipment (CPE) instances are supported.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -264,8 +264,10 @@ public class DescribeDnatEntriesRequest extends Request {
         /**
          * <p>The type of the DNAT entry. Valid values:</p>
          * <ul>
-         * <li><strong>Intranet</strong>: translates the IP address to a specific internal IP address. This is the default value.</li>
-         * <li><strong>Internet</strong>: translates the IP address to a specific public IP address.</li>
+         * <li><p><strong>Intranet</strong>: translates the IP address to a specific internal IP address. This is the default value.</p>
+         * </li>
+         * <li><p><strong>Internet</strong>: translates the IP address to a specific public IP address.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

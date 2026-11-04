@@ -128,7 +128,7 @@ public class DescribeQosesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of QoS policies.</p>
+         * Qoses.
          */
         public Builder qoses(Qoses qoses) {
             this.qoses = qoses;
@@ -268,10 +268,7 @@ public class DescribeQosesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the QoS policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>description</p>
+             * QosDescription.
              */
             public Builder qosDescription(String qosDescription) {
                 this.qosDescription = qosDescription;
@@ -279,10 +276,7 @@ public class DescribeQosesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the QoS policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qos-oek3r2cmvk7m8q****</p>
+             * QosId.
              */
             public Builder qosId(String qosId) {
                 this.qosId = qosId;
@@ -290,10 +284,7 @@ public class DescribeQosesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the QoS policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zxtest</p>
+             * QosName.
              */
             public Builder qosName(String qosName) {
                 this.qosName = qosName;
@@ -301,10 +292,7 @@ public class DescribeQosesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the QoS policy belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfm2iu4fnc****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -312,10 +300,7 @@ public class DescribeQosesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the SAG instances to which the QoS policy is applied.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * SagCount.
              */
             public Builder sagCount(String sagCount) {
                 this.sagCount = sagCount;
@@ -323,10 +308,7 @@ public class DescribeQosesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the SAG instances to which the QoS policy is applied.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-x34wj76fe0vhw*****,sag-jp04l844chg16*****</p>
+             * SmartAGIds.
              */
             public Builder smartAGIds(String smartAGIds) {
                 this.smartAGIds = smartAGIds;

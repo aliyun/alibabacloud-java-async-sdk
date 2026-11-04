@@ -176,7 +176,7 @@ public class ModifySagUserDnsRequest extends Request {
         /**
          * <p>The IP address of the primary DNS server.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the IP address of the existing DNS server will be cleared.</p>
+         * <p>If you do not specify this parameter, the DNS configuration is cleared.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class ModifySagUserDnsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class ModifySagUserDnsRequest extends Request {
         /**
          * <p>The IP address of the secondary DNS server.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the IP address of the existing DNS server will be cleared.</p>
+         * <p>If you do not specify this parameter, the secondary DNS configuration is cleared.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class ModifySagUserDnsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class ModifySagUserDnsRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device associated with the SAG instance.</p>
+         * <p>The serial number of the bound Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

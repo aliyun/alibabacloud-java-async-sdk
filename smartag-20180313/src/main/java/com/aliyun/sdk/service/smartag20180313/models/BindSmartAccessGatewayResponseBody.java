@@ -54,7 +54,7 @@ public class BindSmartAccessGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8A3FF8DD-B27D-4ED2-B032-5EF90B38195D</p>

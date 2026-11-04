@@ -159,7 +159,19 @@ public class ModifyClientUserDNSRequest extends Request {
         } 
 
         /**
-         * AppDNS.
+         * <p>The IP addresses of the primary and secondary DNS servers that the client uses when it connects to a private network.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the client uses PrivateZone to access Alibaba Cloud, the DNS server IP addresses are 100.100.2.136 and 100.100.2.138.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>DNS configuration is supported only on Android and macOS clients, version 2.1.1 or later.</li>
+         * <li>This parameter is optional. If you do not specify this parameter, the system deletes the existing DNS configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100.XX.XX.100</p>
          */
         public Builder appDNS(java.util.List<String> appDNS) {
             this.putQueryParameter("AppDNS", appDNS);
@@ -186,7 +198,13 @@ public class ModifyClientUserDNSRequest extends Request {
         }
 
         /**
-         * RecoveredDNS.
+         * <p>The IP addresses of the primary and secondary DNS servers to use after the client disconnects from the private network.</p>
+         * <blockquote>
+         * <p>This feature is not yet available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100.XX.XX.110</p>
          */
         public Builder recoveredDNS(java.util.List<String> recoveredDNS) {
             this.putQueryParameter("RecoveredDNS", recoveredDNS);
@@ -195,7 +213,7 @@ public class ModifyClientUserDNSRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG app instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway app instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +244,7 @@ public class ModifyClientUserDNSRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG app instance.</p>
+         * <p>The ID of the Smart Access Gateway app instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

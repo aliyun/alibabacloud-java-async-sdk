@@ -106,7 +106,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries returned per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ADE68CEE-8E4F-4D0B-9EE9-2C2FFAABF41F</p>
@@ -139,7 +139,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of SAG instances.</p>
+         * SmartAccessGateways.
          */
         public Builder smartAccessGateways(SmartAccessGateways smartAccessGateways) {
             this.smartAccessGateways = smartAccessGateways;
@@ -147,7 +147,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -294,10 +294,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The bandwidth value of the connection. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50M</p>
+             * Bandwidth.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -305,14 +302,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product type. Valid values:</p>
-             * <ul>
-             * <li><strong>bandwidth</strong>: The SAG instance and bandwidth resources can be separately purchased.</li>
-             * <li><strong>smartag</strong>: The SAG instance and bandwidth resources must be purchased as a bundle.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>smartag</p>
+             * CommodityType.
              */
             public Builder commodityType(String commodityType) {
                 this.commodityType = commodityType;
@@ -320,11 +310,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the connection expires. Unit: milliseconds.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1628265600000</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -332,10 +318,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the product instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-6z21oj0vjjrx6s****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -343,10 +326,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance associated with the connection.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn-iz26o9zye6lhoo****</p>
+             * RelateInstanceId.
              */
             public Builder relateInstanceId(String relateInstanceId) {
                 this.relateInstanceId = relateInstanceId;
@@ -354,10 +334,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance with which the connection is associated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shanghai</p>
+             * RelateInstanceRegionId.
              */
             public Builder relateInstanceRegionId(String relateInstanceRegionId) {
                 this.relateInstanceRegionId = relateInstanceRegionId;
@@ -365,23 +342,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the network connection.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><strong>Ordered</strong>: The order is to be shipped.</li>
-             * <li><strong>Delivered</strong>: The order is shipped.</li>
-             * <li><strong>Offline</strong>: The connection is disconnected.</li>
-             * <li><strong>Active</strong>: The SAG device is available.</li>
-             * <li><strong>Arrearage</strong>: The SAG device is locked due to overdue payments.</li>
-             * </ul>
-             * <p>The status of the Express Connect circuit. Valid values:</p>
-             * <ul>
-             * <li><strong>normal</strong>: normal</li>
-             * <li><strong>arrears</strong>: overdue payments</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -389,14 +350,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the network connection. Valid values:</p>
-             * <ul>
-             * <li><strong>ccn</strong>: The on-premises network is connected to Alibaba Cloud through CCN.</li>
-             * <li><strong>vbr</strong>: The on-premises network is connected to Alibaba Cloud through virtual border routers (VBRs) and Express Connect circuits.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1063,10 +1017,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum bandwidth value for application acceleration. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AccelerateBandwidth.
              */
             public Builder accelerateBandwidth(Long accelerateBandwidth) {
                 this.accelerateBandwidth = accelerateBandwidth;
@@ -1074,10 +1025,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the access point for the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>238</p>
+             * AccessPointId.
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -1085,10 +1033,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ACL with which the SAG instance is associated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acl-shfhfhhfbnvkdg****</p>
+             * AclIds.
              */
             public Builder aclIds(String aclIds) {
                 this.aclIds = aclIds;
@@ -1096,10 +1041,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bandwidth plan for application acceleration that is associated with the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>abwp-7963l7iqnquyj3****</p>
+             * ApplicationBandwidthPackageId.
              */
             public Builder applicationBandwidthPackageId(String applicationBandwidthPackageId) {
                 this.applicationBandwidthPackageId = applicationBandwidthPackageId;
@@ -1107,10 +1049,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the CCN instance with which the SAG instance is associated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn-iz26o9zye6lhoo****</p>
+             * AssociatedCcnId.
              */
             public Builder associatedCcnId(String associatedCcnId) {
                 this.associatedCcnId = associatedCcnId;
@@ -1118,10 +1057,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the CCN instance associated with the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn</p>
+             * AssociatedCcnName.
              */
             public Builder associatedCcnName(String associatedCcnName) {
                 this.associatedCcnName = associatedCcnName;
@@ -1129,10 +1065,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software version of the standby SAG device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2.3.0.0</p>
+             * BackupSoftwareVersion.
              */
             public Builder backupSoftwareVersion(String backupSoftwareVersion) {
                 this.backupSoftwareVersion = backupSoftwareVersion;
@@ -1140,10 +1073,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SAG backup device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * BackupStatus.
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -1151,10 +1081,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private CIDR block of the destination network with which the on-premises network or client needs to communicate.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.0.9.0/24</p>
+             * CidrBlock.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -1162,10 +1089,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the city where the SAG device is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shanghai</p>
+             * City.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -1173,11 +1097,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the SAG instance was created. Unit: milliseconds.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1622617250000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1185,13 +1105,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data transfer plan of the SAG instance. Unit: GB.</p>
-             * <blockquote>
-             * <p> Each client account is assigned a free data transfer quota of 5 GB per month.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * DataPlan.
              */
             public Builder dataPlan(Long dataPlan) {
                 this.dataPlan = dataPlan;
@@ -1199,10 +1113,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>docdesc</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1210,14 +1121,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the DPI-based monitoring feature. Valid values:</p>
-             * <ul>
-             * <li><strong>Active</strong>: enabled</li>
-             * <li><strong>Inactive</strong>: disabled</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Inactive</p>
+             * DpiMonitorStatus.
              */
             public Builder dpiMonitorStatus(String dpiMonitorStatus) {
                 this.dpiMonitorStatus = dpiMonitorStatus;
@@ -1225,14 +1129,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the deep packet inspection (DPI) feature. Valid values:</p>
-             * <ul>
-             * <li><strong>On</strong>: enabled</li>
-             * <li><strong>Off</strong>: disabled</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Off</p>
+             * DpiStatus.
              */
             public Builder dpiStatus(String dpiStatus) {
                 this.dpiStatus = dpiStatus;
@@ -1240,14 +1137,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether DPI is enabled for the SAG instance. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: enabled</li>
-             * <li><strong>false</strong>: disabled</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * EnableAdvancedMonitor.
              */
             public Builder enableAdvancedMonitor(Boolean enableAdvancedMonitor) {
                 this.enableAdvancedMonitor = enableAdvancedMonitor;
@@ -1255,14 +1145,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether auditing is enabled for the network connection logs of the SAS app instance. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: enabled</li>
-             * <li><strong>false</strong>: disabled</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * EnableSoftwareConnectionAudit.
              */
             public Builder enableSoftwareConnectionAudit(Boolean enableSoftwareConnectionAudit) {
                 this.enableSoftwareConnectionAudit = enableSoftwareConnectionAudit;
@@ -1270,11 +1153,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the SAG instance expires. Unit: milliseconds.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1628265600000</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -1282,10 +1161,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the enterprise code associated with the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12P****</p>
+             * EnterpriseCode.
              */
             public Builder enterpriseCode(String enterpriseCode) {
                 this.enterpriseCode = enterpriseCode;
@@ -1293,16 +1169,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the SAG instance. Valid values:</p>
-             * <ul>
-             * <li><strong>sag-1000</strong>: an SAG CPE instance that is associated with an SAG-1000 device.</li>
-             * <li><strong>sag-100wm</strong>: an SAG CPE instance that is associated with an SAG-100WM device.</li>
-             * <li><strong>sag-software</strong>: an SAG app instance.</li>
-             * <li><strong>sag-vcpe</strong>: an SAG vCPE instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-100wm</p>
+             * HardwareVersion.
              */
             public Builder hardwareVersion(String hardwareVersion) {
                 this.hardwareVersion = hardwareVersion;
@@ -1310,10 +1177,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the intelligent routing policies that are associated with the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ir-7unf5nom01ygrg****</p>
+             * IRIds.
              */
             public Builder IRIds(String IRIds) {
                 this.IRIds = IRIds;
@@ -1321,10 +1185,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Identity as a Service (IDaaS) application associated with the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>idaas-cn-hangzhou-l7j0wf0crzea****</p>
+             * IdaasApplicationId.
              */
             public Builder idaasApplicationId(String idaasApplicationId) {
                 this.idaasApplicationId = idaasApplicationId;
@@ -1332,10 +1193,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IDaaS instance with which the SAG instance is associated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>idaas-cn-hangzhou-1ahixtl****</p>
+             * IdaasId.
              */
             public Builder idaasId(String idaasId) {
                 this.idaasId = idaasId;
@@ -1343,14 +1201,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the IPsec-VPN connection. Valid values:</p>
-             * <ul>
-             * <li><strong>up</strong>: normal</li>
-             * <li><strong>down</strong>: abnormal</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>up</p>
+             * IpsecStatus.
              */
             public Builder ipsecStatus(String ipsecStatus) {
                 this.ipsecStatus = ipsecStatus;
@@ -1358,10 +1209,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Internet service provider (ISP) of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>China Telecom</p>
+             * Isp.
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -1369,7 +1217,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of connections between the on-premises network and Alibaba Cloud.</p>
+             * Links.
              */
             public Builder links(Links links) {
                 this.links = links;
@@ -1377,10 +1225,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum bandwidth value of the SAG instance. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50M</p>
+             * MaxBandwidth.
              */
             public Builder maxBandwidth(String maxBandwidth) {
                 this.maxBandwidth = maxBandwidth;
@@ -1388,10 +1233,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testname</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1399,10 +1241,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location information about the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[{\&quot;adcode\&quot;:\&quot;\&quot;,\&quot;label\&quot;:\&quot;Jimo District, Qingdao, Shandong province\&quot;,\&quot;value\&quot;:\&quot;B02140800T\&quot;,\&quot;center\&quot;:\&quot;120.989576,36.487512\&quot;,\&quot;_new\&quot;:\&quot;true\&quot;}]</p>
+             * Position.
              */
             public Builder position(String position) {
                 this.position = position;
@@ -1410,10 +1249,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the QoS policy associated with the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qos-djh****</p>
+             * QosIds.
              */
             public Builder qosIds(String qosIds) {
                 this.qosIds = qosIds;
@@ -1421,10 +1257,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance that belongs to the reseller.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-v0fkpk4akfz5****</p>
+             * ResellerInstanceId.
              */
             public Builder resellerInstanceId(String resellerInstanceId) {
                 this.resellerInstanceId = resellerInstanceId;
@@ -1432,10 +1265,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the third-party reseller.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>25346073170691****</p>
+             * ResellerUid.
              */
             public Builder resellerUid(String resellerUid) {
                 this.resellerUid = resellerUid;
@@ -1443,10 +1273,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the SAG instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfm2iu4fnc****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1454,14 +1281,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method that the SAG instance uses to advertise routes to Alibaba Cloud.</p>
-             * <ul>
-             * <li><strong>static</strong>: static routing</li>
-             * <li><strong>dynamic</strong>: dynamic routing</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>static</p>
+             * RoutingStrategy.
              */
             public Builder routingStrategy(String routingStrategy) {
                 this.routingStrategy = routingStrategy;
@@ -1469,11 +1289,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time threshold. If the SAG device remains offline for the specified period of time, the SAG device is locked.</p>
-             * <p>Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3600</p>
+             * SecurityLockThreshold.
              */
             public Builder securityLockThreshold(Integer securityLockThreshold) {
                 this.securityLockThreshold = securityLockThreshold;
@@ -1481,10 +1297,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the SAG device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sage6gsdllbid****,sage6nniq3dqa****</p>
+             * SerialNumber.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -1492,10 +1305,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-6z21oj0vjjrx6s****</p>
+             * SmartAGId.
              */
             public Builder smartAGId(String smartAGId) {
                 this.smartAGId = smartAGId;
@@ -1503,10 +1313,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the SAG instance is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1210123456123456</p>
+             * SmartAGUid.
              */
             public Builder smartAGUid(Long smartAGUid) {
                 this.smartAGUid = smartAGUid;
@@ -1514,10 +1321,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The software version of the active SAG device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2.3.0.0</p>
+             * SoftwareVersion.
              */
             public Builder softwareVersion(String softwareVersion) {
                 this.softwareVersion = softwareVersion;
@@ -1525,19 +1329,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SAG instance. Valid values:</p>
-             * <ul>
-             * <li><strong>Ordered</strong>: Your order has been placed.</li>
-             * <li><strong>Delivered</strong>: Your order has been shipped.</li>
-             * <li><strong>Received</strong>: You have received the SAG device.</li>
-             * <li><strong>Returning</strong>: The order is being returned.</li>
-             * <li><strong>Active</strong>: The SAG device is active.</li>
-             * <li><strong>init</strong>: The SAG device is being initialized.</li>
-             * <li><strong>Offline</strong>: The SAG device is disconnected.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1545,10 +1337,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum upstream bandwidth of 4G network connections established by the SAG device. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * UpBandwidth4G.
              */
             public Builder upBandwidth4G(Integer upBandwidth4G) {
                 this.upBandwidth4G = upBandwidth4G;
@@ -1556,10 +1345,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum upstream bandwidth of network connections established on the WAN port of the SAG device. Unit: Mbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * UpBandwidthWan.
              */
             public Builder upBandwidthWan(Integer upBandwidthWan) {
                 this.upBandwidthWan = upBandwidthWan;
@@ -1567,10 +1353,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of client accounts for the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * UserCount.
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;
@@ -1578,14 +1361,7 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the VPN connection. Valid values:</p>
-             * <ul>
-             * <li><strong>up</strong>: normal</li>
-             * <li><strong>down</strong>: abnormal</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>down</p>
+             * VpnStatus.
              */
             public Builder vpnStatus(String vpnStatus) {
                 this.vpnStatus = vpnStatus;

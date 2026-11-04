@@ -106,7 +106,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>62F4CF10-F909-487E-8E95-BC35457C5F50</p>
@@ -139,7 +139,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The information about the client account.</p>
+         * Users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -281,10 +281,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The maximum application acceleration bandwidth allocated to the client account. Unit: Kbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * AccelerateBandwidth.
              */
             public Builder accelerateBandwidth(Long accelerateBandwidth) {
                 this.accelerateBandwidth = accelerateBandwidth;
@@ -292,10 +289,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The maximum bandwidth allocated to the client account. Unit: Kbit/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2000</p>
+             * Bandwidth.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -303,10 +297,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The IP address assigned by the system to the client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.10.10.1</p>
+             * ClientIp.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -314,14 +305,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Indicates whether the client IP address is a static IP address.</p>
-             * <ul>
-             * <li><strong>1</strong>: yes</li>
-             * <li><strong>0</strong>: no</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * IsStaticIp.
              */
             public Builder isStaticIp(Long isStaticIp) {
                 this.isStaticIp = isStaticIp;
@@ -329,14 +313,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Indicates whether the client is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: enabled</li>
-             * <li><strong>1</strong>: disabled</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * State.
              */
             public Builder state(Integer state) {
                 this.state = state;
@@ -344,10 +321,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The email address of the client account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:username@example.com">username@example.com</a></p>
+             * UserMail.
              */
             public Builder userMail(String userMail) {
                 this.userMail = userMail;
@@ -355,10 +329,7 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The username of the client account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>username</p>
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

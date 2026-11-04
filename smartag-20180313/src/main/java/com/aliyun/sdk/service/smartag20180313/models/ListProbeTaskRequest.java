@@ -172,10 +172,7 @@ public class ListProbeTaskRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -184,10 +181,7 @@ public class ListProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,10 +190,7 @@ public class ListProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the probe task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>probe-****</p>
+         * ProbeTaskId.
          */
         public Builder probeTaskId(String probeTaskId) {
             this.putQueryParameter("ProbeTaskId", probeTaskId);
@@ -208,18 +199,7 @@ public class ListProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The protocol of the probe task. Valid values:</p>
-         * <ul>
-         * <li><strong>ICMP</strong></li>
-         * <li><strong>TCP</strong></li>
-         * <li><strong>HTTP</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> Tasks that probe private networks support only ICMP and TCP.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>ICMP</p>
+         * Protocol.
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -228,12 +208,7 @@ public class ListProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the SAG instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,10 +217,7 @@ public class ListProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sag-****</p>
+         * SagId.
          */
         public Builder sagId(String sagId) {
             this.putQueryParameter("SagId", sagId);
@@ -254,10 +226,7 @@ public class ListProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the SAG instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>shanghai-office</p>
+         * SagName.
          */
         public Builder sagName(String sagName) {
             this.putQueryParameter("SagName", sagName);
@@ -266,10 +235,7 @@ public class ListProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sag****</p>
+         * Sn.
          */
         public Builder sn(String sn) {
             this.putQueryParameter("Sn", sn);
@@ -278,10 +244,7 @@ public class ListProbeTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the probe task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-ping</p>
+         * TaskName.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

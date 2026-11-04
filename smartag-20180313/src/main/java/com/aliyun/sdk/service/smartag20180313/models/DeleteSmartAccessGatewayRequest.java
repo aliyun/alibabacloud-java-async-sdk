@@ -88,7 +88,7 @@ public class DeleteSmartAccessGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the SAG instance that you want to delete.</p>
+         * <p>The instance ID of the Smart Access Gateway instance that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class DeleteSmartAccessGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

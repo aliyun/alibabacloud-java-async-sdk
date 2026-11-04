@@ -106,7 +106,7 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the permissions that the SAG instance grants to the CCN instance of another Alibaba Cloud account.</p>
+         * GrantRules.
          */
         public Builder grantRules(GrantRules grantRules) {
             this.grantRules = grantRules;
@@ -268,10 +268,7 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the CCN instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ccn-hd**********</p>
+             * CcnInstanceId.
              */
             public Builder ccnInstanceId(String ccnInstanceId) {
                 this.ccnInstanceId = ccnInstanceId;
@@ -279,10 +276,7 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID (UID) of the Alibaba Cloud account to which the CCN instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123456</p>
+             * CcnUid.
              */
             public Builder ccnUid(Long ccnUid) {
                 this.ccnUid = ccnUid;
@@ -290,10 +284,7 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the permissions were granted.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>156576751700</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -301,14 +292,7 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the CCN instance is granted permissions to manage network traffic from the SAG instance.</p>
-             * <ul>
-             * <li><strong>true</strong>: granted.</li>
-             * <li><strong>false</strong>: not granted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * GrantTrafficService.
              */
             public Builder grantTrafficService(Boolean grantTrafficService) {
                 this.grantTrafficService = grantTrafficService;
@@ -316,10 +300,7 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the SAG instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123455</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -327,10 +308,7 @@ public class DescribeGrantSagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-hdhgn*****</p>
+             * SmartAGId.
              */
             public Builder smartAGId(String smartAGId) {
                 this.smartAGId = smartAGId;

@@ -143,7 +143,7 @@ public class ViewSmartAccessGatewayDnsForwardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1914</p>
@@ -154,7 +154,7 @@ public class ViewSmartAccessGatewayDnsForwardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A DNS forwarding list.</p>
+         * <p>The list of DNS forwarding instances.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -173,7 +173,7 @@ public class ViewSmartAccessGatewayDnsForwardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -353,7 +353,7 @@ public class ViewSmartAccessGatewayDnsForwardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sagv3dnsforward-nc7qabskj17werc7su</p>
@@ -377,10 +377,10 @@ public class ViewSmartAccessGatewayDnsForwardsResponseBody extends TeaModel {
             /**
              * <p>The forwarding mode.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li>This parameter is not in use. Ignore this parameter.</li>
+             * <li>Invalid field. Ignore this field.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>first</p>
@@ -391,7 +391,7 @@ public class ViewSmartAccessGatewayDnsForwardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the egress port.</p>
+             * <p>The outbound interface index.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -402,7 +402,7 @@ public class ViewSmartAccessGatewayDnsForwardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The egress port.</p>
+             * <p>The outbound interface.</p>
              * 
              * <strong>example:</strong>
              * <p>eth0</p>
@@ -413,7 +413,7 @@ public class ViewSmartAccessGatewayDnsForwardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the egress port.</p>
+             * <p>The outbound interface type.</p>
              * 
              * <strong>example:</strong>
              * <p>PhysicalPort</p>

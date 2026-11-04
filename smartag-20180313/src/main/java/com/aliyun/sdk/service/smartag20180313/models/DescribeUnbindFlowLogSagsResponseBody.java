@@ -80,7 +80,7 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of the SAG instances.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -91,7 +91,7 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C850C10E-9856-45FF-8640-80288BA467DF</p>
@@ -102,7 +102,7 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of the SAG instances.</p>
+         * Sags.
          */
         public Builder sags(Sags sags) {
             this.sags = sags;
@@ -181,10 +181,7 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>desctest</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -192,10 +189,7 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sj1000-yf-01</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -203,10 +197,7 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-tzirqx07bvcngm****</p>
+             * SmartAGId.
              */
             public Builder smartAGId(String smartAGId) {
                 this.smartAGId = smartAGId;

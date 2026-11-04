@@ -54,7 +54,7 @@ public class DeleteSmartAccessGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E26DBAAE-A796-4A48-98B4-B45AFCD1F299</p>

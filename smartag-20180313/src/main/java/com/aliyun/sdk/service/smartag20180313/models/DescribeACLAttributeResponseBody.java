@@ -106,7 +106,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the ACL rules in the ACL.</p>
+         * Acrs.
          */
         public Builder acrs(Acrs acrs) {
             this.acrs = acrs;
@@ -114,7 +114,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of access control rule entries returned on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8F62CE77-FBA2-4F8D-AED9-0A02814EDA69</p>
@@ -147,7 +147,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of access control rule entries in the access control instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -519,10 +519,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of ACL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acl-7louazbja80bmg****</p>
+             * AclId.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -530,14 +527,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of SAG instances associated with the ACL. Valid values:</p>
-             * <ul>
-             * <li><strong>acl-hardware</strong>: SAG CPE instance</li>
-             * <li><strong>acl-software</strong>: SAG app instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>acl-hardware</p>
+             * AclType.
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -545,10 +535,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ACL rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acr-gxzxj5w9qqdf1c****</p>
+             * AcrId.
              */
             public Builder acrId(String acrId) {
                 this.acrId = acrId;
@@ -556,9 +543,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the ACL rule.</p>
-             * <p>The description must be <strong>1 to 512</strong> characters in length.</p>
-             * <p>By default, this parameter is not returned. You can call the ModifyACLRule operation to add a description for the ACL rule. Then, this parameter is included in the response.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -566,11 +551,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination CIDR block.</p>
-             * <p>The value of this parameter is specified in CIDR notation. Example: 192.168.10.0/24.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.0.0.0/0</p>
+             * DestCidr.
              */
             public Builder destCidr(String destCidr) {
                 this.destCidr = destCidr;
@@ -578,12 +559,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination port range.</p>
-             * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-             * <p>The destination port range is in one of the following formats: 1/200 or 80/80. A value of -1/-1 indicates all ports.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10000/20000</p>
+             * DestPortRange.
              */
             public Builder destPortRange(String destPortRange) {
                 this.destPortRange = destPortRange;
@@ -591,14 +567,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The direction of traffic in which the ACL rule is applied.</p>
-             * <ul>
-             * <li><strong>in</strong>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the SAG instance.</li>
-             * <li><strong>out</strong>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>out</p>
+             * Direction.
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -606,8 +575,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the application groups that match the current ACL rule.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/196754.html">ListDpiGroups</a> operation to query application group IDs and information about the applications.</p>
+             * DpiGroupIds.
              */
             public Builder dpiGroupIds(DpiGroupIds dpiGroupIds) {
                 this.dpiGroupIds = dpiGroupIds;
@@ -615,8 +583,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the applications that match the current ACL rule.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/196630.html">ListDpiSignatures</a> operation to query application IDs and information about the applications.</p>
+             * DpiSignatureIds.
              */
             public Builder dpiSignatureIds(DpiSignatureIds dpiSignatureIds) {
                 this.dpiSignatureIds = dpiSignatureIds;
@@ -624,11 +591,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the ACL rule was created.</p>
-             * <p>The timestamp is of the Long data type. If multiple ACL rules have the same priority, the rule with the earliest timestamp takes effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1580821597000</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -636,11 +599,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol used by the ACL rule.</p>
-             * <p>The supported protocols provided in this topic are for reference only. The actual protocols in the SAG console shall prevail. The value of the parameter is not case-sensitive.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>UDP</p>
+             * IpProtocol.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -648,11 +607,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ACL.</p>
-             * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>doctest</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -660,14 +615,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action of the ACL rule. Valid values:</p>
-             * <ul>
-             * <li><strong>accept</strong>: allows network traffic.</li>
-             * <li><strong>drop</strong>: blocks network traffic.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>drop</p>
+             * Policy.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -675,11 +623,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the ACL rule.</p>
-             * <p>Valid values: <strong>1 to 100</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>70</p>
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -687,11 +631,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source CIDR block.</p>
-             * <p>The value of this parameter in is specified in CIDR notation. Example: 192.168.1.0/24.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.0.0.0/0</p>
+             * SourceCidr.
              */
             public Builder sourceCidr(String sourceCidr) {
                 this.sourceCidr = sourceCidr;
@@ -699,12 +639,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source port range.</p>
-             * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-             * <p>The source port range is in one of the following formats: 1/200 or 80/80. A value of -1/-1 indicates all ports.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30000/40000</p>
+             * SourcePortRange.
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
@@ -712,14 +647,7 @@ public class DescribeACLAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the ACL rule:</p>
-             * <ul>
-             * <li><strong>LAN</strong>: The ACL rule controls network traffic transmitted through private IP addresses.</li>
-             * <li><strong>WAN</strong>: The ACL rule controls network traffic transmitted through public IP addresses.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>WAN</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

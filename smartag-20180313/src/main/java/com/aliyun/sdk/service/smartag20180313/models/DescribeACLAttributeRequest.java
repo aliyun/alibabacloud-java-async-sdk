@@ -201,7 +201,7 @@ public class DescribeACLAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ACL.</p>
+         * <p>The ID of the access control instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,10 +214,10 @@ public class DescribeACLAttributeRequest extends Request {
         }
 
         /**
-         * <p>The direction of traffic in which the ACL rule is applied. Valid values:</p>
+         * <p>The direction in which the access control rule is applied. Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the Smart Access Gateway (SAG) instance.</li>
-         * <li><strong>out</strong>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</li>
+         * <li><strong>in</strong>: inbound, which indicates traffic from external networks to the local branch where the Smart Access Gateway instance is deployed.</li>
+         * <li><strong>out</strong>: outbound, which indicates traffic from the local branch where the Smart Access Gateway instance is deployed to external networks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,10 +230,10 @@ public class DescribeACLAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the ACL.</p>
-         * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name of the access control instance.</p>
+         * <p>The name must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter or Chinese character.</p>
          * <blockquote>
-         * <p> This parameter supports fuzzy match.</p>
+         * <p>Fuzzy search is supported for this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class DescribeACLAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1255444444</p>
@@ -276,7 +276,7 @@ public class DescribeACLAttributeRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number for a paging query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,7 +288,7 @@ public class DescribeACLAttributeRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of access control rule entries to return on each page in a paging query.</p>
          * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * <p>Default value: <strong>10</strong>.</p>
          * 
@@ -302,7 +302,7 @@ public class DescribeACLAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the ACL is deployed.</p>
+         * <p>The region ID of the access control instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

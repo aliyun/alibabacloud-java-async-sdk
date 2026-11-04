@@ -118,10 +118,12 @@ public class ViewSmartAccessGatewayDnsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to query only the SAG instances that belong to another Alibaba Cloud account. Valid values:</p>
+         * <p>Specifies whether to query only Smart Access Gateway instances that belong to other accounts. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default)</li>
-         * <li><strong>true</strong></li>
+         * <li><p><strong>false</strong> (default): no.</p>
+         * </li>
+         * <li><p><strong>true</strong>: yes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,8 +136,8 @@ public class ViewSmartAccessGatewayDnsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the SAG instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +150,7 @@ public class ViewSmartAccessGatewayDnsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the SAG instance belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the Smart Access Gateway instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>109790620697****</p>
@@ -160,7 +162,7 @@ public class ViewSmartAccessGatewayDnsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Smart Access Gateway (SAG) instance.</p>
+         * <p>The Smart Access Gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,7 @@ public class ViewSmartAccessGatewayDnsRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the SAG device.</p>
+         * <p>The serial number of the Smart Access Gateway device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

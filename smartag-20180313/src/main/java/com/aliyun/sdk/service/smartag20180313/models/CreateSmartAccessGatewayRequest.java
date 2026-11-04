@@ -478,7 +478,7 @@ public class CreateSmartAccessGatewayRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Remarks</p>
+         * <p>Message</p>
          */
         public Builder buyerMessage(String buyerMessage) {
             this.putQueryParameter("BuyerMessage", buyerMessage);
@@ -632,7 +632,7 @@ public class CreateSmartAccessGatewayRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>No.XX</p>
+         * <p>No. XX</p>
          */
         public Builder receiverAddress(String receiverAddress) {
             this.putQueryParameter("ReceiverAddress", receiverAddress);
@@ -710,7 +710,7 @@ public class CreateSmartAccessGatewayRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alice</p>
+         * <p>John Doe</p>
          */
         public Builder receiverName(String receiverName) {
             this.putQueryParameter("ReceiverName", receiverName);
@@ -748,7 +748,7 @@ public class CreateSmartAccessGatewayRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhuan Tang</p>
+         * <p>Zhuantang</p>
          */
         public Builder receiverTown(String receiverTown) {
             this.putQueryParameter("ReceiverTown", receiverTown);

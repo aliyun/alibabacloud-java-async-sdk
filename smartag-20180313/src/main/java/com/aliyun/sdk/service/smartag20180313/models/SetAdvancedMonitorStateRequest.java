@@ -90,15 +90,7 @@ public class SetAdvancedMonitorStateRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the DPI feature. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
-         * </ul>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -107,12 +99,7 @@ public class SetAdvancedMonitorStateRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the SAG instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -121,11 +108,7 @@ public class SetAdvancedMonitorStateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sag-****</p>
          */
         public Builder sagId(String sagId) {
             this.putQueryParameter("SagId", sagId);

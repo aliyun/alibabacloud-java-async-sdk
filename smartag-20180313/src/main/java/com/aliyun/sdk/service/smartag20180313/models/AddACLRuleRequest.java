@@ -320,7 +320,7 @@ public class AddACLRuleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ACL.</p>
+         * <p>The ID of the access control instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,8 +333,8 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The description of the ACL rule.</p>
-         * <p>The description must be <strong>1 to 512</strong> characters in length.</p>
+         * <p>The description of the access control rule.</p>
+         * <p>The description must be <strong>1</strong> to <strong>512</strong> characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -346,8 +346,8 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The range of the destination IP addresses.</p>
-         * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.</p>
+         * <p>The destination CIDR block.</p>
+         * <p>The destination CIDR block must be in CIDR format, such as 192.168.10.0/24.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -361,8 +361,8 @@ public class AddACLRuleRequest extends Request {
 
         /**
          * <p>The destination port range.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-         * <p>Set the destination port range in one of the following formats: 1/200 or 80/80. A value of -1/-1 indicates all ports.</p>
+         * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The destination port range is in the format of 1/200 or 80/80. A value of -1/-1 specifies that all ports are allowed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -375,10 +375,10 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The direction of traffic in which the ACL rule is applied. Valid values:</p>
+         * <p>The direction in which the access control rule is applied. Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: The ACL rule controls inbound network traffic of the on-premises network that is associated with the Smart Access Gateway (SAG) instance.</li>
-         * <li><strong>out</strong>: The ACL rule controls outbound network traffic of the on-premises network that is associated with the SAG instance.</li>
+         * <li><strong>in</strong>: inbound. This value specifies traffic from external networks to the local branch where the Smart Access Gateway (SAG) instance is deployed.</li>
+         * <li><strong>out</strong>: outbound. This value specifies traffic from the local branch where the SAG instance is deployed to external networks.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -392,7 +392,11 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * DpiGroupIds.
+         * <p>The IDs of the application groups that match the access control rule.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196754.html">ListDpiGroups</a> operation to query application group IDs and the included application information. Maximum value of N: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder dpiGroupIds(java.util.List<String> dpiGroupIds) {
             this.putQueryParameter("DpiGroupIds", dpiGroupIds);
@@ -401,7 +405,11 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * DpiSignatureIds.
+         * <p>The IDs of the applications that match the access control rule.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196630.html">ListDpiSignatures</a> operation to query application IDs and the corresponding application information. Maximum value of N: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dpiSignatureIds(java.util.List<String> dpiSignatureIds) {
             this.putQueryParameter("DpiSignatureIds", dpiSignatureIds);
@@ -410,8 +418,8 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The protocol used by the ACL rule.</p>
-         * <p>The protocols that are provided in this topic are for reference only. The protocols available in the SAG console may vary. The value of the parameter is not case-sensitive.</p>
+         * <p>The protocol used by the access control rule.</p>
+         * <p>For the protocol types supported by the access control feature, refer to the console. The protocol format is not case-sensitive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -424,8 +432,8 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the ACL rule.</p>
-         * <p>The name must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name of the access control rule.</p>
+         * <p>The name must be 2 to 100 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>doctest</p>
@@ -455,10 +463,12 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The action policy of the ACL rule. Valid values:</p>
+         * <p>The authorization policy of the access control rule. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: allows network traffic.</li>
-         * <li><strong>drop</strong>: blocks the network traffic.</li>
+         * <li><p><strong>accept</strong>: Allows the traffic.</p>
+         * </li>
+         * <li><p><strong>drop</strong>: Denies the traffic.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -472,9 +482,9 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The priority of the ACL rule.</p>
-         * <p>A smaller value indicates a higher priority. If rules have the same priority, whichever applied to the SAG devices earlier takes effect.</p>
-         * <p>Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The priority of the access control rule.</p>
+         * <p>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes effect first.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -486,8 +496,8 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the ACL is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the access control instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -518,8 +528,8 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The range of the source IP addresses.</p>
-         * <p>Specify the value of this parameter in CIDR notation. Example: 192.168.1.0/24.</p>
+         * <p>The source CIDR block.</p>
+         * <p>The source CIDR block must be in CIDR format, such as 192.168.1.0/24.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -533,8 +543,8 @@ public class AddACLRuleRequest extends Request {
 
         /**
          * <p>The source port range.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>65535</strong> and <strong>-1</strong>.</p>
-         * <p>Set the source port range in one of the following formats: 1/200 or 80/80. A value of -1/-1 indicates all ports.</p>
+         * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The source port range is in the format of 1/200 or 80/80. A value of -1/-1 specifies that all ports are allowed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -547,10 +557,12 @@ public class AddACLRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the ACL rule: Valid values:</p>
+         * <p>The type of the access control rule. Valid values:</p>
          * <ul>
-         * <li><strong>LAN</strong>: The ACL rule controls network traffic transmitted through private IP addresses.</li>
-         * <li><strong>WAN</strong>: The ACL rule controls network traffic transmitted through public IP addresses.</li>
+         * <li><p><strong>LAN</strong>: private network. This is the default value. This value specifies that the access control rule is applied to traffic destined for private IP addresses.</p>
+         * </li>
+         * <li><p><strong>WAN</strong>: public network. This value specifies that the access control rule is applied to traffic destined for public IP addresses.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

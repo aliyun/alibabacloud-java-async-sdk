@@ -178,7 +178,7 @@ public class DescribeUserFlowStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The region where the SAG APP instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway app instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class DescribeUserFlowStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SAG APP instance.</p>
+         * <p>The instance ID of the Smart Access Gateway app instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,8 +222,10 @@ public class DescribeUserFlowStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The month during which the data transfer statistics are collected.</p>
-         * <p>If you do not specify a month, the current month is queried.</p>
+         * <p>The statistical date in the YYYYMM format.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified, the current month is used by default.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>201905</p>
@@ -235,11 +237,8 @@ public class DescribeUserFlowStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The list of usernames of client accounts. Maximum value of N: 50.</p>
+         * <p>The list of usernames. The list can contain up to 50 usernames.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12</p>
          */
         public Builder userNames(java.util.List<String> userNames) {
             this.putQueryParameter("UserNames", userNames);

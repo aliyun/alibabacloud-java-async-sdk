@@ -298,6 +298,9 @@ public class ModifyFlowLogAttributeRequest extends Request {
 
         /**
          * <p>The description of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Flow log instance 1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -393,9 +396,12 @@ public class ModifyFlowLogAttributeRequest extends Request {
         /**
          * <p>The location where the flow log is stored. Valid values:</p>
          * <ul>
-         * <li><strong>sls</strong>: The flow log is stored in Log Service.</li>
-         * <li><strong>netflow</strong>: The flow log is stored on a NetFlow collector.</li>
-         * <li><strong>all</strong>: The flow log is stored both in Log Service and on a NetFlow collector.</li>
+         * <li><p><strong>sls</strong>: The flow log is stored in Log Service.</p>
+         * </li>
+         * <li><p><strong>netflow</strong>: The flow log is stored on a NetFlow collector.</p>
+         * </li>
+         * <li><p><strong>all</strong>: The flow log is stored both in Log Service and on a NetFlow collector.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

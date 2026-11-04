@@ -139,7 +139,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of route advertisement policies.</p>
+         * Strategies.
          */
         public Builder strategies(Strategies strategies) {
             this.strategies = strategies;
@@ -333,10 +333,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about overlapped routes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;10.90.6.0/24&quot;:&quot;vbr-wz900pom71qyr6x67qz65,vbr-wz9f8icxnlcom7riz0gfx&quot;</p>
+             * ConflictInfo.
              */
             public Builder conflictInfo(String conflictInfo) {
                 this.conflictInfo = conflictInfo;
@@ -344,10 +341,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates when the health check instance was created. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1622617250000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -355,10 +349,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination CIDR block.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.3.0/24</p>
+             * DestCidrBlock.
              */
             public Builder destCidrBlock(String destCidrBlock) {
                 this.destCidrBlock = destCidrBlock;
@@ -366,10 +357,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the health check instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hc-sztovuprqzgm50****</p>
+             * HcInstanceId.
              */
             public Builder hcInstanceId(String hcInstanceId) {
                 this.hcInstanceId = hcInstanceId;
@@ -377,14 +365,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether routes are overlapped. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * IsConflict.
              */
             public Builder isConflict(Boolean isConflict) {
                 this.isConflict = isConflict;
@@ -392,19 +373,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route advertisement policy. Valid values:</p>
-             * <ul>
-             * <li><strong>publish</strong>: advertises routes.</li>
-             * <li><strong>no_publish</strong>: does not advertise routes.</li>
-             * <li><strong>no_publish_and_publish_on_health_success</strong>: routes are advertised only when they pass the health check.</li>
-             * <li><strong>no_publish_and_publish_on_health_fail</strong>: routes are advertised only when they fail the health check.</li>
-             * <li><strong>publish_and_revoke_on_health_success</strong>: advertised routes are withdrawn only when they pass the health check.</li>
-             * <li><strong>publish_and_revoke_on_health_fail</strong>: advertised routes are withdrawn only when they fail the health check.</li>
-             * </ul>
-             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163971.html">Configure health checks</a> and <a href="https://help.aliyun.com/document_detail/163973.html">Advertise routes</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>publish</p>
+             * RouteDistribution.
              */
             public Builder routeDistribution(String routeDistribution) {
                 this.routeDistribution = routeDistribution;
@@ -412,26 +381,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of routes. Valid values:</p>
-             * <ul>
-             * <li><p><strong>Alibaba Cloud-facing routes</strong></p>
-             * <ul>
-             * <li><strong>Virtual private clouds (VPCs) IDs</strong>: Routes that are learned from the VPCs.</li>
-             * <li><strong>Virtual border routers (VBRs)</strong>: Routes that are learned from VBRs.</li>
-             * <li><strong>SAG instance IDs</strong>: Routes that are learned from SAG instances.</li>
-             * </ul>
-             * </li>
-             * <li><p><strong>On-premises network-facing routes</strong></p>
-             * <ul>
-             * <li><strong>STATIC</strong>: Static routes that are specified in the SAG console.</li>
-             * <li><strong>OSPF</strong>: Routes that are learned through the Open Shortest Path First (OSPF) protocol.</li>
-             * <li><strong>BGP</strong>: Routes that are learned through Border Gateway Protocol (BGP).</li>
-             * </ul>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>STATIC</p>
+             * RouteSource.
              */
             public Builder routeSource(String routeSource) {
                 this.routeSource = routeSource;
@@ -439,10 +389,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAG instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-erx3qta5xg5zyq****</p>
+             * SmartAGId.
              */
             public Builder smartAGId(String smartAGId) {
                 this.smartAGId = smartAGId;
@@ -450,14 +397,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the route. Valid values:</p>
-             * <ul>
-             * <li><strong>cloud</strong>: Alibaba Cloud-facing routes.</li>
-             * <li><strong>local</strong>: on-premises network-facing routes.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud</p>
+             * SourceType.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -465,14 +405,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route status. Valid values:</p>
-             * <ul>
-             * <li><strong>normal</strong>: The route is working as expected.</li>
-             * <li><strong>revoked</strong>: The route has been withdrawn.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>normal</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,14 +413,7 @@ public class DescribeRouteDistributionStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route advertisement status. Valid values:</p>
-             * <ul>
-             * <li><strong>publish</strong>: The route has been advertised.</li>
-             * <li><strong>not_publish</strong>: The route has not been advertised.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>publish</p>
+             * StrategyPublishStatus.
              */
             public Builder strategyPublishStatus(String strategyPublishStatus) {
                 this.strategyPublishStatus = strategyPublishStatus;

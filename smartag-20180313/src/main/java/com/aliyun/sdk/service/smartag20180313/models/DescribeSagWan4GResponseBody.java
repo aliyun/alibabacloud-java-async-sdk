@@ -132,7 +132,7 @@ public class DescribeSagWan4GResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IP address of the 4G SIM card.</p>
+         * <p>The IP address of the 4G NIC.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.1</p>
@@ -143,7 +143,7 @@ public class DescribeSagWan4GResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The MAC address of the 4G SIM card.</p>
+         * <p>The MAC address of the 4G NIC.</p>
          * 
          * <strong>example:</strong>
          * <p>c4:00:ad:a2:f5:****</p>
@@ -154,7 +154,7 @@ public class DescribeSagWan4GResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The priority of the 4G SIM card. The default value is <strong>99</strong>, which indicates the lowest priority and cannot be modified.</p>
+         * <p>The priority of the 4G NIC. The default value is <strong>99</strong>, which indicates the lowest priority. The priority cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -176,11 +176,11 @@ public class DescribeSagWan4GResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the 4G SIM card. Valid value:</p>
+         * <p>The status of the 4G NIC. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: The 4G SIM card is available.</li>
-         * <li><strong>Abnormal</strong>: The 4G SIM card encountered an error.</li>
-         * <li><strong>Unavailable</strong>: No 4G SIM card is inserted.</li>
+         * <li><strong>Normal</strong>: The status is normal.</li>
+         * <li><strong>Abnormal</strong>: The status is abnormal.</li>
+         * <li><strong>Unavailable</strong>: No 4G NIC is available.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,12 +192,12 @@ public class DescribeSagWan4GResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The signal strength of the 4G network. Valid values:</p>
+         * <p>The 4G signal strength. Valid values:</p>
          * <ul>
-         * <li><strong>High</strong>: strong signals.</li>
-         * <li><strong>Middle</strong>: medium-strength signals.</li>
-         * <li><strong>Low</strong>: weak signals.</li>
-         * <li><strong>Unavailable</strong>: no signal.</li>
+         * <li><strong>High</strong>: Strong.</li>
+         * <li><strong>Middle</strong>: Medium.</li>
+         * <li><strong>Low</strong>: Weak.</li>
+         * <li><strong>Unavailable</strong>: No signal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,10 +209,10 @@ public class DescribeSagWan4GResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network status of the 4G SIM card. Valid values:</p>
+         * <p>The traffic status of the 4G NIC. Valid values:</p>
          * <ul>
-         * <li><strong>active</strong>: The 4G SIM card is used to establish the active connection. Network traffic is transmitted over the 4G SIM card first.</li>
-         * <li><strong>standby</strong>: The 4G SIM card is used to establish a standby connection. Network traffic is not transmitted over the 4G SIM card unless the active connection fails.</li>
+         * <li><strong>active</strong>: The 4G NIC acts as the active link, and current traffic is transmitted through this 4G NIC.</li>
+         * <li><strong>standby</strong>: The 4G NIC acts as the standby link and does not forward traffic. If the active link fails, traffic is transmitted through this 4G NIC.</li>
          * </ul>
          * 
          * <strong>example:</strong>

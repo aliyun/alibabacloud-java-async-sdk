@@ -132,7 +132,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The serial number of the standby SAG device.</p>
+         * <p>The serial number of the standby device.</p>
          * 
          * <strong>example:</strong>
          * <p>sag11axxxx</p>
@@ -143,10 +143,10 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether device-based HA is enabled. Valid values:</p>
+         * <p>The device-level backup state. Valid values:</p>
          * <ul>
-         * <li><strong>ON</strong>: enabled</li>
-         * <li><strong>OFF</strong>: disabled</li>
+         * <li><strong>ON</strong>: Enabled.</li>
+         * <li><strong>OFF</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,11 +158,11 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The deployment mode of the SAG devices that have HA enabled. Valid values:</p>
+         * <p>The device-level high-availability type. Valid values:</p>
          * <ul>
-         * <li><strong>warm_backup</strong>: active-active mode.</li>
-         * <li><strong>cold_backup</strong>: active-standby mode.</li>
-         * <li><strong>no_backup</strong>: HA is disabled.</li>
+         * <li><strong>warm_backup</strong>: Active-active mode.</li>
+         * <li><strong>cold_backup</strong>: Active-standby mode.</li>
+         * <li><strong>no_backup</strong>: No backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about standby connections.</p>
+         * LinkBackupInfoList.
          */
         public Builder linkBackupInfoList(LinkBackupInfoList linkBackupInfoList) {
             this.linkBackupInfoList = linkBackupInfoList;
@@ -182,7 +182,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The serial number of the active SAG device.</p>
+         * <p>The serial number of the active device.</p>
          * 
          * <strong>example:</strong>
          * <p>sag11axxxx</p>
@@ -193,7 +193,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>582FE511-FEFE-42BC-BBF4-4F8ECF92Exxx</p>
@@ -204,7 +204,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-i8mogwi9kisigc3xxxx</p>
@@ -325,10 +325,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the standby connection.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>wan1</p>
+             * BackupLinkId.
              */
             public Builder backupLinkId(String backupLinkId) {
                 this.backupLinkId = backupLinkId;
@@ -336,14 +333,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the standby connection. Valid values:</p>
-             * <ul>
-             * <li><strong>up</strong>: available</li>
-             * <li><strong>down</strong>: unavailable</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>down</p>
+             * BackupLinkState.
              */
             public Builder backupLinkState(String backupLinkState) {
                 this.backupLinkState = backupLinkState;
@@ -351,14 +341,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HA is enabled to provide standby connections. Valid values:</p>
-             * <ul>
-             * <li><strong>ON</strong>: enabled</li>
-             * <li><strong>OFF</strong>: disabled</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ON</p>
+             * LinkLevelBackupState.
              */
             public Builder linkLevelBackupState(String linkLevelBackupState) {
                 this.linkLevelBackupState = linkLevelBackupState;
@@ -366,15 +349,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HA mode. Valid values:</p>
-             * <ul>
-             * <li><strong>DedicatedLineBackupMode</strong>: Express Connect circuit and SAG.</li>
-             * <li><strong>StandbyMode</strong>: active and standby WAN ports.</li>
-             * <li><strong>Off</strong>: HA is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>StandbyMode</p>
+             * LinkLevelBackupType.
              */
             public Builder linkLevelBackupType(String linkLevelBackupType) {
                 this.linkLevelBackupType = linkLevelBackupType;
@@ -382,10 +357,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the active connection.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lte</p>
+             * MainLinkId.
              */
             public Builder mainLinkId(String mainLinkId) {
                 this.mainLinkId = mainLinkId;
@@ -393,14 +365,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the active connection. Valid values:</p>
-             * <ul>
-             * <li><strong>up</strong>: available</li>
-             * <li><strong>down</strong>: unavailable</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>up</p>
+             * MainLinkState.
              */
             public Builder mainLinkState(String mainLinkState) {
                 this.mainLinkState = mainLinkState;
@@ -454,7 +419,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about standby connections.</p>
+             * LinkBackupInfoList.
              */
             public Builder linkBackupInfoList(java.util.List<LinkBackupInfoListLinkBackupInfoList> linkBackupInfoList) {
                 this.linkBackupInfoList = linkBackupInfoList;

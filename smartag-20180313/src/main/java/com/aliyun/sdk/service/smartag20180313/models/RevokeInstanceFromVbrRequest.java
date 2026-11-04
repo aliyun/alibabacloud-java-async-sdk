@@ -146,10 +146,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         } 
 
         /**
-         * <p>OwnerAccount</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OwnerAccount</p>
+         * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
             this.putQueryParameter("OwnerAccount", ownerAccount);
@@ -158,10 +155,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * <p>OwnerId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OwnerId</p>
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -183,10 +177,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * <p>ResourceOwnerAccount</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ResourceOwnerAccount</p>
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -195,10 +186,7 @@ public class RevokeInstanceFromVbrRequest extends Request {
         }
 
         /**
-         * <p>ResourceOwnerId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ResourceOwnerId</p>
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

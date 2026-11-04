@@ -106,7 +106,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of quintuple rules returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the 5-tuple.</p>
+         * QosPolicies.
          */
         public Builder qosPolicies(QosPolicies qosPolicies) {
             this.qosPolicies = qosPolicies;
@@ -136,7 +136,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>97862812-2C7E-4D25-B0D5-B26DAC7FA293</p>
@@ -147,7 +147,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of quintuple rules that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -480,10 +480,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the 5-tuple.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>docdesc</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -491,10 +488,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination CIDR block.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.10.10.0/24</p>
+             * DestCidr.
              */
             public Builder destCidr(String destCidr) {
                 this.destCidr = destCidr;
@@ -502,10 +496,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination port range.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>90/90</p>
+             * DestPortRange.
              */
             public Builder destPortRange(String destPortRange) {
                 this.destPortRange = destPortRange;
@@ -513,8 +504,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application group.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/196754.html">ListDpiGroups</a> operation to query application group IDs and information about the applications.</p>
+             * DpiGroupIds.
              */
             public Builder dpiGroupIds(DpiGroupIds dpiGroupIds) {
                 this.dpiGroupIds = dpiGroupIds;
@@ -522,8 +512,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of applications.</p>
-             * <p>You can call the <a href="https://help.aliyun.com/document_detail/196630.html">ListDpiSignatures</a> operation to query application IDs and information about the applications.</p>
+             * DpiSignatureIds.
              */
             public Builder dpiSignatureIds(DpiSignatureIds dpiSignatureIds) {
                 this.dpiSignatureIds = dpiSignatureIds;
@@ -531,10 +520,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the 5-tuple stops taking effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-07-14T16:41:33+0800</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -542,10 +528,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the protocol that is applied to the 5-tuple.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TCP</p>
+             * IpProtocol.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -553,10 +536,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the 5-tuple.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -564,10 +544,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the traffic throttling rule that is applied to the 5-tuple.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -575,10 +552,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the QoS policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qos-xitd8690ucu8ro****</p>
+             * QosId.
              */
             public Builder qosId(String qosId) {
                 this.qosId = qosId;
@@ -586,10 +560,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the 5-tuple.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qospy-427m9fo6wkh****</p>
+             * QosPolicyId.
              */
             public Builder qosPolicyId(String qosPolicyId) {
                 this.qosPolicyId = qosPolicyId;
@@ -597,10 +568,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of the source IP addresses.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.0.0.0/24</p>
+             * SourceCidr.
              */
             public Builder sourceCidr(String sourceCidr) {
                 this.sourceCidr = sourceCidr;
@@ -608,10 +576,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of the source port.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80/80</p>
+             * SourcePortRange.
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
@@ -619,10 +584,7 @@ public class DescribeQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the 5-tuple starts to take effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-07-14T16:41:33+0800</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

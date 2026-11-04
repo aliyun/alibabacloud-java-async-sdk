@@ -201,8 +201,8 @@ public class DescribeQosPoliciesRequest extends Request {
         } 
 
         /**
-         * <p>The description of the 5-tuple.</p>
-         * <p>The description must be 1 to 512 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>The description of the quintuple rule instance in the QoS policy.</p>
+         * <p>The description must be 1 to 512 characters in length, start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>docdesc</p>
@@ -232,7 +232,7 @@ public class DescribeQosPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The default value is <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -244,8 +244,8 @@ public class DescribeQosPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Default value: <strong>10</strong>. A maximum of <strong>50</strong> entries can be returned on each page.</p>
+         * <p>The number of quintuple rules to return on each page.</p>
+         * <p>The default value is <strong>10</strong>. The maximum value is <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -257,10 +257,10 @@ public class DescribeQosPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The priority of the traffic throttling rule that is applied to the 5-tuple.</p>
-         * <p>Valid values: <strong>1 to 3</strong>. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the throttling rule to which the quintuple rule in the QoS policy belongs.</p>
+         * <p>The priority range is 1 to <strong>3</strong>. A smaller value indicates a higher priority.</p>
          * <blockquote>
-         * <p> If you have submitted a ticket and created a QoS policy with the priority value 4 by calling the <a href="https://help.aliyun.com/document_detail/131575.html">CreateQosPolicy</a> operation, you can set the value to 4.</p>
+         * <p>If you have submitted a ticket and created a priority-4 QoS policy by calling the <a href="https://help.aliyun.com/document_detail/131575.html">CreateQosPolicy</a> operation, you can use this operation to query the configurations of quintuple rules for the priority-4 QoS policy.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -273,7 +273,7 @@ public class DescribeQosPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the QoS policy.</p>
+         * <p>The ID of the QoS policy instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class DescribeQosPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the 5-tuple.</p>
+         * <p>The ID of the quintuple rule instance in the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qospy-427m9fo6wkh****</p>
@@ -298,7 +298,7 @@ public class DescribeQosPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the QoS policy belongs.</p>
+         * <p>The ID of the region where the QoS policy instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

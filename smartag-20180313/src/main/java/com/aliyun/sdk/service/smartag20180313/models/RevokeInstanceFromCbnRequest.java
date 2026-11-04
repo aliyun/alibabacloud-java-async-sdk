@@ -146,7 +146,7 @@ public class RevokeInstanceFromCbnRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CCN instance.</p>
+         * <p>The Cloud Connect Network (CCN) instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class RevokeInstanceFromCbnRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class RevokeInstanceFromCbnRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the CCN instance is deployed.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

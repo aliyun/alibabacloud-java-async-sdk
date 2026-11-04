@@ -106,7 +106,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of flow logs.</p>
+         * FlowLogs.
          */
         public Builder flowLogs(FlowLogs flowLogs) {
             this.flowLogs = flowLogs;
@@ -385,10 +385,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The output interval under active connections. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>300</p>
+             * ActiveAging.
              */
             public Builder activeAging(Integer activeAging) {
                 this.activeAging = activeAging;
@@ -396,10 +393,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>aaa</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -407,10 +401,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fl-7a56mar1kfw9vj****</p>
+             * FlowLogId.
              */
             public Builder flowLogId(String flowLogId) {
                 this.flowLogId = flowLogId;
@@ -418,10 +409,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output interval under inactive connections. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>15</p>
+             * InactiveAging.
              */
             public Builder inactiveAging(Integer inactiveAging) {
                 this.inactiveAging = inactiveAging;
@@ -429,10 +417,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Logstore in Log Service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>config-operation-log</p>
+             * LogstoreName.
              */
             public Builder logstoreName(String logstoreName) {
                 this.logstoreName = logstoreName;
@@ -440,10 +425,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the flow log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DDE</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -451,10 +433,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the NetFlow collector where the flow log is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.0.1</p>
+             * NetflowServerIp.
              */
             public Builder netflowServerIp(String netflowServerIp) {
                 this.netflowServerIp = netflowServerIp;
@@ -462,10 +441,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number of the NetFlow collector that stores the flow log. Default value: <strong>9995</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>9995</p>
+             * NetflowServerPort.
              */
             public Builder netflowServerPort(String netflowServerPort) {
                 this.netflowServerPort = netflowServerPort;
@@ -473,10 +449,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol version number of the NetFlow collector that stores the flow log. Default value: <strong>V9</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>V9</p>
+             * NetflowVersion.
              */
             public Builder netflowVersion(String netflowVersion) {
                 this.netflowVersion = netflowVersion;
@@ -484,15 +457,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location where the flow log is stored. Valid values:</p>
-             * <ul>
-             * <li><strong>sls</strong>: The flow log is stored in Log Service.</li>
-             * <li><strong>netflow</strong>: The flow log is stored on a NetFlow collector.</li>
-             * <li><strong>all</strong>: The flow log is stored both in Log Service and on a NetFlow collector.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>sls</p>
+             * OutputType.
              */
             public Builder outputType(String outputType) {
                 this.outputType = outputType;
@@ -500,10 +465,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Log Service project.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sag-flowlog-shanghai</p>
+             * ProjectName.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -511,10 +473,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the flow log belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfm2iu4fnc****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -522,10 +481,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region that the Log Service is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shanghai</p>
+             * SlsRegionId.
              */
             public Builder slsRegionId(String slsRegionId) {
                 this.slsRegionId = slsRegionId;
@@ -533,14 +489,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the flow log. Valid values:</p>
-             * <ul>
-             * <li><strong>Active</strong>: The flow log is enabled.</li>
-             * <li><strong>Inactive</strong>: The flow log is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -548,10 +497,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of Smart Access gateway (SAG) instances with which the flow log is associated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * TotalSagNum.
              */
             public Builder totalSagNum(Integer totalSagNum) {
                 this.totalSagNum = totalSagNum;

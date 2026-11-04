@@ -131,7 +131,7 @@ public class ActiveFlowLogRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the flow log.</p>
+         * <p>The flow log instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class ActiveFlowLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the flow log belongs.</p>
+         * <p>The region ID of the flow log.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

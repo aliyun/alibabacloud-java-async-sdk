@@ -106,7 +106,7 @@ public class DescribeACLsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of ACLs.</p>
+         * Acls.
          */
         public Builder acls(Acls acls) {
             this.acls = acls;
@@ -114,7 +114,7 @@ public class DescribeACLsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeACLsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeACLsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>660F303F-C88E-4026-BC6A-FC24B78FD7EA</p>
@@ -147,7 +147,7 @@ public class DescribeACLsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,10 +255,7 @@ public class DescribeACLsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the ACL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acl-xhwhyuo43l*******</p>
+             * AclId.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -266,14 +263,7 @@ public class DescribeACLsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the SAG instance associated with the ACL. Valid values:</p>
-             * <ul>
-             * <li><strong>acl-hardware</strong>: SAG CPE instance</li>
-             * <li><strong>acl-software</strong>: SAG app instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>acl-hardware</p>
+             * AclType.
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -281,10 +271,7 @@ public class DescribeACLsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ACL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,10 +279,7 @@ public class DescribeACLsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the ACL belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfm2iu4fnc****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -303,10 +287,7 @@ public class DescribeACLsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of SAG instances associated with the ACL.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * SagCount.
              */
             public Builder sagCount(String sagCount) {
                 this.sagCount = sagCount;
