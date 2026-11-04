@@ -312,7 +312,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a workspace along with the first member and the first API key in a one-time onboarding process. The plaintext API key is returned in the response.</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow, and returns the plaintext API key.</p>
      * 
      * @param request the request parameters of CreateContextDatabaseWorkspace  CreateContextDatabaseWorkspaceRequest
      * @return CreateContextDatabaseWorkspaceResponse

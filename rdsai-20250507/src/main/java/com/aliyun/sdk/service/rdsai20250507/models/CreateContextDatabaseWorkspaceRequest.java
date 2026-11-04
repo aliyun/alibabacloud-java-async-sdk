@@ -23,6 +23,10 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
     private String memberName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionMode")
+    private String permissionMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceName;
@@ -30,6 +34,7 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
     private CreateContextDatabaseWorkspaceRequest(Builder builder) {
         super(builder);
         this.memberName = builder.memberName;
+        this.permissionMode = builder.permissionMode;
         this.workspaceName = builder.workspaceName;
     }
 
@@ -54,6 +59,13 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
     }
 
     /**
+     * @return permissionMode
+     */
+    public String getPermissionMode() {
+        return this.permissionMode;
+    }
+
+    /**
      * @return workspaceName
      */
     public String getWorkspaceName() {
@@ -62,6 +74,7 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateContextDatabaseWorkspaceRequest, Builder> {
         private String memberName; 
+        private String permissionMode; 
         private String workspaceName; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
         private Builder(CreateContextDatabaseWorkspaceRequest request) {
             super(request);
             this.memberName = request.memberName;
+            this.permissionMode = request.permissionMode;
             this.workspaceName = request.workspaceName;
         } 
 
@@ -88,7 +102,24 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The permission mode selected when creating the workspace. Valid values:</p>
+         * <ul>
+         * <li><code>compatibility</code>: Compatibility mode. This mode is used if this parameter is not specified.</li>
+         * <li><code>advanced</code>: Advanced permission mode. Only the Alibaba Cloud account can select this mode. It takes effect immediately after the workspace is created and cannot be disabled after creation.</li>
+         * </ul>
+         * <p>This parameter is a string, not a Boolean switch. Valid values are case-insensitive and ignore leading and trailing whitespace. If an empty string, a string with only whitespace, or an invalid value is explicitly specified, <code>InvalidParameter</code> (HTTP 400) is returned. If a RAM user selects <code>advanced</code>, <code>NoPermission</code> (HTTP 403) is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>advanced</p>
+         */
+        public Builder permissionMode(String permissionMode) {
+            this.putQueryParameter("PermissionMode", permissionMode);
+            this.permissionMode = permissionMode;
+            return this;
+        }
+
+        /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
