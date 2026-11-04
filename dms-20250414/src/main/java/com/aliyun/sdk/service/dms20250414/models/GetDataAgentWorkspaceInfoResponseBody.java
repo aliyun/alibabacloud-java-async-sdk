@@ -136,7 +136,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E0D2-*****-A63B6</p>
@@ -170,6 +170,9 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
      * <p>GetDataAgentWorkspaceInfoResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private String config;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -204,6 +207,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         private String workspaceStatus;
 
         private Data(Builder builder) {
+            this.config = builder.config;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.isSessionShareEnabled = builder.isSessionShareEnabled;
@@ -223,6 +227,13 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
         }
 
         /**
@@ -303,6 +314,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String config; 
             private String createTime; 
             private String creator; 
             private Boolean isSessionShareEnabled; 
@@ -319,6 +331,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.config = model.config;
                 this.createTime = model.createTime;
                 this.creator = model.creator;
                 this.isSessionShareEnabled = model.isSessionShareEnabled;
@@ -333,7 +346,18 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the workspace. The value is a UNIX timestamp in seconds.</p>
+             * <p>The configuration items of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{sql_config:null}</p>
+             */
+            public Builder config(String config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * <p>The creation time of the session. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1765960516</p>
@@ -355,7 +379,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether sessions are shared within the workspace.</p>
+             * <p>Indicates whether sessions in the workspace are shared.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -410,7 +434,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the workspace.</p>
+             * <p>The description of the collaborative workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>space for test</p>
@@ -421,7 +445,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The ID of the collaborative workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>20923*****7291</p>

@@ -106,7 +106,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request fails.</p>
+         * <p>The error code returned when a request exception occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>DMS-DA-40114</p>
@@ -125,7 +125,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Specified parameter is not valid.</p>
@@ -147,7 +147,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -170,6 +170,9 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
      * <p>UpdateDataAgentSpaceInfoResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private String config;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -201,6 +204,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         private String workspaceStatus;
 
         private Data(Builder builder) {
+            this.config = builder.config;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.description = builder.description;
@@ -219,6 +223,13 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
         }
 
         /**
@@ -292,6 +303,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String config; 
             private String createTime; 
             private String creator; 
             private String description; 
@@ -307,6 +319,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.config = model.config;
                 this.createTime = model.createTime;
                 this.creator = model.creator;
                 this.description = model.description;
@@ -320,7 +333,18 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the workspace was created, specified as a UNIX timestamp in seconds.</p>
+             * <p>The workspace configuration items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{sql_config:null}</p>
+             */
+            public Builder config(String config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * <p>The creation time of the session (UNIX timestamp in seconds).</p>
              * 
              * <strong>example:</strong>
              * <p>1765960516</p>
@@ -331,7 +355,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID (UID) of the workspace creator.</p>
+             * <p>The UID of the workspace creator.</p>
              * 
              * <strong>example:</strong>
              * <p>20282*****7591</p>
@@ -342,7 +366,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the workspace.</p>
+             * <p>The description of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>space for test new</p>
@@ -353,7 +377,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether session sharing is enabled in the workspace.</p>
+             * <p>Indicates whether session sharing within the workspace is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -364,7 +388,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workspace was last modified, specified as a UNIX timestamp in seconds.</p>
+             * <p>The last modification time of the workspace (UNIX timestamp in seconds).</p>
              * 
              * <strong>example:</strong>
              * <p>1765962516</p>
@@ -375,7 +399,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user role in the workspace.</p>
+             * <p>The name of the removed user role.</p>
              * 
              * <strong>example:</strong>
              * <p>active</p>
@@ -397,7 +421,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20923*****7291</p>

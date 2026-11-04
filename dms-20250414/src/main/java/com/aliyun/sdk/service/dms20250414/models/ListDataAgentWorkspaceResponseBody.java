@@ -162,7 +162,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>nu use</p>
@@ -184,7 +184,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>E0D2-*****-A63B6</p>
@@ -218,6 +218,9 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
      * <p>ListDataAgentWorkspaceResponseBody</p>
      */
     public static class Content extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private String config;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -264,6 +267,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         private String workspaceStatus;
 
         private Content(Builder builder) {
+            this.config = builder.config;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.creatorName = builder.creatorName;
@@ -287,6 +291,13 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
 
         public static Content create() {
             return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
         }
 
         /**
@@ -395,6 +406,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String config; 
             private Long createTime; 
             private String creator; 
             private String creatorName; 
@@ -415,6 +427,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             } 
 
             private Builder(Content model) {
+                this.config = model.config;
                 this.createTime = model.createTime;
                 this.creator = model.creator;
                 this.creatorName = model.creatorName;
@@ -433,7 +446,18 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the workspace. The value is a timestamp in milliseconds.</p>
+             * <p>The workspace configuration items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{sql_config:null}</p>
+             */
+            public Builder config(String config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * <p>The time when the workspace was created. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1765960516000</p>
@@ -488,7 +512,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether session sharing is enabled for the workspace.</p>
+             * <p>Indicates whether workspace sessions are shared.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -499,7 +523,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the workspace. The value is a timestamp in milliseconds.</p>
+             * <p>The time when the workspace was last modified. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1765961516000</p>
@@ -510,7 +534,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role name of the user in the workspace.</p>
+             * <p>The name of the user\&quot;s role in the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>

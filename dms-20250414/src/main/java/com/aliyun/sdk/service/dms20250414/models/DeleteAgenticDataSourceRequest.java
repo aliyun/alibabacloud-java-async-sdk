@@ -83,7 +83,7 @@ public class DeleteAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the data source to delete. Ensure that no workloads are using the data source before deletion.</p>
+         * <p>The UUID of the data source to delete. Ensure that the data source is no longer in use before deletion.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

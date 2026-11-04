@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateDataAgentSpaceInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    private String config;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DMSUnit")
     private String DMSUnit;
 
@@ -39,6 +43,7 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
 
     private UpdateDataAgentSpaceInfoRequest(Builder builder) {
         super(builder);
+        this.config = builder.config;
         this.DMSUnit = builder.DMSUnit;
         this.isSessionShareEnabled = builder.isSessionShareEnabled;
         this.workspaceDesc = builder.workspaceDesc;
@@ -57,6 +62,13 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return config
+     */
+    public String getConfig() {
+        return this.config;
     }
 
     /**
@@ -95,6 +107,7 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateDataAgentSpaceInfoRequest, Builder> {
+        private String config; 
         private String DMSUnit; 
         private Boolean isSessionShareEnabled; 
         private String workspaceDesc; 
@@ -107,12 +120,25 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
 
         private Builder(UpdateDataAgentSpaceInfoRequest request) {
             super(request);
+            this.config = request.config;
             this.DMSUnit = request.DMSUnit;
             this.isSessionShareEnabled = request.isSessionShareEnabled;
             this.workspaceDesc = request.workspaceDesc;
             this.workspaceId = request.workspaceId;
             this.workspaceName = request.workspaceName;
         } 
+
+        /**
+         * <p>The workspace configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{sql_config:null}</p>
+         */
+        public Builder config(String config) {
+            this.putQueryParameter("Config", config);
+            this.config = config;
+            return this;
+        }
 
         /**
          * <p>The current DMS unit.</p>
@@ -127,7 +153,7 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable session sharing for the workspace. Valid values: true and false.</p>
+         * <p>Specifies whether to enable the session sharing feature for the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -139,7 +165,7 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         }
 
         /**
-         * <p>The new description for the workspace.</p>
+         * <p>The new description of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>space for test new</p>
@@ -151,7 +177,7 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>
@@ -163,7 +189,7 @@ public class UpdateDataAgentSpaceInfoRequest extends Request {
         }
 
         /**
-         * <p>The new name for the workspace.</p>
+         * <p>The new name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>yunqitest_v2</p>

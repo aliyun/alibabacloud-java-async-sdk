@@ -147,7 +147,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -170,6 +170,9 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
      * <p>CreateDataAgentWorkspaceResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private String config;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -204,6 +207,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         private String workspaceStatus;
 
         private Data(Builder builder) {
+            this.config = builder.config;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.isSessionShareEnabled = builder.isSessionShareEnabled;
@@ -223,6 +227,13 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
         }
 
         /**
@@ -303,6 +314,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String config; 
             private Long createTime; 
             private String creator; 
             private Boolean isSessionShareEnabled; 
@@ -319,6 +331,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.config = model.config;
                 this.createTime = model.createTime;
                 this.creator = model.creator;
                 this.isSessionShareEnabled = model.isSessionShareEnabled;
@@ -333,7 +346,18 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the workspace. This value is a UNIX timestamp in seconds.</p>
+             * <p>The workspace configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{sql_config:null}</p>
+             */
+            public Builder config(String config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * <p>The creation time of the workspace. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1765960516</p>
@@ -355,7 +379,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether session sharing is enabled within the workspace.</p>
+             * <p>Indicates whether session sharing within the workspace is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -366,7 +390,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent modification time of the workspace. This value is a UNIX timestamp in seconds.</p>
+             * <p>The last modification time of the workspace. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1765961516</p>
@@ -377,7 +401,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role name of the user in the workspace.</p>
+             * <p>The name of the user\&quot;s role in the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>owner</p>
@@ -388,7 +412,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of members in the workspace.</p>
+             * <p>The number of members in the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -401,8 +425,8 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
             /**
              * <p>The workspace type. Valid values:</p>
              * <ul>
-             * <li>personal: personal workspace.</li>
-             * <li>common/null: multi-user collaborative workspace.</li>
+             * <li>personal: Personal workspace.</li>
+             * <li>common or null: Multi-user collaborative workspace.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDataAgentWorkspaceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    private String config;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DMSUnit")
     private String DMSUnit;
 
@@ -35,6 +39,7 @@ public class CreateDataAgentWorkspaceRequest extends Request {
 
     private CreateDataAgentWorkspaceRequest(Builder builder) {
         super(builder);
+        this.config = builder.config;
         this.DMSUnit = builder.DMSUnit;
         this.isSessionShareEnabled = builder.isSessionShareEnabled;
         this.workspaceDesc = builder.workspaceDesc;
@@ -52,6 +57,13 @@ public class CreateDataAgentWorkspaceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return config
+     */
+    public String getConfig() {
+        return this.config;
     }
 
     /**
@@ -83,6 +95,7 @@ public class CreateDataAgentWorkspaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDataAgentWorkspaceRequest, Builder> {
+        private String config; 
         private String DMSUnit; 
         private Boolean isSessionShareEnabled; 
         private String workspaceDesc; 
@@ -94,11 +107,24 @@ public class CreateDataAgentWorkspaceRequest extends Request {
 
         private Builder(CreateDataAgentWorkspaceRequest request) {
             super(request);
+            this.config = request.config;
             this.DMSUnit = request.DMSUnit;
             this.isSessionShareEnabled = request.isSessionShareEnabled;
             this.workspaceDesc = request.workspaceDesc;
             this.workspaceName = request.workspaceName;
         } 
+
+        /**
+         * <p>The workspace configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{sql_config:null}</p>
+         */
+        public Builder config(String config) {
+            this.putQueryParameter("Config", config);
+            this.config = config;
+            return this;
+        }
 
         /**
          * <p>The current DMS unit.</p>
@@ -113,7 +139,7 @@ public class CreateDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether session sharing is enabled within the workspace.</p>
+         * <p>Specifies whether sessions within the workspace are shared.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -125,7 +151,7 @@ public class CreateDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The description of the workspace.</p>
+         * <p>The description of the collaborative workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>Space for test</p>
@@ -137,7 +163,7 @@ public class CreateDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The name of the collaborative workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspaceTest</p>

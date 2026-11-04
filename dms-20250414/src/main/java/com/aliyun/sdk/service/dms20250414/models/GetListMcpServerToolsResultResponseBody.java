@@ -106,7 +106,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The MCP Server connectivity detection result. The business status is distinguished by the State field.</p>
+         * <p>The connectivity detection results of the MCP server. The business status is indicated by State.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return code. The value success is returned if the request succeeds. An error code is returned if the request fails.</p>
+         * <p>The error code. The value is success if the request succeeds, or the corresponding error code if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -125,7 +125,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when a system-level request failure occurs.</p>
+         * <p>The error message returned when the request fails at the system level.</p>
          * 
          * <strong>example:</strong>
          * <p>no mcp connect test record for session</p>
@@ -136,7 +136,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate this API call.</p>
+         * <p>The request ID, which is used to locate the call.</p>
          * 
          * <strong>example:</strong>
          * <p>550***544</p>
@@ -147,7 +147,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,7 +229,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the MCP tool functionality.</p>
+             * <p>The description of the MCP tool.</p>
              * 
              * <strong>example:</strong>
              * <p>query user information by user ID</p>
@@ -240,7 +240,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSON Schema string of the tool input parameters.</p>
+             * <p>The JSON schema string for the input parameters of the tool.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;userId&quot;:{&quot;type&quot;:&quot;string&quot;}}}</p>
@@ -251,7 +251,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP tool name.</p>
+             * <p>The name of the MCP tool.</p>
              * 
              * <strong>example:</strong>
              * <p>query_user</p>
@@ -334,7 +334,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the MCP Server is accessible. The value is true only when State is success.</p>
+             * <p>Indicates whether the MCP server is accessible. The value is true only when State is success.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -345,13 +345,7 @@ public class GetListMcpServerToolsResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detection status. Valid values:</p>
-             * <ul>
-             * <li>pending: The detection is in progress.</li>
-             * <li>success: The detection succeeded.</li>
-             * <li>failed: The detection failed or timed out.</li>
-             * </ul>
-             * <p>The top-level Success field can be true in all three business states.</p>
+             * <p>The detection status. Valid values: pending: The detection is in progress. success: The detection succeeded. failed: The detection failed or timed out. The top-level Success field can be true in all three business statuses.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>

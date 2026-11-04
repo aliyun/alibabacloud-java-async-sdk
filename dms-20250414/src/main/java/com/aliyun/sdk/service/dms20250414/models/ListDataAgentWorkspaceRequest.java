@@ -212,7 +212,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>no use</p>
@@ -273,7 +273,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,7 +298,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The workspace type to query.</p>
+         * <p>The workspace type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
