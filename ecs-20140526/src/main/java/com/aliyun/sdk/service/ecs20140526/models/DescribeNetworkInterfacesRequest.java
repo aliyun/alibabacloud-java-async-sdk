@@ -393,7 +393,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID to which the Elastic Network Interface (ENI) is currently attached.</p>
+         * <p>The ID of the instance to which the ENI is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1e2l6djkndyuli****</p>
@@ -405,7 +405,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 address of the Elastic Network Interface (ENI). N indicates that multiple IPv6 addresses can be configured. Valid values of N: 1 to 100.</p>
+         * <p>The IPv6 address of the ENI. N indicates that you can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>2408:4321:180:1701:94c7:bc38:3bfa:****</p>
@@ -417,7 +417,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paging query. Valid values: 10 to 500.</p>
+         * <p>The maximum number of entries per page for a paged query. Valid values: 10 to 500.</p>
          * <p>Default value:</p>
          * <ul>
          * <li>If this parameter is not specified or the specified value is less than 10, the default value is 10.</li>
@@ -434,7 +434,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The Elastic Network Interface (ENI) ID. Valid values of N: 1 to 100.</p>
+         * <p>The ENI ID. Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp125p95hhdhn3ot****</p>
@@ -446,7 +446,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The name of the Elastic Network Interface (ENI). The name must be 2 to 128 characters in length, and can contain characters in the letter categorization of Unicode (including English, Chinese, and digits). It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the ENI. The name must be 2 to 128 characters in length and can contain Unicode letters, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>test-eni-name</p>
@@ -459,7 +459,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
         /**
          * <p>The pagination token. Set the value to the <code>NextToken</code> value returned from the previous API call.</p>
-         * <p>For more information about how to configure the pagination parameters, see the &quot;Operation description&quot; section.</p>
+         * <p>For more information about how to configure the pagination parameters for this operation, see the &quot;Operation description&quot; section above.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -490,7 +490,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p><strong>[Deprecated]</strong> We recommend that you use the <code>MaxResults</code> and <code>NextToken</code> parameters for pagination.</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>MaxResults</code> or <code>NextToken</code> parameter for paged queries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -504,7 +504,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p><strong>[Deprecated]</strong> We recommend that you use the <code>MaxResults</code> and <code>NextToken</code> parameters for pagination.</p>
+         * <p><strong>[Deprecated]</strong> Use the <code>MaxResults</code> or <code>NextToken</code> parameter for paged queries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -517,7 +517,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The primary private network IPv4 address of the Elastic Network Interface (ENI).</p>
+         * <p>The primary private IPv4 address of the ENI.</p>
          * 
          * <strong>example:</strong>
          * <p><code>192.168.**.**</code></p>
@@ -529,7 +529,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The secondary private IP IPv4 address of the Elastic Network Interface (ENI). Valid values of N: 1 to 100.</p>
+         * <p>The secondary private IPv4 address of the ENI. Valid values of N: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p><code>192.168.**.**</code></p>
@@ -554,7 +554,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.</p>
+         * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
          * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
@@ -603,7 +603,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the Elastic Network Interface (ENI) is used by an Alibaba Cloud service or a Virtual Network Operator (VNO).</p>
+         * <p>Specifies whether the ENI is managed by an Alibaba Cloud service or a Virtual Network Operator (VNO).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -615,15 +615,15 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The status of the Elastic Network Interface (ENI). Valid values:</p>
+         * <p>The status of the ENI. Valid values:</p>
          * <ul>
-         * <li>Available: active.</li>
-         * <li>Attaching: being attached.</li>
-         * <li>InUse: attached.</li>
-         * <li>Detaching: being detached.</li>
-         * <li>Deleting: being deleted.</li>
+         * <li>Available: available.</li>
+         * <li>Attaching: attaching.</li>
+         * <li>InUse: in use.</li>
+         * <li>Detaching: detaching.</li>
+         * <li>Deleting: deleting.</li>
          * </ul>
-         * <p>Default value: empty, which indicates that Elastic Network Interfaces (ENIs) in all states are queried.</p>
+         * <p>Default value: empty. An empty value indicates that all statuses are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -635,7 +635,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -644,12 +644,12 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The Elastic Network Interface (ENI) type. Valid values:</p>
+         * <p>The ENI type. Valid values:</p>
          * <ul>
-         * <li>Primary: primary network interface controller (NIC).</li>
+         * <li>Primary: primary ENI.</li>
          * <li>Secondary: secondary ENI.</li>
          * </ul>
-         * <p>Default value: empty, which indicates that Elastic Network Interfaces (ENIs) of all types are queried.</p>
+         * <p>Default value: empty. An empty value indicates that all types are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Secondary</p>
@@ -661,7 +661,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID of the Elastic Network Interface (ENI).</p>
+         * <p>The vSwitch ID of the ENI.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp16usj2p27htro3****</p>
@@ -673,7 +673,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID of the Elastic Network Interface (ENI).</p>
+         * <p>The VPC ID of the ENI.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1j7w3gc1cexjqd****</p>
@@ -744,7 +744,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the Elastic Network Interface (ENI). Valid values of N: 1 to 20.</p>
+             * <p>The tag key of the ENI. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -755,8 +755,8 @@ public class DescribeNetworkInterfacesRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the Elastic Network Interface (ENI). Valid values of N: 1 to 20.</p>
-             * <p>If you use a single tag to filter resources, the number of resources that match the tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources that are attached with multiple tags cannot exceed 1,000. If the number of resources exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+             * <p>The tag value of the ENI. Valid values of N: 1 to 20.</p>
+             * <p>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources to which you attach multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

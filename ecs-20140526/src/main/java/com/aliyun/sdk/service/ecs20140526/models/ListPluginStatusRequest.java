@@ -223,7 +223,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can specify up to 50 instances in a single request. Valid values of N: 1 to 50.</p>
+         * <p>The instance ID. You can specify up to 50 instance IDs in a single request. Valid values of N: 1 to 50.</p>
          */
         public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -232,7 +232,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * <p>Maximum value: 50.</p>
          * <p>Default value: 10.</p>
          * 
@@ -246,14 +246,14 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * <p>The plugin name. Full character set is supported. The name can be up to 255 characters in length.</p>
+         * <p>The plugin name. All characters are supported. The name can be up to 255 characters in length.</p>
          * <ul>
-         * <li><p>If you do not specify this parameter, the status of all installed plugins on the instance is queried.</p>
+         * <li><p>If you do not specify this parameter, the status of installed plugins on the instance is queried.</p>
          * <blockquote>
          * <p>If you do not specify this parameter, you can specify only one instance ID.</p>
          * </blockquote>
          * </li>
-         * <li><p>If you specify this parameter, the status of the specified plugin on the instances is queried.</p>
+         * <li><p>If you specify this parameter, the status of the specified plugin on the instance is queried.</p>
          * </li>
          * </ul>
          * 
@@ -267,7 +267,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * <p>The pagination token. Set the value to the NextToken value returned in the previous call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -298,7 +298,7 @@ public class ListPluginStatusRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter will be offline soon. Use NextToken and MaxResults to complete paged query operations. Paging is handled by these parameters instead.</p>
+         * <p>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults to perform paging query operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class ListPluginStatusRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter will be offline soon. Use NextToken and MaxResults to complete paged query operations. Paging is handled by these parameters instead.</p>
+         * <p>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults to perform paging query operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -325,7 +325,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

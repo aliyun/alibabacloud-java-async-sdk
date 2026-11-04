@@ -668,7 +668,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The list of additional properties of the instance.</p>
+         * <p>The list of additional attributes of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>META_OPTIONS</p>
@@ -681,7 +681,7 @@ public class DescribeInstancesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -694,10 +694,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.  </li>
-         * <li>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</li>
+         * <li>true: Sends a check request without querying resources. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.  </li>
+         * <li>false: Sends a normal request. If the request passes the dry run, the 2xx HTTP status code is returned and resources are queried.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -711,7 +711,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The elastic IP addresses (EIPs) of instances. This parameter takes effect when InstanceNetworkType is set to vpc. The value is a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+         * <p>The elastic IP addresses (EIPs) of the instances. This parameter takes effect only when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;42.1.1.<strong>&quot;, &quot;42.1.2.</strong>&quot;, … &quot;42.1.10.**&quot;]</p>
@@ -723,7 +723,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the HPC cluster to which the instance belongs.</p>
+         * <p>The ID of the High Performance Computing (HPC) cluster to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>hpc-bp67acfmxazb4p****</p>
@@ -735,14 +735,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the access channel for instance metadata is enabled. Valid values:</p>
+         * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
          * <ul>
-         * <li>enabled: enabled.</li>
-         * <li>disabled: disabled.</li>
+         * <li>enabled: Enable.</li>
+         * <li>disabled: Disable.</li>
          * </ul>
          * <p>Default value: enabled.</p>
          * <blockquote>
-         * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of ECS instance metadata</a>.</p>
+         * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of instance metadata</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -756,7 +756,7 @@ public class DescribeInstancesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -769,14 +769,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully use the hardened mode (IMDSv2) when accessing instance metadata. Valid values:</p>
+         * <p>Specifies whether to forcibly use the security access mode (IMDSv2) to access instance metadata. Valid values:</p>
          * <ul>
-         * <li>optional: The hardened mode is not forcefully used.</li>
-         * <li>required: The hardened mode is forcefully used. After you set this parameter to required, you cannot access instance metadata in the normal pattern.</li>
+         * <li>optional: Do not forcibly use the security access mode.</li>
+         * <li>required: Forcibly use the security access mode. After you set this value, you cannot access instance metadata in normal mode.</li>
          * </ul>
          * <p>Default value: optional.</p>
          * <blockquote>
-         * <p>For more information about instance metadata access patterns, see <a href="https://help.aliyun.com/document_detail/150575.html">Instance metadata access modes</a>.</p>
+         * <p>For more information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Modes of accessing instance metadata</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -801,10 +801,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The internal network IP addresses of instances with the classic network type. This parameter takes effect when InstanceNetworkType is set to classic. The value is a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,). </p>
+         * <p>The internal IP addresses of instances in the classic network. This parameter takes effect only when InstanceNetworkType is set to classic. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,). </p>
          * <blockquote>
          * <ul>
-         * <li>The classic network feature has been retired. For details, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</li>
+         * <li>The classic network feature is retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">retirement notice</a>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -834,7 +834,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 instance IDs. Separate the instance IDs with commas (,).</p>
+         * <p>The instance IDs. The value can be a JSON array that consists of up to 100 instance IDs. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;i-bp67acfmxazb4p****&quot;, &quot;i-bp67acfmxazb4p****&quot;, … &quot;i-bp67acfmxazb4p****&quot;]</p>
@@ -846,7 +846,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. Fuzzy search with the asterisk (\*) wildcard is supported.</p>
+         * <p>The name of the instance. You can use the wildcard (*) for fuzzy search.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -861,7 +861,7 @@ public class DescribeInstancesRequest extends Request {
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
          * <li>vpc: VPC.</li>
-         * <li>classic: classic network. The classic network is no longer available. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</li>
+         * <li>classic: classic network. The classic network feature is retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">retirement notice</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -904,7 +904,7 @@ public class DescribeInstancesRequest extends Request {
          * <li>PayByTraffic: pay-by-traffic.</li>
          * </ul>
          * <blockquote>
-         * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth for your workloads, use the <strong>pay-by-bandwidth</strong> mode.</p>
+         * <p>In the <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are the upper limits of bandwidths and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidths, use the <strong>pay-by-bandwidth</strong> mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -919,8 +919,8 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
          * <ul>
-         * <li>true: The instance is I/O optimized.</li>
-         * <li>false: The instance is not I/O optimized.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -933,7 +933,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 addresses assigned to Elastic Network Interfaces (ENIs).</p>
+         * <p>The IPv6 address specified for the Elastic Network Interface (ENI).</p>
          */
         public Builder ipv6Address(java.util.List<String> ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -942,7 +942,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the SSH key pair bound to the instance.</p>
+         * <p>The name of the SSH key pair used by the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyPairNameTest</p>
@@ -956,15 +956,15 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The reason why the resource is locked. Valid values:</p>
          * <ul>
-         * <li><p>financial: The resource is locked due to overdue payment.</p>
+         * <li><p>financial: The resource is locked due to overdue payments.</p>
          * </li>
-         * <li><p>security: The resource is locked due to security reasons.</p>
+         * <li><p>security: The resource is locked for security reasons.</p>
          * </li>
-         * <li><p>Recycling: The spot instance is locked and pending release.</p>
+         * <li><p>Recycling: The spot instance is in the pending release state.</p>
          * </li>
-         * <li><p>dedicatedhostfinancial: The ECS instance is locked because the dedicated host has an overdue payment.</p>
+         * <li><p>dedicatedhostfinancial: The ECS instance is locked due to overdue payments for the dedicated host.</p>
          * </li>
-         * <li><p>refunded: The resource is locked because a refund is made.</p>
+         * <li><p>refunded: The resource is locked due to a refund.</p>
          * </li>
          * </ul>
          * 
@@ -978,11 +978,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paging query. Maximum value: 100.</p>
-         * <p>Default value:</p>
+         * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
+         * <p>Default values:</p>
          * <ul>
-         * <li>If you do not set this parameter or set it to a value less than 10, the default value is 10.</li>
-         * <li>If you set this parameter to a value greater than 100, the default value is 100.</li>
+         * <li>If you do not specify this parameter or the specified value is less than 10, the default value is 10.</li>
+         * <li>If the specified value is greater than 100, the default value is 100.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -996,7 +996,7 @@ public class DescribeInstancesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1009,7 +1009,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set the value to the NextToken value returned in the previous API call.</p>
+         * <p>The query token. The value is the NextToken parameter value returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -1040,7 +1040,7 @@ public class DescribeInstancesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
+         * <p>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged query operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1054,7 +1054,7 @@ public class DescribeInstancesRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
+         * <p>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged query operations.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1067,7 +1067,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The private IP addresses of instances with the VPC network type. This parameter takes effect when InstanceNetworkType is set to vpc. The value is a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+         * <p>The private IP addresses of instances in the VPC. This parameter takes effect only when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;172.16.1.1&quot;, &quot;172.16.2.1&quot;, … &quot;172.16.10.1&quot;]</p>
@@ -1079,7 +1079,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The public IP addresses of instances. The value is a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+         * <p>The public IP addresses of the instances. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;42.1.1.<strong>&quot;, &quot;42.1.2.</strong>&quot;, … &quot;42.1.10.**&quot;]</p>
@@ -1091,7 +1091,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The RDMA IP addresses of the HPC instance.</p>
+         * <p>The Remote Direct Memory Access (RDMA) IP addresses of the HPC instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10.10.10.102</p>
@@ -1116,7 +1116,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
+         * <p>The ID of the enterprise resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
          * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
@@ -1149,7 +1149,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group to which the instance belongs.</p>
+         * <p>The security group to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp67acfmxazb4p****</p>
@@ -1163,11 +1163,11 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The instance status. Valid values: </p>
          * <ul>
-         * <li>Pending: being created.</li>
-         * <li>Running: running.</li>
-         * <li>Starting: being started.</li>
-         * <li>Stopping: being stopped.</li>
-         * <li>Stopped: stopped.</li>
+         * <li>Pending: The instance is being created.</li>
+         * <li>Running: The instance is running.</li>
+         * <li>Starting: The instance is being started.</li>
+         * <li>Stopping: The instance is being stopped.</li>
+         * <li>Stopped: The instance is stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1180,7 +1180,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1284,7 +1284,7 @@ public class DescribeInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The key of filter 1 used to query resources. Set the value to <code>CreationStartTime</code>. You can specify both Filter.1.Key and Filter.1.Value to query resources that were created after the specified point in time.</p>
+             * <p>The filter key used to query resources. The value must be CreationStartTime. If you specify both Filter.1.Key and Filter.1.Value, you can query the resources created after the specified point in time.</p>
              * 
              * <strong>example:</strong>
              * <p>CreationStartTime</p>
@@ -1295,7 +1295,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * <p>The value of filter 1 used to query resources. When you specify this parameter, you must also specify <code>Filter.1.Key</code>. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC.</p>
+             * <p>The filter value used to query resources. If you specify this parameter, you must also specify the Filter.1.Key parameter. The value must be in the <code>yyyy-MM-ddTHH:mmZ</code> format and use the UTC+0 time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2017-12-05T22:40Z</p>
@@ -1366,7 +1366,7 @@ public class DescribeInstancesRequest extends Request {
 
             /**
              * <p>The tag key of the instance. Valid values of N: 1 to 20.</p>
-             * <p>If you use a single tag to filter resources, the number of resources with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+             * <p>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that attach multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>

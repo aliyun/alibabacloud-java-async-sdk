@@ -182,7 +182,12 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li>true: Performs a dry run and does not delete the image. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: Performs a normal request and deletes the image if the request passes the check.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -191,10 +196,10 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to force delete the custom image. Valid values:</p>
+         * <p>Specifies whether to execute a force delete. Valid values:</p>
          * <ul>
-         * <li>true: Forces the deletion of the custom image, regardless of whether the image is in use by other instances.</li>
-         * <li>false: Deletes the custom image normally and checks whether the image is in use by other instances before deletion.</li>
+         * <li>true: Executes a force delete of the custom image, regardless of whether the image is in use by other instances.</li>
+         * <li>false: Deletes the custom image normally. The system checks whether the image is in use by other instances before the deletion.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 

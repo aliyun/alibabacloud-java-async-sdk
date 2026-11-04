@@ -127,7 +127,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this request.</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -139,7 +139,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p><strong>[Deprecated]</strong> This parameter will soon go offline. We recommend that you use the NextToken and MaxResults parameters for paging to complete the paged query.</p>
+         * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paged queries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p><strong>[Deprecated]</strong> This parameter will soon go offline. We recommend that you use the NextToken and MaxResults parameters for paging to complete the paged query.</p>
+         * <p>This parameter will be deprecated soon. Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paged queries.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -175,9 +175,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of queried results.</p>
+         * <p>The total number of entries returned.</p>
          * <blockquote>
-         * <p>When you use the MaxResults and NextToken parameters for paging to perform a paged query, the returned value of TotalCount is invalid.</p>
+         * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paged queries, the returned <code>TotalCount</code> value is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

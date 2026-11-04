@@ -327,7 +327,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The description of the network interface controller (NIC).</p>
+         * <p>The description of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -362,7 +362,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The MAC address of the network interface controller (NIC).</p>
+         * <p>The MAC address of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>00:16:3e:12:<strong>:</strong></p>
@@ -373,7 +373,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the network interface controller (NIC).</p>
+         * <p>The ID of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp14v2sdd3v8htln****</p>
@@ -384,7 +384,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the network interface controller (NIC).</p>
+         * <p>The name of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>my-eni-name</p>
@@ -395,7 +395,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the account to which the network interface controller (NIC) belongs.</p>
+         * <p>The ID of the account to which the Elastic Network Interface (ENI) belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -406,7 +406,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private IP address of the network interface controller (NIC).</p>
+         * <p>The private IP address of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p><code>172.17.**.**</code></p>
@@ -455,7 +455,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Virtual Network Operator (VNO) associated with the network interface controller (NIC).</p>
+         * <p>The ID of the Virtual Network Operator (VNO) associated with the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>12345678910</p>
@@ -466,7 +466,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the user of the network interface controller (NIC) is a cloud service or a VNO.</p>
+         * <p>Indicates whether the user of the Elastic Network Interface (ENI) is a cloud service or a VNO.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -490,7 +490,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the elastic network interface (ENI).</p>
+         * <p>The status of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -509,7 +509,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the network interface controller (NIC).</p>
+         * <p>The type of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>Secondary</p>
@@ -964,7 +964,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the network interface controller (NIC).</p>
+             * <p>The private IP address of the Elastic Network Interface (ENI).</p>
              * 
              * <strong>example:</strong>
              * <p><code>172.17.**.**</code></p>

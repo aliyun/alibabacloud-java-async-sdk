@@ -298,8 +298,8 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The end time of the temporary bandwidth change. The time is in ISO 8601 format and UTC time zone.
-         * This parameter takes effect only when InternetMaxBandwidthOut is not empty.</p>
+         * <p>The end time of the temporary bandwidth change. The time is in the ISO 8601 standard and UTC time zone.
+         * This parameter takes effect only when InternetMaxBandwidthOut is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-06T22Z</p>
@@ -311,7 +311,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The Internet service provider (ISP).</p>
+         * <p>The Internet Service Provider (ISP).</p>
          * 
          * <strong>example:</strong>
          * <p>BGP</p>
@@ -335,7 +335,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance for which you want to query the upgrade price.</p>
+         * <p>The instance ID for which you want to query the upgrade price.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         /**
          * <p>The target instance type for the instance upgrade. Before upgrading, call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in the specified zone.</p>
          * <blockquote>
-         * <p>When you query the price, the instance type parameter (<code>InstanceType</code>) and the data disk parameter (<code>DataDisk.N.*</code>) cannot be both empty. You must specify at least one of them.</p>
+         * <p>When you query the price, the instance type parameter (<code>InstanceType</code>) and the data disk parameter (<code>DataDisk.N.*</code>) cannot be empty at the same time. You must specify at least one of them.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -440,8 +440,8 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * <p>The start time of the temporary bandwidth change. The time is in ISO 8601 format and UTC time zone.
-         * This parameter takes effect only when InternetMaxBandwidthOut is not empty.</p>
+         * <p>The start time of the temporary bandwidth change. The time is in the ISO 8601 standard and UTC time zone.
+         * This parameter takes effect only when InternetMaxBandwidthOut is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-05T22:40Z</p>
@@ -643,16 +643,16 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             } 
 
             /**
-             * <p>The data disk category. You can specify this parameter when you need to query the price of a new subscription data disk attached to the ECS instance. Valid values of N: 1 to 16. Valid values:</p>
+             * <p>The data disk category. Specify this parameter when you need to query the price of a new subscription data disk attached to the ECS instance. Valid values of N: 1 to 16. Valid values:</p>
              * <ul>
              * <li>cloud_efficiency: ultra disk.</li>
              * <li>cloud_ssd: standard SSD.</li>
              * <li>cloud_essd: enterprise SSD.</li>
              * <li>cloud: basic disk.</li>
              * </ul>
-             * <p>Default value: None.</p>
+             * <p>Default value: none.</p>
              * <blockquote>
-             * <p>When you query the price, the instance type parameter (<code>InstanceType</code>) and the data disk parameter (<code>DataDisk.N.*</code>) cannot be both empty. You must specify at least one of them.</p>
+             * <p>When you query the price, the instance type parameter (<code>InstanceType</code>) and the data disk parameter (<code>DataDisk.N.*</code>) cannot be empty at the same time. You must specify at least one of them.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -665,8 +665,8 @@ public class DescribeInstanceModificationPriceRequest extends Request {
 
             /**
              * <p>The data disk ID.
-             * If DiskId is empty, a new data disk is added.
-             * If DiskId is not empty, the data disk is modified.</p>
+             * If this parameter is left empty, a new data disk is added.
+             * If this parameter is specified, an existing data disk is modified.</p>
              * 
              * <strong>example:</strong>
              * <p>d-bf4rupt9****</p>
@@ -677,15 +677,15 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the data disk when the data disk category is enterprise SSD. The value of N must be the same as the value of N in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
+             * <p>The performance level of the data disk. This parameter is valid only when the data disk category is enterprise SSD. The value of N must be the same as the value of N in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
              * <ul>
-             * <li>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</li>
+             * <li>PL0: Up to 10,000 random read/write IOPS per disk.</li>
+             * <li>PL1: Up to 50,000 random read/write IOPS per disk.</li>
+             * <li>PL2: Up to 100,000 random read/write IOPS per disk.</li>
+             * <li>PL3: Up to 1,000,000 random read/write IOPS per disk.</li>
              * </ul>
              * <p>Default value: PL1.</p>
-             * <p>For more information about how to select an enterprise SSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSD</a>.</p>
+             * <p>For more information about how to select the performance level of an enterprise SSD, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSD</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL1</p>
@@ -709,7 +709,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
              * </li>
              * <li>cloud: 5 to 2000.</li>
              * </ul>
-             * <p>Default value: the minimum size allowed for the specified data disk category.</p>
+             * <p>Default value: The minimum size allowed for the specified data disk category.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

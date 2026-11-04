@@ -195,7 +195,7 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can specify up to 100 subscription instance IDs at a time. Separate multiple instance IDs with commas (,).</p>
+         * <p>The instance IDs. You can specify up to 100 subscription instance IDs for a batch query. Separate multiple instance IDs with commas (,).</p>
          * <blockquote>
          * <p>You must specify at least one of the InstanceId and RenewalStatus parameters.</p>
          * </blockquote>
@@ -228,8 +228,8 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
-         * <p>Minimum value: 1.</p>
+         * <p>The page number of the resource list to return.</p>
+         * <p>Starting value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Unit: entries.</p>
+         * <p>The number of entries per page.</p>
          * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -256,7 +256,7 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,13 +269,13 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal status of ECS instance. Valid values:</p>
+         * <p>The auto-renewal status of the instance. Valid values:</p>
          * <ul>
          * <li><p>AutoRenewal: Auto-renewal is enabled.</p>
          * </li>
          * <li><p>Normal: Auto-renewal is disabled.</p>
          * </li>
-         * <li><p>NotRenewal: ECS instance will not be renewed. The system no longer sends expiration reminders but sends only a non-renewal reminder three days before ECS instance expires. You can call <a href="https://help.aliyun.com/document_detail/52843.html">ModifyInstanceAutoRenewAttribute</a> to change the renewal status of an instance from NotRenewal to <code>Normal</code>, and then manually renew ECS instance or enable auto-renewal for ECS instance.</p>
+         * <li><p>NotRenewal: The instance is not renewed. The system no longer sends expiration reminders, but sends a non-renewal reminder only on the third day before expiration. For an ECS instance that is not renewed, you can call the <a href="https://help.aliyun.com/document_detail/52843.html">ModifyInstanceAutoRenewAttribute</a> operation to change its status to Normal, and then manually renew the instance or enable auto-renewal.</p>
          * </li>
          * </ul>
          * 

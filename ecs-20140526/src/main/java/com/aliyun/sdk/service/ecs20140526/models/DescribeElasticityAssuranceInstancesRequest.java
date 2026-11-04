@@ -191,7 +191,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page for paging.</p>
+         * <p>The number of entries to return per page for a paging query.</p>
          * <p>Maximum value: 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -205,7 +205,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the query. You can obtain the token from the response of the previous request.</p>
+         * <p>The pagination token for the elasticity assurance query. You can obtain the token from the response of the previous request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

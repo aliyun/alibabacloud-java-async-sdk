@@ -67,7 +67,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The PriceInfo data type, which includes pricing and discount rule information.</p>
+         * <p>The pricing information, including the price and discount rule information.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -506,9 +506,9 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             /**
              * <p>The currency unit. Valid values:</p>
              * <ul>
-             * <li><p>China site: CNY.</p>
+             * <li><p>CNY: China site.</p>
              * </li>
-             * <li><p>International site: USD.</p>
+             * <li><p>USD: international site.</p>
              * </li>
              * </ul>
              * 
@@ -529,7 +529,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>61.320</p>
@@ -551,7 +551,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final price, which is the original price minus the discount.</p>
+             * <p>The final price, which is the original price minus the discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>113.880</p>
@@ -647,9 +647,13 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The currency unit.</p>
-             * <p>China site: CNY.</p>
-             * <p>International site: USD.</p>
+             * <p>The currency unit. Valid values:</p>
+             * <ul>
+             * <li><p>CNY: China site.</p>
+             * </li>
+             * <li><p>USD: international site.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -660,7 +664,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -682,7 +686,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final price, which is the original price minus the discount.</p>
+             * <p>The final price, which is the original price minus the discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -739,7 +743,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Marketplace image price.</p>
+             * <p>The price of the Alibaba Cloud Marketplace image.</p>
              */
             public Builder marketplaceImagePrice(MarketplaceImagePrice marketplaceImagePrice) {
                 this.marketplaceImagePrice = marketplaceImagePrice;
@@ -956,7 +960,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The associated price.</p>
+             * <p>The related price.</p>
              */
             public Builder relatedPrice(RelatedPrice relatedPrice) {
                 this.relatedPrice = relatedPrice;

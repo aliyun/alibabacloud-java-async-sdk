@@ -261,7 +261,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set the value to the NextToken value returned from the previous call. You do not need to specify this parameter for the first call.</p>
+         * <p>The query token. The value is the <code>NextToken</code> parameter value returned by the previous call to this operation. You do not need to specify this parameter for the first call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -304,7 +304,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
+         * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
          * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>

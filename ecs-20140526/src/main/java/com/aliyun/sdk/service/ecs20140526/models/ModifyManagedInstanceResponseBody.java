@@ -67,7 +67,7 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the managed instance.</p>
+         * <p>The managed instance information.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;

@@ -174,6 +174,9 @@ public class DescribeBandwidthPackagesRequest extends Request {
 
         /**
          * <p>The ID of the bandwidth package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bwp-bp1xea10o8qxwaswq****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -182,7 +185,10 @@ public class DescribeBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NAT gateway. If specified, only bandwidth packages associated with the NAT gateway are returned.</p>
+         * <p>The ID of the NAT gateway. If you specify this parameter, only bandwidth packages associated with the NAT gateway are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iyaszaasza****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -210,6 +216,9 @@ public class DescribeBandwidthPackagesRequest extends Request {
 
         /**
          * <p>The page number. Starting value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -219,6 +228,9 @@ public class DescribeBandwidthPackagesRequest extends Request {
 
         /**
          * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,6 +241,9 @@ public class DescribeBandwidthPackagesRequest extends Request {
         /**
          * <p>The region ID of the bandwidth package.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

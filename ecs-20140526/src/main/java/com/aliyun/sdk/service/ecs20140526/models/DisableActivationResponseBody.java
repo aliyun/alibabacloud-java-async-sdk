@@ -67,7 +67,7 @@ public class DisableActivationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the activation code and its usage.</p>
+         * <p>The activation code and its usage information.</p>
          */
         public Builder activation(Activation activation) {
             this.activation = activation;
@@ -259,7 +259,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the activation code was created. The time is displayed in ISO 8601 format in UTC.</p>
+             * <p>The time when the activation code was created. The time follows the ISO 8601 standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T06:00:00Z</p>
@@ -270,7 +270,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of deregistered instances.</p>
+             * <p>The number of unregistered instances.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

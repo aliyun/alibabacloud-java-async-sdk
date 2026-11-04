@@ -133,6 +133,9 @@ public class DeleteBandwidthPackageRequest extends Request {
         /**
          * <p>The ID of the bandwidth package to delete.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bwp-bp1xea10o8qxwaswq****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -159,8 +162,11 @@ public class DeleteBandwidthPackageRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the bandwidth package. You can call the DescribeRegions operation to query the latest region list.</p>
+         * <p>The ID of the region where the bandwidth package is located. You can call the DescribeRegions operation to query the latest region list.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

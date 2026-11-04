@@ -325,7 +325,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The name of the new snapshot. The name must be 2 to 128 characters in length, must start with a letter or a Chinese character, and cannot start with http:// or https://. It supports characters in the Letter category of Unicode, including English letters, Chinese characters, and digits. It can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and cannot start with http:// or https://. It supports characters in the Unicode Letter category, including English letters, Chinese characters, and digits. It can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
          * <p>Default value: empty.</p>
          * <p>This parameter is required.</p>
          * 
@@ -370,7 +370,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The KMS customer master key (CMK) in the destination region.</p>
+         * <p>The customer master key (CMK) managed by Key Management Service (KMS) in the destination region.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -391,7 +391,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The region where the source snapshot resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region of the source snapshot. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -435,7 +435,7 @@ public class CopySnapshotRequest extends Request {
 
         /**
          * <p>The retention period of the new snapshot. Unit: days. The snapshot is subject to automatic release when the retention period expires. Valid values: 1 to 65536.</p>
-         * <p>Default value: empty, which indicates that the snapshot is not subject to automatic release.</p>
+         * <p>Default value: empty, which indicates that the snapshot is not scheduled for automatic release.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -460,7 +460,7 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * <p>The tag information of the new snapshot.</p>
+         * <p>The tags of the new snapshot.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -639,7 +639,7 @@ public class CopySnapshotRequest extends Request {
             } 
 
             /**
-             * <p>The tag key of the new snapshot. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * <p>The tag key of the new snapshot. If specified, the value cannot be an empty string. The value can be up to 128 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -650,7 +650,7 @@ public class CopySnapshotRequest extends Request {
             }
 
             /**
-             * <p>The tag value of the new snapshot. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * <p>The tag value of the new snapshot. This parameter can be left empty. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

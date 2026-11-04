@@ -127,7 +127,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by the current call.</p>
+         * <p>The query token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2</p>
@@ -173,7 +173,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * <p>The total number of commands.</p>
          * <blockquote>
-         * <p>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</p>
+         * <p>When you use the MaxResults and NextToken parameters to perform a paged query, the returned TotalCount value is meaningless.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

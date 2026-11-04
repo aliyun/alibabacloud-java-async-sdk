@@ -75,7 +75,7 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the diagnostic metric sets. You can specify up to 10 IDs.</p>
+         * <p>The IDs of the diagnostic metric sets. A maximum of 10 IDs are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder metricSetIds(java.util.List<String> metricSetIds) {

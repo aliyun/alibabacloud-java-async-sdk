@@ -114,7 +114,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page for paging.</p>
+         * <p>The number of entries returned per page for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

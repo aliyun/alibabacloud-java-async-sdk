@@ -954,7 +954,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows per page for paging.</p>
+             * <p>The number of entries per page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -967,7 +967,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             /**
              * <p>The total number of commands.</p>
              * <blockquote>
-             * <p>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</p>
+             * <p>When you use the MaxResults and NextToken parameters for a paged query, the returned TotalCount value is meaningless.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

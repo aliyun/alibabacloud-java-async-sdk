@@ -266,7 +266,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests. The <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -278,9 +278,9 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The command to run after the session is initiated. The command can be up to 512 characters in length.</p>
+         * <p>The command to execute after the session is initiated. The value cannot exceed 512 characters in length.</p>
          * <blockquote>
-         * <p>After you specify CommandLine, you cannot specify PortNumber or TargetServer.</p>
+         * <p>If you specify <code>CommandLine</code>, you cannot specify <code>PortNumber</code> or <code>TargetServer</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -293,10 +293,10 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The network type of the WebSocket URL required for establishing a remote connection to the instance. Valid values:</p>
+         * <p>The network type of the WebSocket URL required for remotely connecting to the instance. Valid values:</p>
          * <ul>
-         * <li>Internet: Internet. This is the default value.</li>
-         * <li>Intranet: internal network.</li>
+         * <li>Internet: the Internet (default).</li>
+         * <li>Intranet: the internal network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,8 +347,8 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The name of the password for the user when using Session Manager on a Windows instance. The name can be up to 255 characters in length.
-         * When you want to use Session Manager on a Windows instance as a non-default user (System), specify both Username and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management and specify only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a>.</p>
+         * <p>The name of the user password used when using Session Manager on a Windows instance. The value cannot exceed 255 characters in length.
+         * If you want to use Session Manager on a Windows instance as a non-default user (other than System), you must specify both <code>Username</code> and this parameter. To reduce the risk of password leakage, the plaintext password must be hosted in the parameter repository of CloudOps Orchestration Service, and you only need to pass the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encrypt a parameter</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>axtSecretPassword</p>
@@ -360,8 +360,8 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The port number of the ECS instance for data forwarding. After this parameter is set, Cloud Assistant Agent forwards data to the specified port for port forwarding. For example, SSH uses port 22.</p>
-         * <p>Default value: empty, which indicates that no port number is set for data forwarding.</p>
+         * <p>The port number of the ECS instance used for port forwarding. If you specify this parameter, the Cloud Assistant Agent forwards data to the specified port. For example, SSH uses port 22.</p>
+         * <p>Default value: empty, which indicates that no port number is specified for port forwarding.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -373,7 +373,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -404,9 +404,9 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The address of the destination server in the VPC that you want to access through the instance.</p>
+         * <p>The address of the destination service in the VPC that is accessed through the instance.</p>
          * <blockquote>
-         * <p>When this parameter is not empty, PortNumber specifies the port number of the destination server in the VPC that you want to access through the managed instance.</p>
+         * <p>If this parameter is not empty, <code>PortNumber</code> specifies the port number of the destination service in the VPC accessed through the managed instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -419,7 +419,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * <p>The username used for the connection.</p>
+         * <p>The username used to connect to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>testUser</p>
@@ -514,11 +514,11 @@ public class StartTerminalSessionRequest extends Request {
             }
 
             /**
-             * <p>The KMS key ID.
+             * <p>The ID of the Key Management Service (KMS) key.
              * Precautions:</p>
              * <ul>
              * <li>Only KMS symmetric keys are supported.</li>
-             * <li>This parameter can be specified only when the encryption mode is set to Kms.</li>
+             * <li>You can specify this parameter only when the encryption mode is set to Kms.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -530,15 +530,15 @@ public class StartTerminalSessionRequest extends Request {
             }
 
             /**
-             * <p>The secret key encryption pattern. Valid values:</p>
+             * <p>The encryption mode. Valid values:</p>
              * <ul>
-             * <li>Auto: Uses an automatically negotiated key to encrypt the session.</li>
-             * <li>Kms: Uses a KMS key to encrypt the session.</li>
+             * <li>Auto: uses automatically negotiated keys to encrypt the session.</li>
+             * <li>Kms: uses KMS keys to encrypt the session.</li>
              * <li>Default value: Auto.</li>
              * </ul>
              * <p>Precautions:</p>
              * <ul>
-             * <li>This parameter can be specified only when session encryption is enabled.</li>
+             * <li>You can specify this parameter only when session encryption is enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

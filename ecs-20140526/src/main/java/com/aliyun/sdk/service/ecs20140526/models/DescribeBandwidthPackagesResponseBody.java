@@ -115,6 +115,9 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
         /**
          * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -123,6 +126,9 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -131,6 +137,9 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8909013D-4A64-41A6-93E6-E3FD08A3EAFE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -139,6 +148,9 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

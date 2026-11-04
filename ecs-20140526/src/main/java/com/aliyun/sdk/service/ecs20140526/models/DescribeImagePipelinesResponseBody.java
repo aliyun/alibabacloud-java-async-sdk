@@ -114,7 +114,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page in a paging query.</p>
+         * <p>The number of rows returned per page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,7 +125,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call. For more information, see the operation description.</p>
+         * <p>The pagination token returned by the current request. For more information, see the operation description.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -147,7 +147,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of image templates returned.</p>
+         * <p>The number of image templates returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

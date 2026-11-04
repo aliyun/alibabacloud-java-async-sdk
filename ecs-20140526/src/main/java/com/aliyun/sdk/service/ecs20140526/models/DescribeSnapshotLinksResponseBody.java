@@ -119,7 +119,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token returned by the current call.</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -141,7 +141,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -173,7 +173,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         /**
          * <p>The total number of snapshot chains.</p>
          * <blockquote>
-         * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paging in a paged query, the returned <code>TotalCount</code> value is invalid.</p>
+         * <p>If you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paged queries, the returned <code>TotalCount</code> value is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -455,7 +455,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             /**
              * <p>The total number of snapshot chains.</p>
              * <blockquote>
-             * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paging in a paged query, the returned <code>TotalCount</code> value is invalid.</p>
+             * <p>If you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paged queries, the returned <code>TotalCount</code> value is invalid.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
