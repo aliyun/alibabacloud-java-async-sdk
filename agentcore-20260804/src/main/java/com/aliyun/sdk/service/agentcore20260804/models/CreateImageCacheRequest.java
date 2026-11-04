@@ -116,7 +116,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required and cannot be empty. It is reserved to be compatible with the API. Currently, it does not provide the ability to deduplicate requests or recover the original result based on this field. If a timeout occurs or the result is unconfirmed, query the query cache status first before deciding whether to recommit.</p>
+         * <p>Required and non-empty. This parameter is reserved for API compatibility. It currently does not provide request deduplication or original result recovery based on this field. If a timeout occurs or the result is unconfirmed, query the cache status first before deciding whether to resubmit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class CreateImageCacheRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow the current source reading and transfer to use the public network. At least one of this parameter and accessVpc must be set to true. The server verifies the access conditions of the current workspace.</p>
+             * <p>Specifies whether to allow the use of the public network for the current source read and transfer. At least one of this parameter and accessVpc must be set to true. The server verifies the access conditions of the current workspace.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -284,7 +284,7 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow the current source reading and transfer to use a VPC. At least one of this parameter and accessInternet must be set to true. The server parses the trusted network of the current workspace and does not modify the agent runtime network.</p>
+             * <p>Specifies whether to allow the use of a VPC for the current source read and transfer. At least one of this parameter and accessInternet must be set to true. The server parses the trusted network of the current workspace and does not modify the agent runtime network.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * <p>The name of the repository under the namespace. Do not include the namespace repeatedly.</p>
+             * <p>The name of the repository under the namespace. Do not include the namespace in the repository name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

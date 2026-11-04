@@ -60,7 +60,7 @@ public class ListIdentityProviderSCIMCredentialsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the target workspace. This parameter is required. The request region must be the same as the region of the target workspace.</p>
+         * <p>Required. The ID of the target workspace. The request region must be the same as the region of the target workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

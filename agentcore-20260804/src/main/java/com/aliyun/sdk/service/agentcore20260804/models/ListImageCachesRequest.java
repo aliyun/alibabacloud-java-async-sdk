@@ -215,7 +215,7 @@ public class ListImageCachesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the source ACR Enterprise instance. The match must be exact. Empty character strings are invalid.</p>
+         * <p>The ID of the source ACR Enterprise instance. Exact match is required. Empty character strings are invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-example</p>
@@ -227,7 +227,7 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * <p>The complete image digest in the sha256: format followed by a 64-character lowercase hexadecimal string. The format is verified by the console. The match must be exact, and prefixes are not supported.</p>
+         * <p>The complete image digest in the sha256: format followed by a 64-character lowercase hexadecimal string. The format is verified by the console. Exact match is required, and prefixes are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
@@ -263,7 +263,7 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * <p>The source namespace. The match is case-sensitive and must be exact. Empty strings are invalid.</p>
+         * <p>The source namespace. Exact and case-sensitive match is required. Empty strings are invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>team</p>
@@ -300,7 +300,7 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the source repository. The match is case-insensitive and must be exact. Do not include the protocol, path, or tag. Public network and VPC domain names are not considered equal. Empty strings are invalid.</p>
+         * <p>The domain name of the source repository. Exact and case-insensitive match is required. The value must not include the protocol, path, or tag. Public network and VPC domain names are not considered equal. Empty strings are invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>example-registry.cn-hangzhou.cr.aliyuncs.com</p>
@@ -312,7 +312,7 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * <p>The name of the repository under the namespace. The match is case-sensitive and must be exact. Do not include the namespace. If this parameter is provided, the namespace parameter must also be provided. Empty strings are invalid.</p>
+         * <p>The repository name under the namespace. Exact and case-sensitive match is required. The value must not include the namespace. If this parameter is provided, the namespace parameter must also be provided. Empty strings are invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>app</p>
@@ -336,7 +336,7 @@ public class ListImageCachesRequest extends Request {
         }
 
         /**
-         * <p>The tag of the source image. The match is case-sensitive and must be exact. The latest tag is not inferred. Empty strings are invalid.</p>
+         * <p>The source image tag. Exact and case-sensitive match is required. The latest tag is not inferred. Empty strings are invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

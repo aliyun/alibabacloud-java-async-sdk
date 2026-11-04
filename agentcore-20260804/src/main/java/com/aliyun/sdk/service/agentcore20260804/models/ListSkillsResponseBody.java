@@ -101,7 +101,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of entries to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -112,7 +112,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>next-page-token</p>
@@ -158,6 +158,9 @@ public class ListSkillsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("draftMode")
         private String draftMode;
 
+        @com.aliyun.core.annotation.NameInMap("editable")
+        private Boolean editable;
+
         @com.aliyun.core.annotation.NameInMap("editingVersion")
         private String editingVersion;
 
@@ -199,6 +202,7 @@ public class ListSkillsResponseBody extends TeaModel {
             this.description = builder.description;
             this.downloadCount = builder.downloadCount;
             this.draftMode = builder.draftMode;
+            this.editable = builder.editable;
             this.editingVersion = builder.editingVersion;
             this.enable = builder.enable;
             this.from = builder.from;
@@ -247,6 +251,13 @@ public class ListSkillsResponseBody extends TeaModel {
          */
         public String getDraftMode() {
             return this.draftMode;
+        }
+
+        /**
+         * @return editable
+         */
+        public Boolean getEditable() {
+            return this.editable;
         }
 
         /**
@@ -338,6 +349,7 @@ public class ListSkillsResponseBody extends TeaModel {
             private String description; 
             private Long downloadCount; 
             private String draftMode; 
+            private Boolean editable; 
             private String editingVersion; 
             private Boolean enable; 
             private String from; 
@@ -359,6 +371,7 @@ public class ListSkillsResponseBody extends TeaModel {
                 this.description = model.description;
                 this.downloadCount = model.downloadCount;
                 this.draftMode = model.draftMode;
+                this.editable = model.editable;
                 this.editingVersion = model.editingVersion;
                 this.enable = model.enable;
                 this.from = model.from;
@@ -374,7 +387,7 @@ public class ListSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business tags as a JSON array string.</p>
+             * <p>The JSON array string of business tags.</p>
              * 
              * <strong>example:</strong>
              * <p>Sample property value</p>
@@ -388,7 +401,7 @@ public class ListSkillsResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description that explains the purpose of the resource</p>
+             * <p>Sample description used to explain the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -407,12 +420,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The draft mode. Valid values:</p>
-             * <ul>
-             * <li>HEAD: The Skill has a persistent draft.</li>
-             * <li>VERSIONED: Each edit creates a versioned draft.</li>
-             * </ul>
-             * <p>The value is determined by the server. The caller uses this value to render the status column.</p>
+             * <p>The draft mode. A value of HEAD indicates that the skill has a persistent draft. A value of VERSIONED indicates that a versioned draft is created for each edit. This value is determined by the server, and the caller renders the status column based on this value.</p>
              * 
              * <strong>example:</strong>
              * <p>HEAD</p>
@@ -423,7 +431,15 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version that is being edited. In HEAD draft mode, the value is HEAD.</p>
+             * <p>Indicates whether the page item is editable.</p>
+             */
+            public Builder editable(Boolean editable) {
+                this.editable = editable;
+                return this;
+            }
+
+            /**
+             * <p>The version being edited. The value is HEAD in HEAD draft mode.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -434,7 +450,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Skill is enabled.</p>
+             * <p>Indicates whether the skill is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -494,7 +510,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version that is under review. In HEAD draft mode, the value is HEAD.</p>
+             * <p>The version under review. The value is HEAD in HEAD draft mode.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -516,7 +532,7 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>

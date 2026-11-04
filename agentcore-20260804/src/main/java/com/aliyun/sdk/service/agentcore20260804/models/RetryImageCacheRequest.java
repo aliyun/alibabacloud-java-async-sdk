@@ -119,7 +119,7 @@ public class RetryImageCacheRequest extends Request {
         } 
 
         /**
-         * <p>The image cache record ID.</p>
+         * <p>The cache record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class RetryImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The request body is a fixed empty object {}. WorkspaceId is passed as a query parameter. Do not pass the Pool, role, Digest, or network parameters.</p>
+         * <p>The request body, which is a fixed empty object {}. WorkspaceId is placed in the query. Do not pass Pool, role, Digest, or network.</p>
          */
         public Builder body(RetryImageCacheRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -142,7 +142,7 @@ public class RetryImageCacheRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required and cannot be empty. It is reserved to keep the API compatible. This field does not currently deduplicate requests or recover the original result. If a timeout occurs or the result is not confirmed, query the query cache status first before deciding whether to commit again.</p>
+         * <p>The client token. It is required and non-empty, and is reserved to keep the API compatible. This field does not currently deduplicate requests or recover original results. If a timeout occurs or the result is not confirmed, query the query cache status first before deciding whether to commit again.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class RetryImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The current routed workspace. The server verifies the account, region, and resource ownership. You cannot omit this parameter or use it to access other workspaces.</p>
+         * <p>The current routed workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

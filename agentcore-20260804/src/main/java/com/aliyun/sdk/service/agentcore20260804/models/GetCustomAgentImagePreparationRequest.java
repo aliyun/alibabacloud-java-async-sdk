@@ -88,7 +88,7 @@ public class GetCustomAgentImagePreparationRequest extends Request {
         }
 
         /**
-         * <p>The console image preparation task ID.</p>
+         * <p>The Console image preparation task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

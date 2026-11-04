@@ -199,7 +199,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of entries to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -211,7 +211,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>next-page-token</p>
@@ -223,7 +223,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort results. The value download_count is supported. Default value: gmt_modified.</p>
+         * <p>The field by which to sort the results. Valid value: download_count. Default value: gmt_modified.</p>
          * 
          * <strong>example:</strong>
          * <p>download_count</p>
@@ -235,7 +235,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>Filters results by owner.</p>
+         * <p>The owner used to filter the results.</p>
          * 
          * <strong>example:</strong>
          * <p>user123</p>
@@ -271,11 +271,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>Filters results by visibility. Valid values:</p>
-         * <ul>
-         * <li>PUBLIC</li>
-         * <li>PRIVATE</li>
-         * </ul>
+         * <p>The visibility used to filter the results. Valid values: PUBLIC and PRIVATE.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -287,11 +283,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The search mode. Valid values:</p>
-         * <ul>
-         * <li>accurate: exact match.</li>
-         * <li>blur: fuzzy match.</li>
-         * </ul>
+         * <p>The search mode. Valid values: accurate (exact match) and blur (fuzzy match).</p>
          * 
          * <strong>example:</strong>
          * <p>blur</p>

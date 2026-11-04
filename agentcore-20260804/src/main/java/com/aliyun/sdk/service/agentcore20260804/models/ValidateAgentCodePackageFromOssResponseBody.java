@@ -263,7 +263,7 @@ public class ValidateAgentCodePackageFromOssResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The original file name of the code package.</p>
+             * <p>The file name of the original code package.</p>
              * 
              * <strong>example:</strong>
              * <p>main.zip</p>

@@ -103,7 +103,7 @@ public class GetIdentityProviderServiceProviderRequest extends Request {
         }
 
         /**
-         * <p>This operation only supports CustomSSO.</p>
+         * <p>This operation supports only CustomSSO.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetIdentityProviderServiceProviderRequest extends Request {
         }
 
         /**
-         * <p>The query parameter is required and only supports the exact value SAML. The response returns SAML.</p>
+         * <p>Required. The query parameter supports only the exact value SAML. The response returns SAML.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

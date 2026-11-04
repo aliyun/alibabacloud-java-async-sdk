@@ -102,7 +102,7 @@ public class DeleteAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The access application ID.</p>
+         * <p>The ID of the access application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

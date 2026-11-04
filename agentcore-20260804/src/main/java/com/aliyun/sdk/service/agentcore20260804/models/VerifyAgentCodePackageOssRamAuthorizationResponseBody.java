@@ -130,7 +130,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -263,7 +263,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The policy binding status.</p>
+             * <p>The binding status of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTHORIZED</p>

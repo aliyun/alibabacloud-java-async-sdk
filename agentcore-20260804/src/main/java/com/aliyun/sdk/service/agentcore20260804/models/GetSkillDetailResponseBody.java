@@ -248,7 +248,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version author.</p>
+             * <p>The author of the version.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -270,7 +270,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MD5 checksum of the Skill content package for this version, used to verify content consistency.</p>
+             * <p>The MD5 checksum of the skill content package for this version, which is used to verify content consistency.</p>
              * 
              * <strong>example:</strong>
              * <p>9e107d9d372bb6826bd81d3542a419d6</p>
@@ -281,7 +281,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time. It is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>
@@ -295,7 +295,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description that explains the purpose of the resource</p>
+             * <p>Sample description to illustrate the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -336,7 +336,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>
@@ -383,6 +383,9 @@ public class GetSkillDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("draftMode")
         private String draftMode;
 
+        @com.aliyun.core.annotation.NameInMap("editable")
+        private Boolean editable;
+
         @com.aliyun.core.annotation.NameInMap("editingVersion")
         private String editingVersion;
 
@@ -427,6 +430,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             this.description = builder.description;
             this.downloadCount = builder.downloadCount;
             this.draftMode = builder.draftMode;
+            this.editable = builder.editable;
             this.editingVersion = builder.editingVersion;
             this.enable = builder.enable;
             this.from = builder.from;
@@ -476,6 +480,13 @@ public class GetSkillDetailResponseBody extends TeaModel {
          */
         public String getDraftMode() {
             return this.draftMode;
+        }
+
+        /**
+         * @return editable
+         */
+        public Boolean getEditable() {
+            return this.editable;
         }
 
         /**
@@ -574,6 +585,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             private String description; 
             private Long downloadCount; 
             private String draftMode; 
+            private Boolean editable; 
             private String editingVersion; 
             private Boolean enable; 
             private String from; 
@@ -596,6 +608,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
                 this.description = model.description;
                 this.downloadCount = model.downloadCount;
                 this.draftMode = model.draftMode;
+                this.editable = model.editable;
                 this.editingVersion = model.editingVersion;
                 this.enable = model.enable;
                 this.from = model.from;
@@ -612,7 +625,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business label JSON array string.</p>
+             * <p>The JSON array string of business tags.</p>
              * 
              * <strong>example:</strong>
              * <p>Sample property value</p>
@@ -626,7 +639,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description that explains the purpose of the resource</p>
+             * <p>Sample description to illustrate the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -645,13 +658,21 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The draft pattern. HEAD indicates that the Skill has a persistent draft. VERSIONED indicates that each edit creates a draft with a version number. The server determines the pattern, and the invoker uses it for routing what to do next.</p>
+             * <p>The draft pattern. HEAD indicates that the skill has a persistent draft, and VERSIONED indicates that a draft with a version number is created for each edit. This pattern is determined by the server, and the invoker uses this value for routing What to do next.</p>
              * 
              * <strong>example:</strong>
              * <p>HEAD</p>
              */
             public Builder draftMode(String draftMode) {
                 this.draftMode = draftMode;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the root data is editable.</p>
+             */
+            public Builder editable(Boolean editable) {
+                this.editable = editable;
                 return this;
             }
 
@@ -667,7 +688,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Skill is enabled.</p>
+             * <p>Specifies whether the skill is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -749,7 +770,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>
@@ -779,7 +800,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the current user has write permissions.</p>
+             * <p>Specifies whether the current user has write permissions.</p>
              */
             public Builder writeable(Boolean writeable) {
                 this.writeable = writeable;

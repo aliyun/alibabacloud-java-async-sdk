@@ -137,7 +137,7 @@ public class DeleteImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of deleting the image cache.</p>
+         * <p>The image cache deletion result.</p>
          * <p>This parameter is required.</p>
          */
         public Builder data(Data data) {
@@ -182,7 +182,7 @@ public class DeleteImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. This does not mean that the cache creation is complete.</p>
+         * <p>Indicates whether the request is successful. This does not indicate that the cache creation is complete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class DeleteImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image cache ID, which matches the request. The requested ID is still returned even if the current workspace no longer exists.</p>
+             * <p>The image cache ID, which matches the request. This ID is still returned even if the current workspace no longer exists.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

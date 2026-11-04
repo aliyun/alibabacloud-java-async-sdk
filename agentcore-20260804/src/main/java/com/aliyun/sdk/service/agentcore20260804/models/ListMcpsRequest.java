@@ -194,10 +194,10 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>Filters results by custom tag. The tag must be an exact match.</p>
+         * <p>Filters the results by custom tags. An exact match is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>KnowledgeBase</p>
+         * <p>Knowledge base</p>
          */
         public Builder customTag(String customTag) {
             this.putQueryParameter("customTag", customTag);
@@ -206,7 +206,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of entries to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -218,7 +218,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>The MCP service name or service ID. Used together with SearchType.</p>
+         * <p>The MCP service name or service ID. This parameter is used in conjunction with SearchType.</p>
          * 
          * <strong>example:</strong>
          * <p>my-mcp-server</p>
@@ -242,7 +242,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>Filters results by official usage tag.</p>
+         * <p>Filters the results by official usage tags.</p>
          * 
          * <strong>example:</strong>
          * <p>KNOWLEDGE_BASE</p>
@@ -254,12 +254,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>The name matching method. Takes effect only when Name is specified. Valid values:</p>
-         * <ul>
-         * <li>accurate: exact match.</li>
-         * <li>blur: fuzzy match.</li>
-         * </ul>
-         * <p>Default value: blur.</p>
+         * <p>The name matching mode. This parameter takes effect only when Name is specified. Valid values: accurate (exact match) and blur (fuzzy match). Default value: blur.</p>
          * 
          * <strong>example:</strong>
          * <p>blur</p>
@@ -271,7 +266,7 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the service is still bound by the official template usage.</p>
+         * <p>Specifies whether the service is still subject to official template usage constraints.</p>
          */
         public Builder usageActive(Boolean usageActive) {
             this.putQueryParameter("usageActive", usageActive);

@@ -111,7 +111,7 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>Idempotence is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
+         * <p>Idempotence is currently not guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
          * 
          * <strong>example:</strong>
          * <p>custom-agent-request-20261010-001</p>
@@ -208,7 +208,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required for each mount item and is verified by the backend. Mount targets must not be duplicated or form parent-child overrides.</p>
+             * <p>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required for each mount item. Mount targets must not be duplicated or form parent-child overrides.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/agenticfs/data</p>
@@ -241,7 +241,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The domain name of the access point. This parameter is required for each mount item. Specify the DomainName value from the ListAccessPoints response of NAS. Do not include the protocol, port, or path.</p>
+             * <p>The domain name of the access point. This parameter is required for each mount item. Use the DomainName value from the response of the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -339,7 +339,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the code runtime environment, such as python3.12. When you create or switch the environment, use the identifier returned by ListAgentCodeRuntimes. The identifier is verified by the current version catalog and is not a fixed enumeration.</p>
+             * <p>The code runtime environment identifier, such as python3.12. When you create or switch environments, use the identifier returned by the ListAgentCodeRuntimes operation. The identifier is validated by the current version catalog and is not a fixed enumeration.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -351,7 +351,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The source URI of the code package. This parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including OSS signed URLs. Arbitrary external sites, custom domain names, or additional authentication request headers are not supported. For local uploads, use the sourceUri returned by GetAgentCodePackageUploadUrl. The URI is reverified and transferred during creation or update. After the URI is saved, a fixed oss:// address of the platform is returned. You can reuse this fixed address for regular updates.</p>
+             * <p>The source address of the code package. This parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including OSS signed URLs. Arbitrary external sites, custom domain names, and additional authentication request headers are not supported. After a local upload, use the sourceUri returned by the GetAgentCodePackageUploadUrl operation. The address is revalidated and transferred during creation or update. After the address is saved, a fixed oss:// address of the platform is returned. You can reuse this fixed address for regular updates.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -475,7 +475,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The optional image startup command. If specified, it must be a non-empty string. If omitted, the default startup method of the image is used.</p>
+             * <p>The optional image startup command. If specified, this parameter must be a non-empty string. If omitted, the default startup method of the image is used.</p>
              * 
              * <strong>example:</strong>
              * <p>python app.py</p>
@@ -530,7 +530,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The source type of the image. Currently, only acr is supported, which indicates Alibaba Cloud Container Registry (ACR).</p>
+             * <p>The image source type. Currently, only acr is supported, which indicates Alibaba Cloud Container Registry (ACR).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -615,7 +615,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The code package deployment configuration. This parameter is mutually exclusive with container. The code package uses the ZIP or TAR.GZ format. Dependencies must be packaged by the user. The platform does not install dependencies or perform online builds.</p>
+             * <p>The code package deployment configuration. This parameter is mutually exclusive with the container parameter. The code package must be in ZIP or TAR.GZ format. Dependencies must be packaged by the user. The platform does not install dependencies or perform online builds.</p>
              */
             public Builder code(Code code) {
                 this.code = code;
@@ -623,7 +623,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The Container Registry (ACR) container image configuration. You must specify the type, instanceId, namespace, repo, and tag parameters. Do not configure code at the same time.</p>
+             * <p>The Container Registry (ACR) container image configuration. You must specify the type, instanceId, namespace, repo, and tag parameters. Do not configure the code parameter at the same time.</p>
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -728,7 +728,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the security group. This parameter is required when type is set to vpc. The security group must belong to the selected VPC.</p>
+             * <p>The security group ID. This parameter is required when type is set to vpc and must belong to the selected VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-example</p>
@@ -739,7 +739,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The type of the pull network. This parameter is required when you submit pullNetwork and is verified by the backend. The default value is public network, which is independent of the agent runtime network.</p>
+             * <p>The network type. This parameter is required when you submit pullNetwork and is validated by the backend. The default value for new creations is public network, which is independent of the agent runtime network.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -750,7 +750,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The ID of the security group. This parameter is required when type is set to vpc. The security group must belong to the selected VPC.</p>
+             * <p>The security group ID. This parameter is required when type is set to vpc and must belong to the selected VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-example</p>
@@ -761,7 +761,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC. This parameter is required when type is set to vpc. The associated account and region are verified by the backend.</p>
+             * <p>The VPC ID. This parameter is required when type is set to vpc. The associated account and region are validated by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-example</p>
@@ -870,7 +870,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The address of the custom image. This parameter is required when you submit customImage and is verified by the backend. Specify the full registry[:port]/repository:tag or registry[:port]/repository@sha256:digest format. Multi-level paths are supported. Do not include the protocol or user information.</p>
+             * <p>The image address. This parameter is required when you submit customImage and is validated by the backend. Specify the full registry[:port]/repository:tag or registry[:port]/repository@sha256:digest. Multi-level paths are supported. Do not include the protocol or user information.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.example.com/team/agent:v1</p>
@@ -881,7 +881,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The password or token for the current repository.</p>
+             * <p>The repository password or token for this request.</p>
              * 
              * <strong>example:</strong>
              * <p>example-registry-token</p>
@@ -892,7 +892,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The independent network configuration for pulling the image. This parameter is required when you submit customImage and is verified by the backend. For public networks, only pass type=public.</p>
+             * <p>The pull network configuration. This parameter is required when you submit customImage and is validated by the backend. Specify the complete independent pull network configuration. For public networks, pass only type=public.</p>
              */
             public Builder pullNetwork(PullNetwork pullNetwork) {
                 this.pullNetwork = pullNetwork;
@@ -911,7 +911,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The username for the current repository.</p>
+             * <p>The repository username for this request.</p>
              * 
              * <strong>example:</strong>
              * <p>reader</p>
@@ -995,7 +995,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable. The value must be a string. Empty strings are allowed.</p>
+             * <p>The value of the environment variable. This parameter must be a string. Empty strings are allowed.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1173,7 +1173,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is currently invalid. Omit this field.</p>
+             * <p>This parameter is currently not in effect. Omit this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1195,7 +1195,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The HTTP health check path. The path must start with a forward slash (/). Default value: /healthz.</p>
+             * <p>The HTTP health check path. This value must start with a forward slash (/). Default value: /healthz.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthz</p>
@@ -1206,7 +1206,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The port accessed for health checks. This field is required when health checks are configured. Valid values: 1 to 65535.</p>
+             * <p>The port accessed for health checks. This field is required when you configure a health check. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -1298,7 +1298,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the Simple Log Service Logstore that receives agent logs.</p>
+             * <p>The name of the SLS Logstore that receives agent logs.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-runtime</p>
@@ -1309,7 +1309,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The name of the Simple Log Service project that receives agent logs.</p>
+             * <p>The name of the SLS project that receives agent logs.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent-logs</p>
@@ -1366,7 +1366,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The Simple Log Service log delivery destination. When this object is configured, neither the project nor the logstore field can be empty.</p>
+             * <p>The SLS log delivery destination. When you configure this object, both the project and logstore fields must be specified.</p>
              */
             public Builder sls(Sls sls) {
                 this.sls = sls;
@@ -1420,7 +1420,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow the agent to access the Internet. A Boolean value is required when accessInternet is configured. For this setting to take effect, the workspace must also allow Internet access.</p>
+             * <p>Specifies whether to allow the agent to access the Internet. A Boolean value is required when you configure accessInternet. For this setting to take effect, the workspace must also allow Internet access.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1474,7 +1474,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow the agent to access the user VPC configured for the workspace. A Boolean value is required when accessVpc is configured. For this setting to take effect, the workspace must also allow VPC access.</p>
+             * <p>Specifies whether to allow the agent to access the user VPC configured for the workspace. A Boolean value is required when you configure accessVpc. For this setting to take effect, the workspace must also allow VPC access.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1549,7 +1549,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The user VPC access configuration. If this access item is omitted, VPC access is not restricted on the agent side. However, the workspace must be configured to allow access to the user VPC.</p>
+             * <p>The user VPC access configuration. If this access item is omitted, VPC access is not restricted on the agent side. However, the workspace must still be configured to allow access to the user VPC.</p>
              */
             public Builder accessVpc(AccessVpc accessVpc) {
                 this.accessVpc = accessVpc;
@@ -1911,9 +1911,9 @@ public class CreateCustomAgentRequest extends Request {
             /**
              * <p>The invocation protocol type. Valid values:</p>
              * <ul>
-             * <li>agui: AG-UI protocol.</li>
-             * <li>openai-chat-completion: OpenAI Chat Completions compatible protocol.</li>
-             * <li>custom: Custom protocol.</li>
+             * <li>agui: AG-UI protocol</li>
+             * <li>openai-chat-completion: OpenAI Chat Completions compatible protocol</li>
+             * <li>custom: custom protocol</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1975,9 +1975,9 @@ public class CreateCustomAgentRequest extends Request {
             /**
              * <p>The compute specification. Valid values:</p>
              * <ul>
-             * <li>INTERACTIVE: 1 vCPU and 2 GiB of memory.</li>
-             * <li>STANDARD: 2 vCPUs and 4 GiB of memory.</li>
-             * <li>HEAVY: 4 vCPUs and 8 GiB of memory.</li>
+             * <li>INTERACTIVE: 1 vCPU and 2 GiB of memory</li>
+             * <li>STANDARD: 2 vCPUs and 4 GiB of memory</li>
+             * <li>HEAVY: 4 vCPUs and 8 GiB of memory</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -2089,7 +2089,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable elastic scaling. A value of true indicates that elastic scaling is enabled, and false indicates that it is disabled. When runtime is provided, omitting this field defaults to false.</p>
+             * <p>Specifies whether to enable elastic scaling. A value of true indicates that elastic scaling is enabled, and a value of false indicates that elastic scaling is disabled. When runtime is provided, omitting this field defaults to false.</p>
              * <p>This parameter is required.</p>
              */
             public Builder enabled(Boolean enabled) {
@@ -2215,10 +2215,10 @@ public class CreateCustomAgentRequest extends Request {
             /**
              * <p>The session policy type. Valid values:</p>
              * <ul>
-             * <li>AFFINITY: Session affinity.</li>
-             * <li>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified in headerName.</li>
-             * <li>ISOLATED_COOKIE: Not recommended for use at this time.</li>
-             * <li>DISABLED: A compatibility option. The response returns AFFINITY.</li>
+             * <li>AFFINITY: session affinity</li>
+             * <li>ISOLATED_HEADER_FIELD: uses the request header specified by headerName to associate sessions</li>
+             * <li>ISOLATED_COOKIE: not recommended for use at this time</li>
+             * <li>DISABLED: compatibility option, where the response returns AFFINITY</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -2322,7 +2322,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The session policy configuration used to set the session association method for requests.</p>
+             * <p>The session policy configuration, which is used to set the session association method for requests.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sessionPolicy(SessionPolicy sessionPolicy) {
@@ -2589,7 +2589,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>省略时默认为 API_KEY。USER 表示使用用户身份访问。</p>
+             * <p>The inbound access mode.</p>
              * 
              * <strong>example:</strong>
              * <p>API_KEY</p>
@@ -2600,7 +2600,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>accessMode 为 USER 时必填；ALL 表示全部用户，SPECIFIED 表示指定用户。</p>
+             * <p>The user access scope.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -2611,7 +2611,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The list of additional AgenticFS mounts. The total number of AgenticFS mounts and ossMounts cannot exceed 10. If you omit this parameter or pass an empty array [] during creation, no additional mounts are configured. If you omit this parameter during an update, the original value is retained. If you pass an empty array [], the mounts are cleared. You cannot pass null.</p>
+             * <p>The list of additional AgenticFS mounts. The total number of AgenticFS mounts and ossMounts cannot exceed 10. If you omit this parameter or pass an empty array during creation, no additional mounts are configured. If you omit this parameter during an update, the original value is retained. If you pass an empty array during an update, the mounts are cleared. You cannot pass null.</p>
              */
             public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
                 this.agenticFsMounts = agenticFsMounts;
@@ -2619,7 +2619,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The deployment artifact configuration. You must specify the service listening port in the port parameter and choose either code or container as the deployment method.</p>
+             * <p>The deployment artifact configuration. You must specify the service listening port and choose either the code or container deployment method.</p>
              * <p>This parameter is required.</p>
              */
             public Builder artifact(Artifact artifact) {
@@ -2628,7 +2628,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The source of the custom image. This parameter is required when artifact.container.type is set to custom. Omit this parameter for other sources.</p>
+             * <p>The custom image source. This parameter is required when artifact.container.type is set to custom. Omit this parameter for other sources.</p>
              */
             public Builder customImage(CustomImage customImage) {
                 this.customImage = customImage;
@@ -2636,7 +2636,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The description of the agent\&quot;s purpose. The maximum length is 1,024 characters after leading and trailing whitespaces are removed.</p>
+             * <p>The description of the agent purpose. The maximum length is 1,024 characters after leading and trailing whitespaces are removed.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom agent that provides conversation services</p>
@@ -2647,7 +2647,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The environment variable configuration passed to the agent runtime process.</p>
+             * <p>The environment variable configurations passed to the agent runtime process.</p>
              */
             public Builder environment(Environment environment) {
                 this.environment = environment;
@@ -2655,7 +2655,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The optional HTTP health check configuration. When this object is provided, the port field is required, and unspecified fields use default values. Omitting this field during creation means no health check is configured. During an update, omitting this top-level field retains the original configuration, while passing null removes the health check.</p>
+             * <p>The optional HTTP health check configuration. When this object is provided, the port field is required, and unspecified fields use default values. Omitting this object during creation means no health check is configured. Omitting this top-level field during an update retains the original configuration, while passing null removes the health check.</p>
              */
             public Builder healthCheck(HealthCheck healthCheck) {
                 this.healthCheck = healthCheck;
@@ -2663,7 +2663,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The log delivery configuration for the agent. You can specify the Simple Log Service project and Logstore. After a successful creation or update, verify that logs are delivered properly.</p>
+             * <p>The log delivery configuration for the agent. You can specify the Simple Log Service (SLS) project and Logstore. After a successful creation or update, verify that logs are delivered as expected.</p>
              */
             public Builder logging(Logging logging) {
                 this.logging = logging;
@@ -2671,7 +2671,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The custom name of the agent. The name must be 1 to 128 characters in length after leading and trailing spaces are removed, and must be unique within the same workspace.</p>
+             * <p>The custom name of the agent. The name must be 1 to 128 characters in length after leading and trailing whitespaces are removed, and must be unique within the same workspace.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2691,7 +2691,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The observability configuration for high-code agents.</p>
+             * <p>The high-code agent observability configuration.</p>
              */
             public Builder observability(Observability observability) {
                 this.observability = observability;
@@ -2699,7 +2699,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The OSS mount list. The total number of items in this list and agenticFsMounts cannot exceed 10. Each item must include bucketName, path, and mountPath. Mount targets must not be duplicated or overlap with each other. During an update, this list is replaced entirely. Pass an empty array to clear the list.</p>
+             * <p>The OSS mount list. The total number of items in this list and agenticFsMounts cannot exceed 10. Each item must specify bucketName, path, and mountPath. Mount targets must not be duplicated or overlap with each other. During an update, this list is replaced entirely. Pass an empty array [] to clear the list.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
@@ -2727,7 +2727,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The runtime configuration, including compute specifications, session policies, and optional elastic policy. Both compute and sessionPolicy must be specified at the same time.</p>
+             * <p>The runtime configuration, including compute specifications, session policy, and optional elastic policy. Both compute and sessionPolicy must be specified at the same time.</p>
              * <p>This parameter is required.</p>
              */
             public Builder runtime(Runtime runtime) {
@@ -2736,7 +2736,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use the image cache. If omitted during creation, the default value is false. Explicit true or false settings are supported. The new contract rejects null and invalid types. Existing compatibility endpoints are handled according to migration agreements.</p>
+             * <p>Specifies whether to use the image cache. Default value: false. Explicit true or false settings are supported. The new contract rejects null and invalid types. Existing compatibility endpoints are handled according to migration agreements.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

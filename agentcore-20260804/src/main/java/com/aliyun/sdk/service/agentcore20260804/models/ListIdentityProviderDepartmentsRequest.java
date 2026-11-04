@@ -156,7 +156,7 @@ public class ListIdentityProviderDepartmentsRequest extends Request {
         }
 
         /**
-         * <p>The nextToken returned from the previous page. Do not specify this parameter for the first query. When continuing pagination, keep the identity provider and parentDepartmentId unchanged, and pass the token as is. An empty or missing return value indicates that there are no subsequent pages at the current hierarchy level.</p>
+         * <p>The nextToken returned from the previous page. Do not specify this parameter for the first query. When continuing pagination, keep the identity provider and parentDepartmentId unchanged, and pass the token as is. An empty or missing return value indicates that there are no subsequent pages at the current hierarchy.</p>
          * 
          * <strong>example:</strong>
          * <p>example-next-page-token</p>

@@ -90,7 +90,7 @@ public class DeleteImageCacheRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cache record.</p>
+         * <p>The ID of the image cache record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DeleteImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The product entry region, which is determined by the selected regional endpoint.</p>
+         * <p>The region ID of the service endpoint, which is determined by the selected regional endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DeleteImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The current routed workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</p>
+         * <p>The ID of the current workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

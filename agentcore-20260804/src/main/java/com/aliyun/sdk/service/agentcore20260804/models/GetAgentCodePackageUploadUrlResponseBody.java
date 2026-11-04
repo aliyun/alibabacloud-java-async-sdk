@@ -300,7 +300,7 @@ public class GetAgentCodePackageUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP headers that must be included in the direct upload request.</p>
+             * <p>The HTTP headers required for direct upload.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -319,7 +319,7 @@ public class GetAgentCodePackageUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temporary Object Storage Service (OSS) URI of the code package.</p>
+             * <p>The temporary OSS URI of the code package.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://agentcore-platform-example/code-package-uploads/workspaces/ws-a1b2c3d4e5f6/550e8400-e29b-41d4-a716-446655440000/package.zip</p>

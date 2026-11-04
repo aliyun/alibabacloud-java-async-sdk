@@ -270,7 +270,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Image cache production failed. Please retry</p>
+             * <p>Image cache production failed. Try again</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -519,7 +519,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deduplicated number of agents in the current workspace that have useImageCache set to true and are associated with this logical resource. The value is greater than or equal to 0. This uses the same set as the imageCacheId filter in ListAllAgents. Agents with the feature disabled are not counted, regardless of the number of occupied instances.</p>
+             * <p>The deduplicated number of agents in the current workspace that have useImageCache set to true and are associated with this logical resource. The value is greater than or equal to 0. This is the same set as the imageCacheId filter in ListAllAgents. Agents with the feature disabled are not counted, regardless of the number of occupied instances.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -543,7 +543,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether deletion is allowed. The value is true when the current workspace has no configuration references with the switch enabled, no valid instances are occupying the resource, and the resource is not being deleted. If the reference status is unknown, the query fails instead of allowing deletion by default.</p>
+             * <p>Indicates whether deletion is allowed. The value is true when the current workspace has no configuration references with the switch enabled, no valid instances occupy the resource, and the resource is not being deleted. If the reference status is unknown, the query should fail instead of allowing deletion by default.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -567,7 +567,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why deletion is blocked. The value is null when canDelete is true. Otherwise, the value is returned based on the priority of DELETING, AGENT_ENABLED, and INSTANCES_RELEASING. Old instances may still occupy the resource even if the agent count is 0.</p>
+             * <p>The reason for blocking deletion. The value is null when canDelete is true. Otherwise, the value is returned based on the priority of DELETING, AGENT_ENABLED, and INSTANCES_RELEASING. Old instances may still occupy the resource even if the agent count is 0.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -591,7 +591,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for cache failure. This is a non-empty object when the status is FAILED, and null for other statuses. It only describes the current content and the current production round.</p>
+             * <p>The cache failure reason. It must be a non-empty object when the status is FAILED, and null for other statuses. It only describes the current content and the current production round.</p>
              * <p>This parameter is required.</p>
              */
             public Builder error(Error error) {
@@ -638,10 +638,10 @@ public class RetryImageCacheResponseBody extends TeaModel {
             /**
              * <p>The image cache status. Valid values:</p>
              * <ul>
-             * <li>PENDING: The cache is being created.</li>
-             * <li>READY: The cache is available.</li>
-             * <li>FAILED: An exception occurred.</li>
-             * <li>DELETING: The cache is being deleted in the current workspace.</li>
+             * <li>PENDING: creating</li>
+             * <li>READY: available</li>
+             * <li>FAILED: abnormal</li>
+             * <li>DELETING: deleting in the current workspace</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -654,7 +654,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source image tag with case preserved. Regular tags cannot be registered with different digests, except for the exact lowercase &quot;latest&quot; tag.</p>
+             * <p>The source image tag. Case is preserved. Regular tags cannot be registered with different digests, except for the exact lowercase &quot;latest&quot; tag.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -666,7 +666,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID, which is consistent with the requested workspace. Resources with the same content from other workspaces are not returned.</p>
+             * <p>The workspace ID. It is consistent with the requested workspace. Resources with the same content from other workspaces are not returned.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

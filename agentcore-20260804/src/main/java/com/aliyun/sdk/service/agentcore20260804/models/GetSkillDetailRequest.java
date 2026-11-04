@@ -88,7 +88,7 @@ public class GetSkillDetailRequest extends Request {
         }
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

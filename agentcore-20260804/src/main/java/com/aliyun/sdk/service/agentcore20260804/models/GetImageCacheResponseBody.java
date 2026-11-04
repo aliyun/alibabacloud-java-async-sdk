@@ -137,7 +137,7 @@ public class GetImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query result of the image cache details.</p>
+         * <p>The result of querying the image cache details.</p>
          * <p>This parameter is required.</p>
          */
         public Builder data(Data data) {
@@ -254,7 +254,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The secure and non-empty error code for the current creation failure.</p>
+             * <p>The secure and non-null error code for the current creation failure.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -266,11 +266,11 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secure and non-empty display message for the creation failure, excluding credentials, internal addresses, or stack traces.</p>
+             * <p>The secure and non-null description of the failure reason, excluding credentials, internal addresses, or stack traces.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Image cache creation failed. Please try again</p>
+             * <p>Failed to create the image cache. Please try again</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -519,7 +519,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of unique agents in the current workspace that have useImageCache set to true and are associated with this logical resource. The value is greater than or equal to 0. This uses the same collection as the imageCacheId filter in ListAllAgents. Disabled agents are not counted, regardless of the number of occupied instances.</p>
+             * <p>The deduplicated number of agents that have useImageCache set to true and are associated with this logical resource in the current workspace. The value is greater than or equal to 0. This set is the same as the imageCacheId filter in ListAllAgents. Agents with the feature disabled are not counted, regardless of the number of instances occupied.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -531,7 +531,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual cache size in bytes. The known value is greater than or equal to 0. If unknown, the value is null. The compressed size of the source image cannot be used as a substitute.</p>
+             * <p>The actual cache size in bytes. The known value is greater than or equal to 0. If the value is unknown, it is null. The compressed size of the source image cannot be used as a substitute.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -543,7 +543,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether deletion is allowed. The value is true if there are no configuration references with the switch enabled, no valid instances occupying the resource, and the resource is not being deleted in the current workspace. If the reference status is unknown, the query fails instead of allowing deletion by default.</p>
+             * <p>Indicates whether deletion is allowed. The value is true if there are no configuration references with the feature enabled, no valid instances are occupied, and the resource is not being deleted in the current workspace. If the reference status is unknown, the query should fail instead of allowing deletion by default.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -555,7 +555,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the logical resource in the current workspace, in RFC3339 format with time zone. Content updates for the latest tag do not refresh this time.</p>
+             * <p>The creation time of the logical resource in the current workspace, in RFC3339 format with time zone. The time is not refreshed when the content of the &quot;latest&quot; tag is updated.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -567,7 +567,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why deletion is blocked. The value is null if canDelete is true. Otherwise, the value is returned based on the priority of DELETING, AGENT_ENABLED, and INSTANCES_RELEASING. Even if the agent count is 0, old instances may still occupy the resource.</p>
+             * <p>The reason why deletion is blocked. The value is null if canDelete is true. Otherwise, the value is returned based on the priority of DELETING, AGENT_ENABLED, and INSTANCES_RELEASING. Legacy instances may still be occupied even if the number of agents is 0.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -579,7 +579,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current content digest in the sha256: format followed by a 64-character lowercase hexadecimal string. It only describes the currently registered content and does not prove that old instances have been switched.</p>
+             * <p>The current content digest in the format of sha256: followed by a 64-character lowercase hexadecimal string. It only describes the currently registered content and does not prove that legacy instances have been switched.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -591,7 +591,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cache failure reason. This must be a non-null object when the status is FAILED, and null for other statuses. It only describes the current content and the current creation round.</p>
+             * <p>The reason for cache failure. This is a non-null object when the status is FAILED, and null for other statuses. It only describes the current content and the current creation round.</p>
              * <p>This parameter is required.</p>
              */
             public Builder error(Error error) {
@@ -600,7 +600,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical resource ID manageable by the current workspace, not the shared physical cache ID.</p>
+             * <p>The logical resource ID that can be managed in the current workspace. This is not a shared physical cache ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -654,7 +654,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source image tag with case preserved. Regular tags cannot be registered with different digests, except for the exact lowercase latest tag.</p>
+             * <p>The source image tag with case preserved. Regular tags cannot be registered with different digests, except for the exact lowercase &quot;latest&quot; tag.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -666,7 +666,7 @@ public class GetImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID, which must match the requested workspace. Resources with the same content from other workspaces are not returned.</p>
+             * <p>The workspace ID, which is consistent with the requested workspace. Resources with the same content from other workspaces are not returned.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

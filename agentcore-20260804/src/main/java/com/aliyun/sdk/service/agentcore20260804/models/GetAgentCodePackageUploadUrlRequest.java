@@ -174,7 +174,7 @@ public class GetAgentCodePackageUploadUrlRequest extends Request {
             } 
 
             /**
-             * <p>The filename of the code package.</p>
+             * <p>The file name of the code package.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

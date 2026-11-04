@@ -111,7 +111,7 @@ public class CreatePermissionRulesRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token.</p>
+         * <p>The client token.</p>
          * 
          * <strong>example:</strong>
          * <p>550e8400-e29b-41d4-a716-446655440000</p>
@@ -432,7 +432,7 @@ public class CreatePermissionRulesRequest extends Request {
             } 
 
             /**
-             * <p>The list of permission rules to create.</p>
+             * <p>The list of permission rules to be created.</p>
              * <p>This parameter is required.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
