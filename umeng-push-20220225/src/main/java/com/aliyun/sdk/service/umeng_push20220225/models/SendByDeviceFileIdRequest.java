@@ -268,9 +268,6 @@ public class SendByDeviceFileIdRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PF835431668603208261</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("FileId", fileId);

@@ -268,9 +268,6 @@ public class SendByDeviceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ArdNyIzFCH2K3szXA8arpu0Y7ywOdA67mCSumtpnMnmf</p>
          */
         public Builder deviceTokens(String deviceTokens) {
             this.putBodyParameter("DeviceTokens", deviceTokens);

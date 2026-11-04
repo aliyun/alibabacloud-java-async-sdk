@@ -243,9 +243,6 @@ public class SendByAliasRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
          */
         public Builder alias(String alias) {
             this.putBodyParameter("Alias", alias);

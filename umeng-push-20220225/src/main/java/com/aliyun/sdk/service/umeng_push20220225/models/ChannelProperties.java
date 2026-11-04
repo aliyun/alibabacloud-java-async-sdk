@@ -65,6 +65,12 @@ public class ChannelProperties extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("vivoPushMode")
     private String vivoPushMode;
 
+    @com.aliyun.core.annotation.NameInMap("vivoTemplateId")
+    private String vivoTemplateId;
+
+    @com.aliyun.core.annotation.NameInMap("vivoTemplateParams")
+    private java.util.Map<String, ?> vivoTemplateParams;
+
     @com.aliyun.core.annotation.NameInMap("xiaomiChannelId")
     @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String xiaomiChannelId;
@@ -85,6 +91,8 @@ public class ChannelProperties extends TeaModel {
         this.vivoAddBadge = builder.vivoAddBadge;
         this.vivoCategory = builder.vivoCategory;
         this.vivoPushMode = builder.vivoPushMode;
+        this.vivoTemplateId = builder.vivoTemplateId;
+        this.vivoTemplateParams = builder.vivoTemplateParams;
         this.xiaomiChannelId = builder.xiaomiChannelId;
     }
 
@@ -206,6 +214,20 @@ public class ChannelProperties extends TeaModel {
     }
 
     /**
+     * @return vivoTemplateId
+     */
+    public String getVivoTemplateId() {
+        return this.vivoTemplateId;
+    }
+
+    /**
+     * @return vivoTemplateParams
+     */
+    public java.util.Map<String, ?> getVivoTemplateParams() {
+        return this.vivoTemplateParams;
+    }
+
+    /**
      * @return xiaomiChannelId
      */
     public String getXiaomiChannelId() {
@@ -228,6 +250,8 @@ public class ChannelProperties extends TeaModel {
         private String vivoAddBadge; 
         private String vivoCategory; 
         private String vivoPushMode; 
+        private String vivoTemplateId; 
+        private java.util.Map<String, ?> vivoTemplateParams; 
         private String xiaomiChannelId; 
 
         private Builder() {
@@ -249,6 +273,8 @@ public class ChannelProperties extends TeaModel {
             this.vivoAddBadge = model.vivoAddBadge;
             this.vivoCategory = model.vivoCategory;
             this.vivoPushMode = model.vivoPushMode;
+            this.vivoTemplateId = model.vivoTemplateId;
+            this.vivoTemplateParams = model.vivoTemplateParams;
             this.xiaomiChannelId = model.xiaomiChannelId;
         } 
 
@@ -369,6 +395,22 @@ public class ChannelProperties extends TeaModel {
          */
         public Builder vivoPushMode(String vivoPushMode) {
             this.vivoPushMode = vivoPushMode;
+            return this;
+        }
+
+        /**
+         * vivoTemplateId.
+         */
+        public Builder vivoTemplateId(String vivoTemplateId) {
+            this.vivoTemplateId = vivoTemplateId;
+            return this;
+        }
+
+        /**
+         * vivoTemplateParams.
+         */
+        public Builder vivoTemplateParams(java.util.Map<String, ?> vivoTemplateParams) {
+            this.vivoTemplateParams = vivoTemplateParams;
             return this;
         }
 
