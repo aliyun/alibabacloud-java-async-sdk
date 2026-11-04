@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRecordRequest} extends {@link RequestModel}
  *
  * <p>QueryRecordRequest</p>
  */
 public class QueryRecordRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer beginTime;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer endTime;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("NeedSnapshot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedSnapshot")
     private Boolean needSnapshot;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("RecordType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordType")
     private Integer recordType;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private Integer streamType;
 
     private QueryRecordRequest(Builder builder) {
@@ -81,7 +86,7 @@ public class QueryRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,7 +201,11 @@ public class QueryRecordRequest extends Request {
         } 
 
         /**
-         * BeginTime.
+         * <p>The start time of the query range. The time is a 10-digit timestamp in seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1508200012</p>
          */
         public Builder beginTime(Integer beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -205,7 +214,10 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -214,7 +226,13 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the IP camera. You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -223,7 +241,11 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query range. The time is a 10-digit timestamp in seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582420940</p>
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -232,7 +254,13 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The ID of the IP camera. The ID is issued by IoT Platform and is the unique identifier of the device. You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation of IoT Platform to query the ID.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> is the unique identifier of the device and corresponds to the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>C47T6xwp6ms4bNlkHRWCg4****</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -241,7 +269,18 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the ID of the current instance on the <strong>Overview</strong> tab in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <ul>
+         * <li>If your instance has an ID, you must specify the <strong>ID</strong>. Otherwise, the call fails.</li>
+         * <li>If your instance does not have an ID, you do not need to specify this parameter.</li>
+         * </ul>
+         * <p>For more information about instances, see <a href="https://help.aliyun.com/document_detail/356505.html">Instance overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-060a****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -250,7 +289,14 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * NeedSnapshot.
+         * <p>Specifies whether to return thumbnails. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong> (default): no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needSnapshot(Boolean needSnapshot) {
             this.putQueryParameter("NeedSnapshot", needSnapshot);
@@ -259,7 +305,10 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,7 +317,13 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the IP camera belongs. You can view the ProductKey on the <strong>Products</strong> page in the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to query the information of all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -277,7 +332,16 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * RecordType.
+         * <p>The recording type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: continuous recording.</li>
+         * <li><strong>1</strong>: intelligent alert event recording.</li>
+         * <li><strong>2</strong> (default): manual recording.</li>
+         * </ul>
+         * <p>If this parameter is left empty, all recording types are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recordType(Integer recordType) {
             this.putQueryParameter("RecordType", recordType);
@@ -286,7 +350,14 @@ public class QueryRecordRequest extends Request {
         }
 
         /**
-         * StreamType.
+         * <p>The stream type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): main stream.</li>
+         * <li><strong>1</strong>: sub stream.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder streamType(Integer streamType) {
             this.putQueryParameter("StreamType", streamType);

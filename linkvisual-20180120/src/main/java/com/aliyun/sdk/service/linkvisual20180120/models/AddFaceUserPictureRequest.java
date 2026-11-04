@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFaceUserPictureRequest} extends {@link RequestModel}
  *
  * <p>AddFaceUserPictureRequest</p>
  */
 public class AddFaceUserPictureRequest extends Request {
-    @Query
-    @NameInMap("FacePicUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FacePicUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String facePicUrl;
 
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private AddFaceUserPictureRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class AddFaceUserPictureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,11 @@ public class AddFaceUserPictureRequest extends Request {
         } 
 
         /**
-         * FacePicUrl.
+         * <p>The download URL of the user\&quot;s face image. Only JPEG and JPG images are supported, and the image URL cannot contain Chinese characters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/test.jpeg">https://example.com/test.jpeg</a></p>
          */
         public Builder facePicUrl(String facePicUrl) {
             this.putQueryParameter("FacePicUrl", facePicUrl);
@@ -94,7 +103,11 @@ public class AddFaceUserPictureRequest extends Request {
         }
 
         /**
-         * IsolationId.
+         * <p>The business isolation ID, which is used to isolate data between different business applications under the same Alibaba Cloud account. Keep this value consistent with the <strong>IsolationId</strong> set when calling the <a href="https://help.aliyun.com/document_detail/288338.html">AddFaceUser</a> API operation to add a user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZheJiangHZ</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);
@@ -103,7 +116,11 @@ public class AddFaceUserPictureRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID. Pass in the <strong>UserId</strong> value that was obtained and saved locally after calling the <a href="https://help.aliyun.com/document_detail/288338.html">AddFaceUser</a> API operation to add a user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3mtjaqebeq4d****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

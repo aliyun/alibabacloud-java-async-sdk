@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceDeviceGroupsByDeviceRequest} extends {@link RequestModel}
  *
  * <p>QueryFaceDeviceGroupsByDeviceRequest</p>
  */
 public class QueryFaceDeviceGroupsByDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceName;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private QueryFaceDeviceGroupsByDeviceRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -130,7 +135,11 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The device name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDeviceName</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -139,7 +148,11 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestIotInstanceId</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -148,7 +161,11 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends Request {
         }
 
         /**
-         * IsolationId.
+         * <p>The isolation ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestIsolationId</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);
@@ -157,7 +174,11 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -166,7 +187,11 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +200,11 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The product key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestProductKey</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRecordUrlByTimeRequest} extends {@link RequestModel}
  *
  * <p>QueryRecordUrlByTimeRequest</p>
  */
 public class QueryRecordUrlByTimeRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true, maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2147483647)
     private Integer beginTime;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true, maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2147483647)
     private Integer endTime;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private Integer streamType;
 
-    @Query
-    @NameInMap("UrlValidDuration")
-    @Validation(maximum = 3600, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UrlValidDuration")
+    @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 10)
     private Integer urlValidDuration;
 
     private QueryRecordUrlByTimeRequest(Builder builder) {
@@ -67,7 +72,7 @@ public class QueryRecordUrlByTimeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,7 +160,12 @@ public class QueryRecordUrlByTimeRequest extends Request {
         } 
 
         /**
-         * BeginTime.
+         * <p>The start time of the query range. The value is a 10-digit timestamp in seconds.</p>
+         * <p>The minimum value is 0, and the maximum value is 2147483647.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638675381</p>
          */
         public Builder beginTime(Integer beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -164,7 +174,14 @@ public class QueryRecordUrlByTimeRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the IP camera.
+         * You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page of the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -173,7 +190,12 @@ public class QueryRecordUrlByTimeRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query range. The value is a 10-digit timestamp in seconds.</p>
+         * <p>The minimum value is 0, and the maximum value is 2147483647.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638866820</p>
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -182,7 +204,13 @@ public class QueryRecordUrlByTimeRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The IotId of the IP camera. The IotId is the unique identifier issued by IoT Platform for the device. You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation of IoT Platform to query the IotId.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> is the unique identifier of the device and corresponds to the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d7XmBoJhAr88C6PelXDF00****</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -191,7 +219,14 @@ public class QueryRecordUrlByTimeRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID.</p>
+         * <p>You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page of the IoT Platform console. If the instance has an ID, you must specify this ID. Otherwise, the call fails.</p>
+         * <blockquote>
+         * <p>If the public instance does not have an ID, see <a href="https://help.aliyun.com/document_detail/267533.html">How to obtain an instance ID</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-060a****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -200,7 +235,14 @@ public class QueryRecordUrlByTimeRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the IP camera belongs.
+         * You can view the ProductKey on the <strong>Products</strong> page of the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to query all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -209,7 +251,14 @@ public class QueryRecordUrlByTimeRequest extends Request {
         }
 
         /**
-         * StreamType.
+         * <p>The type of the video stream. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): main stream</li>
+         * <li><strong>1</strong>: sub stream</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder streamType(Integer streamType) {
             this.putQueryParameter("StreamType", streamType);
@@ -218,7 +267,10 @@ public class QueryRecordUrlByTimeRequest extends Request {
         }
 
         /**
-         * UrlValidDuration.
+         * <p>The validity period of the URL. Valid values: 10 to 3600. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder urlValidDuration(Integer urlValidDuration) {
             this.putQueryParameter("UrlValidDuration", urlValidDuration);

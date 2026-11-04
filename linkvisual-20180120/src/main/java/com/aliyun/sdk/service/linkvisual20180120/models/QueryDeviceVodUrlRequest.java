@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceVodUrlRequest} extends {@link RequestModel}
  *
  * <p>QueryDeviceVodUrlRequest</p>
  */
 public class QueryDeviceVodUrlRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("EnableStun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableStun")
     private Boolean enableStun;
 
-    @Query
-    @NameInMap("EncryptType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
     private Integer encryptType;
 
-    @Query
-    @NameInMap("FileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PlayUnLimited")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayUnLimited")
     private Boolean playUnLimited;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("Scheme")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scheme")
     private String scheme;
 
-    @Query
-    @NameInMap("SeekTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SeekTime")
     private Integer seekTime;
 
-    @Query
-    @NameInMap("ShouldEncrypt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShouldEncrypt")
     private Boolean shouldEncrypt;
 
-    @Query
-    @NameInMap("UrlValidDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UrlValidDuration")
     private Integer urlValidDuration;
 
     private QueryDeviceVodUrlRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class QueryDeviceVodUrlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -209,7 +214,14 @@ public class QueryDeviceVodUrlRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the IP camera.
+         * You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -227,7 +239,10 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * EncryptType.
+         * <p>The encryption type. Only I-frame encryption is supported. Set the value to 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder encryptType(Integer encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -236,7 +251,14 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>The name of the recording file. You can call the <a href="https://help.aliyun.com/document_detail/69584.html">InvokeThingService</a> operation provided by IoT Platform to query the name. For request parameter examples, see <strong>Supplementary description of request parameters</strong> below.</p>
+         * <blockquote>
+         * <p>The name of the recording file cannot exceed 180 characters in length.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file1</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -245,7 +267,13 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The ID of the IP camera. The ID is issued by IoT Platform and uniquely identifies the device. You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation of IoT Platform to query the ID.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> parameter uniquely identifies the device and has a one-to-one mapping with the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zLZyi6aOLyOSHa9hsPyD00****</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -254,7 +282,18 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <ul>
+         * <li>If an instance ID is specified, you must specify this parameter. Otherwise, the call fails.</li>
+         * <li>If no &lt;props=&quot;intl&quot;&gt;<ph><strong>Instance Overview</strong> page or </ph>instance ID is available, you do not need to specify this parameter.</li>
+         * </ul>
+         * <p>For more information about instances, see <a href="https://help.aliyun.com/document_detail/356505.html">Instance overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-n6w1y59****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -263,7 +302,14 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * PlayUnLimited.
+         * <p>Specifies whether the playback URL can be used an unlimited number of times. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The URL can be used an unlimited number of times within 10 seconds.</li>
+         * <li><strong>false</strong>: The URL can be used only once. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder playUnLimited(Boolean playUnLimited) {
             this.putQueryParameter("PlayUnLimited", playUnLimited);
@@ -272,7 +318,14 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the IP camera belongs.
+         * You can view the ProductKey on the <strong>Products</strong> page in the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to query the information about all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -281,7 +334,18 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * Scheme.
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>rtmp</strong>: RTMP.</li>
+         * <li><strong>flv</strong>: HTTP-FLV.</li>
+         * <li><strong>hls</strong>: HLS.<blockquote>
+         * <p>For more information about the limits of HLS, see <a href="https://help.aliyun.com/document_detail/208584.html">Cloud development</a>.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         public Builder scheme(String scheme) {
             this.putQueryParameter("Scheme", scheme);
@@ -290,7 +354,10 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * SeekTime.
+         * <p>The offset relative to the <strong>BeginTime</strong> parameter, which specifies the start time of the recording. Unit: seconds. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder seekTime(Integer seekTime) {
             this.putQueryParameter("SeekTime", seekTime);
@@ -299,7 +366,14 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * ShouldEncrypt.
+         * <p>Specifies whether to encrypt the recording file. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Encrypts the recording file.</li>
+         * <li><strong>false</strong>: Does not encrypt the recording file. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder shouldEncrypt(Boolean shouldEncrypt) {
             this.putQueryParameter("ShouldEncrypt", shouldEncrypt);
@@ -308,7 +382,10 @@ public class QueryDeviceVodUrlRequest extends Request {
         }
 
         /**
-         * UrlValidDuration.
+         * <p>The validity period of the URL. Valid values: 10 to 14400. Unit: seconds. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder urlValidDuration(Integer urlValidDuration) {
             this.putQueryParameter("UrlValidDuration", urlValidDuration);

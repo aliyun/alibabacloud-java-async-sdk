@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceAllUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFaceAllUserGroupResponseBody</p>
  */
 public class QueryFaceAllUserGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryFaceAllUserGroupResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
 
     public static QueryFaceAllUserGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryFaceAllUserGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +163,20 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryFaceAllUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceAllUserGroupResponseBody</p>
+     */
     public static class UserGroupList extends TeaModel {
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
-        @NameInMap("UserGroupName")
+        @com.aliyun.core.annotation.NameInMap("UserGroupName")
         private String userGroupName;
 
         private UserGroupList(Builder builder) {
@@ -181,8 +219,20 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
             private String userGroupId; 
             private String userGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserGroupList model) {
+                this.modifiedTime = model.modifiedTime;
+                this.userGroupId = model.userGroupId;
+                this.userGroupName = model.userGroupName;
+            } 
+
             /**
-             * ModifiedTime.
+             * <p>The last modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-12 17:12:37</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -190,7 +240,10 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dmjpxfdk</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -198,7 +251,10 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * <p>The user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestUserGroupName</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;
@@ -212,18 +268,24 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFaceAllUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceAllUserGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("UserGroupList")
-        private java.util.List < UserGroupList> userGroupList;
+        @com.aliyun.core.annotation.NameInMap("UserGroupList")
+        private java.util.List<UserGroupList> userGroupList;
 
         private Data(Builder builder) {
             this.pageNo = builder.pageNo;
@@ -264,7 +326,7 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
         /**
          * @return userGroupList
          */
-        public java.util.List < UserGroupList> getUserGroupList() {
+        public java.util.List<UserGroupList> getUserGroupList() {
             return this.userGroupList;
         }
 
@@ -272,10 +334,23 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer total; 
-            private java.util.List < UserGroupList> userGroupList; 
+            private java.util.List<UserGroupList> userGroupList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageNo = model.pageNo;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.userGroupList = model.userGroupList;
+            } 
 
             /**
-             * PageNo.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -283,7 +358,10 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -291,7 +369,10 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of user groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -299,9 +380,9 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupList.
+             * <p>The list of user group information.</p>
              */
-            public Builder userGroupList(java.util.List < UserGroupList> userGroupList) {
+            public Builder userGroupList(java.util.List<UserGroupList> userGroupList) {
                 this.userGroupList = userGroupList;
                 return this;
             }

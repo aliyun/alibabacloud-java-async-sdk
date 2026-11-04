@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFaceUserPictureResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteFaceUserPictureResponseBody</p>
  */
 public class DeleteFaceUserPictureResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteFaceUserPictureResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class DeleteFaceUserPictureResponseBody extends TeaModel {
 
     public static DeleteFaceUserPictureResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,25 @@ public class DeleteFaceUserPictureResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteFaceUserPictureResponseBody model) {
+            this.code = model.code;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The return code of the operation:</p>
+         * <ul>
+         * <li><strong>200</strong>: The call is successful.</li>
+         * <li>Other values: error codes. For more information, see <a href="https://help.aliyun.com/document_detail/288314.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +108,10 @@ public class DeleteFaceUserPictureResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>face user not exist</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +119,10 @@ public class DeleteFaceUserPictureResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4de2c367-c1db-417c-aa15-8c585e595d92</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +130,14 @@ public class DeleteFaceUserPictureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

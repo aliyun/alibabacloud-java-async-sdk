@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryLocalFileUploadJobResponseBody} extends {@link TeaModel}
  *
  * <p>QueryLocalFileUploadJobResponseBody</p>
  */
 public class QueryLocalFileUploadJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryLocalFileUploadJobResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
 
     public static QueryLocalFileUploadJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,26 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryLocalFileUploadJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code:</p>
+         * <ul>
+         * <li><strong>200</strong>: The call is successful.</li>
+         * <li>Other values: An error occurred. For more information about error codes, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +121,7 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +129,10 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tenant auth error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +140,10 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>449ECE75-A36A-4ACE-B253-147C78C440C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,14 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +171,20 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryLocalFileUploadJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLocalFileUploadJobResponseBody</p>
+     */
     public static class FileList extends TeaModel {
-        @NameInMap("FileEndTime")
+        @com.aliyun.core.annotation.NameInMap("FileEndTime")
         private Integer fileEndTime;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileStartTime")
+        @com.aliyun.core.annotation.NameInMap("FileStartTime")
         private Integer fileStartTime;
 
         private FileList(Builder builder) {
@@ -181,8 +227,20 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
             private String fileName; 
             private Integer fileStartTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileList model) {
+                this.fileEndTime = model.fileEndTime;
+                this.fileName = model.fileName;
+                this.fileStartTime = model.fileStartTime;
+            } 
+
             /**
-             * FileEndTime.
+             * <p>The end time of the video recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634746054</p>
              */
             public Builder fileEndTime(Integer fileEndTime) {
                 this.fileEndTime = fileEndTime;
@@ -190,7 +248,10 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the video recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video1</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -198,7 +259,10 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
             }
 
             /**
-             * FileStartTime.
+             * <p>The start time of the video recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634747054</p>
              */
             public Builder fileStartTime(Integer fileStartTime) {
                 this.fileStartTime = fileStartTime;
@@ -212,29 +276,35 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryLocalFileUploadJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLocalFileUploadJobResponseBody</p>
+     */
     public static class ResultList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("FileList")
-        private java.util.List < FileList> fileList;
+        @com.aliyun.core.annotation.NameInMap("FileList")
+        private java.util.List<FileList> fileList;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
-        @NameInMap("SlotEndTime")
+        @com.aliyun.core.annotation.NameInMap("SlotEndTime")
         private Integer slotEndTime;
 
-        @NameInMap("SlotStartTime")
+        @com.aliyun.core.annotation.NameInMap("SlotStartTime")
         private Integer slotStartTime;
 
-        @NameInMap("SlotStatus")
+        @com.aliyun.core.annotation.NameInMap("SlotStatus")
         private Integer slotStatus;
 
         private ResultList(Builder builder) {
@@ -273,7 +343,7 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         /**
          * @return fileList
          */
-        public java.util.List < FileList> getFileList() {
+        public java.util.List<FileList> getFileList() {
             return this.fileList;
         }
 
@@ -315,15 +385,39 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         public static final class Builder {
             private Integer code; 
             private String deviceName; 
-            private java.util.List < FileList> fileList; 
+            private java.util.List<FileList> fileList; 
             private String iotId; 
             private String productKey; 
             private Integer slotEndTime; 
             private Integer slotStartTime; 
             private Integer slotStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultList model) {
+                this.code = model.code;
+                this.deviceName = model.deviceName;
+                this.fileList = model.fileList;
+                this.iotId = model.iotId;
+                this.productKey = model.productKey;
+                this.slotEndTime = model.slotEndTime;
+                this.slotStartTime = model.slotStartTime;
+                this.slotStatus = model.slotStatus;
+            } 
+
             /**
-             * Code.
+             * <p>The status code of the video recording upload task. Valid values:</p>
+             * <ul>
+             * <li>200: Normal.</li>
+             * <li>9201: The device is offline. Bring the device online and try again.</li>
+             * <li>9409: No cloud storage quota is available. Check the cloud storage quota and try again.</li>
+             * <li>9417: A device, network, or other exception occurred. Try again, or check the device and network status.</li>
+             * <li>9435: The video recording file does not exist. Make sure that the video recording file is stored locally on the video device and try again.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>9201</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -331,7 +425,10 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceName.
+             * <p>The DeviceName of the video device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gb_hik_IPC</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -339,15 +436,18 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
             }
 
             /**
-             * FileList.
+             * <p>The list of video recording files.</p>
              */
-            public Builder fileList(java.util.List < FileList> fileList) {
+            public Builder fileList(java.util.List<FileList> fileList) {
                 this.fileList = fileList;
                 return this;
             }
 
             /**
-             * IotId.
+             * <p>The ID of the video device. The ID is issued by IoT Platform and uniquely identifies the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IQ9mO4tvMnAj****QUdcg2n400</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -355,7 +455,10 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
             }
 
             /**
-             * ProductKey.
+             * <p>The ProductKey of the product to which the video device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g2****Q6ggK</p>
              */
             public Builder productKey(String productKey) {
                 this.productKey = productKey;
@@ -363,7 +466,10 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
             }
 
             /**
-             * SlotEndTime.
+             * <p>The end time of the video recording upload task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634746054</p>
              */
             public Builder slotEndTime(Integer slotEndTime) {
                 this.slotEndTime = slotEndTime;
@@ -371,7 +477,10 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
             }
 
             /**
-             * SlotStartTime.
+             * <p>The start time of the video recording upload task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634745754</p>
              */
             public Builder slotStartTime(Integer slotStartTime) {
                 this.slotStartTime = slotStartTime;
@@ -379,7 +488,17 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
             }
 
             /**
-             * SlotStatus.
+             * <p>The execution status of the video recording upload task within the time period specified by <strong>SlotStartTime</strong> and <strong>SlotEndTime</strong>. Valid values:</p>
+             * <ul>
+             * <li>0: The task is being initialized.</li>
+             * <li>1: The task is running.</li>
+             * <li>2: The task is completed.</li>
+             * <li>3: An exception occurred during task execution.</li>
+             * <li>4: The task is manually terminated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder slotStatus(Integer slotStatus) {
                 this.slotStatus = slotStatus;
@@ -393,11 +512,17 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryLocalFileUploadJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryLocalFileUploadJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ResultList")
-        private java.util.List < ResultList> resultList;
+        @com.aliyun.core.annotation.NameInMap("ResultList")
+        private java.util.List<ResultList> resultList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Data(Builder builder) {
@@ -416,7 +541,7 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         /**
          * @return resultList
          */
-        public java.util.List < ResultList> getResultList() {
+        public java.util.List<ResultList> getResultList() {
             return this.resultList;
         }
 
@@ -428,19 +553,35 @@ public class QueryLocalFileUploadJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ResultList> resultList; 
+            private java.util.List<ResultList> resultList; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resultList = model.resultList;
+                this.status = model.status;
+            } 
+
             /**
-             * ResultList.
+             * <p>The task list.</p>
              */
-            public Builder resultList(java.util.List < ResultList> resultList) {
+            public Builder resultList(java.util.List<ResultList> resultList) {
                 this.resultList = resultList;
                 return this;
             }
 
             /**
-             * Status.
+             * <p>The status of the video recording upload task. Valid values:</p>
+             * <ul>
+             * <li>0: The task is being initialized.</li>
+             * <li>1: The task is running.</li>
+             * <li>2: The task is completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

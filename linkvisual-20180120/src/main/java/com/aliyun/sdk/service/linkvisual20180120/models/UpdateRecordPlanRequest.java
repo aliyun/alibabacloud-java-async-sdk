@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRecordPlanRequest} extends {@link RequestModel}
  *
  * <p>UpdateRecordPlanRequest</p>
  */
 public class UpdateRecordPlanRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("PlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private UpdateRecordPlanRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class UpdateRecordPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,12 @@ public class UpdateRecordPlanRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name of the recording plan.</p>
+         * <p>The name must be less than 48 characters in length and can contain letters, digits, and the following special characters: hyphens (-), underscores (_), at signs (@), periods (.), and colons (:).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -94,7 +104,11 @@ public class UpdateRecordPlanRequest extends Request {
         }
 
         /**
-         * PlanId.
+         * <p>The ID of the recording plan. You can call <a href="https://help.aliyun.com/document_detail/107896.html">QueryRecordPlans</a> to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c5a397bc17c4b48ace86f0f0c30****</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -103,7 +117,11 @@ public class UpdateRecordPlanRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the time template to be associated with the recording plan. You can call <a href="https://help.aliyun.com/document_detail/107890.html">QueryTimeTemplate</a> to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36f06322442e4e3f85a5ae8862c9****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

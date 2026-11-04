@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGbDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGbDeviceResponseBody</p>
  */
 public class CreateGbDeviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateGbDeviceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateGbDeviceResponseBody extends TeaModel {
 
     public static CreateGbDeviceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateGbDeviceResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGbDeviceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,11 +151,17 @@ public class CreateGbDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGbDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGbDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
         private Data(Builder builder) {
@@ -168,6 +194,14 @@ public class CreateGbDeviceResponseBody extends TeaModel {
         public static final class Builder {
             private String deviceName; 
             private String iotId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+            } 
 
             /**
              * DeviceName.

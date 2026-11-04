@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableGbSubDeviceRequest} extends {@link RequestModel}
  *
  * <p>EnableGbSubDeviceRequest</p>
  */
 public class EnableGbSubDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("SubDeviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDeviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subDeviceId;
 
     private EnableGbSubDeviceRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class EnableGbSubDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -130,7 +135,7 @@ public class EnableGbSubDeviceRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -148,7 +153,7 @@ public class EnableGbSubDeviceRequest extends Request {
         }
 
         /**
-         * SubDeviceId.
+         * <p>This parameter is required.</p>
          */
         public Builder subDeviceId(String subDeviceId) {
             this.putQueryParameter("SubDeviceId", subDeviceId);

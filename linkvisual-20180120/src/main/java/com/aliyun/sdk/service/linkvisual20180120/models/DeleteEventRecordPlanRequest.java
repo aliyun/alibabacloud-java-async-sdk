@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEventRecordPlanRequest} extends {@link RequestModel}
  *
  * <p>DeleteEventRecordPlanRequest</p>
  */
 public class DeleteEventRecordPlanRequest extends Request {
-    @Query
-    @NameInMap("PlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
 
     private DeleteEventRecordPlanRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DeleteEventRecordPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class DeleteEventRecordPlanRequest extends Request {
         } 
 
         /**
-         * PlanId.
+         * <p>The ID of the intelligent alert event recording plan. You can call the <a href="https://help.aliyun.com/document_detail/107907.html">QueryEventRecordPlans</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e34a1989aa54debac22358aca7f****</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);

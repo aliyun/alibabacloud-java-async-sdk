@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceAllUserIdsByGroupIdRequest} extends {@link RequestModel}
  *
  * <p>QueryFaceAllUserIdsByGroupIdRequest</p>
  */
 public class QueryFaceAllUserIdsByGroupIdRequest extends Request {
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
     private QueryFaceAllUserIdsByGroupIdRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class QueryFaceAllUserIdsByGroupIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,11 @@ public class QueryFaceAllUserIdsByGroupIdRequest extends Request {
         } 
 
         /**
-         * IsolationId.
+         * <p>The isolation ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestIsolationId</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);
@@ -109,7 +118,11 @@ public class QueryFaceAllUserIdsByGroupIdRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -118,7 +131,11 @@ public class QueryFaceAllUserIdsByGroupIdRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -127,7 +144,11 @@ public class QueryFaceAllUserIdsByGroupIdRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The user group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUserGroupId</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

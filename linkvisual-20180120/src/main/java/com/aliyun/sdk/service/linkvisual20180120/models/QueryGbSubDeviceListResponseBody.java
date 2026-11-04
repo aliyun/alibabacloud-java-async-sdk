@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGbSubDeviceListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGbSubDeviceListResponseBody</p>
  */
 public class QueryGbSubDeviceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryGbSubDeviceListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryGbSubDeviceListResponseBody extends TeaModel {
 
     public static QueryGbSubDeviceListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryGbSubDeviceListResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryGbSubDeviceListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class QueryGbSubDeviceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryGbSubDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGbSubDeviceListResponseBody</p>
+     */
     public static class GbSubDeviceList extends TeaModel {
-        @NameInMap("DeviceEnable")
+        @com.aliyun.core.annotation.NameInMap("DeviceEnable")
         private Integer deviceEnable;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("ProductKey")
+        @com.aliyun.core.annotation.NameInMap("ProductKey")
         private String productKey;
 
         private GbSubDeviceList(Builder builder) {
@@ -205,6 +231,17 @@ public class QueryGbSubDeviceListResponseBody extends TeaModel {
             private String iotId; 
             private String productKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(GbSubDeviceList model) {
+                this.deviceEnable = model.deviceEnable;
+                this.deviceId = model.deviceId;
+                this.deviceName = model.deviceName;
+                this.iotId = model.iotId;
+                this.productKey = model.productKey;
+            } 
+
             /**
              * DeviceEnable.
              */
@@ -252,11 +289,17 @@ public class QueryGbSubDeviceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryGbSubDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGbSubDeviceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GbSubDeviceList")
-        private java.util.List < GbSubDeviceList> gbSubDeviceList;
+        @com.aliyun.core.annotation.NameInMap("GbSubDeviceList")
+        private java.util.List<GbSubDeviceList> gbSubDeviceList;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -275,7 +318,7 @@ public class QueryGbSubDeviceListResponseBody extends TeaModel {
         /**
          * @return gbSubDeviceList
          */
-        public java.util.List < GbSubDeviceList> getGbSubDeviceList() {
+        public java.util.List<GbSubDeviceList> getGbSubDeviceList() {
             return this.gbSubDeviceList;
         }
 
@@ -287,13 +330,21 @@ public class QueryGbSubDeviceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < GbSubDeviceList> gbSubDeviceList; 
+            private java.util.List<GbSubDeviceList> gbSubDeviceList; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gbSubDeviceList = model.gbSubDeviceList;
+                this.total = model.total;
+            } 
 
             /**
              * GbSubDeviceList.
              */
-            public Builder gbSubDeviceList(java.util.List < GbSubDeviceList> gbSubDeviceList) {
+            public Builder gbSubDeviceList(java.util.List<GbSubDeviceList> gbSubDeviceList) {
                 this.gbSubDeviceList = gbSubDeviceList;
                 return this;
             }

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRecordDownloadJobByIdRequest} extends {@link RequestModel}
  *
  * <p>QueryRecordDownloadJobByIdRequest</p>
  */
 public class QueryRecordDownloadJobByIdRequest extends Request {
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private QueryRecordDownloadJobByIdRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class QueryRecordDownloadJobByIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class QueryRecordDownloadJobByIdRequest extends Request {
         } 
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the ID of the current instance on the <strong>Instance Overview</strong> tab in the IoT Platform console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Iot-r******</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -79,7 +88,11 @@ public class QueryRecordDownloadJobByIdRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the cloud record download task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w2s******</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

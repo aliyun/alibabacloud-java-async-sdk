@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClearFaceDeviceDBRequest} extends {@link RequestModel}
  *
  * <p>ClearFaceDeviceDBRequest</p>
  */
 public class ClearFaceDeviceDBRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceName;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private ClearFaceDeviceDBRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class ClearFaceDeviceDBRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,11 @@ public class ClearFaceDeviceDBRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The name of the device corresponding to the V-series edge all-in-one machine. On the <strong>Basic Information</strong> tab of the <strong>Host Details</strong> page for the V-series edge all-in-one machine in the Edge Computing console, find the <strong>Video Gateway</strong> information and obtain the <strong>DeviceName</strong> value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDevice_1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -108,7 +117,14 @@ public class ClearFaceDeviceDBRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID.</p>
+         * <p>You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page in the IoT Platform console. If an ID value exists, you must pass this ID value. Otherwise, the call fails.</p>
+         * <blockquote>
+         * <p>If a public instance does not have an ID value, see <a href="https://help.aliyun.com/document_detail/267533.html">How to obtain an instance ID</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -117,7 +133,11 @@ public class ClearFaceDeviceDBRequest extends Request {
         }
 
         /**
-         * IsolationId.
+         * <p>The business isolation ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZheJiangHZ</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);
@@ -126,7 +146,11 @@ public class ClearFaceDeviceDBRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The unique identifier of the product to which the device corresponding to the V-series edge all-in-one machine belongs. On the <strong>Basic Information</strong> tab of the <strong>Host Details</strong> page for the V-series edge all-in-one machine in the Edge Computing console, find the <strong>Video Gateway</strong> information and obtain the <strong>ProductKey</strong> value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1Wmy******</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceUserByNameRequest} extends {@link RequestModel}
  *
  * <p>QueryFaceUserByNameRequest</p>
  */
 public class QueryFaceUserByNameRequest extends Request {
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true, maximum = 1000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000000, minimum = 1)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
     private QueryFaceUserByNameRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class QueryFaceUserByNameRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,11 @@ public class QueryFaceUserByNameRequest extends Request {
         } 
 
         /**
-         * IsolationId.
+         * <p>The business isolation ID, which is used to isolate data between different business applications under the same Alibaba Cloud account. Make sure that this parameter is consistent with the <strong>IsolationId</strong> set when you call the <a href="https://help.aliyun.com/document_detail/288338.html">AddFaceUser</a> operation to add a user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZheJiangHZ</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);
@@ -122,7 +131,11 @@ public class QueryFaceUserByNameRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The username. The name can contain Chinese characters, uppercase and lowercase letters, digits, underscores (_), and hyphens (-), and can be up to 64 characters in length.</p>
+         * <p>Fuzzy match is supported. If this parameter is not specified, all records are matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tony</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -131,7 +144,11 @@ public class QueryFaceUserByNameRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number of the page to return. Minimum value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -140,7 +157,11 @@ public class QueryFaceUserByNameRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Maximum value: 50. Minimum value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +170,11 @@ public class QueryFaceUserByNameRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The custom user parameters.</p>
+         * <p>Exact match is supported, but fuzzy match is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;:&quot;value2&quot;}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);

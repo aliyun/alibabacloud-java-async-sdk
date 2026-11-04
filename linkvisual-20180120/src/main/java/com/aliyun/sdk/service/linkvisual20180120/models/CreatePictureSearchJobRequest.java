@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePictureSearchJobRequest} extends {@link RequestModel}
  *
  * <p>CreatePictureSearchJobRequest</p>
  */
 public class CreatePictureSearchJobRequest extends Request {
-    @Query
-    @NameInMap("AppInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceId;
 
-    @Query
-    @NameInMap("BodyThreshold")
-    @Validation(maximum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BodyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 1)
     private Float bodyThreshold;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true, maximum = 9999999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 9999999999999D)
     private Long endTime;
 
-    @Query
-    @NameInMap("PictureSearchType")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PictureSearchType")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Integer pictureSearchType;
 
-    @Query
-    @NameInMap("SearchPicUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchPicUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String searchPicUrl;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true, maximum = 9999999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 9999999999999D)
     private Long startTime;
 
-    @Query
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float threshold;
 
     private CreatePictureSearchJobRequest(Builder builder) {
@@ -66,7 +71,7 @@ public class CreatePictureSearchJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +150,11 @@ public class CreatePictureSearchJobRequest extends Request {
         } 
 
         /**
-         * AppInstanceId.
+         * <p>Instance ID of the image search application instance. You can call the <a href="https://help.aliyun.com/document_detail/206608.html">QueryPictureSearchApps</a> operation to query instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e429560124b44b685095df81a27****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.putQueryParameter("AppInstanceId", appInstanceId);
@@ -154,7 +163,11 @@ public class CreatePictureSearchJobRequest extends Request {
         }
 
         /**
-         * BodyThreshold.
+         * <p>The threshold for human body search. Valid values: 0 to 1.</p>
+         * <p>To ensure the accuracy of search results, set this parameter to a value greater than or equal to 0.8. If this parameter is not specified, the value of the Threshold parameter is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
          */
         public Builder bodyThreshold(Float bodyThreshold) {
             this.putQueryParameter("BodyThreshold", bodyThreshold);
@@ -163,7 +176,11 @@ public class CreatePictureSearchJobRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the search range. The time is a 13-digit timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614327915000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -172,7 +189,15 @@ public class CreatePictureSearchJobRequest extends Request {
         }
 
         /**
-         * PictureSearchType.
+         * <p>The search type. Valid values:</p>
+         * <ul>
+         * <li>1: face</li>
+         * <li>0: human body</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pictureSearchType(Integer pictureSearchType) {
             this.putQueryParameter("PictureSearchType", pictureSearchType);
@@ -181,7 +206,11 @@ public class CreatePictureSearchJobRequest extends Request {
         }
 
         /**
-         * SearchPicUrl.
+         * <p>The URL of the image to be searched.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.xxx/1.jpg">http://xxx.xxx/1.jpg</a></p>
          */
         public Builder searchPicUrl(String searchPicUrl) {
             this.putQueryParameter("SearchPicUrl", searchPicUrl);
@@ -190,7 +219,11 @@ public class CreatePictureSearchJobRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the search range. The time is a 13-digit timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614227915000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -199,7 +232,12 @@ public class CreatePictureSearchJobRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * <p>The threshold for face search. Valid values: 0 to 1.</p>
+         * <p>To ensure the accuracy of search results, set this parameter to a value between 0.3 and 0.6.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder threshold(Float threshold) {
             this.putQueryParameter("Threshold", threshold);

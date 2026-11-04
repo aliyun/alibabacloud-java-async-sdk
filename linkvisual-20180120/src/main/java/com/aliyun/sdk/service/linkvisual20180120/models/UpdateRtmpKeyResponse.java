@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRtmpKeyResponse} extends {@link TeaModel}
  *
  * <p>UpdateRtmpKeyResponse</p>
  */
 public class UpdateRtmpKeyResponse extends Response {
-    @NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private UpdateRtmpKeyResponseBody body;
 
     private UpdateRtmpKeyResponse(BuilderImpl builder) {
@@ -32,7 +37,7 @@ public class UpdateRtmpKeyResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -40,7 +45,7 @@ public class UpdateRtmpKeyResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -60,7 +65,7 @@ public class UpdateRtmpKeyResponse extends Response {
 
     public interface Builder extends Response.Builder<UpdateRtmpKeyResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -74,7 +79,7 @@ public class UpdateRtmpKeyResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<UpdateRtmpKeyResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private UpdateRtmpKeyResponseBody body; 
 
@@ -93,7 +98,7 @@ public class UpdateRtmpKeyResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }

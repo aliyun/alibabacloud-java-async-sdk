@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerRecordRequest} extends {@link RequestModel}
  *
  * <p>TriggerRecordRequest</p>
  */
 public class TriggerRecordRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PreRecordDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreRecordDuration")
     private Integer preRecordDuration;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("RecordDuration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordDuration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer recordDuration;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private Integer streamType;
 
     private TriggerRecordRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class TriggerRecordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +144,13 @@ public class TriggerRecordRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the IPC device. You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -148,7 +159,13 @@ public class TriggerRecordRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The IotId of the IPC device. The IotId is the unique identifier that is issued by IoT Platform to the device. You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation of IoT Platform to query the IotId.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> is the unique identifier of the device and corresponds to the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zLZyi6aOLyOSHa****yD000100</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -157,7 +174,16 @@ public class TriggerRecordRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page in the IoT Platform console. If the instance has an ID, you must specify the ID. Otherwise, the call fails.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <blockquote>
+         * <p>If the public instance does not have an ID, see <a href="https://help.aliyun.com/document_detail/267533.html">How to obtain an instance ID</a>.</p>
+         * </blockquote>
+         * <p>&lt;props=&quot;intl&quot;&gt;You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-n6w1y5****0t</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -166,7 +192,13 @@ public class TriggerRecordRequest extends Request {
         }
 
         /**
-         * PreRecordDuration.
+         * <p>The pre-recording duration. Valid values: 0 to 10. Unit: seconds.</p>
+         * <blockquote>
+         * <p>The pre-recording duration is generated only when the device supports the pre-recording feature. Otherwise, the pre-recording duration is 0.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder preRecordDuration(Integer preRecordDuration) {
             this.putQueryParameter("PreRecordDuration", preRecordDuration);
@@ -175,7 +207,13 @@ public class TriggerRecordRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the IPC device belongs. You can view the ProductKey on the <strong>Products</strong> page in the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to query all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -184,7 +222,14 @@ public class TriggerRecordRequest extends Request {
         }
 
         /**
-         * RecordDuration.
+         * <p>The recording duration, including the pre-recording duration. Valid values: 10 to 7200. Unit: seconds.</p>
+         * <blockquote>
+         * <p>The maximum length of a single recording file is 30 minutes. If the recording duration exceeds 30 minutes, the recording is automatically split into multiple recording files.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder recordDuration(Integer recordDuration) {
             this.putQueryParameter("RecordDuration", recordDuration);
@@ -193,7 +238,14 @@ public class TriggerRecordRequest extends Request {
         }
 
         /**
-         * StreamType.
+         * <p>The stream type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): main stream.</li>
+         * <li><strong>1</strong>: sub stream.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder streamType(Integer streamType) {
             this.putQueryParameter("StreamType", streamType);

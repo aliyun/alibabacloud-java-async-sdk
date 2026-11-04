@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchQueryVisionDeviceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>BatchQueryVisionDeviceInfoResponseBody</p>
  */
 public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchQueryVisionDeviceInfoResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
 
     public static BatchQueryVisionDeviceInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchQueryVisionDeviceInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,23 +151,29 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchQueryVisionDeviceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchQueryVisionDeviceInfoResponseBody</p>
+     */
     public static class GbDeviceInfo extends TeaModel {
-        @NameInMap("DeviceProtocol")
+        @com.aliyun.core.annotation.NameInMap("DeviceProtocol")
         private Integer deviceProtocol;
 
-        @NameInMap("GbId")
+        @com.aliyun.core.annotation.NameInMap("GbId")
         private String gbId;
 
-        @NameInMap("NetProtocol")
+        @com.aliyun.core.annotation.NameInMap("NetProtocol")
         private Integer netProtocol;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("SubProductKey")
+        @com.aliyun.core.annotation.NameInMap("SubProductKey")
         private String subProductKey;
 
         private GbDeviceInfo(Builder builder) {
@@ -217,6 +243,18 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
             private String password; 
             private String subProductKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(GbDeviceInfo model) {
+                this.deviceProtocol = model.deviceProtocol;
+                this.gbId = model.gbId;
+                this.netProtocol = model.netProtocol;
+                this.nickName = model.nickName;
+                this.password = model.password;
+                this.subProductKey = model.subProductKey;
+            } 
+
             /**
              * DeviceProtocol.
              */
@@ -272,26 +310,32 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchQueryVisionDeviceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchQueryVisionDeviceInfoResponseBody</p>
+     */
     public static class RtmpDeviceInfo extends TeaModel {
-        @NameInMap("PullAuthKey")
+        @com.aliyun.core.annotation.NameInMap("PullAuthKey")
         private String pullAuthKey;
 
-        @NameInMap("PullKeyExpireTime")
+        @com.aliyun.core.annotation.NameInMap("PullKeyExpireTime")
         private Integer pullKeyExpireTime;
 
-        @NameInMap("PushAuthKey")
+        @com.aliyun.core.annotation.NameInMap("PushAuthKey")
         private String pushAuthKey;
 
-        @NameInMap("PushKeyExpireTime")
+        @com.aliyun.core.annotation.NameInMap("PushKeyExpireTime")
         private Integer pushKeyExpireTime;
 
-        @NameInMap("PushUrlSample")
+        @com.aliyun.core.annotation.NameInMap("PushUrlSample")
         private String pushUrlSample;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("StreamStatus")
+        @com.aliyun.core.annotation.NameInMap("StreamStatus")
         private Integer streamStatus;
 
         private RtmpDeviceInfo(Builder builder) {
@@ -370,6 +414,19 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
             private String streamName; 
             private Integer streamStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(RtmpDeviceInfo model) {
+                this.pullAuthKey = model.pullAuthKey;
+                this.pullKeyExpireTime = model.pullKeyExpireTime;
+                this.pushAuthKey = model.pushAuthKey;
+                this.pushKeyExpireTime = model.pushKeyExpireTime;
+                this.pushUrlSample = model.pushUrlSample;
+                this.streamName = model.streamName;
+                this.streamStatus = model.streamStatus;
+            } 
+
             /**
              * PullAuthKey.
              */
@@ -433,20 +490,26 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchQueryVisionDeviceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchQueryVisionDeviceInfoResponseBody</p>
+     */
     public static class DeviceInfoList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private Integer deviceType;
 
-        @NameInMap("GbDeviceInfo")
+        @com.aliyun.core.annotation.NameInMap("GbDeviceInfo")
         private GbDeviceInfo gbDeviceInfo;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("RtmpDeviceInfo")
+        @com.aliyun.core.annotation.NameInMap("RtmpDeviceInfo")
         private RtmpDeviceInfo rtmpDeviceInfo;
 
         private DeviceInfoList(Builder builder) {
@@ -507,6 +570,17 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
             private String iotId; 
             private RtmpDeviceInfo rtmpDeviceInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeviceInfoList model) {
+                this.description = model.description;
+                this.deviceType = model.deviceType;
+                this.gbDeviceInfo = model.gbDeviceInfo;
+                this.iotId = model.iotId;
+                this.rtmpDeviceInfo = model.rtmpDeviceInfo;
+            } 
+
             /**
              * Description.
              */
@@ -554,9 +628,15 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchQueryVisionDeviceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchQueryVisionDeviceInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeviceInfoList")
-        private java.util.List < DeviceInfoList> deviceInfoList;
+        @com.aliyun.core.annotation.NameInMap("DeviceInfoList")
+        private java.util.List<DeviceInfoList> deviceInfoList;
 
         private Data(Builder builder) {
             this.deviceInfoList = builder.deviceInfoList;
@@ -573,17 +653,24 @@ public class BatchQueryVisionDeviceInfoResponseBody extends TeaModel {
         /**
          * @return deviceInfoList
          */
-        public java.util.List < DeviceInfoList> getDeviceInfoList() {
+        public java.util.List<DeviceInfoList> getDeviceInfoList() {
             return this.deviceInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < DeviceInfoList> deviceInfoList; 
+            private java.util.List<DeviceInfoList> deviceInfoList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.deviceInfoList = model.deviceInfoList;
+            } 
 
             /**
              * DeviceInfoList.
              */
-            public Builder deviceInfoList(java.util.List < DeviceInfoList> deviceInfoList) {
+            public Builder deviceInfoList(java.util.List<DeviceInfoList> deviceInfoList) {
                 this.deviceInfoList = deviceInfoList;
                 return this;
             }

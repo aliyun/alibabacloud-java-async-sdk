@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPictureSearchAppsRequest} extends {@link RequestModel}
  *
  * <p>QueryPictureSearchAppsRequest</p>
  */
 public class QueryPictureSearchAppsRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true, maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 1)
     private Integer pageSize;
 
     private QueryPictureSearchAppsRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class QueryPictureSearchAppsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,11 @@ public class QueryPictureSearchAppsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return. Minimum value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -93,7 +102,14 @@ public class QueryPictureSearchAppsRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID.</p>
+         * <p>You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page in the IoT Platform console. If the instance has an ID, you must specify the ID. Otherwise, the call fails.</p>
+         * <blockquote>
+         * <p>If a public instance does not have an ID, refer to <a href="https://help.aliyun.com/document_detail/267533.html">How to obtain an instance ID</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -102,7 +118,11 @@ public class QueryPictureSearchAppsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 20.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

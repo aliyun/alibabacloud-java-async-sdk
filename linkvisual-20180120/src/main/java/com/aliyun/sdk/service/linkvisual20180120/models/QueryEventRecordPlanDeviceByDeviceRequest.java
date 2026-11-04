@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEventRecordPlanDeviceByDeviceRequest} extends {@link RequestModel}
  *
  * <p>QueryEventRecordPlanDeviceByDeviceRequest</p>
  */
 public class QueryEventRecordPlanDeviceByDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private Integer streamType;
 
     private QueryEventRecordPlanDeviceByDeviceRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class QueryEventRecordPlanDeviceByDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -110,7 +115,14 @@ public class QueryEventRecordPlanDeviceByDeviceRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The device name of the IPC device.
+         * You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -119,7 +131,13 @@ public class QueryEventRecordPlanDeviceByDeviceRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The device ID of the IPC device. This is the unique identifier issued by IoT Platform for the device. You can call <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> of IoT Platform to query the device ID.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. <strong>IotId</strong> is a globally unique identifier of the device and corresponds to a combination of <strong>ProductKey</strong> and <strong>DeviceName</strong> on a one-to-one basis. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zLZyi6aOLyOSHa9hsPyD00****</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -128,7 +146,14 @@ public class QueryEventRecordPlanDeviceByDeviceRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID.</p>
+         * <p>You can view the <strong>ID</strong> of the current instance on the <strong>Overview</strong> page in the IoT Platform console. If the ID value exists, you must specify this ID value. Otherwise, the call fails.</p>
+         * <blockquote>
+         * <p>If the public instance does not have an ID value, see <a href="https://help.aliyun.com/document_detail/267533.html">How to obtain an instance ID</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-n6w1y59****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -137,7 +162,14 @@ public class QueryEventRecordPlanDeviceByDeviceRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the IPC device belongs.
+         * You can view the ProductKey on the <strong>Products</strong> page in the IoT Platform console, or call <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> to query the information about all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -146,7 +178,14 @@ public class QueryEventRecordPlanDeviceByDeviceRequest extends Request {
         }
 
         /**
-         * StreamType.
+         * <p>The stream type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): main stream</li>
+         * <li><strong>1</strong>: sub stream</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder streamType(Integer streamType) {
             this.putQueryParameter("StreamType", streamType);

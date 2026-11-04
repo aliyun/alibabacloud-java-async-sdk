@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDeviceVodUrlResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDeviceVodUrlResponseBody</p>
  */
 public class QueryDeviceVodUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDeviceVodUrlResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
 
     public static QueryDeviceVodUrlResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,26 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDeviceVodUrlResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: The call was successful.</li>
+         * <li>Other values: The call failed. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +121,7 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +129,10 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product is not active.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +140,10 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06DC77A0-4622-42DB-9EE0-25FIOHS82JK1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,14 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +171,20 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDeviceVodUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDeviceVodUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DecryptKey")
+        @com.aliyun.core.annotation.NameInMap("DecryptKey")
         private String decryptKey;
 
-        @NameInMap("StunInfo")
+        @com.aliyun.core.annotation.NameInMap("StunInfo")
         private String stunInfo;
 
-        @NameInMap("VodUrl")
+        @com.aliyun.core.annotation.NameInMap("VodUrl")
         private String vodUrl;
 
         private Data(Builder builder) {
@@ -181,8 +227,21 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
             private String stunInfo; 
             private String vodUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.decryptKey = model.decryptKey;
+                this.stunInfo = model.stunInfo;
+                this.vodUrl = model.vodUrl;
+            } 
+
             /**
-             * DecryptKey.
+             * <p>The decryption key.
+             * A decryption key is generated when the <strong>ShouldEncrypt</strong> parameter is set to <strong>true</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;iv&quot;: &quot;MDEy<strong><strong>OTo7PD0+Pw==&quot;,&quot;key&quot;: &quot;eA2r</strong></strong>fHjOmnyBfQ==&quot;}</p>
              */
             public Builder decryptKey(String decryptKey) {
                 this.decryptKey = decryptKey;
@@ -198,7 +257,7 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
             }
 
             /**
-             * VodUrl.
+             * <p>The URL of the local recording.</p>
              */
             public Builder vodUrl(String vodUrl) {
                 this.vodUrl = vodUrl;

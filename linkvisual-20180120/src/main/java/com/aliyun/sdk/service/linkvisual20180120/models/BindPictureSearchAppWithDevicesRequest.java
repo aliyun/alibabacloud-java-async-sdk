@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindPictureSearchAppWithDevicesRequest} extends {@link RequestModel}
  *
  * <p>BindPictureSearchAppWithDevicesRequest</p>
  */
 public class BindPictureSearchAppWithDevicesRequest extends Request {
-    @Query
-    @NameInMap("AppInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceId;
 
-    @Query
-    @NameInMap("DeviceIotIds")
-    @Validation(required = true)
-    private java.util.List < String > deviceIotIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceIotIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> deviceIotIds;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
     private BindPictureSearchAppWithDevicesRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class BindPictureSearchAppWithDevicesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -56,7 +61,7 @@ public class BindPictureSearchAppWithDevicesRequest extends Request {
     /**
      * @return deviceIotIds
      */
-    public java.util.List < String > getDeviceIotIds() {
+    public java.util.List<String> getDeviceIotIds() {
         return this.deviceIotIds;
     }
 
@@ -69,7 +74,7 @@ public class BindPictureSearchAppWithDevicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<BindPictureSearchAppWithDevicesRequest, Builder> {
         private String appInstanceId; 
-        private java.util.List < String > deviceIotIds; 
+        private java.util.List<String> deviceIotIds; 
         private String iotInstanceId; 
 
         private Builder() {
@@ -84,7 +89,11 @@ public class BindPictureSearchAppWithDevicesRequest extends Request {
         } 
 
         /**
-         * AppInstanceId.
+         * <p>Instance ID of the image search application instance. You can call the <a href="https://help.aliyun.com/document_detail/206608.html">QueryPictureSearchApps</a> operation to query instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a502d3fbab8410e8fd4be9037c7****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.putQueryParameter("AppInstanceId", appInstanceId);
@@ -93,16 +102,30 @@ public class BindPictureSearchAppWithDevicesRequest extends Request {
         }
 
         /**
-         * DeviceIotIds.
+         * <p>The list of device IoT IDs. You can specify the IoT IDs of V-series edge all-in-one devices or cameras.</p>
+         * <p>An IoT ID is a unique identifier issued by IoT Platform for a device.
+         * You can call the IoT Platform <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation to query the IoT ID.</p>
+         * <p>You can specify up to 20 device IoT IDs in a single call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VrJwPGjC1sJlqPjZA3cxg4****</p>
          */
-        public Builder deviceIotIds(java.util.List < String > deviceIotIds) {
+        public Builder deviceIotIds(java.util.List<String> deviceIotIds) {
             this.putQueryParameter("DeviceIotIds", deviceIotIds);
             this.deviceIotIds = deviceIotIds;
             return this;
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID.</p>
+         * <ul>
+         * <li>Enterprise Enterprise instance: You must specify this parameter. You can view the ID of your Enterprise Enterprise instance on the <strong>Instance Overview</strong> page in the IoT Platform console.</li>
+         * <li>Public instance: You do not need to specify this parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-060a****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);

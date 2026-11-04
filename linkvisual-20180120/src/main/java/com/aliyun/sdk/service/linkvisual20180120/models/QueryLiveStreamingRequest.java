@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryLiveStreamingRequest} extends {@link RequestModel}
  *
  * <p>QueryLiveStreamingRequest</p>
  */
 public class QueryLiveStreamingRequest extends Request {
-    @Query
-    @NameInMap("CacheDuration")
-    @Validation(maximum = 10000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CacheDuration")
+    @com.aliyun.core.annotation.Validation(maximum = 10000)
     private Integer cacheDuration;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("EnableStun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableStun")
     private Boolean enableStun;
 
-    @Query
-    @NameInMap("EncryptType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
     private Integer encryptType;
 
-    @Query
-    @NameInMap("ForceIFrame")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceIFrame")
     private Boolean forceIFrame;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PlayUnLimited")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayUnLimited")
     private Boolean playUnLimited;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("Scheme")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scheme")
     private String scheme;
 
-    @Query
-    @NameInMap("ShouldEncrypt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShouldEncrypt")
     private Boolean shouldEncrypt;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private Integer streamType;
 
-    @Query
-    @NameInMap("UrlValidDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UrlValidDuration")
     private Integer urlValidDuration;
 
     private QueryLiveStreamingRequest(Builder builder) {
@@ -90,7 +95,7 @@ public class QueryLiveStreamingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -223,7 +228,10 @@ public class QueryLiveStreamingRequest extends Request {
         } 
 
         /**
-         * CacheDuration.
+         * <p>The duration of video cached data. Valid values: 0 to 10000. Unit: milliseconds. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cacheDuration(Integer cacheDuration) {
             this.putQueryParameter("CacheDuration", cacheDuration);
@@ -232,7 +240,13 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the IPC device. You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -250,7 +264,14 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * EncryptType.
+         * <p>The encryption type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong> (default): Keyframe encryption.</li>
+         * <li><strong>0</strong>: No encryption.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder encryptType(Integer encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -259,7 +280,14 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * ForceIFrame.
+         * <p>Specifies whether to send a force I-frame command to the device. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Sent.</li>
+         * <li><strong>false</strong> (default): Not sent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceIFrame(Boolean forceIFrame) {
             this.putQueryParameter("ForceIFrame", forceIFrame);
@@ -268,7 +296,13 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The IotId of the IPC device. The IotId is the globally unique identifier that is issued by IoT Platform to the device. You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation of IoT Platform to query the IotId.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> is the globally unique identifier of the device and corresponds to the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>C47T6xwp6ms4bNlkHRWCg4****</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -277,7 +311,18 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <ul>
+         * <li>If an ID value is displayed, you must specify this parameter. Otherwise, the call fails.</li>
+         * <li>If the &lt;props=&quot;intl&quot;&gt;<ph><strong>Instance Overview</strong> page or </ph>ID value is not displayed, you do not need to specify this parameter.</li>
+         * </ul>
+         * <p>For more information about instances, see <a href="https://help.aliyun.com/document_detail/356505.html">Instance overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-n6w1y59****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -286,7 +331,14 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * PlayUnLimited.
+         * <p>Specifies whether the playback URL can be used for an unlimited number of times within the validity period. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Allowed.</li>
+         * <li><strong>false</strong> (default): Not allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder playUnLimited(Boolean playUnLimited) {
             this.putQueryParameter("PlayUnLimited", playUnLimited);
@@ -295,7 +347,13 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the IPC device belongs. You can view the ProductKey on the <strong>Products</strong> page in the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to query the information about all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);
@@ -304,7 +362,15 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * Scheme.
+         * <p>The playback protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>rtmp</strong> (default): RTMP.</li>
+         * <li><strong>hls</strong>: HLS.</li>
+         * <li><strong>flv</strong>: HTTP-FLV.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         public Builder scheme(String scheme) {
             this.putQueryParameter("Scheme", scheme);
@@ -313,7 +379,14 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * ShouldEncrypt.
+         * <p>Specifies whether to encrypt the stream. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Encrypted.</li>
+         * <li><strong>false</strong> (default): Not encrypted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder shouldEncrypt(Boolean shouldEncrypt) {
             this.putQueryParameter("ShouldEncrypt", shouldEncrypt);
@@ -322,7 +395,14 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * StreamType.
+         * <p>The stream type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): Main stream.</li>
+         * <li><strong>1</strong>: Sub stream.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder streamType(Integer streamType) {
             this.putQueryParameter("StreamType", streamType);
@@ -331,7 +411,10 @@ public class QueryLiveStreamingRequest extends Request {
         }
 
         /**
-         * UrlValidDuration.
+         * <p>The validity period of the URL. Valid values: 10 to 14400. Unit: seconds. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder urlValidDuration(Integer urlValidDuration) {
             this.putQueryParameter("UrlValidDuration", urlValidDuration);

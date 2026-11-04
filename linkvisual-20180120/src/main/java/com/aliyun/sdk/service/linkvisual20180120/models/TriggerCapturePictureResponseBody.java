@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerCapturePictureResponseBody} extends {@link TeaModel}
  *
  * <p>TriggerCapturePictureResponseBody</p>
  */
 public class TriggerCapturePictureResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private TriggerCapturePictureResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class TriggerCapturePictureResponseBody extends TeaModel {
 
     public static TriggerCapturePictureResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,26 @@ public class TriggerCapturePictureResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(TriggerCapturePictureResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: The call was successful.</li>
+         * <li>Other values: An error occurred. For more information about error codes, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +121,13 @@ public class TriggerCapturePictureResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The ID of the image that is generated after the IPC device captures the image.</p>
+         * <blockquote>
+         * <p>The image ID takes effect after the IPC device successfully uploads the image.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>eventPicId_12****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +135,10 @@ public class TriggerCapturePictureResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request forbidden</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +146,10 @@ public class TriggerCapturePictureResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06DC77A0-4622-42DB-9EE0-25FIOHS82JK1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +157,14 @@ public class TriggerCapturePictureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

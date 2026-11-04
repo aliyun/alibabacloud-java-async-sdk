@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePictureSearchAppRequest} extends {@link RequestModel}
  *
  * <p>CreatePictureSearchAppRequest</p>
  */
 public class CreatePictureSearchAppRequest extends Request {
-    @Query
-    @NameInMap("Desc")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Desc")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desc;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private CreatePictureSearchAppRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class CreatePictureSearchAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,12 @@ public class CreatePictureSearchAppRequest extends Request {
         } 
 
         /**
-         * Desc.
+         * <p>The description of the image search application instance.</p>
+         * <p>The description can contain Chinese characters, uppercase and lowercase English letters, digits, underscores (_), and hyphens (-). It can be up to 1,024 characters in length, and each Chinese character counts as two characters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageSearchDemo</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -93,7 +103,14 @@ public class CreatePictureSearchAppRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID.</p>
+         * <p>You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page in the IoT Platform console. If the instance has an ID, you must specify this ID. Otherwise, the call fails.</p>
+         * <blockquote>
+         * <p>If the public instance does not have an ID, see <a href="https://help.aliyun.com/document_detail/267533.html">How to obtain an instance ID</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -102,7 +119,12 @@ public class CreatePictureSearchAppRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the image search application instance. </p>
+         * <p>The name can contain Chinese characters, uppercase and lowercase English letters, digits, underscores (_), and hyphens (-). It can be up to 64 characters in length, and each Chinese character counts as two characters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageSearch</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

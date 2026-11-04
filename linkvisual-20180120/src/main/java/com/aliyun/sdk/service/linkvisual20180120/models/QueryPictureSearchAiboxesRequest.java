@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPictureSearchAiboxesRequest} extends {@link RequestModel}
  *
  * <p>QueryPictureSearchAiboxesRequest</p>
  */
 public class QueryPictureSearchAiboxesRequest extends Request {
-    @Query
-    @NameInMap("AppInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceId;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 50, minimum = 1)
     private Integer pageSize;
 
     private QueryPictureSearchAiboxesRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class QueryPictureSearchAiboxesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,11 @@ public class QueryPictureSearchAiboxesRequest extends Request {
         } 
 
         /**
-         * AppInstanceId.
+         * <p>Instance ID of the image search application instance. You can call the <a href="https://help.aliyun.com/document_detail/206608.html">QueryPictureSearchApps</a> operation to query instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a502d3fbab8410e8fd4be9037c7****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.putQueryParameter("AppInstanceId", appInstanceId);
@@ -108,7 +117,11 @@ public class QueryPictureSearchAiboxesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number. Minimum value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -117,7 +130,14 @@ public class QueryPictureSearchAiboxesRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The ID of the instance. </p>
+         * <p>You can view the instance ID on the <strong>Instance Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>If a public instance does not have an ID, see <a href="https://help.aliyun.com/document_detail/267533.html">How to obtain an instance ID</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>iot_instc_pu****_c*-v64********</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -126,7 +146,11 @@ public class QueryPictureSearchAiboxesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 1 to 30. Default value: 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

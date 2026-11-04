@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePictureRequest} extends {@link RequestModel}
  *
  * <p>DeletePictureRequest</p>
  */
 public class DeletePictureRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PictureIdList")
-    @Validation(required = true)
-    private java.util.List < String > pictureIdList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PictureIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> pictureIdList;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
     private DeletePictureRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class DeletePictureRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -79,7 +84,7 @@ public class DeletePictureRequest extends Request {
     /**
      * @return pictureIdList
      */
-    public java.util.List < String > getPictureIdList() {
+    public java.util.List<String> getPictureIdList() {
         return this.pictureIdList;
     }
 
@@ -94,7 +99,7 @@ public class DeletePictureRequest extends Request {
         private String deviceName; 
         private String iotId; 
         private String iotInstanceId; 
-        private java.util.List < String > pictureIdList; 
+        private java.util.List<String> pictureIdList; 
         private String productKey; 
 
         private Builder() {
@@ -111,7 +116,14 @@ public class DeletePictureRequest extends Request {
         } 
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the IPC device.
+         * You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -120,7 +132,13 @@ public class DeletePictureRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The IotId of the IPC device. The IotId is a unique identifier issued by IoT Platform for the device. You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation of IoT Platform to query the IotId.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> is a unique identifier for the device and has a one-to-one mapping with the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1CJ0****e7qiq8VkQi1000000</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -129,7 +147,18 @@ public class DeletePictureRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <ul>
+         * <li>If the instance has an ID, you must specify the ID. Otherwise, the call fails.</li>
+         * <li>If the instance does not have an &lt;props=&quot;intl&quot;&gt;<ph><strong>Instance Overview</strong> page or an </ph>ID, you do not need to specify this parameter.</li>
+         * </ul>
+         * <p>For more information about instances, see <a href="https://help.aliyun.com/document_detail/356505.html">Instance overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-n6w1y******</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -138,16 +167,30 @@ public class DeletePictureRequest extends Request {
         }
 
         /**
-         * PictureIdList.
+         * <p>The list of picture IDs. Picture IDs are generated when you call the <a href="https://help.aliyun.com/document_detail/107914.html">TriggerCapturePicture</a> operation.</p>
+         * <blockquote>
+         * <p>You can specify up to 50 picture IDs in a single call.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cFc5MzZ<em><em><strong>npYT1</strong></em>TDFzX1hrVzA0Z</em>***</p>
          */
-        public Builder pictureIdList(java.util.List < String > pictureIdList) {
+        public Builder pictureIdList(java.util.List<String> pictureIdList) {
             this.putQueryParameter("PictureIdList", pictureIdList);
             this.pictureIdList = pictureIdList;
             return this;
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the IPC device belongs.
+         * You can view the ProductKey on the <strong>Products</strong> page in the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to query the information about all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

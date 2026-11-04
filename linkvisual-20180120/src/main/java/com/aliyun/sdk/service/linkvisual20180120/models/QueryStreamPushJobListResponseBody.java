@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryStreamPushJobListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryStreamPushJobListResponseBody</p>
  */
 public class QueryStreamPushJobListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryStreamPushJobListResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
 
     public static QueryStreamPushJobListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,26 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryStreamPushJobListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: The call was successful.</li>
+         * <li>Other values: error codes. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +121,7 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +129,10 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request parameter error.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +140,10 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55<em><strong>B7-4</strong></em>-4***-8***-D3******F565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,14 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,23 +171,29 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryStreamPushJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStreamPushJobListResponseBody</p>
+     */
     public static class JobList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Integer createTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private Integer jobType;
 
-        @NameInMap("PushStatus")
+        @com.aliyun.core.annotation.NameInMap("PushStatus")
         private Integer pushStatus;
 
-        @NameInMap("PushUrl")
+        @com.aliyun.core.annotation.NameInMap("PushUrl")
         private String pushUrl;
 
-        @NameInMap("StreamType")
+        @com.aliyun.core.annotation.NameInMap("StreamType")
         private Integer streamType;
 
         private JobList(Builder builder) {
@@ -217,8 +263,23 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
             private String pushUrl; 
             private Integer streamType; 
 
+            private Builder() {
+            } 
+
+            private Builder(JobList model) {
+                this.createTime = model.createTime;
+                this.jobId = model.jobId;
+                this.jobType = model.jobType;
+                this.pushStatus = model.pushStatus;
+                this.pushUrl = model.pushUrl;
+                this.streamType = model.streamType;
+            } 
+
             /**
-             * CreateTime.
+             * <p>The time when the job was created. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581595942</p>
              */
             public Builder createTime(Integer createTime) {
                 this.createTime = createTime;
@@ -226,7 +287,10 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23********</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -234,7 +298,14 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The type of the stream push job. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: continuous job.</li>
+             * <li><strong>2</strong>: triggered job. The job ends after it is interrupted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder jobType(Integer jobType) {
                 this.jobType = jobType;
@@ -242,7 +313,15 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PushStatus.
+             * <p>The current stream push status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: pushing.</li>
+             * <li><strong>2</strong>: waiting to push.</li>
+             * <li><strong>3</strong>: push ended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pushStatus(Integer pushStatus) {
                 this.pushStatus = pushStatus;
@@ -250,7 +329,10 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PushUrl.
+             * <p>The stream push URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://****</p>
              */
             public Builder pushUrl(String pushUrl) {
                 this.pushUrl = pushUrl;
@@ -258,7 +340,14 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
             }
 
             /**
-             * StreamType.
+             * <p>The stream type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: main stream.</li>
+             * <li><strong>1</strong>: sub stream.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder streamType(Integer streamType) {
                 this.streamType = streamType;
@@ -272,11 +361,17 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryStreamPushJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStreamPushJobListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("JobList")
-        private java.util.List < JobList> jobList;
+        @com.aliyun.core.annotation.NameInMap("JobList")
+        private java.util.List<JobList> jobList;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -295,7 +390,7 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
         /**
          * @return jobList
          */
-        public java.util.List < JobList> getJobList() {
+        public java.util.List<JobList> getJobList() {
             return this.jobList;
         }
 
@@ -307,19 +402,30 @@ public class QueryStreamPushJobListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < JobList> jobList; 
+            private java.util.List<JobList> jobList; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.jobList = model.jobList;
+                this.total = model.total;
+            } 
+
             /**
-             * JobList.
+             * <p>The job list information.</p>
              */
-            public Builder jobList(java.util.List < JobList> jobList) {
+            public Builder jobList(java.util.List<JobList> jobList) {
                 this.jobList = jobList;
                 return this;
             }
 
             /**
-             * Total.
+             * <p>The total number of jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

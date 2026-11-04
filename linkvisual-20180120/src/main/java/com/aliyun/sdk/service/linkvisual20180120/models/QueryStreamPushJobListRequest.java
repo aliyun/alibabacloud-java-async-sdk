@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryStreamPushJobListRequest} extends {@link RequestModel}
  *
  * <p>QueryStreamPushJobListRequest</p>
  */
 public class QueryStreamPushJobListRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("JobType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobType")
     private Integer jobType;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
     private QueryStreamPushJobListRequest(Builder builder) {
@@ -61,7 +66,7 @@ public class QueryStreamPushJobListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -140,7 +145,10 @@ public class QueryStreamPushJobListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Specifies the page number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -149,7 +157,14 @@ public class QueryStreamPushJobListRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the device.
+         * You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -158,7 +173,13 @@ public class QueryStreamPushJobListRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The ID of the device. The ID is the unique identifier that is issued by IoT Platform to the device. You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation of IoT Platform to query the ID.</p>
+         * <blockquote>
+         * <p>Notice:  <strong>IotId</strong> is the unique identifier of the device and corresponds to the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d7XmBoJhAr88C6PelXDF00****</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -167,7 +188,11 @@ public class QueryStreamPushJobListRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>Instance ID of the instance. You can view instance ID of the current instance on the <strong>Instance Overview</strong> tab in the IoT Platform console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-n6w1y59****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -176,7 +201,14 @@ public class QueryStreamPushJobListRequest extends Request {
         }
 
         /**
-         * JobType.
+         * <p>The type of the stream push job. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong> (default): continuous job.</li>
+         * <li><strong>2</strong>: triggered job. The job ends after it is interrupted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder jobType(Integer jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -185,7 +217,10 @@ public class QueryStreamPushJobListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Specifies the number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +229,14 @@ public class QueryStreamPushJobListRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The <strong>ProductKey</strong> of the product to which the device belongs.
+         * You can view the <strong>ProductKey</strong> on the <strong>Products</strong> page in the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to query the information of all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

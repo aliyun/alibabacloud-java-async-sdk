@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveFaceDeviceFromDeviceGroupRequest} extends {@link RequestModel}
  *
  * <p>RemoveFaceDeviceFromDeviceGroupRequest</p>
  */
 public class RemoveFaceDeviceFromDeviceGroupRequest extends Request {
-    @Query
-    @NameInMap("DeviceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceGroupId;
 
-    @Query
-    @NameInMap("DeviceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceName;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
     private RemoveFaceDeviceFromDeviceGroupRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class RemoveFaceDeviceFromDeviceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,7 +119,11 @@ public class RemoveFaceDeviceFromDeviceGroupRequest extends Request {
         } 
 
         /**
-         * DeviceGroupId.
+         * <p>The device group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDeviceGroupId</p>
          */
         public Builder deviceGroupId(String deviceGroupId) {
             this.putQueryParameter("DeviceGroupId", deviceGroupId);
@@ -123,7 +132,11 @@ public class RemoveFaceDeviceFromDeviceGroupRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The device name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDeviceName</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -132,7 +145,10 @@ public class RemoveFaceDeviceFromDeviceGroupRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestIotInstanceId</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -141,7 +157,11 @@ public class RemoveFaceDeviceFromDeviceGroupRequest extends Request {
         }
 
         /**
-         * IsolationId.
+         * <p>The isolation ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestIsolationId</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);
@@ -150,7 +170,11 @@ public class RemoveFaceDeviceFromDeviceGroupRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The product key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestProductKey</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePictureSearchAppRequest} extends {@link RequestModel}
  *
  * <p>UpdatePictureSearchAppRequest</p>
  */
 public class UpdatePictureSearchAppRequest extends Request {
-    @Query
-    @NameInMap("AppInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceId;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private UpdatePictureSearchAppRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class UpdatePictureSearchAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,11 @@ public class UpdatePictureSearchAppRequest extends Request {
         } 
 
         /**
-         * AppInstanceId.
+         * <p>Instance ID of the image search application instance. You can call the <a href="206608">QueryPictureSearchApps</a> operation to query instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e429560124b44b685095df81a27****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.putQueryParameter("AppInstanceId", appInstanceId);
@@ -94,7 +103,12 @@ public class UpdatePictureSearchAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the image search application instance.</p>
+         * <p>The description can contain Chinese characters, uppercase and lowercase letters, digits, underscores (_), and hyphens (-). It can be up to 1,024 characters in length, and each Chinese character counts as two characters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>以图搜图Demo2</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -103,7 +117,12 @@ public class UpdatePictureSearchAppRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the image search application instance. </p>
+         * <p>The name can contain Chinese characters, uppercase and lowercase letters, digits, underscores (_), and hyphens (-). It can be up to 64 characters in length, and each Chinese character counts as two characters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新以图搜图</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRtmpKeyRequest} extends {@link RequestModel}
  *
  * <p>UpdateRtmpKeyRequest</p>
  */
 public class UpdateRtmpKeyRequest extends Request {
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
-    @Query
-    @NameInMap("PullAuthKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PullAuthKey")
     private String pullAuthKey;
 
-    @Query
-    @NameInMap("PullKeyExpireTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PullKeyExpireTime")
     private Integer pullKeyExpireTime;
 
-    @Query
-    @NameInMap("PushAuthKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PushAuthKey")
     private String pushAuthKey;
 
-    @Query
-    @NameInMap("PushKeyExpireTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PushKeyExpireTime")
     private Integer pushKeyExpireTime;
 
     private UpdateRtmpKeyRequest(Builder builder) {
@@ -65,7 +70,7 @@ public class UpdateRtmpKeyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -171,7 +176,7 @@ public class UpdateRtmpKeyRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);

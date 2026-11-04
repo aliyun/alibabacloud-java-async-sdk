@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryStreamPushJobResponseBody} extends {@link TeaModel}
  *
  * <p>QueryStreamPushJobResponseBody</p>
  */
 public class QueryStreamPushJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryStreamPushJobResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
 
     public static QueryStreamPushJobResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,26 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryStreamPushJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li><strong>200</strong>: The call is successful.</li>
+         * <li>Other values: An error code. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +121,7 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +129,10 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request parameter error.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +140,10 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E55<em><strong>B7-4</strong></em>-4***-8***-D3******F565</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,14 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +171,26 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryStreamPushJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStreamPushJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Integer createTime;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private Integer jobType;
 
-        @NameInMap("PushStatus")
+        @com.aliyun.core.annotation.NameInMap("PushStatus")
         private Integer pushStatus;
 
-        @NameInMap("PushUrl")
+        @com.aliyun.core.annotation.NameInMap("PushUrl")
         private String pushUrl;
 
-        @NameInMap("StreamType")
+        @com.aliyun.core.annotation.NameInMap("StreamType")
         private Integer streamType;
 
         private Data(Builder builder) {
@@ -205,8 +251,22 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
             private String pushUrl; 
             private Integer streamType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.jobType = model.jobType;
+                this.pushStatus = model.pushStatus;
+                this.pushUrl = model.pushUrl;
+                this.streamType = model.streamType;
+            } 
+
             /**
-             * CreateTime.
+             * <p>The time when the job was created. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581595942</p>
              */
             public Builder createTime(Integer createTime) {
                 this.createTime = createTime;
@@ -214,7 +274,14 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The type of the stream push job. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Continuous job.</li>
+             * <li><strong>2</strong>: Triggered job, which ends after an interruption.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder jobType(Integer jobType) {
                 this.jobType = jobType;
@@ -222,7 +289,15 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
             }
 
             /**
-             * PushStatus.
+             * <p>The current stream push status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Pushing.</li>
+             * <li><strong>2</strong>: Waiting to push.</li>
+             * <li><strong>3</strong>: Push ended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pushStatus(Integer pushStatus) {
                 this.pushStatus = pushStatus;
@@ -230,7 +305,10 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
             }
 
             /**
-             * PushUrl.
+             * <p>The stream push URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://****</p>
              */
             public Builder pushUrl(String pushUrl) {
                 this.pushUrl = pushUrl;
@@ -238,7 +316,14 @@ public class QueryStreamPushJobResponseBody extends TeaModel {
             }
 
             /**
-             * StreamType.
+             * <p>The stream type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Main stream.</li>
+             * <li><strong>1</strong>: Sub stream.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder streamType(Integer streamType) {
                 this.streamType = streamType;

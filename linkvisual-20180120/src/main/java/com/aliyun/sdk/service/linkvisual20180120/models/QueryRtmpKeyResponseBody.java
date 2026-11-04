@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRtmpKeyResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRtmpKeyResponseBody</p>
  */
 public class QueryRtmpKeyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryRtmpKeyResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryRtmpKeyResponseBody extends TeaModel {
 
     public static QueryRtmpKeyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class QueryRtmpKeyResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryRtmpKeyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class QueryRtmpKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRtmpKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRtmpKeyResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PullAuthKey")
+        @com.aliyun.core.annotation.NameInMap("PullAuthKey")
         private String pullAuthKey;
 
-        @NameInMap("PullKeyExpireTime")
+        @com.aliyun.core.annotation.NameInMap("PullKeyExpireTime")
         private Integer pullKeyExpireTime;
 
-        @NameInMap("PushAuthKey")
+        @com.aliyun.core.annotation.NameInMap("PushAuthKey")
         private String pushAuthKey;
 
-        @NameInMap("PushKeyExpireTime")
+        @com.aliyun.core.annotation.NameInMap("PushKeyExpireTime")
         private Integer pushKeyExpireTime;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
         private Data(Builder builder) {
@@ -204,6 +230,17 @@ public class QueryRtmpKeyResponseBody extends TeaModel {
             private String pushAuthKey; 
             private Integer pushKeyExpireTime; 
             private String streamName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pullAuthKey = model.pullAuthKey;
+                this.pullKeyExpireTime = model.pullKeyExpireTime;
+                this.pushAuthKey = model.pushAuthKey;
+                this.pushKeyExpireTime = model.pushKeyExpireTime;
+                this.streamName = model.streamName;
+            } 
 
             /**
              * PullAuthKey.

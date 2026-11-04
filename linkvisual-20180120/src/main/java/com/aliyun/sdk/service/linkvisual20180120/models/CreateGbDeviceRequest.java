@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGbDeviceRequest} extends {@link RequestModel}
  *
  * <p>CreateGbDeviceRequest</p>
  */
 public class CreateGbDeviceRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("DeviceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceType")
     private Integer deviceType;
 
-    @Query
-    @NameInMap("GbId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GbId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gbId;
 
-    @Query
-    @NameInMap("IotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("MediaNetProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaNetProtocol")
     private String mediaNetProtocol;
 
-    @Query
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @Query
-    @NameInMap("ProductKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("SubProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubProductKey")
     private String subProductKey;
 
     private CreateGbDeviceRequest(Builder builder) {
@@ -73,7 +78,7 @@ public class CreateGbDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -197,7 +202,7 @@ public class CreateGbDeviceRequest extends Request {
         }
 
         /**
-         * GbId.
+         * <p>This parameter is required.</p>
          */
         public Builder gbId(String gbId) {
             this.putQueryParameter("GbId", gbId);
@@ -206,7 +211,7 @@ public class CreateGbDeviceRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -224,7 +229,7 @@ public class CreateGbDeviceRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>This parameter is required.</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -233,7 +238,7 @@ public class CreateGbDeviceRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>This parameter is required.</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

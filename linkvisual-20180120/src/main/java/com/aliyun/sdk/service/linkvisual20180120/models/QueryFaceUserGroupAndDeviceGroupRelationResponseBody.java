@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceUserGroupAndDeviceGroupRelationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFaceUserGroupAndDeviceGroupRelationResponseBody</p>
  */
 public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryFaceUserGroupAndDeviceGroupRelationResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
 
     public static QueryFaceUserGroupAndDeviceGroupRelationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryFaceUserGroupAndDeviceGroupRelationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
         }
 
         /**
-         * Data.
+         * <p>The return value of the API call.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +163,26 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link QueryFaceUserGroupAndDeviceGroupRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceUserGroupAndDeviceGroupRelationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ControlId")
+        @com.aliyun.core.annotation.NameInMap("ControlId")
         private String controlId;
 
-        @NameInMap("ControlType")
+        @com.aliyun.core.annotation.NameInMap("ControlType")
         private String controlType;
 
-        @NameInMap("DeviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("DeviceGroupId")
         private String deviceGroupId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
         private Data(Builder builder) {
@@ -205,8 +243,22 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
             private String modifiedTime; 
             private String userGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.controlId = model.controlId;
+                this.controlType = model.controlType;
+                this.deviceGroupId = model.deviceGroupId;
+                this.modifiedTime = model.modifiedTime;
+                this.userGroupId = model.userGroupId;
+            } 
+
             /**
-             * ControlId.
+             * <p>The control ID for the face synchronization relationship between user groups and device groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ni1iyxqry0j03plv</p>
              */
             public Builder controlId(String controlId) {
                 this.controlId = controlId;
@@ -214,7 +266,10 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
             }
 
             /**
-             * ControlType.
+             * <p>The face synchronization relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYNC_INFO_PICTURE</p>
              */
             public Builder controlType(String controlType) {
                 this.controlType = controlType;
@@ -222,7 +277,10 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
             }
 
             /**
-             * DeviceGroupId.
+             * <p>The device group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestDeviceGroupId</p>
              */
             public Builder deviceGroupId(String deviceGroupId) {
                 this.deviceGroupId = deviceGroupId;
@@ -230,7 +288,10 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
             }
 
             /**
-             * ModifiedTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-12 17:12:37</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -238,7 +299,10 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
             }
 
             /**
-             * UserGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestUserGroupId</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;

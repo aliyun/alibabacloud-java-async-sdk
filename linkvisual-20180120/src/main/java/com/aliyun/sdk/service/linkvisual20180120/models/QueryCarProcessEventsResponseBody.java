@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCarProcessEventsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCarProcessEventsResponseBody</p>
  */
 public class QueryCarProcessEventsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCarProcessEventsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
 
     public static QueryCarProcessEventsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,26 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryCarProcessEventsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: The call was successful.</li>
+         * <li>Other values: An error occurred. For more information, see <a href="https://help.aliyun.com/document_detail/288314.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +121,7 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +129,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified access key is not found.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +140,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B8E77F0-7713-0139-A3D6-93482A025D45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,14 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,50 +171,56 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCarProcessEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCarProcessEventsResponseBody</p>
+     */
     public static class PageData extends TeaModel {
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private Integer actionType;
 
-        @NameInMap("AreaIndex")
+        @com.aliyun.core.annotation.NameInMap("AreaIndex")
         private Integer areaIndex;
 
-        @NameInMap("Confidence")
+        @com.aliyun.core.annotation.NameInMap("Confidence")
         private Integer confidence;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventPicId")
+        @com.aliyun.core.annotation.NameInMap("EventPicId")
         private String eventPicId;
 
-        @NameInMap("EventPicUrl")
+        @com.aliyun.core.annotation.NameInMap("EventPicUrl")
         private String eventPicUrl;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private Long eventTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private Integer eventType;
 
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("PlateNo")
+        @com.aliyun.core.annotation.NameInMap("PlateNo")
         private String plateNo;
 
-        @NameInMap("SubDeviceName")
+        @com.aliyun.core.annotation.NameInMap("SubDeviceName")
         private String subDeviceName;
 
-        @NameInMap("SubDeviceNickName")
+        @com.aliyun.core.annotation.NameInMap("SubDeviceNickName")
         private String subDeviceNickName;
 
-        @NameInMap("SubIotId")
+        @com.aliyun.core.annotation.NameInMap("SubIotId")
         private String subIotId;
 
-        @NameInMap("SubProductKey")
+        @com.aliyun.core.annotation.NameInMap("SubProductKey")
         private String subProductKey;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private PageData(Builder builder) {
@@ -325,8 +371,32 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             private String subProductKey; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.actionType = model.actionType;
+                this.areaIndex = model.areaIndex;
+                this.confidence = model.confidence;
+                this.eventId = model.eventId;
+                this.eventPicId = model.eventPicId;
+                this.eventPicUrl = model.eventPicUrl;
+                this.eventTime = model.eventTime;
+                this.eventType = model.eventType;
+                this.iotId = model.iotId;
+                this.plateNo = model.plateNo;
+                this.subDeviceName = model.subDeviceName;
+                this.subDeviceNickName = model.subDeviceNickName;
+                this.subIotId = model.subIotId;
+                this.subProductKey = model.subProductKey;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * ActionType.
+             * <p>The action type of the vehicle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder actionType(Integer actionType) {
                 this.actionType = actionType;
@@ -334,7 +404,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AreaIndex.
+             * <p>The number of detection boxes recognized by the IPC device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder areaIndex(Integer areaIndex) {
                 this.areaIndex = areaIndex;
@@ -342,7 +415,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Confidence.
+             * <p>The confidence level of the vehicle recognition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63</p>
              */
             public Builder confidence(Integer confidence) {
                 this.confidence = confidence;
@@ -350,7 +426,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The ID of the intelligent alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dailyb3d6658d9****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -358,7 +437,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventPicId.
+             * <p>The ID of the intelligent alert event picture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SU5LT2pXaUM4MV****Nzg</p>
              */
             public Builder eventPicId(String eventPicId) {
                 this.eventPicId = eventPicId;
@@ -366,7 +448,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventPicUrl.
+             * <p>The URL of the intelligent alert event picture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/test.jpg">https://example.com/test.jpg</a></p>
              */
             public Builder eventPicUrl(String eventPicUrl) {
                 this.eventPicUrl = eventPicUrl;
@@ -374,7 +459,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The timestamp when the event occurred, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646288428361</p>
              */
             public Builder eventTime(Long eventTime) {
                 this.eventTime = eventTime;
@@ -382,7 +470,18 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The type of the intelligent alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: All intelligent alert events.</li>
+             * <li>Multiple intelligent alert events: Enter the sequence numbers of the intelligent alert events and separate them with commas (,), such as <code>10001,10002</code>.<blockquote>
+             * <p>You can specify up to 10 intelligent alert events at a time.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * <p>To view all intelligent alert event types, go to the <strong>Define Feature</strong> tab of the <strong>Product Details</strong> page in the IoT Platform console. For more information, see <a href="https://help.aliyun.com/document_detail/207701.html">View intelligent alert event types</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10005</p>
              */
             public Builder eventType(Integer eventType) {
                 this.eventType = eventType;
@@ -390,7 +489,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * IotId.
+             * <p>The IotId of the V-series edge appliance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gl9kLgp0UsPSCcIM8EAY00****</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -398,7 +500,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PlateNo.
+             * <p>The license plate number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZheA6****</p>
              */
             public Builder plateNo(String plateNo) {
                 this.plateNo = plateNo;
@@ -406,7 +511,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SubDeviceName.
+             * <p>The DeviceName of the IPC device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>car_test</p>
              */
             public Builder subDeviceName(String subDeviceName) {
                 this.subDeviceName = subDeviceName;
@@ -414,7 +522,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SubDeviceNickName.
+             * <p>The DeviceNickName of the IPC device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestVehicle</p>
              */
             public Builder subDeviceNickName(String subDeviceNickName) {
                 this.subDeviceNickName = subDeviceNickName;
@@ -422,7 +533,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SubIotId.
+             * <p>The ID of the IPC device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImP6ECd1aQxio9CAfWTO****</p>
              */
             public Builder subIotId(String subIotId) {
                 this.subIotId = subIotId;
@@ -430,7 +544,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SubProductKey.
+             * <p>The ProductKey of the IPC device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1Duh0F****</p>
              */
             public Builder subProductKey(String subProductKey) {
                 this.subProductKey = subProductKey;
@@ -438,7 +555,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID of the vehicle detection event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily55617e7653354490938d****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -452,20 +572,26 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCarProcessEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCarProcessEventsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageCount")
+        @com.aliyun.core.annotation.NameInMap("PageCount")
         private Integer pageCount;
 
-        @NameInMap("PageData")
-        private java.util.List < PageData> pageData;
+        @com.aliyun.core.annotation.NameInMap("PageData")
+        private java.util.List<PageData> pageData;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -501,7 +627,7 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
         /**
          * @return pageData
          */
-        public java.util.List < PageData> getPageData() {
+        public java.util.List<PageData> getPageData() {
             return this.pageData;
         }
 
@@ -522,12 +648,26 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Integer pageCount; 
-            private java.util.List < PageData> pageData; 
+            private java.util.List<PageData> pageData; 
             private Integer pageSize; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageCount = model.pageCount;
+                this.pageData = model.pageData;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -535,7 +675,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageCount.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageCount(Integer pageCount) {
                 this.pageCount = pageCount;
@@ -543,15 +686,18 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageData.
+             * <p>The list of returned intelligent alert events.</p>
              */
-            public Builder pageData(java.util.List < PageData> pageData) {
+            public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
                 return this;
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -559,7 +705,10 @@ public class QueryCarProcessEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of vehicle recognition events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

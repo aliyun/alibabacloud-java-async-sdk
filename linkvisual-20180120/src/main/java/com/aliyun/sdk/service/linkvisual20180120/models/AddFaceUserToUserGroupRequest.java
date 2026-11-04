@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFaceUserToUserGroupRequest} extends {@link RequestModel}
  *
  * <p>AddFaceUserToUserGroupRequest</p>
  */
 public class AddFaceUserToUserGroupRequest extends Request {
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private AddFaceUserToUserGroupRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class AddFaceUserToUserGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,15 @@ public class AddFaceUserToUserGroupRequest extends Request {
         } 
 
         /**
-         * IsolationId.
+         * <p>The business isolation ID. It is used to isolate data between different business applications under the same Alibaba Cloud account.</p>
+         * <blockquote>
+         * <p>Notice: 
+         * The user and the user group must be under the same isolation ID. Make sure that this parameter is consistent with the <strong>IsolationId</strong> parameter that you specified when you called the <a href="https://help.aliyun.com/document_detail/288338.html">AddFaceUser</a> operation to add the user and the <a href="https://help.aliyun.com/document_detail/288341.html">AddFaceUserGroup</a> operation to create the user group.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZheJiangHZ</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);
@@ -94,7 +107,11 @@ public class AddFaceUserToUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The user group ID. Set this parameter to the user group ID that you obtained and saved locally after you called the <a href="https://help.aliyun.com/document_detail/288341.html">AddFaceUserGroup</a> operation to create the user group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kvjy****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -103,7 +120,11 @@ public class AddFaceUserToUserGroupRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The user ID. Set this parameter to the user ID that you obtained and saved locally after you called the <a href="https://help.aliyun.com/document_detail/288338.html">AddFaceUser</a> operation to add the user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3mtjaqebeq4d****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

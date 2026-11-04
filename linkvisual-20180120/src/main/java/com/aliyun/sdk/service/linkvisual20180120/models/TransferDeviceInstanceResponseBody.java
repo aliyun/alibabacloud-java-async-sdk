@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferDeviceInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>TransferDeviceInstanceResponseBody</p>
  */
 public class TransferDeviceInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private TransferDeviceInstanceResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
 
     public static TransferDeviceInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,26 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(TransferDeviceInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code:</p>
+         * <ul>
+         * <li><strong>200</strong>: The call was successful.</li>
+         * <li>Other values: The call failed. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +121,7 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +129,10 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The source instance and the target instance cannot be the same</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +140,10 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27AF2E38-12ED-4F67-BD20-36E812CD7A42</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,14 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +171,17 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TransferDeviceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>TransferDeviceInstanceResponseBody</p>
+     */
     public static class FailedList extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private FailedList(Builder builder) {
@@ -169,8 +215,19 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
             private String deviceName; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailedList model) {
+                this.deviceName = model.deviceName;
+                this.message = model.message;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The name of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e5jdfalekj****</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -178,7 +235,10 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The description of the failed transfer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The device has already been transferred or does not belong to the source instance</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -192,11 +252,17 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TransferDeviceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>TransferDeviceInstanceResponseBody</p>
+     */
     public static class SuccessList extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private SuccessList(Builder builder) {
@@ -230,8 +296,19 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
             private String deviceName; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(SuccessList model) {
+                this.deviceName = model.deviceName;
+                this.message = model.message;
+            } 
+
             /**
-             * DeviceName.
+             * <p>The name of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e598798j****</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -239,7 +316,10 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The description of the successful transfer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -253,12 +333,18 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TransferDeviceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>TransferDeviceInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FailedList")
-        private java.util.List < FailedList> failedList;
+        @com.aliyun.core.annotation.NameInMap("FailedList")
+        private java.util.List<FailedList> failedList;
 
-        @NameInMap("SuccessList")
-        private java.util.List < SuccessList> successList;
+        @com.aliyun.core.annotation.NameInMap("SuccessList")
+        private java.util.List<SuccessList> successList;
 
         private Data(Builder builder) {
             this.failedList = builder.failedList;
@@ -276,33 +362,41 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
         /**
          * @return failedList
          */
-        public java.util.List < FailedList> getFailedList() {
+        public java.util.List<FailedList> getFailedList() {
             return this.failedList;
         }
 
         /**
          * @return successList
          */
-        public java.util.List < SuccessList> getSuccessList() {
+        public java.util.List<SuccessList> getSuccessList() {
             return this.successList;
         }
 
         public static final class Builder {
-            private java.util.List < FailedList> failedList; 
-            private java.util.List < SuccessList> successList; 
+            private java.util.List<FailedList> failedList; 
+            private java.util.List<SuccessList> successList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.failedList = model.failedList;
+                this.successList = model.successList;
+            } 
 
             /**
-             * FailedList.
+             * <p>The list of devices that failed to be transferred.</p>
              */
-            public Builder failedList(java.util.List < FailedList> failedList) {
+            public Builder failedList(java.util.List<FailedList> failedList) {
                 this.failedList = failedList;
                 return this;
             }
 
             /**
-             * SuccessList.
+             * <p>The list of devices that were successfully transferred.</p>
              */
-            public Builder successList(java.util.List < SuccessList> successList) {
+            public Builder successList(java.util.List<SuccessList> successList) {
                 this.successList = successList;
                 return this;
             }

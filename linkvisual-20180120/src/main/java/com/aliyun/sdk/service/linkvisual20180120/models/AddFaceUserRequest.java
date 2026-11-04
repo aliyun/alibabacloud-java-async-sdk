@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFaceUserRequest} extends {@link RequestModel}
  *
  * <p>AddFaceUserRequest</p>
  */
 public class AddFaceUserRequest extends Request {
-    @Query
-    @NameInMap("CustomUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String customUserId;
 
-    @Query
-    @NameInMap("FacePicUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FacePicUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String facePicUrl;
 
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
     private AddFaceUserRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class AddFaceUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,11 @@ public class AddFaceUserRequest extends Request {
         } 
 
         /**
-         * CustomUserId.
+         * <p>The user identification ID. It supports any uppercase letter and digits. Recommended Settings: the user\&quot;s ID card number, student ID, or similar identifier.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder customUserId(String customUserId) {
             this.putQueryParameter("CustomUserId", customUserId);
@@ -122,7 +131,11 @@ public class AddFaceUserRequest extends Request {
         }
 
         /**
-         * FacePicUrl.
+         * <p>The URL for downloading the user\&quot;s face image. Only JPEG and JPG image formats are supported, and the image URL cannot contain Chinese characters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/test.jpeg">https://example.com/test.jpeg</a></p>
          */
         public Builder facePicUrl(String facePicUrl) {
             this.putQueryParameter("FacePicUrl", facePicUrl);
@@ -131,7 +144,16 @@ public class AddFaceUserRequest extends Request {
         }
 
         /**
-         * IsolationId.
+         * <p>The business isolation ID. It is used for data isolation between different business applications under the same Alibaba Cloud account. It supports uppercase and lowercase English letters and digits.</p>
+         * <p>For example, if you have face recognition businesses in Region A and Region B, you can set different business isolation IDs to distinguish the face recognition businesses in Region A and Region B.</p>
+         * <blockquote>
+         * <p>Notice: 
+         * Save the business isolation ID properly for use in subsequent calls to other API operations in this business isolation zone.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZheJiangHZ</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);
@@ -140,7 +162,10 @@ public class AddFaceUserRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The username. It supports Chinese characters, uppercase and lowercase English letters, digits, underscores (_), and hyphens (-). The length cannot exceed 64 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tony</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -149,7 +174,10 @@ public class AddFaceUserRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The custom user parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;:&quot;value2&quot;}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);

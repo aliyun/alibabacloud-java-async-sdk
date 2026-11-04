@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCarProcessEventsRequest} extends {@link RequestModel}
  *
  * <p>QueryCarProcessEventsRequest</p>
  */
 public class QueryCarProcessEventsRequest extends Request {
-    @Query
-    @NameInMap("ActionType")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionType")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer actionType;
 
-    @Query
-    @NameInMap("AreaIndex")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AreaIndex")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Integer areaIndex;
 
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(maximum = 10000000000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(maximum = 10000000000000D)
     private Long beginTime;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true, maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(maximum = 10000000000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(maximum = 10000000000000D)
     private Long endTime;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PlateNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlateNo")
     private String plateNo;
 
-    @Query
-    @NameInMap("SubDeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDeviceName")
     private String subDeviceName;
 
-    @Query
-    @NameInMap("SubIotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubIotId")
     private String subIotId;
 
-    @Query
-    @NameInMap("SubProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubProductKey")
     private String subProductKey;
 
     private QueryCarProcessEventsRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class QueryCarProcessEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -200,7 +205,15 @@ public class QueryCarProcessEventsRequest extends Request {
         } 
 
         /**
-         * ActionType.
+         * <p>The action type of the vehicle. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Enter.</li>
+         * <li><strong>2</strong>: Stay.</li>
+         * <li><strong>3</strong>: Leave.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder actionType(Integer actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -209,7 +222,10 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * AreaIndex.
+         * <p>The detection box of the IPC device. You can call the <a href="https://help.aliyun.com/document_detail/69584.html">InvokeThingService</a> operation to query the number of detection boxes. Set <strong>identifier</strong> to <strong>QueryAlgoTaskDetails</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder areaIndex(Integer areaIndex) {
             this.putQueryParameter("AreaIndex", areaIndex);
@@ -218,7 +234,10 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * <p>The start time of the query range. The time is a 13-digit timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646288487368</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -227,7 +246,11 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page. Pages start from 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -236,7 +259,10 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query range. The time is a 13-digit timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646288488368</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -245,7 +271,18 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>The instance ID. You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <ul>
+         * <li>If the instance has an ID, you must specify this ID. Otherwise, the call fails.</li>
+         * <li>If the instance does not have an ID&lt;props=&quot;intl&quot;&gt;<ph> or the <strong>Instance Overview</strong> page is not displayed</ph>, you do not need to specify this parameter.</li>
+         * </ul>
+         * <p>For more information about instances, see <a href="https://help.aliyun.com/document_detail/356505.html">Instance overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iotx-oxsshare****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -254,7 +291,11 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 1 to 20. Default value: 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -263,7 +304,10 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * PlateNo.
+         * <p>The license plate number. The value can be up to 15 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZheAM****</p>
          */
         public Builder plateNo(String plateNo) {
             this.putQueryParameter("PlateNo", plateNo);
@@ -272,7 +316,14 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * SubDeviceName.
+         * <p>The name of the IPC device.
+         * You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page in the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>car_test</p>
          */
         public Builder subDeviceName(String subDeviceName) {
             this.putQueryParameter("SubDeviceName", subDeviceName);
@@ -281,7 +332,13 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * SubIotId.
+         * <p>The ID of the IP camera (IPC) device. The ID is issued by IoT Platform and uniquely identifies the device. You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation of IoT Platform to query the ID.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> uniquely identifies the device and corresponds to the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ImP6ECd1aQ****CAfWTO000101</p>
          */
         public Builder subIotId(String subIotId) {
             this.putQueryParameter("SubIotId", subIotId);
@@ -290,7 +347,14 @@ public class QueryCarProcessEventsRequest extends Request {
         }
 
         /**
-         * SubProductKey.
+         * <p>The ProductKey of the product to which the IPC device belongs.
+         * You can view the ProductKey on the <strong>Products</strong> page in the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to query the information about all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1Duh0F****</p>
          */
         public Builder subProductKey(String subProductKey) {
             this.putQueryParameter("SubProductKey", subProductKey);

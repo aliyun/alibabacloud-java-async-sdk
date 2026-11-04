@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPictureSearchDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPictureSearchDevicesResponseBody</p>
  */
 public class QueryPictureSearchDevicesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryPictureSearchDevicesResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
 
     public static QueryPictureSearchDevicesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryPictureSearchDevicesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter CurrentPage is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF7DC571-FE48-4C25-8BE0-B13C3038C85B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,14 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +167,17 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPictureSearchDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPictureSearchDevicesResponseBody</p>
+     */
     public static class PageData extends TeaModel {
-        @NameInMap("IotId")
+        @com.aliyun.core.annotation.NameInMap("IotId")
         private String iotId;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
         private PageData(Builder builder) {
@@ -169,8 +211,19 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
             private String iotId; 
             private String nickName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.iotId = model.iotId;
+                this.nickName = model.nickName;
+            } 
+
             /**
-             * IotId.
+             * <p>The ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VrJwPGjC1sJlqPjZA3cxg4****</p>
              */
             public Builder iotId(String iotId) {
                 this.iotId = iotId;
@@ -178,7 +231,13 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>The alias of the device.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for IPC devices.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>camera1</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -192,20 +251,26 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPictureSearchDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPictureSearchDevicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageCount")
+        @com.aliyun.core.annotation.NameInMap("PageCount")
         private Integer pageCount;
 
-        @NameInMap("PageData")
-        private java.util.List < PageData> pageData;
+        @com.aliyun.core.annotation.NameInMap("PageData")
+        private java.util.List<PageData> pageData;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -241,7 +306,7 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
         /**
          * @return pageData
          */
-        public java.util.List < PageData> getPageData() {
+        public java.util.List<PageData> getPageData() {
             return this.pageData;
         }
 
@@ -262,12 +327,26 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Integer pageCount; 
-            private java.util.List < PageData> pageData; 
+            private java.util.List<PageData> pageData; 
             private Integer pageSize; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageCount = model.pageCount;
+                this.pageData = model.pageData;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -275,7 +354,10 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * PageCount.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageCount(Integer pageCount) {
                 this.pageCount = pageCount;
@@ -283,15 +365,18 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * PageData.
+             * <p>The list of applications.</p>
              */
-            public Builder pageData(java.util.List < PageData> pageData) {
+            public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
                 return this;
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -299,7 +384,10 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

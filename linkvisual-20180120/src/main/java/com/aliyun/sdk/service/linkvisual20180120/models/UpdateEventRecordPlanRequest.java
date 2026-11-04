@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEventRecordPlanRequest} extends {@link RequestModel}
  *
  * <p>UpdateEventRecordPlanRequest</p>
  */
 public class UpdateEventRecordPlanRequest extends Request {
-    @Query
-    @NameInMap("EventTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventTypes")
     private String eventTypes;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("PlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
 
-    @Query
-    @NameInMap("PreRecordDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreRecordDuration")
     private Integer preRecordDuration;
 
-    @Query
-    @NameInMap("RecordDuration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordDuration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer recordDuration;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private UpdateEventRecordPlanRequest(Builder builder) {
@@ -58,7 +63,7 @@ public class UpdateEventRecordPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,7 +133,18 @@ public class UpdateEventRecordPlanRequest extends Request {
         } 
 
         /**
-         * EventTypes.
+         * <p>The types of intelligent alert events. Valid values:</p>
+         * <ul>
+         * <li>0: All intelligent alert events.</li>
+         * <li>Multiple intelligent alert events: Enter the sequence numbers of the intelligent alert events and separate them with commas (,), for example, <code>10001,10002</code>.<blockquote>
+         * <p>You can specify up to 10 intelligent alert events at a time.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * <p>To view all types of intelligent alert events, log on to the IoT Platform console, go to the <strong>Product Details</strong> page, and click the <strong>Define Feature</strong> tab. For more information, see <a href="https://help.aliyun.com/document_detail/207701.html">View intelligent alert event types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder eventTypes(String eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
@@ -137,7 +153,12 @@ public class UpdateEventRecordPlanRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the video recording plan for intelligent alert events.</p>
+         * <p>The name must be less than 48 characters in length and can contain letters, digits, and the following special characters: hyphens (-), underscores (_), at signs (@), periods (.), and colons (:).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -146,7 +167,11 @@ public class UpdateEventRecordPlanRequest extends Request {
         }
 
         /**
-         * PlanId.
+         * <p>The ID of the video recording plan for intelligent alert events. You can call the <a href="https://help.aliyun.com/document_detail/107907.html">QueryEventRecordPlans</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b60bf0dd55944c19d7817442bc9****</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -155,7 +180,13 @@ public class UpdateEventRecordPlanRequest extends Request {
         }
 
         /**
-         * PreRecordDuration.
+         * <p>The pre-recording duration. Valid values: 0 to 10. Unit: seconds.</p>
+         * <blockquote>
+         * <p>A pre-recording duration is generated only when the device supports the pre-recording feature. Otherwise, the pre-recording duration is 0.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder preRecordDuration(Integer preRecordDuration) {
             this.putQueryParameter("PreRecordDuration", preRecordDuration);
@@ -164,7 +195,11 @@ public class UpdateEventRecordPlanRequest extends Request {
         }
 
         /**
-         * RecordDuration.
+         * <p>The video recording duration, including the pre-recording duration. Valid values: 10 to 60. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder recordDuration(Integer recordDuration) {
             this.putQueryParameter("RecordDuration", recordDuration);
@@ -173,7 +208,11 @@ public class UpdateEventRecordPlanRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the time template. You can call the <a href="https://help.aliyun.com/document_detail/107890.html">QueryTimeTemplate</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36f06322442e4e3f85a5ae8862c9****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

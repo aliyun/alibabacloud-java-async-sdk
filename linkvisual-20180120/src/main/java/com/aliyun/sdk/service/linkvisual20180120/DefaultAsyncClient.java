@@ -92,6 +92,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddEventRecordPlanDevice  AddEventRecordPlanDeviceRequest
+     * @return AddEventRecordPlanDeviceResponse
+     */
     @Override
     public CompletableFuture<AddEventRecordPlanDeviceResponse> addEventRecordPlanDevice(AddEventRecordPlanDeviceRequest request) {
         try {
@@ -106,6 +110,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 100.<blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * </li>
+     * <li>After you invoke this API operation, the system returns the ID of the device group (<strong>DeviceGroupId</strong>). Save this value locally for use when invoking other API operations.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddFaceDeviceGroup  AddFaceDeviceGroupRequest
+     * @return AddFaceDeviceGroupResponse
+     */
     @Override
     public CompletableFuture<AddFaceDeviceGroupResponse> addFaceDeviceGroup(AddFaceDeviceGroupRequest request) {
         try {
@@ -120,6 +138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddFaceDeviceToDeviceGroup  AddFaceDeviceToDeviceGroupRequest
+     * @return AddFaceDeviceToDeviceGroupResponse
+     */
     @Override
     public CompletableFuture<AddFaceDeviceToDeviceGroupResponse> addFaceDeviceToDeviceGroup(AddFaceDeviceToDeviceGroupRequest request) {
         try {
@@ -134,6 +156,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 100.<blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * </li>
+     * <li>Configure a URL for downloading the user\&quot;s face image in advance.<blockquote>
+     * <p>Only JPEG and JPG image formats are supported, and the image URL cannot contain Chinese characters.</p>
+     * </blockquote>
+     * </li>
+     * <li>After you invoke this API operation, the system returns a user ID (<strong>UserId</strong>). Save this value locally for use when you invoke other API operations.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddFaceUser  AddFaceUserRequest
+     * @return AddFaceUserResponse
+     */
     @Override
     public CompletableFuture<AddFaceUserResponse> addFaceUser(AddFaceUserRequest request) {
         try {
@@ -148,6 +188,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The maximum queries per second (QPS) limit for a single Alibaba Cloud account to invoke this API operation is 100.<blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * </li>
+     * <li>After you invoke this API operation, the system returns the ID of the user group (<strong>UserGroupId</strong>). Save this value locally for use when you invoke other API operations.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddFaceUserGroup  AddFaceUserGroupRequest
+     * @return AddFaceUserGroupResponse
+     */
     @Override
     public CompletableFuture<AddFaceUserGroupResponse> addFaceUserGroup(AddFaceUserGroupRequest request) {
         try {
@@ -162,6 +216,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddFaceUserGroupAndDeviceGroupRelation  AddFaceUserGroupAndDeviceGroupRelationRequest
+     * @return AddFaceUserGroupAndDeviceGroupRelationResponse
+     */
     @Override
     public CompletableFuture<AddFaceUserGroupAndDeviceGroupRelationResponse> addFaceUserGroupAndDeviceGroupRelation(AddFaceUserGroupAndDeviceGroupRelationRequest request) {
         try {
@@ -176,6 +234,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 100.<blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * </li>
+     * <li>Configure a download URL for the user\&quot;s face image in advance.<blockquote>
+     * <p>Only images in JPEG and JPG format are supported, and the image URL cannot contain Chinese characters.</p>
+     * </blockquote>
+     * </li>
+     * <li>After you invoke this API operation, the system returns the unique identity (<strong>Data</strong>) of the user\&quot;s face image. Save this value locally for use when you invoke other API operations.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddFaceUserPicture  AddFaceUserPictureRequest
+     * @return AddFaceUserPictureResponse
+     */
     @Override
     public CompletableFuture<AddFaceUserPictureResponse> addFaceUserPicture(AddFaceUserPictureRequest request) {
         try {
@@ -190,6 +266,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this operation is 100.
+     *     &gt; Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * 
+     * @param request the request parameters of AddFaceUserToUserGroup  AddFaceUserToUserGroupRequest
+     * @return AddFaceUserToUserGroupResponse
+     */
     @Override
     public CompletableFuture<AddFaceUserToUserGroupResponse> addFaceUserToUserGroup(AddFaceUserToUserGroupRequest request) {
         try {
@@ -204,6 +289,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddRecordPlanDevice  AddRecordPlanDeviceRequest
+     * @return AddRecordPlanDeviceResponse
+     */
     @Override
     public CompletableFuture<AddRecordPlanDeviceResponse> addRecordPlanDevice(AddRecordPlanDeviceRequest request) {
         try {
@@ -218,6 +307,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchQueryVisionDeviceInfo  BatchQueryVisionDeviceInfoRequest
+     * @return BatchQueryVisionDeviceInfoResponse
+     */
     @Override
     public CompletableFuture<BatchQueryVisionDeviceInfoResponse> batchQueryVisionDeviceInfo(BatchQueryVisionDeviceInfoRequest request) {
         try {
@@ -232,6 +325,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>If you invoke this operation on an Enterprise instance, you must specify the <strong>IotInstanceId</strong> request parameter. Otherwise, the invocation failed.</p>
+     * 
+     * @param request the request parameters of BindPictureSearchAppWithDevices  BindPictureSearchAppWithDevicesRequest
+     * @return BindPictureSearchAppWithDevicesResponse
+     */
     @Override
     public CompletableFuture<BindPictureSearchAppWithDevicesResponse> bindPictureSearchAppWithDevices(BindPictureSearchAppWithDevicesRequest request) {
         try {
@@ -246,6 +347,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckFaceUserDoExistOnDevice  CheckFaceUserDoExistOnDeviceRequest
+     * @return CheckFaceUserDoExistOnDeviceResponse
+     */
     @Override
     public CompletableFuture<CheckFaceUserDoExistOnDeviceResponse> checkFaceUserDoExistOnDevice(CheckFaceUserDoExistOnDeviceRequest request) {
         try {
@@ -260,6 +365,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this operation is 100.
+     *     &gt; Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * 
+     * @param request the request parameters of ClearFaceDeviceDB  ClearFaceDeviceDBRequest
+     * @return ClearFaceDeviceDBResponse
+     */
     @Override
     public CompletableFuture<ClearFaceDeviceDBResponse> clearFaceDeviceDB(ClearFaceDeviceDBRequest request) {
         try {
@@ -274,6 +388,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEventRecordPlan  CreateEventRecordPlanRequest
+     * @return CreateEventRecordPlanResponse
+     */
     @Override
     public CompletableFuture<CreateEventRecordPlanResponse> createEventRecordPlan(CreateEventRecordPlanRequest request) {
         try {
@@ -288,6 +406,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGbDevice  CreateGbDeviceRequest
+     * @return CreateGbDeviceResponse
+     */
     @Override
     public CompletableFuture<CreateGbDeviceResponse> createGbDevice(CreateGbDeviceRequest request) {
         try {
@@ -302,6 +424,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>A single local video recording upload job supports uploading up to 200 files. The maximum number of items in the TimeSlot list is 200.</p>
+     * 
+     * @param request the request parameters of CreateLocalFileUploadJob  CreateLocalFileUploadJobRequest
+     * @return CreateLocalFileUploadJobResponse
+     */
     @Override
     public CompletableFuture<CreateLocalFileUploadJobResponse> createLocalFileUploadJob(CreateLocalFileUploadJobRequest request) {
         try {
@@ -316,6 +445,26 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <ul>
+     * <li>The maximum duration for a single time-based download is 30 minutes.</li>
+     * <li>Download tasks and files are retained for up to 1 day. You can re-download them after they expire.</li>
+     * <li>A single instance supports up to 10 concurrent downloads. Completed downloads are not counted.</li>
+     * <li>If the audio and video encoding parameters change, the downloaded recording defaults to the first half of the recording.</li>
+     * <li>Due to fluctuations in the device\&quot;s upstream network, the link may be abnormally disconnected or the device may actively drop data. As a result, the uploaded and downloaded recordings may be incomplete.</li>
+     * <li>The downloaded recording data is determined by the device\&quot;s stream pushing logic. If the pushed data is abnormal, the duration of the downloaded recording may not match the time period specified in the task settings.</li>
+     * </ul>
+     * <h2>QPS limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateLocalRecordDownloadByTimeJob  CreateLocalRecordDownloadByTimeJobRequest
+     * @return CreateLocalRecordDownloadByTimeJobResponse
+     */
     @Override
     public CompletableFuture<CreateLocalRecordDownloadByTimeJobResponse> createLocalRecordDownloadByTimeJob(CreateLocalRecordDownloadByTimeJobRequest request) {
         try {
@@ -330,6 +479,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 100.</p>
+     * <blockquote>
+     * <p>A Resource Access Management (RAM) user shares the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreatePictureSearchApp  CreatePictureSearchAppRequest
+     * @return CreatePictureSearchAppResponse
+     */
     @Override
     public CompletableFuture<CreatePictureSearchAppResponse> createPictureSearchApp(CreatePictureSearchAppRequest request) {
         try {
@@ -344,6 +504,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Integrated image search retrieves both face and human body features simultaneously during an image search.</p>
+     * <blockquote>
+     * <p>This feature requires the deployment of face and human body detection algorithms on V-series edge all-in-one machines.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreatePictureSearchJob  CreatePictureSearchJobRequest
+     * @return CreatePictureSearchJobResponse
+     */
     @Override
     public CompletableFuture<CreatePictureSearchJobResponse> createPictureSearchJob(CreatePictureSearchJobRequest request) {
         try {
@@ -358,6 +528,27 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <ul>
+     * <li>Maximum duration for a single time-based download: 30 minutes.</li>
+     * <li>Download time precision: The precision of the download time range is within 10 seconds. For example, if you select a 20-second data segment to download, up to 30 seconds of data may be downloaded.</li>
+     * <li>Maximum number of recording files for a single time-based download: 100.</li>
+     * <li>Download tasks and files are retained for up to 1 day. You can re-download them after they expire.</li>
+     * <li>Maximum concurrent downloads per instance: 10. Completed downloads are not counted.</li>
+     * <li>If the audio and video encoding parameters change, the first half of the recording is downloaded by default.</li>
+     * <li>If the download time ranges of recordings overlap, the cloud deduplicates the overlapping data.</li>
+     * </ul>
+     * <h2>QPS limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to call this API operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under a single Alibaba Cloud account share the quota of the account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateRecordDownloadByTimeJob  CreateRecordDownloadByTimeJobRequest
+     * @return CreateRecordDownloadByTimeJobResponse
+     */
     @Override
     public CompletableFuture<CreateRecordDownloadByTimeJobResponse> createRecordDownloadByTimeJob(CreateRecordDownloadByTimeJobRequest request) {
         try {
@@ -372,6 +563,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRecordPlan  CreateRecordPlanRequest
+     * @return CreateRecordPlanResponse
+     */
     @Override
     public CompletableFuture<CreateRecordPlanResponse> createRecordPlan(CreateRecordPlanRequest request) {
         try {
@@ -386,6 +581,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRtmpDevice  CreateRtmpDeviceRequest
+     * @return CreateRtmpDeviceResponse
+     */
     @Override
     public CompletableFuture<CreateRtmpDeviceResponse> createRtmpDevice(CreateRtmpDeviceRequest request) {
         try {
@@ -400,6 +599,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>QPS limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under an Alibaba Cloud account share the quota of the account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateStreamPushJob  CreateStreamPushJobRequest
+     * @return CreateStreamPushJobResponse
+     */
     @Override
     public CompletableFuture<CreateStreamPushJobResponse> createStreamPushJob(CreateStreamPushJobRequest request) {
         try {
@@ -414,6 +624,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>QPS limit</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateStreamSnapshotJob  CreateStreamSnapshotJobRequest
+     * @return CreateStreamSnapshotJobResponse
+     */
     @Override
     public CompletableFuture<CreateStreamSnapshotJobResponse> createStreamSnapshotJob(CreateStreamSnapshotJobRequest request) {
         try {
@@ -428,6 +649,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTimeTemplate  CreateTimeTemplateRequest
+     * @return CreateTimeTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateTimeTemplateResponse> createTimeTemplate(CreateTimeTemplateRequest request) {
         try {
@@ -442,6 +667,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEventRecordPlan  DeleteEventRecordPlanRequest
+     * @return DeleteEventRecordPlanResponse
+     */
     @Override
     public CompletableFuture<DeleteEventRecordPlanResponse> deleteEventRecordPlan(DeleteEventRecordPlanRequest request) {
         try {
@@ -456,6 +685,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEventRecordPlanDevice  DeleteEventRecordPlanDeviceRequest
+     * @return DeleteEventRecordPlanDeviceResponse
+     */
     @Override
     public CompletableFuture<DeleteEventRecordPlanDeviceResponse> deleteEventRecordPlanDevice(DeleteEventRecordPlanDeviceRequest request) {
         try {
@@ -470,6 +703,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFaceDeviceGroup  DeleteFaceDeviceGroupRequest
+     * @return DeleteFaceDeviceGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceDeviceGroupResponse> deleteFaceDeviceGroup(DeleteFaceDeviceGroupRequest request) {
         try {
@@ -484,6 +721,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFaceUser  DeleteFaceUserRequest
+     * @return DeleteFaceUserResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceUserResponse> deleteFaceUser(DeleteFaceUserRequest request) {
         try {
@@ -498,6 +739,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this operation is 100.</p>
+     * <blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteFaceUserGroup  DeleteFaceUserGroupRequest
+     * @return DeleteFaceUserGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceUserGroupResponse> deleteFaceUserGroup(DeleteFaceUserGroupRequest request) {
         try {
@@ -512,6 +764,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>The maximum number of queries per second (QPS) per Alibaba Cloud account for invoking this operation is 100.
+     *     &gt; Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * 
+     * @param request the request parameters of DeleteFaceUserGroupAndDeviceGroupRelation  DeleteFaceUserGroupAndDeviceGroupRelationRequest
+     * @return DeleteFaceUserGroupAndDeviceGroupRelationResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceUserGroupAndDeviceGroupRelationResponse> deleteFaceUserGroupAndDeviceGroupRelation(DeleteFaceUserGroupAndDeviceGroupRelationRequest request) {
         try {
@@ -526,6 +787,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this operation is 100.</p>
+     * <blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteFaceUserPicture  DeleteFaceUserPictureRequest
+     * @return DeleteFaceUserPictureResponse
+     */
     @Override
     public CompletableFuture<DeleteFaceUserPictureResponse> deleteFaceUserPicture(DeleteFaceUserPictureRequest request) {
         try {
@@ -540,6 +812,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGbDevice  DeleteGbDeviceRequest
+     * @return DeleteGbDeviceResponse
+     */
     @Override
     public CompletableFuture<DeleteGbDeviceResponse> deleteGbDevice(DeleteGbDeviceRequest request) {
         try {
@@ -554,6 +830,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>After you stop a local recording upload task, the recording files that have been created are not deleted.</p>
+     * 
+     * @param request the request parameters of DeleteLocalFileUploadJob  DeleteLocalFileUploadJobRequest
+     * @return DeleteLocalFileUploadJobResponse
+     */
     @Override
     public CompletableFuture<DeleteLocalFileUploadJobResponse> deleteLocalFileUploadJob(DeleteLocalFileUploadJobRequest request) {
         try {
@@ -568,6 +851,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePicture  DeletePictureRequest
+     * @return DeletePictureResponse
+     */
     @Override
     public CompletableFuture<DeletePictureResponse> deletePicture(DeletePictureRequest request) {
         try {
@@ -582,6 +869,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRecord  DeleteRecordRequest
+     * @return DeleteRecordResponse
+     */
     @Override
     public CompletableFuture<DeleteRecordResponse> deleteRecord(DeleteRecordRequest request) {
         try {
@@ -596,6 +887,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRecordPlan  DeleteRecordPlanRequest
+     * @return DeleteRecordPlanResponse
+     */
     @Override
     public CompletableFuture<DeleteRecordPlanResponse> deleteRecordPlan(DeleteRecordPlanRequest request) {
         try {
@@ -610,6 +905,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRecordPlanDevice  DeleteRecordPlanDeviceRequest
+     * @return DeleteRecordPlanDeviceResponse
+     */
     @Override
     public CompletableFuture<DeleteRecordPlanDeviceResponse> deleteRecordPlanDevice(DeleteRecordPlanDeviceRequest request) {
         try {
@@ -624,6 +923,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRtmpDevice  DeleteRtmpDeviceRequest
+     * @return DeleteRtmpDeviceResponse
+     */
     @Override
     public CompletableFuture<DeleteRtmpDeviceResponse> deleteRtmpDevice(DeleteRtmpDeviceRequest request) {
         try {
@@ -638,6 +941,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRtmpKey  DeleteRtmpKeyRequest
+     * @return DeleteRtmpKeyResponse
+     */
     @Override
     public CompletableFuture<DeleteRtmpKeyResponse> deleteRtmpKey(DeleteRtmpKeyRequest request) {
         try {
@@ -652,6 +959,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>QPS limit</h2>
+     * <p>A single Alibaba Cloud account can invoke this operation up to 50 times per second (QPS).</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under a single Alibaba Cloud account share the quota of that account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteStreamPushJob  DeleteStreamPushJobRequest
+     * @return DeleteStreamPushJobResponse
+     */
     @Override
     public CompletableFuture<DeleteStreamPushJobResponse> deleteStreamPushJob(DeleteStreamPushJobRequest request) {
         try {
@@ -666,6 +984,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>QPS limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeleteStreamSnapshotJob  DeleteStreamSnapshotJobRequest
+     * @return DeleteStreamSnapshotJobResponse
+     */
     @Override
     public CompletableFuture<DeleteStreamSnapshotJobResponse> deleteStreamSnapshotJob(DeleteStreamSnapshotJobRequest request) {
         try {
@@ -680,6 +1009,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTimeTemplate  DeleteTimeTemplateRequest
+     * @return DeleteTimeTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteTimeTemplateResponse> deleteTimeTemplate(DeleteTimeTemplateRequest request) {
         try {
@@ -694,20 +1027,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DetectUserFaceByUrlResponse> detectUserFaceByUrl(DetectUserFaceByUrlRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DetectUserFaceByUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DetectUserFaceByUrlResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DetectUserFaceByUrlResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of EnableGbSubDevice  EnableGbSubDeviceRequest
+     * @return EnableGbSubDeviceResponse
+     */
     @Override
     public CompletableFuture<EnableGbSubDeviceResponse> enableGbSubDevice(EnableGbSubDeviceRequest request) {
         try {
@@ -722,6 +1045,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Integrated image search retrieves both facial and body features during an image search.</p>
+     * <blockquote>
+     * <p>This feature requires the deployment of face and body detection algorithms on V-series edge all-in-one machines.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of GetPictureSearchJobStatus  GetPictureSearchJobStatusRequest
+     * @return GetPictureSearchJobStatusResponse
+     */
     @Override
     public CompletableFuture<GetPictureSearchJobStatusResponse> getPictureSearchJobStatus(GetPictureSearchJobStatusRequest request) {
         try {
@@ -736,6 +1069,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PictureSearchPicture  PictureSearchPictureRequest
+     * @return PictureSearchPictureResponse
+     */
     @Override
     public CompletableFuture<PictureSearchPictureResponse> pictureSearchPicture(PictureSearchPictureRequest request) {
         try {
@@ -750,6 +1087,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to call this API operation is 10.  </p>
+     * <blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryCarProcessEvents  QueryCarProcessEventsRequest
+     * @return QueryCarProcessEventsResponse
+     */
     @Override
     public CompletableFuture<QueryCarProcessEventsResponse> queryCarProcessEvents(QueryCarProcessEventsRequest request) {
         try {
@@ -764,6 +1112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDeviceEvent  QueryDeviceEventRequest
+     * @return QueryDeviceEventResponse
+     */
     @Override
     public CompletableFuture<QueryDeviceEventResponse> queryDeviceEvent(QueryDeviceEventRequest request) {
         try {
@@ -778,6 +1130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDeviceEventPicture  QueryDeviceEventPictureRequest
+     * @return QueryDeviceEventPictureResponse
+     */
     @Override
     public CompletableFuture<QueryDeviceEventPictureResponse> queryDeviceEventPicture(QueryDeviceEventPictureRequest request) {
         try {
@@ -792,6 +1148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDeviceEventRecord  QueryDeviceEventRecordRequest
+     * @return QueryDeviceEventRecordResponse
+     */
     @Override
     public CompletableFuture<QueryDeviceEventRecordResponse> queryDeviceEventRecord(QueryDeviceEventRecordRequest request) {
         try {
@@ -806,6 +1166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDevicePictureByList  QueryDevicePictureByListRequest
+     * @return QueryDevicePictureByListResponse
+     */
     @Override
     public CompletableFuture<QueryDevicePictureByListResponse> queryDevicePictureByList(QueryDevicePictureByListRequest request) {
         try {
@@ -820,6 +1184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDevicePictureFile  QueryDevicePictureFileRequest
+     * @return QueryDevicePictureFileResponse
+     */
     @Override
     public CompletableFuture<QueryDevicePictureFileResponse> queryDevicePictureFile(QueryDevicePictureFileRequest request) {
         try {
@@ -834,6 +1202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDevicePictureLifeCycle  QueryDevicePictureLifeCycleRequest
+     * @return QueryDevicePictureLifeCycleResponse
+     */
     @Override
     public CompletableFuture<QueryDevicePictureLifeCycleResponse> queryDevicePictureLifeCycle(QueryDevicePictureLifeCycleRequest request) {
         try {
@@ -848,6 +1220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDeviceRecordLifeCycle  QueryDeviceRecordLifeCycleRequest
+     * @return QueryDeviceRecordLifeCycleResponse
+     */
     @Override
     public CompletableFuture<QueryDeviceRecordLifeCycleResponse> queryDeviceRecordLifeCycle(QueryDeviceRecordLifeCycleRequest request) {
         try {
@@ -862,6 +1238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDeviceVodUrl  QueryDeviceVodUrlRequest
+     * @return QueryDeviceVodUrlResponse
+     */
     @Override
     public CompletableFuture<QueryDeviceVodUrlResponse> queryDeviceVodUrl(QueryDeviceVodUrlRequest request) {
         try {
@@ -876,6 +1256,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>This operation is supported only in scenarios where IPC devices are directly connected to IoT Platform.</p>
+     * 
+     * @param request the request parameters of QueryDeviceVodUrlByTime  QueryDeviceVodUrlByTimeRequest
+     * @return QueryDeviceVodUrlByTimeResponse
+     */
     @Override
     public CompletableFuture<QueryDeviceVodUrlByTimeResponse> queryDeviceVodUrlByTime(QueryDeviceVodUrlByTimeRequest request) {
         try {
@@ -890,6 +1278,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEventRecordPlanDetail  QueryEventRecordPlanDetailRequest
+     * @return QueryEventRecordPlanDetailResponse
+     */
     @Override
     public CompletableFuture<QueryEventRecordPlanDetailResponse> queryEventRecordPlanDetail(QueryEventRecordPlanDetailRequest request) {
         try {
@@ -904,6 +1296,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEventRecordPlanDeviceByDevice  QueryEventRecordPlanDeviceByDeviceRequest
+     * @return QueryEventRecordPlanDeviceByDeviceResponse
+     */
     @Override
     public CompletableFuture<QueryEventRecordPlanDeviceByDeviceResponse> queryEventRecordPlanDeviceByDevice(QueryEventRecordPlanDeviceByDeviceRequest request) {
         try {
@@ -918,6 +1314,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEventRecordPlanDeviceByPlan  QueryEventRecordPlanDeviceByPlanRequest
+     * @return QueryEventRecordPlanDeviceByPlanResponse
+     */
     @Override
     public CompletableFuture<QueryEventRecordPlanDeviceByPlanResponse> queryEventRecordPlanDeviceByPlan(QueryEventRecordPlanDeviceByPlanRequest request) {
         try {
@@ -932,6 +1332,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEventRecordPlans  QueryEventRecordPlansRequest
+     * @return QueryEventRecordPlansResponse
+     */
     @Override
     public CompletableFuture<QueryEventRecordPlansResponse> queryEventRecordPlans(QueryEventRecordPlansRequest request) {
         try {
@@ -946,6 +1350,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceAllDeviceGroup  QueryFaceAllDeviceGroupRequest
+     * @return QueryFaceAllDeviceGroupResponse
+     */
     @Override
     public CompletableFuture<QueryFaceAllDeviceGroupResponse> queryFaceAllDeviceGroup(QueryFaceAllDeviceGroupRequest request) {
         try {
@@ -960,6 +1368,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceAllUserGroup  QueryFaceAllUserGroupRequest
+     * @return QueryFaceAllUserGroupResponse
+     */
     @Override
     public CompletableFuture<QueryFaceAllUserGroupResponse> queryFaceAllUserGroup(QueryFaceAllUserGroupRequest request) {
         try {
@@ -974,6 +1386,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceAllUserGroupAndDeviceGroupRelation  QueryFaceAllUserGroupAndDeviceGroupRelationRequest
+     * @return QueryFaceAllUserGroupAndDeviceGroupRelationResponse
+     */
     @Override
     public CompletableFuture<QueryFaceAllUserGroupAndDeviceGroupRelationResponse> queryFaceAllUserGroupAndDeviceGroupRelation(QueryFaceAllUserGroupAndDeviceGroupRelationRequest request) {
         try {
@@ -988,6 +1404,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceAllUserIdsByGroupId  QueryFaceAllUserIdsByGroupIdRequest
+     * @return QueryFaceAllUserIdsByGroupIdResponse
+     */
     @Override
     public CompletableFuture<QueryFaceAllUserIdsByGroupIdResponse> queryFaceAllUserIdsByGroupId(QueryFaceAllUserIdsByGroupIdRequest request) {
         try {
@@ -1002,6 +1422,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceCustomUserIdByUserId  QueryFaceCustomUserIdByUserIdRequest
+     * @return QueryFaceCustomUserIdByUserIdResponse
+     */
     @Override
     public CompletableFuture<QueryFaceCustomUserIdByUserIdResponse> queryFaceCustomUserIdByUserId(QueryFaceCustomUserIdByUserIdRequest request) {
         try {
@@ -1016,6 +1440,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceDeviceGroupsByDevice  QueryFaceDeviceGroupsByDeviceRequest
+     * @return QueryFaceDeviceGroupsByDeviceResponse
+     */
     @Override
     public CompletableFuture<QueryFaceDeviceGroupsByDeviceResponse> queryFaceDeviceGroupsByDevice(QueryFaceDeviceGroupsByDeviceRequest request) {
         try {
@@ -1030,6 +1458,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceUser  QueryFaceUserRequest
+     * @return QueryFaceUserResponse
+     */
     @Override
     public CompletableFuture<QueryFaceUserResponse> queryFaceUser(QueryFaceUserRequest request) {
         try {
@@ -1044,6 +1476,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 100.<blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryFaceUserBatch  QueryFaceUserBatchRequest
+     * @return QueryFaceUserBatchResponse
+     */
     @Override
     public CompletableFuture<QueryFaceUserBatchResponse> queryFaceUserBatch(QueryFaceUserBatchRequest request) {
         try {
@@ -1058,6 +1503,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 100.<blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of QueryFaceUserByName  QueryFaceUserByNameRequest
+     * @return QueryFaceUserByNameResponse
+     */
     @Override
     public CompletableFuture<QueryFaceUserByNameResponse> queryFaceUserByName(QueryFaceUserByNameRequest request) {
         try {
@@ -1072,6 +1530,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceUserGroup  QueryFaceUserGroupRequest
+     * @return QueryFaceUserGroupResponse
+     */
     @Override
     public CompletableFuture<QueryFaceUserGroupResponse> queryFaceUserGroup(QueryFaceUserGroupRequest request) {
         try {
@@ -1086,6 +1548,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceUserGroupAndDeviceGroupRelation  QueryFaceUserGroupAndDeviceGroupRelationRequest
+     * @return QueryFaceUserGroupAndDeviceGroupRelationResponse
+     */
     @Override
     public CompletableFuture<QueryFaceUserGroupAndDeviceGroupRelationResponse> queryFaceUserGroupAndDeviceGroupRelation(QueryFaceUserGroupAndDeviceGroupRelationRequest request) {
         try {
@@ -1100,6 +1566,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryFaceUserIdByCustomUserId  QueryFaceUserIdByCustomUserIdRequest
+     * @return QueryFaceUserIdByCustomUserIdResponse
+     */
     @Override
     public CompletableFuture<QueryFaceUserIdByCustomUserIdResponse> queryFaceUserIdByCustomUserId(QueryFaceUserIdByCustomUserIdRequest request) {
         try {
@@ -1114,6 +1584,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryGbSubDeviceList  QueryGbSubDeviceListRequest
+     * @return QueryGbSubDeviceListResponse
+     */
     @Override
     public CompletableFuture<QueryGbSubDeviceListResponse> queryGbSubDeviceList(QueryGbSubDeviceListRequest request) {
         try {
@@ -1128,6 +1602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryLiveStreaming  QueryLiveStreamingRequest
+     * @return QueryLiveStreamingResponse
+     */
     @Override
     public CompletableFuture<QueryLiveStreamingResponse> queryLiveStreaming(QueryLiveStreamingRequest request) {
         try {
@@ -1142,6 +1620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryLocalFileUploadJob  QueryLocalFileUploadJobRequest
+     * @return QueryLocalFileUploadJobResponse
+     */
     @Override
     public CompletableFuture<QueryLocalFileUploadJobResponse> queryLocalFileUploadJob(QueryLocalFileUploadJobRequest request) {
         try {
@@ -1156,6 +1638,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMonthRecord  QueryMonthRecordRequest
+     * @return QueryMonthRecordResponse
+     */
     @Override
     public CompletableFuture<QueryMonthRecordResponse> queryMonthRecord(QueryMonthRecordRequest request) {
         try {
@@ -1170,6 +1656,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>QPS limit</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 500.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryPictureFiles  QueryPictureFilesRequest
+     * @return QueryPictureFilesResponse
+     */
     @Override
     public CompletableFuture<QueryPictureFilesResponse> queryPictureFiles(QueryPictureFilesRequest request) {
         try {
@@ -1184,6 +1681,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPictureSearchAiboxes  QueryPictureSearchAiboxesRequest
+     * @return QueryPictureSearchAiboxesResponse
+     */
     @Override
     public CompletableFuture<QueryPictureSearchAiboxesResponse> queryPictureSearchAiboxes(QueryPictureSearchAiboxesRequest request) {
         try {
@@ -1198,6 +1699,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 100.</p>
+     * <blockquote>
+     * <p>Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryPictureSearchApps  QueryPictureSearchAppsRequest
+     * @return QueryPictureSearchAppsResponse
+     */
     @Override
     public CompletableFuture<QueryPictureSearchAppsResponse> queryPictureSearchApps(QueryPictureSearchAppsRequest request) {
         try {
@@ -1212,6 +1724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPictureSearchDevices  QueryPictureSearchDevicesRequest
+     * @return QueryPictureSearchDevicesResponse
+     */
     @Override
     public CompletableFuture<QueryPictureSearchDevicesResponse> queryPictureSearchDevices(QueryPictureSearchDevicesRequest request) {
         try {
@@ -1226,6 +1742,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Integrated image search means that both faces and human bodies are retrieved simultaneously during an image search.</p>
+     * <blockquote>
+     * <p>This feature requires the deployment of face and human body detection algorithms on V-series edge all-in-one machines.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryPictureSearchJob  QueryPictureSearchJobRequest
+     * @return QueryPictureSearchJobResponse
+     */
     @Override
     public CompletableFuture<QueryPictureSearchJobResponse> queryPictureSearchJob(QueryPictureSearchJobRequest request) {
         try {
@@ -1240,6 +1766,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPictureSearchJobResult  QueryPictureSearchJobResultRequest
+     * @return QueryPictureSearchJobResultResponse
+     */
     @Override
     public CompletableFuture<QueryPictureSearchJobResultResponse> queryPictureSearchJobResult(QueryPictureSearchJobResultRequest request) {
         try {
@@ -1254,6 +1784,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>QPS limit</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 250.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users within a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryRecord  QueryRecordRequest
+     * @return QueryRecordResponse
+     */
     @Override
     public CompletableFuture<QueryRecordResponse> queryRecord(QueryRecordRequest request) {
         try {
@@ -1268,6 +1809,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRecordByRecordId  QueryRecordByRecordIdRequest
+     * @return QueryRecordByRecordIdResponse
+     */
     @Override
     public CompletableFuture<QueryRecordByRecordIdResponse> queryRecordByRecordId(QueryRecordByRecordIdRequest request) {
         try {
@@ -1282,6 +1827,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>The obtained recording download URL is valid for 1 hour.</p>
+     * <h2>QPS limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryRecordDownloadJobById  QueryRecordDownloadJobByIdRequest
+     * @return QueryRecordDownloadJobByIdResponse
+     */
     @Override
     public CompletableFuture<QueryRecordDownloadJobByIdResponse> queryRecordDownloadJobById(QueryRecordDownloadJobByIdRequest request) {
         try {
@@ -1296,6 +1854,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>The obtained recording download URL is valid for 1 hour.</p>
+     * <h2>QPS limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users within a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryRecordDownloadJobList  QueryRecordDownloadJobListRequest
+     * @return QueryRecordDownloadJobListResponse
+     */
     @Override
     public CompletableFuture<QueryRecordDownloadJobListResponse> queryRecordDownloadJobList(QueryRecordDownloadJobListRequest request) {
         try {
@@ -1310,6 +1881,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>Generating a cloud recording file takes a long time. You must poll this operation to obtain the progress. The download URL is generated only after the progress is complete.</p>
+     * 
+     * @param request the request parameters of QueryRecordDownloadUrl  QueryRecordDownloadUrlRequest
+     * @return QueryRecordDownloadUrlResponse
+     */
     @Override
     public CompletableFuture<QueryRecordDownloadUrlResponse> queryRecordDownloadUrl(QueryRecordDownloadUrlRequest request) {
         try {
@@ -1324,6 +1903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRecordPlanDetail  QueryRecordPlanDetailRequest
+     * @return QueryRecordPlanDetailResponse
+     */
     @Override
     public CompletableFuture<QueryRecordPlanDetailResponse> queryRecordPlanDetail(QueryRecordPlanDetailRequest request) {
         try {
@@ -1338,6 +1921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRecordPlanDeviceByDevice  QueryRecordPlanDeviceByDeviceRequest
+     * @return QueryRecordPlanDeviceByDeviceResponse
+     */
     @Override
     public CompletableFuture<QueryRecordPlanDeviceByDeviceResponse> queryRecordPlanDeviceByDevice(QueryRecordPlanDeviceByDeviceRequest request) {
         try {
@@ -1352,6 +1939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRecordPlanDeviceByPlan  QueryRecordPlanDeviceByPlanRequest
+     * @return QueryRecordPlanDeviceByPlanResponse
+     */
     @Override
     public CompletableFuture<QueryRecordPlanDeviceByPlanResponse> queryRecordPlanDeviceByPlan(QueryRecordPlanDeviceByPlanRequest request) {
         try {
@@ -1366,6 +1957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRecordPlans  QueryRecordPlansRequest
+     * @return QueryRecordPlansResponse
+     */
     @Override
     public CompletableFuture<QueryRecordPlansResponse> queryRecordPlans(QueryRecordPlansRequest request) {
         try {
@@ -1380,6 +1975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRecordUrl  QueryRecordUrlRequest
+     * @return QueryRecordUrlResponse
+     */
     @Override
     public CompletableFuture<QueryRecordUrlResponse> queryRecordUrl(QueryRecordUrlRequest request) {
         try {
@@ -1394,6 +1993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRecordUrlByTime  QueryRecordUrlByTimeRequest
+     * @return QueryRecordUrlByTimeResponse
+     */
     @Override
     public CompletableFuture<QueryRecordUrlByTimeResponse> queryRecordUrlByTime(QueryRecordUrlByTimeRequest request) {
         try {
@@ -1408,6 +2011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRtmpKey  QueryRtmpKeyRequest
+     * @return QueryRtmpKeyResponse
+     */
     @Override
     public CompletableFuture<QueryRtmpKeyResponse> queryRtmpKey(QueryRtmpKeyRequest request) {
         try {
@@ -1422,6 +2029,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>QPS limit</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to call this API operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users within a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryStreamPushJob  QueryStreamPushJobRequest
+     * @return QueryStreamPushJobResponse
+     */
     @Override
     public CompletableFuture<QueryStreamPushJobResponse> queryStreamPushJob(QueryStreamPushJobRequest request) {
         try {
@@ -1436,6 +2054,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>QPS limit</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryStreamPushJobList  QueryStreamPushJobListRequest
+     * @return QueryStreamPushJobListResponse
+     */
     @Override
     public CompletableFuture<QueryStreamPushJobListResponse> queryStreamPushJobList(QueryStreamPushJobListRequest request) {
         try {
@@ -1450,6 +2079,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>QPS limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 50.</p>
+     * <blockquote>
+     * <p>All Resource Access Management (RAM) users under a single Alibaba Cloud account share the quota of the Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of QueryStreamSnapshotJob  QueryStreamSnapshotJobRequest
+     * @return QueryStreamSnapshotJobResponse
+     */
     @Override
     public CompletableFuture<QueryStreamSnapshotJobResponse> queryStreamSnapshotJob(QueryStreamSnapshotJobRequest request) {
         try {
@@ -1464,6 +2104,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTimeTemplate  QueryTimeTemplateRequest
+     * @return QueryTimeTemplateResponse
+     */
     @Override
     public CompletableFuture<QueryTimeTemplateResponse> queryTimeTemplate(QueryTimeTemplateRequest request) {
         try {
@@ -1478,6 +2122,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryTimeTemplateDetail  QueryTimeTemplateDetailRequest
+     * @return QueryTimeTemplateDetailResponse
+     */
     @Override
     public CompletableFuture<QueryTimeTemplateDetailResponse> queryTimeTemplateDetail(QueryTimeTemplateDetailRequest request) {
         try {
@@ -1492,6 +2140,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryVisionDeviceInfo  QueryVisionDeviceInfoRequest
+     * @return QueryVisionDeviceInfoResponse
+     */
     @Override
     public CompletableFuture<QueryVisionDeviceInfoResponse> queryVisionDeviceInfo(QueryVisionDeviceInfoRequest request) {
         try {
@@ -1506,6 +2158,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryVoiceIntercom  QueryVoiceIntercomRequest
+     * @return QueryVoiceIntercomResponse
+     */
     @Override
     public CompletableFuture<QueryVoiceIntercomResponse> queryVoiceIntercom(QueryVoiceIntercomRequest request) {
         try {
@@ -1520,6 +2176,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshGbSubDeviceList  RefreshGbSubDeviceListRequest
+     * @return RefreshGbSubDeviceListResponse
+     */
     @Override
     public CompletableFuture<RefreshGbSubDeviceListResponse> refreshGbSubDeviceList(RefreshGbSubDeviceListRequest request) {
         try {
@@ -1534,6 +2194,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveFaceDeviceFromDeviceGroup  RemoveFaceDeviceFromDeviceGroupRequest
+     * @return RemoveFaceDeviceFromDeviceGroupResponse
+     */
     @Override
     public CompletableFuture<RemoveFaceDeviceFromDeviceGroupResponse> removeFaceDeviceFromDeviceGroup(RemoveFaceDeviceFromDeviceGroupRequest request) {
         try {
@@ -1548,6 +2212,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveFaceUserFromUserGroup  RemoveFaceUserFromUserGroupRequest
+     * @return RemoveFaceUserFromUserGroupResponse
+     */
     @Override
     public CompletableFuture<RemoveFaceUserFromUserGroupResponse> removeFaceUserFromUserGroup(RemoveFaceUserFromUserGroupRequest request) {
         try {
@@ -1562,6 +2230,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>By default, images are permanently stored in the cloud before you configure the cloud storage image lifecycle.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of SetDevicePictureLifeCycle  SetDevicePictureLifeCycleRequest
+     * @return SetDevicePictureLifeCycleResponse
+     */
     @Override
     public CompletableFuture<SetDevicePictureLifeCycleResponse> setDevicePictureLifeCycle(SetDevicePictureLifeCycleRequest request) {
         try {
@@ -1576,6 +2253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDeviceRecordLifeCycle  SetDeviceRecordLifeCycleRequest
+     * @return SetDeviceRecordLifeCycleResponse
+     */
     @Override
     public CompletableFuture<SetDeviceRecordLifeCycleResponse> setDeviceRecordLifeCycle(SetDeviceRecordLifeCycleRequest request) {
         try {
@@ -1590,6 +2271,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>Before you invoke this operation, you must implement the Thing Specification Language (TSL) model service for stopping live streaming with the identity <strong>StopPushStreaming</strong> on the IPC device. If this service is not implemented on the IPC device, or the IPC device does not return a normal response after receiving the service invocation, the IPC device will not stop pushing the stream. For more information about TSL models, see <a href="https://help.aliyun.com/document_detail/73727.html">What is a TSL model</a>.</li>
+     * <li>If no one is watching the stream on the IPC device, you do not need to invoke this operation. IoT Platform automatically triggers the device to stop pushing the stream.</li>
+     * <li>During the procedure of triggering a video recording event, invoking this operation causes interruptions to the video file. Use this operation with caution.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of StopLiveStreaming  StopLiveStreamingRequest
+     * @return StopLiveStreamingResponse
+     */
     @Override
     public CompletableFuture<StopLiveStreamingResponse> stopLiveStreaming(StopLiveStreamingRequest request) {
         try {
@@ -1604,6 +2297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopTriggeredRecord  StopTriggeredRecordRequest
+     * @return StopTriggeredRecordResponse
+     */
     @Override
     public CompletableFuture<StopTriggeredRecordResponse> stopTriggeredRecord(StopTriggeredRecordRequest request) {
         try {
@@ -1618,6 +2315,26 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation to transfer devices to another instance, contact technical support to evaluate the migration plan and prevent features from becoming unavailable after the migration.
+     * <strong>Before you begin</strong></p>
+     * <ul>
+     * <li>The devices to be transferred have the video service feature enabled.<ul>
+     * <li>Devices in the Enterprise instance: Log on to the IoT Platform console and click <strong>Enterprise instance</strong>. In the left-side navigation pane, choose <strong>Video Service</strong> &gt; <strong>Access Service</strong>. On the <strong>Access Service</strong> page, click the <strong>Product Management</strong> tab. Check the product to which the device to be transferred belongs, and make sure that the <strong>Enabled/Disabled Status</strong> column displays <strong>Enabled</strong>.</li>
+     * <li>Devices in an Enterprise Edition instance: The video service is enabled.</li>
+     * </ul>
+     * </li>
+     * <li>The device distribution task is complete. For more information, see <a href="https://help.aliyun.com/document_detail/199390.html">CreateDeviceDistributeJob</a> or <a href="https://help.aliyun.com/document_detail/143450.html">Device distribution</a>.</li>
+     * <li>Make sure that a picture lifecycle is configured for camera devices. If no picture lifecycle is configured for a camera device, calling this operation automatically sets the picture lifecycle to 180 days. For more information, see <a href="https://help.aliyun.com/document_detail/107880.html">SetDevicePictureLifeCycle</a>.
+     * <strong>Background information</strong></li>
+     * <li>If the source instance and target instance are of different types, review the Billable methods of the instances before the migration. For more information about Billable methods, see <a href="https://help.aliyun.com/document_detail/124250.html">Billing overview</a>.</li>
+     * <li>During the migration, devices go offline. The more devices you migrate, the longer the migration takes. Data generated by the devices during this period cannot be retained.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of TransferDeviceInstance  TransferDeviceInstanceRequest
+     * @return TransferDeviceInstanceResponse
+     */
     @Override
     public CompletableFuture<TransferDeviceInstanceResponse> transferDeviceInstance(TransferDeviceInstanceRequest request) {
         try {
@@ -1632,6 +2349,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TriggerCapturePicture  TriggerCapturePictureRequest
+     * @return TriggerCapturePictureResponse
+     */
     @Override
     public CompletableFuture<TriggerCapturePictureResponse> triggerCapturePicture(TriggerCapturePictureRequest request) {
         try {
@@ -1646,6 +2367,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TriggerRecord  TriggerRecordRequest
+     * @return TriggerRecordResponse
+     */
     @Override
     public CompletableFuture<TriggerRecordResponse> triggerRecord(TriggerRecordRequest request) {
         try {
@@ -1660,6 +2385,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>If you invoke this operation on an Enterprise instance, you must specify the <strong>IotInstanceId</strong> request parameter. Otherwise, the call is failed.</p>
+     * 
+     * @param request the request parameters of UnbindPictureSearchAppWithDevices  UnbindPictureSearchAppWithDevicesRequest
+     * @return UnbindPictureSearchAppWithDevicesResponse
+     */
     @Override
     public CompletableFuture<UnbindPictureSearchAppWithDevicesResponse> unbindPictureSearchAppWithDevices(UnbindPictureSearchAppWithDevicesRequest request) {
         try {
@@ -1674,6 +2407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEventRecordPlan  UpdateEventRecordPlanRequest
+     * @return UpdateEventRecordPlanResponse
+     */
     @Override
     public CompletableFuture<UpdateEventRecordPlanResponse> updateEventRecordPlan(UpdateEventRecordPlanRequest request) {
         try {
@@ -1688,6 +2425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFaceUser  UpdateFaceUserRequest
+     * @return UpdateFaceUserResponse
+     */
     @Override
     public CompletableFuture<UpdateFaceUserResponse> updateFaceUser(UpdateFaceUserRequest request) {
         try {
@@ -1702,6 +2443,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Limits</h2>
+     * <p>The maximum queries per second (QPS) for a single Alibaba Cloud account to invoke this API operation is 100.
+     *     &gt; Resource Access Management (RAM) users share the quota of the Alibaba Cloud account.</p>
+     * 
+     * @param request the request parameters of UpdateFaceUserGroupAndDeviceGroupRelation  UpdateFaceUserGroupAndDeviceGroupRelationRequest
+     * @return UpdateFaceUserGroupAndDeviceGroupRelationResponse
+     */
     @Override
     public CompletableFuture<UpdateFaceUserGroupAndDeviceGroupRelationResponse> updateFaceUserGroupAndDeviceGroupRelation(UpdateFaceUserGroupAndDeviceGroupRelationRequest request) {
         try {
@@ -1716,6 +2466,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGbDevice  UpdateGbDeviceRequest
+     * @return UpdateGbDeviceResponse
+     */
     @Override
     public CompletableFuture<UpdateGbDeviceResponse> updateGbDevice(UpdateGbDeviceRequest request) {
         try {
@@ -1730,6 +2484,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateInstanceInternetProtocol  UpdateInstanceInternetProtocolRequest
+     * @return UpdateInstanceInternetProtocolResponse
+     */
     @Override
     public CompletableFuture<UpdateInstanceInternetProtocolResponse> updateInstanceInternetProtocol(UpdateInstanceInternetProtocolRequest request) {
         try {
@@ -1744,6 +2502,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePictureSearchApp  UpdatePictureSearchAppRequest
+     * @return UpdatePictureSearchAppResponse
+     */
     @Override
     public CompletableFuture<UpdatePictureSearchAppResponse> updatePictureSearchApp(UpdatePictureSearchAppRequest request) {
         try {
@@ -1758,6 +2520,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRecordPlan  UpdateRecordPlanRequest
+     * @return UpdateRecordPlanResponse
+     */
     @Override
     public CompletableFuture<UpdateRecordPlanResponse> updateRecordPlan(UpdateRecordPlanRequest request) {
         try {
@@ -1772,6 +2538,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRtmpKey  UpdateRtmpKeyRequest
+     * @return UpdateRtmpKeyResponse
+     */
     @Override
     public CompletableFuture<UpdateRtmpKeyResponse> updateRtmpKey(UpdateRtmpKeyRequest request) {
         try {
@@ -1786,6 +2556,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTimeTemplate  UpdateTimeTemplateRequest
+     * @return UpdateTimeTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateTimeTemplateResponse> updateTimeTemplate(UpdateTimeTemplateRequest request) {
         try {

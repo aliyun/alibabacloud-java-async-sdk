@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFaceUserGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteFaceUserGroupRequest</p>
  */
 public class DeleteFaceUserGroupRequest extends Request {
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
     private DeleteFaceUserGroupRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class DeleteFaceUserGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class DeleteFaceUserGroupRequest extends Request {
         } 
 
         /**
-         * IsolationId.
+         * <p>The business isolation ID, which is used to isolate data between different business applications under the same Alibaba Cloud account. This value must be the same as the <strong>IsolationId</strong> specified when you call the <a href="https://help.aliyun.com/document_detail/288341.html">AddFaceUserGroup</a> operation to add a user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZheJiangHZ</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);
@@ -79,7 +88,11 @@ public class DeleteFaceUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The ID of the user group. Specify the user group ID that you obtained and saved locally after calling the <a href="https://help.aliyun.com/document_detail/288341.html">AddFaceUserGroup</a> operation to add the user group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kvjy****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

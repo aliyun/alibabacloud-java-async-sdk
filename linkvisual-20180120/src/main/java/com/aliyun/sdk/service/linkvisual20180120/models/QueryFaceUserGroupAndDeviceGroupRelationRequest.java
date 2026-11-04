@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceUserGroupAndDeviceGroupRelationRequest} extends {@link RequestModel}
  *
  * <p>QueryFaceUserGroupAndDeviceGroupRelationRequest</p>
  */
 public class QueryFaceUserGroupAndDeviceGroupRelationRequest extends Request {
-    @Query
-    @NameInMap("ControlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String controlId;
 
-    @Query
-    @NameInMap("IsolationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsolationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isolationId;
 
     private QueryFaceUserGroupAndDeviceGroupRelationRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class QueryFaceUserGroupAndDeviceGroupRelationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class QueryFaceUserGroupAndDeviceGroupRelationRequest extends Request {
         } 
 
         /**
-         * ControlId.
+         * <p>The control ID for the face synchronization relationship between user groups and device groups.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ni1iyxqry0j03plv</p>
          */
         public Builder controlId(String controlId) {
             this.putQueryParameter("ControlId", controlId);
@@ -79,7 +88,11 @@ public class QueryFaceUserGroupAndDeviceGroupRelationRequest extends Request {
         }
 
         /**
-         * IsolationId.
+         * <p>The isolation ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestIsolationId</p>
          */
         public Builder isolationId(String isolationId) {
             this.putQueryParameter("IsolationId", isolationId);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTimeTemplateDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTimeTemplateDetailResponseBody</p>
  */
 public class QueryTimeTemplateDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryTimeTemplateDetailResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
 
     public static QueryTimeTemplateDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,26 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryTimeTemplateDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code:</p>
+         * <ul>
+         * <li><strong>200</strong>: The call is successful.</li>
+         * <li>Other values: error codes. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +121,7 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The time template information returned when the call was successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +129,10 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned when the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template owner error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +140,10 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06DC77A0-4622-42DB-9EE0-25FIOHS82JK1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +151,14 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +171,20 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTimeTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTimeTemplateDetailResponseBody</p>
+     */
     public static class TimeSectionList extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Integer begin;
 
-        @NameInMap("DayOfWeek")
+        @com.aliyun.core.annotation.NameInMap("DayOfWeek")
         private Integer dayOfWeek;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Integer end;
 
         private TimeSectionList(Builder builder) {
@@ -181,8 +227,20 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
             private Integer dayOfWeek; 
             private Integer end; 
 
+            private Builder() {
+            } 
+
+            private Builder(TimeSectionList model) {
+                this.begin = model.begin;
+                this.dayOfWeek = model.dayOfWeek;
+                this.end = model.end;
+            } 
+
             /**
-             * Begin.
+             * <p>The start time of each day, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -190,7 +248,10 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DayOfWeek.
+             * <p>The day of the week. Valid values: 0 to 6, where 0 indicates Sunday and 6 indicates Saturday.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dayOfWeek(Integer dayOfWeek) {
                 this.dayOfWeek = dayOfWeek;
@@ -198,7 +259,10 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>The end time of each day, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60000</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -212,21 +276,27 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTimeTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTimeTemplateDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AllDay")
+        @com.aliyun.core.annotation.NameInMap("AllDay")
         private Integer allDay;
 
-        @NameInMap("Default")
+        @com.aliyun.core.annotation.NameInMap("Default")
         private Integer _default;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TimeSectionList")
-        private java.util.List < TimeSectionList> timeSectionList;
+        @com.aliyun.core.annotation.NameInMap("TimeSectionList")
+        private java.util.List<TimeSectionList> timeSectionList;
 
         private Data(Builder builder) {
             this.allDay = builder.allDay;
@@ -275,7 +345,7 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
         /**
          * @return timeSectionList
          */
-        public java.util.List < TimeSectionList> getTimeSectionList() {
+        public java.util.List<TimeSectionList> getTimeSectionList() {
             return this.timeSectionList;
         }
 
@@ -284,10 +354,28 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
             private Integer _default; 
             private String name; 
             private String templateId; 
-            private java.util.List < TimeSectionList> timeSectionList; 
+            private java.util.List<TimeSectionList> timeSectionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.allDay = model.allDay;
+                this._default = model._default;
+                this.name = model.name;
+                this.templateId = model.templateId;
+                this.timeSectionList = model.timeSectionList;
+            } 
 
             /**
-             * AllDay.
+             * <p>Indicates whether 24/7 recording is enabled:</p>
+             * <ul>
+             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong>: No. For detailed configuration, see the <strong>TimeSectionList</strong> parameter.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder allDay(Integer allDay) {
                 this.allDay = allDay;
@@ -295,7 +383,14 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Default.
+             * <p>Indicates whether the template is the default template:</p>
+             * <ul>
+             * <li><strong>1</strong>: Default template.</li>
+             * <li><strong>0</strong>: Custom template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder _default(Integer _default) {
                 this._default = _default;
@@ -303,7 +398,10 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the time template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +409,10 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the time template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36f06322442e4e3f85a5ae8862c9****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -319,9 +420,9 @@ public class QueryTimeTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TimeSectionList.
+             * <p>The list of time sections in the time template.</p>
              */
-            public Builder timeSectionList(java.util.List < TimeSectionList> timeSectionList) {
+            public Builder timeSectionList(java.util.List<TimeSectionList> timeSectionList) {
                 this.timeSectionList = timeSectionList;
                 return this;
             }

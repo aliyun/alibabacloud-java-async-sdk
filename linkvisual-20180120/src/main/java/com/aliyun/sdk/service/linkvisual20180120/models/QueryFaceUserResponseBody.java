@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceUserResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFaceUserResponseBody</p>
  */
 public class QueryFaceUserResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryFaceUserResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
 
     public static QueryFaceUserResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryFaceUserResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryFaceUserResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryFaceUserResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,23 +163,29 @@ public class QueryFaceUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryFaceUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceUserResponseBody</p>
+     */
     public static class FeatureDTOList extends TeaModel {
-        @NameInMap("AlgorithmName")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmName")
         private String algorithmName;
 
-        @NameInMap("AlgorithmProvider")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmProvider")
         private String algorithmProvider;
 
-        @NameInMap("AlgorithmVersion")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmVersion")
         private String algorithmVersion;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FaceMd5")
+        @com.aliyun.core.annotation.NameInMap("FaceMd5")
         private String faceMd5;
 
         private FeatureDTOList(Builder builder) {
@@ -217,8 +255,23 @@ public class QueryFaceUserResponseBody extends TeaModel {
             private String errorMessage; 
             private String faceMd5; 
 
+            private Builder() {
+            } 
+
+            private Builder(FeatureDTOList model) {
+                this.algorithmName = model.algorithmName;
+                this.algorithmProvider = model.algorithmProvider;
+                this.algorithmVersion = model.algorithmVersion;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.faceMd5 = model.faceMd5;
+            } 
+
             /**
-             * AlgorithmName.
+             * <p>The name of the algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestAlgorithmName</p>
              */
             public Builder algorithmName(String algorithmName) {
                 this.algorithmName = algorithmName;
@@ -226,7 +279,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * AlgorithmProvider.
+             * <p>The provider of the algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestAlgorithmProvider</p>
              */
             public Builder algorithmProvider(String algorithmProvider) {
                 this.algorithmProvider = algorithmProvider;
@@ -234,7 +290,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * AlgorithmVersion.
+             * <p>The version of the algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestAlgorithmVersion</p>
              */
             public Builder algorithmVersion(String algorithmVersion) {
                 this.algorithmVersion = algorithmVersion;
@@ -242,7 +301,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -250,7 +312,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -258,7 +323,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * FaceMd5.
+             * <p>The MD5 hash of the face.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestFaceMd5</p>
              */
             public Builder faceMd5(String faceMd5) {
                 this.faceMd5 = faceMd5;
@@ -272,15 +340,21 @@ public class QueryFaceUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFaceUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceUserResponseBody</p>
+     */
     public static class FacePicList extends TeaModel {
-        @NameInMap("FaceMd5")
+        @com.aliyun.core.annotation.NameInMap("FaceMd5")
         private String faceMd5;
 
-        @NameInMap("FaceUrl")
+        @com.aliyun.core.annotation.NameInMap("FaceUrl")
         private String faceUrl;
 
-        @NameInMap("FeatureDTOList")
-        private java.util.List < FeatureDTOList> featureDTOList;
+        @com.aliyun.core.annotation.NameInMap("FeatureDTOList")
+        private java.util.List<FeatureDTOList> featureDTOList;
 
         private FacePicList(Builder builder) {
             this.faceMd5 = builder.faceMd5;
@@ -313,17 +387,29 @@ public class QueryFaceUserResponseBody extends TeaModel {
         /**
          * @return featureDTOList
          */
-        public java.util.List < FeatureDTOList> getFeatureDTOList() {
+        public java.util.List<FeatureDTOList> getFeatureDTOList() {
             return this.featureDTOList;
         }
 
         public static final class Builder {
             private String faceMd5; 
             private String faceUrl; 
-            private java.util.List < FeatureDTOList> featureDTOList; 
+            private java.util.List<FeatureDTOList> featureDTOList; 
+
+            private Builder() {
+            } 
+
+            private Builder(FacePicList model) {
+                this.faceMd5 = model.faceMd5;
+                this.faceUrl = model.faceUrl;
+                this.featureDTOList = model.featureDTOList;
+            } 
 
             /**
-             * FaceMd5.
+             * <p>The MD5 hash of the photo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestFaceMd5</p>
              */
             public Builder faceMd5(String faceMd5) {
                 this.faceMd5 = faceMd5;
@@ -331,7 +417,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * FaceUrl.
+             * <p>The URL of the photo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.com/xxx.jpg">https://test.com/xxx.jpg</a></p>
              */
             public Builder faceUrl(String faceUrl) {
                 this.faceUrl = faceUrl;
@@ -339,9 +428,9 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureDTOList.
+             * <p>The list of face feature values.</p>
              */
-            public Builder featureDTOList(java.util.List < FeatureDTOList> featureDTOList) {
+            public Builder featureDTOList(java.util.List<FeatureDTOList> featureDTOList) {
                 this.featureDTOList = featureDTOList;
                 return this;
             }
@@ -353,20 +442,26 @@ public class QueryFaceUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryFaceUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceUserResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CustomUserId")
+        @com.aliyun.core.annotation.NameInMap("CustomUserId")
         private String customUserId;
 
-        @NameInMap("FacePicList")
-        private java.util.List < FacePicList> facePicList;
+        @com.aliyun.core.annotation.NameInMap("FacePicList")
+        private java.util.List<FacePicList> facePicList;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Params")
+        @com.aliyun.core.annotation.NameInMap("Params")
         private String params;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {
@@ -395,7 +490,7 @@ public class QueryFaceUserResponseBody extends TeaModel {
         /**
          * @return facePicList
          */
-        public java.util.List < FacePicList> getFacePicList() {
+        public java.util.List<FacePicList> getFacePicList() {
             return this.facePicList;
         }
 
@@ -422,13 +517,27 @@ public class QueryFaceUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private String customUserId; 
-            private java.util.List < FacePicList> facePicList; 
+            private java.util.List<FacePicList> facePicList; 
             private String name; 
             private String params; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customUserId = model.customUserId;
+                this.facePicList = model.facePicList;
+                this.name = model.name;
+                this.params = model.params;
+                this.userId = model.userId;
+            } 
+
             /**
-             * CustomUserId.
+             * <p>The user ID in the caller\&quot;s system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestCustomUserId</p>
              */
             public Builder customUserId(String customUserId) {
                 this.customUserId = customUserId;
@@ -436,15 +545,18 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * FacePicList.
+             * <p>The list of face photo information.</p>
              */
-            public Builder facePicList(java.util.List < FacePicList> facePicList) {
+            public Builder facePicList(java.util.List<FacePicList> facePicList) {
                 this.facePicList = facePicList;
                 return this;
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -452,7 +564,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The user parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;age&quot;:28, &quot;sex&quot;:&quot;male&quot;}</p>
              */
             public Builder params(String params) {
                 this.params = params;
@@ -460,7 +575,10 @@ public class QueryFaceUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestUserId</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

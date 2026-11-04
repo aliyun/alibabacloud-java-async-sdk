@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDevicePictureLifeCycleRequest} extends {@link RequestModel}
  *
  * <p>QueryDevicePictureLifeCycleRequest</p>
  */
 public class QueryDevicePictureLifeCycleRequest extends Request {
-    @Query
-    @NameInMap("IotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String iotId;
 
     private QueryDevicePictureLifeCycleRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class QueryDevicePictureLifeCycleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class QueryDevicePictureLifeCycleRequest extends Request {
         } 
 
         /**
-         * IotId.
+         * <p>The ID of the IPC device. The ID is issued by IoT Platform and uniquely identifies the device. You can call the IoT Platform <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C47T6xwp6ms4bNlkHRWCg4****</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);

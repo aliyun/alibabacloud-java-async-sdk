@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPictureFilesRequest} extends {@link RequestModel}
  *
  * <p>QueryPictureFilesRequest</p>
  */
 public class QueryPictureFilesRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long beginTime;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DeviceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceName")
     private String deviceName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("IotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotId")
     private String iotId;
 
-    @Query
-    @NameInMap("IotInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IotInstanceId")
     private String iotInstanceId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PictureSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PictureSource")
     private Integer pictureSource;
 
-    @Query
-    @NameInMap("PictureType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PictureType")
     private Integer pictureType;
 
-    @Query
-    @NameInMap("ProductKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductKey")
     private String productKey;
 
     private QueryPictureFilesRequest(Builder builder) {
@@ -76,7 +81,7 @@ public class QueryPictureFilesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -182,7 +187,11 @@ public class QueryPictureFilesRequest extends Request {
         } 
 
         /**
-         * BeginTime.
+         * <p>The start time of the retrieval range. The time is a 13-digit timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615357669000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -191,7 +200,10 @@ public class QueryPictureFilesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -200,7 +212,14 @@ public class QueryPictureFilesRequest extends Request {
         }
 
         /**
-         * DeviceName.
+         * <p>The DeviceName of the IP camera.
+         * You can view the <strong>DeviceName</strong> on the <strong>Devices</strong> page of the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>ProductKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
          */
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
@@ -209,7 +228,11 @@ public class QueryPictureFilesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the retrieval range. The time is a 13-digit timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615444063000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -218,7 +241,13 @@ public class QueryPictureFilesRequest extends Request {
         }
 
         /**
-         * IotId.
+         * <p>The ID of the IP camera. The ID is issued by IoT Platform and is the unique identifier of the device. You can call the <a href="https://help.aliyun.com/document_detail/69594.html">QueryDeviceDetail</a> operation of IoT Platform to query the ID.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you do not need to specify <strong>ProductKey</strong> or <strong>DeviceName</strong>. The <strong>IotId</strong> is the unique identifier of the device and corresponds to the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>. If you specify both <strong>IotId</strong> and the combination of <strong>ProductKey</strong> and <strong>DeviceName</strong>, <strong>IotId</strong> takes precedence.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zLZyi6aOLyOSHa9hsPyD00****</p>
          */
         public Builder iotId(String iotId) {
             this.putQueryParameter("IotId", iotId);
@@ -227,7 +256,18 @@ public class QueryPictureFilesRequest extends Request {
         }
 
         /**
-         * IotInstanceId.
+         * <p>Instance ID of the instance. You can view the <strong>ID</strong> of the current instance on the <strong>Instance Overview</strong> page of the IoT Platform console.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <ul>
+         * <li>If the instance has an ID, you must specify instance ID. Otherwise, the call fails.</li>
+         * <li>If the instance does not have an &lt;props=&quot;intl&quot;&gt;<ph><strong>Instance Overview</strong> page or </ph>ID, you do not need to specify this parameter.</li>
+         * </ul>
+         * <p>For more information about instances, see <a href="https://help.aliyun.com/document_detail/356505.html">Instance overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot-cn-n6w1y****</p>
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
@@ -236,7 +276,10 @@ public class QueryPictureFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -245,7 +288,17 @@ public class QueryPictureFilesRequest extends Request {
         }
 
         /**
-         * PictureSource.
+         * <p>The source of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: all events. This is the default value.</li>
+         * <li><strong>1</strong>: snapshot captured during an alert event.</li>
+         * <li><strong>2</strong>: manual snapshot.</li>
+         * <li><strong>3</strong>: other sources.</li>
+         * <li><strong>4</strong>: cloud snapshot.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pictureSource(Integer pictureSource) {
             this.putQueryParameter("PictureSource", pictureSource);
@@ -254,7 +307,15 @@ public class QueryPictureFilesRequest extends Request {
         }
 
         /**
-         * PictureType.
+         * <p>The type of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: thumbnail. </li>
+         * <li><strong>1</strong>: original image.</li>
+         * <li><strong>2</strong>: all images. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pictureType(Integer pictureType) {
             this.putQueryParameter("PictureType", pictureType);
@@ -263,7 +324,14 @@ public class QueryPictureFilesRequest extends Request {
         }
 
         /**
-         * ProductKey.
+         * <p>The ProductKey of the product to which the IP camera belongs.
+         * You can view the ProductKey on the <strong>Products</strong> page of the IoT Platform console or call the <a href="https://help.aliyun.com/document_detail/69271.html">QueryProductList</a> operation to query the information about all products under the current account.</p>
+         * <blockquote>
+         * <p>Notice:  If you specify this parameter, you must also specify <strong>DeviceName</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a1BwAGV****</p>
          */
         public Builder productKey(String productKey) {
             this.putQueryParameter("ProductKey", productKey);

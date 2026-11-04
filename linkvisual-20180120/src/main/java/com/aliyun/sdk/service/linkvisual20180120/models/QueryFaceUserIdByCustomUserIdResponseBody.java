@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkvisual20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFaceUserIdByCustomUserIdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFaceUserIdByCustomUserIdResponseBody</p>
  */
 public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryFaceUserIdByCustomUserIdResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
 
     public static QueryFaceUserIdByCustomUserIdResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryFaceUserIdByCustomUserIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The return value of the API operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +136,10 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the API call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +163,23 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryFaceUserIdByCustomUserIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFaceUserIdByCustomUserIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CustomUserId")
+        @com.aliyun.core.annotation.NameInMap("CustomUserId")
         private String customUserId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Params")
+        @com.aliyun.core.annotation.NameInMap("Params")
         private String params;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {
@@ -193,8 +231,21 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
             private String params; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.customUserId = model.customUserId;
+                this.name = model.name;
+                this.params = model.params;
+                this.userId = model.userId;
+            } 
+
             /**
-             * CustomUserId.
+             * <p>The user ID in the caller system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestCustomUserId</p>
              */
             public Builder customUserId(String customUserId) {
                 this.customUserId = customUserId;
@@ -202,7 +253,10 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +264,10 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The user parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;age&quot;:28, &quot;sex&quot;:&quot;male&quot;}</p>
              */
             public Builder params(String params) {
                 this.params = params;
@@ -218,7 +275,10 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestUserId</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
