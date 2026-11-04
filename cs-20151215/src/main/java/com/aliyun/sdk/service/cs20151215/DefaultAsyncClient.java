@@ -986,10 +986,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <ul>
      * <li>When you remove a node, perform standard operations by using this API operation or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by running the <code>kubectl delete node</code> command.</li>
-     * <li>Do not release nodes or remove instances in the ECS or Auto Scaling console, or by calling related API operations, or passively release nodes when a subscription instance expires. In these cases, the nodes are directly shut down and automatically removed from the Container Service console.</li>
-     * <li>If the expected number of nodes is configured for a node pool, the node pool automatically scales out other instances based on the corresponding configurations to maintain the expected number of nodes.</li>
-     * <li>Removing a node involves pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up your data in advance.</li>
-     * <li>When a node is removed, ACK drains the node. Make sure that other nodes in the cluster have sufficient resources to prevent application pods from failing to be scheduled.</li>
+     * <li>Do not proactively release nodes or remove instances in the ECS or Auto Scaling (ESS) console or by calling related API operations, or passively release nodes when a subscription instance expires. In these cases, the nodes are directly shut down and automatically removed from the Container Service console.</li>
+     * <li>If the expected number of nodes is configured for a node pool, the node pool automatically scales out other instances based on the configurations to maintain the expected number of nodes.</li>
+     * <li>Removing a node involves pod migration and may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up your data in advance.</li>
+     * <li>When a node is removed, ACK performs a drain operation. Make sure that other nodes in the cluster have sufficient resources to prevent application pods from failing to be scheduled.</li>
      * <li>Check the node affinity rules and scheduling policies of the pods on the node to be removed. Make sure that the pods can be scheduled to other nodes after the node is removed.</li>
      * </ul>
      * 
@@ -2164,7 +2164,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters of ACK cluster management OpenAPI operations and deprecation of OpenAPI operations</a>.</notice></p>
+     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to request and response parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</notice></p>
      * 
      * @param request the request parameters of ModifyClusterNodePool  ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
@@ -2349,11 +2349,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Node removal involves pod migration, which may affect your workloads. Perform this operation during off-peak hours.</li>
+     * <li>Removing nodes involves pod migration and may affect your services. Perform this operation during off-peak hours.</li>
      * <li>Unexpected risks may occur during the operation. Back up your data in advance.</li>
      * <li>During the operation, the system sets the nodes to the unschedulable state.</li>
      * <li>Only worker nodes are removed. Master nodes are not removed.</li>
-     * <li>Even if you choose to release nodes (by setting release_node to true), subscription nodes are not released. You must release them manually in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after removing them from the node pool.</li>
+     * <li>Even if you choose to release nodes (by setting <code>release_node</code> to <code>true</code>), subscription nodes are not released. To release subscription nodes, you must first <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change their billing method to pay-as-you-go</a> and then release them in the <a href="https://ecs.console.aliyun.com/">ECS console</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of RemoveNodePoolNodes  RemoveNodePoolNodesRequest

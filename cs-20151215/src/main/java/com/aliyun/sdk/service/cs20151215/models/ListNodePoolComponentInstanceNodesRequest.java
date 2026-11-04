@@ -199,7 +199,7 @@ public class ListNodePoolComponentInstanceNodesRequest extends Request {
         }
 
         /**
-         * <p>Filters nodes by the specified configuration version number of the node component.</p>
+         * <p>Filters nodes by the specified configuration revision of the node component.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

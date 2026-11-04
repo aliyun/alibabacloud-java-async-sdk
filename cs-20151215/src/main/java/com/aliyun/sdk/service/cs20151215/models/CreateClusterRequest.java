@@ -393,6 +393,10 @@ public class CreateClusterRequest extends Request {
     private Boolean sshFlags;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("support_policy")
+    private String supportPolicy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tag> tags;
 
@@ -580,6 +584,7 @@ public class CreateClusterRequest extends Request {
         this.snatEntry = builder.snatEntry;
         this.socEnabled = builder.socEnabled;
         this.sshFlags = builder.sshFlags;
+        this.supportPolicy = builder.supportPolicy;
         this.tags = builder.tags;
         this.taints = builder.taints;
         this.timeoutMins = builder.timeoutMins;
@@ -1192,6 +1197,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return supportPolicy
+     */
+    public String getSupportPolicy() {
+        return this.supportPolicy;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tag> getTags() {
@@ -1428,6 +1440,7 @@ public class CreateClusterRequest extends Request {
         private Boolean snatEntry; 
         private Boolean socEnabled; 
         private Boolean sshFlags; 
+        private String supportPolicy; 
         private java.util.List<Tag> tags; 
         private java.util.List<Taint> taints; 
         private Long timeoutMins; 
@@ -1539,6 +1552,7 @@ public class CreateClusterRequest extends Request {
             this.snatEntry = request.snatEntry;
             this.socEnabled = request.socEnabled;
             this.sshFlags = request.sshFlags;
+            this.supportPolicy = request.supportPolicy;
             this.tags = request.tags;
             this.taints = request.taints;
             this.timeoutMins = request.timeoutMins;
@@ -2765,6 +2779,15 @@ public class CreateClusterRequest extends Request {
         public Builder sshFlags(Boolean sshFlags) {
             this.putBodyParameter("ssh_flags", sshFlags);
             this.sshFlags = sshFlags;
+            return this;
+        }
+
+        /**
+         * support_policy.
+         */
+        public Builder supportPolicy(String supportPolicy) {
+            this.putBodyParameter("support_policy", supportPolicy);
+            this.supportPolicy = supportPolicy;
             return this;
         }
 

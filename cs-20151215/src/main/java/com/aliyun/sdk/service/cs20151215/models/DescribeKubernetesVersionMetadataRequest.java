@@ -44,6 +44,10 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
     private String region;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportPolicy")
+    private String supportPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
@@ -55,6 +59,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         this.profile = builder.profile;
         this.queryUpgradableVersion = builder.queryUpgradableVersion;
         this.region = builder.region;
+        this.supportPolicy = builder.supportPolicy;
         this.runtime = builder.runtime;
     }
 
@@ -114,6 +119,13 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
     }
 
     /**
+     * @return supportPolicy
+     */
+    public String getSupportPolicy() {
+        return this.supportPolicy;
+    }
+
+    /**
      * @return runtime
      */
     public String getRuntime() {
@@ -127,6 +139,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         private String profile; 
         private Boolean queryUpgradableVersion; 
         private String region; 
+        private String supportPolicy; 
         private String runtime; 
 
         private Builder() {
@@ -141,6 +154,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
             this.profile = request.profile;
             this.queryUpgradableVersion = request.queryUpgradableVersion;
             this.region = request.region;
+            this.supportPolicy = request.supportPolicy;
             this.runtime = request.runtime;
         } 
 
@@ -236,6 +250,15 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * SupportPolicy.
+         */
+        public Builder supportPolicy(String supportPolicy) {
+            this.putQueryParameter("SupportPolicy", supportPolicy);
+            this.supportPolicy = supportPolicy;
             return this;
         }
 

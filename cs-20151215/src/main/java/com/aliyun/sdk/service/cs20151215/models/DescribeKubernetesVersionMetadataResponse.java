@@ -135,17 +135,17 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
      * <p>DescribeKubernetesVersionMetadataResponse</p>
      */
     public static class Images extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("architecture")
+        private String architecture;
+
+        @com.aliyun.core.annotation.NameInMap("image_category")
+        private String imageCategory;
+
         @com.aliyun.core.annotation.NameInMap("image_id")
         private String imageId;
 
         @com.aliyun.core.annotation.NameInMap("image_name")
         private String imageName;
-
-        @com.aliyun.core.annotation.NameInMap("platform")
-        private String platform;
-
-        @com.aliyun.core.annotation.NameInMap("os_version")
-        private String osVersion;
 
         @com.aliyun.core.annotation.NameInMap("image_type")
         private String imageType;
@@ -153,21 +153,21 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         @com.aliyun.core.annotation.NameInMap("os_type")
         private String osType;
 
-        @com.aliyun.core.annotation.NameInMap("image_category")
-        private String imageCategory;
+        @com.aliyun.core.annotation.NameInMap("os_version")
+        private String osVersion;
 
-        @com.aliyun.core.annotation.NameInMap("architecture")
-        private String architecture;
+        @com.aliyun.core.annotation.NameInMap("platform")
+        private String platform;
 
         private Images(Builder builder) {
+            this.architecture = builder.architecture;
+            this.imageCategory = builder.imageCategory;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
-            this.platform = builder.platform;
-            this.osVersion = builder.osVersion;
             this.imageType = builder.imageType;
             this.osType = builder.osType;
-            this.imageCategory = builder.imageCategory;
-            this.architecture = builder.architecture;
+            this.osVersion = builder.osVersion;
+            this.platform = builder.platform;
         }
 
         public static Builder builder() {
@@ -176,6 +176,20 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
 
         public static Images create() {
             return builder().build();
+        }
+
+        /**
+         * @return architecture
+         */
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        /**
+         * @return imageCategory
+         */
+        public String getImageCategory() {
+            return this.imageCategory;
         }
 
         /**
@@ -193,20 +207,6 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         }
 
         /**
-         * @return platform
-         */
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        /**
-         * @return osVersion
-         */
-        public String getOsVersion() {
-            return this.osVersion;
-        }
-
-        /**
          * @return imageType
          */
         public String getImageType() {
@@ -221,42 +221,70 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         }
 
         /**
-         * @return imageCategory
+         * @return osVersion
          */
-        public String getImageCategory() {
-            return this.imageCategory;
+        public String getOsVersion() {
+            return this.osVersion;
         }
 
         /**
-         * @return architecture
+         * @return platform
          */
-        public String getArchitecture() {
-            return this.architecture;
+        public String getPlatform() {
+            return this.platform;
         }
 
         public static final class Builder {
+            private String architecture; 
+            private String imageCategory; 
             private String imageId; 
             private String imageName; 
-            private String platform; 
-            private String osVersion; 
             private String imageType; 
             private String osType; 
-            private String imageCategory; 
-            private String architecture; 
+            private String osVersion; 
+            private String platform; 
 
             private Builder() {
             } 
 
             private Builder(Images model) {
+                this.architecture = model.architecture;
+                this.imageCategory = model.imageCategory;
                 this.imageId = model.imageId;
                 this.imageName = model.imageName;
-                this.platform = model.platform;
-                this.osVersion = model.osVersion;
                 this.imageType = model.imageType;
                 this.osType = model.osType;
-                this.imageCategory = model.imageCategory;
-                this.architecture = model.architecture;
+                this.osVersion = model.osVersion;
+                this.platform = model.platform;
             } 
+
+            /**
+             * <p>The image architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64</p>
+             */
+            public Builder architecture(String architecture) {
+                this.architecture = architecture;
+                return this;
+            }
+
+            /**
+             * <p>The image category. Some valid values:</p>
+             * <ul>
+             * <li><code>system</code>: public images.</li>
+             * <li><code>self</code>: your custom images.</li>
+             * <li><code>others</code>: public images from other users.</li>
+             * <li><code>marketplace</code>: Alibaba Cloud Marketplace images.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
+             */
+            public Builder imageCategory(String imageCategory) {
+                this.imageCategory = imageCategory;
+                return this;
+            }
 
             /**
              * <p>The image ID.</p>
@@ -277,34 +305,6 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
-                return this;
-            }
-
-            /**
-             * <p>The operating system platform. Valid values:</p>
-             * <ul>
-             * <li><code>AliyunLinux</code></li>
-             * <li><code>CentOS</code></li>
-             * <li><code>Windows</code></li>
-             * <li><code>WindowsCore</code></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>AliyunLinux</p>
-             */
-            public Builder platform(String platform) {
-                this.platform = platform;
-                return this;
-            }
-
-            /**
-             * <p>The image version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3.2104</p>
-             */
-            public Builder osVersion(String osVersion) {
-                this.osVersion = osVersion;
                 return this;
             }
 
@@ -346,30 +346,30 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The image category. Some valid values:</p>
-             * <ul>
-             * <li><code>system</code>: public images.</li>
-             * <li><code>self</code>: your custom images.</li>
-             * <li><code>others</code>: public images from other users.</li>
-             * <li><code>marketplace</code>: Alibaba Cloud Marketplace images.</li>
-             * </ul>
+             * <p>The image version.</p>
              * 
              * <strong>example:</strong>
-             * <p>system</p>
+             * <p>3.2104</p>
              */
-            public Builder imageCategory(String imageCategory) {
-                this.imageCategory = imageCategory;
+            public Builder osVersion(String osVersion) {
+                this.osVersion = osVersion;
                 return this;
             }
 
             /**
-             * <p>The image architecture.</p>
+             * <p>The operating system platform. Valid values:</p>
+             * <ul>
+             * <li><code>AliyunLinux</code></li>
+             * <li><code>CentOS</code></li>
+             * <li><code>Windows</code></li>
+             * <li><code>WindowsCore</code></li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>x86_64</p>
+             * <p>AliyunLinux</p>
              */
-            public Builder architecture(String architecture) {
-                this.architecture = architecture;
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 
@@ -390,40 +390,48 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         @com.aliyun.core.annotation.NameInMap("capabilities")
         private java.util.Map<String, ?> capabilities;
 
+        @com.aliyun.core.annotation.NameInMap("creatable")
+        private Boolean creatable;
+
+        @com.aliyun.core.annotation.NameInMap("expiration_date")
+        private String expirationDate;
+
+        @com.aliyun.core.annotation.NameInMap("extended_expiration_date")
+        private String extendedExpirationDate;
+
         @com.aliyun.core.annotation.NameInMap("images")
         private java.util.List<Images> images;
 
         @com.aliyun.core.annotation.NameInMap("meta_data")
         private java.util.Map<String, ?> metaData;
 
-        @com.aliyun.core.annotation.NameInMap("runtimes")
-        private java.util.List<Runtime> runtimes;
-
-        @com.aliyun.core.annotation.NameInMap("version")
-        private String version;
-
         @com.aliyun.core.annotation.NameInMap("release_date")
         private String releaseDate;
 
-        @com.aliyun.core.annotation.NameInMap("expiration_date")
-        private String expirationDate;
+        @com.aliyun.core.annotation.NameInMap("runtimes")
+        private java.util.List<Runtime> runtimes;
 
-        @com.aliyun.core.annotation.NameInMap("creatable")
-        private Boolean creatable;
+        @com.aliyun.core.annotation.NameInMap("support_policy")
+        private String supportPolicy;
 
         @com.aliyun.core.annotation.NameInMap("upgradable_versions")
         private java.util.List<String> upgradableVersions;
 
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
         private DescribeKubernetesVersionMetadataResponseBody(Builder builder) {
             this.capabilities = builder.capabilities;
+            this.creatable = builder.creatable;
+            this.expirationDate = builder.expirationDate;
+            this.extendedExpirationDate = builder.extendedExpirationDate;
             this.images = builder.images;
             this.metaData = builder.metaData;
-            this.runtimes = builder.runtimes;
-            this.version = builder.version;
             this.releaseDate = builder.releaseDate;
-            this.expirationDate = builder.expirationDate;
-            this.creatable = builder.creatable;
+            this.runtimes = builder.runtimes;
+            this.supportPolicy = builder.supportPolicy;
             this.upgradableVersions = builder.upgradableVersions;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -442,6 +450,27 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         }
 
         /**
+         * @return creatable
+         */
+        public Boolean getCreatable() {
+            return this.creatable;
+        }
+
+        /**
+         * @return expirationDate
+         */
+        public String getExpirationDate() {
+            return this.expirationDate;
+        }
+
+        /**
+         * @return extendedExpirationDate
+         */
+        public String getExtendedExpirationDate() {
+            return this.extendedExpirationDate;
+        }
+
+        /**
          * @return images
          */
         public java.util.List<Images> getImages() {
@@ -456,20 +485,6 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         }
 
         /**
-         * @return runtimes
-         */
-        public java.util.List<Runtime> getRuntimes() {
-            return this.runtimes;
-        }
-
-        /**
-         * @return version
-         */
-        public String getVersion() {
-            return this.version;
-        }
-
-        /**
          * @return releaseDate
          */
         public String getReleaseDate() {
@@ -477,17 +492,17 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         }
 
         /**
-         * @return expirationDate
+         * @return runtimes
          */
-        public String getExpirationDate() {
-            return this.expirationDate;
+        public java.util.List<Runtime> getRuntimes() {
+            return this.runtimes;
         }
 
         /**
-         * @return creatable
+         * @return supportPolicy
          */
-        public Boolean getCreatable() {
-            return this.creatable;
+        public String getSupportPolicy() {
+            return this.supportPolicy;
         }
 
         /**
@@ -497,30 +512,41 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             return this.upgradableVersions;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private java.util.Map<String, ?> capabilities; 
+            private Boolean creatable; 
+            private String expirationDate; 
+            private String extendedExpirationDate; 
             private java.util.List<Images> images; 
             private java.util.Map<String, ?> metaData; 
-            private java.util.List<Runtime> runtimes; 
-            private String version; 
             private String releaseDate; 
-            private String expirationDate; 
-            private Boolean creatable; 
+            private java.util.List<Runtime> runtimes; 
+            private String supportPolicy; 
             private java.util.List<String> upgradableVersions; 
+            private String version; 
 
             private Builder() {
             } 
 
             private Builder(DescribeKubernetesVersionMetadataResponseBody model) {
                 this.capabilities = model.capabilities;
+                this.creatable = model.creatable;
+                this.expirationDate = model.expirationDate;
+                this.extendedExpirationDate = model.extendedExpirationDate;
                 this.images = model.images;
                 this.metaData = model.metaData;
-                this.runtimes = model.runtimes;
-                this.version = model.version;
                 this.releaseDate = model.releaseDate;
-                this.expirationDate = model.expirationDate;
-                this.creatable = model.creatable;
+                this.runtimes = model.runtimes;
+                this.supportPolicy = model.supportPolicy;
                 this.upgradableVersions = model.upgradableVersions;
+                this.version = model.version;
             } 
 
             /**
@@ -534,6 +560,36 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
              */
             public Builder capabilities(java.util.Map<String, ?> capabilities) {
                 this.capabilities = capabilities;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the Kubernetes version can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder creatable(Boolean creatable) {
+                this.creatable = creatable;
+                return this;
+            }
+
+            /**
+             * <p>The expiration time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-30T00:00:00Z</p>
+             */
+            public Builder expirationDate(String expirationDate) {
+                this.expirationDate = expirationDate;
+                return this;
+            }
+
+            /**
+             * extended_expiration_date.
+             */
+            public Builder extendedExpirationDate(String extendedExpirationDate) {
+                this.extendedExpirationDate = extendedExpirationDate;
                 return this;
             }
 
@@ -561,25 +617,6 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The container runtime configurations.</p>
-             */
-            public Builder runtimes(java.util.List<Runtime> runtimes) {
-                this.runtimes = runtimes;
-                return this;
-            }
-
-            /**
-             * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.31.1-aliyun.1</p>
-             */
-            public Builder version(String version) {
-                this.version = version;
-                return this;
-            }
-
-            /**
              * <p>The release time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
              * 
              * <strong>example:</strong>
@@ -591,24 +628,18 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>The expiration time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2026-01-30T00:00:00Z</p>
+             * <p>The container runtime configurations.</p>
              */
-            public Builder expirationDate(String expirationDate) {
-                this.expirationDate = expirationDate;
+            public Builder runtimes(java.util.List<Runtime> runtimes) {
+                this.runtimes = runtimes;
                 return this;
             }
 
             /**
-             * <p>Indicates whether the Kubernetes version can be created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * support_policy.
              */
-            public Builder creatable(Boolean creatable) {
-                this.creatable = creatable;
+            public Builder supportPolicy(String supportPolicy) {
+                this.supportPolicy = supportPolicy;
                 return this;
             }
 
@@ -617,6 +648,17 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
              */
             public Builder upgradableVersions(java.util.List<String> upgradableVersions) {
                 this.upgradableVersions = upgradableVersions;
+                return this;
+            }
+
+            /**
+             * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.31.1-aliyun.1</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

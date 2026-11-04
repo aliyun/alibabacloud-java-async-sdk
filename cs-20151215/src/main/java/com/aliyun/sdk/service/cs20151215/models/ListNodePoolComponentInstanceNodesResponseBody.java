@@ -280,7 +280,7 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom configuration version number of the component on the node.</p>
+             * <p>The custom configuration revision of the component on the node.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -385,7 +385,7 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the component on the node.</p>
+             * <p>The detailed information about the component on the node.</p>
              */
             public Builder component(Component component) {
                 this.component = component;

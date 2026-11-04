@@ -99,6 +99,10 @@ public class ModifyClusterRequest extends Request {
     private String securityGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("support_policy")
+    private String supportPolicy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("system_events_logging")
     private SystemEventsLogging systemEventsLogging;
 
@@ -131,6 +135,7 @@ public class ModifyClusterRequest extends Request {
         this.operationPolicy = builder.operationPolicy;
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
+        this.supportPolicy = builder.supportPolicy;
         this.systemEventsLogging = builder.systemEventsLogging;
         this.timezone = builder.timezone;
         this.vswitchIds = builder.vswitchIds;
@@ -283,6 +288,13 @@ public class ModifyClusterRequest extends Request {
     }
 
     /**
+     * @return supportPolicy
+     */
+    public String getSupportPolicy() {
+        return this.supportPolicy;
+    }
+
+    /**
      * @return systemEventsLogging
      */
     public SystemEventsLogging getSystemEventsLogging() {
@@ -323,6 +335,7 @@ public class ModifyClusterRequest extends Request {
         private OperationPolicy operationPolicy; 
         private String resourceGroupId; 
         private String securityGroupId; 
+        private String supportPolicy; 
         private SystemEventsLogging systemEventsLogging; 
         private String timezone; 
         private java.util.List<String> vswitchIds; 
@@ -352,6 +365,7 @@ public class ModifyClusterRequest extends Request {
             this.operationPolicy = request.operationPolicy;
             this.resourceGroupId = request.resourceGroupId;
             this.securityGroupId = request.securityGroupId;
+            this.supportPolicy = request.supportPolicy;
             this.systemEventsLogging = request.systemEventsLogging;
             this.timezone = request.timezone;
             this.vswitchIds = request.vswitchIds;
@@ -602,6 +616,15 @@ public class ModifyClusterRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("security_group_id", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * support_policy.
+         */
+        public Builder supportPolicy(String supportPolicy) {
+            this.putBodyParameter("support_policy", supportPolicy);
+            this.supportPolicy = supportPolicy;
             return this;
         }
 

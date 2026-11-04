@@ -132,6 +132,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @Deprecated
     private String subnetCidr;
 
+    @com.aliyun.core.annotation.NameInMap("support_policy")
+    private String supportPolicy;
+
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tag> tags;
 
@@ -195,6 +198,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         this.size = builder.size;
         this.state = builder.state;
         this.subnetCidr = builder.subnetCidr;
+        this.supportPolicy = builder.supportPolicy;
         this.tags = builder.tags;
         this.timezone = builder.timezone;
         this.updated = builder.updated;
@@ -470,6 +474,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return supportPolicy
+     */
+    public String getSupportPolicy() {
+        return this.supportPolicy;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tag> getTags() {
@@ -562,6 +573,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private Long size; 
         private String state; 
         private String subnetCidr; 
+        private String supportPolicy; 
         private java.util.List<Tag> tags; 
         private String timezone; 
         private String updated; 
@@ -611,6 +623,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             this.size = model.size;
             this.state = model.state;
             this.subnetCidr = model.subnetCidr;
+            this.supportPolicy = model.supportPolicy;
             this.tags = model.tags;
             this.timezone = model.timezone;
             this.updated = model.updated;
@@ -1053,6 +1066,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
          */
         public Builder subnetCidr(String subnetCidr) {
             this.subnetCidr = subnetCidr;
+            return this;
+        }
+
+        /**
+         * support_policy.
+         */
+        public Builder supportPolicy(String supportPolicy) {
+            this.supportPolicy = supportPolicy;
             return this;
         }
 
