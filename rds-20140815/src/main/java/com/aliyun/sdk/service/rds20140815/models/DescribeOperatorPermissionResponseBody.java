@@ -93,7 +93,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * CreatedTime.
+         * <p>The effective period of the authorization. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-12T02:27:04Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -101,7 +104,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * <p>The time when the authorization expires. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2030-01-01T11:58:17Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -109,7 +115,14 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Privileges.
+         * <p>The types of permissions that are granted. Valid values:</p>
+         * <ul>
+         * <li><strong>Control</strong>: configuration permissions. Allows you to view and modify instance configurations.</li>
+         * <li><strong>Data</strong>: database permissions. Allows you to view table schemas, indexes, and SQL statements.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Control,Data</p>
          */
         public Builder privileges(String privileges) {
             this.privileges = privileges;
@@ -117,7 +130,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C3535DC-743E-505A-B4F6-ABC***75C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

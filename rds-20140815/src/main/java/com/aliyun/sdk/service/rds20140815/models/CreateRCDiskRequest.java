@@ -276,7 +276,7 @@ public class CreateRCDiskRequest extends Request {
          * <li><strong>false</strong>: Only an order is generated and no payment is made.</li>
          * </ul>
          * <blockquote>
-         * <p>If your payment method has insufficient balance, you can set this parameter to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</p>
+         * <p>If your payment method has an insufficient balance, you can set this parameter to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -295,7 +295,7 @@ public class CreateRCDiskRequest extends Request {
          * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
-         * <p>If you purchase the cloud disk on a monthly basis, the auto-renewal epoch is one month. If you purchase the cloud disk on a yearly basis, the auto-renewal epoch is one year.</p>
+         * <p>If you purchase the cloud disk on a monthly basis, the auto-renewal epoch is 1 month. If you purchase the cloud disk on a yearly basis, the auto-renewal epoch is 1 year.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -338,7 +338,7 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud disk. The name must be 2 to 128 characters in length and can contain letters and digits in the Unicode Letter category. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the cloud disk. The name must be 2 to 128 characters in length and can contain Unicode letters, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testDisk</p>
@@ -352,8 +352,8 @@ public class CreateRCDiskRequest extends Request {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go. Cloud disks of this billing method do not need to be mounted to instances. You can also mount a pay-as-you-go cloud disk to an instance of any billing method when you create it as needed.</li>
-         * <li><strong>Prepaid</strong>: subscription. Cloud disks of this billing method must be mounted to subscription instances. You must specify the <strong>InstanceId</strong> parameter, which is the instance ID of a subscription instance.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go. Cloud disks of this billing method do not need to be mounted to instances. You can also mount a pay-as-you-go cloud disk to an instance of any billing method during creation as needed.</li>
+         * <li><strong>Prepaid</strong>: subscription. A cloud disk of this billing method must be mounted to a subscription instance. You must specify the <strong>InstanceId</strong> parameter, which is the instance ID of a subscription instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,7 +378,7 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The performance level of the ESSD cloud disk. Valid values:</p>
+         * <p>The performance level of the ESSD. This parameter does not apply to a standard SSD. Valid values:</p>
          * <ul>
          * <li><strong>PL0</strong>: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
          * <li><strong>PL1</strong> (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
@@ -397,7 +397,7 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * <p>Reserved parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -409,7 +409,7 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * <p>Reserved parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -471,11 +471,11 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot used to create the cloud disk.</p>
+         * <p>The snapshot used to create the cloud disk.</p>
          * <ul>
          * <li>You can use RDS Custom snapshots and ECS snapshots (excluding shared snapshots).</li>
          * <li>If the size of the snapshot specified by <strong>SnapshotId</strong> is greater than the value of <strong>Size</strong>, the created cloud disk is the same size as the snapshot. If the snapshot size is smaller than the value of <strong>Size</strong>, the created cloud disk is the size specified by <strong>Size</strong>.</li>
-         * <li>You cannot use snapshots to create ephemeral disks.</li>
+         * <li>You cannot use snapshots to create elastic ephemeral disks.</li>
          * <li>Snapshots created on or before July 15, 2013 cannot be used to create cloud disks.</li>
          * </ul>
          * 
@@ -498,8 +498,8 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The zone ID.</p>
-         * <p>This parameter is required when you do not specify the <strong>InstanceId</strong> parameter, which is the instance ID of the instance to which the cloud disk is mounted.</p>
+         * <p>The ID of the active zone.</p>
+         * <p>This parameter is required if you do not specify the <strong>InstanceId</strong> parameter, which is the instance ID of the instance to which the cloud disk is mounted.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -570,7 +570,7 @@ public class CreateRCDiskRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You can create up to N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
+             * <p>The tag key. You can specify up to N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. Empty strings are not allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>testkey1</p>
@@ -581,7 +581,7 @@ public class CreateRCDiskRequest extends Request {
             }
 
             /**
-             * <p>The tag value that corresponds to the tag key. You can specify up to N tag values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
+             * <p>The tag value that corresponds to the tag key. You can specify up to N tag values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. Empty strings are allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>testvalue1</p>

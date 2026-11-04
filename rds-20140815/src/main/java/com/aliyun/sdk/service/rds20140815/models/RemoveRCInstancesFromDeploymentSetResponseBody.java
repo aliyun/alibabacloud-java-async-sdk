@@ -155,10 +155,10 @@ public class RemoveRCInstancesFromDeploymentSetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node status. Valid values:</p>
+             * <p>The status of the node. Valid values:</p>
              * <ul>
-             * <li><strong>Success</strong>: successful</li>
-             * <li><strong>Failed</strong>: failed</li>
+             * <li><strong>Success</strong>: Successful.</li>
+             * <li><strong>Failed</strong>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

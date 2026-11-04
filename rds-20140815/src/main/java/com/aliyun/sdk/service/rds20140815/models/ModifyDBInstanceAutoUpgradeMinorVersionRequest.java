@@ -131,10 +131,10 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         } 
 
         /**
-         * <p>The minor version upgrade method for the instance. Valid values:</p>
+         * <p>The method used to upgrade the minor engine version of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Auto</strong>: Automatically upgrades the minor version.</li>
-         * <li><strong>Manual</strong>: Does not automatically upgrade the minor version. The minor version is forcibly upgraded only when the current version is retired.</li>
+         * <li><strong>Auto</strong>: automatically upgrades the minor engine version.</li>
+         * <li><strong>Manual</strong>: does not automatically upgrade the minor engine version. The minor engine version is forcibly upgraded only when the current version is retired.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -148,7 +148,7 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can be up to 64 characters in length and cannot contain non-ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The value can be up to 64 characters in length and can contain only ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -160,7 +160,7 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -23,6 +23,12 @@ public class DescribeRCElasticScalingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
+    @com.aliyun.core.annotation.NameInMap("MaxAcu")
+    private Integer maxAcu;
+
+    @com.aliyun.core.annotation.NameInMap("MinAcu")
+    private Integer minAcu;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -44,6 +50,8 @@ public class DescribeRCElasticScalingResponseBody extends TeaModel {
     private DescribeRCElasticScalingResponseBody(Builder builder) {
         this.acuType = builder.acuType;
         this.instanceId = builder.instanceId;
+        this.maxAcu = builder.maxAcu;
+        this.minAcu = builder.minAcu;
         this.requestId = builder.requestId;
         this.scalingEnabled = builder.scalingEnabled;
         this.scalingSupported = builder.scalingSupported;
@@ -76,6 +84,20 @@ public class DescribeRCElasticScalingResponseBody extends TeaModel {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return maxAcu
+     */
+    public Integer getMaxAcu() {
+        return this.maxAcu;
+    }
+
+    /**
+     * @return minAcu
+     */
+    public Integer getMinAcu() {
+        return this.minAcu;
     }
 
     /**
@@ -123,6 +145,8 @@ public class DescribeRCElasticScalingResponseBody extends TeaModel {
     public static final class Builder {
         private String acuType; 
         private String instanceId; 
+        private Integer maxAcu; 
+        private Integer minAcu; 
         private String requestId; 
         private Boolean scalingEnabled; 
         private Boolean scalingSupported; 
@@ -136,6 +160,8 @@ public class DescribeRCElasticScalingResponseBody extends TeaModel {
         private Builder(DescribeRCElasticScalingResponseBody model) {
             this.acuType = model.acuType;
             this.instanceId = model.instanceId;
+            this.maxAcu = model.maxAcu;
+            this.minAcu = model.minAcu;
             this.requestId = model.requestId;
             this.scalingEnabled = model.scalingEnabled;
             this.scalingSupported = model.scalingSupported;
@@ -157,6 +183,22 @@ public class DescribeRCElasticScalingResponseBody extends TeaModel {
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaxAcu.
+         */
+        public Builder maxAcu(Integer maxAcu) {
+            this.maxAcu = maxAcu;
+            return this;
+        }
+
+        /**
+         * MinAcu.
+         */
+        public Builder minAcu(Integer minAcu) {
+            this.minAcu = minAcu;
             return this;
         }
 

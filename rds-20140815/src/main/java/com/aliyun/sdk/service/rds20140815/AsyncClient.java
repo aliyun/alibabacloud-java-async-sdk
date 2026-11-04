@@ -44,7 +44,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>By default, instances with local disks are not allowed to be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the administrator to add your UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</p>
+     * <p>By default, instances with local disks cannot be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the development team and ask the administrator to add the UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</p>
      * 
      * @param request the request parameters of AddRCInstancesToDeploymentSet  AddRCInstancesToDeploymentSetRequest
      * @return AddRCInstancesToDeploymentSetResponse
@@ -948,9 +948,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ul>
      * <li>Supported cloud disk types: ultra disk, standard SSD, ESSD, and premium performance disk (default).</li>
-     * <li>When the billing method of the cloud disk is subscription (<strong>Prepaid</strong>), you must specify the instance ID of a subscription instance (<strong>InstanceId</strong>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</li>
-     * <li>You can create a pay-as-you-go (<strong>Postpaid</strong>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method when you create it as needed.</li>
-     * <li>The types and number of cloud disks that can be mounted vary based on the instance type.</li>
+     * <li>When the billing method of the cloud disk is subscription (<strong>Prepaid</strong>), you must specify the instance ID (<strong>InstanceId</strong>) of a subscription instance to which this cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</li>
+     * <li>You can create a pay-as-you-go (<strong>Postpaid</strong>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method during creation as needed.</li>
+     * <li>The supported cloud disk types and the maximum number of cloud disks that can be mounted vary based on the instance type.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRCDisk  CreateRCDiskRequest
@@ -2881,6 +2881,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeModifyParameterLogResponse> describeModifyParameterLog(DescribeModifyParameterLogRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Supported engines</h3>
+     * <ul>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * </ul>
+     * <h3>Related documentation</h3>
+     * <blockquote>
+     * <p>Notice: Before you call this operation, read the related documentation carefully to fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146887.html">Grant permissions to a service account for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for ApsaraDB RDS for SQL Server</a></li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeOperatorPermission  DescribeOperatorPermissionRequest
      * @return DescribeOperatorPermissionResponse
      */
@@ -4065,9 +4082,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
@@ -4152,18 +4169,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/213582.html">Modify the automatic upgrade settings for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceAutoUpgradeMinorVersion  ModifyDBInstanceAutoUpgradeMinorVersionRequest
@@ -5441,7 +5460,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Removing an RDS custom instance from a deployment set is a non-disruptive operation and does not cause the instance to restart.</p>
+     * <p>Removing an instance from a deployment set is a lossless operation and does not cause the instance to restart.</p>
      * 
      * @param request the request parameters of RemoveRCInstancesFromDeploymentSet  RemoveRCInstancesFromDeploymentSetRequest
      * @return RemoveRCInstancesFromDeploymentSetResponse
@@ -5695,9 +5714,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before creating an RDS Custom instance, submit a ticket to request that your Alibaba Cloud account be added to the whitelist.</li>
-     * <li>Only subscription RDS Custom instances can be created.</li>
-     * <li>Supported regions are Beijing, Shanghai, Shenzhen, and Hangzhou.</li>
+     * <li>Before you create an RDS Custom instance, submit a ticket to apply for adding your Alibaba Cloud account to the whitelist.</li>
+     * <li>Only subscription RDS Custom instances are supported.</li>
+     * <li>Supported regions include Beijing, Shanghai, Shenzhen, and Hangzhou.</li>
      * </ul>
      * 
      * @param request the request parameters of RunRCInstances  RunRCInstancesRequest

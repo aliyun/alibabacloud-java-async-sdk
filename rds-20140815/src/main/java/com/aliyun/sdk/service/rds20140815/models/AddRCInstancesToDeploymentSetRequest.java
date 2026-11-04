@@ -118,7 +118,7 @@ public class AddRCInstancesToDeploymentSetRequest extends Request {
         } 
 
         /**
-         * <p>The group number of the instance in the deployment set. This parameter is valid only when the deployment set strategy of the ECS instance to be added or adjusted is AvailabilityGroup. Valid values: 1 to 7.</p>
+         * <p>The group number of the ECS instance in the deployment set. You can specify this parameter when the deployment set policy is the AvailabilityGroup policy. Valid values: 1 to 7.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class AddRCInstancesToDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the deployment set.</p>
+         * <p>The deployment set ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,8 +145,8 @@ public class AddRCInstancesToDeploymentSetRequest extends Request {
         /**
          * <p>Specifies whether to forcibly release the running instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes.</li>
-         * <li><strong>false</strong> (default): no.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong> (default): No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class AddRCInstancesToDeploymentSetRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
+         * <p>The region ID. You can call DescribeRegions to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

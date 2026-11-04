@@ -193,7 +193,7 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to retrieve the ID.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,11 +224,11 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The data retention policy for archived backups of deleted <strong>MySQL</strong> instances. Valid values:</p>
+         * <p>The data retention policy for archive backups of deleted <strong>MySQL</strong> instances. Valid values:</p>
          * <ul>
          * <li><strong>None</strong>: no retention</li>
-         * <li><strong>Lastest</strong>: retains the last backup</li>
-         * <li><strong>All</strong>: retains all backups</li>
+         * <li><strong>Lastest</strong>: retains the last archive backup</li>
+         * <li><strong>All</strong>: retains all archive backups</li>
          * </ul>
          * 
          * <strong>example:</strong>

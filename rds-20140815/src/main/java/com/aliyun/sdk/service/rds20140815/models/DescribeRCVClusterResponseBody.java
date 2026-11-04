@@ -224,6 +224,9 @@ public class DescribeRCVClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DashboardPublicEndpoint")
         private String dashboardPublicEndpoint;
 
+        @com.aliyun.core.annotation.NameInMap("DashboardPublicEndpointExpireTime")
+        private String dashboardPublicEndpointExpireTime;
+
         @com.aliyun.core.annotation.NameInMap("DashboardUsername")
         private String dashboardUsername;
 
@@ -238,6 +241,7 @@ public class DescribeRCVClusterResponseBody extends TeaModel {
 
         private MysqlOperator(Builder builder) {
             this.dashboardPublicEndpoint = builder.dashboardPublicEndpoint;
+            this.dashboardPublicEndpointExpireTime = builder.dashboardPublicEndpointExpireTime;
             this.dashboardUsername = builder.dashboardUsername;
             this.dashboardVpcEndpoint = builder.dashboardVpcEndpoint;
             this.deployTime = builder.deployTime;
@@ -257,6 +261,13 @@ public class DescribeRCVClusterResponseBody extends TeaModel {
          */
         public String getDashboardPublicEndpoint() {
             return this.dashboardPublicEndpoint;
+        }
+
+        /**
+         * @return dashboardPublicEndpointExpireTime
+         */
+        public String getDashboardPublicEndpointExpireTime() {
+            return this.dashboardPublicEndpointExpireTime;
         }
 
         /**
@@ -289,6 +300,7 @@ public class DescribeRCVClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dashboardPublicEndpoint; 
+            private String dashboardPublicEndpointExpireTime; 
             private String dashboardUsername; 
             private String dashboardVpcEndpoint; 
             private String deployTime; 
@@ -299,6 +311,7 @@ public class DescribeRCVClusterResponseBody extends TeaModel {
 
             private Builder(MysqlOperator model) {
                 this.dashboardPublicEndpoint = model.dashboardPublicEndpoint;
+                this.dashboardPublicEndpointExpireTime = model.dashboardPublicEndpointExpireTime;
                 this.dashboardUsername = model.dashboardUsername;
                 this.dashboardVpcEndpoint = model.dashboardVpcEndpoint;
                 this.deployTime = model.deployTime;
@@ -310,6 +323,14 @@ public class DescribeRCVClusterResponseBody extends TeaModel {
              */
             public Builder dashboardPublicEndpoint(String dashboardPublicEndpoint) {
                 this.dashboardPublicEndpoint = dashboardPublicEndpoint;
+                return this;
+            }
+
+            /**
+             * DashboardPublicEndpointExpireTime.
+             */
+            public Builder dashboardPublicEndpointExpireTime(String dashboardPublicEndpointExpireTime) {
+                this.dashboardPublicEndpointExpireTime = dashboardPublicEndpointExpireTime;
                 return this;
             }
 

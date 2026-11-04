@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRCElasticScalingRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcuType")
+    private String acuType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
@@ -39,6 +43,7 @@ public class DescribeRCElasticScalingRequest extends Request {
 
     private DescribeRCElasticScalingRequest(Builder builder) {
         super(builder);
+        this.acuType = builder.acuType;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
@@ -57,6 +62,13 @@ public class DescribeRCElasticScalingRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acuType
+     */
+    public String getAcuType() {
+        return this.acuType;
     }
 
     /**
@@ -95,6 +107,7 @@ public class DescribeRCElasticScalingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRCElasticScalingRequest, Builder> {
+        private String acuType; 
         private String instanceChargeType; 
         private String instanceId; 
         private String instanceType; 
@@ -107,12 +120,22 @@ public class DescribeRCElasticScalingRequest extends Request {
 
         private Builder(DescribeRCElasticScalingRequest request) {
             super(request);
+            this.acuType = request.acuType;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
             this.regionId = request.regionId;
             this.supportCase = request.supportCase;
         } 
+
+        /**
+         * AcuType.
+         */
+        public Builder acuType(String acuType) {
+            this.putQueryParameter("AcuType", acuType);
+            this.acuType = acuType;
+            return this;
+        }
 
         /**
          * InstanceChargeType.
