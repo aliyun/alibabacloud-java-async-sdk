@@ -184,7 +184,7 @@ public class DeleteRbacOrgUnitResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denied details.</p>
+         * <p>The access denial details.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,10 +195,10 @@ public class DeleteRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed. Valid values:</p>
+         * <p>Specifies whether retries are allowed. Valid values:</p>
          * <ul>
-         * <li>false: Retry is not allowed.</li>
-         * <li>true: Retry is allowed.</li>
+         * <li>false: Retries are not allowed.</li>
+         * <li>true: Retries are allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class DeleteRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -221,7 +221,7 @@ public class DeleteRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic code. This parameter is not in use and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -232,9 +232,9 @@ public class DeleteRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message that is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class DeleteRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -290,7 +290,7 @@ public class DeleteRbacOrgUnitResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -298,7 +298,7 @@ public class DeleteRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

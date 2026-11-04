@@ -293,7 +293,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>Ensures request idempotence. You can generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>210713a117660695309606626a</p>
@@ -305,7 +305,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * CreateAction.
+         * <p>The action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_SUBSCRIPTION</p>
          */
         public Builder createAction(String createAction) {
             this.putQueryParameter("CreateAction", createAction);
@@ -326,7 +329,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>go-to-the-docks-for-french-fries</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -359,7 +365,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docs</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -368,7 +377,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>The payment type.</p>
+         * <p>The payment method.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTO_PAY</p>
@@ -380,13 +389,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Required. The unit of the subscription period. Valid values:</p>
-         * <ul>
-         * <li>Year: year</li>
-         * <li>Month: month</li>
-         * <li>Day: day</li>
-         * <li>Hour: hour.</li>
-         * </ul>
+         * <p>Required. The unit of the subscription period. Valid values: Year, Month, Day, and Hour.</p>
          * 
          * <strong>example:</strong>
          * <p>Year</p>
@@ -398,7 +401,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * <p>Required. The number of instances to subscribe to.</p>
+         * <p>Required. The number of instances to purchase.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -512,7 +515,7 @@ public class CreateAppInstanceRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>Group</p>
@@ -523,7 +526,7 @@ public class CreateAppInstanceRequest extends Request {
             }
 
             /**
-             * <p>The value of tag 0.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>ufo</p>

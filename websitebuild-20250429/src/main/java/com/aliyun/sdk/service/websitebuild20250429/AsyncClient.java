@@ -30,7 +30,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * @param request the request parameters of AssignRbacUserRole  AssignRbacUserRoleRequest
      * @return AssignRbacUserRoleResponse
@@ -233,7 +233,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session through Wanxiaozhi 2.0.</p>
+     * <p>The Wanxiaozhi 2.0 API operation for creating an AI session.</p>
      * 
      * @param request the request parameters of CreateRbacPermission  CreateRbacPermissionRequest
      * @return CreateRbacPermissionResponse
@@ -335,7 +335,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session for WanXiaoZhi 2.0.</p>
+     * <p>The API operation for creating an AI session in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of DeleteRbacPermission  DeleteRbacPermissionRequest
      * @return DeleteRbacPermissionResponse
@@ -344,7 +344,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * @param request the request parameters of DeleteRbacRole  DeleteRbacRoleRequest
      * @return DeleteRbacRoleResponse
@@ -377,7 +377,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance configuration information corresponding to a resource.</p>
+     * <p>Queries the Supabase instance configuration for a resource.</p>
      * 
      * @param request the request parameters of ExportRbacConfig  ExportRbacConfigRequest
      * @return ExportRbacConfigResponse
@@ -458,7 +458,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the details of application instances.</p>
      * 
      * @param request the request parameters of GetAppInstanceForAdmin  GetAppInstanceForAdminRequest
      * @return GetAppInstanceForAdminResponse
@@ -938,7 +938,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session through WanXiaoZhi 2.0.</p>
+     * <p>Creates an AI session in Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of ListRbacPermissions  ListRbacPermissionsRequest
      * @return ListRbacPermissionsResponse
@@ -947,7 +947,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * @param request the request parameters of ListRbacRoleHierarchy  ListRbacRoleHierarchyRequest
      * @return ListRbacRoleHierarchyResponse
@@ -956,7 +956,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * @param request the request parameters of ListRbacRoles  ListRbacRolesRequest
      * @return ListRbacRolesResponse
@@ -1145,7 +1145,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the information of an application instance.</p>
      * 
      * @param request the request parameters of QueryRbacRole  QueryRbacRoleRequest
      * @return QueryRbacRoleResponse
@@ -1154,7 +1154,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session for Wan Xiaozhi 2.0.</p>
+     * <p>The API operation to create an AI session for Wanxiaozhi 2.0.</p>
      * 
      * @param request the request parameters of QueryRbacRolePermissions  QueryRbacRolePermissionsRequest
      * @return QueryRbacRolePermissionsResponse
@@ -1222,7 +1222,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * @param request the request parameters of RemoveRbacRoleHierarchy  RemoveRbacRoleHierarchyRequest
      * @return RemoveRbacRoleHierarchyResponse
@@ -1348,7 +1348,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * @param request the request parameters of SetRbacRoleHierarchy  SetRbacRoleHierarchyRequest
      * @return SetRbacRoleHierarchyResponse
@@ -1501,7 +1501,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * @param request the request parameters of UpdateRbacRole  UpdateRbacRoleRequest
      * @return UpdateRbacRoleResponse

@@ -108,7 +108,7 @@ public class CreateRbacPermissionRequest extends Request {
         }
 
         /**
-         * <p>The permission parameter.</p>
+         * <p>The permission parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;resource&quot;:&quot;post&quot;,&quot;action&quot;:&quot;read&quot;,&quot;description&quot;:&quot;read post&quot;}</p>

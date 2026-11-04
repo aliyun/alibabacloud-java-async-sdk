@@ -347,6 +347,9 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RdsDatabasePassword")
         private String rdsDatabasePassword;
 
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
+        private String schemaName;
+
         @com.aliyun.core.annotation.NameInMap("ServiceKey")
         private String serviceKey;
 
@@ -380,6 +383,9 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
+        @com.aliyun.core.annotation.NameInMap("TenantMode")
+        private String tenantMode;
+
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
@@ -395,6 +401,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
             this.instanceCreateStatus = builder.instanceCreateStatus;
             this.isDeleted = builder.isDeleted;
             this.rdsDatabasePassword = builder.rdsDatabasePassword;
+            this.schemaName = builder.schemaName;
             this.serviceKey = builder.serviceKey;
             this.status = builder.status;
             this.supabaseDashboardPassword = builder.supabaseDashboardPassword;
@@ -406,6 +413,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
             this.supabasePublicIp = builder.supabasePublicIp;
             this.supabasePublicUrl = builder.supabasePublicUrl;
             this.tenantId = builder.tenantId;
+            this.tenantMode = builder.tenantMode;
             this.userId = builder.userId;
         }
 
@@ -495,6 +503,13 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         }
 
         /**
+         * @return schemaName
+         */
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        /**
          * @return serviceKey
          */
         public String getServiceKey() {
@@ -572,6 +587,13 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantMode
+         */
+        public String getTenantMode() {
+            return this.tenantMode;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -590,6 +612,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
             private String instanceCreateStatus; 
             private Integer isDeleted; 
             private String rdsDatabasePassword; 
+            private String schemaName; 
             private String serviceKey; 
             private Integer status; 
             private String supabaseDashboardPassword; 
@@ -601,6 +624,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
             private String supabasePublicIp; 
             private String supabasePublicUrl; 
             private String tenantId; 
+            private String tenantMode; 
             private String userId; 
 
             private Builder() {
@@ -618,6 +642,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
                 this.instanceCreateStatus = model.instanceCreateStatus;
                 this.isDeleted = model.isDeleted;
                 this.rdsDatabasePassword = model.rdsDatabasePassword;
+                this.schemaName = model.schemaName;
                 this.serviceKey = model.serviceKey;
                 this.status = model.status;
                 this.supabaseDashboardPassword = model.supabaseDashboardPassword;
@@ -629,6 +654,7 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
                 this.supabasePublicIp = model.supabasePublicIp;
                 this.supabasePublicUrl = model.supabasePublicUrl;
                 this.tenantId = model.tenantId;
+                this.tenantMode = model.tenantMode;
                 this.userId = model.userId;
             } 
 
@@ -754,6 +780,14 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
             }
 
             /**
+             * SchemaName.
+             */
+            public Builder schemaName(String schemaName) {
+                this.schemaName = schemaName;
+                return this;
+            }
+
+            /**
              * <p>The service key.</p>
              * 
              * <strong>example:</strong>
@@ -871,6 +905,14 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
+                return this;
+            }
+
+            /**
+             * TenantMode.
+             */
+            public Builder tenantMode(String tenantMode) {
+                this.tenantMode = tenantMode;
                 return this;
             }
 

@@ -184,7 +184,7 @@ public class ExportRbacConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class ExportRbacConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class ExportRbacConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The app name.</p>
          * 
          * <strong>example:</strong>
          * <p>ish-intelligence-store-platform-admin-web</p>
@@ -228,9 +228,9 @@ public class ExportRbacConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class ExportRbacConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -250,7 +250,7 @@ public class ExportRbacConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response object.</p>
+         * <p>The returned object.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -286,7 +286,7 @@ public class ExportRbacConfigResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -294,7 +294,7 @@ public class ExportRbacConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

@@ -178,8 +178,7 @@ public class ListRbacRolesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of results per query. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -191,7 +190,7 @@ public class ListRbacRolesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * <p>The token used to start the next query. If there is no next query, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</p>
@@ -203,7 +202,7 @@ public class ListRbacRolesRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results.</p>
+         * <p>The field used for sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>gmtCreated</p>

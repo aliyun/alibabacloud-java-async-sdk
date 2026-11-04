@@ -210,7 +210,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -221,7 +221,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -254,7 +254,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic message. This parameter is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -265,7 +265,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The error parameters returned.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -273,8 +273,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries to return per query.</p>
-         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * <p>The maximum number of results per query. Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -293,7 +292,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * <p>The token used to start the next query. If there is no next query, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -326,7 +325,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
          * <p>System exception</p>
@@ -458,7 +457,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation date. The value is in ISO 8601 format with the time zone set to UTC (Z).</p>
+             * <p>The creation date in ISO 8601 format in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-28T17:59:55Z</p>
@@ -480,10 +479,10 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is the default report. Valid values:</p>
+             * <p>Specifies whether the report is the default report. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: Not the default report.</li>
-             * <li><strong>1</strong>: The default report.</li>
+             * <li><strong>1</strong>: Default report.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -495,7 +494,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the approval template is system-defined. Valid values:</p>
+             * <p>Specifies whether the approval template is system-defined. Valid values:</p>
              * <ul>
              * <li>1: Yes.</li>
              * <li>0: No.</li>
@@ -521,7 +520,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
              * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>FileName</p>
+             * <p>File name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -640,7 +639,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created. The value is in the YYYY-MM-DD HH:mm:ss format.</p>
+             * <p>The task creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-27 16:02:28</p>
@@ -662,7 +661,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is the default dedicated gateway.</p>
+             * <p>Specifies whether the private gateway is the default one.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -673,7 +672,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the approval template is system-defined. Valid values:</p>
+             * <p>Specifies whether the approval template is system-defined. Valid values:</p>
              * <ul>
              * <li>1: Yes.</li>
              * <li>0: No.</li>
@@ -868,7 +867,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query results.</p>
+             * <p>The request results.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -884,7 +883,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a next page exists.</p>
+             * <p>Specifies whether a next page exists.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -906,7 +905,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a previous page exists.</p>
+             * <p>Specifies whether a previous page exists.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -917,7 +916,7 @@ public class ListRbacRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the server-side result limit is reached. The server processes up to 1,000 recent records beyond pagination limits. If the results exceed 1,000, <strong>ResultLimit</strong> is <strong>true</strong> and you must narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

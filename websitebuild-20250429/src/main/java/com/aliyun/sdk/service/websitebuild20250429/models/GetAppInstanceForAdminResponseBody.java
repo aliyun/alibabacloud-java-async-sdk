@@ -184,7 +184,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission verification failure.</p>
+         * <p>The details of the permission check failure.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>

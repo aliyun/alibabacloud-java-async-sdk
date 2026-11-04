@@ -178,7 +178,7 @@ public class ListRbacPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per query.</p>
+         * <p>The number of entries to return in each query.</p>
          * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class ListRbacPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * <p>The token that is used to start the next query. This parameter is empty if no next query exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -215,7 +215,7 @@ public class ListRbacPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The sort type. Valid values: ASC and DESC.</p>
+         * <p>The sort order. Valid values: ASC and DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>DESC</p>

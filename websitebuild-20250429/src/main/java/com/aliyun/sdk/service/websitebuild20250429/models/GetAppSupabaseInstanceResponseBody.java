@@ -329,6 +329,9 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceCreateStatus")
         private String instanceCreateStatus;
 
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
+        private String schemaName;
+
         @com.aliyun.core.annotation.NameInMap("ServiceKey")
         private String serviceKey;
 
@@ -341,16 +344,21 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupabasePublicUrl")
         private String supabasePublicUrl;
 
+        @com.aliyun.core.annotation.NameInMap("TenantMode")
+        private String tenantMode;
+
         private Module(Builder builder) {
             this.anonKey = builder.anonKey;
             this.bizId = builder.bizId;
             this.dbInstanceId = builder.dbInstanceId;
             this.dbPublicUrl = builder.dbPublicUrl;
             this.instanceCreateStatus = builder.instanceCreateStatus;
+            this.schemaName = builder.schemaName;
             this.serviceKey = builder.serviceKey;
             this.status = builder.status;
             this.supabaseInstanceId = builder.supabaseInstanceId;
             this.supabasePublicUrl = builder.supabasePublicUrl;
+            this.tenantMode = builder.tenantMode;
         }
 
         public static Builder builder() {
@@ -397,6 +405,13 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return schemaName
+         */
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        /**
          * @return serviceKey
          */
         public String getServiceKey() {
@@ -424,16 +439,25 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             return this.supabasePublicUrl;
         }
 
+        /**
+         * @return tenantMode
+         */
+        public String getTenantMode() {
+            return this.tenantMode;
+        }
+
         public static final class Builder {
             private String anonKey; 
             private String bizId; 
             private String dbInstanceId; 
             private String dbPublicUrl; 
             private String instanceCreateStatus; 
+            private String schemaName; 
             private String serviceKey; 
             private Integer status; 
             private String supabaseInstanceId; 
             private String supabasePublicUrl; 
+            private String tenantMode; 
 
             private Builder() {
             } 
@@ -444,10 +468,12 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
                 this.dbInstanceId = model.dbInstanceId;
                 this.dbPublicUrl = model.dbPublicUrl;
                 this.instanceCreateStatus = model.instanceCreateStatus;
+                this.schemaName = model.schemaName;
                 this.serviceKey = model.serviceKey;
                 this.status = model.status;
                 this.supabaseInstanceId = model.supabaseInstanceId;
                 this.supabasePublicUrl = model.supabasePublicUrl;
+                this.tenantMode = model.tenantMode;
             } 
 
             /**
@@ -506,6 +532,14 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * SchemaName.
+             */
+            public Builder schemaName(String schemaName) {
+                this.schemaName = schemaName;
+                return this;
+            }
+
+            /**
              * <p>The service key.</p>
              * 
              * <strong>example:</strong>
@@ -546,6 +580,14 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
              */
             public Builder supabasePublicUrl(String supabasePublicUrl) {
                 this.supabasePublicUrl = supabasePublicUrl;
+                return this;
+            }
+
+            /**
+             * TenantMode.
+             */
+            public Builder tenantMode(String tenantMode) {
+                this.tenantMode = tenantMode;
                 return this;
             }
 

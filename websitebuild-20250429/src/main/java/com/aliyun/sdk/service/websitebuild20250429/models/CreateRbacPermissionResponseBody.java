@@ -184,7 +184,7 @@ public class CreateRbacPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class CreateRbacPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether a retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -239,7 +239,7 @@ public class CreateRbacPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -280,10 +280,10 @@ public class CreateRbacPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;

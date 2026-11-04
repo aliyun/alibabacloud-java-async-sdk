@@ -96,7 +96,7 @@ public class CreateRbacRoleRequest extends Request {
         }
 
         /**
-         * <p>The business ID of the customer.</p>
+         * <p>The customer business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WS20250731233102000001</p>

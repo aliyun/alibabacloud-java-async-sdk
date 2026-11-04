@@ -184,7 +184,7 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access was denied.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,10 +195,10 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed. Valid values:</p>
+         * <p>Specifies whether a retry is allowed. Valid values:</p>
          * <ul>
-         * <li>false: Retry is not allowed.</li>
-         * <li>true: Retry is allowed.</li>
+         * <li>false: A retry is not allowed.</li>
+         * <li>true: A retry is allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -232,7 +232,7 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, used to replace the %s variable in the ErrMessage response parameter.</p>
+         * <p>The dynamic error message, which is used to replace %s in the ErrMessage response parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM.ERROR</p>
@@ -251,7 +251,7 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the deletion was successful.</p>
+         * <p>Indicates whether the deletion is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -287,7 +287,7 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -295,7 +295,7 @@ public class AssignRbacUserRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The backup parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

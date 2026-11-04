@@ -184,7 +184,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -228,7 +228,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic message. This parameter is not used. Ignore it.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_ERROR</p>
@@ -239,7 +239,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -247,7 +247,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the move is successful.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -277,10 +277,10 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -288,7 +288,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is synchronously processed.</p>
+         * <p>Specifies whether synchronous processing is used.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -383,7 +383,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation that you want to perform. Set the value to <strong>DeleteIntegration</strong>.</p>
+             * <p>The system-defined parameter. Set the value to <strong>DeleteIntegration</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>js</p>
@@ -416,7 +416,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert rule name.</p>
+             * <p>The name of the alert rule.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-uf6wxzsjwavr2kyq92slf-80-clb4</p>
@@ -512,7 +512,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation that you want to perform. Set the value to <strong>GetCreateCustomerInfomation</strong>.</p>
+             * <p>The system-defined parameter. Set the value to <strong>GetCreateCustomerInfomation</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -546,7 +546,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
 
             /**
              * <p>The statistical method for the Warn level.</p>
-             * <p>The value of <code>Statistics</code> varies by cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring items</a>.</p>
+             * <p>The value of <code>Statistics</code> varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>mwaf-apisec0629.wafqax.top-waf</p>
@@ -726,7 +726,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next feature ID.</p>
+             * <p>The ID of the next feature.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -767,7 +767,7 @@ public class QueryRbacRolePermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server processes up to 1,000 recent records beyond the pagination limit for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

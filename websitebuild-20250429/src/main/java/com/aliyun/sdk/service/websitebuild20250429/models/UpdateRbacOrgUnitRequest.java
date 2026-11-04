@@ -122,7 +122,7 @@ public class UpdateRbacOrgUnitRequest extends Request {
         }
 
         /**
-         * <p>The organization parameters.</p>
+         * <p>The organizational unit parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;name&quot;:&quot;xx&quot;}</p>
@@ -134,7 +134,7 @@ public class UpdateRbacOrgUnitRequest extends Request {
         }
 
         /**
-         * <p>The organization ID.</p>
+         * <p>The organizational unit ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f0534aa7-94ec-4368-a34a-310390f66253</p>

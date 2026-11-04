@@ -210,7 +210,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The detailed cause of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -221,7 +221,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a retry is allowed.</p>
+         * <p>Indicates whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -232,7 +232,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -254,9 +254,9 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> return parameter.</p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -276,7 +276,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per query.</p>
+         * <p>The number of results returned per query.</p>
          * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * <p>The token used to start the next query. This parameter is empty if no subsequent query is available.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -340,7 +340,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -448,7 +448,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time. The time is in ISO 8601 format in the UTC (Z) time zone.</p>
+             * <p>The creation time. The time is in the ISO 8601 format and the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-08T02:28:26Z</p>
@@ -484,7 +484,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
              * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>FileName</p>
+             * <p>File name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -598,7 +598,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation date. The time is in ISO 8601 format in the UTC (Z) time zone.</p>
+             * <p>The creation date. The date is in the ISO 8601 format and the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-15T02:29:22Z</p>
@@ -609,7 +609,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category level. The root category is 1.</p>
+             * <p>The category level. The root category level is 1.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -814,7 +814,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query results.</p>
+             * <p>The request result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -822,7 +822,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next feature ID.</p>
+             * <p>The ID of the next feature.</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -863,7 +863,7 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>In addition to pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+             * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

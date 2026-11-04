@@ -184,7 +184,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -217,7 +217,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
+         * <p>The dynamic code. This field is not used and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-oo1</p>
@@ -239,7 +239,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters.</p>
+         * <p>The returned error parameters.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -247,7 +247,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response object.</p>
+         * <p>The returned object.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -280,10 +280,10 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,7 +291,7 @@ public class CreateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is synchronously processed.</p>
+         * <p>Specifies whether synchronous processing is used.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

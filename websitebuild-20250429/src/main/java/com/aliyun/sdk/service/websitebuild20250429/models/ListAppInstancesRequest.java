@@ -299,7 +299,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return for each query.</p>
+         * <p>The maximum number of results returned per query.</p>
          * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The token that is used to start the next query. This parameter is empty if no subsequent query is required.</p>
+         * <p>The token used to start the next query. This parameter is empty if no next query exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>

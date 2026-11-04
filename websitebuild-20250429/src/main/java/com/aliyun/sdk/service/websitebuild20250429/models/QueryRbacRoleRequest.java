@@ -108,13 +108,13 @@ public class QueryRbacRoleRequest extends Request {
         }
 
         /**
-         * <p>The storage management role ID, including preset roles and custom roles.</p>
+         * <p>The storage management role ID, including predefined and custom roles:</p>
          * <ul>
-         * <li>25: storage management administrator (preset role)</li>
-         * <li>26: developer (preset role)</li>
-         * <li>27: analyst (preset role)</li>
-         * <li>30: viewer (preset role)</li>
-         * <li>Custom role: the role ID of the custom role</li>
+         * <li>25: Storage management administrator (predefined role)</li>
+         * <li>26: Developer (predefined role)</li>
+         * <li>27: Analyst (predefined role)</li>
+         * <li>30: Viewer (predefined role)</li>
+         * <li>Custom role: the role ID of the custom role.</li>
          * </ul>
          * 
          * <strong>example:</strong>

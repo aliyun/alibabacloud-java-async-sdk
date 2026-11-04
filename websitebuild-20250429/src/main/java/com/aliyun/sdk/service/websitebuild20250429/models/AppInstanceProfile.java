@@ -393,7 +393,7 @@ public class AppInstanceProfile extends TeaModel {
          * <p>The display name of the application type.</p>
          * 
          * <strong>example:</strong>
-         * <p>PC Website</p>
+         * <p>PC website</p>
          */
         public Builder applicationTypeText(String applicationTypeText) {
             this.applicationTypeText = applicationTypeText;
@@ -456,7 +456,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The commodity code used when placing the order.</p>
+         * <p>The commodity code of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>domain_website_public_cn</p>
@@ -467,7 +467,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The customer service contact information or description.</p>
+         * <p>The contact information or instructions for customer service.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:support@example.com">support@example.com</a></p>
@@ -478,7 +478,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The deployment region code of the application.</p>
+         * <p>The code of the region where the application is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>HongKong</p>
@@ -489,7 +489,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The ICP filing number bound to the custom domain name. Multiple filing numbers are separated by commas (,).</p>
+         * <p>The ICP filing number of the bound custom domain name. Separate multiple ICP filing numbers with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>京ICP备12345678号-1</p>
@@ -500,7 +500,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The dedicated server information. This field is computed in real time by DescribeAppInstance and is not populated in list API responses.</p>
+         * <p>The independent server information. This information is computed in real time by DescribeAppInstance and is not populated in list operations.</p>
          */
         public Builder independentDeployment(IndependentDeployment independentDeployment) {
             this.independentDeployment = independentDeployment;
@@ -519,7 +519,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current user is included in the ChatBI feature canary release whitelist.</p>
+         * <p>Specifies whether the current user is included in the grayscale whitelist for the ChatBI feature.</p>
          */
         public Builder openChatBi(Boolean openChatBi) {
             this.openChatBi = openChatBi;
@@ -527,7 +527,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The time when the order was placed, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The time when the order was placed. The format is yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-17 10:30:00</p>
@@ -549,7 +549,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The time when the payment was made, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The time when the payment was made. The format is yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-17 10:35:00</p>
@@ -571,7 +571,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The SEO site configuration identifier.</p>
+         * <p>The configuration identifier of the SEO site.</p>
          * 
          * <strong>example:</strong>
          * <p>seo-site-1</p>
@@ -582,7 +582,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The switch for the share rendering watermark. A value of 1 indicates enabled, and a value of 0 indicates disabled. This field is empty if not configured.</p>
+         * <p>Specifies whether to enable the watermark for shared rendering. A value of 1 indicates that the feature is enabled, and a value of 0 indicates that the feature is disabled. If this parameter is not configured, it is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -604,10 +604,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The display name of the site version, including the deployment region.</p>
+         * <p>The display name of the site version, which includes the deployment region.</p>
          * 
          * <strong>example:</strong>
-         * <p>Flagship Edition [Hong Kong]</p>
+         * <p>Ultimate Edition [Hong Kong]</p>
          */
         public Builder siteVersionText(String siteVersionText) {
             this.siteVersionText = siteVersionText;
@@ -637,7 +637,7 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * <p>The template ID used by the current application.</p>
+         * <p>The ID of the template used by the current application.</p>
          * 
          * <strong>example:</strong>
          * <p>tpl-1</p>
@@ -648,7 +648,10 @@ public class AppInstanceProfile extends TeaModel {
         }
 
         /**
-         * UpgradeStatus.
+         * <p>The upgrade status of the instance. DOING indicates that the upgrade is in progress, SUCC indicates that the upgrade is successful, and FAIL indicates that the upgrade failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCC</p>
          */
         public Builder upgradeStatus(String upgradeStatus) {
             this.upgradeStatus = upgradeStatus;
@@ -792,7 +795,7 @@ public class AppInstanceProfile extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether a retry is allowed after the dedicated server fails to start.</p>
+             * <p>Specifies whether retries are allowed after the independent server fails to be enabled.</p>
              */
             public Builder canRetry(Boolean canRetry) {
                 this.canRetry = canRetry;
@@ -800,7 +803,7 @@ public class AppInstanceProfile extends TeaModel {
             }
 
             /**
-             * <p>The deployment region code of the dedicated server.</p>
+             * <p>The code of the region where the independent server is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>HongKong</p>
@@ -811,7 +814,7 @@ public class AppInstanceProfile extends TeaModel {
             }
 
             /**
-             * <p>The DNS record type used when binding a domain name to the dedicated IP address.</p>
+             * <p>The type of the DNS record used when an independent IP address is bound to a domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>A</p>
@@ -822,12 +825,7 @@ public class AppInstanceProfile extends TeaModel {
             }
 
             /**
-             * <p>The eligibility status of the dedicated server. Valid values:</p>
-             * <ul>
-             * <li>UPGRADE_REQUIRED: A version upgrade is required.</li>
-             * <li>AVAILABLE: The dedicated server can be started.</li>
-             * <li>UNAVAILABLE: The dedicated server is currently unavailable.</li>
-             * </ul>
+             * <p>The eligibility status of the independent server. UPGRADE_REQUIRED indicates that an upgrade is required, AVAILABLE indicates that the feature can be enabled, and UNAVAILABLE indicates that the feature is currently unavailable.</p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -838,13 +836,7 @@ public class AppInstanceProfile extends TeaModel {
             }
 
             /**
-             * <p>The status of the dedicated server. Valid values:</p>
-             * <ul>
-             * <li>NOT_ENABLED: Not started.</li>
-             * <li>ENABLING: Starting.</li>
-             * <li>ACTIVE: Started.</li>
-             * <li>FAILED: Failed to start.</li>
-             * </ul>
+             * <p>The status of the independent server. NOT_ENABLED indicates that the feature is not enabled, ENABLING indicates that the feature is being enabled, ACTIVE indicates that the feature is enabled, and FAILED indicates that the feature failed to be enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -855,7 +847,7 @@ public class AppInstanceProfile extends TeaModel {
             }
 
             /**
-             * <p>The dedicated IP address assigned after the dedicated server is started.</p>
+             * <p>The independent IP address assigned after the independent server is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>203.0.113.10</p>
@@ -866,10 +858,10 @@ public class AppInstanceProfile extends TeaModel {
             }
 
             /**
-             * <p>The display specification of the dedicated server. This does not represent the real-time resource usage of the container.</p>
+             * <p>The unified display specification of the independent server, which does not represent the real-time resource usage of the container.</p>
              * 
              * <strong>example:</strong>
-             * <p>2 vCPUs 2 GB</p>
+             * <p>2 vCPUs and 2 GB</p>
              */
             public Builder serverSpec(String serverSpec) {
                 this.serverSpec = serverSpec;
@@ -877,7 +869,7 @@ public class AppInstanceProfile extends TeaModel {
             }
 
             /**
-             * <p>The task ID for starting the dedicated server.</p>
+             * <p>The ID of the task to enable the independent server.</p>
              * 
              * <strong>example:</strong>
              * <p>17</p>

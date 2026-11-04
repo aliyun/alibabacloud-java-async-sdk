@@ -184,7 +184,7 @@ public class UpdateRbacOrgUnitResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason why access is denied.</p>
+         * <p>The detailed reason for the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class UpdateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether a retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class UpdateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name.</p>
+         * <p>The app name.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -280,10 +280,10 @@ public class UpdateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,7 +291,7 @@ public class UpdateRbacOrgUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is synchronously processed.</p>
+         * <p>Indicates whether synchronous processing is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

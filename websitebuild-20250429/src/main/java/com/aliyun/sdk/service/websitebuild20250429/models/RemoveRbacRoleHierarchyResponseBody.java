@@ -184,7 +184,7 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the permission verification failure.</p>
+         * <p>The details of the permission check failure.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -195,7 +195,7 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Indicates whether a retry is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The application with this name is queried.</p>
+         * <p>The name of the application to query.</p>
          * 
          * <strong>example:</strong>
          * <p>or</p>
@@ -280,10 +280,10 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,7 +291,7 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is processed synchronously.</p>
+         * <p>Indicates whether the processing is synchronous.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

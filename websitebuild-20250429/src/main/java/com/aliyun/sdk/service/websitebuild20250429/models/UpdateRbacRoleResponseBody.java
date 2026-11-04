@@ -195,7 +195,7 @@ public class UpdateRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether retry is allowed.</p>
+         * <p>Specifies whether retries are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -206,7 +206,7 @@ public class UpdateRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</p>
+         * <p>The application name. It can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-b</p>
@@ -228,9 +228,9 @@ public class UpdateRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class UpdateRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error parameters returned.</p>
+         * <p>The error arguments.</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -250,7 +250,7 @@ public class UpdateRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the move is successful.</p>
+         * <p>Indicates whether the move was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -286,7 +286,7 @@ public class UpdateRbacRoleResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统异常</p>
+         * <p>System exception</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -294,7 +294,7 @@ public class UpdateRbacRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is synchronously processed.</p>
+         * <p>Specifies whether the processing is synchronous.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

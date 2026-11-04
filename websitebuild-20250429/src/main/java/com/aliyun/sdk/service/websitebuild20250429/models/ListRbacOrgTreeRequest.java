@@ -178,7 +178,7 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per query.</p>
+         * <p>The number of results returned per query.</p>
          * <p>Valid values: 10 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+         * <p>The token used to start the next query. This parameter is empty if no subsequent query is available.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -203,7 +203,7 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results.</p>
+         * <p>The field used for sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>gmtCreated</p>
@@ -215,11 +215,7 @@ public class ListRbacOrgTreeRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values:</p>
-         * <ul>
-         * <li>ASC: ascending order.</li>
-         * <li>DESC: descending order.</li>
-         * </ul>
+         * <p>The sort order. Valid values: ASC and DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
