@@ -119,7 +119,10 @@ public class ListVolumesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page used in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -135,7 +141,10 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. A value of success indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page, which is used for subsequent queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qxGrXje86XMrYQ51aJMy</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -151,7 +163,10 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,7 @@ public class ListVolumesResponseBody extends TeaModel {
         }
 
         /**
-         * volumes.
+         * <p>The list of storage volumes.</p>
          */
         public Builder volumes(java.util.List<E2BVolume> volumes) {
             this.volumes = volumes;

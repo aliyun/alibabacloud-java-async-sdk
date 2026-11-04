@@ -87,7 +87,10 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * templateID.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpl-9f3a2b7c8d1e4f5a6b0c7d8e9f1a2b3c</p>
          */
         public Builder templateID(String templateID) {
             this.putPathParameter("templateID", templateID);
@@ -96,7 +99,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request struct for updating a template. Specify only the fields to be updated.</p>
          */
         public Builder body(PublicUpdateTemplateInput body) {
             this.putBodyParameter("body", body);
@@ -105,7 +108,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * teamID.
+         * <p>The team ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team-a1b2c3d4e5f6</p>
          */
         public Builder teamID(String teamID) {
             this.putQueryParameter("teamID", teamID);

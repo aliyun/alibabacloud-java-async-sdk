@@ -87,7 +87,10 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -96,7 +99,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Set this parameter to the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -105,7 +111,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * teamID.
+         * <p>The team ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13b721e6-8cc8-5df2-af13-80316f7508af</p>
          */
         public Builder teamID(String teamID) {
             this.putQueryParameter("teamID", teamID);

@@ -115,7 +115,10 @@ public class ListTemplateCacheRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -124,7 +127,10 @@ public class ListTemplateCacheRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token returned from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -133,7 +139,10 @@ public class ListTemplateCacheRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Filters by cache status. Valid values: InProgress, Success, Failed, Deleting, and Evicted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -142,7 +151,10 @@ public class ListTemplateCacheRequest extends Request {
         }
 
         /**
-         * teamID.
+         * <p>The team ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13b721e6-8cc8-5df2-af13-80316f7508af</p>
          */
         public Builder teamID(String teamID) {
             this.putQueryParameter("teamID", teamID);
@@ -151,7 +163,10 @@ public class ListTemplateCacheRequest extends Request {
         }
 
         /**
-         * templateID.
+         * <p>The unique identifier of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us7dxqaezw5uu7aa2cm5</p>
          */
         public Builder templateID(String templateID) {
             this.putQueryParameter("templateID", templateID);

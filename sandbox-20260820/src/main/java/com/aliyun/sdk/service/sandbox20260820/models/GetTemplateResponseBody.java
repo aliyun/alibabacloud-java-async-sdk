@@ -35,6 +35,9 @@ public class GetTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
 
+    @com.aliyun.core.annotation.NameInMap("resourceTags")
+    private java.util.List<ResourceTags> resourceTags;
+
     @com.aliyun.core.annotation.NameInMap("runtimeConfig")
     private PublicTemplateRuntimeConfig runtimeConfig;
 
@@ -57,6 +60,7 @@ public class GetTemplateResponseBody extends TeaModel {
         this.name = builder.name;
         this.requestId = builder.requestId;
         this.resourceGroupID = builder.resourceGroupID;
+        this.resourceTags = builder.resourceTags;
         this.runtimeConfig = builder.runtimeConfig;
         this.status = builder.status;
         this.teamID = builder.teamID;
@@ -119,6 +123,13 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceTags
+     */
+    public java.util.List<ResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
+    /**
      * @return runtimeConfig
      */
     public PublicTemplateRuntimeConfig getRuntimeConfig() {
@@ -160,6 +171,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String resourceGroupID; 
+        private java.util.List<ResourceTags> resourceTags; 
         private PublicTemplateRuntimeConfig runtimeConfig; 
         private PublicTemplateStatus status; 
         private String teamID; 
@@ -176,6 +188,7 @@ public class GetTemplateResponseBody extends TeaModel {
             this.name = model.name;
             this.requestId = model.requestId;
             this.resourceGroupID = model.resourceGroupID;
+            this.resourceTags = model.resourceTags;
             this.runtimeConfig = model.runtimeConfig;
             this.status = model.status;
             this.teamID = model.teamID;
@@ -184,7 +197,10 @@ public class GetTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code. The value is 200 if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -192,7 +208,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * createdTime.
+         * <p>The creation time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-19T10:00:00Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -200,7 +219,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -208,7 +230,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-template</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -216,7 +241,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -224,7 +252,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -232,7 +263,15 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * runtimeConfig.
+         * <p>The resource tags.</p>
+         */
+        public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
+            this.resourceTags = resourceTags;
+            return this;
+        }
+
+        /**
+         * <p>The runtime configuration of the template.</p>
          */
         public Builder runtimeConfig(PublicTemplateRuntimeConfig runtimeConfig) {
             this.runtimeConfig = runtimeConfig;
@@ -240,7 +279,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the template.</p>
          */
         public Builder status(PublicTemplateStatus status) {
             this.status = status;
@@ -248,7 +287,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The team ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13b721e6-8cc8-5df2-af13-80316f7508af</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -256,7 +298,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-team</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -264,7 +309,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The unique identifier of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us7dxqaezw5uu7aa2cm5</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;
@@ -277,4 +325,85 @@ public class GetTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateResponseBody</p>
+     */
+    public static class ResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private ResourceTags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ResourceTags build() {
+                return new ResourceTags(this);
+            } 
+
+        } 
+
+    }
 }

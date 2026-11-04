@@ -59,7 +59,7 @@ public class CreateTeamRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request parameters for creating a team.</p>
          */
         public Builder body(CreateTeamInput body) {
             this.putBodyParameter("body", body);

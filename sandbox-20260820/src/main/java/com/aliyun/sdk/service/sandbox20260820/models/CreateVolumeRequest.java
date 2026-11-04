@@ -59,7 +59,7 @@ public class CreateVolumeRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request parameters for creating a storage volume.</p>
          */
         public Builder body(CreateVolumeInput body) {
             this.putBodyParameter("body", body);

@@ -132,7 +132,10 @@ public class ListTeamsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. The value is success if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -148,7 +154,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number of the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +165,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page for the current query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +176,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * teams.
+         * <p>The list of teams.</p>
          */
         public Builder teams(java.util.List<E2BTeam> teams) {
             this.teams = teams;
@@ -180,7 +195,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of teams that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65</p>
          */
         public Builder total(Integer total) {
             this.total = total;

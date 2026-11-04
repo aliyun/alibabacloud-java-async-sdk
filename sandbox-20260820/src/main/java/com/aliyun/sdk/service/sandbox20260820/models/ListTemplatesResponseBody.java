@@ -119,7 +119,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page returned in the current response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -135,7 +141,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. This parameter is empty if no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -151,7 +163,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * templates.
+         * <p>The list of template objects.</p>
          */
         public Builder templates(java.util.List<PublicTemplate> templates) {
             this.templates = templates;

@@ -93,7 +93,10 @@ public class CreateTeamResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateTeamResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. The value is success if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class CreateTeamResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class CreateTeamResponseBody extends TeaModel {
         }
 
         /**
-         * team.
+         * <p>The team information.</p>
          */
         public Builder team(E2BTeam team) {
             this.team = team;

@@ -59,7 +59,7 @@ public class UpdateQuotaRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request parameters for updating the quota configuration.</p>
          */
         public Builder body(Quota body) {
             this.putBodyParameter("body", body);

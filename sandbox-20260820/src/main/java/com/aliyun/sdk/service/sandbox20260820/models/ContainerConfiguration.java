@@ -80,7 +80,7 @@ public class ContainerConfiguration extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID of the Container Registry Enterprise instance. Required when registryType is set to acree.</p>
+         * <p>The ID of the Container Registry Enterprise instance. This parameter is required when registryType is set to acree.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-****</p>
@@ -91,7 +91,7 @@ public class ContainerConfiguration extends TeaModel {
         }
 
         /**
-         * <p>The base image address of the sandbox.</p>
+         * <p>The address of the sandbox base image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12</p>
@@ -102,7 +102,7 @@ public class ContainerConfiguration extends TeaModel {
         }
 
         /**
-         * <p>The repository access credentials used to pull the image. Not required when using a public image.</p>
+         * <p>The repository access credentials used to pull images. You do not need to configure this parameter when you use public images.</p>
          */
         public Builder registryCredential(RegistryCredential registryCredential) {
             this.registryCredential = registryCredential;
@@ -168,7 +168,7 @@ public class ContainerConfiguration extends TeaModel {
             } 
 
             /**
-             * <p>The logon password or access token for the image repository. Stored with server-side encryption and not returned in plaintext when queried.</p>
+             * <p>The logon password or access token for the image repository. The value is encrypted and stored on the server, and plaintext is not returned in query responses.</p>
              * 
              * <strong>example:</strong>
              * <p>Passw0rd****</p>
@@ -179,7 +179,7 @@ public class ContainerConfiguration extends TeaModel {
             }
 
             /**
-             * <p>The username for logging on to the image repository.</p>
+             * <p>The logon username for the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>sandbox-puller</p>

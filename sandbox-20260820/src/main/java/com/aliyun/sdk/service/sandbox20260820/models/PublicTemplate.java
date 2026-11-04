@@ -26,6 +26,9 @@ public class PublicTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
 
+    @com.aliyun.core.annotation.NameInMap("resourceTags")
+    private java.util.List<ResourceTags> resourceTags;
+
     @com.aliyun.core.annotation.NameInMap("runtimeConfig")
     private PublicTemplateRuntimeConfig runtimeConfig;
 
@@ -45,6 +48,7 @@ public class PublicTemplate extends TeaModel {
         this.createdTime = builder.createdTime;
         this.name = builder.name;
         this.resourceGroupID = builder.resourceGroupID;
+        this.resourceTags = builder.resourceTags;
         this.runtimeConfig = builder.runtimeConfig;
         this.status = builder.status;
         this.teamID = builder.teamID;
@@ -86,6 +90,13 @@ public class PublicTemplate extends TeaModel {
     }
 
     /**
+     * @return resourceTags
+     */
+    public java.util.List<ResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
+    /**
      * @return runtimeConfig
      */
     public PublicTemplateRuntimeConfig getRuntimeConfig() {
@@ -124,6 +135,7 @@ public class PublicTemplate extends TeaModel {
         private String createdTime; 
         private String name; 
         private String resourceGroupID; 
+        private java.util.List<ResourceTags> resourceTags; 
         private PublicTemplateRuntimeConfig runtimeConfig; 
         private PublicTemplateStatus status; 
         private String teamID; 
@@ -137,6 +149,7 @@ public class PublicTemplate extends TeaModel {
             this.createdTime = model.createdTime;
             this.name = model.name;
             this.resourceGroupID = model.resourceGroupID;
+            this.resourceTags = model.resourceTags;
             this.runtimeConfig = model.runtimeConfig;
             this.status = model.status;
             this.teamID = model.teamID;
@@ -145,7 +158,7 @@ public class PublicTemplate extends TeaModel {
         } 
 
         /**
-         * <p>The creation time of the template, in UTC and formatted as RFC 3339.</p>
+         * <p>The time when the template was created, in UTC and RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-20T08:30:00Z</p>
@@ -156,7 +169,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * <p>The template name, which is unique within the same team.</p>
+         * <p>The name of the template, which is unique within a team.</p>
          * 
          * <strong>example:</strong>
          * <p>python-data-analysis</p>
@@ -178,7 +191,15 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * <p>The runtime configuration of the template, which determines the specifications and environment of sandbox instances created from this template.</p>
+         * <p>The resource tags.</p>
+         */
+        public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
+            this.resourceTags = resourceTags;
+            return this;
+        }
+
+        /**
+         * <p>The runtime configuration of the template, which determines the specifications and environment of the sandbox instances created from the template.</p>
          */
         public Builder runtimeConfig(PublicTemplateRuntimeConfig runtimeConfig) {
             this.runtimeConfig = runtimeConfig;
@@ -205,7 +226,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * <p>The team name.</p>
+         * <p>The name of the team.</p>
          * 
          * <strong>example:</strong>
          * <p>sandbox-dev</p>
@@ -216,7 +237,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * <p>The sandbox template ID.</p>
+         * <p>The ID of the sandbox template.</p>
          * 
          * <strong>example:</strong>
          * <p>tm-8f3a2c7b5e14d806</p>
@@ -232,4 +253,85 @@ public class PublicTemplate extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PublicTemplate} extends {@link TeaModel}
+     *
+     * <p>PublicTemplate</p>
+     */
+    public static class ResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private ResourceTags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ResourceTags build() {
+                return new ResourceTags(this);
+            } 
+
+        } 
+
+    }
 }

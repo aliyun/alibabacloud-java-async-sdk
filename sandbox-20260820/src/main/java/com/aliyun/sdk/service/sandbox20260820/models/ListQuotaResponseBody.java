@@ -119,7 +119,10 @@ public class ListQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. The value is 200 for a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The value of maxResults specified in the request. This field is returned only if a positive integer is specified for maxResults in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -135,7 +141,10 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. The value is success for a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page, which can be used for subsequent queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qxGrXje86XMrYQ51aJMy</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -151,7 +163,7 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * quotas.
+         * <p>The list of quota configurations.</p>
          */
         public Builder quotas(java.util.List<Quota> quotas) {
             this.quotas = quotas;
@@ -159,7 +171,10 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

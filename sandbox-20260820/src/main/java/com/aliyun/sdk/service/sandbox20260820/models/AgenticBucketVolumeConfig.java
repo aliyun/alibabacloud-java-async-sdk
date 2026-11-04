@@ -139,7 +139,7 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * <p>The OSS endpoint address.</p>
+         * <p>The OSS endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -150,7 +150,7 @@ public class AgenticBucketVolumeConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the mount directory has read-only access permissions after the OSS bucket is mounted. Valid values:</p>
+         * <p>Specifies whether the access permissions of the mounted directory are read-only after the OSS bucket is mounted. Valid values:</p>
          * <ul>
          * <li>true: Read-only.</li>
          * <li>false: Read and write.</li>

@@ -93,7 +93,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code. The value is 200 if the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The unique identifier of the created template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us7dxqaezw5uu7aa2cm5</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;

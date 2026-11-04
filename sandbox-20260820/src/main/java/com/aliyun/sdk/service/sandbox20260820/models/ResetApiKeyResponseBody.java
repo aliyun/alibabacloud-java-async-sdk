@@ -119,7 +119,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * apiKey.
+         * <p>The API key information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfjoY87-9IUHH</p>
          */
         public Builder apiKey(ApiKey apiKey) {
             this.apiKey = apiKey;
@@ -127,7 +130,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The response code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ipBlacklist.
+         * <p>The list of IP blacklist rules.</p>
          */
         public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
             this.ipBlacklist = ipBlacklist;
@@ -143,7 +149,7 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ipWhitelist.
+         * <p>The list of IP address whitelist rules.</p>
          */
         public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
             this.ipWhitelist = ipWhitelist;
@@ -151,7 +157,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. The value is success if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -159,7 +168,10 @@ public class ResetApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

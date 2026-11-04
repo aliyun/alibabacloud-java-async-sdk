@@ -38,6 +38,9 @@ public class E2BListedSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
 
+    @com.aliyun.core.annotation.NameInMap("resourceTags")
+    private java.util.List<ResourceTags> resourceTags;
+
     @com.aliyun.core.annotation.NameInMap("sandboxID")
     private String sandboxID;
 
@@ -73,6 +76,7 @@ public class E2BListedSandbox extends TeaModel {
         this.memoryMB = builder.memoryMB;
         this.metadata = builder.metadata;
         this.resourceGroupID = builder.resourceGroupID;
+        this.resourceTags = builder.resourceTags;
         this.sandboxID = builder.sandboxID;
         this.startedAt = builder.startedAt;
         this.state = builder.state;
@@ -146,6 +150,13 @@ public class E2BListedSandbox extends TeaModel {
     }
 
     /**
+     * @return resourceTags
+     */
+    public java.util.List<ResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
+    /**
      * @return sandboxID
      */
     public String getSandboxID() {
@@ -216,6 +227,7 @@ public class E2BListedSandbox extends TeaModel {
         private Integer memoryMB; 
         private java.util.Map<String, String> metadata; 
         private String resourceGroupID; 
+        private java.util.List<ResourceTags> resourceTags; 
         private String sandboxID; 
         private String startedAt; 
         private String state; 
@@ -237,6 +249,7 @@ public class E2BListedSandbox extends TeaModel {
             this.memoryMB = model.memoryMB;
             this.metadata = model.metadata;
             this.resourceGroupID = model.resourceGroupID;
+            this.resourceTags = model.resourceTags;
             this.sandboxID = model.sandboxID;
             this.startedAt = model.startedAt;
             this.state = model.state;
@@ -260,7 +273,7 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * <p>The temporary disk specification.</p>
+         * <p>The ephemeral disk specification.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -323,6 +336,14 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
+         * <p>The resource tags.</p>
+         */
+        public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
+            this.resourceTags = resourceTags;
+            return this;
+        }
+
+        /**
          * <p>The sandbox ID.</p>
          * 
          * <strong>example:</strong>
@@ -345,16 +366,16 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * <p>The sandbox status. Valid values:</p>
+         * <p>The sandbox state. Valid values:</p>
          * <ul>
          * <li>running: Running.</li>
-         * <li>pausing: Being paused.</li>
+         * <li>pausing: Pausing.</li>
          * <li>paused: Paused.</li>
-         * <li>resuming: Being resumed.</li>
-         * <li>pause_fail: Failed to pause.</li>
-         * <li>resume_fail: Failed to resume.</li>
+         * <li>resuming: Resuming.</li>
+         * <li>pause_fail: Pause failed.</li>
+         * <li>resume_fail: Resume failed.</li>
          * <li>snapshotting: Creating a snapshot.</li>
-         * <li>snapshot_failed: Failed to create a snapshot.</li>
+         * <li>snapshot_failed: Snapshot creation failed.</li>
          * <li>terminated: Terminated.</li>
          * </ul>
          * 
@@ -438,4 +459,85 @@ public class E2BListedSandbox extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link E2BListedSandbox} extends {@link TeaModel}
+     *
+     * <p>E2BListedSandbox</p>
+     */
+    public static class ResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private ResourceTags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ResourceTags build() {
+                return new ResourceTags(this);
+            } 
+
+        } 
+
+    }
 }

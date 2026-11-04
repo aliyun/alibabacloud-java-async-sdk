@@ -59,7 +59,7 @@ public class CreateApiKeyRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request parameters for creating an API key.</p>
          */
         public Builder body(CreateApiKeyInput body) {
             this.putBodyParameter("body", body);

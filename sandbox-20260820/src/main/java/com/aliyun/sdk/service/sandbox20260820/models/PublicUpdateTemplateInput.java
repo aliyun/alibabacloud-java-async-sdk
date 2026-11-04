@@ -20,11 +20,15 @@ public class PublicUpdateTemplateInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("buildConfig")
     private PublicUpdateTemplateBuildConfig buildConfig;
 
+    @com.aliyun.core.annotation.NameInMap("plan")
+    private String plan;
+
     @com.aliyun.core.annotation.NameInMap("runtimeConfig")
     private PublicUpdateTemplateRuntimeConfig runtimeConfig;
 
     private PublicUpdateTemplateInput(Builder builder) {
         this.buildConfig = builder.buildConfig;
+        this.plan = builder.plan;
         this.runtimeConfig = builder.runtimeConfig;
     }
 
@@ -48,6 +52,13 @@ public class PublicUpdateTemplateInput extends TeaModel {
     }
 
     /**
+     * @return plan
+     */
+    public String getPlan() {
+        return this.plan;
+    }
+
+    /**
      * @return runtimeConfig
      */
     public PublicUpdateTemplateRuntimeConfig getRuntimeConfig() {
@@ -56,6 +67,7 @@ public class PublicUpdateTemplateInput extends TeaModel {
 
     public static final class Builder {
         private PublicUpdateTemplateBuildConfig buildConfig; 
+        private String plan; 
         private PublicUpdateTemplateRuntimeConfig runtimeConfig; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class PublicUpdateTemplateInput extends TeaModel {
 
         private Builder(PublicUpdateTemplateInput model) {
             this.buildConfig = model.buildConfig;
+            this.plan = model.plan;
             this.runtimeConfig = model.runtimeConfig;
         } 
 
@@ -71,6 +84,17 @@ public class PublicUpdateTemplateInput extends TeaModel {
          */
         public Builder buildConfig(PublicUpdateTemplateBuildConfig buildConfig) {
             this.buildConfig = buildConfig;
+            return this;
+        }
+
+        /**
+         * <p>The subscription plan for the team. Valid values: eco, std, and pro.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pro</p>
+         */
+        public Builder plan(String plan) {
+            this.plan = plan;
             return this;
         }
 

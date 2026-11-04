@@ -41,6 +41,9 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("startCommand")
     private String startCommand;
 
+    @com.aliyun.core.annotation.NameInMap("steps")
+    private java.util.List<PublicUpdateTemplateStep> steps;
+
     private PublicUpdateTemplateSandboxConfig(Builder builder) {
         this.acrInstanceId = builder.acrInstanceId;
         this.generation = builder.generation;
@@ -50,6 +53,7 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         this.registryConfig = builder.registryConfig;
         this.registryType = builder.registryType;
         this.startCommand = builder.startCommand;
+        this.steps = builder.steps;
     }
 
     public static Builder builder() {
@@ -120,6 +124,13 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         return this.startCommand;
     }
 
+    /**
+     * @return steps
+     */
+    public java.util.List<PublicUpdateTemplateStep> getSteps() {
+        return this.steps;
+    }
+
     public static final class Builder {
         private String acrInstanceId; 
         private Integer generation; 
@@ -129,6 +140,7 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         private PublicUpdateTemplateRegistryConfig registryConfig; 
         private String registryType; 
         private String startCommand; 
+        private java.util.List<PublicUpdateTemplateStep> steps; 
 
         private Builder() {
         } 
@@ -142,10 +154,11 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
             this.registryConfig = model.registryConfig;
             this.registryType = model.registryType;
             this.startCommand = model.startCommand;
+            this.steps = model.steps;
         } 
 
         /**
-         * <p>The ID of the Container Registry Enterprise instance.</p>
+         * <p>The ID of the ACR Enterprise instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-abc123</p>
@@ -156,7 +169,7 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * <p>The sandbox generation. A value of 1 indicates rund, and a value of 2 indicates micro.</p>
+         * <p>The sandbox generation. Valid values: 1: rund. 2: micro.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -189,7 +202,7 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * <p>The readiness probe command for the micro sandbox. Only the second generation supports this parameter.</p>
+         * <p>The readiness probe command for the micro sandbox. This command is supported only by the second generation.</p>
          * 
          * <strong>example:</strong>
          * <p>/ready</p>
@@ -219,13 +232,21 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * <p>The startup command for the micro sandbox. Only the second generation supports this parameter.</p>
+         * <p>The startup command for the micro sandbox. This command is supported only by the second generation.</p>
          * 
          * <strong>example:</strong>
          * <p>/start-coroutines.sh</p>
          */
         public Builder startCommand(String startCommand) {
             this.startCommand = startCommand;
+            return this;
+        }
+
+        /**
+         * <p>The list of custom build steps. If you do not specify this parameter, the original steps are retained. If you pass an empty array, the steps are cleared.</p>
+         */
+        public Builder steps(java.util.List<PublicUpdateTemplateStep> steps) {
+            this.steps = steps;
             return this;
         }
 

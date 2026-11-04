@@ -117,7 +117,7 @@ public class PublicUpdateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether image replication is enabled.</p>
+         * <p>Specifies whether image replication is enabled.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -144,7 +144,7 @@ public class PublicUpdateTemplateCopyAction extends TeaModel {
         }
 
         /**
-         * <p>The type of the destination repository.</p>
+         * <p>The destination repository type.</p>
          * 
          * <strong>example:</strong>
          * <p>acr</p>

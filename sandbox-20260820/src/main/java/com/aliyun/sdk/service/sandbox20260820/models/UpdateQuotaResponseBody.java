@@ -93,7 +93,10 @@ public class UpdateQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. The value is success if the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class UpdateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * quota.
+         * <p>The quota configuration information.</p>
          */
         public Builder quota(Quota quota) {
             this.quota = quota;
@@ -117,7 +123,10 @@ public class UpdateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BCFAE0A-9FA9-5F72-8E8B-724632BC19A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

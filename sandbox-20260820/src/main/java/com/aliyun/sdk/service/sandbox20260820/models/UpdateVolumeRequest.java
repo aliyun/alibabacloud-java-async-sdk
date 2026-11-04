@@ -87,7 +87,10 @@ public class UpdateVolumeRequest extends Request {
         } 
 
         /**
-         * volumeID.
+         * <p>The unique identifier of the storage volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82c8c42e-cf7a-46d0-8b58-9024409c1579</p>
          */
         public Builder volumeID(String volumeID) {
             this.putPathParameter("volumeID", volumeID);
@@ -96,7 +99,7 @@ public class UpdateVolumeRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request parameters for updating the storage volume.</p>
          */
         public Builder body(UpdateVolumeInput body) {
             this.putBodyParameter("body", body);
@@ -105,7 +108,10 @@ public class UpdateVolumeRequest extends Request {
         }
 
         /**
-         * teamID.
+         * <p>The ID of the team to which the storage volume belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9f5a1fe9-****</p>
          */
         public Builder teamID(String teamID) {
             this.putQueryParameter("teamID", teamID);

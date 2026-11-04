@@ -65,6 +65,9 @@ public class E2BSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
 
+    @com.aliyun.core.annotation.NameInMap("resourceTags")
+    private java.util.List<ResourceTags> resourceTags;
+
     @com.aliyun.core.annotation.NameInMap("runtime")
     private InnerSandboxRuntimeConfig runtime;
 
@@ -115,6 +118,7 @@ public class E2BSandbox extends TeaModel {
         this.metadata = builder.metadata;
         this.network = builder.network;
         this.resourceGroupID = builder.resourceGroupID;
+        this.resourceTags = builder.resourceTags;
         this.runtime = builder.runtime;
         this.sandboxID = builder.sandboxID;
         this.startedAt = builder.startedAt;
@@ -253,6 +257,13 @@ public class E2BSandbox extends TeaModel {
     }
 
     /**
+     * @return resourceTags
+     */
+    public java.util.List<ResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
+    /**
      * @return runtime
      */
     public InnerSandboxRuntimeConfig getRuntime() {
@@ -346,6 +357,7 @@ public class E2BSandbox extends TeaModel {
         private java.util.Map<String, String> metadata; 
         private E2BNetwork network; 
         private String resourceGroupID; 
+        private java.util.List<ResourceTags> resourceTags; 
         private InnerSandboxRuntimeConfig runtime; 
         private String sandboxID; 
         private String startedAt; 
@@ -378,6 +390,7 @@ public class E2BSandbox extends TeaModel {
             this.metadata = model.metadata;
             this.network = model.network;
             this.resourceGroupID = model.resourceGroupID;
+            this.resourceTags = model.resourceTags;
             this.runtime = model.runtime;
             this.sandboxID = model.sandboxID;
             this.startedAt = model.startedAt;
@@ -403,7 +416,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the sandbox is allowed to access external networks.</p>
+         * <p>Specifies whether the sandbox is allowed to access the external network.</p>
          */
         public Builder allowInternetAccess(Boolean allowInternetAccess) {
             this.allowInternetAccess = allowInternetAccess;
@@ -463,7 +476,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * <p>The authentication credential for accessing the envd daemon process inside the sandbox, in UUID format. Automatically generated only when secure is set to true.</p>
+         * <p>The authentication token for accessing the envd daemon process in the sandbox, in UUID format. This token is automatically generated only when secure is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>4b1e9d07-****</p>
@@ -496,7 +509,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * <p>The Function Compute session ID corresponding to the sandbox, in UUID format. Used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
+         * <p>The Function Compute session ID corresponding to the sandbox, in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
          * 
          * <strong>example:</strong>
          * <p>3a7ecd09-****</p>
@@ -556,6 +569,14 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
+         * resourceTags.
+         */
+        public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
+            this.resourceTags = resourceTags;
+            return this;
+        }
+
+        /**
          * <p>The runtime configuration.</p>
          */
         public Builder runtime(InnerSandboxRuntimeConfig runtime) {
@@ -586,17 +607,17 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * <p>The sandbox status. Valid values:</p>
+         * <p>The sandbox state. Valid values:</p>
          * <ul>
-         * <li>running: Running.</li>
-         * <li>pausing: Pausing.</li>
-         * <li>paused: Paused.</li>
-         * <li>resuming: Resuming.</li>
-         * <li>pause_fail: Pause failed.</li>
-         * <li>resume_fail: Resume failed.</li>
-         * <li>snapshotting: Creating a snapshot.</li>
+         * <li>running: The sandbox is running.</li>
+         * <li>pausing: The sandbox is pausing.</li>
+         * <li>paused: The sandbox is paused.</li>
+         * <li>resuming: The sandbox is resuming.</li>
+         * <li>pause_fail: The pause operation failed.</li>
+         * <li>resume_fail: The resume operation failed.</li>
+         * <li>snapshotting: A snapshot is being created.</li>
          * <li>snapshot_failed: Snapshot creation failed.</li>
-         * <li>terminated: Terminated.</li>
+         * <li>terminated: The sandbox is terminated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -687,4 +708,79 @@ public class E2BSandbox extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link E2BSandbox} extends {@link TeaModel}
+     *
+     * <p>E2BSandbox</p>
+     */
+    public static class ResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private ResourceTags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ResourceTags build() {
+                return new ResourceTags(this);
+            } 
+
+        } 
+
+    }
 }

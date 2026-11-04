@@ -59,7 +59,10 @@ public class DeleteApiKeyRequest extends Request {
         } 
 
         /**
-         * apiKeyID.
+         * <p>The unique identifier of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34f6a4c4-499f-4bbd-baa0-0e699f53abcd</p>
          */
         public Builder apiKeyID(String apiKeyID) {
             this.putPathParameter("apiKeyID", apiKeyID);
