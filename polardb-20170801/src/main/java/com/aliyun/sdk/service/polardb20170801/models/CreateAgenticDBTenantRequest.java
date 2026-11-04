@@ -121,7 +121,7 @@ public class CreateAgenticDBTenantRequest extends Request {
          * <p>The description of the tenant. The description can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Example tenant</p>
+         * <p>Sample tenant</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -143,7 +143,7 @@ public class CreateAgenticDBTenantRequest extends Request {
         }
 
         /**
-         * <p>The name of the tenant. It must be 1 to 64 characters in length, start with a letter, and contain only letters, digits, underscores (_), and hyphens (-).</p>
+         * <p>The tenant name. The name must be 1 to 64 characters in length, start with a letter, and contain only letters, digits, underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

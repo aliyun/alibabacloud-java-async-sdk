@@ -1491,6 +1491,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateInspectionTask  CreateInspectionTaskRequest
+     * @return CreateInspectionTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateInspectionTaskResponse> createInspectionTask(CreateInspectionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateInspectionTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInspectionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInspectionTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateKBSyncLink  CreateKBSyncLinkRequest
      * @return CreateKBSyncLinkResponse
      */
@@ -1539,6 +1557,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateKnowledgeSpaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateLakebaseMountParameterGroup  CreateLakebaseMountParameterGroupRequest
+     * @return CreateLakebaseMountParameterGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateLakebaseMountParameterGroupResponse> createLakebaseMountParameterGroup(CreateLakebaseMountParameterGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateLakebaseMountParameterGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLakebaseMountParameterGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLakebaseMountParameterGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1718,6 +1754,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreatePolarClawCronJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreatePolarClawSkillTemplate  CreatePolarClawSkillTemplateRequest
+     * @return CreatePolarClawSkillTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreatePolarClawSkillTemplateResponse> createPolarClawSkillTemplate(CreatePolarClawSkillTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePolarClawSkillTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePolarClawSkillTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePolarClawSkillTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2059,7 +2113,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only tenants whose projects and branches have been completely cleaned up can be deleted. After a successful deletion, all API keys associated with the tenant become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
+     * <p>You can only delete a tenant whose projects and branches have been cleaned up. After the tenant is deleted, all its API keys become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
      * 
      * @param request the request parameters of DeleteAgenticDBTenant  DeleteAgenticDBTenantRequest
      * @return DeleteAgenticDBTenantResponse
@@ -2614,6 +2668,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteLakebaseMountParameterGroup  DeleteLakebaseMountParameterGroupRequest
+     * @return DeleteLakebaseMountParameterGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLakebaseMountParameterGroupResponse> deleteLakebaseMountParameterGroup(DeleteLakebaseMountParameterGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteLakebaseMountParameterGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLakebaseMountParameterGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLakebaseMountParameterGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteLakebaseS3Account  DeleteLakebaseS3AccountRequest
      * @return DeleteLakebaseS3AccountResponse
      */
@@ -2798,6 +2870,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeletePolarClawSkill  DeletePolarClawSkillRequest
+     * @return DeletePolarClawSkillResponse
+     */
+    @Override
+    public CompletableFuture<DeletePolarClawSkillResponse> deletePolarClawSkill(DeletePolarClawSkillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePolarClawSkill").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePolarClawSkillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePolarClawSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeletePolarFs  DeletePolarFsRequest
      * @return DeletePolarFsResponse
      */
@@ -2963,6 +3053,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteSQLRateLimitingRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAIAgentOrder  DescribeAIAgentOrderRequest
+     * @return DescribeAIAgentOrderResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAIAgentOrderResponse> describeAIAgentOrder(DescribeAIAgentOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAIAgentOrder").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAIAgentOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAIAgentOrderResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3245,6 +3353,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeActiveOperationMaintainConfResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTask  DescribeActiveOperationTaskRequest
+     * @return DescribeActiveOperationTaskResponse
+     */
+    @Override
+    public CompletableFuture<DescribeActiveOperationTaskResponse> describeActiveOperationTask(DescribeActiveOperationTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeActiveOperationTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeActiveOperationTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeActiveOperationTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4247,6 +4373,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDBClusterModelEnhancement  DescribeDBClusterModelEnhancementRequest
+     * @return DescribeDBClusterModelEnhancementResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDBClusterModelEnhancementResponse> describeDBClusterModelEnhancement(DescribeDBClusterModelEnhancementRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDBClusterModelEnhancement").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDBClusterModelEnhancementResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDBClusterModelEnhancementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeDBClusterMonitor  DescribeDBClusterMonitorRequest
      * @return DescribeDBClusterMonitorResponse
      */
@@ -4562,6 +4706,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDBInstances  DescribeDBInstancesRequest
+     * @return DescribeDBInstancesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDBInstances").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDBInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDBInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can query only the database links that use a PolarDB for Oracle cluster as the source.</p>
@@ -4792,6 +4954,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDetachedBackupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeEdgeCloudRegion  DescribeEdgeCloudRegionRequest
+     * @return DescribeEdgeCloudRegionResponse
+     */
+    @Override
+    public CompletableFuture<DescribeEdgeCloudRegionResponse> describeEdgeCloudRegion(DescribeEdgeCloudRegionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeEdgeCloudRegion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEdgeCloudRegionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeEdgeCloudRegionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5129,6 +5309,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeKVCacheInstances  DescribeKVCacheInstancesRequest
+     * @return DescribeKVCacheInstancesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKVCacheInstancesResponse> describeKVCacheInstances(DescribeKVCacheInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKVCacheInstances").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKVCacheInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKVCacheInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeKnowledgeBaseAnswer  DescribeKnowledgeBaseAnswerRequest
      * @return DescribeKnowledgeBaseAnswerResponse
      */
@@ -5231,6 +5429,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeKnowledgeSpaceAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLakebaseMountParameterGroup  DescribeLakebaseMountParameterGroupRequest
+     * @return DescribeLakebaseMountParameterGroupResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLakebaseMountParameterGroupResponse> describeLakebaseMountParameterGroup(DescribeLakebaseMountParameterGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLakebaseMountParameterGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLakebaseMountParameterGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLakebaseMountParameterGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLakebaseMountParameterGroupChangeLogs  DescribeLakebaseMountParameterGroupChangeLogsRequest
+     * @return DescribeLakebaseMountParameterGroupChangeLogsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLakebaseMountParameterGroupChangeLogsResponse> describeLakebaseMountParameterGroupChangeLogs(DescribeLakebaseMountParameterGroupChangeLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLakebaseMountParameterGroupChangeLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLakebaseMountParameterGroupChangeLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLakebaseMountParameterGroupChangeLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLakebaseMountParameterGroups  DescribeLakebaseMountParameterGroupsRequest
+     * @return DescribeLakebaseMountParameterGroupsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLakebaseMountParameterGroupsResponse> describeLakebaseMountParameterGroups(DescribeLakebaseMountParameterGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLakebaseMountParameterGroups").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLakebaseMountParameterGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLakebaseMountParameterGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLakebaseMountParameterTemplateList  DescribeLakebaseMountParameterTemplateListRequest
+     * @return DescribeLakebaseMountParameterTemplateListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLakebaseMountParameterTemplateListResponse> describeLakebaseMountParameterTemplateList(DescribeLakebaseMountParameterTemplateListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLakebaseMountParameterTemplateList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLakebaseMountParameterTemplateListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLakebaseMountParameterTemplateListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5731,6 +6001,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribePolarClawSkillAssessment  DescribePolarClawSkillAssessmentRequest
+     * @return DescribePolarClawSkillAssessmentResponse
+     */
+    @Override
+    public CompletableFuture<DescribePolarClawSkillAssessmentResponse> describePolarClawSkillAssessment(DescribePolarClawSkillAssessmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePolarClawSkillAssessment").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePolarClawSkillAssessmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePolarClawSkillAssessmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribePolarClawSkillDetail  DescribePolarClawSkillDetailRequest
      * @return DescribePolarClawSkillDetailResponse
      */
@@ -5743,6 +6031,70 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribePolarClawSkillDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API operation queries all quota rules under a specific Polarlakebase instance and supports fuzzy matching by using the QuotaNameMatch and PatternMatch parameters.</li>
+     * <li>The pagination feature is not yet public and will be available after the kernel is ready. Currently, there is no pagination limit on the returned results.</li>
+     * <li>PolarFsInstanceId is required and specifies the Polarlakebase instance to query.</li>
+     * <li>Optional parameters such as QuotaNameMatch and PatternMatch can be used to further filter the matching quota rules.</li>
+     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as the rule ID, name, description, and capacity limit.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribePolarClawSkillTemplate  DescribePolarClawSkillTemplateRequest
+     * @return DescribePolarClawSkillTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DescribePolarClawSkillTemplateResponse> describePolarClawSkillTemplate(DescribePolarClawSkillTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePolarClawSkillTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePolarClawSkillTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePolarClawSkillTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePolarClawSkills  DescribePolarClawSkillsRequest
+     * @return DescribePolarClawSkillsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePolarClawSkillsResponse> describePolarClawSkills(DescribePolarClawSkillsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePolarClawSkills").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePolarClawSkillsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePolarClawSkillsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePolarClawSkillsMarket  DescribePolarClawSkillsMarketRequest
+     * @return DescribePolarClawSkillsMarketResponse
+     */
+    @Override
+    public CompletableFuture<DescribePolarClawSkillsMarketResponse> describePolarClawSkillsMarket(DescribePolarClawSkillsMarketRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePolarClawSkillsMarket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePolarClawSkillsMarketResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePolarClawSkillsMarketResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5988,6 +6340,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeReplicationSlots  DescribeReplicationSlotsRequest
+     * @return DescribeReplicationSlotsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeReplicationSlotsResponse> describeReplicationSlots(DescribeReplicationSlotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeReplicationSlots").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeReplicationSlotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeReplicationSlotsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeResourcePackages  DescribeResourcePackagesRequest
      * @return DescribeResourcePackagesResponse
      */
@@ -6000,6 +6370,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeResourcePackagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSQLExplorerPolicy  DescribeSQLExplorerPolicyRequest
+     * @return DescribeSQLExplorerPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSQLExplorerPolicyResponse> describeSQLExplorerPolicy(DescribeSQLExplorerPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSQLExplorerPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSQLExplorerPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSQLExplorerPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSQLExplorerRetention  DescribeSQLExplorerRetentionRequest
+     * @return DescribeSQLExplorerRetentionResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSQLExplorerRetentionResponse> describeSQLExplorerRetention(DescribeSQLExplorerRetentionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSQLExplorerRetention").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSQLExplorerRetentionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSQLExplorerRetentionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6110,6 +6516,29 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeSlowLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is only supported in regions where the endpoint is polardb.aliyuncs.com.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeStoragePlan  DescribeStoragePlanRequest
+     * @return DescribeStoragePlanResponse
+     */
+    @Override
+    public CompletableFuture<DescribeStoragePlanResponse> describeStoragePlan(DescribeStoragePlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeStoragePlan").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeStoragePlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeStoragePlanResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6248,6 +6677,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableDBClusterCTable  DisableDBClusterCTableRequest
+     * @return DisableDBClusterCTableResponse
+     */
+    @Override
+    public CompletableFuture<DisableDBClusterCTableResponse> disableDBClusterCTable(DisableDBClusterCTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableDBClusterCTable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableDBClusterCTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableDBClusterCTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DisableDBClusterDocumentDB  DisableDBClusterDocumentDBRequest
+     * @return DisableDBClusterDocumentDBResponse
+     */
+    @Override
+    public CompletableFuture<DisableDBClusterDocumentDBResponse> disableDBClusterDocumentDB(DisableDBClusterDocumentDBRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableDBClusterDocumentDB").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableDBClusterDocumentDBResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableDBClusterDocumentDBResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableDBClusterDynamoDB  DisableDBClusterDynamoDBRequest
      * @return DisableDBClusterDynamoDBResponse
      */
@@ -6354,6 +6819,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DisablePolarClawPluginResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableAIDBClusterDatasetService  EnableAIDBClusterDatasetServiceRequest
+     * @return EnableAIDBClusterDatasetServiceResponse
+     */
+    @Override
+    public CompletableFuture<EnableAIDBClusterDatasetServiceResponse> enableAIDBClusterDatasetService(EnableAIDBClusterDatasetServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableAIDBClusterDatasetService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableAIDBClusterDatasetServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableAIDBClusterDatasetServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableDBClusterCTable  EnableDBClusterCTableRequest
+     * @return EnableDBClusterCTableResponse
+     */
+    @Override
+    public CompletableFuture<EnableDBClusterCTableResponse> enableDBClusterCTable(EnableDBClusterCTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableDBClusterCTable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableDBClusterCTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableDBClusterCTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableDBClusterDocumentDB  EnableDBClusterDocumentDBRequest
+     * @return EnableDBClusterDocumentDBResponse
+     */
+    @Override
+    public CompletableFuture<EnableDBClusterDocumentDBResponse> enableDBClusterDocumentDB(EnableDBClusterDocumentDBRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableDBClusterDocumentDB").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableDBClusterDocumentDBResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableDBClusterDocumentDBResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6663,6 +7182,33 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path starting from the root directory rather than a mount point path. Additionally, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when a rule is missing.</p>
+     * <h3>Important notes</h3>
+     * <ul>
+     * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
+     * <li>To apply rules to multi-level subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetPolarClawSkillRegion  GetPolarClawSkillRegionRequest
+     * @return GetPolarClawSkillRegionResponse
+     */
+    @Override
+    public CompletableFuture<GetPolarClawSkillRegionResponse> getPolarClawSkillRegion(GetPolarClawSkillRegionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetPolarClawSkillRegion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPolarClawSkillRegionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPolarClawSkillRegionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <ul>
      * <li><p>An account can be authorized to access one or more databases.</p>
@@ -6924,6 +7470,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyAIDBClusterModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyAIDBClusterTask  ModifyAIDBClusterTaskRequest
+     * @return ModifyAIDBClusterTaskResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAIDBClusterTaskResponse> modifyAIDBClusterTask(ModifyAIDBClusterTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAIDBClusterTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAIDBClusterTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAIDBClusterTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -7403,6 +7967,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyDBClusterAuditLogCollectorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyDBClusterAutoUpgradeMinorVersion  ModifyDBClusterAutoUpgradeMinorVersionRequest
+     * @return ModifyDBClusterAutoUpgradeMinorVersionResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDBClusterAutoUpgradeMinorVersionResponse> modifyDBClusterAutoUpgradeMinorVersion(ModifyDBClusterAutoUpgradeMinorVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDBClusterAutoUpgradeMinorVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDBClusterAutoUpgradeMinorVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDBClusterAutoUpgradeMinorVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -7911,6 +8493,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyDBNodeRouterWeight  ModifyDBNodeRouterWeightRequest
+     * @return ModifyDBNodeRouterWeightResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDBNodeRouterWeightResponse> modifyDBNodeRouterWeight(ModifyDBNodeRouterWeightRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDBNodeRouterWeight").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDBNodeRouterWeightResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDBNodeRouterWeightResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyDBNodeSccMode  ModifyDBNodeSccModeRequest
      * @return ModifyDBNodeSccModeResponse
      */
@@ -8091,6 +8691,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyLakebaseMountParameterGroup  ModifyLakebaseMountParameterGroupRequest
+     * @return ModifyLakebaseMountParameterGroupResponse
+     */
+    @Override
+    public CompletableFuture<ModifyLakebaseMountParameterGroupResponse> modifyLakebaseMountParameterGroup(ModifyLakebaseMountParameterGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyLakebaseMountParameterGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyLakebaseMountParameterGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyLakebaseMountParameterGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyLakebaseS3AccountPolicy  ModifyLakebaseS3AccountPolicyRequest
+     * @return ModifyLakebaseS3AccountPolicyResponse
+     */
+    @Override
+    public CompletableFuture<ModifyLakebaseS3AccountPolicyResponse> modifyLakebaseS3AccountPolicy(ModifyLakebaseS3AccountPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyLakebaseS3AccountPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyLakebaseS3AccountPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyLakebaseS3AccountPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyLogBackupPolicy  ModifyLogBackupPolicyRequest
      * @return ModifyLogBackupPolicyResponse
      */
@@ -8175,6 +8811,65 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyPendingMaintenanceActionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyPolarClawSkill  ModifyPolarClawSkillRequest
+     * @return ModifyPolarClawSkillResponse
+     */
+    @Override
+    public CompletableFuture<ModifyPolarClawSkillResponse> modifyPolarClawSkill(ModifyPolarClawSkillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPolarClawSkill").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPolarClawSkillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPolarClawSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyPolarFs  ModifyPolarFsRequest
+     * @return ModifyPolarFsResponse
+     */
+    @Override
+    public CompletableFuture<ModifyPolarFsResponse> modifyPolarFs(ModifyPolarFsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPolarFs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPolarFsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPolarFsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyPolarFsInstanceDescription  ModifyPolarFsInstanceDescriptionRequest
+     * @return ModifyPolarFsInstanceDescriptionResponse
+     */
+    @Override
+    public CompletableFuture<ModifyPolarFsInstanceDescriptionResponse> modifyPolarFsInstanceDescription(ModifyPolarFsInstanceDescriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPolarFsInstanceDescription").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPolarFsInstanceDescriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPolarFsInstanceDescriptionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -8296,6 +8991,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyScheduleTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifySecurityIps  ModifySecurityIpsRequest
+     * @return ModifySecurityIpsResponse
+     */
+    @Override
+    public CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySecurityIps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySecurityIpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySecurityIpsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -8623,6 +9336,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Only privileged accounts of PolarDB for MySQL clusters can be reset.</li>
+     * <li>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ResetApplicationAccountPassword  ResetApplicationAccountPasswordRequest
+     * @return ResetApplicationAccountPasswordResponse
+     */
+    @Override
+    public CompletableFuture<ResetApplicationAccountPasswordResponse> resetApplicationAccountPassword(ResetApplicationAccountPasswordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ResetApplicationAccountPassword").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResetApplicationAccountPasswordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResetApplicationAccountPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ResetConsumerApiKey  ResetConsumerApiKeyRequest
      * @return ResetConsumerApiKeyResponse
      */
@@ -8689,6 +9428,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RestartAIDBClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RestartDBCluster  RestartDBClusterRequest
+     * @return RestartDBClusterResponse
+     */
+    @Override
+    public CompletableFuture<RestartDBClusterResponse> restartDBCluster(RestartDBClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestartDBCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestartDBClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RestartDBClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -9103,6 +9860,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UninstallPolarClawPluginResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><code>PolarFsInstanceId</code> is required and identifies the Polarlakebase instance to operate on.</li>
+     * <li>The <code>FilePathIds</code> parameter is also required. It accepts a list of file path IDs in string format. These IDs correspond to the specific file paths whose quota rules need to be deleted. Ensure that each provided ID is valid and belongs to the specified Polarlakebase instance.</li>
+     * <li>A single API call can process quota deletion requests for multiple file paths. However, control the request size to avoid performance issues.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UninstallPolarClawSkills  UninstallPolarClawSkillsRequest
+     * @return UninstallPolarClawSkillsResponse
+     */
+    @Override
+    public CompletableFuture<UninstallPolarClawSkillsResponse> uninstallPolarClawSkills(UninstallPolarClawSkillsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UninstallPolarClawSkills").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UninstallPolarClawSkillsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UninstallPolarClawSkillsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

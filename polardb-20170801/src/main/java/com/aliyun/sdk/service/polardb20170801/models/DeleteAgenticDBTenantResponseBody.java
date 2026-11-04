@@ -54,7 +54,7 @@ public class DeleteAgenticDBTenantResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01A13E8C-3773-1A76-BA95-96EA81D260DC</p>

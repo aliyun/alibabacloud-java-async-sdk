@@ -90,7 +90,7 @@ public class ApplyLakebaseMountParameterGroupRequest extends Request {
         } 
 
         /**
-         * <p>The parameter template ID. The ID starts with pagp-.</p>
+         * <p>The parameter template ID, which starts with pagp-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

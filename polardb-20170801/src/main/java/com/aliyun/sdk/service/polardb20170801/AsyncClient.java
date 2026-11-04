@@ -590,6 +590,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGwConsumerOrderResponse> createGwConsumerOrder(CreateGwConsumerOrderRequest request);
 
     /**
+     * @param request the request parameters of CreateInspectionTask  CreateInspectionTaskRequest
+     * @return CreateInspectionTaskResponse
+     */
+    CompletableFuture<CreateInspectionTaskResponse> createInspectionTask(CreateInspectionTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateKBSyncLink  CreateKBSyncLinkRequest
      * @return CreateKBSyncLinkResponse
      */
@@ -606,6 +612,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateKnowledgeSpaceResponse
      */
     CompletableFuture<CreateKnowledgeSpaceResponse> createKnowledgeSpace(CreateKnowledgeSpaceRequest request);
+
+    /**
+     * @param request the request parameters of CreateLakebaseMountParameterGroup  CreateLakebaseMountParameterGroupRequest
+     * @return CreateLakebaseMountParameterGroupResponse
+     */
+    CompletableFuture<CreateLakebaseMountParameterGroupResponse> createLakebaseMountParameterGroup(CreateLakebaseMountParameterGroupRequest request);
 
     /**
      * @param request the request parameters of CreateLakebaseS3Account  CreateLakebaseS3AccountRequest
@@ -677,6 +689,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePolarClawCronJobResponse
      */
     CompletableFuture<CreatePolarClawCronJobResponse> createPolarClawCronJob(CreatePolarClawCronJobRequest request);
+
+    /**
+     * @param request the request parameters of CreatePolarClawSkillTemplate  CreatePolarClawSkillTemplateRequest
+     * @return CreatePolarClawSkillTemplateResponse
+     */
+    CompletableFuture<CreatePolarClawSkillTemplateResponse> createPolarClawSkillTemplate(CreatePolarClawSkillTemplateRequest request);
 
     /**
      * @param request the request parameters of CreatePolarFs  CreatePolarFsRequest
@@ -810,7 +828,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only tenants whose projects and branches have been completely cleaned up can be deleted. After a successful deletion, all API keys associated with the tenant become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
+     * <p>You can only delete a tenant whose projects and branches have been cleaned up. After the tenant is deleted, all its API keys become invalid. This operation does not automatically clean up projects, branches, or storage.</p>
      * 
      * @param request the request parameters of DeleteAgenticDBTenant  DeleteAgenticDBTenantRequest
      * @return DeleteAgenticDBTenantResponse
@@ -1029,6 +1047,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteKnowledgeBaseFileResponse> deleteKnowledgeBaseFile(DeleteKnowledgeBaseFileRequest request);
 
     /**
+     * @param request the request parameters of DeleteLakebaseMountParameterGroup  DeleteLakebaseMountParameterGroupRequest
+     * @return DeleteLakebaseMountParameterGroupResponse
+     */
+    CompletableFuture<DeleteLakebaseMountParameterGroupResponse> deleteLakebaseMountParameterGroup(DeleteLakebaseMountParameterGroupRequest request);
+
+    /**
      * @param request the request parameters of DeleteLakebaseS3Account  DeleteLakebaseS3AccountRequest
      * @return DeleteLakebaseS3AccountResponse
      */
@@ -1105,6 +1129,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePolarClawCronJobResponse> deletePolarClawCronJob(DeletePolarClawCronJobRequest request);
 
     /**
+     * @param request the request parameters of DeletePolarClawSkill  DeletePolarClawSkillRequest
+     * @return DeletePolarClawSkillResponse
+     */
+    CompletableFuture<DeletePolarClawSkillResponse> deletePolarClawSkill(DeletePolarClawSkillRequest request);
+
+    /**
      * @param request the request parameters of DeletePolarFs  DeletePolarFsRequest
      * @return DeletePolarFsResponse
      */
@@ -1178,6 +1208,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSQLRateLimitingRulesResponse
      */
     CompletableFuture<DeleteSQLRateLimitingRulesResponse> deleteSQLRateLimitingRules(DeleteSQLRateLimitingRulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAIAgentOrder  DescribeAIAgentOrderRequest
+     * @return DescribeAIAgentOrderResponse
+     */
+    CompletableFuture<DescribeAIAgentOrderResponse> describeAIAgentOrder(DescribeAIAgentOrderRequest request);
 
     /**
      * @param request the request parameters of DescribeAIDBClusterApiKeys  DescribeAIDBClusterApiKeysRequest
@@ -1280,6 +1316,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeActiveOperationMaintainConfResponse
      */
     CompletableFuture<DescribeActiveOperationMaintainConfResponse> describeActiveOperationMaintainConf(DescribeActiveOperationMaintainConfRequest request);
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTask  DescribeActiveOperationTaskRequest
+     * @return DescribeActiveOperationTaskResponse
+     */
+    CompletableFuture<DescribeActiveOperationTaskResponse> describeActiveOperationTask(DescribeActiveOperationTaskRequest request);
 
     /**
      * @param request the request parameters of DescribeActiveOperationTasks  DescribeActiveOperationTasksRequest
@@ -1630,6 +1672,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterMigrationResponse> describeDBClusterMigration(DescribeDBClusterMigrationRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBClusterModelEnhancement  DescribeDBClusterModelEnhancementRequest
+     * @return DescribeDBClusterModelEnhancementResponse
+     */
+    CompletableFuture<DescribeDBClusterModelEnhancementResponse> describeDBClusterModelEnhancement(DescribeDBClusterModelEnhancementRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBClusterMonitor  DescribeDBClusterMonitorRequest
      * @return DescribeDBClusterMonitorResponse
      */
@@ -1753,6 +1801,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstancePerformanceResponse> describeDBInstancePerformance(DescribeDBInstancePerformanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBInstances  DescribeDBInstancesRequest
+     * @return DescribeDBInstancesResponse
+     */
+    CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can query only the database links that use a PolarDB for Oracle cluster as the source.</p>
@@ -1855,6 +1909,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDetachedBackupsResponse
      */
     CompletableFuture<DescribeDetachedBackupsResponse> describeDetachedBackups(DescribeDetachedBackupsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeEdgeCloudRegion  DescribeEdgeCloudRegionRequest
+     * @return DescribeEdgeCloudRegionResponse
+     */
+    CompletableFuture<DescribeEdgeCloudRegionResponse> describeEdgeCloudRegion(DescribeEdgeCloudRegionRequest request);
 
     /**
      * @param request the request parameters of DescribeEncryptionDBRolePrivilege  DescribeEncryptionDBRolePrivilegeRequest
@@ -1972,6 +2032,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeKBSyncLinksResponse> describeKBSyncLinks(DescribeKBSyncLinksRequest request);
 
     /**
+     * @param request the request parameters of DescribeKVCacheInstances  DescribeKVCacheInstancesRequest
+     * @return DescribeKVCacheInstancesResponse
+     */
+    CompletableFuture<DescribeKVCacheInstancesResponse> describeKVCacheInstances(DescribeKVCacheInstancesRequest request);
+
+    /**
      * @param request the request parameters of DescribeKnowledgeBaseAnswer  DescribeKnowledgeBaseAnswerRequest
      * @return DescribeKnowledgeBaseAnswerResponse
      */
@@ -2006,6 +2072,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeKnowledgeSpaceAttributeResponse
      */
     CompletableFuture<DescribeKnowledgeSpaceAttributeResponse> describeKnowledgeSpaceAttribute(DescribeKnowledgeSpaceAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLakebaseMountParameterGroup  DescribeLakebaseMountParameterGroupRequest
+     * @return DescribeLakebaseMountParameterGroupResponse
+     */
+    CompletableFuture<DescribeLakebaseMountParameterGroupResponse> describeLakebaseMountParameterGroup(DescribeLakebaseMountParameterGroupRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLakebaseMountParameterGroupChangeLogs  DescribeLakebaseMountParameterGroupChangeLogsRequest
+     * @return DescribeLakebaseMountParameterGroupChangeLogsResponse
+     */
+    CompletableFuture<DescribeLakebaseMountParameterGroupChangeLogsResponse> describeLakebaseMountParameterGroupChangeLogs(DescribeLakebaseMountParameterGroupChangeLogsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLakebaseMountParameterGroups  DescribeLakebaseMountParameterGroupsRequest
+     * @return DescribeLakebaseMountParameterGroupsResponse
+     */
+    CompletableFuture<DescribeLakebaseMountParameterGroupsResponse> describeLakebaseMountParameterGroups(DescribeLakebaseMountParameterGroupsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLakebaseMountParameterTemplateList  DescribeLakebaseMountParameterTemplateListRequest
+     * @return DescribeLakebaseMountParameterTemplateListResponse
+     */
+    CompletableFuture<DescribeLakebaseMountParameterTemplateListResponse> describeLakebaseMountParameterTemplateList(DescribeLakebaseMountParameterTemplateListRequest request);
 
     /**
      * @param request the request parameters of DescribeLakebaseS3Account  DescribeLakebaseS3AccountRequest
@@ -2190,10 +2280,44 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarClawPluginsResponse> describePolarClawPlugins(DescribePolarClawPluginsRequest request);
 
     /**
+     * @param request the request parameters of DescribePolarClawSkillAssessment  DescribePolarClawSkillAssessmentRequest
+     * @return DescribePolarClawSkillAssessmentResponse
+     */
+    CompletableFuture<DescribePolarClawSkillAssessmentResponse> describePolarClawSkillAssessment(DescribePolarClawSkillAssessmentRequest request);
+
+    /**
      * @param request the request parameters of DescribePolarClawSkillDetail  DescribePolarClawSkillDetailRequest
      * @return DescribePolarClawSkillDetailResponse
      */
     CompletableFuture<DescribePolarClawSkillDetailResponse> describePolarClawSkillDetail(DescribePolarClawSkillDetailRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API operation queries all quota rules under a specific Polarlakebase instance and supports fuzzy matching by using the QuotaNameMatch and PatternMatch parameters.</li>
+     * <li>The pagination feature is not yet public and will be available after the kernel is ready. Currently, there is no pagination limit on the returned results.</li>
+     * <li>PolarFsInstanceId is required and specifies the Polarlakebase instance to query.</li>
+     * <li>Optional parameters such as QuotaNameMatch and PatternMatch can be used to further filter the matching quota rules.</li>
+     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as the rule ID, name, description, and capacity limit.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribePolarClawSkillTemplate  DescribePolarClawSkillTemplateRequest
+     * @return DescribePolarClawSkillTemplateResponse
+     */
+    CompletableFuture<DescribePolarClawSkillTemplateResponse> describePolarClawSkillTemplate(DescribePolarClawSkillTemplateRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarClawSkills  DescribePolarClawSkillsRequest
+     * @return DescribePolarClawSkillsResponse
+     */
+    CompletableFuture<DescribePolarClawSkillsResponse> describePolarClawSkills(DescribePolarClawSkillsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarClawSkillsMarket  DescribePolarClawSkillsMarketRequest
+     * @return DescribePolarClawSkillsMarketResponse
+     */
+    CompletableFuture<DescribePolarClawSkillsMarketResponse> describePolarClawSkillsMarket(DescribePolarClawSkillsMarketRequest request);
 
     /**
      * @param request the request parameters of DescribePolarClawTask  DescribePolarClawTaskRequest
@@ -2291,10 +2415,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     /**
+     * @param request the request parameters of DescribeReplicationSlots  DescribeReplicationSlotsRequest
+     * @return DescribeReplicationSlotsResponse
+     */
+    CompletableFuture<DescribeReplicationSlotsResponse> describeReplicationSlots(DescribeReplicationSlotsRequest request);
+
+    /**
      * @param request the request parameters of DescribeResourcePackages  DescribeResourcePackagesRequest
      * @return DescribeResourcePackagesResponse
      */
     CompletableFuture<DescribeResourcePackagesResponse> describeResourcePackages(DescribeResourcePackagesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSQLExplorerPolicy  DescribeSQLExplorerPolicyRequest
+     * @return DescribeSQLExplorerPolicyResponse
+     */
+    CompletableFuture<DescribeSQLExplorerPolicyResponse> describeSQLExplorerPolicy(DescribeSQLExplorerPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSQLExplorerRetention  DescribeSQLExplorerRetentionRequest
+     * @return DescribeSQLExplorerRetentionResponse
+     */
+    CompletableFuture<DescribeSQLExplorerRetentionResponse> describeSQLExplorerRetention(DescribeSQLExplorerRetentionRequest request);
 
     /**
      * @param request the request parameters of DescribeSQLRateLimitingRules  DescribeSQLRateLimitingRulesRequest
@@ -2348,6 +2490,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is only supported in regions where the endpoint is polardb.aliyuncs.com.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeStoragePlan  DescribeStoragePlanRequest
+     * @return DescribeStoragePlanResponse
+     */
+    CompletableFuture<DescribeStoragePlanResponse> describeStoragePlan(DescribeStoragePlanRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>You can view tasks generated by directly calling an API operation such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or tasks generated when the system calls the corresponding API operation while you use a feature in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</p>
      * <ul>
      * <li>Currently, you can view only the progress details of tasks generated when creating a cluster, that is, when the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation is called and the <code>CreationOption</code> parameter is not set to <code>CreateGdnStandby</code>.</li>
@@ -2395,6 +2548,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
 
     /**
+     * @param request the request parameters of DisableDBClusterCTable  DisableDBClusterCTableRequest
+     * @return DisableDBClusterCTableResponse
+     */
+    CompletableFuture<DisableDBClusterCTableResponse> disableDBClusterCTable(DisableDBClusterCTableRequest request);
+
+    /**
+     * @param request the request parameters of DisableDBClusterDocumentDB  DisableDBClusterDocumentDBRequest
+     * @return DisableDBClusterDocumentDBResponse
+     */
+    CompletableFuture<DisableDBClusterDocumentDBResponse> disableDBClusterDocumentDB(DisableDBClusterDocumentDBRequest request);
+
+    /**
      * @param request the request parameters of DisableDBClusterDynamoDB  DisableDBClusterDynamoDBRequest
      * @return DisableDBClusterDynamoDBResponse
      */
@@ -2433,6 +2598,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisablePolarClawPluginResponse
      */
     CompletableFuture<DisablePolarClawPluginResponse> disablePolarClawPlugin(DisablePolarClawPluginRequest request);
+
+    /**
+     * @param request the request parameters of EnableAIDBClusterDatasetService  EnableAIDBClusterDatasetServiceRequest
+     * @return EnableAIDBClusterDatasetServiceResponse
+     */
+    CompletableFuture<EnableAIDBClusterDatasetServiceResponse> enableAIDBClusterDatasetService(EnableAIDBClusterDatasetServiceRequest request);
+
+    /**
+     * @param request the request parameters of EnableDBClusterCTable  EnableDBClusterCTableRequest
+     * @return EnableDBClusterCTableResponse
+     */
+    CompletableFuture<EnableDBClusterCTableResponse> enableDBClusterCTable(EnableDBClusterCTableRequest request);
+
+    /**
+     * @param request the request parameters of EnableDBClusterDocumentDB  EnableDBClusterDocumentDBRequest
+     * @return EnableDBClusterDocumentDBResponse
+     */
+    CompletableFuture<EnableDBClusterDocumentDBResponse> enableDBClusterDocumentDB(EnableDBClusterDocumentDBRequest request);
 
     /**
      * @param request the request parameters of EnableDBClusterDynamoDB  EnableDBClusterDynamoDBRequest
@@ -2538,6 +2721,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path starting from the root directory rather than a mount point path. Additionally, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when a rule is missing.</p>
+     * <h3>Important notes</h3>
+     * <ul>
+     * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
+     * <li>To apply rules to multi-level subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetPolarClawSkillRegion  GetPolarClawSkillRegionRequest
+     * @return GetPolarClawSkillRegionResponse
+     */
+    CompletableFuture<GetPolarClawSkillRegionResponse> getPolarClawSkillRegion(GetPolarClawSkillRegionRequest request);
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <ul>
      * <li><p>An account can be authorized to access one or more databases.</p>
@@ -2635,6 +2833,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAIDBClusterModelResponse
      */
     CompletableFuture<ModifyAIDBClusterModelResponse> modifyAIDBClusterModel(ModifyAIDBClusterModelRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAIDBClusterTask  ModifyAIDBClusterTaskRequest
+     * @return ModifyAIDBClusterTaskResponse
+     */
+    CompletableFuture<ModifyAIDBClusterTaskResponse> modifyAIDBClusterTask(ModifyAIDBClusterTaskRequest request);
 
     /**
      * @param request the request parameters of ModifyAccountDescription  ModifyAccountDescriptionRequest
@@ -2802,6 +3006,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBClusterAuditLogCollectorResponse
      */
     CompletableFuture<ModifyDBClusterAuditLogCollectorResponse> modifyDBClusterAuditLogCollector(ModifyDBClusterAuditLogCollectorRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBClusterAutoUpgradeMinorVersion  ModifyDBClusterAutoUpgradeMinorVersionRequest
+     * @return ModifyDBClusterAutoUpgradeMinorVersionResponse
+     */
+    CompletableFuture<ModifyDBClusterAutoUpgradeMinorVersionResponse> modifyDBClusterAutoUpgradeMinorVersion(ModifyDBClusterAutoUpgradeMinorVersionRequest request);
 
     /**
      * @param request the request parameters of ModifyDBClusterDeletion  ModifyDBClusterDeletionRequest
@@ -3006,6 +3216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBNodeHotReplicaModeResponse> modifyDBNodeHotReplicaMode(ModifyDBNodeHotReplicaModeRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBNodeRouterWeight  ModifyDBNodeRouterWeightRequest
+     * @return ModifyDBNodeRouterWeightResponse
+     */
+    CompletableFuture<ModifyDBNodeRouterWeightResponse> modifyDBNodeRouterWeight(ModifyDBNodeRouterWeightRequest request);
+
+    /**
      * @param request the request parameters of ModifyDBNodeSccMode  ModifyDBNodeSccModeRequest
      * @return ModifyDBNodeSccModeResponse
      */
@@ -3066,6 +3282,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyGlobalSecurityIPGroupRelationResponse> modifyGlobalSecurityIPGroupRelation(ModifyGlobalSecurityIPGroupRelationRequest request);
 
     /**
+     * @param request the request parameters of ModifyLakebaseMountParameterGroup  ModifyLakebaseMountParameterGroupRequest
+     * @return ModifyLakebaseMountParameterGroupResponse
+     */
+    CompletableFuture<ModifyLakebaseMountParameterGroupResponse> modifyLakebaseMountParameterGroup(ModifyLakebaseMountParameterGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyLakebaseS3AccountPolicy  ModifyLakebaseS3AccountPolicyRequest
+     * @return ModifyLakebaseS3AccountPolicyResponse
+     */
+    CompletableFuture<ModifyLakebaseS3AccountPolicyResponse> modifyLakebaseS3AccountPolicy(ModifyLakebaseS3AccountPolicyRequest request);
+
+    /**
      * @param request the request parameters of ModifyLogBackupPolicy  ModifyLogBackupPolicyRequest
      * @return ModifyLogBackupPolicyResponse
      */
@@ -3094,6 +3322,29 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPendingMaintenanceActionResponse
      */
     CompletableFuture<ModifyPendingMaintenanceActionResponse> modifyPendingMaintenanceAction(ModifyPendingMaintenanceActionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyPolarClawSkill  ModifyPolarClawSkillRequest
+     * @return ModifyPolarClawSkillResponse
+     */
+    CompletableFuture<ModifyPolarClawSkillResponse> modifyPolarClawSkill(ModifyPolarClawSkillRequest request);
+
+    /**
+     * @param request the request parameters of ModifyPolarFs  ModifyPolarFsRequest
+     * @return ModifyPolarFsResponse
+     */
+    CompletableFuture<ModifyPolarFsResponse> modifyPolarFs(ModifyPolarFsRequest request);
+
+    /**
+     * @param request the request parameters of ModifyPolarFsInstanceDescription  ModifyPolarFsInstanceDescriptionRequest
+     * @return ModifyPolarFsInstanceDescriptionResponse
+     */
+    CompletableFuture<ModifyPolarFsInstanceDescriptionResponse> modifyPolarFsInstanceDescription(ModifyPolarFsInstanceDescriptionRequest request);
 
     /**
      * @param request the request parameters of ModifyPolarFsMappingAuth  ModifyPolarFsMappingAuthRequest
@@ -3143,6 +3394,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyScheduleTaskResponse
      */
     CompletableFuture<ModifyScheduleTaskResponse> modifyScheduleTask(ModifyScheduleTaskRequest request);
+
+    /**
+     * @param request the request parameters of ModifySecurityIps  ModifySecurityIpsRequest
+     * @return ModifySecurityIpsResponse
+     */
+    CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
 
     /**
      * @param request the request parameters of MovePolarFsObjects  MovePolarFsObjectsRequest
@@ -3262,6 +3519,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAgenticDBTenantApiKeyResponse> resetAgenticDBTenantApiKey(ResetAgenticDBTenantApiKeyRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Only privileged accounts of PolarDB for MySQL clusters can be reset.</li>
+     * <li>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ResetApplicationAccountPassword  ResetApplicationAccountPasswordRequest
+     * @return ResetApplicationAccountPasswordResponse
+     */
+    CompletableFuture<ResetApplicationAccountPasswordResponse> resetApplicationAccountPassword(ResetApplicationAccountPasswordRequest request);
+
+    /**
      * @param request the request parameters of ResetConsumerApiKey  ResetConsumerApiKeyRequest
      * @return ResetConsumerApiKeyResponse
      */
@@ -3284,6 +3555,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestartAIDBClusterResponse
      */
     CompletableFuture<RestartAIDBClusterResponse> restartAIDBCluster(RestartAIDBClusterRequest request);
+
+    /**
+     * @param request the request parameters of RestartDBCluster  RestartDBClusterRequest
+     * @return RestartDBClusterResponse
+     */
+    CompletableFuture<RestartDBClusterResponse> restartDBCluster(RestartDBClusterRequest request);
 
     /**
      * @param request the request parameters of RestartDBLink  RestartDBLinkRequest
@@ -3446,6 +3723,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UninstallPolarClawPluginResponse
      */
     CompletableFuture<UninstallPolarClawPluginResponse> uninstallPolarClawPlugin(UninstallPolarClawPluginRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><code>PolarFsInstanceId</code> is required and identifies the Polarlakebase instance to operate on.</li>
+     * <li>The <code>FilePathIds</code> parameter is also required. It accepts a list of file path IDs in string format. These IDs correspond to the specific file paths whose quota rules need to be deleted. Ensure that each provided ID is valid and belongs to the specified Polarlakebase instance.</li>
+     * <li>A single API call can process quota deletion requests for multiple file paths. However, control the request size to avoid performance issues.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UninstallPolarClawSkills  UninstallPolarClawSkillsRequest
+     * @return UninstallPolarClawSkillsResponse
+     */
+    CompletableFuture<UninstallPolarClawSkillsResponse> uninstallPolarClawSkills(UninstallPolarClawSkillsRequest request);
 
     /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest
