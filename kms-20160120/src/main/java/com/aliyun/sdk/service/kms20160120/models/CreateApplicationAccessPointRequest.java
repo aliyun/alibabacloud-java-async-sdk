@@ -103,7 +103,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         } 
 
         /**
-         * <p>The authentication method. Currently, only ClientKey is supported.</p>
+         * <p>The authentication method. Only ClientKey is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>ClientKey</p>
@@ -115,7 +115,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The description of the AAP.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>aap description</p>
@@ -127,7 +127,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The name of the AAP.</p>
+         * <p>The name of the application access point (AAP).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,9 +140,9 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * <p>The permission policy.</p>
+         * <p>The attached access policies.</p>
          * <blockquote>
-         * <p>You can bind up to three permission policies to each AAP.</p>
+         * <p>You can attach up to three access policies to each application access point (AAP).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

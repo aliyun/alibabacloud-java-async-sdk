@@ -60,7 +60,7 @@ public class CancelKeyDeletionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CMK. The ID must be globally unique.</p>
+         * <p>The globally unique identifier of the master key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,8 +75,7 @@ public class CreateAliasRequest extends Request {
         } 
 
         /**
-         * <p>The alias of the CMK.</p>
-         * <p>The alias must be 1 to 255 characters in length and must contain the prefix <code>alias/</code>. The alias cannot be prefixed with the reserved word <code>alias/acs</code>.</p>
+         * <p>The alias of the CMK. The alias must be 1 to 255 characters in length, must contain the <code>alias/</code> prefix, and cannot start with the reserved word <code>alias/acs</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,7 +88,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * <p>The ID of the CMK. The ID must be globally unique.</p>
+         * <p>The globally unique identifier of the CMK.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -23,6 +23,15 @@ public class GenerateDataKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CiphertextForRecipient")
     private String ciphertextForRecipient;
 
+    @com.aliyun.core.annotation.NameInMap("DataKeyName")
+    private String dataKeyName;
+
+    @com.aliyun.core.annotation.NameInMap("DataKeyVersionId")
+    private String dataKeyVersionId;
+
+    @com.aliyun.core.annotation.NameInMap("DataKeyVersionName")
+    private String dataKeyVersionName;
+
     @com.aliyun.core.annotation.NameInMap("KeyId")
     private String keyId;
 
@@ -38,6 +47,9 @@ public class GenerateDataKeyResponseBody extends TeaModel {
     private GenerateDataKeyResponseBody(Builder builder) {
         this.ciphertextBlob = builder.ciphertextBlob;
         this.ciphertextForRecipient = builder.ciphertextForRecipient;
+        this.dataKeyName = builder.dataKeyName;
+        this.dataKeyVersionId = builder.dataKeyVersionId;
+        this.dataKeyVersionName = builder.dataKeyVersionName;
         this.keyId = builder.keyId;
         this.keyVersionId = builder.keyVersionId;
         this.plaintext = builder.plaintext;
@@ -71,6 +83,27 @@ public class GenerateDataKeyResponseBody extends TeaModel {
     }
 
     /**
+     * @return dataKeyName
+     */
+    public String getDataKeyName() {
+        return this.dataKeyName;
+    }
+
+    /**
+     * @return dataKeyVersionId
+     */
+    public String getDataKeyVersionId() {
+        return this.dataKeyVersionId;
+    }
+
+    /**
+     * @return dataKeyVersionName
+     */
+    public String getDataKeyVersionName() {
+        return this.dataKeyVersionName;
+    }
+
+    /**
      * @return keyId
      */
     public String getKeyId() {
@@ -101,6 +134,9 @@ public class GenerateDataKeyResponseBody extends TeaModel {
     public static final class Builder {
         private String ciphertextBlob; 
         private String ciphertextForRecipient; 
+        private String dataKeyName; 
+        private String dataKeyVersionId; 
+        private String dataKeyVersionName; 
         private String keyId; 
         private String keyVersionId; 
         private String plaintext; 
@@ -112,6 +148,9 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         private Builder(GenerateDataKeyResponseBody model) {
             this.ciphertextBlob = model.ciphertextBlob;
             this.ciphertextForRecipient = model.ciphertextForRecipient;
+            this.dataKeyName = model.dataKeyName;
+            this.dataKeyVersionId = model.dataKeyVersionId;
+            this.dataKeyVersionName = model.dataKeyVersionName;
             this.keyId = model.keyId;
             this.keyVersionId = model.keyVersionId;
             this.plaintext = model.plaintext;
@@ -130,7 +169,15 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * CiphertextForRecipient.
+         * <p>When the Recipient parameter is passed, the public key encryption of the plaintext data key (DK) is performed by using the pubkey in the extendUserData field of the Recipient parameter, and Base64 encoding is applied.
+         * The public key is the pubkey field in extendUserData.
+         * This parameter takes effect only when you invoke the API operation through a KMS instance gateway.</p>
+         * <blockquote>
+         * <p>Notice: This parameter takes effect only when you invoke the API operation through a dedicated gateway.</notice></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NIahY6pgjK4ZMP2R0EmsmBqntrv0AI2rcDyU7Su6uOT9Le7EOvlCpjHJfr9z3M0vkfulQoyuETmKSpYDfixE3auE4MwxloT6D9Gfsk6hm5FV2iAxL//Ms2kLv6K4z6yGi7lKm2yjX4***==</p>
          */
         public Builder ciphertextForRecipient(String ciphertextForRecipient) {
             this.ciphertextForRecipient = ciphertextForRecipient;
@@ -138,7 +185,40 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The key ID. If the KeyId parameter in the request uses a key alias or key ARN, the key ID is also returned in the response.</p>
+         * <p>If the invoke is used to generate a managed data key (DK), this field is not empty and indicates the name of the generated managed data key (DK).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-data-key</p>
+         */
+        public Builder dataKeyName(String dataKeyName) {
+            this.dataKeyName = dataKeyName;
+            return this;
+        }
+
+        /**
+         * <p>If the invoke is used to generate a managed data key (DK), this field is not empty and indicates the latest key version of the generated managed data key (DK).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyQEyD44</p>
+         */
+        public Builder dataKeyVersionId(String dataKeyVersionId) {
+            this.dataKeyVersionId = dataKeyVersionId;
+            return this;
+        }
+
+        /**
+         * <p>If the invoke is used to generate a managed data key (DK), this field is not empty and indicates the name of the credential that stores the key material of the latest version of the generated managed data key (DK).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kms-datakeyversion!example-data-key!eyQEyD44</p>
+         */
+        public Builder dataKeyVersionName(String dataKeyVersionName) {
+            this.dataKeyVersionName = dataKeyVersionName;
+            return this;
+        }
+
+        /**
+         * <p>The key ID. If the KeyId parameter in the request is set to the alias or ARN of the key, the key ID is also returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>key-hzz630494463ejqjx****</p>
@@ -149,7 +229,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The key version ID. The globally unique identifier of the CMK version.</p>
+         * <p>The key version ID, which is the globally unique identifier of the primary key version.</p>
          * 
          * <strong>example:</strong>
          * <p>2ab1a983-7072-4bbc-a582-584b5bd8****</p>
@@ -160,7 +240,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Base64 encoding of the plaintext of the data key (DK).</p>
+         * <p>The value of the plaintext of the data key (DK) after Base64 encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>QmFzZTY0IGVuY29kZWQgcGxhaW50****</p>
@@ -171,7 +251,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. The unique identifier generated by Alibaba Cloud for this request. You can use this ID to troubleshoot and locate issues.</p>
+         * <p>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>7021b6ec-4be7-4d3c-8a68-1e85d4d515a0</p>

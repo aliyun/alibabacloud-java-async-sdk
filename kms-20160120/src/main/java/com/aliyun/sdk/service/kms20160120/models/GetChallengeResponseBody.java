@@ -80,7 +80,10 @@ public class GetChallengeResponseBody extends TeaModel {
         } 
 
         /**
-         * ChallengeToken.
+         * <p>The challenge token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGciOiJSUzM4NCIsInR5cCI6IkpXVCJ9.eyJub25jZSI6Im1OWnpNVENTc3JVT1JTd1d1WFNneDlTNG80MW1Mc3FPS21xd0d4Tzk******E3NTU5NzIzMDB9.signature-part...=</p>
          */
         public Builder challengeToken(String challengeToken) {
             this.challengeToken = challengeToken;
@@ -88,7 +91,10 @@ public class GetChallengeResponseBody extends TeaModel {
         }
 
         /**
-         * Nonce.
+         * <p>The nonce.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mNZzMTCQ******4o1mLsqOKmqwGxO94i9c=</p>
          */
         public Builder nonce(String nonce) {
             this.nonce = nonce;
@@ -96,7 +102,10 @@ public class GetChallengeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c337a6ee-27d1-465e-acb2-dddef7c3c589</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

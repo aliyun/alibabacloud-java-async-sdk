@@ -60,7 +60,7 @@ public class DeletePolicyRequest extends Request {
         } 
 
         /**
-         * <p>The name of the permission policy that you want to delete.</p>
+         * <p>The name of the permission policy to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
