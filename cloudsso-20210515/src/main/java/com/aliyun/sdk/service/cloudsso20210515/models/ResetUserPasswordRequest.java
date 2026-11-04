@@ -34,6 +34,10 @@ public class ResetUserPasswordRequest extends Request {
     private Boolean requirePasswordResetForNextLogin;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetMethod")
+    private String resetMethod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -43,6 +47,7 @@ public class ResetUserPasswordRequest extends Request {
         this.generateRandomPassword = builder.generateRandomPassword;
         this.password = builder.password;
         this.requirePasswordResetForNextLogin = builder.requirePasswordResetForNextLogin;
+        this.resetMethod = builder.resetMethod;
         this.userId = builder.userId;
     }
 
@@ -88,6 +93,13 @@ public class ResetUserPasswordRequest extends Request {
     }
 
     /**
+     * @return resetMethod
+     */
+    public String getResetMethod() {
+        return this.resetMethod;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -99,6 +111,7 @@ public class ResetUserPasswordRequest extends Request {
         private Boolean generateRandomPassword; 
         private String password; 
         private Boolean requirePasswordResetForNextLogin; 
+        private String resetMethod; 
         private String userId; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class ResetUserPasswordRequest extends Request {
             this.generateRandomPassword = request.generateRandomPassword;
             this.password = request.password;
             this.requirePasswordResetForNextLogin = request.requirePasswordResetForNextLogin;
+            this.resetMethod = request.resetMethod;
             this.userId = request.userId;
         } 
 
@@ -172,6 +186,15 @@ public class ResetUserPasswordRequest extends Request {
         public Builder requirePasswordResetForNextLogin(Boolean requirePasswordResetForNextLogin) {
             this.putQueryParameter("RequirePasswordResetForNextLogin", requirePasswordResetForNextLogin);
             this.requirePasswordResetForNextLogin = requirePasswordResetForNextLogin;
+            return this;
+        }
+
+        /**
+         * ResetMethod.
+         */
+        public Builder resetMethod(String resetMethod) {
+            this.putQueryParameter("ResetMethod", resetMethod);
+            this.resetMethod = resetMethod;
             return this;
         }
 
