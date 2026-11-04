@@ -147,11 +147,11 @@ public class GetMigrationVerifyCodeRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>29348393884****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -173,7 +173,7 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * <p>The method to obtain the verification code. Valid values: SMS and VOICE.</p>
+         * <p>The verification code delivery method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,11 +195,11 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * <p>Phone number.</p>
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>8613800001234</p>
+         * <p>861380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

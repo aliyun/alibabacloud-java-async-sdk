@@ -177,6 +177,7 @@ public class CreateMessageCampaignRequest extends Request {
         } 
 
         /**
+         * <p>The Meta ad account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +190,7 @@ public class CreateMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The budget, in cents.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,6 +203,7 @@ public class CreateMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The budget type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,6 +216,7 @@ public class CreateMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The space ID of an Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,10 +229,11 @@ public class CreateMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The budget name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Example</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -246,6 +251,7 @@ public class CreateMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The Messenger Page ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

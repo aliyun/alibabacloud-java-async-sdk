@@ -202,10 +202,10 @@ public class GetChatappTemplateMetricRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the RAM user within the ISV account.</p>
+         * <p>The space ID or instance ID of the ISV sub-customer, which is also the channel ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> interface.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>cams-************</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -214,7 +214,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end time of the query. This value is a timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,11 +227,10 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * <p>The granularity of the metric.</p>
-         * <p>Valid values:</p>
+         * <p>The metric granularity. Valid values:</p>
          * <ul>
-         * <li>DAILY</li>
-         * <li>HALF_HOUR</li>
+         * <li>DAILY: collects metrics on a daily basis.</li>
+         * <li>HALF_HOUR: collects metrics every half hour.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,10 +243,10 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
+         * <p>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</p>
          * 
          * <strong>example:</strong>
-         * <p>skdi3kksloslikdkkdk</p>
+         * <p>skdi3kksloslikd****</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -256,7 +255,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * <p>The template language.</p>
+         * <p>The template language. For more languages, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -295,7 +294,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start time of the query. This value is a timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,11 +307,11 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * <p>The template code.</p>
+         * <p>The template code. You can view the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Template Design</strong> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>744c4b5c79c9432497a075bdfca36bf5</p>
+         * <p>1100***************</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -321,12 +320,13 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * <p>The template type. If you do not specify this parameter, the default value WHATSAPP is used.</p>
-         * <p>Valid values:</p>
+         * <p>The templatetype. Valid values:</p>
          * <ul>
-         * <li>VIBER</li>
          * <li>WHATSAPP</li>
          * </ul>
+         * <blockquote>
+         * <p>If this parameter is not specified, the default value is WHATSAPP.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>WHATSAPP</p>

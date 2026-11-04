@@ -119,7 +119,7 @@ public class ListProductResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>Details about the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -130,10 +130,12 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>A value of OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +147,7 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The message returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -156,7 +158,7 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder model(Model model) {
             this.model = model;
@@ -175,10 +177,12 @@ public class ListProductResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request was successful.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +252,7 @@ public class ListProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cursor that points to the end of the page of the returned data.</p>
+             * <p>The cursor that points to the next page.</p>
              * 
              * <strong>example:</strong>
              * <p>sjsuueu83838</p>
@@ -259,7 +263,7 @@ public class ListProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cursor that points to the beginning of the page of the returned data.</p>
+             * <p>The cursor that points to the previous page.</p>
              * 
              * <strong>example:</strong>
              * <p>sjjsjdjjdjd83883</p>
@@ -316,7 +320,7 @@ public class ListProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cursors for pagination.</p>
+             * <p>The cursors for paging.</p>
              */
             public Builder cursors(Cursors cursors) {
                 this.cursors = cursors;
@@ -391,7 +395,7 @@ public class ListProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pagination details.</p>
+             * <p>Paging details.</p>
              */
             public Builder paging(Paging paging) {
                 this.paging = paging;

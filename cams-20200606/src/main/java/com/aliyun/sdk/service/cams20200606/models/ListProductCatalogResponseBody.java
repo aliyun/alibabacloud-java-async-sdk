@@ -130,10 +130,12 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>A value of OK indicates that the request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +158,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned result.</p>
          */
         public Builder model(Model model) {
             this.model = model;
@@ -175,10 +177,10 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +250,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cursor that points to the end of the page of the returned data.</p>
+             * <p>The cursor for the next record.</p>
              * 
              * <strong>example:</strong>
              * <p>sjsuueu83838</p>
@@ -259,7 +261,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cursor that points to the beginning of the page of the returned data.</p>
+             * <p>The cursor for the previous record.</p>
              * 
              * <strong>example:</strong>
              * <p>sjjsjdjjdjd83883</p>
@@ -316,7 +318,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cursors for pagination.</p>
+             * <p>The pagination cursors.</p>
              */
             public Builder cursors(Cursors cursors) {
                 this.cursors = cursors;
@@ -383,7 +385,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned data.</p>
+             * <p>The returned data object.</p>
              */
             public Builder data(java.util.List<java.util.Map<String, ?>> data) {
                 this.data = data;

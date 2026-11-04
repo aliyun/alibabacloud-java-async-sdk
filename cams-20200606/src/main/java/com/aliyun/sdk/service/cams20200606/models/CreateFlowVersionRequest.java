@@ -157,7 +157,7 @@ public class CreateFlowVersionRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -169,7 +169,7 @@ public class CreateFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -182,10 +182,10 @@ public class CreateFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>f4912c16943b4dfba44bd6fedacf****</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -194,7 +194,7 @@ public class CreateFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>The flow version to be copied.</p>
+         * <p>The flow version to copy. Click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to enter the canvas orchestration page and view historical flow versions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,10 +215,10 @@ public class CreateFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Version remarks.</p>
+         * <p>The version remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>Fix Send WhatsApp Message Error</p>
+         * <p>Fix WhatsApp message sending error.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

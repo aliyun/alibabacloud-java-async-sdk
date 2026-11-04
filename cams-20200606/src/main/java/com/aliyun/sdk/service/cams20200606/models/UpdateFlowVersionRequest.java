@@ -185,7 +185,7 @@ public class UpdateFlowVersionRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -197,7 +197,7 @@ public class UpdateFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -210,10 +210,10 @@ public class UpdateFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>f4912c16943b4dfba44bd6fedacf****</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -222,7 +222,7 @@ public class UpdateFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow version</p>
+         * <p>The flow version. You can click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the flow editor canvas page and view the flow version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -234,10 +234,20 @@ public class UpdateFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>DSL data of the flow version</p>
+         * <p>The DSL data of the flow version. This is a JSON-formatted data string. You can orchestrate flow components on the flow editor canvas in advance, save the flow, and then click <strong>Settings</strong> &gt; <strong>Export</strong> in the upper-right corner of the canvas orchestration page to export a JSON-formatted data file for viewing.</p>
          * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>{
+         *   &quot;schema&quot;: {
+         *     &quot;namespace&quot;: &quot;External&quot;,
+         *     &quot;version&quot;: &quot;1.0&quot;,
+         *     &quot;copyright&quot;: &quot;Alibaba Cloud&quot;
+         *   },
+         *   &quot;editor&quot;: &quot;H4sIAAAAAAAAA+1YbU/c***********************&quot;,
+         *   &quot;flow&quot;: {
+         *     &quot;triggerType&quot;: &quot;TriggeredByWhatsApp&quot;
+         *   }
+         * }</p>
          */
         public Builder flowViewModel(String flowViewModel) {
             this.putQueryParameter("FlowViewModel", flowViewModel);
@@ -255,10 +265,10 @@ public class UpdateFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Version remarks</p>
+         * <p>The version remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>Fix Send WhatsApp Message Error</p>
+         * <p>Fix WhatsApp message sending error</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -285,7 +295,10 @@ public class UpdateFlowVersionRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The save type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

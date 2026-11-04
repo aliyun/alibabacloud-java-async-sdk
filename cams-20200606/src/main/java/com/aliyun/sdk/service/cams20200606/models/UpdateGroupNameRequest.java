@@ -117,10 +117,11 @@ public class UpdateGroupNameRequest extends Request {
         } 
 
         /**
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>Sample value sample value sample value.</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -129,10 +130,11 @@ public class UpdateGroupNameRequest extends Request {
         }
 
         /**
+         * <p>The group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value sample value.</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

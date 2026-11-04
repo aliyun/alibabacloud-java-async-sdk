@@ -188,7 +188,10 @@ public class ListMessageCampaignRequest extends Request {
         } 
 
         /**
-         * AdAccountId.
+         * <p>The Meta ad account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>239**</p>
          */
         public Builder adAccountId(String adAccountId) {
             this.putQueryParameter("AdAccountId", adAccountId);
@@ -197,7 +200,10 @@ public class ListMessageCampaignRequest extends Request {
         }
 
         /**
-         * CampaignId.
+         * <p>The budget ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233**</p>
          */
         public Builder campaignId(String campaignId) {
             this.putQueryParameter("CampaignId", campaignId);
@@ -206,7 +212,10 @@ public class ListMessageCampaignRequest extends Request {
         }
 
         /**
-         * CampaignName.
+         * <p>The budget name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-campaign</p>
          */
         public Builder campaignName(String campaignName) {
             this.putQueryParameter("CampaignName", campaignName);
@@ -215,6 +224,7 @@ public class ListMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,6 +246,7 @@ public class ListMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The pagination parameter object.</p>
          * <p>This parameter is required.</p>
          */
         public Builder page(Page page) {
@@ -246,6 +257,7 @@ public class ListMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The Page ID of Messenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +288,10 @@ public class ListMessageCampaignRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The budget status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -346,6 +361,7 @@ public class ListMessageCampaignRequest extends Request {
             } 
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -357,6 +373,7 @@ public class ListMessageCampaignRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

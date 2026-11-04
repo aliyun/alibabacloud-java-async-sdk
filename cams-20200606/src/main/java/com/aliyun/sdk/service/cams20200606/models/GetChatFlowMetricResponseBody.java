@@ -119,10 +119,10 @@ public class GetChatFlowMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of access denial.</p>
+         * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -130,7 +130,7 @@ public class GetChatFlowMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,10 +141,7 @@ public class GetChatFlowMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>无</p>
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -152,10 +149,10 @@ public class GetChatFlowMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -163,10 +160,10 @@ public class GetChatFlowMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Unique request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,10 +171,16 @@ public class GetChatFlowMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful. Values: true: success; false: failure.</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: successful.</p>
+         * </li>
+         * <li><p>false: failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

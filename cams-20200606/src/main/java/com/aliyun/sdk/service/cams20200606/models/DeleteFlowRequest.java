@@ -116,7 +116,10 @@ public class DeleteFlowRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The SpaceId of the ISV sub-customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-awlkj23a09jd</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -125,10 +128,11 @@ public class DeleteFlowRequest extends Request {
         }
 
         /**
+         * <p>The workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>346699123</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

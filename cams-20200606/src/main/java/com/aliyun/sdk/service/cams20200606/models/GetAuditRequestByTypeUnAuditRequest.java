@@ -117,6 +117,7 @@ public class GetAuditRequestByTypeUnAuditRequest extends Request {
         } 
 
         /**
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the <a href="https://chatapp.console.aliyun.com/CustomerList">China Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +139,7 @@ public class GetAuditRequestByTypeUnAuditRequest extends Request {
         }
 
         /**
+         * <p>The request type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

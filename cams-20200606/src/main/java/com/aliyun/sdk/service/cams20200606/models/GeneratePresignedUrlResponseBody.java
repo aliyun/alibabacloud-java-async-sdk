@@ -119,7 +119,10 @@ public class GeneratePresignedUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class GeneratePresignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class GeneratePresignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class GeneratePresignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class GeneratePresignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,16 @@ public class GeneratePresignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +239,10 @@ public class GeneratePresignedUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * Url.
+             * <p>The material path.</p>
+             * <blockquote>
+             * <p>For Viber, the recommended image size is 800 × 800.</p>
+             * </blockquote>
              */
             public Builder url(String url) {
                 this.url = url;

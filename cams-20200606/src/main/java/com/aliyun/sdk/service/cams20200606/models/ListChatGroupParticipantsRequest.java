@@ -160,6 +160,7 @@ public class ListChatGroupParticipantsRequest extends Request {
         } 
 
         /**
+         * <p>The business phone number. You can view the business phone number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,16 @@ public class ListChatGroupParticipantsRequest extends Request {
         }
 
         /**
-         * ChannelType.
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><strong>WHATSAPP</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>Only the WhatsApp channel type is supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -181,6 +191,7 @@ public class ListChatGroupParticipantsRequest extends Request {
         }
 
         /**
+         * <p>The space ID of the ISV sub-customer, which is also the instance ID. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +204,7 @@ public class ListChatGroupParticipantsRequest extends Request {
         }
 
         /**
+         * <p>The group ID. You can view the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +226,7 @@ public class ListChatGroupParticipantsRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -301,7 +313,10 @@ public class ListChatGroupParticipantsRequest extends Request {
             } 
 
             /**
-             * Index.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -309,7 +324,10 @@ public class ListChatGroupParticipantsRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;

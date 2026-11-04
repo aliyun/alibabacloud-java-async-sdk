@@ -119,7 +119,7 @@ public class GetWhatsappConnectionCatalogRequest extends Request {
          * <p>The space ID of the user within the ISV account.</p>
          * 
          * <strong>example:</strong>
-         * <p>C2020939922929292</p>
+         * <p>C20209399229****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -159,7 +159,7 @@ public class GetWhatsappConnectionCatalogRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>292939399393</p>
+         * <p>29293939****</p>
          */
         public Builder wabaId(String wabaId) {
             this.putQueryParameter("WabaId", wabaId);

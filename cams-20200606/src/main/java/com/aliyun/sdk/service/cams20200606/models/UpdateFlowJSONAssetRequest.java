@@ -131,7 +131,10 @@ public class UpdateFlowJSONAssetRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-sdk2j3dnxxxx</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -140,10 +143,11 @@ public class UpdateFlowJSONAssetRequest extends Request {
         }
 
         /**
+         * <p>The file path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p><a href="http://www.xxxx.com/files/document.json">http://www.xxxx.com/files/document.json</a></p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -152,10 +156,11 @@ public class UpdateFlowJSONAssetRequest extends Request {
         }
 
         /**
+         * <p>The flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>2322334234234</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

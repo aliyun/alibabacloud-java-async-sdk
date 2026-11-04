@@ -196,7 +196,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * ContactMail.
+         * <p>The contact email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@alibaba.com">123@alibaba.com</a></p>
          */
         public Builder contactMail(String contactMail) {
             this.putQueryParameter("ContactMail", contactMail);
@@ -205,7 +208,13 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * CountryId.
+         * <p>The country code.</p>
+         * <blockquote>
+         * <p>For a list of country codes, see <a href="https://help.aliyun.com/document_detail/608210.html">Country Codes</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder countryId(String countryId) {
             this.putQueryParameter("CountryId", countryId);
@@ -214,10 +223,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * <p>fb bmId</p>
+         * <p>The Facebook Business Manager ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3939982828</p>
+         * <p>393998****</p>
          */
         public Builder facebookBmId(String facebookBmId) {
             this.putQueryParameter("FacebookBmId", facebookBmId);
@@ -226,7 +235,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceDescription.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ins</p>
          */
         public Builder instanceDescription(String instanceDescription) {
             this.putQueryParameter("InstanceDescription", instanceDescription);
@@ -235,6 +247,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,6 +260,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +273,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * IsConfirmAudit.
+         * <p>Specifies whether to enable automatic audit confirmation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder isConfirmAudit(String isConfirmAudit) {
             this.putQueryParameter("IsConfirmAudit", isConfirmAudit);
@@ -268,7 +285,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * IsvTerms.
+         * <p>The URL of the Independent Software Vendor (ISV) agreement file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aa.com/a.pdf">https://aa.com/a.pdf</a></p>
          */
         public Builder isvTerms(String isvTerms) {
             this.putQueryParameter("IsvTerms", isvTerms);
@@ -277,7 +297,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * OfficeAddress.
+         * <p>The company address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder officeAddress(String officeAddress) {
             this.putQueryParameter("OfficeAddress", officeAddress);

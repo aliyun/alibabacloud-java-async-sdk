@@ -119,10 +119,10 @@ public class FlowBindPhoneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of access denial; this field is returned only when RAM verification fails.</p>
+         * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -130,10 +130,10 @@ public class FlowBindPhoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,10 +141,10 @@ public class FlowBindPhoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error description message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,7 +152,13 @@ public class FlowBindPhoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return result.</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The operation is successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -163,10 +169,10 @@ public class FlowBindPhoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +180,13 @@ public class FlowBindPhoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful. Values: true: success; false: failure.</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The operation is successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

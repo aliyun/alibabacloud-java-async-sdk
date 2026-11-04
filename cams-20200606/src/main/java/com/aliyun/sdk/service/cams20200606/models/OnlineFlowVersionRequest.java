@@ -157,7 +157,7 @@ public class OnlineFlowVersionRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -169,7 +169,7 @@ public class OnlineFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -182,7 +182,7 @@ public class OnlineFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
          * 
          * <strong>example:</strong>
          * <p>f4912c16943b4dfba44bd6fedacf****</p>
@@ -194,7 +194,7 @@ public class OnlineFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow version</p>
+         * <p>The flow version. You can click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas page and view the flow version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,10 +215,10 @@ public class OnlineFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Remark</p>
+         * <p>The flow remark. You can view the flow remark on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>Let&quot;s go online.</p>
+         * <p>Trigger verification template delivery through API.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

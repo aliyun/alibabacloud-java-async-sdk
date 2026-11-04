@@ -116,7 +116,10 @@ public class ListPhoneMessageQrdlRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-8filvjc8snw</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -134,10 +137,11 @@ public class ListPhoneMessageQrdlRequest extends Request {
         }
 
         /**
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>86163********</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

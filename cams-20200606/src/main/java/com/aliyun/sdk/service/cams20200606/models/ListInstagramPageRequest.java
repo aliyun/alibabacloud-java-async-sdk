@@ -102,6 +102,7 @@ public class ListInstagramPageRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. Only non-Alibaba Cloud hosts are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -130,7 +130,7 @@ public class AddAuditViberOpenRequest extends Request {
         } 
 
         /**
-         * AuditRecord.
+         * <p>The audit record.</p>
          */
         public Builder auditRecord(AuditRecord auditRecord) {
             String auditRecordShrink = shrink(auditRecord, "AuditRecord", "json");
@@ -140,7 +140,10 @@ public class AddAuditViberOpenRequest extends Request {
         }
 
         /**
-         * AuditResult.
+         * <p>The audit result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder auditResult(String auditResult) {
             this.putQueryParameter("AuditResult", auditResult);
@@ -149,10 +152,11 @@ public class AddAuditViberOpenRequest extends Request {
         }
 
         /**
+         * <p>The SpaceId of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>example</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -247,7 +251,10 @@ public class AddAuditViberOpenRequest extends Request {
             } 
 
             /**
-             * CompanyAddress.
+             * <p>The company address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>address</p>
              */
             public Builder companyAddress(String companyAddress) {
                 this.companyAddress = companyAddress;
@@ -255,7 +262,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompanyAddressTitle.
+             * <p>The title of the company address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder companyAddressTitle(String companyAddressTitle) {
                 this.companyAddressTitle = companyAddressTitle;
@@ -322,7 +332,10 @@ public class AddAuditViberOpenRequest extends Request {
             } 
 
             /**
-             * CompanyTelNumber.
+             * <p>The company telephone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>156********</p>
              */
             public Builder companyTelNumber(String companyTelNumber) {
                 this.companyTelNumber = companyTelNumber;
@@ -330,7 +343,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompanyTelTitle.
+             * <p>The title of the company telephone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder companyTelTitle(String companyTelTitle) {
                 this.companyTelTitle = companyTelTitle;
@@ -748,7 +764,10 @@ public class AddAuditViberOpenRequest extends Request {
             } 
 
             /**
-             * AgeLimit.
+             * <p>The age limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder ageLimit(String ageLimit) {
                 this.ageLimit = ageLimit;
@@ -756,7 +775,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * BusinessAccountName.
+             * <p>The business account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder businessAccountName(String businessAccountName) {
                 this.businessAccountName = businessAccountName;
@@ -764,7 +786,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * BusinessLicenseRegistrationNumber.
+             * <p>The business license registration number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder businessLicenseRegistrationNumber(String businessLicenseRegistrationNumber) {
                 this.businessLicenseRegistrationNumber = businessLicenseRegistrationNumber;
@@ -772,7 +797,7 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompanyAddress.
+             * <p>The list of company addresses.</p>
              */
             public Builder companyAddress(java.util.List<CompanyAddress> companyAddress) {
                 this.companyAddress = companyAddress;
@@ -780,7 +805,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompanyEnglishName.
+             * <p>The English name of the company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7Pj6</p>
              */
             public Builder companyEnglishName(String companyEnglishName) {
                 this.companyEnglishName = companyEnglishName;
@@ -788,7 +816,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompanyLegalName.
+             * <p>The legal name of the company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder companyLegalName(String companyLegalName) {
                 this.companyLegalName = companyLegalName;
@@ -796,7 +827,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompanyLegalPerson.
+             * <p>The legal representative of the company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jerry</p>
              */
             public Builder companyLegalPerson(String companyLegalPerson) {
                 this.companyLegalPerson = companyLegalPerson;
@@ -804,7 +838,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompanyProfile.
+             * <p>The company profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CompanyProfile</p>
              */
             public Builder companyProfile(String companyProfile) {
                 this.companyProfile = companyProfile;
@@ -812,7 +849,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompanyRegisteredCountry.
+             * <p>The country where the company is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder companyRegisteredCountry(String companyRegisteredCountry) {
                 this.companyRegisteredCountry = companyRegisteredCountry;
@@ -820,7 +860,7 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompanyTel.
+             * <p>The list of company telephone objects.</p>
              */
             public Builder companyTel(java.util.List<CompanyTel> companyTel) {
                 this.companyTel = companyTel;
@@ -828,7 +868,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * CompleteAddressOfHeadquarters.
+             * <p>The complete address of the headquarters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder completeAddressOfHeadquarters(String completeAddressOfHeadquarters) {
                 this.completeAddressOfHeadquarters = completeAddressOfHeadquarters;
@@ -836,7 +879,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * ContactEmail.
+             * <p>The email address of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7151***<a href="mailto:5@qq.com">5@qq.com</a></p>
              */
             public Builder contactEmail(String contactEmail) {
                 this.contactEmail = contactEmail;
@@ -844,7 +890,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * ContactMail.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:123@123.com">123@123.com</a></p>
              */
             public Builder contactMail(String contactMail) {
                 this.contactMail = contactMail;
@@ -852,7 +901,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * ContactName.
+             * <p>The name of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mary</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -860,7 +912,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * ContactPhone.
+             * <p>The phone number of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8615115**777</p>
              */
             public Builder contactPhone(String contactPhone) {
                 this.contactPhone = contactPhone;
@@ -868,7 +923,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * ContactPosition.
+             * <p>The position of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder contactPosition(String contactPosition) {
                 this.contactPosition = contactPosition;
@@ -876,7 +934,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * EnableAutoReply.
+             * <p>Specifies whether to enable auto-reply.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder enableAutoReply(String enableAutoReply) {
                 this.enableAutoReply = enableAutoReply;
@@ -884,7 +945,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * IndustryDescription.
+             * <p>The industry description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder industryDescription(String industryDescription) {
                 this.industryDescription = industryDescription;
@@ -892,7 +956,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * IndustryInvolved.
+             * <p>The industry involved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NFUwytiBnm11</p>
              */
             public Builder industryInvolved(String industryInvolved) {
                 this.industryInvolved = industryInvolved;
@@ -900,7 +967,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * LetterGuarantee.
+             * <p>The letter of guarantee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tiCaYNHR8ttt</p>
              */
             public Builder letterGuarantee(String letterGuarantee) {
                 this.letterGuarantee = letterGuarantee;
@@ -908,7 +978,7 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * Logo.
+             * <p>The list of logos.</p>
              */
             public Builder logo(java.util.List<String> logo) {
                 this.logo = logo;
@@ -916,7 +986,7 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * MessageDestinationCountry.
+             * <p>The list of message destination countries.</p>
              */
             public Builder messageDestinationCountry(java.util.List<String> messageDestinationCountry) {
                 this.messageDestinationCountry = messageDestinationCountry;
@@ -924,7 +994,7 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * MessageDestinationInternationalCountry.
+             * <p>The list of international destination countries for messages.</p>
              */
             public Builder messageDestinationInternationalCountry(java.util.List<String> messageDestinationInternationalCountry) {
                 this.messageDestinationInternationalCountry = messageDestinationInternationalCountry;
@@ -932,7 +1002,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * MessageDialogueIntroduction.
+             * <p>The introduction of the message dialog box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder messageDialogueIntroduction(String messageDialogueIntroduction) {
                 this.messageDialogueIntroduction = messageDialogueIntroduction;
@@ -940,7 +1013,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * MessageEnableDate.
+             * <p>The date when messaging is enabled, in the YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder messageEnableDate(String messageEnableDate) {
                 this.messageEnableDate = messageEnableDate;
@@ -948,7 +1024,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * MessageSessionName.
+             * <p>The message session name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nPHK8uaRo</p>
              */
             public Builder messageSessionName(String messageSessionName) {
                 this.messageSessionName = messageSessionName;
@@ -956,7 +1035,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * OtherLetterGuarantee.
+             * <p>The other letter of guarantee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder otherLetterGuarantee(String otherLetterGuarantee) {
                 this.otherLetterGuarantee = otherLetterGuarantee;
@@ -964,7 +1046,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * ReplyContent.
+             * <p>The reply content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder replyContent(String replyContent) {
                 this.replyContent = replyContent;
@@ -972,7 +1057,10 @@ public class AddAuditViberOpenRequest extends Request {
             }
 
             /**
-             * WebAddress.
+             * <p>The web address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder webAddress(String webAddress) {
                 this.webAddress = webAddress;

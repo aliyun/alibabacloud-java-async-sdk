@@ -106,7 +106,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If OK is returned, the request was successful.</p>
+         * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -133,7 +136,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error description information.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -216,7 +219,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
              * <p>The file path.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://url.com/json.json">https://url.com/json.json</a></p>
+             * <p><a href="https://bucket-*****-ap-southeast-1.aliyuncs.com/9658820125168****.json">https://bucket-*****-ap-southeast-1.aliyuncs.com/9658820125168****.json</a></p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -224,10 +227,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Flow ID.</p>
+             * <p>Flow ID。</p>
              * 
              * <strong>example:</strong>
-             * <p>flow_id_arms</p>
+             * <p>92675332812643****</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;

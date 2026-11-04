@@ -171,7 +171,7 @@ public class ReadFlowVersionRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -183,7 +183,7 @@ public class ReadFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -196,7 +196,10 @@ public class ReadFlowVersionRequest extends Request {
         }
 
         /**
-         * DraftVersion.
+         * <p>The draft version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample valueSample value</p>
          */
         public Builder draftVersion(String draftVersion) {
             this.putQueryParameter("DraftVersion", draftVersion);
@@ -205,10 +208,10 @@ public class ReadFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>f4912c16943b4dfba44bd6fedacf****</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -217,7 +220,7 @@ public class ReadFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow version</p>
+         * <p>The flow version. You can click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view the flow version, or call <a href="https://help.aliyun.com/document_detail/2937202.html">ListFlowVersion</a> to retrieve the flow version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -256,7 +259,13 @@ public class ReadFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow version status.</p>
+         * <p>The flow version status. Valid values:</p>
+         * <ul>
+         * <li>DRAFT: draft.</li>
+         * <li>DELETED: deleted.</li>
+         * <li>ONLINE: online.</li>
+         * <li>OFFLINE: offline.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DRAFT</p>

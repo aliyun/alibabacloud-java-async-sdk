@@ -119,7 +119,10 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>A value of OK indicates that the request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,16 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +278,10 @@ public class ListPageAdAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * AdAccountId.
+             * <p>The Meta ad account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29393****</p>
              */
             public Builder adAccountId(String adAccountId) {
                 this.adAccountId = adAccountId;
@@ -259,7 +289,10 @@ public class ListPageAdAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AdAccountName.
+             * <p>The name of the ad account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder adAccountName(String adAccountName) {
                 this.adAccountName = adAccountName;
@@ -267,7 +300,10 @@ public class ListPageAdAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -275,7 +311,10 @@ public class ListPageAdAccountResponseBody extends TeaModel {
             }
 
             /**
-             * PageId.
+             * <p>The Page ID of Messenger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2030***</p>
              */
             public Builder pageId(String pageId) {
                 this.pageId = pageId;

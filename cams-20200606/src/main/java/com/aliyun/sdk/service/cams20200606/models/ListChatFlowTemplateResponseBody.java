@@ -119,10 +119,10 @@ public class ListChatFlowTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Access denied details.</p>
+         * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -130,7 +130,7 @@ public class ListChatFlowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,7 +141,7 @@ public class ListChatFlowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data object.</p>
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,10 +149,10 @@ public class ListChatFlowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -160,10 +160,10 @@ public class ListChatFlowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,7 +171,13 @@ public class ListChatFlowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful. Values: true: success; false: failure.</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -227,10 +233,7 @@ public class ListChatFlowTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Content of the returned data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>无</p>
+             * <p>The content of the returned data.</p>
              */
             public Builder response(java.util.Map<String, ?> response) {
                 this.response = response;

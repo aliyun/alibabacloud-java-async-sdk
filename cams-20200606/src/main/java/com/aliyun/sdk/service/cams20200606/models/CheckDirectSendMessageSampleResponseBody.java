@@ -119,7 +119,10 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>A value of OK indicates that the request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,16 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +252,16 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The WhatsApp template category. Valid values:</p>
+             * <ul>
+             * <li><p><strong>UTILITY</strong>: transaction-related.</p>
+             * </li>
+             * <li><p><strong>MARKETING</strong>: marketing template.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -233,7 +269,16 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation is successful. Valid values:</p>
+             * <ul>
+             * <li><p>true: Successful.</p>
+             * </li>
+             * <li><p>false: Failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

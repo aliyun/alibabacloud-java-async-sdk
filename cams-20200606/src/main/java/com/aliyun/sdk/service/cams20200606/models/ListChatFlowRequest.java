@@ -255,7 +255,7 @@ public class ListChatFlowRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -267,7 +267,7 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -280,7 +280,10 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * FlowCode.
+         * <p>flowCode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValueSampleValue</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -289,7 +292,10 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * FlowStatus.
+         * <p>The flow status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValueSampleValue</p>
          */
         public Builder flowStatus(String flowStatus) {
             this.putQueryParameter("FlowStatus", flowStatus);
@@ -298,7 +304,7 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Flow trigger type, enum values:</p>
+         * <p>The flow trigger type. Valid values:</p>
          * <ul>
          * <li>TriggeredManually</li>
          * <li>TriggeredByWhatsApp</li>
@@ -308,7 +314,7 @@ public class ListChatFlowRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>TriggeredByWhatsApp</p>
          */
         public Builder flowTriggerType(String flowTriggerType) {
             this.putQueryParameter("FlowTriggerType", flowTriggerType);
@@ -317,10 +323,10 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Search keyword.</p>
+         * <p>The search keyword. This parameter is used for fuzzy match of flow names.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>LLM</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -338,7 +344,7 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -350,7 +356,7 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -362,7 +368,10 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValue</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -389,7 +398,13 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Whether to return the online status</p>
+         * <p>Specifies whether to return the online status. Valid values:</p>
+         * <ul>
+         * <li><p>true: Yes.</p>
+         * </li>
+         * <li><p>false: No.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -401,7 +416,7 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Flow status</p>
+         * <p>The flow status. Default value: NORMAL.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -413,7 +428,10 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValueSampleValue</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

@@ -119,7 +119,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details about why access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code of the response.</p>
+         * <ul>
+         * <li><p><code>OK</code> indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. If the request fails, this field contains error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,16 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +317,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelType.
+             * <p>The channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIBER</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -298,7 +328,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>des</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +339,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>des</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -314,7 +350,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>293992992</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -322,7 +361,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ins</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -330,7 +372,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The ID of the region where the instance is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -338,7 +383,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * <p>The time when the instance information was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-01 00:00:00</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;

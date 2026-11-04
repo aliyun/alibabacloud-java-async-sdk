@@ -162,6 +162,7 @@ public class CreateMessengerPageRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the authorized ad accounts.</p>
          * <p>This parameter is required.</p>
          */
         public Builder adAccountIds(java.util.List<String> adAccountIds) {
@@ -172,6 +173,7 @@ public class CreateMessengerPageRequest extends Request {
         }
 
         /**
+         * <p>The authorization code obtained after the embedded authorization is completed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +186,7 @@ public class CreateMessengerPageRequest extends Request {
         }
 
         /**
+         * <p>The Business platform ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +199,7 @@ public class CreateMessengerPageRequest extends Request {
         }
 
         /**
+         * <p>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +221,7 @@ public class CreateMessengerPageRequest extends Request {
         }
 
         /**
+         * <p>The PageId of the messenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

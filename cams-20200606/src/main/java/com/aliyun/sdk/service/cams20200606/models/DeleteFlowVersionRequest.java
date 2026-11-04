@@ -143,7 +143,7 @@ public class DeleteFlowVersionRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -155,7 +155,7 @@ public class DeleteFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -168,10 +168,10 @@ public class DeleteFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>f4912c16943b4dfba44bd6fedacf****</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -180,7 +180,7 @@ public class DeleteFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow version</p>
+         * <p>The flow version. Click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas page and view the flow version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

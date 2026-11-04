@@ -122,7 +122,7 @@ public class GetCommerceSettingResponseBody extends TeaModel {
          * <p>Access denied for detailed information.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>无</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -132,8 +132,10 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         /**
          * <p>The response code.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>The value OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +158,7 @@ public class GetCommerceSettingResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,8 +179,10 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,8 +254,10 @@ public class GetCommerceSettingResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the shopping cart button is displayed. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true</p>
+             * </li>
+             * <li><p>false</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -265,8 +271,10 @@ public class GetCommerceSettingResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the catalog button is displayed. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true</p>
+             * </li>
+             * <li><p>false</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

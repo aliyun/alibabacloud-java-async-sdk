@@ -117,6 +117,7 @@ public class GetFbMessengerPagesRequest extends Request {
         } 
 
         /**
+         * <p>The token of the Meta public page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class GetFbMessengerPagesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

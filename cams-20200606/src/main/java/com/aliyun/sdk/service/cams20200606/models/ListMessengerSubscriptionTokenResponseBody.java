@@ -132,7 +132,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,16 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>A value of OK indicates that the request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +160,7 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -156,7 +168,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +179,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * <p>The next page token. Pass this value to query the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3399***</p>
          */
         public Builder nextPage(String nextPage) {
             this.nextPage = nextPage;
@@ -172,7 +190,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ei**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +201,16 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The operation is successful.</p>
+         * </li>
+         * <li><p>false: The operation fails.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -363,7 +393,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTimestamp.
+             * <p>The creation time of the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172546854885</p>
              */
             public Builder creationTimestamp(Long creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -371,7 +404,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAudienceId.
+             * <p>The custom audience ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example</p>
              */
             public Builder customAudienceId(String customAudienceId) {
                 this.customAudienceId = customAudienceId;
@@ -379,7 +415,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * NextEligibleTime.
+             * <p>The time when the application can send the next marketing message to the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172546854885</p>
              */
             public Builder nextEligibleTime(Long nextEligibleTime) {
                 this.nextEligibleTime = nextEligibleTime;
@@ -387,7 +426,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationMessagesReoptin.
+             * <p>The resubscription status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example</p>
              */
             public Builder notificationMessagesReoptin(String notificationMessagesReoptin) {
                 this.notificationMessagesReoptin = notificationMessagesReoptin;
@@ -395,7 +437,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationMessagesTimezone.
+             * <p>The time zone of the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example</p>
              */
             public Builder notificationMessagesTimezone(String notificationMessagesTimezone) {
                 this.notificationMessagesTimezone = notificationMessagesTimezone;
@@ -403,7 +448,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationMessagesToken.
+             * <p>The page-scoped ID of the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example</p>
              */
             public Builder notificationMessagesToken(String notificationMessagesToken) {
                 this.notificationMessagesToken = notificationMessagesToken;
@@ -411,7 +459,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * PageId.
+             * <p>The page ID of Messenger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>239***</p>
              */
             public Builder pageId(String pageId) {
                 this.pageId = pageId;
@@ -419,10 +470,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The customer&quot;s Page-scoped ID (PSID)</p>
+             * <p>The customer\&quot;s Page-scoped ID (PSID)</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值</p>
+             * <p>Example</p>
              */
             public Builder recipientId(String recipientId) {
                 this.recipientId = recipientId;
@@ -430,7 +481,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * TokenExpiryTimestamp.
+             * <p>The expiration time of the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172546854885</p>
              */
             public Builder tokenExpiryTimestamp(Long tokenExpiryTimestamp) {
                 this.tokenExpiryTimestamp = tokenExpiryTimestamp;
@@ -438,10 +492,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message&quot;s title</p>
+             * <p>The message\&quot;s title</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值示例值</p>
+             * <p>Example</p>
              */
             public Builder topicTitle(String topicTitle) {
                 this.topicTitle = topicTitle;
@@ -449,7 +503,10 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
             }
 
             /**
-             * UserTokenStatus.
+             * <p>The token status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example</p>
              */
             public Builder userTokenStatus(String userTokenStatus) {
                 this.userTokenStatus = userTokenStatus;

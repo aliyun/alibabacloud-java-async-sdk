@@ -157,7 +157,7 @@ public class UpdateChatFlowRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -169,7 +169,7 @@ public class UpdateChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -182,10 +182,10 @@ public class UpdateChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Process code.</p>
+         * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>f4912c16943b4dfba44bd6fedacf8c70</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -203,10 +203,10 @@ public class UpdateChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Process remarks</p>
+         * <p>The updated flow remark.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is Customer Service WhatsApp Auto-Reply Flow</p>
+         * <p>FlowRemark.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -233,10 +233,10 @@ public class UpdateChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Process title</p>
+         * <p>The updated flow name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Customer Service WhatsApp Auto-Reply Flow</p>
+         * <p>TestFlow.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

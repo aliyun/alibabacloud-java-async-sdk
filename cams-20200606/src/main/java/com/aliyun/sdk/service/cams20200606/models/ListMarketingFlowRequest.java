@@ -213,7 +213,10 @@ public class ListMarketingFlowRequest extends Request {
         } 
 
         /**
-         * ActivityCode.
+         * <p>The campaign code. You can use the system-generated code or modify it to use a custom code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rewrwerw</p>
          */
         public Builder activityCode(String activityCode) {
             this.putQueryParameter("ActivityCode", activityCode);
@@ -222,7 +225,10 @@ public class ListMarketingFlowRequest extends Request {
         }
 
         /**
-         * ActivityName.
+         * <p>The name of the node task instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>werewew</p>
          */
         public Builder activityName(String activityName) {
             this.putQueryParameter("ActivityName", activityName);
@@ -231,7 +237,10 @@ public class ListMarketingFlowRequest extends Request {
         }
 
         /**
-         * ActivityStatus.
+         * <p>The campaign status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sucess</p>
          */
         public Builder activityStatus(String activityStatus) {
             this.putQueryParameter("ActivityStatus", activityStatus);
@@ -240,7 +249,10 @@ public class ListMarketingFlowRequest extends Request {
         }
 
         /**
-         * BizCode.
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALICOM_OPAAS</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -249,7 +261,10 @@ public class ListMarketingFlowRequest extends Request {
         }
 
         /**
-         * BizExtend.
+         * <p>The business extension information. Default value: &quot;{}&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
@@ -268,7 +283,10 @@ public class ListMarketingFlowRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(String pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -277,7 +295,10 @@ public class ListMarketingFlowRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -286,7 +307,10 @@ public class ListMarketingFlowRequest extends Request {
         }
 
         /**
-         * RelatedFlowCode.
+         * <p>The ID of the associated flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfsdfdsfs</p>
          */
         public Builder relatedFlowCode(String relatedFlowCode) {
             this.putQueryParameter("RelatedFlowCode", relatedFlowCode);
@@ -295,7 +319,10 @@ public class ListMarketingFlowRequest extends Request {
         }
 
         /**
-         * RelatedGroupId.
+         * <p>The ID of the associated group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         public Builder relatedGroupId(Long relatedGroupId) {
             this.putQueryParameter("RelatedGroupId", relatedGroupId);

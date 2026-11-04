@@ -132,7 +132,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,16 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>A value of OK indicates that the request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Example</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +160,7 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -156,7 +168,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +179,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +190,16 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +207,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -324,7 +354,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
             } 
 
             /**
-             * AdAccountId.
+             * <p>The Meta ad account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2339**</p>
              */
             public Builder adAccountId(String adAccountId) {
                 this.adAccountId = adAccountId;
@@ -332,7 +365,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * Budget.
+             * <p>The budget.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62</p>
              */
             public Builder budget(Long budget) {
                 this.budget = budget;
@@ -340,7 +376,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetType.
+             * <p>The budget type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily</p>
              */
             public Builder budgetType(String budgetType) {
                 this.budgetType = budgetType;
@@ -348,7 +387,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * CampaignId.
+             * <p>The budget ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>233**</p>
              */
             public Builder campaignId(String campaignId) {
                 this.campaignId = campaignId;
@@ -356,7 +398,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * CampaignName.
+             * <p>The budget name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>campaign-name</p>
              */
             public Builder campaignName(String campaignName) {
                 this.campaignName = campaignName;
@@ -364,7 +409,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173029392838</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -372,7 +420,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * PageId.
+             * <p>The Page ID of Messenger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>238***</p>
              */
             public Builder pageId(String pageId) {
                 this.pageId = pageId;
@@ -380,7 +431,10 @@ public class ListMessageCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The budget status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;

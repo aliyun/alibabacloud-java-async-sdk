@@ -119,10 +119,10 @@ public class ReadFlowVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Access denied details; this field is only returned when RAM verification fails.</p>
+         * <p>The access denied details.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -130,10 +130,10 @@ public class ReadFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,10 +141,10 @@ public class ReadFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,10 +152,10 @@ public class ReadFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,10 +163,7 @@ public class ReadFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Content of the returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>无</p>
+         * <p>The response data.</p>
          */
         public Builder response(java.util.Map<String, ?> response) {
             this.response = response;
@@ -174,7 +171,13 @@ public class ReadFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful. Values: true: success; false: failure.</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: successful.</p>
+         * </li>
+         * <li><p>false: failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

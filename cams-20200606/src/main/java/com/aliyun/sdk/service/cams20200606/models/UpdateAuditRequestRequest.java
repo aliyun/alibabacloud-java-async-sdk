@@ -146,6 +146,7 @@ public class UpdateAuditRequestRequest extends Request {
         } 
 
         /**
+         * <p>The Viber audit items.</p>
          * <p>This parameter is required.</p>
          */
         public Builder auditRecord(AuditRecord auditRecord) {
@@ -156,7 +157,10 @@ public class UpdateAuditRequestRequest extends Request {
         }
 
         /**
-         * AuditResult.
+         * <p>The audit result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unAudit</p>
          */
         public Builder auditResult(String auditResult) {
             this.putQueryParameter("AuditResult", auditResult);
@@ -165,6 +169,7 @@ public class UpdateAuditRequestRequest extends Request {
         }
 
         /**
+         * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +191,7 @@ public class UpdateAuditRequestRequest extends Request {
         }
 
         /**
+         * <p>The request number to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +281,10 @@ public class UpdateAuditRequestRequest extends Request {
             } 
 
             /**
-             * CompanyAddress.
+             * <p>The company address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123 Sunshine Street, City, Country</p>
              */
             public Builder companyAddress(String companyAddress) {
                 this.companyAddress = companyAddress;
@@ -283,7 +292,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompanyAddressTitle.
+             * <p>The company address title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx company</p>
              */
             public Builder companyAddressTitle(String companyAddressTitle) {
                 this.companyAddressTitle = companyAddressTitle;
@@ -350,7 +362,10 @@ public class UpdateAuditRequestRequest extends Request {
             } 
 
             /**
-             * CompanyTelNumber.
+             * <p>The company telephone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07364245xxxx</p>
              */
             public Builder companyTelNumber(String companyTelNumber) {
                 this.companyTelNumber = companyTelNumber;
@@ -358,7 +373,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompanyTelTitle.
+             * <p>The telephone number title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder companyTelTitle(String companyTelTitle) {
                 this.companyTelTitle = companyTelTitle;
@@ -815,7 +833,10 @@ public class UpdateAuditRequestRequest extends Request {
             } 
 
             /**
-             * AgeLimit.
+             * <p>The age limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unlimited</p>
              */
             public Builder ageLimit(String ageLimit) {
                 this.ageLimit = ageLimit;
@@ -823,7 +844,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * ApplyReason.
+             * <p>The reason for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reason</p>
              */
             public Builder applyReason(String applyReason) {
                 this.applyReason = applyReason;
@@ -831,7 +855,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * BusinessAccountName.
+             * <p>The business account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testaccount</p>
              */
             public Builder businessAccountName(String businessAccountName) {
                 this.businessAccountName = businessAccountName;
@@ -839,7 +866,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * BusinessLicenseRegistrationNumber.
+             * <p>The business license registration number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9211515**345</p>
              */
             public Builder businessLicenseRegistrationNumber(String businessLicenseRegistrationNumber) {
                 this.businessLicenseRegistrationNumber = businessLicenseRegistrationNumber;
@@ -847,7 +877,7 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompanyAddress.
+             * <p>The company address.</p>
              */
             public Builder companyAddress(java.util.List<CompanyAddress> companyAddress) {
                 this.companyAddress = companyAddress;
@@ -855,7 +885,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompanyEnglishName.
+             * <p>The English name of the company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baidu</p>
              */
             public Builder companyEnglishName(String companyEnglishName) {
                 this.companyEnglishName = companyEnglishName;
@@ -863,7 +896,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompanyLegalName.
+             * <p>The legal name of the company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder companyLegalName(String companyLegalName) {
                 this.companyLegalName = companyLegalName;
@@ -871,7 +907,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompanyLegalPerson.
+             * <p>The name of the legal representative of the company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder companyLegalPerson(String companyLegalPerson) {
                 this.companyLegalPerson = companyLegalPerson;
@@ -879,7 +918,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompanyProfile.
+             * <p>The company profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder companyProfile(String companyProfile) {
                 this.companyProfile = companyProfile;
@@ -887,7 +929,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompanyRegisteredCountry.
+             * <p>The country or region where the company is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder companyRegisteredCountry(String companyRegisteredCountry) {
                 this.companyRegisteredCountry = companyRegisteredCountry;
@@ -895,7 +940,7 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompanyTel.
+             * <p>The company telephone number.</p>
              */
             public Builder companyTel(java.util.List<CompanyTel> companyTel) {
                 this.companyTel = companyTel;
@@ -903,7 +948,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * CompleteAddressOfHeadquarters.
+             * <p>The complete address of the headquarters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxstreet</p>
              */
             public Builder completeAddressOfHeadquarters(String completeAddressOfHeadquarters) {
                 this.completeAddressOfHeadquarters = completeAddressOfHeadquarters;
@@ -911,7 +959,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * ContactEmail.
+             * <p>The email address of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5**<a href="mailto:8585@gmail.com">8585@gmail.com</a></p>
              */
             public Builder contactEmail(String contactEmail) {
                 this.contactEmail = contactEmail;
@@ -919,7 +970,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * ContactMail.
+             * <p>The contact email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxxx@gamil.com">xxxx@gamil.com</a></p>
              */
             public Builder contactMail(String contactMail) {
                 this.contactMail = contactMail;
@@ -927,7 +981,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * ContactName.
+             * <p>The name of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mary</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -935,7 +992,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * ContactPhone.
+             * <p>The phone number of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>861515115***</p>
              */
             public Builder contactPhone(String contactPhone) {
                 this.contactPhone = contactPhone;
@@ -943,7 +1003,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * ContactPosition.
+             * <p>The position of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job</p>
              */
             public Builder contactPosition(String contactPosition) {
                 this.contactPosition = contactPosition;
@@ -951,7 +1014,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * EnableAutoReply.
+             * <p>Specifies whether to enable auto-reply. This field is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A‌</p>
              */
             public Builder enableAutoReply(String enableAutoReply) {
                 this.enableAutoReply = enableAutoReply;
@@ -959,7 +1025,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * IndustryDescription.
+             * <p>The industry description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder industryDescription(String industryDescription) {
                 this.industryDescription = industryDescription;
@@ -967,7 +1036,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * IndustryInvolved.
+             * <p>The industry to which the company belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecommunicationsAndIT</p>
              */
             public Builder industryInvolved(String industryInvolved) {
                 this.industryInvolved = industryInvolved;
@@ -975,7 +1047,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * LetterGuarantee.
+             * <p>The letter of guarantee (download URL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a></p>
              */
             public Builder letterGuarantee(String letterGuarantee) {
                 this.letterGuarantee = letterGuarantee;
@@ -991,7 +1066,7 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * MessageDestinationCountry.
+             * <p>The local destination countries or regions.</p>
              */
             public Builder messageDestinationCountry(java.util.List<String> messageDestinationCountry) {
                 this.messageDestinationCountry = messageDestinationCountry;
@@ -999,7 +1074,7 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * MessageDestinationInternationalCountry.
+             * <p>The international destination countries and regions.</p>
              */
             public Builder messageDestinationInternationalCountry(java.util.List<String> messageDestinationInternationalCountry) {
                 this.messageDestinationInternationalCountry = messageDestinationInternationalCountry;
@@ -1007,7 +1082,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * MessageDialogueIntroduction.
+             * <p>The introduction to the business message dialogue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello!</p>
              */
             public Builder messageDialogueIntroduction(String messageDialogueIntroduction) {
                 this.messageDialogueIntroduction = messageDialogueIntroduction;
@@ -1015,7 +1093,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * MessageEnableDate.
+             * <p>The date on which business messaging is enabled (GMT time zone).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-07</p>
              */
             public Builder messageEnableDate(String messageEnableDate) {
                 this.messageEnableDate = messageEnableDate;
@@ -1023,7 +1104,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * MessageSessionName.
+             * <p>The business message session name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder messageSessionName(String messageSessionName) {
                 this.messageSessionName = messageSessionName;
@@ -1031,7 +1115,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * OtherLetterGuarantee.
+             * <p>The URL of the supplementary document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.xxx.com">https://xxx.xxx.com</a></p>
              */
             public Builder otherLetterGuarantee(String otherLetterGuarantee) {
                 this.otherLetterGuarantee = otherLetterGuarantee;
@@ -1039,7 +1126,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * RecoveryDate.
+             * <p>The recovery date, in YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-07</p>
              */
             public Builder recoveryDate(String recoveryDate) {
                 this.recoveryDate = recoveryDate;
@@ -1047,7 +1137,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * ReplyContent.
+             * <p>The reply content. This field is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder replyContent(String replyContent) {
                 this.replyContent = replyContent;
@@ -1055,7 +1148,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * SuspensionDate.
+             * <p>This field is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder suspensionDate(String suspensionDate) {
                 this.suspensionDate = suspensionDate;
@@ -1063,7 +1159,10 @@ public class UpdateAuditRequestRequest extends Request {
             }
 
             /**
-             * WebAddress.
+             * <p>The company web address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.xxx.xxx.com">https://www.xxx.xxx.com</a></p>
              */
             public Builder webAddress(String webAddress) {
                 this.webAddress = webAddress;

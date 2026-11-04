@@ -208,7 +208,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * BindId.
+         * <p>The binding ID.</p>
          */
         public Builder bindId(String bindId) {
             this.putQueryParameter("BindId", bindId);
@@ -217,7 +217,19 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * ChannelType.
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>whatsapp</strong></p>
+         * </li>
+         * <li><p><strong>messenger</strong></p>
+         * </li>
+         * <li><p><strong>instagram</strong></p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;- <strong>viber</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIBER</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -226,7 +238,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * FilterStr.
+         * <p>The filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa</p>
          */
         public Builder filterStr(String filterStr) {
             this.putQueryParameter("FilterStr", filterStr);
@@ -235,7 +250,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. Only non-Alibaba Cloud hosts are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-uf6wd7pkyjwxvlxfhk</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -244,7 +262,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>viber_ins</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -253,7 +274,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * IsBind.
+         * <p>Indicates whether the instance is bound.</p>
          */
         public Builder isBind(Boolean isBind) {
             this.putQueryParameter("IsBind", isBind);
@@ -262,7 +283,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         public Builder pageIndex(Long pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -271,7 +295,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,7 +307,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the enterprise resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -289,7 +319,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * SubmitTime.
+         * <p>The submit time in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-12 00:00:00</p>
          */
         public Builder submitTime(String submitTime) {
             this.putQueryParameter("SubmitTime", submitTime);

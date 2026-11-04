@@ -104,10 +104,12 @@ public class ChatappPhoneNumberDeregisterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code.</p>
+         * <p>The status code of the request.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>A value of OK indicates that the request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

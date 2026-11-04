@@ -119,7 +119,10 @@ public class QueryInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class QueryInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p><code>OK</code> indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error code list</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class QueryInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data object returned on a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class QueryInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class QueryInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29kskkd******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,16 @@ public class QueryInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -368,7 +395,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelType.
+             * <p>The channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIBER</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -376,7 +406,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ContactMail.
+             * <p>The contact email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:1@alibaba.com">1@alibaba.com</a></p>
              */
             public Builder contactMail(String contactMail) {
                 this.contactMail = contactMail;
@@ -384,7 +417,13 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CountryId.
+             * <p>The country ID.</p>
+             * <blockquote>
+             * <p>For a list of country codes, see <a href="https://help.aliyun.com/document_detail/608210.html">Country codes</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder countryId(String countryId) {
                 this.countryId = countryId;
@@ -392,7 +431,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CustType.
+             * <p>The customer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01</p>
              */
             public Builder custType(String custType) {
                 this.custType = custType;
@@ -400,10 +442,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>FacebookBmId</p>
+             * <p>The Facebook Business Manager ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>399298882</p>
+             * <p>39929****</p>
              */
             public Builder facebookBmId(String facebookBmId) {
                 this.facebookBmId = facebookBmId;
@@ -411,7 +453,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ins</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -419,7 +464,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>293939*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -427,7 +475,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>viber_ins</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -435,7 +486,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IsvTerms.
+             * <p>The ISV terms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://alibaba.com/1.pdf">https://alibaba.com/1.pdf</a></p>
              */
             public Builder isvTerms(String isvTerms) {
                 this.isvTerms = isvTerms;
@@ -443,7 +497,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeAddress.
+             * <p>The office address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder officeAddress(String officeAddress) {
                 this.officeAddress = officeAddress;
@@ -451,7 +508,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -459,7 +519,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -467,7 +530,10 @@ public class QueryInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * <p>The submission time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140092992</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;

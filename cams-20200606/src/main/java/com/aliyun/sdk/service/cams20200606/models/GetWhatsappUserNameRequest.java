@@ -75,6 +75,7 @@ public class GetWhatsappUserNameRequest extends Request {
         } 
 
         /**
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the <a href="https://chatapp.console.aliyun.com/CustomerList">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetWhatsappUserNameRequest extends Request {
         }
 
         /**
+         * <p>The business phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -203,7 +203,10 @@ public class UpdateContactByIdRequest extends Request {
         } 
 
         /**
-         * BizCode.
+         * <p>The business code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value.</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -212,7 +215,10 @@ public class UpdateContactByIdRequest extends Request {
         }
 
         /**
-         * BizExtend.
+         * <p>The business extension information. Default value: an empty collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
@@ -222,10 +228,11 @@ public class UpdateContactByIdRequest extends Request {
         }
 
         /**
+         * <p>The description of the contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value sample value.</p>
          */
         public Builder contactDetails(String contactDetails) {
             this.putQueryParameter("ContactDetails", contactDetails);
@@ -234,10 +241,11 @@ public class UpdateContactByIdRequest extends Request {
         }
 
         /**
+         * <p>The ID of the contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>Sample value sample value sample value.</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -246,10 +254,11 @@ public class UpdateContactByIdRequest extends Request {
         }
 
         /**
+         * <p>The name of the contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value sample value.</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -258,10 +267,11 @@ public class UpdateContactByIdRequest extends Request {
         }
 
         /**
+         * <p>The country code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value sample value.</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -270,7 +280,10 @@ public class UpdateContactByIdRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value.</p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -288,7 +301,10 @@ public class UpdateContactByIdRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

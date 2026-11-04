@@ -159,7 +159,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         } 
 
         /**
-         * <p>The commands.</p>
+         * <p>The list of commands.</p>
          */
         public Builder commands(java.util.List<Commands> commands) {
             String commandsShrink = shrink(commands, "Commands", "json");
@@ -169,7 +169,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         }
 
         /**
-         * <p>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</p>
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the welcoming message.</p>
+         * <p>Specifies whether to enable the welcome message.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +203,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         }
 
         /**
-         * <p>The phone number of the enterprise.</p>
+         * <p>The business phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class UpdateConversationalAutomationRequest extends Request {
         }
 
         /**
-         * <p>The opening remarks.</p>
+         * <p>The list of conversation starters.</p>
          */
         public Builder prompts(java.util.List<String> prompts) {
             String promptsShrink = shrink(prompts, "Prompts", "json");
@@ -303,10 +303,10 @@ public class UpdateConversationalAutomationRequest extends Request {
             } 
 
             /**
-             * <p>The description of the command.</p>
+             * <p>The command description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Command 1.</p>
+             * <p>Command 1</p>
              */
             public Builder commandDescription(String commandDescription) {
                 this.commandDescription = commandDescription;

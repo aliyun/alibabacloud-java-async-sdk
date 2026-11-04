@@ -89,6 +89,7 @@ public class SubmitVerifyCodeResultRequest extends Request {
         } 
 
         /**
+         * <p>The message ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class SubmitVerifyCodeResultRequest extends Request {
         }
 
         /**
+         * <p>The backfill result.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class SubmitVerifyCodeResultRequest extends Request {
         }
 
         /**
-         * To.
+         * <p>The recipient number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86138000***</p>
          */
         public Builder to(String to) {
             this.putQueryParameter("To", to);

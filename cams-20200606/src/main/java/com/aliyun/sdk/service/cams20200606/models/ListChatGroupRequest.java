@@ -202,6 +202,7 @@ public class ListChatGroupRequest extends Request {
         } 
 
         /**
+         * <p>The business phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +215,13 @@ public class ListChatGroupRequest extends Request {
         }
 
         /**
-         * ChannelType.
+         * <p>The channel type. Valid values: <strong>WHATSAPP</strong>.</p>
+         * <blockquote>
+         * <p>Only the WhatsApp channel type is supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -223,6 +230,7 @@ public class ListChatGroupRequest extends Request {
         }
 
         /**
+         * <p>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +243,10 @@ public class ListChatGroupRequest extends Request {
         }
 
         /**
-         * GroupLink.
+         * <p>The Telegram group link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder groupLink(String groupLink) {
             this.putQueryParameter("GroupLink", groupLink);
@@ -244,7 +255,24 @@ public class ListChatGroupRequest extends Request {
         }
 
         /**
-         * GroupStatus.
+         * <p>The group status. Valid values:</p>
+         * <ul>
+         * <li><p>ACTIVE: In use.</p>
+         * </li>
+         * <li><p>INACTIVE: Not activated.</p>
+         * </li>
+         * <li><p>SUSPENDED: Suspended.</p>
+         * </li>
+         * <li><p>CREATING: Being created.</p>
+         * </li>
+         * <li><p>DELETING: Being deleted.</p>
+         * </li>
+         * <li><p>UPDATING: Being updated.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder groupStatus(String groupStatus) {
             this.putQueryParameter("GroupStatus", groupStatus);
@@ -253,7 +281,10 @@ public class ListChatGroupRequest extends Request {
         }
 
         /**
-         * GroupType.
+         * <p>The Telegram group type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -271,6 +302,7 @@ public class ListChatGroupRequest extends Request {
         }
 
         /**
+         * <p>The pagination information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder page(Page page) {
@@ -299,7 +331,10 @@ public class ListChatGroupRequest extends Request {
         }
 
         /**
-         * Subject.
+         * <p>The group subject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder subject(String subject) {
             this.putQueryParameter("Subject", subject);
@@ -369,6 +404,7 @@ public class ListChatGroupRequest extends Request {
             } 
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -380,6 +416,7 @@ public class ListChatGroupRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

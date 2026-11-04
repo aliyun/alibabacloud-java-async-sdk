@@ -145,7 +145,10 @@ public class CopyTemplateRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -154,7 +157,10 @@ public class CopyTemplateRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -190,6 +196,7 @@ public class CopyTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +209,7 @@ public class CopyTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

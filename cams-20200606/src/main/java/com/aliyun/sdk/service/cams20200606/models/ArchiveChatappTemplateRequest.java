@@ -105,6 +105,7 @@ public class ArchiveChatappTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The archive type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,10 +118,17 @@ public class ArchiveChatappTemplateRequest extends Request {
         }
 
         /**
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><strong>WHATSAPP</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>Currently, only the WhatsApp channel type is supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Sample value</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -129,10 +137,11 @@ public class ArchiveChatappTemplateRequest extends Request {
         }
 
         /**
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the space ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -141,6 +150,7 @@ public class ArchiveChatappTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template list.</p>
          * <p>This parameter is required.</p>
          */
         public Builder templateList(java.util.List<TemplateList> templateList) {
@@ -212,6 +222,7 @@ public class ArchiveChatappTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The template language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -223,6 +234,7 @@ public class ArchiveChatappTemplateRequest extends Request {
             }
 
             /**
+             * <p>The template code. To view the template code, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page and choose <strong>Manage</strong> &gt; <strong>Template Design</strong>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

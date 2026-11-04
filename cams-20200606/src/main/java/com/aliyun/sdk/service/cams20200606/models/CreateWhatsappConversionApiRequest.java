@@ -129,7 +129,10 @@ public class CreateWhatsappConversionApiRequest extends Request {
         } 
 
         /**
-         * Code.
+         * <p>The embedded code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -138,7 +141,10 @@ public class CreateWhatsappConversionApiRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +162,7 @@ public class CreateWhatsappConversionApiRequest extends Request {
         }
 
         /**
-         * Permissions.
+         * <p>The list of embedded permissions.</p>
          */
         public Builder permissions(java.util.List<String> permissions) {
             String permissionsShrink = shrink(permissions, "Permissions", "json");

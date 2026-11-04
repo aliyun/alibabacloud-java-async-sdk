@@ -271,7 +271,10 @@ public class AddMarketingFlowRequest extends Request {
         } 
 
         /**
-         * ActivityDesc.
+         * <p>The description of the campaign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         public Builder activityDesc(String activityDesc) {
             this.putQueryParameter("ActivityDesc", activityDesc);
@@ -280,6 +283,7 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
+         * <p>The name of the node task instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +296,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * BizCode.
+         * <p>The business code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -301,7 +308,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * BizExtend.
+         * <p>The business extension information. Default value: an empty collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
@@ -311,7 +321,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * CronExpression.
+         * <p>The cron expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
@@ -320,7 +333,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -329,6 +345,11 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
+         * <p>The trigger method of the baseline scan. Valid values:</p>
+         * <ul>
+         * <li><strong>Schedule</strong>: Triggered by a periodic configuration task.</li>
+         * <li><strong>Manual</strong>: Manually triggered.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -350,7 +371,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * ParamFlag.
+         * <p>The parameter flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder paramFlag(String paramFlag) {
             this.putQueryParameter("ParamFlag", paramFlag);
@@ -359,7 +383,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The API parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder params(java.util.Map<String, ?> params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -369,7 +396,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * RelatedFlowCode.
+         * <p>The code of the associated flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder relatedFlowCode(String relatedFlowCode) {
             this.putQueryParameter("RelatedFlowCode", relatedFlowCode);
@@ -378,7 +408,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * RelatedFlowName.
+         * <p>The name of the associated flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder relatedFlowName(String relatedFlowName) {
             this.putQueryParameter("RelatedFlowName", relatedFlowName);
@@ -387,7 +420,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * RelatedGroupId.
+         * <p>The ID of the related group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder relatedGroupId(Long relatedGroupId) {
             this.putQueryParameter("RelatedGroupId", relatedGroupId);
@@ -414,7 +450,10 @@ public class AddMarketingFlowRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

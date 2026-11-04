@@ -119,7 +119,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The access denied details.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -130,10 +130,12 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The status code of the request.</p>
          * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>A value of OK indicates that the request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +147,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -153,10 +155,10 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>NONE</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +166,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -175,7 +177,10 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +246,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the message template.</p>
+             * <p>The template code.</p>
              * 
              * <strong>example:</strong>
              * <p>8472929283883</p>
@@ -252,7 +257,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the message template.</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
              * <p>hello_whatsapp</p>

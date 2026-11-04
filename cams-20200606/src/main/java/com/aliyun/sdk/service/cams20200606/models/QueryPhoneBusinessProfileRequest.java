@@ -117,11 +117,11 @@ public class QueryPhoneBusinessProfileRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2934839388494***</p>
+         * <p>293483938849****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -139,11 +139,11 @@ public class QueryPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * <p>The phone number.</p>
+         * <p>The mobile phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>8613800001234</p>
+         * <p>861380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

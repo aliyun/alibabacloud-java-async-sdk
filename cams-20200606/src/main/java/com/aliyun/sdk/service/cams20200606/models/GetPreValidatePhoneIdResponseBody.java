@@ -93,10 +93,12 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</li>
+         * <li><p>A value of OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://www.alibabacloud.com/help/en/cams/latest/api-error-codes">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +201,7 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
              * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>929833</p>
+             * <p>92****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -207,10 +209,10 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the phone number.</p>
+             * <p>The phone number ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>8613800000000</p>
+             * <p>861380000****</p>
              */
             public Builder phoneNumberId(String phoneNumberId) {
                 this.phoneNumberId = phoneNumberId;

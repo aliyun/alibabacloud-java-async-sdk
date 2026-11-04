@@ -171,7 +171,10 @@ public class DeleteContactsRequest extends Request {
         } 
 
         /**
-         * BizCode.
+         * <p>The business code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALICOM_OPAAS</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -180,7 +183,10 @@ public class DeleteContactsRequest extends Request {
         }
 
         /**
-         * BizExtend.
+         * <p>The extended business information. Default value: an empty set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
@@ -190,7 +196,10 @@ public class DeleteContactsRequest extends Request {
         }
 
         /**
-         * ContactDetails.
+         * <p>The contact details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1507486****</p>
          */
         public Builder contactDetails(String contactDetails) {
             this.putQueryParameter("ContactDetails", contactDetails);
@@ -199,7 +208,10 @@ public class DeleteContactsRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * <p>The contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hahaha</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -208,7 +220,10 @@ public class DeleteContactsRequest extends Request {
         }
 
         /**
-         * Country.
+         * <p>The country.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -217,7 +232,10 @@ public class DeleteContactsRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://****</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);

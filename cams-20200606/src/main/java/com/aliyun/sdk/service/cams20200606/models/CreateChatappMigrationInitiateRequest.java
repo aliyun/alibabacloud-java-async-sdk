@@ -132,7 +132,7 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         } 
 
         /**
-         * <p>The code of the country or region.</p>
+         * <p>The country code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         }
 
         /**
-         * <p>The space ID of the user within the ISV account.</p>
+         * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,11 +158,11 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         }
 
         /**
-         * <p>The mobile number without the country code or region code.</p>
+         * <p>The phone number. Do not include the country code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>13900001234</p>
+         * <p>1390000****</p>
          */
         public Builder mobileNumber(String mobileNumber) {
             this.putQueryParameter("MobileNumber", mobileNumber);

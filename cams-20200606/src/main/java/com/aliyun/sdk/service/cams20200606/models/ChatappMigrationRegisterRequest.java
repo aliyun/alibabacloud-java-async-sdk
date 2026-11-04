@@ -117,7 +117,7 @@ public class ChatappMigrationRegisterRequest extends Request {
         } 
 
         /**
-         * <p>None</p>
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ChatappMigrationRegisterRequest extends Request {
         }
 
         /**
-         * <p>phone number.</p>
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

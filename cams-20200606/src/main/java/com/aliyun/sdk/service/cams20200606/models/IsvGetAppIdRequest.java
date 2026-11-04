@@ -130,7 +130,10 @@ public class IsvGetAppIdRequest extends Request {
         } 
 
         /**
-         * IntlVersion.
+         * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder intlVersion(String intlVersion) {
             this.putQueryParameter("IntlVersion", intlVersion);
@@ -148,7 +151,10 @@ public class IsvGetAppIdRequest extends Request {
         }
 
         /**
-         * Permissions.
+         * <p>The permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Example value</p>
          */
         public Builder permissions(String permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -175,10 +181,14 @@ public class IsvGetAppIdRequest extends Request {
         }
 
         /**
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li>whatsapp: WhatsApp.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>whatsapp</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -117,6 +117,8 @@ public class GetFbInstagramPagesRequest extends Request {
         } 
 
         /**
+         * <p>The personal access token.
+         * This field is not required if you use Alibaba Cloud AccessKey pair (AK+SK) or STS temporary authorization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class GetFbInstagramPagesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. The unique identifier of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

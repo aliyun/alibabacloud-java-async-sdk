@@ -119,7 +119,10 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +272,10 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The component prototype code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SendWhatsAppMessageNode</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -259,7 +283,10 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
             }
 
             /**
-             * GroupCode.
+             * <p>The component group code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Core</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -267,7 +294,30 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
             }
 
             /**
-             * PublicExtend.
+             * <p>The public extension information. This is used by the frontend to display extended information of flow components. The value is a JSON string. The first parameter in the string represents the flow component title. The following section describes the other fields:</p>
+             * <ul>
+             * <li><p>en: the English information of the flow component.</p>
+             * </li>
+             * <li><p>zh: the Chinese information of the flow component.</p>
+             * </li>
+             * <li><p>name: the name of the flow component.</p>
+             * </li>
+             * <li><p>remark: the remarks of the flow component.</p>
+             * </li>
+             * <li><p>order: the display order of the flow component.</p>
+             * </li>
+             * <li><p>style: the style of the flow component.</p>
+             * </li>
+             * <li><p>svg: the icon URL of the flow component.</p>
+             * </li>
+             * <li><p>icon: a deprecated field.</p>
+             * </li>
+             * <li><p>bgcolor: the background color of the icon.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;i18n\&quot;: {\&quot;en\&quot;: {\&quot;name\&quot;: \&quot;Send a WhatsApp Message\&quot;, \&quot;remark\&quot;: \&quot;Send a message with the ability for the user to reply utilizing WhatsApp specific features.\&quot;}, \&quot;zh\&quot;: {\&quot;name\&quot;: \&quot;Send WhatsApp messages\&quot;, \&quot;remark\&quot;: \&quot;Send a message that allows users to reply using specific features of WhatsApp\&quot;}}, \&quot;order\&quot;: \&quot;9000\&quot;, \&quot;style\&quot;: {\&quot;svg\&quot;: \&quot;<a href="https://img.alicdn.com/***********************************%5C%5C">https://img.alicdn.com/***********************************\\</a>&quot;, \&quot;icon\&quot;: \&quot;<a href="https://img.alicdn.com/***********************************%5C%5C">https://img.alicdn.com/***********************************\\</a>&quot;, \&quot;bgcolor\&quot;: \&quot;blue\&quot;}}</p>
              */
             public Builder publicExtend(String publicExtend) {
                 this.publicExtend = publicExtend;
@@ -275,7 +325,10 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The component prototype status. Default value: NORMAL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -329,7 +382,7 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * Model.
+             * <p>The list of request result data.</p>
              */
             public Builder model(java.util.List<Model> model) {
                 this.model = model;

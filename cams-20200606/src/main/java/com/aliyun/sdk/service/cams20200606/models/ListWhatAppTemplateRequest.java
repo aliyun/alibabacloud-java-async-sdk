@@ -96,7 +96,10 @@ public class ListWhatAppTemplateRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2983883892</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -105,7 +108,10 @@ public class ListWhatAppTemplateRequest extends Request {
         }
 
         /**
-         * HetuParams.
+         * <p>The internal parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder hetuParams(String hetuParams) {
             this.putQueryParameter("HetuParams", hetuParams);

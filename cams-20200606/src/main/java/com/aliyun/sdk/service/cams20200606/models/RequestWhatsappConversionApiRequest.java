@@ -131,6 +131,7 @@ public class RequestWhatsappConversionApiRequest extends Request {
         } 
 
         /**
+         * <p>The space ID or instance ID of the customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +153,7 @@ public class RequestWhatsappConversionApiRequest extends Request {
         }
 
         /**
+         * <p>The PageId of Meta.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +166,7 @@ public class RequestWhatsappConversionApiRequest extends Request {
         }
 
         /**
-         * RequestData.
+         * <p>The request data.</p>
          */
         public Builder requestData(java.util.List<RequestData> requestData) {
             String requestDataShrink = shrink(requestData, "RequestData", "json");
@@ -411,6 +413,19 @@ public class RequestWhatsappConversionApiRequest extends Request {
             } 
 
             /**
+             * <p>Specifies where the conversion occurred. Knowing where the event occurred helps ensure that ads are delivered to the correct audience. By using the Conversions API, you agree that the action_source parameter is accurate to the best of your knowledge.</p>
+             * <p>The values you can send in the action_source field are as follows:</p>
+             * <ul>
+             * <li>email: The conversion occurred through email.</li>
+             * <li>website: The conversion was made on a website.</li>
+             * <li>app: The conversion was made on a shift application.</li>
+             * <li>phone_call: The conversion was made over the phone.</li>
+             * <li>chat: The conversion was made through a messaging app, SMS, or online messaging feature.</li>
+             * <li>physical_store: The conversion was made in person at a physical store entity.</li>
+             * <li>system_generated: The conversion occurred automatically, such as a subscribe renewal with Settings for monthly automatic payment.</li>
+             * <li>other: The conversion was made through a method not listed in this topic.</li>
+             * </ul>
+             * <p>Note: All action source values support ads measurement and custom audience creation. All action sources except physical_store support ads optimization.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -422,7 +437,8 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * AppData.
+             * <p>Required parameters for app events.</p>
+             * <p>These parameters are used to share app data and device information with the Conversions API.</p>
              */
             public Builder appData(java.util.Map<String, ?> appData) {
                 this.appData = appData;
@@ -430,7 +446,7 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * CustomData.
+             * <p>A map that contains additional business data for the event.</p>
              */
             public Builder customData(java.util.Map<String, ?> customData) {
                 this.customData = customData;
@@ -438,7 +454,7 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * DataProcessingOptions.
+             * <p>The processing options you want to enable for a specific event. For Limited Data Use, the currently accepted value is LDU. You can send an empty array to explicitly specify that the event must not be processed with Limited Data Use restrictions.</p>
              */
             public Builder dataProcessingOptions(java.util.List<String> dataProcessingOptions) {
                 this.dataProcessingOptions = dataProcessingOptions;
@@ -446,7 +462,11 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * DataProcessingOptionsCountry.
+             * <p>Required if you send LDU under data_processing_options.
+             * The country you want to associate with this data processing option. Currently accepted values are 1 (representing the United States) or 0 (requesting that we geolocate this event).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder dataProcessingOptionsCountry(Long dataProcessingOptionsCountry) {
                 this.dataProcessingOptionsCountry = dataProcessingOptionsCountry;
@@ -454,7 +474,11 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * DataProcessingOptionsState.
+             * <p>Required in some cases. (See the notes below for details.)
+             * The state you want to associate with this data processing option. Currently accepted values are 1000 (representing California) or 0 (requesting that we geolocate this event).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder dataProcessingOptionsState(Long dataProcessingOptionsState) {
                 this.dataProcessingOptionsState = dataProcessingOptionsState;
@@ -462,7 +486,10 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * EventId.
+             * <p>This ID can be any unique string chosen by the advertiser. The event_name and event_id parameters are used to deduplicate events sent by a website (through Meta Pixel), an app (through the SDK or App Events API), and the Conversions API. Although event_id is marked as optional, we recommend that you use this parameter for deduplication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20029399299</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -470,6 +497,12 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
+             * <ul>
+             * <li><p>The name of a standard event or custom event. This field is used to deduplicate events sent by a website (through Meta Pixel), an app (through the SDK or App Events API), and the Conversions API. The event_id parameter is also used for deduplication.</p>
+             * </li>
+             * <li><p>For the same customer action, the event from the browser or app should match the event_name from the server event. If a match is found between events sent within 48 hours, only the first event is considered. If server and browser/app events are received at approximately the same time (within 5 minutes of each other), the browser/app event takes priority. Learn more about deduplicating Pixel events and server events.</p>
+             * </li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -481,7 +514,10 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * EventSourceUrl.
+             * <p>The browser URL where the event occurred. The URL must start with http:// or https:// and should match the verified domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://alibaba.com">http://alibaba.com</a></p>
              */
             public Builder eventSourceUrl(String eventSourceUrl) {
                 this.eventSourceUrl = eventSourceUrl;
@@ -489,6 +525,7 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
+             * <p>A Unix timestamp in seconds indicating when the event actually occurred. The specified time may be earlier than the time you send the event to Facebook. This is intended for batch processing and server performance optimization. You must send the date in Greenwich Mean Time (GMT) time zone format.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -500,7 +537,8 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * ExtInfo.
+             * <p>Required parameters for app events.</p>
+             * <p>Extended device information, such as the width and height of the screen. This parameter is an array with values separated by commas. When using extinfo, all values are required and must be arranged in the following index order. If a value is missing, use an empty string as a placeholder.</p>
              */
             public Builder extInfo(java.util.Map<String, ?> extInfo) {
                 this.extInfo = extInfo;
@@ -508,7 +546,10 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * MessagingChannel.
+             * <p>The source. Fixed value: whatsapp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>whatsapp</p>
              */
             public Builder messagingChannel(String messagingChannel) {
                 this.messagingChannel = messagingChannel;
@@ -516,7 +557,10 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
-             * OptOut.
+             * <p>A flag that indicates this event should not be used for ad delivery optimization. When set to true, the event can only be used for attribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder optOut(Boolean optOut) {
                 this.optOut = optOut;
@@ -524,6 +568,7 @@ public class RequestWhatsappConversionApiRequest extends Request {
             }
 
             /**
+             * <p>A map that contains customer information data.</p>
              * <p>This parameter is required.</p>
              */
             public Builder userData(java.util.Map<String, ?> userData) {

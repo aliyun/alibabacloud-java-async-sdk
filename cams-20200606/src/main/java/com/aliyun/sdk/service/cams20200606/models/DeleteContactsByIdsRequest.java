@@ -102,6 +102,7 @@ public class DeleteContactsByIdsRequest extends Request {
         } 
 
         /**
+         * <p>The list of contact codes, separated by commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

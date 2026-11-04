@@ -103,6 +103,7 @@ public class CheckDirectSendMessageSampleRequest extends Request {
         } 
 
         /**
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class CheckDirectSendMessageSampleRequest extends Request {
         }
 
         /**
-         * Interactive.
+         * <p>The message body of the interactive type.</p>
          */
         public Builder interactive(java.util.Map<String, ?> interactive) {
             String interactiveShrink = shrink(interactive, "Interactive", "json");
@@ -125,7 +126,10 @@ public class CheckDirectSendMessageSampleRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The message body of the text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;text&quot;: &quot;This is a direct send message&quot;}</p>
          */
         public Builder text(java.util.Map<String, ?> text) {
             String textShrink = shrink(text, "Text", "json");
@@ -135,10 +139,15 @@ public class CheckDirectSendMessageSampleRequest extends Request {
         }
 
         /**
+         * <p>The direct-send content type. Valid values:</p>
+         * <ul>
+         * <li>interactive</li>
+         * <li>text</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>interactive</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

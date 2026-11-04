@@ -117,7 +117,7 @@ public class ListBindingRelationsForFlowVersionRequest extends Request {
         } 
 
         /**
-         * <p>Channel type. Values:</p>
+         * <p>The channel type. Valid values:</p>
          * <ul>
          * <li>INSTAGRAM</li>
          * <li>WHATSAPP</li>
@@ -136,7 +136,7 @@ public class ListBindingRelationsForFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Process code. View the process code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</p>
+         * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -287,6 +287,11 @@ public class ListChatappMessageRequest extends Request {
         } 
 
         /**
+         * <p>The business phone number.</p>
+         * <ul>
+         * <li>For WhatsApp channels, view the business phone number in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> console.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;- For Viber channels, view the Service ID in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Service Account Management</strong> console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,6 +304,13 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>whatsapp</strong>.</p>
+         * </li>
+         * <li><p><strong>viber</strong>.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -311,7 +323,10 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * ClientAcceptStatus.
+         * <p>The message acceptance status of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder clientAcceptStatus(String clientAcceptStatus) {
             this.putQueryParameter("ClientAcceptStatus", clientAcceptStatus);
@@ -320,10 +335,11 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. View the Space ID in the <a href="https://chatapp.console.aliyun.com/CustomerList">Channel Management</a> console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>cams-************</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -332,7 +348,10 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1727057232686</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -341,7 +360,10 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * EndTimeStr.
+         * <p>The end time in the format of YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-30 00:00:00</p>
          */
         public Builder endTimeStr(String endTimeStr) {
             this.putQueryParameter("EndTimeStr", endTimeStr);
@@ -350,7 +372,14 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * EventAction.
+         * <p>The message type. Valid values:</p>
+         * <ul>
+         * <li>DOWN: downstream message.</li>
+         * <li>UP: upstream message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UP</p>
          */
         public Builder eventAction(String eventAction) {
             this.putQueryParameter("EventAction", eventAction);
@@ -359,7 +388,10 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * GroupMessageId.
+         * <p>The batch message ID. View the batch message ID in the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Message List</strong> &gt; <strong>Batch Sending List</strong> console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9292****</p>
          */
         public Builder groupMessageId(String groupMessageId) {
             this.putQueryParameter("GroupMessageId", groupMessageId);
@@ -368,7 +400,10 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * MessageStatus.
+         * <p>The message status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder messageStatus(String messageStatus) {
             this.putQueryParameter("MessageStatus", messageStatus);
@@ -386,6 +421,7 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
+         * <p>The pagination object.</p>
          * <p>This parameter is required.</p>
          */
         public Builder page(Page page) {
@@ -414,7 +450,10 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1727057232686</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -423,7 +462,10 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * StartTimeStr.
+         * <p>The start time in the format of YYYY-MM-DD HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
          */
         public Builder startTimeStr(String startTimeStr) {
             this.putQueryParameter("StartTimeStr", startTimeStr);
@@ -432,7 +474,10 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * <p>The template code. View the template code in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Template Design</strong> console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9938***</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -441,7 +486,10 @@ public class ListChatappMessageRequest extends Request {
         }
 
         /**
-         * UserNumber.
+         * <p>The user phone number. This is the user phone number that you imported when sending messages in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Message Sending</strong> console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86138***</p>
          */
         public Builder userNumber(String userNumber) {
             this.putQueryParameter("UserNumber", userNumber);
@@ -511,10 +559,11 @@ public class ListChatappMessageRequest extends Request {
             } 
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>49</p>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -522,10 +571,11 @@ public class ListChatappMessageRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>78</p>
+             * <p>10</p>
              */
             public Builder size(Long size) {
                 this.size = size;

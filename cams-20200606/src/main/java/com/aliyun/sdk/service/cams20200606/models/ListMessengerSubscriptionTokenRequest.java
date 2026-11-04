@@ -174,6 +174,7 @@ public class ListMessengerSubscriptionTokenRequest extends Request {
         } 
 
         /**
+         * <p>The SpaceId or instance ID of the ISV sub-customer, which is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,10 @@ public class ListMessengerSubscriptionTokenRequest extends Request {
         }
 
         /**
-         * CustomAudienceId.
+         * <p>The custom audience ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233**</p>
          */
         public Builder customAudienceId(String customAudienceId) {
             this.putQueryParameter("CustomAudienceId", customAudienceId);
@@ -195,7 +199,10 @@ public class ListMessengerSubscriptionTokenRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The number of items to query. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67</p>
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -213,6 +220,7 @@ public class ListMessengerSubscriptionTokenRequest extends Request {
         }
 
         /**
+         * <p>The page ID of Messenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +233,10 @@ public class ListMessengerSubscriptionTokenRequest extends Request {
         }
 
         /**
-         * PageKey.
+         * <p>The pagination key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ie**</p>
          */
         public Builder pageKey(String pageKey) {
             this.putQueryParameter("PageKey", pageKey);
@@ -252,6 +263,7 @@ public class ListMessengerSubscriptionTokenRequest extends Request {
         }
 
         /**
+         * <p>The token type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

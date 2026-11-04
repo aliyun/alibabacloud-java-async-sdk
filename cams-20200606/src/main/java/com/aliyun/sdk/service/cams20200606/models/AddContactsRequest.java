@@ -229,7 +229,10 @@ public class AddContactsRequest extends Request {
         } 
 
         /**
-         * BizCode.
+         * <p>The business code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -238,7 +241,10 @@ public class AddContactsRequest extends Request {
         }
 
         /**
-         * BizExtend.
+         * <p>The business extension information. Default value: an empty set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
@@ -248,7 +254,10 @@ public class AddContactsRequest extends Request {
         }
 
         /**
-         * ContactDetails.
+         * <p>The description of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15111111111</p>
          */
         public Builder contactDetails(String contactDetails) {
             this.putQueryParameter("ContactDetails", contactDetails);
@@ -257,7 +266,10 @@ public class AddContactsRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * <p>The name of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mary</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -266,7 +278,10 @@ public class AddContactsRequest extends Request {
         }
 
         /**
-         * Country.
+         * <p>The country.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -275,7 +290,10 @@ public class AddContactsRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -284,7 +302,10 @@ public class AddContactsRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -293,10 +314,11 @@ public class AddContactsRequest extends Request {
         }
 
         /**
+         * <p>The user group information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value</p>
          */
         public Builder groups(String groups) {
             this.putQueryParameter("Groups", groups);
@@ -305,6 +327,11 @@ public class AddContactsRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the whitelist of back-to-origin IP addresses needs to be updated. If the whitelist of back-to-origin IP addresses in use differs from the latest whitelist of back-to-origin IP addresses, the whitelist needs to be updated and this parameter returns true. Valid values:</p>
+         * <ul>
+         * <li>true: The whitelist needs to be updated.</li>
+         * <li>false: The whitelist does not need to be updated.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,7 +353,10 @@ public class AddContactsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

@@ -230,7 +230,10 @@ public class ModifyChatappTemplateRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>The template category for Viber templates. This parameter is invalid for WhatsApp templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MARKETING</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -239,7 +242,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * CategoryChangePaused.
+         * <p>Specifies whether to pause sending the template when its category is changed from Utility to Marketing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder categoryChangePaused(Boolean categoryChangePaused) {
             this.putQueryParameter("CategoryChangePaused", categoryChangePaused);
@@ -248,6 +254,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
+         * <p>The list of message template components.</p>
+         * <blockquote>
+         * <p>When Category is AUTHENTICATION, Components cannot contain nodes with Type set to HEADER. When Type is BODY or FOOTER, if Text is empty, the content is automatically generated.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder components(java.util.List<Components> components) {
@@ -258,7 +268,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The Space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-did***</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -267,7 +280,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * CustWabaId.
+         * <p>The WABA ID of the ISV customer. This parameter is deprecated. Use CustSpaceId instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>939***</p>
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -276,7 +292,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * Example.
+         * <p>The variables in a key-value structure.</p>
          */
         public Builder example(java.util.Map<String, String> example) {
             String exampleShrink = shrink(example, "Example", "json");
@@ -286,7 +302,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * IsvCode.
+         * <p>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9393***</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -295,6 +314,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
+         * <p>The language.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -307,7 +327,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * MessageSendTtlSeconds.
+         * <p>The validity period for sending WhatsApp authentication template messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder messageSendTtlSeconds(Integer messageSendTtlSeconds) {
             this.putQueryParameter("MessageSendTtlSeconds", messageSendTtlSeconds);
@@ -316,7 +339,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * ProductSetId.
+         * <p>productSetId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>939***</p>
          */
         public Builder productSetId(String productSetId) {
             this.putQueryParameter("ProductSetId", productSetId);
@@ -325,7 +351,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * <p>The message template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93938**</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -334,7 +363,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -343,7 +375,10 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * <p>The templatetype to modify. Valid values: WHATSAPP and VIBER. Default value: WHATSAPP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
@@ -411,7 +446,10 @@ public class ModifyChatappTemplateRequest extends Request {
             } 
 
             /**
-             * PackageName.
+             * <p>The package name of the application invoked by WhatsApp. This parameter is valid for WhatsApp templates where Category is Authentication and Button Type is ONE_TAP or ZERO_TAP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliyun.pack.***</p>
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -419,7 +457,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * SignatureHash.
+             * <p>The signature hash value of the application invoked by WhatsApp. This parameter is valid for WhatsApp templates where Category is Authentication and Button Type is ONE_TAP or ZERO_TAP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kdikie9398k</p>
              */
             public Builder signatureHash(String signatureHash) {
                 this.signatureHash = signatureHash;
@@ -473,6 +514,9 @@ public class ModifyChatappTemplateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
+        @com.aliyun.core.annotation.NameInMap("TtlMinutes")
+        private Long ttlMinutes;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
@@ -495,6 +539,7 @@ public class ModifyChatappTemplateRequest extends Request {
             this.signatureHash = builder.signatureHash;
             this.supportedApps = builder.supportedApps;
             this.text = builder.text;
+            this.ttlMinutes = builder.ttlMinutes;
             this.type = builder.type;
             this.url = builder.url;
             this.urlType = builder.urlType;
@@ -586,6 +631,13 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return ttlMinutes
+         */
+        public Long getTtlMinutes() {
+            return this.ttlMinutes;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -618,6 +670,7 @@ public class ModifyChatappTemplateRequest extends Request {
             private String signatureHash; 
             private java.util.List<SupportedApps> supportedApps; 
             private String text; 
+            private Long ttlMinutes; 
             private String type; 
             private String url; 
             private String urlType; 
@@ -637,13 +690,17 @@ public class ModifyChatappTemplateRequest extends Request {
                 this.signatureHash = model.signatureHash;
                 this.supportedApps = model.supportedApps;
                 this.text = model.text;
+                this.ttlMinutes = model.ttlMinutes;
                 this.type = model.type;
                 this.url = model.url;
                 this.urlType = model.urlType;
             } 
 
             /**
-             * AutofillText.
+             * <p>The button text for the WhatsApp autofill operation. This parameter is required for WhatsApp templates where Category is Authentication and Button Type is ONE_TAP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Autofill</p>
              */
             public Builder autofillText(String autofillText) {
                 this.autofillText = autofillText;
@@ -651,7 +708,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * CouponCode.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23838jdjdj</p>
              */
             public Builder couponCode(String couponCode) {
                 this.couponCode = couponCode;
@@ -659,7 +719,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * FlowAction.
+             * <p>The flow data event type. Valid values: NAVIGATE and DATA_EXCHANGE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NAVIGATE</p>
              */
             public Builder flowAction(String flowAction) {
                 this.flowAction = flowAction;
@@ -667,7 +730,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * FlowId.
+             * <p>Flow id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>293882</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -675,7 +741,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * IsOptOut.
+             * <p>Specifies whether the button is a marketing opt-out button. If a customer clicks this button and send control operations are configured on the Chat App Message Service platform, subsequent marketing messages are not sent to the customer. This parameter is valid only for WhatsApp templates where Category is Marketing and Button Type is QUICK_REPLY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isOptOut(Boolean isOptOut) {
                 this.isOptOut = isOptOut;
@@ -683,7 +752,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * NavigateScreen.
+             * <p>The navigation screen. This parameter is required when FlowAction is NAVIGATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIGN_UP</p>
              */
             public Builder navigateScreen(String navigateScreen) {
                 this.navigateScreen = navigateScreen;
@@ -691,7 +763,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * PackageName.
+             * <p>The package name of the application invoked by WhatsApp. This parameter is valid for WhatsApp templates where Category is Authentication and Button Type is ONE_TAP or ZERO_TAP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliyun.pack.***</p>
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -699,7 +774,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613800**</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -707,7 +785,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * SignatureHash.
+             * <p>The signature hash value of the application invoked by WhatsApp. This parameter is valid for WhatsApp templates where Category is Authentication and Button Type is ONE_TAP or ZERO_TAP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kdikie9398k</p>
              */
             public Builder signatureHash(String signatureHash) {
                 this.signatureHash = signatureHash;
@@ -715,7 +796,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * SupportedApps.
+             * <p>The applications supported by the ONE_TAP or ZERO_TAP verification code.</p>
              */
             public Builder supportedApps(java.util.List<SupportedApps> supportedApps) {
                 this.supportedApps = supportedApps;
@@ -723,7 +804,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p>The text of the message to be sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CTA</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -731,6 +815,18 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
+             * <p>The validity period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10800</p>
+             */
+            public Builder ttlMinutes(Long ttlMinutes) {
+                this.ttlMinutes = ttlMinutes;
+                return this;
+            }
+
+            /**
+             * <p>The button type. Valid values: PHONE_NUMBER, URL, and QUICK_REPLY.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -742,7 +838,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The URL to be accessed when the button is clicked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -750,7 +849,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * UrlType.
+             * <p>The URL type. Valid values: static and dynamic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -857,7 +959,10 @@ public class ModifyChatappTemplateRequest extends Request {
             } 
 
             /**
-             * PhoneNumber.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613800**</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -865,7 +970,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p>The button text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -873,6 +981,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
+             * <p>The button type of the carousel template. Valid values: URL, PHONE_NUMBER, and QUICK_REQLY.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -884,7 +993,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The URL to be accessed when the button is clicked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun.com/image.png">https://aliyun.com/image.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -892,7 +1004,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * UrlType.
+             * <p>The URL type. Valid values: static and dynamic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -999,7 +1114,7 @@ public class ModifyChatappTemplateRequest extends Request {
             } 
 
             /**
-             * Buttons.
+             * <p>The buttons in the carousel card. The button type, name, and order must be consistent across all cards. Each card can have a maximum of two buttons.</p>
              */
             public Builder buttons(java.util.List<CardComponentsButtons> buttons) {
                 this.buttons = buttons;
@@ -1007,7 +1122,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Format.
+             * <p>The header type in the carousel template. Only IMAGE and VIDEO are supported. The header must be consistent across all cards. Valid values: IMGAGE and VIDEO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -1015,7 +1133,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p>The body content in the carousel card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>body</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -1023,6 +1144,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
+             * <p>The component type. Valid values: BODY, HEADER, and BUTTONS.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1034,7 +1156,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The URL of the image or video in the header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun.com/image.png">https://aliyun.com/image.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1089,6 +1214,7 @@ public class ModifyChatappTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The list of components in the carousel card.</p>
              * <p>This parameter is required.</p>
              */
             public Builder cardComponents(java.util.List<CardComponents> cardComponents) {
@@ -1314,7 +1440,10 @@ public class ModifyChatappTemplateRequest extends Request {
             } 
 
             /**
-             * AddSecretRecommendation.
+             * <p>The prompt displayed above the body that advises users not to share the verification code with others. This parameter is valid only for WhatsApp templates where Category is Authentication and Component Type is Body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder addSecretRecommendation(Boolean addSecretRecommendation) {
                 this.addSecretRecommendation = addSecretRecommendation;
@@ -1322,7 +1451,16 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Buttons.
+             * <p>The list of buttons. This parameter applies only to <strong>BUTTONS</strong> components.</p>
+             * <blockquote>
+             * <p>WhatsApp button limits</p>
+             * <ul>
+             * <li>For MARKETING or UTILITY templates, a maximum of 10 buttons are allowed.</li>
+             * <li>Only one PHONE_NUMBER button is allowed.</li>
+             * <li>A maximum of two URL buttons are allowed.</li>
+             * <li>QUICK_REPLY buttons must not be mixed with PHONE_NUMBER or URL buttons.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder buttons(java.util.List<Buttons> buttons) {
                 this.buttons = buttons;
@@ -1330,7 +1468,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Caption.
+             * <p>The description. You can add a description when Type is Header and Format is IMGAGE, DOCUMENT, or VIDEO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -1338,7 +1479,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Cards.
+             * <p>The list of carousel template cards.</p>
              */
             public Builder cards(java.util.List<Cards> cards) {
                 this.cards = cards;
@@ -1346,7 +1487,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * CodeExpirationMinutes.
+             * <p>The validity period of the verification code in minutes for WhatsApp authentication templates. This parameter is valid only for WhatsApp messages where Category is Authentication and Component Type is Footer. This information is displayed in the footer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder codeExpirationMinutes(Integer codeExpirationMinutes) {
                 this.codeExpirationMinutes = codeExpirationMinutes;
@@ -1354,7 +1498,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the Viber video message. Valid values: 0 to 600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -1362,7 +1509,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * FileName.
+             * <p>The file name. You can specify a file name when Type is Header and Format is DOCUMENT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>txt.txt</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1370,7 +1520,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * FileType.
+             * <p>The file type of the Viber file message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>txt</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -1378,7 +1531,16 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Format.
+             * <p>The format. Valid values:</p>
+             * <ul>
+             * <li>TEXT: Text.</li>
+             * <li>IMGAGE: Image.</li>
+             * <li>DOCUMENT: Document.</li>
+             * <li>VIDEO: Video.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>body</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -1386,7 +1548,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * HasExpiration.
+             * <p>Specifies whether the LTO template has an expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasExpiration(Boolean hasExpiration) {
                 this.hasExpiration = hasExpiration;
@@ -1394,7 +1559,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p>The text of the message to be sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -1402,7 +1570,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * ThumbUrl.
+             * <p>The thumbnail URL for a Viber video message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.png">https://img.png</a></p>
              */
             public Builder thumbUrl(String thumbUrl) {
                 this.thumbUrl = thumbUrl;
@@ -1410,6 +1581,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
+             * <p>The component type. Valid values: BODY, HEADER, FOOTER, and BUTTONS.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1421,7 +1593,10 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The media URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.png">https://img.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

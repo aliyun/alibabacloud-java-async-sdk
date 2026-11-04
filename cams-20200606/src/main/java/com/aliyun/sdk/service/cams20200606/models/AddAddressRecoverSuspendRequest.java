@@ -129,7 +129,7 @@ public class AddAddressRecoverSuspendRequest extends Request {
         } 
 
         /**
-         * AuditRecord.
+         * <p>The audit record.</p>
          */
         public Builder auditRecord(AuditRecord auditRecord) {
             String auditRecordShrink = shrink(auditRecord, "AuditRecord", "json");
@@ -139,7 +139,10 @@ public class AddAddressRecoverSuspendRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The customer space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -157,7 +160,10 @@ public class AddAddressRecoverSuspendRequest extends Request {
         }
 
         /**
-         * RequestType.
+         * <p>The request type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder requestType(String requestType) {
             this.putQueryParameter("RequestType", requestType);
@@ -282,7 +288,10 @@ public class AddAddressRecoverSuspendRequest extends Request {
             } 
 
             /**
-             * ApplyReason.
+             * <p>The reason for the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder applyReason(String applyReason) {
                 this.applyReason = applyReason;
@@ -290,7 +299,7 @@ public class AddAddressRecoverSuspendRequest extends Request {
             }
 
             /**
-             * MessageDestinationCountry.
+             * <p>The list of destination countries for messages.</p>
              */
             public Builder messageDestinationCountry(java.util.List<String> messageDestinationCountry) {
                 this.messageDestinationCountry = messageDestinationCountry;
@@ -298,7 +307,7 @@ public class AddAddressRecoverSuspendRequest extends Request {
             }
 
             /**
-             * MessageDestinationInternationalCountry.
+             * <p>The list of international destination countries for messages.</p>
              */
             public Builder messageDestinationInternationalCountry(java.util.List<String> messageDestinationInternationalCountry) {
                 this.messageDestinationInternationalCountry = messageDestinationInternationalCountry;
@@ -306,7 +315,10 @@ public class AddAddressRecoverSuspendRequest extends Request {
             }
 
             /**
-             * RecoveryDate.
+             * <p>The recovery date in YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder recoveryDate(String recoveryDate) {
                 this.recoveryDate = recoveryDate;
@@ -314,7 +326,10 @@ public class AddAddressRecoverSuspendRequest extends Request {
             }
 
             /**
-             * SuspensionDate.
+             * <p>The suspension date in YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
              */
             public Builder suspensionDate(String suspensionDate) {
                 this.suspensionDate = suspensionDate;

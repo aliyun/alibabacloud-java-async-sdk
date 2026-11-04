@@ -199,7 +199,10 @@ public class GetDownloadExcelListRequest extends Request {
         } 
 
         /**
-         * BizCode.
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALICOM_OPAAS</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -208,7 +211,10 @@ public class GetDownloadExcelListRequest extends Request {
         }
 
         /**
-         * BizExtend.
+         * <p>The business extension information. Default value: &quot;{}&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
@@ -218,7 +224,10 @@ public class GetDownloadExcelListRequest extends Request {
         }
 
         /**
-         * Condition.
+         * <p>The query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa</p>
          */
         public Builder condition(String condition) {
             this.putQueryParameter("Condition", condition);
@@ -227,7 +236,7 @@ public class GetDownloadExcelListRequest extends Request {
         }
 
         /**
-         * CountryNames.
+         * <p>The country name.</p>
          */
         public Builder countryNames(java.util.List<String> countryNames) {
             String countryNamesShrink = shrink(countryNames, "CountryNames", "json");
@@ -237,7 +246,10 @@ public class GetDownloadExcelListRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end date. Format: YYYY-MM-DD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-01</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -246,7 +258,10 @@ public class GetDownloadExcelListRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -255,7 +270,7 @@ public class GetDownloadExcelListRequest extends Request {
         }
 
         /**
-         * GroupIds.
+         * <p>The contact group ID.</p>
          */
         public Builder groupIds(java.util.List<String> groupIds) {
             String groupIdsShrink = shrink(groupIds, "GroupIds", "json");
@@ -292,7 +307,10 @@ public class GetDownloadExcelListRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start date. Format: YYYY-MM-DD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-11-01</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

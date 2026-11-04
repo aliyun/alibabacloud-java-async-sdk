@@ -172,7 +172,7 @@ public class ListProductCatalogRequest extends Request {
         } 
 
         /**
-         * <p>The cursor that points to the end of the page of the returned data.</p>
+         * <p>The start position of the next page for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>kdkii48jfjjei3</p>
@@ -184,7 +184,7 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * <p>The cursor that points to the beginning of the page of the returned data.</p>
+         * <p>The end position of the previous page for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>wiidkd939kek93</p>
@@ -196,11 +196,11 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * <p>The Business Manager ID.</p>
+         * <p>The ID of the business platform where the WhatsApp Business Account (WABA) is located. You can view the business platform ID in the Chat App Message Service console after the WABA registration is completed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>28</p>
+         * <p>105048970863****</p>
          */
         public Builder businessId(Long businessId) {
             this.putQueryParameter("BusinessId", businessId);
@@ -209,10 +209,10 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * <p>The space ID of the ISV sub-customer.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>C29398882929</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -221,8 +221,7 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * <p>The fields. Separate multiple fields with commas (,).
-         * see  <a href="https://help.aliyun.com/document_detail/2579419.html">catalog fields</a></p>
+         * <p>The list of fields. Separate multiple fields with commas (,). For specific fields, refer to <a href="https://help.aliyun.com/document_detail/2579419.html">Catalog fields</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>id,name</p>
@@ -234,7 +233,7 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * <p>The number of catalogs to be queried. Valid values: 1 to 1000.</p>
+         * <p>The number of entries to query. Valid values: 1 to 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>73</p>

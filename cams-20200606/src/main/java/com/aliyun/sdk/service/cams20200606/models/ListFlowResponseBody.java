@@ -106,7 +106,10 @@ public class ListFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class ListFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If OK is returned, the request was successful.</p>
+         * <p>The result. OK indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -125,7 +128,7 @@ public class ListFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -226,7 +229,7 @@ public class ListFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The categories of the Flows.</p>
+             * <p>The categories.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -234,10 +237,10 @@ public class ListFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Flow ID.</p>
+             * <p>Flow ID。</p>
              * 
              * <strong>example:</strong>
-             * <p>3939393***</p>
+             * <p>92675332812643****</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;

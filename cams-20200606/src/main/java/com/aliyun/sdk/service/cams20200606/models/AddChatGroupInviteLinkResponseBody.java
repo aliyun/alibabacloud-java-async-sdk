@@ -119,7 +119,10 @@ public class AddChatGroupInviteLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class AddChatGroupInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code. Valid values:</p>
+         * <ul>
+         * <li><p>OK: The request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,10 @@ public class AddChatGroupInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * InviteLink.
+         * <p>The invite link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://chat.whatsapp.com/">https://chat.whatsapp.com/</a>****</p>
          */
         public Builder inviteLink(String inviteLink) {
             this.inviteLink = inviteLink;
@@ -143,7 +158,10 @@ public class AddChatGroupInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +169,10 @@ public class AddChatGroupInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +180,14 @@ public class AddChatGroupInviteLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

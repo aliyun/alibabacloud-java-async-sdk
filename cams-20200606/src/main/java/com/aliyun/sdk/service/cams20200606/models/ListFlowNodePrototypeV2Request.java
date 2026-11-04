@@ -160,6 +160,7 @@ public class ListFlowNodePrototypeV2Request extends Request {
         } 
 
         /**
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,20 @@ public class ListFlowNodePrototypeV2Request extends Request {
         }
 
         /**
-         * GroupCode.
+         * <p>The component group code. Valid values:</p>
+         * <ul>
+         * <li><p>Messaging: messaging components.</p>
+         * </li>
+         * <li><p>Core: core components.</p>
+         * </li>
+         * <li><p>Intelligence: intelligent components.</p>
+         * </li>
+         * <li><p>Contact: contact management components.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Core</p>
          */
         public Builder groupCode(String groupCode) {
             this.putQueryParameter("GroupCode", groupCode);
@@ -181,7 +195,10 @@ public class ListFlowNodePrototypeV2Request extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword. This parameter is used for fuzzy match based on the flow component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WhatsApp</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -199,6 +216,7 @@ public class ListFlowNodePrototypeV2Request extends Request {
         }
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +229,7 @@ public class ListFlowNodePrototypeV2Request extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

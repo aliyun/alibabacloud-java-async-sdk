@@ -147,6 +147,7 @@ public class DeleteMessageCampaignRequest extends Request {
         } 
 
         /**
+         * <p>The Meta ad account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +160,7 @@ public class DeleteMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The campaign ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +173,7 @@ public class DeleteMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The space ID of an Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +195,7 @@ public class DeleteMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The Page ID of Messenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

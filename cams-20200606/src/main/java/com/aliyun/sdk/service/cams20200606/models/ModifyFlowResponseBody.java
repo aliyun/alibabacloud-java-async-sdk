@@ -106,7 +106,10 @@ public class ModifyFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class ModifyFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If OK is returned, the request was successful.</p>
+         * <p>The response code. OK indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -239,7 +242,7 @@ public class ModifyFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The categories of the Flow.</p>
+             * <p>The flow folder.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -247,7 +250,10 @@ public class ModifyFlowResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointUri.
+             * <p>The URL of the WA Flow Endpoint</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.abc.com">http://www.abc.com</a></p>
              */
             public Builder endpointUri(String endpointUri) {
                 this.endpointUri = endpointUri;
@@ -255,10 +261,10 @@ public class ModifyFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Flow ID.</p>
+             * <p>Flow ID。</p>
              * 
              * <strong>example:</strong>
-             * <p>3939399****</p>
+             * <p>92675332812643****</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -266,10 +272,10 @@ public class ModifyFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Flow name.</p>
+             * <p>The name of the flow.</p>
              * 
              * <strong>example:</strong>
-             * <p>flow-00203</p>
+             * <p>flow_001</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

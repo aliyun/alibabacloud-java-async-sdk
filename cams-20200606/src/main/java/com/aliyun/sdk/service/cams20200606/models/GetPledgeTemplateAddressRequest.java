@@ -115,7 +115,10 @@ public class GetPledgeTemplateAddressRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-x***</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -124,7 +127,10 @@ public class GetPledgeTemplateAddressRequest extends Request {
         }
 
         /**
-         * IndustryType.
+         * <p>The industry type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>it</p>
          */
         public Builder industryType(String industryType) {
             this.putQueryParameter("IndustryType", industryType);

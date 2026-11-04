@@ -115,7 +115,10 @@ public class DeleteMarketingFlowRequest extends Request {
         } 
 
         /**
-         * ActivityCode.
+         * <p>The activity code. You can use the system-generated code or modify it to use a custom code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder activityCode(String activityCode) {
             this.putQueryParameter("ActivityCode", activityCode);
@@ -124,7 +127,10 @@ public class DeleteMarketingFlowRequest extends Request {
         }
 
         /**
-         * ActivityId.
+         * <p>The activity ID (deprecated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>已弃用</p>
          */
         public Builder activityId(String activityId) {
             this.putQueryParameter("ActivityId", activityId);

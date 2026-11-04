@@ -188,7 +188,10 @@ public class ListCustomAudienceRequest extends Request {
         } 
 
         /**
-         * AdAccountId.
+         * <p>The Meta ad account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>339**</p>
          */
         public Builder adAccountId(String adAccountId) {
             this.putQueryParameter("AdAccountId", adAccountId);
@@ -197,6 +200,7 @@ public class ListCustomAudienceRequest extends Request {
         }
 
         /**
+         * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +213,10 @@ public class ListCustomAudienceRequest extends Request {
         }
 
         /**
-         * CustomAudienceId.
+         * <p>The custom audience ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>239**</p>
          */
         public Builder customAudienceId(String customAudienceId) {
             this.putQueryParameter("CustomAudienceId", customAudienceId);
@@ -218,7 +225,10 @@ public class ListCustomAudienceRequest extends Request {
         }
 
         /**
-         * CustomAudienceName.
+         * <p>The custom audience name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder customAudienceName(String customAudienceName) {
             this.putQueryParameter("CustomAudienceName", customAudienceName);
@@ -236,6 +246,7 @@ public class ListCustomAudienceRequest extends Request {
         }
 
         /**
+         * <p>The pagination information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder page(Page page) {
@@ -246,6 +257,7 @@ public class ListCustomAudienceRequest extends Request {
         }
 
         /**
+         * <p>The page ID of Messenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +288,10 @@ public class ListCustomAudienceRequest extends Request {
         }
 
         /**
-         * TokenType.
+         * <p>The token type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder tokenType(String tokenType) {
             this.putQueryParameter("TokenType", tokenType);
@@ -346,6 +361,7 @@ public class ListCustomAudienceRequest extends Request {
             } 
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -357,6 +373,7 @@ public class ListCustomAudienceRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

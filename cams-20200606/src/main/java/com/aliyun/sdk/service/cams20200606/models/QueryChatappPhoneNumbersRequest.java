@@ -129,10 +129,10 @@ public class QueryChatappPhoneNumbersRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the RAM user within the ISV account.</p>
+         * <p>The space ID of the ISV sub-customer.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>29348393884****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -141,10 +141,10 @@ public class QueryChatappPhoneNumbersRequest extends Request {
         }
 
         /**
-         * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
+         * <p>The ISV verification code, used to verify whether a sub-account is authorized by an ISV.</p>
          * 
          * <strong>example:</strong>
-         * <p>aksik93kdkkxmwol93939</p>
+         * <p>aksik93kdkkxmwol9****</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -180,7 +180,7 @@ public class QueryChatappPhoneNumbersRequest extends Request {
         }
 
         /**
-         * <p>The state of the phone number.</p>
+         * <p>The phone number status.</p>
          * 
          * <strong>example:</strong>
          * <p>VERIFIED</p>

@@ -109,7 +109,7 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
          * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>无</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -117,7 +117,13 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The URL of the website.</p>
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -128,7 +134,7 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The prompt message. A value is returned when an exception occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -139,7 +145,7 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The websites.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -150,10 +156,10 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

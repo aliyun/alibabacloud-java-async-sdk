@@ -159,6 +159,7 @@ public class ModifyFlowRequest extends Request {
         } 
 
         /**
+         * <p>The folder.</p>
          * <p>This parameter is required.</p>
          */
         public Builder categories(java.util.List<String> categories) {
@@ -169,7 +170,10 @@ public class ModifyFlowRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-1sdkjwen2</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -178,7 +182,10 @@ public class ModifyFlowRequest extends Request {
         }
 
         /**
-         * EndpointUri.
+         * <p>The URL of the WA Flow Endpoint</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.***.com">http://www.***.com</a></p>
          */
         public Builder endpointUri(String endpointUri) {
             this.putQueryParameter("EndpointUri", endpointUri);
@@ -187,7 +194,10 @@ public class ModifyFlowRequest extends Request {
         }
 
         /**
-         * FlowId.
+         * <p>The ID of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21231232312</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);
@@ -196,10 +206,11 @@ public class ModifyFlowRequest extends Request {
         }
 
         /**
+         * <p>The name of the flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Flow-**001</p>
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);

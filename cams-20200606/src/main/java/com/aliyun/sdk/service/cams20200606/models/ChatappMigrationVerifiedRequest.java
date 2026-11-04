@@ -132,11 +132,11 @@ public class ChatappMigrationVerifiedRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>29348393884****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -158,7 +158,7 @@ public class ChatappMigrationVerifiedRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>861380001234</p>
+         * <p>86138000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -189,7 +189,7 @@ public class ChatappMigrationVerifiedRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>828798</p>
+         * <p>8287**</p>
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

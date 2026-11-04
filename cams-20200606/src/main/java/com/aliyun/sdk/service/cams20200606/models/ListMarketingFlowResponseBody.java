@@ -132,7 +132,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,16 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +160,7 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -156,7 +168,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +179,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB6122C9-09B5-5926-**476A96CB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +190,14 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.                                 </li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +205,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -493,7 +521,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * ActivityCode.
+             * <p>The campaign code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3243243***</p>
              */
             public Builder activityCode(String activityCode) {
                 this.activityCode = activityCode;
@@ -501,7 +532,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * ActivityDesc.
+             * <p>The campaign description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder activityDesc(String activityDesc) {
                 this.activityDesc = activityDesc;
@@ -509,7 +543,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * ActivityName.
+             * <p>The campaign name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -517,7 +554,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * ActivityStatus.
+             * <p>The campaign status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder activityStatus(String activityStatus) {
                 this.activityStatus = activityStatus;
@@ -525,7 +565,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * BizCode.
+             * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -533,7 +576,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * BizExtend.
+             * <p>The business extension information. Default value: &quot;{}&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
                 this.bizExtend = bizExtend;
@@ -541,7 +587,11 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * <p>The upgrade start time. The upgrade start time is specified as a cron expression.</p>
+             * <p>For example, <code>0 0 4 1/1 * ?</code> indicates that the upgrade starts at 4:00 on the first day of each month and runs at 4:00 every day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 4 1/1 * ?</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -549,7 +599,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 XX1:11:11</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -557,7 +610,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionType.
+             * <p>The execution method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1(default cron)</p>
              */
             public Builder executionType(String executionType) {
                 this.executionType = executionType;
@@ -565,7 +621,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-XX-01 11:11:11</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -573,7 +632,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifier.
+             * <p><strong>[Deprecated]</strong> The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder gmtModifier(String gmtModifier) {
                 this.gmtModifier = gmtModifier;
@@ -581,7 +643,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The operational activity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -589,7 +654,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * ParamFlag.
+             * <p>Indicates whether custom parameters are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder paramFlag(String paramFlag) {
                 this.paramFlag = paramFlag;
@@ -597,7 +665,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The custom user parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;CustomerLimit\&quot;:false}</p>
              */
             public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
@@ -605,7 +676,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedFlowCode.
+             * <p>The associated flow code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsafdsf***</p>
              */
             public Builder relatedFlowCode(String relatedFlowCode) {
                 this.relatedFlowCode = relatedFlowCode;
@@ -613,7 +687,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedFlowName.
+             * <p>The name of the associated flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder relatedFlowName(String relatedFlowName) {
                 this.relatedFlowName = relatedFlowName;
@@ -621,7 +698,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedGroupId.
+             * <p>The ID of the associated group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54354**</p>
              */
             public Builder relatedGroupId(String relatedGroupId) {
                 this.relatedGroupId = relatedGroupId;
@@ -629,7 +709,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedGroupName.
+             * <p>The name of the associated group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAA</p>
              */
             public Builder relatedGroupName(String relatedGroupName) {
                 this.relatedGroupName = relatedGroupName;
@@ -637,7 +720,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * SpecificTime.
+             * <p>The specific time. This parameter is valid when ExecutionType is set to 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Specific time (when ExecutionType is 2)</p>
              */
             public Builder specificTime(String specificTime) {
                 this.specificTime = specificTime;
@@ -645,7 +731,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * StartDate.
+             * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-XX 11:11:11</p>
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -653,7 +742,10 @@ public class ListMarketingFlowResponseBody extends TeaModel {
             }
 
             /**
-             * TenantCode.
+             * <p>The tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111</p>
              */
             public Builder tenantCode(String tenantCode) {
                 this.tenantCode = tenantCode;

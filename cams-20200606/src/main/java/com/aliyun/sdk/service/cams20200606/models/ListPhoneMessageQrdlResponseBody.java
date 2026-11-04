@@ -106,7 +106,10 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If OK is returned, the request was successful.</p>
+         * <p>The response code. OK indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -125,7 +128,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -133,10 +136,10 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error description information.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>None.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -265,7 +268,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The URL of the deep link.</p>
+             * <p>The deep link URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://wa.msg/">https://wa.msg/</a></p>
@@ -276,7 +279,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format of the generated image.</p>
+             * <p>The type of the generated image.</p>
              * 
              * <strong>example:</strong>
              * <p>PNG</p>
@@ -290,7 +293,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
              * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>8613800</p>
+             * <p>86138009****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -309,7 +312,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the QR code.</p>
+             * <p>The URL of the QR code image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://img.png">https://img.png</a></p>
@@ -320,7 +323,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mode of the quick-response (QR) code.</p>
+             * <p>The QR code identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>IUIED999</p>

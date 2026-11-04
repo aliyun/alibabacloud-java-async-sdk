@@ -116,7 +116,10 @@ public class DeprecateFlowRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-awsd12312o3j</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -125,10 +128,11 @@ public class DeprecateFlowRequest extends Request {
         }
 
         /**
+         * <p>The Flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>1212323</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

@@ -158,7 +158,7 @@ public class ListChatFlowTemplateRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class ListChatFlowTemplateRequest extends Request {
         }
 
         /**
-         * <p>Search keyword.</p>
+         * <p>The search keyword. Used for fuzzy match of template names.</p>
          * 
          * <strong>example:</strong>
          * <p>LLM</p>
@@ -192,7 +192,7 @@ public class ListChatFlowTemplateRequest extends Request {
         }
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -204,7 +204,7 @@ public class ListChatFlowTemplateRequest extends Request {
         }
 
         /**
-         * <p>Number of records per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -234,7 +234,7 @@ public class ListChatFlowTemplateRequest extends Request {
         }
 
         /**
-         * <p>Trigger type, with the following enum values:</p>
+         * <p>The flow trigger type. Valid values:</p>
          * <ul>
          * <li>TriggeredManually</li>
          * <li>TriggeredByWhatsApp</li>

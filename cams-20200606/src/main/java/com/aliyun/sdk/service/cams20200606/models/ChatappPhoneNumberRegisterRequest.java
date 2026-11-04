@@ -117,10 +117,11 @@ public class ChatappPhoneNumberRegisterRequest extends Request {
         } 
 
         /**
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>939283893939</p>
+         * <p>93928389****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -138,10 +139,11 @@ public class ChatappPhoneNumberRegisterRequest extends Request {
         }
 
         /**
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>8613800000000</p>
+         * <p>861380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

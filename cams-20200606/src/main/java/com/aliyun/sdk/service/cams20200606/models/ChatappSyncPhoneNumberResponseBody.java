@@ -122,7 +122,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>无</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -130,10 +130,12 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The response code.</p>
          * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>A value of OK indicates that the request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,10 +147,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>None.</p>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +158,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The phone numbers.</p>
+         * <p>The list of phone numbers.</p>
          */
         public Builder phoneNumbers(java.util.List<PhoneNumbers> phoneNumbers) {
             this.phoneNumbers = phoneNumbers;
@@ -164,7 +166,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -175,9 +177,9 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>true</strong>: The call is successful.</li>
          * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
@@ -934,13 +936,12 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification state of the phone number.</p>
-             * <p>Valid values:</p>
+             * <p>The verification status. Valid values:</p>
              * <ul>
-             * <li>REVOKED: The review application is revoked.</li>
-             * <li>MORE_INFORMATION_REQUESTED: More information needs to be provided.</li>
-             * <li>VERIFIED: The phone number passes the verification.</li>
-             * <li>REJECTED: The phone number fails to pass the verification.</li>
+             * <li>REVOKED: The verification request is revoked.</li>
+             * <li>MORE_INFORMATION_REQUESTED: More information is required.</li>
+             * <li>VERIFIED: The verification is passed.</li>
+             * <li>REJECTED: The verification is rejected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -952,7 +953,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether it is a WhatsApp Official Business Account (OBA).</p>
+             * <p>Indicates whether the phone number is OBA-certified.</p>
              * 
              * <strong>example:</strong>
              * <p>N</p>
@@ -963,10 +964,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of phone numbers to which messages can be sent in a day.</p>
+             * <p>The messaging limit tier of the phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>TIER_10</p>
+             * <p>TIER_10K</p>
              */
             public Builder messagingLimitTier(String messagingLimitTier) {
                 this.messagingLimitTier = messagingLimitTier;
@@ -974,7 +975,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review status of the business display name.</p>
+             * <p>The name review status.</p>
              * 
              * <strong>example:</strong>
              * <p>Approval</p>
@@ -985,7 +986,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review status of the new business display name.</p>
+             * <p>The review status of the new name.</p>
              * 
              * <strong>example:</strong>
              * <p>Approval</p>
@@ -999,7 +1000,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
              * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>8613800001234</p>
+             * <p>861380000****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -1008,12 +1009,6 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
 
             /**
              * <p>The quality rating of the phone number.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>RED</li>
-             * <li>YELLOW</li>
-             * <li>GREEN</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>GREEN</p>
@@ -1024,21 +1019,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the phone number.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>MIGRATED</li>
-             * <li>FLAGGED</li>
-             * <li>DISCONNECTED</li>
-             * <li>UNVERIFIED</li>
-             * <li>BANNED</li>
-             * <li>RATE_LIMITED</li>
-             * <li>PENDING</li>
-             * <li>CONNECTED</li>
-             * <li>UNKNOWN</li>
-             * <li>DELETED</li>
-             * <li>RESTRICTED</li>
-             * </ul>
+             * <p>The status of the phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>PENDING</p>
@@ -1049,7 +1030,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
+             * <p>The callback URL for status reports.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.alibaba.com/status">https://www.alibaba.com/status</a></p>
@@ -1063,7 +1044,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
              * <p>The status report queue.</p>
              * 
              * <strong>example:</strong>
-             * <p>alicom-09399200-queue</p>
+             * <p>alicom-0939****-queue</p>
              */
             public Builder statusQueue(String statusQueue) {
                 this.statusQueue = statusQueue;
@@ -1071,7 +1052,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that receives the MO messages.</p>
+             * <p>The callback URL for upstream messages.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.alibaba.com/inbound">https://www.alibaba.com/inbound</a></p>
@@ -1082,10 +1063,10 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile originated (MO) message queue.</p>
+             * <p>The upstream MSMQ.</p>
              * 
              * <strong>example:</strong>
-             * <p>alicom-09399200-queue</p>
+             * <p>alicom-0939****-queue</p>
              */
             public Builder upQueue(String upQueue) {
                 this.upQueue = upQueue;
@@ -1093,7 +1074,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the business to which the phone number belongs.</p>
+             * <p>The verified name of the phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba</p>

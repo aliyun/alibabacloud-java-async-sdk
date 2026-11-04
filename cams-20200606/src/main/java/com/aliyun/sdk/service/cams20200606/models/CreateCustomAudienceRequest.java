@@ -190,6 +190,7 @@ public class CreateCustomAudienceRequest extends Request {
         } 
 
         /**
+         * <p>The Meta ad account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +203,8 @@ public class CreateCustomAudienceRequest extends Request {
         }
 
         /**
+         * <p>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</p>
+         * <p>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +217,10 @@ public class CreateCustomAudienceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -223,7 +229,10 @@ public class CreateCustomAudienceRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket/file.xlsx</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -232,6 +241,7 @@ public class CreateCustomAudienceRequest extends Request {
         }
 
         /**
+         * <p>The name of the custom audience.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,6 +263,7 @@ public class CreateCustomAudienceRequest extends Request {
         }
 
         /**
+         * <p>The Page ID for Messenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,6 +294,7 @@ public class CreateCustomAudienceRequest extends Request {
         }
 
         /**
+         * <p>The upload method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

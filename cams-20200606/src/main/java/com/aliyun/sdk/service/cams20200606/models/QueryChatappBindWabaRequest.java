@@ -115,10 +115,10 @@ public class QueryChatappBindWabaRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the user under the ISV account.</p>
+         * <p>The space ID of the ISV sub-customer.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>293483****49493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -127,10 +127,10 @@ public class QueryChatappBindWabaRequest extends Request {
         }
 
         /**
-         * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+         * <p>The ISV verification code, used to verify whether the sub-account is authorized by the ISV.</p>
          * 
          * <strong>example:</strong>
-         * <p>aksik93kdkkxmwol93939</p>
+         * <p>aksik93kdkkxmwol9****</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);

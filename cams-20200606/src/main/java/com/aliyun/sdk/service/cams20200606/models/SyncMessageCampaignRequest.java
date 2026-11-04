@@ -117,6 +117,7 @@ public class SyncMessageCampaignRequest extends Request {
         } 
 
         /**
+         * <p>The Meta ad account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +139,7 @@ public class SyncMessageCampaignRequest extends Request {
         }
 
         /**
+         * <p>The Messenger page ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

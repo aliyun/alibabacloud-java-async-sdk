@@ -157,10 +157,10 @@ public class CreateChatFlowByImportRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>ALICOM_OPAAS</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -169,7 +169,7 @@ public class CreateChatFlowByImportRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -182,10 +182,20 @@ public class CreateChatFlowByImportRequest extends Request {
         }
 
         /**
-         * <p>Imported flow DSL data</p>
+         * <p>The imported flow DSL data, which is a JSON-formatted string. You can arrange flow components on the canvas in the flow orchestration console in advance, save the flow, and then click <strong>Settings</strong> &gt; <strong>Export</strong> in the upper-right corner of the canvas to export a JSON data file for viewing.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>{
+         *   &quot;schema&quot;: {
+         *     &quot;namespace&quot;: &quot;External&quot;,
+         *     &quot;version&quot;: &quot;1.0&quot;,
+         *     &quot;copyright&quot;: &quot;Alibaba Cloud&quot;
+         *   },
+         *   &quot;editor&quot;: &quot;H4sIAAAAAAAAA+1YbU/c***********************&quot;,
+         *   &quot;flow&quot;: {
+         *     &quot;triggerType&quot;: &quot;TriggeredByWhatsApp&quot;
+         *   }
+         * }</p>
          */
         public Builder flowViewModel(String flowViewModel) {
             this.putQueryParameter("FlowViewModel", flowViewModel);
@@ -203,10 +213,10 @@ public class CreateChatFlowByImportRequest extends Request {
         }
 
         /**
-         * <p>Flow remarks</p>
+         * <p>The flow remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Trigger Subscription.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -233,10 +243,10 @@ public class CreateChatFlowByImportRequest extends Request {
         }
 
         /**
-         * <p>Flow title</p>
+         * <p>The flow title.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>WhatsApp Trigger Subscription.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

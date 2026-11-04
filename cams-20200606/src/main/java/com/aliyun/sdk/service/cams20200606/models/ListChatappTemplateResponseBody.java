@@ -132,7 +132,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -143,10 +143,12 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error code list</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +160,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message templates.</p>
+         * <p>The list data.</p>
          */
         public Builder listTemplate(java.util.List<ListTemplate> listTemplate) {
             this.listTemplate = listTemplate;
@@ -166,7 +168,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>User not authorized to operate on the specified resource.</p>
@@ -177,7 +179,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -188,10 +190,10 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The call succeeded.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +205,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -350,12 +352,16 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The review state of the template. Valid values:</p>
+             * <p>The audit status. Valid values:</p>
              * <ul>
-             * <li><strong>pass</strong>: The template is approved.</li>
-             * <li><strong>fail</strong>: The template is rejected.</li>
-             * <li><strong>auditing</strong>: The template is being reviewed.</li>
-             * <li><strong>unaudit</strong>: The review is suspended.</li>
+             * <li><p><strong>pass</strong>: Approved.</p>
+             * </li>
+             * <li><p><strong>fail</strong>: Rejected.</p>
+             * </li>
+             * <li><p><strong>auditing</strong>: Under review.</p>
+             * </li>
+             * <li><p><strong>unaudit</strong>: Review suspended.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -367,27 +373,27 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the WhatsApp message template. Valid values:</p>
+             * <p>The WhatsApp template category. Valid values:</p>
              * <ul>
-             * <li><strong>UTILITY</strong></li>
-             * <li><strong>MARKETING</strong></li>
-             * <li><strong>AUTHENTICATION</strong></li>
+             * <li><p><strong>UTILITY</strong>: Transaction-related.</p>
+             * </li>
+             * <li><p><strong>MARKETING</strong>: Marketing template.</p>
+             * </li>
+             * <li><p><strong>AUTHENTICATION</strong>: Identity verification.</p>
+             * </li>
              * </ul>
-             * <p>The category of the Viber template. Valid values:</p>
+             * <p>Viber template category:</p>
              * <ul>
-             * <li><strong>text</strong>: template that contains only text</li>
-             * <li><strong>image</strong>: template that contains only images</li>
-             * <li><strong>text_image_button</strong>: template that contains text, images, and buttons</li>
-             * <li><strong>text_button</strong>: template that contains text and buttons</li>
-             * <li><strong>document</strong>: template that contains only documents</li>
-             * <li><strong>video</strong>: template that contains only videos</li>
-             * <li><strong>text_video</strong>: template that contains text and videos</li>
-             * <li><strong>text_video_button</strong>: template that contains text, videos, and buttons</li>
-             * <li><strong>text_image</strong>: template that contains text and images</li>
+             * <li><p><strong>UTILITY</strong>: Transaction-related.</p>
+             * </li>
+             * <li><p><strong>MARKETING</strong>: Marketing template.</p>
+             * </li>
+             * <li><p><strong>AUTHENTICATION</strong>: Identity verification.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>TRANSACTIONAL</p>
+             * <p>UTILITY</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -395,7 +401,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+             * <p>The template language. For language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>en</p>
@@ -406,7 +412,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the template was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The last modification time, expressed as a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1711006633000</p>
@@ -417,7 +423,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the template was rejected.</p>
+             * <p>The reason the template audit was rejected.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -428,7 +434,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the message template.</p>
+             * <p>The template code.</p>
              * 
              * <strong>example:</strong>
              * <p>744c4b5c79c9432497a075bdfca3****</p>
@@ -439,7 +445,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the message template.</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
              * <p>hello_whatsapp</p>
@@ -450,7 +456,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the template. Valid values: WHATSAPP and VIBER.</p>
+             * <p>The templatetype. Valid values: WHATSAPP or VIBER.</p>
              * 
              * <strong>example:</strong>
              * <p>WHATSAPP</p>

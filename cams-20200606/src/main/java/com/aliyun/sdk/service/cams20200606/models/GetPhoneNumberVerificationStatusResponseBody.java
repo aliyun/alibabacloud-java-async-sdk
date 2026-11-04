@@ -106,7 +106,10 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,10 +117,12 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>OK: The request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +134,7 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +142,7 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -148,7 +153,7 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90E63D28-E31D-1EB2-8939-A94866411B2D</p>
@@ -230,7 +235,12 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The verification status.</p>
+             * <p>The verification status of the phone number. Valid values:</p>
+             * <ul>
+             * <li>NOT_VERIFIED: Not verified.</li>
+             * <li>VERIFIED: Verified.</li>
+             * <li>EXPIRED: Verification expired.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>VERIFIED</p>
@@ -241,10 +251,10 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the number.</p>
+             * <p>The phone number ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>2224342624</p>
+             * <p>222434****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -255,7 +265,7 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
              * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>8613900001234</p>
+             * <p>861390000****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;

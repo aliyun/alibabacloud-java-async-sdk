@@ -93,7 +93,7 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Access denied for detailed information.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -104,10 +104,12 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>OK: The request is successful.</p>
+         * </li>
+         * <li><p>Other error codes: For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +121,7 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Prompt message, there is a value when an exception is returned.</p>
+         * <p>The prompt message. This parameter is returned when an exception occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>

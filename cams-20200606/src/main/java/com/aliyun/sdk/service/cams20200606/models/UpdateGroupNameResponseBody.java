@@ -119,7 +119,10 @@ public class UpdateGroupNameResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None.</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,12 @@ public class UpdateGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code. Valid values:</p>
+         * <p>OK: The request was successful.</p>
+         * <p>For other error codes, see the error code list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value sample value.</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +143,10 @@ public class UpdateGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value sample value.</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -143,7 +154,10 @@ public class UpdateGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value sample value.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +165,10 @@ public class UpdateGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value sample value.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +176,16 @@ public class UpdateGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

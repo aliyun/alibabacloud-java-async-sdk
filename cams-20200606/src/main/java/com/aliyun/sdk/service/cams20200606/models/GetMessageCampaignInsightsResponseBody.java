@@ -119,7 +119,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code. Valid values:</p>
+         * <ul>
+         * <li><p>OK: The request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, refer to <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s39**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,16 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -329,7 +356,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             } 
 
             /**
-             * DateStart.
+             * <p>The start date in the format of YYYY-MM-DD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-01</p>
              */
             public Builder dateStart(String dateStart) {
                 this.dateStart = dateStart;
@@ -337,7 +367,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             }
 
             /**
-             * DateStop.
+             * <p>The end date in the format of YYYY-MM-DD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-29</p>
              */
             public Builder dateStop(String dateStop) {
                 this.dateStop = dateStop;
@@ -345,7 +378,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             }
 
             /**
-             * MarketingMessagesCostPerDelivered.
+             * <p>The average cost per delivered message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2755</p>
              */
             public Builder marketingMessagesCostPerDelivered(String marketingMessagesCostPerDelivered) {
                 this.marketingMessagesCostPerDelivered = marketingMessagesCostPerDelivered;
@@ -353,7 +389,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             }
 
             /**
-             * MarketingMessagesCostPerLinkBtnClick.
+             * <p>The average cost per message link click. This metric does not include messages sent to Europe, Argentina, Türkiye, South Korea, or Japan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>268</p>
              */
             public Builder marketingMessagesCostPerLinkBtnClick(String marketingMessagesCostPerLinkBtnClick) {
                 this.marketingMessagesCostPerLinkBtnClick = marketingMessagesCostPerLinkBtnClick;
@@ -361,7 +400,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             }
 
             /**
-             * MarketingMessagesDelivered.
+             * <p>The number of messages that the business sends to users and that are successfully delivered. Some messages may not be delivered, for example, when the user\&quot;s device is unavailable. This metric does not include messages delivered to Europe or Japan. In some cases, this metric may be an estimate, and its value may differ from the data shown on your billing statement because of minor differences in the data processing procedure, resulting in data inconsistency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2755</p>
              */
             public Builder marketingMessagesDelivered(String marketingMessagesDelivered) {
                 this.marketingMessagesDelivered = marketingMessagesDelivered;
@@ -369,7 +411,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             }
 
             /**
-             * MarketingMessagesDeliveryRate.
+             * <p>The message delivery rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79.419238</p>
              */
             public Builder marketingMessagesDeliveryRate(String marketingMessagesDeliveryRate) {
                 this.marketingMessagesDeliveryRate = marketingMessagesDeliveryRate;
@@ -377,7 +422,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             }
 
             /**
-             * MarketingMessagesLinkBtnClick.
+             * <p>The number of times users clicked or tapped within marketing messages, directing them to on-Meta or off-Meta destinations specified by the advertiser. This metric does not include messages sent to Europe, Argentina, Türkiye, South Korea, or Japan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>268</p>
              */
             public Builder marketingMessagesLinkBtnClick(String marketingMessagesLinkBtnClick) {
                 this.marketingMessagesLinkBtnClick = marketingMessagesLinkBtnClick;
@@ -385,7 +433,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             }
 
             /**
-             * MarketingMessagesLinkBtnClickRate.
+             * <p>The percentage of delivered messages that received link clicks out of the total number of delivered messages. This metric does not include messages sent to Europe, Argentina, Türkiye, South Korea, or Japan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79.419238</p>
              */
             public Builder marketingMessagesLinkBtnClickRate(String marketingMessagesLinkBtnClickRate) {
                 this.marketingMessagesLinkBtnClickRate = marketingMessagesLinkBtnClickRate;
@@ -393,7 +444,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             }
 
             /**
-             * MarketingMessagesReadRate.
+             * <p>The number of read messages divided by the number of delivered messages. The read status of some messages may not be captured, for example, when a customer disables read receipts. This metric does not include messages sent to Europe or Japan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79.419238</p>
              */
             public Builder marketingMessagesReadRate(String marketingMessagesReadRate) {
                 this.marketingMessagesReadRate = marketingMessagesReadRate;
@@ -401,7 +455,10 @@ public class GetMessageCampaignInsightsResponseBody extends TeaModel {
             }
 
             /**
-             * MarketingMessagesSpend.
+             * <p>The total amount spent on a messaging campaign, message set, or message over the entire delivery period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38.87</p>
              */
             public Builder marketingMessagesSpend(String marketingMessagesSpend) {
                 this.marketingMessagesSpend = marketingMessagesSpend;

@@ -228,12 +228,16 @@ public class ListChatappTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The review state of the template. Valid values:</p>
+         * <p>The audit status. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: The template is approved.</li>
-         * <li><strong>fail</strong>: The template is rejected.</li>
-         * <li><strong>auditing</strong>: The template is being reviewed.</li>
-         * <li><strong>unaudit</strong>: The review is suspended.</li>
+         * <li><p><strong>pass</strong>: Approved.</p>
+         * </li>
+         * <li><p><strong>fail</strong>: Rejected.</p>
+         * </li>
+         * <li><p><strong>auditing</strong>: Under review.</p>
+         * </li>
+         * <li><p><strong>unaudit</strong>: Review suspended.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,7 +250,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The category of the message template.</p>
+         * <p>The template category.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTHENTICATION</p>
@@ -258,7 +262,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The code of the message template.</p>
+         * <p>The template code.</p>
          * 
          * <strong>example:</strong>
          * <p>838888822*****</p>
@@ -270,7 +274,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The space ID of the RAM user within the ISV account.</p>
+         * <p>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</p>
          * 
          * <strong>example:</strong>
          * <p>28251486512358****</p>
@@ -282,9 +286,9 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * <p>The WabaId of the ISV customer.</p>
          * <blockquote>
-         * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+         * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -297,7 +301,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
+         * <p>The ISV verification code, used to verify whether a sub-account is authorized by the ISV.</p>
          * 
          * <strong>example:</strong>
          * <p>skdi3kksloslikdkkdk</p>
@@ -309,7 +313,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+         * <p>The template language. For language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -321,7 +325,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>hello_whatsapp</p>
@@ -345,7 +349,7 @@ public class ListChatappTemplateRequest extends Request {
          * <p>The pagination settings.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;page&quot;: &quot;{&quot;index&quot;: 1,&quot;size&quot;: 20}</p>
+         * <p>&quot;page&quot;: &quot;{\&quot;index\&quot;: 1,\&quot;size\&quot;: 20}</p>
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -373,10 +377,12 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The type of the message template.</p>
+         * <p>The templatetype. Valid values:</p>
          * <ul>
-         * <li><strong>WHATSAPP</strong></li>
-         * <li><strong>VIBER</strong></li>
+         * <li><p><strong>WHATSAPP</strong></p>
+         * </li>
+         * <li><p><strong>VIBER</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -462,7 +468,7 @@ public class ListChatappTemplateRequest extends Request {
             }
 
             /**
-             * <p>The number of entries per page. Default value: 10.</p>
+             * <p>The number of templates to return per query. Default value: 10.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

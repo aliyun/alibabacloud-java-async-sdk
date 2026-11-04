@@ -117,10 +117,11 @@ public class DeleteInstagramPageRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -138,6 +139,7 @@ public class DeleteInstagramPageRequest extends Request {
         }
 
         /**
+         * <p>The PageId of the Messenger page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

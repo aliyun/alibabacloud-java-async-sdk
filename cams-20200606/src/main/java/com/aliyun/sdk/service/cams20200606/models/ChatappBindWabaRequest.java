@@ -129,6 +129,7 @@ public class ChatappBindWabaRequest extends Request {
         }
 
         /**
+         * <p>The WABA ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

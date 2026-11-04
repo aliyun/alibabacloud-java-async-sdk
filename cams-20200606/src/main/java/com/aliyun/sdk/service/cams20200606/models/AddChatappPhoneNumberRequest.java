@@ -162,7 +162,7 @@ public class AddChatappPhoneNumberRequest extends Request {
         } 
 
         /**
-         * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+         * <p>The country code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * <p>Adds a phone number for a WhatsApp Business account (WABA).</p>
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * <p>AddChatappPhoneNumber</p>
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,10 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * <p>cams:ChatappPhoneNumberRegister</p>
+         * <p>The pre-validated phone number.</p>
+         * <blockquote>
+         * <p><strong>[Deprecated]</strong></p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1020****</p>
@@ -240,7 +243,7 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * <p>Private</p>
+         * <p>The name of the phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

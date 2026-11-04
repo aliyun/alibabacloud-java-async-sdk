@@ -147,6 +147,7 @@ public class GetMessageCampaignInsightsRequest extends Request {
         } 
 
         /**
+         * <p>The Meta ad account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +160,7 @@ public class GetMessageCampaignInsightsRequest extends Request {
         }
 
         /**
+         * <p>The budget ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +173,7 @@ public class GetMessageCampaignInsightsRequest extends Request {
         }
 
         /**
+         * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +195,7 @@ public class GetMessageCampaignInsightsRequest extends Request {
         }
 
         /**
+         * <p>The page number to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

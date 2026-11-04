@@ -102,10 +102,11 @@ public class ListBindDmAccountRequest extends Request {
         } 
 
         /**
+         * <p>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value.</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);

@@ -157,7 +157,7 @@ public class OfflineFlowVersionRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -169,7 +169,7 @@ public class OfflineFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty set.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -182,10 +182,10 @@ public class OfflineFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. You can view it in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>f4912c16943b4dfba44bd6fedacf****</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -194,7 +194,7 @@ public class OfflineFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow version</p>
+         * <p>The flow version. You can click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> to go to the canvas page of the flow editor and view the flow version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,10 +215,10 @@ public class OfflineFlowVersionRequest extends Request {
         }
 
         /**
-         * <p>Flow remarks</p>
+         * <p>The flow remark. You can view the flow remark in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>We don&quot;t need this old version.</p>
+         * <p>This version is no longer needed</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

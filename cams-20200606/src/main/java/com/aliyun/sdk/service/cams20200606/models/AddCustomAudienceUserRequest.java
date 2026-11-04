@@ -190,6 +190,7 @@ public class AddCustomAudienceUserRequest extends Request {
         } 
 
         /**
+         * <p>The Meta ad account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +203,10 @@ public class AddCustomAudienceUserRequest extends Request {
         }
 
         /**
-         * BatchLastFlag.
+         * <p>The last batch flag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder batchLastFlag(Boolean batchLastFlag) {
             this.putQueryParameter("BatchLastFlag", batchLastFlag);
@@ -211,6 +215,10 @@ public class AddCustomAudienceUserRequest extends Request {
         }
 
         /**
+         * <p>The SpaceId of the ISV sub-customer.</p>
+         * <ul>
+         * <li>The instance ID of the direct customer.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +231,7 @@ public class AddCustomAudienceUserRequest extends Request {
         }
 
         /**
+         * <p>The custom audience ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +244,10 @@ public class AddCustomAudienceUserRequest extends Request {
         }
 
         /**
-         * EstimatedNumTotal.
+         * <p>The estimated phone number data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         public Builder estimatedNumTotal(Long estimatedNumTotal) {
             this.putQueryParameter("EstimatedNumTotal", estimatedNumTotal);
@@ -253,6 +265,7 @@ public class AddCustomAudienceUserRequest extends Request {
         }
 
         /**
+         * <p>The Page ID of Messenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,6 +296,7 @@ public class AddCustomAudienceUserRequest extends Request {
         }
 
         /**
+         * <p>The list of users.</p>
          * <p>This parameter is required.</p>
          */
         public Builder users(java.util.List<Users> users) {
@@ -352,7 +366,10 @@ public class AddCustomAudienceUserRequest extends Request {
             } 
 
             /**
-             * Email.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -360,7 +377,10 @@ public class AddCustomAudienceUserRequest extends Request {
             }
 
             /**
-             * Phone.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;

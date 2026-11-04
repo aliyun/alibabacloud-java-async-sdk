@@ -106,7 +106,10 @@ public class GetFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class GetFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>If OK is returned, the request was successful.</p>
+         * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -147,7 +150,7 @@ public class GetFlowResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+         * <p>DAC72B08-3327-33EF-BEDC-8EC3E83A6575</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -304,7 +307,7 @@ public class GetFlowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The categories of the Flow.</p>
+             * <p>The list of categories.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -312,7 +315,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the API.</p>
+             * <p>The API version information.</p>
              * 
              * <strong>example:</strong>
              * <p>3.0</p>
@@ -323,7 +326,10 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointUri.
+             * <p>The URL of the WA Flow Endpoint</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://abc.com">http://abc.com</a></p>
              */
             public Builder endpointUri(String endpointUri) {
                 this.endpointUri = endpointUri;
@@ -331,10 +337,10 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Flow ID.</p>
+             * <p>Flow ID。</p>
              * 
              * <strong>example:</strong>
-             * <p>flow_id_arms</p>
+             * <p>92675332812643****</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -345,7 +351,7 @@ public class GetFlowResponseBody extends TeaModel {
              * <p>The Flow name.</p>
              * 
              * <strong>example:</strong>
-             * <p>dnjn</p>
+             * <p>flow_001</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -353,7 +359,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSON version.</p>
+             * <p>The JSON version information.</p>
              * 
              * <strong>example:</strong>
              * <p>2.1</p>
@@ -375,7 +381,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The expiration time of the preview URL.</p>
              * 
              * <strong>example:</strong>
              * <p>1700617436633</p>
@@ -386,29 +392,11 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the Flow.</p>
-             * <p>Valid values:</p>
+             * <p>The status of the Flow. Valid values:</p>
              * <ul>
-             * <li><p>PUBLISHED</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>DRAFT</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>DEPRECATED</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>PUBLISHED: Published.</li>
+             * <li>DRAFT: Draft.</li>
+             * <li>DEPRECATED: Deprecated.</li>
              * </ul>
              * 
              * <strong>example:</strong>

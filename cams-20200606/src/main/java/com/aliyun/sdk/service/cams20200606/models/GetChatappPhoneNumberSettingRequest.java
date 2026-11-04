@@ -116,7 +116,10 @@ public class GetChatappPhoneNumberSettingRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C29393993****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -134,6 +137,7 @@ public class GetChatappPhoneNumberSettingRequest extends Request {
         }
 
         /**
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

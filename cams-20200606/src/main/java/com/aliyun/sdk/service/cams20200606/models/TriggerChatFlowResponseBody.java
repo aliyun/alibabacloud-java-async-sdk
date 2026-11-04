@@ -119,10 +119,10 @@ public class TriggerChatFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of access denial</p>
+         * <p>Details about the access denied error.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -130,10 +130,10 @@ public class TriggerChatFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,7 +141,7 @@ public class TriggerChatFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -152,10 +152,10 @@ public class TriggerChatFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error description message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -163,10 +163,10 @@ public class TriggerChatFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,10 +174,12 @@ public class TriggerChatFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the call was successful.</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Call succeeded.</li>
-         * <li><strong>false</strong>: Call failed.</li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

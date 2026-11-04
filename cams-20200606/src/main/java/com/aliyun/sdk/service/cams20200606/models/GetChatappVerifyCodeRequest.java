@@ -147,6 +147,7 @@ public class GetChatappVerifyCodeRequest extends Request {
         } 
 
         /**
+         * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +160,7 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
+         * <p>The language. For values, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +173,7 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
+         * <p>The method to receive the verification code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,10 +195,11 @@ public class GetChatappVerifyCodeRequest extends Request {
         }
 
         /**
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>8613800000000</p>
+         * <p>861380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

@@ -102,7 +102,7 @@ public class ChatappSyncPhoneNumberRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+         * <p>The SpaceId of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

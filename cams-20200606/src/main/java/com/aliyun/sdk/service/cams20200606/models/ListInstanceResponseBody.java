@@ -132,7 +132,10 @@ public class ListInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,16 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +160,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -156,7 +168,10 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +179,10 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2993*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +190,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +205,10 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that meet the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -402,7 +430,10 @@ public class ListInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelType.
+             * <p>The channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIBER</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -410,7 +441,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ContactMail.
+             * <p>The contact email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ma**@gmail.com</p>
              */
             public Builder contactMail(String contactMail) {
                 this.contactMail = contactMail;
@@ -418,7 +452,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CountryId.
+             * <p>The country ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder countryId(String countryId) {
                 this.countryId = countryId;
@@ -426,7 +463,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CustSpaceId.
+             * <p>The customer space ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dad-gf**</p>
              */
             public Builder custSpaceId(String custSpaceId) {
                 this.custSpaceId = custSpaceId;
@@ -434,7 +474,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * FacebookBmId.
+             * <p>The bound Facebook ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder facebookBmId(String facebookBmId) {
                 this.facebookBmId = facebookBmId;
@@ -442,7 +485,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ins</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -450,7 +496,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29339****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -458,7 +507,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>viber_ins</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -466,7 +518,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IsvTerms.
+             * <p>The ISV/Client agreement file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa</p>
              */
             public Builder isvTerms(String isvTerms) {
                 this.isvTerms = isvTerms;
@@ -474,7 +529,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeAddress.
+             * <p>The enterprise address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder officeAddress(String officeAddress) {
                 this.officeAddress = officeAddress;
@@ -482,7 +540,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -490,7 +551,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The region to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -498,7 +562,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>published</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -506,7 +573,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * <p>The submit time in the YYYY-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-12 00:00:00</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;

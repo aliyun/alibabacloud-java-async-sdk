@@ -132,10 +132,11 @@ public class BindDmAccountRequest extends Request {
         } 
 
         /**
+         * <p>The account code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>Sample value</p>
          */
         public Builder accountCode(String accountCode) {
             this.putQueryParameter("AccountCode", accountCode);
@@ -144,10 +145,11 @@ public class BindDmAccountRequest extends Request {
         }
 
         /**
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -156,6 +158,7 @@ public class BindDmAccountRequest extends Request {
         }
 
         /**
+         * <p>The extended attributes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder extendAttr(ExtendAttr extendAttr) {
@@ -254,10 +257,11 @@ public class BindDmAccountRequest extends Request {
             } 
 
             /**
+             * <p>The account name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值</p>
+             * <p>Sample value</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -265,10 +269,11 @@ public class BindDmAccountRequest extends Request {
             }
 
             /**
+             * <p>The send type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值</p>
+             * <p>Sample value</p>
              */
             public Builder sendType(String sendType) {
                 this.sendType = sendType;

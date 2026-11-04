@@ -187,10 +187,10 @@ public class FlowBindPhoneRequest extends Request {
         } 
 
         /**
-         * <p>Message channel Code</p>
+         * <p>The message channel code, which is the channel ID. View the channel ID in the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>cams-8c8*********</p>
          */
         public Builder channelCode(String channelCode) {
             this.putQueryParameter("ChannelCode", channelCode);
@@ -199,11 +199,17 @@ public class FlowBindPhoneRequest extends Request {
         }
 
         /**
-         * <p>Message channel Type</p>
+         * <p>The message channel type. Valid values:</p>
+         * <ul>
+         * <li>INSTAGRAM</li>
+         * <li>WHATSAPP</li>
+         * <li>MESSENGER</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;- VIBER</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>WHATSAPP</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -212,11 +218,11 @@ public class FlowBindPhoneRequest extends Request {
         }
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -225,7 +231,7 @@ public class FlowBindPhoneRequest extends Request {
         }
 
         /**
-         * <p>Flow version</p>
+         * <p>The flow version. Click the flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page to enter the flow builder canvas and view the flow version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,7 +243,7 @@ public class FlowBindPhoneRequest extends Request {
         }
 
         /**
-         * MultiWabaPhoneNumbers.
+         * <p>The multi-WABA binding configuration.</p>
          */
         public Builder multiWabaPhoneNumbers(java.util.List<MultiWabaPhoneNumbers> multiWabaPhoneNumbers) {
             String multiWabaPhoneNumbersShrink = shrink(multiWabaPhoneNumbers, "MultiWabaPhoneNumbers", "json");
@@ -256,7 +262,7 @@ public class FlowBindPhoneRequest extends Request {
         }
 
         /**
-         * <p>Phone numbers or PageIds under the channel instance, etc.</p>
+         * <p>The list of phone numbers, PageIds, or AccountIds&lt;props=&quot;intl&quot;&gt;, or ServiceIds under the channel instance.</p>
          */
         public Builder phoneNumbers(java.util.List<String> phoneNumbers) {
             String phoneNumbersShrink = shrink(phoneNumbers, "PhoneNumbers", "json");
@@ -284,10 +290,16 @@ public class FlowBindPhoneRequest extends Request {
         }
 
         /**
-         * <p>WABA account ID, or PageId for other channel types, etc.</p>
+         * <p>The WABA account ID, PageId, or AccountId&lt;props=&quot;intl&quot;&gt;, or ServiceId.</p>
+         * <ul>
+         * <li><p>If the ChannelType parameter is set to WHATSAPP, specify the WABA account ID. View the WABA account ID in <a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong>.</p>
+         * </li>
+         * <li><p>If the ChannelType parameter is not set to WHATSAPP, specify the PageId for MESSENGER, the AccountId for INSTAGRAM&lt;props=&quot;intl&quot;&gt;, or the ServiceId for VIBER.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>1952************</p>
          */
         public Builder wabaId(String wabaId) {
             this.putQueryParameter("WabaId", wabaId);
@@ -368,10 +380,10 @@ public class FlowBindPhoneRequest extends Request {
             } 
 
             /**
-             * <p>Message channel Code</p>
+             * <p>The channel code.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值示例值示例值</p>
+             * <p>示例值示例值</p>
              */
             public Builder channelCode(String channelCode) {
                 this.channelCode = channelCode;
@@ -379,7 +391,7 @@ public class FlowBindPhoneRequest extends Request {
             }
 
             /**
-             * <p>Phone numbers or PageIds under the channel instance, etc.</p>
+             * <p>The list of phone numbers.</p>
              */
             public Builder phoneNumbers(java.util.List<String> phoneNumbers) {
                 this.phoneNumbers = phoneNumbers;
@@ -387,10 +399,10 @@ public class FlowBindPhoneRequest extends Request {
             }
 
             /**
-             * <p>WABA account ID, or PageId for other channel types, etc.</p>
+             * <p>wabaId</p>
              * 
              * <strong>example:</strong>
-             * <p>示例值</p>
+             * <p>示例值示例值</p>
              */
             public Builder wabaId(String wabaId) {
                 this.wabaId = wabaId;

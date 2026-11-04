@@ -93,7 +93,10 @@ public class DeprecateFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -101,7 +104,7 @@ public class DeprecateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returns OK as normal.</p>
+         * <p>The response code. OK indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -112,7 +115,7 @@ public class DeprecateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error description information.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

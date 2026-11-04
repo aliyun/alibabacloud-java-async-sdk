@@ -160,6 +160,7 @@ public class DeleteChatGroupParticipantsRequest extends Request {
         } 
 
         /**
+         * <p>The business number. You can obtain the business number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,16 @@ public class DeleteChatGroupParticipantsRequest extends Request {
         }
 
         /**
-         * ChannelType.
+         * <p>The channel type. Valid value:</p>
+         * <ul>
+         * <li><strong>WHATSAPP</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>Currently, only the WhatsApp channel is supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -181,6 +191,7 @@ public class DeleteChatGroupParticipantsRequest extends Request {
         }
 
         /**
+         * <p>The space ID of the ISV sub-customer or the instance ID. This ID is also the channel ID. You can find the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +204,7 @@ public class DeleteChatGroupParticipantsRequest extends Request {
         }
 
         /**
+         * <p>The group ID. You can obtain the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +217,7 @@ public class DeleteChatGroupParticipantsRequest extends Request {
         }
 
         /**
-         * List.
+         * <p>A list of group members to remove.</p>
          */
         public Builder list(java.util.List<List> list) {
             String listShrink = shrink(list, "List", "json");
@@ -288,7 +300,10 @@ public class DeleteChatGroupParticipantsRequest extends Request {
             } 
 
             /**
-             * ParticipantNumber.
+             * <p>The participant number of the group member. You can obtain the participant numbers of group members by calling the <a href="https://help.aliyun.com/document_detail/2932628.html">ListChatGroupParticipants</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86138***</p>
              */
             public Builder participantNumber(String participantNumber) {
                 this.participantNumber = participantNumber;

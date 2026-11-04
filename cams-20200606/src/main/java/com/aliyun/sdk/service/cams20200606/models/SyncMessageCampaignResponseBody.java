@@ -106,7 +106,10 @@ public class SyncMessageCampaignResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denial details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,12 @@ public class SyncMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code. Valid values:</p>
+         * <p>OK: The request is successful.</p>
+         * <p>For other error codes, see the error code list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +130,10 @@ public class SyncMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +141,10 @@ public class SyncMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +152,14 @@ public class SyncMessageCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

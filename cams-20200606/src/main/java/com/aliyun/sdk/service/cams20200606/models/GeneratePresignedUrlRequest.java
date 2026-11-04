@@ -102,6 +102,7 @@ public class GeneratePresignedUrlRequest extends Request {
         } 
 
         /**
+         * <p>The OSS path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

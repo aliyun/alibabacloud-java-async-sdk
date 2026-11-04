@@ -93,7 +93,10 @@ public class GetPermissionByCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -103,8 +106,10 @@ public class GetPermissionByCodeResponseBody extends TeaModel {
         /**
          * <p>The response code.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +121,7 @@ public class GetPermissionByCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error description information.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

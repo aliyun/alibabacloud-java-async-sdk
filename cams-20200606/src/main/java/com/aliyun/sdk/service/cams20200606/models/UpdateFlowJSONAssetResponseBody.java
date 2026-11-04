@@ -106,7 +106,10 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returns OK as normal.</p>
+         * <p>The response code. A value of OK indicates a successful call.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -133,7 +136,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error description information.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -200,10 +203,10 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Flow ID.</p>
+             * <p>The flow ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>84848847****</p>
+             * <p>92675332812643****</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;

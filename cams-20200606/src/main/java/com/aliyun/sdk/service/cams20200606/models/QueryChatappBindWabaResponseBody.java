@@ -130,10 +130,12 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>A return value of OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +147,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -153,7 +155,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -164,7 +166,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -175,10 +177,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call succeeded.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,19 +367,12 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The review state of the WhatsApp Business account (WABA).</p>
-             * <blockquote>
-             * <p> Valid values:</p>
-             * </blockquote>
+             * <p>The review status of the WABA. Valid values:</p>
              * <ul>
-             * <li><p>PENDING: The WABA is to be reviewed.</p>
-             * </li>
-             * <li><p>APPROVED: The WABA was approved.</p>
-             * </li>
-             * <li><p>REJECTED: The WABA was rejected.</p>
-             * </li>
-             * <li><p>DISABLED: The WABA was forbidden.</p>
-             * </li>
+             * <li>PENDING: Pending review.</li>
+             * <li>APPROVED: Review approved.</li>
+             * <li>REJECTED: Review rejected.</li>
+             * <li>DISABLED: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -389,7 +384,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>WABA related information.</p>
+             * <p>The WABA-related information.</p>
              */
             public Builder authInternationalRateEligibility(java.util.Map<String, ?> authInternationalRateEligibility) {
                 this.authInternationalRateEligibility = authInternationalRateEligibility;
@@ -397,7 +392,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business ID.</p>
+             * <p>The ID of the Business platform.</p>
              * 
              * <strong>example:</strong>
              * <p>19293988***</p>
@@ -408,7 +403,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business name.</p>
+             * <p>The name of the Business platform.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba</p>
@@ -430,7 +425,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the WhatsApp Business account.</p>
+             * <p>The WABA account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20393988393993***</p>
@@ -441,7 +436,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * IsOnBizApp.
+             * <p>Indicates whether the phone number is in use in the WhatsApp Business app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N</p>
              */
             public Builder isOnBizApp(String isOnBizApp) {
                 this.isOnBizApp = isOnBizApp;
@@ -449,7 +447,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Marketing Messaging Lite status.</p>
+             * <p>The MML status.</p>
              * 
              * <strong>example:</strong>
              * <p>Y</p>
@@ -460,10 +458,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the message template.</p>
+             * <p>The template namespace.</p>
              * 
              * <strong>example:</strong>
-             * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+             * <p>93e6b26e_8a67_4163_a093_ebfe645a66b0</p>
              */
             public Builder messageTemplateNamespace(String messageTemplateNamespace) {
                 this.messageTemplateNamespace = messageTemplateNamespace;
@@ -471,7 +469,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the WhatsApp Business account.</p>
+             * <p>The WABA account name.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba</p>
@@ -482,7 +480,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time when the authentication-international rate applies.</p>
+             * <p>The international rate eligibility.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;start_time&quot;:1721952000</p>

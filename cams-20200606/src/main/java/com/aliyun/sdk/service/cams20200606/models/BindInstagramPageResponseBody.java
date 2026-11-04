@@ -119,7 +119,10 @@ public class BindInstagramPageResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class BindInstagramPageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class BindInstagramPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class BindInstagramPageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class BindInstagramPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fdsfdsf-22fk***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class BindInstagramPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +270,10 @@ public class BindInstagramPageResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13243543543</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -259,7 +281,10 @@ public class BindInstagramPageResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionStatus.
+             * <p>The connection status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connected</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -267,7 +292,10 @@ public class BindInstagramPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageId.
+             * <p>The current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234322333</p>
              */
             public Builder pageId(String pageId) {
                 this.pageId = pageId;
@@ -275,7 +303,10 @@ public class BindInstagramPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageName.
+             * <p>The page name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iwhalecloud</p>
              */
             public Builder pageName(String pageName) {
                 this.pageName = pageName;

@@ -101,7 +101,10 @@ public class QueryMMLActiveRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The SpaceId of the ISV sub-customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>erer-retreerew**</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);

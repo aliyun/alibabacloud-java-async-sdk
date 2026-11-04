@@ -117,6 +117,7 @@ public class SyncBusinessAppHistoryRequest extends Request {
         } 
 
         /**
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +139,7 @@ public class SyncBusinessAppHistoryRequest extends Request {
         }
 
         /**
+         * <p>The phone number of the business.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

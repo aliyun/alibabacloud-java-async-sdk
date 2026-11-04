@@ -132,6 +132,7 @@ public class UpdateWabaMmlStatusRequest extends Request {
         } 
 
         /**
+         * <p>The Meta embedded authorization code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +145,7 @@ public class UpdateWabaMmlStatusRequest extends Request {
         }
 
         /**
+         * <p>The space ID or instance ID of the ISV sub-customer, which is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

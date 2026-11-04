@@ -214,7 +214,10 @@ public class AddGroupRequest extends Request {
         } 
 
         /**
-         * BizCode.
+         * <p>The business tenant code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value sample value sample value</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -223,7 +226,10 @@ public class AddGroupRequest extends Request {
         }
 
         /**
-         * BizExtend.
+         * <p>The business extension information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
@@ -233,7 +239,10 @@ public class AddGroupRequest extends Request {
         }
 
         /**
-         * ContactDetails.
+         * <p>The contact description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15111111111</p>
          */
         public Builder contactDetails(String contactDetails) {
             this.putQueryParameter("ContactDetails", contactDetails);
@@ -242,7 +251,10 @@ public class AddGroupRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * <p>The contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mary</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);
@@ -251,7 +263,10 @@ public class AddGroupRequest extends Request {
         }
 
         /**
-         * Country.
+         * <p>The country.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -260,7 +275,10 @@ public class AddGroupRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value sample value</p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -269,7 +287,10 @@ public class AddGroupRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src/main/resources/config/promql_node.yaml</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -278,6 +299,7 @@ public class AddGroupRequest extends Request {
         }
 
         /**
+         * <p>The group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +321,10 @@ public class AddGroupRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

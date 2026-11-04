@@ -173,7 +173,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         } 
 
         /**
-         * <p>SpaceId for ISV sub clients.</p>
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,10 +186,12 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * <p>Whether to use HTTP to receive receipts. Value:</p>
+         * <p>Specifies whether to use HTTP to receive receipts. Valid values:</p>
          * <ul>
-         * <li>Y: Yes.</li>
-         * <li>N: No.</li>
+         * <li><p>Y: Yes.</p>
+         * </li>
+         * <li><p>N: No.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,11 +213,11 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * <p>phone number.</p>
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>8613800001234</p>
+         * <p>861380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -224,10 +226,12 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * <p>Whether to use queue method to receive receipts. Value:</p>
+         * <p>Specifies whether to use a queue to receive receipts. Valid values:</p>
          * <ul>
-         * <li>Y: Yes.</li>
-         * <li>N: No.</li>
+         * <li><p>Y: Yes.</p>
+         * </li>
+         * <li><p>N: No.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +262,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * <p>HTTP status report interface callback address.</p>
+         * <p>The callback URL for the status report API over HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
@@ -270,7 +274,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * <p>HTTP upstream message interface callback address.</p>
+         * <p>The callback URL for the upstream message API over HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://aliyun.com">http://aliyun.com</a></p>

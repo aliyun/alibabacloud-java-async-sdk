@@ -119,7 +119,10 @@ public class BindMessengerPageResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denial details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class BindMessengerPageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class BindMessengerPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class BindMessengerPageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class BindMessengerPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DSFDS-8FSDFS**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class BindMessengerPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +257,10 @@ public class BindMessengerPageResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionStatus.
+             * <p>The connection status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONNECTED</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -246,7 +268,10 @@ public class BindMessengerPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageId.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1654543543543</p>
              */
             public Builder pageId(String pageId) {
                 this.pageId = pageId;
@@ -254,7 +279,10 @@ public class BindMessengerPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageName.
+             * <p>The page name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iwhalecloud</p>
              */
             public Builder pageName(String pageName) {
                 this.pageName = pageName;

@@ -117,7 +117,13 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The value OK indicates that the request was successful.</p>
+         * <p>The request status code. Valid values:</p>
+         * <ul>
+         * <li><p>OK: The request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -128,7 +134,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -150,7 +156,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+         * <p>608F9CCA-B5EB-3D72-8047-B25D6D75BDEC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -229,10 +235,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The text on the button.</p>
+             * <p>The button text.</p>
              * 
              * <strong>example:</strong>
-             * <p>Open url</p>
+             * <p>reply</p>
              */
             public Builder buttonContent(String buttonContent) {
                 this.buttonContent = buttonContent;
@@ -251,12 +257,11 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The button type.</p>
-             * <p>Valid values:</p>
+             * <p>The button type. Valid values:</p>
              * <ul>
-             * <li>phone_number_button</li>
-             * <li>url_button</li>
-             * <li>quick_relpy_button</li>
+             * <li>phone_number_button: a phone call button.</li>
+             * <li>url_button: a URL button.</li>
+             * <li>quick_relpy_button: a quick reply button.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -405,7 +410,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistics on button clicks.</p>
+             * <p>The list of button click statistics.</p>
              */
             public Builder cliented(java.util.List<Cliented> cliented) {
                 this.cliented = cliented;
@@ -424,7 +429,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range you queried.</p>
+             * <p>The end time of the metric collection period. This value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1668138331485</p>
@@ -468,7 +473,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range you queried.</p>
+             * <p>The start time of the metric collection period. This value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1673919240001</p>
@@ -482,7 +487,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
              * <p>The template code.</p>
              * 
              * <strong>example:</strong>
-             * <p>83837774838*****</p>
+             * <p>1100***************</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;

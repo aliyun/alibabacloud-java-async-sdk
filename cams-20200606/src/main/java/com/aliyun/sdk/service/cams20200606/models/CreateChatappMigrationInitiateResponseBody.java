@@ -106,7 +106,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the request denial..</p>
+         * <p>Details about the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -117,10 +117,12 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code.</p>
+         * <p>The status code of the request.</p>
          * <ul>
-         * <li>A value of OK indicates that the request was successful.</li>
-         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">API error codes</a>.</li>
+         * <li><p>A value of OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +134,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -140,7 +142,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -151,7 +153,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -233,10 +235,10 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the mobile number.</p>
+             * <p>The ID of the phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>82828893332</p>
+             * <p>8282889****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -244,10 +246,10 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile number.</p>
+             * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>8613900001234</p>
+             * <p>861390000****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -255,7 +257,8 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the mobile number. Only MIGRATING may be returned, which indicates that the mobile number is being migrated.</p>
+             * <p>The status of the phone number.
+             * Valid value: MIGRATING: The phone number is being migrated.</p>
              * 
              * <strong>example:</strong>
              * <p>MIGRATING</p>

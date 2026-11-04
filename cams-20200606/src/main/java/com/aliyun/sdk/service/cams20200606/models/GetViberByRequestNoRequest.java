@@ -116,7 +116,10 @@ public class GetViberByRequestNoRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of an ISV sub-customer or the instance ID of a direct customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28251486512358****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -134,6 +137,7 @@ public class GetViberByRequestNoRequest extends Request {
         }
 
         /**
+         * <p>The request number of the application form.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

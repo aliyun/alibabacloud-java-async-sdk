@@ -115,10 +115,10 @@ public class EnableWhatsappROIMetricRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the user within the ISV account.</p>
+         * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>cams-************</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -127,10 +127,10 @@ public class EnableWhatsappROIMetricRequest extends Request {
         }
 
         /**
-         * <p>The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.</p>
+         * <p>The ISV verification code, which is used to verify that the RAM user is authorized by the ISV.</p>
          * 
          * <strong>example:</strong>
-         * <p>skdi3kksloslikdkkdk</p>
+         * <p>skdi3kksloslikd****</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);

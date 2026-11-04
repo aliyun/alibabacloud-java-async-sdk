@@ -132,7 +132,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -143,10 +143,12 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +160,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -166,7 +171,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -177,7 +182,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The phone numbers.</p>
+         * <p>The list of phone numbers.</p>
          */
         public Builder phoneNumbers(java.util.List<PhoneNumbers> phoneNumbers) {
             this.phoneNumbers = phoneNumbers;
@@ -185,7 +190,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -196,10 +201,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +287,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * Date.
+             * <p>The date in YYYY-MM-DD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -290,7 +298,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time in HHmm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2359</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -298,7 +309,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time in HHmm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -378,7 +392,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * CloseTime.
+             * <p>The closing time in HHmm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2359</p>
              */
             public Builder closeTime(String closeTime) {
                 this.closeTime = closeTime;
@@ -386,7 +403,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * DayOfWeek.
+             * <p>The day of the week.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
             public Builder dayOfWeek(String dayOfWeek) {
                 this.dayOfWeek = dayOfWeek;
@@ -394,7 +414,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * OpenTime.
+             * <p>The opening time in HHmm format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0000</p>
              */
             public Builder openTime(String openTime) {
                 this.openTime = openTime;
@@ -513,7 +536,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * CallIconVisibility.
+             * <p>The visibility of the call icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder callIconVisibility(String callIconVisibility) {
                 this.callIconVisibility = callIconVisibility;
@@ -521,7 +547,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * CallbackPermissionStatus.
+             * <p>The callback permission status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder callbackPermissionStatus(String callbackPermissionStatus) {
                 this.callbackPermissionStatus = callbackPermissionStatus;
@@ -529,7 +558,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * HolidaySchedule.
+             * <p>The holiday call hours schedule.</p>
              */
             public Builder holidaySchedule(java.util.List<HolidaySchedule> holidaySchedule) {
                 this.holidaySchedule = holidaySchedule;
@@ -537,7 +566,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the call hours configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -545,7 +577,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * TimezoneId.
+             * <p>The time zone ID, such as Asia/Shanghai.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezoneId(String timezoneId) {
                 this.timezoneId = timezoneId;
@@ -553,7 +588,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * WeeklyOperatingHours.
+             * <p>The weekly operating hours schedule.</p>
              */
             public Builder weeklyOperatingHours(java.util.List<WeeklyOperatingHours> weeklyOperatingHours) {
                 this.weeklyOperatingHours = weeklyOperatingHours;
@@ -620,7 +655,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * CallHours.
+             * <p>The call hours configuration.</p>
              */
             public Builder callHours(CallHours callHours) {
                 this.callHours = callHours;
@@ -628,7 +663,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the calling feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -708,7 +746,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * Calling.
+             * <p>The calling feature configuration.</p>
              */
             public Builder calling(Calling calling) {
                 this.calling = calling;
@@ -716,7 +754,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * CallingCallbackUrl.
+             * <p>The callback URL for calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
              */
             public Builder callingCallbackUrl(String callingCallbackUrl) {
                 this.callingCallbackUrl = callingCallbackUrl;
@@ -724,7 +765,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTalkTime.
+             * <p>The maximum call duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxTalkTime(Long maxTalkTime) {
                 this.maxTalkTime = maxTalkTime;
@@ -947,7 +991,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             } 
 
             /**
-             * CallingConfigure.
+             * <p>The calling configuration.</p>
              */
             public Builder callingConfigure(CallingConfigure callingConfigure) {
                 this.callingConfigure = callingConfigure;
@@ -956,13 +1000,6 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
             /**
              * <p>The verification status of the phone number.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>REVOKED: The review application is revoked.</li>
-             * <li>MORE_INFORMATION_REQUESTED: More information needs to be provided.</li>
-             * <li>VERIFIED: The phone number passes the verification.</li>
-             * <li>REJECTED: The phone number fails to pass the verification.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>VERIFIED</p>
@@ -973,7 +1010,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether it is a WhatsApp Official Business Account (OBA).</p>
+             * <p>Indicates whether the phone number is verified.</p>
              * 
              * <strong>example:</strong>
              * <p>N</p>
@@ -984,19 +1021,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of phone numbers to which messages can be sent in a day.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>TIER_100K: 100,000</li>
-             * <li>TIER_UNLIMITED: unlimited</li>
-             * <li>TIER_250: 250</li>
-             * <li>TIER_1K: 1,000</li>
-             * <li>TIER_50: 50</li>
-             * <li>TIER_10K: 10,000</li>
-             * </ul>
+             * <p>The messaging volume limit tier of the phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>TIER_10</p>
+             * <p>TIER_10K</p>
              */
             public Builder messagingLimitTier(String messagingLimitTier) {
                 this.messagingLimitTier = messagingLimitTier;
@@ -1004,7 +1032,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review status of the name.</p>
+             * <p>The name status.</p>
              * 
              * <strong>example:</strong>
              * <p>Approval</p>
@@ -1015,7 +1043,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The review status of the new display name of the enterprise.</p>
+             * <p>The review status of the new name.</p>
              * 
              * <strong>example:</strong>
              * <p>Approval</p>
@@ -1029,7 +1057,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
              * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>8613800000</p>
+             * <p>861380000****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -1038,13 +1066,6 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
             /**
              * <p>The quality rating of the phone number.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>RED: low</li>
-             * <li>YELLOW: medium</li>
-             * <li>UNKNOWN: unknown</li>
-             * <li>GREEN: high</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>GREEN</p>
@@ -1055,21 +1076,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the phone number.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>MIGRATED</li>
-             * <li>FLAGGED</li>
-             * <li>DISCONNECTED</li>
-             * <li>UNVERIFIED</li>
-             * <li>BANNED</li>
-             * <li>RATE_LIMITED</li>
-             * <li>PENDING</li>
-             * <li>CONNECTED</li>
-             * <li>UNKNOWN</li>
-             * <li>DELETED</li>
-             * <li>RESTRICTED</li>
-             * </ul>
+             * <p>The phone number status.</p>
              * 
              * <strong>example:</strong>
              * <p>CONNECTED</p>
@@ -1080,7 +1087,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that receives the status reports.</p>
+             * <p>The URL for status report notifications.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://ali.com/status">https://ali.com/status</a></p>
@@ -1091,7 +1098,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status report queue.</p>
+             * <p>The queue for status report notifications.</p>
              * 
              * <strong>example:</strong>
              * <p>Alicom-Queue-****-ChatAppStatus</p>
@@ -1102,7 +1109,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that receives the MO messages.</p>
+             * <p>The URL for inbound message notifications.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://ali.com/inbound">https://ali.com/inbound</a></p>
@@ -1113,7 +1120,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile originated (MO) message queue.</p>
+             * <p>The queue for inbound message notifications.</p>
              * 
              * <strong>example:</strong>
              * <p>Alicom-Queue-****-ChatAppInbound</p>
@@ -1124,7 +1131,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the enterprise to which the phone number belongs.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba</p>

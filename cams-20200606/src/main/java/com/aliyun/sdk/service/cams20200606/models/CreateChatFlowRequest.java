@@ -39,7 +39,12 @@ public class CreateChatFlowRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifeCycleExtendData")
+    @Deprecated
     private java.util.Map<String, String> lifeCycleExtendData;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifeCycleExtendDataV2")
+    private java.util.Map<String, ?> lifeCycleExtendDataV2;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -69,6 +74,7 @@ public class CreateChatFlowRequest extends Request {
         this.createFromFlowVersion = builder.createFromFlowVersion;
         this.flowTriggerType = builder.flowTriggerType;
         this.lifeCycleExtendData = builder.lifeCycleExtendData;
+        this.lifeCycleExtendDataV2 = builder.lifeCycleExtendDataV2;
         this.ownerId = builder.ownerId;
         this.remark = builder.remark;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -132,6 +138,13 @@ public class CreateChatFlowRequest extends Request {
     }
 
     /**
+     * @return lifeCycleExtendDataV2
+     */
+    public java.util.Map<String, ?> getLifeCycleExtendDataV2() {
+        return this.lifeCycleExtendDataV2;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -173,6 +186,7 @@ public class CreateChatFlowRequest extends Request {
         private String createFromFlowVersion; 
         private String flowTriggerType; 
         private java.util.Map<String, String> lifeCycleExtendData; 
+        private java.util.Map<String, ?> lifeCycleExtendDataV2; 
         private Long ownerId; 
         private String remark; 
         private String resourceOwnerAccount; 
@@ -191,6 +205,7 @@ public class CreateChatFlowRequest extends Request {
             this.createFromFlowVersion = request.createFromFlowVersion;
             this.flowTriggerType = request.flowTriggerType;
             this.lifeCycleExtendData = request.lifeCycleExtendData;
+            this.lifeCycleExtendDataV2 = request.lifeCycleExtendDataV2;
             this.ownerId = request.ownerId;
             this.remark = request.remark;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -199,7 +214,7 @@ public class CreateChatFlowRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -211,7 +226,7 @@ public class CreateChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -224,7 +239,10 @@ public class CreateChatFlowRequest extends Request {
         }
 
         /**
-         * CreateFromFlowCode.
+         * <p>The source flowCode for creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder createFromFlowCode(String createFromFlowCode) {
             this.putQueryParameter("CreateFromFlowCode", createFromFlowCode);
@@ -233,7 +251,10 @@ public class CreateChatFlowRequest extends Request {
         }
 
         /**
-         * CreateFromFlowVersion.
+         * <p>The source flowVersion for creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value sample value sample value</p>
          */
         public Builder createFromFlowVersion(String createFromFlowVersion) {
             this.putQueryParameter("CreateFromFlowVersion", createFromFlowVersion);
@@ -242,7 +263,14 @@ public class CreateChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Flow trigger type</p>
+         * <p>The trigger type of the flow. Valid values:</p>
+         * <ul>
+         * <li>TriggeredManually</li>
+         * <li>TriggeredByWhatsApp</li>
+         * <li>TriggeredByMessenger</li>
+         * <li>TriggeredByInstagram</li>
+         * <li>TriggeredByViber</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TriggeredByWhatsApp</p>
@@ -254,12 +282,22 @@ public class CreateChatFlowRequest extends Request {
         }
 
         /**
-         * LifeCycleExtendData.
+         * <p>The lifecycle extension input parameters.</p>
          */
         public Builder lifeCycleExtendData(java.util.Map<String, String> lifeCycleExtendData) {
             String lifeCycleExtendDataShrink = shrink(lifeCycleExtendData, "LifeCycleExtendData", "json");
             this.putQueryParameter("LifeCycleExtendData", lifeCycleExtendDataShrink);
             this.lifeCycleExtendData = lifeCycleExtendData;
+            return this;
+        }
+
+        /**
+         * <p>The lifecycle extension input parameters.</p>
+         */
+        public Builder lifeCycleExtendDataV2(java.util.Map<String, ?> lifeCycleExtendDataV2) {
+            String lifeCycleExtendDataV2Shrink = shrink(lifeCycleExtendDataV2, "LifeCycleExtendDataV2", "json");
+            this.putQueryParameter("LifeCycleExtendDataV2", lifeCycleExtendDataV2Shrink);
+            this.lifeCycleExtendDataV2 = lifeCycleExtendDataV2;
             return this;
         }
 
@@ -273,10 +311,10 @@ public class CreateChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Flow remarks</p>
+         * <p>The remarks for the flow.</p>
          * 
          * <strong>example:</strong>
-         * <p>ChatFlow for WhatsApp Customer Service Auto-Reply.</p>
+         * <p>Trigger verification template delivery via API</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -303,10 +341,10 @@ public class CreateChatFlowRequest extends Request {
         }
 
         /**
-         * <p>Flow title</p>
+         * <p>The title of the flow.</p>
          * 
          * <strong>example:</strong>
-         * <p>Auto Reply</p>
+         * <p>WhatsApp Auto-Reply</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

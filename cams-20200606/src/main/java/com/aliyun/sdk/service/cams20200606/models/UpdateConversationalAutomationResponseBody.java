@@ -109,7 +109,7 @@ public class UpdateConversationalAutomationResponseBody extends TeaModel {
          * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>无</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -119,8 +119,10 @@ public class UpdateConversationalAutomationResponseBody extends TeaModel {
         /**
          * <p>The response code.</p>
          * <ul>
-         * <li>The value OK indicates that the request was successful.</li>
-         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,10 +134,10 @@ public class UpdateConversationalAutomationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The prompt message. This parameter is returned when an exception occurs.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,10 +156,10 @@ public class UpdateConversationalAutomationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

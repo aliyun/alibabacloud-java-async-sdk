@@ -330,10 +330,20 @@ public class SendChatappMassMessageRequest extends Request {
         } 
 
         /**
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>whatsapp</strong></p>
+         * </li>
+         * <li><p><strong>messenger</strong></p>
+         * </li>
+         * <li><p><strong>instagram</strong></p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;- <strong>viber</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>whatsapp</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -342,7 +352,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer, or the instance ID for direct customers. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-8c8*********</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -351,7 +364,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * CustWabaId.
+         * <p>The WABA ID of the ISV customer. This parameter is deprecated. Use CustSpaceId instead, which is the instance ID for direct customers. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-8c8*********</p>
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -360,7 +376,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * FallBackContent.
+         * <p>The custom fallback content. This parameter applies to the international site only and can be ignored on the China site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Fallback SMS</p>
          */
         public Builder fallBackContent(String fallBackContent) {
             this.putQueryParameter("FallBackContent", fallBackContent);
@@ -369,7 +388,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * FallBackDuration.
+         * <p>The fallback trigger duration. This parameter applies to the international site only and can be ignored on the China site. &lt;props=&quot;intl&quot;&gt;If no delivery receipt is returned within the specified duration, a fallback is triggered. If this parameter is not set, the fallback is not triggered based on this duration — a fallback occurs only when the message fails to send or a failure status report is received. Unit: seconds. Minimum value: 60. Maximum value: 43200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder fallBackDuration(Integer fallBackDuration) {
             this.putQueryParameter("FallBackDuration", fallBackDuration);
@@ -378,7 +400,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * FallBackId.
+         * <p>The fallback policy ID. This parameter applies to the international site only and can be ignored on the China site. &lt;props=&quot;intl&quot;&gt;You can view the policy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><strong>Fallback Policy</strong></a> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S0****</p>
          */
         public Builder fallBackId(String fallBackId) {
             this.putQueryParameter("FallBackId", fallBackId);
@@ -387,7 +412,13 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * FallBackRule.
+         * <p>The fallback rule. This parameter applies to the international site only and can be ignored on the China site.
+         * &lt;props=&quot;intl&quot;&gt;Valid values:
+         * &lt;props=&quot;intl&quot;&gt;- <strong>undelivered</strong>: triggers a fallback when the message cannot be delivered to the endpoint. During the sending phase, the template and parameters must pass validation. Checks for blocked templates or blocked phone numbers are not performed. If this parameter is left empty, this rule is used by default.
+         * &lt;props=&quot;intl&quot;&gt;- <strong>sentFailed</strong>: triggers a fallback when validation of the template, template variables, or other parameters fails. Only the following parameters are strictly validated: channelType, type, messageType, to, and from (whether they exist).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>undelivered</p>
          */
         public Builder fallBackRule(String fallBackRule) {
             this.putQueryParameter("FallBackRule", fallBackRule);
@@ -396,10 +427,17 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
+         * <p>The sender\&quot;s phone number.</p>
+         * <ul>
+         * <li>If ChannelType is <strong>whatsapp</strong>, this is the phone number registered and bound to WhatsApp. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Number Management</strong> page.</li>
+         * <li>If ChannelType is <strong>messenger</strong>, this is the Page ID of the public page. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Public Pages</strong> page.</li>
+         * <li>If ChannelType is <strong>instagram</strong>, this is the Instagram professional account ID (Account ID). You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Professional Accounts</strong> page.
+         * &lt;props=&quot;intl&quot;&gt;- If ChannelType is <strong>viber</strong>, this is the Viber service number ID (Service ID). You can view it on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Service Number Management</strong> page.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>861387777****</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -408,7 +446,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * IsvCode.
+         * <p>The ISV verification code used to verify whether a sub-account is authorized by an ISV. This parameter is deprecated and can be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skdi3kksloslikd****</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -417,7 +458,13 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The Viber message type. This parameter applies to the international site only and can be ignored on the China site.
+         * &lt;props=&quot;intl&quot;&gt;Valid values:
+         * &lt;props=&quot;intl&quot;&gt;- <strong>pormotion</strong>: marketing and promotional messages.
+         * &lt;props=&quot;intl&quot;&gt;- <strong>transaction</strong>: notification messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>promotion</p>
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);
@@ -426,10 +473,11 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
+         * <p>The language. For a list of language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -465,7 +513,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * SenderList.
+         * <p>The list of recipient phone numbers.</p>
          */
         public Builder senderList(java.util.List<SenderList> senderList) {
             String senderListShrink = shrink(senderList, "SenderList", "json");
@@ -475,7 +523,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag information. Specifies a custom tag for Viber messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tag</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -484,7 +535,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The custom task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -493,7 +547,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * <p>The template code. You can view the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Template Design</strong> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1119***************</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -502,7 +559,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The template name. You can view the template name on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Template Design</strong> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -511,7 +571,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * <p>The timeout period for sending Viber messages. This parameter applies to the international site only and can be ignored on the China site. &lt;props=&quot;intl&quot;&gt;Unit: seconds. Valid values: 30 to 1209600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46</p>
          */
         public Builder ttl(Long ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -579,7 +642,7 @@ public class SendChatappMassMessageRequest extends Request {
             } 
 
             /**
-             * FlowActionData.
+             * <p>The collection of default Flow parameters.</p>
              */
             public Builder flowActionData(java.util.Map<String, ?> flowActionData) {
                 this.flowActionData = flowActionData;
@@ -587,7 +650,10 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * FlowToken.
+             * <p>The custom Flow token information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kde****</p>
              */
             public Builder flowToken(String flowToken) {
                 this.flowToken = flowToken;
@@ -641,7 +707,10 @@ public class SendChatappMassMessageRequest extends Request {
             } 
 
             /**
-             * ProductRetailerId.
+             * <p>The product ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Catalog Management</strong> &gt; <strong>Product Management</strong> page, or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2557786.html">ListProduct</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ksi3****</p>
              */
             public Builder productRetailerId(String productRetailerId) {
                 this.productRetailerId = productRetailerId;
@@ -708,7 +777,7 @@ public class SendChatappMassMessageRequest extends Request {
             } 
 
             /**
-             * ProductItems.
+             * <p>The list of product information.</p>
              */
             public Builder productItems(java.util.List<ProductItems> productItems) {
                 this.productItems = productItems;
@@ -716,7 +785,10 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>The category name. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Catalog Management</strong> &gt; <strong>Product Management</strong> page, or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2557786.html">ListProduct</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -783,7 +855,7 @@ public class SendChatappMassMessageRequest extends Request {
             } 
 
             /**
-             * Sections.
+             * <p>The list of product categories. A maximum of 10 categories and 30 products are supported.</p>
              */
             public Builder sections(java.util.List<Sections> sections) {
                 this.sections = sections;
@@ -791,7 +863,10 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * ThumbnailProductRetailerId.
+             * <p>The product catalog ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2539783.html">ListProductCatalog</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skkks99****</p>
              */
             public Builder thumbnailProductRetailerId(String thumbnailProductRetailerId) {
                 this.thumbnailProductRetailerId = thumbnailProductRetailerId;
@@ -910,7 +985,7 @@ public class SendChatappMassMessageRequest extends Request {
             } 
 
             /**
-             * FlowAction.
+             * <p>The Flow message object.</p>
              */
             public Builder flowAction(FlowAction flowAction) {
                 this.flowAction = flowAction;
@@ -918,7 +993,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * Payload.
+             * <p>The list of trigger message identifiers for buttons.</p>
              */
             public Builder payload(java.util.List<String> payload) {
                 this.payload = payload;
@@ -926,7 +1001,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * ProductAction.
+             * <p>The product information. This parameter applies only to the WhatsApp channel type and represents the product information you uploaded to Meta.</p>
              */
             public Builder productAction(ProductAction productAction) {
                 this.productAction = productAction;
@@ -934,7 +1009,10 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * RecipientType.
+             * <p>The recipient type, such as individual.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>individual</p>
              */
             public Builder recipientType(String recipientType) {
                 this.recipientType = recipientType;
@@ -942,7 +1020,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * TemplateParams.
+             * <p>The collection of template parameters.</p>
              */
             public Builder templateParams(java.util.Map<String, String> templateParams) {
                 this.templateParams = templateParams;
@@ -950,7 +1028,16 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * To.
+             * <p>The recipient\&quot;s phone number.</p>
+             * <ul>
+             * <li>If ChannelType is <strong>whatsapp</strong>, this is the recipient\&quot;s phone number.</li>
+             * <li>If ChannelType is <strong>messenger</strong>, this is the Page-Scoped User ID generated when the user interacts with a Facebook page message.</li>
+             * <li>If ChannelType is <strong>instagram</strong>, this is the Instagram User ID generated when the user interacts with an Instagram business account or creator account.
+             * &lt;props=&quot;intl&quot;&gt;- If ChannelType is <strong>viber</strong>, this is the recipient\&quot;s phone number.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>861386666****</p>
              */
             public Builder to(String to) {
                 this.to = to;

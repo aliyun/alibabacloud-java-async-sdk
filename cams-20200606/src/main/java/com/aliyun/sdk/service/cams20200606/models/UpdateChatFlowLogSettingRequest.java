@@ -129,10 +129,10 @@ public class UpdateChatFlowLogSettingRequest extends Request {
         } 
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>f4912c16943b4dfba44bd6fedacf****</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -141,7 +141,7 @@ public class UpdateChatFlowLogSettingRequest extends Request {
         }
 
         /**
-         * <p>Setting ID.</p>
+         * <p>The unique ID of the setting. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -180,11 +180,14 @@ public class UpdateChatFlowLogSettingRequest extends Request {
         }
 
         /**
-         * <p>Log enable status, enum values:</p>
+         * <p>The log enabling status. Valid values:</p>
          * <ul>
-         * <li>ENABLED: Enabled, enables log writing</li>
-         * <li>DISABLED: Create or retain related resources, but do not enable log writing</li>
-         * <li>DELETED: Delete, and decide whether to delete related resources based on options</li>
+         * <li><p>ENABLED: Enables log writing.</p>
+         * </li>
+         * <li><p>DISABLED: Disables log writing but retains the Simple Log Service log instance.</p>
+         * </li>
+         * <li><p>DELETED: Disables log writing and deletes the Simple Log Service log instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

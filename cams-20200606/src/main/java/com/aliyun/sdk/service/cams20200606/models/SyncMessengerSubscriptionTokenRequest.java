@@ -146,6 +146,7 @@ public class SyncMessengerSubscriptionTokenRequest extends Request {
         } 
 
         /**
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,10 @@ public class SyncMessengerSubscriptionTokenRequest extends Request {
         }
 
         /**
-         * CustomAudienceId.
+         * <p>The custom audience ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20399***</p>
          */
         public Builder customAudienceId(String customAudienceId) {
             this.putQueryParameter("CustomAudienceId", customAudienceId);
@@ -176,6 +180,7 @@ public class SyncMessengerSubscriptionTokenRequest extends Request {
         }
 
         /**
+         * <p>The PageId of Messenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +211,7 @@ public class SyncMessengerSubscriptionTokenRequest extends Request {
         }
 
         /**
+         * <p>The token type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

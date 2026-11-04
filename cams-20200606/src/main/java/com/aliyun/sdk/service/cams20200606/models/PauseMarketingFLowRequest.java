@@ -115,7 +115,10 @@ public class PauseMarketingFLowRequest extends Request {
         } 
 
         /**
-         * ActivityCode.
+         * <p>The activity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>439859845**234</p>
          */
         public Builder activityCode(String activityCode) {
             this.putQueryParameter("ActivityCode", activityCode);
@@ -124,7 +127,10 @@ public class PauseMarketingFLowRequest extends Request {
         }
 
         /**
-         * ActivityId.
+         * <p>The activity ID (deprecated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder activityId(String activityId) {
             this.putQueryParameter("ActivityId", activityId);

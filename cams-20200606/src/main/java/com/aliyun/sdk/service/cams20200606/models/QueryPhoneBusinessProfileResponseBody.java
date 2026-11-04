@@ -119,7 +119,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -130,10 +130,12 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The request status code.</p>
          * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>A value of OK indicates that the request is successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +155,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -164,7 +166,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -175,10 +177,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,7 +315,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Regarding.</p>
+             * <p>The about information.</p>
              * 
              * <strong>example:</strong>
              * <p>business profile</p>
@@ -349,7 +351,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
              * <p>The email address.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="mailto:aa@aliyun.com">aa@aliyun.com</a></p>
+             * <p><a href="mailto:example@aliyun.com">example@aliyun.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -357,10 +359,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The profile picture.</p>
+             * <p>The URL of the profile picture.</p>
              * 
              * <strong>example:</strong>
-             * <p>https://....img</p>
+             * <p><a href="https://example.img">https://example.img</a></p>
              */
             public Builder profilePictureUrl(String profilePictureUrl) {
                 this.profilePictureUrl = profilePictureUrl;
@@ -379,7 +381,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website.</p>
+             * <p>The websites.</p>
              */
             public Builder websites(java.util.List<String> websites) {
                 this.websites = websites;

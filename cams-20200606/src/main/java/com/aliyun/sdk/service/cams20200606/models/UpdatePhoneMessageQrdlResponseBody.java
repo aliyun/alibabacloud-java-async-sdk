@@ -106,7 +106,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returns OK as normal.</p>
+         * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -133,7 +136,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error description information.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -265,7 +268,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Deep link address.</p>
+             * <p>The deep link URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://wa.msg/">https://wa.msg/</a></p>
@@ -276,7 +279,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Generate image types.</p>
+             * <p>The type of the generated image.</p>
              * 
              * <strong>example:</strong>
              * <p>PNG</p>
@@ -287,10 +290,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number.</p>
+             * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>8613800</p>
+             * <p>86158********</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -298,7 +301,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Message content.</p>
+             * <p>The message content.</p>
              * 
              * <strong>example:</strong>
              * <p>Hello</p>
@@ -309,7 +312,7 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>QR code address.</p>
+             * <p>The URL of the QR code image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://img.png">https://img.png</a></p>
@@ -320,10 +323,10 @@ public class UpdatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>QR code encoding.</p>
+             * <p>The QR code encoding.</p>
              * 
              * <strong>example:</strong>
-             * <p>DEDEE998</p>
+             * <p>D9AA3***</p>
              */
             public Builder qrdlCode(String qrdlCode) {
                 this.qrdlCode = qrdlCode;

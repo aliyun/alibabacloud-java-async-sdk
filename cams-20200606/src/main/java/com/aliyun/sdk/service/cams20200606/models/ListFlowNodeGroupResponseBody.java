@@ -119,7 +119,10 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial. This field is returned only when RAM verification fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,14 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +250,10 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -233,7 +261,10 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PublicExtend.
+             * <p>The public extension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder publicExtend(String publicExtend) {
                 this.publicExtend = publicExtend;
@@ -287,7 +318,7 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Model.
+             * <p>The request result data.</p>
              */
             public Builder model(java.util.List<Model> model) {
                 this.model = model;

@@ -126,6 +126,7 @@ public class ListFlowNodeGroupRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +139,7 @@ public class ListFlowNodeGroupRequest extends Request {
         }
 
         /**
+         * <p>The number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

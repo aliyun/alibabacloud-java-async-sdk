@@ -115,7 +115,10 @@ public class ListAllGroupsRequest extends Request {
         } 
 
         /**
-         * BizCode.
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALICOM_OPAAS</p>
          */
         public Builder bizCode(String bizCode) {
             this.putQueryParameter("BizCode", bizCode);
@@ -124,7 +127,10 @@ public class ListAllGroupsRequest extends Request {
         }
 
         /**
-         * BizExtend.
+         * <p>The business extension information. Default value: an empty set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");

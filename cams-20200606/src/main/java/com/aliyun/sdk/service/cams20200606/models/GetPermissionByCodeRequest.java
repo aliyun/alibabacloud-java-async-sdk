@@ -130,10 +130,11 @@ public class GetPermissionByCodeRequest extends Request {
         } 
 
         /**
+         * <p>The authorization code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>flow_001</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
@@ -142,7 +143,10 @@ public class GetPermissionByCodeRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-isj23ljd912</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -160,7 +164,7 @@ public class GetPermissionByCodeRequest extends Request {
         }
 
         /**
-         * Permissions.
+         * <p>The permissions.</p>
          */
         public Builder permissions(java.util.List<String> permissions) {
             String permissionsShrink = shrink(permissions, "Permissions", "json");

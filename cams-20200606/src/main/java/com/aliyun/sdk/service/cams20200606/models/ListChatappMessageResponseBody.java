@@ -119,7 +119,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class ListChatappMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>OK: The request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class ListChatappMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of returned data objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>608F9CCA-B5EB-3D72-8047-B25D6D75BDEC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,14 @@ public class ListChatappMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -537,7 +562,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessNumber.
+             * <p>The business phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86183********</p>
              */
             public Builder businessNumber(String businessNumber) {
                 this.businessNumber = businessNumber;
@@ -545,7 +573,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelType.
+             * <p>The channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WHATSAPP</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -553,7 +584,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ClientAcceptStatusName.
+             * <p>The name of the message acceptance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder clientAcceptStatusName(String clientAcceptStatusName) {
                 this.clientAcceptStatusName = clientAcceptStatusName;
@@ -561,7 +595,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ClientReadStatus.
+             * <p>The message read status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder clientReadStatus(String clientReadStatus) {
                 this.clientReadStatus = clientReadStatus;
@@ -569,7 +606,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ClientReadStatusName.
+             * <p>The message read status name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder clientReadStatusName(String clientReadStatusName) {
                 this.clientReadStatusName = clientReadStatusName;
@@ -577,7 +617,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The conversation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>805a66**************************</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -585,7 +628,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * EventAction.
+             * <p>The upstream or downstream message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOWN</p>
              */
             public Builder eventAction(String eventAction) {
                 this.eventAction = eventAction;
@@ -593,7 +639,16 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * EventActionName.
+             * <p>The name of the upstream or downstream message type. Valid values:</p>
+             * <ul>
+             * <li><p>DOWN: downstream message.</p>
+             * </li>
+             * <li><p>UP: upstream message.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DOWN</p>
              */
             public Builder eventActionName(String eventActionName) {
                 this.eventActionName = eventActionName;
@@ -601,7 +656,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * FailBackContent.
+             * <p>The fallback content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder failBackContent(String failBackContent) {
                 this.failBackContent = failBackContent;
@@ -609,7 +667,16 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * FailBackFlag.
+             * <p>Indicates whether the message falls back to SMS. Valid values:</p>
+             * <ul>
+             * <li><p>Y: Yes.</p>
+             * </li>
+             * <li><p>N: No.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder failBackFlag(String failBackFlag) {
                 this.failBackFlag = failBackFlag;
@@ -617,7 +684,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * FailReason.
+             * <p>The reason for the sending failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>timeout</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
@@ -625,7 +695,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageCode.
+             * <p>The template language. For more languages, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder languageCode(String languageCode) {
                 this.languageCode = languageCode;
@@ -633,7 +706,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -641,7 +717,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202509*******************</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -649,7 +728,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageSource.
+             * <p>The message source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder messageSource(String messageSource) {
                 this.messageSource = messageSource;
@@ -657,7 +739,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageStatus.
+             * <p>The message status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder messageStatus(String messageStatus) {
                 this.messageStatus = messageStatus;
@@ -665,7 +750,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageStatusName.
+             * <p>The message status name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder messageStatusName(String messageStatusName) {
                 this.messageStatusName = messageStatusName;
@@ -673,7 +761,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageType.
+             * <p>The message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERACTIVE</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -681,7 +772,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageTypeName.
+             * <p>The message type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>interactive</p>
              */
             public Builder messageTypeName(String messageTypeName) {
                 this.messageTypeName = messageTypeName;
@@ -689,7 +783,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Month.
+             * <p>The month of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202507</p>
              */
             public Builder month(String month) {
                 this.month = month;
@@ -697,7 +794,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * SendTime.
+             * <p>The sending time in ISO 8601 format with a time zone offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-11T01:16:49.761+00:00</p>
              */
             public Builder sendTime(String sendTime) {
                 this.sendTime = sendTime;
@@ -705,7 +805,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * <p>The template code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1103***************</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -713,7 +816,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>picture_template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -721,7 +827,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>message</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -729,7 +838,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueMessageId.
+             * <p>The unique message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250911******************************</p>
              */
             public Builder uniqueMessageId(String uniqueMessageId) {
                 this.uniqueMessageId = uniqueMessageId;
@@ -737,7 +849,10 @@ public class ListChatappMessageResponseBody extends TeaModel {
             }
 
             /**
-             * UserNumber.
+             * <p>The user phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86177********</p>
              */
             public Builder userNumber(String userNumber) {
                 this.userNumber = userNumber;

@@ -121,7 +121,7 @@ public class GetCommerceSettingRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>29348393884****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);

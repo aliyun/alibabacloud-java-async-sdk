@@ -132,7 +132,10 @@ public class ListDmAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,16 @@ public class ListDmAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code. Valid values:</p>
+         * <ul>
+         * <li><p>OK: The request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +160,7 @@ public class ListDmAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -156,7 +168,10 @@ public class ListDmAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +179,10 @@ public class ListDmAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xis-sx***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +190,16 @@ public class ListDmAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: The operation was successful.</p>
+         * </li>
+         * <li><p>false: The operation failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +207,10 @@ public class ListDmAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -272,7 +302,10 @@ public class ListDmAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:send1@xx.xx.asia">send1@xx.xx.asia</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -280,7 +313,10 @@ public class ListDmAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the account was created. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1743579634000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -288,7 +324,10 @@ public class ListDmAccountResponseBody extends TeaModel {
             }
 
             /**
-             * MailAddressId.
+             * <p>The ID of the email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:a@b.com">a@b.com</a></p>
              */
             public Builder mailAddressId(String mailAddressId) {
                 this.mailAddressId = mailAddressId;
@@ -296,7 +335,14 @@ public class ListDmAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Sendtype.
+             * <p>The type of the sender address. Valid values:</p>
+             * <ul>
+             * <li>batch: batch email</li>
+             * <li>trigger: triggered email</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>trigger</p>
              */
             public Builder sendtype(String sendtype) {
                 this.sendtype = sendtype;

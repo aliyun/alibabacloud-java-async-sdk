@@ -129,7 +129,10 @@ public class ListFlowRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The SpaceId of the ISV sub-customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-sa2ksj21jksd</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -138,7 +141,10 @@ public class ListFlowRequest extends Request {
         }
 
         /**
-         * FlowName.
+         * <p>The Flow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow-21101</p>
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
@@ -156,7 +162,7 @@ public class ListFlowRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -243,7 +249,10 @@ public class ListFlowRequest extends Request {
             } 
 
             /**
-             * Index.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -251,7 +260,10 @@ public class ListFlowRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Integer size) {
                 this.size = size;

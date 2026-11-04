@@ -117,7 +117,7 @@ public class GetConversationalAutomationRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</p>
+         * <p>The space ID of the ISV sub-customer or the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,10 +119,10 @@ public class CreateChatFlowByImportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Access denied details.</p>
+         * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -130,10 +130,10 @@ public class CreateChatFlowByImportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request status code.</p>
+         * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,10 +141,7 @@ public class CreateChatFlowByImportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data object.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>无</p>
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -152,10 +149,10 @@ public class CreateChatFlowByImportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -163,10 +160,10 @@ public class CreateChatFlowByImportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,10 +171,16 @@ public class CreateChatFlowByImportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -173,10 +173,10 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         } 
 
         /**
-         * <p>The space ID of the RAM user within the ISV account.</p>
+         * <p>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channels Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channels Management</a> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>cams-************</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -185,11 +185,11 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The query end time. This value is a timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1693407714687</p>
+         * <p>1758902399000</p>
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -198,11 +198,10 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * <p>The granularity of the metric.</p>
-         * <p>Valid values:</p>
+         * <p>The metric granularity. Valid values:</p>
          * <ul>
-         * <li>DAILY</li>
-         * <li>HALF_HOUR</li>
+         * <li>DAILY: collects metrics on a daily basis.</li>
+         * <li>HALF_HOUR: collects metrics every half hour.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,10 +214,10 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
+         * <p>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</p>
          * 
          * <strong>example:</strong>
-         * <p>skdi3kksloslikdkkdk</p>
+         * <p>skdi3kksloslikd****</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -236,10 +235,10 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * <p>The business phone number.</p>
+         * <p>The business phone number. This is the number used to send messages, which can be viewed on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channels Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channels Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>861380000</p>
+         * <p>861380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -266,11 +265,11 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The query start time. This value is a timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1693107714687</p>
+         * <p>1756742399000</p>
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

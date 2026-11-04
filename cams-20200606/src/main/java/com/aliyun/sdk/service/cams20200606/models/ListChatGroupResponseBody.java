@@ -119,7 +119,10 @@ public class ListChatGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class ListChatGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code. Valid values:</p>
+         * <ul>
+         * <li><p>OK: The request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class ListChatGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class ListChatGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt message. This parameter has a value when an exception is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class ListChatGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,14 @@ public class ListChatGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -355,7 +380,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessNumber.
+             * <p>The business phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613800**</p>
              */
             public Builder businessNumber(String businessNumber) {
                 this.businessNumber = businessNumber;
@@ -363,7 +391,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessRole.
+             * <p>The role of the bot in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder businessRole(String businessRole) {
                 this.businessRole = businessRole;
@@ -371,7 +402,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -379,7 +413,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifier.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>94</p>
              */
             public Builder gmtModifier(Long gmtModifier) {
                 this.gmtModifier = gmtModifier;
@@ -387,7 +424,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EA30d***</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -395,7 +435,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupLink.
+             * <p>The group link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder groupLink(String groupLink) {
                 this.groupLink = groupLink;
@@ -403,7 +446,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupStatus.
+             * <p>The group status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder groupStatus(String groupStatus) {
                 this.groupStatus = groupStatus;
@@ -411,7 +457,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * <p>The group type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -419,7 +468,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InviteLink.
+             * <p>The invite link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://chat.whatsapp.com/">https://chat.whatsapp.com/</a>***</p>
              */
             public Builder inviteLink(String inviteLink) {
                 this.inviteLink = inviteLink;
@@ -427,7 +479,7 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ProfilePictureFile.
+             * <p>The group profile picture.</p>
              */
             public Builder profilePictureFile(String profilePictureFile) {
                 this.profilePictureFile = profilePictureFile;
@@ -435,7 +487,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Subject.
+             * <p>The group subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test subject</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -443,7 +498,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TotalParticipantCount.
+             * <p>The number of group members.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35</p>
              */
             public Builder totalParticipantCount(Long totalParticipantCount) {
                 this.totalParticipantCount = totalParticipantCount;
@@ -510,7 +568,7 @@ public class ListChatGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The group list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -518,7 +576,10 @@ public class ListChatGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51</p>
              */
             public Builder total(Long total) {
                 this.total = total;

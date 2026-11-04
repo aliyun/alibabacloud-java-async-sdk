@@ -144,10 +144,19 @@ public class FlowUnbindPhoneRequest extends Request {
         } 
 
         /**
-         * <p>Message channel type</p>
+         * <p>The message channel type. Valid values:</p>
+         * <ul>
+         * <li><p>INSTAGRAM</p>
+         * </li>
+         * <li><p>WHATSAPP</p>
+         * </li>
+         * <li><p>MESSENGER</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;- VIBER</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>WHATSAPP</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -156,11 +165,11 @@ public class FlowUnbindPhoneRequest extends Request {
         }
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -169,10 +178,10 @@ public class FlowUnbindPhoneRequest extends Request {
         }
 
         /**
-         * <p>Flow version</p>
+         * <p>The flow version. You can click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas page of the flow editor and view the flow version.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>1</p>
          */
         public Builder flowVersion(String flowVersion) {
             this.putQueryParameter("FlowVersion", flowVersion);
@@ -190,7 +199,7 @@ public class FlowUnbindPhoneRequest extends Request {
         }
 
         /**
-         * <p>Phone numbers or PageIds under the channel instance, etc.</p>
+         * <p>The list of phone numbers, PageIds, AccountIds&lt;props=&quot;intl&quot;&gt;, and ServiceIds under the channel instance.</p>
          */
         public Builder phoneNumbers(java.util.List<String> phoneNumbers) {
             String phoneNumbersShrink = shrink(phoneNumbers, "PhoneNumbers", "json");

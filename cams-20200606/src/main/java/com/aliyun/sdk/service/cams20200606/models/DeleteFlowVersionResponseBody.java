@@ -119,10 +119,10 @@ public class DeleteFlowVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed reason for access denial.</p>
+         * <p>The detailed reason why access was denied.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -130,7 +130,7 @@ public class DeleteFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,10 +141,10 @@ public class DeleteFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,10 +152,10 @@ public class DeleteFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,10 +163,10 @@ public class DeleteFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Content of the returned data.</p>
+         * <p>The response content.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>434991</p>
          */
         public Builder response(java.util.Map<String, ?> response) {
             this.response = response;
@@ -174,10 +174,16 @@ public class DeleteFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful. Values: true: success; false: failure.</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

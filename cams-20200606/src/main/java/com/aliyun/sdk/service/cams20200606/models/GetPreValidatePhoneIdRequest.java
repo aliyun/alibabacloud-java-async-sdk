@@ -79,7 +79,7 @@ public class GetPreValidatePhoneIdRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>861380000</p>
+         * <p>86138****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);
@@ -88,11 +88,11 @@ public class GetPreValidatePhoneIdRequest extends Request {
         }
 
         /**
-         * <p>The verification code provided when you purchased the pre-registered phone number.</p>
+         * <p>The verification code provided when you purchased the pre-validated phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>208393</p>
+         * <p>2083**</p>
          */
         public Builder verifyCode(String verifyCode) {
             this.putBodyParameter("VerifyCode", verifyCode);

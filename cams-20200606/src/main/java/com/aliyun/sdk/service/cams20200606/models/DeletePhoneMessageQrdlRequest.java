@@ -131,7 +131,11 @@ public class DeletePhoneMessageQrdlRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the
+         * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-kei****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -149,10 +153,13 @@ public class DeletePhoneMessageQrdlRequest extends Request {
         }
 
         /**
+         * <p>The phone number. You can view the phone number on the
+         * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>&gt; <strong>Management</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Number Management</strong> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>86158********</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -161,10 +168,11 @@ public class DeletePhoneMessageQrdlRequest extends Request {
         }
 
         /**
+         * <p>The QR code identifier. This is the QrdlCode returned by the <a href="https://help.aliyun.com/document_detail/2638749.html">CreatePhoneMessageQrdl</a> operation when you created the message QR code, or the QrdlCode returned by the <a href="https://help.aliyun.com/document_detail/2638746.html">UpdatePhoneMessageQrdl</a> operation when you modified the QR code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>D9II3***</p>
          */
         public Builder qrdlCode(String qrdlCode) {
             this.putQueryParameter("QrdlCode", qrdlCode);

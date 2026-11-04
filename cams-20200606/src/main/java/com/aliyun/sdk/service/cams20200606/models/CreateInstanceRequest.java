@@ -210,6 +210,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The channel type.</p>
+         * <blockquote>
+         * <p>Notice: The Singapore site supports all channels, and the Germany site currently supports only WhatsApp.</notice></p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +226,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ContactMail.
+         * <p>The contact email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder contactMail(String contactMail) {
             this.putQueryParameter("ContactMail", contactMail);
@@ -231,7 +238,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * CountryId.
+         * <p>The country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder countryId(String countryId) {
             this.putQueryParameter("CountryId", countryId);
@@ -252,7 +262,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceDescription.
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ins</p>
          */
         public Builder instanceDescription(String instanceDescription) {
             this.putQueryParameter("InstanceDescription", instanceDescription);
@@ -261,6 +274,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +287,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * IsConfirmAudit.
+         * <p>Specifies whether the audit is confirmed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder isConfirmAudit(String isConfirmAudit) {
             this.putQueryParameter("IsConfirmAudit", isConfirmAudit);
@@ -282,7 +299,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * IsvTerms.
+         * <p>The name of the ISV/client agreement file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://a.com/1.pdf">https://a.com/1.pdf</a></p>
          */
         public Builder isvTerms(String isvTerms) {
             this.putQueryParameter("IsvTerms", isvTerms);
@@ -291,7 +311,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * OfficeAddress.
+         * <p>The enterprise address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder officeAddress(String officeAddress) {
             this.putQueryParameter("OfficeAddress", officeAddress);
@@ -300,7 +323,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

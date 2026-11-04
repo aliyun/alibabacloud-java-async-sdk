@@ -122,7 +122,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
          * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>无</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -132,8 +132,10 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code returned.</p>
          * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * <li><p>A value of OK indicates that the call is successful.</p>
+         * </li>
+         * <li><p>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +158,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
          * <p>The error message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>None.</p>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,8 +179,10 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +282,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
              * <p>The Business Manager ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>192882828733</p>
+             * <p>19288282****</p>
              */
             public Builder businessId(String businessId) {
                 this.businessId = businessId;
@@ -311,7 +315,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
              * <p>The industry.</p>
              * 
              * <strong>example:</strong>
-             * <p>Retail</p>
+             * <p>零售</p>
              */
             public Builder vertical(String vertical) {
                 this.vertical = vertical;

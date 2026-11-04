@@ -102,6 +102,7 @@ public class DeleteGroupByIdRequest extends Request {
         } 
 
         /**
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

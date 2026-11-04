@@ -132,10 +132,11 @@ public class ChatappVerifyAndRegisterRequest extends Request {
         } 
 
         /**
+         * <p>The space ID of the ISV sub-customer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>29389299388383</p>
+         * <p>2938929938****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -153,10 +154,11 @@ public class ChatappVerifyAndRegisterRequest extends Request {
         }
 
         /**
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>86138000000</p>
+         * <p>861380000****</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -183,10 +185,11 @@ public class ChatappVerifyAndRegisterRequest extends Request {
         }
 
         /**
+         * <p>The verification code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123466</p>
+         * <p>1234**</p>
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

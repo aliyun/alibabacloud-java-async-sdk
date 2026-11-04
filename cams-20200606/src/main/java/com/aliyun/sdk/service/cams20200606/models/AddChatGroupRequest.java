@@ -173,6 +173,7 @@ public class AddChatGroupRequest extends Request {
         } 
 
         /**
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,16 @@ public class AddChatGroupRequest extends Request {
         }
 
         /**
-         * ChannelType.
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><strong>WHATSAPP</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Currently, only WhatsApp channel messages are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -194,6 +204,7 @@ public class AddChatGroupRequest extends Request {
         }
 
         /**
+         * <p>The space ID or instance ID of the ISV sub-customer, which is the channel ID. You can view the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channels Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +217,10 @@ public class AddChatGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a newly created group</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -215,7 +229,10 @@ public class AddChatGroupRequest extends Request {
         }
 
         /**
-         * GroupLink.
+         * <p>The Telegram group link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://t.me/testgroup">https://t.me/testgroup</a></p>
          */
         public Builder groupLink(String groupLink) {
             this.putQueryParameter("GroupLink", groupLink);
@@ -251,7 +268,10 @@ public class AddChatGroupRequest extends Request {
         }
 
         /**
-         * Subject.
+         * <p>The title of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder subject(String subject) {
             this.putQueryParameter("Subject", subject);

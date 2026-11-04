@@ -200,7 +200,7 @@ public class GetChatFlowMetricRequest extends Request {
         } 
 
         /**
-         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
          * 
          * <strong>example:</strong>
          * <p>ALICOM_OPAAS</p>
@@ -212,7 +212,7 @@ public class GetChatFlowMetricRequest extends Request {
         }
 
         /**
-         * <p>Business extension information, default is “{}”.</p>
+         * <p>The business extension information. Default value: an empty collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -225,10 +225,10 @@ public class GetChatFlowMetricRequest extends Request {
         }
 
         /**
-         * <p>Flow code.</p>
+         * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
          * 
          * <strong>example:</strong>
-         * <p>f4912c16943b4dfba44bd6fedacf****</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);
@@ -237,7 +237,7 @@ public class GetChatFlowMetricRequest extends Request {
         }
 
         /**
-         * <p>Flow version.</p>
+         * <p>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the flow editor canvas page and view the flow version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -249,7 +249,7 @@ public class GetChatFlowMetricRequest extends Request {
         }
 
         /**
-         * <p>Start timestamp in seconds.</p>
+         * <p>The start time. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1751299200</p>
@@ -261,7 +261,13 @@ public class GetChatFlowMetricRequest extends Request {
         }
 
         /**
-         * <p>Metric name.</p>
+         * <p>The metric name. Valid values:</p>
+         * <ul>
+         * <li><p>nodeUsageStatistics: node usage statistics.</p>
+         * </li>
+         * <li><p>nodeErrorDetails: node error details.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +280,22 @@ public class GetChatFlowMetricRequest extends Request {
         }
 
         /**
-         * MetricParam.
+         * <p>The extended parameter for the metric query. When MetricName is set to nodeErrorDetails, pass in a JSON string. Valid JSON fields:</p>
+         * <ul>
+         * <li><p>pageNo: the current page number.</p>
+         * </li>
+         * <li><p>pageSize: the number of entries per page.</p>
+         * </li>
+         * <li><p>nodeId: the node ID. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page and copy the node ID.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;pageNo&quot;: 1,
+         *   &quot;pageSize&quot;: 20,
+         *   &quot;nodeId&quot;: &quot;SendWhatsAppMessage#H7fKq5rM&quot;
+         * }</p>
          */
         public Builder metricParam(java.util.Map<String, ?> metricParam) {
             String metricParamShrink = shrink(metricParam, "MetricParam", "json");
@@ -311,7 +332,7 @@ public class GetChatFlowMetricRequest extends Request {
         }
 
         /**
-         * <p>End timestamp in seconds.</p>
+         * <p>The end time. This value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1751385599</p>

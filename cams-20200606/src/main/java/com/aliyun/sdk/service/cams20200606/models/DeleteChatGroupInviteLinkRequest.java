@@ -146,6 +146,7 @@ public class DeleteChatGroupInviteLinkRequest extends Request {
         } 
 
         /**
+         * <p>The business phone number. You can view the business phone number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,16 @@ public class DeleteChatGroupInviteLinkRequest extends Request {
         }
 
         /**
-         * ChannelType.
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><strong>WHATSAPP</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>Only WhatsApp channel type messages are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -167,6 +177,7 @@ public class DeleteChatGroupInviteLinkRequest extends Request {
         }
 
         /**
+         * <p>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +190,7 @@ public class DeleteChatGroupInviteLinkRequest extends Request {
         }
 
         /**
+         * <p>The group ID. You can view the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

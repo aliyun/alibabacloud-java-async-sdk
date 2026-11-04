@@ -270,7 +270,10 @@ public class UpdateMarketingFLowRequest extends Request {
         } 
 
         /**
-         * ActivityCode.
+         * <p>The code of the campaign to modify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115311507XXXX49888</p>
          */
         public Builder activityCode(String activityCode) {
             this.putQueryParameter("ActivityCode", activityCode);
@@ -279,7 +282,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * ActivityDesc.
+         * <p>The description of the campaign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Campaign description</p>
          */
         public Builder activityDesc(String activityDesc) {
             this.putQueryParameter("ActivityDesc", activityDesc);
@@ -288,7 +294,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * ActivityId.
+         * <p>The ID of the campaign to modify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>674574575658675XX</p>
          */
         public Builder activityId(String activityId) {
             this.putQueryParameter("ActivityId", activityId);
@@ -297,7 +306,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * ActivityName.
+         * <p>The name of the campaign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder activityName(String activityName) {
             this.putQueryParameter("ActivityName", activityName);
@@ -306,7 +318,7 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * CronExpression.
+         * <p>The cron expression for periodic scheduling.</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
@@ -315,7 +327,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-11-26 09:59:00</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -324,6 +339,7 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
+         * <p>The execution method. Set this parameter to 1 (cron).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,7 +361,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * ParamFlag.
+         * <p>Specifies whether to pass custom parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y: Pass custom parameters. N: Do not pass parameters</p>
          */
         public Builder paramFlag(String paramFlag) {
             this.putQueryParameter("ParamFlag", paramFlag);
@@ -354,7 +373,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The custom parameters to pass.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;testEmail&quot;:&quot;wy****<a href="mailto:999@alibaba-inc.com">999@alibaba-inc.com</a>&quot;}</p>
          */
         public Builder params(java.util.Map<String, ?> params) {
             String paramsShrink = shrink(params, "Params", "json");
@@ -364,7 +386,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * RelatedFlowCode.
+         * <p>The code of the associated flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf-kr3k31**mfeir8w</p>
          */
         public Builder relatedFlowCode(String relatedFlowCode) {
             this.putQueryParameter("RelatedFlowCode", relatedFlowCode);
@@ -373,7 +398,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * RelatedFlowName.
+         * <p>The name of the associated flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testflow</p>
          */
         public Builder relatedFlowName(String relatedFlowName) {
             this.putQueryParameter("RelatedFlowName", relatedFlowName);
@@ -382,7 +410,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * RelatedGroupId.
+         * <p>The ID of the associated group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114345654645XX</p>
          */
         public Builder relatedGroupId(Long relatedGroupId) {
             this.putQueryParameter("RelatedGroupId", relatedGroupId);
@@ -409,7 +440,10 @@ public class UpdateMarketingFLowRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-11-25 09:59:00</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

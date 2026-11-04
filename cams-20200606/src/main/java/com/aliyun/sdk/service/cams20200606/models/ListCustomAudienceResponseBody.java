@@ -132,7 +132,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,16 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>A return value of OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error code list</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +160,7 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -156,7 +168,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +179,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +190,14 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +205,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -363,7 +391,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             } 
 
             /**
-             * AdAccountId.
+             * <p>The Meta ad account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>339**</p>
              */
             public Builder adAccountId(String adAccountId) {
                 this.adAccountId = adAccountId;
@@ -371,7 +402,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, expressed as a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1720356898</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -379,7 +413,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAudienceId.
+             * <p>The custom audience ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>339**</p>
              */
             public Builder customAudienceId(String customAudienceId) {
                 this.customAudienceId = customAudienceId;
@@ -387,7 +424,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAudienceName.
+             * <p>The custom audience name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom audience name</p>
              */
             public Builder customAudienceName(String customAudienceName) {
                 this.customAudienceName = customAudienceName;
@@ -395,7 +435,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -403,7 +446,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * PageId.
+             * <p>The page ID of Messenger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>239**</p>
              */
             public Builder pageId(String pageId) {
                 this.pageId = pageId;
@@ -411,7 +457,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -419,7 +468,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * TokenTotal.
+             * <p>The number of tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder tokenTotal(Long tokenTotal) {
                 this.tokenTotal = tokenTotal;
@@ -427,7 +479,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * TokenType.
+             * <p>The token type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder tokenType(String tokenType) {
                 this.tokenType = tokenType;
@@ -435,7 +490,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -443,7 +501,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
             }
 
             /**
-             * UploadType.
+             * <p>The user upload type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>excel</p>
              */
             public Builder uploadType(String uploadType) {
                 this.uploadType = uploadType;

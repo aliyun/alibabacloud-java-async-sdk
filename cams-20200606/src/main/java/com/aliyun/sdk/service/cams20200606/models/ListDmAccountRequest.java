@@ -143,7 +143,10 @@ public class ListDmAccountRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -161,7 +164,10 @@ public class ListDmAccountRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Long pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -170,7 +176,10 @@ public class ListDmAccountRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +206,10 @@ public class ListDmAccountRequest extends Request {
         }
 
         /**
-         * SendType.
+         * <p>The sending type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batch</p>
          */
         public Builder sendType(String sendType) {
             this.putQueryParameter("SendType", sendType);

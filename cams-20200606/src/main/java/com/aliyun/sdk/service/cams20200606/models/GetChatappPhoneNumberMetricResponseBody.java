@@ -106,10 +106,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The access denied details.</p>
          * 
          * <strong>example:</strong>
-         * <p>NONE</p>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -117,7 +117,13 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The value OK indicates that the request was successful.</p>
+         * <p>The request status code. Valid values:</p>
+         * <ul>
+         * <li><p>OK: The request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">API error codes</a>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -128,7 +134,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -150,7 +156,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1612C226-E271-4CFE-9F18-4066D******</p>
+         * <p>608F9CCA-B5EB-3D72-8047-B25D6D75BDEC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -279,7 +285,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range that you queried.</p>
+             * <p>The end time of the metric collection period. This value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1667196043904</p>
@@ -290,12 +296,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The granularity of the metric.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>DAILY</li>
-             * <li>HALF_HOUR</li>
-             * </ul>
+             * <p>The metric granularity.</p>
              * 
              * <strong>example:</strong>
              * <p>DAILY</p>
@@ -309,7 +310,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
              * <p>The business phone number.</p>
              * 
              * <strong>example:</strong>
-             * <p>861380000</p>
+             * <p>861380000****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -328,7 +329,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range that you queried.</p>
+             * <p>The start time of the metric collection period. This value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1669619491000</p>

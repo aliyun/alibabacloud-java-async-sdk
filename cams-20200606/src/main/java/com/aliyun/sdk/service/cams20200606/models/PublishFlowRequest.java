@@ -116,7 +116,13 @@ public class PublishFlowRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the
+         * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>
+         * page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cams-kei****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -125,10 +131,11 @@ public class PublishFlowRequest extends Request {
         }
 
         /**
+         * <p>The Flow ID, which is the FlowId returned by the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation when you create a WhatsApp Flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>333993838***</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

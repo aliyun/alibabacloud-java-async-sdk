@@ -119,7 +119,10 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denial details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,16 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * <ul>
+         * <li><p>OK indicates that the request was successful.</p>
+         * </li>
+         * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +147,7 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -143,7 +155,10 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +166,10 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. This is used for troubleshooting when an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddhjdn-dnjdnkdjknd**</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +177,16 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -303,7 +330,10 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessAccountName.
+             * <p>The business account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test.</p>
              */
             public Builder businessAccountName(String businessAccountName) {
                 this.businessAccountName = businessAccountName;
@@ -311,7 +341,7 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationCountryId.
+             * <p>The destination country or region ID.</p>
              */
             public Builder destinationCountryId(java.util.List<String> destinationCountryId) {
                 this.destinationCountryId = destinationCountryId;
@@ -319,7 +349,7 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationInternationalCountryId.
+             * <p>The destination country or region ID.</p>
              */
             public Builder destinationInternationalCountryId(java.util.List<String> destinationInternationalCountryId) {
                 this.destinationInternationalCountryId = destinationInternationalCountryId;
@@ -327,7 +357,10 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
             }
 
             /**
-             * IndustryInvolved.
+             * <p>The industry involved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Healthcare.</p>
              */
             public Builder industryInvolved(String industryInvolved) {
                 this.industryInvolved = industryInvolved;
@@ -335,7 +368,7 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageDestinationCountry.
+             * <p>The collection of destination countries or regions.</p>
              */
             public Builder messageDestinationCountry(java.util.List<String> messageDestinationCountry) {
                 this.messageDestinationCountry = messageDestinationCountry;
@@ -343,7 +376,7 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageDestinationInternationalCountry.
+             * <p>The list of international destination countries or regions.</p>
              */
             public Builder messageDestinationInternationalCountry(java.util.List<String> messageDestinationInternationalCountry) {
                 this.messageDestinationInternationalCountry = messageDestinationInternationalCountry;
@@ -351,7 +384,10 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25644</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -359,7 +395,10 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder state(String state) {
                 this.state = state;
