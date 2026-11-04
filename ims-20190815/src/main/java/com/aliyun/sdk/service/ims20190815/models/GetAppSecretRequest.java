@@ -75,7 +75,7 @@ public class GetAppSecretRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetAppSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application secret.</p>
+         * <p>The app secret ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

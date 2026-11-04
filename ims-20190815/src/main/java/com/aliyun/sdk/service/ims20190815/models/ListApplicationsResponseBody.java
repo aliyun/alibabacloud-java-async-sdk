@@ -371,6 +371,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
+        @com.aliyun.core.annotation.NameInMap("AssignmentType")
+        private String assignmentType;
+
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
@@ -382,6 +385,9 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("IsMultiTenant")
         private Boolean isMultiTenant;
+
+        @com.aliyun.core.annotation.NameInMap("NeedPrincipalConsent")
+        private Boolean needPrincipalConsent;
 
         @com.aliyun.core.annotation.NameInMap("ProtocolVersion")
         private String protocolVersion;
@@ -404,10 +410,12 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.appName = builder.appName;
             this.appType = builder.appType;
+            this.assignmentType = builder.assignmentType;
             this.createDate = builder.createDate;
             this.delegatedScope = builder.delegatedScope;
             this.displayName = builder.displayName;
             this.isMultiTenant = builder.isMultiTenant;
+            this.needPrincipalConsent = builder.needPrincipalConsent;
             this.protocolVersion = builder.protocolVersion;
             this.redirectUris = builder.redirectUris;
             this.refreshTokenValidity = builder.refreshTokenValidity;
@@ -459,6 +467,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return assignmentType
+         */
+        public String getAssignmentType() {
+            return this.assignmentType;
+        }
+
+        /**
          * @return createDate
          */
         public String getCreateDate() {
@@ -484,6 +499,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public Boolean getIsMultiTenant() {
             return this.isMultiTenant;
+        }
+
+        /**
+         * @return needPrincipalConsent
+         */
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
         }
 
         /**
@@ -527,10 +549,12 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private String appType; 
+            private String assignmentType; 
             private String createDate; 
             private DelegatedScope delegatedScope; 
             private String displayName; 
             private Boolean isMultiTenant; 
+            private Boolean needPrincipalConsent; 
             private String protocolVersion; 
             private RedirectUris redirectUris; 
             private Integer refreshTokenValidity; 
@@ -546,10 +570,12 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.appId = model.appId;
                 this.appName = model.appName;
                 this.appType = model.appType;
+                this.assignmentType = model.assignmentType;
                 this.createDate = model.createDate;
                 this.delegatedScope = model.delegatedScope;
                 this.displayName = model.displayName;
                 this.isMultiTenant = model.isMultiTenant;
+                this.needPrincipalConsent = model.needPrincipalConsent;
                 this.protocolVersion = model.protocolVersion;
                 this.redirectUris = model.redirectUris;
                 this.refreshTokenValidity = model.refreshTokenValidity;
@@ -598,6 +624,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
+             * AssignmentType.
+             */
+            public Builder assignmentType(String assignmentType) {
+                this.assignmentType = assignmentType;
+                return this;
+            }
+
+            /**
              * CreateDate.
              */
             public Builder createDate(String createDate) {
@@ -626,6 +660,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder isMultiTenant(Boolean isMultiTenant) {
                 this.isMultiTenant = isMultiTenant;
+                return this;
+            }
+
+            /**
+             * NeedPrincipalConsent.
+             */
+            public Builder needPrincipalConsent(Boolean needPrincipalConsent) {
+                this.needPrincipalConsent = needPrincipalConsent;
                 return this;
             }
 

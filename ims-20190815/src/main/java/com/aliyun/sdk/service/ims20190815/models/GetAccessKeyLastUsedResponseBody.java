@@ -67,7 +67,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the time when the AccessKey pair was used for the last time.</p>
+         * <p>The last usage information of the access key.</p>
          */
         public Builder accessKeyLastUsed(AccessKeyLastUsed accessKeyLastUsed) {
             this.accessKeyLastUsed = accessKeyLastUsed;
@@ -144,7 +144,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the AccessKey pair was used for the last time.</p>
+             * <p>The last used time. Format: RFC 3339 (UTC). Example: 2020-10-16T01:37:37Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-16T01:37:37Z</p>
@@ -155,7 +155,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud service that was last accessed by using the AccessKey pair.</p>
+             * <p>The last used cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>Ram</p>

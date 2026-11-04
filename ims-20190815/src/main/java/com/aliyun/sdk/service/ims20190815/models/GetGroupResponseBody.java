@@ -67,7 +67,7 @@ public class GetGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the RAM user group.</p>
+         * <p>The user group information.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -196,10 +196,10 @@ public class GetGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description.</p>
+             * <p>The comments.</p>
              * 
              * <strong>example:</strong>
-             * <p>开发团队</p>
+             * <p>Development team</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -207,7 +207,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. Format: RFC 3339 (UTC). Example: 2020-10-19T16:15:17Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-19T16:15:17Z</p>
@@ -218,7 +218,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the RAM user group.</p>
+             * <p>The display name of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>Dev-Team</p>
@@ -229,7 +229,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user group.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>740317625433843****</p>
@@ -240,7 +240,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user group.</p>
+             * <p>The name of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>Dev-Team</p>
@@ -251,7 +251,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time. Format: RFC 3339 (UTC). Example: 2020-10-19T16:15:17Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-19T16:15:17Z</p>

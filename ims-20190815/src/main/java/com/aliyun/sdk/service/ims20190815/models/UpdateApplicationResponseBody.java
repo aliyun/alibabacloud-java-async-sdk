@@ -371,6 +371,9 @@ public class UpdateApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
+        @com.aliyun.core.annotation.NameInMap("AssignmentType")
+        private String assignmentType;
+
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
@@ -382,6 +385,9 @@ public class UpdateApplicationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("IsMultiTenant")
         private Boolean isMultiTenant;
+
+        @com.aliyun.core.annotation.NameInMap("NeedPrincipalConsent")
+        private Boolean needPrincipalConsent;
 
         @com.aliyun.core.annotation.NameInMap("ProtocolVersion")
         private String protocolVersion;
@@ -404,10 +410,12 @@ public class UpdateApplicationResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.appName = builder.appName;
             this.appType = builder.appType;
+            this.assignmentType = builder.assignmentType;
             this.createDate = builder.createDate;
             this.delegatedScope = builder.delegatedScope;
             this.displayName = builder.displayName;
             this.isMultiTenant = builder.isMultiTenant;
+            this.needPrincipalConsent = builder.needPrincipalConsent;
             this.protocolVersion = builder.protocolVersion;
             this.redirectUris = builder.redirectUris;
             this.refreshTokenValidity = builder.refreshTokenValidity;
@@ -459,6 +467,13 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return assignmentType
+         */
+        public String getAssignmentType() {
+            return this.assignmentType;
+        }
+
+        /**
          * @return createDate
          */
         public String getCreateDate() {
@@ -484,6 +499,13 @@ public class UpdateApplicationResponseBody extends TeaModel {
          */
         public Boolean getIsMultiTenant() {
             return this.isMultiTenant;
+        }
+
+        /**
+         * @return needPrincipalConsent
+         */
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
         }
 
         /**
@@ -527,10 +549,12 @@ public class UpdateApplicationResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private String appType; 
+            private String assignmentType; 
             private String createDate; 
             private DelegatedScope delegatedScope; 
             private String displayName; 
             private Boolean isMultiTenant; 
+            private Boolean needPrincipalConsent; 
             private String protocolVersion; 
             private RedirectUris redirectUris; 
             private Integer refreshTokenValidity; 
@@ -546,10 +570,12 @@ public class UpdateApplicationResponseBody extends TeaModel {
                 this.appId = model.appId;
                 this.appName = model.appName;
                 this.appType = model.appType;
+                this.assignmentType = model.assignmentType;
                 this.createDate = model.createDate;
                 this.delegatedScope = model.delegatedScope;
                 this.displayName = model.displayName;
                 this.isMultiTenant = model.isMultiTenant;
+                this.needPrincipalConsent = model.needPrincipalConsent;
                 this.protocolVersion = model.protocolVersion;
                 this.redirectUris = model.redirectUris;
                 this.refreshTokenValidity = model.refreshTokenValidity;
@@ -613,6 +639,21 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The application assignment type. Valid values:</p>
+             * <ul>
+             * <li>AllowAll: Full assignment. All RAM users and roles under the account are allowed to use the application.</li>
+             * <li>OnDemand: On-demand assignment. Only specified RAM users and roles under the account are allowed to use the application.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AlloAll</p>
+             */
+            public Builder assignmentType(String assignmentType) {
+                this.assignmentType = assignmentType;
+                return this;
+            }
+
+            /**
              * <p>The creation time.</p>
              * <p>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
              * 
@@ -625,7 +666,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission scope information of the application.</p>
+             * <p>The application permission scope information.</p>
              */
             public Builder delegatedScope(DelegatedScope delegatedScope) {
                 this.delegatedScope = delegatedScope;
@@ -644,13 +685,28 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application is allowed to be installed by other accounts.</p>
+             * <p>Indicates whether the application can be installed by other accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
              */
             public Builder isMultiTenant(Boolean isMultiTenant) {
                 this.isMultiTenant = isMultiTenant;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether user authorization is required. Valid values:</p>
+             * <ul>
+             * <li>true: User authorization is required.</li>
+             * <li>false: User authorization is not required.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder needPrincipalConsent(Boolean needPrincipalConsent) {
+                this.needPrincipalConsent = needPrincipalConsent;
                 return this;
             }
 

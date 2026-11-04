@@ -116,12 +116,10 @@ public class CreateLoginProfileRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether the RAM user must enable multi-factor authentication (MFA). Valid values:</p>
+         * <p>Specifies whether the Resource Access Management (RAM) user is required to enable multi-factor authentication (MFA). Valid values:</p>
          * <ul>
-         * <li><p>true: MFA is required. The RAM user must bind an MFA device at the next logon.</p>
-         * </li>
-         * <li><p>false (default): MFA is not required.</p>
-         * </li>
+         * <li>true: Required. The Resource Access Management (RAM) user must attach an MFA device upon the next logon.</li>
+         * <li>false (default): Not required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,8 +132,7 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>The logon password for the RAM user.</p>
-         * <p>The password must meet the password policy.</p>
+         * <p>The console logon password of the Resource Access Management (RAM) user. The password must meet the password strength requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>mypassword</p>
@@ -147,12 +144,10 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the RAM user must reset the password at the next logon. Valid values:</p>
+         * <p>Specifies whether the Resource Access Management (RAM) user is required to reset the password upon the next logon. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false (default)</p>
-         * </li>
+         * <li>true</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,12 +160,10 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable password-based logon to the console. Valid values:</p>
+         * <p>The status of console password logon. Valid values:</p>
          * <ul>
-         * <li><p>Active (default): Enable</p>
-         * </li>
-         * <li><p>Inactive: Disable</p>
-         * </li>
+         * <li>Active (default): Enabled.</li>
+         * <li>Inactive: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +176,7 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>The logon name of the RAM user.</p>
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

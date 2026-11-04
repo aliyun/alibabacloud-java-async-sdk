@@ -106,8 +106,7 @@ public class GetCredentialReportResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The content of the user credential report.</p>
-         * <p>The report is Base64-encoded. After you decode the report, the credential report is in the CSV format.</p>
+         * <p>The content of the user credential report. The content is Base64-encoded. After decoding, the content is in CSV format.</p>
          * 
          * <strong>example:</strong>
          * <p>OVZWK4RMOVZW****</p>
@@ -118,7 +117,7 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the user credential report was generated.</p>
+         * <p>The time when the user credential report was generated. The time is displayed in the RFC 3339 format in UTC. Example: 2020-10-19T15:06:52Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-19T15:06:52Z</p>
@@ -131,10 +130,8 @@ public class GetCredentialReportResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +143,7 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameter that is used to obtain the truncated part. This parameter takes effect only when <code>IsTruncated</code> is set to true.</p>
+         * <p>The token used to retrieve the next set of results. This parameter takes effect only when IsTruncated is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -157,7 +154,7 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7A01826E-7601-44B0-B4DF-2B0C509836DE</p>

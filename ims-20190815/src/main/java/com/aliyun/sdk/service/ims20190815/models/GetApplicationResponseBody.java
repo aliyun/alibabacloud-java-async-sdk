@@ -67,7 +67,7 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the application.</p>
+         * <p>The application information.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -281,7 +281,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the permissions that are granted on the application.</p>
+             * PredefinedScopes.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;
@@ -371,6 +371,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
+        @com.aliyun.core.annotation.NameInMap("AssignmentType")
+        private String assignmentType;
+
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
@@ -382,6 +385,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("IsMultiTenant")
         private Boolean isMultiTenant;
+
+        @com.aliyun.core.annotation.NameInMap("NeedPrincipalConsent")
+        private Boolean needPrincipalConsent;
 
         @com.aliyun.core.annotation.NameInMap("ProtocolVersion")
         private String protocolVersion;
@@ -404,10 +410,12 @@ public class GetApplicationResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.appName = builder.appName;
             this.appType = builder.appType;
+            this.assignmentType = builder.assignmentType;
             this.createDate = builder.createDate;
             this.delegatedScope = builder.delegatedScope;
             this.displayName = builder.displayName;
             this.isMultiTenant = builder.isMultiTenant;
+            this.needPrincipalConsent = builder.needPrincipalConsent;
             this.protocolVersion = builder.protocolVersion;
             this.redirectUris = builder.redirectUris;
             this.refreshTokenValidity = builder.refreshTokenValidity;
@@ -459,6 +467,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return assignmentType
+         */
+        public String getAssignmentType() {
+            return this.assignmentType;
+        }
+
+        /**
          * @return createDate
          */
         public String getCreateDate() {
@@ -484,6 +499,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public Boolean getIsMultiTenant() {
             return this.isMultiTenant;
+        }
+
+        /**
+         * @return needPrincipalConsent
+         */
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
         }
 
         /**
@@ -527,10 +549,12 @@ public class GetApplicationResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private String appType; 
+            private String assignmentType; 
             private String createDate; 
             private DelegatedScope delegatedScope; 
             private String displayName; 
             private Boolean isMultiTenant; 
+            private Boolean needPrincipalConsent; 
             private String protocolVersion; 
             private RedirectUris redirectUris; 
             private Integer refreshTokenValidity; 
@@ -546,10 +570,12 @@ public class GetApplicationResponseBody extends TeaModel {
                 this.appId = model.appId;
                 this.appName = model.appName;
                 this.appType = model.appType;
+                this.assignmentType = model.assignmentType;
                 this.createDate = model.createDate;
                 this.delegatedScope = model.delegatedScope;
                 this.displayName = model.displayName;
                 this.isMultiTenant = model.isMultiTenant;
+                this.needPrincipalConsent = model.needPrincipalConsent;
                 this.protocolVersion = model.protocolVersion;
                 this.redirectUris = model.redirectUris;
                 this.refreshTokenValidity = model.refreshTokenValidity;
@@ -569,7 +595,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+             * <p>The Alibaba Cloud account ID to which the application belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>177242285274****</p>
@@ -604,12 +630,9 @@ public class GetApplicationResponseBody extends TeaModel {
             /**
              * <p>The application type. Valid values:</p>
              * <ul>
-             * <li><p>WebApp: a web application that is based on browser interaction.</p>
-             * </li>
-             * <li><p>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
-             * </li>
-             * <li><p>ServerApp: an application that directly accesses Alibaba Cloud services without user logon. Currently, only applications that use the System for Cross-domain Identity Management (SCIM) protocol for user synchronization are supported.</p>
-             * </li>
+             * <li>WebApp: web applications that are based on browser interactions.</li>
+             * <li>NativeApp: local applications that run in operating systems, such as desktop or shift operating systems.</li>
+             * <li>ServerApp: applications that directly access Alibaba Cloud services without requiring user logon. Currently, only user synchronization applications based on the System for Cross-domain Identity Management protocol are supported.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -621,7 +644,22 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created.</p>
+             * <p>The application assignment type. Valid values:</p>
+             * <ul>
+             * <li>AllowAll: full assignment. All RAM users and roles within the account are allowed to use the application.</li>
+             * <li>OnDemand: on-demand assignment. Only specified RAM users and roles within the account are allowed to use the application.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AllowAll</p>
+             */
+            public Builder assignmentType(String assignmentType) {
+                this.assignmentType = assignmentType;
+                return this;
+            }
+
+            /**
+             * <p>The creation time. Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-23T08:06:57Z</p>
@@ -632,7 +670,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the permissions that are granted on the application.</p>
+             * <p>The delegated scope information of the application.</p>
              */
             public Builder delegatedScope(DelegatedScope delegatedScope) {
                 this.delegatedScope = delegatedScope;
@@ -651,7 +689,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+             * <p>Specifies whether the application can be installed by other accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -662,12 +700,25 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Specifies whether user authorization is required. Valid values:</p>
+             * <ul>
+             * <li>true: User authorization is required.</li>
+             * <li>false: User authorization is not required.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder needPrincipalConsent(Boolean needPrincipalConsent) {
+                this.needPrincipalConsent = needPrincipalConsent;
+                return this;
+            }
+
+            /**
              * <p>The OAuth protocol version of the application. Valid values:</p>
              * <ul>
-             * <li><p><code>2.0</code>: OAuth 2.0</p>
-             * </li>
-             * <li><p><code>2.1</code>: OAuth 2.1</p>
-             * </li>
+             * <li><code>2.0</code>: OAuth 2.0 protocol.</li>
+             * <li><code>2.1</code>: OAuth 2.1 protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -679,7 +730,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The redirect URLs.</p>
+             * RedirectUris.
              */
             public Builder redirectUris(RedirectUris redirectUris) {
                 this.redirectUris = redirectUris;
@@ -698,7 +749,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a secret is required.</p>
+             * <p>Specifies whether an application secret is required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -709,7 +760,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was last updated.</p>
+             * <p>The update time. Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-23T08:06:57Z</p>

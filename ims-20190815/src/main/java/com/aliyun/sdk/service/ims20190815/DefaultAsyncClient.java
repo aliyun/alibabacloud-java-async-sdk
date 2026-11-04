@@ -197,6 +197,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateApplicationAssignment  CreateApplicationAssignmentRequest
+     * @return CreateApplicationAssignmentResponse
+     */
+    @Override
+    public CompletableFuture<CreateApplicationAssignmentResponse> createApplicationAssignment(CreateApplicationAssignmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateApplicationAssignment").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateApplicationAssignmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateApplicationAssignmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateGroup  CreateGroupRequest
      * @return CreateGroupResponse
      */
@@ -299,9 +317,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to create a RAM user named <code>test</code>.</p>
-     * 
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
      */
@@ -404,6 +419,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteApplicationAssignment  DeleteApplicationAssignmentRequest
+     * @return DeleteApplicationAssignmentResponse
+     */
+    @Override
+    public CompletableFuture<DeleteApplicationAssignmentResponse> deleteApplicationAssignment(DeleteApplicationAssignmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteApplicationAssignment").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteApplicationAssignmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteApplicationAssignmentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -584,9 +617,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you want to call this operation to uninstall an internal application, the type of the internal application must be <strong>ServerApp</strong>. Otherwise, an error occurs when you call this operation.</p>
+     * <p>When you uninstall an internal application, the application must be of the <strong>ServerApp</strong> type. Otherwise, the call fails.</p>
      * <blockquote>
-     * <p>For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
+     * <p>Among <strong>internal applications</strong>, only applications of the ServerApp type require the <strong>provisioning</strong> operation. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not require and cannot be uninstalled</strong>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeprovisionApplication  DeprovisionApplicationRequest
@@ -824,7 +857,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the configurations of an application named <code>472457090344041****</code>.</p>
+     * <p>This topic provides an example to query the configuration information of the application <code>472457090344041****</code>.</p>
      * 
      * @param request the request parameters of GetApplication  GetApplicationRequest
      * @return GetApplicationResponse
@@ -977,7 +1010,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询前，目标 RAM 用户必须已有控制台登录配置（<code>LoginProfile</code>）；如果尚未配置，需先调用 <code>CreateLoginProfile</code> 创建登录配置。</p>
+     * <p>Before querying, the target RAM user must have a console logon profile (LoginProfile). If the profile is not configured, call CreateLoginProfile to create a logon profile first.</p>
      * 
      * @param request the request parameters of GetLoginProfile  GetLoginProfileRequest
      * @return GetLoginProfileResponse
@@ -1235,6 +1268,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListApplicationAssignments  ListApplicationAssignmentsRequest
+     * @return ListApplicationAssignmentsResponse
+     */
+    @Override
+    public CompletableFuture<ListApplicationAssignmentsResponse> listApplicationAssignments(ListApplicationAssignmentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListApplicationAssignments").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApplicationAssignmentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApplicationAssignmentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListApplicationAssignmentsForPrincipal  ListApplicationAssignmentsForPrincipalRequest
+     * @return ListApplicationAssignmentsForPrincipalResponse
+     */
+    @Override
+    public CompletableFuture<ListApplicationAssignmentsForPrincipalResponse> listApplicationAssignmentsForPrincipal(ListApplicationAssignmentsForPrincipalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListApplicationAssignmentsForPrincipal").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApplicationAssignmentsForPrincipalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApplicationAssignmentsForPrincipalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListApplicationProvisionInfos  ListApplicationProvisionInfosRequest
      * @return ListApplicationProvisionInfosResponse
      */
@@ -1254,7 +1323,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <code>myapp</code>, exists in the account.</p>
+     * <p>This topic provides an example of querying the applications within the current account. The response indicates that the current account has only one application named <code>myapp</code>.</p>
      * 
      * @param request the request parameters of ListApplications  ListApplicationsRequest
      * @return ListApplicationsResponse

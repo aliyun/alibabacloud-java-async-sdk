@@ -60,7 +60,7 @@ public class GetLoginProfileRequest extends Request {
         } 
 
         /**
-         * <p>The logon name of the RAM user.</p>
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -81,6 +81,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
     /**
+     * @param request the request parameters of CreateApplicationAssignment  CreateApplicationAssignmentRequest
+     * @return CreateApplicationAssignmentResponse
+     */
+    CompletableFuture<CreateApplicationAssignmentResponse> createApplicationAssignment(CreateApplicationAssignmentRequest request);
+
+    /**
      * @param request the request parameters of CreateGroup  CreateGroupRequest
      * @return CreateGroupResponse
      */
@@ -123,9 +129,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceCredentialResponse> createServiceCredential(CreateServiceCredentialRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to create a RAM user named <code>test</code>.</p>
-     * 
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
      */
@@ -160,6 +163,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteApplicationResponse
      */
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApplicationAssignment  DeleteApplicationAssignmentRequest
+     * @return DeleteApplicationAssignmentResponse
+     */
+    CompletableFuture<DeleteApplicationAssignmentResponse> deleteApplicationAssignment(DeleteApplicationAssignmentRequest request);
 
     /**
      * <b>description</b> :
@@ -228,9 +237,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you want to call this operation to uninstall an internal application, the type of the internal application must be <strong>ServerApp</strong>. Otherwise, an error occurs when you call this operation.</p>
+     * <p>When you uninstall an internal application, the application must be of the <strong>ServerApp</strong> type. Otherwise, the call fails.</p>
      * <blockquote>
-     * <p>For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
+     * <p>Among <strong>internal applications</strong>, only applications of the ServerApp type require the <strong>provisioning</strong> operation. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not require and cannot be uninstalled</strong>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeprovisionApplication  DeprovisionApplicationRequest
@@ -312,7 +321,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the configurations of an application named <code>472457090344041****</code>.</p>
+     * <p>This topic provides an example to query the configuration information of the application <code>472457090344041****</code>.</p>
      * 
      * @param request the request parameters of GetApplication  GetApplicationRequest
      * @return GetApplicationResponse
@@ -369,7 +378,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>查询前，目标 RAM 用户必须已有控制台登录配置（<code>LoginProfile</code>）；如果尚未配置，需先调用 <code>CreateLoginProfile</code> 创建登录配置。</p>
+     * <p>Before querying, the target RAM user must have a console logon profile (LoginProfile). If the profile is not configured, call CreateLoginProfile to create a logon profile first.</p>
      * 
      * @param request the request parameters of GetLoginProfile  GetLoginProfileRequest
      * @return GetLoginProfileResponse
@@ -459,6 +468,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAppSecretIdsResponse> listAppSecretIds(ListAppSecretIdsRequest request);
 
     /**
+     * @param request the request parameters of ListApplicationAssignments  ListApplicationAssignmentsRequest
+     * @return ListApplicationAssignmentsResponse
+     */
+    CompletableFuture<ListApplicationAssignmentsResponse> listApplicationAssignments(ListApplicationAssignmentsRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationAssignmentsForPrincipal  ListApplicationAssignmentsForPrincipalRequest
+     * @return ListApplicationAssignmentsForPrincipalResponse
+     */
+    CompletableFuture<ListApplicationAssignmentsForPrincipalResponse> listApplicationAssignmentsForPrincipal(ListApplicationAssignmentsForPrincipalRequest request);
+
+    /**
      * @param request the request parameters of ListApplicationProvisionInfos  ListApplicationProvisionInfosRequest
      * @return ListApplicationProvisionInfosResponse
      */
@@ -466,7 +487,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <code>myapp</code>, exists in the account.</p>
+     * <p>This topic provides an example of querying the applications within the current account. The response indicates that the current account has only one application named <code>myapp</code>.</p>
      * 
      * @param request the request parameters of ListApplications  ListApplicationsRequest
      * @return ListApplicationsResponse

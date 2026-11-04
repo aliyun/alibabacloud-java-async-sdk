@@ -67,7 +67,7 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the AccessKey pair.</p>
+         * <p>The access key information.</p>
          */
         public Builder accessKey(AccessKey accessKey) {
             this.accessKey = accessKey;
@@ -209,7 +209,7 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AccessKey ID.</p>
+             * <p>The access key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>LTAI*******************</p>
@@ -220,7 +220,8 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair was created.</p>
+             * <p>The time when the access key was created.</p>
+             * <p>Format: RFC 3339 (UTC). Example: 2020-10-12T09:12:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-12T09:12:00Z</p>
@@ -231,7 +232,8 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair will be permanently deleted from the recycle bin.</p>
+             * <p>The time when the access key will be permanently deleted from the recycle bin.</p>
+             * <p>Format: RFC 3339 (UTC). Example: 2020-11-12T10:12:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-12T10:12:00Z</p>
@@ -242,7 +244,8 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair was deleted and moved to the recycle bin.</p>
+             * <p>The time when the access key was deleted and moved to the recycle bin.</p>
+             * <p>Format: RFC 3339 (UTC). Example: 2020-10-12T10:12:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-12T10:12:00Z</p>
@@ -253,7 +256,7 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user.</p>
+             * <p>The ID of the Resource Access Management (RAM) user.</p>
              * 
              * <strong>example:</strong>
              * <p>20732900249392****</p>
@@ -264,7 +267,7 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon name of the RAM user.</p>
+             * <p>The logon name of the Resource Access Management (RAM) user.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
@@ -275,12 +278,10 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the RAM user to which the AccessKey pair belongs is in the recycle bin. Valid values:</p>
+             * <p>Indicates whether the Resource Access Management (RAM) user to which the access key belongs is revoked. Valid values:</p>
              * <ul>
-             * <li><p>true</p>
-             * </li>
-             * <li><p>false</p>
-             * </li>
+             * <li>true: The Resource Access Management (RAM) user is revoked.</li>
+             * <li>false: The Resource Access Management (RAM) user is not revoked.</li>
              * </ul>
              * 
              * <strong>example:</strong>

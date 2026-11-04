@@ -31,6 +31,10 @@ public class CreateApplicationRequest extends Request {
     private String appType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssignmentType")
+    private String assignmentType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DisplayName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
@@ -38,6 +42,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsMultiTenant")
     private Boolean isMultiTenant;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedPrincipalConsent")
+    private Boolean needPrincipalConsent;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PredefinedScopes")
@@ -68,8 +76,10 @@ public class CreateApplicationRequest extends Request {
         this.accessTokenValidity = builder.accessTokenValidity;
         this.appName = builder.appName;
         this.appType = builder.appType;
+        this.assignmentType = builder.assignmentType;
         this.displayName = builder.displayName;
         this.isMultiTenant = builder.isMultiTenant;
+        this.needPrincipalConsent = builder.needPrincipalConsent;
         this.predefinedScopes = builder.predefinedScopes;
         this.protocolVersion = builder.protocolVersion;
         this.redirectUris = builder.redirectUris;
@@ -113,6 +123,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return assignmentType
+     */
+    public String getAssignmentType() {
+        return this.assignmentType;
+    }
+
+    /**
      * @return displayName
      */
     public String getDisplayName() {
@@ -124,6 +141,13 @@ public class CreateApplicationRequest extends Request {
      */
     public Boolean getIsMultiTenant() {
         return this.isMultiTenant;
+    }
+
+    /**
+     * @return needPrincipalConsent
+     */
+    public Boolean getNeedPrincipalConsent() {
+        return this.needPrincipalConsent;
     }
 
     /**
@@ -172,8 +196,10 @@ public class CreateApplicationRequest extends Request {
         private Integer accessTokenValidity; 
         private String appName; 
         private String appType; 
+        private String assignmentType; 
         private String displayName; 
         private Boolean isMultiTenant; 
+        private Boolean needPrincipalConsent; 
         private String predefinedScopes; 
         private String protocolVersion; 
         private String redirectUris; 
@@ -190,8 +216,10 @@ public class CreateApplicationRequest extends Request {
             this.accessTokenValidity = request.accessTokenValidity;
             this.appName = request.appName;
             this.appType = request.appType;
+            this.assignmentType = request.assignmentType;
             this.displayName = request.displayName;
             this.isMultiTenant = request.isMultiTenant;
+            this.needPrincipalConsent = request.needPrincipalConsent;
             this.predefinedScopes = request.predefinedScopes;
             this.protocolVersion = request.protocolVersion;
             this.redirectUris = request.redirectUris;
@@ -216,7 +244,7 @@ public class CreateApplicationRequest extends Request {
 
         /**
          * <p>The application name.</p>
-         * <p>It can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The maximum length is 64 characters. Only letters, digits, periods (.), underscores (_), and hyphens (-) are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>myapp</p>
@@ -228,14 +256,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The type of the application. Valid values:</p>
+         * <p>The application type. Valid values:</p>
          * <ul>
-         * <li><p>WebApp: a web application that is based on browser interaction.</p>
-         * </li>
-         * <li><p>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
-         * </li>
-         * <li><p>ServerApp: an application that directly accesses Alibaba Cloud services without user logon. Currently, only applications that use the System for Cross-domain Identity Management (SCIM) protocol for user synchronization are supported.</p>
-         * </li>
+         * <li>WebApp: web applications that interact with users through browsers. </li>
+         * <li>NativeApp: native applications that run in operating systems, primarily on desktop or shift operating systems. </li>
+         * <li>ServerApp: applications that directly access Alibaba Cloud services without requiring user logons. Currently, only user synchronization applications based on the System for Cross-domain Identity Management protocol are supported.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -249,8 +274,24 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * <p>The application assignment type. Valid values:</p>
+         * <ul>
+         * <li>AllowAll: assigns the application to all RAM users and roles in the account, allowing them to use the application.</li>
+         * <li>OnDemand: assigns the application only to specified RAM users and roles in the account, allowing only them to use the application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AllowAll</p>
+         */
+        public Builder assignmentType(String assignmentType) {
+            this.putQueryParameter("AssignmentType", assignmentType);
+            this.assignmentType = assignmentType;
+            return this;
+        }
+
+        /**
          * <p>The display name of the application.</p>
-         * <p>It can be up to 24 characters in length.</p>
+         * <p>Maximum length: 24 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,12 +304,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the application can be installed by other Alibaba Cloud accounts. Valid values:</p>
+         * <p>Specifies whether the application can be installed by other accounts. Valid values:</p>
          * <ul>
-         * <li><p>true: If not specified, the default value is true for NativeApp and ServerApp applications.</p>
-         * </li>
-         * <li><p>false: If not specified, the default value is false for WebApp applications.</p>
-         * </li>
+         * <li>true: For NativeApp and ServerApp applications, if this value is empty, the default value is true.</li>
+         * <li>false: For WebApp applications, if this value is empty, the default value is false.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,9 +320,25 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The scope of application permissions.</p>
-         * <p>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">OAuth overview</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to obtain the scopes that are supported by different application types.</p>
-         * <p>To specify multiple permissions, separate them with semicolons (;).</p>
+         * <p>Specifies whether user authorization is required. Valid values:</p>
+         * <ul>
+         * <li>true: In addition to the authorization required during application installation, users must also authorize the application <strong>each time</strong> they use it for OAuth logon.</li>
+         * <li>false: Authorization is required only during application installation. Users do not need additional authorization when they use the application for OAuth logon later.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder needPrincipalConsent(Boolean needPrincipalConsent) {
+            this.putQueryParameter("NeedPrincipalConsent", needPrincipalConsent);
+            this.needPrincipalConsent = needPrincipalConsent;
+            return this;
+        }
+
+        /**
+         * <p>The scopes of the application.</p>
+         * <p>For the valid values and descriptions of application scopes, see <a href="https://help.aliyun.com/document_detail/93693.html">OAuth scopes</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to obtain the scopes supported by different application types.</p>
+         * <p>Separate multiple scopes with semicolons (;).</p>
          * 
          * <strong>example:</strong>
          * <p>aliuid;profile</p>
@@ -297,12 +352,10 @@ public class CreateApplicationRequest extends Request {
         /**
          * <p>The OAuth protocol version of the application. Valid values:</p>
          * <ul>
-         * <li><p><code>2.0</code>: OAuth 2.0</p>
-         * </li>
-         * <li><p><code>2.1</code>: OAuth 2.1</p>
-         * </li>
+         * <li>2.0: OAuth 2.0 protocol.</li>
+         * <li>2.1: OAuth 2.1 protocol.</li>
          * </ul>
-         * <p>Default value: <code>2.0</code>.</p>
+         * <p>Default value: 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -314,8 +367,8 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The redirect URL of the application.</p>
-         * <p>To specify multiple URLs, separate them with semicolons (;).</p>
+         * <p>The redirect URIs.</p>
+         * <p>Separate multiple URIs with semicolons (;).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
@@ -331,10 +384,8 @@ public class CreateApplicationRequest extends Request {
          * <p>Valid values: 7200 to 31536000. Unit: seconds.</p>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>If not specified, the default value is 2,592,000 seconds (30 days) for NativeApp and ServerApp applications.</p>
-         * </li>
-         * <li><p>If not specified, the default value is 7,776,000 seconds (90 days) for WebApp applications.</p>
-         * </li>
+         * <li>For NativeApp and ServerApp applications, if this value is empty, the default value is 2592000 seconds (30 days).</li>
+         * <li>For WebApp applications, if this value is empty, the default value is 7776000 seconds (90 days).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,11 +398,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The required permission.</p>
-         * <p>You can specify one or more permissions for the <code>RequiredScopes</code> parameter. When a user grants permissions to the application, the scopes specified in this parameter are pre-selected and cannot be deselected.</p>
-         * <p>To enter multiple scopes, separate them with semicolons (;).</p>
+         * <p>The required scopes of the application.</p>
+         * <p>You can set one or more scopes in RequiredScopes as required. After a scope is set as required, it is selected by default and cannot be deselected when a user authorizes the application.</p>
+         * <p>Separate multiple scopes with semicolons (;).</p>
          * <blockquote>
-         * <p>Any scope specified here must also be included in <code>PredefinedScopes</code>. Otherwise, the scope will not be set as required.</p>
+         * <p>If a scope that you specify in RequiredScopes is not included in PredefinedScopes, the required scope does not take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -364,21 +415,23 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether a secret is required. Valid values:</p>
+         * <p>Specifies whether an application secret is required. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>For applications of the WebApp and ServerApp types, this parameter is required and is always set to true.</li>
+         * <li><ul>
+         * <li>For WebApp and ServerApp applications, this value is forcibly set to true and cannot be modified.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>For NativeApp applications, you can set this value to true or false. If you do not specify this value, the default value is false. Because such applications often run in untrusted environments and cannot effectively protect application secrets, do not set this value to true unless necessary. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Log on to Alibaba Cloud from a native application</a>.</li>
+         * </ul>
+         * </li>
          * </ul>
          * </blockquote>
-         * <ul>
-         * <li>For applications of the NativeApp type, you can set this parameter to true or false. If not specified, the default value is false. Since native applications are public clients and cannot reliably protect secrets, we recommend keeping this false unless a secret is strictly required. For more information, see <a href="https://help.aliyun.com/document_detail/93697.html">Access Alibaba Cloud APIs from a native application</a>.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

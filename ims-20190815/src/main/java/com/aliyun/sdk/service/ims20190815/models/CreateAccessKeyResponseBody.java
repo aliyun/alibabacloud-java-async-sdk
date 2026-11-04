@@ -67,7 +67,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the AccessKey pair.</p>
+         * <p>The access key.</p>
          */
         public Builder accessKey(AccessKey accessKey) {
             this.accessKey = accessKey;
@@ -170,7 +170,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AccessKey ID.</p>
+             * <p>The access key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>yourAccessKeyID</p>
@@ -181,7 +181,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AccessKey secret.</p>
+             * <p>The access key.</p>
              * 
              * <strong>example:</strong>
              * <p>yourAccessKeySecret</p>
@@ -192,7 +192,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair was created.</p>
+             * <p>The creation time of the access key. Format: RFC 3339 (UTC). Example: 2020-10-15T08:08:54Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-15T08:08:54Z</p>
@@ -203,12 +203,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the AccessKey pair. Valid values:</p>
+             * <p>The status of the access key. Valid values:</p>
              * <ul>
-             * <li><p>Active</p>
-             * </li>
-             * <li><p>Inactive</p>
-             * </li>
+             * <li>Active: Activated.</li>
+             * <li>Inactive: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

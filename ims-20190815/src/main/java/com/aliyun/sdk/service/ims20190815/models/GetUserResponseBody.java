@@ -78,7 +78,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM user.</p>
+         * <p>The information about the Resource Access Management (RAM) user.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -414,7 +414,8 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user was created.</p>
+             * <p>The time when the Resource Access Management (RAM) user was created.</p>
+             * <p>The format is RFC 3339 (UTC). Example: 2020-10-12T09:12:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-12T09:12:00Z</p>
@@ -425,7 +426,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the RAM user.</p>
+             * <p>The display name of the Resource Access Management (RAM) user.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -436,9 +437,9 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the RAM user.</p>
+             * <p>The electron mailbox of the Resource Access Management (RAM) user.</p>
              * <blockquote>
-             * <p>This parameter is valid only on the China site (aliyun.com).</p>
+             * <p>This parameter applies only to the China site.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -450,7 +451,8 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last time when the RAM user logged on to the Alibaba Cloud Management Console.</p>
+             * <p>The time of the last console logon of the Resource Access Management (RAM) user.</p>
+             * <p>The format is RFC 3339 (UTC). Example: 2020-10-12T09:12:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-12T09:12:00Z</p>
@@ -461,9 +463,9 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile phone number of the RAM user.</p>
+             * <p>The mobile phone number of the Resource Access Management (RAM) user.</p>
              * <blockquote>
-             * <p>This parameter is valid only on the China site (aliyun.com).</p>
+             * <p>This parameter applies only to the China site.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -475,14 +477,11 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the RAM user. Valid value:</p>
+             * <p>The synchronization type. Valid values:</p>
              * <ul>
-             * <li><p>Manual: The RAM user is manually created in the RAM console.</p>
-             * </li>
-             * <li><p>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</p>
-             * </li>
-             * <li><p>CloudSSO: The RAM user is mapped from a CloudSSO user.</p>
-             * </li>
+             * <li>Manual: The Resource Access Management (RAM) user is manually created in RAM.</li>
+             * <li>SCIM: The Resource Access Management (RAM) user is created through synchronization via the System for Cross-domain Identity Management protocol.</li>
+             * <li>CloudSSO: The user is created through CloudSSO synchronization.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -502,7 +501,8 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information about the RAM user was updated.</p>
+             * <p>The time when the Resource Access Management (RAM) user was updated.</p>
+             * <p>The format is RFC 3339 (UTC). Example: 2020-10-13T07:39:22Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-13T07:39:22Z</p>
@@ -513,7 +513,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user.</p>
+             * <p>The ID of the Resource Access Management (RAM) user.</p>
              * 
              * <strong>example:</strong>
              * <p>20732900249392****</p>
@@ -524,7 +524,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the RAM user, which is the prefix of the logon name of the RAM user.</p>
+             * <p>The name of the Resource Access Management (RAM) user, which is the prefix of the logon name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -535,7 +535,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon name of the RAM user.</p>
+             * <p>The logon name of the Resource Access Management (RAM) user.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
