@@ -67,7 +67,10 @@ public class RefreshLoginTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * LoginToken.
+         * <p>The logon credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1c27bab6c205b2fdfac916434306375722776d6aa89e30b7836d18c95ade9137f0f5ac4325260782184e96ee2b3f0****</p>
          */
         public Builder loginToken(String loginToken) {
             this.loginToken = loginToken;
@@ -75,7 +78,10 @@ public class RefreshLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

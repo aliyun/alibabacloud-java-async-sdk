@@ -145,7 +145,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * AgentBriefSummary.
+         * <p>The brief summary information of the agent.</p>
          */
         public Builder agentBriefSummary(AgentBriefSummary agentBriefSummary) {
             this.agentBriefSummary = agentBriefSummary;
@@ -153,7 +153,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回最大数量。</p>
+         * <p>The maximum number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -164,7 +164,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token used to start the next page of query results. An empty NextToken indicates that no more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -175,7 +175,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource types that failed to be queried.</p>
+         * <p>The list of resource types that failed to be queried.</p>
          */
         public Builder queryFailedResourceTypes(java.util.List<String> queryFailedResourceTypes) {
             this.queryFailedResourceTypes = queryFailedResourceTypes;
@@ -205,7 +205,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resources.</p>
+         * <p>The list of resource details.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -213,7 +213,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>总数。</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -254,11 +254,17 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
+        @com.aliyun.core.annotation.NameInMap("PcAvatarUrl")
+        private String pcAvatarUrl;
+
         @com.aliyun.core.annotation.NameInMap("SubTitle")
         private String subTitle;
 
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
+
+        @com.aliyun.core.annotation.NameInMap("Watermark")
+        private String watermark;
 
         private AgentBriefs(Builder builder) {
             this.agentPlatform = builder.agentPlatform;
@@ -267,8 +273,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             this.avatarUrl = builder.avatarUrl;
             this.count = builder.count;
             this.displayName = builder.displayName;
+            this.pcAvatarUrl = builder.pcAvatarUrl;
             this.subTitle = builder.subTitle;
             this.url = builder.url;
+            this.watermark = builder.watermark;
         }
 
         public static Builder builder() {
@@ -322,6 +330,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return pcAvatarUrl
+         */
+        public String getPcAvatarUrl() {
+            return this.pcAvatarUrl;
+        }
+
+        /**
          * @return subTitle
          */
         public String getSubTitle() {
@@ -335,6 +350,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             return this.url;
         }
 
+        /**
+         * @return watermark
+         */
+        public String getWatermark() {
+            return this.watermark;
+        }
+
         public static final class Builder {
             private String agentPlatform; 
             private String agentProvider; 
@@ -342,8 +364,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String avatarUrl; 
             private Integer count; 
             private String displayName; 
+            private String pcAvatarUrl; 
             private String subTitle; 
             private String url; 
+            private String watermark; 
 
             private Builder() {
             } 
@@ -355,12 +379,17 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
                 this.avatarUrl = model.avatarUrl;
                 this.count = model.count;
                 this.displayName = model.displayName;
+                this.pcAvatarUrl = model.pcAvatarUrl;
                 this.subTitle = model.subTitle;
                 this.url = model.url;
+                this.watermark = model.watermark;
             } 
 
             /**
-             * AgentPlatform.
+             * <p>The agent platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENTERPRISE_JVS</p>
              */
             public Builder agentPlatform(String agentPlatform) {
                 this.agentPlatform = agentPlatform;
@@ -368,7 +397,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * AgentProvider.
+             * <p>The agent provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenClaw</p>
              */
             public Builder agentProvider(String agentProvider) {
                 this.agentProvider = agentProvider;
@@ -376,7 +408,11 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarNoResourceUrl.
+             * <p>The generic avatar download URL for this agent type when no cloud resources are available.
+             * The backend automatically returns different avatars based on ClientType. If no match is found, a generic avatar is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.png">https://xxx.png</a></p>
              */
             public Builder avatarNoResourceUrl(String avatarNoResourceUrl) {
                 this.avatarNoResourceUrl = avatarNoResourceUrl;
@@ -384,7 +420,11 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarUrl.
+             * <p>The generic avatar download URL for this agent type.
+             * The backend automatically returns different avatars based on ClientType. If no match is found, a generic avatar is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://abc.com/efg.png">https://abc.com/efg.png</a></p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -392,7 +432,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -400,7 +443,11 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name, such as JVS Claw.
+             * The backend automatically returns different display names based on Language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JVS Claw</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -408,7 +455,22 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SubTitle.
+             * <p>The generic PC avatar download URL for this agent type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.png">https://xxx.png</a></p>
+             */
+            public Builder pcAvatarUrl(String pcAvatarUrl) {
+                this.pcAvatarUrl = pcAvatarUrl;
+                return this;
+            }
+
+            /**
+             * <p>The subtitle, such as: Intelligent evolution, happy shrimp farming.
+             * The backend automatically returns different subtitles based on Language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intelligent evolution, happy shrimp farming</p>
              */
             public Builder subTitle(String subTitle) {
                 this.subTitle = subTitle;
@@ -416,10 +478,24 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the agent management page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.png">https://test.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
+                return this;
+            }
+
+            /**
+             * <p>The URL of the avatar watermark selected for this type of agent based on the client type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxx.png">https://xxxx.png</a></p>
+             */
+            public Builder watermark(String watermark) {
+                this.watermark = watermark;
                 return this;
             }
 
@@ -483,7 +559,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentBriefs.
+             * <p>The list of brief information for the included agent instance types.</p>
              */
             public Builder agentBriefs(java.util.List<AgentBriefs> agentBriefs) {
                 this.agentBriefs = agentBriefs;
@@ -491,7 +567,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总数。</p>
+             * <p>The total number of agent instances.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -561,7 +637,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client type.</p>
+             * <p>The type of the client.</p>
              * 
              * <strong>example:</strong>
              * <p>windows</p>
@@ -572,12 +648,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>OFF</li>
-             * <li>ON</li>
-             * </ul>
+             * <p>The support status.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -777,7 +848,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance order.</p>
+             * <p>The order instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mdp-0bxls4qpi6bl6****</p>
@@ -788,7 +859,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the package was created.</p>
+             * <p>The creation time. The time is in ISO 8601 format and in UTC (indicated by Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-17T07:01Z</p>
@@ -799,7 +870,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the package.</p>
+             * <p>The expiration time. The time is in ISO 8601 format and in UTC (indicated by Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-02-17T15:59Z</p>
@@ -810,7 +881,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The package ID.</p>
+             * <p>The ID of the package.</p>
              * 
              * <strong>example:</strong>
              * <p>mdp-0bxls4qpi6bl6****</p>
@@ -821,7 +892,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The package status.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -832,14 +903,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The package type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>FREE_PACKAGE: a free package.</li>
-             * <li>NORMAL_PACKAGE: a paid package (120-hour computing plan).</li>
-             * <li>POSTPAID_PACKAGE: a pay-as-you-go package (200-hour computing plan).</li>
-             * <li>Duration: an hourly package.</li>
-             * </ul>
+             * <p>The type of the duration package.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL_PACKAGE</p>
@@ -850,12 +914,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy for the cloud computer status once the monthly package quota is exhausted.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Shutdown: The cloud computer enters the Stopped or Hibernated state.</li>
-             * <li>PostPaid: The cloud computer continues providing services that are billed on the pay-as-you-go basis.</li>
-             * </ul>
+             * <p>The status policy for the cloud computer after the monthly package quota is exhausted.</p>
              * 
              * <strong>example:</strong>
              * <p>Postpaid</p>
@@ -866,7 +925,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The package&quot;s effective end time for the current month.</p>
+             * <p>The end time of the monthly package. The time is in ISO 8601 format and in UTC (indicated by Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-02-17T15:59Z</p>
@@ -877,7 +936,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The package&quot;s effective start time for the current month.</p>
+             * <p>The start time of the monthly package. The time is in ISO 8601 format and in UTC (indicated by Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-17T07:01Z</p>
@@ -888,9 +947,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum fee for the package in the second phase.</p>
+             * <p>The maximum amount for the second-stage package.</p>
              * <blockquote>
-             * <p> This parameter is returned if you set ResourceType to <code>POSTPAID_PACKAG</code> or <code>FREE_PACKAGE</code>.</p>
+             * <p>This parameter is returned only when ResourceType is <code>POSTPAID_PACKAG</code> or <code>FREE_PACKAGE</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -913,7 +972,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription duration consumed.</p>
+             * <p>The used duration.</p>
              * 
              * <strong>example:</strong>
              * <p>16850</p>
@@ -1061,7 +1120,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether to allow end users to configure scheduled tasks on clients.</p>
+             * <p>Specifies whether to allow client settings.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1072,7 +1131,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cron expression specified in the scheduled task.</p>
+             * <p>The cron expression of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>0 30 13 ? * 1-7</p>
@@ -1083,7 +1142,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to forcibly execute the scheduled task.</p>
+             * <p>Specifies whether to forcibly execute the task.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1094,7 +1153,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the scheduled task is executed.</p>
+             * <p>The execution time. The time is formatted in ISO 8601 and uses the UTC time zone (indicated by Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-21T11:37Z</p>
@@ -1105,7 +1164,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval at which the scheduled task is executed.</p>
+             * <p>The interval of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -1116,7 +1175,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the scheduled action.</p>
+             * <p>The operation type.</p>
              * 
              * <strong>example:</strong>
              * <p>Hibernate</p>
@@ -1127,7 +1186,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reset option.</p>
+             * <p>The reset type.</p>
              * 
              * <strong>example:</strong>
              * <p>RESET_TYPE_SYSTEM</p>
@@ -1138,7 +1197,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task type.</p>
+             * <p>The type of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>TimerBoot</p>
@@ -1150,6 +1209,87 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             public DesktopTimers build() {
                 return new DesktopTimers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserResourcesResponseBody</p>
+     */
+    public static class Disks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
+        private Integer diskSize;
+
+        @com.aliyun.core.annotation.NameInMap("DiskType")
+        private String diskType;
+
+        private Disks(Builder builder) {
+            this.diskSize = builder.diskSize;
+            this.diskType = builder.diskType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Disks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskSize
+         */
+        public Integer getDiskSize() {
+            return this.diskSize;
+        }
+
+        /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        public static final class Builder {
+            private Integer diskSize; 
+            private String diskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+            } 
+
+            /**
+             * <p>The disk size in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
+             */
+            public Builder diskSize(Integer diskSize) {
+                this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * <p>The disk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
+
+            public Disks build() {
+                return new Disks(this);
             } 
 
         } 
@@ -1323,7 +1463,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current version number of the cloud computer&quot;s image.</p>
+             * <p>The version number of the current image of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>2.7.0-R-20250122.154826</p>
@@ -1334,7 +1474,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to implement a forced update.</p>
+             * <p>Specifies whether the upgrade is mandatory.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1345,7 +1485,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target version number of the cloud computer&quot;s image.</p>
+             * <p>The version number to which the cloud computer can be upgraded.</p>
              * 
              * <strong>example:</strong>
              * <p>2.7.0-R-20250125.154826</p>
@@ -1356,7 +1496,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest version available for updating the component disk.</p>
+             * <p>The version number of the upgradable component disk.</p>
              * 
              * <strong>example:</strong>
              * <p>2.6.9-R-20250123.153415</p>
@@ -1367,7 +1507,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The project name.</p>
+             * <p>The name of the project.</p>
              * 
              * <strong>example:</strong>
              * <p>wuying-asp_single_session_desktop_win_x64</p>
@@ -1378,10 +1518,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version description of the cloud computer&quot;s image.</p>
+             * <p>The description of the upgradable version.</p>
              * 
              * <strong>example:</strong>
-             * <p>up</p>
+             * <p>New version</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -1389,10 +1529,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The English release note for the new image version.</p>
+             * <p>The English description of the upgradable version.</p>
              * 
              * <strong>example:</strong>
-             * <p>up</p>
+             * <p>new version</p>
              */
             public Builder releaseNoteEn(String releaseNoteEn) {
                 this.releaseNoteEn = releaseNoteEn;
@@ -1400,10 +1540,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Japanese release note for the new image version.</p>
+             * <p>The Japanese description of the upgradable version.</p>
              * 
              * <strong>example:</strong>
-             * <p>up</p>
+             * <p>新バージョン</p>
              */
             public Builder releaseNoteJp(String releaseNoteJp) {
                 this.releaseNoteJp = releaseNoteJp;
@@ -1411,7 +1551,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the update package for the cloud computer image. Unit: KB.</p>
+             * <p>The size of the installation package for the upgradable version. Unit: KB.</p>
              * 
              * <strong>example:</strong>
              * <p>474981930</p>
@@ -1494,7 +1634,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The patch description.</p>
+             * <p>The description of the patch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Installing this update modifies the files used to detect viruses, spyware, and other potentially unwanted software. Once installed, this item cannot be removed</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1502,7 +1645,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The patch number.</p>
+             * <p>The KB number.</p>
              * 
              * <strong>example:</strong>
              * <p>KB2267***</p>
@@ -1513,7 +1656,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The patch title.</p>
+             * <p>The title of the patch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Patch for ****</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1619,7 +1765,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the check task.</p>
+             * <p>The check ID.</p>
              * 
              * <strong>example:</strong>
              * <p>wua-1740652957251743***</p>
@@ -1630,7 +1776,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The patch numbers.</p>
+             * <p>The list of KB numbers.</p>
              * 
              * <strong>example:</strong>
              * <p>KB2267***</p>
@@ -1641,7 +1787,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of packets.</p>
+             * <p>The number of packages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1652,7 +1798,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The patch packages.</p>
+             * <p>The list of patch package information.</p>
              */
             public Builder packages(java.util.List<Packages> packages) {
                 this.packages = packages;
@@ -1660,7 +1806,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update categorization URL.</p>
+             * <p>The URL of the update catalog.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://catalog.update.microsoft.com/home.aspx">https://catalog.update.microsoft.com/home.aspx</a></p>
@@ -1769,7 +1915,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * LastClientIp.
+             * <p>The IP address of the client from which the user last logged on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.3.4:22068</p>
              */
             public Builder lastClientIp(String lastClientIp) {
                 this.lastClientIp = lastClientIp;
@@ -1777,7 +1926,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户的昵称。</p>
+             * <p>The nickname of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>user-001</p>
@@ -1788,7 +1937,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the resource session was established.</p>
+             * <p>The start time of the resource session. The time is in ISO 8601 format and in UTC (indicated by Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-22T11:03:36Z</p>
@@ -1799,7 +1948,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username used to log on to the resource.</p>
+             * <p>The username of the user who logged on to the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>user001</p>
@@ -1810,7 +1959,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The User Principal Name (UPN) of the resource-bound user (if applicable). This parameter is returned only when you query the current user&quot;s sessions.</p>
+             * <p>The user principal name (UPN) of the user bound to the resource, if any. This value is returned only for the session of the currently queried user.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:benchmark_test@test.shenzhen">benchmark_test@test.shenzhen</a></p>
@@ -1839,6 +1988,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AgentImUrl")
         private String agentImUrl;
+
+        @com.aliyun.core.annotation.NameInMap("AgentProviderList")
+        private java.util.List<String> agentProviderList;
 
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -1870,6 +2022,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionProperties")
         private String connectionProperties;
 
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Integer cpu;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -1878,6 +2033,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DesktopTimers")
         private java.util.List<DesktopTimers> desktopTimers;
+
+        @com.aliyun.core.annotation.NameInMap("Disks")
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -1893,6 +2051,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("GlobalStatus")
         private Boolean globalStatus;
+
+        @com.aliyun.core.annotation.NameInMap("GpuSpec")
+        private String gpuSpec;
 
         @com.aliyun.core.annotation.NameInMap("HasUpgrade")
         private Boolean hasUpgrade;
@@ -1911,6 +2072,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ManagementStatuses")
         private java.util.List<String> managementStatuses;
+
+        @com.aliyun.core.annotation.NameInMap("Memory")
+        private Long memory;
 
         @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
@@ -1996,6 +2160,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         private Resources(Builder builder) {
             this.accessType = builder.accessType;
             this.agentImUrl = builder.agentImUrl;
+            this.agentProviderList = builder.agentProviderList;
             this.aliUid = builder.aliUid;
             this.appId = builder.appId;
             this.authMode = builder.authMode;
@@ -2006,20 +2171,24 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.clients = builder.clients;
             this.connectionProperties = builder.connectionProperties;
+            this.cpu = builder.cpu;
             this.createTime = builder.createTime;
             this.desktopDurationList = builder.desktopDurationList;
             this.desktopTimers = builder.desktopTimers;
+            this.disks = builder.disks;
             this.expiredTime = builder.expiredTime;
             this.externalDomainId = builder.externalDomainId;
             this.externalUserId = builder.externalUserId;
             this.fotaUpdate = builder.fotaUpdate;
             this.globalStatus = builder.globalStatus;
+            this.gpuSpec = builder.gpuSpec;
             this.hasUpgrade = builder.hasUpgrade;
             this.hibernationBeta = builder.hibernationBeta;
             this.icon = builder.icon;
             this.lastStartTime = builder.lastStartTime;
             this.localName = builder.localName;
             this.managementStatuses = builder.managementStatuses;
+            this.memory = builder.memory;
             this.officeSiteId = builder.officeSiteId;
             this.orderStatus = builder.orderStatus;
             this.os = builder.os;
@@ -2069,6 +2238,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
          */
         public String getAgentImUrl() {
             return this.agentImUrl;
+        }
+
+        /**
+         * @return agentProviderList
+         */
+        public java.util.List<String> getAgentProviderList() {
+            return this.agentProviderList;
         }
 
         /**
@@ -2142,6 +2318,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
          * @return createTime
          */
         public String getCreateTime() {
@@ -2160,6 +2343,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
          */
         public java.util.List<DesktopTimers> getDesktopTimers() {
             return this.desktopTimers;
+        }
+
+        /**
+         * @return disks
+         */
+        public java.util.List<Disks> getDisks() {
+            return this.disks;
         }
 
         /**
@@ -2195,6 +2385,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
          */
         public Boolean getGlobalStatus() {
             return this.globalStatus;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
         }
 
         /**
@@ -2237,6 +2434,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
          */
         public java.util.List<String> getManagementStatuses() {
             return this.managementStatuses;
+        }
+
+        /**
+         * @return memory
+         */
+        public Long getMemory() {
+            return this.memory;
         }
 
         /**
@@ -2431,6 +2635,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String accessType; 
             private String agentImUrl; 
+            private java.util.List<String> agentProviderList; 
             private Long aliUid; 
             private String appId; 
             private String authMode; 
@@ -2441,20 +2646,24 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String chargeType; 
             private java.util.List<Clients> clients; 
             private String connectionProperties; 
+            private Integer cpu; 
             private String createTime; 
             private java.util.List<DesktopDurationList> desktopDurationList; 
             private java.util.List<DesktopTimers> desktopTimers; 
+            private java.util.List<Disks> disks; 
             private String expiredTime; 
             private String externalDomainId; 
             private String externalUserId; 
             private FotaUpdate fotaUpdate; 
             private Boolean globalStatus; 
+            private String gpuSpec; 
             private Boolean hasUpgrade; 
             private Boolean hibernationBeta; 
             private String icon; 
             private String lastStartTime; 
             private String localName; 
             private java.util.List<String> managementStatuses; 
+            private Long memory; 
             private String officeSiteId; 
             private String orderStatus; 
             private String os; 
@@ -2489,6 +2698,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private Builder(Resources model) {
                 this.accessType = model.accessType;
                 this.agentImUrl = model.agentImUrl;
+                this.agentProviderList = model.agentProviderList;
                 this.aliUid = model.aliUid;
                 this.appId = model.appId;
                 this.authMode = model.authMode;
@@ -2499,20 +2709,24 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
                 this.chargeType = model.chargeType;
                 this.clients = model.clients;
                 this.connectionProperties = model.connectionProperties;
+                this.cpu = model.cpu;
                 this.createTime = model.createTime;
                 this.desktopDurationList = model.desktopDurationList;
                 this.desktopTimers = model.desktopTimers;
+                this.disks = model.disks;
                 this.expiredTime = model.expiredTime;
                 this.externalDomainId = model.externalDomainId;
                 this.externalUserId = model.externalUserId;
                 this.fotaUpdate = model.fotaUpdate;
                 this.globalStatus = model.globalStatus;
+                this.gpuSpec = model.gpuSpec;
                 this.hasUpgrade = model.hasUpgrade;
                 this.hibernationBeta = model.hibernationBeta;
                 this.icon = model.icon;
                 this.lastStartTime = model.lastStartTime;
                 this.localName = model.localName;
                 this.managementStatuses = model.managementStatuses;
+                this.memory = model.memory;
                 this.officeSiteId = model.officeSiteId;
                 this.orderStatus = model.orderStatus;
                 this.os = model.os;
@@ -2544,12 +2758,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The access type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>INTERNET: access over the Internet.</li>
-             * <li>VPC: access over an enterprise VPC.</li>
-             * <li>ANY: access over the Internet or an enterprise VPC.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>INTERNET</p>
@@ -2560,7 +2768,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * AgentImUrl.
+             * <p>The URL of the AgentIM page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://wuying.aliyun.com/OpenIM/chat?desktopId=ecd-xxxxx">https://wuying.aliyun.com/OpenIM/chat?desktopId=ecd-xxxxx</a></p>
              */
             public Builder agentImUrl(String agentImUrl) {
                 this.agentImUrl = agentImUrl;
@@ -2568,7 +2779,15 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The list of agent providers.</p>
+             */
+            public Builder agentProviderList(java.util.List<String> agentProviderList) {
+                this.agentProviderList = agentProviderList;
+                return this;
+            }
+
+            /**
+             * <p>The Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>194101959****</p>
@@ -2579,7 +2798,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The app ID. This parameter is for apps only.</p>
+             * <p>The application ID. This parameter is specific to resources whose resource type is App.</p>
              * 
              * <strong>example:</strong>
              * <p>app-0001</p>
@@ -2590,13 +2809,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization mode of the cloud app.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>App: authorizes access to apps.</li>
-             * <li>AppInstanceGroup: authorizes access to delivery groups.</li>
-             * <li>Session: authorizes access to sessions.</li>
-             * </ul>
+             * <p>The authorization mode of the cloud application.</p>
              * 
              * <strong>example:</strong>
              * <p>App</p>
@@ -2607,7 +2820,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level-2 resource category. This parameter is for apps only.</p>
+             * <p>The level-2 category of the resource. This parameter is specific to resources whose resource type is App.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2618,7 +2831,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level-1 resource category. This parameter is for apps only.</p>
+             * <p>The level-1 category of the resource. This parameter is specific to resources whose resource type is App.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2629,7 +2842,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The drive name. This parameter is for enterprise drives only.</p>
+             * <p>The name of the cloud drive. This parameter is specific to resources whose resource type is CloudDrive.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai+cds-695277****</p>
@@ -2640,7 +2853,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the centralized resource.</p>
+             * <p>The centralized resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecds-0****</p>
@@ -2652,11 +2865,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The billing method.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Postpaid (default): pay-as-you-go.</li>
-             * <li>PrePaid: subscription.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>PrePaid</p>
@@ -2667,7 +2875,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client types supported by resources.</p>
+             * <p>The list of client types supported by the resource.</p>
              */
             public Builder clients(java.util.List<Clients> clients) {
                 this.clients = clients;
@@ -2675,7 +2883,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection attributes in JSON format. The client does not need to process the attributes; they are directly passed to the resource management center when the app resource is created.</p>
+             * <p>The connection properties in JSON string format. The client does not need to process the content and directly passes it to the central resource management when establishing a connection for application resources.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;authMode&quot;:&quot;App&quot;}</p>
@@ -2686,7 +2894,18 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was created.</p>
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * <p>The resource creation time. The time is in ISO 8601 format and UTC time zone (indicated by Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-11T07:12:12Z</p>
@@ -2697,7 +2916,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer plans.</p>
+             * <p>The list of cloud computer duration package information.</p>
              */
             public Builder desktopDurationList(java.util.List<DesktopDurationList> desktopDurationList) {
                 this.desktopDurationList = desktopDurationList;
@@ -2705,7 +2924,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduled tasks for cloud computers.</p>
+             * <p>The list of scheduled task settings for the cloud desktop.</p>
              */
             public Builder desktopTimers(java.util.List<DesktopTimers> desktopTimers) {
                 this.desktopTimers = desktopTimers;
@@ -2713,7 +2932,15 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the subscription resource.</p>
+             * <p>The list of disk information.</p>
+             */
+            public Builder disks(java.util.List<Disks> disks) {
+                this.disks = disks;
+                return this;
+            }
+
+            /**
+             * <p>The expiration time of subscription resources. The time is formatted in ISO 8601 and uses the UTC time zone (indicated by Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-02-22T16:00:00Z</p>
@@ -2724,7 +2951,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the external domain. This parameter is for enterprise drives only.</p>
+             * <p>The external domain ID. This parameter is specific to resources whose resource type is CloudDrive.</p>
              * 
              * <strong>example:</strong>
              * <p>stg114510</p>
@@ -2735,7 +2962,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the external user. This parameter is for enterprise drives only.</p>
+             * <p>The external user ID. This parameter is specific to resources whose resource type is CloudDrive.</p>
              * 
              * <strong>example:</strong>
              * <p>test001</p>
@@ -2746,7 +2973,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update info of the cloud computer.</p>
+             * <p>The upgrade information of the cloud computer.</p>
              */
             public Builder fotaUpdate(FotaUpdate fotaUpdate) {
                 this.fotaUpdate = fotaUpdate;
@@ -2754,7 +2981,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether cross-region access is supported. This parameter is for enterprise drives only.</p>
+             * <p>Indicates whether cross-region access is supported. This parameter is specific to resources whose resource type is CloudDrive.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2765,7 +2992,18 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an update exists.</p>
+             * <p>The GPU specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40GiB</p>
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether an update is available.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2776,12 +3014,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is a beta version of the hibernation feature.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Indicates whether the hibernation feature is in beta.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2792,7 +3025,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource icon. This parameter is for apps only.</p>
+             * <p>The URL of the resource icon. This parameter is specific to resources whose resource type is App.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example.com/icon.png">http://example.com/icon.png</a></p>
@@ -2803,7 +3036,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was last started.</p>
+             * <p>The last start time of the resource. The time is formatted in ISO 8601 and uses the UTC time zone (indicated by Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-24T03:12:04Z</p>
@@ -2814,7 +3047,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region name.</p>
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -2822,10 +3058,21 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The management status.</p>
+             * <p>The list of management statuses.</p>
              */
             public Builder managementStatuses(java.util.List<String> managementStatuses) {
                 this.managementStatuses = managementStatuses;
+                return this;
+            }
+
+            /**
+             * <p>The memory size in MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
+             */
+            public Builder memory(Long memory) {
+                this.memory = memory;
                 return this;
             }
 
@@ -2841,14 +3088,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Ceased: Your account has an overdue payment.</li>
-             * <li>Released: The order is closed.</li>
-             * <li>Expired: The subscription resource has expired.</li>
-             * <li>Normal: The order is normal.</li>
-             * </ul>
+             * <p>The status of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -2859,7 +3099,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS platform.</p>
+             * <p>The operating system platform information.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows Server 2022</p>
@@ -2870,7 +3110,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the OS platform.</p>
+             * <p>The operating system platform description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows genuine license</p>
              */
             public Builder osDescription(String osDescription) {
                 this.osDescription = osDescription;
@@ -2878,13 +3121,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Linux</li>
-             * <li>Windows</li>
-             * <li>Android</li>
-             * </ul>
+             * <p>The operating system type.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows</p>
@@ -2895,7 +3132,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update info of the OS.</p>
+             * <p>The operating system upgrade information.</p>
              */
             public Builder osUpdate(OsUpdate osUpdate) {
                 this.osUpdate = osUpdate;
@@ -2903,14 +3140,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>CloudDesktop: regular cloud computers or cloud computer shares.</li>
-             * <li>CloudApp: App Streaming</li>
-             * <li>CloudBrowser: Cloud Browser.</li>
-             * <li>AndroidCloud: Cloud Phone.</li>
-             * </ul>
+             * <p>The product type.</p>
              * 
              * <strong>example:</strong>
              * <p>AndroidCloud</p>
@@ -2922,11 +3152,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The protocol type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>HDX</li>
-             * <li>ASP</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ASP</p>
@@ -2937,7 +3162,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The real ID of the cloud computer (from a share). This parameter is returned only when the cloud computer share has ongoing sessions.</p>
+             * <p>The ID of the actual cloud computer in a shared cloud computer group. This parameter is returned only when a session exists for the shared cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-0001</p>
@@ -2959,12 +3184,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The geographical location.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Mainland: regions in the Chinese mainland.</li>
-             * <li>Overseas: regions outside the Chinese mainland, including China (Hong Kong).</li>
-             * </ul>
+             * <p>The region location.</p>
              * 
              * <strong>example:</strong>
              * <p>Mainland</p>
@@ -2998,11 +3218,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The resource level.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Center: a centralized resource.</li>
-             * <li>Region: a unit resource.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Center</p>
@@ -3025,12 +3240,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The session status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Unknown</li>
-             * <li>Connected</li>
-             * <li>Disconnected</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Connected</p>
@@ -3041,21 +3250,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Unknown: The resource status is unknown.</li>
-             * <li>Stopped: The resource is stopped.</li>
-             * <li>Failed: The resource failed to be created.</li>
-             * <li>Starting: The resource is being started.</li>
-             * <li>Rebuilding: The resource is changing.</li>
-             * <li>Running: The resource is running.</li>
-             * <li>Stopping: The resource is being stopped.</li>
-             * <li>FotaUpdating: The image is being updated.</li>
-             * <li>Pending: The resource is still being prepared.</li>
-             * <li>Deleting: The resource is being deleted.</li>
-             * <li>Unavailable: The resource is unavailable.</li>
-             * </ul>
+             * <p>The status of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -3067,13 +3262,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The resource type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>App: cloud apps including App Streaming, Cloud Phone, and Cloud Browser.</li>
-             * <li>Desktop: cloud computers.</li>
-             * <li>DesktopGroup: cloud computer shares.</li>
-             * <li>CloudDrive: enterprise drives.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Desktop</p>
@@ -3085,11 +3273,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The session type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>SINGLE_SESSION</li>
-             * <li>MULTIPLE_SESSION</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>SINGLE_SESSION</p>
@@ -3100,7 +3283,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sessions established between users and resources.</p>
+             * <p>The list of user session information for the resource.</p>
              */
             public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
@@ -3109,11 +3292,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The sub-billing method.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>monthPackage: monthly subscription.</li>
-             * <li>PrePaid: hourly plans.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>PrePaid</p>
@@ -3124,7 +3302,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAgentIm.
+             * <p>Indicates whether AgentIM is supported.</p>
              */
             public Builder supportAgentIm(Boolean supportAgentIm) {
                 this.supportAgentIm = supportAgentIm;
@@ -3133,11 +3311,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             /**
              * <p>Indicates whether hibernation is supported.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3148,7 +3321,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The supported actions. This parameter is returned only for cloud computers or phones.</p>
+             * <p>The list of supported operation types. Currently, only cloud phones and cloud computers (including shared cloud computers) are supported.</p>
              */
             public Builder supportedActions(java.util.List<String> supportedActions) {
                 this.supportedActions = supportedActions;
@@ -3156,7 +3329,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The theme color of the resource. This parameter is for apps only.</p>
+             * <p>The theme color of the resource. This parameter is specific to resources whose resource type is App.</p>
              * 
              * <strong>example:</strong>
              * <p>#FFFFFF</p>
@@ -3167,7 +3340,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom name of the resource.</p>
+             * <p>The custom name specified by the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My cloud computer</p>
              */
             public Builder userCustomName(String userCustomName) {
                 this.userCustomName = userCustomName;
@@ -3175,7 +3351,10 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource version. This parameter is for apps only.</p>
+             * <p>The resource version. This parameter is specific to resources whose resource type is App.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource version</p>
              */
             public Builder version(String version) {
                 this.version = version;

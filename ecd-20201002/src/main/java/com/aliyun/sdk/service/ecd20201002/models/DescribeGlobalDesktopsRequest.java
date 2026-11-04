@@ -340,16 +340,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to connect cloud computers that reside in the office network from WUYING clients.</p>
+         * <p>The access method allowed for connecting to the cloud computer.</p>
          * <blockquote>
-         * <p> The VPC connection method depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. If you set this parameter to VPC or Any, the system automatically enables PrivateLink.</p>
+         * <p>The VPC connection method relies on the Alibaba Cloud PrivateLink service, which is free of charge. If you set this parameter to VPC or Any, the system automatically activates the PrivateLink service for you.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>INTERNET (default): End users connect to cloud computers from clients over the Internet.</li>
-         * <li>VPC: End users connect to cloud computers from clients over a virtual private cloud (VPC).</li>
-         * <li>Any: End users connect to cloud computers from clients over the Internet or a VPC.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -361,7 +355,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer ID. You can specify one or more cloud computer IDs. Valid values: 1 to 20.</p>
+         * <p>The cloud computer IDs. You can specify 1 to 20 IDs.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -383,17 +377,6 @@ public class DescribeGlobalDesktopsRequest extends Request {
 
         /**
          * <p>The cloud computer status.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Stopped</li>
-         * <li>Starting.</li>
-         * <li>Rebuilding</li>
-         * <li>Running:.</li>
-         * <li>Stopping:.</li>
-         * <li>Expired</li>
-         * <li>Deleted</li>
-         * <li>Pending: The resource is still being prepared.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -405,9 +388,9 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The office network IDs.</p>
+         * <p>The office network ID.</p>
          * <blockquote>
-         * <p> This parameter is about to be disabled. Use <code>OfficeSiteId</code>.</p>
+         * <p>This parameter is deprecated. Use OfficeSiteId instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -420,7 +403,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The keyword. Fuzzy search is supported for cloud computer IDs, cloud computer names, and end user custom cloud computer names.</p>
+         * <p>The keyword. Fuzzy search is supported for cloud computer IDs, cloud computer names, and custom cloud computer names specified by end users.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd</p>
@@ -432,7 +415,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The client language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -441,10 +427,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the office network resides. This parameter is left empty when you log on with an organization ID.</p>
+         * <p>The region ID of the office network. Leave this parameter empty when you log on with an organization ID.</p>
          * <ul>
-         * <li>This parameter is required when you log on by using the office network ID.</li>
-         * <li>If you log on by using an organization ID, this parameter can be left empty.</li>
+         * <li>This parameter is required when you log on with an office network ID.</li>
+         * <li>This parameter can be left empty when you log on with an organization ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -457,7 +443,8 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The logon token. You can call the GetLoginToken operation to obtain the token. You can also call the UpdateToken operation to obtain the token RefreshLoginToken. Response parameter: LoginToken.</p>
+         * <p>The logon token.
+         * You can obtain this token from the LoginToken response parameter of the GetLoginToken API operation, or from the RefreshLoginToken API operation after logon.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -470,10 +457,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return per page in a paging query.</p>
          * <ul>
-         * <li>Maximum value: 500.</li>
-         * <li>and the default value is 10.</li>
+         * <li>Maximum value: 500</li>
+         * <li>Default value: 10</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -486,7 +473,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The token used to start the next query. If NextToken is empty, it indicates that there is no next query.</p>
+         * <p>The token that is used to start the next query. If NextToken is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJkZWZhdWx0IjpbIjk2MjEy****</p>
@@ -498,9 +485,9 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The office network IDs.</p>
+         * <p>The office network ID.</p>
          * <blockquote>
-         * <p> <code>DirectoryId</code> the parameter is about to be retired, use this field.</p>
+         * <p>The DirectoryId parameter is deprecated. Use this field instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -513,11 +500,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting. If you do not specify this option, the system is sorted in descending order of creation time.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AssignTime: sort by allocation time.</li>
-         * </ul>
+         * <p>The sort field. If you do not specify this parameter, the results are sorted in descending order of creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>AssignTime</p>
@@ -529,7 +512,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query information about the image update.</p>
+         * <p>Specifies whether to query image update information.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -542,10 +525,6 @@ public class DescribeGlobalDesktopsRequest extends Request {
 
         /**
          * <p>The region ID.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>cn-shanghai: China (Shanghai)</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -557,7 +536,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the searched region. You can specify this parameter to filter cloud computers in specific regions.</p>
+         * <p>The search region ID. This parameter is used to filter cloud computers in a specified region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -569,7 +548,8 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The session ID. You can call the GetLoginToken operation to query the value of the SessionId parameter.</p>
+         * <p>The session ID.
+         * You can obtain this ID from the SessionId response parameter of the GetLoginToken API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>5c456a41-1e65-4e72-ab4d-5dcfff52****</p>
@@ -581,12 +561,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The sorting method.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ASC (default): the ascending order.</li>
-         * <li>DESC: the descending order.</li>
-         * </ul>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>ASC</p>
@@ -598,7 +573,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Whether to query real-time cloud computer information. The cloud computer status information in the current interface has a delay of 1 to 3 seconds. If you need accurate information, set this value to <code>true</code>.</p>
+         * <p>Specifies whether to query real-time cloud computer information. The cloud computer status information in the current API operation has a delay of 1 to 3 seconds. If you need accurate information, set this parameter to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

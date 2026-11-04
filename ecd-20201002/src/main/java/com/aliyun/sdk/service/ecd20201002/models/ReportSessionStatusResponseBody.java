@@ -54,7 +54,10 @@ public class ReportSessionStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0EE5DE20-25F4-5870-9D56-C259A45B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

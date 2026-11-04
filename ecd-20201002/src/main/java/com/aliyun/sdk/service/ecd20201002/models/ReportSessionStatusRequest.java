@@ -134,7 +134,10 @@ public class ReportSessionStatusRequest extends Request {
         } 
 
         /**
-         * EndUserId.
+         * <p>The connected user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liming</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -143,6 +146,7 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +159,7 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +172,7 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
+         * <p>The duration of the session change.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +185,7 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +198,22 @@ public class ReportSessionStatusRequest extends Request {
         }
 
         /**
+         * <p>The session status. Valid values:</p>
+         * <ul>
+         * <li>SessionLogOff: The session is closed.</li>
+         * <li>DesktopTimerDisconnection: The cloud computer is disconnected by a scheduled task.</li>
+         * <li>SessionReboot: The session is rebooted.</li>
+         * <li>DesktopTimerShutdown: The cloud computer is started by a scheduled task.</li>
+         * <li>SessionLock: The logged-on user locks the session.</li>
+         * <li>SessionShutdown: The session is shut down.</li>
+         * <li>SessionUnLock: The logged-on user unlocks the session.</li>
+         * <li>DesktopTimerReboot: The cloud computer is rebooted by a scheduled task.</li>
+         * <li>ConsoleConnect: The console is connected before the session starts.</li>
+         * <li>SessionLogOn: The session starts.</li>
+         * <li>SessionPopup: The session exits before disconnection.</li>
+         * <li>SessionDisconnect: The session is disconnected.</li>
+         * <li>ConsoleDisconnect: The console is disconnected after the session is logged off.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

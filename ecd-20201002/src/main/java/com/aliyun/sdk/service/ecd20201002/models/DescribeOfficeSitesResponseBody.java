@@ -75,7 +75,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -241,7 +244,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopAccessType.
+             * <p>The allowed connection types for accessing the office network.</p>
+             * <blockquote>
+             * <p>The VPC connection type depends on the Alibaba Cloud PrivateLink service, which incurs no fee. When this parameter is set to VPC or Any, the system automatically enables the PrivateLink service for you.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder desktopAccessType(String desktopAccessType) {
                 this.desktopAccessType = desktopAccessType;
@@ -249,7 +258,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopVpcEndpoint.
+             * <p>The endpoint used when connecting to cloud desktops through a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com">http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com</a></p>
              */
             public Builder desktopVpcEndpoint(String desktopVpcEndpoint) {
                 this.desktopVpcEndpoint = desktopVpcEndpoint;
@@ -257,7 +269,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>Office network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-363353****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -265,7 +280,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteType.
+             * <p>The type of account system used by the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -273,7 +291,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderId.
+             * <p>User Account BID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>268****</p>
              */
             public Builder providerId(String providerId) {
                 this.providerId = providerId;
@@ -281,7 +302,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * SsoServiceUrl.
+             * <p>SSO connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://eds-cn-shanghai-67">https://eds-cn-shanghai-67</a>****</p>
              */
             public Builder ssoServiceUrl(String ssoServiceUrl) {
                 this.ssoServiceUrl = ssoServiceUrl;

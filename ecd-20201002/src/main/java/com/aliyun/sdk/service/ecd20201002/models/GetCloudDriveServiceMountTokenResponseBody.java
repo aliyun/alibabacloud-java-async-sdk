@@ -67,7 +67,10 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC27288A-F9E1-5092-9B5B-71C27D15****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * DomainId.
+             * <p>Enterprise File Gateway domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h****</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -201,7 +207,10 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredAfter.
+             * <p>Expiration Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-10T04:41:35Z</p>
              */
             public Builder expiredAfter(String expiredAfter) {
                 this.expiredAfter = expiredAfter;
@@ -209,7 +218,10 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Current status of the Enterprise File Gateway user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -239,7 +251,10 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
             }
 
             /**
-             * UsedSize.
+             * <p>Used capacity. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>605089</p>
              */
             public Builder usedSize(Long usedSize) {
                 this.usedSize = usedSize;

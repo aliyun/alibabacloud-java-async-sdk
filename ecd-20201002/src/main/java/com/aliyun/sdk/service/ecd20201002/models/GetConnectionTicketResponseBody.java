@@ -161,7 +161,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +172,20 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskCode.
+         * <p>The ticket used to connect to the user instance. Before you use the ticket, you must decode its content by using Base64, save the decoded content as an .ica file (for example, xxx.ica), and then open the file. Python code example:</p>
+         * <pre><code>import base64
+         * response = {
+         *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
+         *     &quot;RequestId&quot;: &quot;1CBAFFAB-B697-4049-A9B1-67E1FC5F****&quot;,
+         * }
+         * f = open (\\&quot;xxx.ica\\&quot;, \\&quot;w\\&quot;)
+         * out = base64.b64decode(response[\\&quot;Ticket\\&quot;])
+         * f.write(out)
+         * f.close()
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>
          */
         public Builder taskCode(String taskCode) {
             this.taskCode = taskCode;
@@ -177,7 +193,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task to connect to the cloud computer.</p>
+         * <p>The ID of the cloud desktop connection task.</p>
          * 
          * <strong>example:</strong>
          * <p>2afbad19-778a-4fc5-9674-1f19c63862da</p>
@@ -188,7 +204,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskMessage.
+         * <p>The ID of the cloud desktop connection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
          */
         public Builder taskMessage(String taskMessage) {
             this.taskMessage = taskMessage;
@@ -196,7 +215,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -204,7 +226,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The credentials for connecting to the cloud computer.</p>
+         * <p>The connection credentials for the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>

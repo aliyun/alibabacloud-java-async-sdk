@@ -30,32 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "ecd";
         this.version = "2020-10-02";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "ecd.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "ecd.us-east-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "ecd.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "ecd.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "ecd.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "ecd.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "ecd.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "ecd.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "ecd.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "ecd.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "ecd.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "ecd.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "ecd.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "ecd.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "ecd.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "ecd.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "ecd.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "ecd.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "ecd.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "ecd.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "ecd.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "ecd.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "ecd.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ecd.ap-northeast-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -156,9 +131,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</p>
      * <ul>
-     * <li>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</li>
+     * <li>This API operation uses a centralized domain name. The endpoint is in Shanghai, and calls from other regions are not supported.</li>
+     * <li>The cloud computer status information in this API operation has a delay of 1 to 3 seconds compared to the actual value.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeGlobalDesktops  DescribeGlobalDesktopsRequest
@@ -234,7 +209,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</p>
+     * <p>Before you call this operation, make sure that you fully understand the resource types and product types of WUYING Workspace.</p>
      * 
      * @param request the request parameters of DescribeUserResources  DescribeUserResourcesRequest
      * @return DescribeUserResourcesResponse
@@ -291,7 +266,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The first time you call this operation, the system returns a task ID in the <code>TaskID</code> parameter. Use the task ID indicated in the <code>TaskID</code> parameter to continue calling this operation until the value of the <code>TaskStatus</code> parameter becomes <code>FINISHED</code> or <code>FAILED</code>. When <code>TaskStatus</code> becomes <code>FINISHED</code>, the value of the <code>Ticket</code> parameter is the ticket that is used to connect the client to the cloud computer.</p>
+     * <p>When you call this operation for the first time, the system returns a <code>TaskId</code>. Use this <code>TaskId</code> to continue calling this operation until the value of <code>TaskStatus</code> changes to <code>FINISHED</code> or <code>FAILED</code>. When <code>TaskStatus</code> is <code>FINISHED</code>, the value of <code>Ticket</code> is the ticket that the client uses to connect to the cloud desktop.</p>
      * 
      * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
@@ -365,6 +340,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>A logon credential (LoginToken) is valid for 8 hours. If the end user does not log off from the client within 8 hours, the client must refresh the logon credential.</p>
+     * 
      * @param request the request parameters of RefreshLoginToken  RefreshLoginTokenRequest
      * @return RefreshLoginTokenResponse
      */
@@ -549,7 +527,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</p>
+     * <p>The cloud desktop must be in the Running state. After the API operation is called, the state of the cloud desktop changes to Stopped.</p>
      * 
      * @param request the request parameters of StopDesktops  StopDesktopsRequest
      * @return StopDesktopsResponse
