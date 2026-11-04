@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceStateResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceStateResponseBody</p>
  */
 public class GetInstanceStateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RealTimeInstanceState")
+    @com.aliyun.core.annotation.NameInMap("RealTimeInstanceState")
     private RealTimeInstanceState realTimeInstanceState;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInstanceStateResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetInstanceStateResponseBody extends TeaModel {
 
     public static GetInstanceStateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetInstanceStateResponseBody extends TeaModel {
         private RealTimeInstanceState realTimeInstanceState; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceStateResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.realTimeInstanceState = model.realTimeInstanceState;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,11 +172,17 @@ public class GetInstanceStateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceStateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceStateResponseBody</p>
+     */
     public static class AgentStateCount extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private AgentStateCount(Builder builder) {
@@ -189,6 +216,14 @@ public class GetInstanceStateResponseBody extends TeaModel {
             private Long count; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(AgentStateCount model) {
+                this.count = model.count;
+                this.state = model.state;
+            } 
+
             /**
              * Count.
              */
@@ -212,9 +247,15 @@ public class GetInstanceStateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceStateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceStateResponseBody</p>
+     */
     public static class AgentStateDistributions extends TeaModel {
-        @NameInMap("AgentStateCount")
-        private java.util.List < AgentStateCount> agentStateCount;
+        @com.aliyun.core.annotation.NameInMap("AgentStateCount")
+        private java.util.List<AgentStateCount> agentStateCount;
 
         private AgentStateDistributions(Builder builder) {
             this.agentStateCount = builder.agentStateCount;
@@ -231,17 +272,24 @@ public class GetInstanceStateResponseBody extends TeaModel {
         /**
          * @return agentStateCount
          */
-        public java.util.List < AgentStateCount> getAgentStateCount() {
+        public java.util.List<AgentStateCount> getAgentStateCount() {
             return this.agentStateCount;
         }
 
         public static final class Builder {
-            private java.util.List < AgentStateCount> agentStateCount; 
+            private java.util.List<AgentStateCount> agentStateCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentStateDistributions model) {
+                this.agentStateCount = model.agentStateCount;
+            } 
 
             /**
              * AgentStateCount.
              */
-            public Builder agentStateCount(java.util.List < AgentStateCount> agentStateCount) {
+            public Builder agentStateCount(java.util.List<AgentStateCount> agentStateCount) {
                 this.agentStateCount = agentStateCount;
                 return this;
             }
@@ -253,8 +301,14 @@ public class GetInstanceStateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceStateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceStateResponseBody</p>
+     */
     public static class RealTimeInstanceState extends TeaModel {
-        @NameInMap("AgentStateDistributions")
+        @com.aliyun.core.annotation.NameInMap("AgentStateDistributions")
         private AgentStateDistributions agentStateDistributions;
 
         private RealTimeInstanceState(Builder builder) {
@@ -278,6 +332,13 @@ public class GetInstanceStateResponseBody extends TeaModel {
 
         public static final class Builder {
             private AgentStateDistributions agentStateDistributions; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealTimeInstanceState model) {
+                this.agentStateDistributions = model.agentStateDistributions;
+            } 
 
             /**
              * AgentStateDistributions.

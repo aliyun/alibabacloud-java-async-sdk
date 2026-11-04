@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBulkPhoneNumbersRequest} extends {@link RequestModel}
  *
  * <p>AddBulkPhoneNumbersRequest</p>
  */
 public class AddBulkPhoneNumbersRequest extends Request {
-    @Query
-    @NameInMap("ContactFlowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
     private String contactFlowId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
-    private java.util.List < String > phoneNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> phoneNumber;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    private java.util.List < String > skillGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    private java.util.List<String> skillGroupId;
 
-    @Query
-    @NameInMap("Usage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Usage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String usage;
 
     private AddBulkPhoneNumbersRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class AddBulkPhoneNumbersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,14 +79,14 @@ public class AddBulkPhoneNumbersRequest extends Request {
     /**
      * @return phoneNumber
      */
-    public java.util.List < String > getPhoneNumber() {
+    public java.util.List<String> getPhoneNumber() {
         return this.phoneNumber;
     }
 
     /**
      * @return skillGroupId
      */
-    public java.util.List < String > getSkillGroupId() {
+    public java.util.List<String> getSkillGroupId() {
         return this.skillGroupId;
     }
 
@@ -95,21 +100,21 @@ public class AddBulkPhoneNumbersRequest extends Request {
     public static final class Builder extends Request.Builder<AddBulkPhoneNumbersRequest, Builder> {
         private String contactFlowId; 
         private String instanceId; 
-        private java.util.List < String > phoneNumber; 
-        private java.util.List < String > skillGroupId; 
+        private java.util.List<String> phoneNumber; 
+        private java.util.List<String> skillGroupId; 
         private String usage; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddBulkPhoneNumbersRequest response) {
-            super(response);
-            this.contactFlowId = response.contactFlowId;
-            this.instanceId = response.instanceId;
-            this.phoneNumber = response.phoneNumber;
-            this.skillGroupId = response.skillGroupId;
-            this.usage = response.usage;
+        private Builder(AddBulkPhoneNumbersRequest request) {
+            super(request);
+            this.contactFlowId = request.contactFlowId;
+            this.instanceId = request.instanceId;
+            this.phoneNumber = request.phoneNumber;
+            this.skillGroupId = request.skillGroupId;
+            this.usage = request.usage;
         } 
 
         /**
@@ -122,7 +127,7 @@ public class AddBulkPhoneNumbersRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,9 +136,9 @@ public class AddBulkPhoneNumbersRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>This parameter is required.</p>
          */
-        public Builder phoneNumber(java.util.List < String > phoneNumber) {
+        public Builder phoneNumber(java.util.List<String> phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
             this.phoneNumber = phoneNumber;
             return this;
@@ -142,14 +147,14 @@ public class AddBulkPhoneNumbersRequest extends Request {
         /**
          * SkillGroupId.
          */
-        public Builder skillGroupId(java.util.List < String > skillGroupId) {
+        public Builder skillGroupId(java.util.List<String> skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
             this.skillGroupId = skillGroupId;
             return this;
         }
 
         /**
-         * Usage.
+         * <p>This parameter is required.</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);

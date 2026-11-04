@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CallOnlinePrivacyNumberRequest} extends {@link RequestModel}
  *
  * <p>CallOnlinePrivacyNumberRequest</p>
  */
 public class CallOnlinePrivacyNumberRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("TelA")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TelA")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String telA;
 
-    @Query
-    @NameInMap("TelB")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TelB")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String telB;
 
     private CallOnlinePrivacyNumberRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class CallOnlinePrivacyNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -77,15 +82,15 @@ public class CallOnlinePrivacyNumberRequest extends Request {
             super();
         } 
 
-        private Builder(CallOnlinePrivacyNumberRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.telA = response.telA;
-            this.telB = response.telB;
+        private Builder(CallOnlinePrivacyNumberRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.telA = request.telA;
+            this.telB = request.telB;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +99,7 @@ public class CallOnlinePrivacyNumberRequest extends Request {
         }
 
         /**
-         * TelA.
+         * <p>This parameter is required.</p>
          */
         public Builder telA(String telA) {
             this.putQueryParameter("TelA", telA);
@@ -103,7 +108,7 @@ public class CallOnlinePrivacyNumberRequest extends Request {
         }
 
         /**
-         * TelB.
+         * <p>This parameter is required.</p>
          */
         public Builder telB(String telB) {
             this.putQueryParameter("TelB", telB);

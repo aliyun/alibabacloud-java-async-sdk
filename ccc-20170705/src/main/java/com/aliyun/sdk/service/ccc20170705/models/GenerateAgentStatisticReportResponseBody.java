@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateAgentStatisticReportResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateAgentStatisticReportResponseBody</p>
  */
 public class GenerateAgentStatisticReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DataList")
+    @com.aliyun.core.annotation.NameInMap("DataList")
     private DataList dataList;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GenerateAgentStatisticReportResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
 
     public static GenerateAgentStatisticReportResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateAgentStatisticReportResponseBody model) {
+            this.code = model.code;
+            this.dataList = model.dataList;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,59 +172,65 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateAgentStatisticReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateAgentStatisticReportResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
-        @NameInMap("AverageHoldTime")
+        @com.aliyun.core.annotation.NameInMap("AverageHoldTime")
         private Long averageHoldTime;
 
-        @NameInMap("AverageRingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageRingTime")
         private Long averageRingTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Long averageTalkTime;
 
-        @NameInMap("AverageWorkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Long averageWorkTime;
 
-        @NameInMap("CallsHandled")
+        @com.aliyun.core.annotation.NameInMap("CallsHandled")
         private Long callsHandled;
 
-        @NameInMap("CallsOffered")
+        @com.aliyun.core.annotation.NameInMap("CallsOffered")
         private Long callsOffered;
 
-        @NameInMap("HandleRate")
+        @com.aliyun.core.annotation.NameInMap("HandleRate")
         private Float handleRate;
 
-        @NameInMap("MaxHoldTime")
+        @com.aliyun.core.annotation.NameInMap("MaxHoldTime")
         private Long maxHoldTime;
 
-        @NameInMap("MaxRingTime")
+        @com.aliyun.core.annotation.NameInMap("MaxRingTime")
         private Long maxRingTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("MaxWorkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWorkTime")
         private Long maxWorkTime;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Float satisfactionIndex;
 
-        @NameInMap("SatisfactionSurveysOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysOffered")
         private Long satisfactionSurveysOffered;
 
-        @NameInMap("SatisfactionSurveysResponded")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
-        @NameInMap("TotalHoldTime")
+        @com.aliyun.core.annotation.NameInMap("TotalHoldTime")
         private Long totalHoldTime;
 
-        @NameInMap("TotalRingTime")
+        @com.aliyun.core.annotation.NameInMap("TotalRingTime")
         private Long totalRingTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
-        @NameInMap("TotalWorkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWorkTime")
         private Long totalWorkTime;
 
         private Inbound(Builder builder) {
@@ -381,6 +408,30 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inbound model) {
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsHandled = model.callsHandled;
+                this.callsOffered = model.callsOffered;
+                this.handleRate = model.handleRate;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AverageHoldTime.
              */
@@ -532,59 +583,65 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateAgentStatisticReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateAgentStatisticReportResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
-        @NameInMap("AnswerRate")
+        @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private Float answerRate;
 
-        @NameInMap("AverageDialingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageDialingTime")
         private Long averageDialingTime;
 
-        @NameInMap("AverageHoldTime")
+        @com.aliyun.core.annotation.NameInMap("AverageHoldTime")
         private Long averageHoldTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Long averageTalkTime;
 
-        @NameInMap("AverageWorkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Long averageWorkTime;
 
-        @NameInMap("CallsAnswered")
+        @com.aliyun.core.annotation.NameInMap("CallsAnswered")
         private Long callsAnswered;
 
-        @NameInMap("CallsDialed")
+        @com.aliyun.core.annotation.NameInMap("CallsDialed")
         private Long callsDialed;
 
-        @NameInMap("MaxDialingTime")
+        @com.aliyun.core.annotation.NameInMap("MaxDialingTime")
         private Long maxDialingTime;
 
-        @NameInMap("MaxHoldTime")
+        @com.aliyun.core.annotation.NameInMap("MaxHoldTime")
         private Long maxHoldTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("MaxWorkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWorkTime")
         private Long maxWorkTime;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Float satisfactionIndex;
 
-        @NameInMap("SatisfactionSurveysOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysOffered")
         private Long satisfactionSurveysOffered;
 
-        @NameInMap("SatisfactionSurveysResponded")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
-        @NameInMap("TotalDialingTime")
+        @com.aliyun.core.annotation.NameInMap("TotalDialingTime")
         private Long totalDialingTime;
 
-        @NameInMap("TotalHoldTime")
+        @com.aliyun.core.annotation.NameInMap("TotalHoldTime")
         private Long totalHoldTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
-        @NameInMap("TotalWorkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWorkTime")
         private Long totalWorkTime;
 
         private Outbound(Builder builder) {
@@ -762,6 +819,30 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outbound model) {
+                this.answerRate = model.answerRate;
+                this.averageDialingTime = model.averageDialingTime;
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAnswered = model.callsAnswered;
+                this.callsDialed = model.callsDialed;
+                this.maxDialingTime = model.maxDialingTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalDialingTime = model.totalDialingTime;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AnswerRate.
              */
@@ -913,44 +994,50 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateAgentStatisticReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateAgentStatisticReportResponseBody</p>
+     */
     public static class Overall extends TeaModel {
-        @NameInMap("AverageHoldTime")
+        @com.aliyun.core.annotation.NameInMap("AverageHoldTime")
         private Long averageHoldTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Long averageTalkTime;
 
-        @NameInMap("AverageWorkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Long averageWorkTime;
 
-        @NameInMap("MaxHoldTime")
+        @com.aliyun.core.annotation.NameInMap("MaxHoldTime")
         private Long maxHoldTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("MaxWorkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWorkTime")
         private Long maxWorkTime;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Float satisfactionIndex;
 
-        @NameInMap("SatisfactionSurveysOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysOffered")
         private Long satisfactionSurveysOffered;
 
-        @NameInMap("SatisfactionSurveysResponded")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
-        @NameInMap("TotalCalls")
+        @com.aliyun.core.annotation.NameInMap("TotalCalls")
         private Long totalCalls;
 
-        @NameInMap("TotalHoldTime")
+        @com.aliyun.core.annotation.NameInMap("TotalHoldTime")
         private Long totalHoldTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
-        @NameInMap("TotalWorkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWorkTime")
         private Long totalWorkTime;
 
         private Overall(Builder builder) {
@@ -1083,6 +1170,25 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Overall model) {
+                this.averageHoldTime = model.averageHoldTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.maxHoldTime = model.maxHoldTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalCalls = model.totalCalls;
+                this.totalHoldTime = model.totalHoldTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AverageHoldTime.
              */
@@ -1194,53 +1300,59 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateAgentStatisticReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateAgentStatisticReportResponseBody</p>
+     */
     public static class GenerateAgentStatistic extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("AverageReadyTime")
+        @com.aliyun.core.annotation.NameInMap("AverageReadyTime")
         private Long averageReadyTime;
 
-        @NameInMap("Inbound")
+        @com.aliyun.core.annotation.NameInMap("Inbound")
         private Inbound inbound;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("MaxReadyTime")
+        @com.aliyun.core.annotation.NameInMap("MaxReadyTime")
         private Long maxReadyTime;
 
-        @NameInMap("OccupancyRate")
+        @com.aliyun.core.annotation.NameInMap("OccupancyRate")
         private Float occupancyRate;
 
-        @NameInMap("Outbound")
+        @com.aliyun.core.annotation.NameInMap("Outbound")
         private Outbound outbound;
 
-        @NameInMap("Overall")
+        @com.aliyun.core.annotation.NameInMap("Overall")
         private Overall overall;
 
-        @NameInMap("RecordDate")
+        @com.aliyun.core.annotation.NameInMap("RecordDate")
         private String recordDate;
 
-        @NameInMap("SkillGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupIds")
         private String skillGroupIds;
 
-        @NameInMap("SkillGroupNames")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupNames")
         private String skillGroupNames;
 
-        @NameInMap("TotalBreakTime")
+        @com.aliyun.core.annotation.NameInMap("TotalBreakTime")
         private Long totalBreakTime;
 
-        @NameInMap("TotalLoggedInTime")
+        @com.aliyun.core.annotation.NameInMap("TotalLoggedInTime")
         private Long totalLoggedInTime;
 
-        @NameInMap("TotalReadyTime")
+        @com.aliyun.core.annotation.NameInMap("TotalReadyTime")
         private Long totalReadyTime;
 
         private GenerateAgentStatistic(Builder builder) {
@@ -1400,6 +1512,28 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
             private Long totalLoggedInTime; 
             private Long totalReadyTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(GenerateAgentStatistic model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.averageReadyTime = model.averageReadyTime;
+                this.inbound = model.inbound;
+                this.instanceId = model.instanceId;
+                this.loginName = model.loginName;
+                this.maxReadyTime = model.maxReadyTime;
+                this.occupancyRate = model.occupancyRate;
+                this.outbound = model.outbound;
+                this.overall = model.overall;
+                this.recordDate = model.recordDate;
+                this.skillGroupIds = model.skillGroupIds;
+                this.skillGroupNames = model.skillGroupNames;
+                this.totalBreakTime = model.totalBreakTime;
+                this.totalLoggedInTime = model.totalLoggedInTime;
+                this.totalReadyTime = model.totalReadyTime;
+            } 
+
             /**
              * AgentId.
              */
@@ -1535,9 +1669,15 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateAgentStatisticReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateAgentStatisticReportResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("GenerateAgentStatistic")
-        private java.util.List < GenerateAgentStatistic> generateAgentStatistic;
+        @com.aliyun.core.annotation.NameInMap("GenerateAgentStatistic")
+        private java.util.List<GenerateAgentStatistic> generateAgentStatistic;
 
         private List(Builder builder) {
             this.generateAgentStatistic = builder.generateAgentStatistic;
@@ -1554,17 +1694,24 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
         /**
          * @return generateAgentStatistic
          */
-        public java.util.List < GenerateAgentStatistic> getGenerateAgentStatistic() {
+        public java.util.List<GenerateAgentStatistic> getGenerateAgentStatistic() {
             return this.generateAgentStatistic;
         }
 
         public static final class Builder {
-            private java.util.List < GenerateAgentStatistic> generateAgentStatistic; 
+            private java.util.List<GenerateAgentStatistic> generateAgentStatistic; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.generateAgentStatistic = model.generateAgentStatistic;
+            } 
 
             /**
              * GenerateAgentStatistic.
              */
-            public Builder generateAgentStatistic(java.util.List < GenerateAgentStatistic> generateAgentStatistic) {
+            public Builder generateAgentStatistic(java.util.List<GenerateAgentStatistic> generateAgentStatistic) {
                 this.generateAgentStatistic = generateAgentStatistic;
                 return this;
             }
@@ -1576,17 +1723,23 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GenerateAgentStatisticReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateAgentStatisticReportResponseBody</p>
+     */
     public static class DataList extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DataList(Builder builder) {
@@ -1637,6 +1790,16 @@ public class GenerateAgentStatisticReportResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

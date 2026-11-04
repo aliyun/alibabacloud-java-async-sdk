@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DialExResponseBody} extends {@link TeaModel}
  *
  * <p>DialExResponseBody</p>
  */
 public class DialExResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private String statusCode;
 
-    @NameInMap("StatusDesc")
+    @com.aliyun.core.annotation.NameInMap("StatusDesc")
     private String statusDesc;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TimeStamp")
+    @com.aliyun.core.annotation.NameInMap("TimeStamp")
     private String timeStamp;
 
     private DialExResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class DialExResponseBody extends TeaModel {
 
     public static DialExResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,6 +141,21 @@ public class DialExResponseBody extends TeaModel {
         private Boolean success; 
         private String taskId; 
         private String timeStamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DialExResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.statusCode = model.statusCode;
+            this.statusDesc = model.statusDesc;
+            this.success = model.success;
+            this.taskId = model.taskId;
+            this.timeStamp = model.timeStamp;
+        } 
 
         /**
          * Code.

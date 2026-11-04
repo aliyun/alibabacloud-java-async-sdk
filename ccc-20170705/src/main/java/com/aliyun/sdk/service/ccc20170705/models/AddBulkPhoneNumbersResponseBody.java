@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBulkPhoneNumbersResponseBody} extends {@link TeaModel}
  *
  * <p>AddBulkPhoneNumbersResponseBody</p>
  */
 public class AddBulkPhoneNumbersResponseBody extends TeaModel {
-    @NameInMap("ArrearagePhoneNumbers")
+    @com.aliyun.core.annotation.NameInMap("ArrearagePhoneNumbers")
     private ArrearagePhoneNumbers arrearagePhoneNumbers;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FailedPhoneNumbers")
+    @com.aliyun.core.annotation.NameInMap("FailedPhoneNumbers")
     private FailedPhoneNumbers failedPhoneNumbers;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PhoneNumbers")
+    @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
     private PhoneNumbers phoneNumbers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("UserdPhoneNumbers")
+    @com.aliyun.core.annotation.NameInMap("UserdPhoneNumbers")
     private UserdPhoneNumbers userdPhoneNumbers;
 
     private AddBulkPhoneNumbersResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
 
     public static AddBulkPhoneNumbersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,6 +141,21 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private UserdPhoneNumbers userdPhoneNumbers; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddBulkPhoneNumbersResponseBody model) {
+            this.arrearagePhoneNumbers = model.arrearagePhoneNumbers;
+            this.code = model.code;
+            this.failedPhoneNumbers = model.failedPhoneNumbers;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.phoneNumbers = model.phoneNumbers;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.userdPhoneNumbers = model.userdPhoneNumbers;
+        } 
 
         /**
          * ArrearagePhoneNumbers.
@@ -211,9 +235,15 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddBulkPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBulkPhoneNumbersResponseBody</p>
+     */
     public static class ArrearagePhoneNumbers extends TeaModel {
-        @NameInMap("ArrearagePhoneNumber")
-        private java.util.List < String > arrearagePhoneNumber;
+        @com.aliyun.core.annotation.NameInMap("ArrearagePhoneNumber")
+        private java.util.List<String> arrearagePhoneNumber;
 
         private ArrearagePhoneNumbers(Builder builder) {
             this.arrearagePhoneNumber = builder.arrearagePhoneNumber;
@@ -230,17 +260,24 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         /**
          * @return arrearagePhoneNumber
          */
-        public java.util.List < String > getArrearagePhoneNumber() {
+        public java.util.List<String> getArrearagePhoneNumber() {
             return this.arrearagePhoneNumber;
         }
 
         public static final class Builder {
-            private java.util.List < String > arrearagePhoneNumber; 
+            private java.util.List<String> arrearagePhoneNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArrearagePhoneNumbers model) {
+                this.arrearagePhoneNumber = model.arrearagePhoneNumber;
+            } 
 
             /**
              * ArrearagePhoneNumber.
              */
-            public Builder arrearagePhoneNumber(java.util.List < String > arrearagePhoneNumber) {
+            public Builder arrearagePhoneNumber(java.util.List<String> arrearagePhoneNumber) {
                 this.arrearagePhoneNumber = arrearagePhoneNumber;
                 return this;
             }
@@ -252,9 +289,15 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddBulkPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBulkPhoneNumbersResponseBody</p>
+     */
     public static class FailedPhoneNumbers extends TeaModel {
-        @NameInMap("FailedPhoneNumber")
-        private java.util.List < String > failedPhoneNumber;
+        @com.aliyun.core.annotation.NameInMap("FailedPhoneNumber")
+        private java.util.List<String> failedPhoneNumber;
 
         private FailedPhoneNumbers(Builder builder) {
             this.failedPhoneNumber = builder.failedPhoneNumber;
@@ -271,17 +314,24 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         /**
          * @return failedPhoneNumber
          */
-        public java.util.List < String > getFailedPhoneNumber() {
+        public java.util.List<String> getFailedPhoneNumber() {
             return this.failedPhoneNumber;
         }
 
         public static final class Builder {
-            private java.util.List < String > failedPhoneNumber; 
+            private java.util.List<String> failedPhoneNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailedPhoneNumbers model) {
+                this.failedPhoneNumber = model.failedPhoneNumber;
+            } 
 
             /**
              * FailedPhoneNumber.
              */
-            public Builder failedPhoneNumber(java.util.List < String > failedPhoneNumber) {
+            public Builder failedPhoneNumber(java.util.List<String> failedPhoneNumber) {
                 this.failedPhoneNumber = failedPhoneNumber;
                 return this;
             }
@@ -293,20 +343,26 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddBulkPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBulkPhoneNumbersResponseBody</p>
+     */
     public static class ContactFlow extends TeaModel {
-        @NameInMap("ContactFlowDescription")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowDescription")
         private String contactFlowDescription;
 
-        @NameInMap("ContactFlowId")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowId")
         private String contactFlowId;
 
-        @NameInMap("ContactFlowName")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowName")
         private String contactFlowName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ContactFlow(Builder builder) {
@@ -367,6 +423,17 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
             private String instanceId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactFlow model) {
+                this.contactFlowDescription = model.contactFlowDescription;
+                this.contactFlowId = model.contactFlowId;
+                this.contactFlowName = model.contactFlowName;
+                this.instanceId = model.instanceId;
+                this.type = model.type;
+            } 
+
             /**
              * ContactFlowDescription.
              */
@@ -414,11 +481,17 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddBulkPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBulkPhoneNumbersResponseBody</p>
+     */
     public static class SkillGroup extends TeaModel {
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
         private SkillGroup(Builder builder) {
@@ -452,6 +525,14 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
             private String skillGroupId; 
             private String skillGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroup model) {
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+            } 
+
             /**
              * SkillGroupId.
              */
@@ -475,9 +556,15 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddBulkPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBulkPhoneNumbersResponseBody</p>
+     */
     public static class SkillGroups extends TeaModel {
-        @NameInMap("SkillGroup")
-        private java.util.List < SkillGroup> skillGroup;
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
+        private java.util.List<SkillGroup> skillGroup;
 
         private SkillGroups(Builder builder) {
             this.skillGroup = builder.skillGroup;
@@ -494,17 +581,24 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         /**
          * @return skillGroup
          */
-        public java.util.List < SkillGroup> getSkillGroup() {
+        public java.util.List<SkillGroup> getSkillGroup() {
             return this.skillGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SkillGroup> skillGroup; 
+            private java.util.List<SkillGroup> skillGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillGroups model) {
+                this.skillGroup = model.skillGroup;
+            } 
 
             /**
              * SkillGroup.
              */
-            public Builder skillGroup(java.util.List < SkillGroup> skillGroup) {
+            public Builder skillGroup(java.util.List<SkillGroup> skillGroup) {
                 this.skillGroup = skillGroup;
                 return this;
             }
@@ -516,38 +610,44 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddBulkPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBulkPhoneNumbersResponseBody</p>
+     */
     public static class PhoneNumber extends TeaModel {
-        @NameInMap("AllowOutbound")
+        @com.aliyun.core.annotation.NameInMap("AllowOutbound")
         private Boolean allowOutbound;
 
-        @NameInMap("ContactFlow")
+        @com.aliyun.core.annotation.NameInMap("ContactFlow")
         private ContactFlow contactFlow;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("PhoneNumberDescription")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberDescription")
         private String phoneNumberDescription;
 
-        @NameInMap("PhoneNumberId")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
         private String phoneNumberId;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private Integer remainingTime;
 
-        @NameInMap("SkillGroups")
+        @com.aliyun.core.annotation.NameInMap("SkillGroups")
         private SkillGroups skillGroups;
 
-        @NameInMap("TestOnly")
+        @com.aliyun.core.annotation.NameInMap("TestOnly")
         private Boolean testOnly;
 
-        @NameInMap("Trunks")
+        @com.aliyun.core.annotation.NameInMap("Trunks")
         private Integer trunks;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private PhoneNumber(Builder builder) {
@@ -662,6 +762,23 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
             private Integer trunks; 
             private String usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumber model) {
+                this.allowOutbound = model.allowOutbound;
+                this.contactFlow = model.contactFlow;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.phoneNumberDescription = model.phoneNumberDescription;
+                this.phoneNumberId = model.phoneNumberId;
+                this.remainingTime = model.remainingTime;
+                this.skillGroups = model.skillGroups;
+                this.testOnly = model.testOnly;
+                this.trunks = model.trunks;
+                this.usage = model.usage;
+            } 
+
             /**
              * AllowOutbound.
              */
@@ -757,9 +874,15 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddBulkPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBulkPhoneNumbersResponseBody</p>
+     */
     public static class PhoneNumbers extends TeaModel {
-        @NameInMap("PhoneNumber")
-        private java.util.List < PhoneNumber> phoneNumber;
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+        private java.util.List<PhoneNumber> phoneNumber;
 
         private PhoneNumbers(Builder builder) {
             this.phoneNumber = builder.phoneNumber;
@@ -776,17 +899,24 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         /**
          * @return phoneNumber
          */
-        public java.util.List < PhoneNumber> getPhoneNumber() {
+        public java.util.List<PhoneNumber> getPhoneNumber() {
             return this.phoneNumber;
         }
 
         public static final class Builder {
-            private java.util.List < PhoneNumber> phoneNumber; 
+            private java.util.List<PhoneNumber> phoneNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumbers model) {
+                this.phoneNumber = model.phoneNumber;
+            } 
 
             /**
              * PhoneNumber.
              */
-            public Builder phoneNumber(java.util.List < PhoneNumber> phoneNumber) {
+            public Builder phoneNumber(java.util.List<PhoneNumber> phoneNumber) {
                 this.phoneNumber = phoneNumber;
                 return this;
             }
@@ -798,9 +928,15 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddBulkPhoneNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddBulkPhoneNumbersResponseBody</p>
+     */
     public static class UserdPhoneNumbers extends TeaModel {
-        @NameInMap("UserdPhoneNumber")
-        private java.util.List < String > userdPhoneNumber;
+        @com.aliyun.core.annotation.NameInMap("UserdPhoneNumber")
+        private java.util.List<String> userdPhoneNumber;
 
         private UserdPhoneNumbers(Builder builder) {
             this.userdPhoneNumber = builder.userdPhoneNumber;
@@ -817,17 +953,24 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         /**
          * @return userdPhoneNumber
          */
-        public java.util.List < String > getUserdPhoneNumber() {
+        public java.util.List<String> getUserdPhoneNumber() {
             return this.userdPhoneNumber;
         }
 
         public static final class Builder {
-            private java.util.List < String > userdPhoneNumber; 
+            private java.util.List<String> userdPhoneNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserdPhoneNumbers model) {
+                this.userdPhoneNumber = model.userdPhoneNumber;
+            } 
 
             /**
              * UserdPhoneNumber.
              */
-            public Builder userdPhoneNumber(java.util.List < String > userdPhoneNumber) {
+            public Builder userdPhoneNumber(java.util.List<String> userdPhoneNumber) {
                 this.userdPhoneNumber = userdPhoneNumber;
                 return this;
             }

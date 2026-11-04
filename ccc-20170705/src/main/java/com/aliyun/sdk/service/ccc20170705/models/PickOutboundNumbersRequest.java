@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PickOutboundNumbersRequest} extends {@link RequestModel}
  *
  * <p>PickOutboundNumbersRequest</p>
  */
 public class PickOutboundNumbersRequest extends Request {
-    @Query
-    @NameInMap("CalleeNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalleeNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calleeNumber;
 
-    @Query
-    @NameInMap("CandidateNumber")
-    @Validation(required = true)
-    private java.util.List < String > candidateNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CandidateNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> candidateNumber;
 
-    @Query
-    @NameInMap("Count")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Count")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer count;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private PickOutboundNumbersRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class PickOutboundNumbersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,7 +68,7 @@ public class PickOutboundNumbersRequest extends Request {
     /**
      * @return candidateNumber
      */
-    public java.util.List < String > getCandidateNumber() {
+    public java.util.List<String> getCandidateNumber() {
         return this.candidateNumber;
     }
 
@@ -83,7 +88,7 @@ public class PickOutboundNumbersRequest extends Request {
 
     public static final class Builder extends Request.Builder<PickOutboundNumbersRequest, Builder> {
         private String calleeNumber; 
-        private java.util.List < String > candidateNumber; 
+        private java.util.List<String> candidateNumber; 
         private Integer count; 
         private String instanceId; 
 
@@ -91,16 +96,16 @@ public class PickOutboundNumbersRequest extends Request {
             super();
         } 
 
-        private Builder(PickOutboundNumbersRequest response) {
-            super(response);
-            this.calleeNumber = response.calleeNumber;
-            this.candidateNumber = response.candidateNumber;
-            this.count = response.count;
-            this.instanceId = response.instanceId;
+        private Builder(PickOutboundNumbersRequest request) {
+            super(request);
+            this.calleeNumber = request.calleeNumber;
+            this.candidateNumber = request.candidateNumber;
+            this.count = request.count;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * CalleeNumber.
+         * <p>This parameter is required.</p>
          */
         public Builder calleeNumber(String calleeNumber) {
             this.putQueryParameter("CalleeNumber", calleeNumber);
@@ -109,16 +114,16 @@ public class PickOutboundNumbersRequest extends Request {
         }
 
         /**
-         * CandidateNumber.
+         * <p>This parameter is required.</p>
          */
-        public Builder candidateNumber(java.util.List < String > candidateNumber) {
+        public Builder candidateNumber(java.util.List<String> candidateNumber) {
             this.putQueryParameter("CandidateNumber", candidateNumber);
             this.candidateNumber = candidateNumber;
             return this;
         }
 
         /**
-         * Count.
+         * <p>This parameter is required.</p>
          */
         public Builder count(Integer count) {
             this.putQueryParameter("Count", count);
@@ -127,7 +132,7 @@ public class PickOutboundNumbersRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

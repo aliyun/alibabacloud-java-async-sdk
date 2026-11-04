@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRolesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRolesResponseBody</p>
  */
 public class ListRolesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Roles")
+    @com.aliyun.core.annotation.NameInMap("Roles")
     private Roles roles;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListRolesResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListRolesResponseBody extends TeaModel {
 
     public static ListRolesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListRolesResponseBody extends TeaModel {
         private String requestId; 
         private Roles roles; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRolesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.roles = model.roles;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,17 +172,23 @@ public class ListRolesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRolesResponseBody</p>
+     */
     public static class Role extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RoleDescription")
+        @com.aliyun.core.annotation.NameInMap("RoleDescription")
         private String roleDescription;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private Role(Builder builder) {
@@ -213,6 +240,16 @@ public class ListRolesResponseBody extends TeaModel {
             private String roleId; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.instanceId = model.instanceId;
+                this.roleDescription = model.roleDescription;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * InstanceId.
              */
@@ -252,9 +289,15 @@ public class ListRolesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRolesResponseBody</p>
+     */
     public static class Roles extends TeaModel {
-        @NameInMap("Role")
-        private java.util.List < Role> role;
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private java.util.List<Role> role;
 
         private Roles(Builder builder) {
             this.role = builder.role;
@@ -271,17 +314,24 @@ public class ListRolesResponseBody extends TeaModel {
         /**
          * @return role
          */
-        public java.util.List < Role> getRole() {
+        public java.util.List<Role> getRole() {
             return this.role;
         }
 
         public static final class Builder {
-            private java.util.List < Role> role; 
+            private java.util.List<Role> role; 
+
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.role = model.role;
+            } 
 
             /**
              * Role.
              */
-            public Builder role(java.util.List < Role> role) {
+            public Builder role(java.util.List<Role> role) {
                 this.role = role;
                 return this;
             }

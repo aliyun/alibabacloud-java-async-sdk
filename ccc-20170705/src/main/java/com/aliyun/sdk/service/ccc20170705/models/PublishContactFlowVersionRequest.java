@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishContactFlowVersionRequest} extends {@link RequestModel}
  *
  * <p>PublishContactFlowVersionRequest</p>
  */
 public class PublishContactFlowVersionRequest extends Request {
-    @Query
-    @NameInMap("ContactFlowVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactFlowVersionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("UseTianGong")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseTianGong")
     private Boolean useTianGong;
 
     private PublishContactFlowVersionRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class PublishContactFlowVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,15 +81,15 @@ public class PublishContactFlowVersionRequest extends Request {
             super();
         } 
 
-        private Builder(PublishContactFlowVersionRequest response) {
-            super(response);
-            this.contactFlowVersionId = response.contactFlowVersionId;
-            this.instanceId = response.instanceId;
-            this.useTianGong = response.useTianGong;
+        private Builder(PublishContactFlowVersionRequest request) {
+            super(request);
+            this.contactFlowVersionId = request.contactFlowVersionId;
+            this.instanceId = request.instanceId;
+            this.useTianGong = request.useTianGong;
         } 
 
         /**
-         * ContactFlowVersionId.
+         * <p>This parameter is required.</p>
          */
         public Builder contactFlowVersionId(String contactFlowVersionId) {
             this.putQueryParameter("ContactFlowVersionId", contactFlowVersionId);
@@ -93,7 +98,7 @@ public class PublishContactFlowVersionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

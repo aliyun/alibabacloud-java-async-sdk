@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPhoneNumberResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyPhoneNumberResponseBody</p>
  */
 public class ModifyPhoneNumberResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private PhoneNumber phoneNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ModifyPhoneNumberResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
 
     public static ModifyPhoneNumberResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
         private PhoneNumber phoneNumber; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyPhoneNumberResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.phoneNumber = model.phoneNumber;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,20 +172,26 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyPhoneNumberResponseBody</p>
+     */
     public static class ContactFlow extends TeaModel {
-        @NameInMap("ContactFlowDescription")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowDescription")
         private String contactFlowDescription;
 
-        @NameInMap("ContactFlowId")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowId")
         private String contactFlowId;
 
-        @NameInMap("ContactFlowName")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowName")
         private String contactFlowName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ContactFlow(Builder builder) {
@@ -225,6 +252,17 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
             private String instanceId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactFlow model) {
+                this.contactFlowDescription = model.contactFlowDescription;
+                this.contactFlowId = model.contactFlowId;
+                this.contactFlowName = model.contactFlowName;
+                this.instanceId = model.instanceId;
+                this.type = model.type;
+            } 
+
             /**
              * ContactFlowDescription.
              */
@@ -272,11 +310,17 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyPhoneNumberResponseBody</p>
+     */
     public static class SkillGroup extends TeaModel {
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
         private SkillGroup(Builder builder) {
@@ -310,6 +354,14 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
             private String skillGroupId; 
             private String skillGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroup model) {
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+            } 
+
             /**
              * SkillGroupId.
              */
@@ -333,9 +385,15 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyPhoneNumberResponseBody</p>
+     */
     public static class SkillGroups extends TeaModel {
-        @NameInMap("SkillGroup")
-        private java.util.List < SkillGroup> skillGroup;
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
+        private java.util.List<SkillGroup> skillGroup;
 
         private SkillGroups(Builder builder) {
             this.skillGroup = builder.skillGroup;
@@ -352,17 +410,24 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
         /**
          * @return skillGroup
          */
-        public java.util.List < SkillGroup> getSkillGroup() {
+        public java.util.List<SkillGroup> getSkillGroup() {
             return this.skillGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SkillGroup> skillGroup; 
+            private java.util.List<SkillGroup> skillGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillGroups model) {
+                this.skillGroup = model.skillGroup;
+            } 
 
             /**
              * SkillGroup.
              */
-            public Builder skillGroup(java.util.List < SkillGroup> skillGroup) {
+            public Builder skillGroup(java.util.List<SkillGroup> skillGroup) {
                 this.skillGroup = skillGroup;
                 return this;
             }
@@ -374,38 +439,44 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyPhoneNumberResponseBody</p>
+     */
     public static class PhoneNumber extends TeaModel {
-        @NameInMap("AllowOutbound")
+        @com.aliyun.core.annotation.NameInMap("AllowOutbound")
         private Boolean allowOutbound;
 
-        @NameInMap("ContactFlow")
+        @com.aliyun.core.annotation.NameInMap("ContactFlow")
         private ContactFlow contactFlow;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("PhoneNumberDescription")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberDescription")
         private String phoneNumberDescription;
 
-        @NameInMap("PhoneNumberId")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
         private String phoneNumberId;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private Integer remainingTime;
 
-        @NameInMap("SkillGroups")
+        @com.aliyun.core.annotation.NameInMap("SkillGroups")
         private SkillGroups skillGroups;
 
-        @NameInMap("TestOnly")
+        @com.aliyun.core.annotation.NameInMap("TestOnly")
         private Boolean testOnly;
 
-        @NameInMap("Trunks")
+        @com.aliyun.core.annotation.NameInMap("Trunks")
         private Integer trunks;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private PhoneNumber(Builder builder) {
@@ -519,6 +590,23 @@ public class ModifyPhoneNumberResponseBody extends TeaModel {
             private Boolean testOnly; 
             private Integer trunks; 
             private String usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumber model) {
+                this.allowOutbound = model.allowOutbound;
+                this.contactFlow = model.contactFlow;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.phoneNumberDescription = model.phoneNumberDescription;
+                this.phoneNumberId = model.phoneNumberId;
+                this.remainingTime = model.remainingTime;
+                this.skillGroups = model.skillGroups;
+                this.testOnly = model.testOnly;
+                this.trunks = model.trunks;
+                this.usage = model.usage;
+            } 
 
             /**
              * AllowOutbound.

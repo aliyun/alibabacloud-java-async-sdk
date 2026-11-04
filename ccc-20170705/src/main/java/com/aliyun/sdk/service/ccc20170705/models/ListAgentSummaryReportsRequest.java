@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentSummaryReportsRequest} extends {@link RequestModel}
  *
  * <p>ListAgentSummaryReportsRequest</p>
  */
 public class ListAgentSummaryReportsRequest extends Request {
-    @Query
-    @NameInMap("AgentIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentIds")
     private String agentIds;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
     private String skillGroupId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private ListAgentSummaryReportsRequest(Builder builder) {
@@ -62,7 +67,7 @@ public class ListAgentSummaryReportsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,15 +134,15 @@ public class ListAgentSummaryReportsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAgentSummaryReportsRequest response) {
-            super(response);
-            this.agentIds = response.agentIds;
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.skillGroupId = response.skillGroupId;
-            this.startTime = response.startTime;
+        private Builder(ListAgentSummaryReportsRequest request) {
+            super(request);
+            this.agentIds = request.agentIds;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.skillGroupId = request.skillGroupId;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -150,7 +155,7 @@ public class ListAgentSummaryReportsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -159,7 +164,7 @@ public class ListAgentSummaryReportsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -195,7 +200,7 @@ public class ListAgentSummaryReportsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitContactFlowVersionModificationRequest} extends {@link RequestModel}
  *
  * <p>CommitContactFlowVersionModificationRequest</p>
  */
 public class CommitContactFlowVersionModificationRequest extends Request {
-    @Body
-    @NameInMap("Canvas")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Canvas")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String canvas;
 
-    @Query
-    @NameInMap("ContactFlowVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactFlowVersionId;
 
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private CommitContactFlowVersionModificationRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class CommitContactFlowVersionModificationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -91,16 +96,16 @@ public class CommitContactFlowVersionModificationRequest extends Request {
             super();
         } 
 
-        private Builder(CommitContactFlowVersionModificationRequest response) {
-            super(response);
-            this.canvas = response.canvas;
-            this.contactFlowVersionId = response.contactFlowVersionId;
-            this.content = response.content;
-            this.instanceId = response.instanceId;
+        private Builder(CommitContactFlowVersionModificationRequest request) {
+            super(request);
+            this.canvas = request.canvas;
+            this.contactFlowVersionId = request.contactFlowVersionId;
+            this.content = request.content;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * Canvas.
+         * <p>This parameter is required.</p>
          */
         public Builder canvas(String canvas) {
             this.putBodyParameter("Canvas", canvas);
@@ -109,7 +114,7 @@ public class CommitContactFlowVersionModificationRequest extends Request {
         }
 
         /**
-         * ContactFlowVersionId.
+         * <p>This parameter is required.</p>
          */
         public Builder contactFlowVersionId(String contactFlowVersionId) {
             this.putQueryParameter("ContactFlowVersionId", contactFlowVersionId);
@@ -118,7 +123,7 @@ public class CommitContactFlowVersionModificationRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -127,7 +132,7 @@ public class CommitContactFlowVersionModificationRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

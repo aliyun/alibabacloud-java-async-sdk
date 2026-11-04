@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRealTimeAgentResponseBody} extends {@link TeaModel}
  *
  * <p>ListRealTimeAgentResponseBody</p>
  */
 public class ListRealTimeAgentResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListRealTimeAgentResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
 
     public static ListRealTimeAgentResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRealTimeAgentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,17 +172,23 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRealTimeAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealTimeAgentResponseBody</p>
+     */
     public static class Skill extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("SkillGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupDescription")
         private String skillGroupDescription;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
         private Skill(Builder builder) {
@@ -213,6 +240,16 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
             private String skillGroupId; 
             private String skillGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Skill model) {
+                this.instanceId = model.instanceId;
+                this.skillGroupDescription = model.skillGroupDescription;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+            } 
+
             /**
              * InstanceId.
              */
@@ -252,14 +289,20 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealTimeAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealTimeAgentResponseBody</p>
+     */
     public static class SkillLevel extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Integer level;
 
-        @NameInMap("Skill")
+        @com.aliyun.core.annotation.NameInMap("Skill")
         private Skill skill;
 
-        @NameInMap("SkillLevelId")
+        @com.aliyun.core.annotation.NameInMap("SkillLevelId")
         private String skillLevelId;
 
         private SkillLevel(Builder builder) {
@@ -302,6 +345,15 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
             private Skill skill; 
             private String skillLevelId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillLevel model) {
+                this.level = model.level;
+                this.skill = model.skill;
+                this.skillLevelId = model.skillLevelId;
+            } 
+
             /**
              * Level.
              */
@@ -333,9 +385,15 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealTimeAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealTimeAgentResponseBody</p>
+     */
     public static class SkillLevels extends TeaModel {
-        @NameInMap("SkillLevel")
-        private java.util.List < SkillLevel> skillLevel;
+        @com.aliyun.core.annotation.NameInMap("SkillLevel")
+        private java.util.List<SkillLevel> skillLevel;
 
         private SkillLevels(Builder builder) {
             this.skillLevel = builder.skillLevel;
@@ -352,17 +410,24 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
         /**
          * @return skillLevel
          */
-        public java.util.List < SkillLevel> getSkillLevel() {
+        public java.util.List<SkillLevel> getSkillLevel() {
             return this.skillLevel;
         }
 
         public static final class Builder {
-            private java.util.List < SkillLevel> skillLevel; 
+            private java.util.List<SkillLevel> skillLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillLevels model) {
+                this.skillLevel = model.skillLevel;
+            } 
 
             /**
              * SkillLevel.
              */
-            public Builder skillLevel(java.util.List < SkillLevel> skillLevel) {
+            public Builder skillLevel(java.util.List<SkillLevel> skillLevel) {
                 this.skillLevel = skillLevel;
                 return this;
             }
@@ -374,26 +439,32 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealTimeAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealTimeAgentResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Dn")
+        @com.aliyun.core.annotation.NameInMap("Dn")
         private String dn;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private String ramId;
 
-        @NameInMap("SkillLevels")
+        @com.aliyun.core.annotation.NameInMap("SkillLevels")
         private SkillLevels skillLevels;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StateDesc")
+        @com.aliyun.core.annotation.NameInMap("StateDesc")
         private String stateDesc;
 
         private User(Builder builder) {
@@ -472,6 +543,19 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
             private String state; 
             private String stateDesc; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.displayName = model.displayName;
+                this.dn = model.dn;
+                this.phone = model.phone;
+                this.ramId = model.ramId;
+                this.skillLevels = model.skillLevels;
+                this.state = model.state;
+                this.stateDesc = model.stateDesc;
+            } 
+
             /**
              * DisplayName.
              */
@@ -535,9 +619,15 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealTimeAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealTimeAgentResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("User")
-        private java.util.List < User> user;
+        @com.aliyun.core.annotation.NameInMap("User")
+        private java.util.List<User> user;
 
         private Data(Builder builder) {
             this.user = builder.user;
@@ -554,17 +644,24 @@ public class ListRealTimeAgentResponseBody extends TeaModel {
         /**
          * @return user
          */
-        public java.util.List < User> getUser() {
+        public java.util.List<User> getUser() {
             return this.user;
         }
 
         public static final class Builder {
-            private java.util.List < User> user; 
+            private java.util.List<User> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.
              */
-            public Builder user(java.util.List < User> user) {
+            public Builder user(java.util.List<User> user) {
                 this.user = user;
                 return this;
             }

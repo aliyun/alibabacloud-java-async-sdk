@@ -1,62 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DirectDialogueResponseBody} extends {@link TeaModel}
+ * 
+ * {@link ModifySkillGroupBasicInfoResponseBody} extends {@link TeaModel}
  *
- * <p>DirectDialogueResponseBody</p>
+ * <p>ModifySkillGroupBasicInfoResponseBody</p>
  */
-public class DirectDialogueResponseBody extends TeaModel {
-    @NameInMap("Code")
+public class ModifySkillGroupBasicInfoResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Content")
-    private String content;
-
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MessageId")
-    private String messageId;
-
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SessionId")
-    private String sessionId;
-
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Type")
-    private String type;
-
-    private DirectDialogueResponseBody(Builder builder) {
+    private ModifySkillGroupBasicInfoResponseBody(Builder builder) {
         this.code = builder.code;
-        this.content = builder.content;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
-        this.messageId = builder.messageId;
         this.requestId = builder.requestId;
-        this.sessionId = builder.sessionId;
         this.success = builder.success;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DirectDialogueResponseBody create() {
+    public static ModifySkillGroupBasicInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -64,13 +57,6 @@ public class DirectDialogueResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return content
-     */
-    public String getContent() {
-        return this.content;
     }
 
     /**
@@ -88,24 +74,10 @@ public class DirectDialogueResponseBody extends TeaModel {
     }
 
     /**
-     * @return messageId
-     */
-    public String getMessageId() {
-        return this.messageId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return sessionId
-     */
-    public String getSessionId() {
-        return this.sessionId;
     }
 
     /**
@@ -115,37 +87,29 @@ public class DirectDialogueResponseBody extends TeaModel {
         return this.success;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
     public static final class Builder {
         private String code; 
-        private String content; 
         private Integer httpStatusCode; 
         private String message; 
-        private String messageId; 
         private String requestId; 
-        private String sessionId; 
         private Boolean success; 
-        private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifySkillGroupBasicInfoResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * Content.
-         */
-        public Builder content(String content) {
-            this.content = content;
             return this;
         }
 
@@ -166,26 +130,10 @@ public class DirectDialogueResponseBody extends TeaModel {
         }
 
         /**
-         * MessageId.
-         */
-        public Builder messageId(String messageId) {
-            this.messageId = messageId;
-            return this;
-        }
-
-        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * SessionId.
-         */
-        public Builder sessionId(String sessionId) {
-            this.sessionId = sessionId;
             return this;
         }
 
@@ -197,16 +145,8 @@ public class DirectDialogueResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * Type.
-         */
-        public Builder type(String type) {
-            this.type = type;
-            return this;
-        }
-
-        public DirectDialogueResponseBody build() {
-            return new DirectDialogueResponseBody(this);
+        public ModifySkillGroupBasicInfoResponseBody build() {
+            return new ModifySkillGroupBasicInfoResponseBody(this);
         } 
 
     } 

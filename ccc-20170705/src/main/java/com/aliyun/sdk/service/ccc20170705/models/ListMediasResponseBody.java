@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMediasResponseBody} extends {@link TeaModel}
  *
  * <p>ListMediasResponseBody</p>
  */
 public class ListMediasResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Medias")
+    @com.aliyun.core.annotation.NameInMap("Medias")
     private Medias medias;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListMediasResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListMediasResponseBody extends TeaModel {
 
     public static ListMediasResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListMediasResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMediasResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.medias = model.medias;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,32 +172,38 @@ public class ListMediasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMediasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediasResponseBody</p>
+     */
     public static class Media extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private String instance;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OssFileName")
+        @com.aliyun.core.annotation.NameInMap("OssFileName")
         private String ossFileName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Media(Builder builder) {
@@ -273,6 +300,21 @@ public class ListMediasResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Media model) {
+                this.content = model.content;
+                this.description = model.description;
+                this.fileName = model.fileName;
+                this.filePath = model.filePath;
+                this.instance = model.instance;
+                this.name = model.name;
+                this.ossFileName = model.ossFileName;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * Content.
              */
@@ -352,9 +394,15 @@ public class ListMediasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediasResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Media")
-        private java.util.List < Media> media;
+        @com.aliyun.core.annotation.NameInMap("Media")
+        private java.util.List<Media> media;
 
         private List(Builder builder) {
             this.media = builder.media;
@@ -371,17 +419,24 @@ public class ListMediasResponseBody extends TeaModel {
         /**
          * @return media
          */
-        public java.util.List < Media> getMedia() {
+        public java.util.List<Media> getMedia() {
             return this.media;
         }
 
         public static final class Builder {
-            private java.util.List < Media> media; 
+            private java.util.List<Media> media; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.media = model.media;
+            } 
 
             /**
              * Media.
              */
-            public Builder media(java.util.List < Media> media) {
+            public Builder media(java.util.List<Media> media) {
                 this.media = media;
                 return this;
             }
@@ -393,17 +448,23 @@ public class ListMediasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMediasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMediasResponseBody</p>
+     */
     public static class Medias extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Medias(Builder builder) {
@@ -454,6 +515,16 @@ public class ListMediasResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Medias model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

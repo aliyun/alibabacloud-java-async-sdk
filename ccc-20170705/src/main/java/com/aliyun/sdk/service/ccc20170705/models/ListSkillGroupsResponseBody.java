@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSkillGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSkillGroupsResponseBody</p>
  */
 public class ListSkillGroupsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SkillGroups")
+    @com.aliyun.core.annotation.NameInMap("SkillGroups")
     private SkillGroups skillGroups;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSkillGroupsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListSkillGroupsResponseBody extends TeaModel {
 
     public static ListSkillGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         private String requestId; 
         private SkillGroups skillGroups; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSkillGroupsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.skillGroups = model.skillGroups;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,32 +172,38 @@ public class ListSkillGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSkillGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupsResponseBody</p>
+     */
     public static class PhoneNumber extends TeaModel {
-        @NameInMap("AllowOutbound")
+        @com.aliyun.core.annotation.NameInMap("AllowOutbound")
         private Boolean allowOutbound;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("PhoneNumberDescription")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberDescription")
         private String phoneNumberDescription;
 
-        @NameInMap("PhoneNumberId")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
         private String phoneNumberId;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private Integer remainingTime;
 
-        @NameInMap("TestOnly")
+        @com.aliyun.core.annotation.NameInMap("TestOnly")
         private Boolean testOnly;
 
-        @NameInMap("Trunks")
+        @com.aliyun.core.annotation.NameInMap("Trunks")
         private Integer trunks;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private PhoneNumber(Builder builder) {
@@ -273,6 +300,21 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             private Integer trunks; 
             private String usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumber model) {
+                this.allowOutbound = model.allowOutbound;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.phoneNumberDescription = model.phoneNumberDescription;
+                this.phoneNumberId = model.phoneNumberId;
+                this.remainingTime = model.remainingTime;
+                this.testOnly = model.testOnly;
+                this.trunks = model.trunks;
+                this.usage = model.usage;
+            } 
+
             /**
              * AllowOutbound.
              */
@@ -352,9 +394,15 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupsResponseBody</p>
+     */
     public static class OutboundPhoneNumbers extends TeaModel {
-        @NameInMap("PhoneNumber")
-        private java.util.List < PhoneNumber> phoneNumber;
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+        private java.util.List<PhoneNumber> phoneNumber;
 
         private OutboundPhoneNumbers(Builder builder) {
             this.phoneNumber = builder.phoneNumber;
@@ -371,17 +419,24 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         /**
          * @return phoneNumber
          */
-        public java.util.List < PhoneNumber> getPhoneNumber() {
+        public java.util.List<PhoneNumber> getPhoneNumber() {
             return this.phoneNumber;
         }
 
         public static final class Builder {
-            private java.util.List < PhoneNumber> phoneNumber; 
+            private java.util.List<PhoneNumber> phoneNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutboundPhoneNumbers model) {
+                this.phoneNumber = model.phoneNumber;
+            } 
 
             /**
              * PhoneNumber.
              */
-            public Builder phoneNumber(java.util.List < PhoneNumber> phoneNumber) {
+            public Builder phoneNumber(java.util.List<PhoneNumber> phoneNumber) {
                 this.phoneNumber = phoneNumber;
                 return this;
             }
@@ -393,32 +448,38 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupsResponseBody</p>
+     */
     public static class SkillGroup extends TeaModel {
-        @NameInMap("AccQueueName")
+        @com.aliyun.core.annotation.NameInMap("AccQueueName")
         private String accQueueName;
 
-        @NameInMap("AccSkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("AccSkillGroupName")
         private String accSkillGroupName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OutboundPhoneNumbers")
+        @com.aliyun.core.annotation.NameInMap("OutboundPhoneNumbers")
         private OutboundPhoneNumbers outboundPhoneNumbers;
 
-        @NameInMap("RoutingStrategy")
+        @com.aliyun.core.annotation.NameInMap("RoutingStrategy")
         private String routingStrategy;
 
-        @NameInMap("SkillGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupDescription")
         private String skillGroupDescription;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
-        @NameInMap("UserCount")
+        @com.aliyun.core.annotation.NameInMap("UserCount")
         private Integer userCount;
 
         private SkillGroup(Builder builder) {
@@ -515,6 +576,21 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             private String skillGroupName; 
             private Integer userCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroup model) {
+                this.accQueueName = model.accQueueName;
+                this.accSkillGroupName = model.accSkillGroupName;
+                this.instanceId = model.instanceId;
+                this.outboundPhoneNumbers = model.outboundPhoneNumbers;
+                this.routingStrategy = model.routingStrategy;
+                this.skillGroupDescription = model.skillGroupDescription;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.userCount = model.userCount;
+            } 
+
             /**
              * AccQueueName.
              */
@@ -594,9 +670,15 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupsResponseBody</p>
+     */
     public static class SkillGroups extends TeaModel {
-        @NameInMap("SkillGroup")
-        private java.util.List < SkillGroup> skillGroup;
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
+        private java.util.List<SkillGroup> skillGroup;
 
         private SkillGroups(Builder builder) {
             this.skillGroup = builder.skillGroup;
@@ -613,17 +695,24 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         /**
          * @return skillGroup
          */
-        public java.util.List < SkillGroup> getSkillGroup() {
+        public java.util.List<SkillGroup> getSkillGroup() {
             return this.skillGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SkillGroup> skillGroup; 
+            private java.util.List<SkillGroup> skillGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillGroups model) {
+                this.skillGroup = model.skillGroup;
+            } 
 
             /**
              * SkillGroup.
              */
-            public Builder skillGroup(java.util.List < SkillGroup> skillGroup) {
+            public Builder skillGroup(java.util.List<SkillGroup> skillGroup) {
                 this.skillGroup = skillGroup;
                 return this;
             }

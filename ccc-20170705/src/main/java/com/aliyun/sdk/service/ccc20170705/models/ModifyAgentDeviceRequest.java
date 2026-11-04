@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAgentDeviceRequest} extends {@link RequestModel}
  *
  * <p>ModifyAgentDeviceRequest</p>
  */
 public class ModifyAgentDeviceRequest extends Request {
-    @Query
-    @NameInMap("AgentDeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentDeviceId")
     private Long agentDeviceId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IsLogin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsLogin")
     private Integer isLogin;
 
     private ModifyAgentDeviceRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class ModifyAgentDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,11 +80,11 @@ public class ModifyAgentDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAgentDeviceRequest response) {
-            super(response);
-            this.agentDeviceId = response.agentDeviceId;
-            this.instanceId = response.instanceId;
-            this.isLogin = response.isLogin;
+        private Builder(ModifyAgentDeviceRequest request) {
+            super(request);
+            this.agentDeviceId = request.agentDeviceId;
+            this.instanceId = request.instanceId;
+            this.isLogin = request.isLogin;
         } 
 
         /**
@@ -92,7 +97,7 @@ public class ModifyAgentDeviceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

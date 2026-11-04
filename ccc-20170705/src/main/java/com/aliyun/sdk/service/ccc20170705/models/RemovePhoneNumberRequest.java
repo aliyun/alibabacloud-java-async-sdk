@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemovePhoneNumberRequest} extends {@link RequestModel}
  *
  * <p>RemovePhoneNumberRequest</p>
  */
 public class RemovePhoneNumberRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumberId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumberId;
 
     private RemovePhoneNumberRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class RemovePhoneNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class RemovePhoneNumberRequest extends Request {
             super();
         } 
 
-        private Builder(RemovePhoneNumberRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.phoneNumberId = response.phoneNumberId;
+        private Builder(RemovePhoneNumberRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.phoneNumberId = request.phoneNumberId;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +84,7 @@ public class RemovePhoneNumberRequest extends Request {
         }
 
         /**
-         * PhoneNumberId.
+         * <p>This parameter is required.</p>
          */
         public Builder phoneNumberId(String phoneNumberId) {
             this.putQueryParameter("PhoneNumberId", phoneNumberId);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentStatesResponseBody</p>
  */
 public class ListAgentStatesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAgentStatesResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListAgentStatesResponseBody extends TeaModel {
 
     public static ListAgentStatesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListAgentStatesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentStatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,26 +172,32 @@ public class ListAgentStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentStatesResponseBody</p>
+     */
     public static class RealTimeAgentState extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("Dn")
+        @com.aliyun.core.annotation.NameInMap("Dn")
         private String dn;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StateDuration")
+        @com.aliyun.core.annotation.NameInMap("StateDuration")
         private String stateDuration;
 
         private RealTimeAgentState(Builder builder) {
@@ -249,6 +276,19 @@ public class ListAgentStatesResponseBody extends TeaModel {
             private String state; 
             private String stateDuration; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealTimeAgentState model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.dn = model.dn;
+                this.instanceId = model.instanceId;
+                this.loginName = model.loginName;
+                this.state = model.state;
+                this.stateDuration = model.stateDuration;
+            } 
+
             /**
              * AgentId.
              */
@@ -312,9 +352,15 @@ public class ListAgentStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentStatesResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("RealTimeAgentState")
-        private java.util.List < RealTimeAgentState> realTimeAgentState;
+        @com.aliyun.core.annotation.NameInMap("RealTimeAgentState")
+        private java.util.List<RealTimeAgentState> realTimeAgentState;
 
         private List(Builder builder) {
             this.realTimeAgentState = builder.realTimeAgentState;
@@ -331,17 +377,24 @@ public class ListAgentStatesResponseBody extends TeaModel {
         /**
          * @return realTimeAgentState
          */
-        public java.util.List < RealTimeAgentState> getRealTimeAgentState() {
+        public java.util.List<RealTimeAgentState> getRealTimeAgentState() {
             return this.realTimeAgentState;
         }
 
         public static final class Builder {
-            private java.util.List < RealTimeAgentState> realTimeAgentState; 
+            private java.util.List<RealTimeAgentState> realTimeAgentState; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.realTimeAgentState = model.realTimeAgentState;
+            } 
 
             /**
              * RealTimeAgentState.
              */
-            public Builder realTimeAgentState(java.util.List < RealTimeAgentState> realTimeAgentState) {
+            public Builder realTimeAgentState(java.util.List<RealTimeAgentState> realTimeAgentState) {
                 this.realTimeAgentState = realTimeAgentState;
                 return this;
             }
@@ -353,17 +406,23 @@ public class ListAgentStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentStatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -414,6 +473,16 @@ public class ListAgentStatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

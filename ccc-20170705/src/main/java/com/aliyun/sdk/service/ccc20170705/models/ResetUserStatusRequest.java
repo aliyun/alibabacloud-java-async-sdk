@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetUserStatusRequest} extends {@link RequestModel}
  *
  * <p>ResetUserStatusRequest</p>
  */
 public class ResetUserStatusRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RamIdList")
-    private java.util.List < Long > ramIdList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamIdList")
+    private java.util.List<Long> ramIdList;
 
     private ResetUserStatusRequest(Builder builder) {
         super(builder);
@@ -35,7 +40,7 @@ public class ResetUserStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -50,26 +55,26 @@ public class ResetUserStatusRequest extends Request {
     /**
      * @return ramIdList
      */
-    public java.util.List < Long > getRamIdList() {
+    public java.util.List<Long> getRamIdList() {
         return this.ramIdList;
     }
 
     public static final class Builder extends Request.Builder<ResetUserStatusRequest, Builder> {
         private String instanceId; 
-        private java.util.List < Long > ramIdList; 
+        private java.util.List<Long> ramIdList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ResetUserStatusRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.ramIdList = response.ramIdList;
+        private Builder(ResetUserStatusRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.ramIdList = request.ramIdList;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -80,7 +85,7 @@ public class ResetUserStatusRequest extends Request {
         /**
          * RamIdList.
          */
-        public Builder ramIdList(java.util.List < Long > ramIdList) {
+        public Builder ramIdList(java.util.List<Long> ramIdList) {
             this.putQueryParameter("RamIdList", ramIdList);
             this.ramIdList = ramIdList;
             return this;

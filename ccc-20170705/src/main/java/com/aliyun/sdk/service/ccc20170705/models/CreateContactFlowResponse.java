@@ -1,28 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateContactFlowResponse} extends {@link TeaModel}
  *
  * <p>CreateContactFlowResponse</p>
  */
 public class CreateContactFlowResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private CreateContactFlowResponseBody body;
 
     private CreateContactFlowResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -30,7 +37,7 @@ public class CreateContactFlowResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -38,8 +45,15 @@ public class CreateContactFlowResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     /**
@@ -51,7 +65,9 @@ public class CreateContactFlowResponse extends Response {
 
     public interface Builder extends Response.Builder<CreateContactFlowResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateContactFlowResponseBody body);
 
@@ -63,7 +79,8 @@ public class CreateContactFlowResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<CreateContactFlowResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
         private CreateContactFlowResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +90,7 @@ public class CreateContactFlowResponse extends Response {
         private BuilderImpl(CreateContactFlowResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -80,8 +98,17 @@ public class CreateContactFlowResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

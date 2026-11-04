@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPhoneTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPhoneTagsResponseBody</p>
  */
 public class ListPhoneTagsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PhoneNumbers")
+    @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
     private PhoneNumbers phoneNumbers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListPhoneTagsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListPhoneTagsResponseBody extends TeaModel {
 
     public static ListPhoneTagsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListPhoneTagsResponseBody extends TeaModel {
         private PhoneNumbers phoneNumbers; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPhoneTagsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.phoneNumbers = model.phoneNumbers;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,47 +172,53 @@ public class ListPhoneTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPhoneTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPhoneTagsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Integer concurrency;
 
-        @NameInMap("ContactFlowId")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowId")
         private String contactFlowId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("PhoneNumberDescription")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberDescription")
         private String phoneNumberDescription;
 
-        @NameInMap("PhoneNumberId")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
         private String phoneNumberId;
 
-        @NameInMap("Provider")
+        @com.aliyun.core.annotation.NameInMap("Provider")
         private String provider;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("ServiceTag")
+        @com.aliyun.core.annotation.NameInMap("ServiceTag")
         private String serviceTag;
 
-        @NameInMap("SkillGroupIdList")
-        private java.util.List < String > skillGroupIdList;
+        @com.aliyun.core.annotation.NameInMap("SkillGroupIdList")
+        private java.util.List<String> skillGroupIdList;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private List(Builder builder) {
@@ -299,7 +326,7 @@ public class ListPhoneTagsResponseBody extends TeaModel {
         /**
          * @return skillGroupIdList
          */
-        public java.util.List < String > getSkillGroupIdList() {
+        public java.util.List<String> getSkillGroupIdList() {
             return this.skillGroupIdList;
         }
 
@@ -329,9 +356,29 @@ public class ListPhoneTagsResponseBody extends TeaModel {
             private String provider; 
             private String province; 
             private String serviceTag; 
-            private java.util.List < String > skillGroupIdList; 
+            private java.util.List<String> skillGroupIdList; 
             private Integer type; 
             private String usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.city = model.city;
+                this.concurrency = model.concurrency;
+                this.contactFlowId = model.contactFlowId;
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.phoneNumberDescription = model.phoneNumberDescription;
+                this.phoneNumberId = model.phoneNumberId;
+                this.provider = model.provider;
+                this.province = model.province;
+                this.serviceTag = model.serviceTag;
+                this.skillGroupIdList = model.skillGroupIdList;
+                this.type = model.type;
+                this.usage = model.usage;
+            } 
 
             /**
              * City.
@@ -424,7 +471,7 @@ public class ListPhoneTagsResponseBody extends TeaModel {
             /**
              * SkillGroupIdList.
              */
-            public Builder skillGroupIdList(java.util.List < String > skillGroupIdList) {
+            public Builder skillGroupIdList(java.util.List<String> skillGroupIdList) {
                 this.skillGroupIdList = skillGroupIdList;
                 return this;
             }
@@ -452,17 +499,23 @@ public class ListPhoneTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPhoneTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPhoneTagsResponseBody</p>
+     */
     public static class PhoneNumbers extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PhoneNumbers(Builder builder) {
@@ -483,7 +536,7 @@ public class ListPhoneTagsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -509,15 +562,25 @@ public class ListPhoneTagsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumbers model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

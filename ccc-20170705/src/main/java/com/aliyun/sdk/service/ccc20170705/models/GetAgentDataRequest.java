@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentDataRequest} extends {@link RequestModel}
  *
  * <p>GetAgentDataRequest</p>
  */
 public class GetAgentDataRequest extends Request {
-    @Query
-    @NameInMap("EndDay")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDay")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endDay;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartDay")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDay")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDay;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private GetAgentDataRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class GetAgentDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,18 +123,18 @@ public class GetAgentDataRequest extends Request {
             super();
         } 
 
-        private Builder(GetAgentDataRequest response) {
-            super(response);
-            this.endDay = response.endDay;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startDay = response.startDay;
-            this.userId = response.userId;
+        private Builder(GetAgentDataRequest request) {
+            super(request);
+            this.endDay = request.endDay;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startDay = request.startDay;
+            this.userId = request.userId;
         } 
 
         /**
-         * EndDay.
+         * <p>This parameter is required.</p>
          */
         public Builder endDay(String endDay) {
             this.putQueryParameter("EndDay", endDay);
@@ -138,7 +143,7 @@ public class GetAgentDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +152,7 @@ public class GetAgentDataRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +161,7 @@ public class GetAgentDataRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +170,7 @@ public class GetAgentDataRequest extends Request {
         }
 
         /**
-         * StartDay.
+         * <p>This parameter is required.</p>
          */
         public Builder startDay(String startDay) {
             this.putQueryParameter("StartDay", startDay);

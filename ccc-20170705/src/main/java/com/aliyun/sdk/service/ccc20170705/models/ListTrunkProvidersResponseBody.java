@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrunkProvidersResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrunkProvidersResponseBody</p>
  */
 public class ListTrunkProvidersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TrunkProviders")
-    private java.util.List < TrunkProviders> trunkProviders;
+    @com.aliyun.core.annotation.NameInMap("TrunkProviders")
+    private java.util.List<TrunkProviders> trunkProviders;
 
     private ListTrunkProvidersResponseBody(Builder builder) {
         this.code = builder.code;
@@ -45,6 +50,10 @@ public class ListTrunkProvidersResponseBody extends TeaModel {
 
     public static ListTrunkProvidersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,7 +94,7 @@ public class ListTrunkProvidersResponseBody extends TeaModel {
     /**
      * @return trunkProviders
      */
-    public java.util.List < TrunkProviders> getTrunkProviders() {
+    public java.util.List<TrunkProviders> getTrunkProviders() {
         return this.trunkProviders;
     }
 
@@ -95,7 +104,19 @@ public class ListTrunkProvidersResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TrunkProviders> trunkProviders; 
+        private java.util.List<TrunkProviders> trunkProviders; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrunkProvidersResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.trunkProviders = model.trunkProviders;
+        } 
 
         /**
          * Code.
@@ -140,7 +161,7 @@ public class ListTrunkProvidersResponseBody extends TeaModel {
         /**
          * TrunkProviders.
          */
-        public Builder trunkProviders(java.util.List < TrunkProviders> trunkProviders) {
+        public Builder trunkProviders(java.util.List<TrunkProviders> trunkProviders) {
             this.trunkProviders = trunkProviders;
             return this;
         }
@@ -151,11 +172,17 @@ public class ListTrunkProvidersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrunkProvidersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrunkProvidersResponseBody</p>
+     */
     public static class TrunkProviders extends TeaModel {
-        @NameInMap("ProviderName")
+        @com.aliyun.core.annotation.NameInMap("ProviderName")
         private String providerName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private TrunkProviders(Builder builder) {
@@ -188,6 +215,14 @@ public class ListTrunkProvidersResponseBody extends TeaModel {
         public static final class Builder {
             private String providerName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrunkProviders model) {
+                this.providerName = model.providerName;
+                this.status = model.status;
+            } 
 
             /**
              * ProviderName.

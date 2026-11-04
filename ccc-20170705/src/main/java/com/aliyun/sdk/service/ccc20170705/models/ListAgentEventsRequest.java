@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentEventsRequest} extends {@link RequestModel}
  *
  * <p>ListAgentEventsRequest</p>
  */
 public class ListAgentEventsRequest extends Request {
-    @Query
-    @NameInMap("Event")
-    private java.util.List < String > event;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Event")
+    private java.util.List<String> event;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RamId")
-    @Validation(required = true)
-    private java.util.List < String > ramId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> ramId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("StopTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopTime")
     private Long stopTime;
 
     private ListAgentEventsRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class ListAgentEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +64,7 @@ public class ListAgentEventsRequest extends Request {
     /**
      * @return event
      */
-    public java.util.List < String > getEvent() {
+    public java.util.List<String> getEvent() {
         return this.event;
     }
 
@@ -73,7 +78,7 @@ public class ListAgentEventsRequest extends Request {
     /**
      * @return ramId
      */
-    public java.util.List < String > getRamId() {
+    public java.util.List<String> getRamId() {
         return this.ramId;
     }
 
@@ -92,9 +97,9 @@ public class ListAgentEventsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAgentEventsRequest, Builder> {
-        private java.util.List < String > event; 
+        private java.util.List<String> event; 
         private String instanceId; 
-        private java.util.List < String > ramId; 
+        private java.util.List<String> ramId; 
         private Long startTime; 
         private Long stopTime; 
 
@@ -102,26 +107,26 @@ public class ListAgentEventsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAgentEventsRequest response) {
-            super(response);
-            this.event = response.event;
-            this.instanceId = response.instanceId;
-            this.ramId = response.ramId;
-            this.startTime = response.startTime;
-            this.stopTime = response.stopTime;
+        private Builder(ListAgentEventsRequest request) {
+            super(request);
+            this.event = request.event;
+            this.instanceId = request.instanceId;
+            this.ramId = request.ramId;
+            this.startTime = request.startTime;
+            this.stopTime = request.stopTime;
         } 
 
         /**
          * Event.
          */
-        public Builder event(java.util.List < String > event) {
+        public Builder event(java.util.List<String> event) {
             this.putQueryParameter("Event", event);
             this.event = event;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,9 +135,9 @@ public class ListAgentEventsRequest extends Request {
         }
 
         /**
-         * RamId.
+         * <p>This parameter is required.</p>
          */
-        public Builder ramId(java.util.List < String > ramId) {
+        public Builder ramId(java.util.List<String> ramId) {
             this.putQueryParameter("RamId", ramId);
             this.ramId = ramId;
             return this;

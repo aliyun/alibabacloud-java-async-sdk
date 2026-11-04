@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallDetailRecordsRequest} extends {@link RequestModel}
  *
  * <p>ListCallDetailRecordsRequest</p>
  */
 public class ListCallDetailRecordsRequest extends Request {
-    @Query
-    @NameInMap("ContactDisposition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactDisposition")
     private String contactDisposition;
 
-    @Query
-    @NameInMap("ContactId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactId")
     private String contactId;
 
-    @Query
-    @NameInMap("ContactType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactType")
     private String contactType;
 
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 5000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 5000)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private String phoneNumber;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("StopTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopTime")
     private Long stopTime;
 
-    @Query
-    @NameInMap("WithRecording")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithRecording")
     private Boolean withRecording;
 
     private ListCallDetailRecordsRequest(Builder builder) {
@@ -87,7 +92,7 @@ public class ListCallDetailRecordsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -194,20 +199,20 @@ public class ListCallDetailRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(ListCallDetailRecordsRequest response) {
-            super(response);
-            this.contactDisposition = response.contactDisposition;
-            this.contactId = response.contactId;
-            this.contactType = response.contactType;
-            this.criteria = response.criteria;
-            this.instanceId = response.instanceId;
-            this.orderBy = response.orderBy;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.phoneNumber = response.phoneNumber;
-            this.startTime = response.startTime;
-            this.stopTime = response.stopTime;
-            this.withRecording = response.withRecording;
+        private Builder(ListCallDetailRecordsRequest request) {
+            super(request);
+            this.contactDisposition = request.contactDisposition;
+            this.contactId = request.contactId;
+            this.contactType = request.contactType;
+            this.criteria = request.criteria;
+            this.instanceId = request.instanceId;
+            this.orderBy = request.orderBy;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.phoneNumber = request.phoneNumber;
+            this.startTime = request.startTime;
+            this.stopTime = request.stopTime;
+            this.withRecording = request.withRecording;
         } 
 
         /**
@@ -247,7 +252,7 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -265,7 +270,7 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -274,7 +279,7 @@ public class ListCallDetailRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

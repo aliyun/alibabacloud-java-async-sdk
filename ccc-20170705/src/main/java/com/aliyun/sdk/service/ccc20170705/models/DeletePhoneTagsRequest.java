@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePhoneTagsRequest} extends {@link RequestModel}
  *
  * <p>DeletePhoneTagsRequest</p>
  */
 public class DeletePhoneTagsRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumberList")
-    @Validation(required = true)
-    private java.util.List < String > phoneNumberList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> phoneNumberList;
 
     private DeletePhoneTagsRequest(Builder builder) {
         super(builder);
@@ -36,7 +41,7 @@ public class DeletePhoneTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -51,26 +56,26 @@ public class DeletePhoneTagsRequest extends Request {
     /**
      * @return phoneNumberList
      */
-    public java.util.List < String > getPhoneNumberList() {
+    public java.util.List<String> getPhoneNumberList() {
         return this.phoneNumberList;
     }
 
     public static final class Builder extends Request.Builder<DeletePhoneTagsRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > phoneNumberList; 
+        private java.util.List<String> phoneNumberList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeletePhoneTagsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.phoneNumberList = response.phoneNumberList;
+        private Builder(DeletePhoneTagsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.phoneNumberList = request.phoneNumberList;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,9 +84,9 @@ public class DeletePhoneTagsRequest extends Request {
         }
 
         /**
-         * PhoneNumberList.
+         * <p>This parameter is required.</p>
          */
-        public Builder phoneNumberList(java.util.List < String > phoneNumberList) {
+        public Builder phoneNumberList(java.util.List<String> phoneNumberList) {
             this.putQueryParameter("PhoneNumberList", phoneNumberList);
             this.phoneNumberList = phoneNumberList;
             return this;

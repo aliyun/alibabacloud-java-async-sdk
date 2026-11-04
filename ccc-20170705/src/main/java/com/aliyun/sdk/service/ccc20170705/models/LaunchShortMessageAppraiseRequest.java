@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LaunchShortMessageAppraiseRequest} extends {@link RequestModel}
  *
  * <p>LaunchShortMessageAppraiseRequest</p>
  */
 public class LaunchShortMessageAppraiseRequest extends Request {
-    @Query
-    @NameInMap("Acid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Acid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acid;
 
-    @Query
-    @NameInMap("ContactType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer contactType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumbers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumbers;
 
-    @Query
-    @NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
     private String skillGroupId;
 
     private LaunchShortMessageAppraiseRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class LaunchShortMessageAppraiseRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -104,17 +109,17 @@ public class LaunchShortMessageAppraiseRequest extends Request {
             super();
         } 
 
-        private Builder(LaunchShortMessageAppraiseRequest response) {
-            super(response);
-            this.acid = response.acid;
-            this.contactType = response.contactType;
-            this.instanceId = response.instanceId;
-            this.phoneNumbers = response.phoneNumbers;
-            this.skillGroupId = response.skillGroupId;
+        private Builder(LaunchShortMessageAppraiseRequest request) {
+            super(request);
+            this.acid = request.acid;
+            this.contactType = request.contactType;
+            this.instanceId = request.instanceId;
+            this.phoneNumbers = request.phoneNumbers;
+            this.skillGroupId = request.skillGroupId;
         } 
 
         /**
-         * Acid.
+         * <p>This parameter is required.</p>
          */
         public Builder acid(String acid) {
             this.putQueryParameter("Acid", acid);
@@ -123,7 +128,7 @@ public class LaunchShortMessageAppraiseRequest extends Request {
         }
 
         /**
-         * ContactType.
+         * <p>This parameter is required.</p>
          */
         public Builder contactType(Integer contactType) {
             this.putQueryParameter("ContactType", contactType);
@@ -132,7 +137,7 @@ public class LaunchShortMessageAppraiseRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,7 +146,7 @@ public class LaunchShortMessageAppraiseRequest extends Request {
         }
 
         /**
-         * PhoneNumbers.
+         * <p>This parameter is required.</p>
          */
         public Builder phoneNumbers(String phoneNumbers) {
             this.putQueryParameter("PhoneNumbers", phoneNumbers);

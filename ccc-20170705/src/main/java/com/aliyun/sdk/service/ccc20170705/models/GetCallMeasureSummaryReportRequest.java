@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCallMeasureSummaryReportRequest} extends {@link RequestModel}
  *
  * <p>GetCallMeasureSummaryReportRequest</p>
  */
 public class GetCallMeasureSummaryReportRequest extends Request {
-    @Query
-    @NameInMap("Day")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Day")
     private Integer day;
 
-    @Query
-    @NameInMap("IntervalType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String intervalType;
 
-    @Query
-    @NameInMap("Month")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Month")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer month;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Year")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Year")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer year;
 
     private GetCallMeasureSummaryReportRequest(Builder builder) {
@@ -57,7 +62,7 @@ public class GetCallMeasureSummaryReportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,14 +121,14 @@ public class GetCallMeasureSummaryReportRequest extends Request {
             super();
         } 
 
-        private Builder(GetCallMeasureSummaryReportRequest response) {
-            super(response);
-            this.day = response.day;
-            this.intervalType = response.intervalType;
-            this.month = response.month;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.year = response.year;
+        private Builder(GetCallMeasureSummaryReportRequest request) {
+            super(request);
+            this.day = request.day;
+            this.intervalType = request.intervalType;
+            this.month = request.month;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.year = request.year;
         } 
 
         /**
@@ -136,7 +141,7 @@ public class GetCallMeasureSummaryReportRequest extends Request {
         }
 
         /**
-         * IntervalType.
+         * <p>This parameter is required.</p>
          */
         public Builder intervalType(String intervalType) {
             this.putQueryParameter("IntervalType", intervalType);
@@ -145,7 +150,7 @@ public class GetCallMeasureSummaryReportRequest extends Request {
         }
 
         /**
-         * Month.
+         * <p>This parameter is required.</p>
          */
         public Builder month(Integer month) {
             this.putQueryParameter("Month", month);
@@ -172,7 +177,7 @@ public class GetCallMeasureSummaryReportRequest extends Request {
         }
 
         /**
-         * Year.
+         * <p>This parameter is required.</p>
          */
         public Builder year(Integer year) {
             this.putQueryParameter("Year", year);

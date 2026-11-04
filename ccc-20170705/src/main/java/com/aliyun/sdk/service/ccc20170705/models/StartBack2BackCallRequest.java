@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartBack2BackCallRequest} extends {@link RequestModel}
  *
  * <p>StartBack2BackCallRequest</p>
  */
 public class StartBack2BackCallRequest extends Request {
-    @Query
-    @NameInMap("CallCenterNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallCenterNumber")
     private String callCenterNumber;
 
-    @Query
-    @NameInMap("Callee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callee;
 
-    @Query
-    @NameInMap("Caller")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caller;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("WorkflowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowId")
     private String workflowId;
 
     private StartBack2BackCallRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class StartBack2BackCallRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,13 +108,13 @@ public class StartBack2BackCallRequest extends Request {
             super();
         } 
 
-        private Builder(StartBack2BackCallRequest response) {
-            super(response);
-            this.callCenterNumber = response.callCenterNumber;
-            this.callee = response.callee;
-            this.caller = response.caller;
-            this.instanceId = response.instanceId;
-            this.workflowId = response.workflowId;
+        private Builder(StartBack2BackCallRequest request) {
+            super(request);
+            this.callCenterNumber = request.callCenterNumber;
+            this.callee = request.callee;
+            this.caller = request.caller;
+            this.instanceId = request.instanceId;
+            this.workflowId = request.workflowId;
         } 
 
         /**
@@ -122,7 +127,7 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
-         * Callee.
+         * <p>This parameter is required.</p>
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -131,7 +136,7 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>This parameter is required.</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -140,7 +145,7 @@ public class StartBack2BackCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserByExtensionResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserByExtensionResponseBody</p>
  */
 public class GetUserByExtensionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private GetUserByExtensionResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetUserByExtensionResponseBody extends TeaModel {
 
     public static GetUserByExtensionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetUserByExtensionResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private User user; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserByExtensionResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.user = model.user;
+        } 
 
         /**
          * Code.
@@ -151,23 +172,29 @@ public class GetUserByExtensionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserByExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserByExtensionResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("Department")
+        @com.aliyun.core.annotation.NameInMap("Department")
         private String department;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
         private Detail(Builder builder) {
@@ -237,6 +264,18 @@ public class GetUserByExtensionResponseBody extends TeaModel {
             private String loginName; 
             private String phone; 
 
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.department = model.department;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.extension = model.extension;
+                this.loginName = model.loginName;
+                this.phone = model.phone;
+            } 
+
             /**
              * Department.
              */
@@ -292,17 +331,23 @@ public class GetUserByExtensionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserByExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserByExtensionResponseBody</p>
+     */
     public static class Roles extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RoleDescription")
+        @com.aliyun.core.annotation.NameInMap("RoleDescription")
         private String roleDescription;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private Roles(Builder builder) {
@@ -354,6 +399,16 @@ public class GetUserByExtensionResponseBody extends TeaModel {
             private String roleId; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.instanceId = model.instanceId;
+                this.roleDescription = model.roleDescription;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * InstanceId.
              */
@@ -393,17 +448,23 @@ public class GetUserByExtensionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserByExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserByExtensionResponseBody</p>
+     */
     public static class Skill extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("SkillGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupDescription")
         private String skillGroupDescription;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
         private Skill(Builder builder) {
@@ -455,6 +516,16 @@ public class GetUserByExtensionResponseBody extends TeaModel {
             private String skillGroupId; 
             private String skillGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Skill model) {
+                this.instanceId = model.instanceId;
+                this.skillGroupDescription = model.skillGroupDescription;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+            } 
+
             /**
              * InstanceId.
              */
@@ -494,14 +565,20 @@ public class GetUserByExtensionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserByExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserByExtensionResponseBody</p>
+     */
     public static class SkillLevels extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Integer level;
 
-        @NameInMap("Skill")
+        @com.aliyun.core.annotation.NameInMap("Skill")
         private Skill skill;
 
-        @NameInMap("SkillLevelId")
+        @com.aliyun.core.annotation.NameInMap("SkillLevelId")
         private String skillLevelId;
 
         private SkillLevels(Builder builder) {
@@ -544,6 +621,15 @@ public class GetUserByExtensionResponseBody extends TeaModel {
             private Skill skill; 
             private String skillLevelId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillLevels model) {
+                this.level = model.level;
+                this.skill = model.skill;
+                this.skillLevelId = model.skillLevelId;
+            } 
+
             /**
              * Level.
              */
@@ -575,23 +661,29 @@ public class GetUserByExtensionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserByExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserByExtensionResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Detail detail;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private String ramId;
 
-        @NameInMap("Roles")
-        private java.util.List < Roles> roles;
+        @com.aliyun.core.annotation.NameInMap("Roles")
+        private java.util.List<Roles> roles;
 
-        @NameInMap("SkillLevels")
-        private java.util.List < SkillLevels> skillLevels;
+        @com.aliyun.core.annotation.NameInMap("SkillLevels")
+        private java.util.List<SkillLevels> skillLevels;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private User(Builder builder) {
@@ -635,14 +727,14 @@ public class GetUserByExtensionResponseBody extends TeaModel {
         /**
          * @return roles
          */
-        public java.util.List < Roles> getRoles() {
+        public java.util.List<Roles> getRoles() {
             return this.roles;
         }
 
         /**
          * @return skillLevels
          */
-        public java.util.List < SkillLevels> getSkillLevels() {
+        public java.util.List<SkillLevels> getSkillLevels() {
             return this.skillLevels;
         }
 
@@ -657,9 +749,21 @@ public class GetUserByExtensionResponseBody extends TeaModel {
             private Detail detail; 
             private String instanceId; 
             private String ramId; 
-            private java.util.List < Roles> roles; 
-            private java.util.List < SkillLevels> skillLevels; 
+            private java.util.List<Roles> roles; 
+            private java.util.List<SkillLevels> skillLevels; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.detail = model.detail;
+                this.instanceId = model.instanceId;
+                this.ramId = model.ramId;
+                this.roles = model.roles;
+                this.skillLevels = model.skillLevels;
+                this.userId = model.userId;
+            } 
 
             /**
              * Detail.
@@ -688,7 +792,7 @@ public class GetUserByExtensionResponseBody extends TeaModel {
             /**
              * Roles.
              */
-            public Builder roles(java.util.List < Roles> roles) {
+            public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
                 return this;
             }
@@ -696,7 +800,7 @@ public class GetUserByExtensionResponseBody extends TeaModel {
             /**
              * SkillLevels.
              */
-            public Builder skillLevels(java.util.List < SkillLevels> skillLevels) {
+            public Builder skillLevels(java.util.List<SkillLevels> skillLevels) {
                 this.skillLevels = skillLevels;
                 return this;
             }

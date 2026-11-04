@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitContactFlowVersionModificationResponseBody} extends {@link TeaModel}
  *
  * <p>CommitContactFlowVersionModificationResponseBody</p>
  */
 public class CommitContactFlowVersionModificationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ContactFlowVersion")
+    @com.aliyun.core.annotation.NameInMap("ContactFlowVersion")
     private ContactFlowVersion contactFlowVersion;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CommitContactFlowVersionModificationResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class CommitContactFlowVersionModificationResponseBody extends TeaModel {
 
     public static CommitContactFlowVersionModificationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class CommitContactFlowVersionModificationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CommitContactFlowVersionModificationResponseBody model) {
+            this.code = model.code;
+            this.contactFlowVersion = model.contactFlowVersion;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,32 +172,38 @@ public class CommitContactFlowVersionModificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CommitContactFlowVersionModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CommitContactFlowVersionModificationResponseBody</p>
+     */
     public static class ContactFlowVersion extends TeaModel {
-        @NameInMap("Canvas")
+        @com.aliyun.core.annotation.NameInMap("Canvas")
         private String canvas;
 
-        @NameInMap("ContactFlowVersionDescription")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowVersionDescription")
         private String contactFlowVersionDescription;
 
-        @NameInMap("ContactFlowVersionId")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowVersionId")
         private String contactFlowVersionId;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
-        @NameInMap("LastModifiedBy")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedBy")
         private String lastModifiedBy;
 
-        @NameInMap("LockedBy")
+        @com.aliyun.core.annotation.NameInMap("LockedBy")
         private String lockedBy;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ContactFlowVersion(Builder builder) {
@@ -272,6 +299,21 @@ public class CommitContactFlowVersionModificationResponseBody extends TeaModel {
             private String lockedBy; 
             private String status; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactFlowVersion model) {
+                this.canvas = model.canvas;
+                this.contactFlowVersionDescription = model.contactFlowVersionDescription;
+                this.contactFlowVersionId = model.contactFlowVersionId;
+                this.content = model.content;
+                this.lastModified = model.lastModified;
+                this.lastModifiedBy = model.lastModifiedBy;
+                this.lockedBy = model.lockedBy;
+                this.status = model.status;
+                this.version = model.version;
+            } 
 
             /**
              * Canvas.

@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Query
-    @NameInMap("AdminRamId")
-    private java.util.List < String > adminRamId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdminRamId")
+    private java.util.List<String> adminRamId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private String phoneNumber;
 
-    @Query
-    @NameInMap("PhoneNumbers")
-    private java.util.List < String > phoneNumbers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
+    private java.util.List<String> phoneNumbers;
 
-    @Query
-    @NameInMap("StorageMaxDays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageMaxDays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer storageMaxDays;
 
-    @Query
-    @NameInMap("StorageMaxSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageMaxSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer storageMaxSize;
 
-    @Query
-    @NameInMap("UserObject")
-    private java.util.List < String > userObject;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserObject")
+    private java.util.List<String> userObject;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
@@ -78,7 +83,7 @@ public class CreateInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,7 +91,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return adminRamId
      */
-    public java.util.List < String > getAdminRamId() {
+    public java.util.List<String> getAdminRamId() {
         return this.adminRamId;
     }
 
@@ -128,7 +133,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return phoneNumbers
      */
-    public java.util.List < String > getPhoneNumbers() {
+    public java.util.List<String> getPhoneNumbers() {
         return this.phoneNumbers;
     }
 
@@ -149,44 +154,44 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return userObject
      */
-    public java.util.List < String > getUserObject() {
+    public java.util.List<String> getUserObject() {
         return this.userObject;
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
-        private java.util.List < String > adminRamId; 
+        private java.util.List<String> adminRamId; 
         private String description; 
         private String directoryId; 
         private String domainName; 
         private String name; 
         private String phoneNumber; 
-        private java.util.List < String > phoneNumbers; 
+        private java.util.List<String> phoneNumbers; 
         private Integer storageMaxDays; 
         private Integer storageMaxSize; 
-        private java.util.List < String > userObject; 
+        private java.util.List<String> userObject; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateInstanceRequest response) {
-            super(response);
-            this.adminRamId = response.adminRamId;
-            this.description = response.description;
-            this.directoryId = response.directoryId;
-            this.domainName = response.domainName;
-            this.name = response.name;
-            this.phoneNumber = response.phoneNumber;
-            this.phoneNumbers = response.phoneNumbers;
-            this.storageMaxDays = response.storageMaxDays;
-            this.storageMaxSize = response.storageMaxSize;
-            this.userObject = response.userObject;
+        private Builder(CreateInstanceRequest request) {
+            super(request);
+            this.adminRamId = request.adminRamId;
+            this.description = request.description;
+            this.directoryId = request.directoryId;
+            this.domainName = request.domainName;
+            this.name = request.name;
+            this.phoneNumber = request.phoneNumber;
+            this.phoneNumbers = request.phoneNumbers;
+            this.storageMaxDays = request.storageMaxDays;
+            this.storageMaxSize = request.storageMaxSize;
+            this.userObject = request.userObject;
         } 
 
         /**
          * AdminRamId.
          */
-        public Builder adminRamId(java.util.List < String > adminRamId) {
+        public Builder adminRamId(java.util.List<String> adminRamId) {
             this.putQueryParameter("AdminRamId", adminRamId);
             this.adminRamId = adminRamId;
             return this;
@@ -211,7 +216,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -220,7 +225,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -240,14 +245,14 @@ public class CreateInstanceRequest extends Request {
         /**
          * PhoneNumbers.
          */
-        public Builder phoneNumbers(java.util.List < String > phoneNumbers) {
+        public Builder phoneNumbers(java.util.List<String> phoneNumbers) {
             this.putQueryParameter("PhoneNumbers", phoneNumbers);
             this.phoneNumbers = phoneNumbers;
             return this;
         }
 
         /**
-         * StorageMaxDays.
+         * <p>This parameter is required.</p>
          */
         public Builder storageMaxDays(Integer storageMaxDays) {
             this.putQueryParameter("StorageMaxDays", storageMaxDays);
@@ -256,7 +261,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * StorageMaxSize.
+         * <p>This parameter is required.</p>
          */
         public Builder storageMaxSize(Integer storageMaxSize) {
             this.putQueryParameter("StorageMaxSize", storageMaxSize);
@@ -267,7 +272,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * UserObject.
          */
-        public Builder userObject(java.util.List < String > userObject) {
+        public Builder userObject(java.util.List<String> userObject) {
             this.putQueryParameter("UserObject", userObject);
             this.userObject = userObject;
             return this;

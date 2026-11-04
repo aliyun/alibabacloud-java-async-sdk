@@ -1,100 +1,105 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFaultRequest} extends {@link RequestModel}
  *
  * <p>CreateFaultRequest</p>
  */
 public class CreateFaultRequest extends Request {
-    @Query
-    @NameInMap("AgentFilePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentFilePath")
     private String agentFilePath;
 
-    @Query
-    @NameInMap("AgentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long agentId;
 
-    @Query
-    @NameInMap("AgentOssFileName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentOssFileName")
     private String agentOssFileName;
 
-    @Query
-    @NameInMap("BrowserVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BrowserVersion")
     private String browserVersion;
 
-    @Query
-    @NameInMap("ClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIp")
     private String clientIp;
 
-    @Query
-    @NameInMap("ClientPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientPort")
     private String clientPort;
 
-    @Query
-    @NameInMap("ConnectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectId;
 
-    @Query
-    @NameInMap("CustomFilePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFilePath")
     private String customFilePath;
 
-    @Query
-    @NameInMap("CustomOssFileName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomOssFileName")
     private String customOssFileName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MicrophoneEquipment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MicrophoneEquipment")
     private String microphoneEquipment;
 
-    @Query
-    @NameInMap("MicrophoneList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MicrophoneList")
     private String microphoneList;
 
-    @Query
-    @NameInMap("OperatingSystemVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperatingSystemVersion")
     private String operatingSystemVersion;
 
-    @Query
-    @NameInMap("ServiceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceIp")
     private String serviceIp;
 
-    @Query
-    @NameInMap("ServicePort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicePort")
     private String servicePort;
 
-    @Query
-    @NameInMap("SpeakerEquipment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeakerEquipment")
     private String speakerEquipment;
 
-    @Query
-    @NameInMap("SpeakerList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeakerList")
     private String speakerList;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private CreateFaultRequest(Builder builder) {
@@ -129,7 +134,7 @@ public class CreateFaultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -300,28 +305,28 @@ public class CreateFaultRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFaultRequest response) {
-            super(response);
-            this.agentFilePath = response.agentFilePath;
-            this.agentId = response.agentId;
-            this.agentOssFileName = response.agentOssFileName;
-            this.browserVersion = response.browserVersion;
-            this.clientIp = response.clientIp;
-            this.clientPort = response.clientPort;
-            this.connectId = response.connectId;
-            this.customFilePath = response.customFilePath;
-            this.customOssFileName = response.customOssFileName;
-            this.description = response.description;
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.microphoneEquipment = response.microphoneEquipment;
-            this.microphoneList = response.microphoneList;
-            this.operatingSystemVersion = response.operatingSystemVersion;
-            this.serviceIp = response.serviceIp;
-            this.servicePort = response.servicePort;
-            this.speakerEquipment = response.speakerEquipment;
-            this.speakerList = response.speakerList;
-            this.startTime = response.startTime;
+        private Builder(CreateFaultRequest request) {
+            super(request);
+            this.agentFilePath = request.agentFilePath;
+            this.agentId = request.agentId;
+            this.agentOssFileName = request.agentOssFileName;
+            this.browserVersion = request.browserVersion;
+            this.clientIp = request.clientIp;
+            this.clientPort = request.clientPort;
+            this.connectId = request.connectId;
+            this.customFilePath = request.customFilePath;
+            this.customOssFileName = request.customOssFileName;
+            this.description = request.description;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.microphoneEquipment = request.microphoneEquipment;
+            this.microphoneList = request.microphoneList;
+            this.operatingSystemVersion = request.operatingSystemVersion;
+            this.serviceIp = request.serviceIp;
+            this.servicePort = request.servicePort;
+            this.speakerEquipment = request.speakerEquipment;
+            this.speakerList = request.speakerList;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -334,7 +339,7 @@ public class CreateFaultRequest extends Request {
         }
 
         /**
-         * AgentId.
+         * <p>This parameter is required.</p>
          */
         public Builder agentId(Long agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -379,7 +384,7 @@ public class CreateFaultRequest extends Request {
         }
 
         /**
-         * ConnectId.
+         * <p>This parameter is required.</p>
          */
         public Builder connectId(String connectId) {
             this.putQueryParameter("ConnectId", connectId);
@@ -415,7 +420,7 @@ public class CreateFaultRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -424,7 +429,7 @@ public class CreateFaultRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -496,7 +501,7 @@ public class CreateFaultRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveWebRTCStatsResponseBody} extends {@link TeaModel}
  *
  * <p>SaveWebRTCStatsResponseBody</p>
  */
 public class SaveWebRTCStatsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RowCount")
+    @com.aliyun.core.annotation.NameInMap("RowCount")
     private Long rowCount;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SaveWebRTCStatsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
 
     public static SaveWebRTCStatsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         private String requestId; 
         private Long rowCount; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(SaveWebRTCStatsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.rowCount = model.rowCount;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

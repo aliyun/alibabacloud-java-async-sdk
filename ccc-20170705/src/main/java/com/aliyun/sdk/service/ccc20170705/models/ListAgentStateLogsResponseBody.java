@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentStateLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentStateLogsResponseBody</p>
  */
 public class ListAgentStateLogsResponseBody extends TeaModel {
-    @NameInMap("AgentStateLogPage")
+    @com.aliyun.core.annotation.NameInMap("AgentStateLogPage")
     private AgentStateLogPage agentStateLogPage;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAgentStateLogsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
 
     public static ListAgentStateLogsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentStateLogsResponseBody model) {
+            this.agentStateLogPage = model.agentStateLogPage;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AgentStateLogPage.
@@ -151,32 +172,38 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentStateLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentStateLogsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("ConnectId")
+        @com.aliyun.core.annotation.NameInMap("ConnectId")
         private String connectId;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("CounterParty")
+        @com.aliyun.core.annotation.NameInMap("CounterParty")
         private String counterParty;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private Long ramId;
 
-        @NameInMap("SkillGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupIds")
         private String skillGroupIds;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StateCode")
+        @com.aliyun.core.annotation.NameInMap("StateCode")
         private String stateCode;
 
-        @NameInMap("StateTime")
+        @com.aliyun.core.annotation.NameInMap("StateTime")
         private Long stateTime;
 
         private List(Builder builder) {
@@ -273,6 +300,21 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             private String stateCode; 
             private Long stateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.connectId = model.connectId;
+                this.contactId = model.contactId;
+                this.counterParty = model.counterParty;
+                this.instanceId = model.instanceId;
+                this.ramId = model.ramId;
+                this.skillGroupIds = model.skillGroupIds;
+                this.state = model.state;
+                this.stateCode = model.stateCode;
+                this.stateTime = model.stateTime;
+            } 
+
             /**
              * ConnectId.
              */
@@ -352,17 +394,23 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentStateLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentStateLogsResponseBody</p>
+     */
     public static class AgentStateLogPage extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private AgentStateLogPage(Builder builder) {
@@ -383,7 +431,7 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -409,15 +457,25 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(AgentStateLogPage model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

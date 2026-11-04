@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListConfigResponseBody</p>
  */
 public class ListConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ConfigItems")
+    @com.aliyun.core.annotation.NameInMap("ConfigItems")
     private ConfigItems configItems;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListConfigResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListConfigResponseBody extends TeaModel {
 
     public static ListConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConfigResponseBody model) {
+            this.code = model.code;
+            this.configItems = model.configItems;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,11 +172,17 @@ public class ListConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConfigResponseBody</p>
+     */
     public static class ConfigItem extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ConfigItem(Builder builder) {
@@ -189,6 +216,14 @@ public class ListConfigResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigItem model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * Name.
              */
@@ -212,9 +247,15 @@ public class ListConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConfigResponseBody</p>
+     */
     public static class ConfigItems extends TeaModel {
-        @NameInMap("ConfigItem")
-        private java.util.List < ConfigItem> configItem;
+        @com.aliyun.core.annotation.NameInMap("ConfigItem")
+        private java.util.List<ConfigItem> configItem;
 
         private ConfigItems(Builder builder) {
             this.configItem = builder.configItem;
@@ -231,17 +272,24 @@ public class ListConfigResponseBody extends TeaModel {
         /**
          * @return configItem
          */
-        public java.util.List < ConfigItem> getConfigItem() {
+        public java.util.List<ConfigItem> getConfigItem() {
             return this.configItem;
         }
 
         public static final class Builder {
-            private java.util.List < ConfigItem> configItem; 
+            private java.util.List<ConfigItem> configItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigItems model) {
+                this.configItem = model.configItem;
+            } 
 
             /**
              * ConfigItem.
              */
-            public Builder configItem(java.util.List < ConfigItem> configItem) {
+            public Builder configItem(java.util.List<ConfigItem> configItem) {
                 this.configItem = configItem;
                 return this;
             }

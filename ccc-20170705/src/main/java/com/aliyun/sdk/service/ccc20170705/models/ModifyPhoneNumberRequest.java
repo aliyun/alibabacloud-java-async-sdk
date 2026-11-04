@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPhoneNumberRequest} extends {@link RequestModel}
  *
  * <p>ModifyPhoneNumberRequest</p>
  */
 public class ModifyPhoneNumberRequest extends Request {
-    @Query
-    @NameInMap("ContactFlowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
     private String contactFlowId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumberId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumberId;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    private java.util.List < String > skillGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    private java.util.List<String> skillGroupId;
 
-    @Query
-    @NameInMap("Usage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Usage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String usage;
 
     private ModifyPhoneNumberRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class ModifyPhoneNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +86,7 @@ public class ModifyPhoneNumberRequest extends Request {
     /**
      * @return skillGroupId
      */
-    public java.util.List < String > getSkillGroupId() {
+    public java.util.List<String> getSkillGroupId() {
         return this.skillGroupId;
     }
 
@@ -96,20 +101,20 @@ public class ModifyPhoneNumberRequest extends Request {
         private String contactFlowId; 
         private String instanceId; 
         private String phoneNumberId; 
-        private java.util.List < String > skillGroupId; 
+        private java.util.List<String> skillGroupId; 
         private String usage; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyPhoneNumberRequest response) {
-            super(response);
-            this.contactFlowId = response.contactFlowId;
-            this.instanceId = response.instanceId;
-            this.phoneNumberId = response.phoneNumberId;
-            this.skillGroupId = response.skillGroupId;
-            this.usage = response.usage;
+        private Builder(ModifyPhoneNumberRequest request) {
+            super(request);
+            this.contactFlowId = request.contactFlowId;
+            this.instanceId = request.instanceId;
+            this.phoneNumberId = request.phoneNumberId;
+            this.skillGroupId = request.skillGroupId;
+            this.usage = request.usage;
         } 
 
         /**
@@ -122,7 +127,7 @@ public class ModifyPhoneNumberRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,7 +136,7 @@ public class ModifyPhoneNumberRequest extends Request {
         }
 
         /**
-         * PhoneNumberId.
+         * <p>This parameter is required.</p>
          */
         public Builder phoneNumberId(String phoneNumberId) {
             this.putQueryParameter("PhoneNumberId", phoneNumberId);
@@ -142,14 +147,14 @@ public class ModifyPhoneNumberRequest extends Request {
         /**
          * SkillGroupId.
          */
-        public Builder skillGroupId(java.util.List < String > skillGroupId) {
+        public Builder skillGroupId(java.util.List<String> skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
             this.skillGroupId = skillGroupId;
             return this;
         }
 
         /**
-         * Usage.
+         * <p>This parameter is required.</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);

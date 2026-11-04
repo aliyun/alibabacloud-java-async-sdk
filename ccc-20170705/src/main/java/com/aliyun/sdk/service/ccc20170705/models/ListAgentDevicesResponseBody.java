@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentDevicesResponseBody</p>
  */
 public class ListAgentDevicesResponseBody extends TeaModel {
-    @NameInMap("AgentDeviceList")
+    @com.aliyun.core.annotation.NameInMap("AgentDeviceList")
     private AgentDeviceList agentDeviceList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAgentDevicesResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListAgentDevicesResponseBody extends TeaModel {
 
     public static ListAgentDevicesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListAgentDevicesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentDevicesResponseBody model) {
+            this.agentDeviceList = model.agentDeviceList;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AgentDeviceList.
@@ -151,29 +172,35 @@ public class ListAgentDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentDevicesResponseBody</p>
+     */
     public static class AgentDevice extends TeaModel {
-        @NameInMap("BrowserVersion")
+        @com.aliyun.core.annotation.NameInMap("BrowserVersion")
         private String browserVersion;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ClientPort")
+        @com.aliyun.core.annotation.NameInMap("ClientPort")
         private String clientPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IsLogin")
+        @com.aliyun.core.annotation.NameInMap("IsLogin")
         private Integer isLogin;
 
-        @NameInMap("LoginTime")
+        @com.aliyun.core.annotation.NameInMap("LoginTime")
         private Long loginTime;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private Long ramId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private AgentDevice(Builder builder) {
@@ -261,6 +288,20 @@ public class ListAgentDevicesResponseBody extends TeaModel {
             private Long ramId; 
             private String remark; 
 
+            private Builder() {
+            } 
+
+            private Builder(AgentDevice model) {
+                this.browserVersion = model.browserVersion;
+                this.clientIp = model.clientIp;
+                this.clientPort = model.clientPort;
+                this.instanceId = model.instanceId;
+                this.isLogin = model.isLogin;
+                this.loginTime = model.loginTime;
+                this.ramId = model.ramId;
+                this.remark = model.remark;
+            } 
+
             /**
              * BrowserVersion.
              */
@@ -332,9 +373,15 @@ public class ListAgentDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentDevicesResponseBody</p>
+     */
     public static class AgentDeviceList extends TeaModel {
-        @NameInMap("AgentDevice")
-        private java.util.List < AgentDevice> agentDevice;
+        @com.aliyun.core.annotation.NameInMap("AgentDevice")
+        private java.util.List<AgentDevice> agentDevice;
 
         private AgentDeviceList(Builder builder) {
             this.agentDevice = builder.agentDevice;
@@ -351,17 +398,24 @@ public class ListAgentDevicesResponseBody extends TeaModel {
         /**
          * @return agentDevice
          */
-        public java.util.List < AgentDevice> getAgentDevice() {
+        public java.util.List<AgentDevice> getAgentDevice() {
             return this.agentDevice;
         }
 
         public static final class Builder {
-            private java.util.List < AgentDevice> agentDevice; 
+            private java.util.List<AgentDevice> agentDevice; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentDeviceList model) {
+                this.agentDevice = model.agentDevice;
+            } 
 
             /**
              * AgentDevice.
              */
-            public Builder agentDevice(java.util.List < AgentDevice> agentDevice) {
+            public Builder agentDevice(java.util.List<AgentDevice> agentDevice) {
                 this.agentDevice = agentDevice;
                 return this;
             }

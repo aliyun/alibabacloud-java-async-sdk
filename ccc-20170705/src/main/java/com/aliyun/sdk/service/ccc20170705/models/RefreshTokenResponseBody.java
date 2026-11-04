@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshTokenResponseBody} extends {@link TeaModel}
  *
  * <p>RefreshTokenResponseBody</p>
  */
 public class RefreshTokenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.NameInMap("Token")
     private Token token;
 
     private RefreshTokenResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class RefreshTokenResponseBody extends TeaModel {
 
     public static RefreshTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class RefreshTokenResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Token token; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefreshTokenResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.token = model.token;
+        } 
 
         /**
          * Code.
@@ -151,11 +172,17 @@ public class RefreshTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RefreshTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefreshTokenResponseBody</p>
+     */
     public static class Token extends TeaModel {
-        @NameInMap("SignData")
+        @com.aliyun.core.annotation.NameInMap("SignData")
         private String signData;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
         private Token(Builder builder) {
@@ -188,6 +215,14 @@ public class RefreshTokenResponseBody extends TeaModel {
         public static final class Builder {
             private String signData; 
             private String signature; 
+
+            private Builder() {
+            } 
+
+            private Builder(Token model) {
+                this.signData = model.signData;
+                this.signature = model.signature;
+            } 
 
             /**
              * SignData.

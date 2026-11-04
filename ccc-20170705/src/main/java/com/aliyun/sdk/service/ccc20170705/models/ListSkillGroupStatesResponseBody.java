@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSkillGroupStatesResponseBody</p>
  */
 public class ListSkillGroupStatesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSkillGroupStatesResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
 
     public static ListSkillGroupStatesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSkillGroupStatesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,35 +172,41 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupStatesResponseBody</p>
+     */
     public static class RealTimeSkillGroupState extends TeaModel {
-        @NameInMap("BreakingAgents")
+        @com.aliyun.core.annotation.NameInMap("BreakingAgents")
         private Long breakingAgents;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LoggedInAgents")
+        @com.aliyun.core.annotation.NameInMap("LoggedInAgents")
         private Long loggedInAgents;
 
-        @NameInMap("LongestCall")
+        @com.aliyun.core.annotation.NameInMap("LongestCall")
         private Long longestCall;
 
-        @NameInMap("ReadyAgents")
+        @com.aliyun.core.annotation.NameInMap("ReadyAgents")
         private Long readyAgents;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
-        @NameInMap("TalkingAgents")
+        @com.aliyun.core.annotation.NameInMap("TalkingAgents")
         private Long talkingAgents;
 
-        @NameInMap("WaitingCalls")
+        @com.aliyun.core.annotation.NameInMap("WaitingCalls")
         private Long waitingCalls;
 
-        @NameInMap("WorkingAgents")
+        @com.aliyun.core.annotation.NameInMap("WorkingAgents")
         private Long workingAgents;
 
         private RealTimeSkillGroupState(Builder builder) {
@@ -285,6 +312,22 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             private Long waitingCalls; 
             private Long workingAgents; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealTimeSkillGroupState model) {
+                this.breakingAgents = model.breakingAgents;
+                this.instanceId = model.instanceId;
+                this.loggedInAgents = model.loggedInAgents;
+                this.longestCall = model.longestCall;
+                this.readyAgents = model.readyAgents;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.talkingAgents = model.talkingAgents;
+                this.waitingCalls = model.waitingCalls;
+                this.workingAgents = model.workingAgents;
+            } 
+
             /**
              * BreakingAgents.
              */
@@ -372,9 +415,15 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupStatesResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("RealTimeSkillGroupState")
-        private java.util.List < RealTimeSkillGroupState> realTimeSkillGroupState;
+        @com.aliyun.core.annotation.NameInMap("RealTimeSkillGroupState")
+        private java.util.List<RealTimeSkillGroupState> realTimeSkillGroupState;
 
         private List(Builder builder) {
             this.realTimeSkillGroupState = builder.realTimeSkillGroupState;
@@ -391,17 +440,24 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         /**
          * @return realTimeSkillGroupState
          */
-        public java.util.List < RealTimeSkillGroupState> getRealTimeSkillGroupState() {
+        public java.util.List<RealTimeSkillGroupState> getRealTimeSkillGroupState() {
             return this.realTimeSkillGroupState;
         }
 
         public static final class Builder {
-            private java.util.List < RealTimeSkillGroupState> realTimeSkillGroupState; 
+            private java.util.List<RealTimeSkillGroupState> realTimeSkillGroupState; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.realTimeSkillGroupState = model.realTimeSkillGroupState;
+            } 
 
             /**
              * RealTimeSkillGroupState.
              */
-            public Builder realTimeSkillGroupState(java.util.List < RealTimeSkillGroupState> realTimeSkillGroupState) {
+            public Builder realTimeSkillGroupState(java.util.List<RealTimeSkillGroupState> realTimeSkillGroupState) {
                 this.realTimeSkillGroupState = realTimeSkillGroupState;
                 return this;
             }
@@ -413,17 +469,23 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupStatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -474,6 +536,16 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

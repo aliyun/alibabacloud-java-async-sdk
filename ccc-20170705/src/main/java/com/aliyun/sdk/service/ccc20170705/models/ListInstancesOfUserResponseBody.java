@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesOfUserResponseBody</p>
  */
 public class ListInstancesOfUserResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListInstancesOfUserResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
 
     public static ListInstancesOfUserResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesOfUserResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.instances = model.instances;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,20 +172,26 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("Department")
+        @com.aliyun.core.annotation.NameInMap("Department")
         private String department;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
         private Detail(Builder builder) {
@@ -225,6 +252,17 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private String loginName; 
             private String phone; 
 
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.department = model.department;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.loginName = model.loginName;
+                this.phone = model.phone;
+            } 
+
             /**
              * Department.
              */
@@ -272,17 +310,23 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Detail detail;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private String ramId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private User(Builder builder) {
@@ -334,6 +378,16 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private String ramId; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.detail = model.detail;
+                this.instanceId = model.instanceId;
+                this.ramId = model.ramId;
+                this.userId = model.userId;
+            } 
+
             /**
              * Detail.
              */
@@ -373,9 +427,15 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class Admin extends TeaModel {
-        @NameInMap("User")
-        private java.util.List < User> user;
+        @com.aliyun.core.annotation.NameInMap("User")
+        private java.util.List<User> user;
 
         private Admin(Builder builder) {
             this.user = builder.user;
@@ -392,17 +452,24 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         /**
          * @return user
          */
-        public java.util.List < User> getUser() {
+        public java.util.List<User> getUser() {
             return this.user;
         }
 
         public static final class Builder {
-            private java.util.List < User> user; 
+            private java.util.List<User> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Admin model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.
              */
-            public Builder user(java.util.List < User> user) {
+            public Builder user(java.util.List<User> user) {
                 this.user = user;
                 return this;
             }
@@ -414,32 +481,38 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class PhoneNumber extends TeaModel {
-        @NameInMap("AllowOutbound")
+        @com.aliyun.core.annotation.NameInMap("AllowOutbound")
         private Boolean allowOutbound;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("PhoneNumberDescription")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberDescription")
         private String phoneNumberDescription;
 
-        @NameInMap("PhoneNumberId")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
         private String phoneNumberId;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private Integer remainingTime;
 
-        @NameInMap("TestOnly")
+        @com.aliyun.core.annotation.NameInMap("TestOnly")
         private Boolean testOnly;
 
-        @NameInMap("Trunks")
+        @com.aliyun.core.annotation.NameInMap("Trunks")
         private Integer trunks;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private PhoneNumber(Builder builder) {
@@ -536,6 +609,21 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private Integer trunks; 
             private String usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumber model) {
+                this.allowOutbound = model.allowOutbound;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.phoneNumberDescription = model.phoneNumberDescription;
+                this.phoneNumberId = model.phoneNumberId;
+                this.remainingTime = model.remainingTime;
+                this.testOnly = model.testOnly;
+                this.trunks = model.trunks;
+                this.usage = model.usage;
+            } 
+
             /**
              * AllowOutbound.
              */
@@ -615,9 +703,15 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class PhoneNumbers extends TeaModel {
-        @NameInMap("PhoneNumber")
-        private java.util.List < PhoneNumber> phoneNumber;
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+        private java.util.List<PhoneNumber> phoneNumber;
 
         private PhoneNumbers(Builder builder) {
             this.phoneNumber = builder.phoneNumber;
@@ -634,17 +728,24 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         /**
          * @return phoneNumber
          */
-        public java.util.List < PhoneNumber> getPhoneNumber() {
+        public java.util.List<PhoneNumber> getPhoneNumber() {
             return this.phoneNumber;
         }
 
         public static final class Builder {
-            private java.util.List < PhoneNumber> phoneNumber; 
+            private java.util.List<PhoneNumber> phoneNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumbers model) {
+                this.phoneNumber = model.phoneNumber;
+            } 
 
             /**
              * PhoneNumber.
              */
-            public Builder phoneNumber(java.util.List < PhoneNumber> phoneNumber) {
+            public Builder phoneNumber(java.util.List<PhoneNumber> phoneNumber) {
                 this.phoneNumber = phoneNumber;
                 return this;
             }
@@ -656,53 +757,59 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class CallCenterInstance extends TeaModel {
-        @NameInMap("Admin")
+        @com.aliyun.core.annotation.NameInMap("Admin")
         private Admin admin;
 
-        @NameInMap("ConsoleUrl")
+        @com.aliyun.core.annotation.NameInMap("ConsoleUrl")
         private String consoleUrl;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("MaxOnlineAgents")
+        @com.aliyun.core.annotation.NameInMap("MaxOnlineAgents")
         private Integer maxOnlineAgents;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("PhoneNumbers")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
         private PhoneNumbers phoneNumbers;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageBucket")
+        @com.aliyun.core.annotation.NameInMap("StorageBucket")
         private String storageBucket;
 
-        @NameInMap("StorageMaxDays")
+        @com.aliyun.core.annotation.NameInMap("StorageMaxDays")
         private Integer storageMaxDays;
 
-        @NameInMap("StorageMaxSize")
+        @com.aliyun.core.annotation.NameInMap("StorageMaxSize")
         private Integer storageMaxSize;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
         private CallCenterInstance(Builder builder) {
@@ -862,6 +969,28 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private Integer storageMaxSize; 
             private String tenantId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallCenterInstance model) {
+                this.admin = model.admin;
+                this.consoleUrl = model.consoleUrl;
+                this.createdTime = model.createdTime;
+                this.directoryId = model.directoryId;
+                this.domainName = model.domainName;
+                this.instanceDescription = model.instanceDescription;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.maxOnlineAgents = model.maxOnlineAgents;
+                this.owner = model.owner;
+                this.phoneNumbers = model.phoneNumbers;
+                this.status = model.status;
+                this.storageBucket = model.storageBucket;
+                this.storageMaxDays = model.storageMaxDays;
+                this.storageMaxSize = model.storageMaxSize;
+                this.tenantId = model.tenantId;
+            } 
+
             /**
              * Admin.
              */
@@ -997,9 +1126,15 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesOfUserResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("CallCenterInstance")
-        private java.util.List < CallCenterInstance> callCenterInstance;
+        @com.aliyun.core.annotation.NameInMap("CallCenterInstance")
+        private java.util.List<CallCenterInstance> callCenterInstance;
 
         private Instances(Builder builder) {
             this.callCenterInstance = builder.callCenterInstance;
@@ -1016,17 +1151,24 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         /**
          * @return callCenterInstance
          */
-        public java.util.List < CallCenterInstance> getCallCenterInstance() {
+        public java.util.List<CallCenterInstance> getCallCenterInstance() {
             return this.callCenterInstance;
         }
 
         public static final class Builder {
-            private java.util.List < CallCenterInstance> callCenterInstance; 
+            private java.util.List<CallCenterInstance> callCenterInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.callCenterInstance = model.callCenterInstance;
+            } 
 
             /**
              * CallCenterInstance.
              */
-            public Builder callCenterInstance(java.util.List < CallCenterInstance> callCenterInstance) {
+            public Builder callCenterInstance(java.util.List<CallCenterInstance> callCenterInstance) {
                 this.callCenterInstance = callCenterInstance;
                 return this;
             }

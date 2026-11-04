@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConversationDetailByContactIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetConversationDetailByContactIdResponseBody</p>
  */
 public class GetConversationDetailByContactIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DataList")
+    @com.aliyun.core.annotation.NameInMap("DataList")
     private DataList dataList;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetConversationDetailByContactIdResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
 
     public static GetConversationDetailByContactIdResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConversationDetailByContactIdResponseBody model) {
+            this.code = model.code;
+            this.dataList = model.dataList;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,20 +172,26 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConversationDetailByContactIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConversationDetailByContactIdResponseBody</p>
+     */
     public static class QualityCheckPhrase extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private QualityCheckPhrase(Builder builder) {
@@ -225,6 +252,17 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
             private String role; 
             private String words; 
 
+            private Builder() {
+            } 
+
+            private Builder(QualityCheckPhrase model) {
+                this.begin = model.begin;
+                this.end = model.end;
+                this.identity = model.identity;
+                this.role = model.role;
+                this.words = model.words;
+            } 
+
             /**
              * Begin.
              */
@@ -272,9 +310,15 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConversationDetailByContactIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConversationDetailByContactIdResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("QualityCheckPhrase")
-        private java.util.List < QualityCheckPhrase> qualityCheckPhrase;
+        @com.aliyun.core.annotation.NameInMap("QualityCheckPhrase")
+        private java.util.List<QualityCheckPhrase> qualityCheckPhrase;
 
         private List(Builder builder) {
             this.qualityCheckPhrase = builder.qualityCheckPhrase;
@@ -291,17 +335,24 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
         /**
          * @return qualityCheckPhrase
          */
-        public java.util.List < QualityCheckPhrase> getQualityCheckPhrase() {
+        public java.util.List<QualityCheckPhrase> getQualityCheckPhrase() {
             return this.qualityCheckPhrase;
         }
 
         public static final class Builder {
-            private java.util.List < QualityCheckPhrase> qualityCheckPhrase; 
+            private java.util.List<QualityCheckPhrase> qualityCheckPhrase; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.qualityCheckPhrase = model.qualityCheckPhrase;
+            } 
 
             /**
              * QualityCheckPhrase.
              */
-            public Builder qualityCheckPhrase(java.util.List < QualityCheckPhrase> qualityCheckPhrase) {
+            public Builder qualityCheckPhrase(java.util.List<QualityCheckPhrase> qualityCheckPhrase) {
                 this.qualityCheckPhrase = qualityCheckPhrase;
                 return this;
             }
@@ -313,17 +364,23 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConversationDetailByContactIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConversationDetailByContactIdResponseBody</p>
+     */
     public static class DataList extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DataList(Builder builder) {
@@ -374,6 +431,16 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataList model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

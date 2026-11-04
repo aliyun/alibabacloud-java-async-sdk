@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserRequest} extends {@link RequestModel}
  *
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String email;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LoginName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginName;
 
-    @Query
-    @NameInMap("Phone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Phone")
     private String phone;
 
-    @Query
-    @NameInMap("PrivateOutboundNumberId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateOutboundNumberId")
     private String privateOutboundNumberId;
 
-    @Query
-    @NameInMap("RoleId")
-    @Validation(required = true)
-    private java.util.List < String > roleId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> roleId;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    private java.util.List < String > skillGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    private java.util.List<String> skillGroupId;
 
-    @Query
-    @NameInMap("SkillLevel")
-    private java.util.List < Integer > skillLevel;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillLevel")
+    private java.util.List<Integer> skillLevel;
 
     private CreateUserRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class CreateUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,21 +129,21 @@ public class CreateUserRequest extends Request {
     /**
      * @return roleId
      */
-    public java.util.List < String > getRoleId() {
+    public java.util.List<String> getRoleId() {
         return this.roleId;
     }
 
     /**
      * @return skillGroupId
      */
-    public java.util.List < String > getSkillGroupId() {
+    public java.util.List<String> getSkillGroupId() {
         return this.skillGroupId;
     }
 
     /**
      * @return skillLevel
      */
-    public java.util.List < Integer > getSkillLevel() {
+    public java.util.List<Integer> getSkillLevel() {
         return this.skillLevel;
     }
 
@@ -149,29 +154,29 @@ public class CreateUserRequest extends Request {
         private String loginName; 
         private String phone; 
         private String privateOutboundNumberId; 
-        private java.util.List < String > roleId; 
-        private java.util.List < String > skillGroupId; 
-        private java.util.List < Integer > skillLevel; 
+        private java.util.List<String> roleId; 
+        private java.util.List<String> skillGroupId; 
+        private java.util.List<Integer> skillLevel; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateUserRequest response) {
-            super(response);
-            this.displayName = response.displayName;
-            this.email = response.email;
-            this.instanceId = response.instanceId;
-            this.loginName = response.loginName;
-            this.phone = response.phone;
-            this.privateOutboundNumberId = response.privateOutboundNumberId;
-            this.roleId = response.roleId;
-            this.skillGroupId = response.skillGroupId;
-            this.skillLevel = response.skillLevel;
+        private Builder(CreateUserRequest request) {
+            super(request);
+            this.displayName = request.displayName;
+            this.email = request.email;
+            this.instanceId = request.instanceId;
+            this.loginName = request.loginName;
+            this.phone = request.phone;
+            this.privateOutboundNumberId = request.privateOutboundNumberId;
+            this.roleId = request.roleId;
+            this.skillGroupId = request.skillGroupId;
+            this.skillLevel = request.skillLevel;
         } 
 
         /**
-         * DisplayName.
+         * <p>This parameter is required.</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -180,7 +185,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>This parameter is required.</p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -189,7 +194,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -198,7 +203,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * LoginName.
+         * <p>This parameter is required.</p>
          */
         public Builder loginName(String loginName) {
             this.putQueryParameter("LoginName", loginName);
@@ -225,9 +230,9 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * RoleId.
+         * <p>This parameter is required.</p>
          */
-        public Builder roleId(java.util.List < String > roleId) {
+        public Builder roleId(java.util.List<String> roleId) {
             this.putQueryParameter("RoleId", roleId);
             this.roleId = roleId;
             return this;
@@ -236,7 +241,7 @@ public class CreateUserRequest extends Request {
         /**
          * SkillGroupId.
          */
-        public Builder skillGroupId(java.util.List < String > skillGroupId) {
+        public Builder skillGroupId(java.util.List<String> skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
             this.skillGroupId = skillGroupId;
             return this;
@@ -245,7 +250,7 @@ public class CreateUserRequest extends Request {
         /**
          * SkillLevel.
          */
-        public Builder skillLevel(java.util.List < Integer > skillLevel) {
+        public Builder skillLevel(java.util.List<Integer> skillLevel) {
             this.putQueryParameter("SkillLevel", skillLevel);
             this.skillLevel = skillLevel;
             return this;

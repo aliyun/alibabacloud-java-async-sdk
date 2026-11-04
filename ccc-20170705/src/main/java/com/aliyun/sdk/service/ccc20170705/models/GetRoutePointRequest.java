@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRoutePointRequest} extends {@link RequestModel}
  *
  * <p>GetRoutePointRequest</p>
  */
 public class GetRoutePointRequest extends Request {
-    @Query
-    @NameInMap("ContactFlowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactFlowId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private GetRoutePointRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class GetRoutePointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class GetRoutePointRequest extends Request {
             super();
         } 
 
-        private Builder(GetRoutePointRequest response) {
-            super(response);
-            this.contactFlowId = response.contactFlowId;
-            this.instanceId = response.instanceId;
+        private Builder(GetRoutePointRequest request) {
+            super(request);
+            this.contactFlowId = request.contactFlowId;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * ContactFlowId.
+         * <p>This parameter is required.</p>
          */
         public Builder contactFlowId(String contactFlowId) {
             this.putQueryParameter("ContactFlowId", contactFlowId);
@@ -79,7 +84,7 @@ public class GetRoutePointRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

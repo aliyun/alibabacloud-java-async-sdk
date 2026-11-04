@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveWebRTCStatsRequest} extends {@link RequestModel}
  *
  * <p>SaveWebRTCStatsRequest</p>
  */
 public class SaveWebRTCStatsRequest extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("CallStartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallStartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long callStartTime;
 
-    @Query
-    @NameInMap("CalleeNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalleeNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calleeNumber;
 
-    @Query
-    @NameInMap("CallerNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallerNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callerNumber;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RecordTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long recordTime;
 
-    @Query
-    @NameInMap("Stats")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Stats")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stats;
 
-    @Query
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    @Query
-    @NameInMap("Uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uid;
 
     private SaveWebRTCStatsRequest(Builder builder) {
@@ -78,7 +83,7 @@ public class SaveWebRTCStatsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -161,21 +166,21 @@ public class SaveWebRTCStatsRequest extends Request {
             super();
         } 
 
-        private Builder(SaveWebRTCStatsRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.callStartTime = response.callStartTime;
-            this.calleeNumber = response.calleeNumber;
-            this.callerNumber = response.callerNumber;
-            this.instanceId = response.instanceId;
-            this.recordTime = response.recordTime;
-            this.stats = response.stats;
-            this.tenantId = response.tenantId;
-            this.uid = response.uid;
+        private Builder(SaveWebRTCStatsRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.callStartTime = request.callStartTime;
+            this.calleeNumber = request.calleeNumber;
+            this.callerNumber = request.callerNumber;
+            this.instanceId = request.instanceId;
+            this.recordTime = request.recordTime;
+            this.stats = request.stats;
+            this.tenantId = request.tenantId;
+            this.uid = request.uid;
         } 
 
         /**
-         * CallId.
+         * <p>This parameter is required.</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -184,7 +189,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
-         * CallStartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder callStartTime(Long callStartTime) {
             this.putQueryParameter("CallStartTime", callStartTime);
@@ -193,7 +198,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
-         * CalleeNumber.
+         * <p>This parameter is required.</p>
          */
         public Builder calleeNumber(String calleeNumber) {
             this.putQueryParameter("CalleeNumber", calleeNumber);
@@ -202,7 +207,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
-         * CallerNumber.
+         * <p>This parameter is required.</p>
          */
         public Builder callerNumber(String callerNumber) {
             this.putQueryParameter("CallerNumber", callerNumber);
@@ -211,7 +216,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -220,7 +225,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
-         * RecordTime.
+         * <p>This parameter is required.</p>
          */
         public Builder recordTime(Long recordTime) {
             this.putQueryParameter("RecordTime", recordTime);
@@ -229,7 +234,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
-         * Stats.
+         * <p>This parameter is required.</p>
          */
         public Builder stats(String stats) {
             this.putQueryParameter("Stats", stats);
@@ -238,7 +243,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);
@@ -247,7 +252,7 @@ public class SaveWebRTCStatsRequest extends Request {
         }
 
         /**
-         * Uid.
+         * <p>This parameter is required.</p>
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySkillGroupOfUserRequest} extends {@link RequestModel}
  *
  * <p>ModifySkillGroupOfUserRequest</p>
  */
 public class ModifySkillGroupOfUserRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RoleId")
-    @Validation(required = true)
-    private java.util.List < String > roleId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> roleId;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    private java.util.List < String > skillGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    private java.util.List<String> skillGroupId;
 
-    @Query
-    @NameInMap("SkillLevel")
-    private java.util.List < Integer > skillLevel;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillLevel")
+    private java.util.List<Integer> skillLevel;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private ModifySkillGroupOfUserRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class ModifySkillGroupOfUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,21 +72,21 @@ public class ModifySkillGroupOfUserRequest extends Request {
     /**
      * @return roleId
      */
-    public java.util.List < String > getRoleId() {
+    public java.util.List<String> getRoleId() {
         return this.roleId;
     }
 
     /**
      * @return skillGroupId
      */
-    public java.util.List < String > getSkillGroupId() {
+    public java.util.List<String> getSkillGroupId() {
         return this.skillGroupId;
     }
 
     /**
      * @return skillLevel
      */
-    public java.util.List < Integer > getSkillLevel() {
+    public java.util.List<Integer> getSkillLevel() {
         return this.skillLevel;
     }
 
@@ -94,26 +99,26 @@ public class ModifySkillGroupOfUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySkillGroupOfUserRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > roleId; 
-        private java.util.List < String > skillGroupId; 
-        private java.util.List < Integer > skillLevel; 
+        private java.util.List<String> roleId; 
+        private java.util.List<String> skillGroupId; 
+        private java.util.List<Integer> skillLevel; 
         private String userId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifySkillGroupOfUserRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.roleId = response.roleId;
-            this.skillGroupId = response.skillGroupId;
-            this.skillLevel = response.skillLevel;
-            this.userId = response.userId;
+        private Builder(ModifySkillGroupOfUserRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.roleId = request.roleId;
+            this.skillGroupId = request.skillGroupId;
+            this.skillLevel = request.skillLevel;
+            this.userId = request.userId;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -122,9 +127,9 @@ public class ModifySkillGroupOfUserRequest extends Request {
         }
 
         /**
-         * RoleId.
+         * <p>This parameter is required.</p>
          */
-        public Builder roleId(java.util.List < String > roleId) {
+        public Builder roleId(java.util.List<String> roleId) {
             this.putQueryParameter("RoleId", roleId);
             this.roleId = roleId;
             return this;
@@ -133,7 +138,7 @@ public class ModifySkillGroupOfUserRequest extends Request {
         /**
          * SkillGroupId.
          */
-        public Builder skillGroupId(java.util.List < String > skillGroupId) {
+        public Builder skillGroupId(java.util.List<String> skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
             this.skillGroupId = skillGroupId;
             return this;
@@ -142,14 +147,14 @@ public class ModifySkillGroupOfUserRequest extends Request {
         /**
          * SkillLevel.
          */
-        public Builder skillLevel(java.util.List < Integer > skillLevel) {
+        public Builder skillLevel(java.util.List<Integer> skillLevel) {
             this.putQueryParameter("SkillLevel", skillLevel);
             this.skillLevel = skillLevel;
             return this;
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

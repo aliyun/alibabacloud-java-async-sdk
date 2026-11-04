@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMediaRequest} extends {@link RequestModel}
  *
  * <p>CreateMediaRequest</p>
  */
 public class CreateMediaRequest extends Request {
-    @Query
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OssFileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssFileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossFileName;
 
-    @Query
-    @NameInMap("OssFilePath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssFilePath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossFilePath;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("UploadResult")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadResult")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uploadResult;
 
     private CreateMediaRequest(Builder builder) {
@@ -76,7 +81,7 @@ public class CreateMediaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -159,17 +164,17 @@ public class CreateMediaRequest extends Request {
             super();
         } 
 
-        private Builder(CreateMediaRequest response) {
-            super(response);
-            this.content = response.content;
-            this.description = response.description;
-            this.fileName = response.fileName;
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.ossFileName = response.ossFileName;
-            this.ossFilePath = response.ossFilePath;
-            this.type = response.type;
-            this.uploadResult = response.uploadResult;
+        private Builder(CreateMediaRequest request) {
+            super(request);
+            this.content = request.content;
+            this.description = request.description;
+            this.fileName = request.fileName;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.ossFileName = request.ossFileName;
+            this.ossFilePath = request.ossFilePath;
+            this.type = request.type;
+            this.uploadResult = request.uploadResult;
         } 
 
         /**
@@ -191,7 +196,7 @@ public class CreateMediaRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>This parameter is required.</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -200,7 +205,7 @@ public class CreateMediaRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -209,7 +214,7 @@ public class CreateMediaRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -218,7 +223,7 @@ public class CreateMediaRequest extends Request {
         }
 
         /**
-         * OssFileName.
+         * <p>This parameter is required.</p>
          */
         public Builder ossFileName(String ossFileName) {
             this.putQueryParameter("OssFileName", ossFileName);
@@ -227,7 +232,7 @@ public class CreateMediaRequest extends Request {
         }
 
         /**
-         * OssFilePath.
+         * <p>This parameter is required.</p>
          */
         public Builder ossFilePath(String ossFilePath) {
             this.putQueryParameter("OssFilePath", ossFilePath);
@@ -236,7 +241,7 @@ public class CreateMediaRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -245,7 +250,7 @@ public class CreateMediaRequest extends Request {
         }
 
         /**
-         * UploadResult.
+         * <p>This parameter is required.</p>
          */
         public Builder uploadResult(String uploadResult) {
             this.putQueryParameter("UploadResult", uploadResult);

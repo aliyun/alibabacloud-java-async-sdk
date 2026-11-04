@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSmsConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetSmsConfigResponseBody</p>
  */
 public class GetSmsConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmsConfigs")
+    @com.aliyun.core.annotation.NameInMap("SmsConfigs")
     private SmsConfigs smsConfigs;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSmsConfigResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetSmsConfigResponseBody extends TeaModel {
 
     public static GetSmsConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetSmsConfigResponseBody extends TeaModel {
         private String requestId; 
         private SmsConfigs smsConfigs; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSmsConfigResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.smsConfigs = model.smsConfigs;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,35 +172,41 @@ public class GetSmsConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSmsConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmsConfigResponseBody</p>
+     */
     public static class SmsConfig extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private String instance;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Scenario")
+        @com.aliyun.core.annotation.NameInMap("Scenario")
         private Integer scenario;
 
-        @NameInMap("SignName")
+        @com.aliyun.core.annotation.NameInMap("SignName")
         private String signName;
 
-        @NameInMap("TemplateCode")
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
         private SmsConfig(Builder builder) {
@@ -285,6 +312,22 @@ public class GetSmsConfigResponseBody extends TeaModel {
             private String signName; 
             private String templateCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(SmsConfig model) {
+                this.description = model.description;
+                this.extra = model.extra;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.instance = model.instance;
+                this.name = model.name;
+                this.scenario = model.scenario;
+                this.signName = model.signName;
+                this.templateCode = model.templateCode;
+            } 
+
             /**
              * Description.
              */
@@ -372,9 +415,15 @@ public class GetSmsConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSmsConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmsConfigResponseBody</p>
+     */
     public static class SmsConfigs extends TeaModel {
-        @NameInMap("SmsConfig")
-        private java.util.List < SmsConfig> smsConfig;
+        @com.aliyun.core.annotation.NameInMap("SmsConfig")
+        private java.util.List<SmsConfig> smsConfig;
 
         private SmsConfigs(Builder builder) {
             this.smsConfig = builder.smsConfig;
@@ -391,17 +440,24 @@ public class GetSmsConfigResponseBody extends TeaModel {
         /**
          * @return smsConfig
          */
-        public java.util.List < SmsConfig> getSmsConfig() {
+        public java.util.List<SmsConfig> getSmsConfig() {
             return this.smsConfig;
         }
 
         public static final class Builder {
-            private java.util.List < SmsConfig> smsConfig; 
+            private java.util.List<SmsConfig> smsConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(SmsConfigs model) {
+                this.smsConfig = model.smsConfig;
+            } 
 
             /**
              * SmsConfig.
              */
-            public Builder smsConfig(java.util.List < SmsConfig> smsConfig) {
+            public Builder smsConfig(java.util.List<SmsConfig> smsConfig) {
                 this.smsConfig = smsConfig;
                 return this;
             }

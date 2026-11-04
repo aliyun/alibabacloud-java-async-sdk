@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LaunchAppraiseRequest} extends {@link RequestModel}
  *
  * <p>LaunchAppraiseRequest</p>
  */
 public class LaunchAppraiseRequest extends Request {
-    @Query
-    @NameInMap("Acid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Acid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acid;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private LaunchAppraiseRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class LaunchAppraiseRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class LaunchAppraiseRequest extends Request {
             super();
         } 
 
-        private Builder(LaunchAppraiseRequest response) {
-            super(response);
-            this.acid = response.acid;
-            this.instanceId = response.instanceId;
+        private Builder(LaunchAppraiseRequest request) {
+            super(request);
+            this.acid = request.acid;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * Acid.
+         * <p>This parameter is required.</p>
          */
         public Builder acid(String acid) {
             this.putQueryParameter("Acid", acid);
@@ -79,7 +84,7 @@ public class LaunchAppraiseRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

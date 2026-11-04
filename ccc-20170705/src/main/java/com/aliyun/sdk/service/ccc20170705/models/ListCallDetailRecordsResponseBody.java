@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallDetailRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCallDetailRecordsResponseBody</p>
  */
 public class ListCallDetailRecordsResponseBody extends TeaModel {
-    @NameInMap("CallDetailRecords")
+    @com.aliyun.core.annotation.NameInMap("CallDetailRecords")
     private CallDetailRecords callDetailRecords;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCallDetailRecordsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
 
     public static ListCallDetailRecordsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCallDetailRecordsResponseBody model) {
+            this.callDetailRecords = model.callDetailRecords;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * CallDetailRecords.
@@ -151,14 +172,20 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCallDetailRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallDetailRecordsResponseBody</p>
+     */
     public static class CallDetailAgent extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("Feedback")
+        @com.aliyun.core.annotation.NameInMap("Feedback")
         private String feedback;
 
-        @NameInMap("Satisfaction")
+        @com.aliyun.core.annotation.NameInMap("Satisfaction")
         private String satisfaction;
 
         private CallDetailAgent(Builder builder) {
@@ -201,6 +228,15 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             private String feedback; 
             private String satisfaction; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallDetailAgent model) {
+                this.agentId = model.agentId;
+                this.feedback = model.feedback;
+                this.satisfaction = model.satisfaction;
+            } 
+
             /**
              * AgentId.
              */
@@ -232,9 +268,15 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallDetailRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallDetailRecordsResponseBody</p>
+     */
     public static class Agents extends TeaModel {
-        @NameInMap("CallDetailAgent")
-        private java.util.List < CallDetailAgent> callDetailAgent;
+        @com.aliyun.core.annotation.NameInMap("CallDetailAgent")
+        private java.util.List<CallDetailAgent> callDetailAgent;
 
         private Agents(Builder builder) {
             this.callDetailAgent = builder.callDetailAgent;
@@ -251,17 +293,24 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         /**
          * @return callDetailAgent
          */
-        public java.util.List < CallDetailAgent> getCallDetailAgent() {
+        public java.util.List<CallDetailAgent> getCallDetailAgent() {
             return this.callDetailAgent;
         }
 
         public static final class Builder {
-            private java.util.List < CallDetailAgent> callDetailAgent; 
+            private java.util.List<CallDetailAgent> callDetailAgent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Agents model) {
+                this.callDetailAgent = model.callDetailAgent;
+            } 
 
             /**
              * CallDetailAgent.
              */
-            public Builder callDetailAgent(java.util.List < CallDetailAgent> callDetailAgent) {
+            public Builder callDetailAgent(java.util.List<CallDetailAgent> callDetailAgent) {
                 this.callDetailAgent = callDetailAgent;
                 return this;
             }
@@ -273,32 +322,38 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallDetailRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallDetailRecordsResponseBody</p>
+     */
     public static class Recording extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("FileDescription")
+        @com.aliyun.core.annotation.NameInMap("FileDescription")
         private String fileDescription;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("QualityCheckTaskId")
+        @com.aliyun.core.annotation.NameInMap("QualityCheckTaskId")
         private String qualityCheckTaskId;
 
-        @NameInMap("QualityCheckTid")
+        @com.aliyun.core.annotation.NameInMap("QualityCheckTid")
         private String qualityCheckTid;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Recording(Builder builder) {
@@ -395,6 +450,21 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             private String qualityCheckTid; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Recording model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.contactId = model.contactId;
+                this.duration = model.duration;
+                this.fileDescription = model.fileDescription;
+                this.fileName = model.fileName;
+                this.qualityCheckTaskId = model.qualityCheckTaskId;
+                this.qualityCheckTid = model.qualityCheckTid;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * AgentId.
              */
@@ -474,9 +544,15 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallDetailRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallDetailRecordsResponseBody</p>
+     */
     public static class Recordings extends TeaModel {
-        @NameInMap("Recording")
-        private java.util.List < Recording> recording;
+        @com.aliyun.core.annotation.NameInMap("Recording")
+        private java.util.List<Recording> recording;
 
         private Recordings(Builder builder) {
             this.recording = builder.recording;
@@ -493,17 +569,24 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         /**
          * @return recording
          */
-        public java.util.List < Recording> getRecording() {
+        public java.util.List<Recording> getRecording() {
             return this.recording;
         }
 
         public static final class Builder {
-            private java.util.List < Recording> recording; 
+            private java.util.List<Recording> recording; 
+
+            private Builder() {
+            } 
+
+            private Builder(Recordings model) {
+                this.recording = model.recording;
+            } 
 
             /**
              * Recording.
              */
-            public Builder recording(java.util.List < Recording> recording) {
+            public Builder recording(java.util.List<Recording> recording) {
                 this.recording = recording;
                 return this;
             }
@@ -515,53 +598,59 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallDetailRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallDetailRecordsResponseBody</p>
+     */
     public static class CallDetailRecord extends TeaModel {
-        @NameInMap("AgentNames")
+        @com.aliyun.core.annotation.NameInMap("AgentNames")
         private String agentNames;
 
-        @NameInMap("Agents")
+        @com.aliyun.core.annotation.NameInMap("Agents")
         private Agents agents;
 
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("CallingNumber")
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
         private String callingNumber;
 
-        @NameInMap("ContactDisposition")
+        @com.aliyun.core.annotation.NameInMap("ContactDisposition")
         private String contactDisposition;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("ContactType")
+        @com.aliyun.core.annotation.NameInMap("ContactType")
         private String contactType;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("Feedback")
+        @com.aliyun.core.annotation.NameInMap("Feedback")
         private String feedback;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Recordings")
+        @com.aliyun.core.annotation.NameInMap("Recordings")
         private Recordings recordings;
 
-        @NameInMap("Satisfaction")
+        @com.aliyun.core.annotation.NameInMap("Satisfaction")
         private Integer satisfaction;
 
-        @NameInMap("SatisfactionDesc")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionDesc")
         private String satisfactionDesc;
 
-        @NameInMap("SkillGroupIdList")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupIdList")
         private String skillGroupIdList;
 
-        @NameInMap("SkillGroupNames")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupNames")
         private String skillGroupNames;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private CallDetailRecord(Builder builder) {
@@ -721,6 +810,28 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             private String skillGroupNames; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallDetailRecord model) {
+                this.agentNames = model.agentNames;
+                this.agents = model.agents;
+                this.calledNumber = model.calledNumber;
+                this.callingNumber = model.callingNumber;
+                this.contactDisposition = model.contactDisposition;
+                this.contactId = model.contactId;
+                this.contactType = model.contactType;
+                this.duration = model.duration;
+                this.feedback = model.feedback;
+                this.instanceId = model.instanceId;
+                this.recordings = model.recordings;
+                this.satisfaction = model.satisfaction;
+                this.satisfactionDesc = model.satisfactionDesc;
+                this.skillGroupIdList = model.skillGroupIdList;
+                this.skillGroupNames = model.skillGroupNames;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * AgentNames.
              */
@@ -856,9 +967,15 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallDetailRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallDetailRecordsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("CallDetailRecord")
-        private java.util.List < CallDetailRecord> callDetailRecord;
+        @com.aliyun.core.annotation.NameInMap("CallDetailRecord")
+        private java.util.List<CallDetailRecord> callDetailRecord;
 
         private List(Builder builder) {
             this.callDetailRecord = builder.callDetailRecord;
@@ -875,17 +992,24 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         /**
          * @return callDetailRecord
          */
-        public java.util.List < CallDetailRecord> getCallDetailRecord() {
+        public java.util.List<CallDetailRecord> getCallDetailRecord() {
             return this.callDetailRecord;
         }
 
         public static final class Builder {
-            private java.util.List < CallDetailRecord> callDetailRecord; 
+            private java.util.List<CallDetailRecord> callDetailRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.callDetailRecord = model.callDetailRecord;
+            } 
 
             /**
              * CallDetailRecord.
              */
-            public Builder callDetailRecord(java.util.List < CallDetailRecord> callDetailRecord) {
+            public Builder callDetailRecord(java.util.List<CallDetailRecord> callDetailRecord) {
                 this.callDetailRecord = callDetailRecord;
                 return this;
             }
@@ -897,17 +1021,23 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallDetailRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallDetailRecordsResponseBody</p>
+     */
     public static class CallDetailRecords extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private CallDetailRecords(Builder builder) {
@@ -958,6 +1088,16 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallDetailRecords model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

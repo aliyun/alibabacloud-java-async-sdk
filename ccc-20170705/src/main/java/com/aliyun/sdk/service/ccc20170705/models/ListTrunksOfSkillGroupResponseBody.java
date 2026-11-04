@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrunksOfSkillGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrunksOfSkillGroupResponseBody</p>
  */
 public class ListTrunksOfSkillGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TrunkConfigs")
-    private java.util.List < TrunkConfigs> trunkConfigs;
+    @com.aliyun.core.annotation.NameInMap("TrunkConfigs")
+    private java.util.List<TrunkConfigs> trunkConfigs;
 
     private ListTrunksOfSkillGroupResponseBody(Builder builder) {
         this.code = builder.code;
@@ -45,6 +50,10 @@ public class ListTrunksOfSkillGroupResponseBody extends TeaModel {
 
     public static ListTrunksOfSkillGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,7 +94,7 @@ public class ListTrunksOfSkillGroupResponseBody extends TeaModel {
     /**
      * @return trunkConfigs
      */
-    public java.util.List < TrunkConfigs> getTrunkConfigs() {
+    public java.util.List<TrunkConfigs> getTrunkConfigs() {
         return this.trunkConfigs;
     }
 
@@ -95,7 +104,19 @@ public class ListTrunksOfSkillGroupResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TrunkConfigs> trunkConfigs; 
+        private java.util.List<TrunkConfigs> trunkConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrunksOfSkillGroupResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.trunkConfigs = model.trunkConfigs;
+        } 
 
         /**
          * Code.
@@ -140,7 +161,7 @@ public class ListTrunksOfSkillGroupResponseBody extends TeaModel {
         /**
          * TrunkConfigs.
          */
-        public Builder trunkConfigs(java.util.List < TrunkConfigs> trunkConfigs) {
+        public Builder trunkConfigs(java.util.List<TrunkConfigs> trunkConfigs) {
             this.trunkConfigs = trunkConfigs;
             return this;
         }
@@ -151,11 +172,17 @@ public class ListTrunksOfSkillGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrunksOfSkillGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrunksOfSkillGroupResponseBody</p>
+     */
     public static class TrunkConfigs extends TeaModel {
-        @NameInMap("Primary")
+        @com.aliyun.core.annotation.NameInMap("Primary")
         private Boolean primary;
 
-        @NameInMap("ProviderName")
+        @com.aliyun.core.annotation.NameInMap("ProviderName")
         private String providerName;
 
         private TrunkConfigs(Builder builder) {
@@ -188,6 +215,14 @@ public class ListTrunksOfSkillGroupResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean primary; 
             private String providerName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrunkConfigs model) {
+                this.primary = model.primary;
+                this.providerName = model.providerName;
+            } 
 
             /**
              * Primary.

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAgentDeviceRequest} extends {@link RequestModel}
  *
  * <p>AddAgentDeviceRequest</p>
  */
 public class AddAgentDeviceRequest extends Request {
-    @Body
-    @NameInMap("BrowserVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BrowserVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String browserVersion;
 
-    @Query
-    @NameInMap("ClientIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientIp;
 
-    @Query
-    @NameInMap("ClientPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientPort")
     private String clientPort;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
     private AddAgentDeviceRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class AddAgentDeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,17 +108,17 @@ public class AddAgentDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(AddAgentDeviceRequest response) {
-            super(response);
-            this.browserVersion = response.browserVersion;
-            this.clientIp = response.clientIp;
-            this.clientPort = response.clientPort;
-            this.instanceId = response.instanceId;
-            this.remark = response.remark;
+        private Builder(AddAgentDeviceRequest request) {
+            super(request);
+            this.browserVersion = request.browserVersion;
+            this.clientIp = request.clientIp;
+            this.clientPort = request.clientPort;
+            this.instanceId = request.instanceId;
+            this.remark = request.remark;
         } 
 
         /**
-         * BrowserVersion.
+         * <p>This parameter is required.</p>
          */
         public Builder browserVersion(String browserVersion) {
             this.putBodyParameter("BrowserVersion", browserVersion);
@@ -122,7 +127,7 @@ public class AddAgentDeviceRequest extends Request {
         }
 
         /**
-         * ClientIp.
+         * <p>This parameter is required.</p>
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);
@@ -140,7 +145,7 @@ public class AddAgentDeviceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

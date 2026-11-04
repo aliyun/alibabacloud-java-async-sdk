@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceExtensionsRequest} extends {@link RequestModel}
  *
  * <p>GetServiceExtensionsRequest</p>
  */
 public class GetServiceExtensionsRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ServiceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceType;
 
     private GetServiceExtensionsRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class GetServiceExtensionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class GetServiceExtensionsRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceExtensionsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.serviceType = response.serviceType;
+        private Builder(GetServiceExtensionsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.serviceType = request.serviceType;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +84,7 @@ public class GetServiceExtensionsRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOutboundPhoneNumberOfUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListOutboundPhoneNumberOfUserResponseBody</p>
  */
 public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NumberList")
+    @com.aliyun.core.annotation.NameInMap("NumberList")
     private NumberList numberList;
 
-    @NameInMap("OutboundPhoneNumbers")
+    @com.aliyun.core.annotation.NameInMap("OutboundPhoneNumbers")
     private OutboundPhoneNumbers outboundPhoneNumbers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListOutboundPhoneNumberOfUserResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
 
     public static ListOutboundPhoneNumberOfUserResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
         private OutboundPhoneNumbers outboundPhoneNumbers; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOutboundPhoneNumberOfUserResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.numberList = model.numberList;
+            this.outboundPhoneNumbers = model.outboundPhoneNumbers;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -171,9 +193,15 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOutboundPhoneNumberOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOutboundPhoneNumberOfUserResponseBody</p>
+     */
     public static class NumberList extends TeaModel {
-        @NameInMap("Number")
-        private java.util.List < String > number;
+        @com.aliyun.core.annotation.NameInMap("Number")
+        private java.util.List<String> number;
 
         private NumberList(Builder builder) {
             this.number = builder.number;
@@ -190,17 +218,24 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
         /**
          * @return number
          */
-        public java.util.List < String > getNumber() {
+        public java.util.List<String> getNumber() {
             return this.number;
         }
 
         public static final class Builder {
-            private java.util.List < String > number; 
+            private java.util.List<String> number; 
+
+            private Builder() {
+            } 
+
+            private Builder(NumberList model) {
+                this.number = model.number;
+            } 
 
             /**
              * Number.
              */
-            public Builder number(java.util.List < String > number) {
+            public Builder number(java.util.List<String> number) {
                 this.number = number;
                 return this;
             }
@@ -212,32 +247,38 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOutboundPhoneNumberOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOutboundPhoneNumberOfUserResponseBody</p>
+     */
     public static class PrivacyNumber extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("PoolId")
+        @com.aliyun.core.annotation.NameInMap("PoolId")
         private String poolId;
 
-        @NameInMap("PoolName")
+        @com.aliyun.core.annotation.NameInMap("PoolName")
         private String poolName;
 
-        @NameInMap("RegionNameCity")
+        @com.aliyun.core.annotation.NameInMap("RegionNameCity")
         private String regionNameCity;
 
-        @NameInMap("SubId")
+        @com.aliyun.core.annotation.NameInMap("SubId")
         private String subId;
 
-        @NameInMap("TelX")
+        @com.aliyun.core.annotation.NameInMap("TelX")
         private String telX;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PrivacyNumber(Builder builder) {
@@ -334,6 +375,21 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
             private String telX; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrivacyNumber model) {
+                this.bizId = model.bizId;
+                this.extra = model.extra;
+                this.phoneNumber = model.phoneNumber;
+                this.poolId = model.poolId;
+                this.poolName = model.poolName;
+                this.regionNameCity = model.regionNameCity;
+                this.subId = model.subId;
+                this.telX = model.telX;
+                this.type = model.type;
+            } 
+
             /**
              * BizId.
              */
@@ -413,47 +469,53 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOutboundPhoneNumberOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOutboundPhoneNumberOfUserResponseBody</p>
+     */
     public static class PhoneNumber extends TeaModel {
-        @NameInMap("AllowOutbound")
+        @com.aliyun.core.annotation.NameInMap("AllowOutbound")
         private Boolean allowOutbound;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("PhoneNumberDescription")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberDescription")
         private String phoneNumberDescription;
 
-        @NameInMap("PhoneNumberId")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
         private String phoneNumberId;
 
-        @NameInMap("PrivacyNumber")
+        @com.aliyun.core.annotation.NameInMap("PrivacyNumber")
         private PrivacyNumber privacyNumber;
 
-        @NameInMap("PrivateFlag")
+        @com.aliyun.core.annotation.NameInMap("PrivateFlag")
         private Boolean privateFlag;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private Integer remainingTime;
 
-        @NameInMap("SipTelX")
+        @com.aliyun.core.annotation.NameInMap("SipTelX")
         private String sipTelX;
 
-        @NameInMap("TestOnly")
+        @com.aliyun.core.annotation.NameInMap("TestOnly")
         private Boolean testOnly;
 
-        @NameInMap("Trunks")
+        @com.aliyun.core.annotation.NameInMap("Trunks")
         private Integer trunks;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private PhoneNumber(Builder builder) {
@@ -595,6 +657,26 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
             private Integer trunks; 
             private String usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumber model) {
+                this.allowOutbound = model.allowOutbound;
+                this.city = model.city;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.phoneNumberDescription = model.phoneNumberDescription;
+                this.phoneNumberId = model.phoneNumberId;
+                this.privacyNumber = model.privacyNumber;
+                this.privateFlag = model.privateFlag;
+                this.province = model.province;
+                this.remainingTime = model.remainingTime;
+                this.sipTelX = model.sipTelX;
+                this.testOnly = model.testOnly;
+                this.trunks = model.trunks;
+                this.usage = model.usage;
+            } 
+
             /**
              * AllowOutbound.
              */
@@ -714,9 +796,15 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOutboundPhoneNumberOfUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOutboundPhoneNumberOfUserResponseBody</p>
+     */
     public static class OutboundPhoneNumbers extends TeaModel {
-        @NameInMap("PhoneNumber")
-        private java.util.List < PhoneNumber> phoneNumber;
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+        private java.util.List<PhoneNumber> phoneNumber;
 
         private OutboundPhoneNumbers(Builder builder) {
             this.phoneNumber = builder.phoneNumber;
@@ -733,17 +821,24 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
         /**
          * @return phoneNumber
          */
-        public java.util.List < PhoneNumber> getPhoneNumber() {
+        public java.util.List<PhoneNumber> getPhoneNumber() {
             return this.phoneNumber;
         }
 
         public static final class Builder {
-            private java.util.List < PhoneNumber> phoneNumber; 
+            private java.util.List<PhoneNumber> phoneNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutboundPhoneNumbers model) {
+                this.phoneNumber = model.phoneNumber;
+            } 
 
             /**
              * PhoneNumber.
              */
-            public Builder phoneNumber(java.util.List < PhoneNumber> phoneNumber) {
+            public Builder phoneNumber(java.util.List<PhoneNumber> phoneNumber) {
                 this.phoneNumber = phoneNumber;
                 return this;
             }

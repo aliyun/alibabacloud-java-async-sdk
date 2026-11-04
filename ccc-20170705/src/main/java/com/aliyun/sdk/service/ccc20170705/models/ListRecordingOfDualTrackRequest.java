@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecordingOfDualTrackRequest} extends {@link RequestModel}
  *
  * <p>ListRecordingOfDualTrackRequest</p>
  */
 public class ListRecordingOfDualTrackRequest extends Request {
-    @Query
-    @NameInMap("AgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
     private String agentId;
 
-    @Query
-    @NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
     private String calledNumber;
 
-    @Query
-    @NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
     private String callingNumber;
 
-    @Query
-    @NameInMap("ConnectId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectId")
     private String connectId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("StopTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long stopTime;
 
     private ListRecordingOfDualTrackRequest(Builder builder) {
@@ -74,7 +79,7 @@ public class ListRecordingOfDualTrackRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,17 +162,17 @@ public class ListRecordingOfDualTrackRequest extends Request {
             super();
         } 
 
-        private Builder(ListRecordingOfDualTrackRequest response) {
-            super(response);
-            this.agentId = response.agentId;
-            this.calledNumber = response.calledNumber;
-            this.callingNumber = response.callingNumber;
-            this.connectId = response.connectId;
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.stopTime = response.stopTime;
+        private Builder(ListRecordingOfDualTrackRequest request) {
+            super(request);
+            this.agentId = request.agentId;
+            this.calledNumber = request.calledNumber;
+            this.callingNumber = request.callingNumber;
+            this.connectId = request.connectId;
+            this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.stopTime = request.stopTime;
         } 
 
         /**
@@ -207,7 +212,7 @@ public class ListRecordingOfDualTrackRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -216,7 +221,7 @@ public class ListRecordingOfDualTrackRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +230,7 @@ public class ListRecordingOfDualTrackRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +239,7 @@ public class ListRecordingOfDualTrackRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -243,7 +248,7 @@ public class ListRecordingOfDualTrackRequest extends Request {
         }
 
         /**
-         * StopTime.
+         * <p>This parameter is required.</p>
          */
         public Builder stopTime(Long stopTime) {
             this.putQueryParameter("StopTime", stopTime);

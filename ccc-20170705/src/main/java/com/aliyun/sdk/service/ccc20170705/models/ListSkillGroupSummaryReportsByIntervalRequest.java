@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSkillGroupSummaryReportsByIntervalRequest} extends {@link RequestModel}
  *
  * <p>ListSkillGroupSummaryReportsByIntervalRequest</p>
  */
 public class ListSkillGroupSummaryReportsByIntervalRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SkillGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupIds")
     private String skillGroupIds;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private ListSkillGroupSummaryReportsByIntervalRequest(Builder builder) {
@@ -62,7 +67,7 @@ public class ListSkillGroupSummaryReportsByIntervalRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,19 +134,19 @@ public class ListSkillGroupSummaryReportsByIntervalRequest extends Request {
             super();
         } 
 
-        private Builder(ListSkillGroupSummaryReportsByIntervalRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.interval = response.interval;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.skillGroupIds = response.skillGroupIds;
-            this.startTime = response.startTime;
+        private Builder(ListSkillGroupSummaryReportsByIntervalRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.interval = request.interval;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.skillGroupIds = request.skillGroupIds;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -150,7 +155,7 @@ public class ListSkillGroupSummaryReportsByIntervalRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -195,7 +200,7 @@ public class ListSkillGroupSummaryReportsByIntervalRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

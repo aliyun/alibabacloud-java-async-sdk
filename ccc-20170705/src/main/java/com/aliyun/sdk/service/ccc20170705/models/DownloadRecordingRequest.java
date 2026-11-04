@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadRecordingRequest} extends {@link RequestModel}
  *
  * <p>DownloadRecordingRequest</p>
  */
 public class DownloadRecordingRequest extends Request {
-    @Query
-    @NameInMap("Channel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Channel")
     private String channel;
 
-    @Query
-    @NameInMap("FileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private DownloadRecordingRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class DownloadRecordingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,11 +81,11 @@ public class DownloadRecordingRequest extends Request {
             super();
         } 
 
-        private Builder(DownloadRecordingRequest response) {
-            super(response);
-            this.channel = response.channel;
-            this.fileName = response.fileName;
-            this.instanceId = response.instanceId;
+        private Builder(DownloadRecordingRequest request) {
+            super(request);
+            this.channel = request.channel;
+            this.fileName = request.fileName;
+            this.instanceId = request.instanceId;
         } 
 
         /**
@@ -93,7 +98,7 @@ public class DownloadRecordingRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>This parameter is required.</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -102,7 +107,7 @@ public class DownloadRecordingRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMediaResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMediaResponseBody</p>
  */
 public class CreateMediaResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MediaUploadParam")
+    @com.aliyun.core.annotation.NameInMap("MediaUploadParam")
     private MediaUploadParam mediaUploadParam;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateMediaResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class CreateMediaResponseBody extends TeaModel {
 
     public static CreateMediaResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class CreateMediaResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMediaResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.mediaUploadParam = model.mediaUploadParam;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,23 +172,29 @@ public class CreateMediaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMediaResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMediaResponseBody</p>
+     */
     public static class MediaUploadParam extends TeaModel {
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private String instance;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OssFileName")
+        @com.aliyun.core.annotation.NameInMap("OssFileName")
         private String ossFileName;
 
-        @NameInMap("OssFilePath")
+        @com.aliyun.core.annotation.NameInMap("OssFilePath")
         private String ossFilePath;
 
         private MediaUploadParam(Builder builder) {
@@ -236,6 +263,18 @@ public class CreateMediaResponseBody extends TeaModel {
             private String name; 
             private String ossFileName; 
             private String ossFilePath; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaUploadParam model) {
+                this.fileName = model.fileName;
+                this.id = model.id;
+                this.instance = model.instance;
+                this.name = model.name;
+                this.ossFileName = model.ossFileName;
+                this.ossFilePath = model.ossFilePath;
+            } 
 
             /**
              * FileName.

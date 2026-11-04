@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTURNServerListResponseBody} extends {@link TeaModel}
  *
  * <p>GetTURNServerListResponseBody</p>
  */
 public class GetTURNServerListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TurnServerListConfig")
+    @com.aliyun.core.annotation.NameInMap("TurnServerListConfig")
     private String turnServerListConfig;
 
     private GetTURNServerListResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetTURNServerListResponseBody extends TeaModel {
 
     public static GetTURNServerListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetTURNServerListResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String turnServerListConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTURNServerListResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.turnServerListConfig = model.turnServerListConfig;
+        } 
 
         /**
          * Code.

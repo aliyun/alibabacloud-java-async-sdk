@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConfigRequest} extends {@link RequestModel}
  *
  * <p>GetConfigRequest</p>
  */
 public class GetConfigRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ObjectId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectId")
     private String objectId;
 
-    @Query
-    @NameInMap("ObjectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String objectType;
 
     private GetConfigRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class GetConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,16 +95,16 @@ public class GetConfigRequest extends Request {
             super();
         } 
 
-        private Builder(GetConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.objectId = response.objectId;
-            this.objectType = response.objectType;
+        private Builder(GetConfigRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.objectId = request.objectId;
+            this.objectType = request.objectType;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,7 +113,7 @@ public class GetConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -126,7 +131,7 @@ public class GetConfigRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * <p>This parameter is required.</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);

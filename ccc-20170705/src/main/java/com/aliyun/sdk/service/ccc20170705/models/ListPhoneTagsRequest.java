@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPhoneTagsRequest} extends {@link RequestModel}
  *
  * <p>ListPhoneTagsRequest</p>
  */
 public class ListPhoneTagsRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Number")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Number")
     private String number;
 
-    @Query
-    @NameInMap("NumberGroupIds")
-    private java.util.List < String > numberGroupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumberGroupIds")
+    private java.util.List<String> numberGroupIds;
 
-    @Query
-    @NameInMap("OutboundOnly")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundOnly")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean outboundOnly;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
     private ListPhoneTagsRequest(Builder builder) {
@@ -58,7 +63,7 @@ public class ListPhoneTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +92,7 @@ public class ListPhoneTagsRequest extends Request {
     /**
      * @return numberGroupIds
      */
-    public java.util.List < String > getNumberGroupIds() {
+    public java.util.List<String> getNumberGroupIds() {
         return this.numberGroupIds;
     }
 
@@ -109,7 +114,7 @@ public class ListPhoneTagsRequest extends Request {
         private Integer currentPage; 
         private String instanceId; 
         private String number; 
-        private java.util.List < String > numberGroupIds; 
+        private java.util.List<String> numberGroupIds; 
         private Boolean outboundOnly; 
         private Integer pageSize; 
 
@@ -117,18 +122,18 @@ public class ListPhoneTagsRequest extends Request {
             super();
         } 
 
-        private Builder(ListPhoneTagsRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.instanceId = response.instanceId;
-            this.number = response.number;
-            this.numberGroupIds = response.numberGroupIds;
-            this.outboundOnly = response.outboundOnly;
-            this.pageSize = response.pageSize;
+        private Builder(ListPhoneTagsRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.instanceId = request.instanceId;
+            this.number = request.number;
+            this.numberGroupIds = request.numberGroupIds;
+            this.outboundOnly = request.outboundOnly;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -137,7 +142,7 @@ public class ListPhoneTagsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -157,14 +162,14 @@ public class ListPhoneTagsRequest extends Request {
         /**
          * NumberGroupIds.
          */
-        public Builder numberGroupIds(java.util.List < String > numberGroupIds) {
+        public Builder numberGroupIds(java.util.List<String> numberGroupIds) {
             this.putQueryParameter("NumberGroupIds", numberGroupIds);
             this.numberGroupIds = numberGroupIds;
             return this;
         }
 
         /**
-         * OutboundOnly.
+         * <p>This parameter is required.</p>
          */
         public Builder outboundOnly(Boolean outboundOnly) {
             this.putQueryParameter("OutboundOnly", outboundOnly);
@@ -173,7 +178,7 @@ public class ListPhoneTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

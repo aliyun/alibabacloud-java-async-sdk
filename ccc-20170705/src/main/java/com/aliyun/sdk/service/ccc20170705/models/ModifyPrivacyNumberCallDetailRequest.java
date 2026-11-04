@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPrivacyNumberCallDetailRequest} extends {@link RequestModel}
  *
  * <p>ModifyPrivacyNumberCallDetailRequest</p>
  */
 public class ModifyPrivacyNumberCallDetailRequest extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("ContactId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private ModifyPrivacyNumberCallDetailRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class ModifyPrivacyNumberCallDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -77,15 +82,15 @@ public class ModifyPrivacyNumberCallDetailRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyPrivacyNumberCallDetailRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.contactId = response.contactId;
-            this.instanceId = response.instanceId;
+        private Builder(ModifyPrivacyNumberCallDetailRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.contactId = request.contactId;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * CallId.
+         * <p>This parameter is required.</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -94,7 +99,7 @@ public class ModifyPrivacyNumberCallDetailRequest extends Request {
         }
 
         /**
-         * ContactId.
+         * <p>This parameter is required.</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -103,7 +108,7 @@ public class ModifyPrivacyNumberCallDetailRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

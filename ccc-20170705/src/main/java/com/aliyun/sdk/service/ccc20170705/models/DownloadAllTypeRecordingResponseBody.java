@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadAllTypeRecordingResponseBody} extends {@link TeaModel}
  *
  * <p>DownloadAllTypeRecordingResponseBody</p>
  */
 public class DownloadAllTypeRecordingResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MediaDownloadParamList")
+    @com.aliyun.core.annotation.NameInMap("MediaDownloadParamList")
     private MediaDownloadParamList mediaDownloadParamList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DownloadAllTypeRecordingResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
 
     public static DownloadAllTypeRecordingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DownloadAllTypeRecordingResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.mediaDownloadParamList = model.mediaDownloadParamList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,11 +172,17 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DownloadAllTypeRecordingResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadAllTypeRecordingResponseBody</p>
+     */
     public static class MediaDownloadParam extends TeaModel {
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("SignatureUrl")
+        @com.aliyun.core.annotation.NameInMap("SignatureUrl")
         private String signatureUrl;
 
         private MediaDownloadParam(Builder builder) {
@@ -189,6 +216,14 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
             private String fileName; 
             private String signatureUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaDownloadParam model) {
+                this.fileName = model.fileName;
+                this.signatureUrl = model.signatureUrl;
+            } 
+
             /**
              * FileName.
              */
@@ -212,9 +247,15 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DownloadAllTypeRecordingResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadAllTypeRecordingResponseBody</p>
+     */
     public static class MediaDownloadParamList extends TeaModel {
-        @NameInMap("MediaDownloadParam")
-        private java.util.List < MediaDownloadParam> mediaDownloadParam;
+        @com.aliyun.core.annotation.NameInMap("MediaDownloadParam")
+        private java.util.List<MediaDownloadParam> mediaDownloadParam;
 
         private MediaDownloadParamList(Builder builder) {
             this.mediaDownloadParam = builder.mediaDownloadParam;
@@ -231,17 +272,24 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
         /**
          * @return mediaDownloadParam
          */
-        public java.util.List < MediaDownloadParam> getMediaDownloadParam() {
+        public java.util.List<MediaDownloadParam> getMediaDownloadParam() {
             return this.mediaDownloadParam;
         }
 
         public static final class Builder {
-            private java.util.List < MediaDownloadParam> mediaDownloadParam; 
+            private java.util.List<MediaDownloadParam> mediaDownloadParam; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaDownloadParamList model) {
+                this.mediaDownloadParam = model.mediaDownloadParam;
+            } 
 
             /**
              * MediaDownloadParam.
              */
-            public Builder mediaDownloadParam(java.util.List < MediaDownloadParam> mediaDownloadParam) {
+            public Builder mediaDownloadParam(java.util.List<MediaDownloadParam> mediaDownloadParam) {
                 this.mediaDownloadParam = mediaDownloadParam;
                 return this;
             }

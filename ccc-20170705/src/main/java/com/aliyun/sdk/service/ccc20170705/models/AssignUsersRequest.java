@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignUsersRequest} extends {@link RequestModel}
  *
  * <p>AssignUsersRequest</p>
  */
 public class AssignUsersRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RoleId")
-    private java.util.List < String > roleId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleId")
+    private java.util.List<String> roleId;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    private java.util.List < String > skillGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    private java.util.List<String> skillGroupId;
 
-    @Query
-    @NameInMap("SkillLevel")
-    private java.util.List < Integer > skillLevel;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillLevel")
+    private java.util.List<Integer> skillLevel;
 
-    @Query
-    @NameInMap("UserRamId")
-    @Validation(required = true)
-    private java.util.List < String > userRamId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserRamId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> userRamId;
 
     private AssignUsersRequest(Builder builder) {
         super(builder);
@@ -51,7 +56,7 @@ public class AssignUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,53 +71,53 @@ public class AssignUsersRequest extends Request {
     /**
      * @return roleId
      */
-    public java.util.List < String > getRoleId() {
+    public java.util.List<String> getRoleId() {
         return this.roleId;
     }
 
     /**
      * @return skillGroupId
      */
-    public java.util.List < String > getSkillGroupId() {
+    public java.util.List<String> getSkillGroupId() {
         return this.skillGroupId;
     }
 
     /**
      * @return skillLevel
      */
-    public java.util.List < Integer > getSkillLevel() {
+    public java.util.List<Integer> getSkillLevel() {
         return this.skillLevel;
     }
 
     /**
      * @return userRamId
      */
-    public java.util.List < String > getUserRamId() {
+    public java.util.List<String> getUserRamId() {
         return this.userRamId;
     }
 
     public static final class Builder extends Request.Builder<AssignUsersRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > roleId; 
-        private java.util.List < String > skillGroupId; 
-        private java.util.List < Integer > skillLevel; 
-        private java.util.List < String > userRamId; 
+        private java.util.List<String> roleId; 
+        private java.util.List<String> skillGroupId; 
+        private java.util.List<Integer> skillLevel; 
+        private java.util.List<String> userRamId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AssignUsersRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.roleId = response.roleId;
-            this.skillGroupId = response.skillGroupId;
-            this.skillLevel = response.skillLevel;
-            this.userRamId = response.userRamId;
+        private Builder(AssignUsersRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.roleId = request.roleId;
+            this.skillGroupId = request.skillGroupId;
+            this.skillLevel = request.skillLevel;
+            this.userRamId = request.userRamId;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +128,7 @@ public class AssignUsersRequest extends Request {
         /**
          * RoleId.
          */
-        public Builder roleId(java.util.List < String > roleId) {
+        public Builder roleId(java.util.List<String> roleId) {
             this.putQueryParameter("RoleId", roleId);
             this.roleId = roleId;
             return this;
@@ -132,7 +137,7 @@ public class AssignUsersRequest extends Request {
         /**
          * SkillGroupId.
          */
-        public Builder skillGroupId(java.util.List < String > skillGroupId) {
+        public Builder skillGroupId(java.util.List<String> skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
             this.skillGroupId = skillGroupId;
             return this;
@@ -141,16 +146,16 @@ public class AssignUsersRequest extends Request {
         /**
          * SkillLevel.
          */
-        public Builder skillLevel(java.util.List < Integer > skillLevel) {
+        public Builder skillLevel(java.util.List<Integer> skillLevel) {
             this.putQueryParameter("SkillLevel", skillLevel);
             this.skillLevel = skillLevel;
             return this;
         }
 
         /**
-         * UserRamId.
+         * <p>This parameter is required.</p>
          */
-        public Builder userRamId(java.util.List < String > userRamId) {
+        public Builder userRamId(java.util.List<String> userRamId) {
             this.putQueryParameter("UserRamId", userRamId);
             this.userRamId = userRamId;
             return this;

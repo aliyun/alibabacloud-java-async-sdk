@@ -1,12 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrunkProvidersRequest} extends {@link RequestModel}
  *
  * <p>ListTrunkProvidersRequest</p>
@@ -24,7 +29,7 @@ public class ListTrunkProvidersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -35,8 +40,8 @@ public class ListTrunkProvidersRequest extends Request {
             super();
         } 
 
-        private Builder(ListTrunkProvidersRequest response) {
-            super(response);
+        private Builder(ListTrunkProvidersRequest request) {
+            super(request);
         } 
 
         @Override

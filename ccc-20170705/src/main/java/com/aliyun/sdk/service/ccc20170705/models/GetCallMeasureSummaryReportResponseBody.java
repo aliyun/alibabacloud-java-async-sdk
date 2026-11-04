@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCallMeasureSummaryReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetCallMeasureSummaryReportResponseBody</p>
  */
 public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NumberReports")
+    @com.aliyun.core.annotation.NameInMap("NumberReports")
     private NumberReports numberReports;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("SummaryReport")
+    @com.aliyun.core.annotation.NameInMap("SummaryReport")
     private SummaryReport summaryReport;
 
     private GetCallMeasureSummaryReportResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
 
     public static GetCallMeasureSummaryReportResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private SummaryReport summaryReport; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCallMeasureSummaryReportResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.numberReports = model.numberReports;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.summaryReport = model.summaryReport;
+        } 
 
         /**
          * Code.
@@ -171,29 +193,35 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCallMeasureSummaryReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallMeasureSummaryReportResponseBody</p>
+     */
     public static class NumberReport extends TeaModel {
-        @NameInMap("Day")
+        @com.aliyun.core.annotation.NameInMap("Day")
         private Integer day;
 
-        @NameInMap("InboundCount")
+        @com.aliyun.core.annotation.NameInMap("InboundCount")
         private Long inboundCount;
 
-        @NameInMap("InboundDurationByMinute")
+        @com.aliyun.core.annotation.NameInMap("InboundDurationByMinute")
         private Long inboundDurationByMinute;
 
-        @NameInMap("Month")
+        @com.aliyun.core.annotation.NameInMap("Month")
         private Integer month;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("OutboundCount")
+        @com.aliyun.core.annotation.NameInMap("OutboundCount")
         private Long outboundCount;
 
-        @NameInMap("OutboundDurationByMinute")
+        @com.aliyun.core.annotation.NameInMap("OutboundDurationByMinute")
         private Long outboundDurationByMinute;
 
-        @NameInMap("Year")
+        @com.aliyun.core.annotation.NameInMap("Year")
         private Integer year;
 
         private NumberReport(Builder builder) {
@@ -281,6 +309,20 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
             private Long outboundDurationByMinute; 
             private Integer year; 
 
+            private Builder() {
+            } 
+
+            private Builder(NumberReport model) {
+                this.day = model.day;
+                this.inboundCount = model.inboundCount;
+                this.inboundDurationByMinute = model.inboundDurationByMinute;
+                this.month = model.month;
+                this.number = model.number;
+                this.outboundCount = model.outboundCount;
+                this.outboundDurationByMinute = model.outboundDurationByMinute;
+                this.year = model.year;
+            } 
+
             /**
              * Day.
              */
@@ -352,9 +394,15 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallMeasureSummaryReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallMeasureSummaryReportResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("NumberReport")
-        private java.util.List < NumberReport> numberReport;
+        @com.aliyun.core.annotation.NameInMap("NumberReport")
+        private java.util.List<NumberReport> numberReport;
 
         private List(Builder builder) {
             this.numberReport = builder.numberReport;
@@ -371,17 +419,24 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         /**
          * @return numberReport
          */
-        public java.util.List < NumberReport> getNumberReport() {
+        public java.util.List<NumberReport> getNumberReport() {
             return this.numberReport;
         }
 
         public static final class Builder {
-            private java.util.List < NumberReport> numberReport; 
+            private java.util.List<NumberReport> numberReport; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.numberReport = model.numberReport;
+            } 
 
             /**
              * NumberReport.
              */
-            public Builder numberReport(java.util.List < NumberReport> numberReport) {
+            public Builder numberReport(java.util.List<NumberReport> numberReport) {
                 this.numberReport = numberReport;
                 return this;
             }
@@ -393,17 +448,23 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallMeasureSummaryReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallMeasureSummaryReportResponseBody</p>
+     */
     public static class NumberReports extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private NumberReports(Builder builder) {
@@ -455,6 +516,16 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(NumberReports model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
@@ -494,26 +565,32 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCallMeasureSummaryReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCallMeasureSummaryReportResponseBody</p>
+     */
     public static class SummaryReport extends TeaModel {
-        @NameInMap("Day")
+        @com.aliyun.core.annotation.NameInMap("Day")
         private Integer day;
 
-        @NameInMap("InboundCount")
+        @com.aliyun.core.annotation.NameInMap("InboundCount")
         private Long inboundCount;
 
-        @NameInMap("InboundDurationByMinute")
+        @com.aliyun.core.annotation.NameInMap("InboundDurationByMinute")
         private Long inboundDurationByMinute;
 
-        @NameInMap("Month")
+        @com.aliyun.core.annotation.NameInMap("Month")
         private Integer month;
 
-        @NameInMap("OutboundCount")
+        @com.aliyun.core.annotation.NameInMap("OutboundCount")
         private Long outboundCount;
 
-        @NameInMap("OutboundDurationByMinute")
+        @com.aliyun.core.annotation.NameInMap("OutboundDurationByMinute")
         private Long outboundDurationByMinute;
 
-        @NameInMap("Year")
+        @com.aliyun.core.annotation.NameInMap("Year")
         private Integer year;
 
         private SummaryReport(Builder builder) {
@@ -591,6 +668,19 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
             private Long outboundCount; 
             private Long outboundDurationByMinute; 
             private Integer year; 
+
+            private Builder() {
+            } 
+
+            private Builder(SummaryReport model) {
+                this.day = model.day;
+                this.inboundCount = model.inboundCount;
+                this.inboundDurationByMinute = model.inboundDurationByMinute;
+                this.month = model.month;
+                this.outboundCount = model.outboundCount;
+                this.outboundDurationByMinute = model.outboundDurationByMinute;
+                this.year = model.year;
+            } 
 
             /**
              * Day.

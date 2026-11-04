@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadRecordingResponseBody} extends {@link TeaModel}
  *
  * <p>DownloadRecordingResponseBody</p>
  */
 public class DownloadRecordingResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MediaDownloadParam")
+    @com.aliyun.core.annotation.NameInMap("MediaDownloadParam")
     private MediaDownloadParam mediaDownloadParam;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DownloadRecordingResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DownloadRecordingResponseBody extends TeaModel {
 
     public static DownloadRecordingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DownloadRecordingResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DownloadRecordingResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.mediaDownloadParam = model.mediaDownloadParam;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,11 +172,17 @@ public class DownloadRecordingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DownloadRecordingResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadRecordingResponseBody</p>
+     */
     public static class MediaDownloadParam extends TeaModel {
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("SignatureUrl")
+        @com.aliyun.core.annotation.NameInMap("SignatureUrl")
         private String signatureUrl;
 
         private MediaDownloadParam(Builder builder) {
@@ -188,6 +215,14 @@ public class DownloadRecordingResponseBody extends TeaModel {
         public static final class Builder {
             private String fileName; 
             private String signatureUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaDownloadParam model) {
+                this.fileName = model.fileName;
+                this.signatureUrl = model.signatureUrl;
+            } 
 
             /**
              * FileName.

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PickLocalNumberResponseBody} extends {@link TeaModel}
  *
  * <p>PickLocalNumberResponseBody</p>
  */
 public class PickLocalNumberResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PickLocalNumberResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class PickLocalNumberResponseBody extends TeaModel {
 
     public static PickLocalNumberResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class PickLocalNumberResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PickLocalNumberResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,14 +151,20 @@ public class PickLocalNumberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PickLocalNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>PickLocalNumberResponseBody</p>
+     */
     public static class Callee extends TeaModel {
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private Callee(Builder builder) {
@@ -181,6 +207,15 @@ public class PickLocalNumberResponseBody extends TeaModel {
             private String number; 
             private String province; 
 
+            private Builder() {
+            } 
+
+            private Builder(Callee model) {
+                this.city = model.city;
+                this.number = model.number;
+                this.province = model.province;
+            } 
+
             /**
              * City.
              */
@@ -212,14 +247,20 @@ public class PickLocalNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PickLocalNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>PickLocalNumberResponseBody</p>
+     */
     public static class Caller extends TeaModel {
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private Caller(Builder builder) {
@@ -262,6 +303,15 @@ public class PickLocalNumberResponseBody extends TeaModel {
             private String number; 
             private String province; 
 
+            private Builder() {
+            } 
+
+            private Builder(Caller model) {
+                this.city = model.city;
+                this.number = model.number;
+                this.province = model.province;
+            } 
+
             /**
              * City.
              */
@@ -293,11 +343,17 @@ public class PickLocalNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PickLocalNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>PickLocalNumberResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Callee")
+        @com.aliyun.core.annotation.NameInMap("Callee")
         private Callee callee;
 
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private Caller caller;
 
         private Data(Builder builder) {
@@ -330,6 +386,14 @@ public class PickLocalNumberResponseBody extends TeaModel {
         public static final class Builder {
             private Callee callee; 
             private Caller caller; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callee = model.callee;
+                this.caller = model.caller;
+            } 
 
             /**
              * Callee.

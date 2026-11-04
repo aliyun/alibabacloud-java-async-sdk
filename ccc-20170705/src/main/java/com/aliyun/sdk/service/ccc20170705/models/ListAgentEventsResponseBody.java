@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentEventsResponseBody</p>
  */
 public class ListAgentEventsResponseBody extends TeaModel {
-    @NameInMap("AgentEventList")
+    @com.aliyun.core.annotation.NameInMap("AgentEventList")
     private AgentEventList agentEventList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAgentEventsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListAgentEventsResponseBody extends TeaModel {
 
     public static ListAgentEventsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListAgentEventsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentEventsResponseBody model) {
+            this.agentEventList = model.agentEventList;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AgentEventList.
@@ -151,11 +172,17 @@ public class ListAgentEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentEventsResponseBody</p>
+     */
     public static class SkillGroup extends TeaModel {
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
         private SkillGroup(Builder builder) {
@@ -189,6 +216,14 @@ public class ListAgentEventsResponseBody extends TeaModel {
             private String skillGroupId; 
             private String skillGroupName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroup model) {
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+            } 
+
             /**
              * SkillGroupId.
              */
@@ -212,9 +247,15 @@ public class ListAgentEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentEventsResponseBody</p>
+     */
     public static class SkillGroupIds extends TeaModel {
-        @NameInMap("SkillGroup")
-        private java.util.List < SkillGroup> skillGroup;
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
+        private java.util.List<SkillGroup> skillGroup;
 
         private SkillGroupIds(Builder builder) {
             this.skillGroup = builder.skillGroup;
@@ -231,17 +272,24 @@ public class ListAgentEventsResponseBody extends TeaModel {
         /**
          * @return skillGroup
          */
-        public java.util.List < SkillGroup> getSkillGroup() {
+        public java.util.List<SkillGroup> getSkillGroup() {
             return this.skillGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SkillGroup> skillGroup; 
+            private java.util.List<SkillGroup> skillGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillGroupIds model) {
+                this.skillGroup = model.skillGroup;
+            } 
 
             /**
              * SkillGroup.
              */
-            public Builder skillGroup(java.util.List < SkillGroup> skillGroup) {
+            public Builder skillGroup(java.util.List<SkillGroup> skillGroup) {
                 this.skillGroup = skillGroup;
                 return this;
             }
@@ -253,23 +301,29 @@ public class ListAgentEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentEventsResponseBody</p>
+     */
     public static class AgentEvent extends TeaModel {
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private Long eventTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private Long ramId;
 
-        @NameInMap("SkillGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupIds")
         private SkillGroupIds skillGroupIds;
 
         private AgentEvent(Builder builder) {
@@ -339,6 +393,18 @@ public class ListAgentEventsResponseBody extends TeaModel {
             private Long ramId; 
             private SkillGroupIds skillGroupIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(AgentEvent model) {
+                this.event = model.event;
+                this.eventTime = model.eventTime;
+                this.instanceId = model.instanceId;
+                this.loginName = model.loginName;
+                this.ramId = model.ramId;
+                this.skillGroupIds = model.skillGroupIds;
+            } 
+
             /**
              * Event.
              */
@@ -394,9 +460,15 @@ public class ListAgentEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentEventsResponseBody</p>
+     */
     public static class AgentEventList extends TeaModel {
-        @NameInMap("AgentEvent")
-        private java.util.List < AgentEvent> agentEvent;
+        @com.aliyun.core.annotation.NameInMap("AgentEvent")
+        private java.util.List<AgentEvent> agentEvent;
 
         private AgentEventList(Builder builder) {
             this.agentEvent = builder.agentEvent;
@@ -413,17 +485,24 @@ public class ListAgentEventsResponseBody extends TeaModel {
         /**
          * @return agentEvent
          */
-        public java.util.List < AgentEvent> getAgentEvent() {
+        public java.util.List<AgentEvent> getAgentEvent() {
             return this.agentEvent;
         }
 
         public static final class Builder {
-            private java.util.List < AgentEvent> agentEvent; 
+            private java.util.List<AgentEvent> agentEvent; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentEventList model) {
+                this.agentEvent = model.agentEvent;
+            } 
 
             /**
              * AgentEvent.
              */
-            public Builder agentEvent(java.util.List < AgentEvent> agentEvent) {
+            public Builder agentEvent(java.util.List<AgentEvent> agentEvent) {
                 this.agentEvent = agentEvent;
                 return this;
             }

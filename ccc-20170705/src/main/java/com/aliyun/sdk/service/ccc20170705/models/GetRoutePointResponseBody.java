@@ -1,39 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRoutePointResponseBody} extends {@link TeaModel}
  *
  * <p>GetRoutePointResponseBody</p>
  */
 public class GetRoutePointResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RoutePoint")
+    @com.aliyun.core.annotation.NameInMap("RoutePoint")
     private String routePoint;
 
-    @NameInMap("StatusCode")
-    private String statusCode;
-
-    @NameInMap("StatusDesc")
-    private String statusDesc;
-
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRoutePointResponseBody(Builder builder) {
@@ -42,8 +41,6 @@ public class GetRoutePointResponseBody extends TeaModel {
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.routePoint = builder.routePoint;
-        this.statusCode = builder.statusCode;
-        this.statusDesc = builder.statusDesc;
         this.success = builder.success;
     }
 
@@ -53,6 +50,10 @@ public class GetRoutePointResponseBody extends TeaModel {
 
     public static GetRoutePointResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -91,20 +92,6 @@ public class GetRoutePointResponseBody extends TeaModel {
     }
 
     /**
-     * @return statusCode
-     */
-    public String getStatusCode() {
-        return this.statusCode;
-    }
-
-    /**
-     * @return statusDesc
-     */
-    public String getStatusDesc() {
-        return this.statusDesc;
-    }
-
-    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -117,9 +104,19 @@ public class GetRoutePointResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String routePoint; 
-        private String statusCode; 
-        private String statusDesc; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRoutePointResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.routePoint = model.routePoint;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -158,22 +155,6 @@ public class GetRoutePointResponseBody extends TeaModel {
          */
         public Builder routePoint(String routePoint) {
             this.routePoint = routePoint;
-            return this;
-        }
-
-        /**
-         * StatusCode.
-         */
-        public Builder statusCode(String statusCode) {
-            this.statusCode = statusCode;
-            return this;
-        }
-
-        /**
-         * StatusDesc.
-         */
-        public Builder statusDesc(String statusDesc) {
-            this.statusDesc = statusDesc;
             return this;
         }
 

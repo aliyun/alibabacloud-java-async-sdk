@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PickGlobalOutboundNumbersRequest} extends {@link RequestModel}
  *
  * <p>PickGlobalOutboundNumbersRequest</p>
  */
 public class PickGlobalOutboundNumbersRequest extends Request {
-    @Query
-    @NameInMap("CalleeNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalleeNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calleeNumber;
 
-    @Query
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IsVirtual")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsVirtual")
     private Boolean isVirtual;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    @Validation(required = true)
-    private java.util.List < String > skillGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> skillGroupId;
 
     private PickGlobalOutboundNumbersRequest(Builder builder) {
         super(builder);
@@ -52,7 +57,7 @@ public class PickGlobalOutboundNumbersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,7 +93,7 @@ public class PickGlobalOutboundNumbersRequest extends Request {
     /**
      * @return skillGroupId
      */
-    public java.util.List < String > getSkillGroupId() {
+    public java.util.List<String> getSkillGroupId() {
         return this.skillGroupId;
     }
 
@@ -97,23 +102,23 @@ public class PickGlobalOutboundNumbersRequest extends Request {
         private Integer count; 
         private String instanceId; 
         private Boolean isVirtual; 
-        private java.util.List < String > skillGroupId; 
+        private java.util.List<String> skillGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(PickGlobalOutboundNumbersRequest response) {
-            super(response);
-            this.calleeNumber = response.calleeNumber;
-            this.count = response.count;
-            this.instanceId = response.instanceId;
-            this.isVirtual = response.isVirtual;
-            this.skillGroupId = response.skillGroupId;
+        private Builder(PickGlobalOutboundNumbersRequest request) {
+            super(request);
+            this.calleeNumber = request.calleeNumber;
+            this.count = request.count;
+            this.instanceId = request.instanceId;
+            this.isVirtual = request.isVirtual;
+            this.skillGroupId = request.skillGroupId;
         } 
 
         /**
-         * CalleeNumber.
+         * <p>This parameter is required.</p>
          */
         public Builder calleeNumber(String calleeNumber) {
             this.putQueryParameter("CalleeNumber", calleeNumber);
@@ -131,7 +136,7 @@ public class PickGlobalOutboundNumbersRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,9 +154,9 @@ public class PickGlobalOutboundNumbersRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * <p>This parameter is required.</p>
          */
-        public Builder skillGroupId(java.util.List < String > skillGroupId) {
+        public Builder skillGroupId(java.util.List<String> skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);
             this.skillGroupId = skillGroupId;
             return this;

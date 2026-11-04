@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckNumberAvaliableResponseBody} extends {@link TeaModel}
  *
  * <p>CheckNumberAvaliableResponseBody</p>
  */
 public class CheckNumberAvaliableResponseBody extends TeaModel {
-    @NameInMap("CalleeAvaliable")
+    @com.aliyun.core.annotation.NameInMap("CalleeAvaliable")
     private CalleeAvaliable calleeAvaliable;
 
-    @NameInMap("CallerAvaliable")
+    @com.aliyun.core.annotation.NameInMap("CallerAvaliable")
     private CallerAvaliable callerAvaliable;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckNumberAvaliableResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class CheckNumberAvaliableResponseBody extends TeaModel {
 
     public static CheckNumberAvaliableResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,6 +117,19 @@ public class CheckNumberAvaliableResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckNumberAvaliableResponseBody model) {
+            this.calleeAvaliable = model.calleeAvaliable;
+            this.callerAvaliable = model.callerAvaliable;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * CalleeAvaliable.
@@ -171,11 +193,17 @@ public class CheckNumberAvaliableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckNumberAvaliableResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckNumberAvaliableResponseBody</p>
+     */
     public static class CalleeAvaliable extends TeaModel {
-        @NameInMap("Avaliable")
+        @com.aliyun.core.annotation.NameInMap("Avaliable")
         private Boolean avaliable;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private CalleeAvaliable(Builder builder) {
@@ -209,6 +237,14 @@ public class CheckNumberAvaliableResponseBody extends TeaModel {
             private Boolean avaliable; 
             private String reason; 
 
+            private Builder() {
+            } 
+
+            private Builder(CalleeAvaliable model) {
+                this.avaliable = model.avaliable;
+                this.reason = model.reason;
+            } 
+
             /**
              * Avaliable.
              */
@@ -232,11 +268,17 @@ public class CheckNumberAvaliableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CheckNumberAvaliableResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckNumberAvaliableResponseBody</p>
+     */
     public static class CallerAvaliable extends TeaModel {
-        @NameInMap("Avaliable")
+        @com.aliyun.core.annotation.NameInMap("Avaliable")
         private Boolean avaliable;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private CallerAvaliable(Builder builder) {
@@ -269,6 +311,14 @@ public class CheckNumberAvaliableResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean avaliable; 
             private String reason; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallerAvaliable model) {
+                this.avaliable = model.avaliable;
+                this.reason = model.reason;
+            } 
 
             /**
              * Avaliable.

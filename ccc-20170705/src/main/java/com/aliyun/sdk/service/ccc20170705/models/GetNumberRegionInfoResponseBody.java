@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNumberRegionInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetNumberRegionInfoResponseBody</p>
  */
 public class GetNumberRegionInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private PhoneNumber phoneNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetNumberRegionInfoResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetNumberRegionInfoResponseBody extends TeaModel {
 
     public static GetNumberRegionInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetNumberRegionInfoResponseBody extends TeaModel {
         private PhoneNumber phoneNumber; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetNumberRegionInfoResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.phoneNumber = model.phoneNumber;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,14 +151,20 @@ public class GetNumberRegionInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNumberRegionInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNumberRegionInfoResponseBody</p>
+     */
     public static class PhoneNumber extends TeaModel {
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private PhoneNumber(Builder builder) {
@@ -180,6 +206,15 @@ public class GetNumberRegionInfoResponseBody extends TeaModel {
             private String city; 
             private String number; 
             private String province; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumber model) {
+                this.city = model.city;
+                this.number = model.number;
+                this.province = model.province;
+            } 
 
             /**
              * City.

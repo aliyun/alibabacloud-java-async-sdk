@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DialExRequest} extends {@link RequestModel}
  *
  * <p>DialExRequest</p>
  */
 public class DialExRequest extends Request {
-    @Query
-    @NameInMap("AnswerMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnswerMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer answerMode;
 
-    @Query
-    @NameInMap("Callee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callee;
 
-    @Query
-    @NameInMap("Caller")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caller;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Provider")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
 
-    @Query
-    @NameInMap("RoutPoint")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoutPoint")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routPoint;
 
     private DialExRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class DialExRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,18 +123,18 @@ public class DialExRequest extends Request {
             super();
         } 
 
-        private Builder(DialExRequest response) {
-            super(response);
-            this.answerMode = response.answerMode;
-            this.callee = response.callee;
-            this.caller = response.caller;
-            this.instanceId = response.instanceId;
-            this.provider = response.provider;
-            this.routPoint = response.routPoint;
+        private Builder(DialExRequest request) {
+            super(request);
+            this.answerMode = request.answerMode;
+            this.callee = request.callee;
+            this.caller = request.caller;
+            this.instanceId = request.instanceId;
+            this.provider = request.provider;
+            this.routPoint = request.routPoint;
         } 
 
         /**
-         * AnswerMode.
+         * <p>This parameter is required.</p>
          */
         public Builder answerMode(Integer answerMode) {
             this.putQueryParameter("AnswerMode", answerMode);
@@ -138,7 +143,7 @@ public class DialExRequest extends Request {
         }
 
         /**
-         * Callee.
+         * <p>This parameter is required.</p>
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -147,7 +152,7 @@ public class DialExRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>This parameter is required.</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -156,7 +161,7 @@ public class DialExRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +179,7 @@ public class DialExRequest extends Request {
         }
 
         /**
-         * RoutPoint.
+         * <p>This parameter is required.</p>
          */
         public Builder routPoint(String routPoint) {
             this.putQueryParameter("RoutPoint", routPoint);

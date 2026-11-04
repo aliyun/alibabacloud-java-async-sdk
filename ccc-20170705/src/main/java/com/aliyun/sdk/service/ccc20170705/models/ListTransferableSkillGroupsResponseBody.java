@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransferableSkillGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransferableSkillGroupsResponseBody</p>
  */
 public class ListTransferableSkillGroupsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SkillGroups")
-    private java.util.List < SkillGroups> skillGroups;
+    @com.aliyun.core.annotation.NameInMap("SkillGroups")
+    private java.util.List<SkillGroups> skillGroups;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTransferableSkillGroupsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListTransferableSkillGroupsResponseBody extends TeaModel {
 
     public static ListTransferableSkillGroupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -78,7 +87,7 @@ public class ListTransferableSkillGroupsResponseBody extends TeaModel {
     /**
      * @return skillGroups
      */
-    public java.util.List < SkillGroups> getSkillGroups() {
+    public java.util.List<SkillGroups> getSkillGroups() {
         return this.skillGroups;
     }
 
@@ -94,8 +103,20 @@ public class ListTransferableSkillGroupsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.List < SkillGroups> skillGroups; 
+        private java.util.List<SkillGroups> skillGroups; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTransferableSkillGroupsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.skillGroups = model.skillGroups;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -132,7 +153,7 @@ public class ListTransferableSkillGroupsResponseBody extends TeaModel {
         /**
          * SkillGroups.
          */
-        public Builder skillGroups(java.util.List < SkillGroups> skillGroups) {
+        public Builder skillGroups(java.util.List<SkillGroups> skillGroups) {
             this.skillGroups = skillGroups;
             return this;
         }
@@ -151,32 +172,38 @@ public class ListTransferableSkillGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransferableSkillGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransferableSkillGroupsResponseBody</p>
+     */
     public static class SkillGroups extends TeaModel {
-        @NameInMap("AccQueueName")
+        @com.aliyun.core.annotation.NameInMap("AccQueueName")
         private String accQueueName;
 
-        @NameInMap("AccSkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("AccSkillGroupName")
         private String accSkillGroupName;
 
-        @NameInMap("AllowPrivateOutboundNumber")
+        @com.aliyun.core.annotation.NameInMap("AllowPrivateOutboundNumber")
         private Boolean allowPrivateOutboundNumber;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RoutingStrategy")
+        @com.aliyun.core.annotation.NameInMap("RoutingStrategy")
         private String routingStrategy;
 
-        @NameInMap("SkillGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupDescription")
         private String skillGroupDescription;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
-        @NameInMap("UserCount")
+        @com.aliyun.core.annotation.NameInMap("UserCount")
         private Integer userCount;
 
         private SkillGroups(Builder builder) {
@@ -272,6 +299,21 @@ public class ListTransferableSkillGroupsResponseBody extends TeaModel {
             private String skillGroupId; 
             private String skillGroupName; 
             private Integer userCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillGroups model) {
+                this.accQueueName = model.accQueueName;
+                this.accSkillGroupName = model.accSkillGroupName;
+                this.allowPrivateOutboundNumber = model.allowPrivateOutboundNumber;
+                this.instanceId = model.instanceId;
+                this.routingStrategy = model.routingStrategy;
+                this.skillGroupDescription = model.skillGroupDescription;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.userCount = model.userCount;
+            } 
 
             /**
              * AccQueueName.

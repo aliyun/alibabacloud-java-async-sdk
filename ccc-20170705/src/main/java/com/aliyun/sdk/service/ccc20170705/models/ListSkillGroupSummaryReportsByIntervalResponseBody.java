@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSkillGroupSummaryReportsByIntervalResponseBody} extends {@link TeaModel}
  *
  * <p>ListSkillGroupSummaryReportsByIntervalResponseBody</p>
  */
 public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PagedSkillGroupSummaryReport")
+    @com.aliyun.core.annotation.NameInMap("PagedSkillGroupSummaryReport")
     private PagedSkillGroupSummaryReport pagedSkillGroupSummaryReport;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSkillGroupSummaryReportsByIntervalResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
 
     public static ListSkillGroupSummaryReportsByIntervalResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         private PagedSkillGroupSummaryReport pagedSkillGroupSummaryReport; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSkillGroupSummaryReportsByIntervalResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pagedSkillGroupSummaryReport = model.pagedSkillGroupSummaryReport;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,80 +172,86 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsByIntervalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsByIntervalResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
-        @NameInMap("AbandonedInQueueOfQueueCount")
+        @com.aliyun.core.annotation.NameInMap("AbandonedInQueueOfQueueCount")
         private Long abandonedInQueueOfQueueCount;
 
-        @NameInMap("AnsweredByAgentOfQueueCount")
+        @com.aliyun.core.annotation.NameInMap("AnsweredByAgentOfQueueCount")
         private Long answeredByAgentOfQueueCount;
 
-        @NameInMap("AnsweredByAgentOfQueueMaxWaitTimeDuration")
+        @com.aliyun.core.annotation.NameInMap("AnsweredByAgentOfQueueMaxWaitTimeDuration")
         private Long answeredByAgentOfQueueMaxWaitTimeDuration;
 
-        @NameInMap("AnsweredByAgentOfQueueWaitTimeDuration")
+        @com.aliyun.core.annotation.NameInMap("AnsweredByAgentOfQueueWaitTimeDuration")
         private Long answeredByAgentOfQueueWaitTimeDuration;
 
-        @NameInMap("AverageRingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageRingTime")
         private Long averageRingTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Long averageTalkTime;
 
-        @NameInMap("AverageWorkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Long averageWorkTime;
 
-        @NameInMap("CallsHandled")
+        @com.aliyun.core.annotation.NameInMap("CallsHandled")
         private Long callsHandled;
 
-        @NameInMap("CallsOffered")
+        @com.aliyun.core.annotation.NameInMap("CallsOffered")
         private Long callsOffered;
 
-        @NameInMap("GiveUpByAgentOfQueueCount")
+        @com.aliyun.core.annotation.NameInMap("GiveUpByAgentOfQueueCount")
         private Long giveUpByAgentOfQueueCount;
 
-        @NameInMap("HandleRate")
+        @com.aliyun.core.annotation.NameInMap("HandleRate")
         private Float handleRate;
 
-        @NameInMap("InComingQueueOfQueueCount")
+        @com.aliyun.core.annotation.NameInMap("InComingQueueOfQueueCount")
         private Long inComingQueueOfQueueCount;
 
-        @NameInMap("MaxRingTime")
+        @com.aliyun.core.annotation.NameInMap("MaxRingTime")
         private Long maxRingTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("MaxWorkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWorkTime")
         private Long maxWorkTime;
 
-        @NameInMap("OverFlowInQueueOfQueueCount")
+        @com.aliyun.core.annotation.NameInMap("OverFlowInQueueOfQueueCount")
         private Long overFlowInQueueOfQueueCount;
 
-        @NameInMap("QueueMaxWaitTimeDuration")
+        @com.aliyun.core.annotation.NameInMap("QueueMaxWaitTimeDuration")
         private Long queueMaxWaitTimeDuration;
 
-        @NameInMap("QueueWaitTimeDuration")
+        @com.aliyun.core.annotation.NameInMap("QueueWaitTimeDuration")
         private Long queueWaitTimeDuration;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Float satisfactionIndex;
 
-        @NameInMap("SatisfactionSurveysOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysOffered")
         private Long satisfactionSurveysOffered;
 
-        @NameInMap("SatisfactionSurveysResponded")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
-        @NameInMap("ServiceLevel20")
+        @com.aliyun.core.annotation.NameInMap("ServiceLevel20")
         private Float serviceLevel20;
 
-        @NameInMap("TotalRingTime")
+        @com.aliyun.core.annotation.NameInMap("TotalRingTime")
         private Long totalRingTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
-        @NameInMap("TotalWorkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWorkTime")
         private Long totalWorkTime;
 
         private Inbound(Builder builder) {
@@ -465,6 +492,37 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Inbound model) {
+                this.abandonedInQueueOfQueueCount = model.abandonedInQueueOfQueueCount;
+                this.answeredByAgentOfQueueCount = model.answeredByAgentOfQueueCount;
+                this.answeredByAgentOfQueueMaxWaitTimeDuration = model.answeredByAgentOfQueueMaxWaitTimeDuration;
+                this.answeredByAgentOfQueueWaitTimeDuration = model.answeredByAgentOfQueueWaitTimeDuration;
+                this.averageRingTime = model.averageRingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsHandled = model.callsHandled;
+                this.callsOffered = model.callsOffered;
+                this.giveUpByAgentOfQueueCount = model.giveUpByAgentOfQueueCount;
+                this.handleRate = model.handleRate;
+                this.inComingQueueOfQueueCount = model.inComingQueueOfQueueCount;
+                this.maxRingTime = model.maxRingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.overFlowInQueueOfQueueCount = model.overFlowInQueueOfQueueCount;
+                this.queueMaxWaitTimeDuration = model.queueMaxWaitTimeDuration;
+                this.queueWaitTimeDuration = model.queueWaitTimeDuration;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.serviceLevel20 = model.serviceLevel20;
+                this.totalRingTime = model.totalRingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AbandonedInQueueOfQueueCount.
              */
@@ -672,50 +730,56 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsByIntervalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsByIntervalResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
-        @NameInMap("AnswerRate")
+        @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private Float answerRate;
 
-        @NameInMap("AverageDialingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageDialingTime")
         private Long averageDialingTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Long averageTalkTime;
 
-        @NameInMap("AverageWorkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Long averageWorkTime;
 
-        @NameInMap("CallsAnswered")
+        @com.aliyun.core.annotation.NameInMap("CallsAnswered")
         private Long callsAnswered;
 
-        @NameInMap("CallsDialed")
+        @com.aliyun.core.annotation.NameInMap("CallsDialed")
         private Long callsDialed;
 
-        @NameInMap("MaxDialingTime")
+        @com.aliyun.core.annotation.NameInMap("MaxDialingTime")
         private Long maxDialingTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("MaxWorkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWorkTime")
         private Long maxWorkTime;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Float satisfactionIndex;
 
-        @NameInMap("SatisfactionSurveysOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysOffered")
         private Long satisfactionSurveysOffered;
 
-        @NameInMap("SatisfactionSurveysResponded")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
-        @NameInMap("TotalDialingTime")
+        @com.aliyun.core.annotation.NameInMap("TotalDialingTime")
         private Long totalDialingTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
-        @NameInMap("TotalWorkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWorkTime")
         private Long totalWorkTime;
 
         private Outbound(Builder builder) {
@@ -866,6 +930,27 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outbound model) {
+                this.answerRate = model.answerRate;
+                this.averageDialingTime = model.averageDialingTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.callsAnswered = model.callsAnswered;
+                this.callsDialed = model.callsDialed;
+                this.maxDialingTime = model.maxDialingTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalDialingTime = model.totalDialingTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AnswerRate.
              */
@@ -993,53 +1078,59 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsByIntervalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsByIntervalResponseBody</p>
+     */
     public static class Overall extends TeaModel {
-        @NameInMap("AverageReadyTime")
+        @com.aliyun.core.annotation.NameInMap("AverageReadyTime")
         private Long averageReadyTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Long averageTalkTime;
 
-        @NameInMap("AverageWorkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Long averageWorkTime;
 
-        @NameInMap("MaxReadyTime")
+        @com.aliyun.core.annotation.NameInMap("MaxReadyTime")
         private Long maxReadyTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("MaxWorkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWorkTime")
         private Long maxWorkTime;
 
-        @NameInMap("OccupancyRate")
+        @com.aliyun.core.annotation.NameInMap("OccupancyRate")
         private Float occupancyRate;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Float satisfactionIndex;
 
-        @NameInMap("SatisfactionSurveysOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysOffered")
         private Long satisfactionSurveysOffered;
 
-        @NameInMap("SatisfactionSurveysResponded")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
-        @NameInMap("TotalBreakTime")
+        @com.aliyun.core.annotation.NameInMap("TotalBreakTime")
         private Long totalBreakTime;
 
-        @NameInMap("TotalCalls")
+        @com.aliyun.core.annotation.NameInMap("TotalCalls")
         private Long totalCalls;
 
-        @NameInMap("TotalLoggedInTime")
+        @com.aliyun.core.annotation.NameInMap("TotalLoggedInTime")
         private Long totalLoggedInTime;
 
-        @NameInMap("TotalReadyTime")
+        @com.aliyun.core.annotation.NameInMap("TotalReadyTime")
         private Long totalReadyTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
-        @NameInMap("TotalWorkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWorkTime")
         private Long totalWorkTime;
 
         private Overall(Builder builder) {
@@ -1199,6 +1290,28 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
             private Long totalTalkTime; 
             private Long totalWorkTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Overall model) {
+                this.averageReadyTime = model.averageReadyTime;
+                this.averageTalkTime = model.averageTalkTime;
+                this.averageWorkTime = model.averageWorkTime;
+                this.maxReadyTime = model.maxReadyTime;
+                this.maxTalkTime = model.maxTalkTime;
+                this.maxWorkTime = model.maxWorkTime;
+                this.occupancyRate = model.occupancyRate;
+                this.satisfactionIndex = model.satisfactionIndex;
+                this.satisfactionSurveysOffered = model.satisfactionSurveysOffered;
+                this.satisfactionSurveysResponded = model.satisfactionSurveysResponded;
+                this.totalBreakTime = model.totalBreakTime;
+                this.totalCalls = model.totalCalls;
+                this.totalLoggedInTime = model.totalLoggedInTime;
+                this.totalReadyTime = model.totalReadyTime;
+                this.totalTalkTime = model.totalTalkTime;
+                this.totalWorkTime = model.totalWorkTime;
+            } 
+
             /**
              * AverageReadyTime.
              */
@@ -1334,26 +1447,32 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsByIntervalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsByIntervalResponseBody</p>
+     */
     public static class SkillGroupSummaryReport extends TeaModel {
-        @NameInMap("Inbound")
+        @com.aliyun.core.annotation.NameInMap("Inbound")
         private Inbound inbound;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Outbound")
+        @com.aliyun.core.annotation.NameInMap("Outbound")
         private Outbound outbound;
 
-        @NameInMap("Overall")
+        @com.aliyun.core.annotation.NameInMap("Overall")
         private Overall overall;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
         private SkillGroupSummaryReport(Builder builder) {
@@ -1432,6 +1551,19 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
             private String skillGroupName; 
             private String timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroupSummaryReport model) {
+                this.inbound = model.inbound;
+                this.instanceId = model.instanceId;
+                this.outbound = model.outbound;
+                this.overall = model.overall;
+                this.skillGroupId = model.skillGroupId;
+                this.skillGroupName = model.skillGroupName;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * Inbound.
              */
@@ -1495,9 +1627,15 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsByIntervalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsByIntervalResponseBody</p>
+     */
     public static class IntervalList extends TeaModel {
-        @NameInMap("SkillGroupSummaryReport")
-        private java.util.List < SkillGroupSummaryReport> skillGroupSummaryReport;
+        @com.aliyun.core.annotation.NameInMap("SkillGroupSummaryReport")
+        private java.util.List<SkillGroupSummaryReport> skillGroupSummaryReport;
 
         private IntervalList(Builder builder) {
             this.skillGroupSummaryReport = builder.skillGroupSummaryReport;
@@ -1514,17 +1652,24 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         /**
          * @return skillGroupSummaryReport
          */
-        public java.util.List < SkillGroupSummaryReport> getSkillGroupSummaryReport() {
+        public java.util.List<SkillGroupSummaryReport> getSkillGroupSummaryReport() {
             return this.skillGroupSummaryReport;
         }
 
         public static final class Builder {
-            private java.util.List < SkillGroupSummaryReport> skillGroupSummaryReport; 
+            private java.util.List<SkillGroupSummaryReport> skillGroupSummaryReport; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntervalList model) {
+                this.skillGroupSummaryReport = model.skillGroupSummaryReport;
+            } 
 
             /**
              * SkillGroupSummaryReport.
              */
-            public Builder skillGroupSummaryReport(java.util.List < SkillGroupSummaryReport> skillGroupSummaryReport) {
+            public Builder skillGroupSummaryReport(java.util.List<SkillGroupSummaryReport> skillGroupSummaryReport) {
                 this.skillGroupSummaryReport = skillGroupSummaryReport;
                 return this;
             }
@@ -1536,11 +1681,17 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsByIntervalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsByIntervalResponseBody</p>
+     */
     public static class SkillGroupTimeIntervalReport extends TeaModel {
-        @NameInMap("IntervalList")
+        @com.aliyun.core.annotation.NameInMap("IntervalList")
         private IntervalList intervalList;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
         private SkillGroupTimeIntervalReport(Builder builder) {
@@ -1574,6 +1725,14 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
             private IntervalList intervalList; 
             private String skillGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SkillGroupTimeIntervalReport model) {
+                this.intervalList = model.intervalList;
+                this.skillGroupId = model.skillGroupId;
+            } 
+
             /**
              * IntervalList.
              */
@@ -1597,9 +1756,15 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsByIntervalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsByIntervalResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("SkillGroupTimeIntervalReport")
-        private java.util.List < SkillGroupTimeIntervalReport> skillGroupTimeIntervalReport;
+        @com.aliyun.core.annotation.NameInMap("SkillGroupTimeIntervalReport")
+        private java.util.List<SkillGroupTimeIntervalReport> skillGroupTimeIntervalReport;
 
         private List(Builder builder) {
             this.skillGroupTimeIntervalReport = builder.skillGroupTimeIntervalReport;
@@ -1616,17 +1781,24 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         /**
          * @return skillGroupTimeIntervalReport
          */
-        public java.util.List < SkillGroupTimeIntervalReport> getSkillGroupTimeIntervalReport() {
+        public java.util.List<SkillGroupTimeIntervalReport> getSkillGroupTimeIntervalReport() {
             return this.skillGroupTimeIntervalReport;
         }
 
         public static final class Builder {
-            private java.util.List < SkillGroupTimeIntervalReport> skillGroupTimeIntervalReport; 
+            private java.util.List<SkillGroupTimeIntervalReport> skillGroupTimeIntervalReport; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.skillGroupTimeIntervalReport = model.skillGroupTimeIntervalReport;
+            } 
 
             /**
              * SkillGroupTimeIntervalReport.
              */
-            public Builder skillGroupTimeIntervalReport(java.util.List < SkillGroupTimeIntervalReport> skillGroupTimeIntervalReport) {
+            public Builder skillGroupTimeIntervalReport(java.util.List<SkillGroupTimeIntervalReport> skillGroupTimeIntervalReport) {
                 this.skillGroupTimeIntervalReport = skillGroupTimeIntervalReport;
                 return this;
             }
@@ -1638,17 +1810,23 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListSkillGroupSummaryReportsByIntervalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillGroupSummaryReportsByIntervalResponseBody</p>
+     */
     public static class PagedSkillGroupSummaryReport extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PagedSkillGroupSummaryReport(Builder builder) {
@@ -1699,6 +1877,16 @@ public class ListSkillGroupSummaryReportsByIntervalResponseBody extends TeaModel
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PagedSkillGroupSummaryReport model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * List.

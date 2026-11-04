@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecordingsByContactIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListRecordingsByContactIdResponseBody</p>
  */
 public class ListRecordingsByContactIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Recordings")
+    @com.aliyun.core.annotation.NameInMap("Recordings")
     private Recordings recordings;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListRecordingsByContactIdResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
 
     public static ListRecordingsByContactIdResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
         private Recordings recordings; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRecordingsByContactIdResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.recordings = model.recordings;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,50 +172,56 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRecordingsByContactIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRecordingsByContactIdResponseBody</p>
+     */
     public static class Recording extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("CallingNumber")
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
         private String callingNumber;
 
-        @NameInMap("Channel")
+        @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("ContactType")
+        @com.aliyun.core.annotation.NameInMap("ContactType")
         private String contactType;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("FileDescription")
+        @com.aliyun.core.annotation.NameInMap("FileDescription")
         private String fileDescription;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("QualityCheckTaskId")
+        @com.aliyun.core.annotation.NameInMap("QualityCheckTaskId")
         private String qualityCheckTaskId;
 
-        @NameInMap("QualityCheckTid")
+        @com.aliyun.core.annotation.NameInMap("QualityCheckTid")
         private String qualityCheckTid;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Recording(Builder builder) {
@@ -345,6 +372,27 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
             private String qualityCheckTid; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Recording model) {
+                this.agentId = model.agentId;
+                this.agentName = model.agentName;
+                this.calledNumber = model.calledNumber;
+                this.callingNumber = model.callingNumber;
+                this.channel = model.channel;
+                this.contactId = model.contactId;
+                this.contactType = model.contactType;
+                this.duration = model.duration;
+                this.fileDescription = model.fileDescription;
+                this.fileName = model.fileName;
+                this.filePath = model.filePath;
+                this.instanceId = model.instanceId;
+                this.qualityCheckTaskId = model.qualityCheckTaskId;
+                this.qualityCheckTid = model.qualityCheckTid;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * AgentId.
              */
@@ -472,9 +520,15 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRecordingsByContactIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRecordingsByContactIdResponseBody</p>
+     */
     public static class Recordings extends TeaModel {
-        @NameInMap("Recording")
-        private java.util.List < Recording> recording;
+        @com.aliyun.core.annotation.NameInMap("Recording")
+        private java.util.List<Recording> recording;
 
         private Recordings(Builder builder) {
             this.recording = builder.recording;
@@ -491,17 +545,24 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
         /**
          * @return recording
          */
-        public java.util.List < Recording> getRecording() {
+        public java.util.List<Recording> getRecording() {
             return this.recording;
         }
 
         public static final class Builder {
-            private java.util.List < Recording> recording; 
+            private java.util.List<Recording> recording; 
+
+            private Builder() {
+            } 
+
+            private Builder(Recordings model) {
+                this.recording = model.recording;
+            } 
 
             /**
              * Recording.
              */
-            public Builder recording(java.util.List < Recording> recording) {
+            public Builder recording(java.util.List<Recording> recording) {
                 this.recording = recording;
                 return this;
             }

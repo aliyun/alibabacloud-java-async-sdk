@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPhoneTagsRequest} extends {@link RequestModel}
  *
  * <p>ModifyPhoneTagsRequest</p>
  */
 public class ModifyPhoneTagsRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ServiceTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceTag;
 
-    @Query
-    @NameInMap("SkillGroupIdList")
-    private java.util.List < String > skillGroupIdList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupIdList")
+    private java.util.List<String> skillGroupIdList;
 
     private ModifyPhoneTagsRequest(Builder builder) {
         super(builder);
@@ -41,7 +46,7 @@ public class ModifyPhoneTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,28 +68,28 @@ public class ModifyPhoneTagsRequest extends Request {
     /**
      * @return skillGroupIdList
      */
-    public java.util.List < String > getSkillGroupIdList() {
+    public java.util.List<String> getSkillGroupIdList() {
         return this.skillGroupIdList;
     }
 
     public static final class Builder extends Request.Builder<ModifyPhoneTagsRequest, Builder> {
         private String instanceId; 
         private String serviceTag; 
-        private java.util.List < String > skillGroupIdList; 
+        private java.util.List<String> skillGroupIdList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyPhoneTagsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.serviceTag = response.serviceTag;
-            this.skillGroupIdList = response.skillGroupIdList;
+        private Builder(ModifyPhoneTagsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.serviceTag = request.serviceTag;
+            this.skillGroupIdList = request.skillGroupIdList;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +98,7 @@ public class ModifyPhoneTagsRequest extends Request {
         }
 
         /**
-         * ServiceTag.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceTag(String serviceTag) {
             this.putQueryParameter("ServiceTag", serviceTag);
@@ -104,7 +109,7 @@ public class ModifyPhoneTagsRequest extends Request {
         /**
          * SkillGroupIdList.
          */
-        public Builder skillGroupIdList(java.util.List < String > skillGroupIdList) {
+        public Builder skillGroupIdList(java.util.List<String> skillGroupIdList) {
             this.putQueryParameter("SkillGroupIdList", skillGroupIdList);
             this.skillGroupIdList = skillGroupIdList;
             return this;

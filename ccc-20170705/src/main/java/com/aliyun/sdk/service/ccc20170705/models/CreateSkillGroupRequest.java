@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSkillGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateSkillGroupRequest</p>
  */
 public class CreateSkillGroupRequest extends Request {
-    @Query
-    @NameInMap("AllowPrivateOutboundNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowPrivateOutboundNumber")
     private Boolean allowPrivateOutboundNumber;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OutboundPhoneNumberId")
-    private java.util.List < String > outboundPhoneNumberId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundPhoneNumberId")
+    private java.util.List<String> outboundPhoneNumberId;
 
-    @Query
-    @NameInMap("RoutingStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoutingStrategy")
     private String routingStrategy;
 
-    @Query
-    @NameInMap("SkillLevel")
-    private java.util.List < Integer > skillLevel;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillLevel")
+    private java.util.List<Integer> skillLevel;
 
-    @Query
-    @NameInMap("UserId")
-    private java.util.List < String > userId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private java.util.List<String> userId;
 
     private CreateSkillGroupRequest(Builder builder) {
         super(builder);
@@ -66,7 +71,7 @@ public class CreateSkillGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,7 +107,7 @@ public class CreateSkillGroupRequest extends Request {
     /**
      * @return outboundPhoneNumberId
      */
-    public java.util.List < String > getOutboundPhoneNumberId() {
+    public java.util.List<String> getOutboundPhoneNumberId() {
         return this.outboundPhoneNumberId;
     }
 
@@ -116,14 +121,14 @@ public class CreateSkillGroupRequest extends Request {
     /**
      * @return skillLevel
      */
-    public java.util.List < Integer > getSkillLevel() {
+    public java.util.List<Integer> getSkillLevel() {
         return this.skillLevel;
     }
 
     /**
      * @return userId
      */
-    public java.util.List < String > getUserId() {
+    public java.util.List<String> getUserId() {
         return this.userId;
     }
 
@@ -132,25 +137,25 @@ public class CreateSkillGroupRequest extends Request {
         private String description; 
         private String instanceId; 
         private String name; 
-        private java.util.List < String > outboundPhoneNumberId; 
+        private java.util.List<String> outboundPhoneNumberId; 
         private String routingStrategy; 
-        private java.util.List < Integer > skillLevel; 
-        private java.util.List < String > userId; 
+        private java.util.List<Integer> skillLevel; 
+        private java.util.List<String> userId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateSkillGroupRequest response) {
-            super(response);
-            this.allowPrivateOutboundNumber = response.allowPrivateOutboundNumber;
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.outboundPhoneNumberId = response.outboundPhoneNumberId;
-            this.routingStrategy = response.routingStrategy;
-            this.skillLevel = response.skillLevel;
-            this.userId = response.userId;
+        private Builder(CreateSkillGroupRequest request) {
+            super(request);
+            this.allowPrivateOutboundNumber = request.allowPrivateOutboundNumber;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.outboundPhoneNumberId = request.outboundPhoneNumberId;
+            this.routingStrategy = request.routingStrategy;
+            this.skillLevel = request.skillLevel;
+            this.userId = request.userId;
         } 
 
         /**
@@ -172,7 +177,7 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -181,7 +186,7 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -192,7 +197,7 @@ public class CreateSkillGroupRequest extends Request {
         /**
          * OutboundPhoneNumberId.
          */
-        public Builder outboundPhoneNumberId(java.util.List < String > outboundPhoneNumberId) {
+        public Builder outboundPhoneNumberId(java.util.List<String> outboundPhoneNumberId) {
             this.putQueryParameter("OutboundPhoneNumberId", outboundPhoneNumberId);
             this.outboundPhoneNumberId = outboundPhoneNumberId;
             return this;
@@ -210,7 +215,7 @@ public class CreateSkillGroupRequest extends Request {
         /**
          * SkillLevel.
          */
-        public Builder skillLevel(java.util.List < Integer > skillLevel) {
+        public Builder skillLevel(java.util.List<Integer> skillLevel) {
             this.putQueryParameter("SkillLevel", skillLevel);
             this.skillLevel = skillLevel;
             return this;
@@ -219,7 +224,7 @@ public class CreateSkillGroupRequest extends Request {
         /**
          * UserId.
          */
-        public Builder userId(java.util.List < String > userId) {
+        public Builder userId(java.util.List<String> userId) {
             this.putQueryParameter("UserId", userId);
             this.userId = userId;
             return this;

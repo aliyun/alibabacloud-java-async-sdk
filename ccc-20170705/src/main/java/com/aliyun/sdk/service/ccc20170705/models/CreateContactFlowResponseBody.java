@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateContactFlowResponseBody} extends {@link TeaModel}
  *
  * <p>CreateContactFlowResponseBody</p>
  */
 public class CreateContactFlowResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ContactFlow")
+    @com.aliyun.core.annotation.NameInMap("ContactFlow")
     private ContactFlow contactFlow;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateContactFlowResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class CreateContactFlowResponseBody extends TeaModel {
 
     public static CreateContactFlowResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class CreateContactFlowResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateContactFlowResponseBody model) {
+            this.code = model.code;
+            this.contactFlow = model.contactFlow;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,32 +172,38 @@ public class CreateContactFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateContactFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateContactFlowResponseBody</p>
+     */
     public static class PhoneNumber extends TeaModel {
-        @NameInMap("AllowOutbound")
+        @com.aliyun.core.annotation.NameInMap("AllowOutbound")
         private Boolean allowOutbound;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("PhoneNumberDescription")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberDescription")
         private String phoneNumberDescription;
 
-        @NameInMap("PhoneNumberId")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
         private String phoneNumberId;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private Integer remainingTime;
 
-        @NameInMap("TestOnly")
+        @com.aliyun.core.annotation.NameInMap("TestOnly")
         private Boolean testOnly;
 
-        @NameInMap("Trunks")
+        @com.aliyun.core.annotation.NameInMap("Trunks")
         private Integer trunks;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private PhoneNumber(Builder builder) {
@@ -273,6 +300,21 @@ public class CreateContactFlowResponseBody extends TeaModel {
             private Integer trunks; 
             private String usage; 
 
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumber model) {
+                this.allowOutbound = model.allowOutbound;
+                this.instanceId = model.instanceId;
+                this.number = model.number;
+                this.phoneNumberDescription = model.phoneNumberDescription;
+                this.phoneNumberId = model.phoneNumberId;
+                this.remainingTime = model.remainingTime;
+                this.testOnly = model.testOnly;
+                this.trunks = model.trunks;
+                this.usage = model.usage;
+            } 
+
             /**
              * AllowOutbound.
              */
@@ -352,9 +394,15 @@ public class CreateContactFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContactFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateContactFlowResponseBody</p>
+     */
     public static class PhoneNumbers extends TeaModel {
-        @NameInMap("PhoneNumber")
-        private java.util.List < PhoneNumber> phoneNumber;
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+        private java.util.List<PhoneNumber> phoneNumber;
 
         private PhoneNumbers(Builder builder) {
             this.phoneNumber = builder.phoneNumber;
@@ -371,17 +419,24 @@ public class CreateContactFlowResponseBody extends TeaModel {
         /**
          * @return phoneNumber
          */
-        public java.util.List < PhoneNumber> getPhoneNumber() {
+        public java.util.List<PhoneNumber> getPhoneNumber() {
             return this.phoneNumber;
         }
 
         public static final class Builder {
-            private java.util.List < PhoneNumber> phoneNumber; 
+            private java.util.List<PhoneNumber> phoneNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhoneNumbers model) {
+                this.phoneNumber = model.phoneNumber;
+            } 
 
             /**
              * PhoneNumber.
              */
-            public Builder phoneNumber(java.util.List < PhoneNumber> phoneNumber) {
+            public Builder phoneNumber(java.util.List<PhoneNumber> phoneNumber) {
                 this.phoneNumber = phoneNumber;
                 return this;
             }
@@ -393,32 +448,38 @@ public class CreateContactFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContactFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateContactFlowResponseBody</p>
+     */
     public static class ContactFlowVersion extends TeaModel {
-        @NameInMap("Canvas")
+        @com.aliyun.core.annotation.NameInMap("Canvas")
         private String canvas;
 
-        @NameInMap("ContactFlowVersionDescription")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowVersionDescription")
         private String contactFlowVersionDescription;
 
-        @NameInMap("ContactFlowVersionId")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowVersionId")
         private String contactFlowVersionId;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
-        @NameInMap("LastModifiedBy")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedBy")
         private String lastModifiedBy;
 
-        @NameInMap("LockedBy")
+        @com.aliyun.core.annotation.NameInMap("LockedBy")
         private String lockedBy;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ContactFlowVersion(Builder builder) {
@@ -515,6 +576,21 @@ public class CreateContactFlowResponseBody extends TeaModel {
             private String status; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContactFlowVersion model) {
+                this.canvas = model.canvas;
+                this.contactFlowVersionDescription = model.contactFlowVersionDescription;
+                this.contactFlowVersionId = model.contactFlowVersionId;
+                this.content = model.content;
+                this.lastModified = model.lastModified;
+                this.lastModifiedBy = model.lastModifiedBy;
+                this.lockedBy = model.lockedBy;
+                this.status = model.status;
+                this.version = model.version;
+            } 
+
             /**
              * Canvas.
              */
@@ -594,9 +670,15 @@ public class CreateContactFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContactFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateContactFlowResponseBody</p>
+     */
     public static class Versions extends TeaModel {
-        @NameInMap("ContactFlowVersion")
-        private java.util.List < ContactFlowVersion> contactFlowVersion;
+        @com.aliyun.core.annotation.NameInMap("ContactFlowVersion")
+        private java.util.List<ContactFlowVersion> contactFlowVersion;
 
         private Versions(Builder builder) {
             this.contactFlowVersion = builder.contactFlowVersion;
@@ -613,17 +695,24 @@ public class CreateContactFlowResponseBody extends TeaModel {
         /**
          * @return contactFlowVersion
          */
-        public java.util.List < ContactFlowVersion> getContactFlowVersion() {
+        public java.util.List<ContactFlowVersion> getContactFlowVersion() {
             return this.contactFlowVersion;
         }
 
         public static final class Builder {
-            private java.util.List < ContactFlowVersion> contactFlowVersion; 
+            private java.util.List<ContactFlowVersion> contactFlowVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Versions model) {
+                this.contactFlowVersion = model.contactFlowVersion;
+            } 
 
             /**
              * ContactFlowVersion.
              */
-            public Builder contactFlowVersion(java.util.List < ContactFlowVersion> contactFlowVersion) {
+            public Builder contactFlowVersion(java.util.List<ContactFlowVersion> contactFlowVersion) {
                 this.contactFlowVersion = contactFlowVersion;
                 return this;
             }
@@ -635,29 +724,35 @@ public class CreateContactFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContactFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateContactFlowResponseBody</p>
+     */
     public static class ContactFlow extends TeaModel {
-        @NameInMap("AppliedVersion")
+        @com.aliyun.core.annotation.NameInMap("AppliedVersion")
         private String appliedVersion;
 
-        @NameInMap("ContactFlowDescription")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowDescription")
         private String contactFlowDescription;
 
-        @NameInMap("ContactFlowId")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowId")
         private String contactFlowId;
 
-        @NameInMap("ContactFlowName")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowName")
         private String contactFlowName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PhoneNumbers")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
         private PhoneNumbers phoneNumbers;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Versions")
+        @com.aliyun.core.annotation.NameInMap("Versions")
         private Versions versions;
 
         private ContactFlow(Builder builder) {
@@ -744,6 +839,20 @@ public class CreateContactFlowResponseBody extends TeaModel {
             private PhoneNumbers phoneNumbers; 
             private String type; 
             private Versions versions; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactFlow model) {
+                this.appliedVersion = model.appliedVersion;
+                this.contactFlowDescription = model.contactFlowDescription;
+                this.contactFlowId = model.contactFlowId;
+                this.contactFlowName = model.contactFlowName;
+                this.instanceId = model.instanceId;
+                this.phoneNumbers = model.phoneNumbers;
+                this.type = model.type;
+                this.versions = model.versions;
+            } 
 
             /**
              * AppliedVersion.

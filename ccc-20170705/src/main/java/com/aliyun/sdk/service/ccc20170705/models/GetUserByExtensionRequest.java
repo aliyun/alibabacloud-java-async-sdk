@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserByExtensionRequest} extends {@link RequestModel}
  *
  * <p>GetUserByExtensionRequest</p>
  */
 public class GetUserByExtensionRequest extends Request {
-    @Query
-    @NameInMap("Extension")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extension")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String extension;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private GetUserByExtensionRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class GetUserByExtensionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class GetUserByExtensionRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserByExtensionRequest response) {
-            super(response);
-            this.extension = response.extension;
-            this.instanceId = response.instanceId;
+        private Builder(GetUserByExtensionRequest request) {
+            super(request);
+            this.extension = request.extension;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * Extension.
+         * <p>This parameter is required.</p>
          */
         public Builder extension(String extension) {
             this.putQueryParameter("Extension", extension);
@@ -79,7 +84,7 @@ public class GetUserByExtensionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

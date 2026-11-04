@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceExtensionsResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceExtensionsResponseBody</p>
  */
 public class GetServiceExtensionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceExtensions")
+    @com.aliyun.core.annotation.NameInMap("ServiceExtensions")
     private ServiceExtensions serviceExtensions;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetServiceExtensionsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
 
     public static GetServiceExtensionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
         private String requestId; 
         private ServiceExtensions serviceExtensions; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServiceExtensionsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.serviceExtensions = model.serviceExtensions;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,11 +172,17 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceExtensionsResponseBody</p>
+     */
     public static class ServiceExtension extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
         private ServiceExtension(Builder builder) {
@@ -189,6 +216,14 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
             private String name; 
             private String number; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceExtension model) {
+                this.name = model.name;
+                this.number = model.number;
+            } 
+
             /**
              * Name.
              */
@@ -212,9 +247,15 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceExtensionsResponseBody</p>
+     */
     public static class ServiceExtensions extends TeaModel {
-        @NameInMap("ServiceExtension")
-        private java.util.List < ServiceExtension> serviceExtension;
+        @com.aliyun.core.annotation.NameInMap("ServiceExtension")
+        private java.util.List<ServiceExtension> serviceExtension;
 
         private ServiceExtensions(Builder builder) {
             this.serviceExtension = builder.serviceExtension;
@@ -231,17 +272,24 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
         /**
          * @return serviceExtension
          */
-        public java.util.List < ServiceExtension> getServiceExtension() {
+        public java.util.List<ServiceExtension> getServiceExtension() {
             return this.serviceExtension;
         }
 
         public static final class Builder {
-            private java.util.List < ServiceExtension> serviceExtension; 
+            private java.util.List<ServiceExtension> serviceExtension; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceExtensions model) {
+                this.serviceExtension = model.serviceExtension;
+            } 
 
             /**
              * ServiceExtension.
              */
-            public Builder serviceExtension(java.util.List < ServiceExtension> serviceExtension) {
+            public Builder serviceExtension(java.util.List<ServiceExtension> serviceExtension) {
                 this.serviceExtension = serviceExtension;
                 return this;
             }

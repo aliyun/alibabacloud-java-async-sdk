@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallMeasureSummaryReportsRequest} extends {@link RequestModel}
  *
  * <p>ListCallMeasureSummaryReportsRequest</p>
  */
 public class ListCallMeasureSummaryReportsRequest extends Request {
-    @Query
-    @NameInMap("IntervalType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String intervalType;
 
     private ListCallMeasureSummaryReportsRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class ListCallMeasureSummaryReportsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,13 +54,13 @@ public class ListCallMeasureSummaryReportsRequest extends Request {
             super();
         } 
 
-        private Builder(ListCallMeasureSummaryReportsRequest response) {
-            super(response);
-            this.intervalType = response.intervalType;
+        private Builder(ListCallMeasureSummaryReportsRequest request) {
+            super(request);
+            this.intervalType = request.intervalType;
         } 
 
         /**
-         * IntervalType.
+         * <p>This parameter is required.</p>
          */
         public Builder intervalType(String intervalType) {
             this.putQueryParameter("IntervalType", intervalType);

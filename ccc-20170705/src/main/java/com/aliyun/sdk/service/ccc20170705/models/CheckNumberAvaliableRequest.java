@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckNumberAvaliableRequest} extends {@link RequestModel}
  *
  * <p>CheckNumberAvaliableRequest</p>
  */
 public class CheckNumberAvaliableRequest extends Request {
-    @Query
-    @NameInMap("Callee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callee;
 
-    @Query
-    @NameInMap("Caller")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
     private String caller;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private CheckNumberAvaliableRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class CheckNumberAvaliableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,15 +81,15 @@ public class CheckNumberAvaliableRequest extends Request {
             super();
         } 
 
-        private Builder(CheckNumberAvaliableRequest response) {
-            super(response);
-            this.callee = response.callee;
-            this.caller = response.caller;
-            this.instanceId = response.instanceId;
+        private Builder(CheckNumberAvaliableRequest request) {
+            super(request);
+            this.callee = request.callee;
+            this.caller = request.caller;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * Callee.
+         * <p>This parameter is required.</p>
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -102,7 +107,7 @@ public class CheckNumberAvaliableRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

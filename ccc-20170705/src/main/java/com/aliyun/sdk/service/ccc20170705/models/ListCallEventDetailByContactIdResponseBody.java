@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallEventDetailByContactIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListCallEventDetailByContactIdResponseBody</p>
  */
 public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCallEventDetailByContactIdResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
 
     public static ListCallEventDetailByContactIdResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCallEventDetailByContactIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,20 +172,26 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCallEventDetailByContactIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallEventDetailByContactIdResponseBody</p>
+     */
     public static class DetailData extends TeaModel {
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("HangUper")
+        @com.aliyun.core.annotation.NameInMap("HangUper")
         private String hangUper;
 
-        @NameInMap("Helper")
+        @com.aliyun.core.annotation.NameInMap("Helper")
         private String helper;
 
-        @NameInMap("SatisfactionalResearch")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionalResearch")
         private String satisfactionalResearch;
 
-        @NameInMap("SkillGroup")
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
         private String skillGroup;
 
         private DetailData(Builder builder) {
@@ -225,6 +252,17 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
             private String satisfactionalResearch; 
             private String skillGroup; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetailData model) {
+                this.eventType = model.eventType;
+                this.hangUper = model.hangUper;
+                this.helper = model.helper;
+                this.satisfactionalResearch = model.satisfactionalResearch;
+                this.skillGroup = model.skillGroup;
+            } 
+
             /**
              * EventType.
              */
@@ -272,26 +310,32 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallEventDetailByContactIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallEventDetailByContactIdResponseBody</p>
+     */
     public static class CallEventDetail extends TeaModel {
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("CallMode")
+        @com.aliyun.core.annotation.NameInMap("CallMode")
         private String callMode;
 
-        @NameInMap("DetailData")
+        @com.aliyun.core.annotation.NameInMap("DetailData")
         private DetailData detailData;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private CallEventDetail(Builder builder) {
@@ -370,6 +414,19 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
             private String status; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallEventDetail model) {
+                this.agentName = model.agentName;
+                this.callMode = model.callMode;
+                this.detailData = model.detailData;
+                this.duration = model.duration;
+                this.event = model.event;
+                this.status = model.status;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * AgentName.
              */
@@ -433,9 +490,15 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallEventDetailByContactIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallEventDetailByContactIdResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("CallEventDetail")
-        private java.util.List < CallEventDetail> callEventDetail;
+        @com.aliyun.core.annotation.NameInMap("CallEventDetail")
+        private java.util.List<CallEventDetail> callEventDetail;
 
         private Events(Builder builder) {
             this.callEventDetail = builder.callEventDetail;
@@ -452,17 +515,24 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         /**
          * @return callEventDetail
          */
-        public java.util.List < CallEventDetail> getCallEventDetail() {
+        public java.util.List<CallEventDetail> getCallEventDetail() {
             return this.callEventDetail;
         }
 
         public static final class Builder {
-            private java.util.List < CallEventDetail> callEventDetail; 
+            private java.util.List<CallEventDetail> callEventDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.callEventDetail = model.callEventDetail;
+            } 
 
             /**
              * CallEventDetail.
              */
-            public Builder callEventDetail(java.util.List < CallEventDetail> callEventDetail) {
+            public Builder callEventDetail(java.util.List<CallEventDetail> callEventDetail) {
                 this.callEventDetail = callEventDetail;
                 return this;
             }
@@ -474,29 +544,35 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallEventDetailByContactIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallEventDetailByContactIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("Callee")
+        @com.aliyun.core.annotation.NameInMap("Callee")
         private String callee;
 
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
 
-        @NameInMap("Events")
+        @com.aliyun.core.annotation.NameInMap("Events")
         private Events events;
 
-        @NameInMap("PrivacyNumber")
+        @com.aliyun.core.annotation.NameInMap("PrivacyNumber")
         private String privacyNumber;
 
-        @NameInMap("ReleaseAgent")
+        @com.aliyun.core.annotation.NameInMap("ReleaseAgent")
         private String releaseAgent;
 
-        @NameInMap("ReleaseReason")
+        @com.aliyun.core.annotation.NameInMap("ReleaseReason")
         private String releaseReason;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Data(Builder builder) {
@@ -583,6 +659,20 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
             private String releaseAgent; 
             private String releaseReason; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callType = model.callType;
+                this.callee = model.callee;
+                this.caller = model.caller;
+                this.events = model.events;
+                this.privacyNumber = model.privacyNumber;
+                this.releaseAgent = model.releaseAgent;
+                this.releaseReason = model.releaseReason;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * CallType.

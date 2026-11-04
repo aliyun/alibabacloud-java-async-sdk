@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVoiceAppraiseRequest} extends {@link RequestModel}
  *
  * <p>CreateVoiceAppraiseRequest</p>
  */
 public class CreateVoiceAppraiseRequest extends Request {
-    @Query
-    @NameInMap("ContactFlowVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactFlowVersionId;
 
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IsAppraise")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAppraise")
     private Boolean isAppraise;
 
     private CreateVoiceAppraiseRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class CreateVoiceAppraiseRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,16 +95,16 @@ public class CreateVoiceAppraiseRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVoiceAppraiseRequest response) {
-            super(response);
-            this.contactFlowVersionId = response.contactFlowVersionId;
-            this.content = response.content;
-            this.instanceId = response.instanceId;
-            this.isAppraise = response.isAppraise;
+        private Builder(CreateVoiceAppraiseRequest request) {
+            super(request);
+            this.contactFlowVersionId = request.contactFlowVersionId;
+            this.content = request.content;
+            this.instanceId = request.instanceId;
+            this.isAppraise = request.isAppraise;
         } 
 
         /**
-         * ContactFlowVersionId.
+         * <p>This parameter is required.</p>
          */
         public Builder contactFlowVersionId(String contactFlowVersionId) {
             this.putQueryParameter("ContactFlowVersionId", contactFlowVersionId);
@@ -108,7 +113,7 @@ public class CreateVoiceAppraiseRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -117,7 +122,7 @@ public class CreateVoiceAppraiseRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

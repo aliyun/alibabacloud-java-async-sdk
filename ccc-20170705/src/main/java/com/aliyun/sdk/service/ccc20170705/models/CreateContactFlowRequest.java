@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateContactFlowRequest} extends {@link RequestModel}
  *
  * <p>CreateContactFlowRequest</p>
  */
 public class CreateContactFlowRequest extends Request {
-    @Body
-    @NameInMap("Canvas")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Canvas")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String canvas;
 
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateContactFlowRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class CreateContactFlowRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,18 +123,18 @@ public class CreateContactFlowRequest extends Request {
             super();
         } 
 
-        private Builder(CreateContactFlowRequest response) {
-            super(response);
-            this.canvas = response.canvas;
-            this.content = response.content;
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.type = response.type;
+        private Builder(CreateContactFlowRequest request) {
+            super(request);
+            this.canvas = request.canvas;
+            this.content = request.content;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.type = request.type;
         } 
 
         /**
-         * Canvas.
+         * <p>This parameter is required.</p>
          */
         public Builder canvas(String canvas) {
             this.putBodyParameter("Canvas", canvas);
@@ -138,7 +143,7 @@ public class CreateContactFlowRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -156,7 +161,7 @@ public class CreateContactFlowRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -165,7 +170,7 @@ public class CreateContactFlowRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -174,7 +179,7 @@ public class CreateContactFlowRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

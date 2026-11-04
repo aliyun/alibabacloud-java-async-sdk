@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPhoneNumberRequest} extends {@link RequestModel}
  *
  * <p>AddPhoneNumberRequest</p>
  */
 public class AddPhoneNumberRequest extends Request {
-    @Query
-    @NameInMap("ContactFlowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
     private String contactFlowId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("Usage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Usage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String usage;
 
     private AddPhoneNumberRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class AddPhoneNumberRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,12 +95,12 @@ public class AddPhoneNumberRequest extends Request {
             super();
         } 
 
-        private Builder(AddPhoneNumberRequest response) {
-            super(response);
-            this.contactFlowId = response.contactFlowId;
-            this.instanceId = response.instanceId;
-            this.phoneNumber = response.phoneNumber;
-            this.usage = response.usage;
+        private Builder(AddPhoneNumberRequest request) {
+            super(request);
+            this.contactFlowId = request.contactFlowId;
+            this.instanceId = request.instanceId;
+            this.phoneNumber = request.phoneNumber;
+            this.usage = request.usage;
         } 
 
         /**
@@ -108,7 +113,7 @@ public class AddPhoneNumberRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +122,7 @@ public class AddPhoneNumberRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>This parameter is required.</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -126,7 +131,7 @@ public class AddPhoneNumberRequest extends Request {
         }
 
         /**
-         * Usage.
+         * <p>This parameter is required.</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);

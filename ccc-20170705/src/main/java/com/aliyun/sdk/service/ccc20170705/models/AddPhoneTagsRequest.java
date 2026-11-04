@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPhoneTagsRequest} extends {@link RequestModel}
  *
  * <p>AddPhoneTagsRequest</p>
  */
 public class AddPhoneTagsRequest extends Request {
-    @Query
-    @NameInMap("Concurrency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Concurrency")
     private Integer concurrency;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumberList")
-    @Validation(required = true)
-    private java.util.List < String > phoneNumberList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> phoneNumberList;
 
-    @Query
-    @NameInMap("Provider")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
 
-    @Query
-    @NameInMap("RegionNameCity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNameCity")
     private String regionNameCity;
 
-    @Query
-    @NameInMap("RegionNameProvince")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNameProvince")
     private String regionNameProvince;
 
-    @Query
-    @NameInMap("ServiceTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceTag;
 
-    @Query
-    @NameInMap("SipTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SipTag")
     private String sipTag;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
     private AddPhoneTagsRequest(Builder builder) {
@@ -72,7 +77,7 @@ public class AddPhoneTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -94,7 +99,7 @@ public class AddPhoneTagsRequest extends Request {
     /**
      * @return phoneNumberList
      */
-    public java.util.List < String > getPhoneNumberList() {
+    public java.util.List<String> getPhoneNumberList() {
         return this.phoneNumberList;
     }
 
@@ -143,7 +148,7 @@ public class AddPhoneTagsRequest extends Request {
     public static final class Builder extends Request.Builder<AddPhoneTagsRequest, Builder> {
         private Integer concurrency; 
         private String instanceId; 
-        private java.util.List < String > phoneNumberList; 
+        private java.util.List<String> phoneNumberList; 
         private String provider; 
         private String regionNameCity; 
         private String regionNameProvince; 
@@ -155,17 +160,17 @@ public class AddPhoneTagsRequest extends Request {
             super();
         } 
 
-        private Builder(AddPhoneTagsRequest response) {
-            super(response);
-            this.concurrency = response.concurrency;
-            this.instanceId = response.instanceId;
-            this.phoneNumberList = response.phoneNumberList;
-            this.provider = response.provider;
-            this.regionNameCity = response.regionNameCity;
-            this.regionNameProvince = response.regionNameProvince;
-            this.serviceTag = response.serviceTag;
-            this.sipTag = response.sipTag;
-            this.type = response.type;
+        private Builder(AddPhoneTagsRequest request) {
+            super(request);
+            this.concurrency = request.concurrency;
+            this.instanceId = request.instanceId;
+            this.phoneNumberList = request.phoneNumberList;
+            this.provider = request.provider;
+            this.regionNameCity = request.regionNameCity;
+            this.regionNameProvince = request.regionNameProvince;
+            this.serviceTag = request.serviceTag;
+            this.sipTag = request.sipTag;
+            this.type = request.type;
         } 
 
         /**
@@ -178,7 +183,7 @@ public class AddPhoneTagsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,9 +192,9 @@ public class AddPhoneTagsRequest extends Request {
         }
 
         /**
-         * PhoneNumberList.
+         * <p>This parameter is required.</p>
          */
-        public Builder phoneNumberList(java.util.List < String > phoneNumberList) {
+        public Builder phoneNumberList(java.util.List<String> phoneNumberList) {
             this.putQueryParameter("PhoneNumberList", phoneNumberList);
             this.phoneNumberList = phoneNumberList;
             return this;
@@ -223,7 +228,7 @@ public class AddPhoneTagsRequest extends Request {
         }
 
         /**
-         * ServiceTag.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceTag(String serviceTag) {
             this.putQueryParameter("ServiceTag", serviceTag);

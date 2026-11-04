@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSmsConfigRequest} extends {@link RequestModel}
  *
  * <p>GetSmsConfigRequest</p>
  */
 public class GetSmsConfigRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Scenario")
-    @Validation(required = true)
-    private java.util.List < Integer > scenario;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scenario")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Integer> scenario;
 
     private GetSmsConfigRequest(Builder builder) {
         super(builder);
@@ -36,7 +41,7 @@ public class GetSmsConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -51,26 +56,26 @@ public class GetSmsConfigRequest extends Request {
     /**
      * @return scenario
      */
-    public java.util.List < Integer > getScenario() {
+    public java.util.List<Integer> getScenario() {
         return this.scenario;
     }
 
     public static final class Builder extends Request.Builder<GetSmsConfigRequest, Builder> {
         private String instanceId; 
-        private java.util.List < Integer > scenario; 
+        private java.util.List<Integer> scenario; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetSmsConfigRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.scenario = response.scenario;
+        private Builder(GetSmsConfigRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.scenario = request.scenario;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,9 +84,9 @@ public class GetSmsConfigRequest extends Request {
         }
 
         /**
-         * Scenario.
+         * <p>This parameter is required.</p>
          */
-        public Builder scenario(java.util.List < Integer > scenario) {
+        public Builder scenario(java.util.List<Integer> scenario) {
             this.putQueryParameter("Scenario", scenario);
             this.scenario = scenario;
             return this;

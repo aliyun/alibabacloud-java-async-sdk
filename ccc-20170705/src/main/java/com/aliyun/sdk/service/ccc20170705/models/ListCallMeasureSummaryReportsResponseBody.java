@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallMeasureSummaryReportsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCallMeasureSummaryReportsResponseBody</p>
  */
 public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
-    @NameInMap("CallMeasureSummaryReportList")
+    @com.aliyun.core.annotation.NameInMap("CallMeasureSummaryReportList")
     private CallMeasureSummaryReportList callMeasureSummaryReportList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCallMeasureSummaryReportsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
 
     public static ListCallMeasureSummaryReportsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCallMeasureSummaryReportsResponseBody model) {
+            this.callMeasureSummaryReportList = model.callMeasureSummaryReportList;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * CallMeasureSummaryReportList.
@@ -151,26 +172,32 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCallMeasureSummaryReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallMeasureSummaryReportsResponseBody</p>
+     */
     public static class CallMeasureSummaryReport extends TeaModel {
-        @NameInMap("Day")
+        @com.aliyun.core.annotation.NameInMap("Day")
         private String day;
 
-        @NameInMap("InboundCount")
+        @com.aliyun.core.annotation.NameInMap("InboundCount")
         private Long inboundCount;
 
-        @NameInMap("InboundDurationByMinute")
+        @com.aliyun.core.annotation.NameInMap("InboundDurationByMinute")
         private Long inboundDurationByMinute;
 
-        @NameInMap("Month")
+        @com.aliyun.core.annotation.NameInMap("Month")
         private String month;
 
-        @NameInMap("OutboundCount")
+        @com.aliyun.core.annotation.NameInMap("OutboundCount")
         private Long outboundCount;
 
-        @NameInMap("OutboundDurationByMinute")
+        @com.aliyun.core.annotation.NameInMap("OutboundDurationByMinute")
         private Long outboundDurationByMinute;
 
-        @NameInMap("Year")
+        @com.aliyun.core.annotation.NameInMap("Year")
         private String year;
 
         private CallMeasureSummaryReport(Builder builder) {
@@ -249,6 +276,19 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
             private Long outboundDurationByMinute; 
             private String year; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallMeasureSummaryReport model) {
+                this.day = model.day;
+                this.inboundCount = model.inboundCount;
+                this.inboundDurationByMinute = model.inboundDurationByMinute;
+                this.month = model.month;
+                this.outboundCount = model.outboundCount;
+                this.outboundDurationByMinute = model.outboundDurationByMinute;
+                this.year = model.year;
+            } 
+
             /**
              * Day.
              */
@@ -312,9 +352,15 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCallMeasureSummaryReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallMeasureSummaryReportsResponseBody</p>
+     */
     public static class CallMeasureSummaryReportList extends TeaModel {
-        @NameInMap("CallMeasureSummaryReport")
-        private java.util.List < CallMeasureSummaryReport> callMeasureSummaryReport;
+        @com.aliyun.core.annotation.NameInMap("CallMeasureSummaryReport")
+        private java.util.List<CallMeasureSummaryReport> callMeasureSummaryReport;
 
         private CallMeasureSummaryReportList(Builder builder) {
             this.callMeasureSummaryReport = builder.callMeasureSummaryReport;
@@ -331,17 +377,24 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
         /**
          * @return callMeasureSummaryReport
          */
-        public java.util.List < CallMeasureSummaryReport> getCallMeasureSummaryReport() {
+        public java.util.List<CallMeasureSummaryReport> getCallMeasureSummaryReport() {
             return this.callMeasureSummaryReport;
         }
 
         public static final class Builder {
-            private java.util.List < CallMeasureSummaryReport> callMeasureSummaryReport; 
+            private java.util.List<CallMeasureSummaryReport> callMeasureSummaryReport; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallMeasureSummaryReportList model) {
+                this.callMeasureSummaryReport = model.callMeasureSummaryReport;
+            } 
 
             /**
              * CallMeasureSummaryReport.
              */
-            public Builder callMeasureSummaryReport(java.util.List < CallMeasureSummaryReport> callMeasureSummaryReport) {
+            public Builder callMeasureSummaryReport(java.util.List<CallMeasureSummaryReport> callMeasureSummaryReport) {
                 this.callMeasureSummaryReport = callMeasureSummaryReport;
                 return this;
             }

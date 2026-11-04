@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RequestLoginInfoResponseBody} extends {@link TeaModel}
  *
  * <p>RequestLoginInfoResponseBody</p>
  */
 public class RequestLoginInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("LoginInfo")
+    @com.aliyun.core.annotation.NameInMap("LoginInfo")
     private LoginInfo loginInfo;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private RequestLoginInfoResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class RequestLoginInfoResponseBody extends TeaModel {
 
     public static RequestLoginInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class RequestLoginInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RequestLoginInfoResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.loginInfo = model.loginInfo;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,17 +172,23 @@ public class RequestLoginInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RequestLoginInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>RequestLoginInfoResponseBody</p>
+     */
     public static class Role extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RoleDescription")
+        @com.aliyun.core.annotation.NameInMap("RoleDescription")
         private String roleDescription;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private Role(Builder builder) {
@@ -213,6 +240,16 @@ public class RequestLoginInfoResponseBody extends TeaModel {
             private String roleId; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.instanceId = model.instanceId;
+                this.roleDescription = model.roleDescription;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * InstanceId.
              */
@@ -252,9 +289,15 @@ public class RequestLoginInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RequestLoginInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>RequestLoginInfoResponseBody</p>
+     */
     public static class Roles extends TeaModel {
-        @NameInMap("Role")
-        private java.util.List < Role> role;
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private java.util.List<Role> role;
 
         private Roles(Builder builder) {
             this.role = builder.role;
@@ -271,17 +314,24 @@ public class RequestLoginInfoResponseBody extends TeaModel {
         /**
          * @return role
          */
-        public java.util.List < Role> getRole() {
+        public java.util.List<Role> getRole() {
             return this.role;
         }
 
         public static final class Builder {
-            private java.util.List < Role> role; 
+            private java.util.List<Role> role; 
+
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.role = model.role;
+            } 
 
             /**
              * Role.
              */
-            public Builder role(java.util.List < Role> role) {
+            public Builder role(java.util.List<Role> role) {
                 this.role = role;
                 return this;
             }
@@ -293,38 +343,44 @@ public class RequestLoginInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RequestLoginInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>RequestLoginInfoResponseBody</p>
+     */
     public static class LoginInfo extends TeaModel {
-        @NameInMap("AgentServerUrl")
+        @com.aliyun.core.annotation.NameInMap("AgentServerUrl")
         private String agentServerUrl;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Roles")
+        @com.aliyun.core.annotation.NameInMap("Roles")
         private Roles roles;
 
-        @NameInMap("SignData")
+        @com.aliyun.core.annotation.NameInMap("SignData")
         private String signData;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("WebRtcUrl")
+        @com.aliyun.core.annotation.NameInMap("WebRtcUrl")
         private String webRtcUrl;
 
         private LoginInfo(Builder builder) {
@@ -438,6 +494,23 @@ public class RequestLoginInfoResponseBody extends TeaModel {
             private String tenantId; 
             private String userName; 
             private String webRtcUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoginInfo model) {
+                this.agentServerUrl = model.agentServerUrl;
+                this.displayName = model.displayName;
+                this.extension = model.extension;
+                this.phoneNumber = model.phoneNumber;
+                this.region = model.region;
+                this.roles = model.roles;
+                this.signData = model.signData;
+                this.signature = model.signature;
+                this.tenantId = model.tenantId;
+                this.userName = model.userName;
+                this.webRtcUrl = model.webRtcUrl;
+            } 
 
             /**
              * AgentServerUrl.

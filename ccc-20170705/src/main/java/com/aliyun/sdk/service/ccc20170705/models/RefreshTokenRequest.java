@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshTokenRequest} extends {@link RequestModel}
  *
  * <p>RefreshTokenRequest</p>
  */
 public class RefreshTokenRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private RefreshTokenRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class RefreshTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -49,13 +54,13 @@ public class RefreshTokenRequest extends Request {
             super();
         } 
 
-        private Builder(RefreshTokenRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(RefreshTokenRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

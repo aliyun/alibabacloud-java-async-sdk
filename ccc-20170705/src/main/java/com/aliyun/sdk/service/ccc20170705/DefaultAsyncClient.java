@@ -62,6 +62,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddAgentDevice  AddAgentDeviceRequest
+     * @return AddAgentDeviceResponse
+     */
     @Override
     public CompletableFuture<AddAgentDeviceResponse> addAgentDevice(AddAgentDeviceRequest request) {
         try {
@@ -76,6 +80,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddBulkPhoneNumbers  AddBulkPhoneNumbersRequest
+     * @return AddBulkPhoneNumbersResponse
+     */
     @Override
     public CompletableFuture<AddBulkPhoneNumbersResponse> addBulkPhoneNumbers(AddBulkPhoneNumbersRequest request) {
         try {
@@ -90,6 +98,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddPhoneNumber  AddPhoneNumberRequest
+     * @return AddPhoneNumberResponse
+     */
     @Override
     public CompletableFuture<AddPhoneNumberResponse> addPhoneNumber(AddPhoneNumberRequest request) {
         try {
@@ -104,6 +116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddPhoneTags  AddPhoneTagsRequest
+     * @return AddPhoneTagsResponse
+     */
     @Override
     public CompletableFuture<AddPhoneTagsResponse> addPhoneTags(AddPhoneTagsRequest request) {
         try {
@@ -118,6 +134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssignUsers  AssignUsersRequest
+     * @return AssignUsersResponse
+     */
     @Override
     public CompletableFuture<AssignUsersResponse> assignUsers(AssignUsersRequest request) {
         try {
@@ -132,6 +152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CallOnlinePrivacyNumber  CallOnlinePrivacyNumberRequest
+     * @return CallOnlinePrivacyNumberResponse
+     */
     @Override
     public CompletableFuture<CallOnlinePrivacyNumberResponse> callOnlinePrivacyNumber(CallOnlinePrivacyNumberRequest request) {
         try {
@@ -146,6 +170,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckNumberAvaliable  CheckNumberAvaliableRequest
+     * @return CheckNumberAvaliableResponse
+     */
     @Override
     public CompletableFuture<CheckNumberAvaliableResponse> checkNumberAvaliable(CheckNumberAvaliableRequest request) {
         try {
@@ -160,6 +188,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CommitContactFlowVersionModification  CommitContactFlowVersionModificationRequest
+     * @return CommitContactFlowVersionModificationResponse
+     */
     @Override
     public CompletableFuture<CommitContactFlowVersionModificationResponse> commitContactFlowVersionModification(CommitContactFlowVersionModificationRequest request) {
         try {
@@ -174,6 +206,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateContactFlow  CreateContactFlowRequest
+     * @return CreateContactFlowResponse
+     */
     @Override
     public CompletableFuture<CreateContactFlowResponse> createContactFlow(CreateContactFlowRequest request) {
         try {
@@ -188,6 +224,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFault  CreateFaultRequest
+     * @return CreateFaultResponse
+     */
     @Override
     public CompletableFuture<CreateFaultResponse> createFault(CreateFaultRequest request) {
         try {
@@ -202,6 +242,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
@@ -216,6 +260,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMedia  CreateMediaRequest
+     * @return CreateMediaResponse
+     */
     @Override
     public CompletableFuture<CreateMediaResponse> createMedia(CreateMediaRequest request) {
         try {
@@ -230,20 +278,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateScenarioParameterResponse> createScenarioParameter(CreateScenarioParameterRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateScenarioParameter").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateScenarioParameterResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateScenarioParameterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of CreateSkillGroup  CreateSkillGroupRequest
+     * @return CreateSkillGroupResponse
+     */
     @Override
     public CompletableFuture<CreateSkillGroupResponse> createSkillGroup(CreateSkillGroupRequest request) {
         try {
@@ -258,6 +296,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUser  CreateUserRequest
+     * @return CreateUserResponse
+     */
     @Override
     public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
         try {
@@ -272,6 +314,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVoiceAppraise  CreateVoiceAppraiseRequest
+     * @return CreateVoiceAppraiseResponse
+     */
     @Override
     public CompletableFuture<CreateVoiceAppraiseResponse> createVoiceAppraise(CreateVoiceAppraiseRequest request) {
         try {
@@ -286,20 +332,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DebugIntentResponse> debugIntent(DebugIntentRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DebugIntent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DebugIntentResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DebugIntentResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
         try {
@@ -314,6 +350,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMedia  DeleteMediaRequest
+     * @return DeleteMediaResponse
+     */
     @Override
     public CompletableFuture<DeleteMediaResponse> deleteMedia(DeleteMediaRequest request) {
         try {
@@ -328,6 +368,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePhoneTags  DeletePhoneTagsRequest
+     * @return DeletePhoneTagsResponse
+     */
     @Override
     public CompletableFuture<DeletePhoneTagsResponse> deletePhoneTags(DeletePhoneTagsRequest request) {
         try {
@@ -342,20 +386,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DeleteScenarioParameterResponse> deleteScenarioParameter(DeleteScenarioParameterRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteScenarioParameter").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteScenarioParameterResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteScenarioParameterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DeleteSkillGroup  DeleteSkillGroupRequest
+     * @return DeleteSkillGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteSkillGroupResponse> deleteSkillGroup(DeleteSkillGroupRequest request) {
         try {
@@ -370,6 +404,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DialEx  DialExRequest
+     * @return DialExResponse
+     */
     @Override
     public CompletableFuture<DialExResponse> dialEx(DialExRequest request) {
         try {
@@ -384,20 +422,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DirectDialogueResponse> directDialogue(DirectDialogueRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DirectDialogue").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DirectDialogueResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DirectDialogueResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DisableTrunkProviders  DisableTrunkProvidersRequest
+     * @return DisableTrunkProvidersResponse
+     */
     @Override
     public CompletableFuture<DisableTrunkProvidersResponse> disableTrunkProviders(DisableTrunkProvidersRequest request) {
         try {
@@ -412,6 +440,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadAllTypeRecording  DownloadAllTypeRecordingRequest
+     * @return DownloadAllTypeRecordingResponse
+     */
     @Override
     public CompletableFuture<DownloadAllTypeRecordingResponse> downloadAllTypeRecording(DownloadAllTypeRecordingRequest request) {
         try {
@@ -426,6 +458,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadRecording  DownloadRecordingRequest
+     * @return DownloadRecordingResponse
+     */
     @Override
     public CompletableFuture<DownloadRecordingResponse> downloadRecording(DownloadRecordingRequest request) {
         try {
@@ -440,6 +476,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FindUsers  FindUsersRequest
+     * @return FindUsersResponse
+     */
     @Override
     public CompletableFuture<FindUsersResponse> findUsers(FindUsersRequest request) {
         try {
@@ -454,6 +494,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateAgentStatisticReport  GenerateAgentStatisticReportRequest
+     * @return GenerateAgentStatisticReportResponse
+     */
     @Override
     public CompletableFuture<GenerateAgentStatisticReportResponse> generateAgentStatisticReport(GenerateAgentStatisticReportRequest request) {
         try {
@@ -468,6 +512,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAgentData  GetAgentDataRequest
+     * @return GetAgentDataResponse
+     */
     @Override
     public CompletableFuture<GetAgentDataResponse> getAgentData(GetAgentDataRequest request) {
         try {
@@ -482,6 +530,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCallMeasureSummaryReport  GetCallMeasureSummaryReportRequest
+     * @return GetCallMeasureSummaryReportResponse
+     */
     @Override
     public CompletableFuture<GetCallMeasureSummaryReportResponse> getCallMeasureSummaryReport(GetCallMeasureSummaryReportRequest request) {
         try {
@@ -496,6 +548,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetConfig  GetConfigRequest
+     * @return GetConfigResponse
+     */
     @Override
     public CompletableFuture<GetConfigResponse> getConfig(GetConfigRequest request) {
         try {
@@ -510,6 +566,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetConversationDetailByContactId  GetConversationDetailByContactIdRequest
+     * @return GetConversationDetailByContactIdResponse
+     */
     @Override
     public CompletableFuture<GetConversationDetailByContactIdResponse> getConversationDetailByContactId(GetConversationDetailByContactIdRequest request) {
         try {
@@ -524,6 +584,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstance  GetInstanceRequest
+     * @return GetInstanceResponse
+     */
     @Override
     public CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request) {
         try {
@@ -538,6 +602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceState  GetInstanceStateRequest
+     * @return GetInstanceStateResponse
+     */
     @Override
     public CompletableFuture<GetInstanceStateResponse> getInstanceState(GetInstanceStateRequest request) {
         try {
@@ -552,6 +620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceSummaryReport  GetInstanceSummaryReportRequest
+     * @return GetInstanceSummaryReportResponse
+     */
     @Override
     public CompletableFuture<GetInstanceSummaryReportResponse> getInstanceSummaryReport(GetInstanceSummaryReportRequest request) {
         try {
@@ -566,6 +638,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceSummaryReportByInterval  GetInstanceSummaryReportByIntervalRequest
+     * @return GetInstanceSummaryReportByIntervalResponse
+     */
     @Override
     public CompletableFuture<GetInstanceSummaryReportByIntervalResponse> getInstanceSummaryReportByInterval(GetInstanceSummaryReportByIntervalRequest request) {
         try {
@@ -580,6 +656,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceSummaryReportSinceMidnight  GetInstanceSummaryReportSinceMidnightRequest
+     * @return GetInstanceSummaryReportSinceMidnightResponse
+     */
     @Override
     public CompletableFuture<GetInstanceSummaryReportSinceMidnightResponse> getInstanceSummaryReportSinceMidnight(GetInstanceSummaryReportSinceMidnightRequest request) {
         try {
@@ -594,6 +674,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetNumberRegionInfo  GetNumberRegionInfoRequest
+     * @return GetNumberRegionInfoResponse
+     */
     @Override
     public CompletableFuture<GetNumberRegionInfoResponse> getNumberRegionInfo(GetNumberRegionInfoRequest request) {
         try {
@@ -608,6 +692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRecordOssUploadParam  GetRecordOssUploadParamRequest
+     * @return GetRecordOssUploadParamResponse
+     */
     @Override
     public CompletableFuture<GetRecordOssUploadParamResponse> getRecordOssUploadParam(GetRecordOssUploadParamRequest request) {
         try {
@@ -622,6 +710,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRoutePoint  GetRoutePointRequest
+     * @return GetRoutePointResponse
+     */
     @Override
     public CompletableFuture<GetRoutePointResponse> getRoutePoint(GetRoutePointRequest request) {
         try {
@@ -636,6 +728,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceExtensions  GetServiceExtensionsRequest
+     * @return GetServiceExtensionsResponse
+     */
     @Override
     public CompletableFuture<GetServiceExtensionsResponse> getServiceExtensions(GetServiceExtensionsRequest request) {
         try {
@@ -650,6 +746,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSmsConfig  GetSmsConfigRequest
+     * @return GetSmsConfigResponse
+     */
     @Override
     public CompletableFuture<GetSmsConfigResponse> getSmsConfig(GetSmsConfigRequest request) {
         try {
@@ -664,6 +764,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTURNCredentials  GetTURNCredentialsRequest
+     * @return GetTURNCredentialsResponse
+     */
     @Override
     public CompletableFuture<GetTURNCredentialsResponse> getTURNCredentials(GetTURNCredentialsRequest request) {
         try {
@@ -678,6 +782,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTURNServerList  GetTURNServerListRequest
+     * @return GetTURNServerListResponse
+     */
     @Override
     public CompletableFuture<GetTURNServerListResponse> getTURNServerList(GetTURNServerListRequest request) {
         try {
@@ -692,6 +800,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
+     */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
         try {
@@ -706,6 +818,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserByExtension  GetUserByExtensionRequest
+     * @return GetUserByExtensionResponse
+     */
     @Override
     public CompletableFuture<GetUserByExtensionResponse> getUserByExtension(GetUserByExtensionRequest request) {
         try {
@@ -720,6 +836,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LaunchAppraise  LaunchAppraiseRequest
+     * @return LaunchAppraiseResponse
+     */
     @Override
     public CompletableFuture<LaunchAppraiseResponse> launchAppraise(LaunchAppraiseRequest request) {
         try {
@@ -734,6 +854,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LaunchShortMessageAppraise  LaunchShortMessageAppraiseRequest
+     * @return LaunchShortMessageAppraiseResponse
+     */
     @Override
     public CompletableFuture<LaunchShortMessageAppraiseResponse> launchShortMessageAppraise(LaunchShortMessageAppraiseRequest request) {
         try {
@@ -748,6 +872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentDevices  ListAgentDevicesRequest
+     * @return ListAgentDevicesResponse
+     */
     @Override
     public CompletableFuture<ListAgentDevicesResponse> listAgentDevices(ListAgentDevicesRequest request) {
         try {
@@ -762,6 +890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentEvents  ListAgentEventsRequest
+     * @return ListAgentEventsResponse
+     */
     @Override
     public CompletableFuture<ListAgentEventsResponse> listAgentEvents(ListAgentEventsRequest request) {
         try {
@@ -776,6 +908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentStateLogs  ListAgentStateLogsRequest
+     * @return ListAgentStateLogsResponse
+     */
     @Override
     public CompletableFuture<ListAgentStateLogsResponse> listAgentStateLogs(ListAgentStateLogsRequest request) {
         try {
@@ -790,6 +926,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentStates  ListAgentStatesRequest
+     * @return ListAgentStatesResponse
+     */
     @Override
     public CompletableFuture<ListAgentStatesResponse> listAgentStates(ListAgentStatesRequest request) {
         try {
@@ -804,6 +944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentSummaryReports  ListAgentSummaryReportsRequest
+     * @return ListAgentSummaryReportsResponse
+     */
     @Override
     public CompletableFuture<ListAgentSummaryReportsResponse> listAgentSummaryReports(ListAgentSummaryReportsRequest request) {
         try {
@@ -818,6 +962,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentSummaryReportsByInterval  ListAgentSummaryReportsByIntervalRequest
+     * @return ListAgentSummaryReportsByIntervalResponse
+     */
     @Override
     public CompletableFuture<ListAgentSummaryReportsByIntervalResponse> listAgentSummaryReportsByInterval(ListAgentSummaryReportsByIntervalRequest request) {
         try {
@@ -832,6 +980,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentSummaryReportsSinceMidnight  ListAgentSummaryReportsSinceMidnightRequest
+     * @return ListAgentSummaryReportsSinceMidnightResponse
+     */
     @Override
     public CompletableFuture<ListAgentSummaryReportsSinceMidnightResponse> listAgentSummaryReportsSinceMidnight(ListAgentSummaryReportsSinceMidnightRequest request) {
         try {
@@ -846,6 +998,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCallDetailRecords  ListCallDetailRecordsRequest
+     * @return ListCallDetailRecordsResponse
+     */
     @Override
     public CompletableFuture<ListCallDetailRecordsResponse> listCallDetailRecords(ListCallDetailRecordsRequest request) {
         try {
@@ -860,6 +1016,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCallEventDetailByContactId  ListCallEventDetailByContactIdRequest
+     * @return ListCallEventDetailByContactIdResponse
+     */
     @Override
     public CompletableFuture<ListCallEventDetailByContactIdResponse> listCallEventDetailByContactId(ListCallEventDetailByContactIdRequest request) {
         try {
@@ -874,6 +1034,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCallMeasureSummaryReports  ListCallMeasureSummaryReportsRequest
+     * @return ListCallMeasureSummaryReportsResponse
+     */
     @Override
     public CompletableFuture<ListCallMeasureSummaryReportsResponse> listCallMeasureSummaryReports(ListCallMeasureSummaryReportsRequest request) {
         try {
@@ -888,6 +1052,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListConfig  ListConfigRequest
+     * @return ListConfigResponse
+     */
     @Override
     public CompletableFuture<ListConfigResponse> listConfig(ListConfigRequest request) {
         try {
@@ -902,6 +1070,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListContactFlows  ListContactFlowsRequest
+     * @return ListContactFlowsResponse
+     */
     @Override
     public CompletableFuture<ListContactFlowsResponse> listContactFlows(ListContactFlowsRequest request) {
         try {
@@ -916,6 +1088,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstancesOfUser  ListInstancesOfUserRequest
+     * @return ListInstancesOfUserResponse
+     */
     @Override
     public CompletableFuture<ListInstancesOfUserResponse> listInstancesOfUser(ListInstancesOfUserRequest request) {
         try {
@@ -930,6 +1106,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIvrTrackingDetail  ListIvrTrackingDetailRequest
+     * @return ListIvrTrackingDetailResponse
+     */
     @Override
     public CompletableFuture<ListIvrTrackingDetailResponse> listIvrTrackingDetail(ListIvrTrackingDetailRequest request) {
         try {
@@ -944,6 +1124,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMedias  ListMediasRequest
+     * @return ListMediasResponse
+     */
     @Override
     public CompletableFuture<ListMediasResponse> listMedias(ListMediasRequest request) {
         try {
@@ -958,6 +1142,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOutboundPhoneNumberOfUser  ListOutboundPhoneNumberOfUserRequest
+     * @return ListOutboundPhoneNumberOfUserResponse
+     */
     @Override
     public CompletableFuture<ListOutboundPhoneNumberOfUserResponse> listOutboundPhoneNumberOfUser(ListOutboundPhoneNumberOfUserRequest request) {
         try {
@@ -972,6 +1160,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPhoneNumbers  ListPhoneNumbersRequest
+     * @return ListPhoneNumbersResponse
+     */
     @Override
     public CompletableFuture<ListPhoneNumbersResponse> listPhoneNumbers(ListPhoneNumbersRequest request) {
         try {
@@ -986,6 +1178,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPhoneTags  ListPhoneTagsRequest
+     * @return ListPhoneTagsResponse
+     */
     @Override
     public CompletableFuture<ListPhoneTagsResponse> listPhoneTags(ListPhoneTagsRequest request) {
         try {
@@ -1000,6 +1196,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRealTimeAgent  ListRealTimeAgentRequest
+     * @return ListRealTimeAgentResponse
+     */
     @Override
     public CompletableFuture<ListRealTimeAgentResponse> listRealTimeAgent(ListRealTimeAgentRequest request) {
         try {
@@ -1014,6 +1214,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRecentCallRecords  ListRecentCallRecordsRequest
+     * @return ListRecentCallRecordsResponse
+     */
     @Override
     public CompletableFuture<ListRecentCallRecordsResponse> listRecentCallRecords(ListRecentCallRecordsRequest request) {
         try {
@@ -1028,6 +1232,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRecordingOfDualTrack  ListRecordingOfDualTrackRequest
+     * @return ListRecordingOfDualTrackResponse
+     */
     @Override
     public CompletableFuture<ListRecordingOfDualTrackResponse> listRecordingOfDualTrack(ListRecordingOfDualTrackRequest request) {
         try {
@@ -1042,6 +1250,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRecordings  ListRecordingsRequest
+     * @return ListRecordingsResponse
+     */
     @Override
     public CompletableFuture<ListRecordingsResponse> listRecordings(ListRecordingsRequest request) {
         try {
@@ -1056,6 +1268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRecordingsByContactId  ListRecordingsByContactIdRequest
+     * @return ListRecordingsByContactIdResponse
+     */
     @Override
     public CompletableFuture<ListRecordingsByContactIdResponse> listRecordingsByContactId(ListRecordingsByContactIdRequest request) {
         try {
@@ -1070,6 +1286,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRoles  ListRolesRequest
+     * @return ListRolesResponse
+     */
     @Override
     public CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request) {
         try {
@@ -1084,34 +1304,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<ListScenarioParametersResponse> listScenarioParameters(ListScenarioParametersRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListScenarioParameters").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListScenarioParametersResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListScenarioParametersResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<ListSipCallRecordsResponse> listSipCallRecords(ListSipCallRecordsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSipCallRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSipCallRecordsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListSipCallRecordsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of ListSkillGroupStates  ListSkillGroupStatesRequest
+     * @return ListSkillGroupStatesResponse
+     */
     @Override
     public CompletableFuture<ListSkillGroupStatesResponse> listSkillGroupStates(ListSkillGroupStatesRequest request) {
         try {
@@ -1126,6 +1322,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSkillGroupSummaryReports  ListSkillGroupSummaryReportsRequest
+     * @return ListSkillGroupSummaryReportsResponse
+     */
     @Override
     public CompletableFuture<ListSkillGroupSummaryReportsResponse> listSkillGroupSummaryReports(ListSkillGroupSummaryReportsRequest request) {
         try {
@@ -1140,6 +1340,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSkillGroupSummaryReportsByInterval  ListSkillGroupSummaryReportsByIntervalRequest
+     * @return ListSkillGroupSummaryReportsByIntervalResponse
+     */
     @Override
     public CompletableFuture<ListSkillGroupSummaryReportsByIntervalResponse> listSkillGroupSummaryReportsByInterval(ListSkillGroupSummaryReportsByIntervalRequest request) {
         try {
@@ -1154,6 +1358,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSkillGroupSummaryReportsSinceMidnight  ListSkillGroupSummaryReportsSinceMidnightRequest
+     * @return ListSkillGroupSummaryReportsSinceMidnightResponse
+     */
     @Override
     public CompletableFuture<ListSkillGroupSummaryReportsSinceMidnightResponse> listSkillGroupSummaryReportsSinceMidnight(ListSkillGroupSummaryReportsSinceMidnightRequest request) {
         try {
@@ -1168,6 +1376,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSkillGroups  ListSkillGroupsRequest
+     * @return ListSkillGroupsResponse
+     */
     @Override
     public CompletableFuture<ListSkillGroupsResponse> listSkillGroups(ListSkillGroupsRequest request) {
         try {
@@ -1182,6 +1394,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSkillGroupsOfUser  ListSkillGroupsOfUserRequest
+     * @return ListSkillGroupsOfUserResponse
+     */
     @Override
     public CompletableFuture<ListSkillGroupsOfUserResponse> listSkillGroupsOfUser(ListSkillGroupsOfUserRequest request) {
         try {
@@ -1196,6 +1412,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTransferableSkillGroups  ListTransferableSkillGroupsRequest
+     * @return ListTransferableSkillGroupsResponse
+     */
     @Override
     public CompletableFuture<ListTransferableSkillGroupsResponse> listTransferableSkillGroups(ListTransferableSkillGroupsRequest request) {
         try {
@@ -1210,6 +1430,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrunkProviders  ListTrunkProvidersRequest
+     * @return ListTrunkProvidersResponse
+     */
     @Override
     public CompletableFuture<ListTrunkProvidersResponse> listTrunkProviders(ListTrunkProvidersRequest request) {
         try {
@@ -1224,6 +1448,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTrunksOfSkillGroup  ListTrunksOfSkillGroupRequest
+     * @return ListTrunksOfSkillGroupResponse
+     */
     @Override
     public CompletableFuture<ListTrunksOfSkillGroupResponse> listTrunksOfSkillGroup(ListTrunksOfSkillGroupRequest request) {
         try {
@@ -1238,6 +1466,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -1252,6 +1484,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsersOfSkillGroup  ListUsersOfSkillGroupRequest
+     * @return ListUsersOfSkillGroupResponse
+     */
     @Override
     public CompletableFuture<ListUsersOfSkillGroupResponse> listUsersOfSkillGroup(ListUsersOfSkillGroupRequest request) {
         try {
@@ -1266,6 +1502,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVoiceAppraise  ListVoiceAppraiseRequest
+     * @return ListVoiceAppraiseResponse
+     */
     @Override
     public CompletableFuture<ListVoiceAppraiseResponse> listVoiceAppraise(ListVoiceAppraiseRequest request) {
         try {
@@ -1280,6 +1520,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAgentDevice  ModifyAgentDeviceRequest
+     * @return ModifyAgentDeviceResponse
+     */
     @Override
     public CompletableFuture<ModifyAgentDeviceResponse> modifyAgentDevice(ModifyAgentDeviceRequest request) {
         try {
@@ -1294,20 +1538,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<ModifyCallRatioOfJobGroupResponse> modifyCallRatioOfJobGroup(ModifyCallRatioOfJobGroupRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyCallRatioOfJobGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyCallRatioOfJobGroupResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ModifyCallRatioOfJobGroupResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of ModifyPhoneNumber  ModifyPhoneNumberRequest
+     * @return ModifyPhoneNumberResponse
+     */
     @Override
     public CompletableFuture<ModifyPhoneNumberResponse> modifyPhoneNumber(ModifyPhoneNumberRequest request) {
         try {
@@ -1322,6 +1556,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPhoneTags  ModifyPhoneTagsRequest
+     * @return ModifyPhoneTagsResponse
+     */
     @Override
     public CompletableFuture<ModifyPhoneTagsResponse> modifyPhoneTags(ModifyPhoneTagsRequest request) {
         try {
@@ -1336,6 +1574,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPrimaryTrunksOfSkillGroup  ModifyPrimaryTrunksOfSkillGroupRequest
+     * @return ModifyPrimaryTrunksOfSkillGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyPrimaryTrunksOfSkillGroupResponse> modifyPrimaryTrunksOfSkillGroup(ModifyPrimaryTrunksOfSkillGroupRequest request) {
         try {
@@ -1350,6 +1592,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPrivacyNumberCallDetail  ModifyPrivacyNumberCallDetailRequest
+     * @return ModifyPrivacyNumberCallDetailResponse
+     */
     @Override
     public CompletableFuture<ModifyPrivacyNumberCallDetailResponse> modifyPrivacyNumberCallDetail(ModifyPrivacyNumberCallDetailRequest request) {
         try {
@@ -1364,6 +1610,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySkillGroup  ModifySkillGroupRequest
+     * @return ModifySkillGroupResponse
+     */
     @Override
     public CompletableFuture<ModifySkillGroupResponse> modifySkillGroup(ModifySkillGroupRequest request) {
         try {
@@ -1378,6 +1628,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySkillGroupBasicInfo  ModifySkillGroupBasicInfoRequest
+     * @return ModifySkillGroupBasicInfoResponse
+     */
+    @Override
+    public CompletableFuture<ModifySkillGroupBasicInfoResponse> modifySkillGroupBasicInfo(ModifySkillGroupBasicInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySkillGroupBasicInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySkillGroupBasicInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySkillGroupBasicInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifySkillGroupOfUser  ModifySkillGroupOfUserRequest
+     * @return ModifySkillGroupOfUserResponse
+     */
     @Override
     public CompletableFuture<ModifySkillGroupOfUserResponse> modifySkillGroupOfUser(ModifySkillGroupOfUserRequest request) {
         try {
@@ -1392,6 +1664,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySkillGroupOutboundNumbers  ModifySkillGroupOutboundNumbersRequest
+     * @return ModifySkillGroupOutboundNumbersResponse
+     */
     @Override
     public CompletableFuture<ModifySkillGroupOutboundNumbersResponse> modifySkillGroupOutboundNumbers(ModifySkillGroupOutboundNumbersRequest request) {
         try {
@@ -1406,6 +1682,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyUser  ModifyUserRequest
+     * @return ModifyUserResponse
+     */
     @Override
     public CompletableFuture<ModifyUserResponse> modifyUser(ModifyUserRequest request) {
         try {
@@ -1420,6 +1700,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PickGlobalOutboundNumbers  PickGlobalOutboundNumbersRequest
+     * @return PickGlobalOutboundNumbersResponse
+     */
     @Override
     public CompletableFuture<PickGlobalOutboundNumbersResponse> pickGlobalOutboundNumbers(PickGlobalOutboundNumbersRequest request) {
         try {
@@ -1434,6 +1718,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PickLocalNumber  PickLocalNumberRequest
+     * @return PickLocalNumberResponse
+     */
     @Override
     public CompletableFuture<PickLocalNumberResponse> pickLocalNumber(PickLocalNumberRequest request) {
         try {
@@ -1448,6 +1736,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PickOutboundNumbers  PickOutboundNumbersRequest
+     * @return PickOutboundNumbersResponse
+     */
     @Override
     public CompletableFuture<PickOutboundNumbersResponse> pickOutboundNumbers(PickOutboundNumbersRequest request) {
         try {
@@ -1462,6 +1754,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishContactFlowVersion  PublishContactFlowVersionRequest
+     * @return PublishContactFlowVersionResponse
+     */
     @Override
     public CompletableFuture<PublishContactFlowVersionResponse> publishContactFlowVersion(PublishContactFlowVersionRequest request) {
         try {
@@ -1476,6 +1772,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshToken  RefreshTokenRequest
+     * @return RefreshTokenResponse
+     */
     @Override
     public CompletableFuture<RefreshTokenResponse> refreshToken(RefreshTokenRequest request) {
         try {
@@ -1490,6 +1790,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemovePhoneNumber  RemovePhoneNumberRequest
+     * @return RemovePhoneNumberResponse
+     */
     @Override
     public CompletableFuture<RemovePhoneNumberResponse> removePhoneNumber(RemovePhoneNumberRequest request) {
         try {
@@ -1504,6 +1808,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUsers  RemoveUsersRequest
+     * @return RemoveUsersResponse
+     */
     @Override
     public CompletableFuture<RemoveUsersResponse> removeUsers(RemoveUsersRequest request) {
         try {
@@ -1518,6 +1826,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUsersFromSkillGroup  RemoveUsersFromSkillGroupRequest
+     * @return RemoveUsersFromSkillGroupResponse
+     */
     @Override
     public CompletableFuture<RemoveUsersFromSkillGroupResponse> removeUsersFromSkillGroup(RemoveUsersFromSkillGroupRequest request) {
         try {
@@ -1532,6 +1844,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RequestLoginInfo  RequestLoginInfoRequest
+     * @return RequestLoginInfoResponse
+     */
     @Override
     public CompletableFuture<RequestLoginInfoResponse> requestLoginInfo(RequestLoginInfoRequest request) {
         try {
@@ -1546,6 +1862,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetUserStatus  ResetUserStatusRequest
+     * @return ResetUserStatusResponse
+     */
     @Override
     public CompletableFuture<ResetUserStatusResponse> resetUserStatus(ResetUserStatusRequest request) {
         try {
@@ -1560,34 +1880,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<SaveRTCStatsV1Response> saveRTCStatsV1(SaveRTCStatsV1Request request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SaveRTCStatsV1").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveRTCStatsV1Response.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SaveRTCStatsV1Response> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<SaveStatsResponse> saveStats(SaveStatsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SaveStats").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveStatsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SaveStatsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of SaveWebRTCStats  SaveWebRTCStatsRequest
+     * @return SaveWebRTCStatsResponse
+     */
     @Override
     public CompletableFuture<SaveWebRTCStatsResponse> saveWebRTCStats(SaveWebRTCStatsRequest request) {
         try {
@@ -1602,6 +1898,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendPredefinedShortMessage  SendPredefinedShortMessageRequest
+     * @return SendPredefinedShortMessageResponse
+     */
     @Override
     public CompletableFuture<SendPredefinedShortMessageResponse> sendPredefinedShortMessage(SendPredefinedShortMessageRequest request) {
         try {
@@ -1616,6 +1916,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartBack2BackCall  StartBack2BackCallRequest
+     * @return StartBack2BackCallResponse
+     */
     @Override
     public CompletableFuture<StartBack2BackCallResponse> startBack2BackCall(StartBack2BackCallRequest request) {
         try {

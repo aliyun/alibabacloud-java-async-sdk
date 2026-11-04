@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigRequest} extends {@link RequestModel}
  *
  * <p>ListConfigRequest</p>
  */
 public class ListConfigRequest extends Request {
-    @Query
-    @NameInMap("ConfigItem")
-    private java.util.List < String > configItem;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigItem")
+    private java.util.List<String> configItem;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private ListConfigRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class ListConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -43,7 +48,7 @@ public class ListConfigRequest extends Request {
     /**
      * @return configItem
      */
-    public java.util.List < String > getConfigItem() {
+    public java.util.List<String> getConfigItem() {
         return this.configItem;
     }
 
@@ -55,30 +60,30 @@ public class ListConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListConfigRequest, Builder> {
-        private java.util.List < String > configItem; 
+        private java.util.List<String> configItem; 
         private String instanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListConfigRequest response) {
-            super(response);
-            this.configItem = response.configItem;
-            this.instanceId = response.instanceId;
+        private Builder(ListConfigRequest request) {
+            super(request);
+            this.configItem = request.configItem;
+            this.instanceId = request.instanceId;
         } 
 
         /**
          * ConfigItem.
          */
-        public Builder configItem(java.util.List < String > configItem) {
+        public Builder configItem(java.util.List<String> configItem) {
             this.putQueryParameter("ConfigItem", configItem);
             this.configItem = configItem;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20170705.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CallOnlinePrivacyNumberResponseBody} extends {@link TeaModel}
  *
  * <p>CallOnlinePrivacyNumberResponseBody</p>
  */
 public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CallOnlinePrivacyNumberResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
 
     public static CallOnlinePrivacyNumberResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CallOnlinePrivacyNumberResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,20 +172,26 @@ public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CallOnlinePrivacyNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>CallOnlinePrivacyNumberResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CallId")
+        @com.aliyun.core.annotation.NameInMap("CallId")
         private String callId;
 
-        @NameInMap("DateCreated")
+        @com.aliyun.core.annotation.NameInMap("DateCreated")
         private String dateCreated;
 
-        @NameInMap("Represent")
+        @com.aliyun.core.annotation.NameInMap("Represent")
         private String represent;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("TelX")
+        @com.aliyun.core.annotation.NameInMap("TelX")
         private String telX;
 
         private Data(Builder builder) {
@@ -224,6 +251,17 @@ public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
             private String represent; 
             private String statusCode; 
             private String telX; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.callId = model.callId;
+                this.dateCreated = model.dateCreated;
+                this.represent = model.represent;
+                this.statusCode = model.statusCode;
+                this.telX = model.telX;
+            } 
 
             /**
              * CallId.
