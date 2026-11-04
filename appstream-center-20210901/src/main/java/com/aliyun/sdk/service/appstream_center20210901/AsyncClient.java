@@ -276,6 +276,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeliverToUserSlsResponse> deliverToUserSls(DeliverToUserSlsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the resource and session events of the current account. <code>StartTime</code> and <code>EndTime</code> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified at the same time, the intersection is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <code>PageSize</code> and <code>PageNumber</code>. The current version does not use <code>MaxResults</code> and <code>NextToken</code>.</p>
+     * 
+     * @param request the request parameters of DescribeEvents  DescribeEventsRequest
+     * @return DescribeEventsResponse
+     */
+    CompletableFuture<DescribeEventsResponse> describeEvents(DescribeEventsRequest request);
+
+    /**
      * @param request the request parameters of DescribeWuyingServer  DescribeWuyingServerRequest
      * @return DescribeWuyingServerResponse
      */
@@ -788,6 +797,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the VirtualNodePoolId under the current account. This operation verifies the ownership of the node pool and returns up to 100 records sorted by the template configuration order. The template content is Base64-encoded after being UTF-8 encoded. You must perform Base64 decoding before use. The current version does not use MaxResults and NextToken for pagination.</p>
+     * 
+     * @param request the request parameters of ListWuyingServerWorkloadTemplate  ListWuyingServerWorkloadTemplateRequest
+     * @return ListWuyingServerWorkloadTemplateResponse
+     */
+    CompletableFuture<ListWuyingServerWorkloadTemplateResponse> listWuyingServerWorkloadTemplate(ListWuyingServerWorkloadTemplateRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>This operation returns the list of available zone IDs for the current Alibaba Cloud account based on the specified region, product type, and operating system type. A typical use case is to check which zones are available before creating a resource that requires a vSwitch, and then select a vSwitch in one of those zones.
      * This operation only queries information. It does not create resources or incur fees.</p>
@@ -886,6 +904,96 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PageListAppInstanceGroupUserResponse
      */
     CompletableFuture<PageListAppInstanceGroupUserResponse> pageListAppInstanceGroupUser(PageListAppInstanceGroupUserRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. <code>AppInstanceGroupId</code> matches the exact ID, and <code>AppInstanceGroupName</code> filters by inclusion. If multiple filter conditions are passed at the same time, the intersection is taken. When filtering by date, <code>StatDate</code> specifies a single day, and <code>StartDate</code> and <code>EndDate</code> must be passed in pairs to represent a closed interval. If both a single day and an interval are passed, the results must meet both conditions. Before using <code>EndUserId</code>, make sure that the user has a valid authorization relationship.</p>
+     * 
+     * @param request the request parameters of QueryAppInstanceGroupReportList  QueryAppInstanceGroupReportListRequest
+     * @return QueryAppInstanceGroupReportListResponse
+     */
+    CompletableFuture<QueryAppInstanceGroupReportListResponse> queryAppInstanceGroupReportList(QueryAppInstanceGroupReportListRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <code>BizRegionId</code> and <code>AppInstanceGroupId</code> parameters. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</p>
+     * 
+     * @param request the request parameters of QueryConnectionReport  QueryConnectionReportRequest
+     * @return QueryConnectionReportResponse
+     */
+    CompletableFuture<QueryConnectionReportResponse> queryConnectionReport(QueryConnectionReportRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to <code>CloudApp</code>. You can use BizRegionId and AppInstanceGroupId to narrow the scope. If neither is specified, the query returns aggregated data for all business regions. Results are paginated, with a maximum of 1,500 records per page.</p>
+     * 
+     * @param request the request parameters of QueryDauReportData  QueryDauReportDataRequest
+     * @return QueryDauReportDataResponse
+     */
+    CompletableFuture<QueryDauReportDataResponse> queryDauReportData(QueryDauReportDataRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the monthly active user (MAU) report. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <code>EndDate</code> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * 
+     * @param request the request parameters of QueryMauReportData  QueryMauReportDataRequest
+     * @return QueryMauReportDataResponse
+     */
+    CompletableFuture<QueryMauReportDataResponse> queryMauReportData(QueryMauReportDataRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries network round-trip time (RTT) reports. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * 
+     * @param request the request parameters of QueryNetworkRttReport  QueryNetworkRttReportRequest
+     * @return QueryNetworkRttReportResponse
+     */
+    CompletableFuture<QueryNetworkRttReportResponse> queryNetworkRttReport(QueryNetworkRttReportRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the node quantity report. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * 
+     * @param request the request parameters of QueryNodeReportData  QueryNodeReportDataRequest
+     * @return QueryNodeReportDataResponse
+     */
+    CompletableFuture<QueryNodeReportDataResponse> queryNodeReportData(QueryNodeReportDataRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries session quantity reports. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 records per page.</p>
+     * 
+     * @param request the request parameters of QuerySessionReportData  QuerySessionReportDataRequest
+     * @return QuerySessionReportDataResponse
+     */
+    CompletableFuture<QuerySessionReportDataResponse> querySessionReportData(QuerySessionReportDataRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</p>
+     * 
+     * @param request the request parameters of QueryUserAppUsageAggregateByHour  QueryUserAppUsageAggregateByHourRequest
+     * @return QueryUserAppUsageAggregateByHourResponse
+     */
+    CompletableFuture<QueryUserAppUsageAggregateByHourResponse> queryUserAppUsageAggregateByHour(QueryUserAppUsageAggregateByHourRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the ranking of application usage duration for a specified user within a statistical range. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</p>
+     * 
+     * @param request the request parameters of QueryUserAppUsageTimeRank  QueryUserAppUsageTimeRankRequest
+     * @return QueryUserAppUsageTimeRankResponse
+     */
+    CompletableFuture<QueryUserAppUsageTimeRankResponse> queryUserAppUsageTimeRank(QueryUserAppUsageTimeRankRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <code>yyyyMMdd</code> format and aggregated based on a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</p>
+     * 
+     * @param request the request parameters of QueryUserUsageReport  QueryUserUsageReportRequest
+     * @return QueryUserUsageReportResponse
+     */
+    CompletableFuture<QueryUserUsageReportResponse> queryUserUsageReport(QueryUserUsageReportRequest request);
 
     /**
      * <b>description</b> :
