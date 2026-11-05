@@ -131,7 +131,10 @@ public class WebSearchRequest extends Request {
         } 
 
         /**
-         * AgentName.
+         * <p>The agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>codex</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -140,7 +143,10 @@ public class WebSearchRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return. Default value: 10. Valid values: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -149,6 +155,7 @@ public class WebSearchRequest extends Request {
         }
 
         /**
+         * <p>The search query string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +168,7 @@ public class WebSearchRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +181,10 @@ public class WebSearchRequest extends Request {
         }
 
         /**
-         * UrlScopeDomains.
+         * <p>A comma-separated list of domain names. The total length cannot exceed 20,480 characters, and the list can contain up to 100 entries. Subdomains are included by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring.io,docs.spring.io</p>
          */
         public Builder urlScopeDomains(String urlScopeDomains) {
             this.putQueryParameter("UrlScopeDomains", urlScopeDomains);
@@ -182,7 +193,10 @@ public class WebSearchRequest extends Request {
         }
 
         /**
-         * UrlScopeMode.
+         * <p>The domain scope mode. Valid values: allowOnly and deny. This parameter must be specified together with UrlScopeDomains, or both must be omitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allowOnly</p>
          */
         public Builder urlScopeMode(String urlScopeMode) {
             this.putQueryParameter("UrlScopeMode", urlScopeMode);

@@ -145,7 +145,10 @@ public class WebSearchResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ErrorMessage Code</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -153,7 +156,10 @@ public class WebSearchResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ErrorMessage Example</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -161,7 +167,10 @@ public class WebSearchResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -169,7 +178,10 @@ public class WebSearchResponseBody extends TeaModel {
         }
 
         /**
-         * Query.
+         * <p>The search query string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Spring Boot</p>
          */
         public Builder query(String query) {
             this.query = query;
@@ -177,7 +189,10 @@ public class WebSearchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A30D0930-xxxx-xxxx-xxxx-C2C661CC8B58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,7 +200,7 @@ public class WebSearchResponseBody extends TeaModel {
         }
 
         /**
-         * SearchResult.
+         * <p>The list of search results.</p>
          */
         public Builder searchResult(java.util.List<SearchResult> searchResult) {
             this.searchResult = searchResult;
@@ -193,7 +208,10 @@ public class WebSearchResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class WebSearchResponseBody extends TeaModel {
         }
 
         /**
-         * TotalResults.
+         * <p>The total number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalResults(Integer totalResults) {
             this.totalResults = totalResults;
@@ -280,7 +301,10 @@ public class WebSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * Snippet.
+             * <p>The snippet of the web page content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications.</p>
              */
             public Builder snippet(String snippet) {
                 this.snippet = snippet;
@@ -288,7 +312,10 @@ public class WebSearchResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the web page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Spring Boot</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -296,7 +323,10 @@ public class WebSearchResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the web page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx/projects/spring-boot">https://xxx/projects/spring-boot</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

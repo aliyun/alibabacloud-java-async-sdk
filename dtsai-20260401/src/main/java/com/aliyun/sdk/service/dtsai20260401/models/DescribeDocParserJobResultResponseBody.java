@@ -145,7 +145,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JobNotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -153,7 +156,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified job does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -161,7 +167,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -169,7 +178,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A30D0930-xxxx-xxxx-xxxx-C2C661CC8B58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +189,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The document parsing result. The format is determined by the OutputFormat parameter specified in the CreateDocParserJob request.</p>
+         * 
+         * <strong>example:</strong>
+         * <h1>Document Title</h1>
          */
         public Builder result(String result) {
             this.result = result;
@@ -185,7 +200,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * ResultType.
+         * <p>The result format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content</p>
          */
         public Builder resultType(String resultType) {
             this.resultType = resultType;
@@ -193,7 +211,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * ResultUrl.
+         * <p>oss url</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://shuanglu-prod.oss-cn-shanghai-finance-1-pub.aliyuncs.com/idrs/24/local/remoteresult?Expires=1764472809&OSSAccessKeyId=****&Signature=">http://shuanglu-prod.oss-cn-shanghai-finance-1-pub.aliyuncs.com/idrs/24/local/remoteresult?Expires=1764472809&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */
         public Builder resultUrl(String resultUrl) {
             this.resultUrl = resultUrl;
@@ -201,7 +222,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

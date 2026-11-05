@@ -102,7 +102,10 @@ public class AuthorizeFileUploadRequest extends Request {
         } 
 
         /**
-         * AgentName.
+         * <p>The source of the agent or client that initiates the call, such as codex, cursor, or openapi. The maximum length is 32 characters. This parameter is used only for statistics and does not participate in authentication, throttling, quota management, or billing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>codex</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -111,7 +114,10 @@ public class AuthorizeFileUploadRequest extends Request {
         }
 
         /**
-         * BatchSize.
+         * <p>The number of OSS PostObject direct upload authorizations returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder batchSize(String batchSize) {
             this.putQueryParameter("BatchSize", batchSize);
@@ -120,7 +126,10 @@ public class AuthorizeFileUploadRequest extends Request {
         }
 
         /**
-         * FileFormat.
+         * <p>The format of the file to be uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pdf</p>
          */
         public Builder fileFormat(String fileFormat) {
             this.putQueryParameter("FileFormat", fileFormat);
@@ -129,6 +138,7 @@ public class AuthorizeFileUploadRequest extends Request {
         }
 
         /**
+         * <p>The region ID, such as cn-beijing.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

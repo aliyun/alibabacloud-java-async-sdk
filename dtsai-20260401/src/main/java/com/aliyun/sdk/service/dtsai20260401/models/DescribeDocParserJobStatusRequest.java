@@ -89,7 +89,10 @@ public class DescribeDocParserJobStatusRequest extends Request {
         } 
 
         /**
-         * AgentName.
+         * <p>The agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>codex</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -98,6 +101,7 @@ public class DescribeDocParserJobStatusRequest extends Request {
         }
 
         /**
+         * <p>The ID of the document parsing task. You can obtain the ID by calling CreateDocParserJob.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class DescribeDocParserJobStatusRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -171,7 +171,10 @@ public class WebFetchResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The web page content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -179,7 +182,18 @@ public class WebFetchResponseBody extends TeaModel {
         }
 
         /**
-         * ContentFormat.
+         * <p>The actual output format. Valid values:</p>
+         * <ul>
+         * <li><p><strong>markdown</strong>: Markdown format.</p>
+         * </li>
+         * <li><p><strong>html</strong>: HTML format.</p>
+         * </li>
+         * <li><p><strong>text</strong>: plain text format.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>markdown</p>
          */
         public Builder contentFormat(String contentFormat) {
             this.contentFormat = contentFormat;
@@ -187,7 +201,10 @@ public class WebFetchResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ErrorMessage Code</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -195,7 +212,10 @@ public class WebFetchResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ErrorMessage Example</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -203,7 +223,10 @@ public class WebFetchResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -211,7 +234,10 @@ public class WebFetchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A30D0930-xxxx-xxxx-xxxx-C2C661CC8B58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +245,10 @@ public class WebFetchResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -227,7 +256,10 @@ public class WebFetchResponseBody extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The web page title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Spring Boot</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -235,7 +267,10 @@ public class WebFetchResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>The URL of the web page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxx/projects/spring-boot">https://xxxx/projects/spring-boot</a></p>
          */
         public Builder url(String url) {
             this.url = url;
@@ -243,7 +278,18 @@ public class WebFetchResponseBody extends TeaModel {
         }
 
         /**
-         * UrlType.
+         * <p>The URL classification result. Valid values:</p>
+         * <ul>
+         * <li><strong>static_html</strong>: Static HTML page.</li>
+         * <li><strong>dynamic_js</strong>: Single-page application (SPA) page that requires JavaScript rendering.</li>
+         * <li><strong>audio</strong>: Audio file.</li>
+         * <li><strong>video</strong>: Video file.</li>
+         * <li><strong>document</strong>: Document file (PDF, Word, PPT, or Excel).</li>
+         * <li><strong>unknown</strong>: Unrecognizable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>static_html</p>
          */
         public Builder urlType(String urlType) {
             this.urlType = urlType;

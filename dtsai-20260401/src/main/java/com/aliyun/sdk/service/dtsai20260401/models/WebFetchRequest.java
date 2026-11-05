@@ -103,7 +103,10 @@ public class WebFetchRequest extends Request {
         } 
 
         /**
-         * AgentName.
+         * <p>The agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>codex</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -112,7 +115,18 @@ public class WebFetchRequest extends Request {
         }
 
         /**
-         * OutputFormat.
+         * <p>The output format. Valid values:</p>
+         * <ul>
+         * <li><p><strong>markdown</strong>: Markdown format.</p>
+         * </li>
+         * <li><p><strong>html</strong>: HTML format.</p>
+         * </li>
+         * <li><p><strong>text</strong>: plain text format.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>markdown</p>
          */
         public Builder outputFormat(String outputFormat) {
             this.putQueryParameter("OutputFormat", outputFormat);
@@ -121,6 +135,7 @@ public class WebFetchRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +148,7 @@ public class WebFetchRequest extends Request {
         }
 
         /**
+         * <p>The URL of the target web page to fetch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

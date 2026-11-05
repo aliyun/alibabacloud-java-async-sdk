@@ -223,7 +223,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessKeyId.
+         * <p>The temporary AccessKey ID used for OSS PostObject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STS.NV5xxx</p>
          */
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = accessKeyId;
@@ -231,7 +234,7 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * Authorizations.
+         * <p>The list of OSS PostObject direct upload authorizations returned in batch.</p>
          */
         public Builder authorizations(java.util.List<Authorizations> authorizations) {
             this.authorizations = authorizations;
@@ -239,7 +242,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * Bucket.
+         * <p>The destination OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts-ai-upload-cn-beijing7500163e0eae09</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;
@@ -247,7 +253,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * EncodedPolicy.
+         * <p>The Base64-encoded PostObject policy, which includes the object key and file size limits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjo...</p>
          */
         public Builder encodedPolicy(String encodedPolicy) {
             this.encodedPolicy = encodedPolicy;
@@ -266,7 +275,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -274,7 +286,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The parameter [Query] is not valid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -282,7 +297,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time of the OSS PostObject direct upload authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -290,7 +308,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The business semantic status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -298,7 +319,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * ObjectKey.
+         * <p>The object key that must be used exactly as provided for the upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a1b_123456_0123456789abcdef0123456789abcdef</p>
          */
         public Builder objectKey(String objectKey) {
             this.objectKey = objectKey;
@@ -306,7 +330,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A30D0930-xxxx-xxxx-xxxx-C2C661CC8B58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -314,7 +341,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityToken.
+         * <p>The temporary Security Token Service (STS) token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAISxxx</p>
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;
@@ -322,7 +352,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * Signature.
+         * <p>The policy signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>masked-signature</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;
@@ -330,7 +363,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -409,7 +445,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
             } 
 
             /**
-             * EncodedPolicy.
+             * <p>The Base64-encoded PostObject policy, which includes the object key and file size limits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJleHBpcmF0aW9uIjo...</p>
              */
             public Builder encodedPolicy(String encodedPolicy) {
                 this.encodedPolicy = encodedPolicy;
@@ -417,7 +456,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectKey.
+             * <p>The object key that must be used exactly as provided for the upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a1b_123456_0123456789abcdef0123456789abcdef</p>
              */
             public Builder objectKey(String objectKey) {
                 this.objectKey = objectKey;
@@ -425,7 +467,10 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>The policy signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>masked-signature</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;

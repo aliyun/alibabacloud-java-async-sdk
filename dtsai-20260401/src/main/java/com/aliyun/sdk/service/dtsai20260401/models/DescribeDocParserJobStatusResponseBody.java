@@ -132,7 +132,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JobNotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -140,7 +143,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified job does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -148,7 +154,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * FailureMessage.
+         * <p>The failure reason. This parameter has a value only when Status is failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed Message</p>
          */
         public Builder failureMessage(String failureMessage) {
             this.failureMessage = failureMessage;
@@ -156,7 +165,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +176,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A30D0930-xxxx-xxxx-xxxx-C2C661CC8B58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,24 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>init</strong>: Created and being prepared.</p>
+         * </li>
+         * <li><p><strong>pending</strong>: Queued and waiting to be scheduled.</p>
+         * </li>
+         * <li><p><strong>running</strong>: Being processed and parsed.</p>
+         * </li>
+         * <li><p><strong>success</strong>: Completed. You can call DescribeDocParserJobResult to obtain the result.</p>
+         * </li>
+         * <li><p><strong>failed</strong>: Failed. The reason is provided in FailureMessage.</p>
+         * </li>
+         * <li><p><strong>cancelled</strong>: Canceled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -180,7 +212,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
