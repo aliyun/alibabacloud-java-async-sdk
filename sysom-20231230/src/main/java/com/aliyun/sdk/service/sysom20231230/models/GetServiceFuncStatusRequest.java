@@ -103,7 +103,7 @@ public class GetServiceFuncStatusRequest extends Request {
         }
 
         /**
-         * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
+         * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records where the parameters match the specified values.</p>
          * <p>This parameter is required.</p>
          */
         public Builder params(Params params) {

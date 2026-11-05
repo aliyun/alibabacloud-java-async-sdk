@@ -96,7 +96,7 @@ public class GetCveHotfixResponseBody extends TeaModel {
          * <p>The status code.</p>
          * <ul>
          * <li>If <code>code == Success</code>, the authorization is successful.</li>
-         * <li>Other status codes indicate that the authorization failed. If the authorization failed, check the <code>message</code> field for the detailed fault information.</li>
+         * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault message.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class GetCveHotfixResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distribution. This value is null if the distribution is not registered.</p>
+             * <p>The distribution. The value is null if the distribution is not registered.</p>
              * 
              * <strong>example:</strong>
              * <p>alinux3</p>
@@ -248,7 +248,7 @@ public class GetCveHotfixResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compatible full kernel version.</p>
+             * <p>The adapted full kernel version.</p>
              * 
              * <strong>example:</strong>
              * <p>5.10.134-18.al8.x86_64</p>
@@ -368,7 +368,7 @@ public class GetCveHotfixResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The hotfix description.</p>
+             * <p>The description of the hotfix.</p>
              * 
              * <strong>example:</strong>
              * <p>Fixes the kernel issue corresponding to the CVE</p>
@@ -379,7 +379,7 @@ public class GetCveHotfixResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hotfix name.</p>
+             * <p>The name of the hotfix.</p>
              * 
              * <strong>example:</strong>
              * <p>12345678</p>
@@ -390,7 +390,7 @@ public class GetCveHotfixResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hotfix module name.</p>
+             * <p>The module name of the hotfix.</p>
              * 
              * <strong>example:</strong>
              * <p>kpatch_example</p>
@@ -401,7 +401,7 @@ public class GetCveHotfixResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of published packages that meet the kernel requirements.</p>
+             * <p>The list of published packages that meet the kernel conditions.</p>
              */
             public Builder packages(java.util.List<Packages> packages) {
                 this.packages = packages;
@@ -409,7 +409,7 @@ public class GetCveHotfixResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hotfix version.</p>
+             * <p>The version of the hotfix.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0</p>

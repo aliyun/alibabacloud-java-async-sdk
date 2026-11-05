@@ -60,10 +60,10 @@ public class CreateCopilotSessionRequest extends Request {
         } 
 
         /**
-         * <p>不填为 New Session</p>
+         * <p>The session name. The name must be 1 to 255 characters in length. Default value: New Session. Empty strings or null values are not supported. If no name is specified, the server uses content generation to create a session name based on the first user message when it is received.</p>
          * 
          * <strong>example:</strong>
-         * <p>排查 CPU 负载</p>
+         * <p>Troubleshoot CPU load</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

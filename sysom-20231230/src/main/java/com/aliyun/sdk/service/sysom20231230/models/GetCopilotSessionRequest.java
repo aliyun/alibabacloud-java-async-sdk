@@ -60,7 +60,7 @@ public class GetCopilotSessionRequest extends Request {
         } 
 
         /**
-         * <p>sessionId</p>
+         * <p>The session ID. The value must be 1 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

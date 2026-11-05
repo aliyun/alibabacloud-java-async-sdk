@@ -93,7 +93,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,14 @@ public class GetCopilotSessionResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +127,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID. You can use it for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BC79EF5-798B-5499-9683-4E14EBBBF712</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -261,7 +274,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The time when the execution turn was created, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-09T01:01:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -269,7 +285,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * finishedAt.
+             * <p>The time when the execution turn ended, in ISO 8601 format. This field is empty if the execution has not ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-09T01:03:00Z</p>
              */
             public Builder finishedAt(String finishedAt) {
                 this.finishedAt = finishedAt;
@@ -277,7 +296,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * inputTokens.
+             * <p>The cumulative number of input tokens in this execution turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder inputTokens(Long inputTokens) {
                 this.inputTokens = inputTokens;
@@ -285,7 +307,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * outputTokens.
+             * <p>The cumulative number of output tokens in this execution turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder outputTokens(Long outputTokens) {
                 this.outputTokens = outputTokens;
@@ -293,7 +318,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * pendingInputId.
+             * <p>The ID of the form that is waiting for user input. It is used when you submit user input. This field is empty if no form needs to be filled out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iso-boot-validation</p>
              */
             public Builder pendingInputId(String pendingInputId) {
                 this.pendingInputId = pendingInputId;
@@ -301,7 +329,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The execution status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -309,7 +340,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * turnId.
+             * <p>The ID of the execution turn. It is used when you submit user input, reconnect, or stop the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e499819f351242dba59ab8af31bc8b0f</p>
              */
             public Builder turnId(String turnId) {
                 this.turnId = turnId;
@@ -317,7 +351,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the execution turn was last updated, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-09T01:02:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -462,7 +499,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The time when the execution turn was created, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-09T01:01:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -470,7 +510,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * finishedAt.
+             * <p>The time when the execution turn ended, in ISO 8601 format. This field is empty if the execution has not ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-09T01:03:00Z</p>
              */
             public Builder finishedAt(String finishedAt) {
                 this.finishedAt = finishedAt;
@@ -478,7 +521,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * inputTokens.
+             * <p>The cumulative number of input tokens in this execution turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder inputTokens(Long inputTokens) {
                 this.inputTokens = inputTokens;
@@ -486,7 +532,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * outputTokens.
+             * <p>The cumulative number of output tokens in this execution turn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder outputTokens(Long outputTokens) {
                 this.outputTokens = outputTokens;
@@ -494,7 +543,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * pendingInputId.
+             * <p>The ID of the form that is waiting for user input. It is used when you submit user input. This field is empty if no form needs to be filled out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iso-boot-validation</p>
              */
             public Builder pendingInputId(String pendingInputId) {
                 this.pendingInputId = pendingInputId;
@@ -502,7 +554,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The execution status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -510,7 +565,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * turnId.
+             * <p>The ID of the execution turn. It is used when you submit user input, reconnect, or stop the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e499819f351242dba59ab8af31bc8b0f</p>
              */
             public Builder turnId(String turnId) {
                 this.turnId = turnId;
@@ -518,7 +576,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the execution turn was last updated, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-09T01:02:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -637,7 +698,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>本次定时执行的 Run ID</p>
+             * <p>The ID of this scheduled execution. It is used to associate with the scheduled execution record. Multiple triggers of the same scheduled task use different runIds.</p>
              * 
              * <strong>example:</strong>
              * <p>run-example-001</p>
@@ -648,7 +709,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>计划触发时间，ISO 8601 含时区偏移</p>
+             * <p>The scheduled trigger time, in ISO 8601 format with a time zone. This field is empty if no record exists.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-09T01:00:00+00:00</p>
@@ -659,7 +720,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Copilot 开始处理时间，ISO 8601 含时区偏移</p>
+             * <p>The time when the processing of this schedule started, in ISO 8601 format with a time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-09T01:00:03+00:00</p>
@@ -670,7 +731,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务 ID；任务删除后仍保留</p>
+             * <p>The ID of the associated scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>42</p>
@@ -681,10 +742,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>触发时的任务名称快照</p>
+             * <p>The name of the scheduled task when this trigger occurred. Subsequent changes to the task name do not change this snapshot.</p>
              * 
              * <strong>example:</strong>
-             * <p>每日巡检</p>
+             * <p>Daily inspection</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -692,7 +753,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务的 cron 时区</p>
+             * <p>The scheduling time zone of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -867,7 +928,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * activeTurn.
+             * <p>The execution information of the turn that currently occupies the session.</p>
              */
             public Builder activeTurn(ActiveTurn activeTurn) {
                 this.activeTurn = activeTurn;
@@ -875,7 +936,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The time when the session was created, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-09T01:00:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -883,7 +947,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>十进制事件序号字符串，范围 0..9223372036854775807；避免 JavaScript 精度丢失</p>
+             * <p>The cursor of the latest persisted event in the current session.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -894,7 +958,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * lastTurn.
+             * <p>The information about the most recent execution turn.</p>
              */
             public Builder lastTurn(LastTurn lastTurn) {
                 this.lastTurn = lastTurn;
@@ -902,7 +966,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The session title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Troubleshoot CPU load</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -910,7 +977,7 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>定时任务触发快照；非定时会话为空</p>
+             * <p>The snapshot information captured when the scheduled task was triggered.</p>
              */
             public Builder scheduledTask(ScheduledTask scheduledTask) {
                 this.scheduledTask = scheduledTask;
@@ -918,7 +985,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c356bc310e4345c3a602a2912322ad21</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -926,7 +996,14 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>会话初始来源：chat、scheduled_task、alert；后续追问不改变来源</p>
+             * <p>The session source. Valid values:</p>
+             * <ul>
+             * <li>openapi: API call.</li>
+             * <li>cron: Scheduled task.</li>
+             * <li>im_dingtalk: DingTalk.</li>
+             * <li>im_feishu: Lark.</li>
+             * <li>alert: Alert.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>openapi</p>
@@ -937,7 +1014,14 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The session status. Valid values:</p>
+             * <ul>
+             * <li>active: The session is not archived.</li>
+             * <li>archived: The session is archived.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -945,7 +1029,10 @@ public class GetCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the session was last updated, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-09T01:02:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

@@ -95,8 +95,8 @@ public class InstallAgentWithTypeResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <ul>
-         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * <li>If <code>code == Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. If the authorization failed, check the <code>message</code> field for the detailed fault message.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class InstallAgentWithTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -184,7 +184,7 @@ public class InstallAgentWithTypeResponseBody extends TeaModel {
 
             /**
              * <p>The task ID.</p>
-             * <p>You can use this task ID to call the GetAgentTask operation to check the task execution status.</p>
+             * <p>You can use this task ID to call the GetAgentTask operation to query the execution status of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>26b3cd97389c43dcad6bc4901c36fcec</p>

@@ -93,7 +93,14 @@ public class DeleteCopilotSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li>If <code>code</code> is <code>Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class DeleteCopilotSessionResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +116,10 @@ public class DeleteCopilotSessionResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message returned when the code is not Success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +127,10 @@ public class DeleteCopilotSessionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BC79EF5-798B-5499-9683-4E14EBBBF712</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +196,10 @@ public class DeleteCopilotSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * deleted.
+             * <p>Indicates whether the session was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleted(Boolean deleted) {
                 this.deleted = deleted;
@@ -191,7 +207,10 @@ public class DeleteCopilotSessionResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>The ID of the deleted session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c356bc310e4345c3a602a2912322ad21</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

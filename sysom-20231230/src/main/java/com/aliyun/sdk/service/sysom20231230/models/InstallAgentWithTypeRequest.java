@@ -133,7 +133,7 @@ public class InstallAgentWithTypeRequest extends Request {
         } 
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -168,7 +168,7 @@ public class InstallAgentWithTypeRequest extends Request {
         }
 
         /**
-         * <p>The configuration ID of the component to install.</p>
+         * <p>The ID of the component configuration to install.</p>
          * 
          * <strong>example:</strong>
          * <p>f0078fbb-4213-11f0-a19b-00163e4ae208</p>
@@ -262,7 +262,10 @@ public class InstallAgentWithTypeRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -270,7 +273,10 @@ public class InstallAgentWithTypeRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tag_value</p>
              */
             public Builder value(String value) {
                 this.value = value;

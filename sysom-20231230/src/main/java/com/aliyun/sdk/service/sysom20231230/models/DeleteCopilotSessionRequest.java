@@ -74,7 +74,10 @@ public class DeleteCopilotSessionRequest extends Request {
         } 
 
         /**
-         * agentId.
+         * <p>The agent identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sre_agent</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("agentId", agentId);
@@ -83,6 +86,7 @@ public class DeleteCopilotSessionRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
