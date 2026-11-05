@@ -88,7 +88,7 @@ public class GetResourceControlEventRequest extends Request {
         } 
 
         /**
-         * <p>The language environment.</p>
+         * <p>The locale.</p>
          * <ul>
          * <li>Chinese (default): <strong>zh</strong></li>
          * <li>English: <strong>en</strong></li>

@@ -213,7 +213,7 @@ public class QueryForOperationRequest extends Request {
          * <ul>
          * <li><strong>EIP</strong>: VPC public IP address.</li>
          * <li><strong>SLB</strong>: load balancing.</li>
-         * <li><strong>ECS</strong>: Public IP address in the classic network.</li>
+         * <li><strong>ECS</strong>: Public IP address of an ECS instance in the classic network.</li>
          * </ul>
          * 
          * <strong>example:</strong>

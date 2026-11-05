@@ -106,7 +106,7 @@ public class SubmitAutoAuditUnblockResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The status code. Valid values:</p>
          * <ul>
          * <li><strong>200</strong>: Success.</li>
          * <li><strong>Other values (such as 400 and 500)</strong>: Failure.</li>
@@ -121,10 +121,10 @@ public class SubmitAutoAuditUnblockResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The submission result.</p>
+         * <p>The submission result. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The submission succeeded.</li>
-         * <li><strong>false</strong>: The submission failed.</li>
+         * <li><strong>true</strong>: Submission succeeded.</li>
+         * <li><strong>false</strong>: Submission failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class SubmitAutoAuditUnblockResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>

@@ -149,7 +149,7 @@ public class QueryForOperationResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>true</strong>: The call was successful.                                </li>
          * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
@@ -378,7 +378,7 @@ public class QueryForOperationResponseBody extends TeaModel {
              * <ul>
              * <li><strong>EIP</strong>: VPC public IP address.</li>
              * <li><strong>SLB</strong>: load balancing.</li>
-             * <li><strong>ECS</strong>: Public IP address in the classic network.</li>
+             * <li><strong>ECS</strong>: Public IP address of an ECS instance in the classic network.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -445,7 +445,7 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the email contains an unsubscribe option. Valid values:</p>
+             * <p>Indicates whether the email contains an unsubscribe link. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Yes.</li>
              * <li><strong>false</strong>: No.</li>
@@ -460,7 +460,7 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID.</p>
+             * <p>The unique identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>710864062</p>
@@ -482,7 +482,7 @@ public class QueryForOperationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the number of sent emails.</p>
+             * <p>The number of sent emails.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -594,9 +594,9 @@ public class QueryForOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number from which the query results are displayed.</p>
+             * <p>The page number of the current page.</p>
              * <blockquote>
-             * <p>Default value: 1, which indicates that the query results are displayed from the first page.</p>
+             * <p>Default value: 1.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

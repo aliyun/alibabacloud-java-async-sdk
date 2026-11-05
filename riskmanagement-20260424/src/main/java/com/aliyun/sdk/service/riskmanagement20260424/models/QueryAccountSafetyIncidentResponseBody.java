@@ -108,7 +108,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p>200: Success. Other values (such as 500 or 400): Error codes.</p>
+         * <p>200: Success. Other values (such as 500 and 400): Error codes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request is successful.</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -236,7 +236,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the alert.</p>
+             * <p>The alert end time.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -598,7 +598,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
              * <p>The name of the control action.</p>
              * 
              * <strong>example:</strong>
-             * <p>Penalty applied successfully</p>
+             * <p>Penalty directly succeeded</p>
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -606,7 +606,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the control is revoked.</p>
+             * <p>The time when the control is removed.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -631,7 +631,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The called API operation.</p>
+             * <p>The API operation called.</p>
              * 
              * <strong>example:</strong>
              * <p>AddDomainRecord</p>
@@ -697,7 +697,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
              * <p>The name of the event subtype.</p>
              * 
              * <strong>example:</strong>
-             * <p>Suspicious identity calling sensitive APIs</p>
+             * <p>Suspicious identity calling sensitive data</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -730,10 +730,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the control action.</p>
-             * <blockquote>
-             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
-             * </blockquote>
+             * <p>The start time of the control action. Format: yyyy-MM-dd HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-16 15:15:00</p>
@@ -779,10 +776,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             /**
              * <p>The event status. Valid values:</p>
              * <ul>
-             * <li><strong>Executing</strong>: The event is being executed.</li>
-             * <li><strong>Removed</strong>: The event is removed.</li>
-             * <li><strong>Alerting</strong>: The event is in the alerting state.</li>
-             * <li><strong>Ended</strong>: The event has ended.</li>
+             * <li><strong>Executing</strong>: Executing.</li>
+             * <li><strong>Removed</strong>: Removed.</li>
+             * <li><strong>Alerting</strong>: Alerting.</li>
+             * <li><strong>Ended</strong>: Ended.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -910,7 +907,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of assets displayed per page when you configure Settings for paging in a paged query.</p>
+             * <p>The number of assets displayed per page in a paged query.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -999,7 +996,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pagination information.</p>
+             * <p>The total number of records.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

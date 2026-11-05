@@ -259,7 +259,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The traffic exceptions in bytes.</p>
+             * <p>The unusual traffic in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>150323855</p>
@@ -273,7 +273,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
              * <p>The anomaly description.</p>
              * 
              * <strong>example:</strong>
-             * <p>The traffic for the domain name cdn-newfile.stomics.tech increased to 54.78 GB between 03:00 and 04:00 on October 22, 2026, approximately 386 times the historical baseline of 0.14 GB. During this period, about 99.7% of the traffic was concentrated in the 14.22.49 CIDR block. Approximately 160 IP addresses accessed the domain, with no single IP accounting for a large proportion. The traffic involved 258 large files, primarily in tar.gz format, with an empty Referer header, indicating batch downloads or abnormal data pulling. Verify whether this was caused by a version release, image synchronization, or partner downloads. If the cause cannot be confirmed, temporarily throttle or block this CIDR block and implement access control for large files</p>
+             * <p>The traffic for the domain name cdn-newfile.stomics.tech increased to 54.78 GB between 03:00 and 04:00 on October 22, 2026, which is approximately 386 times the historical baseline of 0.14 GB. During this period, about 99.7% of the traffic was concentrated in the 14.22.49 CIDR block. There were about 160 accessing IP addresses, with no single IP address accounting for a high proportion. The traffic involved 258 large files, primarily in tar.gz format, with an empty Referer header, indicating characteristics of batch downloading or abnormal pulling. First verify whether this is caused by a version release, image synchronization, or partner downloading. If it cannot be confirmed, temporarily throttle or block this CIDR block and add access control for large files</p>
              */
             public Builder anomalyDesc(String anomalyDesc) {
                 this.anomalyDesc = anomalyDesc;
@@ -555,7 +555,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the alert.</p>
+             * <p>The alert end time.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -583,7 +583,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the restriction is lifted.</p>
+             * <p>The control removal time.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -625,7 +625,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance is shut down.</p>
+             * <p>The instance shutdown time.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -639,7 +639,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance is scanned.</p>
+             * <p>The instance scan time.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -667,7 +667,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing time of the mining alert.</p>
+             * <p>The handling time for mining alerts.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -695,7 +695,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing time.</p>
+             * <p>The handling time.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -709,7 +709,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the restriction.</p>
+             * <p>The control end time.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -723,7 +723,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the restriction.</p>
+             * <p>The control start time.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -751,7 +751,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the restriction is removed.</p>
+             * <p>The removal time.</p>
              * <blockquote>
              * <p>Format: yyyy-MM-dd HH:mm:ss</p>
              * </blockquote>
@@ -890,7 +890,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of abnormal hours for CDN traffic exceptions.</p>
+             * <p>The hourly details of CDN traffic exceptions.</p>
              */
             public Builder anomalyHours(java.util.List<AnomalyHours> anomalyHours) {
                 this.anomalyHours = anomalyHours;
@@ -941,11 +941,11 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             /**
              * <p>The task status.</p>
              * <ul>
-             * <li><strong>Executing</strong>: In progress.</li>
-             * <li><strong>Removed</strong>: Removed.</li>
-             * <li><strong>Alerting</strong>: Alerting.</li>
-             * <li><strong>Ended</strong>: Ended.</li>
-             * <li><strong>Processed</strong>: Processed by the user and under platform review.</li>
+             * <li><strong>Executing</strong>: The task is executing.</li>
+             * <li><strong>Removed</strong>: The penalty is removed.</li>
+             * <li><strong>Alerting</strong>: The alert is active.</li>
+             * <li><strong>Ended</strong>: The task has ended.</li>
+             * <li><strong>Processed</strong>: The user has processed the event and the platform is reviewing it.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -979,6 +979,9 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockIp")
         private String blockIp;
 
+        @com.aliyun.core.annotation.NameInMap("C2Ip")
+        private String c2Ip;
+
         @com.aliyun.core.annotation.NameInMap("Direction")
         private String direction;
 
@@ -993,6 +996,9 @@ public class GetResourceControlEventResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EventImpact")
         private String eventImpact;
+
+        @com.aliyun.core.annotation.NameInMap("IocValue")
+        private String iocValue;
 
         @com.aliyun.core.annotation.NameInMap("LeakName")
         private String leakName;
@@ -1019,11 +1025,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             this.applyRecordList = builder.applyRecordList;
             this.assistantTip = builder.assistantTip;
             this.blockIp = builder.blockIp;
+            this.c2Ip = builder.c2Ip;
             this.direction = builder.direction;
             this.dstIp = builder.dstIp;
             this.dstPort = builder.dstPort;
             this.eventId = builder.eventId;
             this.eventImpact = builder.eventImpact;
+            this.iocValue = builder.iocValue;
             this.leakName = builder.leakName;
             this.protocol = builder.protocol;
             this.punishReason = builder.punishReason;
@@ -1063,6 +1071,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return c2Ip
+         */
+        public String getC2Ip() {
+            return this.c2Ip;
+        }
+
+        /**
          * @return direction
          */
         public String getDirection() {
@@ -1095,6 +1110,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
          */
         public String getEventImpact() {
             return this.eventImpact;
+        }
+
+        /**
+         * @return iocValue
+         */
+        public String getIocValue() {
+            return this.iocValue;
         }
 
         /**
@@ -1150,11 +1172,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             private java.util.List<ApplyRecordList> applyRecordList; 
             private String assistantTip; 
             private String blockIp; 
+            private String c2Ip; 
             private String direction; 
             private String dstIp; 
             private String dstPort; 
             private String eventId; 
             private String eventImpact; 
+            private String iocValue; 
             private String leakName; 
             private String protocol; 
             private String punishReason; 
@@ -1170,11 +1194,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
                 this.applyRecordList = model.applyRecordList;
                 this.assistantTip = model.assistantTip;
                 this.blockIp = model.blockIp;
+                this.c2Ip = model.c2Ip;
                 this.direction = model.direction;
                 this.dstIp = model.dstIp;
                 this.dstPort = model.dstPort;
                 this.eventId = model.eventId;
                 this.eventImpact = model.eventImpact;
+                this.iocValue = model.iocValue;
                 this.leakName = model.leakName;
                 this.protocol = model.protocol;
                 this.punishReason = model.punishReason;
@@ -1185,7 +1211,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of application record information.</p>
+             * <p>The list of application records.</p>
              */
             public Builder applyRecordList(java.util.List<ApplyRecordList> applyRecordList) {
                 this.applyRecordList = applyRecordList;
@@ -1215,10 +1241,21 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The endpoint of the malicious program.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.xx.33.x12</p>
+             */
+            public Builder c2Ip(String c2Ip) {
+                this.c2Ip = c2Ip;
+                return this;
+            }
+
+            /**
              * <p>The traffic direction. Valid values:</p>
              * <ul>
-             * <li><strong>in</strong>: Inbound to the cloud. </li>
-             * <li><strong>out</strong>: Outbound from the cloud.</li>
+             * <li><strong>in</strong>: inbound to the cloud </li>
+             * <li><strong>out</strong>: outbound from the cloud</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1263,13 +1300,24 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overview of the event impact.</p>
+             * <p>The event impact overview.</p>
              * 
              * <strong>example:</strong>
              * <p>Instance Stopped</p>
              */
             public Builder eventImpact(String eventImpact) {
                 this.eventImpact = eventImpact;
+                return this;
+            }
+
+            /**
+             * <p>The endpoint of the ransomware alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.xx.33.x12</p>
+             */
+            public Builder iocValue(String iocValue) {
+                this.iocValue = iocValue;
                 return this;
             }
 
@@ -1296,7 +1344,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the penalty.</p>
+             * <p>The penalty reason.</p>
              * 
              * <strong>example:</strong>
              * <p>This instance is connecting to a Miner Pool and has likely been compromised by hackers for mining or other illicit activities.</p>

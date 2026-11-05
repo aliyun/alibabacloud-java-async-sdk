@@ -143,10 +143,7 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         } 
 
         /**
-         * <p>The list of assets.</p>
-         * <blockquote>
-         * <p>The array supports up to 50 IP addresses.</p>
-         * </blockquote>
+         * <p>The asset list. The array supports up to 50 IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;domain&quot;:&quot;&quot;,&quot;ip&quot;:&quot;120.26.29.16&quot;,&quot;assetType&quot;:&quot;EIP&quot;}]</p>
@@ -158,10 +155,7 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * <p>The auditor.</p>
-         * <blockquote>
-         * <p>You do not need to specify this parameter. It does not take effect.</p>
-         * </blockquote>
+         * <p>The auditor. This parameter is not required and does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -185,7 +179,7 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * <p>The type of the email to send.</p>
+         * <p>The type of the email to be sent.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -197,10 +191,10 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the email includes an unsubscribe option.</p>
+         * <p>Specifies whether the email contains an unsubscribe option. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Included.</li>
-         * <li><strong>false</strong>: Not included.</li>
+         * <li><strong>true</strong>: The email contains an unsubscribe option.</li>
+         * <li><strong>false</strong>: The email does not contain an unsubscribe option.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +207,7 @@ public class SubmitAutoAuditUnblockRequest extends Request {
         }
 
         /**
-         * <p>The description of the number of emails to send.</p>
+         * <p>The description of the number of emails to be sent.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -228,7 +222,7 @@ public class SubmitAutoAuditUnblockRequest extends Request {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Usage instructions</p>
+         * <p>Usage description</p>
          */
         public Builder useDesc(String useDesc) {
             this.putQueryParameter("UseDesc", useDesc);
