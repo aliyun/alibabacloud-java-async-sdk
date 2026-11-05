@@ -87,7 +87,7 @@ public class ResetUserPasswordRequest extends Request {
         }
 
         /**
-         * <p>The request body for resetting the user password.</p>
+         * <p>The request body for resetting a user password.</p>
          */
         public Builder body(ResetUserPasswordRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");

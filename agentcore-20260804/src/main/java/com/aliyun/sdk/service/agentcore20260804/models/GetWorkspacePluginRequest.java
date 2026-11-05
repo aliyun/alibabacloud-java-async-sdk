@@ -88,7 +88,7 @@ public class GetWorkspacePluginRequest extends Request {
         }
 
         /**
-         * <p>The plugin name. Valid values: collaboration and agentloop.</p>
+         * <p>The workspace component identifier. The collaboration value corresponds to the Collaboration component in the console. Other component identifiers retain their original values in the API parameter enum.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

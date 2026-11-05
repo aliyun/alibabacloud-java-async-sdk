@@ -171,7 +171,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -263,7 +263,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The access URL type. Valid values: INTERNET, VPC.</p>
+             * <p>The access address type. Valid values: INTERNET and VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>INTERNET</p>
@@ -274,7 +274,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access URL status. Valid values: CREATING, READY, DEGRADED.</p>
+             * <p>The access address status. Valid values: CREATING, READY, and DEGRADED.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -285,7 +285,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the access URL status. A specific reason is returned when the status is abnormal.</p>
+             * <p>The reason for the access address status. A specific reason is returned when the status is abnormal.</p>
              * 
              * <strong>example:</strong>
              * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
@@ -296,7 +296,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access URL.</p>
+             * <p>The access address.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://endpoint.example.com">https://endpoint.example.com</a></p>
@@ -353,7 +353,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that an API key is passed through the x-api-key request header for authentication.</p>
+             * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the x-api-key request header.</p>
              * 
              * <strong>example:</strong>
              * <p>API_KEY</p>
@@ -506,7 +506,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target type. Valid values: AGENT_VERSION, TEAM_COLLABORATION.</p>
+             * <p>The target type. Valid values: AGENT_VERSION and TEAM_COLLABORATION.</p>
              * 
              * <strong>example:</strong>
              * <p>AGENT_VERSION</p>
@@ -706,7 +706,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of access URLs for the service endpoint.</p>
+             * <p>The list of access addresses for the service endpoint.</p>
              */
             public Builder accessUrls(java.util.List<AccessUrls> accessUrls) {
                 this.accessUrls = accessUrls;
@@ -722,7 +722,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * <p>The creation time in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -733,7 +733,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</p>
+             * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by a user.</p>
              * 
              * <strong>example:</strong>
              * <p>NAMED</p>
@@ -744,7 +744,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service endpoint name. The name must be unique within the workspace and can be 1 to 128 characters in length.</p>
+             * <p>The service endpoint name. It must be unique within the workspace and is 1 to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent-endpoint</p>
@@ -777,7 +777,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, DELETING.</p>
+             * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -799,7 +799,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target routing configuration of the service endpoint.</p>
+             * <p>The target route configuration of the service endpoint.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -807,7 +807,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+             * <p>The last modification time in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

@@ -158,12 +158,7 @@ public class ListAgentIMChannelsRequest extends Request {
         }
 
         /**
-         * <p>The IM channel type. Valid values:</p>
-         * <ul>
-         * <li>DINGTALK: DingTalk.</li>
-         * <li>FEISHU: Lark.</li>
-         * <li>WECOM: WeCom.</li>
-         * </ul>
+         * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</p>
          * 
          * <strong>example:</strong>
          * <p>DINGTALK</p>
@@ -187,7 +182,7 @@ public class ListAgentIMChannelsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. You do not need to specify this parameter for the first request. For subsequent requests, use the nextToken value returned in the previous response.</p>
+         * <p>The pagination token. This parameter is not required for the first call. For subsequent calls, use the nextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>
@@ -199,15 +194,7 @@ public class ListAgentIMChannelsRequest extends Request {
         }
 
         /**
-         * <p>The IM channel status. Valid values:</p>
-         * <ul>
-         * <li>CREATING: The channel is being created.</li>
-         * <li>READY: The channel is ready.</li>
-         * <li>UPDATING: The channel is being updated.</li>
-         * <li>FAILED: The channel creation or update failed.</li>
-         * <li>DELETING: The channel is being deleted.</li>
-         * <li>DELETE_FAILED: The channel deletion failed.</li>
-         * </ul>
+         * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Delete failed).</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

@@ -143,7 +143,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>Filters by credential type. Currently, only apiKey is supported.</p>
+         * <p>The credential type used for filtering. Valid values: apiKey and mcpHeader.</p>
          * 
          * <strong>example:</strong>
          * <p>apiKey</p>
@@ -167,7 +167,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>Filters by credential name.</p>
+         * <p>The credential name used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>credentialxxx</p>
@@ -191,7 +191,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>The cursor used to query the next page. Do not specify this parameter in the first call. For subsequent calls, specify the nextToken returned in the previous response.</p>
+         * <p>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

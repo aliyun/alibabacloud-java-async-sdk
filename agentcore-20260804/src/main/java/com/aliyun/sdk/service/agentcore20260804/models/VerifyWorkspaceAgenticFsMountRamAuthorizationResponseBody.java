@@ -171,7 +171,7 @@ public class VerifyWorkspaceAgenticFsMountRamAuthorizationResponseBody extends T
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -227,7 +227,7 @@ public class VerifyWorkspaceAgenticFsMountRamAuthorizationResponseBody extends T
             } 
 
             /**
-             * <p>The authorization status. A value of AUTHORIZED does not indicate that the actual mount was successful.</p>
+             * <p>The authorization status. A value of AUTHORIZED does not indicate that the actual mount is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTHORIZED</p>

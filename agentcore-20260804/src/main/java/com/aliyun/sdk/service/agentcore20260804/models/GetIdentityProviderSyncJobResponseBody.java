@@ -119,7 +119,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code for the current API request. SUCCESS indicates that the current request is successful, but does not indicate that the asynchronous synchronization task is completed.</p>
+         * <p>The business status code of the API request. SUCCESS indicates that the request is successful, but does not indicate that the asynchronous synchronization task is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business data returned for the current request.</p>
+         * <p>The business data returned by the request.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;taskId&quot;:&quot;12345678-1234-4234-8234-123456789abc&quot;,&quot;status&quot;:&quot;SUCCESS&quot;,&quot;currentStep&quot;:&quot;SYNC&quot;,&quot;synchronizationJobId&quot;:&quot;syncjob_0123456789abcdef0123456789abcdef&quot;,&quot;syncedUserCount&quot;:12}</p>
@@ -141,7 +141,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code for the current API request. It does not indicate the execution result of the asynchronous task.</p>
+         * <p>The HTTP status code of the API request. It does not indicate the execution result of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message for the current API request.</p>
+         * <p>The response message of the API request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -163,7 +163,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. Provide this value when you troubleshoot issues.</p>
+         * <p>The unique identifier of the request. Provide this value when troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>01234567-89AB-CDEF-0123-456789ABCDEF</p>
@@ -174,7 +174,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current API request is successful. To check whether the asynchronous task is completed, query the task status.</p>
+         * <p>Indicates whether the API request is successful. To check whether the asynchronous task is complete, query the task status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -306,7 +306,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The failure summary of the asynchronous task. This field is not returned when no failure information is available. You can use this field together with taskId and requestId for troubleshooting.</p>
+             * <p>The failure summary of the asynchronous task. This field is not returned when no failure information is available. You can use it in combination with taskId and requestId for troubleshooting.</p>
              * 
              * <strong>example:</strong>
              * <p>The identity provider synchronization job failed.</p>
@@ -317,7 +317,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the synchronization task. Valid values: PENDING, RUNNING, PAUSED, SUCCESS, FAILED, and CANCELED. The first three values indicate non-terminal states, and the last three values indicate terminal states. Poll the task until it reaches a terminal state to determine the result.</p>
+             * <p>The status of the synchronization task. Valid values: PENDING (to be executed), RUNNING (executing), PAUSED (paused), SUCCESS (successful), FAILED (failed), and CANCELED (canceled). The first three are non-terminal states, and the last three are terminal states. Query until a terminal state is reached to determine the result.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCESS</p>
@@ -328,7 +328,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of user entries that are locally read and written or updated, including existing users. This value does not represent the number of newly added users or the synchronization percentage. This field is not returned when no statistics are available.</p>
+             * <p>The number of user entries that have been locally read and written or updated, including existing users. It does not represent the number of newly added users or the synchronization percentage. This field is not returned when no statistics are available.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -339,7 +339,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The downstream synchronization task ID in AgentIdentity. This field is not returned if the task is not created. You cannot use this ID instead of taskId to call GetIdentityProviderSyncJob.</p>
+             * <p>The downstream AgentIdentity synchronization task ID. This field is not returned if the task is not yet created. It cannot be used in place of taskId to call GetIdentityProviderSyncJob.</p>
              * 
              * <strong>example:</strong>
              * <p>syncjob_0123456789abcdef0123456789abcdef</p>
@@ -350,7 +350,7 @@ public class GetIdentityProviderSyncJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local task ID in AgentCore returned by CreateIdentityProviderSyncJob. It is not the synchronizationJobId of AgentIdentity. The same workspace and identity provider must be used for the query.</p>
+             * <p>The local AgentCore task ID returned by CreateIdentityProviderSyncJob, not the synchronizationJobId of AgentIdentity. You must use the same workspace and identity provider when querying.</p>
              * 
              * <strong>example:</strong>
              * <p>12345678-1234-4234-8234-123456789abc</p>

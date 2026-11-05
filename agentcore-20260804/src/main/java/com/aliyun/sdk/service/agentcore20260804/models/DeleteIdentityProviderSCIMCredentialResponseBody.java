@@ -106,7 +106,7 @@ public class DeleteIdentityProviderSCIMCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business result code. Use this code in combination with the HTTP status code and message to handle failures.</p>
+         * <p>The business result code. If the call fails, use this code in combination with the HTTP status code and message for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -117,7 +117,7 @@ public class DeleteIdentityProviderSCIMCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The processing status of this request, which is not equivalent to the final result of the background task.</p>
+         * <p>The processing status of this request. This does not indicate the final result of the background task.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class DeleteIdentityProviderSCIMCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request acceptance or error message. For asynchronous tasks, check the task result by using the corresponding query API.</p>
+         * <p>The request acceptance or error message. Check the asynchronous task result by calling the corresponding query operation.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -139,7 +139,7 @@ public class DeleteIdentityProviderSCIMCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Used to associate this call with troubleshooting. Keep this ID when a failure occurs.</p>
+         * <p>The request ID. Used to associate this call with troubleshooting. Retain this ID if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>request-example</p>
@@ -150,7 +150,7 @@ public class DeleteIdentityProviderSCIMCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. A value of true indicates that the request is processed successfully. For asynchronous writes, continue to query the task results.</p>
+         * <p>Indicates whether the request was successful. A value of true indicates that the request was processed successfully. For asynchronous writes, you must continue to query the task result.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

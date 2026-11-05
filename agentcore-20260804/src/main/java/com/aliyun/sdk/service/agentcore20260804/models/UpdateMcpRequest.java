@@ -162,7 +162,7 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
-         * <p>The client token used to ensure the idempotency of the request.</p>
+         * <p>The client token that is used to ensure request idempotency. This is a reserved query parameter. The current console backend does not read this parameter and does not provide idempotency guarantees such as deduplication or recovery of the original acceptance result based on this token.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -590,7 +590,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the configuration.</p>
+             * <p>Specifies whether the configuration is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -678,7 +678,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>References an AgentCore credential when the mode is CREDENTIAL.</p>
+             * <p>The AgentCore credential referenced when the mode is CREDENTIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>credential-id</p>
@@ -689,7 +689,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable entrypoint access control.</p>
+             * <p>Specifies whether to enable access control for the MCP entry point.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -697,7 +697,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Specifies the access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates the use of AgentCore access credentials.</p>
+             * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates the use of AgentCore access credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>CREDENTIAL</p>
@@ -922,7 +922,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
+             * <p>The code package runtime: python3.13, nodejs22, or java17.</p>
              * 
              * <strong>example:</strong>
              * <p>python3.13</p>
@@ -1076,7 +1076,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The entrypoint parameters of the container.</p>
+             * <p>The entrypoint arguments for the container.</p>
              */
             public Builder entrypoint(java.util.List<String> entrypoint) {
                 this.entrypoint = entrypoint;
@@ -1084,7 +1084,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The URL of the container image.</p>
+             * <p>The address of the container image.</p>
              * 
              * <strong>example:</strong>
              * <p>registry.cn-hangzhou.aliyuncs.com/example/mcp:1.0.0</p>
@@ -1106,7 +1106,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The MCP runtime mode. Custom containers must currently expose standard MCP by themselves. Valid value: SELF_HOSTED.</p>
+             * <p>The MCP runtime mode. Custom containers must expose standard MCP themselves. Set the value to SELF_HOSTED.</p>
              * 
              * <strong>example:</strong>
              * <p>SELF_HOSTED</p>
@@ -1117,7 +1117,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The source type of the container. Currently fixed to CONTAINER_IMAGE.</p>
+             * <p>The source type of the container. Currently, this is fixed to CONTAINER_IMAGE.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTAINER_IMAGE</p>
@@ -1266,7 +1266,7 @@ public class UpdateMcpRequest extends Request {
              * <p>The description of the hook.</p>
              * 
              * <strong>example:</strong>
-             * <p>Log MCP tool invoke</p>
+             * <p>Log MCP tool invocations</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1282,7 +1282,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The event of the hook.</p>
+             * <p>The hook event.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE_CALL_TOOL</p>
@@ -1293,7 +1293,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The request headers of the hook.</p>
+             * <p>The hook request headers.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -1301,7 +1301,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of the hook, in milliseconds.</p>
+             * <p>The timeout period in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -1312,7 +1312,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The callback URL of the hook.</p>
+             * <p>The hook callback URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/mcp-hook">https://example.com/mcp-hook</a></p>
@@ -1369,7 +1369,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>Executes PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the array order.</p>
+             * <p>The ordered list of hooks. Executes PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in array order.</p>
              */
             public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
@@ -1491,7 +1491,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The start rule for Function Compute log splitting.</p>
+             * <p>The start rule for Function Compute log segmentation.</p>
              * 
              * <strong>example:</strong>
              * <p>DefaultRegex</p>
@@ -1744,7 +1744,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The address of the NAS server.</p>
+             * <p>The NAS server address.</p>
              * 
              * <strong>example:</strong>
              * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -2103,7 +2103,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The endpoint of the OSS service.</p>
+             * <p>The OSS endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -2335,7 +2335,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the MCP proxy.</p>
+             * <p>Specifies whether the MCP proxy is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2480,7 +2480,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The CPU specification in cores. Default value: 0.25.</p>
+             * <p>The CPU specification, in cores. Default value: 0.25.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -2491,7 +2491,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The ephemeral disk size in MB. Valid values: 512 and 10240.</p>
+             * <p>The ephemeral disk size, in MB. Valid values: 512 and 10240.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2521,7 +2521,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Default value: 200.</p>
+             * <p>The number of concurrent requests per instance. Default value: 200.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -2532,7 +2532,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The unit is MB. Default value: 512.</p>
+             * <p>The memory specification, in MB. Default value: 512.</p>
              * 
              * <strong>example:</strong>
              * <p>512</p>
@@ -2543,7 +2543,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>Default value: 9000.</p>
+             * <p>The service port. Default value: 9000.</p>
              * 
              * <strong>example:</strong>
              * <p>9000</p>
@@ -2554,7 +2554,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The unit is seconds. Default value: 300.</p>
+             * <p>The function timeout period, in seconds. Default value: 300.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2780,7 +2780,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * <p>The MCP entrypoint access control.</p>
+             * <p>The access control for the MCP entry point.</p>
              */
             public Builder accessControl(AccessControl accessControl) {
                 this.accessControl = accessControl;
@@ -2796,7 +2796,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The artifact type. Code indicates a ZIP code package. Container indicates a custom container.</p>
+             * <p>The artifact type. Code indicates a ZIP code package, and Container indicates a custom container.</p>
              * 
              * <strong>example:</strong>
              * <p>Code</p>
@@ -3027,7 +3027,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The backend authentication configuration. When enabled is set to true, specify directProxy (name and value) for DIRECT_PROXY, specify the httpToMcp array (each item includes id, type, and credential; apiKey also requires position and name) for HTTP_TO_MCP, which supports multiple authentication objects where the first one is the default upstream credential, and specify codePackage (headerName and apiKey) for CODE_PACKAGE to verify MCP callers. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
+             * <p>The backend authentication configuration. When enabled is set to true, specify directProxy (name and value) for DIRECT_PROXY, specify the httpToMcp array (each item includes id, type, and credential; apiKey also requires position and name) for HTTP_TO_MCP, and specify codePackage for CODE_PACKAGE. Multiple authentication objects are supported, and the first one serves as the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -3043,7 +3043,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The deployment configuration patch for CODE_PACKAGE MCP, where object fields are merged hierarchically. To retain the current code package, omit CodeConfiguration.CodePackageToken and the server reuses the deployed code package. To replace the code package, provide a new non-empty token. CodePackageUrl is supported only in CreateMcp and not in updates.</p>
+             * <p>The deployment configuration patch for a CODE_PACKAGE MCP. Object fields are merged hierarchically. To retain the current code package, omit CodeConfiguration.CodePackageToken, and the server reuses the deployed code package. To replace the code package, provide a new non-empty token. CodePackageUrl is only supported in CreateMcp and is not supported during updates.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -3054,7 +3054,7 @@ public class UpdateMcpRequest extends Request {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description to illustrate the purpose of the resource</p>
+             * <p>A sample description that illustrates the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3062,7 +3062,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * <p>The access permission mode. PUBLIC indicates public access, and CONTROLLED indicates that access is controlled based on permission rules.</p>
+             * <p>The access permission mode. PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTROLLED</p>

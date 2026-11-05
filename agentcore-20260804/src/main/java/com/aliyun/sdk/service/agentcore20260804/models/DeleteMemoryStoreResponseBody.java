@@ -315,7 +315,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. It follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-23T10:00:00Z</p>
@@ -326,10 +326,10 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the MemoryStore.</p>
+             * <p>The MemoryStore description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Used to store long-term user preferences</p>
+             * <p>Used to store the long-term preferences of users</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -340,7 +340,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
              * <p>The custom extraction instructions.</p>
              * 
              * <strong>example:</strong>
-             * <p>Extract only the long-term preferences explicitly expressed by the user</p>
+             * <p>Extract only long-term preferences explicitly expressed by the user</p>
              */
             public Builder extractInstructions(String extractInstructions) {
                 this.extractInstructions = extractInstructions;
@@ -359,7 +359,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MemoryStore. It cannot be modified after creation.</p>
+             * <p>The MemoryStore name. It cannot be modified after creation.</p>
              * 
              * <strong>example:</strong>
              * <p>customer-memory</p>
@@ -381,7 +381,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time.</p>
+             * <p>The last update time. It follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-23T10:05:00Z</p>

@@ -130,7 +130,7 @@ public class AddMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the write operation.</p>
+         * <p>The write result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class AddMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01A00000-0000-0000-0000-000000000001</p>
@@ -224,7 +224,7 @@ public class AddMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the long-term memory.</p>
+             * <p>The long-term memory ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mem-2f5f9c5a8d0e4c3b</p>
@@ -294,7 +294,7 @@ public class AddMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The memory references returned only when sync is set to true. An empty array is allowed. This parameter is not returned together with taskId.</p>
+             * <p>The memory references. This parameter is returned only when sync is set to true. An empty array is allowed. This parameter is not returned together with taskId.</p>
              */
             public Builder memories(java.util.List<Memories> memories) {
                 this.memories = memories;
@@ -302,7 +302,7 @@ public class AddMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task returned only when sync is set to false. This parameter is not returned together with memories.</p>
+             * <p>The task ID. This parameter is returned only when sync is set to false. This parameter is not returned together with memories.</p>
              * 
              * <strong>example:</strong>
              * <p>task-2f5f9c5a8d0e4c3b</p>

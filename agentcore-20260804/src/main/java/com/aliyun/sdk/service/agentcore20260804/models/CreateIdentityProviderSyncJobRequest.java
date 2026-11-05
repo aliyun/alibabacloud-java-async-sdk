@@ -88,7 +88,7 @@ public class CreateIdentityProviderSyncJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the identity provider. A value of DingTalk indicates DingTalk, and a value of Feishu indicates Lark.</p>
+         * <p>The type of the identity provider. DingTalk indicates DingTalk, and Feishu indicates Lark.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

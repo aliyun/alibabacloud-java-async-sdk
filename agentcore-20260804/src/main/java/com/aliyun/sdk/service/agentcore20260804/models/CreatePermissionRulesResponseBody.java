@@ -407,7 +407,7 @@ public class CreatePermissionRulesResponseBody extends TeaModel {
              * <p>The authorization effect.</p>
              * 
              * <strong>example:</strong>
-             * <p>ALLOW</p>
+             * <p>PERMIT</p>
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -503,10 +503,10 @@ public class CreatePermissionRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the rule source.</p>
+             * <p>The rule source details.</p>
              * 
              * <strong>example:</strong>
-             * <p>OpenAPI</p>
+             * <p>EXPLICIT</p>
              */
             public Builder sourceDetail(String sourceDetail) {
                 this.sourceDetail = sourceDetail;

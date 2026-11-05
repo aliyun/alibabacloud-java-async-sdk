@@ -167,7 +167,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of sessions.</p>
+         * <p>The session list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -309,7 +309,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Session ID</p>
+             * <p>The session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>session-001</p>

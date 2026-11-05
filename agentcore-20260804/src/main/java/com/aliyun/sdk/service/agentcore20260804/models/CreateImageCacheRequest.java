@@ -105,7 +105,7 @@ public class CreateImageCacheRequest extends Request {
         } 
 
         /**
-         * <p>The business parameters for creating an image cache.</p>
+         * <p>The request body for creating an image cache.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(CreateImageCacheRequestBody body) {
@@ -116,7 +116,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * <p>Required and non-empty. This parameter is reserved for API compatibility. It currently does not provide request deduplication or original result recovery based on this field. If a timeout occurs or the result is unconfirmed, query the cache status first before deciding whether to resubmit.</p>
+         * <p>The non-empty request token passed as a query parameter. The current implementation does not guarantee deduplication by this token or recovery of the original acceptance result.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The product entry region, which is determined by the selected region endpoint.</p>
+         * <p>The product entry region, passed as a query parameter. It must match the selected region endpoint and the workspace region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The current routed workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class CreateImageCacheRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow the use of the public network for the current source read and transfer. At least one of this parameter and accessVpc must be set to true. The server verifies the access conditions of the current workspace.</p>
+             * <p>Specifies whether to allow public network access for the current source reading and transfer. At least one of this parameter and <code>accessVpc</code> must be set to true. The server validates the access conditions of the current workspace.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -284,7 +284,7 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow the use of a VPC for the current source read and transfer. At least one of this parameter and accessInternet must be set to true. The server parses the trusted network of the current workspace and does not modify the agent runtime network.</p>
+             * <p>Specifies whether to allow the use of a VPC for the current source reading and transfer. At least one of this parameter and <code>accessInternet</code> must be set to true. The server resolves the trusted network of the current workspace and does not modify the runtime network of the agent.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

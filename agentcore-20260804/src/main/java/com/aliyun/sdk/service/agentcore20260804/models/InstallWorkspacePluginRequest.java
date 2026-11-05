@@ -116,7 +116,7 @@ public class InstallWorkspacePluginRequest extends Request {
         }
 
         /**
-         * <p>The plugin name. Currently, only collaboration is supported.</p>
+         * <p>The identifier of the workspace component. The value collaboration corresponds to the collaboration component in the console. For other component identifiers, use the original values defined in the API parameter enumeration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class InstallWorkspacePluginRequest extends Request {
         }
 
         /**
-         * <p>The request body for installing a plugin.</p>
+         * <p>The request body for installing the component.</p>
          */
         public Builder body(InstallWorkspacePluginRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -197,7 +197,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable Internet access. If set to true and no VPC is specified, PUB_NET is used. If set to true and a VPC is specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. At least one of Internet access and VPC must be configured.</p>
+             * <p>Specifies whether to enable Internet access. If this parameter is set to true and no VPC is specified, PUB_NET is used. If this parameter is set to true and a VPC is specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. You must configure at least one of Internet access and VPC access.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -282,7 +282,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>Explicitly controls whether the collaboration plugin uses the VPC network. If set to false, vpcId and vSwitchIds are ignored. If set to true, you must provide both vpcId and at least two vSwitchIds.</p>
+             * <p>Explicitly controls whether the collaboration component uses a VPC network. If this parameter is set to false, vpcId and vSwitchIds are ignored. If this parameter is set to true, you must provide a vpcId and at least two vSwitchIds.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -293,7 +293,7 @@ public class InstallWorkspacePluginRequest extends Request {
             }
 
             /**
-             * <p>The list of vSwitch IDs. The collaboration plugin requires that the vSwitches cover at least two different zones, and all vSwitches must belong to the VPC specified by vpcId.</p>
+             * <p>The list of vSwitch IDs. The collaboration component requires that the vSwitches cover at least two different zones, and all vSwitches must belong to the VPC specified by vpcId.</p>
              * <p>This parameter is required.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
@@ -302,7 +302,7 @@ public class InstallWorkspacePluginRequest extends Request {
             }
 
             /**
-             * <p>The user VPC ID.</p>
+             * <p>The ID of the user VPC.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow public network access for collaboration components. This configuration only controls public network access capabilities and does not expose component services to the public network.</p>
+             * <p>Specifies whether the collaboration component is allowed to access the public network. This configuration only controls the public network access capability and does not expose the component service to the public network.</p>
              */
             public Builder internet(Internet internet) {
                 this.internet = internet;
@@ -381,7 +381,7 @@ public class InstallWorkspacePluginRequest extends Request {
             }
 
             /**
-             * <p>The user VPC and vSwitch list used for deploying the collaboration plugin. The zones corresponding to the vSwitches are queried by the server, and users do not need to pass in Zones.</p>
+             * <p>The user VPC and the list of vSwitches used to deploy the collaboration component. The zones corresponding to the vSwitches are queried by the server. You do not need to pass the Zones parameter.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -435,7 +435,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>The network configuration used by the collaboration plugin. If not specified, the server uses the existing network configuration of the workspace.</p>
+             * <p>The network configuration used by the collaboration component. If not specified, the server uses the existing network configuration of the workspace.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -489,7 +489,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>The plugin-specific configuration. The configuration structure is determined by pluginName. Currently, the collaboration plugin supports network.</p>
+             * <p>The component-specific configuration. The configuration structure is determined by the pluginName parameter. Currently, the collaboration component supports the network configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;

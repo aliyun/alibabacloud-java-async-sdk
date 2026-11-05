@@ -130,7 +130,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The summary information of the deleted managed agent.</p>
+         * <p>The summary information of the managed Harness agent after deletion.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request processing result message.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -405,7 +405,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The managed agent ID.</p>
+             * <p>The ID of the managed Harness agent.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1</p>
@@ -449,7 +449,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the managed agent.</p>
+             * <p>The description of the managed Harness agent.</p>
              * 
              * <strong>example:</strong>
              * <p>Agent for code review</p>
@@ -471,7 +471,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the managed agent.</p>
+             * <p>The name of the managed Harness agent.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent</p>
@@ -493,7 +493,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the managed agent.</p>
+             * <p>The status of the managed Harness agent.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

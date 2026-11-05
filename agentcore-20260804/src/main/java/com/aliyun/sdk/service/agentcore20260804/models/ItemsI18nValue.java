@@ -80,10 +80,10 @@ public class ItemsI18nValue extends TeaModel {
         } 
 
         /**
-         * <p>The MCP service description in the corresponding language.</p>
+         * <p>The description of the MCP service in the language.</p>
          * 
          * <strong>example:</strong>
-         * <p>An MCP service for querying knowledge bases</p>
+         * <p>MCP service for querying knowledge bases</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -91,10 +91,10 @@ public class ItemsI18nValue extends TeaModel {
         }
 
         /**
-         * <p>The MCP marketplace template name in the corresponding language.</p>
+         * <p>The name of the MCP marketplace template in the language.</p>
          * 
          * <strong>example:</strong>
-         * <p>Knowledge Base</p>
+         * <p>Knowledge base</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -102,10 +102,10 @@ public class ItemsI18nValue extends TeaModel {
         }
 
         /**
-         * <p>The MCP marketplace template usage instructions in the corresponding language.</p>
+         * <p>The usage instructions of the MCP marketplace template in the language.</p>
          * 
          * <strong>example:</strong>
-         * <h1>Knowledge Base\nKnowledge base query service</h1>
+         * <h1>Knowledge base\nKnowledge base query service</h1>
          */
         public Builder readme(String readme) {
             this.readme = readme;

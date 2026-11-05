@@ -119,7 +119,7 @@ public class CreateModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of SUCCESS indicates a successful request.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class CreateModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -347,7 +347,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the model is able to invoke tool calling in a streaming manner.</p>
+             * <p>Specifies whether the model is able to invoke streaming tool calling.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -561,7 +561,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The context window size of the model, in tokens. It must be a positive integer.</p>
+             * <p>The context window size of the model, in tokens. The value must be a positive integer.</p>
              * 
              * <strong>example:</strong>
              * <p>128000</p>
@@ -572,7 +572,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+             * <p>The time when the resource was created. The time is in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>
@@ -583,7 +583,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model description. Maximum length: 255 characters.</p>
+             * <p>The model description, up to 255 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>description</p>
@@ -594,7 +594,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of output tokens supported per generation.</p>
+             * <p>The maximum number of output tokens supported by the model per generation.</p>
              * 
              * <strong>example:</strong>
              * <p>131072</p>
@@ -627,7 +627,7 @@ public class CreateModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+             * <p>The time when the resource was last updated. The time is in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>

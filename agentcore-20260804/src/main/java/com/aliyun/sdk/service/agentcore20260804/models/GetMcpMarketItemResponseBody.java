@@ -160,7 +160,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID used to locate and troubleshoot the request.</p>
          * 
          * <strong>example:</strong>
          * <p>request-123456</p>
@@ -171,7 +171,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -420,7 +420,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
              * <p>The MCP service description.</p>
              * 
              * <strong>example:</strong>
-             * <p>An MCP service for querying knowledge bases</p>
+             * <p>MCP service for querying knowledge bases</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -436,7 +436,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The multilingual display content, organized by BCP-47 language tags. Falls back to default fields when the specified language is not matched.</p>
+             * <p>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the default fields are used.</p>
              */
             public Builder i18n(java.util.Map<String, DataI18nValue> i18n) {
                 this.i18n = i18n;
@@ -455,7 +455,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the template has been installed.</p>
+             * <p>The template installation count.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -521,7 +521,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage instructions for the MCP marketplace template.</p>
+             * <p>The MCP marketplace template instructions.</p>
              * 
              * <strong>example:</strong>
              * <h1>Knowledge\nKnowledge base query service</h1>

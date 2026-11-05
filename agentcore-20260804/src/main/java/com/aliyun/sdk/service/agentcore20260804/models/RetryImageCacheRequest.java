@@ -119,7 +119,7 @@ public class RetryImageCacheRequest extends Request {
         } 
 
         /**
-         * <p>The cache record ID.</p>
+         * <p>The ID of the cache record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class RetryImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The request body, which is a fixed empty object {}. WorkspaceId is placed in the query. Do not pass Pool, role, Digest, or network.</p>
+         * <p>The request body for retrying image cache creation.</p>
          */
         public Builder body(RetryImageCacheRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -142,7 +142,7 @@ public class RetryImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The client token. It is required and non-empty, and is reserved to keep the API compatible. This field does not currently deduplicate requests or recover original results. If a timeout occurs or the result is not confirmed, query the query cache status first before deciding whether to commit again.</p>
+         * <p>The non-empty request token passed as a query parameter. The current implementation does not guarantee deduplication or recovery of the original acceptance result based on this token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class RetryImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The product entry region, which is determined by the selected region endpoint.</p>
+         * <p>The product entry region. This parameter is passed as a query parameter and must be consistent with the selected region endpoint and the workspace region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class RetryImageCacheRequest extends Request {
         }
 
         /**
-         * <p>The current routed workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

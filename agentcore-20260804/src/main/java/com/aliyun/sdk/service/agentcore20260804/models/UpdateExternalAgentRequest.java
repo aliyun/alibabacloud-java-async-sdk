@@ -116,7 +116,7 @@ public class UpdateExternalAgentRequest extends Request {
         }
 
         /**
-         * <p>The external agent ID.</p>
+         * <p>The managed agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class UpdateExternalAgentRequest extends Request {
         }
 
         /**
-         * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current phase.</p>
+         * <p>The reserved query parameter. The backend does not currently provide idempotence guarantees for deduplication or restoring the original acceptance result based on this identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -236,7 +236,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the token quota. Default value: true. If set to false, the quota is disabled and existing quota rules are deleted.</p>
+             * <p>Specifies whether to enable the token quota. If this parameter is not specified, the default value is true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -247,7 +247,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The quota limit type. Required and validated by the backend when the quota is enabled. Fixed value: token.</p>
+             * <p>The quota limit type. This parameter is required and verified by the backend when the quota is enabled. Fixed value: token.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -258,11 +258,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The statistical period for the quota. Required and validated by the backend when the quota is enabled. Valid values:</p>
-             * <ul>
-             * <li>day: Daily.</li>
-             * <li>month: Monthly.</li>
-             * </ul>
+             * <p>The quota statistical period. This parameter is required and verified by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -273,7 +269,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of tokens allowed to be consumed within a single period. Required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
+             * <p>The maximum number of tokens allowed to be consumed in a single period. This parameter is required and verified by the backend when the quota is enabled, and must be greater than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -382,7 +378,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The model token quota configuration. If not passed, no quota is configured.</p>
+             * <p>The model token quota configuration. If this parameter is not passed, no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -449,11 +445,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
-             * <p>The type of the version selector. Valid values:</p>
-             * <ul>
-             * <li>LABEL: By label.</li>
-             * <li>VERSION: By specific version.</li>
-             * </ul>
+             * <p>The version selector type. Valid values: LABEL (by tag) and VERSION (by specific version).</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -464,7 +456,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The value of the selector. When the type is LABEL, this is the label name, such as latest. When the type is VERSION, this is the specific version number.</p>
+             * <p>The selector value. When the type is LABEL, the value is the tag name, such as latest. When the type is VERSION, the value is the specific version number.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -573,11 +565,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The source type of the skill. Valid values:</p>
-             * <ul>
-             * <li>REFERENCE: References the AI Registry.</li>
-             * <li>STATIC: Statically provided with the package.</li>
-             * </ul>
+             * <p>The skill source type. Valid values: REFERENCE (references AI Registry) and STATIC (statically provided with the package).</p>
              * 
              * <strong>example:</strong>
              * <p>REFERENCE</p>
@@ -588,7 +576,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The skill version.</p>
+             * <p>The skill version field compatible with legacy requests. New requests use sourceType and versionSelector, and this parameter is not submitted in combination with sourceType.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -599,7 +587,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The referenced version selector. If omitted, the default is LABEL/latest. Currently, only LABEL/latest is supported.</p>
+             * <p>The skill reference version selector, which supports LABEL tags and specific VERSION numbers. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -668,7 +656,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the template in the AI Registry.</p>
+             * <p>The name of the template in AI Registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -680,7 +668,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The version of the template in the AI Registry.</p>
+             * <p>The version of the template in AI Registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -819,10 +807,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The tool type. Valid values:</p>
-             * <ul>
-             * <li>MCP: MCP tool.</li>
-             * </ul>
+             * <p>The tool type. Valid values: MCP (MCP tool).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -971,7 +956,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
-             * <p>The description of the external agent.</p>
+             * <p>The description of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>Code review agent running in the user environment</p>
@@ -993,7 +978,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The model configuration. Available only when modelSource is set to PLATFORM.</p>
+             * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -1001,11 +986,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be passed at the same time. Valid values:</p>
-             * <ul>
-             * <li>PLATFORM: Platform model.</li>
-             * <li>RUNTIME: Runtime model.</li>
-             * </ul>
+             * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
              * 
              * <strong>example:</strong>
              * <p>PLATFORM</p>
@@ -1016,7 +997,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>The name of the external agent.</p>
+             * <p>The name of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>my-external-agent</p>

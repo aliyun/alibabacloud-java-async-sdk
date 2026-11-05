@@ -102,7 +102,7 @@ public class OnlineSkillRequest extends Request {
         }
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,11 +184,7 @@ public class OnlineSkillRequest extends Request {
             } 
 
             /**
-             * <p>The operation scope. Valid values:</p>
-             * <ul>
-             * <li>skill: the entire Skill.</li>
-             * <li>version: a specified version.</li>
-             * </ul>
+             * <p>The operation scope. Valid values: skill (the entire skill) and version (a specified version).</p>
              * 
              * <strong>example:</strong>
              * <p>version</p>
@@ -199,7 +195,7 @@ public class OnlineSkillRequest extends Request {
             }
 
             /**
-             * <p>The Skill version number.</p>
+             * <p>The skill version number.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.1</p>

@@ -315,7 +315,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-23T10:00:00Z</p>
@@ -348,7 +348,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MemoryStore ID.</p>
+             * <p>The MemoryStore identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>ms-2f5f9c5a8d0e4c3b</p>
@@ -381,7 +381,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last updated time.</p>
+             * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-23T10:05:00Z</p>

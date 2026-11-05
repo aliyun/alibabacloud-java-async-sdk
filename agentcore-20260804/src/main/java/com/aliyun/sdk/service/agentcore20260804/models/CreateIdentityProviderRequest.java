@@ -87,7 +87,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The request content for binding an external identity provider.</p>
+         * <p>The request body for binding an external identity provider.</p>
          */
         public Builder body(CreateIdentityProviderRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -230,7 +230,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Required. The secret of the external identity provider application. This parameter is used only for writing and is not returned by query API operations.</p>
+             * <p>Required. The secret of the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
              * 
              * <strong>example:</strong>
              * <p>example-app-secret</p>
@@ -252,7 +252,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query API operations.</p>
+             * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
              * 
              * <strong>example:</strong>
              * <p>example-encrypt-key</p>
@@ -263,7 +263,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query API operations.</p>
+             * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
              * 
              * <strong>example:</strong>
              * <p>example-verification-token</p>
@@ -333,7 +333,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>When the mode is SelectedDepartments, the list must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
+             * <p>When the mode is SelectedDepartments, this parameter must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;10001&quot;]</p>
@@ -344,7 +344,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>AllAuthorized: the full authorization scope, which is limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</p>
+             * <p>AllAuthorized: the entire authorized scope, which is limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When you explicitly submit syncScope, you must provide a valid mode, which is verified by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>SelectedDepartments</p>
@@ -495,7 +495,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable organization member synchronization. If enabled, the external identity provider synchronizes organization members as workspace users.</p>
+             * <p>Specifies whether to enable organization member synchronization. When enabled, organization members are synchronized as workspace users by the external identity provider.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;
@@ -503,7 +503,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Controls the first synchronization when DingTalk or Lark is bound. If omitted or set to null, the default value is true. If set to false, only the configuration is saved, and synchronization is explicitly triggered later. CustomSSO does not use the vendor pull link.</p>
+             * <p>Controls the initial synchronization when DingTalk or Feishu is bound. If this parameter is omitted or set to null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization must be explicitly triggered later. CustomSSO does not use the provider pull channel.</p>
              */
             public Builder syncOnBind(Boolean syncOnBind) {
                 this.syncOnBind = syncOnBind;
@@ -511,7 +511,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Retains the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized. The first vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</p>
+             * <p>Uses the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized. The initial provider synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</p>
              */
             public Builder syncScope(SyncScope syncScope) {
                 this.syncScope = syncScope;

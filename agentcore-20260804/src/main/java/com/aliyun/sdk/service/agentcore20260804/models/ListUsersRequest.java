@@ -155,7 +155,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return per page. Valid values: 1 to 100. If this parameter is not specified, 10 records are returned by default.</p>
+         * <p>The maximum number of records to return per page. Valid values: 1 to 100. If you do not specify this parameter, 10 records are returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +167,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for exact match on the user name.</p>
+         * <p>The filter condition for exact match on the username.</p>
          * 
          * <strong>example:</strong>
          * <p>user-01</p>
@@ -179,7 +179,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The filter condition for fuzzy match on the user name. The value can be up to 128 characters in length.</p>
+         * <p>The filter condition for fuzzy match on the username. The value can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -191,7 +191,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The cursor for querying the next page. Do not specify this parameter in the first call. In subsequent calls, specify the nextToken value returned in the previous call.</p>
+         * <p>The cursor for querying the next page. Do not specify this parameter in the first call. Specify the nextToken value returned in the previous call for subsequent calls.</p>
          * 
          * <strong>example:</strong>
          * <p>dXNlci1vZmZzZXQ6MTA</p>

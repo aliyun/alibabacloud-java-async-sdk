@@ -326,7 +326,7 @@ public class GetAgentCodePackageDownloadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time-limited, read-only download URL for the code package.</p>
+             * <p>The time-limited read-only download URL for the code package.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://agentcore-platform-example.oss-cn-hangzhou.aliyuncs.com/code-packages/workspaces/ws-a1b2c3d4e5f6/550e8400-e29b-41d4-a716-446655440000/package.zip?OSSAccessKeyId=LTAI5tExample****&Expires=1792627800&Signature=ExampleSignature">https://agentcore-platform-example.oss-cn-hangzhou.aliyuncs.com/code-packages/workspaces/ws-a1b2c3d4e5f6/550e8400-e29b-41d4-a716-446655440000/package.zip?OSSAccessKeyId=LTAI5tExample****&amp;Expires=1792627800&amp;Signature=ExampleSignature</a>****</p>
@@ -370,7 +370,7 @@ public class GetAgentCodePackageDownloadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The compressed size of the code package.</p>
+             * <p>The compressed file size of the code package, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>

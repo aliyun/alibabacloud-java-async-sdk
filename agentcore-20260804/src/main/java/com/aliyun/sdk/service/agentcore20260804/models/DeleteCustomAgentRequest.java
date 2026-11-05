@@ -75,7 +75,7 @@ public class DeleteCustomAgentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the custom agent belongs.</p>
+         * <p>The ID of the workspace to which the custom code or image agent belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the custom agent. You can obtain it from the response of CreateCustomAgent or ListCustomAgents.</p>
+         * <p>The unique identifier of the custom code or image agent. You can obtain this value from the response of CreateCustomAgent or ListCustomAgents.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business result code. Handle failures by combining the HTTP status code and the message.</p>
+         * <p>The business result code. If a failure occurs, handle it based on the HTTP status code and the message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result structure is described in the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, which does not ensure that the background node is completed.</p>
+         * <p>The data structure of the result. For details, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not ensure that the background task is completed.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The processing status of this request, which is not equivalent to the final result of the background node.</p>
+         * <p>The processing status of the current request. This status is not equivalent to the final result of the background task.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request acceptance or fault message. For asynchronous node results, check by using the corresponding query operation.</p>
+         * <p>The request acceptance or error message. For asynchronous tasks, check the task results by calling the corresponding query operation.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID used to associate this call with troubleshooting. Retain this ID when a failure occurs.</p>
+         * <p>The ID of the request. You can use the ID to associate the call with troubleshooting. Keep the ID when a failure occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>request-example</p>
@@ -171,7 +171,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. A value of true indicates that the request is processed successfully. For asynchronous writes, you must continue to query the task results.</p>
+         * <p>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous write operations, you must continue to query the task results.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -263,7 +263,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The SAML assertion consumer service (ACS) URL of the local SP, which is configured in the external IdP.</p>
+             * <p>The SAML assertion consumer service (ACS) URL of the local SP. Configure it in the external IdP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://sp.example.com/saml/acs">https://sp.example.com/saml/acs</a></p>
@@ -274,7 +274,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entity ID of the local SP, which is configured in the external IdP. This is not the Entity ID of the external IdP.</p>
+             * <p>The entity identifier of the local SP. Configure it in the external IdP. This is not the Entity ID of the external IdP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://sp.example.com/entity">https://sp.example.com/entity</a></p>
@@ -285,7 +285,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata XML of the local SP, which is imported by the external IdP. You cannot submit this XML as the IdP XML for SAML configuration.</p>
+             * <p>The SP metadata XML of the local SP. Import it to the external IdP. You cannot use it as the IdP XML to submit the SAML configuration.</p>
              * 
              * <strong>example:</strong>
              * <p><EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.example.com/entity"><SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"><AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.example.com/saml/acs" index="0"/></SPSSODescriptor></EntityDescriptor></p>
@@ -296,7 +296,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Required. The query parameter supports only the exact value SAML. The response returns SAML.</p>
+             * <p>Required. The query parameter. Only the exact value SAML is supported. The response returns SAML.</p>
              * 
              * <strong>example:</strong>
              * <p>SAML</p>

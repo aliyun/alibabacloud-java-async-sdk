@@ -145,7 +145,7 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>The managed agent ID.</p>
+         * <p>The ID of the managed Harness agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records per page. Default value: 20.</p>
+         * <p>The maximum number of entries to return per page. Default value: 20. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -170,7 +170,7 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for querying the next page. When paginating, keep workspaceId, agentId, searchText, sessionId, and maxResults unchanged.</p>
+         * <p>The cursor for querying the next page. When paginating, keep <code>workspaceId</code>, <code>agentId</code>, <code>searchText</code>, <code>sessionId</code>, and <code>maxResults</code> unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>
@@ -182,7 +182,7 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>Performs a case-insensitive fuzzy search by sandbox ID fragment.</p>
+         * <p>The fragment of the Sandbox ID for a case-insensitive fuzzy search.</p>
          * 
          * <strong>example:</strong>
          * <p>2f360</p>
@@ -194,7 +194,7 @@ public class ListSandboxesRequest extends Request {
         }
 
         /**
-         * <p>Performs a case-insensitive fuzzy search by active session ID fragment.</p>
+         * <p>The fragment of the current valid session ID for a case-insensitive fuzzy search.</p>
          * 
          * <strong>example:</strong>
          * <p>session-a</p>

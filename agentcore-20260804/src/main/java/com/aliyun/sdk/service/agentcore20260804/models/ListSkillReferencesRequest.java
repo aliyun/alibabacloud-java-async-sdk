@@ -169,7 +169,7 @@ public class ListSkillReferencesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. If not specified, the default value on the server is used.</p>
+         * <p>The number of entries per page. If not specified, the server default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

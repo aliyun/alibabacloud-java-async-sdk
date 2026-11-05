@@ -103,7 +103,7 @@ public class GetIdentityProviderSyncJobRequest extends Request {
         }
 
         /**
-         * <p>The identity provider type. DingTalk indicates DingTalk, and Feishu indicates Lark.</p>
+         * <p>The type of the identity provider. DingTalk indicates DingTalk, and Feishu indicates Lark.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetIdentityProviderSyncJobRequest extends Request {
         }
 
         /**
-         * <p>The local task ID in AgentCore returned by CreateIdentityProviderSyncJob. It is not the synchronizationJobId of AgentIdentity. The same workspace and identity provider must be used for the query.</p>
+         * <p>The local AgentCore task ID returned by CreateIdentityProviderSyncJob, not the synchronizationJobId of AgentIdentity. You must use the same workspace and identity provider when querying.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

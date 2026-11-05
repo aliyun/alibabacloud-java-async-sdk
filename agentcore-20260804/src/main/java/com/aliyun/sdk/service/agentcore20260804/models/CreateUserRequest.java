@@ -246,7 +246,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * <p>The username. The username must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length. Reserved names such as manager, admin, or names starting with worker- are not allowed.</p>
+             * <p>The username. The username must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length. Reserved names such as manager, admin, or any name starting with worker- are not allowed.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -258,10 +258,10 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * <p>The note for the user. The note can be up to 1,024 characters in length.</p>
+             * <p>The remarks for the user. The remarks can be up to 1,024 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>Agent operations team member</p>
+             * <p>Agent operation team member</p>
              */
             public Builder note(String note) {
                 this.note = note;

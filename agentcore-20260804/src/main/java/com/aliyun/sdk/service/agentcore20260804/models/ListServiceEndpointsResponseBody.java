@@ -188,7 +188,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per page that takes effect in this query.</p>
+         * <p>The maximum number of entries returned on a single page for this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -335,7 +335,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The access URL type. Valid values: INTERNET and VPC.</p>
+             * <p>The type of the access URL. Valid values: INTERNET and VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>INTERNET</p>
@@ -346,7 +346,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access URL status. Valid values: CREATING, READY, and DEGRADED.</p>
+             * <p>The status of the access URL. Valid values: CREATING, READY, and DEGRADED.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -425,7 +425,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the x-api-key request header.</p>
+             * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the <code>x-api-key</code> request header.</p>
              * 
              * <strong>example:</strong>
              * <p>API_KEY</p>
@@ -534,7 +534,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The target agent ID. This parameter is returned when the target type is AGENT_VERSION.</p>
+             * <p>The ID of the target agent. This parameter is returned when the target type is AGENT_VERSION.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-123456</p>
@@ -545,7 +545,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target agent version. This parameter is returned when the target type is AGENT_VERSION.</p>
+             * <p>The version of the target agent. This parameter is returned when the target type is AGENT_VERSION.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -556,7 +556,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collaboration component type. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+             * <p>The type of the collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
              * 
              * <strong>example:</strong>
              * <p>ELEMENT_WEB</p>
@@ -805,7 +805,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by a user.</p>
+             * <p>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</p>
              * 
              * <strong>example:</strong>
              * <p>NAMED</p>
@@ -816,7 +816,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service endpoint name. The name must be unique within the workspace and 1 to 128 characters in length.</p>
+             * <p>The name of the service endpoint. The name must be unique within the workspace and be 1 to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent-endpoint</p>
@@ -827,7 +827,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the service endpoint.</p>
+             * <p>The ID of the region where the service endpoint resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -838,7 +838,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service endpoint ID.</p>
+             * <p>The ID of the service endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>se-123456</p>
@@ -849,7 +849,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
+             * <p>The status of the service endpoint. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -879,7 +879,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time in UTC format compliant with RFC 3339.</p>
+             * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

@@ -113,7 +113,7 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
-         * <p>The client token.</p>
+         * <p>The client request token.</p>
          * 
          * <strong>example:</strong>
          * <p>memory-store-create-20260909-001</p>
@@ -198,10 +198,10 @@ public class CreateMemoryStoreRequest extends Request {
             } 
 
             /**
-             * <p>The description of the MemoryStore. Maximum length: 1,024 characters.</p>
+             * <p>The description of the MemoryStore, up to 1,024 characters.</p>
              * 
              * <strong>example:</strong>
-             * <p>Used to store long-term user preferences</p>
+             * <p>Used to save long-term user preferences</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -209,7 +209,7 @@ public class CreateMemoryStoreRequest extends Request {
             }
 
             /**
-             * <p>The custom extraction instructions. Maximum length: 4,096 characters.</p>
+             * <p>The custom extraction instructions, up to 4,096 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>Extract only explicitly expressed long-term user preferences</p>

@@ -129,7 +129,7 @@ public class UpdateTeamRequest extends Request {
         }
 
         /**
-         * <p>The request body for updating a team.</p>
+         * <p>The request body for updating the team.</p>
          */
         public Builder body(UpdateTeamRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -385,7 +385,7 @@ public class UpdateTeamRequest extends Request {
             } 
 
             /**
-             * <p>The new list of agent members. The existing agent members are replaced based on full overwrite semantics. If this parameter is not specified, the existing agent members remain unchanged.</p>
+             * <p>The new list of agent members. This list replaces the existing agent members based on full overwrite semantics. If not specified, the existing list remains unchanged.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -393,7 +393,7 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * <p>The new team description. If this parameter is not specified, the existing description remains unchanged.</p>
+             * <p>The new team description. If not specified, the existing description remains unchanged.</p>
              * 
              * <strong>example:</strong>
              * <p>Team responsible for intelligent customer service</p>
@@ -404,7 +404,7 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * <p>The new list of user members. The existing user members are replaced based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If this parameter is not specified, the existing user members remain unchanged.</p>
+             * <p>The new list of user members. This list replaces the existing user members based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If not specified, the existing list remains unchanged.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;

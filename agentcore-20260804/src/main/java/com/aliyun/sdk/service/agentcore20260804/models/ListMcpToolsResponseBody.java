@@ -188,7 +188,7 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results per page.</p>
+         * <p>The maximum number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -232,7 +232,7 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -103,7 +103,7 @@ public class DownloadSkillVersionViaOssRequest extends Request {
         }
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

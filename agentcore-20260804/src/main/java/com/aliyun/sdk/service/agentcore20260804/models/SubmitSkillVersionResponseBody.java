@@ -67,7 +67,7 @@ public class SubmitSkillVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

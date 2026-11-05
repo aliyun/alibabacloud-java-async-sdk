@@ -119,7 +119,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS when the operation is successful.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Bootstrap token and CMS configuration required to onboard the external agent.</p>
+         * <p>The bootstrap token and CMS configuration required for the managed agent onboarding.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 when the operation is successful.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message of the request.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -261,7 +261,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The license key used for CMS connection.</p>
+             * <p>The license key used for CMS access.</p>
              * 
              * <strong>example:</strong>
              * <p>license-key</p>
@@ -272,7 +272,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CMS workspace name.</p>
+             * <p>The name of the CMS workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>cms-workspace</p>
@@ -394,7 +394,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external agent ID.</p>
+             * <p>The ID of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1</p>
@@ -405,7 +405,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Bootstrap token used to onboard the external agent.</p>
+             * <p>The bootstrap token used for the managed agent onboarding.</p>
              * 
              * <strong>example:</strong>
              * <p>bootstrap-token</p>
@@ -416,7 +416,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CMS configuration used to onboard the external agent.</p>
+             * <p>The CMS configuration used for the managed agent onboarding.</p>
              */
             public Builder cms(Cms cms) {
                 this.cms = cms;
@@ -424,7 +424,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type for onboarding. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
+             * <p>The access network type. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
              * 
              * <strong>example:</strong>
              * <p>INTERNET</p>
@@ -435,7 +435,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fingerprint of the Bootstrap token.</p>
+             * <p>The fingerprint of the bootstrap token.</p>
              * 
              * <strong>example:</strong>
              * <p>fingerprint</p>

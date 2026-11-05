@@ -75,7 +75,7 @@ public class DeleteIdentityProviderSCIMCredentialRequest extends Request {
         } 
 
         /**
-         * <p>Required. The ID of the target workspace. The request region must match the region of the target workspace.</p>
+         * <p>Required. The ID of the target workspace. The region of the request must be the same as the region of the target workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

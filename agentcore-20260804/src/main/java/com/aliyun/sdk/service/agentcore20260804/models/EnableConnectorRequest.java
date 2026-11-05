@@ -103,7 +103,7 @@ public class EnableConnectorRequest extends Request {
         }
 
         /**
-         * <p>The Connector name. Currently, only qodercli is supported.</p>
+         * <p>The connector name. Currently, only qodercli is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class EnableConnectorRequest extends Request {
         }
 
         /**
-         * <p>The enable request body.</p>
+         * <p>The request body for enabling the connector.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(EnableConnectorRequestBody body) {
@@ -174,7 +174,7 @@ public class EnableConnectorRequest extends Request {
             } 
 
             /**
-             * <p>The Connector configuration JSON string. Set site to global or cn. apiKey is required. serviceAccountKeys must contain at least one named service account key. organizationId is optional.</p>
+             * <p>The JSON string for the connector configuration. The site parameter must be global or cn. The apiKey parameter is required. The serviceAccountKeys parameter must contain at least one named service account key. The organizationId parameter is optional.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

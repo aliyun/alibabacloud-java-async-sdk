@@ -102,7 +102,7 @@ public class UpdateSkillLabelsRequest extends Request {
         }
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class UpdateSkillLabelsRequest extends Request {
             } 
 
             /**
-             * <p>A JSON string of version label mappings.</p>
+             * <p>The JSON string for version label mapping.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

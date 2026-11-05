@@ -172,7 +172,7 @@ public class DebugModelRequest extends Request {
             } 
 
             /**
-             * <p>The prompt used to verify the model call chain.</p>
+             * <p>The prompt used to verify the model invocation pipeline.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

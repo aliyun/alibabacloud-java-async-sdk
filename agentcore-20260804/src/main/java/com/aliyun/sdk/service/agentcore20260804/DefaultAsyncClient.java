@@ -41,7 +41,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Writes messages or text to a memory store. By default, sync is set to true, which means the operation synchronously waits for extraction and returns only memories (an empty array is allowed). If sync is set to false, the operation returns only a taskId, which you can query by calling GetMemoryTask.</p>
+     * <p>Writes messages or text to a memory store to fetch long-term memory to retrieve and use later.</p>
+     * <ul>
+     * <li>If <code>sync</code> is omitted or set to <code>true</code>: waits for the fetch to complete and returns <code>memories</code>. Returns an empty array if no memories are fetched.</li>
+     * <li>If <code>sync</code> is set to <code>false</code>: returns a <code>taskId</code>. You can query the fetch progress and results by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMemoryTask">GetMemoryTask</a>.</li>
+     * </ul>
      * 
      * @param request the request parameters of AddMemories  AddMemoriesRequest
      * @return AddMemoriesResponse
@@ -61,6 +65,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes multiple models in a specified workspace. If any model is in use, the entire batch request fails.</p>
+     * 
      * @param request the request parameters of BatchDeleteModels  BatchDeleteModelsRequest
      * @return BatchDeleteModelsResponse
      */
@@ -80,8 +87,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Uploads skill ZIP packages in batches through OSS and returns the processing result for each skill.</p>
+     * <p>Imports multiple skill ZIP packages that have been uploaded to OSS into a workspace in batches, and returns the processing result for each skill.
+     * OSS is used here to temporarily store the ZIP packages to be imported. First, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetSkillImportFileUrl">GetSkillImportFileUrl</a> to obtain the upload URL and upload the files, and then call this operation. To check the package content and name conflicts in advance, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrecheckSkillUploadViaOss">PrecheckSkillUploadViaOss</a>.</p>
      * 
      * @param request the request parameters of BatchUploadSkillsViaOss  BatchUploadSkillsViaOssRequest
      * @return BatchUploadSkillsViaOssResponse
@@ -102,7 +109,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Disables template usage constraints. After the conversion, the MCP retains its source and tags, but no longer appears on the usage page.</p>
+     * <p>Converts an MCP server installed from a marketplace template to free-edit mode so that you can directly modify the server configuration. After the conversion, the original source and tag information is retained, and the template editing restrictions are removed. The server no longer appears on the use case page associated with the template.</p>
      * 
      * @param request the request parameters of ConvertMcpToFreeEdit  ConvertMcpToFreeEditRequest
      * @return ConvertMcpToFreeEditResponse
@@ -123,7 +130,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates an IM channel for a specified agent and binds it to a publicly accessible ServiceEndpoint.</p>
+     * <p>Creates an IM channel for an agent to route messages from instant messaging platforms to the agent.
+     * During creation, a publicly accessible service endpoint (<code>ServiceEndpoint</code>) is bound to the channel. After the channel is created, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentIMChannel">GetAgentIMChannel</a> to query its configuration and status.</p>
      * 
      * @param request the request parameters of CreateAgentIMChannel  CreateAgentIMChannelRequest
      * @return CreateAgentIMChannelResponse
@@ -144,8 +152,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Creates an AgentSpec in a specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</p>
+     * <p>Creates an agent template (AgentSpec) and generates the first draft version for editing reusable agent configurations. The creation fails if a template with the same name already exists in the same workspace. After creation, you can query the template and version information by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentSpec">GetAgentSpec</a>.</p>
      * 
      * @param request the request parameters of CreateAgentSpec  CreateAgentSpecRequest
      * @return CreateAgentSpecResponse
@@ -166,8 +173,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist and must not have a draft currently being edited.</p>
+     * <p>Creates a new draft version for an existing agent template (AgentSpec) to modify and publish the next version of the configuration.
+     * The template must already exist and must not have a draft currently being edited.</p>
      * 
      * @param request the request parameters of CreateAgentSpecVersion  CreateAgentSpecVersionRequest
      * @return CreateAgentSpecVersionResponse
@@ -188,7 +195,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a credential in a workspace for authentication of services such as Connector.</p>
+     * <p>Creates an apiKey or mcpHeader credential in a workspace for agents or MCP to access external services.</p>
+     * <h3>Credential types</h3>
+     * <ul>
+     * <li><code>apiKey</code>: <code>credentialMetadata</code> is a JSON string that contains only a non-empty <code>apiKey</code>. Do not submit <code>resourceScope</code> and <code>resourceRefs</code>.</li>
+     * <li><code>mcpHeader</code>: <code>credentialMetadata</code> is a JSON string that contains a non-empty <code>headers</code> array. Each item contains a non-empty <code>name</code> and <code>value</code> to configure MCP request headers.</li>
+     * </ul>
+     * <h3>MCP header scope</h3>
+     * <p>You must specify <code>resourceScope</code> when creating an <code>mcpHeader</code> credential:</p>
+     * <ul>
+     * <li><code>ALL</code>: Applies to all MCP services. Omit <code>resourceRefs</code>.</li>
+     * <li><code>SPECIFIED</code>: Applies to specified MCP services. <code>resourceRefs</code> must be a non-empty array. For each item, set <code>resourceType=mcpServer</code> and specify <code>resourceId</code>.</li>
+     * </ul>
+     * <h3>Subsequent queries</h3>
+     * <p>Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListCredentials">ListCredentials</a> to query credentials. For <code>apiKey</code>, a masked value is returned. For <code>mcpHeader</code>, only header names are returned, and header values are not returned.</p>
      * 
      * @param request the request parameters of CreateCredential  CreateCredentialRequest
      * @return CreateCredentialResponse
@@ -209,12 +229,160 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify the name, artifact, roleArn, and runtime parameters. The runtime parameter must include both compute and sessionPolicy.
-     * To use the container mode, configure artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-     * To use the code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint parameters of artifact.code. Do not specify the container parameter at the same time. Dependencies must be packaged by the user. The supported formats are ZIP and TAR.GZ, and the compressed package size cannot exceed 500,000,000 bytes. You can call the ListAgentCodeRuntimes operation to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. To upload a local file, call the GetAgentCodePackageUploadUrl operation to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
-     * When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-     * The creation process is asynchronous. A successful response indicates that the request is accepted. Use the returned agentId to call the GetCustomAgent operation and check the latestVersionStatus, latestExecutionError, and status parameters corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call the CreateServiceEndpoint operation to configure the access endpoint.
-     * The clientToken parameter does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not currently take effect. Omit this parameter.</p>
+     * <p>Deploys a user-provided code package or container image as an agent in a workspace. This corresponds to the &quot;Custom Code / Image&quot; creation method in the console.</p>
+     * <h3>Preparations</h3>
+     * <p>Prepare a writable workspace and submit name, roleArn, artifact, and runtime. In runtime, specify both compute and sessionPolicy. roleArn is the RAM role used by the agent to access your cloud resources.</p>
+     * <h3>Select a deployment method</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Deployment method</th>
+     * <th>Required configurations</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>ACR image</td>
+     * <td>artifact.port, and type=acr, instanceId, namespace, repo, and tag in artifact.container.</td>
+     * </tr>
+     * <tr>
+     * <td>Custom image</td>
+     * <td>artifact.port, artifact.container.type=custom, and the complete customImage. The clientToken query parameter is required.</td>
+     * </tr>
+     * <tr>
+     * <td>Code package</td>
+     * <td>artifact.port, and sourceUri, languageRuntime, and entrypoint in artifact.code.</td>
+     * </tr>
+     * <tr>
+     * <td>artifact.code and artifact.container are mutually exclusive. The service listening port ranges from 1 to 65535. You can specify a startup command for a container image by using artifact.container.entrypoint. If this parameter is omitted, the default startup method of the image is used.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Code package</h3>
+     * <ul>
+     * <li>ZIP and TAR.GZ formats are supported. The compressed package size ranges from 1 to 500,000,000 bytes. Dependencies must be included in the package. The platform does not install dependencies or perform online builds.</li>
+     * <li>Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a> to query the currently active <code>languageRuntime</code>.</li>
+     * <li>For local files, first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a> and upload the file directly by using the upload method, URL, and request headers returned in the response. Then, commit <code>sourceUri</code>.</li>
+     * <li><code>sourceUri</code> supports <code>oss://</code> URLs or HTTPS object URLs of standard OSS public domain names, including signed URLs. Private OSS objects must allow the workspace role to read them. You can first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a> to complete the authorization.</li>
+     * <li>Read permissions, objects, and sizes are checked upon commit, and a fixed copy is saved. If the transfer failed, the agent configuration is not created. Archive integrity and decompression are checked when the instance starts.</li>
+     * <li><code>entrypoint</code> is the startup command executed in the <code>/code</code> folder, such as <code>python main.py</code>. The command does not automatically execute shell pipelines or expand environment variables. For complex startup logic, write a script in the package.
+     * Sample request body for a code package (the runtime environment is subject to the query result):</li>
+     * </ul>
+     * <pre><code class="language-json">{
+     *   &quot;name&quot;: &quot;code-agent&quot;,
+     *   &quot;roleArn&quot;: &quot;acs:ram::1234567890123456:role/AgentRuntimeRole&quot;,
+     *   &quot;artifact&quot;: {
+     *     &quot;port&quot;: 8000,
+     *     &quot;code&quot;: {
+     *       &quot;sourceUri&quot;: &quot;oss://example-code-bucket/releases/agent.zip&quot;,
+     *       &quot;languageRuntime&quot;: &quot;python3.12&quot;,
+     *       &quot;entrypoint&quot;: &quot;python main.py&quot;
+     *     }
+     *   },
+     *   &quot;runtime&quot;: {
+     *     &quot;compute&quot;: {
+     *       &quot;computeClass&quot;: &quot;STANDARD&quot;
+     *     },
+     *     &quot;sessionPolicy&quot;: {
+     *       &quot;type&quot;: &quot;AFFINITY&quot;
+     *     }
+     *   }
+     * }
+     * </code></pre>
+     * <h3>Custom image</h3>
+     * <p>Specify the complete image address in customImage.image. Tags or digests are supported. Do not include protocols or user information. Configure the image pull network separately in customImage.pullNetwork:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Pull method</th>
+     * <th>Configuration</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Internet</td>
+     * <td>type=public. Do not specify VPC fields.</td>
+     * </tr>
+     * <tr>
+     * <td>VPC</td>
+     * <td>type=vpc. Specify vpcId, vSwitchId, and securityGroupId.</td>
+     * </tr>
+     * <tr>
+     * <td>If repository authentication is required, specify both customImage.username and customImage.password. For anonymous access, omit both. The password is not returned in the response. The image pull network and the agent runtime network are configured separately.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>useImageCache=true applies only to ACR images. For custom images and code packages, set this parameter to false or omit it.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Runtime configurations</h3>
+     * <p>Omitted fields in runtime.hpa use the following default values:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Default value</th>
+     * <th>Valid values and description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>enabled</td>
+     * <td>false</td>
+     * <td>Specifies whether to enable elastic scaling.</td>
+     * </tr>
+     * <tr>
+     * <td>minSandboxCount</td>
+     * <td>1</td>
+     * <td>The minimum number of instances. Valid values: 0 to 100.</td>
+     * </tr>
+     * <tr>
+     * <td>maxSandboxCount</td>
+     * <td>10</td>
+     * <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
+     * </tr>
+     * <tr>
+     * <td>maxConcurrentSessionsPerSandbox</td>
+     * <td>20</td>
+     * <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
+     * </tr>
+     * <tr>
+     * <td>sessionTtlSeconds</td>
+     * <td>600</td>
+     * <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
+     * </tr>
+     * <tr>
+     * <td>If sessionPolicy.type=ISOLATED_HEADER_FIELD, you must provide a valid HTTP request header name in headerName. Do not specify this field for other policies.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>If network is omitted, the default access policy on the agent side is used. Actual access is still restricted by the workspace network. When submitting access items, specify the corresponding enabled field.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>The total number of items in ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath must be an absolute path in the container, such as /data/train. It cannot conflict with platform reserved directories, be duplicated, or form parent-child directory overrides.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>File mounts are used to allow the agent to access persistent data. When using AgenticFS, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAgenticFsMountRamAuthorizeUrl">GetWorkspaceAgenticFsMountRamAuthorizeUrl</a> to complete the access point authorization first.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>The path for an OSS mount must be a non-empty directory prefix in the bucket. The server for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The path must be an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If readOnly is omitted, the default value is false.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Environment variable names must be non-empty and unique in the list. Values must be strings, and empty strings are allowed. When configuring healthCheck, you must specify port. Omitting the health check means no health check is configured. When configuring logging.sls, specify both non-empty project and logstore.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Query results and retries</h3>
+     * <p>A successful response indicates that the request is accepted. Save the agentId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a>. Check latestVersionStatus, latestExecutionError, status, and sandboxPhaseCounts to confirm the configuration processing and instance status.
+     * The clientToken query parameter is required for custom image submissions, and optional for ACR image and code package submissions. The token must be 1 to 128 characters in length and can contain letters, digits, periods, underscores, colons, and hyphens. Reuse the original token to retry the same submission. If the parameters are the same, the existing acceptance result is returned. Use a new token for different submission content.</p>
      * 
      * @param request the request parameters of CreateCustomAgent  CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
@@ -235,7 +403,38 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates an external agent in a specified workspace.</p>
+     * <p>Registers an agent hosted in the user\&quot;s runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain the bootstrap information and complete the connection.</p>
+     * <h3>Configure a managed agent</h3>
+     * <p>Provide name, and select the configuration based on the model source:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>modelSource</th>
+     * <th>Model configuration</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>PLATFORM</td>
+     * <td>Uses a platform model. Provide model.modelConnectionId and model.modelName.</td>
+     * </tr>
+     * <tr>
+     * <td>RUNTIME</td>
+     * <td>The model is managed by the external runtime environment. Do not submit model.</td>
+     * </tr>
+     * <tr>
+     * <td>If modelSource is omitted but model is provided, it is processed as PLATFORM. If both are omitted, the agent cannot be created.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Configure instructions, MCP tools, and skills through instruction, tools, and skills. You can also reference an agent template through template.aiRegistry. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Bootstrap sequence</h3>
+     * <p><strong>Step 1:</strong> After creation, save the agentId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration processing result.
+     * <strong>Step 2:</strong> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available bootstrap networks.
+     * <strong>Step 3:</strong> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the bootstrap token and CMS configuration. The external process then completes the bootstrap.
+     * clientToken is a reserved query parameter and currently does not provide idempotency guarantees.</p>
      * 
      * @param request the request parameters of CreateExternalAgent  CreateExternalAgentRequest
      * @return CreateExternalAgentResponse
@@ -256,7 +455,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates the Bootstrap token and CMS configuration required to onboard a specified external agent.</p>
+     * <p>Issues an access token and connection configurations for a registered managed agent whose configurations have taken effect to complete the onboarding in the runtime environment where the agent resides.</p>
+     * <h3>Prerequisites and parameters</h3>
+     * <p>The managed agent must be in the running state, and its latest configurations must have taken effect. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> first to query available networks.
+     * The <code>networkType</code> parameter is passed as a query parameter. Valid values: <code>INTRANET</code> (internal network) and <code>INTERNET</code> (Internet). The selected endpoint must be available.</p>
+     * <h3>Use the response</h3>
+     * <p>Pass the <code>bootstrapToken</code> to the external runtime process to complete the onboarding. The <code>tokenFingerprint</code> is used to identify the token and cannot be used as a substitute for the token. The <code>cms</code> field contains the observability reporting configurations for the corresponding network. Configure the endpoint, workspace, and license key as provided in the response.</p>
      * 
      * @param request the request parameters of CreateExternalAgentBootstrapToken  CreateExternalAgentBootstrapTokenRequest
      * @return CreateExternalAgentBootstrapTokenResponse
@@ -277,32 +481,49 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>The WAITING_CONFIGURATION status also occupies the single external identity source quota for a workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity source. Creating another type returns a 409 IdentityProviderAlreadyBound error. You can change the identity source only after the existing binding is unbound and removed.
-     * A workspace can have only one external identity source binding. The identityProviderType parameter supports DingTalk, Lark, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. Both switches are disabled by default. Protocols and SAML configurations are saved by using UpdateIdentityProvider. SCIM is configured by using a separate API operation. You do not need to save SAML configurations first. If initialization is complete but SAML metadata is not saved, the system returns WAITING_CONFIGURATION. CONFIGURED and SYNCING indicate that the resource is still being initialized. You can call GetIdentityProvider to query the status. After you save the metadata, the system returns UPDATING. After the configuration is complete and the internal OIDC is published, the system returns READY. READY does not mean that the logon switch is enabled. For the same CustomSSO binding, the system may return the existing binding after the initialization request is accepted or completed. You cannot treat all statuses as repeatable creations.
-     * For DingTalk, the metadata must include appKey, appSecret, and corpId. For Lark, the metadata must include appId and appSecret. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. If synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</p>
-     * <h2>Requests and examples</h2>
-     * <p>POST /workspaces/{workspaceId}/identity-providers
-     * Call conventions: Call the API operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
-     * <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
-     * {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
+     * <p>Integrates an enterprise identity source with a workspace to allow application users to log on with enterprise accounts, or to synchronize users from the enterprise address book to the workspace.
+     * DingTalk, Lark, and custom identity sources (CustomSSO) are supported. A workspace can be bound to only one identity source. To change the integration method, you must unbind the current identity source first.</p>
+     * <h3>Select an integration method</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Integration method</th>
+     * <th>Scenario</th>
+     * <th>Task completed by this operation</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>DingTalk or Lark</td>
+     * <td>The enterprise already uses DingTalk or Lark and wants to integrate enterprise accounts and the address book.</td>
+     * <td>Saves the enterprise application credentials and establishes a binding for subsequent logon and address book synchronization configuration.</td>
+     * </tr>
+     * <tr>
+     * <td>Custom identity source (CustomSSO)</td>
+     * <td>The enterprise wants to integrate its own identity authentication and user management system.</td>
+     * <td>Creates a shared user pool to prepare for subsequent SAML single sign-on (SSO) and SCIM user synchronization configuration.</td>
+     * </tr>
+     * <tr>
+     * <td>A user pool stores application users and identity integration configurations. SAML handles enterprise account logon. SCIM provisions users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Bind DingTalk or Lark</h3>
+     * <p>Specify the enterprise application credentials in metadata. DingTalk requires appKey, appSecret, and corpId. Lark requires appId and appSecret.
+     * Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set syncOnBind to false.
+     * Subsequent address book change synchronization is controlled by syncEnabled, which is disabled by default. When enabled, you must also provide encryptKey and verificationToken.</p>
+     * <h3>Bind a custom identity source</h3>
+     * <p>When you create a CustomSSO binding, you only need to specify the identity source type:</p>
+     * <pre><code class="language-http">POST /workspaces/{workspaceId}/identity-providers
+     * {&quot;identityProviderType&quot;:&quot;CustomSSO&quot;}
      * </code></pre>
-     * <h2>Response examples</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: {
-     *     &quot;workspaceId&quot;: &quot;ws-example&quot;,
-     *     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-     *     &quot;loginEnabled&quot;: false,
-     *     &quot;syncEnabled&quot;: false,
-     *     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;
-     *   }
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
-     * 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. If the initialization request fails, retain the request ID for troubleshooting. If a binding already exists, query the current status first to avoid repeated creation.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>CustomSSO call sequence: Create the binding first. After initialization is complete, the system returns WAITING_CONFIGURATION. If the system returns CONFIGURED or SYNCING, you can call GetIdentityProvider to query the status. Then, you can configure SAML and SCIM separately. You do not need to complete them in a fixed sequence. For SAML, use GetIdentityProviderServiceProvider to obtain the SP information of your side, and use UpdateIdentityProvider to save the external IdP configuration. For SCIM, use PrepareIdentityProviderSCIM to obtain the pre-provisioning address and credentials, and then use UpdateIdentityProviderSCIM to confirm synchronization.</p>
+     * <p>This call only creates a user pool. Logon and user synchronization are disabled by default. Do not specify metadata, loginEnabled, or syncEnabled during creation.
+     * After creation, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. If WAITING_CONFIGURATION is returned, the user pool is created and you can proceed with the integration configuration:</p>
+     * <ul>
+     * <li><strong>Integrate enterprise account logon</strong>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML integration information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</li>
+     * <li><strong>Integrate user synchronization</strong>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the SCIM receiving endpoint and credentials, and configure them in the enterprise identity system. After the external configuration is complete, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to enable AgentCore user synchronization.
+     * The two processes are independent. You can select one or both based on your business requirements.</li>
+     * </ul>
      * 
      * @param request the request parameters of CreateIdentityProvider  CreateIdentityProviderRequest
      * @return CreateIdentityProviderResponse
@@ -323,7 +544,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites\nExplicitly issues a new credential, which requires an available shared pool and the AgentIdentity SCIM receiver to be Enabled. This operation does not automatically enable the receiver. If it is not enabled, call the prepare operation first. Returns the configuration, credential summary, and the current token. The maximum limit of two credentials is enforced by AgentIdentity. An existing available token does not prevent users from explicitly creating a second one. Old credentials are not automatically revoked, and no extended rotation process is provided.\nThe token is returned only once and cannot be retrieved again in subsequent list or query operations. Do not automatically retry the issuance. If the response is lost, check the list first to verify whether it has been created. Creating a credential does not enable AC syncEnabled, start a full user import, or switch SAML logon. Deleting an old token should be explicitly performed by the user after confirming the actual usage of the external provisioning system.\n\n## Requests and examples\nPOST /workspaces/{workspaceId}/scim-provisioning/credentials\nCalling conventions: Call the operation in the region of the target workspace, using an AccessKey (AK) or Security Token Service (STS) identity that has permissions for the identity provider resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log the key. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.\n<code>text\\nPOST /workspaces/ws-example/scim-provisioning/credentials\\nNo business request body.\\n</code>\n\n## Response example\n<code>json\\n{\\n  &quot;data&quot;: {\\n    &quot;configuration&quot;: {\\n      &quot;status&quot;: &quot;Enabled&quot;,\\n      &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;\\n    },\\n    &quot;credential&quot;: {\\n      &quot;credentialId&quot;: &quot;credential-example&quot;,\\n      &quot;status&quot;: &quot;Enabled&quot;,\\n      &quot;expireTime&quot;: &quot;&lt;Upstream expiration time&gt;&quot;\\n    },\\n    &quot;token&quot;: &quot;&lt;Newly issued token for this request&gt;&quot;\\n  }\\n}\\n</code>\n\n## Errors and handling\nError handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.\n400 LimitExceeded.ScimCredential: A maximum of two credentials are allowed. Delete one before creating another. 400 InvalidParameter: The receiver is not enabled or the shared pool is unavailable. Do not retry quota errors as system failures.\n\n## Call relationships and usage boundaries\nAfter creation, securely save the token that is returned only once and configure it in the external provisioning system. Existing tokens remain valid. Only DeleteIdentityProviderSCIMCredential revokes the specified credential. Do not automatically retry if the response is lost. Call ListIdentityProviderSCIMCredentials to check first. This operation does not provide automatic rotation or scaling.</h2>
+     * <p>Creates a SCIM access token to authorize an enterprise identity system to send user provisioning requests to AgentCore. For example, when you plan to replace the token used by the enterprise identity system, you can create a new token first and revoke the old token after the switchover is complete.
+     * SCIM is a user provisioning protocol through which an enterprise identity system sends user information by using a receiving endpoint and an access token.</p>
+     * <h3>Before you begin</h3>
+     * <p>A <code>CustomSSO</code> binding is created, and the SCIM receiving endpoint is enabled by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a>.
+     * A maximum of two SCIM credentials can be retained in the same user pool. When the limit is reached, query existing credentials by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderSCIMCredentials">ListIdentityProviderSCIMCredentials</a> and revoke the credentials that are no longer in use.</p>
+     * <h3>What to do next</h3>
+     * <p><strong>Step 1:</strong> Save the plaintext of the <code>token</code> in the response. The token is returned only upon creation. You can only query the credential summary later.
+     * <strong>Step 2:</strong> Configure the receiving endpoint and the new token in the enterprise identity system.
+     * <strong>Step 3:</strong> After you confirm that the enterprise identity system uses the new token, revoke the old token by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteIdentityProviderSCIMCredential">DeleteIdentityProviderSCIMCredential</a> as needed.
+     * If the creation response is lost, query the credential list to verify the creation result to avoid duplicate creation and occupying the credential quota. The user synchronization switch is configured separately by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
      * 
      * @param request the request parameters of CreateIdentityProviderSCIMCredential  CreateIdentityProviderSCIMCredentialRequest
      * @return CreateIdentityProviderSCIMCredentialResponse
@@ -344,24 +574,22 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Initiates a user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. The prerequisites are that the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check failureReason. The workspace user quota is still enforced, and synchronized users are not automatically deleted when the scope is reduced.
-     * Authorization information: The RAM action is agentcore:CreateIdentityProviderSyncJob, the access level is Write, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
-     * Idempotency and retries: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee that the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting the request again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid unnecessary repeated submissions.
-     * Calling this API is free of charge, and operation records support ActionTrail auditing.
-     * First-time selective synchronization flow: CreateIdentityProvider (syncOnBind=false, we recommend that you keep syncEnabled=false initially) → GetIdentityProvider and wait for the READY state → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for the READY state → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the final state. To enable incremental synchronization, configure callbacks and event subscriptions, and then set syncEnabled=true.
-     * Response example:</p>
-     * <pre><code class="language-json">{
-     *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
-     *   &quot;message&quot;: &quot;success&quot;,
-     *   &quot;httpStatusCode&quot;: 200,
-     *   &quot;code&quot;: &quot;SUCCESS&quot;,
-     *   &quot;success&quot;: true,
-     *   &quot;data&quot;: {
-     *     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
-     *     &quot;status&quot;: &quot;PENDING&quot;
-     *   }
-     * }
-     * </code></pre>
+     * <p>Synchronizes users from an enterprise identity provider to a workspace based on the saved department scope. This is suitable for importing users for the first time or manually updating workspace users after adjusting the synchronization scope.</p>
+     * <h3>Prerequisites</h3>
+     * <ul>
+     * <li>The identity provider is configured and its status is <code>READY</code>. If the previous synchronization failed and the status is <code>SYNC_FAILED</code>, you can also re-initiate it.</li>
+     * <li>The user pool is ready, and no identity provider operations are in progress.</li>
+     * <li>Manual synchronization uses the saved <code>syncScope</code>. You do not need to enable <code>syncEnabled</code>, which is used for subsequent address book change synchronization.</li>
+     * </ul>
+     * <h3>Steps for synchronizing by department</h3>
+     * <p><strong>Step 1:</strong> Query departments by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> and select the scope to synchronize.
+     * <strong>Step 2:</strong> Save the <code>syncScope</code> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete.
+     * <strong>Step 3:</strong> Call this operation to initiate the synchronization and save the returned <code>taskId</code>.
+     * <strong>Step 4:</strong> Query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSyncJob">GetIdentityProviderSyncJob</a>. After the synchronization is complete, view the workspace user list.
+     * If you want to select departments before the initial synchronization, set <code>syncOnBind=false</code> when creating the identity provider, and then perform the preceding steps.</p>
+     * <h3>Synchronization results and re-execution</h3>
+     * <p>Synchronization is subject to the maximum number of users allowed in the workspace. Narrowing the synchronization scope does not actively delete users that have already been synchronized.
+     * Each successful initiation creates a new synchronization task. If a request times out or the response is lost, check the identity provider status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> before deciding whether to resubmit the request.</p>
      * 
      * @param request the request parameters of CreateIdentityProviderSyncJob  CreateIdentityProviderSyncJobRequest
      * @return CreateIdentityProviderSyncJobResponse
@@ -382,7 +610,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates or reuses an image cache in the current workspace based on the image source and tag. Both public and private images reuse the workspace\&quot;s source image pull authorization and resource roles. The resource manager parses the tag during the transfer task and performs image replication based on the parsed digest. The digest is empty before parsing is complete. For regular tags, the saved digest is reused after parsing. For the latest tag, re-registration after reaching the final state triggers re-parsing, and duplicate in-progress registrations reuse the task. The logical imageId remains stable. AccessInternet and AccessVpc only determine the source read and transfer for the current request and do not modify the agent network. An HTTP 200 response returns an acceptance snapshot with a status of PENDING, READY, or FAILED, which does not indicate that the creation is complete. The ClientToken does not guarantee request deduplication or original result recovery. If the result is unconfirmed, query the cache status first before deciding whether to resubmit.</p>
+     * <p>Pre-builds or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</p>
+     * <h3>Request parameters</h3>
+     * <p><code>regionId</code>, <code>workspaceId</code>, and <code>clientToken</code> are passed as query parameters. The region must match the entry endpoint and the workspace.
+     * Specify <code>acrInstanceId</code>, <code>namespace</code>, <code>repository</code>, and <code>tag</code> in the JSON request body. For <code>repository</code>, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</p>
+     * <h3>Transfer network</h3>
+     * <p>Both <code>accessInternet</code> and <code>accessVpc</code> must be provided, and at least one must be set to <code>true</code>. The server validates this based on the workspace network conditions. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</p>
+     * <h3>Acceptance and readiness</h3>
+     * <p>A successful response returns the current cache snapshot. <code>PENDING</code> indicates that the cache is being prepared, <code>READY</code> indicates that the cache is ready, and <code>FAILED</code> indicates a failure. For failures, check the <code>error</code> field. Save the <code>imageId</code> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, <code>digest</code> may be empty.
+     * Currently, <code>clientToken</code> is only validated to ensure it is not empty. It does not guarantee deduplication by identifier or recovery of the original acceptance result. If the result is not confirmed, query the existing cache first.</p>
      * 
      * @param request the request parameters of CreateImageCache  CreateImageCacheRequest
      * @return CreateImageCacheResponse
@@ -402,6 +638,108 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</p>
+     * <h3>Required configurations</h3>
+     * <p>Submit name, model, and runtime. The runtime parameter must include both compute and sessionPolicy. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</p>
+     * <h3>Harness and model</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Harness</th>
+     * <th>Model and connector configurations</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>qwenpaw</td>
+     * <td>If you omit harness during creation, this type is used by default. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+     * </tr>
+     * <tr>
+     * <td>qodercli</td>
+     * <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit model.modelName.</td>
+     * </tr>
+     * <tr>
+     * <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. If multiple records exist, you must specify this parameter. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>The harness type cannot be changed after creation.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Instructions, templates, and skills</h3>
+     * <p>skills uses the skill names in the workspace AI registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.
+     * For template.aiRegistry, specify the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using configuredSkills and skills.
+     * If you do not use a template, you can set instructions by using instruction, declare variables by using promptVariables, and configure up to 20 sub-agents by using subAgents. The name and instruction of a sub-agent cannot be empty. Each sub-agent name must be unique. Tools currently use tools[].type=MCP.</p>
+     * <h3>Runtime configurations and mounts</h3>
+     * <p>Omitted fields in runtime.hpa use the following default values:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Default value</th>
+     * <th>Valid values and description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>enabled</td>
+     * <td>false</td>
+     * <td>Specifies whether to enable elastic scaling.</td>
+     * </tr>
+     * <tr>
+     * <td>minSandboxCount</td>
+     * <td>1</td>
+     * <td>The minimum number of instances. Valid values: 0 to 100.</td>
+     * </tr>
+     * <tr>
+     * <td>maxSandboxCount</td>
+     * <td>10</td>
+     * <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
+     * </tr>
+     * <tr>
+     * <td>maxConcurrentSessionsPerSandbox</td>
+     * <td>20</td>
+     * <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
+     * </tr>
+     * <tr>
+     * <td>sessionTtlSeconds</td>
+     * <td>600</td>
+     * <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
+     * </tr>
+     * <tr>
+     * <td>If sessionPolicy.type=ISOLATED_HEADER_FIELD, you must provide headerName. Do not specify this parameter for other policies.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>If you provide network, you must specify both accessInternet.enabled and accessVpc.enabled. Actual access is restricted by the workspace network configurations.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. The path cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>File mounts are used to allow the agent to access persistent data. When you use AgenticFS, you can first complete the access point authorization by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAgenticFsMountRamAuthorizeUrl">GetWorkspaceAgenticFsMountRamAuthorizeUrl</a>.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>The path for an OSS mount must be a non-empty directory prefix in the bucket. The server for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The path is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If readOnly is omitted, the default value is false.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>environment.variables configures environment variables, and environment.credentialReferences references workspace credentials. Environment variable names must be non-empty and unique, and values must be strings.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Query deployment results</h3>
+     * <p>A successful response indicates that the request is accepted. Save the agentId and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken is a reserved query parameter and currently does not provide idempotence guarantees.</p>
+     * 
      * @param request the request parameters of CreateManagedAgent  CreateManagedAgentRequest
      * @return CreateManagedAgentResponse
      */
@@ -421,8 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check the returned status or call a query operation to confirm whether the service is ready.</p>
+     * <p>Creates an MCP service in a workspace for agents to use the tools provided by the service.
+     * The creation process is executed asynchronously. After you submit the request, call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> operation to check whether the service is ready.
+     * To deploy the service by using a local code package, first call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> operation to obtain the upload URL and upload the file. Then, fill in the returned code package token in the deployment configuration.
+     * The <code>clientToken</code> parameter does not provide idempotency guarantees. If the request result is not confirmed, query existing services before you decide whether to recreate the service.</p>
      * 
      * @param request the request parameters of CreateMcp  CreateMcpRequest
      * @return CreateMcpResponse
@@ -443,7 +783,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a long-term memory store in a specified workspace.</p>
+     * <p>Creates a long-term memory store (MemoryStore) in a workspace to organize the long-term memories of an agent and their source sessions.
+     * After creation, you can write messages or text by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> and retrieve memories by semantics by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/SearchMemories">SearchMemories</a>.</p>
      * 
      * @param request the request parameters of CreateMemoryStore  CreateMemoryStoreRequest
      * @return CreateMemoryStoreResponse
@@ -463,6 +804,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a model configuration under a model connection in a workspace for model creation, allowing an agent to select and invoke the model.</p>
+     * 
      * @param request the request parameters of CreateModel  CreateModelRequest
      * @return CreateModelResponse
      */
@@ -481,6 +825,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials for model creation.</p>
+     * 
      * @param request the request parameters of CreateModelConnection  CreateModelConnectionRequest
      * @return CreateModelConnectionResponse
      */
@@ -500,7 +847,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates permission rules in bulk for resources in a specified workspace.</p>
+     * <p>Creates access rules in batches for specified resources in a workspace to define which users or agents can or cannot access the resources.</p>
      * 
      * @param request the request parameters of CreatePermissionRules  CreatePermissionRulesRequest
      * @return CreatePermissionRulesResponse
@@ -521,8 +868,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</p>
+     * <p>Creates a skill and its draft in a workspace for editing skill instructions and related resources. You can derive the draft from an existing version, or specify a target version and a commit message.</p>
      * 
      * @param request the request parameters of CreateSkillDraft  CreateSkillDraftRequest
      * @return CreateSkillDraftResponse
@@ -542,6 +888,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a team in a specified workspace and configures user members and agent members at the same time.</p>
+     * 
      * @param request the request parameters of CreateTeam  CreateTeamRequest
      * @return CreateTeamResponse
      */
@@ -560,6 +909,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a user in a workspace for member collaboration and application access, which is used when configuring team members and user logons.</p>
+     * 
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
      */
@@ -579,7 +931,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. The network configuration uses <code>Enabled</code> to specify whether to enable the VPC network. If enabled, you must provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <p>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.
+     * After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query the details, and then manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</p>
      * 
      * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
@@ -599,6 +952,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invokes a specified model through a published model connection to verify whether the model invocation pipeline is available.</p>
+     * 
      * @param request the request parameters of DebugModel  DebugModelRequest
      * @return DebugModelResponse
      */
@@ -618,7 +974,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an access application. The secret key is returned only upon creation and is not returned by query operations.</p>
+     * <p>Deletes a specified access application and removes the access configuration of the application from the workspace.</p>
      * 
      * @param request the request parameters of DeleteAccessApplication  DeleteAccessApplicationRequest
      * @return DeleteAccessApplicationResponse
@@ -639,7 +995,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an IM channel of a specified agent.</p>
+     * <p>Deletes the IM channel of a specified agent.</p>
      * 
      * @param request the request parameters of DeleteAgentIMChannel  DeleteAgentIMChannelRequest
      * @return DeleteAgentIMChannelResponse
@@ -660,8 +1016,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Deletes the specified AgentSpec and all its versions and metadata. The deletion is irreversible.</p>
+     * <p>Deletes the specified agent template and all its versions and metadata.
+     * This operation is irreversible.</p>
      * 
      * @param request the request parameters of DeleteAgentSpec  DeleteAgentSpecRequest
      * @return DeleteAgentSpecResponse
@@ -682,8 +1038,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</p>
+     * <p>Deletes the draft version of the agent template (AgentSpec) that is currently being edited.</p>
      * 
      * @param request the request parameters of DeleteAgentSpecVersion  DeleteAgentSpecVersionRequest
      * @return DeleteAgentSpecVersionResponse
@@ -704,7 +1059,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes an access credential in a specified workspace. A credential cannot be deleted if it is still bound to an MCP service.</p>
+     * <p>Deletes an access credential that is no longer used in a workspace.
+     * If the credential is still bound to an MCP service, dissociate it before deletion.</p>
      * 
      * @param request the request parameters of DeleteCredential  DeleteCredentialRequest
      * @return DeleteCredentialResponse
@@ -725,9 +1081,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, ensure that the workspace is writable. If the agent is still associated with a team, dissociate the agent from the team first.
-     * Deletion is an asynchronous process. After the request is accepted, the associated invocation endpoints become unavailable, and the runtime resources are subsequently cleaned up. The status in the response is typically Deleting. If the agent is already being deleted, a subsequent request returns the current summary.
-     * You can call GetCustomAgent to check the deletion progress. After the deletion is complete, a detail query returns a resource not found error.</p>
+     * <p>Deletes a custom code or image agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
+     * <h3>Before you begin</h3>
+     * <p>The workspace must be writable. If the agent is still associated with a team, dissociate it from the team first.</p>
+     * <h3>Deletion result</h3>
+     * <p>A successful response indicates that the deletion request is accepted, and the response summary typically returns <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
+     * Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a> to query the deletion progress. After the deletion is complete, a detail query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
      * 
      * @param request the request parameters of DeleteCustomAgent  DeleteCustomAgentRequest
      * @return DeleteCustomAgentResponse
@@ -748,7 +1107,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified external agent.</p>
+     * <p>Deletes a managed agent in a specified workspace and asynchronously cleans up its associated platform resources.</p>
+     * <h3>Prerequisites</h3>
+     * <p>The workspace must be writable. If the agent is still associated with a team, dissociate it from the team first.</p>
+     * <h3>Deletion results</h3>
+     * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
+     * You can query the deletion progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>. After the deletion is complete, a details query returns a resource not found error. The processes and runtime environment of the managed agent are managed by the caller.</p>
      * 
      * @param request the request parameters of DeleteExternalAgent  DeleteExternalAgentRequest
      * @return DeleteExternalAgentResponse
@@ -769,28 +1133,18 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>This operation disconnects the integration as a whole, rather than disabling logon individually. Disconnecting CustomSSO clears the users imported from this identity source, the remote shared user pool and related resources, and the logon publishing configurations and bindings. Therefore, both SAML and SCIM are affected. This operation does not delete the enterprise applications created by users on external platforms such as Azure. The system checks the references between users and teams before disconnecting. If references exist, the disconnection is rejected.
-     * After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the operation returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this operation as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</p>
-     * <h2>Requests and examples</h2>
-     * <p>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
-     * <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
-     * </code></pre>
-     * <h2>Response examples</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: {
-     *     &quot;workspaceId&quot;: &quot;ws-example&quot;,
-     *     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-     *     &quot;status&quot;: &quot;DISCONNECTING&quot;
-     *   }
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-     * 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. Asynchronous failures may result in partial cleanup. You cannot claim completion based solely on the first response.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>If you only need to disable a specific capability: To disable SAML logon, set loginEnabled=false in UpdateIdentityProvider. To disable SCIM, set syncEnabled=false in UpdateIdentityProviderSCIM. To revoke a single token, use DeleteIdentityProviderSCIMCredential. Call this operation only when you need to disconnect the integration as a whole.</p>
+     * <p>Disconnects the association between a workspace and an enterprise identity source. This operation is used to terminate identity federation or clear the current attach configuration before you attach another identity source.
+     * Disconnecting clears the AgentCore users and associated configurations imported from the identity source. For <code>CustomSSO</code>, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</p>
+     * <h3>Preparations before disconnecting</h3>
+     * <p>Remove the reference relationships between the related users and collaboration teams first. If teams still reference these users, the API operation rejects the disconnection request.
+     * If you only want to temporarily disable a specific capability, you can retain the identity source binding. Use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to disable logon, or use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to disable SCIM synchronization.</p>
+     * <h3>Verify the disconnection result</h3>
+     * <p>The disconnection is executed in the background. After the request is accepted, <code>DISCONNECTING</code> is returned. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>:</p>
+     * <ul>
+     * <li>If the query returns <code>IdentityProviderNotFound</code>, the binding has been removed and the disconnection is complete.</li>
+     * <li>If <code>DISCONNECT_FAILED</code> is returned, the cleanup failed. Some resources may have already been cleared. You can initiate the disconnection again.
+     * You can bind a new identity source to the workspace only after the disconnection is complete.</li>
+     * </ul>
      * 
      * @param request the request parameters of DeleteIdentityProvider  DeleteIdentityProviderRequest
      * @return DeleteIdentityProviderResponse
@@ -811,25 +1165,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>Revokes a specified credential. The credentialId parameter is required and cannot be empty. You can obtain it from the credential list. The shared pool must be available. SAML configuration or enabled SCIM receiving is not required. After deletion, external provisioning requests that use this token become invalid. This operation only affects the selected credential. It does not automatically disable receiving, turn off the AC syncEnabled switch, or affect other credentials or SAML.
-     * Even if you delete the last credential, the synchronization switch is not automatically written back and a new token is not reissued. Disable external provisioning or replace the token in use as needed. A successful response returns a common response without business data content. Refresh the list to confirm. The result for unknown or deleted IDs is determined by the upstream system. A unified 404 error or unconditional idempotent success is not guaranteed.</p>
-     * <h2>Request and examples</h2>
-     * <p>DELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}
-     * Call conventions: Call the API in the region of the target workspace by using an AccessKey (AK) or Security Token Service (STS) identity that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
-     * <pre><code class="language-text">DELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example
-     * </code></pre>
-     * <h2>Response example</h2>
-     * <pre><code class="language-json">{
-     *   &quot;success&quot;: true,
-     *   &quot;httpStatusCode&quot;: 200
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameter or current configuration prerequisite is not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. If a synchronous call to the upstream system fails, it may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
-     * 400 InvalidParameter: The credentialId parameter is empty or the shared pool is not available. 404 IdentityProviderNotFound indicates that the binding does not exist. This does not mean that all unknown credential IDs return this code. Handle other deletion errors based on upstream results. If the operation fails, refresh the list to check. Automatic creation of a replacement token is not triggered.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>Use ListIdentityProviderSCIMCredentials to obtain the credentialId and then delete the specified credential. If the external provisioning system still uses this token, subsequent provisioning may result in an authentication failure. Therefore, confirm the actual usage first. After deletion, a new credential is not automatically created, the AC synchronization switch is not turned off, and SAML logon is not disabled.</p>
+     * <p>Revokes a SCIM access token to deactivate an old token or clean up credentials that are no longer in use or have expired.
+     * SCIM tokens are used to authorize enterprise identity systems to send user provisioning requests to user pools. After revocation, the enterprise identity system can no longer use the token to access the SCIM endpoint.</p>
+     * <h3>Usage</h3>
+     * <p><strong>Step 1:</strong> Query the credential list by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderSCIMCredentials">ListIdentityProviderSCIMCredentials</a> to obtain the target credentialId.
+     * <strong>Step 2:</strong> If the enterprise identity system is still using the token, configure another valid token for it first.
+     * <strong>Step 3:</strong> Call this operation to revoke the target credential, and then refresh the list to confirm the result.
+     * This operation only revokes the specified token. Synchronized users, other tokens, logon configurations, and the user synchronization switch are retained. To disable user synchronization, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</p>
      * 
      * @param request the request parameters of DeleteIdentityProviderSCIMCredential  DeleteIdentityProviderSCIMCredentialRequest
      * @return DeleteIdentityProviderSCIMCredentialResponse
@@ -850,7 +1192,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the logical image cache of the current workspace. The deletion requires that no enabled agent configuration references the cache and no valid instances are using it. Concurrency is rechecked upon submission. The PENDING or FAILED status does not prevent deletion, and the backend handles the cleanup. An HTTP 200 response returns an imageId that matches the request. If deletionPending is true, the deletion is still in progress for the current workspace, and a Get request returns DELETING until ImageCacheNotFound is explicitly returned. If false, the deletion is complete or the current workspace no longer exists. Usage by other workspaces does not block the deletion for the current workspace. The physical content is reclaimed after all workspaces in the same region delete their associations and no valid instances are using it.</p>
+     * <p>Deletes the image cache association in a workspace and checks for agent references and instance usage before submission.</p>
+     * <h3>Deletion conditions</h3>
+     * <p>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if instances are still using it or resources are being released. You can first query <code>agentCount</code>, <code>canDelete</code>, and <code>deleteBlockReason</code> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
+     * <h3>Query results</h3>
+     * <p>The <code>imageId</code> in the response corresponds to this request. The current implementation of <code>deletionPending</code> returns <code>false</code>. To confirm whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
+     * This operation deletes the cache association in the specified workspace, but does not delete the source ACR repository or the source image.</p>
      * 
      * @param request the request parameters of DeleteImageCache  DeleteImageCacheRequest
      * @return DeleteImageCacheResponse
@@ -870,6 +1217,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a managed Harness agent in a specified workspace and asynchronously cleans up its platform-associated resources.</p>
+     * <h3>Prerequisites</h3>
+     * <p>The workspace must be writable. If the agent is still associated with a team, dissociate it from the team first.</p>
+     * <h3>Deletion results</h3>
+     * <p>A successful response indicates that the deletion request has been accepted, and the response summary is typically <code>status=Deleting</code>. If the agent is already being deleted, a subsequent request returns the current summary.
+     * You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query the deletion progress. After the deletion is complete, a details query returns a resource not found error. Runtime resources are cleaned up in the background.</p>
+     * 
      * @param request the request parameters of DeleteManagedAgent  DeleteManagedAgentRequest
      * @return DeleteManagedAgentResponse
      */
@@ -889,8 +1244,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Deletes a specified MCP server. The deletion is an asynchronous process, and the MCP server is no longer returned after the process is complete.</p>
+     * <p>Deletes a specified MCP service.
+     * The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
      * 
      * @param request the request parameters of DeleteMcp  DeleteMcpRequest
      * @return DeleteMcpResponse
@@ -911,7 +1266,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a long-term memory based on the memory ID.</p>
+     * <p>Deletes a long-term memory by memory ID.</p>
      * 
      * @param request the request parameters of DeleteMemory  DeleteMemoryRequest
      * @return DeleteMemoryResponse
@@ -932,7 +1287,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Asynchronously deletes a MemoryStore and all long-term memory within it.</p>
+     * <p>Asynchronously deletes a specified long-term memory store (MemoryStore) and all its long-term memories.</p>
      * 
      * @param request the request parameters of DeleteMemoryStore  DeleteMemoryStoreRequest
      * @return DeleteMemoryStoreResponse
@@ -952,6 +1307,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a model in a specified workspace. Models that are in use cannot be deleted.</p>
+     * 
      * @param request the request parameters of DeleteModel  DeleteModelRequest
      * @return DeleteModelResponse
      */
@@ -970,6 +1328,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Submits an asynchronous deletion task for a specified model connection. The connection cannot be deleted if it has associated models or runtime references.</p>
+     * 
      * @param request the request parameters of DeleteModelConnection  DeleteModelConnectionRequest
      * @return DeleteModelConnectionResponse
      */
@@ -989,7 +1350,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a permission rule in a specified workspace. Repeated deletion requests still return a success response.</p>
+     * <p>Deletes an access rule in a workspace and revokes the configuration of the rule. Repeated deletions still return a success response.</p>
      * 
      * @param request the request parameters of DeletePermissionRule  DeletePermissionRuleRequest
      * @return DeletePermissionRuleResponse
@@ -1010,8 +1371,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
+     * <p>Deletes a skill and its related version data from the specified workspace.
+     * The deletion operation is irreversible.</p>
      * 
      * @param request the request parameters of DeleteSkill  DeleteSkillRequest
      * @return DeleteSkillResponse
@@ -1032,8 +1393,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Deletes the draft version currently being edited for a specified Skill.</p>
+     * <p>Deletes the draft of a skill that is being edited in normal version mode.
+     * In <code>HEAD</code> mode, a persistent draft is used, and the delete draft operation is not supported. To modify the content, continue editing the draft. To remove the entire skill, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteSkill">DeleteSkill</a>.</p>
      * 
      * @param request the request parameters of DeleteSkillDraft  DeleteSkillDraftRequest
      * @return DeleteSkillDraftResponse
@@ -1053,6 +1414,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a team in a specified workspace.</p>
+     * 
      * @param request the request parameters of DeleteTeam  DeleteTeamRequest
      * @return DeleteTeamResponse
      */
@@ -1071,6 +1435,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a user from a specified workspace.</p>
+     * 
      * @param request the request parameters of DeleteUser  DeleteUserRequest
      * @return DeleteUserResponse
      */
@@ -1090,7 +1457,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nDeletes the control plane record of a specified workspace. The server completes the state transition from <code>Deleting</code> to <code>Deleted</code> within the same transaction. The server processes repeated deletion requests for workspaces in the <code>Deleting</code> or <code>Deleted</code> state idempotently.\n.</h2>
+     * <p>Deletes a workspace that is no longer in use and ends the management lifecycle of the workspace. The API operation processes repeated deletion requests for the same workspace in the <code>Deleting</code> or <code>Deleted</code> state based on idempotence.</p>
      * 
      * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
      * @return DeleteWorkspaceResponse
@@ -1111,7 +1478,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Disables a Connector in a specified workspace.</p>
+     * <p>Disables the QoderCLI connector in a workspace.</p>
      * 
      * @param request the request parameters of DisableConnector  DisableConnectorRequest
      * @return DisableConnectorResponse
@@ -1132,8 +1499,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Retrieves the presigned OSS download URL of a specified AgentSpec to download the AgentSpec ZIP package.</p>
+     * <p>Retrieves the OSS presigned download URL for a specified agent template to download the agent template ZIP package.</p>
      * 
      * @param request the request parameters of DownloadAgentSpecViaOss  DownloadAgentSpecViaOssRequest
      * @return DownloadAgentSpecViaOssResponse
@@ -1154,8 +1520,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</p>
+     * <p>Retrieves the OSS pre-signed download URL for a specified skill version to download the corresponding skill ZIP package.</p>
      * 
      * @param request the request parameters of DownloadSkillVersionViaOss  DownloadSkillVersionViaOssRequest
      * @return DownloadSkillVersionViaOssResponse
@@ -1176,7 +1541,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Enables a Connector in a specified workspace. Credential verification is required before the Connector can be enabled.</p>
+     * <p>Enables the QoderCLI connector in a workspace. Before enabling, verify the credentials by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyConnector">VerifyConnector</a>.</p>
      * 
      * @param request the request parameters of EnableConnector  EnableConnectorRequest
      * @return EnableConnectorResponse
@@ -1197,7 +1562,51 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the task by using the original client token for creation or update when the response is lost. The backend parses the target agent and verifies permissions. A 404 error does not necessarily mean that the original submission was not accepted.</p>
+     * <p>Uses the <code>clientToken</code> of a create or update request to retrieve a custom image preparation task, which allows you to continue querying the processing progress after a request response is lost.</p>
+     * <h3>Search scope</h3>
+     * <p>Pass the <code>clientToken</code> used when submitting <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a> as a query parameter, and use the original workspace.
+     * The preparation task can be retrieved only if the submission result includes <code>imagePreparation</code>. If no corresponding preparation task exists, a resource not found error is returned.</p>
+     * <h3>Query phases</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><code>phase</code></th>
+     * <th>Description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>QUEUED</code>, <code>CHECKING</code></td>
+     * <td>Queued or checking the source.</td>
+     * </tr>
+     * <tr>
+     * <td><code>COPYING</code></td>
+     * <td>Copying the image.</td>
+     * </tr>
+     * <tr>
+     * <td><code>STARTING</code></td>
+     * <td>Starting the target version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>HEALTH_CHECKING</code></td>
+     * <td>Waiting for the target version instance to be ready.</td>
+     * </tr>
+     * <tr>
+     * <td><code>SUCCEEDED</code></td>
+     * <td>The target version deployment succeeded.</td>
+     * </tr>
+     * <tr>
+     * <td><code>FAILED</code></td>
+     * <td>The preparation or deployment failed. Check <code>failedPhase</code> and <code>error</code>.</td>
+     * </tr>
+     * <tr>
+     * <td><code>CANCELLED</code></td>
+     * <td>The target version has been replaced by a subsequent configuration or canceled.</td>
+     * </tr>
+     * <tr>
+     * <td>After the task is found, you can use the <code>preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> to continuously query the progress.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
      * 
      * @param request the request parameters of FindCustomAgentImagePreparation  FindCustomAgentImagePreparationRequest
      * @return FindCustomAgentImagePreparationResponse
@@ -1218,8 +1627,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Skips the regular review process and forcibly publishes a specified Skill version.</p>
+     * <p>Forcibly publishes a specified skill version by bypassing the standard review process.</p>
      * 
      * @param request the request parameters of ForcePublishSkillVersion  ForcePublishSkillVersionRequest
      * @return ForcePublishSkillVersionResponse
@@ -1240,7 +1648,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the access application. The secret is returned only upon creation and is not returned by the query operation.</p>
+     * <p>Queries the configuration of an access application in a workspace to view the application access information and user source settings.
+     * The query result does not include the plaintext of the application secret. The secret is returned only when the application is created.</p>
      * 
      * @param request the request parameters of GetAccessApplication  GetAccessApplicationRequest
      * @return GetAccessApplicationResponse
@@ -1261,8 +1670,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from OSS. The package is located by using workspaceId and agentId. Arbitrary Bucket, Object Key, or historical version parameters are not accepted.
-     * The current configuration must reference an available, fixed code package, and there is no need to wait for a running instance to be ready. An error is returned if the code package does not exist, has been changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the API again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in this response.</p>
+     * <p>Retrieves the download URL for the currently saved code package of a custom code or image agent, which can be used to download, inspect, or reuse the fixed code package.</p>
+     * <h3>Download scope</h3>
+     * <p>Locates the fixed code package referenced by the currently saved configuration by using <code>workspaceId</code> and <code>agentId</code>. This applies to code packages uploaded locally or imported from OSS. Arbitrary bucket names, object keys, or historical version parameters are not accepted.
+     * The current configuration must be deployed as a code package and the fixed package must be available. You do not need to wait for the running instance to be ready. An error is returned if the object has been changed, is missing, or is unreadable.</p>
+     * <h3>Use the response</h3>
+     * <p>Use <code>downloadUrl</code> to download the file. The <code>fileName</code>, <code>fileSize</code>, <code>format</code>, <code>etag</code>, and <code>crc64</code> fields describe the corresponding fixed package. The unit of <code>fileSize</code> is bytes. The <code>resourceVersionId</code> field identifies the saved configuration version corresponding to this download.
+     * The URL is valid for up to 10 minutes and does not exceed the validity period of the underlying credentials, subject to <code>expiresAt</code>. Retrieve the URL again after it expires.</p>
      * 
      * @param request the request parameters of GetAgentCodePackageDownloadUrl  GetAgentCodePackageDownloadUrlRequest
      * @return GetAgentCodePackageDownloadUrlResponse
@@ -1283,8 +1697,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. Clients cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
-     * This authorization reuses the OSSObjectRestoreCustom template, which includes permissions such as reading, writing, and deleting objects. It is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</p>
+     * <p>Generates an authorization link for the workspace resource role to read the code package source bucket, which is used to complete authorization before deploying an existing OSS code package.</p>
+     * <h3>Authorization steps</h3>
+     * <p><strong>Step 1:</strong> Provide the <code>ossBucketName</code> to obtain the <code>authorizeUrl</code> for the current workspace resource role.
+     * <strong>Step 2:</strong> Open the returned link and confirm the authorization.
+     * <strong>Step 3:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyAgentCodePackageOssRamAuthorization">VerifyAgentCodePackageOssRamAuthorization</a> to query the policy binding status. To verify a specific code package object, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ValidateAgentCodePackageFromOss">ValidateAgentCodePackageFromOss</a>.</p>
+     * <h3>Authorization scope</h3>
+     * <p>The role is selected by the server and cannot be overridden by the caller. This authorization reuses the <code>OSSObjectRestoreCustom</code> template, which includes permissions such as reading, writing, and deleting objects, and is not a read-only authorization. Existing authorizations for the same role and bucket can be reused.
+     * Obtaining the link itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace.</p>
      * 
      * @param request the request parameters of GetAgentCodePackageOssRamAuthorizeUrl  GetAgentCodePackageOssRamAuthorizeUrlRequest
      * @return GetAgentCodePackageOssRamAuthorizeUrlResponse
@@ -1305,8 +1725,33 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ file name without a directory path. The format must match the file extension. The fileSize is specified in bytes, with valid values ranging from 1 to 500,000,000.
-     * Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the validity period of the underlying temporary credentials. Retrieve a new URL if it expires. The example URL is redacted and cannot be used for actual uploads. Use the original URL and request headers from this response.</p>
+     * <p>Retrieves a time-limited direct upload URL and upload requirements for a local code package. After the upload is complete, use the returned <code>sourceUri</code> to submit the agent deployment.</p>
+     * <h3>Request requirements</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Requirement</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>fileName</code></td>
+     * <td>The name of the ZIP or TAR.GZ file without the folder. Maximum length: 255 characters.</td>
+     * </tr>
+     * <tr>
+     * <td><code>format</code></td>
+     * <td><code>zip</code> or <code>tar.gz</code>. Must match the file name extension.</td>
+     * </tr>
+     * <tr>
+     * <td><code>fileSize</code></td>
+     * <td>The size of the compressed package in bytes. Valid values: 1 to 500000000.</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Upload and deployment</h3>
+     * <p><strong>Step 1:</strong> Use the <code>uploadMethod</code>, <code>uploadUrl</code>, and <code>headers</code> from the response to upload the file directly. This operation only generates the URL and does not upload the file content.
+     * <strong>Step 2:</strong> After the upload is complete, specify the <code>sourceUri</code> in the <code>artifact.code.sourceUri</code> parameter of the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a> operation. You must also provide the <code>languageRuntime</code>, <code>entrypoint</code>, and service port.
+     * <strong>Step 3:</strong> During creation or update, the actual object and its size are verified again. The configuration is saved after the object is transferred to a fixed replica.
+     * The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. The exact expiration time is subject to the <code>expiresAt</code> value. If the URL expires, obtain a new one and use the original link and request headers from the response.</p>
      * 
      * @param request the request parameters of GetAgentCodePackageUploadUrl  GetAgentCodePackageUploadUrlRequest
      * @return GetAgentCodePackageUploadUrlResponse
@@ -1348,8 +1793,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</p>
+     * <p>Queries the basic information, version status, and summaries of all versions of an agent template (AgentSpec) for viewing the template and selecting a version.</p>
      * 
      * @param request the request parameters of GetAgentSpec  GetAgentSpecRequest
      * @return GetAgentSpecResponse
@@ -1370,8 +1814,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Retrieves the OSS presigned upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, you can call the AgentSpec OSS upload API to complete the import.</p>
+     * <p>Retrieves the upload URL for an agent template (AgentSpec) ZIP package to import templates from local files.
+     * Files are transferred through Object Storage Service (OSS). First, upload the file by using the returned URL, and then call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadAgentSpecViaOss">UploadAgentSpecViaOss</a> API operation to complete the import.</p>
      * 
      * @param request the request parameters of GetAgentSpecImportFileUrl  GetAgentSpecImportFileUrlRequest
      * @return GetAgentSpecImportFileUrlResponse
@@ -1392,8 +1836,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</p>
+     * <p>Queries the full content of the latest version of an agent template (AgentSpec) for viewing or editing the latest version.</p>
      * 
      * @param request the request parameters of GetAgentSpecLatest  GetAgentSpecLatestRequest
      * @return GetAgentSpecLatestResponse
@@ -1414,8 +1857,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Queries the complete content of a specified AgentSpec version, including the manifest content, resource files, and metadata.</p>
+     * <p>Queries the full content of a specified agent template version, including the manifest content, resource files, and metadata.</p>
      * 
      * @param request the request parameters of GetAgentSpecVersion  GetAgentSpecVersionRequest
      * @return GetAgentSpecVersionResponse
@@ -1436,7 +1878,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a single credential. Sensitive fields are not returned.</p>
+     * <p>Queries the details of a specified credential and returns the list of agents bound to the credential.</p>
+     * <h3>Response content</h3>
+     * <p>Queries the credential type, description, application scope, and binding information. Supports two types: <code>apiKey</code> and <code>mcpHeader</code>.</p>
+     * <ul>
+     * <li><code>apiKey</code>: The key value is returned in a masked format.</li>
+     * <li><code>mcpHeader</code>: Returns the configured header name without the header value. The <code>resourceType</code> of the applicable resource is <code>mcpServer</code>.
+     * To modify the configuration, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCredential">UpdateCredential</a>.</li>
+     * </ul>
      * 
      * @param request the request parameters of GetCredential  GetCredentialRequest
      * @return GetCredentialResponse
@@ -1457,9 +1906,49 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After you create or update a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for the version. If retryable is true, you can query again later.
-     * The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the sandboxPhaseCounts running instance statistics.
-     * If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
+     * <p>Queries the configuration, artifacts, and running status of a custom code or image agent to confirm the processing and effective results of creation or updates.</p>
+     * <h3>Query configuration processing results</h3>
+     * <p>After creation or update, you can poll this operation. The returned configuration belongs to the latest submitted version and may not have taken effect yet.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>latestSpecVersion</code></td>
+     * <td>The latest expected configuration version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>effectiveSpecVersion</code></td>
+     * <td>The currently effective configuration version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>latestVersionStatus</code></td>
+     * <td>The processing status of the latest expected version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>latestExecutionError</code></td>
+     * <td>The reason why the latest version is waiting for a retry or failed to execute, and whether automatic retry is enabled.</td>
+     * </tr>
+     * <tr>
+     * <td><code>status</code></td>
+     * <td>The overall status of the agent.</td>
+     * </tr>
+     * <tr>
+     * <td><code>sandboxPhaseCounts</code></td>
+     * <td>The snapshot of the number of running instances in each phase.</td>
+     * </tr>
+     * <tr>
+     * <td><code>pending</code>, <code>processing</code>, and <code>waiting_retry</code> indicate that processing is continuing. <code>succeeded</code> indicates that the configuration is processed successfully. If the value is <code>failed</code>, troubleshoot the issue based on <code>latestExecutionError</code>. Instance status and configuration processing status are queried separately.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Code packages and images</h3>
+     * <p>In code package mode, <code>artifact.code.sourceUri</code> is the saved fixed package address, and <code>codePackageInfo</code> provides the package information. To download the current fixed package, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageDownloadUrl">GetAgentCodePackageDownloadUrl</a>.
+     * In image mode, <code>customImage</code> is the most recently saved custom source, and <code>currentImage</code> is the image source of the effective version. The two may be different. You can use <code>imagePreparation.preparationId</code> to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgentImagePreparation">GetCustomAgentImagePreparation</a> to query the preparation and deployment phases of the current custom image. <code>imageCachePreparation.statusAtAcceptance</code> only indicates the cache status at the time of acceptance.
+     * The response does not return the image repository password. If you query an agent that does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
      * 
      * @param request the request parameters of GetCustomAgent  GetCustomAgentRequest
      * @return GetCustomAgentResponse
@@ -1480,7 +1969,54 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the preparation and deployment phases of the current submission. The health of the previous instance does not indicate the success of the current deployment. Only phase=SUCCEEDED indicates completion. Regular polling does not create a dump task. A network interruption does not indicate task failure.</p>
+     * <p>Queries the processing progress, such as image checking, copying, and starting, by preparation task ID to track the result of the current custom image submission.</p>
+     * <h3>Obtain the task identifier</h3>
+     * <p>Pass the value of <code>imagePreparation.preparationId</code> from the response of creating or updating a custom code or image agent as the <code>preparationId</code> parameter without modification. It identifies the task for the current submission, not the running instance ID.</p>
+     * <h3>Determine completion</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><code>phase</code></th>
+     * <th>Meaning</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>QUEUED</code>, <code>CHECKING</code></td>
+     * <td>Queued or checking the source.</td>
+     * </tr>
+     * <tr>
+     * <td><code>COPYING</code></td>
+     * <td>Copying the image.</td>
+     * </tr>
+     * <tr>
+     * <td><code>STARTING</code></td>
+     * <td>Starting the target version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>HEALTH_CHECKING</code></td>
+     * <td>Waiting for the target version instance to be ready.</td>
+     * </tr>
+     * <tr>
+     * <td><code>SUCCEEDED</code></td>
+     * <td>The target version is deployed successfully.</td>
+     * </tr>
+     * <tr>
+     * <td><code>FAILED</code></td>
+     * <td>The preparation or deployment failed. Check <code>failedPhase</code> and <code>error</code>.</td>
+     * </tr>
+     * <tr>
+     * <td><code>CANCELLED</code></td>
+     * <td>The target version has been replaced by a subsequent configuration or canceled.</td>
+     * </tr>
+     * <tr>
+     * <td>The query only reads the status and does not recreate the copy task. <code>SUCCEEDED</code> applies to the current target version. Seeing only old instances running does not indicate that the current submission is complete. If the configuration version is replaced by a subsequent submission, the current task may return <code>CANCELLED</code>.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>If the create or update response is lost, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/FindCustomAgentImagePreparation">FindCustomAgentImagePreparation</a> with the <code>clientToken</code> used at that time to retrieve the preparation task.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
      * 
      * @param request the request parameters of GetCustomAgentImagePreparation  GetCustomAgentImagePreparationRequest
      * @return GetCustomAgentImagePreparationResponse
@@ -1501,7 +2037,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a specified external agent.</p>
+     * <p>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration effectiveness.</p>
+     * <h3>Configuration processing and runtime status</h3>
+     * <p><code>latestSpecVersion</code> and <code>latestVersionStatus</code> indicate the latest submitted configuration and its processing status. <code>status</code> represents the platform resource status, and <code>externalAgentStatus</code> represents the external runtime status. A successful configuration acceptance does not mean that the external process is connected.
+     * If <code>modelSource</code> is <code>PLATFORM</code>, the returned model configuration is used. <code>RUNTIME</code> indicates that the model is managed by the external environment. <code>configuredSkills</code> indicates explicit skill configurations, and <code>skills</code> represents the aggregated skill information.</p>
+     * <h3>External access</h3>
+     * <p>After the configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to query available networks, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain access information. If the agent does not exist, has been deleted, or does not belong to the workspace, a resource not found error is returned.</p>
      * 
      * @param request the request parameters of GetExternalAgent  GetExternalAgentRequest
      * @return GetExternalAgentResponse
@@ -1522,7 +2063,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the available access network types for a specified external agent.</p>
+     * <p>Queries the available public and internal network access methods for a managed agent to select the network used for subsequent connections.</p>
+     * <h3>Prerequisites</h3>
+     * <p>The managed agent must be in the running state, and the latest desired configuration must be applied. If the configuration is still being created, updated, or not fully applied, query the status first by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
+     * <h3>Select an access network</h3>
+     * <p>In the response, the <code>networkType</code> in <code>networkOptions</code> is <code>INTRANET</code> or <code>INTERNET</code>, and <code>available</code> indicates whether the corresponding access endpoint is available. Select a network with <code>available=true</code> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the corresponding access information.</p>
      * 
      * @param request the request parameters of GetExternalAgentBootstrapOptions  GetExternalAgentBootstrapOptionsRequest
      * @return GetExternalAgentBootstrapOptionsResponse
@@ -1543,30 +2088,47 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>Reads existing bindings by type. CustomSSO returns the saved protocol, normalized saml, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, saml and configuration may not be returned. If saml is configured, the system additionally queries AgentIdentity, and configuration represents the actual SSO configuration. The saml field is the data source for the edit form. The status switch for configuration is Enabled or Disabled. If the upstream query fails, an error is returned. The failure cannot be treated as an unconfigured state.
-     * Only this operation reads back the actual SAML configuration. List and write operations do not guarantee that configuration is returned. WAITING_CONFIGURATION indicates that user pool initialization is complete but the SAML metadata has not been saved. In this case, you can read the service provider (SP) information, fill in the configuration, or disconnect the integration. Do not lock the form and wait for the READY state. UPDATING and UPDATE_FAILED describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</p>
-     * <h2>Requests and examples</h2>
-     * <p>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-     * Call conventions: Call the operation in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct-connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</p>
-     * <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
-     * </code></pre>
-     * <h2>Response examples</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: {
-     *     &quot;workspaceId&quot;: &quot;ws-example&quot;,
-     *     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-     *     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
-     *     &quot;loginEnabled&quot;: false,
-     *     &quot;syncEnabled&quot;: false
-     *   }
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as an unconfigured state. Actual authentication and workspace non-existence errors follow common error handling procedures.
-     * 404 IdentityProviderNotFound: No binding exists, or the input type is inconsistent with the current binding. If SAML is already configured, an upstream readback failure does not degrade to a successful empty configuration.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>SAML configuration completion and logon enabling are independent operations. protocol=SAML and the presence of the saml field indicate that the logon configuration has been submitted, and loginEnabled indicates the expected logon switch. Check the effective status based on the actual SSO status in configuration. SCIM uses an independent query operation. Do not use status=READY of this operation as the basis for successful SCIM synchronization. Currently, OIDC and JIT configurations or JIT status fields are not provided.</p>
+     * <p>Queries the enterprise identity providers bound to a workspace to view the access configuration, logon and user synchronization switches, and configuration processing progress.
+     * For a custom identity provider (<code>CustomSSO</code>), this API operation also reads the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</p>
+     * <h3>How to interpret the query results</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Purpose</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>identityProviderType</code></td>
+     * <td>Indicates whether DingTalk, Lark, or a custom identity provider is currently connected.</td>
+     * </tr>
+     * <tr>
+     * <td><code>loginEnabled</code></td>
+     * <td>Indicates whether enterprise account logon is enabled.</td>
+     * </tr>
+     * <tr>
+     * <td><code>saml</code></td>
+     * <td>The saved SAML configuration of the enterprise identity system, used for backfilling when editing the configuration.</td>
+     * </tr>
+     * <tr>
+     * <td><code>configuration</code></td>
+     * <td>The actual SAML configuration read from the identity service, used to verify whether the logon configuration has taken effect.</td>
+     * </tr>
+     * <tr>
+     * <td><code>status</code></td>
+     * <td>The processing progress to attach the identity provider or apply the logon configuration.</td>
+     * </tr>
+     * <tr>
+     * <td>If <code>CustomSSO</code> returns <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and continue configuring enterprise single sign-on.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>After saving the logon configuration, you can query <code>status</code> to track the processing progress. <code>READY</code> indicates that the configuration processing is complete. To check whether logon is enabled, you also need to verify <code>loginEnabled</code> and <code>configuration</code>.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Query user synchronization status</h3>
+     * <p>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system to the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</p>
      * 
      * @param request the request parameters of GetIdentityProvider  GetIdentityProviderRequest
      * @return GetIdentityProviderResponse
@@ -1587,33 +2149,78 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>The shared CustomSSO user pool must be created and not in the process of overall unbinding or unbinding failure. Prior SAML configuration is not required. Ongoing SAML updates or update failures do not block the query. The configuration.status and baseUrl fields are retrieved from AgentIdentity. syncEnabled is the expected synchronization switch for AC. operationStatus represents the most recent independent SCIM switch and the initial full import task when enabled. The presence of a URL does not indicate that external provisioning is complete, nor does it mean that AC synchronization is enabled.
-     * operationStatus: PENDING (waiting), RUNNING (executing), PAUSED (paused), SUCCESS (succeeded), FAILED (failed), CANCELED (canceled). Returns null or is omitted if no historical tasks exist. You can poll the status when it is PENDING or RUNNING. Stop polling when it reaches a terminal state. You can manually refresh the status when it is PAUSED. This operation does not provide the taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or the health of continuous incremental synchronization. The URL, credentials, and historical task records may be retained after it is disabled.
-     * status is the independent SCIM configuration state: UNCONFIGURED (preparation is not complete); WAITING_CONFIGURATION (the receiving endpoint is enabled, the HTTPS URL is valid, and at least one valid token exists, waiting for external configuration and enablement confirmation); UPDATING (an enablement or disablement task is being executed); READY (synchronization is enabled and the current enablement task succeeded, and the receiving endpoint, URL, and credentials remain available); DISABLED (disabled and the configuration is retained); UPDATE_FAILED (the operation failed, was paused, was canceled, or the configuration and credentials are unavailable after enablement). The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY state does not prove that Matrix execution is complete, the external connection test has passed, or continuous incremental synchronization is healthy.</p>
-     * <h2>Requests and examples</h2>
-     * <p>GET /workspaces/{workspaceId}/scim-provisioning
-     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS credential that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not imply that the HTTP request uses a long-lived connection to wait for completion.</p>
-     * <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning
-     * </code></pre>
-     * <h2>Response examples</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: {
-     *     &quot;status&quot;: &quot;READY&quot;,
-     *     &quot;configuration&quot;: {
-     *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;
-     *     },
-     *     &quot;syncEnabled&quot;: true,
-     *     &quot;operationStatus&quot;: &quot;SUCCESS&quot;
-     *   }
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls that fail upstream may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace-not-found errors follow the common error handling process.
-     * 400 InvalidParameter: the shared user pool is unavailable, being unbound, or failed to unbind. If no binding exists, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the original error and cannot be mapped to Disabled, unconfigured, or synchronization succeeded.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token into the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is complete. It does not indicate the health of continuous incremental synchronization or the success of the external provisioning connection test.</p>
+     * <p>Queries the access configuration and processing progress of SCIM user synchronization to determine whether the receiving end is ready, whether AgentCore user synchronization is enabled, and whether the most recent synchronization operation is completed.
+     * SCIM is a user provisioning protocol. The enterprise identity system sends user information to the user pool through the receiving URL and access token. After AgentCore user synchronization is enabled, users in the user pool are imported into the workspace.</p>
+     * <h3>How to interpret the query results</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Business meaning</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>configuration</code></td>
+     * <td>The actual status and receiving URL of the SCIM receiving endpoint.</td>
+     * </tr>
+     * <tr>
+     * <td><code>syncEnabled</code></td>
+     * <td>The expected switch for AgentCore user synchronization.</td>
+     * </tr>
+     * <tr>
+     * <td><code>operationStatus</code></td>
+     * <td>The execution result of the most recent operation to enable or disable synchronization. It is an empty string <code>&quot;&quot;</code> if no historical tasks exist.</td>
+     * </tr>
+     * <tr>
+     * <td><code>status</code></td>
+     * <td>The SCIM access state derived from the receiving endpoint configuration, credentials, and operation results.</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Proceed based on the status</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><code>status</code></th>
+     * <th>Current stage</th>
+     * <th>Next step</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>UNCONFIGURED</code></td>
+     * <td>The receiving end is not ready.</td>
+     * <td>Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare for access.</td>
+     * </tr>
+     * <tr>
+     * <td><code>WAITING_CONFIGURATION</code></td>
+     * <td>The URL and valid credentials are available. Waiting for the enterprise-side configuration to be completed and synchronization to be enabled.</td>
+     * <td>Configure the URL and token in the enterprise identity system, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
+     * </tr>
+     * <tr>
+     * <td><code>UPDATING</code></td>
+     * <td>Synchronization is being enabled or disabled.</td>
+     * <td>Continue to query this operation and wait for the operation to complete.</td>
+     * </tr>
+     * <tr>
+     * <td><code>READY</code></td>
+     * <td>Synchronization is enabled, the current enabling task is successful, and the receiving end and credentials are still available.</td>
+     * <td>You can view the synchronized workspace users.</td>
+     * </tr>
+     * <tr>
+     * <td><code>DISABLED</code></td>
+     * <td>Synchronization is disabled. Existing configurations, credentials, and users are retained.</td>
+     * <td>To re-establish access, check and prepare the receiving end first, and then enable synchronization.</td>
+     * </tr>
+     * <tr>
+     * <td><code>UPDATE_FAILED</code></td>
+     * <td>The operation failed, or the configuration and credentials after enabling are no longer available.</td>
+     * <td>Check the operation results and access configuration in combination with <code>operationStatus</code>.</td>
+     * </tr>
+     * <tr>
+     * <td>This operation queries the SCIM status. The SAML enterprise account logon configuration is queried through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. <code>READY</code> reflects the result of the current enabling operation. The user assignment and provisioning status in the enterprise identity system must still be verified on the enterprise side.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
      * 
      * @param request the request parameters of GetIdentityProviderSCIM  GetIdentityProviderSCIMRequest
      * @return GetIdentityProviderSCIMResponse
@@ -1634,29 +2241,43 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>An available CustomSSO shared user pool is required. The identityProviderType must be CustomSSO, and the protocol parameter is required and only supports the exact value SAML. Uploading the IdP metadata in advance is not required. This operation returns the entityId, acsUrl, and metadataXml of the local SP for users to configure an external IdP. These values are not the logon URL or IdP Entity ID of the external IdP. You cannot submit the SP XML as the IdP XML to UpdateIdentityProvider.
-     * This operation is read-only. It does not enable logon, enable SCIM, create credentials, or perform logon connection tests. You cannot read the information when the shared pool is being initialized, being unbound, or failed to be unbound.</p>
-     * <h2>Requests and examples</h2>
-     * <p>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider
-     * Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
-     * <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML
+     * <p>Retrieves the SAML service provider (SP) access information of AgentCore to configure single sign-on (SSO) in an enterprise identity provider (IdP).
+     * An SP is a service provider that receives logon assertions. An IdP is an enterprise identity provider that verifies user identities and issues logon assertions. This operation returns the SP information on the AgentCore side.</p>
+     * <h3>Before you begin</h3>
+     * <p>The workspace is bound to CustomSSO, and the shared user pool is initialized. The protocol parameter is required and must be set to SAML.
+     * You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool is available, you can obtain the SP information and then complete the SAML configuration.</p>
+     * <h3>Request example</h3>
+     * <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/CustomSSO/service-provider?protocol=SAML
      * </code></pre>
-     * <h2>Response examples</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: {
-     *     &quot;protocol&quot;: &quot;SAML&quot;,
-     *     &quot;entityId&quot;: &quot;&lt;Local SP Entity ID&gt;&quot;,
-     *     &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,
-     *     &quot;metadataXml&quot;: &quot;&lt;Local SP Metadata XML&gt;&quot;
-     *   }
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream service may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-     * 400 InvalidParameter: The identityProviderType or protocol is not supported. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, or failed to be unbound.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>SAML configuration sequence: Call CreateIdentityProvider to initialize the CustomSSO shared pool and wait for GetIdentityProvider to return READY. Call this operation to obtain the SP information and configure it in the external IdP. Then, submit the external IdP metadata XML or complete manual configuration to UpdateIdentityProvider. After saving, enable loginEnabled separately as needed. Querying the SP information does not complete the external IdP configuration or verify logon.</p>
+     * <h3>Response information</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Purpose</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>protocol</td>
+     * <td>The access protocol. This operation returns SAML.</td>
+     * </tr>
+     * <tr>
+     * <td>entityId</td>
+     * <td>The SP identifier of AgentCore. Configure it as the service provider Entity ID in the enterprise IdP.</td>
+     * </tr>
+     * <tr>
+     * <td>acsUrl</td>
+     * <td>The URL where AgentCore receives SAML logon assertions. Configure it as the ACS URL in the enterprise IdP.</td>
+     * </tr>
+     * <tr>
+     * <td>metadataXml</td>
+     * <td>The SP metadata XML. Import it to configure the SP in an enterprise IdP that supports metadata import.</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Configuration flow</h3>
+     * <p><strong>Step 1:</strong> Call this operation to obtain the SP information, and configure the SP identifier and the URL to accept assertions of AgentCore in the enterprise IdP.
+     * <strong>Step 2:</strong> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>.
+     * <strong>Step 3:</strong> After the configuration is complete, enable single sign-on logon by setting loginEnabled as needed.</p>
      * 
      * @param request the request parameters of GetIdentityProviderServiceProvider  GetIdentityProviderServiceProviderRequest
      * @return GetIdentityProviderServiceProviderResponse
@@ -1677,26 +2298,41 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task based on the local taskId in AgentCore. The taskId must be returned by CreateIdentityProviderSyncJob for the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not represent the number of newly added users or the progress percentage.
-     * Authorization information: The RAM action is agentcore:GetIdentityProviderSyncJob. The access level is Read. The resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
-     * Idempotence and retry: This API operation is read-only and can be repeatedly called.
-     * Calling this API operation is free of charge. Operation records support ActionTrail audit.
-     * Sample response:</p>
-     * <pre><code class="language-json">{
-     *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
-     *   &quot;message&quot;: &quot;success&quot;,
-     *   &quot;httpStatusCode&quot;: 200,
-     *   &quot;code&quot;: &quot;SUCCESS&quot;,
-     *   &quot;success&quot;: true,
-     *   &quot;data&quot;: {
-     *     &quot;taskId&quot;: &quot;12345678-1234-4234-8234-123456789abc&quot;,
-     *     &quot;status&quot;: &quot;SUCCESS&quot;,
-     *     &quot;currentStep&quot;: &quot;SYNC&quot;,
-     *     &quot;synchronizationJobId&quot;: &quot;syncjob_0123456789abcdef0123456789abcdef&quot;,
-     *     &quot;syncedUserCount&quot;: 12
-     *   }
-     * }
-     * </code></pre>
+     * <p>Queries the progress, number of processed users, and failure causes of a user synchronization task to track whether manual synchronization is complete.
+     * Use the <code>taskId</code> returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> and keep the same workspace and identity provider.</p>
+     * <h3>Determine synchronization results</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><code>status</code></th>
+     * <th>Meaning and what to do next</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>PENDING</code>, <code>RUNNING</code></td>
+     * <td>The node is not yet complete. You can continue to query.</td>
+     * </tr>
+     * <tr>
+     * <td><code>PAUSED</code></td>
+     * <td>The node is paused and has not ended.</td>
+     * </tr>
+     * <tr>
+     * <td><code>SUCCESS</code></td>
+     * <td>The synchronization is complete. You can view the workspace users.</td>
+     * </tr>
+     * <tr>
+     * <td><code>FAILED</code></td>
+     * <td>The synchronization failed. Check <code>failureReason</code>.</td>
+     * </tr>
+     * <tr>
+     * <td><code>CANCELED</code></td>
+     * <td>The node is canceled.</td>
+     * </tr>
+     * <tr>
+     * <td><code>syncedUserCount</code> is the number of processed users, including updated existing users. It is not the number of newly added users and cannot be directly used as a completion percentage. <code>null</code> is returned when the count is not yet available.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
      * 
      * @param request the request parameters of GetIdentityProviderSyncJob  GetIdentityProviderSyncJobRequest
      * @return GetIdentityProviderSyncJobResponse
@@ -1717,37 +2353,31 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the saved synchronization scope, selected department validity, and user count estimation of the downstream identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not indicate that the organization has no sub-departments. Estimations can only be used when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
-     * Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncScope. The access level is Read. The resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
-     * Idempotence and retry: This operation is read-only and can be called repeatedly.
-     * Calling this API is free of charge. Operation records support ActionTrail auditing.
-     * Response example:</p>
-     * <pre><code class="language-json">{
-     *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
-     *   &quot;message&quot;: &quot;success&quot;,
-     *   &quot;httpStatusCode&quot;: 200,
-     *   &quot;code&quot;: &quot;SUCCESS&quot;,
-     *   &quot;success&quot;: true,
-     *   &quot;data&quot;: {
-     *     &quot;syncScope&quot;: {
-     *       &quot;mode&quot;: &quot;SelectedDepartments&quot;,
-     *       &quot;departmentIds&quot;: [
-     *         &quot;10001&quot;
-     *       ]
-     *     },
-     *     &quot;selectedDepartments&quot;: [
-     *       {
-     *         &quot;id&quot;: &quot;10001&quot;,
-     *         &quot;name&quot;: &quot;R&amp;D Department&quot;,
-     *         &quot;exists&quot;: true
-     *       }
-     *     ],
-     *     &quot;estimateStatus&quot;: &quot;Ready&quot;,
-     *     &quot;expandedDepartmentCount&quot;: 2,
-     *     &quot;estimatedUserCount&quot;: 12
-     *   }
-     * }
-     * </code></pre>
+     * <p>Queries the saved user synchronization scope, checks whether the selected departments are valid, and views the estimated number of departments and users involved. You can use this operation to verify the scope before initiating a manual synchronization.</p>
+     * <h3>View synchronization scope</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><code>syncScope.mode</code></th>
+     * <th>Synchronization scope</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>AllAuthorized</code></td>
+     * <td>The address book scope authorized for the enterprise application. The specific scope is determined by the enterprise\&quot;s authorization.</td>
+     * </tr>
+     * <tr>
+     * <td><code>SelectedDepartments</code></td>
+     * <td>The saved scope of specified departments. Use <code>selectedDepartments</code> to view the selected departments and their validity.</td>
+     * </tr>
+     * <tr>
+     * <td>This operation reads the saved configuration. After adjusting the department selection, save the changes by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> before querying the estimated results. To browse the complete department tree, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a>.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Use user count estimation</h3>
+     * <p>You can use <code>expandedDepartmentCount</code> and <code>estimatedUserCount</code> only when <code>estimateStatus=Ready</code> and the counts are not <code>null</code>. Counts that have not been obtained return <code>null</code> and must not be treated as 0.
+     * After confirming the scope, initiate the synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a>.</p>
      * 
      * @param request the request parameters of GetIdentityProviderSyncScope  GetIdentityProviderSyncScopeRequest
      * @return GetIdentityProviderSyncScopeResponse
@@ -1768,7 +2398,43 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of the logical image cache in the current workspace. It returns the complete source, current digest, actual capacity, creation time, status, and secure error messages. The AgentCount field counts the configuration references with the feature enabled. The CanDelete field verifies both configuration references and instance usage. If the feature is disabled, the count is 0, but deletion remains prohibited if legacy instances are not released. Resources with the same content from other workspaces are not returned if the resource does not belong to the current workspace.</p>
+     * <p>Queries the creation status and usage of an image cache to determine whether the cache is available and meets the deletion conditions.</p>
+     * <h3>Cache status</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><code>status</code></th>
+     * <th>Meaning</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>PENDING</code></td>
+     * <td>Preparing. Continue to query.</td>
+     * </tr>
+     * <tr>
+     * <td><code>READY</code></td>
+     * <td>Ready.</td>
+     * </tr>
+     * <tr>
+     * <td><code>FAILED</code></td>
+     * <td>Preparation failed. Troubleshoot based on the <code>error</code> field.</td>
+     * </tr>
+     * <tr>
+     * <td><code>DELETING</code></td>
+     * <td>Deleting.</td>
+     * </tr>
+     * <tr>
+     * <td><code>DISABLED</code></td>
+     * <td>Disabled.</td>
+     * </tr>
+     * <tr>
+     * <td>The <code>digest</code> is provided after the source resolution is completed. The unit of <code>cacheSizeBytes</code> is bytes, and it can be empty when the cache is not yet available.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Usage and deletion</h3>
+     * <p><code>agentCount</code> indicates the number of agents that have enabled the cache switch and reference this cache. <code>canDelete</code> and <code>deleteBlockReason</code> indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests will recheck the usage.
+     * The query scope of this operation is determined by <code>regionId</code>, <code>workspaceId</code>, and <code>imageId</code>.</p>
      * 
      * @param request the request parameters of GetImageCache  GetImageCacheRequest
      * @return GetImageCacheResponse
@@ -1788,6 +2454,43 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the configuration, skill versions, and running status of a managed Harness agent to view the current configuration and its processing results.</p>
+     * <h3>Configuration and running status</h3>
+     * <p>This operation returns the latest submitted configuration, which may still be processing. Use the following fields to determine the update progress and running status:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Purpose</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>latestSpecVersion</code></td>
+     * <td>The latest submitted desired configuration version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>latestVersionStatus</code></td>
+     * <td>The processing status of the desired version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>status</code></td>
+     * <td>The overall status of the agent.</td>
+     * </tr>
+     * <tr>
+     * <td><code>sandboxPhaseCounts</code></td>
+     * <td>The current snapshot of the number of instances in each phase.</td>
+     * </tr>
+     * <tr>
+     * <td>Successful configuration processing does not mean that all old instances have been replaced. To view specific instances or active sessions, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a> and <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxSessions">ListSandboxSessions</a> respectively.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Harness and skill versions</h3>
+     * <p><code>harness.type</code> indicates the runtime framework determined at creation. For qodercli, <code>connectorServiceAccountKey</code> returns the ID of the bound account key record and does not return the original key.
+     * <code>configuredSkills</code> refers to explicitly configured skills. <code>skills</code> includes the aggregated results of template and explicit configurations. <code>resolvedVersion</code> is the current target version, and <code>appliedVersion</code> is the version currently in effect at runtime. These two may differ during an update. <code>fromTemplate=true</code> indicates that the skill comes from a template.
+     * If you query an agent that does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</p>
+     * 
      * @param request the request parameters of GetManagedAgent  GetManagedAgentRequest
      * @return GetManagedAgentResponse
      */
@@ -1807,7 +2510,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
      * <p>Queries the details of a specified MCP service, such as the address, type, status, authentication configuration, and protocol.</p>
      * 
      * @param request the request parameters of GetMcp  GetMcpRequest
@@ -1829,7 +2531,36 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Returns the current template version and installation form schema.</p>
+     * <p>Retrieves a temporary upload URL for a local MCP code package to create or update an MCP service of the code deployment type.</p>
+     * <h3>Upload and deployment steps</h3>
+     * <p><strong>Step 1:</strong> Prepare a ZIP code package, enter the file name in <code>fileName</code>, and call this operation to obtain the upload information.
+     * <strong>Step 2:</strong> Use the returned <code>uploadMethod</code>, <code>uploadUrl</code>, and <code>headers</code> to upload the file content. The package size cannot exceed <code>maxSize</code>. The current limit is 50 MiB (52,428,800 bytes).
+     * <strong>Step 3:</strong> After the upload is complete, submit the <code>codePackageToken</code> to the code deployment configuration in <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateMcp">CreateMcp</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateMcp">UpdateMcp</a>.
+     * <strong>Step 4:</strong> After submitting the deployment, query the service status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a>.</p>
+     * <h3>Validity period</h3>
+     * <p>For the expiration time of the upload URL, see <code>expiresAt</code>. For the expiration time of the temporary code package, see <code>artifactExpiresAt</code>. Complete the upload and deployment within the corresponding periods. If the upload URL expires, retrieve it again.</p>
+     * 
+     * @param request the request parameters of GetMcpCodePackageUploadUrl  GetMcpCodePackageUploadUrlRequest
+     * @return GetMcpCodePackageUploadUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetMcpCodePackageUploadUrlResponse> getMcpCodePackageUploadUrl(GetMcpCodePackageUploadUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMcpCodePackageUploadUrl").setMethod(HttpMethod.POST).setPathRegex("/workspaces/{workspaceId}/mcp-server-actions/get-code-package-upload-url").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMcpCodePackageUploadUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMcpCodePackageUploadUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the capabilities, parameters, and version information of an MCP marketplace template to help you select a template and prepare for installation and configuration.
+     * Returns the current template version and the installation form schema.</p>
      * 
      * @param request the request parameters of GetMcpMarketItem  GetMcpMarketItemRequest
      * @return GetMcpMarketItemResponse
@@ -1871,7 +2602,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the public information and current status of a MemoryStore in a specified workspace.</p>
+     * <p>Queries the configuration and current status of a long-term memory store (MemoryStore) for viewing memory store information.</p>
      * 
      * @param request the request parameters of GetMemoryStore  GetMemoryStoreRequest
      * @return GetMemoryStoreResponse
@@ -1892,7 +2623,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the task ID returned by the asynchronous AddMemories operation.</p>
+     * <p>Queries the progress and results of a memory extraction task by using the <code>taskId</code> returned by the asynchronous <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/AddMemories">AddMemories</a> operation.</p>
      * 
      * @param request the request parameters of GetMemoryTask  GetMemoryTaskRequest
      * @return GetMemoryTaskResponse
@@ -1912,6 +2643,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the detailed configuration and region of a model in a specified workspace.</p>
+     * 
      * @param request the request parameters of GetModel  GetModelRequest
      * @return GetModelResponse
      */
@@ -1930,6 +2664,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the detailed configuration, credential configuration status, publish status, and region of a specified model connection.</p>
+     * 
      * @param request the request parameters of GetModelConnection  GetModelConnectionRequest
      * @return GetModelConnectionResponse
      */
@@ -1949,7 +2686,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description\nQueries the details of a specified service endpoint. A service endpoint (ServiceEndpoint) provides a stable access URL for a specific agent version (AgentVersion) or workspace collaboration component. The response includes target routing, access URL list, authentication configuration, and current lifecycle status.\n.</h2>
+     * <p>Queries the service endpoint of an agent or collaboration component to obtain stable access addresses, authentication configuration, and current status.
+     * A service endpoint associates access addresses with a specified agent version or workspace collaboration component. You can use the target route and address list in the response to verify the access target.</p>
      * 
      * @param request the request parameters of GetServiceEndpoint  GetServiceEndpointRequest
      * @return GetServiceEndpointResponse
@@ -1970,7 +2708,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the currently active API key for a specified service endpoint. The call succeeds only when API key authentication is enabled for the service endpoint and the gateway consumer and credentials are ready. The service reads the API key from the gateway in real time, and AgentCore does not persist the plaintext. Keep the returned API key secure and avoid logging it or exposing it in public configurations.</p>
+     * <p>Retrieves the active API key and invocation method of a service endpoint for external applications to access the endpoint.
+     * The endpoint must have <code>API_KEY</code> authentication enabled and access credentials ready. Securely store the returned API key.</p>
      * 
      * @param request the request parameters of GetServiceEndpointApiKey  GetServiceEndpointApiKeyRequest
      * @return GetServiceEndpointApiKeyResponse
@@ -1991,7 +2730,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
      * <p>Queries the basic information, version status, tags, visibility scope, and version list of a specified skill.</p>
      * 
      * @param request the request parameters of GetSkillDetail  GetSkillDetailRequest
@@ -2013,8 +2751,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Retrieves the OSS presigned upload URL and object name required to import a Skill ZIP package. After the upload is complete, you can call the Skill OSS upload API to complete the import.</p>
+     * <p>Retrieves the upload URL for a skill ZIP package to import a skill from a local file.
+     * Files are transferred through OSS. Upload the file by using the returned URL, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadSkillViaOss">UploadSkillViaOss</a> to complete the import. To check the package content and conflicts, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrecheckSkillUploadViaOss">PrecheckSkillUploadViaOss</a> first.</p>
      * 
      * @param request the request parameters of GetSkillImportFileUrl  GetSkillImportFileUrlRequest
      * @return GetSkillImportFileUrlResponse
@@ -2035,8 +2773,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</p>
+     * <p>Queries the complete details of a specified skill version, including version metadata, skill content, and associated resources.</p>
      * 
      * @param request the request parameters of GetSkillVersionDetail  GetSkillVersionDetailRequest
      * @return GetSkillVersionDetailResponse
@@ -2056,6 +2793,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified team, including the complete attributes and team roles of each user and agent member in the team.</p>
+     * 
      * @param request the request parameters of GetTeam  GetTeamRequest
      * @return GetTeamResponse
      */
@@ -2074,6 +2814,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specific user in a specified workspace.</p>
+     * 
      * @param request the request parameters of GetUser  GetUserRequest
      * @return GetUserResponse
      */
@@ -2093,7 +2836,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nQueries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policies.\n.</h2>
+     * <p>Queries the basic information, associated resources, and network configurations of a workspace for status viewing or configuration verification.
+     * The returned information includes the lifecycle status, associated observability workspace, AI registry namespace, and current network policies.</p>
      * 
      * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
      * @return GetWorkspaceResponse
@@ -2114,7 +2858,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is retained and only new permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. Returns the role resolved by the backend and the authorization URL for the target repository. It does not create ACR or agent execution versions, nor does it deliver runtime configurations. After authorization is complete, you can verify it and then create or update the agent without calling a separate Ensure operation.</p>
+     * <p>Generates an authorization link for the workspace resource role to pull images from a specified ACR Enterprise Edition repository, allowing you to complete access authorization before image deployment.</p>
+     * <h3>Request parameters</h3>
+     * <p>The <code>workspaceId</code> parameter specifies the workspace. The <code>acrInstanceId</code>, <code>namespace</code>, and <code>repository</code> parameters are passed as query parameters. The <code>repository</code> parameter specifies the repository name without the namespace.</p>
+     * <h3>Complete authorization</h3>
+     * <p>Open the <code>authorizeUrl</code> in the response and confirm the authorization. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyWorkspaceAcrRamAuthorization">VerifyWorkspaceAcrRamAuthorization</a> to check the binding status. The role is selected by the server. The <code>roleName</code> and <code>roleSource</code> parameters indicate the selected role and its source, but do not indicate that the authorization is complete.
+     * This authorization is used for ACR image deployment of custom agents and reading image cache sources. Obtaining the link itself does not pull images or create caches.</p>
      * 
      * @param request the request parameters of GetWorkspaceAcrRamAuthorizeUrl  GetWorkspaceAcrRamAuthorizeUrlRequest
      * @return GetWorkspaceAcrRamAuthorizeUrlResponse
@@ -2135,7 +2884,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Determines the account, region, and shared role based on the workspace, and concatenates the resource ARN based on the provided fileSystemId and accessPointId. The server parameter is used to generate the policy name. This operation does not query NAS or check the resource status, and returns an authorization URL that contains only the target NAS policy. After completing RAM authorization, you must call the verification API.</p>
+     * <p>Retrieves the AgenticFS mount authorization link to enable agents in the workspace to access a specified file space.
+     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage type of Apsara File Storage NAS designed for AI agents. It can be used to persistently store files used by agents. AgenticSpace is the file space within it, and an access point provides the mount entry.</p>
+     * <h3>Authorization and mounting steps</h3>
+     * <p><strong>Step 1:</strong> Prepare a file system, an AgenticSpace, and an access point in NAS, and obtain the file system ID, access point ID, and domain name.
+     * <strong>Step 2:</strong> Submit <code>fileSystemId</code>, <code>accessPointId</code>, and <code>server</code> as query parameters. For <code>server</code>, enter the access point domain name returned by the NAS <code>ListAccessPoints</code> operation, without the protocol, port, or path.
+     * <strong>Step 3:</strong> Open the returned <code>authorizeUrl</code> to complete the authorization for the workspace resource role.
+     * <strong>Step 4:</strong> Check the authorization status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyWorkspaceAgenticFsMountRamAuthorization">VerifyWorkspaceAgenticFsMountRamAuthorization</a>.
+     * <strong>Step 5:</strong> When creating or updating a custom code or image agent, or a managed Harness agent, enter the access point domain name, the relative directory <code>path</code>, and the container mount path <code>mountPath</code> in <code>agenticFsMounts</code>.
+     * The access point must be located in the VPC associated with the workspace, and VPC access must be enabled for the agent. The mount directory must already exist. Use a non-empty relative directory within the access point for <code>path</code>, and use an absolute path within the container for <code>mountPath</code>.</p>
      * 
      * @param request the request parameters of GetWorkspaceAgenticFsMountRamAuthorizeUrl  GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
      * @return GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse
@@ -2156,7 +2913,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nQueries the plugin status of a specified workspace. Returns whether the plugin is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plugins are supported: collaboration and agentloop. If a plugin is not installed, its status is DISABLED.\n.</h2>
+     * <p>Queries the status and configuration of the workspace collaboration component to check whether the component is activated and whether the configuration takes effect.
+     * Use <code>pluginName=collaboration</code> to specify the collaboration component. To activate the component, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/InstallWorkspacePlugin">InstallWorkspacePlugin</a>.</p>
      * 
      * @param request the request parameters of GetWorkspacePlugin  GetWorkspacePluginRequest
      * @return GetWorkspacePluginResponse
@@ -2177,7 +2935,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Validates the input based on the specified template version and creates an MCP in the workspace.</p>
+     * <p>Creates an MCP service by using a marketplace template to reuse the tool capabilities and configurations provided by the template.
+     * First, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpMarketItem">GetMcpMarketItem</a> to view the template versions and required parameters, and then submit the configuration based on the selected version. After the service is created, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the service status.</p>
      * 
      * @param request the request parameters of InstallMcpMarketItem  InstallMcpMarketItemRequest
      * @return InstallMcpMarketItemResponse
@@ -2198,7 +2957,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nInstalls a plugin for a specified AgentCore workspace. Currently, only the <code>collaboration</code> plugin is supported. Plugin configurations are passed through the <code>Config</code> parameter, and different plugins can define their own configuration structures. The <code>collaboration</code> plugin uses <code>Config.NetworkConfiguration</code> to specify the VPC and public network access policy. The installation procedure executes asynchronously. If you repeatedly invoke this operation for a plugin with the same name that is being installed or already installed, the operation returns the current status based on idempotent semantics if the configurations are identical. If the configurations are different, the operation returns an operation conflict.\n</h2>
+     * <p>Enables the collaboration component for a workspace and configures initial settings such as the network.
+     * Set pluginName=collaboration to specify the collaboration component. The enabling process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspacePlugin">GetWorkspacePlugin</a> to check the component status and processing result.</p>
      * 
      * @param request the request parameters of InstallWorkspacePlugin  InstallWorkspacePluginRequest
      * @return InstallWorkspacePluginResponse
@@ -2219,8 +2979,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the directory of runtime environments available in the current workspace for creating code package agents or switching runtime environments. The runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
-     * If maxResults is omitted or set to 0, the default value is 10. If it is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If the token becomes invalid due to directory changes, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scale-outs, and regular updates.</p>
+     * <p>Queries the available runtime environments for code package deployment of custom code or image agents, which is used to populate artifact.code.languageRuntime.</p>
+     * <h3>Select a runtime environment</h3>
+     * <p>Copy the languageRuntime value from the response exactly as is into the artifact.code.languageRuntime parameter of <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The catalog is dynamically provided by the current platform version, and internal base image addresses are not returned.</p>
+     * <h3>Pagination rules</h3>
+     * <p>If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. The value cannot be negative. Omit nextToken for the first request. For subsequent requests, use the token returned in the previous response and keep the workspace unchanged. An empty token indicates that the query is complete. If the token becomes invalid due to changes in the runtime environment catalog, restart the query from the first page.
+     * Regular updates, restarts, and scale-outs of existing agents continue to use their saved runtime images. When you create an agent or switch the language runtime environment, the catalog currently returned by this operation prevails.</p>
      * 
      * @param request the request parameters of ListAgentCodeRuntimes  ListAgentCodeRuntimesRequest
      * @return ListAgentCodeRuntimesResponse
@@ -2241,7 +3005,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of IM channels for a specified agent.</p>
+     * <p>Queries the IM channels for a specified agent.</p>
      * 
      * @param request the request parameters of ListAgentIMChannels  ListAgentIMChannelsRequest
      * @return ListAgentIMChannelsResponse
@@ -2262,8 +3026,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Performs a paging query of Agent templates in a specified workspace, and supports name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * @param request the request parameters of ListAgentSpecs  ListAgentSpecsRequest
      * @return ListAgentSpecsResponse
@@ -2283,6 +3046,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the teams to which specified agents belong.</p>
+     * 
      * @param request the request parameters of ListAgentTeams  ListAgentTeamsRequest
      * @return ListAgentTeamsResponse
      */
@@ -2302,7 +3068,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of available models for a specified Connector. Pagination is supported.</p>
+     * <p>Queries the official and enterprise models available for the enabled QoderCLI connector.
+     * Queries the list of models available for a specified connector. Pagination is supported.</p>
      * 
      * @param request the request parameters of ListConnectorModels  ListConnectorModelsRequest
      * @return ListConnectorModelsResponse
@@ -2323,7 +3090,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of connectors in a specified workspace.</p>
+     * <p>Queries the connectors supported by the workspace to view their activation status, configurations, and the number of bound agents.</p>
      * 
      * @param request the request parameters of ListConnectors  ListConnectorsRequest
      * @return ListConnectorsResponse
@@ -2344,7 +3111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for the credential list in a workspace, and supports filtering by type and name during paging.</p>
+     * <p>Performs a paged query for credentials in a specified workspace.</p>
+     * <h3>Query and paging</h3>
+     * <p>Filters credentials by <code>apiKey</code> or <code>mcpHeader</code> type by using <code>credentialType</code>, and performs fuzzy filtering by name by using <code>nameLike</code>.
+     * Uses <code>maxResults</code> to specify the number of entries per page for paging, and uses <code>nextToken</code> in the response to retrieve the next page. The returned credential content is desensitized. To query the details of a single credential, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a>.</p>
      * 
      * @param request the request parameters of ListCredentials  ListCredentialsRequest
      * @return ListCredentialsResponse
@@ -2365,9 +3135,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-     * For the first request, omit nextToken. For subsequent requests, pass the nextToken value returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it yourself. An empty token in the response indicates that there are no more pages.
-     * This operation returns the summaries for the current page and does not return the complete deployment configuration or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in the items.</p>
+     * <p>Performs a paged query to retrieve the identity, deployment method, and status summary of custom code or image agents in a workspace, with paging support.</p>
+     * <h3>Paged query</h3>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20 and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates the end of paging.</p>
+     * <h3>Response content</h3>
+     * <p>This operation returns the summary for the current page. It does not return the complete deployment configurations or errors that occur when you execute the latest configurations. Use <code>items[].agentId</code> to invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a> to query code packages, image sources, results after you execute the version, and running instance statuses.</p>
      * 
      * @param request the request parameters of ListCustomAgents  ListCustomAgentsRequest
      * @return ListCustomAgentsResponse
@@ -2388,7 +3160,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of external agents in a specified workspace.</p>
+     * <h3>Purpose</h3>
+     * <p>Performs a paging query for the identity, configuration version, and status summary of managed agents in a workspace.</p>
+     * <h3>Related concepts</h3>
+     * <ul>
+     * <li>A managed agent runs in a user-provided runtime environment. The platform is responsible for saving the access and capability configurations. The API uses the technical name ExternalAgent.</li>
+     * </ul>
+     * <h3>Paging</h3>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</p>
+     * <h3>Response content</h3>
+     * <p>This operation returns the summary of managed agents. To query the complete models, instructions, tools, skills, and access status, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
      * 
      * @param request the request parameters of ListExternalAgents  ListExternalAgentsRequest
      * @return ListExternalAgentsResponse
@@ -2409,11 +3190,22 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query on DingTalk or Lark departments by hierarchy. You must attach an identity provider, configure a user pool, obtain valid application credentials, and grant address book read authorization. If parentDepartmentId is not specified, the root hierarchy is queried. When expanding a node, use the ID of the node to query its direct child departments. The hasChildren field is used to determine expandability and does not indicate that child nodes have been returned. The nextToken field is only used to continue querying the next page under the current parent department. The query only reads the directory, does not save the synchronization scope, and does not import users. After a new department is added to a DingTalk or Lark organization, you should re-query the corresponding parent department because the old list cannot represent the latest directory.
-     * Authorization information: The RAM action is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
-     * Idempotence and retry: This operation is read-only and can be queried repeatedly.
-     * It is free of charge to invoke this API operation, and operation records support ActionTrail auditing.
-     * Response example:</p>
+     * <p>Queries the list of DingTalk or Lark departments by parent department and paging. This is used when selecting or adjusting the user synchronization scope.</p>
+     * <h3>Before you begin</h3>
+     * <p>A DingTalk or Lark identity provider is bound to the workspace, and the user pool, application credentials, and authorization to read contacts are prepared.</p>
+     * <h3>Query methods</h3>
+     * <ul>
+     * <li>Omit <code>parentDepartmentId</code> to query the root level. Pass a department ID to query its direct child departments.</li>
+     * <li><code>hasChildren</code> indicates whether a department can be expanded. After expansion, use the department ID to query the next level.</li>
+     * <li><code>nextToken</code> is used to continue reading the next page under the same parent department. An empty string indicates that there are no more pages.</li>
+     * </ul>
+     * <h3>Total count and pagination</h3>
+     * <p>This operation does not calculate the total number of departments. Currently, <code>totalCount</code> returns JSON <code>null</code>, which does not mean the number of departments is 0. Whether to continue pagination depends on <code>nextToken</code>.</p>
+     * <h3>Request examples</h3>
+     * <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/departments?maxResults=50
+     * </code></pre>
+     * <h3>Response examples</h3>
+     * <p>The following shows the response structure for an empty directory page. <code>totalCount</code> retains the <code>null</code> value actually returned by the operation.</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
      *   &quot;message&quot;: &quot;success&quot;,
@@ -2422,17 +3214,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      *   &quot;success&quot;: true,
      *   &quot;maxResults&quot;: 50,
      *   &quot;nextToken&quot;: &quot;&quot;,
-     *   &quot;items&quot;: [
-     *     {
-     *       &quot;id&quot;: &quot;10001&quot;,
-     *       &quot;name&quot;: &quot;R&amp;D Department&quot;,
-     *       &quot;parentId&quot;: &quot;1&quot;,
-     *       &quot;memberCount&quot;: 12,
-     *       &quot;hasChildren&quot;: true
-     *     }
-     *   ]
+     *   &quot;totalCount&quot;: null,
+     *   &quot;items&quot;: []
      * }
      * </code></pre>
+     * <h3>What to do next</h3>
+     * <p>After selecting the departments to synchronize, save the synchronization scope by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to initiate synchronization as needed.</p>
      * 
      * @param request the request parameters of ListIdentityProviderDepartments  ListIdentityProviderDepartmentsRequest
      * @return ListIdentityProviderDepartmentsResponse
@@ -2453,31 +3240,19 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>Retrieves the current credential summary list from AgentIdentity and returns a data array. Each item contains credentialId, status, createTime, and expireTime. An empty array is returned if no credentials exist. This operation does not support the maxResults or nextToken parameters, and does not provide pagination capabilities. Do not call this operation with fake pagination fields. The list never returns plaintext tokens, nor does it enable receiving or issuing new credentials.
-     * Receiving is not required to be currently enabled, but the shared pool must be available. A credential is considered available if its status is Enabled and its expireTime is later than the current time. The maximum limit of two credentials is determined by AgentIdentity. Client-side counting is for reference only. The list may contain unavailable or expired credentials. Do not assume that available tokens exist based on this list.</p>
-     * <h2>Requests and examples</h2>
-     * <p>GET /workspaces/{workspaceId}/scim-provisioning/credentials
-     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS credential that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, rather than the extra body wrapper of the backend direct-connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not imply that the HTTP request uses a persistent connection to wait for completion.</p>
-     * <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning/credentials
+     * <p>Queries the list of SCIM access credentials to check which tokens are still valid, when they expire, and to select credentials for revocation.
+     * SCIM tokens are used to authorize enterprise identity systems to send user provisioning requests to the user pool. This operation returns credential summaries, including the credential ID, status, creation time, and expiration time. The plaintext token is returned only upon creation.</p>
+     * <h3>How to use the query results</h3>
+     * <ul>
+     * <li>Credentials with the Enabled status that have not expired can continue to be used.</li>
+     * <li>To obtain a new token, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSCIMCredential">CreateIdentityProviderSCIMCredential</a>.</li>
+     * <li>To revoke a token, pass the target credentialId to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/DeleteIdentityProviderSCIMCredential">DeleteIdentityProviderSCIMCredential</a>.
+     * A single user pool can retain up to two SCIM credentials. The list may include expired or disabled credentials. Clean up unused credentials before creating a new token.</li>
+     * </ul>
+     * <h3>Return method</h3>
+     * <p>This operation returns the complete array of credentials at once without using pagination parameters. If no credentials exist, the following is returned:</p>
+     * <pre><code class="language-json">{&quot;data&quot;:[]}
      * </code></pre>
-     * <h2>Response examples</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: [
-     *     {
-     *       &quot;credentialId&quot;: &quot;credential-example&quot;,
-     *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;createTime&quot;: &quot;&lt;upstream creation time&gt;&quot;,
-     *       &quot;expireTime&quot;: &quot;&lt;upstream expiration time&gt;&quot;
-     *     }
-     *   ]
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the matching type exists. Synchronous calls to the upstream service may return a 503 IdentityProviderProvisioningUnavailable error if they fail. Retain the request ID for troubleshooting and do not interpret read failures as an unconfigured state. Actual authentication and workspace non-existence errors follow the common error handling process.
-     * 400 InvalidParameter: The shared user pool is unavailable. 404 IdentityProviderNotFound: No corresponding binding exists. Upstream query failures must not be replaced with an empty list. Otherwise, users may be induced to repeatedly create credentials.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>Used for configuration recovery and credential management: Existing plaintext tokens cannot be queried and retrieved again. The list provides only credential summaries. Call CreateIdentityProviderSCIMCredential when a new token is required. Submit the credentialId from the list to DeleteIdentityProviderSCIMCredential when a credential needs to be revoked. A maximum of two credentials are allowed in the same pool. This operation returns the complete array and does not support or fabricate pagination parameters.</p>
      * 
      * @param request the request parameters of ListIdentityProviderSCIMCredentials  ListIdentityProviderSCIMCredentialsRequest
      * @return ListIdentityProviderSCIMCredentialsResponse
@@ -2498,35 +3273,18 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>WAITING_CONFIGURATION also occupies the unique external identity provider quota for the workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity provider. Creating other types returns 409 IdentityProviderAlreadyBound. You can change the binding only after unbinding and removing the existing binding.
-     * Returns the local binding summary without querying the actual SAML and SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. Currently, a workspace supports only one external binding. The default value of maxResults is 10, and the valid values are 1 to 100. Currently, nextToken can only be omitted or left empty. A non-empty value returns InvalidParameter, and multi-page results cannot be fabricated.
-     * When CustomSSO initialization is complete but SAML metadata is not saved, the status is WAITING_CONFIGURATION. You can upload the configuration, which does not indicate that a background task is still running. After the configuration is saved, the status changes to UPDATING, and changes to READY after the task succeeds. To query SCIM independently, use GetIdentityProviderSCIM. The list does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</p>
-     * <h2>Requests and examples</h2>
-     * <p>GET /workspaces/{workspaceId}/identity-providers
-     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
-     * <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
-     * </code></pre>
-     * <h2>Response examples</h2>
-     * <pre><code class="language-json">{
-     *   &quot;items&quot;: [
-     *     {
-     *       &quot;workspaceId&quot;: &quot;ws-example&quot;,
-     *       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-     *       &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
-     *       &quot;loginEnabled&quot;: false,
-     *       &quot;syncEnabled&quot;: false
-     *     }
-     *   ],
-     *   &quot;maxResults&quot;: 10,
-     *   &quot;totalCount&quot;: 1
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-     * 400 InvalidParameter: maxResults is out of bounds or nextToken is non-empty, which is currently not supported. When a query fails, an error is displayed, and the status is not cleared to unconfigured.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>This API is used to discover the current binding. To query the specific SAML configuration of CustomSSO, use GetIdentityProvider. To query the SP address, use GetIdentityProviderServiceProvider. To query the actual SCIM configuration and independent operation results, use GetIdentityProviderSCIM.</p>
+     * <p>Queries the enterprise identity providers currently connected to a workspace. This operation is used to display the identity provider list or to check whether a binding already exists before configuring a new connection.
+     * A workspace can be bound to at most one external identity provider: DingTalk, Lark, or a custom identity provider (<code>CustomSSO</code>). If no identity provider is bound, the returned <code>items</code> is an empty array.</p>
+     * <h3>What you can view in the list</h3>
+     * <p>The list returns the identity provider type, binding status, and logon and user synchronization switches. When the status of <code>CustomSSO</code> is <code>WAITING_CONFIGURATION</code>, it indicates that the user pool is ready and you can proceed to complete the integration configuration.
+     * This operation returns a binding summary. To view specific integration configurations, use the corresponding operations:</p>
+     * <ul>
+     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>: Views the identity provider details and SAML logon configuration.</li>
+     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a>: Retrieves the SAML integration information required to configure AgentCore in the enterprise identity system.</li>
+     * <li><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Views the SCIM endpoint configuration and user synchronization status.</li>
+     * </ul>
+     * <h3>Pagination</h3>
+     * <p>Currently, at most one binding is returned. <code>nextToken</code> should be omitted or passed as an empty string. The default value of <code>maxResults</code> is 10. Valid values: 1 to 100.</p>
      * 
      * @param request the request parameters of ListIdentityProviders  ListIdentityProvidersRequest
      * @return ListIdentityProvidersResponse
@@ -2547,7 +3305,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the logical image caches within the current account, region, and workspace. WorkspaceId is required, and caches are invisible across workspaces. All conditions filter the full set using the AND operator before pagination is calculated. The results are sorted in descending order by logical resource creation time and ascending order by ImageId. The cursor is bound to the account, region, workspace, all filters, and sorting criteria. Returns the complete cache objects, the AgentCount based on the configuration switch, and the actual deletion eligibility. Query failures are not disguised as empty lists, and the nextToken on the last page is an empty string.</p>
+     * <p>Performs a paged query for image caches in a workspace. Supports paging and filtering by image source and cache status.</p>
+     * <h3>Filter conditions</h3>
+     * <p>Provide regionId and workspaceId in the query parameters. You can filter by ACR instance, registry, namespace, repository, tag, digest, and status. Use imageRefContains to search for image address fragments.</p>
+     * <h3>Pagination rules</h3>
+     * <p>The default value of maxResults is 20, and the valid values are 1 to 100. Omit nextToken for the first request. For subsequent requests, use the token returned in the response as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that there are no more pages.</p>
+     * <h3>Response content</h3>
+     * <p>Each item includes imageId, source, digest, status, size, reference count, and deletion conditions. PENDING only indicates that the cache is being prepared. For the cause of failure, see error. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</p>
      * 
      * @param request the request parameters of ListImageCaches  ListImageCachesRequest
      * @return ListImageCachesResponse
@@ -2568,7 +3332,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for the list of managed agents in a specified workspace and returns summary information for each agent, including the identity, name, status, template, and specifications. Paging is supported.</p>
+     * <p>Performs a paging query for the identity, harnesses, configuration versions, and status summary of managed Harness agents in a workspace.</p>
+     * <h3>Paging query</h3>
+     * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that no more pages are available.</p>
+     * <h3>Response content</h3>
+     * <p>The list returns summary information, where <code>harness.type</code> indicates the runtime framework. You can query the complete configuration, skill targets and effective versions, and instance status statistics by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</p>
      * 
      * @param request the request parameters of ListManagedAgents  ListManagedAgentsRequest
      * @return ListManagedAgentsResponse
@@ -2589,7 +3357,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries all online official MCP templates. You can filter results by keyword, usage tag, and MCP type.</p>
+     * <p>Queries official MCP marketplace templates available for installation to help select required tool services. Supports filtering by keyword, usage tag, and MCP type.</p>
      * 
      * @param request the request parameters of ListMcpMarketItems  ListMcpMarketItemsRequest
      * @return ListMcpMarketItemsResponse
@@ -2610,8 +3378,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</p>
+     * <p>Queries the list of tools exposed by a specified MCP service and their input and output schemas.</p>
      * 
      * @param request the request parameters of ListMcpTools  ListMcpToolsRequest
      * @return ListMcpToolsResponse
@@ -2632,8 +3399,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Performs a paging query to retrieve the MCP services and their configurations and statuses in a specified workspace.</p>
+     * <p>Performs a paging query for MCP services and their configurations and status in a specified workspace.</p>
      * 
      * @param request the request parameters of ListMcps  ListMcpsRequest
      * @return ListMcpsResponse
@@ -2654,7 +3420,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query on long-term memory records. The results can be filtered independently by user ID, agent ID, and session ID. Paging is supported.</p>
+     * <p>Queries long-term memory with paging and supports filtering by <code>UserId</code>, <code>AgentId</code>, and <code>SessionId</code>.</p>
      * 
      * @param request the request parameters of ListMemories  ListMemoriesRequest
      * @return ListMemoriesResponse
@@ -2675,7 +3441,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for raw messages by exact scope. SessionId is required, and at least one of UserId and AgentId must be provided.</p>
+     * <p>Queries raw messages of a specific session in the memory store with paging to view the session content used for generating long-term memory.
+     * <code>SessionId</code> is required, and at least one of <code>UserId</code> and <code>AgentId</code> must be provided to identify the target session.</p>
      * 
      * @param request the request parameters of ListMemorySessionMessages  ListMemorySessionMessagesRequest
      * @return ListMemorySessionMessagesResponse
@@ -2696,7 +3463,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query for sessions in a MemoryStore. You can filter the sessions independently by user ID and agent ID.</p>
+     * <p>Performs a paged query for source sessions in a long-term memory store (MemoryStore), supporting paging and filtering by user ID and agent ID respectively.</p>
      * 
      * @param request the request parameters of ListMemorySessions  ListMemorySessionsRequest
      * @return ListMemorySessionsResponse
@@ -2717,7 +3484,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for MemoryStores in a specified workspace with paging.</p>
+     * <p>Performs a paged query of the long-term memory stores (MemoryStores) in a workspace by using paging for selection or management.</p>
      * 
      * @param request the request parameters of ListMemoryStores  ListMemoryStoresRequest
      * @return ListMemoryStoresResponse
@@ -2738,7 +3505,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <code>Name</code> and selecting exact match or fuzzy match through <code>SearchType</code>. Also supports filtering by model provider type and invoke protocol, and supports paging.</p>
+     * <p>Queries model connections in a workspace by using paging to view configured model services.</p>
+     * <ul>
+     * <li>Use <code>Name</code> to filter by name, and <code>SearchType</code> to specify exact match or fuzzy match.</li>
+     * <li>You can filter by model provider type and invocation protocol.</li>
+     * </ul>
      * 
      * @param request the request parameters of ListModelConnections  ListModelConnectionsRequest
      * @return ListModelConnectionsResponse
@@ -2758,6 +3529,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Performs a paging query for models in a specified workspace and supports filtering by model connection and model name.</p>
+     * 
      * @param request the request parameters of ListModels  ListModelsRequest
      * @return ListModelsResponse
      */
@@ -2777,7 +3551,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of permission rules by resource with paging.</p>
+     * <p>Performs a paged query of access rules by resource, supporting paging to check existing rules and their sources.</p>
      * 
      * @param request the request parameters of ListPermissionRules  ListPermissionRulesRequest
      * @return ListPermissionRulesResponse
@@ -2797,6 +3571,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the providers supported by the built-in model catalog of AgentCore and their default service configurations.</p>
+     * 
      * @param request the request parameters of ListPredefinedModelProviders  ListPredefinedModelProvidersRequest
      * @return ListPredefinedModelProvidersResponse
      */
@@ -2815,6 +3592,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the models and their capabilities for a specified provider in the AgentCore built-in model catalog.</p>
+     * 
      * @param request the request parameters of ListPredefinedModels  ListPredefinedModelsRequest
      * @return ListPredefinedModelsResponse
      */
@@ -2834,7 +3614,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of active sessions in the sandbox of a specified managed agent.</p>
+     * <p>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</p>
+     * <h3>Query scope</h3>
+     * <p>Locate the instance by using <code>workspaceId</code>, <code>agentId</code>, and <code>sandboxId</code>. You can obtain the <code>sandboxId</code> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</p>
+     * <h3>Pagination</h3>
+     * <p>The default value of <code>maxResults</code> is 20. Valid values: 1 to 100. Omit <code>nextToken</code> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</p>
+     * <h3>Session source</h3>
+     * <p>The source can be <code>API</code>, <code>CONSOLE_DEBUG</code>, <code>EXTERNAL_CHANNEL</code>, or <code>UNKNOWN</code>. For external channels, the channel type is additionally returned. If no source information is provided, <code>UNKNOWN</code> is returned.</p>
      * 
      * @param request the request parameters of ListSandboxSessions  ListSandboxSessionsRequest
      * @return ListSandboxSessionsResponse
@@ -2855,7 +3641,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of sandboxes for a specified managed agent. The searchText parameter performs a fuzzy match on sandbox ID fragments, and the sessionId parameter performs a fuzzy match on active session ID fragments. Both parameters are case-insensitive and can be used together with AND logic.</p>
+     * <p>Queries the running instances (sandboxes) of an agent to view the instance distribution and current running status.</p>
+     * <h3>Filter instances</h3>
+     * <p><code>searchText</code> matches Sandbox ID fragments, and <code>sessionId</code> matches current valid session ID fragments. Both are case-insensitive. If both are submitted at the same time, they are combined for filtering.</p>
+     * <h3>Pagination and status</h3>
+     * <p>The default value of <code>maxResults</code> is 20, and the valid values are 1 to 100. Omit <code>nextToken</code> for the first request. For subsequent requests, use the response token as is, and keep <code>workspaceId</code>, <code>agentId</code>, filter conditions, and <code>maxResults</code> unchanged. An empty token indicates that the query is complete.
+     * <code>phase</code> indicates the instance phase, <code>activeSessionCount</code> indicates the number of current active sessions, and <code>maxConcurrentSessions</code> indicates the configured concurrency limit for a single instance. You can query the active sessions of an instance by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxSessions">ListSandboxSessions</a>.</p>
      * 
      * @param request the request parameters of ListSandboxes  ListSandboxesRequest
      * @return ListSandboxesResponse
@@ -2876,7 +3667,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nQueries service endpoints in a specified workspace with paging. You can filter the results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+     * <p>Queries service endpoints in a workspace with paging to find the access entries for agents or collaboration components.</p>
+     * <ul>
+     * <li>Use <code>targetType</code>, <code>agentId</code>, <code>agentVersion</code>, <code>resourceBindingId</code>, <code>collaborationComponent</code>, and <code>status</code> to filter the results.</li>
+     * <li>Use <code>maxResults</code> to set the number of entries per page. If omitted, the default value is 20.</li>
+     * <li>Use the returned <code>nextToken</code> to query the next page.</li>
+     * </ul>
      * 
      * @param request the request parameters of ListServiceEndpoints  ListServiceEndpointsRequest
      * @return ListServiceEndpointsResponse
@@ -2896,6 +3692,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the reference relationships of a specified skill to verify its usage before modifying or cleaning up skill assets.</p>
+     * 
      * @param request the request parameters of ListSkillReferences  ListSkillReferencesRequest
      * @return ListSkillReferencesResponse
      */
@@ -2915,8 +3714,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Performs a paged query for skills in a specified workspace and returns basic information, version statuses, and paging information.</p>
+     * <p>Performs a paged query of skills in a specified workspace and returns the basic information, version status, and paging information of the skills.</p>
      * 
      * @param request the request parameters of ListSkills  ListSkillsRequest
      * @return ListSkillsResponse
@@ -2936,6 +3734,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Performs a paging query of teams in a specified workspace.</p>
+     * 
      * @param request the request parameters of ListTeams  ListTeamsRequest
      * @return ListTeamsResponse
      */
@@ -2954,6 +3755,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the application user directory in a workspace for viewing users and selecting team members.</p>
+     * 
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
      */
@@ -2973,7 +3777,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nPerforms a paged query on the workspaces under the current tenant. By default, the list does not return soft-deleted records with the Deleted status. The server performs stable sorting on the results by creation order to facilitate paging. You can use nextToken to obtain the next page, skip to skip a specified number of workspaces, maxResults to specify the maximum number of records per page, and nameLike to perform fuzzy filtering by workspace name. If maxResults is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+     * <p>Performs a paged query of workspaces accessible to the current account for selecting a workspace or viewing a workspace overview.</p>
+     * <ul>
+     * <li>Use <code>nameLike</code> to filter by name using fuzzy match.</li>
+     * <li>Use <code>maxResults</code> to configure the Settings for the number of entries per page. If this parameter is omitted or set to <code>0</code>, the default value is 20.</li>
+     * <li>Use <code>nextToken</code> to query the next page during paging, or use <code>skip</code> to skip a specified number of workspaces.
+     * The list is sorted in the order of creation. By default, deleted workspaces (with the <code>Deleted</code> status) are not returned.</li>
+     * </ul>
      * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -2994,8 +3804,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</p>
+     * <p>Takes the online version of a specified skill offline so that it is no longer used as the online version.</p>
      * 
      * @param request the request parameters of OfflineSkill  OfflineSkillRequest
      * @return OfflineSkillResponse
@@ -3016,8 +3825,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Sets a specified Skill version as the online version.</p>
+     * <p>Sets the specified skill version as the online version.</p>
      * 
      * @param request the request parameters of OnlineSkill  OnlineSkillRequest
      * @return OnlineSkillResponse
@@ -3038,8 +3846,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</p>
+     * <p>Checks one or more skill ZIP packages uploaded to OSS for skill names, versions, and import conflicts.
+     * After the check passes, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UploadSkillViaOss">UploadSkillViaOss</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/BatchUploadSkillsViaOss">BatchUploadSkillsViaOss</a> to import the skills into the workspace.</p>
      * 
      * @param request the request parameters of PrecheckSkillUploadViaOss  PrecheckSkillUploadViaOssRequest
      * @return PrecheckSkillUploadViaOssResponse
@@ -3060,36 +3868,38 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>Requires an available CustomSSO shared user pool. Does not depend on SAML metadata and is not locked by SAML updating or update failure statuses. Synchronously calls AgentIdentity to enable SCIM receiving and reads the configuration and credential list. Reuses the existing configuration if receiving is already enabled. Repeated initialization does not create duplicate valid credentials or automatically enable user synchronization. If a credential with the Enabled status exists and has not expired, its summary is returned and token is null. If no available credentials exist, a new credential is created and the token is returned only for the current request. Existing invalid or expired credentials are not automatically deleted and may still trigger the upstream limit of up to two credentials.
-     * The prepare operation has the side effects of enabling receiving and potentially issuing credentials, but does not set the access control syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved again. If the response is lost, query the credential list first instead of automatically reissuing the token. Tokens should not be logged or persisted in frontend caches.</p>
-     * <h2>Request and examples</h2>
-     * <p>POST /workspaces/{workspaceId}/scim-provisioning/prepare
-     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log the keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
-     * <pre><code class="language-text">POST /workspaces/ws-example/scim-provisioning/prepare
-     * No business request body.
-     * </code></pre>
-     * <h2>Response example</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: {
-     *     &quot;configuration&quot;: {
-     *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;
-     *     },
-     *     &quot;credential&quot;: {
-     *       &quot;credentialId&quot;: &quot;credential-example&quot;,
-     *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream&gt;&quot;
-     *     },
-     *     &quot;token&quot;: &quot;&lt;Token newly issued for the current request only. Null if an available credential already exists.&gt;&quot;
-     *   }
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.
-     * 400 LimitExceeded.ScimCredential: The maximum limit of two credentials has been reached. You must explicitly delete one credential before retrying. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>The shared pool is created by using CreateIdentityProvider with identityProviderType=CustomSSO. SAML configuration is not required. If an existing credential is reused and token is null, use the token already saved by the user. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to verify first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new one. When the limit of two credentials is reached, the user must confirm and delete the unused credential.</p>
+     * <p>Prepares the receiving endpoint and access token for integrating an enterprise identity system with SCIM user synchronization. The enterprise identity system uses this information to provision users to the shared user pool of AgentCore.
+     * SCIM is a user provisioning protocol. The enterprise identity system first sends users to the receiving endpoint, and then AgentCore synchronizes the users from the user pool to the workspace.</p>
+     * <h3>Before you begin</h3>
+     * <p>A <code>CustomSSO</code> binding has been created by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProvider">CreateIdentityProvider</a>, and the shared user pool is ready. SCIM integration can be performed independently of SAML logon configuration.</p>
+     * <h3>What this operation prepares</h3>
+     * <p>This operation enables the SCIM receiving endpoint and returns the receiving URL and credential summary:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Current credential status</th>
+     * <th>Returned result</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>An unexpired credential with the status of <code>Enabled</code> already exists</td>
+     * <td>Reuses the existing credential. The <code>token</code> field returns an empty string <code>&quot;&quot;</code>. Use the previously saved token.</td>
+     * </tr>
+     * <tr>
+     * <td>No available credentials exist</td>
+     * <td>Creates a new credential. The <code>token</code> field returns the plaintext of the new token, which is returned only in this response.</td>
+     * </tr>
+     * <tr>
+     * <td>The plaintext of an existing token cannot be queried again. If the token is lost, you can create a new token by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSCIMCredential">CreateIdentityProviderSCIMCredential</a>. A maximum of two credentials can be retained for the same user pool. When the limit is reached, you must delete unused credentials first.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Subsequent configuration</h3>
+     * <ol>
+     * <li>Configure the returned receiving URL and valid token in the SCIM user provisioning settings of the enterprise identity system.</li>
+     * <li>Complete the connection test and user assignment in the enterprise identity system.</li>
+     * <li>Enable AgentCore user synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>, and then query the synchronization result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</li>
+     * </ol>
      * 
      * @param request the request parameters of PrepareIdentityProviderSCIM  PrepareIdentityProviderSCIMRequest
      * @return PrepareIdentityProviderSCIMResponse
@@ -3110,8 +3920,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Publishes a specified Skill version to transition it to the published state.</p>
+     * <p>Publishes a specified skill version and changes its status to published.</p>
      * 
      * @param request the request parameters of PublishSkillVersion  PublishSkillVersionRequest
      * @return PublishSkillVersionResponse
@@ -3132,8 +3941,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</p>
+     * <p>Reverts a specified skill version to an editable draft for further modification.</p>
      * 
      * @param request the request parameters of RedraftSkillVersion  RedraftSkillVersionRequest
      * @return RedraftSkillVersionResponse
@@ -3153,6 +3961,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resets the logon password of a specified user.</p>
+     * 
      * @param request the request parameters of ResetUserPassword  ResetUserPasswordRequest
      * @return ResetUserPasswordResponse
      */
@@ -3172,7 +3983,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retries an image cache for the original ImageId in the current workspace. WorkspaceId is required. The business request body is not required and can be omitted or provided as an empty object. The source authorization and transfer network reuse the original trusted context of the registration. If a digest exists, the retry uses the original digest. If no digest exists, the original tag is re-parsed. A new request in the FAILED state can start a new production round. Requests in the PENDING or READY state are reused. Requests in the DELETING state are rejected, and deleted resources are not recreated. PUBLIC or PRIVATE resources reuse the pull authorization of the original workspace. Returns a complete acceptance snapshot and retains the original ImageId and CreatedAt. ClientToken does not guarantee request deduplication. If the result is not confirmed, query the real-time status first before deciding whether to resubmit.</p>
+     * <p>Resubmits the creation request for an existing image cache to recreate a cache that has not been successfully created.</p>
+     * <h3>Call scope</h3>
+     * <p>Pass <code>regionId</code>, <code>workspaceId</code>, and <code>clientToken</code> as query parameters, and use <code>imageId</code> to locate the cache. This operation applies to ACR source caches and re-verifies the source repository authorization before submission.</p>
+     * <h3>Query retry results</h3>
+     * <p>A successful response indicates that a retry acceptance snapshot is returned, not that the creation is complete. Query the status through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <code>READY</code> indicates that the cache is ready. If the status is <code>FAILED</code>, check the <code>error</code> field.
+     * The <code>clientToken</code> parameter currently only verifies that the value is not empty and does not guarantee deduplication or recovery of the original acceptance result based on this identifier.</p>
      * 
      * @param request the request parameters of RetryImageCache  RetryImageCacheRequest
      * @return RetryImageCacheResponse
@@ -3193,7 +4009,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves long-term memory from a MemoryStore based on semantics.</p>
+     * <p>Retrieves relevant memories semantically from the long-term memory store (MemoryStore) to help agents obtain the information required for subsequent tasks.</p>
      * 
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
      * @return SearchMemoriesResponse
@@ -3214,8 +4030,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Submits a specified draft version of an AgentSpec for review. If no release pipeline is configured, the version is directly published online.</p>
+     * <p>Submits a specified draft version of an agent template for review.
+     * If no release pipeline is configured, the version is directly published online.</p>
      * 
      * @param request the request parameters of SubmitAgentSpecVersion  SubmitAgentSpecVersionRequest
      * @return SubmitAgentSpecVersionResponse
@@ -3236,7 +4052,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
      * <p>Submits a specified draft version of a skill for review.</p>
      * 
      * @param request the request parameters of SubmitSkillVersion  SubmitSkillVersionRequest
@@ -3258,7 +4073,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates an access application. The secret is returned only when the application is created and is not returned by query operations.</p>
+     * <p>Modifies the configuration of an access application in a workspace to adjust application integration and identity source settings.</p>
      * 
      * @param request the request parameters of UpdateAccessApplication  UpdateAccessApplicationRequest
      * @return UpdateAccessApplicationResponse
@@ -3279,7 +4094,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the ServiceEndpoint, enablement status, or channel behavior configuration bound to an IM channel. At least one updatable field must be provided.</p>
+     * <p>Updates the ServiceEndpoint, enablement status, or channel behavior configuration bound to an IM channel.
+     * At least one updatable field must be provided.</p>
      * 
      * @param request the request parameters of UpdateAgentIMChannel  UpdateAgentIMChannelRequest
      * @return UpdateAgentIMChannelResponse
@@ -3300,7 +4116,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Fully updates the channel credentials of a specified IM channel. Secrets are not returned in the response.</p>
+     * <p>Replaces the access credentials for an IM channel to rotate keys or correct authentication configurations.
+     * Submit the complete new credentials. The response does not return plaintext secrets.</p>
      * 
      * @param request the request parameters of UpdateAgentIMChannelCredential  UpdateAgentIMChannelCredentialRequest
      * @return UpdateAgentIMChannelCredentialResponse
@@ -3321,8 +4138,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</p>
+     * <p>Updates the business tags, version tags, and visibility scope of a specified agent template. Fields not provided remain unchanged.</p>
      * 
      * @param request the request parameters of UpdateAgentSpec  UpdateAgentSpecRequest
      * @return UpdateAgentSpecResponse
@@ -3343,7 +4159,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the sensitive configuration of a specified Connector and aligns Service Account Keys by ID.</p>
+     * <p>Updates the API key or service account key collection for an enabled QoderCLI connector.
+     * When updating service account keys, existing keys are matched by their record <code>id</code>.</p>
      * 
      * @param request the request parameters of UpdateConnector  UpdateConnectorRequest
      * @return UpdateConnectorResponse
@@ -3364,7 +4181,24 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the metadata or application scope of a specified credential.</p>
+     * <p>Updates the content, description, or MCP header application scope of a specified credential.</p>
+     * <h3>Update rules</h3>
+     * <p>You must modify at least one of the credential content, description, or application scope. When modifying only the application scope, you do not need to submit credentialMetadata or description.</p>
+     * <ul>
+     * <li>Omit credentialMetadata: The original credential content is retained. If provided, submit a JSON string according to the original credential type.</li>
+     * <li>Omit description: The original description is retained.</li>
+     * <li>The credential name and credentialType cannot be modified.</li>
+     * </ul>
+     * <h3>MCP header application scope</h3>
+     * <p>Only mcpHeader supports updating the application scope. For apiKey, do not submit resourceScope or resourceRefs.</p>
+     * <ul>
+     * <li>Omit both the scope and the resource list: The original configuration is retained.</li>
+     * <li>Submit resourceRefs: You must also submit resourceScope.</li>
+     * <li>resourceScope=ALL: Omit resourceRefs.</li>
+     * <li>resourceScope=SPECIFIED: Submit resourceRefs. An empty array [] is allowed during updates. For each item, specify resourceType=mcpServer and resourceId.</li>
+     * </ul>
+     * <h3>Query results</h3>
+     * <p>After the update, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCredential">GetCredential</a> to query the current configuration and the masked credential content.</p>
      * 
      * @param request the request parameters of UpdateCredential  UpdateCredentialRequest
      * @return UpdateCredentialResponse
@@ -3385,14 +4219,234 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for description to clear the description, and pass null for healthCheck to remove the health check.
-     * When retaining the current ACR image source, you can submit only the artifact subfields that need to be modified. For example, to update the image tag of the same repository, submit only artifact.container.tag. Unsubmitted ports, source fields, and startup commands retain their original values. When switching sources, the merged artifact configuration must meet the required fields of the corresponding source and the mutual exclusivity requirement between code and container.
-     * In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies are packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling ListAgentCodeRuntimes. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call GetAgentCodePackageUploadUrl to obtain the upload URL and upload the file directly, and then commit the returned sourceUri.
-     * When submitting a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-     * Instance count and elasticity: When providing runtime, compute and sessionPolicy must be provided at the same time. When hpa or its partial fields are omitted, unspecified elastic configurations use the default values: enabled=false, minSandboxCount=1, maxSandboxCount=10, maxConcurrentSessionsPerSandbox=100, and sessionTtlSeconds=600. To retain the original elastic configuration, provide the complete hpa. Omitting the entire runtime retains the original configuration. minSandboxCount and maxSandboxCount are configuration boundaries. Query the actual instance count by using sandboxPhaseCounts. When providing network, omitted access items are treated as allowed, but actual access is still restricted by the workspace network. To retain the original restrictions, provide both accessInternet and accessVpc. When providing healthCheck, you must specify port. Other unspecified items use the default values. When providing logging.sls, you must specify both project and logstore.
-     * Environment variables: Omitting the entire environment retains the original configuration. When providing variables, the list is replaced as a whole, and variables to be retained must also be submitted. Setting variables=[] or environment=null clears the user-configured environment variables. Providing environment but omitting variables also clears the variables. Variable names must be non-empty and unique in the list. The value must be a string, and empty strings are allowed.
-     * The update is an asynchronous process. A successful response indicates that the request is accepted. Call GetCustomAgent to query latestSpecVersion, effectiveSpecVersion, latestVersionStatus, and latestExecutionError, and check status and sandboxPhaseCounts to confirm the configuration processing progress and instance status. A successful configuration process does not indicate that all old instances have been replaced.
-     * When explicitly submitting customImage, you must provide clientToken. After clientToken is passed, the backend records the submission based on the tenant, workspace, and this identifier. Retries with the same parameters reuse the acceptance result. Use a new identifier for different submission content. If clientToken is not passed, query the status first before deciding whether to retry. The healthyThreshold field for health checks does not take effect currently. Omit this field.</p>
+     * <p>Updates the deployment artifact or runtime configuration of a custom code or image agent to release new code, images, or configurations.</p>
+     * <h3>Update rules</h3>
+     * <p>Updates a custom code or image agent in a specified workspace. You must provide at least one top-level field to update. Omitted top-level fields retain their original configurations.
+     * The update rules for each configuration are as follows.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Configuration</th>
+     * <th>Update method and precautions</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>name</code></td>
+     * <td>Omit to retain the original name. The value cannot be <code>null</code> or an empty string.</td>
+     * </tr>
+     * <tr>
+     * <td><code>description</code></td>
+     * <td>Omit to retain the original description. Pass <code>null</code> to clear the description.</td>
+     * </tr>
+     * <tr>
+     * <td><code>artifact</code></td>
+     * <td>When submitting, specify <code>port</code> and the required fields for the selected source. To retain a custom startup command, also specify <code>entrypoint</code>. <code>code</code> and <code>container</code> are mutually exclusive.</td>
+     * </tr>
+     * <tr>
+     * <td><code>runtime</code></td>
+     * <td>When submitting, specify both <code>compute</code> and <code>sessionPolicy</code>. To retain the elastic policy, submit the complete <code>hpa</code>.</td>
+     * </tr>
+     * <tr>
+     * <td><code>environment</code></td>
+     * <td>The environment variable list is replaced as a whole. You must include all variables that need to be retained.</td>
+     * </tr>
+     * <tr>
+     * <td><code>network</code></td>
+     * <td>When submitting, omitted access items are treated as allowed. To retain access restrictions, specify both <code>accessInternet</code> and <code>accessVpc</code>.</td>
+     * </tr>
+     * <tr>
+     * <td><code>healthCheck</code></td>
+     * <td>When submitting, you must specify <code>port</code>. Other unspecified configurations use default values. Pass <code>null</code> to remove the health check.</td>
+     * </tr>
+     * <tr>
+     * <td><code>logging</code></td>
+     * <td>When submitting <code>logging.sls</code>, specify non-empty <code>project</code> and <code>logstore</code> at the same time.</td>
+     * </tr>
+     * <tr>
+     * <td><code>protocol</code>, <code>ossMounts</code>, <code>agenticFsMounts</code></td>
+     * <td>When submitting, the corresponding list is replaced as a whole. Pass <code>[]</code> to clear the corresponding list. <code>agenticFsMounts</code> does not accept <code>null</code>.</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Deployment artifacts</h3>
+     * <p>Three deployment methods are supported: code packages, ACR images, and custom images. When updating or switching the deployment method, provide the configuration according to the target method.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Deployment method</th>
+     * <th>Configuration requirements</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>ACR image</td>
+     * <td>When updating the image tag, also provide <code>artifact.port</code>, as well as <code>type=acr</code>, <code>instanceId</code>, <code>namespace</code>, <code>repo</code>, and <code>tag</code> in <code>artifact.container</code>. To retain a custom startup command, also provide <code>entrypoint</code>.</td>
+     * </tr>
+     * <tr>
+     * <td>Custom image</td>
+     * <td>Set <code>artifact.container.type=custom</code>, provide the complete <code>customImage</code>, and provide <code>clientToken</code> in the query parameters. When switching to this method, also specify <code>artifact.port</code>. Do not include ACR instance, namespace, repository, and tag fields in <code>container</code>.</td>
+     * </tr>
+     * <tr>
+     * <td>Code package</td>
+     * <td>Provide <code>artifact.port</code>, as well as <code>sourceUri</code>, <code>languageRuntime</code>, and <code>entrypoint</code> in <code>artifact.code</code>. Do not commit <code>container</code> at the same time.</td>
+     * </tr>
+     * <tr>
+     * <td><strong>Custom image</strong></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <ul>
+     * <li><code>customImage</code> must include the complete image address <code>image</code> and the independent pull network <code>pullNetwork</code>. The image address does not include a protocol or user information, and supports addresses with tags or digests.</li>
+     * <li>For public network pulling, set <code>pullNetwork.type=public</code> and do not include VPC fields. For VPC pulling, set <code>type=vpc</code> and provide <code>vpcId</code>, <code>vSwitchId</code>, and <code>securityGroupId</code> at the same time. The image pull network and the agent runtime network are configured separately.</li>
+     * <li>When repository authentication is required, provide non-empty <code>username</code> and <code>password</code> at the same time. For anonymous access, omit both. The response does not return the password.</li>
+     * <li>Omitting the entire <code>customImage</code> retains the saved image source. Commit the complete object when updating the custom image source. You do not need to resubmit this object when only adjusting the runtime configuration.</li>
+     * <li>Custom images and code packages do not support enabling <code>useImageCache</code>. The value in the final configuration must be <code>false</code>. When this field is omitted for a custom image, it is treated as <code>false</code>. When switching to a code package, if the original configuration is <code>true</code>, you must explicitly change it to <code>false</code>. When updating other sources, omitting this field retains the original value.
+     * <strong>Code package</strong></li>
+     * <li>Supports ZIP or TAR.GZ. The compressed package size cannot exceed <code>500000000</code> bytes. Dependencies are packaged by the invoker. The platform does not execute online builds or install dependencies.</li>
+     * <li>Query the active <code>languageRuntime</code> values by invoking <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListAgentCodeRuntimes">ListAgentCodeRuntimes</a>.</li>
+     * <li><code>sourceUri</code> supports <code>oss://</code> addresses or HTTPS object addresses of standard OSS public domain name, including signed URLs.</li>
+     * <li>For local code packages, first invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageUploadUrl">GetAgentCodePackageUploadUrl</a>, upload the file according to the response information, and then commit the returned <code>sourceUri</code>.</li>
+     * <li>The new source is verified for read permissions, objects, and size before acceptance, and is transferred to a fixed copy on the platform. If the transfer failed, the current agent configuration is not saved. Common updates can reuse the saved fixed code package address.</li>
+     * </ul>
+     * <h3>Runtime configuration and elasticity</h3>
+     * <p>Omitting the entire <code>runtime</code> retains the original runtime configuration. When submitting <code>runtime</code>, you must specify both <code>compute</code> and <code>sessionPolicy</code>.
+     * If you submit <code>runtime</code> but omit <code>hpa</code>, or omit some fields in <code>hpa</code>, the unspecified items use the following default values. <strong>To retain the existing elastic policy, submit the complete <code>hpa</code>.</strong></p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Default value</th>
+     * <th>Description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>enabled</code></td>
+     * <td><code>false</code></td>
+     * <td>Specifies whether elastic scaling is enabled.</td>
+     * </tr>
+     * <tr>
+     * <td><code>minSandboxCount</code></td>
+     * <td><code>1</code></td>
+     * <td>The minimum number of instances.</td>
+     * </tr>
+     * <tr>
+     * <td><code>maxSandboxCount</code></td>
+     * <td><code>10</code></td>
+     * <td>The maximum number of instances, which cannot be less than the minimum number.</td>
+     * </tr>
+     * <tr>
+     * <td><code>maxConcurrentSessionsPerSandbox</code></td>
+     * <td><code>20</code></td>
+     * <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
+     * </tr>
+     * <tr>
+     * <td><code>sessionTtlSeconds</code></td>
+     * <td><code>600</code></td>
+     * <td>The maximum idle time of a session, in seconds.</td>
+     * </tr>
+     * <tr>
+     * <td>The upper and lower limits of the number of instances are configuration values. Query the current number of instances through <code>sandboxPhaseCounts</code>.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>When <code>sessionPolicy.type=ISOLATED_HEADER_FIELD</code>, you must specify a valid HTTP request header name <code>headerName</code>. Do not specify <code>headerName</code> for other session policies.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Network and mounts</h3>
+     * <p>Omitting the entire <code>network</code> retains the original configuration. When submitting this object, omitted access items are treated as allowed on the agent side, and actual access is restricted by the workspace network configuration.
+     * To retain the original restrictions, submit both <code>accessInternet.enabled</code> and <code>accessVpc.enabled</code> at the same time. Do not submit only one of them.
+     * The total number of <code>ossMounts</code> and <code>agenticFsMounts</code> cannot exceed 10. When updating either list, you must include all mount items that need to be retained in the list. The two lists are updated separately. You can use <code>agenticFsMounts=[]</code> to clear AgenticFS mounts, but you cannot use <code>null</code> to clear them.
+     * In this operation, ACR images, custom images, and code packages all use the same user mount target rules: <code>mountPath</code> is the absolute path in the container, such as <code>/data/train</code>, and must not conflict with platform reserved directories. Mount targets must not be duplicated or form parent-child directory overwrites.</p>
+     * <h3>Environment variables</h3>
+     * <p>Omitting the entire <code>environment</code> retains the original configuration. When submitting <code>environment.variables</code>, the original list is replaced as a whole with the current list. You must include all variables that need to be retained.
+     * The following methods all clear the environment variables configured by the user:</p>
+     * <ul>
+     * <li><code>environment.variables=[]</code>.</li>
+     * <li><code>environment=null</code>.</li>
+     * <li>Submit <code>environment</code> but omit <code>variables</code>, such as <code>environment={}</code>.
+     * Variable names must be non-empty and unique in the list. Variable values must be strings, and empty strings are allowed.</li>
+     * </ul>
+     * <h3>Health checks and logs</h3>
+     * <p>Omitting the entire <code>healthCheck</code> retains the original configuration. Pass <code>null</code> to remove the health check. When submitting this object, you must specify <code>port</code>. Other unspecified items use the following default values.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Default value</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>path</code></td>
+     * <td><code>/healthz</code></td>
+     * </tr>
+     * <tr>
+     * <td><code>intervalSeconds</code></td>
+     * <td><code>10</code> seconds</td>
+     * </tr>
+     * <tr>
+     * <td><code>timeoutSeconds</code></td>
+     * <td><code>2</code> seconds</td>
+     * </tr>
+     * <tr>
+     * <td><code>unhealthyThreshold</code></td>
+     * <td><code>3</code> times</td>
+     * </tr>
+     * <tr>
+     * <td>The health check port ranges from 1 to 65535. Health Check Interval, timeout period, and failure threshold must be positive integers, and the timeout period must be less than Health Check Interval. Do not submit <code>healthyThreshold</code>.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>When configuring log delivery, <code>logging.sls.project</code> and <code>logging.sls.logstore</code> must be provided at the same time and cannot be empty.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Asynchronous results and retries</h3>
+     * <p><code>success=true</code> indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetCustomAgent">GetCustomAgent</a> to query the configuration processing result.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Purpose</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>latestSpecVersion</code></td>
+     * <td>The latest expected configuration version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>effectiveSpecVersion</code></td>
+     * <td>The effective configuration version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>latestVersionStatus</code></td>
+     * <td>The processing status of the latest expected configuration version.</td>
+     * </tr>
+     * <tr>
+     * <td><code>latestExecutionError</code></td>
+     * <td>The reason why the latest configuration is waiting for a retry or fails to be executed, and whether to automatically retry.</td>
+     * </tr>
+     * <tr>
+     * <td><code>status</code></td>
+     * <td>The overall status of the agent.</td>
+     * </tr>
+     * <tr>
+     * <td><code>sandboxPhaseCounts</code></td>
+     * <td>A snapshot of the number of instances counted by phase.</td>
+     * </tr>
+     * <tr>
+     * <td>When <code>latestVersionStatus</code> is <code>pending</code>, <code>processing</code>, or <code>waiting_retry</code>, you can continue to query later. <code>succeeded</code> indicates that the configuration is processed successfully. When the value is <code>failed</code>, troubleshoot the configuration based on <code>latestExecutionError</code>.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>When explicitly submitting <code>customImage</code> or explicitly setting <code>artifact.container.type=custom</code>, you must provide <code>clientToken</code> in the query parameters. You can also optionally pass this parameter when updating ACR images or code packages to reuse the acceptance result of the same submission. The identifier is 1 to 128 characters in length and can contain letters, digits, periods, underscores, colons, and hyphens.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>When retrying the same submission, reuse the original <code>clientToken</code>. The service returns the existing acceptance result based on the tenant, workspace, and this identifier. Use a new identifier when modifying the submission content.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
      * 
      * @param request the request parameters of UpdateCustomAgent  UpdateCustomAgentRequest
      * @return UpdateCustomAgentResponse
@@ -3413,7 +4467,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the configuration of a specified external agent.</p>
+     * <p>Updates the model, instruction, tool, or skill configurations saved on the platform side for a managed agent to adjust its capability configurations after integration.</p>
+     * <h3>Update rules</h3>
+     * <p>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced as a whole upon submission. You must include the items to be retained, or pass [] to clear the corresponding explicit lists.</p>
+     * <h3>Switch model sources</h3>
+     * <ul>
+     * <li>To switch to PLATFORM, provide modelSource=PLATFORM and a valid model configuration, including the model connection ID and model name.</li>
+     * <li>To switch to RUNTIME, change the Settings to modelSource=RUNTIME and do not commit the platform model. The original platform model configuration is removed when the source is switched.
+     * When a template is used, configurations belonging to the template such as instructions are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</li>
+     * </ul>
      * 
      * @param request the request parameters of UpdateExternalAgent  UpdateExternalAgentRequest
      * @return UpdateExternalAgentResponse
@@ -3434,18 +4496,61 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites and update methods</h3>
-     * <p>The workspace must be bound to an identity provider of the corresponding type. For DingTalk and Feishu, you must submit at least one of the following fields: loginEnabled, syncEnabled, metadata, and syncScope. The protocol and saml fields are not accepted. For CustomSSO, use the protocol, saml, and loginEnabled fields. The metadata, syncEnabled, and syncScope fields are not accepted. The SCIM synchronization switch is managed separately by using UpdateIdentityProviderSCIM.</p>
-     * <h3>DingTalk and Feishu</h3>
-     * <p>The metadata field is merged by field. Submit only the fields that need to be updated. Omitted fields and existing keys remain unchanged. Explicitly submitting null, empty strings, or blank strings is rejected. The server validates the complete configuration after merging. When incremental synchronization is enabled, the merged configuration must include the encryptKey and verificationToken fields.
-     * The syncEnabled field controls subsequent address book change events and does not control the initial synchronization or manual synchronization. The syncScope field applies only to DingTalk and Feishu. If this field is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. To perform a manual synchronization, call CreateIdentityProviderSyncJob after the save operation is complete and the identity provider is ready, and then call GetIdentityProviderSyncJob to query the task result.</p>
-     * <h3>Custom SAML identity provider</h3>
-     * <p>CustomSSO currently supports only SAML. The saml field supports two mutually exclusive methods: providing metadataXml, or providing the four manually entered configuration fields: entityId, loginUrl, bindingType, and x509Certificates.
-     * The metadataXml field is a single IdP EntityDescriptor XML text of up to 1 MiB, not a URL or file path. DTD and external entities are prohibited. When manually entering the configuration, the entityId field must be non-empty and contain up to 2,048 characters, and cannot be changed after saving. The loginUrl field must be an absolute HTTPS URL without user credentials and fragments. The bindingType field must be HTTP-Redirect or HTTP-POST. The certificates must be valid X.509 signing certificates, with a maximum of 10 certificates.
-     * The jitProvisionEnabled field controls the automatic creation of users during the initial logon. The jitUpdateEnabled field controls whether user information is updated during logon. Omitting these switches during an update retains the existing values. Modifying only the JIT switches also requires an existing valid SAML configuration. Saving the SAML configuration does not automatically enable logon. A valid configuration must exist before enabling logon. Setting loginEnabled to false only triggers a shutdown of logon and does not delete the saved SAML or SCIM configuration.</p>
-     * <h3>Asynchronous results and retries</h3>
-     * <p>When actual changes exist, the expected configuration and the UPDATING status of the identity provider are returned. The CONFIGURED status may also be returned when resource configuration is restored. Call GetIdentityProvider to wait for the READY status. If the operation fails, check for statuses such as UPDATE_FAILED. If the configuration is identical and no restoration is required, the current binding may be returned directly without generating a new task. A successful HTTP request does not indicate that the background task or upstream configuration has taken effect.
-     * Operation conflicts occur when in-flight operations exist. If a submission times out, query the configuration and status before deciding whether to retry. The status field describes the status of the identity provider resource and logon configuration. The SCIM operation results for CustomSSO must be queried by using GetIdentityProviderSCIM and cannot be inferred from this status.</p>
+     * <p>Modifies the logon or directory configuration of a bound enterprise identity provider to update enterprise application credentials, adjust synchronized departments, or configure custom single sign-on.</p>
+     * <h3>Select the configuration to modify</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Identity provider</th>
+     * <th>Updatable content</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>DingTalk (DingTalk), Feishu (Feishu)</td>
+     * <td>Enterprise application credentials metadata, logon switch loginEnabled, directory change synchronization switch syncEnabled, and synchronization scope syncScope. You must submit at least one item.</td>
+     * </tr>
+     * <tr>
+     * <td>Custom identity provider (CustomSSO)</td>
+     * <td>SAML protocol protocol, logon configuration saml, and logon switch loginEnabled. SCIM-based user synchronization is configured separately by using <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Update DingTalk or Feishu</h3>
+     * <p>metadata is updated by field: submit only the fields that need to be modified. Omitted fields and existing keys remain unchanged. Provided values must be non-empty strings. When you enable directory change synchronization, the configuration must include encryptKey and verificationToken.
+     * To adjust synchronized departments:
+     * <strong>Step 1:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListIdentityProviderDepartments">ListIdentityProviderDepartments</a> to query and select departments.
+     * <strong>Step 2:</strong> Save syncScope by using this operation. If you omit this field or pass null, the current scope is retained.
+     * <strong>Step 3:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to wait for the configuration processing to complete, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateIdentityProviderSyncJob">CreateIdentityProviderSyncJob</a> to synchronize users based on the new scope.
+     * Saving the scope does not automatically trigger a full synchronization. syncEnabled controls subsequent directory change events. The initial synchronization and manual synchronization are executed separately.</p>
+     * <h3>Configure custom single sign-on</h3>
+     * <p>CustomSSO uses the SAML protocol to allow users to log on through the enterprise identity system. First, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and configure it in the enterprise identity system. Then, fill in the enterprise-side information in saml.
+     * Choose one of the following two methods:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Method</th>
+     * <th>Required configuration</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Import metadata</td>
+     * <td>metadataXml: a single IdP metadata XML text exported from the enterprise identity provider, with a maximum size of 1 MiB. Enter the XML content instead of a download URL or file path.</td>
+     * </tr>
+     * <tr>
+     * <td>Manual entry</td>
+     * <td>Provide entityId, loginUrl, bindingType, and x509Certificates at the same time. Use an HTTPS logon URL and a valid signing certificate. Set bindingType to HTTP-Redirect or HTTP-POST. You can provide up to two certificates.</td>
+     * </tr>
+     * <tr>
+     * <td>The entityId cannot be changed after it is saved. If the XML contains both binding methods, HTTP-POST and its corresponding URL take precedence.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>After saving the configuration, set loginEnabled=true to enable logon. You can also enable it when submitting a valid SAML configuration. Setting it to false disables logon and retains the existing configuration.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Confirm that the configuration takes effect</h3>
+     * <p>After the request is accepted, UPDATING is usually returned. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. READY indicates that the configuration processing is complete. If it fails, check the returned status and configuration.
+     * If the request times out, query the current configuration and processing status first, and then decide whether to retry. Query the SCIM processing result by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>.</p>
      * 
      * @param request the request parameters of UpdateIdentityProvider  UpdateIdentityProviderRequest
      * @return UpdateIdentityProviderResponse
@@ -3466,45 +4571,26 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>syncEnabled is required. If you set this parameter to true, an independent SCIM enabling and initial full user import task is submitted. During execution, the AgentIdentity receiving status must be Enabled, and an enabled and unexpired credential must exist. Therefore, call the prepare operation first and complete the URL and token configuration in the external system. If you set this parameter to false, a task to disable synchronization and upstream receiving is submitted. Existing users, credentials, and SAML logon configurations are retained. If you re-enable the feature later and receiving is disabled, call the prepare operation again.
-     * After the request is accepted, the expected switch status in AC is saved and an independent SCIM task is submitted. The original shared binding fields are returned, and the status still indicates the shared resource and logon configuration status. The new scimStatus parameter indicates the independent SCIM status, and operationStatus indicates task result of the original SCIM task. The SCIM taskId is not returned. Call GetIdentityProviderSCIM to query and wait for task result. The prerequisite checks for enabling are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then operationStatus is set to FAILED. A failure does not automatically roll back the expected switch status.
-     * SCIM does not depend on SAML configurations and does not affect the SAML status or switch. A successful task and a successful full import of empty users do not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system actually pre-provisions them.
-     * scimStatus indicates the independent SCIM configuration status. Valid values:</p>
+     * <p>Enables or disables SCIM user synchronization for AgentCore. When enabled, all existing users in the shared user pool are fully imported into the workspace. Users in the user pool are provisioned by the enterprise identity system through SCIM.</p>
+     * <h3>Preparations</h3>
+     * <p><strong>Step 1:</strong> Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to enable the receiving endpoint and obtain the receiving URL and a valid token.
+     * <strong>Step 2:</strong> Complete the SCIM configuration, connection test, and user assignment in the enterprise identity system.
+     * <strong>Step 3:</strong> Call this operation and set syncEnabled to true.</p>
+     * <pre><code class="language-http">PUT /workspaces/{workspaceId}/scim-provisioning
+     * {&quot;syncEnabled&quot;:true}
+     * </code></pre>
+     * <p>When the enabling task is executed, the system checks whether the receiving endpoint is enabled and whether valid credentials exist. If no users are provisioned in the enterprise identity system, the initial import may succeed but contain no user records.</p>
+     * <h3>Impact of disabling</h3>
+     * <p>Setting syncEnabled to false disables user synchronization and the upstream SCIM receiving endpoint, but retains the imported users, existing credentials, and SAML logon configuration.
+     * To re-enable the feature later, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to prepare the receiving endpoint first, and then enable synchronization.</p>
+     * <h3>Verify the operation result</h3>
+     * <p>After this operation accepts the request, it executes the enabling or disabling task in the background. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the progress:</p>
      * <ul>
-     * <li>UNCONFIGURED: The preparation is not completed.</li>
-     * <li>WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists. The system is waiting for external configuration and enabling confirmation.</li>
-     * <li>UPDATING: The enabling or disabling operation is being executed.</li>
-     * <li>READY: Synchronization is enabled and the current enabling task is successful. The receiving end, URL, and credentials are still available.</li>
-     * <li>DISABLED: The feature is disabled and the configuration is retained.</li>
-     * <li>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials became unavailable after enabling.
-     * The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY status does not prove that Matrix execution is completed, the external connection test is passed, or continuous incremental synchronization is healthy.</li>
+     * <li>syncEnabled indicates whether synchronization is expected to be enabled or disabled.</li>
+     * <li>operationStatus indicates the execution result of the most recent operation.</li>
+     * <li>The status field in the query operation comprehensively indicates the current stage of SCIM, such as pending configuration, processing, available, or disabled.
+     * If the operation fails, the saved syncEnabled value is not automatically rolled back. Verify the configuration based on the operation result before deciding on subsequent actions.</li>
      * </ul>
-     * <h2>Requests and examples</h2>
-     * <p>PUT /workspaces/{workspaceId}/scim-provisioning
-     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
-     * <pre><code class="language-text">PUT /workspaces/ws-example/scim-provisioning
-     * {&quot;syncEnabled&quot;: true}
-     * To disable the feature: {&quot;syncEnabled&quot;: false}
-     * </code></pre>
-     * <h2>Response example</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: {
-     *     &quot;workspaceId&quot;: &quot;ws-example&quot;,
-     *     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-     *     &quot;status&quot;: &quot;READY&quot;,
-     *     &quot;loginEnabled&quot;: false,
-     *     &quot;scimStatus&quot;: &quot;UPDATING&quot;,
-     *     &quot;syncEnabled&quot;: true,
-     *     &quot;operationStatus&quot;: &quot;PENDING&quot;
-     *   }
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream system that fails may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
-     * 400 InvalidParameter: syncEnabled is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to be unbound, or has a concurrent status conflict. If the upstream system is not enabled or has no valid credentials, it may manifest as an asynchronous FAILED status after acceptance. You cannot handle only HTTP errors.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>The request body for enabling the feature is {&quot;syncEnabled&quot;:true}, and the request body for disabling the feature is {&quot;syncEnabled&quot;:false}. This API retains the original binding details and the meaning of status, and adds scimStatus and operationStatus. After the request is accepted, call GetIdentityProviderSCIM to query the independent status and operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</p>
      * 
      * @param request the request parameters of UpdateIdentityProviderSCIM  UpdateIdentityProviderSCIMRequest
      * @return UpdateIdentityProviderSCIMResponse
@@ -3524,6 +4610,123 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</p>
+     * <h3>Update rules</h3>
+     * <p>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Configuration</th>
+     * <th>Update method</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>harness</td>
+     * <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
+     * </tr>
+     * <tr>
+     * <td>model</td>
+     * <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
+     * </tr>
+     * <tr>
+     * <td>runtime</td>
+     * <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
+     * </tr>
+     * <tr>
+     * <td>tools, skills, promptVariables, and subAgents</td>
+     * <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
+     * </tr>
+     * <tr>
+     * <td>environment</td>
+     * <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
+     * </tr>
+     * <tr>
+     * <td>network</td>
+     * <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
+     * </tr>
+     * <tr>
+     * <td>ossMounts and agenticFsMounts</td>
+     * <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Harness, templates, and skills</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Harness</th>
+     * <th>Model and connector configuration</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>qwenpaw</td>
+     * <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+     * </tr>
+     * <tr>
+     * <td>qodercli</td>
+     * <td>The qodercli Connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
+     * </tr>
+     * <tr>
+     * <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original Service Account Key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>skills uses the Skill names in the workspace AI Registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit Skills and template Skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Elasticity and instances</h3>
+     * <p>If runtime is committed but hpa or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Field</th>
+     * <th>Default value</th>
+     * <th>Value and description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>enabled</td>
+     * <td>false</td>
+     * <td>Specifies whether to enable elastic scaling.</td>
+     * </tr>
+     * <tr>
+     * <td>minSandboxCount</td>
+     * <td>1</td>
+     * <td>The minimum number of instances. Valid values: 0 to 100.</td>
+     * </tr>
+     * <tr>
+     * <td>maxSandboxCount</td>
+     * <td>10</td>
+     * <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
+     * </tr>
+     * <tr>
+     * <td>maxConcurrentSessionsPerSandbox</td>
+     * <td>20</td>
+     * <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
+     * </tr>
+     * <tr>
+     * <td>sessionTtlSeconds</td>
+     * <td>600</td>
+     * <td>The maximum idle time for a session, in seconds. Valid values: 60 to 86400.</td>
+     * </tr>
+     * <tr>
+     * <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum numbers of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Environment and mounts</h3>
+     * <p>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+     * The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
+     * The path for an OSS mount must be a non-empty directory prefix in the bucket. For an AgenticFS mount, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If readOnly is omitted, the default value is false.</p>
+     * <h3>Query update results</h3>
+     * <p>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not provide idempotency guarantees at this time.</p>
+     * 
      * @param request the request parameters of UpdateManagedAgent  UpdateManagedAgentRequest
      * @return UpdateManagedAgentResponse
      */
@@ -3543,8 +4746,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update process is asynchronous.</p>
+     * <p>Updates the address, description, authentication, or Swagger configuration of an MCP service. The service type and protocol cannot be modified after creation.
+     * The update process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query the processing result. The <code>clientToken</code> parameter does not currently provide idempotency guarantees. If the request result is not confirmed, query the current configuration and status first.</p>
      * 
      * @param request the request parameters of UpdateMcp  UpdateMcpRequest
      * @return UpdateMcpResponse
@@ -3565,7 +4768,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created, without upgrading the template version.</p>
+     * <p>Updates parameters based on the marketplace template bound to the MCP service to adjust the configuration of the templated service.
+     * Updates the parameters exposed by the schema using the same template version bound during MCP creation, without upgrading the template version.</p>
      * 
      * @param request the request parameters of UpdateMcpTemplateConfig  UpdateMcpTemplateConfigRequest
      * @return UpdateMcpTemplateConfigResponse
@@ -3586,7 +4790,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the text or metadata of a long-term memory based on the memory ID.</p>
+     * <p>Updates the long-term memory text or metadata based on the memory ID.</p>
      * 
      * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
      * @return UpdateMemoryResponse
@@ -3607,7 +4811,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates a memory store.</p>
+     * <p>Updates the mutable configurations of a long-term memory store to adjust the settings of an existing memory store.</p>
      * 
      * @param request the request parameters of UpdateMemoryStore  UpdateMemoryStoreRequest
      * @return UpdateMemoryStoreResponse
@@ -3628,9 +4832,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports updating description, contextSize, maxTokens, and capabilities. You must specify at least one non-null parameter. Parameters that are not specified or are set to null retain their original values. The capabilities parameter is replaced as a whole object. Capability fields that are not specified in the object are treated as false.
-     * Modifying only the description does not refresh the model configurations of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Repeatedly submitting the same configuration does not trigger a new model configuration refresh.
-     * A successful response indicates that the model configuration has been saved, but does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. You can call GetModel to query the saved model configuration.</p>
+     * <p>Updates the description, context length, maximum output length, or capability configuration of a model.</p>
+     * <h3>Update rules</h3>
+     * <ul>
+     * <li>Provide at least one non-null field among description, contextSize, maxTokens, and capabilities.</li>
+     * <li>Omitted fields or fields passed as null retain their original values.</li>
+     * <li>The capabilities object is replaced as a whole. Unsubmitted capabilities within the object are treated as false.</li>
+     * </ul>
+     * <h3>Impact on agents</h3>
+     * <p>After contextSize, maxTokens, or capabilities actually change, the platform asynchronously refreshes the managed Harness agents that reference this model, as well as the managed agents that use platform models (modelSource=PLATFORM). Modifying only the description or repeatedly submitting the same configuration does not trigger a refresh.
+     * A successful response indicates that the model configuration has been saved. Verify the configuration by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetModel">GetModel</a>, and then check whether the configuration takes effect by calling the corresponding agent details API operation.</p>
      * 
      * @param request the request parameters of UpdateModel  UpdateModelRequest
      * @return UpdateModelResponse
@@ -3650,6 +4861,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.</p>
+     * 
      * @param request the request parameters of UpdateModelConnection  UpdateModelConnectionRequest
      * @return UpdateModelConnectionResponse
      */
@@ -3669,8 +4883,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Updates the business tags of a specified skill. Other attributes not provided in the request remain unchanged.</p>
+     * <p>Updates the business tags of a specified skill. Other attributes that are not specified remain unchanged.</p>
      * 
      * @param request the request parameters of UpdateSkillBizTags  UpdateSkillBizTagsRequest
      * @return UpdateSkillBizTagsResponse
@@ -3691,8 +4904,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Updates the version labels and their mappings for a specified Skill.</p>
+     * <p>Updates the version labels and their mappings for a specified skill.</p>
      * 
      * @param request the request parameters of UpdateSkillLabels  UpdateSkillLabelsRequest
      * @return UpdateSkillLabelsResponse
@@ -3713,7 +4925,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
      * <p>Updates the visibility scope of a specified skill.</p>
      * 
      * @param request the request parameters of UpdateSkillScope  UpdateSkillScopeRequest
@@ -3734,6 +4945,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the description and members of a specified team.</p>
+     * 
      * @param request the request parameters of UpdateTeam  UpdateTeamRequest
      * @return UpdateTeamResponse
      */
@@ -3752,6 +4966,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the display name, email address, or note of a specified user.</p>
+     * 
      * @param request the request parameters of UpdateUser  UpdateUserRequest
      * @return UpdateUserResponse
      */
@@ -3771,7 +4988,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> state can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this API operation. The network configuration uses <code>Enabled</code> to specify whether to enable the VPC network. If enabled, you must provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
+     * <p>Modifies the name or network configuration of a workspace to adjust workspace information and the private network access environment for agents.
+     * The workspace must be in the <code>Initialized</code> state. To enable VPC networking, set <code>Enabled</code> in the network configuration to <code>true</code>, and provide both <code>VpcId</code> and at least one <code>VSwitchIds</code>.</p>
      * 
      * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse
@@ -3792,8 +5010,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses the package, and imports the AgentSpec into the current workspace.</p>
+     * <p>Retrieves an uploaded agent template ZIP package from OSS, parses the package, and imports the agent template into the current workspace.</p>
      * 
      * @param request the request parameters of UploadAgentSpecViaOss  UploadAgentSpecViaOssRequest
      * @return UploadAgentSpecViaOssResponse
@@ -3814,8 +5031,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</p>
+     * <p>Imports a skill into the current workspace by retrieving and parsing an uploaded skill ZIP package from OSS.</p>
      * 
      * @param request the request parameters of UploadSkillViaOss  UploadSkillViaOssRequest
      * @return UploadSkillViaOssResponse
@@ -3836,8 +5052,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Uses the current workspace role to check whether the customer OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
-     * The validation uses object metadata and read probing, and does not perform full downloads, transfers, decompression, or SHA-256 generation. Passing the validation does not indicate that the archive content is complete or can be started. The validation and transfer are performed again when CreateCustomAgent or UpdateCustomAgent is submitted. You do not need to invoke this operation in advance as a prerequisite for submission.</p>
+     * <p>Checks the read conditions and package information of a specified OSS object before submitting the code package for deployment, and obtains the source URI for subsequent deployment.</p>
+     * <h3>Request and validation scope</h3>
+     * <p>In the JSON request body, specify <code>ossBucketName</code> and the complete <code>ossObjectName</code>. Do not specify the HTTPS download URL. The object extension must be ZIP or TAR.GZ, and the compressed size must be between 1 and 500,000,000 bytes.
+     * This operation uses the workspace role to check the object metadata and read permissions, and returns the <code>sourceUri</code>, file name, size, and format.</p>
+     * <h3>Subsequent deployment</h3>
+     * <p>Passing the validation indicates that the object check is successful, but does not mean that the archive content is complete or ready to start. Submit the returned <code>sourceUri</code> to <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateCustomAgent">CreateCustomAgent</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateCustomAgent">UpdateCustomAgent</a>. The system will recheck and save a fixed copy upon submission.
+     * This operation is an optional precheck and is not a required step for creation or update.</p>
      * 
      * @param request the request parameters of ValidateAgentCodePackageFromOss  ValidateAgentCodePackageFromOssRequest
      * @return ValidateAgentCodePackageFromOssResponse
@@ -3858,8 +5079,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the binding status of the authorization policy for the specified source bucket to the current workspace role. AUTHORIZED indicates that the policy is bound, and UNAUTHORIZED indicates that the policy is not bound. A bound policy does not necessarily mean that a specific code package object exists or is readable.
-     * To check a specific object, call ValidateAgentCodePackageFromOss. This operation does not copy code packages or modify the default OSS binding of the workspace.</p>
+     * <p>Queries whether the read authorization for the code package source bucket is bound to the workspace resource role to determine whether supplementary authorization is required.</p>
+     * <h3>Query results</h3>
+     * <p><code>ossBucketName</code> is passed as a query parameter. <code>authorizationStatus=AUTHORIZED</code> indicates that the policy is bound, and <code>UNAUTHORIZED</code> indicates that it is not bound.
+     * A bound policy does not mean that a specific code package object definitely exists or is readable. To check the object, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ValidateAgentCodePackageFromOss">ValidateAgentCodePackageFromOss</a>. To obtain the authorization link, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetAgentCodePackageOssRamAuthorizeUrl">GetAgentCodePackageOssRamAuthorizeUrl</a>.</p>
      * 
      * @param request the request parameters of VerifyAgentCodePackageOssRamAuthorization  VerifyAgentCodePackageOssRamAuthorizationRequest
      * @return VerifyAgentCodePackageOssRamAuthorizationResponse
@@ -3880,7 +5103,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</p>
+     * <p>Verifies Qoder service account keys for a specified site to check whether the credentials are available before enabling or updating a connector. You can submit multiple keys at the same time. The response returns a list of invalid service account keys.</p>
      * 
      * @param request the request parameters of VerifyConnector  VerifyConnectorRequest
      * @return VerifyConnectorResponse
@@ -3901,7 +5124,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is retained and only new permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. This operation performs a read-only check to verify whether the custom policies corresponding to the target instance, namespace, and repository are attached to the shared role, and checks the workspace prerequisites. It does not create execution versions or trigger configuration delivery. AUTHORIZED only indicates that the custom policy for the target name is attached, without parsing the policy content or simulating the final permissions. ELIGIBLE does not mean that RuntimeManager capacity or template admission is complete, nor does it require ACR configuration to be delivered. Creating or updating an agent re-verifies permissions and processes ACR dependencies on the backend. Configuration waiting, failures, and retries are reported through agent details.</p>
+     * <p>Queries the authorization status of a workspace resource role for a specified ACR Enterprise Edition image repository to determine whether to proceed with image preparation or grant additional authorizations.</p>
+     * <h3>Request parameters</h3>
+     * <p><code>acrInstanceId</code>, <code>namespace</code>, and <code>repository</code> use query parameters and must be consistent with the targets used when obtaining the authorization URL.</p>
+     * <h3>Authorization and deployment</h3>
+     * <p><code>authorizationStatus=AUTHORIZED</code> indicates that the target authorization for the selected role is satisfied, and <code>UNAUTHORIZED</code> indicates that it is not yet satisfied. If authorization is required, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a> and confirm on the RAM page.
+     * The authorization status is checked separately from whether the specific image tag exists and whether the pull network is reachable.</p>
      * 
      * @param request the request parameters of VerifyWorkspaceAcrRamAuthorization  VerifyWorkspaceAcrRamAuthorizationRequest
      * @return VerifyWorkspaceAcrRamAuthorizationResponse
@@ -3922,7 +5150,30 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Determines the shared role and target access point based on the workspace and server, checks whether the role has a mounted policy with the expected name and a type of Custom, and returns AUTHORIZED or UNAUTHORIZED. Consistent with OSS/ACR, this operation does not verify the policy body, role trust, or actual mount read/write permissions. If the upstream query fails, an error is returned.</p>
+     * <p>Checks whether the workspace has been granted access to the specified AgenticFS access point for subsequent Agent file mount configurations.
+     * <a href="https://www.alibabacloud.com/help/en/nas/product-overview/agenticfs-overview">AgenticFS</a> is a storage type of File Storage NAS designed for AI agents. Access points provide mount entries for file spaces.</p>
+     * <h3>Query and what to do next</h3>
+     * <p>For the <code>server</code> query parameter, specify the access point domain name without the protocol, port, or path. Keep it consistent with the value used when obtaining the authorization link.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><code>authorizationStatus</code></th>
+     * <th>What to do next</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><code>AUTHORIZED</code></td>
+     * <td>Authorization is complete. You can continue to configure <code>agenticFsMounts</code> for the agent.</td>
+     * </tr>
+     * <tr>
+     * <td><code>UNAUTHORIZED</code></td>
+     * <td>Obtain the link through <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAgenticFsMountRamAuthorizeUrl">GetWorkspaceAgenticFsMountRamAuthorizeUrl</a>, complete the authorization, and then query again.</td>
+     * </tr>
+     * <tr>
+     * <td>After authorization is complete, you must still commit the mount configuration in the agent and check the configuration processing result through the agent details. The mount folder must already exist, the access point must be located in the VPC associated with the workspace, and VPC access must be enabled for the agent.</td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
      * 
      * @param request the request parameters of VerifyWorkspaceAgenticFsMountRamAuthorization  VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
      * @return VerifyWorkspaceAgenticFsMountRamAuthorizationResponse
@@ -3943,7 +5194,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries whether the workspace OSS mount role is bound to the custom RAM policy corresponding to the target bucket, and returns AUTHORIZED or UNAUTHORIZED. When bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. When bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks. Alibaba Cloud Container Registry (ACR) and user OSS mounts share the workspace role. If no existing role is available, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are only appended without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not recreated or renamed due to new naming templates.</p>
+     * <p>Verifies the OSS mount authorization for a workspace, or checks and updates the authorization status of the default OSS storage for the workspace.</p>
+     * <h3>Two query scopes</h3>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Query parameter <code>bucketName</code></th>
+     * <th>Behavior</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Bucket name provided</td>
+     * <td>Checks the mount authorization of the bucket for the workspace resource role without modifying the default OSS binding.</td>
+     * </tr>
+     * <tr>
+     * <td>Omitted</td>
+     * <td>Checks the authorization of the default private OSS storage for the workspace and updates its authorization status.</td>
+     * </tr>
+     * </tbody></table>
+     * <h3>Return statuses</h3>
+     * <p><code>AUTHORIZED</code> indicates that authorization is granted, <code>UNAUTHORIZED</code> indicates that authorization is not granted, and <code>NOT_REQUIRED</code> indicates that authorization is not required. The authorization status does not indicate whether a specific mount directory exists or an instance has completed the mount.
+     * If the goal is to read from a code package source, use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/VerifyAgentCodePackageOssRamAuthorization">VerifyAgentCodePackageOssRamAuthorization</a>. Do not mix code package verification with runtime directory mounting.</p>
      * 
      * @param request the request parameters of VerifyWorkspaceOssMountRamAuthorization  VerifyWorkspaceOssMountRamAuthorizationRequest
      * @return VerifyWorkspaceOssMountRamAuthorizationResponse

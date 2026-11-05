@@ -199,7 +199,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page.</p>
+         * <p>The maximum number of items to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -223,7 +223,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results. Valid value: download_count. Default value: gmt_modified.</p>
+         * <p>The sort field. Valid value: download_count. Default value: gmt_modified.</p>
          * 
          * <strong>example:</strong>
          * <p>download_count</p>
@@ -235,7 +235,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The owner used to filter the results.</p>
+         * <p>Filters the skills by owner.</p>
          * 
          * <strong>example:</strong>
          * <p>user123</p>
@@ -259,7 +259,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * <p>The number of items per page. Default value: 10. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -271,7 +271,7 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * <p>The visibility used to filter the results. Valid values: PUBLIC and PRIVATE.</p>
+         * <p>Filters the skills by visibility. Valid values: PUBLIC and PRIVATE.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>

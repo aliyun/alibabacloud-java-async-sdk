@@ -171,7 +171,7 @@ public class GetTeamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -378,7 +378,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation mode of the agent. CUSTOM indicates custom creation. TEMPLATE indicates creation from a template.</p>
+             * <p>The creation method of the agent. A value of CUSTOM indicates custom creation, and a value of TEMPLATE indicates creation from a template.</p>
              * 
              * <strong>example:</strong>
              * <p>CUSTOM</p>
@@ -389,7 +389,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * <p>The creation time in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -400,7 +400,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment type of the agent. MANAGED indicates platform-managed deployment. SELF_HOSTED indicates self-hosted deployment.</p>
+             * <p>The deployment method of the agent. A value of MANAGED indicates platform-managed deployment, and a value of SELF_HOSTED indicates self-hosted deployment.</p>
              * 
              * <strong>example:</strong>
              * <p>MANAGED</p>
@@ -411,10 +411,10 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent description.</p>
+             * <p>The description of the agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>An agent that handles after-sales inquiries</p>
+             * <p>Agent for handling after-sales inquiries</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -433,7 +433,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent name.</p>
+             * <p>The name of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-01</p>
@@ -455,7 +455,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent status. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
+             * <p>The status of the agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -477,7 +477,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last update in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -688,7 +688,7 @@ public class GetTeamResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication method of the user. password indicates local password authentication in the workspace. dingtalk and feishu indicate synchronization and authentication by the corresponding external identity provider.</p>
+             * <p>The authentication method of the user. A value of password indicates local password authentication in the workspace. A value of dingtalk or feishu indicates synchronization and authentication by the corresponding external identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -699,7 +699,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * <p>The creation time in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -713,7 +713,7 @@ public class GetTeamResponseBody extends TeaModel {
              * <p>The display name of the user. The name must be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>John Doe</p>
+             * <p>Zhang San</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -732,7 +732,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial password of the user. If a password was specified during creation, that password is returned. If no password was specified, a random password generated by the server is returned.</p>
+             * <p>The initial password of the user. If a password is specified during creation, the specified password is returned. Otherwise, a random password generated by the server is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>Example@2026</p>
@@ -743,7 +743,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username. The name must be unique within the workspace. It can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 32 characters in length.</p>
+             * <p>The name of the user. The name must be unique within the workspace, 1 to 32 characters in length, and can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit.</p>
              * 
              * <strong>example:</strong>
              * <p>user-01</p>
@@ -754,10 +754,10 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user note. The note can be up to 1024 characters in length.</p>
+             * <p>The note for the user. The note can be up to 1,024 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>Member of the agent operations group</p>
+             * <p>Member of the agent operations team</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -765,7 +765,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</p>
+             * <p>The status of the user. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -787,7 +787,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last update in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -991,7 +991,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * <p>The creation time in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -1002,10 +1002,10 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team description.</p>
+             * <p>The description of the team.</p>
              * 
              * <strong>example:</strong>
-             * <p>A team responsible for intelligent customer service operations</p>
+             * <p>Team responsible for AI customer service operations</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1013,7 +1013,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 128 characters in length.</p>
+             * <p>The name of the team. The name must be 1 to 128 characters in length and can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit.</p>
              * 
              * <strong>example:</strong>
              * <p>team-01</p>
@@ -1035,7 +1035,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</p>
+             * <p>The status of the team. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -1057,7 +1057,7 @@ public class GetTeamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+             * <p>The time of the last update in UTC format compliant with RFC 3339.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

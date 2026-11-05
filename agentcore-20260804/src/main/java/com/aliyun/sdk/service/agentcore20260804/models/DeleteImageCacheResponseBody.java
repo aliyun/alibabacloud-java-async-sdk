@@ -182,7 +182,7 @@ public class DeleteImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. This does not indicate that the cache creation is complete.</p>
+         * <p>Indicates whether the request is successful. A successful request does not mean that the cache creation is complete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,11 +254,11 @@ public class DeleteImageCacheResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the deletion is still in progress. A value of true indicates that the deletion is accepted but not yet complete, and a Get request returns DELETING until ImageCacheNotFound is explicitly returned. A value of false indicates that the current workspace is deleted or no longer exists.</p>
+             * <p>Indicates whether the deletion is in progress. The current implementation always returns false. To confirm the visibility of the cache, call GetImageCache or ListImageCaches.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder deletionPending(Boolean deletionPending) {
                 this.deletionPending = deletionPending;
@@ -266,7 +266,7 @@ public class DeleteImageCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image cache ID, which matches the request. This ID is still returned even if the current workspace no longer exists.</p>
+             * <p>The image cache ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

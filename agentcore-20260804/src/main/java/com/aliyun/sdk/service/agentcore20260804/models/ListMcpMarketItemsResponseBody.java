@@ -188,7 +188,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records to return in this query.</p>
+         * <p>The maximum number of records to return for this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -210,7 +210,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token used to retrieve the next page of results.</p>
+         * <p>The pagination token used to query the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -221,7 +221,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID used to locate and troubleshoot the request.</p>
          * 
          * <strong>example:</strong>
          * <p>request-123456</p>
@@ -232,7 +232,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,7 +240,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the specified conditions.</p>
+         * <p>The total number of records that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -492,7 +492,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
              * <p>The description of the MCP service.</p>
              * 
              * <strong>example:</strong>
-             * <p>An MCP service for querying knowledge bases</p>
+             * <p>MCP service for querying knowledge bases</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -508,7 +508,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The multilingual display content organized by BCP-47 language tags. Falls back to default fields if the specified language is not matched.</p>
+             * <p>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the system falls back to the default fields.</p>
              */
             public Builder i18n(java.util.Map<String, ItemsI18nValue> i18n) {
                 this.i18n = i18n;
@@ -615,7 +615,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template input schema, represented as a JSON Schema string.</p>
+             * <p>The input schema of the template, represented as a JSON Schema string.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</p>

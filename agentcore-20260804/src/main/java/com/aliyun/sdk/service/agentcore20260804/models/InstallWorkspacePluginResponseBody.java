@@ -130,7 +130,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the plugin installation operation.</p>
+         * <p>The details of the component installation operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. Returns an error description when the request fails.</p>
+         * <p>The response message. An error description is returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -266,7 +266,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the plugin is enabled.</p>
+             * <p>Indicates whether the component is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -277,7 +277,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin name.</p>
+             * <p>The component name.</p>
              * 
              * <strong>example:</strong>
              * <p>collaboration</p>
@@ -288,7 +288,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</p>
+             * <p>The component status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLING</p>

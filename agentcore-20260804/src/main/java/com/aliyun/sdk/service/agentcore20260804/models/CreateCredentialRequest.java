@@ -195,10 +195,10 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
-             * <p>The unique identifier of the resource.</p>
+             * <p>The ID of the applicable MCP service.</p>
              * 
              * <strong>example:</strong>
-             * <p>agent-xxxx</p>
+             * <p>mcp-example</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -209,7 +209,7 @@ public class CreateCredentialRequest extends Request {
              * <p>The name of the resource. This parameter is empty if the resource is deleted.</p>
              * 
              * <strong>example:</strong>
-             * <p>my-agent</p>
+             * <p>my-mcp-service</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -217,10 +217,10 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>The type of the resource, such as agent.</p>
+             * <p>The type of the resource. Set the value to mcpServer, which indicates an MCP service.</p>
              * 
              * <strong>example:</strong>
-             * <p>agent</p>
+             * <p>mcpServer</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -342,7 +342,7 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
-             * <p>The credential content, which is a JSON string. If credentialType is apiKey, this parameter can only contain the apiKey field, and the value cannot be empty. After the credential is written, only desensitized queries are supported.</p>
+             * <p>The credential content, submitted as a JSON string. For the apiKey type, it contains only a non-empty apiKey. For the mcpHeader type, it contains a non-empty headers array, where each item includes a name and a value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -354,7 +354,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>The credential type. Currently, only apiKey is supported.</p>
+             * <p>The credential type. Valid values: apiKey (API key) and mcpHeader (MCP request header).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -377,7 +377,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>The name of the credential. The name must be unique within the workspace, can only contain letters, digits, periods, underscores, and hyphens, and must be 3 to 128 characters in length. Runtime reserved names cannot be used.</p>
+             * <p>The name of the credential. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -389,7 +389,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>If resourceScope is SPECIFIED, this parameter must be a non-empty array. Each item must contain resourceType and resourceId. resourceName is optional.</p>
+             * <p>The list of applicable resources for an mcpHeader credential. This parameter must be non-empty when resourceScope is set to SPECIFIED, and must be omitted when resourceScope is set to ALL.</p>
              */
             public Builder resourceRefs(java.util.List<ResourceRefs> resourceRefs) {
                 this.resourceRefs = resourceRefs;
@@ -397,7 +397,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>The application scope of the credential resource. A value of ALL indicates all resources. A value of SPECIFIED indicates that the credential is applied only to the resources specified by resourceRefs.</p>
+             * <p>The application scope of an mcpHeader credential. This parameter is supported only for the mcpHeader type. ALL indicates all MCP services, and SPECIFIED indicates the MCP services specified in resourceRefs. Do not submit this field for the apiKey type.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>

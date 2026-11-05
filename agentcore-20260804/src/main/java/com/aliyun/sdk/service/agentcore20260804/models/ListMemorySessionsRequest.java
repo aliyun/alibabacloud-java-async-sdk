@@ -158,7 +158,7 @@ public class ListMemorySessionsRequest extends Request {
         }
 
         /**
-         * <p>The agent ID. If you do not specify this parameter, all agents are matched. The value must be 1 to 128 bytes in length and cannot contain forward slashes (/) or asterisks (*).</p>
+         * <p>The agent ID. If not specified, all agents are matched. The length is limited to 1 to 128 UTF-8 bytes, and it cannot contain / or *.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -194,7 +194,7 @@ public class ListMemorySessionsRequest extends Request {
         }
 
         /**
-         * <p>The user ID. If you do not specify this parameter, all users are matched. The value must be 1 to 128 bytes in length and cannot contain forward slashes (/) or asterisks (*).</p>
+         * <p>The user ID. If not specified, all users are matched. The length is limited to 1 to 128 UTF-8 bytes, and it cannot contain / or *.</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>

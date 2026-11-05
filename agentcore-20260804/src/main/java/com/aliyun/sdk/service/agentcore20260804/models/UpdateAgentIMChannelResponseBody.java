@@ -119,7 +119,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+         * <p>The business status code. The value is SUCCESS when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+         * <p>The HTTP status code. The value is 200 when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -587,7 +587,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network access URL of the attached ServiceEndpoint.</p>
+             * <p>The public network access URL of the bound ServiceEndpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://agent.example.com">https://agent.example.com</a></p>
@@ -620,7 +620,7 @@ public class UpdateAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Deletion failed).</p>
+             * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Delete failed).</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>

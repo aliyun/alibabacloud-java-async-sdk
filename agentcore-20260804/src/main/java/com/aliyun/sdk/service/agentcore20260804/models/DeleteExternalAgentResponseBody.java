@@ -130,7 +130,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The summary information of the deleted external agent.</p>
+         * <p>The summary information of the deleted managed agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request processing result message.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -402,7 +402,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external agent ID.</p>
+             * <p>The managed agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1</p>
@@ -446,7 +446,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the external agent.</p>
+             * <p>The description of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>Code review agent running in the user environment</p>
@@ -468,7 +468,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the external agent.</p>
+             * <p>The name of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>my-external-agent</p>
@@ -479,7 +479,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime type reported by the external agent.</p>
+             * <p>The runtime type reported by the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>qwenpaw</p>
@@ -490,7 +490,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the external agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
+             * <p>The status of the managed agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

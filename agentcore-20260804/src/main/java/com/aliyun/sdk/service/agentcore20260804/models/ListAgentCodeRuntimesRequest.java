@@ -114,7 +114,7 @@ public class ListAgentCodeRuntimesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page.</p>
+         * <p>The next page token.</p>
          * 
          * <strong>example:</strong>
          * <p>d3MtYTFiMmMzZDRlNWY2CmNvZGUtcnVudGltZS1leGFtcGxlCjE</p>

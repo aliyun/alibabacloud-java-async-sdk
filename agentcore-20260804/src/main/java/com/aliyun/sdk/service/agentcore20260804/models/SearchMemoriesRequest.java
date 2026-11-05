@@ -199,7 +199,7 @@ public class SearchMemoriesRequest extends Request {
             } 
 
             /**
-             * <p>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain a forward slash (/) or an asterisk (*). If the memory is not associated with an agent ID, this field is not returned.</p>
+             * <p>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with an agent ID, this field is not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-001</p>
@@ -210,7 +210,7 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain a forward slash (/) or an asterisk (*). If the memory is not associated with a session ID, this field is not returned.</p>
+             * <p>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a session ID, this field is not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>session-001</p>
@@ -221,7 +221,7 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain a forward slash (/) or an asterisk (*). If the memory is not associated with a user ID, this field is not returned.</p>
+             * <p>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a user ID, this field is not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>user-001</p>
@@ -368,7 +368,7 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The string key-value metadata for exact match. You can specify up to 16 keys. Each key can be up to 64 characters in length, and each value can be up to 1,024 characters in length.</p>
+             * <p>The string key-value metadata for exact match. A maximum of 16 keys are supported. Each key can be up to 64 characters in length, and each value can be up to 1,024 characters in length.</p>
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
@@ -418,7 +418,7 @@ public class SearchMemoriesRequest extends Request {
             }
 
             /**
-             * <p>The number of results to return.</p>
+             * <p>The number of returned results.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

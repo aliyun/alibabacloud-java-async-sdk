@@ -130,7 +130,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the updated workspace.</p>
+         * <p>The updated workspace details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>request-123456</p>
@@ -253,7 +253,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable the VPC network.</p>
+             * <p>Specifies whether to enable VPC networking.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -355,7 +355,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+             * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -366,7 +366,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. After this feature is disabled, the public ingress for all agent endpoints in the workspace is closed. After this feature is re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
+             * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public network ingress for all agent endpoints in the workspace is closed, and the original public network ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected, and collaboration and Element Web ingress are not controlled by this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -535,7 +535,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authorization status of OSS storage.</p>
+             * <p>The OSS storage authorization status.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTHORIZED</p>
@@ -576,7 +576,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the workspace resides.</p>
+             * <p>The region ID of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -620,7 +620,7 @@ public class UpdateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-123456</p>

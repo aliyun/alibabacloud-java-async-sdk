@@ -158,7 +158,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates a successful request.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -169,7 +169,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates a successful request.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -180,7 +180,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of IM channels.</p>
+         * <p>The IM channels.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -199,7 +199,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request processing result message.</p>
+         * <p>The result message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page. An empty value indicates that the last page has been reached.</p>
+         * <p>The token for the next page. An empty value indicates that the last page is reached.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>
@@ -232,7 +232,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,7 +240,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the specified conditions.</p>
+         * <p>The total number of records that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -621,12 +621,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel type. Valid values:</p>
-             * <ul>
-             * <li>DINGTALK: DingTalk.</li>
-             * <li>FEISHU: Lark.</li>
-             * <li>WECOM: WeCom.</li>
-             * </ul>
+             * <p>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</p>
              * 
              * <strong>example:</strong>
              * <p>DINGTALK</p>
@@ -648,7 +643,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The channel credential summary. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</p>
+             * <p>The channel credential summary. Only non-sensitive fields and configured secret field names are returned. Secret values are not returned.</p>
              */
             public Builder credentialSummary(CredentialSummary credentialSummary) {
                 this.credentialSummary = credentialSummary;
@@ -656,7 +651,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the IM channel is enabled. Default value upon creation: true.</p>
+             * <p>Specifies whether the IM channel is enabled. Default value: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -664,7 +659,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network access URL of the attached ServiceEndpoint.</p>
+             * <p>The public network access address of the attached ServiceEndpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://agent.example.com">https://agent.example.com</a></p>
@@ -686,7 +681,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public access URL.</p>
+             * <p>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint URL.</p>
              * 
              * <strong>example:</strong>
              * <p>se-1</p>
@@ -697,15 +692,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel status. Valid values:</p>
-             * <ul>
-             * <li>CREATING: The channel is being created.</li>
-             * <li>READY: The channel is ready.</li>
-             * <li>UPDATING: The channel is being updated.</li>
-             * <li>FAILED: The channel creation or update failed.</li>
-             * <li>DELETING: The channel is being deleted.</li>
-             * <li>DELETE_FAILED: The channel deletion failed.</li>
-             * </ul>
+             * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Delete failed).</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>

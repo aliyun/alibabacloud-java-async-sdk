@@ -208,7 +208,7 @@ public class GetAgentSpecVersionResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sample description used to explain the purpose of the resource</p>
+             * <p>A sample description used to explain the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;

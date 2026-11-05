@@ -103,7 +103,7 @@ public class CreateExternalAgentBootstrapTokenRequest extends Request {
         }
 
         /**
-         * <p>The external agent ID.</p>
+         * <p>The ID of the managed agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class CreateExternalAgentBootstrapTokenRequest extends Request {
         }
 
         /**
-         * <p>The network type for onboarding. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
+         * <p>The access network type. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

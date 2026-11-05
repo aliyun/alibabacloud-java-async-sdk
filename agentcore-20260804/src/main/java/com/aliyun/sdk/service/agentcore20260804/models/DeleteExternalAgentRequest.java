@@ -88,7 +88,7 @@ public class DeleteExternalAgentRequest extends Request {
         }
 
         /**
-         * <p>The external agent ID.</p>
+         * <p>The managed agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

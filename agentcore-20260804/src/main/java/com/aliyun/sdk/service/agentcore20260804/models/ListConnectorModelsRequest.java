@@ -130,7 +130,7 @@ public class ListConnectorModelsRequest extends Request {
         }
 
         /**
-         * <p>The Connector name. Currently, only qodercli is supported.</p>
+         * <p>The connector name. Only qodercli is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ListConnectorModelsRequest extends Request {
         }
 
         /**
-         * <p>The Connector Key ID. This parameter is not supported in the current version.</p>
+         * <p>The connector key ID. This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>ckey-xxxx</p>
@@ -167,7 +167,7 @@ public class ListConnectorModelsRequest extends Request {
         }
 
         /**
-         * <p>The next page token. This parameter is not supported in the current version.</p>
+         * <p>The next token. This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>dGVzdA==</p>

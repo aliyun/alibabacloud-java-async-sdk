@@ -201,11 +201,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version selector type. Valid values:</p>
-             * <ul>
-             * <li>LABEL: selects by label.</li>
-             * <li>VERSION: selects by specific version.</li>
-             * </ul>
+             * <p>The type of the version selector.</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -216,7 +212,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The selector value. If the type is LABEL, this value is a label name such as latest. If the type is VERSION, this value is a specific version number.</p>
+             * <p>The value of the selector. If the type is LABEL, the value is the label name, such as latest. If the type is VERSION, the value is the specific version number.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -310,11 +306,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill source type. Valid values:</p>
-             * <ul>
-             * <li>REFERENCE: references AI Registry.</li>
-             * <li>STATIC: statically bundled with the package.</li>
-             * </ul>
+             * <p>The source type of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>REFERENCE</p>
@@ -325,7 +317,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version selector for the reference. Defaults to LABEL/latest if omitted.</p>
+             * <p>The referenced version selector. If omitted, the default is LABEL/latest.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -534,7 +526,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A sample description that explains the purpose of the resource</p>
+             * <p>A sample description used to explain the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -553,7 +545,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the AgentSpec is enabled.</p>
+             * <p>Indicates whether it is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -561,7 +553,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of MCP server references.</p>
+             * <p>The list of MCP service references.</p>
              */
             public Builder mcpServers(java.util.List<McpServers> mcpServers) {
                 this.mcpServers = mcpServers;
@@ -599,7 +591,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of Skill references.</p>
+             * <p>The list of skill references.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -607,7 +599,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787671022000</p>

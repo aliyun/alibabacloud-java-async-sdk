@@ -88,7 +88,7 @@ public class GetManagedAgentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the managed agent.</p>
+         * <p>The ID of the managed Harness agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

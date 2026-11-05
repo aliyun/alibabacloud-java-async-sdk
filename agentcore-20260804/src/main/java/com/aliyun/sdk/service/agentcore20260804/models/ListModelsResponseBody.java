@@ -158,7 +158,7 @@ public class ListModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of SUCCESS indicates success.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -169,7 +169,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -188,7 +188,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of results per page. Valid values: 0 to 100. If this parameter is not set or set to 0, the default value 10 is used.</p>
+         * <p>The number of entries to return on each page. Valid values: 0 to 100. If this parameter is not specified or is set to 0, the default value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -199,7 +199,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message of the request processing result.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. Pass the token returned from the previous query. An empty response indicates that no more pages are available.</p>
+         * <p>The pagination token. Specify the token returned from the previous request to retrieve the next page. An empty response indicates that no more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWw6MTA</p>
@@ -232,7 +232,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,7 +240,7 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of resources that match the query conditions.</p>
+         * <p>The total number of resources that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -387,7 +387,7 @@ public class ListModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the model supports audio input or output.</p>
+             * <p>Specifies whether the model supports audio input or output.</p>
              */
             public Builder audio(Boolean audio) {
                 this.audio = audio;
@@ -395,7 +395,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports document input.</p>
+             * <p>Specifies whether the model supports document input.</p>
              */
             public Builder document(Boolean document) {
                 this.document = document;
@@ -403,7 +403,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports invoking multiple tools in a single response.</p>
+             * <p>Specifies whether the model supports multiple tool calls in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -411,7 +411,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports reasoning capabilities.</p>
+             * <p>Specifies whether the model supports reasoning capabilities.</p>
              */
             public Builder reasoning(Boolean reasoning) {
                 this.reasoning = reasoning;
@@ -419,7 +419,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports streaming tool calling.</p>
+             * <p>Specifies whether the model supports streaming tool calling.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -427,7 +427,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports tool calling.</p>
+             * <p>Specifies whether the model supports tool calling.</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -435,7 +435,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports video input.</p>
+             * <p>Specifies whether the model supports video input.</p>
              */
             public Builder video(Boolean video) {
                 this.video = video;
@@ -443,7 +443,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model supports image input.</p>
+             * <p>Specifies whether the model supports image input.</p>
              */
             public Builder vision(Boolean vision) {
                 this.vision = vision;
@@ -614,7 +614,7 @@ public class ListModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The model capability configuration.</p>
+             * <p>The model capability configurations.</p>
              */
             public Builder capabilities(Capabilities capabilities) {
                 this.capabilities = capabilities;
@@ -633,7 +633,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model context window size, in tokens. The value must be a positive integer.</p>
+             * <p>The context window size of the model, in tokens. The value must be a positive integer.</p>
              * 
              * <strong>example:</strong>
              * <p>128000</p>
@@ -644,7 +644,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+             * <p>The time when the resource was created. The time is in the RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>
@@ -655,7 +655,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model description. Maximum length: 255 characters.</p>
+             * <p>The model description. The description can be up to 255 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>description</p>
@@ -666,7 +666,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of output tokens supported by the model in a single generation.</p>
+             * <p>The maximum number of output tokens supported by the model per generation.</p>
              * 
              * <strong>example:</strong>
              * <p>131072</p>
@@ -699,7 +699,7 @@ public class ListModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+             * <p>The time when the resource was last updated. The time is in the RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-09T00:00:00Z</p>

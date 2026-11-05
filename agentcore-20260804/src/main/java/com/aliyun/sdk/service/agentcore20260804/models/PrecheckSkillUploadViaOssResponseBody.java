@@ -67,7 +67,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -313,7 +313,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The draft mode: HEAD or VERSIONED, determined by the server.</p>
+             * <p>The draft mode. Valid values: HEAD and VERSIONED. The value is determined by the server.</p>
              * 
              * <strong>example:</strong>
              * <p>HEAD</p>
@@ -335,7 +335,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entry path of the Skill package.</p>
+             * <p>The entry path of the skill package.</p>
              * 
              * <strong>example:</strong>
              * <p>SKILL.md</p>
@@ -346,7 +346,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Skill already exists.</p>
+             * <p>Indicates whether the skill already exists.</p>
              */
             public Builder exists(Boolean exists) {
                 this.exists = exists;
@@ -354,7 +354,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content revision identifier of the persistent draft, used to determine whether the local cache has expired. Returned only in HEAD draft mode.</p>
+             * <p>The content revision identifier of the persistent draft, which is used to determine whether the local cache has expired. This parameter is returned only in HEAD draft mode.</p>
              * 
              * <strong>example:</strong>
              * <p>rev-1a2b3c4d</p>
@@ -365,7 +365,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the persistent draft: draft, reviewing, or reviewed. Returned only in HEAD draft mode.</p>
+             * <p>The status of the persistent draft. Valid values: draft, reviewing, and reviewed. This parameter is returned only in HEAD draft mode.</p>
              * 
              * <strong>example:</strong>
              * <p>draft</p>
@@ -409,7 +409,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dry run result code.</p>
+             * <p>The precheck result code. HEAD_EXISTS indicates that the upload will overwrite the existing persistent draft and requires secondary confirmation. HEAD_LOCKED indicates that the draft is under review and cannot be overwritten. You must withdraw the review first.</p>
              * 
              * <strong>example:</strong>
              * <p>VALIDATION_FAILED</p>
@@ -442,7 +442,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Skill name.</p>
+             * <p>The skill name.</p>
              * 
              * <strong>example:</strong>
              * <p>skill-example</p>

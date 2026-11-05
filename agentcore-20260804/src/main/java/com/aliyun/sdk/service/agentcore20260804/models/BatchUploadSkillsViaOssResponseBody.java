@@ -67,7 +67,7 @@ public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;

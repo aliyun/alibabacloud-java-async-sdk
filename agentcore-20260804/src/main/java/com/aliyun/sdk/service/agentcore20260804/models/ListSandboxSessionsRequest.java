@@ -132,7 +132,7 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
-         * <p>The managed agent ID.</p>
+         * <p>The ID of the managed Harness agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
-         * <p>The sandbox ID. You can call ListSandboxes to query the sandbox ID.</p>
+         * <p>The sandbox ID. You can obtain the sandbox ID by calling ListSandboxes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records per page. Default value: 20.</p>
+         * <p>The maximum number of entries to return per page. Default value: 20. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -170,7 +170,7 @@ public class ListSandboxSessionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for querying the next page.</p>
+         * <p>The token for the next page. Omit this parameter in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and maxResults unchanged. An empty value indicates that no more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>

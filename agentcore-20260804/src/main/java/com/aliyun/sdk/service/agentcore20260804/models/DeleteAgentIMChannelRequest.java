@@ -143,7 +143,7 @@ public class DeleteAgentIMChannelRequest extends Request {
         }
 
         /**
-         * <p>The reserved idempotence token. The backend does not provide persistent idempotence guarantee in the current version.</p>
+         * <p>The reserved idempotence token. The backend does not provide persistent idempotence guarantees in the current phase.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>

@@ -111,7 +111,7 @@ public class CreatePermissionRulesRequest extends Request {
         }
 
         /**
-         * <p>The client token.</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>550e8400-e29b-41d4-a716-446655440000</p>
@@ -285,7 +285,7 @@ public class CreatePermissionRulesRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>ALLOW</p>
+             * <p>PERMIT</p>
              */
             public Builder effect(String effect) {
                 this.effect = effect;

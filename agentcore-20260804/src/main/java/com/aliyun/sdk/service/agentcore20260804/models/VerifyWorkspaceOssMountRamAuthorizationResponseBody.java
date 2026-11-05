@@ -171,7 +171,7 @@ public class VerifyWorkspaceOssMountRamAuthorizationResponseBody extends TeaMode
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -224,7 +224,7 @@ public class VerifyWorkspaceOssMountRamAuthorizationResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The OSS storage authorization status.</p>
+             * <p>The authorization status of the OSS storage.</p>
              * 
              * <strong>example:</strong>
              * <p>AUTHORIZED</p>

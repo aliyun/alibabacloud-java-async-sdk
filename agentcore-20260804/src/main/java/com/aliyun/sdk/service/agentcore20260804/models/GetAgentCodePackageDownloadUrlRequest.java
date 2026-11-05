@@ -88,7 +88,7 @@ public class GetAgentCodePackageDownloadUrlRequest extends Request {
         }
 
         /**
-         * <p>The custom agent ID.</p>
+         * <p>The ID of the custom code or image agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

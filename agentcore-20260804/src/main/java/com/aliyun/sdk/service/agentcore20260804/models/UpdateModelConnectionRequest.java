@@ -270,7 +270,7 @@ public class UpdateModelConnectionRequest extends Request {
             }
 
             /**
-             * <p>The description of the model connection. The description can be up to 255 characters in length.</p>
+             * <p>The description of the model connection, which can be up to 255 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>description</p>
@@ -281,7 +281,7 @@ public class UpdateModelConnectionRequest extends Request {
             }
 
             /**
-             * <p>The absolute HTTP or HTTPS URL of the upstream model service. The URL can be up to 1,024 characters in length.</p>
+             * <p>The absolute HTTP or HTTPS URL of the upstream model service, which can be up to 1,024 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
@@ -292,7 +292,7 @@ public class UpdateModelConnectionRequest extends Request {
             }
 
             /**
-             * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
+             * <p>The name of the model connection, which must be 1 to 128 non-whitespace characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>

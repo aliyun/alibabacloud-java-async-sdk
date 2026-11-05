@@ -117,7 +117,7 @@ public class RedraftSkillVersionRequest extends Request {
         }
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class RedraftSkillVersionRequest extends Request {
         }
 
         /**
-         * <p>The Skill version number.</p>
+         * <p>The skill version number to revert for re-editing. In HEAD draft mode, pass HEAD to revert the persistent draft. The draft must be in the reviewing or reviewed state; otherwise, a 409 error is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

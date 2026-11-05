@@ -119,7 +119,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+         * <p>The business status code. The value is SUCCESS when the operation succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the updated external agent.</p>
+         * <p>The details of the updated managed agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request processing result message.</p>
+         * <p>The result message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -237,11 +237,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the version selector. Valid values:</p>
-             * <ul>
-             * <li>LABEL: By label.</li>
-             * <li>VERSION: By specific version.</li>
-             * </ul>
+             * <p>The version selector type. Valid values: LABEL (by tag) and VERSION (by specific version).</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -252,7 +248,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the selector. When the type is LABEL, this is the label name, such as latest. When the type is VERSION, this is the specific version number.</p>
+             * <p>The selector value. When the type is LABEL, the value is the tag name, such as latest. When the type is VERSION, the value is the specific version number.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -361,11 +357,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the skill. Valid values:</p>
-             * <ul>
-             * <li>REFERENCE: References the AI Registry.</li>
-             * <li>STATIC: Statically provided with the package.</li>
-             * </ul>
+             * <p>The skill source type. Valid values: REFERENCE (references AI Registry) and STATIC (statically provided with the package).</p>
              * 
              * <strong>example:</strong>
              * <p>REFERENCE</p>
@@ -387,7 +379,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The referenced version selector. If omitted, the default is LABEL/latest. Currently, only LABEL/latest is supported.</p>
+             * <p>The skill reference version selector, which supports LABEL tags and specific VERSION numbers. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -493,12 +485,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The heartbeat status. ONLINE indicates that the latest heartbeat has not exceeded the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or the format is invalid. Valid values:</p>
-             * <ul>
-             * <li>ONLINE: online</li>
-             * <li>STALE: heartbeat expired</li>
-             * <li>UNKNOWN: unknown</li>
-             * </ul>
+             * <p>The heartbeat status. ONLINE indicates that the latest heartbeat has not exceeded the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or the format is invalid. Valid values: ONLINE, STALE, and UNKNOWN.</p>
              * 
              * <strong>example:</strong>
              * <p>ONLINE</p>
@@ -509,7 +496,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last active time of the external agent in RFC 3339 format.</p>
+             * <p>The last active time of the managed agent in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -520,7 +507,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last heartbeat time of the external agent in RFC 3339 format.</p>
+             * <p>The last heartbeat time of the managed agent in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>
@@ -531,7 +518,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The local IP address reported by the external agent.</p>
+             * <p>The local IP address reported by the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.42</p>
@@ -542,7 +529,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime type reported by the external agent.</p>
+             * <p>The runtime type reported by the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>qwenpaw</p>
@@ -677,7 +664,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</p>
+             * <p>Specifies whether the quota is enabled. This field is not returned if no quota is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -699,7 +686,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the quota is exceeded for the current cycle. This is a read-only field returned by the backend.</p>
+             * <p>Indicates whether the quota has been exceeded in the current period. This is a read-only field returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -732,7 +719,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of tokens allowed to be consumed in a single cycle.</p>
+             * <p>The maximum number of tokens allowed to be consumed in a single period.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -743,7 +730,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</p>
+             * <p>The number of tokens consumed in the current period. This is a read-only field returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -848,7 +835,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model token quota configuration and usage status for the current cycle. This field is empty if no quota is configured.</p>
+             * <p>The model token quota configuration and usage status for the current period. This field is empty if no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -915,11 +902,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the version selector. Valid values:</p>
-             * <ul>
-             * <li>LABEL: By label.</li>
-             * <li>VERSION: By specific version.</li>
-             * </ul>
+             * <p>The version selector type. Valid values: LABEL (by tag) and VERSION (by specific version).</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -930,7 +913,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the selector. When the type is LABEL, this is the label name, such as latest. When the type is VERSION, this is the specific version number.</p>
+             * <p>The selector value. When the type is LABEL, the value is the tag name, such as latest. When the type is VERSION, the value is the specific version number.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -1065,7 +1048,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The applied version in the runtime. This is a read-only field.</p>
+             * <p>The version that has taken effect at runtime. This is a read-only field.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1098,7 +1081,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current target version. This is a read-only field.</p>
+             * <p>The current target version. This field is read-only.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1109,11 +1092,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the skill. Valid values:</p>
-             * <ul>
-             * <li>REFERENCE: References the AI Registry.</li>
-             * <li>STATIC: Statically provided with the package.</li>
-             * </ul>
+             * <p>The skill source type. Valid values: REFERENCE (references AI Registry) and STATIC (statically provided with the package).</p>
              * 
              * <strong>example:</strong>
              * <p>REFERENCE</p>
@@ -1124,7 +1103,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skill version.</p>
+             * <p>The current target version compatible with legacy clients. New clients use resolvedVersion and determine the effective runtime version based on appliedVersion.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1135,7 +1114,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The referenced version selector, which defaults to LABEL/latest if omitted.</p>
+             * <p>The skill reference version selector, which supports LABEL tags and specific VERSION numbers. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(SkillsVersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -1204,7 +1183,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the template in the AI Registry.</p>
+             * <p>The name of the template in AI Registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1216,7 +1195,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the template in the AI Registry.</p>
+             * <p>The version of the template in AI Registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1355,10 +1334,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tool type. Valid values:</p>
-             * <ul>
-             * <li>MCP: MCP tool.</li>
-             * </ul>
+             * <p>The tool type. Valid values: MCP (MCP tool).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1676,7 +1652,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The external agent ID.</p>
+             * <p>The managed agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-1</p>
@@ -1687,7 +1663,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Includes only the skills added or overridden by the user, excluding inherited items from templates. The resource model reads this field to preserve update semantics. Creation and update operations still use the skills in the request.</p>
+             * <p>The explicitly configured skills.</p>
              */
             public Builder configuredSkills(java.util.List<ConfiguredSkills> configuredSkills) {
                 this.configuredSkills = configuredSkills;
@@ -1728,7 +1704,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the external agent.</p>
+             * <p>The description of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>Code review agent running in the user environment</p>
@@ -1739,7 +1715,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime status information reported by the external agent.</p>
+             * <p>The runtime status information reported by the managed agent.</p>
              */
             public Builder externalAgentStatus(ExternalAgentStatus externalAgentStatus) {
                 this.externalAgentStatus = externalAgentStatus;
@@ -1769,15 +1745,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing status of the latest specification version. Valid values:</p>
-             * <ul>
-             * <li>pending: pending</li>
-             * <li>processing: processing</li>
-             * <li>waiting_retry: waiting for retry</li>
-             * <li>succeeded: succeeded</li>
-             * <li>failed: failed</li>
-             * <li>superseded: superseded by a new version</li>
-             * </ul>
+             * <p>The processing status of the latest specification version. Valid values: pending, processing, waiting_retry, succeeded, failed, and superseded.</p>
              * 
              * <strong>example:</strong>
              * <p>pending</p>
@@ -1788,7 +1756,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model configuration. Available only when modelSource is set to PLATFORM.</p>
+             * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -1796,11 +1764,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be passed at the same time. Valid values:</p>
-             * <ul>
-             * <li>PLATFORM: Platform model.</li>
-             * <li>RUNTIME: Runtime model.</li>
-             * </ul>
+             * <p>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</p>
              * 
              * <strong>example:</strong>
              * <p>PLATFORM</p>
@@ -1811,7 +1775,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the external agent.</p>
+             * <p>The name of the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>my-external-agent</p>
@@ -1833,7 +1797,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime type reported by the external agent.</p>
+             * <p>The runtime type reported by the managed agent.</p>
              * 
              * <strong>example:</strong>
              * <p>qwenpaw</p>
@@ -1852,7 +1816,7 @@ public class UpdateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the external agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
+             * <p>The status of the managed agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

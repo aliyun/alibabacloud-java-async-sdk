@@ -87,7 +87,7 @@ public class VerifyWorkspaceOssMountRamAuthorizationRequest extends Request {
         }
 
         /**
-         * <p>The OSS bucket name.</p>
+         * <p>The name of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>bucket-001</p>

@@ -90,7 +90,7 @@ public class GetIdentityProviderServiceProviderRequest extends Request {
         } 
 
         /**
-         * <p>Required. The ID of the target workspace. The request region must be the same as the region of the target workspace.</p>
+         * <p>Required. The ID of the destination workspace. The region of the request must be the same as the region of the destination workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetIdentityProviderServiceProviderRequest extends Request {
         }
 
         /**
-         * <p>Required. The query parameter supports only the exact value SAML. The response returns SAML.</p>
+         * <p>Required. The query parameter. Only the exact value SAML is supported. The response returns SAML.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

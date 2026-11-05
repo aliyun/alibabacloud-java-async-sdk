@@ -178,7 +178,7 @@ public class ListMcpMarketItemsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return in this query.</p>
+         * <p>The maximum number of records to return for this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -202,7 +202,7 @@ public class ListMcpMarketItemsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token used to retrieve the next page of results.</p>
+         * <p>The pagination token used to query the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

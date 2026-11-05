@@ -75,7 +75,7 @@ public class UpdateIdentityProviderSCIMRequest extends Request {
         } 
 
         /**
-         * <p>Required. The ID of the target workspace. The request region must be the same as the region of the target workspace.</p>
+         * <p>Required. The ID of the destination workspace. The region of the request must be the same as the region of the destination workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class UpdateIdentityProviderSCIMRequest extends Request {
         }
 
         /**
-         * <p>Submit business parameters as described in this API document. The body parameters of the public API are mapped to the backend wrapper by the gateway. Do not mix them with the body wrapper of the backend direct connection API.</p>
+         * <p>The business parameters submitted in the request body. The body parameters of public APIs are mapped to backend wrappers by the gateway and must not be mixed with direct backend body wrappers.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(UpdateIdentityProviderSCIMRequestBody body) {
@@ -146,7 +146,7 @@ public class UpdateIdentityProviderSCIMRequest extends Request {
             } 
 
             /**
-             * <p>Do not set this parameter to true during CustomSSO initialization. You can only update this parameter by calling UpdateIdentityProviderSCIM later. Determine the result based on operationStatus.</p>
+             * <p>Specifies whether to enable SCIM synchronization. Do not set this parameter to true during CustomSSO initialization. You can update this parameter only by calling UpdateIdentityProviderSCIM. Check the operationStatus field to determine the result.</p>
              * <p>This parameter is required.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {

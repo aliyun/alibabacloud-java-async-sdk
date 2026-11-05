@@ -180,7 +180,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of users.</p>
+         * <p>The user list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -448,7 +448,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC format based on RFC 3339.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -459,7 +459,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the user. The name must be 1 to 32 characters in length.</p>
+             * <p>The display name of the user. The value must be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>Zhang San</p>
@@ -470,7 +470,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the user. The email address can be up to 256 characters in length.</p>
+             * <p>The email address of the user. The value can be up to 256 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
@@ -481,7 +481,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user name. The name must be unique within the workspace, contain only lowercase letters, digits, and hyphens, start and end with a lowercase letter or a digit, and be 1 to 32 characters in length.</p>
+             * <p>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>user-01</p>
@@ -492,10 +492,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user remarks. The remarks can be up to 1,024 characters in length.</p>
+             * <p>The remarks of the user. The value can be up to 1,024 characters in length.</p>
              * 
              * <strong>example:</strong>
-             * <p>Member of the agent operations team</p>
+             * <p>Agent operations team member</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -525,7 +525,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time in UTC format based on RFC 3339.</p>
+             * <p>The time of the last modification. The time is displayed in UTC and follows the RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

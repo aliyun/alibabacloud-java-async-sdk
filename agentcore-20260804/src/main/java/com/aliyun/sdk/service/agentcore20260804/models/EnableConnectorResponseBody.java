@@ -130,7 +130,7 @@ public class EnableConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Connector details.</p>
+         * <p>The connector details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -171,7 +171,7 @@ public class EnableConnectorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -290,7 +290,7 @@ public class EnableConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the Connector was enabled.</p>
+             * <p>The time when the connector was enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-01T08:00:00Z</p>
@@ -301,7 +301,7 @@ public class EnableConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Connector configuration JSON string. This is sensitive information.</p>
+             * <p>The JSON string for the connector configuration. This is sensitive information.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</p>
@@ -312,7 +312,7 @@ public class EnableConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Connector name. The current value is qodercli.</p>
+             * <p>The connector name. Currently, the value is qodercli.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>
@@ -323,7 +323,7 @@ public class EnableConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Connector status.</p>
+             * <p>The connector status.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLED</p>

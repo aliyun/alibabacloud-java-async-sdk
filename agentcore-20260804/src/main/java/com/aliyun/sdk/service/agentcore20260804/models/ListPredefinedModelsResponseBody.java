@@ -119,7 +119,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+         * <p>The business status code. The value is SUCCESS if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+         * <p>The HTTP status code. The value is 200 if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message indicating the request processing result.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -331,7 +331,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the model is able to invoke multiple tool calling in a single response.</p>
+             * <p>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -496,7 +496,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of output tokens supported by the model in a single generation.</p>
+             * <p>The maximum number of output tokens supported by the model per generation.</p>
              * 
              * <strong>example:</strong>
              * <p>131072</p>
@@ -518,7 +518,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release date of the model. The format is YYYY-MM-DD.</p>
+             * <p>The release date of the model, in the YYYY-MM-DD format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-02-01</p>

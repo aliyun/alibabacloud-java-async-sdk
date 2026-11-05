@@ -182,7 +182,7 @@ public class UploadAgentSpecViaOssRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to overwrite existing drafts. Default value: false.</p>
+             * <p>Specifies whether to overwrite the existing draft. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -193,7 +193,7 @@ public class UploadAgentSpecViaOssRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to publish and bring the AgentSpec online immediately after the upload. Default value: false.</p>
+             * <p>Specifies whether to publish and bring the agent online immediately after the upload. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

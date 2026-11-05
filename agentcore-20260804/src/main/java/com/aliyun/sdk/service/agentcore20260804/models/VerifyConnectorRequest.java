@@ -103,7 +103,7 @@ public class VerifyConnectorRequest extends Request {
         }
 
         /**
-         * <p>The Connector name. Currently, only qodercli is supported.</p>
+         * <p>The connector name. Currently, only qodercli is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class VerifyConnectorRequest extends Request {
         }
 
         /**
-         * <p>The validation request body.</p>
+         * <p>The verification request body.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(VerifyConnectorRequestBody body) {
@@ -174,7 +174,7 @@ public class VerifyConnectorRequest extends Request {
             } 
 
             /**
-             * <p>The Connector configuration JSON string to validate. Set site to global or cn. The serviceAccountKeys field must contain at least one item with a serviceAccountKey.</p>
+             * <p>The JSON string of the connector configuration to be verified. The site value can be global or cn, and serviceAccountKeys must contain at least one item with a serviceAccountKey.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -119,7 +119,7 @@ public class DebugModelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class DebugModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class DebugModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request processing result message.</p>
+         * <p>The message about the request processing result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class DebugModelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -352,7 +352,7 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model debugging was successful.</p>
+             * <p>Indicates whether the model debugging is successful.</p>
              */
             public Builder debugSuccess(Boolean debugSuccess) {
                 this.debugSuccess = debugSuccess;
@@ -371,7 +371,7 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when debugging fails.</p>
+             * <p>The error description returned when debugging fails.</p>
              * 
              * <strong>example:</strong>
              * <p>The model endpoint rejected the debug request.</p>
@@ -393,7 +393,7 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time consumed by this model debugging call, in milliseconds.</p>
+             * <p>The duration of this model debugging invocation, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -426,7 +426,7 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text response returned by the model when debugging succeeds. This value is empty when debugging fails.</p>
+             * <p>The text response returned by the model when model debugging succeeds. This field is empty if debugging fails.</p>
              * 
              * <strong>example:</strong>
              * <p>ok</p>
@@ -437,7 +437,7 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The debug result status.</p>
+             * <p>The debugging result status.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>

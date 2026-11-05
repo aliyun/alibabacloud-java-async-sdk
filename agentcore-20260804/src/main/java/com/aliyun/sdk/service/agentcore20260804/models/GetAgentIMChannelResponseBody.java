@@ -119,7 +119,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS if the request succeeds.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -138,7 +138,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 if the request succeeds.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result message of the request.</p>
+         * <p>The request processing result message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -579,7 +579,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the IM channel is enabled. The default value is true upon creation.</p>
+             * <p>Indicates whether the IM channel is enabled. Default value: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -587,7 +587,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public network access URL of the attached service endpoint.</p>
+             * <p>The public network access URL of the attached ServiceEndpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://agent.example.com">https://agent.example.com</a></p>
@@ -609,7 +609,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint URL.</p>
+             * <p>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public address.</p>
              * 
              * <strong>example:</strong>
              * <p>se-1</p>
@@ -620,7 +620,7 @@ public class GetAgentIMChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Deletion failed).</p>
+             * <p>The IM channel status. Valid values: CREATING (creating), READY (ready), UPDATING (updating), FAILED (failed), DELETING (deleting), and DELETE_FAILED (deletion failed).</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
