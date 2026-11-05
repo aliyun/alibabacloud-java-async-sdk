@@ -28,6 +28,11 @@ public class CreateC2paBucketSignTaskRequest extends Request {
     private String bucketRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomAssertions")
+    @com.aliyun.core.annotation.Validation(maxLength = 4096)
+    private String customAssertions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SoftwareAgent")
     private String softwareAgent;
 
@@ -38,12 +43,14 @@ public class CreateC2paBucketSignTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String sourceType;
 
     private CreateC2paBucketSignTaskRequest(Builder builder) {
         super(builder);
         this.bucketName = builder.bucketName;
         this.bucketRegionId = builder.bucketRegionId;
+        this.customAssertions = builder.customAssertions;
         this.softwareAgent = builder.softwareAgent;
         this.sourcePrefix = builder.sourcePrefix;
         this.sourceType = builder.sourceType;
@@ -77,6 +84,13 @@ public class CreateC2paBucketSignTaskRequest extends Request {
     }
 
     /**
+     * @return customAssertions
+     */
+    public String getCustomAssertions() {
+        return this.customAssertions;
+    }
+
+    /**
      * @return softwareAgent
      */
     public String getSoftwareAgent() {
@@ -100,6 +114,7 @@ public class CreateC2paBucketSignTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateC2paBucketSignTaskRequest, Builder> {
         private String bucketName; 
         private String bucketRegionId; 
+        private String customAssertions; 
         private String softwareAgent; 
         private String sourcePrefix; 
         private String sourceType; 
@@ -112,6 +127,7 @@ public class CreateC2paBucketSignTaskRequest extends Request {
             super(request);
             this.bucketName = request.bucketName;
             this.bucketRegionId = request.bucketRegionId;
+            this.customAssertions = request.customAssertions;
             this.softwareAgent = request.softwareAgent;
             this.sourcePrefix = request.sourcePrefix;
             this.sourceType = request.sourceType;
@@ -131,7 +147,7 @@ public class CreateC2paBucketSignTaskRequest extends Request {
         }
 
         /**
-         * <p>The region of the user OSS bucket. It must be consistent with the actual region of the bucket.</p>
+         * <p>The region of the user OSS bucket. It must match the actual region of the bucket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +156,18 @@ public class CreateC2paBucketSignTaskRequest extends Request {
         public Builder bucketRegionId(String bucketRegionId) {
             this.putQueryParameter("BucketRegionId", bucketRegionId);
             this.bucketRegionId = bucketRegionId;
+            return this;
+        }
+
+        /**
+         * <p>The JSON string of the custom assertion list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;label&quot;:&quot;com.shein.internal&quot;,&quot;data&quot;:{&quot;meta_id&quot;:&quot;emp001&quot;,&quot;generation&quot;:{&quot;modelVersion&quot;:&quot;2.1&quot;,&quot;count&quot;:3},&quot;tags&quot;:[&quot;AI-generated&quot;,&quot;E-commerce&quot;],&quot;enabled&quot;:true,&quot;optional&quot;:null}}]</p>
+         */
+        public Builder customAssertions(String customAssertions) {
+            this.putQueryParameter("CustomAssertions", customAssertions);
+            this.customAssertions = customAssertions;
             return this;
         }
 
@@ -156,7 +184,7 @@ public class CreateC2paBucketSignTaskRequest extends Request {
         }
 
         /**
-         * <p>The source object prefix. It must be <code>ai-deepsign/</code> or its subdirectory. The service recursively processes objects under this prefix.</p>
+         * <p>The source object prefix. It must be ai-deepsign/ or its subdirectories. The service recursively processes objects under this prefix.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

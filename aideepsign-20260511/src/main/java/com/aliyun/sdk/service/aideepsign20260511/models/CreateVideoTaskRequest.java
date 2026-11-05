@@ -232,7 +232,7 @@ public class CreateVideoTaskRequest extends Request {
         }
 
         /**
-         * <p>The video duration in seconds. Valid values: an integer in the range of [2, 30], -1 (intelligent duration), and 0 (the server uses the default value of 5 seconds).</p>
+         * <p>The duration of the video in seconds. Valid values: an integer from 2 to 30, -1 for intelligent duration, and 0 for the server default of 5 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -256,7 +256,7 @@ public class CreateVideoTaskRequest extends Request {
         }
 
         /**
-         * <p>The video description prompt. Either this parameter or Media is required. For pure text-to-video generation, only Prompt is required.</p>
+         * <p>The video description prompt. Either this parameter or Media is required. For text-to-video generation, only Prompt is required.</p>
          * 
          * <strong>example:</strong>
          * <p>A meeting room full of cats</p>
@@ -268,7 +268,7 @@ public class CreateVideoTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable intelligent rewriting (prompt_extend). Default value: true.</p>
+         * <p>Specifies whether to enable intelligent prompt rewriting. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -280,7 +280,7 @@ public class CreateVideoTaskRequest extends Request {
         }
 
         /**
-         * <p>The aspect ratio. Valid values: adaptive (default), 16:9, 4:3, 1:1, 3:4, and 9:16.</p>
+         * <p>The aspect ratio of the video. Valid values: adaptive, 16:9, 4:3, 1:1, 3:4, and 9:16. Default value: adaptive.</p>
          * 
          * <strong>example:</strong>
          * <p>adaptive</p>
@@ -292,7 +292,7 @@ public class CreateVideoTaskRequest extends Request {
         }
 
         /**
-         * <p>The resolution. Valid values: 1080P (default), 720P, and 480P.</p>
+         * <p>The video resolution. Valid values: 1080P, 720P, and 480P. Default value: 1080P.</p>
          * 
          * <strong>example:</strong>
          * <p>1080P</p>
@@ -304,7 +304,7 @@ public class CreateVideoTaskRequest extends Request {
         }
 
         /**
-         * <p>The random seed. Valid values: -1 (random), an integer in the range of [0, 2147483647], and 0 (the server uses a random seed by default).</p>
+         * <p>The random seed. Valid values: -1 (random) or an integer from 0 to 2147483647. A value of 0 is a valid reproducible seed. If not specified, the server uses a random seed by default.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -387,7 +387,7 @@ public class CreateVideoTaskRequest extends Request {
             } 
 
             /**
-             * <p>The media type for the first item. Valid values: first_frame, last_frame, reference_image, reference_video, reference_audio, file, and link.</p>
+             * <p>The material type for the first item. Valid values: first_frame, last_frame, reference_image, reference_video, reference_audio, file, and link.</p>
              * 
              * <strong>example:</strong>
              * <p>JPEG</p>
@@ -398,7 +398,7 @@ public class CreateVideoTaskRequest extends Request {
             }
 
             /**
-             * <p>The media URL for the first item. You can specify a public HTTP or HTTPS URL, a temporary oss:// URL, or inline data in the format of data:{mime};base64,....</p>
+             * <p>The material URL for the first item. The value can be a public HTTP or HTTPS URL, a temporary oss:// URL, or inline data in the data:{mime};base64,... format.</p>
              * 
              * <strong>example:</strong>
              * <p>Image URL</p>
