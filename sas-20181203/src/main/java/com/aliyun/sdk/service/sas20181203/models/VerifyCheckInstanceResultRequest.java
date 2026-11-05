@@ -166,7 +166,11 @@ public class VerifyCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run of the request. Valid values: true: checks the request without performing the actual operation. false: performs the actual operation after the request passes the check. Default value: false.</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li>true: Performs a dry run without executing the actual operation.</li>
+         * <li>false: Executes the actual operation.</li>
+         * </ul>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -175,7 +179,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The list of instance IDs of the affected assets for the check item.
+         * <p>The list of instance IDs of the assets affected by the check item.
          * Note: This parameter is actually required. If it is not provided, the API returns a 400 error (Code: -101).</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -185,7 +189,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * <p>The task source. Valid values:</p>
+         * <p>The source of the task. Valid values:</p>
          * <ul>
          * <li><strong>YAO_CHI</strong>: ApsaraDB console.</li>
          * </ul>

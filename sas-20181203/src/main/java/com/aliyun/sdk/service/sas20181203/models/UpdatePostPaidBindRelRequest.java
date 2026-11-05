@@ -146,8 +146,8 @@ public class UpdatePostPaidBindRelRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic binding for newly added assets. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Disabled.</li>
-         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disable.</li>
+         * <li><strong>1</strong>: Enable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>The edition to automatically bind to newly added assets. Valid values:</p>
+         * <p>Specifies the protection edition to automatically bind to newly added assets. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Free Edition </li>
          * <li><strong>3</strong>: Enterprise Edition</li>
@@ -179,7 +179,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>The action parameters for the binding operation.</p>
+         * <p>Specifies the action parameters for the binding operation.</p>
          */
         public Builder bindAction(java.util.List<BindAction> bindAction) {
             this.putQueryParameter("BindAction", bindAction);
@@ -200,7 +200,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run for the request. A value of true indicates that only a dry run is performed and no actual operation is executed. A value of false indicates that the request is normally executed. Default value: false.</p>
+         * <p>Specifies whether to perform a dry run on the request. true: performs a dry run and does not perform the actual operation. false: performs the actual operation. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -209,7 +209,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>The abbreviation of the cloud service. Valid values:</p>
+         * <p>Specifies the abbreviated name of the cloud service. Valid values:</p>
          * <ul>
          * <li><strong>sas</strong>: Security Center</li>
          * </ul>
@@ -336,7 +336,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * <p>The type of free quota used for the binding operation.</p>
+             * <p>Specifies the type of free quota used for the binding action.</p>
              * 
              * <strong>example:</strong>
              * <p>freeEnterprise</p>
@@ -347,7 +347,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * <p>The UUIDs of the specified servers.</p>
+             * <p>Specifies the list of server UUIDs.</p>
              */
             public Builder uuidList(java.util.List<String> uuidList) {
                 this.uuidList = uuidList;
@@ -355,7 +355,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * <p>The Security Center protection edition to bind. Valid values:  </p>
+             * <p>Specifies the Security Center protection edition to bind. Valid values:  </p>
              * <ul>
              * <li><strong>1</strong>: Free Edition </li>
              * <li><strong>3</strong>: Enterprise Edition</li>

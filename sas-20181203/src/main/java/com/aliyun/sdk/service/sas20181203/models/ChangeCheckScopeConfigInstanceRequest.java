@@ -102,7 +102,7 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The list of unique IDs of cloud assets to add.</p>
+         * <p>The UUIDs of the cloud assets to add.</p>
          */
         public Builder addAssetUuids(java.util.List<String> addAssetUuids) {
             this.putQueryParameter("AddAssetUuids", addAssetUuids);
@@ -111,10 +111,7 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scan scope configuration.</p>
-         * <blockquote>
-         * <p>Call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain this parameter.</p>
-         * </blockquote>
+         * <p>The ID of the scan scope configuration. You can call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +124,7 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         }
 
         /**
-         * <p>The list of unique IDs of cloud assets to delete.</p>
+         * <p>The UUIDs of the cloud assets to delete.</p>
          */
         public Builder deleteAssetUuids(java.util.List<String> deleteAssetUuids) {
             this.putQueryParameter("DeleteAssetUuids", deleteAssetUuids);
@@ -136,7 +133,7 @@ public class ChangeCheckScopeConfigInstanceRequest extends Request {
         }
 
         /**
-         * <p>The key for cross-page select-all.</p>
+         * <p>The cross-page select-all key.</p>
          * 
          * <strong>example:</strong>
          * <p>b6d1a39a-f020-4782-af2c-c4b6522*****</p>

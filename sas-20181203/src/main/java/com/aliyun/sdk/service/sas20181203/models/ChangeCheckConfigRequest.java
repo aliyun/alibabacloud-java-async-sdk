@@ -27,6 +27,10 @@ public class ChangeCheckConfigRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    private String configId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigRequirementIds")
     private ConfigRequirementIds configRequirementIds;
 
@@ -43,6 +47,10 @@ public class ChangeCheckConfigRequest extends Request {
     private java.util.List<Integer> cycleDays;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DaysOfMonth")
+    private java.util.List<Integer> daysOfMonth;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -57,6 +65,14 @@ public class ChangeCheckConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Integer endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimeSeconds")
+    private Integer endTimeSeconds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Frequency")
+    private String frequency;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -79,6 +95,15 @@ public class ChangeCheckConfigRequest extends Request {
     private Integer startTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimeSeconds")
+    private Integer startTimeSeconds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
+    @com.aliyun.core.annotation.Validation(maxLength = 30)
+    private String strategyName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemConfig")
     private Boolean systemConfig;
 
@@ -90,19 +115,25 @@ public class ChangeCheckConfigRequest extends Request {
         super(builder);
         this.addedCheck = builder.addedCheck;
         this.clientToken = builder.clientToken;
+        this.configId = builder.configId;
         this.configRequirementIds = builder.configRequirementIds;
         this.configStandardIds = builder.configStandardIds;
         this.configure = builder.configure;
         this.cycleDays = builder.cycleDays;
+        this.daysOfMonth = builder.daysOfMonth;
         this.dryRun = builder.dryRun;
         this.enableAddCheck = builder.enableAddCheck;
         this.enableAutoCheck = builder.enableAutoCheck;
         this.endTime = builder.endTime;
+        this.endTimeSeconds = builder.endTimeSeconds;
+        this.frequency = builder.frequency;
         this.regionId = builder.regionId;
         this.removedCheck = builder.removedCheck;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.standardIds = builder.standardIds;
         this.startTime = builder.startTime;
+        this.startTimeSeconds = builder.startTimeSeconds;
+        this.strategyName = builder.strategyName;
         this.systemConfig = builder.systemConfig;
         this.vendors = builder.vendors;
     }
@@ -135,6 +166,13 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     /**
+     * @return configId
+     */
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    /**
      * @return configRequirementIds
      */
     public ConfigRequirementIds getConfigRequirementIds() {
@@ -163,6 +201,13 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     /**
+     * @return daysOfMonth
+     */
+    public java.util.List<Integer> getDaysOfMonth() {
+        return this.daysOfMonth;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -188,6 +233,20 @@ public class ChangeCheckConfigRequest extends Request {
      */
     public Integer getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return endTimeSeconds
+     */
+    public Integer getEndTimeSeconds() {
+        return this.endTimeSeconds;
+    }
+
+    /**
+     * @return frequency
+     */
+    public String getFrequency() {
+        return this.frequency;
     }
 
     /**
@@ -226,6 +285,20 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     /**
+     * @return startTimeSeconds
+     */
+    public Integer getStartTimeSeconds() {
+        return this.startTimeSeconds;
+    }
+
+    /**
+     * @return strategyName
+     */
+    public String getStrategyName() {
+        return this.strategyName;
+    }
+
+    /**
      * @return systemConfig
      */
     public Boolean getSystemConfig() {
@@ -242,19 +315,25 @@ public class ChangeCheckConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ChangeCheckConfigRequest, Builder> {
         private java.util.List<AddedCheck> addedCheck; 
         private String clientToken; 
+        private String configId; 
         private ConfigRequirementIds configRequirementIds; 
         private ConfigStandardIds configStandardIds; 
         private String configure; 
         private java.util.List<Integer> cycleDays; 
+        private java.util.List<Integer> daysOfMonth; 
         private Boolean dryRun; 
         private Boolean enableAddCheck; 
         private Boolean enableAutoCheck; 
         private Integer endTime; 
+        private Integer endTimeSeconds; 
+        private String frequency; 
         private String regionId; 
         private java.util.List<RemovedCheck> removedCheck; 
         private Long resourceDirectoryAccountId; 
         private java.util.List<Long> standardIds; 
         private Integer startTime; 
+        private Integer startTimeSeconds; 
+        private String strategyName; 
         private Boolean systemConfig; 
         private java.util.List<String> vendors; 
 
@@ -266,26 +345,32 @@ public class ChangeCheckConfigRequest extends Request {
             super(request);
             this.addedCheck = request.addedCheck;
             this.clientToken = request.clientToken;
+            this.configId = request.configId;
             this.configRequirementIds = request.configRequirementIds;
             this.configStandardIds = request.configStandardIds;
             this.configure = request.configure;
             this.cycleDays = request.cycleDays;
+            this.daysOfMonth = request.daysOfMonth;
             this.dryRun = request.dryRun;
             this.enableAddCheck = request.enableAddCheck;
             this.enableAutoCheck = request.enableAutoCheck;
             this.endTime = request.endTime;
+            this.endTimeSeconds = request.endTimeSeconds;
+            this.frequency = request.frequency;
             this.regionId = request.regionId;
             this.removedCheck = request.removedCheck;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.standardIds = request.standardIds;
             this.startTime = request.startTime;
+            this.startTimeSeconds = request.startTimeSeconds;
+            this.strategyName = request.strategyName;
             this.systemConfig = request.systemConfig;
             this.vendors = request.vendors;
         } 
 
         /**
-         * <p>The list of check items to add to the policy.
-         * <notice> If the ConfigStandardIds or ConfigRequirementIds parameter is specified, this parameter does not take effect.</p>
+         * <p>The list of check items to be added to the policy.
+         * <notice> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect. </notice></p>
          */
         public Builder addedCheck(java.util.List<AddedCheck> addedCheck) {
             this.putQueryParameter("AddedCheck", addedCheck);
@@ -294,7 +379,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -303,9 +388,21 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Configures the check policy by specifying requirement IDs.</p>
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22222f91-57af-4907-87f1-f9046da*****</p>
+         */
+        public Builder configId(String configId) {
+            this.putQueryParameter("ConfigId", configId);
+            this.configId = configId;
+            return this;
+        }
+
+        /**
+         * <p>Configures the check policy by using the IDs of the specified regulations.</p>
          * <blockquote>
-         * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain requirement IDs. If the ConfigStandardIds parameter is specified, this parameter does not take effect.</p>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the regulation IDs. If the ConfigStandardIds parameter is configured, this parameter does not take effect.</p>
          * </blockquote>
          */
         public Builder configRequirementIds(ConfigRequirementIds configRequirementIds) {
@@ -316,9 +413,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Configures the check policy by specifying standard IDs.</p>
+         * <p>Configures the check policy by using the IDs of the specified standards.</p>
          * <blockquote>
-         * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain standard IDs.</p>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the standard IDs.</p>
          * </blockquote>
          */
         public Builder configStandardIds(ConfigStandardIds configStandardIds) {
@@ -331,7 +428,7 @@ public class ChangeCheckConfigRequest extends Request {
         /**
          * <p>The field configuration. Valid values:</p>
          * <ul>
-         * <li><strong>all</strong>: adds all check items.</li>
+         * <li><strong>all</strong>: Adds all check items.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,7 +441,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The periodic check schedule.</p>
+         * <p>The periodic check time.</p>
          */
         public Builder cycleDays(java.util.List<Integer> cycleDays) {
             this.putQueryParameter("CycleDays", cycleDays);
@@ -353,7 +450,21 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
+         * <p>The list of days of the month when the policy cycle is monthly.</p>
+         */
+        public Builder daysOfMonth(java.util.List<Integer> daysOfMonth) {
+            this.putQueryParameter("DaysOfMonth", daysOfMonth);
+            this.daysOfMonth = daysOfMonth;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li>true: Only checks the request without performing the actual operation.</li>
+         * <li>false: Executes the request normally.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -362,10 +473,10 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically check newly added check items in the selected requirements. Valid values:</p>
+         * <p>Specifies whether to check new check items by default when new check items are added to the selected regulations. Valid values:</p>
          * <ul>
-         * <li><strong>true:</strong> Enabled.</li>
-         * <li><strong>false:</strong> Disabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -380,8 +491,8 @@ public class ChangeCheckConfigRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic periodic checks. Valid values:</p>
          * <ul>
-         * <li><strong>true:</strong> Enabled.</li>
-         * <li><strong>false:</strong> Disabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -394,7 +505,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The end hour of the check time window, indicating the hour of the day. The start time and end time must fall within one of the following time ranges. Valid values: 6, 12, 18, and 24.</p>
+         * <p>The end time of the check time period, which indicates the hour of the day. The start time and end time must be selected from the following time intervals. Valid values: 6, 12, 18, and 24.</p>
          * <ul>
          * <li><strong>0~6</strong>: If the start time is 0, the end time must be set to 6 on the same day.</li>
          * <li><strong>6~12</strong>: If the start time is 6, the end time must be set to 12 on the same day.</li>
@@ -412,10 +523,40 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
+         * <p>The end time of the check, in seconds from 00:00:00 of the current day. Valid values: 1 to 86400, where 86400 indicates 00:00:00 of the next day. This parameter is optional. If this parameter is not provided, the current value of the policy is retained. This parameter must be paired with StartTimeSeconds. If only one of them is provided, the system returns IllegalParam (paramName=scheduleTime). If both this parameter and StartTime/EndTime are provided, the second-level parameters take precedence, and the hour-level parameters are ignored. The time window span must not be less than 60 seconds. This parameter is not accepted for the system default policy (ConfigId=default) and will be rejected if provided.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32399</p>
+         */
+        public Builder endTimeSeconds(Integer endTimeSeconds) {
+            this.putQueryParameter("EndTimeSeconds", endTimeSeconds);
+            this.endTimeSeconds = endTimeSeconds;
+            return this;
+        }
+
+        /**
+         * <p>The frequency type. Valid values:</p>
+         * <ul>
+         * <li>DAILY: Daily.</li>
+         * <li>WEEKLY: Weekly.</li>
+         * <li>MONTHLY: Monthly.</li>
+         * <li>6HOURLY: Every 6 hours.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY</p>
+         */
+        public Builder frequency(String frequency) {
+            this.putQueryParameter("Frequency", frequency);
+            this.frequency = frequency;
+            return this;
+        }
+
+        /**
          * <p>The region of the Security Center instance. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> China</li>
-         * <li><strong>ap-southeast-1:</strong> Singapore</li>
+         * <li><strong>cn-hangzhou</strong>: Center</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,8 +569,8 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The list of check items to remove from the policy.
-         * <notice> If the ConfigStandardIds or ConfigRequirementIds parameter is specified, this parameter does not take effect.</p>
+         * <p>The list of check items to be removed from the policy.
+         * <notice> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect. </notice></p>
          */
         public Builder removedCheck(java.util.List<RemovedCheck> removedCheck) {
             this.putQueryParameter("RemovedCheck", removedCheck);
@@ -438,9 +579,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
+         * <p>The ID of the member accounts in the resource folder, which is an Alibaba Cloud account ID.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -453,7 +594,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated and does not need to be specified.</p>
+         * <p>This parameter is deprecated and can be ignored.</p>
          */
         public Builder standardIds(java.util.List<Long> standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
@@ -462,7 +603,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The start hour of the check time window, indicating the hour of the day. The start time and end time must fall within one of the following time ranges. Valid values: 0, 6, 12, and 18.</p>
+         * <p>The start time of the check time period, which indicates the hour of the day. The start time and end time must be selected from the following time intervals. Valid values: 0, 6, 12, and 18.</p>
          * <ul>
          * <li><strong>0~6</strong>: If the start time is 0, the end time must be set to 6 on the same day.</li>
          * <li><strong>6~12</strong>: If the start time is 6, the end time must be set to 12 on the same day.</li>
@@ -480,7 +621,31 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the system-generated configuration. Valid values:</p>
+         * <p>The start time of the check, in seconds from 00:00:00 of the current day. Valid values: 0 to 86399, which correspond to 00:00:00 to 23:59:59. This parameter is optional. If this parameter is not provided, the current value of the policy is retained. This parameter must be paired with EndTimeSeconds. If only one of them is provided, the system returns IllegalParam (paramName=scheduleTime). If both this parameter and StartTime/EndTime are provided, the second-level parameters take precedence, and the hour-level parameters are ignored. If the two sets of parameters are inconsistent, the server records a WARN log. The time window span must not be less than 60 seconds. The frequency of the system default policy (ConfigId=default) is always 6HOURLY. This parameter is not accepted for the default policy and will be rejected if provided. Under a multi-policy frequency, the actual scan execution time is exactly the second specified by this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25200</p>
+         */
+        public Builder startTimeSeconds(Integer startTimeSeconds) {
+            this.putQueryParameter("StartTimeSeconds", startTimeSeconds);
+            this.startTimeSeconds = startTimeSeconds;
+            return this;
+        }
+
+        /**
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        public Builder strategyName(String strategyName) {
+            this.putQueryParameter("StrategyName", strategyName);
+            this.strategyName = strategyName;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to use the automatically generated system configuration. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -496,7 +661,7 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud service providers.</p>
+         * <p>The list of cloud providers.</p>
          */
         public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);
@@ -566,7 +731,7 @@ public class ChangeCheckConfigRequest extends Request {
             /**
              * <p>The ID of the check item.</p>
              * <blockquote>
-             * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain check item IDs.</p>
+             * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the check item ID.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -648,7 +813,7 @@ public class ChangeCheckConfigRequest extends Request {
             } 
 
             /**
-             * <p>The list of requirement IDs to add to the policy.</p>
+             * <p>The list of regulation IDs to be added to the policy.</p>
              */
             public Builder addIds(java.util.List<Long> addIds) {
                 this.addIds = addIds;
@@ -656,7 +821,7 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * <p>The list of requirement IDs to remove from the policy.</p>
+             * <p>The list of regulation IDs to be removed from the policy.</p>
              */
             public Builder removeIds(java.util.List<Long> removeIds) {
                 this.removeIds = removeIds;
@@ -723,7 +888,7 @@ public class ChangeCheckConfigRequest extends Request {
             } 
 
             /**
-             * <p>The list of standard IDs to add to the policy.</p>
+             * <p>The list of standard IDs to be added to the policy.</p>
              */
             public Builder addIds(java.util.List<Long> addIds) {
                 this.addIds = addIds;
@@ -731,7 +896,7 @@ public class ChangeCheckConfigRequest extends Request {
             }
 
             /**
-             * <p>The list of standard IDs to remove from the policy.</p>
+             * <p>The list of standard IDs to be removed from the policy.</p>
              */
             public Builder removeIds(java.util.List<Long> removeIds) {
                 this.removeIds = removeIds;
@@ -800,7 +965,7 @@ public class ChangeCheckConfigRequest extends Request {
             /**
              * <p>The ID of the check item.</p>
              * <blockquote>
-             * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain check item IDs.</p>
+             * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the check item ID.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

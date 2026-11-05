@@ -224,6 +224,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeAssetRefreshTaskConfigResponse> changeAssetRefreshTaskConfig(ChangeAssetRefreshTaskConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the configuration of an existing check policy. This operation only modifies policies and does not create new ones. Breaking change: If any multi-policy field (such as StrategyName, Frequency, or DaysOfMonth) is provided, ConfigId is required. If ConfigId is missing, the system returns IllegalParam (paramName=configId). If ConfigId is not provided and no system default policy exists under the account, the system no longer silently creates a policy and returns success. Instead, it returns NoDefaultStrategy. In this case, use CreateCheckConfig to create a policy. If Frequency is not provided, the current value of the policy is retained. If Frequency is provided, time window parameters must also be provided. The time window supports two sets of parameters: hour-level (StartTime and EndTime) and second-level (StartTimeSeconds and EndTimeSeconds). If both sets are provided, the second-level parameters take precedence. If neither set is provided, the current value of the policy is retained. The frequency of the system default policy (ConfigId=default) is always 6HOURLY and cannot be switched. The system only accepts 6HOURLY and four on-the-hour time windows for requests to the default policy, and will deny requests with multi-policy frequencies or second-level parameters. The ConfigId in the response returns the actual ID of the modified policy. Timed scheduling will execute tasks sequentially by second within the same minute, and the concurrency is 1. During periods of high concurrency, the system may skip and not execute some policies in the current run without makeup runs on the same day. Callers that have strong consistency requirements for the time to execute should avoid peak hours.</p>
+     * 
      * @param request the request parameters of ChangeCheckConfig  ChangeCheckConfigRequest
      * @return ChangeCheckConfigResponse
      */
@@ -401,18 +404,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Initiates deep analysis for a specified file and streams the progress of each analysis phase in real time by using Server-Sent Events (SSE).
-     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial edition verification based on the source.
-     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phases. Valid values for the event name (event):</p>
+     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the corresponding alert details. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phase. Valid values for the event name (event):</p>
      * <ul>
      * <li>accepted: The request is accepted.</li>
      * <li>authorized: The purchase verification for the source is passed.</li>
      * <li>alertResolved: The file hash is parsed from the alert or input parameters.</li>
      * <li>fileReady: The file download link is ready.</li>
      * <li>dispatched: The file is delivered to the detection engine, including the requestId.</li>
-     * <li>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</li>
-     * <li>done: The current analysis process is completed.</li>
+     * <li>result: The analysis result is matched. This is optional and pushed after asynchronous processing is complete.</li>
+     * <li>done: The current analysis process is complete.</li>
      * <li>error: A processing exception occurs, including the error code and message.
-     * The data payload of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
+     * The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFileDeepAnalyze  CreateFileDeepAnalyzeRequest
@@ -446,9 +449,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
-     * The form upload method is provided by OSS. For more information, see <a href="https://help.aliyun.com/document_detail/84788.html">Form upload</a>.
-     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.</p>
+     * <p>Retrieves file upload parameters. If the value of FileExist in the response parameters is true, the file to be checked already exists in the cloud and does not need to be uploaded. You can directly push the file for checking. If the value of FileExist is false, you must use the parameters returned by this operation to upload the file to the specified storage location by using form upload.
+     * The form upload service is provided by Object Storage Service (OSS). For more information, see <a href="https://help.aliyun.com/document_detail/84788.html">Form upload</a>.
+     * All file check-related operations include the HashKey parameter, which indicates the unique identifier of the file. Only the MD5 or SHA-256 hash value of the complete file content is supported. Calculate this value before you call the operation. Note that the push and query operations for a single file check must use the same HashKey. Otherwise, the check cannot be pushed and the results cannot be queried correctly.
+     * You can calculate the MD5 or SHA-256 hash value of the file content by performing the following steps:</p>
+     * <ol>
+     * <li>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available tool libraries include the MessageDigest tool in Java and the hashlib library in Python.</li>
+     * <li>Encode the generated hash value into a hexadecimal string. Available tool libraries include the Codec tool in Java and the hex function in Python. Make sure that the final string is a combination of digits and lowercase letters. The MD5 string contains 32 characters, and the SHA-256 string contains 64 characters.</li>
+     * </ol>
      * 
      * @param request the request parameters of CreateFileDetectUploadUrl  CreateFileDetectUploadUrlRequest
      * @return CreateFileDetectUploadUrlResponse
@@ -619,7 +627,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images that the image scan task covers and the number of authorizations consumed. Make sure that sufficient authorizations are available for the image scan task to prevent the image scan task from being overwritten due to insufficient authorizations.</p>
+     * <p>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the container image security scan and the number of consumed authorizations. Ensure that you have sufficient authorizations to prevent the image scan node from being interrupted due to insufficient authorizations.</p>
      * 
      * @param request the request parameters of CreateOssScanConfig  CreateOssScanConfigRequest
      * @return CreateOssScanConfigResponse
@@ -2925,7 +2933,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A download link is returned when the export task status is success.</p>
+     * <p>Returns a download link when the export task status is success.</p>
      * 
      * @param request the request parameters of DescribeVulExportInfo  DescribeVulExportInfoRequest
      * @return DescribeVulExportInfoResponse
@@ -3425,6 +3433,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCanTrySasResponse> getCanTrySas(GetCanTrySasRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the check configuration of a specified policy. Behavior change: When the policy corresponding to ConfigId does not exist, IllegalParam is no longer returned. Instead, a success response is returned with empty configuration fields and Exists set to false. Callers must determine whether the policy exists based on Exists. API contract: When ConfigId is not passed (or an empty string or default is passed), only the system default policy configuration is returned. When a specific UUID ConfigId is explicitly passed, the specified policy is returned. Time field description: StartTimeSeconds and EndTimeSeconds are authoritative values in seconds and are directly passed through from the database. StartTime and EndTime on multi-policy rows are derived approximate values obtained by rounding the second-level values and are not active for reverse-engineering the exact window. For the system default policy (Frequency=6HOURLY) row, the second-level output parameters are always null (not 0), and callers must perform null checks. Timed scheduling executes sequentially by second within the same minute with a concurrency of 1. During periods of high concurrency, the current execution of some policies may be skipped without makeup runs on the same day. Callers with strong consistency requirements for execution time should avoid concentrated periods such as the top of the hour.</p>
+     * 
      * @param request the request parameters of GetCheckConfig  GetCheckConfigRequest
      * @return GetCheckConfigResponse
      */
@@ -5885,6 +5896,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopHoneypotResponse> stopHoneypot(StopHoneypotRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Commits a cloud service configuration check task. When ScanRange is set to POLICY, you can specify ConfigId to trigger a scan based on a specific check policy: If this parameter is not specified or is set to default, the scan is triggered based on the system default policy. If the system default policy does not exist in the account, NoDefaultStrategy is returned and no policy records are added. If another value is specified, the scan is triggered based on the check items of the specified policy. If the policy does not exist or does not belong to the current account, IllegalParam (paramName=configId) is returned. If the hit policy does not have scheduled scanning enabled (EnableAutoCheck=false), requests from timed scheduling (SCHEDULE) return StrategyAutoCheckDisabled, while requests manually triggered from the console (CONSOLE) are processed normally. When ScanRange is set to FULL or FREE, the behavior is independent of ConfigId and remains unchanged. Note: The scan results in the current phase do not include the policy dimension. The check results and task lists are not categorized by policy. ThrottlingTimeSecond indicates that throttling is triggered, and you must retry after the specified number of seconds.</p>
+     * 
      * @param request the request parameters of SubmitCheck  SubmitCheckRequest
      * @return SubmitCheckResponse
      */

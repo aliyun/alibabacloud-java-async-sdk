@@ -87,7 +87,10 @@ public class DescribeVulExportInfoRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the resource directory account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

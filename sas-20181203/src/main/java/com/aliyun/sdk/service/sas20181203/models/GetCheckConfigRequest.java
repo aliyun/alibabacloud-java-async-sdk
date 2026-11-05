@@ -18,11 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetCheckConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    private String configId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
 
     private GetCheckConfigRequest(Builder builder) {
         super(builder);
+        this.configId = builder.configId;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
@@ -40,6 +45,13 @@ public class GetCheckConfigRequest extends Request {
     }
 
     /**
+     * @return configId
+     */
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    /**
      * @return resourceDirectoryAccountId
      */
     public Long getResourceDirectoryAccountId() {
@@ -47,6 +59,7 @@ public class GetCheckConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetCheckConfigRequest, Builder> {
+        private String configId; 
         private Long resourceDirectoryAccountId; 
 
         private Builder() {
@@ -55,13 +68,26 @@ public class GetCheckConfigRequest extends Request {
 
         private Builder(GetCheckConfigRequest request) {
             super(request);
+            this.configId = request.configId;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
-         * <p>The ID of the China account in the resource folder for member accounts.</p>
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22222f91-57af-4907-87f1-f9046da*****</p>
+         */
+        public Builder configId(String configId) {
+            this.putQueryParameter("ConfigId", configId);
+            this.configId = configId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource directory member account belongs.</p>
          * <blockquote>
-         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

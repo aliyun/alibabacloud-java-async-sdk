@@ -59,7 +59,7 @@ public class GetDockerhubImageRiskStatisticRequest extends Request {
         } 
 
         /**
-         * <p>The risk types of the images to query. This parameter is required. Specify at least one valid value. If this parameter is not specified or all specified values are invalid, the API returns an HTTP 400 error with the error code -101.</p>
+         * <p>The image risk types to query. This parameter is required. You must specify at least one valid value. If this parameter is not specified or all specified values are invalid, the API returns HTTP 400 and the error code -101.</p>
          */
         public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);

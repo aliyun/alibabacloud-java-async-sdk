@@ -67,7 +67,7 @@ public class CreateUnknownThreatDetectStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

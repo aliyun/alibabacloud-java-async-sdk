@@ -153,9 +153,9 @@ public class CreateFileDeepAnalyzeRequest extends Request {
         /**
          * <p>The request source. The system verifies the purchased edition based on the request source. Valid values:</p>
          * <ul>
-         * <li><p><strong>edr</strong>: AgenticEDR.</p>
+         * <li><p><strong>edr</strong>: AgenticEDR</p>
          * </li>
-         * <li><p><strong>secOpsAgent</strong>: Security operations agent.</p>
+         * <li><p><strong>secOpsAgent</strong>: Security operations agent</p>
          * </li>
          * </ul>
          * 

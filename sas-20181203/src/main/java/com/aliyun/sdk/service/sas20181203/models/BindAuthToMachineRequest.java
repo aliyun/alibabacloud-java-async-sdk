@@ -263,8 +263,8 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic binding. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Disabled.</li>
-         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled</li>
+         * <li><strong>1</strong>: Enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,9 +277,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The collection of UUIDs to bind.</p>
+         * <p>The set of UUIDs to be bound.</p>
          * <blockquote>
-         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot both be empty.</p>
+         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot be empty at the same time.</p>
          * </blockquote>
          */
         public Builder bind(java.util.List<String> bind) {
@@ -291,8 +291,8 @@ public class BindAuthToMachineRequest extends Request {
         /**
          * <p>Specifies whether to bind all assets. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Bind all assets.</li>
-         * <li><strong>false</strong>: Do not bind all assets.</li>
+         * <li><strong>true</strong>: Yes</li>
+         * <li><strong>false</strong>: No</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You must use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -314,9 +314,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The conditions for searching for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</p>
+         * <p>Sets the conditions for searching assets. This parameter is in JSON format. Pay attention to the case sensitivity when you specify this parameter.</p>
          * <blockquote>
-         * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+         * <p>You can search for assets by using conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -329,7 +329,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values: true: performs a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
+         * <p>Specifies whether to only precheck the request. true: only prechecks the request and does not perform the actual operation. false: performs the request normally. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -338,13 +338,13 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether this is a pre-binding operation. Valid values:</p>
+         * <p>Specifies whether the operation is a pre-binding operation. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No.</li>
-         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>0</strong>: No</li>
+         * <li><strong>1</strong>: Yes</li>
          * </ul>
          * <blockquote>
-         * <p>After pre-binding is enabled, the corresponding authorization quota is automatically bound to the specified servers after the purchase is completed.</p>
+         * <p>After pre-binding is enabled, the system automatically binds the corresponding number of licenses of the specified version to the specified servers after the purchase is completed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -357,10 +357,10 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The logical relationship among multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
+         * <p>Specifies the logical relationship among multiple search conditions. Default value: <strong>OR</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>OR</strong>: The search conditions are evaluated with a logical OR.</li>
-         * <li><strong>AND</strong>: The search conditions are evaluated with a logical AND.</li>
+         * <li><strong>OR</strong>: Specifies the <strong>OR</strong> logical relationship among multiple conditions.</li>
+         * <li><strong>AND</strong>: Specifies the <strong>AND</strong> logical relationship among multiple conditions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,13 +373,13 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The order version associated with the pre-binding. Valid values:</p>
+         * <p>The version of the order associated with the pre-binding operation. Valid values:</p>
          * <ul>
          * <li><strong>level7</strong>: Anti-virus Edition</li>
          * <li><strong>level3</strong>: Advanced Edition</li>
          * <li><strong>level2</strong>: Enterprise Edition</li>
          * <li><strong>level8</strong>: Ultimate Edition</li>
-         * <li><strong>level10</strong>: Value-added service only</li>
+         * <li><strong>level10</strong>: Value-added services only</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,7 +392,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The order ID associated with the pre-binding.</p>
+         * <p>The ID of the order associated with the pre-binding operation.</p>
          * 
          * <strong>example:</strong>
          * <p>233016**0482</p>
@@ -413,9 +413,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member account in the resource folder (Alibaba Cloud account).</p>
+         * <p>The ID of the member accounts in the resource folder. The ID is an Alibaba Cloud account ID.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -428,9 +428,9 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * <p>The collection of UUIDs to unbind.</p>
+         * <p>The set of UUIDs to be unbound.</p>
          * <blockquote>
-         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot both be empty.</p>
+         * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot be empty at the same time.</p>
          * </blockquote>
          */
         public Builder unBind(java.util.List<String> unBind) {

@@ -309,10 +309,10 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether OSS buckets are automatically added to this policy. Valid values:</p>
+         * <p>Specifies whether to add new OSS buckets to this policy by default. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -334,7 +334,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -346,7 +346,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. When the maximum number of decompressed files is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</p>
+         * <p>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. If the number of files exceeds this value, decompression stops, but the scan of already decompressed files is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -358,7 +358,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of decompression layers when nested compressed files exist. Minimum value: 1. Maximum value: 5. When the maximum number of decompression layers is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</p>
+         * <p>The maximum number of decompression layers for nested archives. Minimum value: 1. Maximum value: 5. If the nesting depth exceeds this value, decompression stops, but the scan of already decompressed files is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -379,7 +379,12 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run without executing the actual operation.</li>
+         * <li><strong>false</strong>: executes the actual operation.
+         * Default value: false.</li>
+         * </ul>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -390,8 +395,8 @@ public class CreateOssScanConfigRequest extends Request {
         /**
          * <p>Specifies whether to enable the policy. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Enable.</li>
-         * <li><strong>0</strong>: Disable.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>0</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -404,7 +409,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The scan stop time, in the HH:mm:ss format.</p>
+         * <p>The end time of the scan, in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>01:01:00</p>
@@ -425,7 +430,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The list of file suffixes to scan.</p>
+         * <p>The list of file name extensions to scan.</p>
          */
         public Builder keySuffixList(java.util.List<String> keySuffixList) {
             this.putQueryParameter("KeySuffixList", keySuffixList);
@@ -434,7 +439,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</p>
+         * <p>The timestamp after which the files to be scanned were last modified. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1724301769834</p>
@@ -470,7 +475,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The scan schedule. The number indicates the day of the week.</p>
+         * <p>The days of the week when the scan is performed, represented by numbers.</p>
          */
         public Builder scanDayList(java.util.List<Integer> scanDayList) {
             this.putQueryParameter("ScanDayList", scanDayList);
@@ -479,7 +484,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The business source. Valid values:</p>
+         * <p>The source service. Valid values:</p>
          * <ul>
          * <li><strong>OSS</strong>: OSS.</li>
          * <li><strong>NAS</strong>: NAS.</li>
@@ -495,7 +500,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The scan start time, in the HH:mm:ss format.</p>
+         * <p>The start time of the scan, in the HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>

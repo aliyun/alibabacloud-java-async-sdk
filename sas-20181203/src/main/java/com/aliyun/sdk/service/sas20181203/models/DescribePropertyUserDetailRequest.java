@@ -213,7 +213,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page from which to display the query results. Default value: <strong>1</strong>, which indicates that the query results are displayed starting from the first page.</p>
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,7 +225,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to support fuzzy match for the account name. To enable fuzzy match, set this parameter to <strong>1</strong>. Any other value or an empty value indicates that fuzzy match is not supported.</p>
+         * <p>Specifies whether fuzzy match is supported for the account name. To enable fuzzy match, set this parameter to <strong>1</strong>. Other values or an empty value indicate that fuzzy match is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -277,9 +277,9 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>The token that marks the position from which to start reading. An empty value indicates that the reading starts from the beginning.</p>
+         * <p>The token that specifies the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</p>
          * <blockquote>
-         * <p>You do not need to specify this parameter for the first call. The response to the first call contains the NextToken value for the second call. The response to each subsequent call contains the NextToken value for the next call.</p>
+         * <p>You do not need to specify this parameter for the first call. The response will contain the NextToken for the second call, and each subsequent response will contain the NextToken for the next call.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>The Settings for the number of Asset Fingerprints of accounts to return on each page for paging in a paged query. Default value: <strong>10</strong>, which indicates that 10 Asset Fingerprints of accounts are returned on each page.</p>
+         * <p>The Settings for the number of account Asset fingerprint entries to return on each page during paging for a paged query. Default value: <strong>10</strong>, which indicates that 10 account Asset fingerprint entries are returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -316,7 +316,13 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the management account for the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -325,10 +331,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the NextToken method to retrieve the vulnerability list. If this parameter is used, TotalCount is not returned. Valid values:</p>
+         * <p>Specifies whether to use the NextToken method to retrieve vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Uses the NextToken method.</li>
-         * <li><strong>false</strong>: Does not use the NextToken method.</li>
+         * <li><strong>true</strong>: Use the NextToken method.</li>
+         * <li><strong>false</strong>: Do not use the NextToken method.</li>
          * </ul>
          * 
          * <strong>example:</strong>

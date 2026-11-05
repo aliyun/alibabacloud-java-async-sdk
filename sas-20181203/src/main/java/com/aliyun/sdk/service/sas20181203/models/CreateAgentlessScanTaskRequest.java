@@ -213,7 +213,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The image retention period, in days. This parameter takes effect only for host detection. It does not take effect for user snapshot detection or user custom image detection.</p>
+         * <p>The retention period of the image, in days. This parameter takes effect only for host detection and does not take effect for user snapshot detection or custom image detection.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,7 +237,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The source of the API call, which is used to collect statistics on scan task volume and scan data volume by source. If this parameter is not specified, the value is empty.</p>
+         * <p>The source of the API call. This parameter is used to collect statistics on the number of scan tasks and the amount of scanned data by source. If this parameter is not specified, it is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>image-console</p>
@@ -249,7 +249,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID, which is usually automatically populated by the gateway.</p>
+         * <p>The region ID. This parameter is usually automatically populated by the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -263,8 +263,8 @@ public class CreateAgentlessScanTaskRequest extends Request {
         /**
          * <p>Specifies whether to enable the cost-saving mode. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong>: Enable.</li>
+         * <li><strong>false</strong>: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,8 +291,8 @@ public class CreateAgentlessScanTaskRequest extends Request {
         /**
          * <p>Specifies whether to detect data cloud disks. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Detected.</li>
-         * <li><strong>false</strong>: Not detected.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,10 +307,10 @@ public class CreateAgentlessScanTaskRequest extends Request {
         /**
          * <p>The target type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Host detection - detection by snapshot.</li>
-         * <li><strong>2</strong>: Host detection - detection by image.</li>
+         * <li><strong>1</strong>: Host detection by using snapshots.</li>
+         * <li><strong>2</strong>: Host detection by using images.</li>
          * <li><strong>3</strong>: User snapshot detection.</li>
-         * <li><strong>2</strong>: User custom image detection.</li>
+         * <li><strong>2</strong>: Custom image detection.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -324,7 +324,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The list of targets for image security remediation. Each target specifies the source image, the region, the name of the remediated image, and the vulnerability identifiers to be fixed.</p>
+         * <p>The list of targets for image security remediation. Each target specifies the source image, the region, the name of the remediated image, and the identifiers of the vulnerabilities to be remediated.</p>
          */
         public Builder targets(java.util.List<Targets> targets) {
             this.putQueryParameter("Targets", targets);
@@ -335,7 +335,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
         /**
          * <p>The UUIDs of the assets to be detected.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUIDs of servers.</p>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUID of the server.</p>
          * </blockquote>
          */
         public Builder uuidList(java.util.List<String> uuidList) {
@@ -443,7 +443,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the source ECS custom image to be remediated. The image must be located in the region specified by RegionId of this target.</p>
+             * <p>The ID of the source ECS custom image to be remediated. The image must be located in the region specified by the RegionId parameter of the target.</p>
              * 
              * <strong>example:</strong>
              * <p>m-bp1example123456789</p>
@@ -465,7 +465,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
             }
 
             /**
-             * <p>The name of the ECS image generated after remediation.</p>
+             * <p>The name of the ECS image generated after the remediation is completed.</p>
              * 
              * <strong>example:</strong>
              * <p>patched-image-20260909</p>
@@ -487,7 +487,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
             }
 
             /**
-             * <p>The list of vulnerability identifiers to be fixed. At least one vulnerability identifier must be specified, and each identifier must be unique and non-empty.</p>
+             * <p>The list of vulnerability identifiers to be remediated in this task. You must specify at least one vulnerability identifier. The identifiers cannot be empty or duplicate.</p>
              */
             public Builder vulnerabilityIds(java.util.List<String> vulnerabilityIds) {
                 this.vulnerabilityIds = vulnerabilityIds;

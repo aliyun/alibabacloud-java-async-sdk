@@ -73,6 +73,10 @@ public class AddCloudVendorAccountAKRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VendorAuthAlias")
     private String vendorAuthAlias;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VendorUserName")
+    private String vendorUserName;
+
     private AddCloudVendorAccountAKRequest(Builder builder) {
         super(builder);
         this.akType = builder.akType;
@@ -88,6 +92,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         this.tenantId = builder.tenantId;
         this.vendor = builder.vendor;
         this.vendorAuthAlias = builder.vendorAuthAlias;
+        this.vendorUserName = builder.vendorUserName;
     }
 
     public static Builder builder() {
@@ -194,6 +199,13 @@ public class AddCloudVendorAccountAKRequest extends Request {
         return this.vendorAuthAlias;
     }
 
+    /**
+     * @return vendorUserName
+     */
+    public String getVendorUserName() {
+        return this.vendorUserName;
+    }
+
     public static final class Builder extends Request.Builder<AddCloudVendorAccountAKRequest, Builder> {
         private String akType; 
         private java.util.List<String> authModules; 
@@ -208,6 +220,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         private String tenantId; 
         private String vendor; 
         private String vendorAuthAlias; 
+        private String vendorUserName; 
 
         private Builder() {
             super();
@@ -228,15 +241,16 @@ public class AddCloudVendorAccountAKRequest extends Request {
             this.tenantId = request.tenantId;
             this.vendor = request.vendor;
             this.vendorAuthAlias = request.vendorAuthAlias;
+            this.vendorUserName = request.vendorUserName;
         } 
 
         /**
-         * <p>The AccessKey type. Valid values:</p>
+         * <p>The AccessKey (AK) type. Valid values:</p>
          * <ul>
-         * <li><strong>primary</strong>: Primary account</li>
-         * <li><strong>sub</strong>: Sub-account</li>
+         * <li><strong>primary</strong>: primary account</li>
+         * <li><strong>sub</strong>: sub-account</li>
          * <li><strong>ctdr</strong>: Agentic SOC<blockquote>
-         * <p>Warning: When the vendor is <strong>CHAITIN</strong>, <strong>FORTINET</strong>, <strong>THREATBOOK</strong>, or <strong>WIZ</strong>, set this parameter to <strong>ctdr</strong>. When the vendor is <strong>OracleCloud</strong>, <strong>google</strong>, <strong>BaiduCloud</strong>, or <strong>StateCloud</strong>, set this parameter to <strong>sub</strong>.</p>
+         * <p>Warning: When the vendor is <strong>CHAITIN</strong>, <strong>FORTINET</strong>, <strong>THREATBOOK</strong>, or <strong>WIZ</strong>, set this parameter to <strong>ctdr</strong>. When the vendor is <strong>OracleCloud</strong>, <strong>google</strong>, <strong>BaiduCloud</strong>, or <strong>StateCloud</strong>, set this parameter to <strong>sub</strong>.</warning></p>
          * </blockquote>
          * </li>
          * </ul>
@@ -252,8 +266,8 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The list of modules associated with the AccessKey.</p>
-         * <p>When AkType is set to ctdr, this parameter is required and at least one module must be provided, such as SIEM, HOST, or CSPM. If this parameter is not provided, the API returns HTTP 400 with the error code -101.</p>
+         * <p>The list of modules associated with the AK.</p>
+         * <p>When AkType is set to ctdr, this parameter is required. You must specify at least one module, such as SIEM, HOST, or CSPM. If this parameter is not provided, the API returns HTTP 400 with the error code -101.</p>
          */
         public Builder authModules(java.util.List<String> authModules) {
             this.putQueryParameter("AuthModules", authModules);
@@ -264,7 +278,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         /**
          * <p>The account ID.</p>
          * <blockquote>
-         * <p>The account ID of the connected cloud vendor. This parameter is required when the permission description includes Cloud Threat Detection and Response.</p>
+         * <p>The account ID of the connected cloud vendor. This parameter is required when the permission description includes Threat Detection and Response.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -297,9 +311,9 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The extension information.</p>
+         * <p>The extended information.</p>
          * <blockquote>
-         * <p>This parameter is used to record the extension information of different vendors.
+         * <p>This parameter is used to record the extended information of different vendors.
          * Google Cloud is accessed through a service account. ExtendInfo stores the JSON-formatted service key file, excluding the private_key_id and zprivate_key fields. The file contains the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, and universe_domain. When the vendor is <strong>OracleCloud</strong>, this parameter contains the <strong>fingerprint</strong> key, which indicates the fingerprint.</p>
          * </blockquote>
          * 
@@ -329,9 +343,9 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The list of regions used to verify the AccessKey information. This parameter is valid only when <strong>Vendor</strong> is set to <strong>AWS</strong> or <strong>OracleCloud</strong>.</p>
+         * <p>The list of regions used for AK information verification. This parameter is valid only when <strong>Vendor</strong> is set to <strong>AWS</strong> or <strong>OracleCloud</strong>.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query the regions.</p>
+         * <p>You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to obtain this parameter.</p>
          * </blockquote>
          */
         public Builder regions(java.util.List<String> regions) {
@@ -341,35 +355,85 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey ID. Valid values:</p>
+         * <p>The AK parameter ID. Valid values:</p>
          * <ul>
-         * <li>If AkType is set to primary:<ul>
+         * <li>When AkType is set to primary:</li>
+         * <li><ul>
          * <li><strong>Tencent</strong>: AccessKey ID of the primary account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>HUAWEICLOUD</strong>: AccessKey ID of the primary account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>Azure</strong>: Client ID</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>AWS</strong>: AccessKey ID of the primary account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>VOLCENGINE</strong>: AccessKey ID of the primary account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>KingsoftCloud</strong>: AccessKey ID of the primary account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>UCloud</strong>: AccessKey ID of the primary account</li>
          * </ul>
          * </li>
-         * <li>If AkType is set to sub:<ul>
+         * <li>When AkType is set to sub:</li>
+         * <li><ul>
          * <li><strong>Tencent</strong>: AccessKey ID of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>HUAWEICLOUD</strong>: AccessKey ID of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>Azure</strong>: Client ID</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>AWS</strong>: AccessKey ID of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>VOLCENGINE</strong>: AccessKey ID of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>google</strong>: private_key_id</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>OracleCloud</strong>: OCID of the sub-user</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>BaiduCloud</strong>: AccessKey ID of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>KingsoftCloud</strong>: AccessKey ID of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>UCloud</strong>: AccessKey ID of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>StateCloud</strong>: AccessKey ID of the sub-account</li>
          * </ul>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>If AkType is set to <strong>primary</strong>, this value is the AccessKey ID of the primary account in the third-party cloud. If AkType is set to <strong>sub</strong>, this value is the AccessKey ID of the sub-account in the third-party cloud. For <strong>Azure</strong>, this parameter is not differentiated and the value is the <strong>appId</strong> of the authentication information. Google Cloud is accessed through a service account, and AkType defaults to <strong>sub</strong>. The value is obtained from the private_key_id property in the JSON-formatted service key file. If the vendor is <strong>OracleCloud</strong>, this value is the OCID of the sub-user.</p>
+         * <p>If AkType is set to <strong>primary</strong>, this value is the secret ID of the primary account in the third-party cloud. If AkType is set to <strong>sub</strong>, this value is the AccessKey ID of the sub-account in the third-party cloud. For <strong>Azure</strong>, no distinction is made, and this value is the <strong>appId</strong> of the authentication information. Google Cloud is accessed through a service account, AkType defaults to sub, and this value is obtained from the private_key_id property of the JSON-formatted service key file. When the vendor is <strong>OracleCloud</strong>, this value is the OCID of the sub-user.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -383,30 +447,77 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey secret. Valid values:</p>
+         * <p>The AK parameter secret. Valid values:</p>
          * <ul>
-         * <li>If AkType is set to primary:<ul>
-         * <li><strong>Tencent</strong>: AccessKey secret of the primary account</li>
-         * <li><strong>HUAWEICLOUD</strong>: AccessKey secret of the primary account</li>
-         * <li><strong>Azure</strong>: Client secret</li>
-         * <li><strong>AWS</strong>: AccessKey secret of the primary account</li>
-         * <li><strong>VOLCENGINE</strong>: AccessKey secret of the primary account</li>
-         * <li><strong>KingsoftCloud</strong>: AccessKey secret of the primary account</li>
-         * <li><strong>UCloud</strong>: AccessKey secret of the primary account</li>
+         * <li>When AkType is set to primary:</li>
+         * <li><ul>
+         * <li><strong>Tencent</strong>: SecretAccessKey of the primary account</li>
          * </ul>
          * </li>
-         * <li>If AkType is set to sub:<ul>
-         * <li><strong>Tencent</strong>: AccessKey secret of the sub-account</li>
-         * <li><strong>HUAWEICLOUD</strong>: AccessKey secret of the sub-account</li>
+         * <li><ul>
+         * <li><strong>HUAWEICLOUD</strong>: SecretAccessKey of the primary account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>Azure</strong>: Client secret</li>
-         * <li><strong>AWS</strong>: AccessKey secret of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>AWS</strong>: SecretAccessKey of the primary account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>VOLCENGINE</strong>: SecretAccessKey of the primary account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>KingsoftCloud</strong>: SecretAccessKey of the primary account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>UCloud</strong>: SecretAccessKey of the primary account</li>
+         * </ul>
+         * </li>
+         * <li>When AkType is set to sub:</li>
+         * <li><ul>
+         * <li><strong>Tencent</strong>: SecretAccessKey of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>HUAWEICLOUD</strong>: SecretAccessKey of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>Azure</strong>: Client secret</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>AWS</strong>: SecretAccessKey of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>google</strong>: private_key</li>
+         * </ul>
+         * </li>
+         * <li><ul>
          * <li><strong>OracleCloud</strong>: private_key of the sub-user</li>
-         * <li><strong>BaiduCloud</strong>: AccessKey secret of the sub-account</li>
-         * <li><strong>KingsoftCloud</strong>: AccessKey secret of the sub-account</li>
-         * <li><strong>UCloud</strong>: AccessKey secret of the sub-account</li>
-         * <li><strong>StateCloud</strong>: AccessKey secret of the sub-account<blockquote>
-         * <p>If AkType is set to <strong>primary</strong>, this value is the AccessKey secret of the primary account in the third-party cloud. If AkType is set to <strong>sub</strong>, this value is the AccessKey secret of the sub-account in the third-party cloud. For <strong>Azure</strong>, this parameter is not differentiated and the value is the <strong>password</strong> of the authentication information. Google Cloud is accessed through a service account, and AkType defaults to <strong>sub</strong>. The value is obtained from the private_key property in the JSON-formatted service key file. For <strong>OracleCloud</strong>, this value is obtained from the content of the corresponding private key file.</p>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>BaiduCloud</strong>: SecretAccessKey of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>KingsoftCloud</strong>: SecretAccessKey of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>UCloud</strong>: SecretAccessKey of the sub-account</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li><strong>StateCloud</strong>: SecretAccessKey of the sub-account<blockquote>
+         * <p>If AkType is set to <strong>primary</strong>, this value is the Secret Access Key of the primary account in the third-party cloud. If AkType is set to <strong>sub</strong>, this value is the Secret Access Key of the sub-account in the third-party cloud. For <strong>Azure</strong>, no distinction is made, and this value is the <strong>password</strong> of the authentication information. Google Cloud is accessed through a service account, AkType defaults to sub, and this value is obtained from the private_key property of the JSON-formatted service key file. For <strong>OracleCloud</strong>, this value is obtained from the content of the corresponding private key file.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -426,7 +537,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         /**
          * <p>The list of subscription IDs.</p>
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is no longer valid.</p>
          * </blockquote>
          */
         public Builder subscriptionIds(java.util.List<String> subscriptionIds) {
@@ -481,7 +592,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The name of the AccessKey account.</p>
+         * <p>The name of the AK account.</p>
          * <blockquote>
          * <p>This parameter is used to identify the account to which the third-party host assets belong.</p>
          * </blockquote>
@@ -492,6 +603,21 @@ public class AddCloudVendorAccountAKRequest extends Request {
         public Builder vendorAuthAlias(String vendorAuthAlias) {
             this.putQueryParameter("VendorAuthAlias", vendorAuthAlias);
             this.vendorAuthAlias = vendorAuthAlias;
+            return this;
+        }
+
+        /**
+         * <p>The account name corresponding to the SecretId.</p>
+         * <blockquote>
+         * <p>This parameter is required when <strong>Vendor</strong> is set to <strong>UCloud</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        public Builder vendorUserName(String vendorUserName) {
+            this.putQueryParameter("VendorUserName", vendorUserName);
+            this.vendorUserName = vendorUserName;
             return this;
         }
 

@@ -88,9 +88,9 @@ public class CreateFileDetectUploadUrlRequest extends Request {
         } 
 
         /**
-         * <p>The hash values of files.</p>
+         * <p>The file identifier. Only MD5 is supported. You can specify up to 100 elements in the list.</p>
          * <blockquote>
-         * <p>You must specify at least one of the <strong>HashKeyList</strong> and <strong>HashKeyContextList</strong> parameters.</p>
+         * <p><strong>HashKeyList</strong> and <strong>HashKeyContextList</strong> cannot be empty at the same time.</p>
          * </blockquote>
          */
         public Builder hashKeyContextList(java.util.List<HashKeyContextList> hashKeyContextList) {
@@ -100,9 +100,9 @@ public class CreateFileDetectUploadUrlRequest extends Request {
         }
 
         /**
-         * <p>The identifiers of files. Only MD5 hash values are supported.</p>
+         * <p>The unique identifier of the file. You can specify up to 100 elements in the list.</p>
          * <blockquote>
-         * <p>You must specify at least one of the <strong>HashKeyList</strong> and <strong>HashKeyContextList</strong> parameters.</p>
+         * <p><strong>HashKeyList</strong> and <strong>HashKeyContextList</strong> cannot be empty at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -115,16 +115,10 @@ public class CreateFileDetectUploadUrlRequest extends Request {
         }
 
         /**
-         * <p>The type of the file. Valid values:</p>
+         * <p>The file type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: unknown file</li>
-         * <li><strong>1</strong>: binary file</li>
-         * <li><strong>2</strong>: webshell file</li>
-         * <li><strong>4</strong>: script file</li>
+         * <li><strong>0</strong>: Uncertain file type.</li>
          * </ul>
-         * <blockquote>
-         * <p>If you do not know the type of the file, set this parameter to <strong>0</strong>.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +190,7 @@ public class CreateFileDetectUploadUrlRequest extends Request {
             } 
 
             /**
-             * <p>The size of the file. Unit: bytes.</p>
+             * <p>The file size. If the file size exceeds the limit, the upload parameters are not returned. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2698557</p>
@@ -207,7 +201,7 @@ public class CreateFileDetectUploadUrlRequest extends Request {
             }
 
             /**
-             * <p>The hash value of the file.</p>
+             * <p>The file hash value.</p>
              * 
              * <strong>example:</strong>
              * <p>30319dd5cee8f894766e479cac170da0</p>

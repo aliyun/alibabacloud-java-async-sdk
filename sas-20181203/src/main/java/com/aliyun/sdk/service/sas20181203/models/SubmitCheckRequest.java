@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitCheckRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    private String configId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
 
@@ -31,6 +35,7 @@ public class SubmitCheckRequest extends Request {
 
     private SubmitCheckRequest(Builder builder) {
         super(builder);
+        this.configId = builder.configId;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.scanRange = builder.scanRange;
         this.taskSource = builder.taskSource;
@@ -47,6 +52,13 @@ public class SubmitCheckRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return configId
+     */
+    public String getConfigId() {
+        return this.configId;
     }
 
     /**
@@ -71,6 +83,7 @@ public class SubmitCheckRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitCheckRequest, Builder> {
+        private String configId; 
         private Long resourceDirectoryAccountId; 
         private String scanRange; 
         private String taskSource; 
@@ -81,15 +94,28 @@ public class SubmitCheckRequest extends Request {
 
         private Builder(SubmitCheckRequest request) {
             super(request);
+            this.configId = request.configId;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.scanRange = request.scanRange;
             this.taskSource = request.taskSource;
         } 
 
         /**
-         * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+         * <p>The policy ID. This parameter takes effect only when ScanRange is set to POLICY. You can obtain the value by calling the ListCheckConfigs operation. If this parameter is not specified or is set to default, the scan is triggered based on the system default policy. If the default policy does not exist, NoDefaultStrategy is returned. If another value is specified, the scan is triggered based on the check items of the specified policy. If the policy does not exist or does not belong to the current account, IllegalParam is returned. This parameter is ignored when ScanRange is set to FULL or FREE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22222f91-57af-4907-87f1-f9046da****</p>
+         */
+        public Builder configId(String configId) {
+            this.putQueryParameter("ConfigId", configId);
+            this.configId = configId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the member accounts of the resource folder belong.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -104,8 +130,8 @@ public class SubmitCheckRequest extends Request {
         /**
          * <p>The check scope. Valid values:</p>
          * <ul>
-         * <li><strong>FULL</strong>: scans all check items</li>
-         * <li><strong>POLICY</strong>: scans custom-configured check items</li>
+         * <li><strong>FULL</strong>: Scans all check items.</li>
+         * <li><strong>POLICY</strong>: Scans check items of custom configurations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,9 +144,9 @@ public class SubmitCheckRequest extends Request {
         }
 
         /**
-         * <p>The task source. Valid values:</p>
+         * <p>The source of the task. Valid values:</p>
          * <ul>
-         * <li><strong>YAO_CHI</strong>: Alibaba Cloud ApsaraDB console.</li>
+         * <li><strong>YAO_CHI</strong>: ApsaraDB console.</li>
          * </ul>
          * 
          * <strong>example:</strong>

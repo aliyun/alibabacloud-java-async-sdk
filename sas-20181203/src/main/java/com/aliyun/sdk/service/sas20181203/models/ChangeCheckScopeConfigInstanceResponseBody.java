@@ -93,7 +93,7 @@ public class ChangeCheckScopeConfigInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned by the request.</p>
+         * <p>The status code returned by the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
