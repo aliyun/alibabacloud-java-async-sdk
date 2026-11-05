@@ -1683,23 +1683,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h1>Product introduction</h1>
-     * <p>The high-definition upscaling product is tailored for e-commerce images. It intelligently enhances image resolution and details, improves textures and image quality during upscaling, and supports high-definition outputs such as 2K and 4K. It meets the high-definition requirements for product main images, detail images, and marketing materials, enabling efficient and clear processing of large batches of images to improve product image quality. (Synchronous)</p>
+     * <p>The high-definition upscaling product is customized for e-commerce images. It intelligently enhances image resolution and details, improves textures and image quality during the upscaling process, and supports high-definition outputs such as 2K and 4K. It meets the high-definition requirements for product main images, detail images, and marketing materials, enabling efficient and clear processing of large batches of images to improve product image quality. (Synchronous)</p>
      * <h1>Scenarios</h1>
      * <ul>
-     * <li><p>High-definition e-commerce product images: Enhances the resolution and details of product main images, detail images, and marketing materials to make textures and materials clearer and improve product display quality.</p>
-     * </li>
-     * <li><p>Multi-platform product material adaptation: Upscales existing product images in high definition to meet the image display requirements of different e-commerce platforms and adapt to multi-platform and multi-scenario material usage needs.</p>
-     * </li>
-     * <li><p>Batch optimization of existing images: Enhances existing low-resolution product images in high definition to reduce reshooting and production costs and improve the reuse efficiency of image materials.</p>
-     * </li>
+     * <li>High-definition e-commerce product images: Enhances the resolution and details of product main images, detail images, and marketing materials to make textures and materials clearer and improve product display quality.</li>
+     * <li>Multi-platform product material adaptation: Upscales existing product images to high definition to meet the image display requirements of different e-commerce platforms and adapt to multi-platform and multi-scenario material usage needs.</li>
+     * <li>Batch optimization of existing images: Enhances existing low-resolution product images to high definition, reducing the costs of reshooting and remaking, and improving the reuse efficiency of image materials.</li>
      * </ul>
      * <h1>Features</h1>
      * <ol>
-     * <li><p>Intelligent high-definition upscaling: Uses AI-based image enhancement technology to improve the resolution and optimize the details of input images, enhancing image clarity and texture representation.</p>
+     * <li><p>Intelligent high-definition upscaling: Based on AI image enhancement technology, it improves the resolution and optimizes the details of input images to enhance image clarity and texture representation.</p>
      * </li>
-     * <li><p>Multiple upscaling factors: Supports 2x and 4x upscaling factors. You can flexibly select the factor based on image quality and business requirements.</p>
+     * <li><p>Multiple upscaling factors: Supports 2x and 4x upscaling factors, allowing flexible selection based on image quality and business requirements.</p>
      * </li>
-     * <li><p>Synchronous API calls: Supports synchronous submission of images and retrieval of processing results through API calls, facilitating integration into e-commerce image processing workflows.</p>
+     * <li><p>Synchronous API calls: Supports synchronous submission of images and retrieval of processing results through APIs, facilitating integration into e-commerce image processing workflows.</p>
      * </li>
      * </ol>
      * <h1>Effect comparison</h1>

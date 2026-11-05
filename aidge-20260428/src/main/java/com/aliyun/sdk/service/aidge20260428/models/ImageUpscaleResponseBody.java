@@ -240,7 +240,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result information of the upscaled single image.</p>
+             * <p>The result information of the high-definition upscaling for a single image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/output.png">https://example.com/output.png</a></p>
@@ -438,7 +438,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned when the call fails, such as InvalidParameter or DownstreamUnavailable.</p>
+             * <p>The error code. Returned upon failure, such as InvalidParameter or DownstreamUnavailable.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -449,7 +449,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the call fails.</p>
+             * <p>The error message. Returned upon failure.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -460,7 +460,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
+             * <p>Indicates whether the operation is successful. A value of true indicates success, and a value of false indicates failure.</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -471,7 +471,7 @@ public class ImageUpscaleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the downstream task. This parameter is left empty for synchronous API calls.</p>
+             * <p>The downstream task ID. This parameter is empty for synchronous operations.</p>
              * 
              * <strong>example:</strong>
              * <p>ed9d8504-6141-9fbb-8345-4fa36433483f</p>
