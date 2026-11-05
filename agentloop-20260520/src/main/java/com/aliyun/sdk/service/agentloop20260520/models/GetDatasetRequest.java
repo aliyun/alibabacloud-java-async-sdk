@@ -27,10 +27,15 @@ public class GetDatasetRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 2)
     private String datasetName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("version")
+    private String version;
+
     private GetDatasetRequest(Builder builder) {
         super(builder);
         this.agentSpace = builder.agentSpace;
         this.datasetName = builder.datasetName;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class GetDatasetRequest extends Request {
         return this.datasetName;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<GetDatasetRequest, Builder> {
         private String agentSpace; 
         private String datasetName; 
+        private String version; 
 
         private Builder() {
             super();
@@ -72,10 +85,11 @@ public class GetDatasetRequest extends Request {
             super(request);
             this.agentSpace = request.agentSpace;
             this.datasetName = request.datasetName;
+            this.version = request.version;
         } 
 
         /**
-         * <p>The name of the agent space.</p>
+         * <p>The name of the agent workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,6 +111,18 @@ public class GetDatasetRequest extends Request {
         public Builder datasetName(String datasetName) {
             this.putPathParameter("datasetName", datasetName);
             this.datasetName = datasetName;
+            return this;
+        }
+
+        /**
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("version", version);
+            this.version = version;
             return this;
         }
 

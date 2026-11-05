@@ -171,7 +171,7 @@ public class GetDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the agent space.</p>
+         * <p>The name of the agent workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>sop-agent</p>
