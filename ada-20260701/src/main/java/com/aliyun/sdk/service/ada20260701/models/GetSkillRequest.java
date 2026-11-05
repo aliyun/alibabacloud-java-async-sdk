@@ -111,7 +111,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The name of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>The release history version number to query. If omitted, the current Skill main record is returned.</p>
+         * <p>Specifies the published history version number to query. If omitted, the current main record of the skill is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

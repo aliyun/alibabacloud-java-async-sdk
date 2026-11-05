@@ -195,10 +195,10 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * <p>The new description. If not specified, the existing value is retained.</p>
+         * <p>The new description. If not passed, the original value is retained.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analyzes CR code changes and checks for correctness, security, and maintainability</p>
+         * <p>Analyze code changes and check for correctness, security, and maintainability</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -207,10 +207,10 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * <p>The new display name. If not specified, the existing value is retained.</p>
+         * <p>The new display name. If not passed, the original value is retained.</p>
          * 
          * <strong>example:</strong>
-         * <p>CR Code and Security Review Agent</p>
+         * <p>Code review and security review agent</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -219,7 +219,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * <p>The expected current configuration revision number. This parameter is omitted by default. For concurrency protection, pass in the <code>AgentVersion</code> returned by the most recent <code>GetAgent</code> call.</p>
+         * <p>The expected current configuration revision number. This parameter is omitted by default. Pass the <code>AgentVersion</code> returned by the most recent <code>GetAgent</code> call when concurrent protection is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -231,7 +231,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * <p>The list of knowledge base bindings, which contains at most one element. If not specified, the existing value is retained. A non-empty array replaces the entire value. Passing <code>[ ]</code> removes all bindings.</p>
+         * <p>The list of knowledge base bindings, which can contain at most one element. If not passed, the original value is retained. If a non-empty array is passed, the entire list is replaced. If <code>[ ]</code> is passed, all bindings are removed.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;code-review-guidelines&quot;}]</p>
@@ -243,7 +243,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * <p>The name of the Agent to update.</p>
+         * <p>The name of the agent to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * <p>The list of Skill references. If not specified, the existing value is retained. A non-empty array replaces the entire value. Passing <code>[ ]</code> removes all bindings.</p>
+         * <p>The list of skill references. If not passed, the original value is retained. If a non-empty array is passed, the entire list is replaced. If <code>[ ]</code> is passed, all bindings are removed.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;code-review&quot;}]</p>
@@ -268,10 +268,10 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * <p>The new system prompt. If not specified, the existing value is retained.</p>
+         * <p>The new system prompt. If not passed, the original value is retained.</p>
          * 
          * <strong>example:</strong>
-         * <p>Check the CR for code defects, security risks, and compatibility issues, and provide actionable suggestions for fixes</p>
+         * <p>Check for code defects, security risks, and compatibility issues in the code review, and provide actionable modification suggestions</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putBodyParameter("SystemPrompt", systemPrompt);
@@ -280,7 +280,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * <p>The list of MCP Server and Connector name references. The same array supports both types of entries. Each entry specifies one type of reference. If items is omitted for an MCP entry, all public tools are included. Previously specified items retain their existing values.</p>
+         * <p>The list of MCP server and connector name references. The same array supports both types of entries. Specify only one type of reference for each entry. For MCP, omitting items indicates all public tools. Historically specified items retain their original values.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;mcpServerName&quot;:&quot;code-repository-mcp&quot;},{&quot;connectorName&quot;:&quot;code-review-data&quot;}]</p>
@@ -292,12 +292,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * <p>The new visibility scope. Valid values:</p>
-         * <ul>
-         * <li>user</li>
-         * <li>tenant</li>
-         * </ul>
-         * <p>If not specified, the existing value is retained.</p>
+         * <p>The new visibility scope. Valid values: <code>user</code> and <code>tenant</code>. If not passed, the original value is retained.</p>
          * 
          * <strong>example:</strong>
          * <p>tenant</p>

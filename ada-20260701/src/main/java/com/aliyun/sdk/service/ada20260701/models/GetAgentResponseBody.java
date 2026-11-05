@@ -288,7 +288,7 @@ public class GetAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Agent ID。</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent_00000000000000000000000000000001</p>
@@ -343,10 +343,10 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the agent. This field may not be returned if it is not configured.</p>
+         * <p>The agent description. This field may not be returned if it is not configured.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analyzes code changes and generates CR review comments</p>
+         * <p>Analyze code changes and generate code review comments</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -357,7 +357,7 @@ public class GetAgentResponseBody extends TeaModel {
          * <p>The display name of the agent. This field may not be returned if it is not configured.</p>
          * 
          * <strong>example:</strong>
-         * <p>CR Code Review Agent</p>
+         * <p>Code review agent</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -365,7 +365,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of knowledge base references. The list contains at most one element.</p>
+         * <p>The knowledge base reference list. The list contains at most one element.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;code-review-guidelines&quot;}]</p>
@@ -376,7 +376,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The display metadata of the agent. For specific fields, see &quot;Supplementary description of response elements&quot;.</p>
+         * <p>The display metadata of the agent. For specific fields, refer to the supplementary description of response parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;iconUrl&quot;:&quot;<a href="https://example.com/icons/code-review-agent.png%22%7D">https://example.com/icons/code-review-agent.png&quot;}</a></p>
@@ -387,7 +387,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The saved model configuration. This field is returned only for official agents. The value supports an object array and is compatible with legacy single objects and strings. An empty array returns [ \]. Object arrays preserve the original order, duplicate names, and object fields.</p>
+         * <p>The saved model configuration. This information is returned only for official agents. Object arrays are supported, and historical single objects and strings are compatible. An empty array is returned as [ \]. Object arrays retain the original order, duplicate names, and object fields.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;base&quot;,&quot;default&quot;:true},{&quot;name&quot;:&quot;base&quot;},{&quot;name&quot;:&quot;base&quot;,&quot;settings&quot;:{&quot;thinking&quot;:false,&quot;topK&quot;:5}}]</p>
@@ -398,7 +398,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the agent.</p>
+         * <p>The agent name.</p>
          * 
          * <strong>example:</strong>
          * <p>code-review-agent</p>
@@ -420,7 +420,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
+         * <p>The request ID. It is used for Tracing Analysis and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
@@ -431,7 +431,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of skill references. For specific fields, see &quot;Supplementary description of response elements&quot;.</p>
+         * <p>The skill reference list. For specific fields, refer to the supplementary description of response parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;code-review&quot;}]</p>
@@ -442,7 +442,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the agent. The default status of a newly created agent is <code>draft</code>.</p>
+         * <p>The agent status. The default status of a newly created agent is <code>draft</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>draft</p>
@@ -456,7 +456,7 @@ public class GetAgentResponseBody extends TeaModel {
          * <p>The system prompt. This field may not be returned if it is not configured.</p>
          * 
          * <strong>example:</strong>
-         * <p>Check the correctness, security, and maintainability of code changes in the CR, and provide review comments by severity</p>
+         * <p>Check the correctness, security, and maintainability of code changes in the code review, and provide review comments based on severity</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.systemPrompt = systemPrompt;
@@ -464,7 +464,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of MCP Server and Connector name references. For element fields, see the following section.</p>
+         * <p>The reference list of MCP server and connector names. For element fields, refer to the following sections.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;mcpServerName&quot;:&quot;code-repository-mcp&quot;},{&quot;connectorName&quot;:&quot;code-review-data&quot;}]</p>
@@ -475,7 +475,7 @@ public class GetAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The most recent update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1788332700000</p>

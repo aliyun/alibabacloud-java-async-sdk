@@ -143,7 +143,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page. An empty string is returned if there is no next page.</p>
+         * <p>The next token. An empty string is returned if no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -154,7 +154,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number for compatible page-number-based pagination.</p>
+         * <p>The current compatible page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page for compatible page-number-based pagination.</p>
+         * <p>The number of entries per page for the current compatible pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -187,10 +187,10 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of Skill summaries. The current public contract does not define a fixed structure for list items. For common fields, see &quot;Supplementary description of response elements&quot;.</p>
+         * <p>The list of skill summaries. The structure of list items is not fixed in the current public contract. For common fields, see the supplementary description of response parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;skillId&quot;:&quot;skill_example123&quot;,&quot;name&quot;:&quot;code-review&quot;,&quot;official&quot;:false,&quot;description&quot;:&quot;A Skill for performing code reviews&quot;,&quot;iconUrl&quot;:&quot;<a href="https://example.com/icons/code-review.png%22,%22visibility%22:%22user%22,%22status%22:%22PUBLISHED%22,%22publishedVersion%22:2,%22creatorId%22:%22example-user%22,%22createdAt%22:1760000000000,%22canModify%22:true,%22canDelete%22:true%7D%5D">https://example.com/icons/code-review.png&quot;,&quot;visibility&quot;:&quot;user&quot;,&quot;status&quot;:&quot;PUBLISHED&quot;,&quot;publishedVersion&quot;:2,&quot;creatorId&quot;:&quot;example-user&quot;,&quot;createdAt&quot;:1760000000000,&quot;canModify&quot;:true,&quot;canDelete&quot;:true}]</a></p>
+         * <p>[{&quot;skillId&quot;:&quot;skill_example123&quot;,&quot;name&quot;:&quot;code-review&quot;,&quot;official&quot;:false,&quot;description&quot;:&quot;A skill for performing code reviews&quot;,&quot;iconUrl&quot;:&quot;<a href="https://example.com/icons/code-review.png%22,%22visibility%22:%22user%22,%22status%22:%22PUBLISHED%22,%22publishedVersion%22:2,%22creatorId%22:%22example-user%22,%22createdAt%22:1760000000000,%22canModify%22:true,%22canDelete%22:true%7D%5D">https://example.com/icons/code-review.png&quot;,&quot;visibility&quot;:&quot;user&quot;,&quot;status&quot;:&quot;PUBLISHED&quot;,&quot;publishedVersion&quot;:2,&quot;creatorId&quot;:&quot;example-user&quot;,&quot;createdAt&quot;:1760000000000,&quot;canModify&quot;:true,&quot;canDelete&quot;:true}]</a></p>
          */
         public Builder skills(java.util.List<?> skills) {
             this.skills = skills;
@@ -198,7 +198,7 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of Skills that match the current visibility and filter conditions.</p>
+         * <p>The total number of skills that meet the current visibility and filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -220,7 +220,7 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * <p>The next page token returned in the previous response.</p>
+         * <p>The next token returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJwYWdlIjoyfQ.example</p>
@@ -256,10 +256,10 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. Matches the name, display name, or description.</p>
+         * <p>The search keyword used to match the name, display name, or description.</p>
          * 
          * <strong>example:</strong>
-         * <p>code review</p>
+         * <p>Code review</p>
          */
         public Builder q(String q) {
             this.putQueryParameter("Q", q);
@@ -268,7 +268,7 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * <p>Filters agents by runtime label.</p>
+         * <p>Filters agents by the runtime tag.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen</p>

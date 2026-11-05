@@ -106,7 +106,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Agent ID。</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent_00000000000000000000000000000001</p>
@@ -117,7 +117,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Agent name.</p>
+         * <p>The name of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>code-review-agent</p>
@@ -128,7 +128,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
+         * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</p>
@@ -139,7 +139,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the Agent was successfully updated. A successful response always returns <code>true</code>. A failure returns an error response.</p>
+         * <p>Indicates whether the agent is updated. A success response always returns <code>true</code>. An error response is returned upon failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -150,7 +150,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The most recent update time, as a UNIX timestamp in milliseconds.</p>
+         * <p>The most recent update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1788332700000</p>

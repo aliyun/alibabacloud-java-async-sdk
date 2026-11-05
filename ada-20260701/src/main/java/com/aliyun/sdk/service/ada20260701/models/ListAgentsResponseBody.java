@@ -132,7 +132,7 @@ public class ListAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of agent summaries. For field details, see &quot;Supplementary description of response parameters&quot;.</p>
+         * <p>The list of agent summaries. For the fields of each element, see the supplementary description of response parameters.</p>
          */
         public Builder agents(java.util.List<?> agents) {
             this.agents = agents;
@@ -140,7 +140,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The actual cursor-based pagination size used.</p>
+         * <p>The actual page size used for cursor-based pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -151,7 +151,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The next page token. An empty string is returned if there is no next page.</p>
+         * <p>The next token. An empty string is returned if no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJwYWdlIjoyfQ.example</p>
@@ -195,7 +195,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of agents that match the filter conditions.</p>
+         * <p>The total number of agents that meet the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

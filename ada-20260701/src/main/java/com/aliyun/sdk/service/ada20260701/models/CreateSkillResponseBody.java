@@ -106,7 +106,7 @@ public class CreateSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique identifier of the Skill.</p>
+         * <p>The unique identifier of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>code-review</p>
@@ -128,7 +128,7 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Skill ID。</p>
+         * <p>The skill ID.</p>
          * 
          * <strong>example:</strong>
          * <p>skill_example123</p>
@@ -139,7 +139,7 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the Skill and its body or bundle are fully created and readable. A value of true is returned upon success. Business failures are returned as error responses.</p>
+         * <p>Indicates whether the operation is successful. A value of true is returned when the skill and its body or bundle are fully created and readable. Business failures are indicated by error responses.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -150,7 +150,7 @@ public class CreateSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the Skill was last updated after creation. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time after the skill is created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1760000100000</p>

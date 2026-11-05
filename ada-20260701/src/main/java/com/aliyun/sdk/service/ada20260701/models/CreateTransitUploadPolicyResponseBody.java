@@ -106,7 +106,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The object storage key, which is also the <code>key</code> field in the PostObject form.</p>
+         * <p>The object storage key, which is also the <code>key</code> in the PostObject form.</p>
          * 
          * <strong>example:</strong>
          * <p>skill-bundle/tenant-demo/user-demo/20260904120000_0123456789abcdef0123456789abcdef.zip</p>
@@ -117,7 +117,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The upload policy object. For the complete list of subfields, see the following table.</p>
+         * <p>The upload policy object. For complete sub-fields, see the following table.</p>
          */
         public Builder policyInfo(PolicyInfo policyInfo) {
             this.policyInfo = policyInfo;
@@ -136,7 +136,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the upload policy is generated. A successful response always returns <code>true</code>. An error response is returned upon failure.</p>
+         * <p>Indicates whether the upload policy is successfully generated. A successful response always returns <code>true</code>. An error response is returned upon failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -147,7 +147,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the newly created Transit record, used for subsequent queries and storage operations.</p>
+         * <p>The ID of the newly created Transit record, which is used for subsequent queries and storage.</p>
          * 
          * <strong>example:</strong>
          * <p>transit_0123456789abcdef0123456789abcdef</p>
@@ -268,7 +268,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The <code>OSSAccessKeyId</code> field in the PostObject form. Protect this value together with the entire <code>PolicyInfo</code>.</p>
+             * <p>The <code>OSSAccessKeyId</code> in the PostObject form. Keep it secure along with the entire <code>PolicyInfo</code>.</p>
              * 
              * <strong>example:</strong>
              * <REDACTED>
@@ -290,7 +290,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target URL to which the client sends the PostObject request.</p>
+             * <p>The destination URL for the client to execute the PostObject request.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://upload.example.invalid">https://upload.example.invalid</a></p>
@@ -301,7 +301,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Base64-encoded PostObject upload policy. Protect this value together with the entire <code>PolicyInfo</code>.</p>
+             * <p>The Base64-encoded PostObject upload policy. Keep it secure along with the entire <code>PolicyInfo</code>.</p>
              * 
              * <strong>example:</strong>
              * <REDACTED>
@@ -312,7 +312,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The <code>x-oss-security-token</code> field in the PostObject form when STS credentials are used. This field may be empty when STS is not used. This field contains sensitive authorization information.</p>
+             * <p>When STS credentials are used, this is the <code>x-oss-security-token</code> in the PostObject form. It may be empty if STS is not used. This field contains sensitive authorization information.</p>
              * 
              * <strong>example:</strong>
              * <REDACTED>
@@ -323,7 +323,7 @@ public class CreateTransitUploadPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signature field in the PostObject form. This field contains sensitive authorization information.</p>
+             * <p>The signature of the PostObject form. This field contains sensitive authorization information.</p>
              * 
              * <strong>example:</strong>
              * <REDACTED>
