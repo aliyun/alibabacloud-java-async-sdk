@@ -67,7 +67,7 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdfwef</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -208,7 +214,7 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstances.
+             * <p>The associated instances.</p>
              */
             public Builder dbInstances(java.util.List<DbInstances> dbInstances) {
                 this.dbInstances = dbInstances;
@@ -216,7 +222,10 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP whitelists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1,10.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -224,7 +233,10 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The whitelist template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-asdfwem</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -278,7 +290,7 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Templates.
+             * <p>The whitelist templates.</p>
              */
             public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;

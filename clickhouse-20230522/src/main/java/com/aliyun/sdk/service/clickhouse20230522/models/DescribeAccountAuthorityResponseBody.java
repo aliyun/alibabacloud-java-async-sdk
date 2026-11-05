@@ -67,7 +67,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+         * <p>F5178C10-1407-4987-9133-DE4DC911****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -233,7 +233,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The databases on which permissions are granted.</p>
+             * <p>The list of authorized databases.</p>
              */
             public Builder allowDatabases(java.util.List<String> allowDatabases) {
                 this.allowDatabases = allowDatabases;
@@ -241,7 +241,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dictionaries on which permissions are granted.</p>
+             * <p>The list of authorized dictionaries.</p>
              */
             public Builder allowDictionaries(java.util.List<String> allowDictionaries) {
                 this.allowDictionaries = allowDictionaries;
@@ -260,10 +260,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the DDL permissions are granted to the database account. Valid values:</p>
+             * <p>Indicates whether Data Definition Language (DDL) permissions are granted to the database account. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The account has the permissions to execute DDL statements.</li>
-             * <li><strong>false</strong>: The account does not have the permissions to execute DDL statements.</li>
+             * <li><strong>true</strong>: DDL is allowed.</li>
+             * <li><strong>false</strong>: DDL is not allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -275,11 +275,11 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the DML permissions are granted to the database account. Valid values:</p>
+             * <p>Indicates whether Data Manipulation Language (DML) permissions are granted to the database account. Valid values:</p>
              * <ul>
-             * <li>0: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</li>
-             * <li>1: The account only has the permissions to read data from the database.</li>
-             * <li>2: The account only has the permissions to read data from the database and modify the settings of the database.</li>
+             * <li>0: Read, write, and change settings queries are allowed.</li>
+             * <li>1: Only read data queries are allowed.</li>
+             * <li>2: Read data and change settings queries are allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -291,7 +291,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>All databases.</p>
+             * <p>The list of all databases.</p>
              */
             public Builder totalDatabases(java.util.List<String> totalDatabases) {
                 this.totalDatabases = totalDatabases;
@@ -299,7 +299,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database.</p>
+             * <p>The dictionaries.</p>
              */
             public Builder totalDictionaries(java.util.List<String> totalDictionaries) {
                 this.totalDictionaries = totalDictionaries;

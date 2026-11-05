@@ -89,6 +89,7 @@ public class DeleteWhitelistTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteWhitelistTemplateRequest extends Request {
         }
 
         /**
+         * <p>The whitelist template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeleteWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The whitelist template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98a6d3db05984dca</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

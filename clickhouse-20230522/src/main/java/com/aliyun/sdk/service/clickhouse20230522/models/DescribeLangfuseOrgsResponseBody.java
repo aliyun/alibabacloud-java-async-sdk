@@ -67,7 +67,7 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The time when the Langfuse organization was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-11T10:27:23Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -175,7 +181,10 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the Langfuse organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -183,7 +192,10 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationId.
+             * <p>The ID of the Langfuse organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmrbhzx930005jw2q****</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -191,7 +203,10 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The time when the Langfuse organization was updated. The time follows the YYYY-MM-DDTHH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-09T10:27:55</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -284,7 +299,7 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
             } 
 
             /**
-             * Organizations.
+             * <p>The Langfuse organizations.</p>
              */
             public Builder organizations(java.util.List<Organizations> organizations) {
                 this.organizations = organizations;
@@ -292,7 +307,10 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -300,7 +318,10 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -308,7 +329,10 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

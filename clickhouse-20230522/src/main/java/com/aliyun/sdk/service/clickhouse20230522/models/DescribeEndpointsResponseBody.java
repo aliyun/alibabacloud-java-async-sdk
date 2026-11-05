@@ -67,7 +67,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,11 +144,11 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The port used to connect to the cluster. Valid values:</p>
+             * <p>The access port. Valid values:</p>
              * <ul>
-             * <li>8123: This value is returned when the value of Protocol is HttpPort.</li>
-             * <li>8443: This value is returned when the value of Protocol is HttpsPort.</li>
-             * <li>9000: This value is returned when the value of Protocol is TcpPort.</li>
+             * <li>HttpPort: 8123</li>
+             * <li>HttpsPort: 8443</li>
+             * <li>TcpPort: 9000</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -162,9 +162,9 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             /**
              * <p>The protocol type. Valid values:</p>
              * <ul>
-             * <li>HttpPort</li>
-             * <li>HttpsPort</li>
-             * <li>TcpPort</li>
+             * <li>HttpPort: HTTP port.</li>
+             * <li>HttpsPort: HTTPS port.</li>
+             * <li>TcpPort: TCP port.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -339,7 +339,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * ComputingGroupId.
+             * <p>The compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-ad321**-clickhouse</p>
              */
             public Builder computingGroupId(String computingGroupId) {
                 this.computingGroupId = computingGroupId;
@@ -347,7 +350,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the cluster.</p>
+             * <p>The endpoint of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cc-****-clickhouse.clickhouseserver.pre.rds.aliyuncs.com</p>
@@ -358,7 +361,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointName.
+             * <p>The endpoint name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-*****-clickhouse</p>
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -379,8 +385,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             /**
              * <p>The network type of the endpoint. Valid values:</p>
              * <ul>
-             * <li>VPC</li>
-             * <li>PUBLIC</li>
+             * <li>VPC: virtual private cloud.</li>
+             * <li>PUBLIC: public network.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -392,7 +398,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the ports.</p>
+             * <p>The list of port details.</p>
              */
             public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
@@ -400,7 +406,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the cluster.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>active</p>
@@ -422,7 +428,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>VPC ID。</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf61z****</p>
@@ -433,7 +439,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The VPC-connected instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf61z****</p>
@@ -503,7 +509,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the endpoints.</p>
+             * <p>The list of endpoint details.</p>
              */
             public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -511,10 +517,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the cluster. Valid values:</p>
+             * <p>The network type of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>VPC</strong></li>
-             * <li><strong>PUBLIC</strong></li>
+             * <li><strong>VPC</strong>: virtual private cloud.</li>
+             * <li><strong>PUBLIC</strong>: public network.</li>
              * </ul>
              * 
              * <strong>example:</strong>

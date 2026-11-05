@@ -145,7 +145,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         } 
 
         /**
-         * ComputingGroupId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-2ze34****-clickhouse</p>
          */
         public Builder computingGroupId(String computingGroupId) {
             this.putQueryParameter("ComputingGroupId", computingGroupId);
@@ -154,7 +157,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the cluster.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
@@ -166,7 +169,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the endpoint that is used to connect to the database.</p>
+         * <p>The prefix of the database endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-****-clickhouse</p>
@@ -191,7 +194,14 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * DBInstanceNetType.
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li>Vpc: VPC network.</li>
+         * <li>Public: public network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder DBInstanceNetType(String DBInstanceNetType) {
             this.putQueryParameter("DBInstanceNetType", DBInstanceNetType);
@@ -201,11 +211,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         /**
          * <ul>
-         * <li><p>The database ports that you want to disable. Separate multiple ports with commas (,).</p>
-         * </li>
-         * <li><p>This parameter is supported only for clusters whose minor engine version is 24.10.1.11098_1 or later.</p>
-         * <p>**</p>
-         * <p><strong>Note</strong> If you create a cluster whose minor engine version is earlier than 24.10.1.11098_1 and you update the minor engine version to 24.10.1.11098_1 or later, the cluster still does not support this parameter.</p>
+         * <li>Disables specified database ports. You can specify multiple ports separated by commas (,).</li>
+         * <li>Only clusters with a kernel version of 24.10.1.11098_1 or later support this parameter.<blockquote>
+         * <p>Notice: If the cluster was created with a version earlier than 24.10.1.11098_1 and later upgraded to version 24.10.1.11098_1 or later, this parameter is not supported.</notice></p>
+         * </blockquote>
          * </li>
          * </ul>
          * 

@@ -105,7 +105,7 @@ public class UpdateWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * <p>RegionId</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +118,7 @@ public class UpdateWhitelistTemplateRequest extends Request {
         }
 
         /**
+         * <p>The IP address whitelist. You can add up to 100 IP addresses, separated by commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class UpdateWhitelistTemplateRequest extends Request {
         }
 
         /**
+         * <p>The whitelist template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class UpdateWhitelistTemplateRequest extends Request {
         }
 
         /**
+         * <p>The whitelist template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

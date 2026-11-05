@@ -143,9 +143,9 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * <p>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The specified upgrade time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * <blockquote>
-         * <p> If you set SwitchTimeMode to SpecifyTime, you must configure this parameter to specify the update time.</p>
+         * <p>If SwitchTimeMode is set to SpecifyTime, you must use this parameter to specify the upgrade time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,11 +158,11 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to update the minor engine version of the cluster immediately. Valid values:</p>
+         * <p>Specifies whether to upgrade the minor engine version immediately. Valid values:</p>
          * <ul>
-         * <li><strong>Immediate</strong>: The system immediately performs the update.</li>
-         * <li><strong>MaintainTime</strong>: The system performs the update during the specified maintenance window.</li>
-         * <li><strong>SpecifyTime</strong>: The system performs the update at a specified time.</li>
+         * <li><strong>Immediate</strong>: Upgrades immediately.</li>
+         * <li><strong>MaintainTime</strong>: Upgrades within the O&amp;M window.</li>
+         * <li><strong>SpecifyTime</strong>: Upgrades at a specified time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,9 +175,9 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * <p>The minor engine version to which you want to update.</p>
+         * <p>The target minor engine version.</p>
          * <blockquote>
-         * <p> By default, TargetMinorVersion is not set and the minor engine version of the cluster is updated to the latest version.</p>
+         * <p>By default, this parameter is left empty, and the minor engine version is upgraded to the latest version.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

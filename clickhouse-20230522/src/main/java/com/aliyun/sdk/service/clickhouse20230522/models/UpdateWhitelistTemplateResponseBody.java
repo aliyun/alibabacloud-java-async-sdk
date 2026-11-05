@@ -67,7 +67,7 @@ public class UpdateWhitelistTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The details of the whitelist template.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class UpdateWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -131,7 +131,10 @@ public class UpdateWhitelistTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdfwef</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -211,7 +214,7 @@ public class UpdateWhitelistTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstances.
+             * <p>The list of associated instances.</p>
              */
             public Builder dbInstances(java.util.List<DbInstances> dbInstances) {
                 this.dbInstances = dbInstances;
@@ -219,7 +222,10 @@ public class UpdateWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1,10.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -227,7 +233,10 @@ public class UpdateWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The whitelist template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-asdfwem</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -281,7 +290,7 @@ public class UpdateWhitelistTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Templates.
+             * <p>The list of whitelist templates.</p>
              */
             public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;

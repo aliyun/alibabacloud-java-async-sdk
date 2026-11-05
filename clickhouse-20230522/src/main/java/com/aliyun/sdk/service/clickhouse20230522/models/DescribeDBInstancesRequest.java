@@ -172,7 +172,7 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The cluster IDs. Separate multiple cluster IDs with commas (,).</p>
+         * <p>The list of cluster IDs. Separate multiple cluster IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cc-xxxxx,cx-xxxx</p>
@@ -187,7 +187,12 @@ public class DescribeDBInstancesRequest extends Request {
          * <p>The cluster status.</p>
          * 
          * <strong>example:</strong>
-         * <p>active</p>
+         * <p>ACTIVATION
+         * STOPPED
+         * RESOURCE_PREPARING
+         * CREATING
+         * MINOR_VERSION_TRANSING
+         * CLASS_CHANGING</p>
          */
         public Builder DBInstanceStatus(String DBInstanceStatus) {
             this.putQueryParameter("DBInstanceStatus", DBInstanceStatus);
@@ -257,7 +262,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DescribeDBInstances</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -266,7 +274,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * VpcIds.
+         * <p>The list of VPC IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</p>
          */
         public Builder vpcIds(String vpcIds) {
             this.putQueryParameter("VpcIds", vpcIds);
@@ -334,7 +345,10 @@ public class DescribeDBInstancesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_123</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -342,7 +356,10 @@ public class DescribeDBInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example value</p>
              */
             public Builder value(String value) {
                 this.value = value;

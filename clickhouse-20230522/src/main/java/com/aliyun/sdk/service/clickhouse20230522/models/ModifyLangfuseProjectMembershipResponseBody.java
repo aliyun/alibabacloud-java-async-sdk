@@ -67,7 +67,7 @@ public class ModifyLangfuseProjectMembershipResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,10 @@ public class ModifyLangfuseProjectMembershipResponseBody extends TeaModel {
             } 
 
             /**
-             * Email.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:john@company.com">john@company.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -152,7 +155,10 @@ public class ModifyLangfuseProjectMembershipResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the user in the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIEWER</p>
              */
             public Builder role(String role) {
                 this.role = role;

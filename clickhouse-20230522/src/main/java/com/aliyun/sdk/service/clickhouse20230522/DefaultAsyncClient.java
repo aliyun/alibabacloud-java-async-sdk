@@ -75,7 +75,8 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("rus-west-1-pop", "clickhouse.aliyuncs.com"),
             new TeaPair("us-east-1", "clickhouse.aliyuncs.com"),
             new TeaPair("us-west-1", "clickhouse.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "clickhouse.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -824,6 +825,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation supports only community-compatible edition clusters created after December 01, 2021.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeProcessList  DescribeProcessListRequest
      * @return DescribeProcessListResponse
      */
@@ -950,6 +956,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse before you call this operation.</p>
+     * 
      * @param request the request parameters of KillProcess  KillProcessRequest
      * @return KillProcessResponse
      */
@@ -1058,6 +1067,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8 support data backup.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
      */
@@ -1094,6 +1108,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * 
      * @param request the request parameters of ModifyDBInstanceClass  ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
      */

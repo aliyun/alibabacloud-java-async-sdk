@@ -67,7 +67,7 @@ public class DeleteLangfuseInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,10 @@ public class DeleteLangfuseInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The Langfuse instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lfs-****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;

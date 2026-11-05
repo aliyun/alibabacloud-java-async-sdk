@@ -78,7 +78,7 @@ public class ListClickHouseDBTimezonesResponseBody extends TeaModel {
         }
 
         /**
-         * TimeZones.
+         * <p>The list of time zones that ClickHouse supports.</p>
          */
         public Builder timeZones(java.util.List<TimeZones> timeZones) {
             this.timeZones = timeZones;
@@ -131,7 +131,10 @@ public class ListClickHouseDBTimezonesResponseBody extends TeaModel {
             } 
 
             /**
-             * ZoneId.
+             * <p>The enumeration value for the time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

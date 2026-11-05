@@ -67,7 +67,7 @@ public class RestartDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -171,7 +171,7 @@ public class RestartDBInstanceResponseBody extends TeaModel {
              * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test1</p>
+             * <p>Enterprise edition cluster test</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

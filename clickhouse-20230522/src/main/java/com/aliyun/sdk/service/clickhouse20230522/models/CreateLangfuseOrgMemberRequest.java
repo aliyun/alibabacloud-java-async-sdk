@@ -120,6 +120,7 @@ public class CreateLangfuseOrgMemberRequest extends Request {
         } 
 
         /**
+         * <p>The Langfuse instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +133,7 @@ public class CreateLangfuseOrgMemberRequest extends Request {
         }
 
         /**
+         * <p>The email address of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +146,7 @@ public class CreateLangfuseOrgMemberRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Langfuse organization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +159,7 @@ public class CreateLangfuseOrgMemberRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +172,7 @@ public class CreateLangfuseOrgMemberRequest extends Request {
         }
 
         /**
+         * <p>The role of the user in the organization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

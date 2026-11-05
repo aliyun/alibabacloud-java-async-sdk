@@ -183,7 +183,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+             * <p>The average execution duration of slow SQL statements. Unit: ms. The minimum value is <strong>1000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>2000</p>
@@ -194,7 +194,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of SQL queries within the specified time range.</p>
+             * <p>The total number of SQL statements within the current time period.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -205,7 +205,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+             * <p>The maximum execution duration of slow SQL statements. Unit: ms. The minimum value is <strong>1000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -216,7 +216,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+             * <p>The minimum execution duration of slow SQL statements. Unit: ms. The minimum value is <strong>1000</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -227,7 +227,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+             * <p>The time when the query starts. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-13 17:48:00</p>
@@ -324,7 +324,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
              * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
-             * <p>clusterTest</p>
+             * <p>Cluster test</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -332,7 +332,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result sets.</p>
+             * <p>The result set.</p>
              */
             public Builder resultSet(java.util.List<ResultSet> resultSet) {
                 this.resultSet = resultSet;

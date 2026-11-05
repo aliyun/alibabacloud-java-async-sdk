@@ -90,6 +90,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The database instance IDs. Separate multiple IDs with commas. You can associate or disassociate up to 20 instances at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
+         * <p>The whitelist template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

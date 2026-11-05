@@ -102,7 +102,10 @@ public class ListWhitelistTemplatesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -111,7 +114,10 @@ public class ListWhitelistTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -120,7 +126,7 @@ public class ListWhitelistTemplatesRequest extends Request {
         }
 
         /**
-         * <p>RegionId</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +139,10 @@ public class ListWhitelistTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The whitelist template name. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

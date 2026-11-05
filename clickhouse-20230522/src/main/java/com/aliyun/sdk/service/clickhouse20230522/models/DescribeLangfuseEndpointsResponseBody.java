@@ -67,7 +67,7 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,13 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * Port.
+             * <p>The access port. Valid values:</p>
+             * <ul>
+             * <li>http: 3000</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -152,7 +158,13 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li>http: HTTP port.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -284,7 +296,10 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionString.
+             * <p>The endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lfs-2zeejcvmzn1******.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -292,7 +307,10 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointName.
+             * <p>The endpoint name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lfs-2zeejcvmzn1******</p>
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -300,7 +318,10 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.30.<strong><strong>.</strong></strong></p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -308,7 +329,14 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li>VPC: VPC.</li>
+             * <li>PUBLIC: Internet.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -316,7 +344,7 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * <p>The port details.</p>
              */
             public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
@@ -324,7 +352,10 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-0xi8829****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -402,7 +433,7 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * Endpoints.
+             * <p>The list of endpoints.</p>
              */
             public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -410,7 +441,13 @@ public class DescribeLangfuseEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNetworkType.
+             * <p>The network type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;

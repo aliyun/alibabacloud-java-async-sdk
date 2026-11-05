@@ -75,6 +75,7 @@ public class ListInstanceLinkedWhitelistTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +88,7 @@ public class ListInstanceLinkedWhitelistTemplatesRequest extends Request {
         }
 
         /**
-         * <p>RegionId</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

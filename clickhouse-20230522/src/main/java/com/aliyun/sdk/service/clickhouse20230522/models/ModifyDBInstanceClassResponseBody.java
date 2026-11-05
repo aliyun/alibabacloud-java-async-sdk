@@ -67,7 +67,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -196,7 +196,10 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
             } 
 
             /**
-             * ComputingGroupId.
+             * <p>The compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-gs5j3sua77*******-clickhouse</p>
              */
             public Builder computingGroupId(String computingGroupId) {
                 this.computingGroupId = computingGroupId;
@@ -207,7 +210,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
              * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>cc-xxxxxxx</p>
+             * <p>cc-gs5j3sua77*******</p>
              */
             public Builder DBInstanceID(Long DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -218,7 +221,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
              * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
-             * <p>cc-xxxxxxx</p>
+             * <p>cc-gs5j3sua77*******</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -226,7 +229,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum capacity for elastic scaling.</p>
+             * <p><strong>[Deprecated]</strong> The maximum value for serverless elastic scaling.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -237,7 +240,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum capacity for elastic scaling.</p>
+             * <p><strong>[Deprecated]</strong> The minimum value for serverless elastic scaling.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

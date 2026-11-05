@@ -117,7 +117,10 @@ public class DeleteEndpointRequest extends Request {
         } 
 
         /**
-         * ComputingGroupId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-2ze34****-clickhouse</p>
          */
         public Builder computingGroupId(String computingGroupId) {
             this.putQueryParameter("ComputingGroupId", computingGroupId);
@@ -126,7 +129,7 @@ public class DeleteEndpointRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the endpoint, which indicates the prefix of the value of the ConnectionString parameter.</p>
+         * <p>The prefix of the endpoint to be released, which is the prefix part of the ConnectionString parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
@@ -138,7 +141,7 @@ public class DeleteEndpointRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +154,14 @@ public class DeleteEndpointRequest extends Request {
         }
 
         /**
-         * DBInstanceNetType.
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li>Vpc: VPC network.</li>
+         * <li>Public: public network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder DBInstanceNetType(String DBInstanceNetType) {
             this.putQueryParameter("DBInstanceNetType", DBInstanceNetType);

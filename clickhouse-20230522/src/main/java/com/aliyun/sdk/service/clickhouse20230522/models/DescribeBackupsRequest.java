@@ -149,7 +149,10 @@ public class DescribeBackupsRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * <p>The backup record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117403****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -158,6 +161,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +174,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
+         * <p>The end time of the backup in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +187,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -191,7 +199,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -200,6 +211,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,6 +224,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the backup in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

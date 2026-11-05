@@ -159,7 +159,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>The code of the cloud service.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>clickhouse</p>

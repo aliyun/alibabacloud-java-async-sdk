@@ -67,7 +67,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -183,7 +183,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the whitelist.</p>
+             * <p>The name of the whitelist group.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -194,7 +194,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the whitelist.</p>
+             * <p>The group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -205,7 +205,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses and CIDR blocks in the whitelist.</p>
+             * <p>The list of IP addresses in the whitelist group.</p>
              * 
              * <strong>example:</strong>
              * <p>127.0.XX.XX</p>
@@ -216,7 +216,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address type.</p>
+             * <p>The type of the IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>ipv4</p>
@@ -324,7 +324,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
              * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestCluster</p>
+             * <p>Cluster test</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -332,7 +332,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the whitelists.</p>
+             * <p>The list of whitelist groups.</p>
              */
             public Builder groupItems(java.util.List<GroupItems> groupItems) {
                 this.groupItems = groupItems;

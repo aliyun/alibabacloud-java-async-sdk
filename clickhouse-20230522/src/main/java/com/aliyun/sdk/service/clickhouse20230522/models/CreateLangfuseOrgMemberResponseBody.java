@@ -67,7 +67,7 @@ public class CreateLangfuseOrgMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The information about the user added to the Langfuse organization.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,10 @@ public class CreateLangfuseOrgMemberResponseBody extends TeaModel {
             } 
 
             /**
-             * Email.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:john@company.com">john@company.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -152,7 +155,10 @@ public class CreateLangfuseOrgMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the user in the organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIEWER</p>
              */
             public Builder role(String role) {
                 this.role = role;

@@ -266,6 +266,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLangfuseUsersResponse> describeLangfuseUsers(DescribeLangfuseUsersRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation supports only community-compatible edition clusters created after December 01, 2021.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeProcessList  DescribeProcessListRequest
      * @return DescribeProcessListResponse
      */
@@ -308,6 +313,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWhitelistTemplateResponse> getWhitelistTemplate(GetWhitelistTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse before you call this operation.</p>
+     * 
      * @param request the request parameters of KillProcess  KillProcessRequest
      * @return KillProcessResponse
      */
@@ -344,6 +352,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8 support data backup.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
      */
@@ -356,6 +369,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceAttributeResponse> modifyDBInstanceAttribute(ModifyDBInstanceAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * 
      * @param request the request parameters of ModifyDBInstanceClass  ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
      */

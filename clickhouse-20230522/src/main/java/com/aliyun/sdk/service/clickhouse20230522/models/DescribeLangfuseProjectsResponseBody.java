@@ -67,7 +67,7 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -183,7 +183,10 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The time when the Langfuse project was created. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-27T08:23:45Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -191,7 +194,10 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the Langfuse project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -199,7 +205,10 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationId.
+             * <p>The ID of the organization to which the Langfuse project belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmrbhzx930005jw2q****</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -207,7 +216,10 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The Langfuse project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmrbhzx930005jw2q****</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -215,7 +227,10 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The time when the Langfuse project was updated. The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-09T10:27:35</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -308,7 +323,10 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -316,7 +334,10 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -324,7 +345,7 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Projects.
+             * <p>The list of Langfuse projects.</p>
              */
             public Builder projects(java.util.List<Projects> projects) {
                 this.projects = projects;
@@ -332,7 +353,10 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

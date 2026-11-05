@@ -89,7 +89,7 @@ public class DeleteLangfuseInstanceRequest extends Request {
         } 
 
         /**
-         * ConfirmDeleteAiGateway.
+         * <p>The confirmation mark for deleting the AI gateway instance associated with the Langfuse instance.</p>
          */
         public Builder confirmDeleteAiGateway(Boolean confirmDeleteAiGateway) {
             this.putQueryParameter("ConfirmDeleteAiGateway", confirmDeleteAiGateway);
@@ -98,6 +98,7 @@ public class DeleteLangfuseInstanceRequest extends Request {
         }
 
         /**
+         * <p>The Langfuse instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteLangfuseInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class DeleteDBResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;

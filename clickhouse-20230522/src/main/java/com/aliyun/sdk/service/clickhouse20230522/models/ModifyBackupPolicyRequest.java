@@ -119,7 +119,10 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * BackupRetentionPeriod.
+         * <p>The number of days for which backups are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -128,6 +131,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +144,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
+         * <p>The backup cycle.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
+         * <p>The backup time in UTC. The format is HH:mmZ-HH:mmZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +170,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

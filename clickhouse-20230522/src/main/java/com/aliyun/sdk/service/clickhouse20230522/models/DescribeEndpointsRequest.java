@@ -89,7 +89,10 @@ public class DescribeEndpointsRequest extends Request {
         } 
 
         /**
-         * ComputingGroupId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-*****-clickhouse</p>
          */
         public Builder computingGroupId(String computingGroupId) {
             this.putQueryParameter("ComputingGroupId", computingGroupId);

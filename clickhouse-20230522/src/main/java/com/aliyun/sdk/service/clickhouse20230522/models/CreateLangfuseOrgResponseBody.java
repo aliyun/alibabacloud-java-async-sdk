@@ -67,7 +67,7 @@ public class CreateLangfuseOrgResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +157,10 @@ public class CreateLangfuseOrgResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation time of the Langfuse organization. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.SSSZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-25T09:28:30.949Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -165,7 +168,10 @@ public class CreateLangfuseOrgResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the Langfuse organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -173,7 +179,10 @@ public class CreateLangfuseOrgResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationId.
+             * <p>The ID of the Langfuse organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmrbhzx930005jw****</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;

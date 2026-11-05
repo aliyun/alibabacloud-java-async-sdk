@@ -133,6 +133,7 @@ public class DescribeLangfuseProjectMembershipsRequest extends Request {
         } 
 
         /**
+         * <p>The Langfuse instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class DescribeLangfuseProjectMembershipsRequest extends Request {
         }
 
         /**
+         * <p>The Langfuse organization ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +159,10 @@ public class DescribeLangfuseProjectMembershipsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +171,10 @@ public class DescribeLangfuseProjectMembershipsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,6 +183,7 @@ public class DescribeLangfuseProjectMembershipsRequest extends Request {
         }
 
         /**
+         * <p>The Langfuse project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +196,7 @@ public class DescribeLangfuseProjectMembershipsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

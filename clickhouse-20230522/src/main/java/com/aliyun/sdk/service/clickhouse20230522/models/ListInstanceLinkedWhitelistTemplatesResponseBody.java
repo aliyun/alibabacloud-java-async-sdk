@@ -67,7 +67,7 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -157,7 +157,10 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * SecurityIPList.
+             * <p>The comma-separated IP addresses in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1,10.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -165,7 +168,10 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The IP address whitelist template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-asdfwem</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -173,7 +179,10 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The IP address whitelist template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -227,7 +236,7 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Templates.
+             * <p>A list of IP address whitelist templates.</p>
              */
             public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;

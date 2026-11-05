@@ -67,7 +67,7 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,6 +98,9 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
      * <p>DescribeLangfuseUsersResponseBody</p>
      */
     public static class Users extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowOrgCreation")
+        private Boolean allowOrgCreation;
+
         @com.aliyun.core.annotation.NameInMap("CreatedAt")
         private String createdAt;
 
@@ -108,6 +111,7 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
         private String name;
 
         private Users(Builder builder) {
+            this.allowOrgCreation = builder.allowOrgCreation;
             this.createdAt = builder.createdAt;
             this.email = builder.email;
             this.name = builder.name;
@@ -119,6 +123,13 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
 
         public static Users create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowOrgCreation
+         */
+        public Boolean getAllowOrgCreation() {
+            return this.allowOrgCreation;
         }
 
         /**
@@ -143,6 +154,7 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowOrgCreation; 
             private String createdAt; 
             private String email; 
             private String name; 
@@ -151,13 +163,25 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
             } 
 
             private Builder(Users model) {
+                this.allowOrgCreation = model.allowOrgCreation;
                 this.createdAt = model.createdAt;
                 this.email = model.email;
                 this.name = model.name;
             } 
 
             /**
-             * CreatedAt.
+             * <p>Indicates whether the user is allowed to create an organization.</p>
+             */
+            public Builder allowOrgCreation(Boolean allowOrgCreation) {
+                this.allowOrgCreation = allowOrgCreation;
+                return this;
+            }
+
+            /**
+             * <p>The time when the user was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-01T10:03:05Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -165,7 +189,10 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:john@company.com">john@company.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -173,7 +200,10 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>john</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +296,10 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -274,7 +307,10 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries to return on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -282,7 +318,10 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -290,7 +329,7 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Users.
+             * <p>The list of users.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;

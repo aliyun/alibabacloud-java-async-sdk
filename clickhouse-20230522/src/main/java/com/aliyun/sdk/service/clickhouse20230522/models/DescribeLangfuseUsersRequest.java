@@ -131,6 +131,7 @@ public class DescribeLangfuseUsersRequest extends Request {
         } 
 
         /**
+         * <p>The Langfuse instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,10 @@ public class DescribeLangfuseUsersRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:john@company.com">john@company.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -152,7 +156,10 @@ public class DescribeLangfuseUsersRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>john</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -161,7 +168,10 @@ public class DescribeLangfuseUsersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +180,10 @@ public class DescribeLangfuseUsersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,6 +192,7 @@ public class DescribeLangfuseUsersRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

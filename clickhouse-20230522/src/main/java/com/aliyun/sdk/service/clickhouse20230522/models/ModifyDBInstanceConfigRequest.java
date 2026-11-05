@@ -89,6 +89,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The API data parameter settings in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;max_concurrent_queries&quot;:&quot;100&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -110,6 +114,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

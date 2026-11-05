@@ -159,7 +159,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * ComputingGroupId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-wz9v6y29y3******-clickhouse</p>
          */
         public Builder computingGroupId(String computingGroupId) {
             this.putQueryParameter("ComputingGroupId", computingGroupId);
@@ -181,7 +184,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+         * <p>The end of the time range to query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-15 16:00:00</p>
@@ -222,7 +225,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+         * <p>The execution duration of the slow SQL statement. The minimum value is <strong>1000</strong>. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -247,7 +250,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+         * <p>The beginning of the time range to query. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-11 16:00:00</p>

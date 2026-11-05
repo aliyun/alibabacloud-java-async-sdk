@@ -67,7 +67,7 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The query results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -131,7 +131,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-asdfwef</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -224,7 +227,7 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstances.
+             * <p>The list of associated instances.</p>
              */
             public Builder dbInstances(java.util.List<DbInstances> dbInstances) {
                 this.dbInstances = dbInstances;
@@ -232,7 +235,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1,10.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -240,7 +246,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The whitelist template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-asdfwem</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -248,7 +257,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The whitelist template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-asdfwem</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -380,7 +392,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrPageNumbers.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currPageNumbers(Integer currPageNumbers) {
                 this.currPageNumbers = currPageNumbers;
@@ -388,7 +403,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * HasNext.
+             * <p>Whether a next page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -396,7 +414,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * HasPrev.
+             * <p>Whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasPrev(Boolean hasPrev) {
                 this.hasPrev = hasPrev;
@@ -404,7 +425,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -412,7 +436,7 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Templates.
+             * <p>The list of whitelist templates.</p>
              */
             public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;
@@ -420,7 +444,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of templates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -428,7 +455,10 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNumbers.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalPageNumbers(Integer totalPageNumbers) {
                 this.totalPageNumbers = totalPageNumbers;

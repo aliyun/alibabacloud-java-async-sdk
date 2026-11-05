@@ -67,7 +67,7 @@ public class KillProcessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +157,7 @@ public class KillProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of queries that are terminated.</p>
+             * <p>The number of stopped tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

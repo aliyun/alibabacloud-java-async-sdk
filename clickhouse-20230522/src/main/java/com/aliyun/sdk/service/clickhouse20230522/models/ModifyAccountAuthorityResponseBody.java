@@ -67,7 +67,7 @@ public class ModifyAccountAuthorityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,7 @@ public class ModifyAccountAuthorityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database account.</p>
+             * <p>The database account.</p>
              * 
              * <strong>example:</strong>
              * <p>test1</p>

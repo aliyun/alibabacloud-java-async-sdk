@@ -67,7 +67,7 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,10 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The time when the user was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-24T10:14:33Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -178,7 +181,10 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:john@company.com">john@company.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -186,7 +192,10 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>john</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +203,10 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIEWER</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -287,7 +299,7 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
             } 
 
             /**
-             * Memberships.
+             * <p>The list of user roles in the organization.</p>
              */
             public Builder memberships(java.util.List<Memberships> memberships) {
                 this.memberships = memberships;
@@ -295,7 +307,10 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -303,7 +318,10 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -311,7 +329,10 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

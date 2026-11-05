@@ -162,7 +162,13 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The database account. The account name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be unique.</li>
+         * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+         * <li>The name must be 2 to 64 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,8 +183,8 @@ public class CreateAccountRequest extends Request {
         /**
          * <p>The type of the database account. Valid values:</p>
          * <ul>
-         * <li><strong>NormalAccount</strong>: standard account</li>
-         * <li><strong>SuperAccount</strong>: privileged account</li>
+         * <li><strong>NormalAccount</strong>: Standard account.</li>
+         * <li><strong>SuperAccount</strong>: Privileged account.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -205,10 +211,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The description of the account.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used for account</p>
+         * <p>For testing purposes</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -217,7 +223,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The information about permissions.</p>
+         * <p>The authorization information.</p>
          */
         public Builder dmlAuthSetting(DmlAuthSetting dmlAuthSetting) {
             String dmlAuthSettingShrink = shrink(dmlAuthSetting, "DmlAuthSetting", "json");
@@ -229,9 +235,12 @@ public class CreateAccountRequest extends Request {
         /**
          * <p>The password of the database account. The password must meet the following requirements:</p>
          * <ul>
-         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-         * <li>The following special characters are supported: ! @ # $ % ^ &amp; * ( ) _ + - =</li>
-         * <li>The password must be 8 to 32 characters in length.</li>
+         * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * </li>
+         * <li><p>Special characters include !@#$%^&amp;*()_+-=.</p>
+         * </li>
+         * <li><p>The password must be 8 to 32 characters in length.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -245,7 +254,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The code of the cloud service.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>clickhouse</p>
@@ -355,7 +364,7 @@ public class CreateAccountRequest extends Request {
             } 
 
             /**
-             * <p>The databases on which you want to grant permissions. Separate multiple databases with commas (,).</p>
+             * <p>The list of databases to be authorized. Separate multiple databases with commas (,).</p>
              */
             public Builder allowDatabases(java.util.List<String> allowDatabases) {
                 this.allowDatabases = allowDatabases;
@@ -363,7 +372,7 @@ public class CreateAccountRequest extends Request {
             }
 
             /**
-             * <p>The dictionaries on which you want to grant permissions. Separate multiple dictionaries with commas (,).</p>
+             * <p>The list of dictionaries to be authorized. Separate multiple dictionaries with commas (,).</p>
              */
             public Builder allowDictionaries(java.util.List<String> allowDictionaries) {
                 this.allowDictionaries = allowDictionaries;
@@ -371,10 +380,10 @@ public class CreateAccountRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to grant the DDL permissions to the database account. Valid values:</p>
+             * <p>Specifies whether to grant DDL permissions to the database account. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The account has the permissions to execute DDL statements.</li>
-             * <li><strong>false</strong>: The account does not have the permissions to execute DDL statements.</li>
+             * <li><strong>true</strong>: Allows DDL operations.</li>
+             * <li><strong>false</strong>: Prohibits DDL operations.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -386,11 +395,11 @@ public class CreateAccountRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to grant the DML permissions to the database account. Valid values:</p>
+             * <p>Specifies whether to grant DML permissions to the database account. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</li>
-             * <li><strong>1</strong>: The account only has the permissions to read data from the database.</li>
-             * <li><strong>2</strong>: The account only has the permissions to read data from the database and modify the settings of the database.</li>
+             * <li><strong>0</strong>: Allows queries for reading, writing, and changing settings.</li>
+             * <li><strong>1</strong>: Allows only queries for reading data.</li>
+             * <li><strong>2</strong>: Allows queries for reading data and changing settings.</li>
              * </ul>
              * 
              * <strong>example:</strong>

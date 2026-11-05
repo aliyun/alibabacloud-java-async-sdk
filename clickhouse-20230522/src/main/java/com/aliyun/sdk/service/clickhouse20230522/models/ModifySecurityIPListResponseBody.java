@@ -67,7 +67,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -244,7 +244,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the whitelist.</p>
+             * <p>The group name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -255,7 +255,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the whitelist.</p>
+             * <p>The group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -266,7 +266,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses and CIDR blocks in the whitelist.</p>
+             * <p>The list of IP addresses in the whitelist group.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/24,172.16.0.0/24</p>

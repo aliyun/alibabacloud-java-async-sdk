@@ -67,7 +67,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -196,7 +196,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The address to which the query statement is sent.</p>
+             * <p>The query address.</p>
              * 
              * <strong>example:</strong>
              * <p>0:0:0:0:0:ffff:1edd65ea</p>
@@ -210,7 +210,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
              * <p>The query ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;79f7e40b-87e2-4ef4-b6df-21889a3a030e&quot;</p>
+             * <p>\&quot;79f7e40b-87e2-4ef4-b6df-21889a3a030e\&quot;</p>
              */
             public Builder initialQueryId(String initialQueryId) {
                 this.initialQueryId = initialQueryId;
@@ -218,7 +218,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who executes the query statement.</p>
+             * <p>The query user.</p>
              * 
              * <strong>example:</strong>
              * <p>bany</p>
@@ -229,7 +229,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query statement that is running.</p>
+             * <p>The statement that is being queried.</p>
              * 
              * <strong>example:</strong>
              * <p>select * from test</p>
@@ -251,7 +251,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the query started. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-23T10:13:23Z</p>
@@ -361,7 +361,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
              * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Test.</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -369,7 +369,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result sets.</p>
+             * <p>The result set.</p>
              */
             public Builder resultSet(java.util.List<ResultSet> resultSet) {
                 this.resultSet = resultSet;
@@ -377,7 +377,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

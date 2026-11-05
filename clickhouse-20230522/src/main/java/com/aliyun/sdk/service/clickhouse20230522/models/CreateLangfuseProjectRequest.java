@@ -105,6 +105,7 @@ public class CreateLangfuseProjectRequest extends Request {
         } 
 
         /**
+         * <p>The Langfuse instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class CreateLangfuseProjectRequest extends Request {
         }
 
         /**
+         * <p>The name of the Langfuse project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class CreateLangfuseProjectRequest extends Request {
         }
 
         /**
+         * <p>The ID of the organization to which the Langfuse project belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class CreateLangfuseProjectRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

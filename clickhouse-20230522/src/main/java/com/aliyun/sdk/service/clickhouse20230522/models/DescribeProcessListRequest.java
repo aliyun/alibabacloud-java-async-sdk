@@ -187,7 +187,10 @@ public class DescribeProcessListRequest extends Request {
         } 
 
         /**
-         * ComputingGroupId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-gs5j3sua77******-clickhouse</p>
          */
         public Builder computingGroupId(String computingGroupId) {
             this.putQueryParameter("ComputingGroupId", computingGroupId);
@@ -221,7 +224,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>The user who executes the query statement.</p>
+         * <p>The query user.</p>
          * 
          * <strong>example:</strong>
          * <p>testuser</p>
@@ -269,7 +272,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>The execution duration of slow SQL queries. Minimum value: 1000. Unit: milliseconds.</p>
+         * <p>The execution duration of slow SQL statements. Unit: ms. Minimum value: 1000 ms.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -281,15 +284,18 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * <p>Specifies the columns by which the query results are sorted in descending order.</p>
+         * <p>Sorts results in descending order by the specified columns.</p>
          * <ul>
-         * <li>0: The query results are sorted by the query_duration_ms column.</li>
-         * <li>1: The query results are sorted by the query_duration_ms and query_start_time columns.</li>
-         * <li>2: The query results are sorted by the query_duration_ms, query_start_time, and user columns.</li>
+         * <li><p>0: Sorts only by query_duration_ms.</p>
+         * </li>
+         * <li><p>1: Sorts by query_duration_ms and query_start_time.</p>
+         * </li>
+         * <li><p>2: Sorts by query_duration_ms, query_start_time, and user.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>id</p>
+         * <p>0</p>
          */
         public Builder queryOrder(Long queryOrder) {
             this.putQueryParameter("QueryOrder", queryOrder);

@@ -67,7 +67,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username of the database account.</p>
+             * <p>The database account.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -183,12 +183,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             /**
              * <p>The type of the database account. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: standard account</li>
-             * <li><strong>6</strong>: privileged account</li>
+             * <li><strong>1</strong>: Standard account.</li>
+             * <li><strong>6</strong>: Privileged account.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>NormalAccount</p>
+             * <p>1</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -196,10 +196,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
+             * <p>The description of the account.</p>
              * 
              * <strong>example:</strong>
-             * <p>Used for test</p>
+             * <p>For testing</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -207,11 +207,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the database account. Valid values:</p>
+             * <p>The account status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The database account is being created.</li>
-             * <li><strong>1</strong>: The database account is in use.</li>
-             * <li><strong>3</strong>: The database account is being deleted.</li>
+             * <li><p><strong>0</strong>: Being created.</p>
+             * </li>
+             * <li><p><strong>1</strong>: In use.</p>
+             * </li>
+             * <li><p><strong>3</strong>: Being deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -308,7 +311,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The database accounts.</p>
+             * <p>The list of accounts.</p>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
@@ -343,7 +346,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

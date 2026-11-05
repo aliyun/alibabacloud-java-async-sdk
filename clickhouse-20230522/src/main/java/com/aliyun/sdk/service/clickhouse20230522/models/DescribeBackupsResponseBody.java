@@ -106,7 +106,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of backup sets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of backup sets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -308,7 +320,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupEndTime.
+             * <p>The end time of the backup in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-22T18:28:41Z</p>
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -316,7 +331,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * <p>The backup record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>117403****</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -324,7 +342,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMethod.
+             * <p>The backup method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Physical</p>
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -332,7 +353,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetInfo.
+             * <p>The backup set information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;shard_count&quot;: 4}</p>
              */
             public Builder backupSetInfo(String backupSetInfo) {
                 this.backupSetInfo = backupSetInfo;
@@ -340,7 +364,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSize.
+             * <p>The size of the backup file. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131072</p>
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -348,7 +375,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * <p>The start time of the backup. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-22T18:28:22Z</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -356,7 +386,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * <p>The status of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -364,7 +397,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>FullBackup</strong>: full backup</li>
+             * <li><strong>IncrementalBackup</strong>: incremental backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IncrementalBackup</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -372,7 +412,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp179i5956tih2m93</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -380,7 +423,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>The expiration time of the backup set. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-22T18:28:41Z</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;

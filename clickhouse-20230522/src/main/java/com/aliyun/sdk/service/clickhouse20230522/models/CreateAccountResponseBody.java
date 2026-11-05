@@ -67,7 +67,7 @@ public class CreateAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class CreateAccountResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
+         * <p>2FED790E-FB61-4721-8C1C-07C627FA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +144,7 @@ public class CreateAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database account.</p>
+             * <p>The database account.</p>
              * 
              * <strong>example:</strong>
              * <p>test1</p>

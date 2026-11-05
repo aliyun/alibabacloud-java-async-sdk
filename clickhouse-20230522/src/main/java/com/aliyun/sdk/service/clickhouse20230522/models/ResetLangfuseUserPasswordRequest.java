@@ -105,6 +105,7 @@ public class ResetLangfuseUserPasswordRequest extends Request {
         } 
 
         /**
+         * <p>The Langfuse instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ResetLangfuseUserPasswordRequest extends Request {
         }
 
         /**
+         * <p>The email address of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,10 @@ public class ResetLangfuseUserPasswordRequest extends Request {
         }
 
         /**
+         * <p>The new password of the user. The password must meet the following requirements:</p>
+         * <p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * <p>Special characters include !@#$%^&amp;*()_+-=.</p>
+         * <p>It must be 8 to 32 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +147,7 @@ public class ResetLangfuseUserPasswordRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

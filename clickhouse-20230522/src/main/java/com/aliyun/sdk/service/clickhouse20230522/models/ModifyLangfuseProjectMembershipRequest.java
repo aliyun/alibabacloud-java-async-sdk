@@ -135,6 +135,7 @@ public class ModifyLangfuseProjectMembershipRequest extends Request {
         } 
 
         /**
+         * <p>The Langfuse instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +148,7 @@ public class ModifyLangfuseProjectMembershipRequest extends Request {
         }
 
         /**
+         * <p>The email address of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +161,7 @@ public class ModifyLangfuseProjectMembershipRequest extends Request {
         }
 
         /**
+         * <p>The Langfuse organization ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +174,7 @@ public class ModifyLangfuseProjectMembershipRequest extends Request {
         }
 
         /**
+         * <p>The Langfuse project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +187,7 @@ public class ModifyLangfuseProjectMembershipRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,6 +200,7 @@ public class ModifyLangfuseProjectMembershipRequest extends Request {
         }
 
         /**
+         * <p>The role of the user in the project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -104,7 +104,7 @@ public class CreateDBRequest extends Request {
         } 
 
         /**
-         * <p>Database remark information.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -131,12 +131,12 @@ public class CreateDBRequest extends Request {
         /**
          * <p>The database name. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name can contain lowercase letters, digits, underscores (_), and hyphens (-).</li>
-         * <li>The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
-         * <li>The name can be up to 64 characters in length.</li>
+         * <li>It can contain lowercase letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>It must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+         * <li>It can be up to 64 characters in length.</li>
          * </ul>
          * <blockquote>
-         * <p> An underscore (_) is counted as two characters.</p>
+         * <p>Notice: An underscore (_) is counted as two characters.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

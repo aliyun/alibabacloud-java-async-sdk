@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateLangfuseUserRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowOrgCreation")
+    private Boolean allowOrgCreation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -52,6 +56,7 @@ public class CreateLangfuseUserRequest extends Request {
 
     private CreateLangfuseUserRequest(Builder builder) {
         super(builder);
+        this.allowOrgCreation = builder.allowOrgCreation;
         this.DBInstanceId = builder.DBInstanceId;
         this.email = builder.email;
         this.name = builder.name;
@@ -72,6 +77,13 @@ public class CreateLangfuseUserRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowOrgCreation
+     */
+    public Boolean getAllowOrgCreation() {
+        return this.allowOrgCreation;
     }
 
     /**
@@ -124,6 +136,7 @@ public class CreateLangfuseUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLangfuseUserRequest, Builder> {
+        private Boolean allowOrgCreation; 
         private String DBInstanceId; 
         private String email; 
         private String name; 
@@ -138,6 +151,7 @@ public class CreateLangfuseUserRequest extends Request {
 
         private Builder(CreateLangfuseUserRequest request) {
             super(request);
+            this.allowOrgCreation = request.allowOrgCreation;
             this.DBInstanceId = request.DBInstanceId;
             this.email = request.email;
             this.name = request.name;
@@ -148,6 +162,16 @@ public class CreateLangfuseUserRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether the user is allowed to create organizations. Default value: false.</p>
+         */
+        public Builder allowOrgCreation(Boolean allowOrgCreation) {
+            this.putQueryParameter("AllowOrgCreation", allowOrgCreation);
+            this.allowOrgCreation = allowOrgCreation;
+            return this;
+        }
+
+        /**
+         * <p>The Langfuse instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +184,7 @@ public class CreateLangfuseUserRequest extends Request {
         }
 
         /**
+         * <p>The email address of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +197,7 @@ public class CreateLangfuseUserRequest extends Request {
         }
 
         /**
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +210,10 @@ public class CreateLangfuseUserRequest extends Request {
         }
 
         /**
-         * OrgRole.
+         * <p>The role of the user in the organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIEWER</p>
          */
         public Builder orgRole(String orgRole) {
             this.putQueryParameter("OrgRole", orgRole);
@@ -193,7 +222,10 @@ public class CreateLangfuseUserRequest extends Request {
         }
 
         /**
-         * OrganizationId.
+         * <p>The Langfuse organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmrbhzx930005jw2q****</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("OrganizationId", organizationId);
@@ -202,6 +234,15 @@ public class CreateLangfuseUserRequest extends Request {
         }
 
         /**
+         * <p>The password of the user account. The password must meet the following requirements:</p>
+         * <ul>
+         * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * </li>
+         * <li><p>Special characters include !@#$%^&amp;*()_+-=.</p>
+         * </li>
+         * <li><p>It must be 8 to 32 characters in length.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +255,7 @@ public class CreateLangfuseUserRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,10 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-uf6lkzf*****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;

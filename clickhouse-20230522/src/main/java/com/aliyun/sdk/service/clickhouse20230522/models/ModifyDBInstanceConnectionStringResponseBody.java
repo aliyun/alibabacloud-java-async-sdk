@@ -67,7 +67,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint of the cluster.</p>
+             * <p>The endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
@@ -203,7 +203,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disabled database ports.</p>
+             * <p>The database ports that are disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>9001,8123</p>

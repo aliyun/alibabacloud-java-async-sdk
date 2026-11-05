@@ -67,7 +67,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,10 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             } 
 
             /**
-             * OrganizationId.
+             * <p>The Langfuse organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmrbhzx930005jw2q****</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -152,7 +155,10 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the user in the organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIEWER</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -173,6 +179,9 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
      * <p>CreateLangfuseUserResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowOrgCreation")
+        private Boolean allowOrgCreation;
+
         @com.aliyun.core.annotation.NameInMap("CreatedAt")
         private String createdAt;
 
@@ -186,6 +195,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
         private String name;
 
         private Data(Builder builder) {
+            this.allowOrgCreation = builder.allowOrgCreation;
             this.createdAt = builder.createdAt;
             this.email = builder.email;
             this.membership = builder.membership;
@@ -198,6 +208,13 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowOrgCreation
+         */
+        public Boolean getAllowOrgCreation() {
+            return this.allowOrgCreation;
         }
 
         /**
@@ -229,6 +246,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowOrgCreation; 
             private String createdAt; 
             private String email; 
             private Membership membership; 
@@ -238,6 +256,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.allowOrgCreation = model.allowOrgCreation;
                 this.createdAt = model.createdAt;
                 this.email = model.email;
                 this.membership = model.membership;
@@ -245,7 +264,18 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>Indicates whether the user is allowed to create organizations.</p>
+             */
+            public Builder allowOrgCreation(Boolean allowOrgCreation) {
+                this.allowOrgCreation = allowOrgCreation;
+                return this;
+            }
+
+            /**
+             * <p>The time when the user was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-04T10:20:33Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -253,7 +283,10 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:john@company.com">john@company.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -261,7 +294,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             }
 
             /**
-             * Membership.
+             * <p>The user role.</p>
              */
             public Builder membership(Membership membership) {
                 this.membership = membership;
@@ -269,7 +302,10 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>john</p>
              */
             public Builder name(String name) {
                 this.name = name;

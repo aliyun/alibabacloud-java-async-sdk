@@ -67,7 +67,7 @@ public class DescribeLangfuseProjectMembershipsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,10 @@ public class DescribeLangfuseProjectMembershipsResponseBody extends TeaModel {
             } 
 
             /**
-             * Email.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:john@company.com">john@company.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -178,7 +181,10 @@ public class DescribeLangfuseProjectMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>john</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -186,7 +192,10 @@ public class DescribeLangfuseProjectMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * OrgRole.
+             * <p>The role of the user in the Langfuse organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADMIN</p>
              */
             public Builder orgRole(String orgRole) {
                 this.orgRole = orgRole;
@@ -194,7 +203,10 @@ public class DescribeLangfuseProjectMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectRole.
+             * <p>The role of the user in the Langfuse project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIEWER</p>
              */
             public Builder projectRole(String projectRole) {
                 this.projectRole = projectRole;
@@ -287,7 +299,7 @@ public class DescribeLangfuseProjectMembershipsResponseBody extends TeaModel {
             } 
 
             /**
-             * Memberships.
+             * <p>The list of user roles in the Langfuse project.</p>
              */
             public Builder memberships(java.util.List<Memberships> memberships) {
                 this.memberships = memberships;
@@ -295,7 +307,10 @@ public class DescribeLangfuseProjectMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -303,7 +318,10 @@ public class DescribeLangfuseProjectMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -311,7 +329,10 @@ public class DescribeLangfuseProjectMembershipsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

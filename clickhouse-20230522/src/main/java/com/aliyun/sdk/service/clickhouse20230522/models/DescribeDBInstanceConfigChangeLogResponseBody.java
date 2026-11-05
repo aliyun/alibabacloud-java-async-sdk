@@ -67,7 +67,7 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The query result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -209,7 +209,13 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Applied.
+             * <p>Indicates whether the configuration has taken effect. Valid values:</p>
+             * <ul>
+             * <li><p>true: The configuration has taken effect.</p>
+             * </li>
+             * <li><p>false: The configuration has not taken effect.</p>
+             * </li>
+             * </ul>
              */
             public Builder applied(Boolean applied) {
                 this.applied = applied;
@@ -217,7 +223,10 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the change was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-25 13:46:06</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -225,7 +234,10 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the change was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-25 13:46:06</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -233,7 +245,10 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * ID.
+             * <p>The operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -241,7 +256,10 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>max_concurrent_queries</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -249,7 +267,10 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * NewValue.
+             * <p>The new parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -257,7 +278,10 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * OldValue.
+             * <p>The old parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder oldValue(String oldValue) {
                 this.oldValue = oldValue;
@@ -324,7 +348,10 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -332,7 +359,7 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * ParamChangeLogs.
+             * <p>The parameter change records.</p>
              */
             public Builder paramChangeLogs(java.util.List<ParamChangeLogs> paramChangeLogs) {
                 this.paramChangeLogs = paramChangeLogs;

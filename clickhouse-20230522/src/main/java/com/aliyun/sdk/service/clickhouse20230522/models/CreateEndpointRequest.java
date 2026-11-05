@@ -117,7 +117,10 @@ public class CreateEndpointRequest extends Request {
         } 
 
         /**
-         * ComputingGroupId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****-clickhouse</p>
          */
         public Builder computingGroupId(String computingGroupId) {
             this.putQueryParameter("ComputingGroupId", computingGroupId);
@@ -126,7 +129,7 @@ public class CreateEndpointRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the new endpoint. The prefix of the ConnectionString parameter.</p>
+         * <p>The prefix of the destination endpoint. This is the prefix of the ConnectionString parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
@@ -152,10 +155,6 @@ public class CreateEndpointRequest extends Request {
 
         /**
          * <p>The network type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Public</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Public</p>

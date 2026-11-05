@@ -67,7 +67,7 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,10 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation time of the Langfuse project. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-24T10:14:33Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -178,7 +181,10 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the Langfuse project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -186,7 +192,10 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationId.
+             * <p>The ID of the Langfuse organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmrbhzx930005jw2q****</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -194,7 +203,10 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the Langfuse project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmrbhzx930005jw2q****</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;

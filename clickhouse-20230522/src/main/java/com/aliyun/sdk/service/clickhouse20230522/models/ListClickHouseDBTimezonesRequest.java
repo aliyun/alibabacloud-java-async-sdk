@@ -73,7 +73,10 @@ public class ListClickHouseDBTimezonesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -82,7 +85,18 @@ public class ListClickHouseDBTimezonesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records on each page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong> (default)</p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

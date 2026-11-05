@@ -204,7 +204,7 @@ public class ModifyDBInstanceClassRequest extends Request {
         } 
 
         /**
-         * AutoScaleConfig.
+         * <p>The automatic horizontal elastic configuration.</p>
          */
         public Builder autoScaleConfig(AutoScaleConfig autoScaleConfig) {
             String autoScaleConfigShrink = shrink(autoScaleConfig, "AutoScaleConfig", "json");
@@ -214,7 +214,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * ComputingGroupId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-gs5j3sua77*******-clickhouse</p>
          */
         public Builder computingGroupId(String computingGroupId) {
             this.putQueryParameter("ComputingGroupId", computingGroupId);
@@ -227,7 +230,7 @@ public class ModifyDBInstanceClassRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cc-xxxxxxx</p>
+         * <p>cc-gs5j3sua77*******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -236,7 +239,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * NodeCount.
+         * <p>The number of nodes. Valid values: 2 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeCount(Integer nodeCount) {
             this.putQueryParameter("NodeCount", nodeCount);
@@ -245,7 +251,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * NodeScaleMax.
+         * <p>The maximum value for serverless node elastic scaling. Valid values: 4 to 32. The value must be greater than the minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder nodeScaleMax(Integer nodeScaleMax) {
             this.putQueryParameter("NodeScaleMax", nodeScaleMax);
@@ -254,7 +263,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * NodeScaleMin.
+         * <p>The minimum value for serverless node elastic scaling. Valid values: 4 to 32.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder nodeScaleMin(Integer nodeScaleMin) {
             this.putQueryParameter("NodeScaleMin", nodeScaleMin);
@@ -276,7 +288,7 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * <p>The maximum capacity for elastic scaling.</p>
+         * <p><strong>[Deprecated]</strong> The maximum value for serverless elastic scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -288,10 +300,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * <p>The minimum capacity for elastic scaling.</p>
+         * <p><strong>[Deprecated]</strong> The minimum value for serverless elastic scaling.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>8</p>
          */
         public Builder scaleMin(Long scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -300,7 +312,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * StorageQuota.
+         * <p>The purchased storage quota. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder storageQuota(Long storageQuota) {
             this.putQueryParameter("StorageQuota", storageQuota);
@@ -309,7 +324,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -377,7 +395,7 @@ public class ModifyDBInstanceClassRequest extends Request {
             } 
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch ID in the zone.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -385,7 +403,10 @@ public class ModifyDBInstanceClassRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone of the hot pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-XXX</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -466,7 +487,10 @@ public class ModifyDBInstanceClassRequest extends Request {
             } 
 
             /**
-             * BurstNum.
+             * <p>The number of burstable nodes for horizontal elastic scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder burstNum(Integer burstNum) {
                 this.burstNum = burstNum;
@@ -474,7 +498,14 @@ public class ModifyDBInstanceClassRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The configuration status. Valid values:</p>
+             * <ul>
+             * <li>disable: Disabled.</li>
+             * <li>enable: Enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -482,7 +513,7 @@ public class ModifyDBInstanceClassRequest extends Request {
             }
 
             /**
-             * VSwitchInfos.
+             * <p>The vSwitch information.</p>
              */
             public Builder vSwitchInfos(java.util.List<VSwitchInfos> vSwitchInfos) {
                 this.vSwitchInfos = vSwitchInfos;

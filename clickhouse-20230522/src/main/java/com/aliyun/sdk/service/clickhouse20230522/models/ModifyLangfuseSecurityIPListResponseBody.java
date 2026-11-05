@@ -67,7 +67,7 @@ public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -222,7 +222,10 @@ public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder DBInstanceID(Integer DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -230,7 +233,10 @@ public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The Langfuse instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lfs-*****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -238,7 +244,10 @@ public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -246,7 +255,10 @@ public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTag.
+             * <p>The group tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupTag(String groupTag) {
                 this.groupTag = groupTag;
@@ -254,7 +266,10 @@ public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/24,172.16.0.0/24</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -262,7 +277,10 @@ public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPType.
+             * <p>The IP address type. The value is fixed to IPv4. IPv6 is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder securityIPType(String securityIPType) {
                 this.securityIPType = securityIPType;
@@ -270,7 +288,10 @@ public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001080</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
@@ -278,7 +299,10 @@ public class ModifyLangfuseSecurityIPListResponseBody extends TeaModel {
             }
 
             /**
-             * WhitelistNetType.
+             * <p>The network type of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mix</p>
              */
             public Builder whitelistNetType(String whitelistNetType) {
                 this.whitelistNetType = whitelistNetType;

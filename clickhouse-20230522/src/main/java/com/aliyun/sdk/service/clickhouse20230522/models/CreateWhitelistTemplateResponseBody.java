@@ -67,7 +67,7 @@ public class CreateWhitelistTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +157,10 @@ public class CreateWhitelistTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * SecurityIPList.
+             * <p>The IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1,10.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -165,7 +168,10 @@ public class CreateWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-asdfwem</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -173,7 +179,10 @@ public class CreateWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The name of the whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -227,7 +236,7 @@ public class CreateWhitelistTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Templates.
+             * <p>The list of whitelist templates.</p>
              */
             public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;

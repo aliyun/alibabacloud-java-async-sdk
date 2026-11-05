@@ -67,7 +67,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -261,7 +261,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The address to which the query statement is sent.</p>
+             * <p>The query address.</p>
              * 
              * <strong>example:</strong>
              * <p>0:0:0:0:0:ffff:1edd65ea</p>
@@ -275,7 +275,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              * <p>The query ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;ae915a3ad30e77e67a7215d05b658cc6&quot;</p>
+             * <p>\&quot;ae915a3ad30e77e67a7215d05b658cc6\&quot;</p>
              */
             public Builder initialQueryId(String initialQueryId) {
                 this.initialQueryId = initialQueryId;
@@ -283,7 +283,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user who executes the query statement.</p>
+             * <p>The query user.</p>
              * 
              * <strong>example:</strong>
              * <p>bany</p>
@@ -294,7 +294,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peak memory usage for the query. Unit: bytes.</p>
+             * <p>The peak memory usage of the query. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>4941696</p>
@@ -305,7 +305,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query statement that is running.</p>
+             * <p>The query statement being executed.</p>
              * 
              * <strong>example:</strong>
              * <p>select * from test</p>
@@ -316,7 +316,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+             * <p>The execution duration of the slow SQL statement. The minimum value is <strong>1000</strong>. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -327,7 +327,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+             * <p>The time when the query started. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-09-11 16:00:00</p>
@@ -338,7 +338,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data that is scanned. Unit: bytes.</p>
+             * <p>The size of scanned data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>4507128020832</p>
@@ -349,7 +349,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of read rows.</p>
+             * <p>The number of rows read.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -371,7 +371,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the slow query logs.</p>
+             * <p>The slow log type.</p>
              * 
              * <strong>example:</strong>
              * <p>ExceptionWhileProcessing</p>
@@ -481,7 +481,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestCluster</p>
+             * <p>Cluster test</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -489,7 +489,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result sets.</p>
+             * <p>The result set.</p>
              */
             public Builder resultSet(java.util.List<ResultSet> resultSet) {
                 this.resultSet = resultSet;
@@ -497,7 +497,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

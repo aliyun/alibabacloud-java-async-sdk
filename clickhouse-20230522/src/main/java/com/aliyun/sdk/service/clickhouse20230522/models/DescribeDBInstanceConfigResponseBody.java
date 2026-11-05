@@ -67,7 +67,7 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>66428721-xxxx-xxxx-xxxx-3BD1B67837E0</p>
@@ -222,7 +222,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Maximum number of concurrently executed queries. Zero means unlimited.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -230,7 +233,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -238,7 +244,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IsDynamic.
+             * <p>Indicates whether the parameter takes effect dynamically (without requiring a restart).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isDynamic(Integer isDynamic) {
                 this.isDynamic = isDynamic;
@@ -246,7 +255,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IsUserModifiable.
+             * <p>Indicates whether the parameter can be modified by users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isUserModifiable(Integer isUserModifiable) {
                 this.isUserModifiable = isUserModifiable;
@@ -254,7 +266,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>max_concurrent_queries</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -262,7 +277,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Optional.
+             * <p>The valid values of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0-100]</p>
              */
             public Builder optional(String optional) {
                 this.optional = optional;
@@ -270,7 +288,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ParamRelyRule.
+             * <p>The parameter dependencies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder paramRelyRule(String paramRelyRule) {
                 this.paramRelyRule = paramRelyRule;
@@ -278,7 +299,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -345,7 +369,10 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z3****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -353,7 +380,7 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The user parameters.</p>
              */
             public Builder params(java.util.List<Params> params) {
                 this.params = params;

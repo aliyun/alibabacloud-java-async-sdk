@@ -130,7 +130,7 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * <p>The name of the whitelist whose settings you want to modify.</p>
+         * <p>The name of the group to modify.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -142,14 +142,14 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * <p>The modification mode.</p>
+         * <p>The modification mode. Valid values:</p>
          * <ul>
-         * <li>0: overwrites the original IP addresses and CIDR blocks in the whitelist.</li>
-         * <li>1: adds the IP addresses and CIDR blocks to the whitelist.</li>
-         * <li>2: removes the IP addresses and CIDR blocks from the whitelist.</li>
+         * <li>0: overwrites the existing whitelist.</li>
+         * <li>1: adds IP addresses to the whitelist.</li>
+         * <li>2: removes IP addresses from the whitelist.</li>
          * </ul>
          * <blockquote>
-         * <p> We recommend that you set the value to 0.</p>
+         * <p>Set this parameter to 0 to overwrite the existing whitelist.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class ModifySecurityIPListRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses and CIDR blocks in the whitelist.</p>
+         * <p>The whitelisted IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/24,172.16.0.0/24</p>

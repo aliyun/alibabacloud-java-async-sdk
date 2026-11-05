@@ -119,10 +119,10 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The configuration that you want to modify.</p>
+         * <p>The attribute type to modify.</p>
          * <ul>
-         * <li>MaintainTime: the O&amp;M time</li>
-         * <li>DBInstanceDescription: the cluster name</li>
+         * <li>MaintainTime: Modifies the O&amp;M window.</li>
+         * <li>DBInstanceDescription: Modifies the instance name.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -136,7 +136,7 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new value of the configuration.</p>
+         * <p>The new value of the attribute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The code of the cloud service.</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>clickhouse</p>

@@ -117,6 +117,7 @@ public class ModifyLangfuseSecurityIPListRequest extends Request {
         } 
 
         /**
+         * <p>The Langfuse instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class ModifyLangfuseSecurityIPListRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the whitelist group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -138,7 +142,18 @@ public class ModifyLangfuseSecurityIPListRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * <p>The modification mode. Valid values:</p>
+         * <ul>
+         * <li>0: overwrite</li>
+         * <li>1: increase</li>
+         * <li>2: delete</li>
+         * </ul>
+         * <blockquote>
+         * <p>Specify 0 to use the overwrite mode.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -147,6 +162,7 @@ public class ModifyLangfuseSecurityIPListRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +175,10 @@ public class ModifyLangfuseSecurityIPListRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * <p>The IP addresses to add to the instance whitelist. Separate multiple IP addresses with commas (,). For example, 192.168.0.0/24 indicates that all IP addresses in the 192.168.0.XX range are allowed to access the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24,172.16.0.0/24</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);

@@ -210,7 +210,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
              * <p>The description of the database account.</p>
              * 
              * <strong>example:</strong>
-             * <p>Used for test</p>
+             * <p>Test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -229,10 +229,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
+             * <p>Indicates whether the column is a primary key. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: The column is a primary key.</li>
+             * <li><strong>false</strong>: The column is not a primary key.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the stored data.</p>
+             * <p>The data type of the stored data.</p>
              * 
              * <strong>example:</strong>
              * <p>UInt64</p>
@@ -351,7 +351,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The columns.</p>
+             * <p>The column types.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -370,7 +370,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account.</p>
+             * <p>The accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -381,7 +381,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tables.</p>
+             * <p>The list of tables.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;

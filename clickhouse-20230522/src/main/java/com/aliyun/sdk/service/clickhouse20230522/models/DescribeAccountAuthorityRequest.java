@@ -116,7 +116,7 @@ public class DescribeAccountAuthorityRequest extends Request {
         }
 
         /**
-         * <p>The region ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

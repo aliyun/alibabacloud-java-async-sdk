@@ -67,7 +67,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-database</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -152,7 +155,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason for the disassociation failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Processing exception</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -206,7 +212,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdfwef</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -299,7 +308,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstances.
+             * <p>The associated instances.</p>
              */
             public Builder dbInstances(java.util.List<DbInstances> dbInstances) {
                 this.dbInstances = dbInstances;
@@ -307,7 +316,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP whitelists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1,10.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -315,7 +327,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The whitelist template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-asdfwem</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -323,7 +338,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The whitelist template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -390,7 +408,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-database</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -398,7 +419,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Templates.
+             * <p>The whitelist templates.</p>
              */
             public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;
@@ -478,7 +499,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AttachFailList.
+             * <p>The instances that failed to be disassociated.</p>
              */
             public Builder attachFailList(java.util.List<AttachFailList> attachFailList) {
                 this.attachFailList = attachFailList;
@@ -486,7 +507,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * AttachSuccessedList.
+             * <p>The templates that were successfully associated.</p>
              */
             public Builder attachSuccessedList(java.util.List<AttachSuccessedList> attachSuccessedList) {
                 this.attachSuccessedList = attachSuccessedList;
@@ -494,7 +515,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The operation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder status(String status) {
                 this.status = status;

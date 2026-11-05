@@ -119,7 +119,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * BackupRetentionPeriod.
+         * <p>The number of days for which the backup files are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -127,7 +130,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * BackupSize.
+         * <p>The size of the backup file. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123124</p>
          */
         public Builder backupSize(String backupSize) {
             this.backupSize = backupSize;
@@ -135,7 +141,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * <p>The backup cycle. Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -143,7 +161,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupTime.
+         * <p>The backup time. The time is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15:00Z-16:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -151,7 +172,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +183,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Switch.
+         * <p>Indicates whether the backup feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The backup feature is enabled.</li>
+         * <li><strong>false</strong>: The backup feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder _switch(String _switch) {
             this._switch = _switch;

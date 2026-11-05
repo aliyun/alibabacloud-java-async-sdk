@@ -103,6 +103,7 @@ public class CreateWhitelistTemplateRequest extends Request {
         }
 
         /**
+         * <p>The whitelist. Separate multiple IP addresses with commas. You can specify up to 100 IP addresses.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class CreateWhitelistTemplateRequest extends Request {
         }
 
         /**
+         * <p>The name of the whitelist template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
