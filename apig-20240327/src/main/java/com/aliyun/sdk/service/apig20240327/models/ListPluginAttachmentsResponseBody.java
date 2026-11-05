@@ -283,7 +283,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the plugin mount resource. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
+             * <p>The plugin mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
              * 
              * <strong>example:</strong>
              * <p>GatewayRoute</p>

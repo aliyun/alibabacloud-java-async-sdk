@@ -89,6 +89,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("serviceId")
     private String serviceId;
 
+    @com.aliyun.core.annotation.NameInMap("serviceMetaData")
+    private ServiceMetaData serviceMetaData;
+
     @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
 
@@ -126,6 +129,7 @@ public class Service extends TeaModel {
         this.runtimeDetailErrorCode = builder.runtimeDetailErrorCode;
         this.runtimeDetailStatus = builder.runtimeDetailStatus;
         this.serviceId = builder.serviceId;
+        this.serviceMetaData = builder.serviceMetaData;
         this.sourceType = builder.sourceType;
         this.unhealthyEndpoints = builder.unhealthyEndpoints;
         this.updateTimestamp = builder.updateTimestamp;
@@ -313,6 +317,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return serviceMetaData
+     */
+    public ServiceMetaData getServiceMetaData() {
+        return this.serviceMetaData;
+    }
+
+    /**
      * @return sourceType
      */
     public String getSourceType() {
@@ -365,6 +376,7 @@ public class Service extends TeaModel {
         private String runtimeDetailErrorCode; 
         private String runtimeDetailStatus; 
         private String serviceId; 
+        private ServiceMetaData serviceMetaData; 
         private String sourceType; 
         private java.util.List<String> unhealthyEndpoints; 
         private Long updateTimestamp; 
@@ -398,6 +410,7 @@ public class Service extends TeaModel {
             this.runtimeDetailErrorCode = model.runtimeDetailErrorCode;
             this.runtimeDetailStatus = model.runtimeDetailStatus;
             this.serviceId = model.serviceId;
+            this.serviceMetaData = model.serviceMetaData;
             this.sourceType = model.sourceType;
             this.unhealthyEndpoints = model.unhealthyEndpoints;
             this.updateTimestamp = model.updateTimestamp;
@@ -405,7 +418,7 @@ public class Service extends TeaModel {
         } 
 
         /**
-         * <p>The address information, which is a list of IP addresses or domain names.</p>
+         * <p>The address information, such as IP addresses or domain names.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.addresses = addresses;
@@ -429,7 +442,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The time when the service was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1725617840096</p>
@@ -448,7 +461,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The execution mode of CloudFlow.</p>
+         * <p>The execution method of CloudFlow.</p>
          * 
          * <strong>example:</strong>
          * <p>StartExecution</p>
@@ -459,7 +472,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the gateway.</p>
+         * <p>The gateway instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-xxxx</p>
@@ -489,7 +502,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The health check status. Valid values: Healthy and Unhealthy.</p>
+         * <p>The monitoring check status.</p>
          * 
          * <strong>example:</strong>
          * <p>Healthy</p>
@@ -552,7 +565,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The outlier detection configuration for removing abnormal instances.</p>
+         * <p>The outlier detection configuration.</p>
          */
         public Builder outlierDetection(OutlierDetection outlierDetection) {
             this.outlierDetection = outlierDetection;
@@ -560,7 +573,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The circuit-broken endpoints.</p>
+         * <p>The ejected endpoints.</p>
          */
         public Builder outlierEndpoints(java.util.List<String> outlierEndpoints) {
             this.outlierEndpoints = outlierEndpoints;
@@ -609,7 +622,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The masked error code of the runtime details.</p>
+         * <p>The masked error code in the runtime details.</p>
          * 
          * <strong>example:</strong>
          * <p>RuntimeEndpointTimeout</p>
@@ -642,6 +655,14 @@ public class Service extends TeaModel {
         }
 
         /**
+         * <p>The ExtProc reference status in the service list. This field is not returned if the relationship read fails.</p>
+         */
+        public Builder serviceMetaData(ServiceMetaData serviceMetaData) {
+            this.serviceMetaData = serviceMetaData;
+            return this;
+        }
+
+        /**
          * <p>The source type of the service.</p>
          * 
          * <strong>example:</strong>
@@ -661,7 +682,7 @@ public class Service extends TeaModel {
         }
 
         /**
-         * <p>The time when the service was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1725868548440</p>
@@ -777,7 +798,7 @@ public class Service extends TeaModel {
             } 
 
             /**
-             * <p>The base ejection duration in seconds. Valid values: 1 to 3600.</p>
+             * <p>The base ejection time in seconds. Valid values: 1 to 3600.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -788,7 +809,7 @@ public class Service extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable outlier detection.</p>
+             * <p>Specifies whether to enable the feature.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -799,7 +820,7 @@ public class Service extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of hosts. The value must be greater than or equal to 0.</p>
+             * <p>The minimum number of hosts. Valid values: 0 or greater.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -810,7 +831,7 @@ public class Service extends TeaModel {
             }
 
             /**
-             * <p>The failure rate threshold in percentage. Valid values: 1 to 100.</p>
+             * <p>The failure percentage threshold. Valid values: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -926,7 +947,7 @@ public class Service extends TeaModel {
             }
 
             /**
-             * <p>The protocol. Valid values: TCP and UDP.</p>
+             * <p>The protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -938,6 +959,81 @@ public class Service extends TeaModel {
 
             public Ports build() {
                 return new Ports(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link Service} extends {@link TeaModel}
+     *
+     * <p>Service</p>
+     */
+    public static class ServiceMetaData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dfpReferenced")
+        private Boolean dfpReferenced;
+
+        @com.aliyun.core.annotation.NameInMap("extProc")
+        private Boolean extProc;
+
+        private ServiceMetaData(Builder builder) {
+            this.dfpReferenced = builder.dfpReferenced;
+            this.extProc = builder.extProc;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceMetaData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dfpReferenced
+         */
+        public Boolean getDfpReferenced() {
+            return this.dfpReferenced;
+        }
+
+        /**
+         * @return extProc
+         */
+        public Boolean getExtProc() {
+            return this.extProc;
+        }
+
+        public static final class Builder {
+            private Boolean dfpReferenced; 
+            private Boolean extProc; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceMetaData model) {
+                this.dfpReferenced = model.dfpReferenced;
+                this.extProc = model.extProc;
+            } 
+
+            /**
+             * <p>Specifies whether the current service is referenced by an explicit DFP ExtProc binding of the gateway.</p>
+             */
+            public Builder dfpReferenced(Boolean dfpReferenced) {
+                this.dfpReferenced = dfpReferenced;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the current service is referenced by an ExtProc configuration of the same user and gateway.</p>
+             */
+            public Builder extProc(Boolean extProc) {
+                this.extProc = extProc;
+                return this;
+            }
+
+            public ServiceMetaData build() {
+                return new ServiceMetaData(this);
             } 
 
         } 

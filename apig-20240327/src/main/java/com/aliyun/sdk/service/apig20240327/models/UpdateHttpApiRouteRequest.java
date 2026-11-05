@@ -34,6 +34,10 @@ public class UpdateHttpApiRouteRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dfpConfig")
+    private DfpConfig dfpConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("domainIds")
     private java.util.List<String> domainIds;
 
@@ -59,6 +63,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         this.routeId = builder.routeId;
         this.backendConfig = builder.backendConfig;
         this.description = builder.description;
+        this.dfpConfig = builder.dfpConfig;
         this.domainIds = builder.domainIds;
         this.environmentId = builder.environmentId;
         this.match = builder.match;
@@ -108,6 +113,13 @@ public class UpdateHttpApiRouteRequest extends Request {
     }
 
     /**
+     * @return dfpConfig
+     */
+    public DfpConfig getDfpConfig() {
+        return this.dfpConfig;
+    }
+
+    /**
      * @return domainIds
      */
     public java.util.List<String> getDomainIds() {
@@ -147,6 +159,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         private String routeId; 
         private BackendConfig backendConfig; 
         private String description; 
+        private DfpConfig dfpConfig; 
         private java.util.List<String> domainIds; 
         private String environmentId; 
         private HttpRouteMatch match; 
@@ -163,6 +176,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             this.routeId = request.routeId;
             this.backendConfig = request.backendConfig;
             this.description = request.description;
+            this.dfpConfig = request.dfpConfig;
             this.domainIds = request.domainIds;
             this.environmentId = request.environmentId;
             this.match = request.match;
@@ -195,7 +209,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The backend service configuration of the route.</p>
+         * <p>The backend service configuration for the route.</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -212,6 +226,15 @@ public class UpdateHttpApiRouteRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The current ExtProc service selection for fixed DFP routes. You can only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</p>
+         */
+        public Builder dfpConfig(DfpConfig dfpConfig) {
+            this.putBodyParameter("dfpConfig", dfpConfig);
+            this.dfpConfig = dfpConfig;
             return this;
         }
 
@@ -427,7 +450,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>The service group. Used in HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service group. Used for HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -449,7 +472,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
+             * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. It must be configured for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -460,7 +483,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -484,8 +507,8 @@ public class UpdateHttpApiRouteRequest extends Request {
             /**
              * <p>The service protocol. Valid values:</p>
              * <ul>
-             * <li>HTTP</li>
-             * <li>HTTPS</li>
+             * <li>HTTP.</li>
+             * <li>HTTPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -508,7 +531,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service source type. MSE_NACOS is used in HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service source type. Use MSE_NACOS for HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>MSE_NACOS</p>
@@ -620,6 +643,63 @@ public class UpdateHttpApiRouteRequest extends Request {
 
             public BackendConfig build() {
                 return new BackendConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateHttpApiRouteRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateHttpApiRouteRequest</p>
+     */
+    public static class DfpConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("serviceId")
+        private String serviceId;
+
+        private DfpConfig(Builder builder) {
+            this.serviceId = builder.serviceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DfpConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public static final class Builder {
+            private String serviceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DfpConfig model) {
+                this.serviceId = model.serviceId;
+            } 
+
+            /**
+             * <p>The ID of the ExtProc service mounted to the current route. When updating a fixed DFP route, this value must match the existing service. Service switching is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-cr8k0udlhtgt80sh7png</p>
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            public DfpConfig build() {
+                return new DfpConfig(this);
             } 
 
         } 

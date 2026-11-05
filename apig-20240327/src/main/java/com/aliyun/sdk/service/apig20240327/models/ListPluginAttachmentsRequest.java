@@ -183,7 +183,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The type of the plugin mount point. This parameter is not yet enabled.</p>
+         * <p>The plugin mount point type. This parameter is not enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
@@ -195,7 +195,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>The types of mount points. Separate multiple values with commas.</p>
+         * <p>The mount point types. Separate multiple values with commas.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
@@ -267,7 +267,7 @@ public class ListPluginAttachmentsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return parent resource mounts.&gt;Notice: When this parameter is set to true, it must be used together with a single value of attachResourceTypes. The valid values are GatewayRoute and Operation.</notice></p>
+         * <p>Specifies whether to return parent resource mounts.&gt;Notice: If this parameter is set to true, it must be used together with a single value of attachResourceTypes, which must be GatewayRoute or Operation.</notice></p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

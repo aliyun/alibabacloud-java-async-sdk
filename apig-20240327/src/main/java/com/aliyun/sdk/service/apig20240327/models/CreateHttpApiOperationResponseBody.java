@@ -104,7 +104,7 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation information.</p>
+         * <p>The API operation information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -179,7 +179,7 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation ID.</p>
+             * <p>The API operation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>op-xxx</p>
@@ -236,7 +236,7 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The operation information.</p>
+             * <p>The API operation information.</p>
              */
             public Builder operations(java.util.List<Operations> operations) {
                 this.operations = operations;

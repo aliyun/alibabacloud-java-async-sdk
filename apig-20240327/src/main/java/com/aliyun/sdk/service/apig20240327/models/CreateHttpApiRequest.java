@@ -351,7 +351,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of protocols supported by the agent. This parameter is required when type is set to Agent. You do not need to specify this parameter for other types.</p>
+         * <p>The list of protocols supported by the agent. This parameter is required when type is set to Agent. This field is not required for other types.</p>
          */
         public Builder agentProtocols(java.util.List<String> agentProtocols) {
             this.putBodyParameter("agentProtocols", agentProtocols);
@@ -360,7 +360,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of AI API protocols. This parameter is required when type is set to LLM, and only one protocol can be specified. This parameter is required when type is set to Ai, and multiple protocols can be specified. You do not need to specify this parameter for other types. Example protocol entry: OpenAI/v1.</p>
+         * <p>The list of AI API protocols. This parameter is required and only one protocol can be passed when type is set to LLM. This parameter is required and multiple protocols can be passed when type is set to Ai. This parameter is not required for other types. Example protocol item: OpenAI/v1.</p>
          */
         public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.putBodyParameter("aiProtocols", aiProtocols);
@@ -369,7 +369,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The authentication configuration. This parameter is required when enableAuth is set to true.</p>
+         * <p>The permission authentication configuration. This parameter is required when enableAuth is set to true.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.putBodyParameter("authConfig", authConfig);
@@ -378,7 +378,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The base path of the API. The path must start with a forward slash (/), cannot exceed 256 bytes in length, and cannot contain spaces. This parameter is required when type is set to Rest. When type is set to LLM, Ai, or Agent, this parameter is optional and defaults to /.</p>
+         * <p>The base path of the API. It must start with a forward slash (/), be up to 256 bytes in length, and contain no spaces. This parameter is required when type is set to Rest. When type is set to LLM, Ai, or Agent, this parameter is optional and defaults to /.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -390,7 +390,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway to which the API belongs.</p>
+         * <p>The ID of the associated gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-abc123xyz789</p>
@@ -402,7 +402,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of deployment configurations for the HTTP API. This parameter is required when type is set to LLM or Ai, and only one deployment configuration can be specified. This parameter is not validated at the request level for other types.</p>
+         * <p>The list of deployment configurations for the HTTP API. This parameter is required and only one deployment configuration can be passed when type is set to LLM or Ai. Request-layer validation is not required for other types.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
@@ -423,7 +423,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run without executing the operation.</p>
+         * <p>Specifies whether to only preview the operation without executing it.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -435,7 +435,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable authentication. This parameter is validated when type is set to LLM, Ai, or Agent. This parameter is not validated at the request level when type is set to Rest.</p>
+         * <p>Specifies whether to enable permission authentication. This parameter is validated when type is set to LLM, Ai, or Agent. This field is not validated at the request layer when type is set to Rest.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -447,7 +447,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for waiting for the first byte from the backend.</p>
+         * <p>The timeout period for waiting for the backend to return the first byte.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -459,7 +459,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The HTTP Ingress API configuration. This parameter is required and cannot be nil when type is set to HttpIngress. You do not need to specify this parameter for other types.</p>
+         * <p>The configuration information of the HTTP Ingress API. This parameter is required and cannot be nil when type is set to HttpIngress. This field is not required for other types.</p>
          */
         public Builder ingressConfig(IngressConfig ingressConfig) {
             this.putBodyParameter("ingressConfig", ingressConfig);
@@ -468,17 +468,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The AI model category. This parameter is optional when type is set to LLM or Ai. You do not need to specify this parameter for other types. Valid values:</p>
-         * <ul>
-         * <li>Text: text generation.</li>
-         * <li>Image: image generation.</li>
-         * <li>Audio: audio processing.</li>
-         * <li>Video: AI video generation.</li>
-         * <li>MultiModal: multimodal.</li>
-         * <li>Embedding: embedding.</li>
-         * <li>Rerank: reranking.</li>
-         * <li>Others: other.</li>
-         * </ul>
+         * <p>The AI model category. This parameter is optional when type is set to LLM or Ai, and is not required for other types. Valid values: Text (text generation), Image (image generation), Audio (audio processing), Video (video generation), MultiModal (multimodal), Embedding (vector embedding), Rerank (reranking), and Others (others).</p>
          * 
          * <strong>example:</strong>
          * <p>Text</p>
@@ -490,7 +480,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The name of the HTTP API, which is used to identify the API resource. Example: test-api.</p>
+         * <p>The name of the HTTP API, which is used to identify the current API resource, such as test-api.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -536,7 +526,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The conflict merge strategy for import.</p>
+         * <p>The conflict merging strategy for import.</p>
          * 
          * <strong>example:</strong>
          * <p>ExistFirst</p>
@@ -548,15 +538,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The type of the HTTP API. Valid values:</p>
-         * <ul>
-         * <li>Http: standard HTTP API.</li>
-         * <li>Rest: RESTful API.</li>
-         * <li>WebSocket: WebSocket API.</li>
-         * <li>HttpIngress: HTTP API connected through Ingress.</li>
-         * <li>LLM: large language model API.</li>
-         * <li>Agent: agent proxy API.</li>
-         * </ul>
+         * <p>The type of the HTTP API. Valid values: Http (common HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), and Agent (agent API).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -578,7 +560,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token, which is a globally unique value generated by the caller. We recommend that you use a UUID. The token cannot exceed 64 characters in length. Within approximately 24 hours after the first successful request, a duplicate request that carries the same ClientToken and identical request parameters directly returns the httpApiId created by the first request without creating a duplicate HTTP API. If the same ClientToken is carried but the request parameters differ, an IdempotentParameterMismatch error is returned. If the first request is still being processed, an IdempotentProcessing error is returned. If this parameter is not specified, idempotency control is not enabled, and the behavior is consistent with the existing version.</p>
+         * <p>The client token. It is a globally unique value generated by the caller (UUID is recommended) and can be up to 64 characters in length. Within about 24 hours after the first request succeeds, a repeated request with the same ClientToken and identical request parameters directly returns the httpApiId created by the first request without creating the HTTP API again. If the same ClientToken is used but the request parameters are different, IdempotentParameterMismatch is returned. If the first request is still being processed, IdempotentProcessing is returned. If this parameter is not specified, idempotence control is not enabled, and the behavior is consistent with the existing version.</p>
          * 
          * <strong>example:</strong>
          * <p>5f7a2c1e-9b3d-4e8f-a1c6-0d2b8e4f7a13</p>
@@ -757,7 +739,7 @@ public class CreateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The namespace to listen on.</p>
+             * <p>The namespace to watch.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

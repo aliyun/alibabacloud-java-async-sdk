@@ -32,6 +32,9 @@ public class HttpRoute extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("dfpConfig")
+    private DfpConfig dfpConfig;
+
     @com.aliyun.core.annotation.NameInMap("domainInfos")
     private java.util.List<DomainInfos> domainInfos;
 
@@ -62,6 +65,7 @@ public class HttpRoute extends TeaModel {
         this.createTimestamp = builder.createTimestamp;
         this.deployStatus = builder.deployStatus;
         this.description = builder.description;
+        this.dfpConfig = builder.dfpConfig;
         this.domainInfos = builder.domainInfos;
         this.environmentInfo = builder.environmentInfo;
         this.gatewayStatus = builder.gatewayStatus;
@@ -117,6 +121,13 @@ public class HttpRoute extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dfpConfig
+     */
+    public DfpConfig getDfpConfig() {
+        return this.dfpConfig;
     }
 
     /**
@@ -181,6 +192,7 @@ public class HttpRoute extends TeaModel {
         private Long createTimestamp; 
         private String deployStatus; 
         private String description; 
+        private DfpConfig dfpConfig; 
         private java.util.List<DomainInfos> domainInfos; 
         private EnvironmentInfo environmentInfo; 
         private java.util.Map<String, String> gatewayStatus; 
@@ -199,6 +211,7 @@ public class HttpRoute extends TeaModel {
             this.createTimestamp = model.createTimestamp;
             this.deployStatus = model.deployStatus;
             this.description = model.description;
+            this.dfpConfig = model.dfpConfig;
             this.domainInfos = model.domainInfos;
             this.environmentInfo = model.environmentInfo;
             this.gatewayStatus = model.gatewayStatus;
@@ -262,7 +275,15 @@ public class HttpRoute extends TeaModel {
         }
 
         /**
-         * <p>The domain name information list.</p>
+         * <p>The ExtProc service selected for the fixed dynamic forwarding route. This field is not returned when no matching binding exists.</p>
+         */
+        public Builder dfpConfig(DfpConfig dfpConfig) {
+            this.dfpConfig = dfpConfig;
+            return this;
+        }
+
+        /**
+         * <p>The list of domain information.</p>
          */
         public Builder domainInfos(java.util.List<DomainInfos> domainInfos) {
             this.domainInfos = domainInfos;
@@ -346,6 +367,63 @@ public class HttpRoute extends TeaModel {
      *
      * <p>HttpRoute</p>
      */
+    public static class DfpConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("serviceId")
+        private String serviceId;
+
+        private DfpConfig(Builder builder) {
+            this.serviceId = builder.serviceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DfpConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public static final class Builder {
+            private String serviceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DfpConfig model) {
+                this.serviceId = model.serviceId;
+            } 
+
+            /**
+             * <p>The ExtProc gRPC service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-cr8k0udlhtgt80sh7png</p>
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            public DfpConfig build() {
+                return new DfpConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpRoute} extends {@link TeaModel}
+     *
+     * <p>HttpRoute</p>
+     */
     public static class DomainInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainId")
         private String domainId;
@@ -406,7 +484,7 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * <p>The domain name ID.</p>
+             * <p>The domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-cr3v7dllhtgi9s***</p>
@@ -629,7 +707,7 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * <p>The domain name ID.</p>
+             * <p>The domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-cqu19hdlhtgjuv4***</p>
@@ -771,7 +849,7 @@ public class HttpRoute extends TeaModel {
             } 
 
             /**
-             * <p>The environment name alias.</p>
+             * <p>The alias of the environment name.</p>
              * 
              * <strong>example:</strong>
              * <p>商品中心预发环境</p>
@@ -812,7 +890,7 @@ public class HttpRoute extends TeaModel {
             }
 
             /**
-             * <p>The list of default subdomains of the environment.</p>
+             * <p>The list of default subdomains for the environment.</p>
              */
             public Builder subDomains(java.util.List<SubDomains> subDomains) {
                 this.subDomains = subDomains;

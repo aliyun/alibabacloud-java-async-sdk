@@ -283,7 +283,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the plugin attachment is enabled.</p>
+             * <p>Indicates whether the plugin is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -318,7 +318,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin attachment ID.</p>
+             * <p>The ID of the plugin attachment.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-d05f1tmm1hku195dd8j0</p>

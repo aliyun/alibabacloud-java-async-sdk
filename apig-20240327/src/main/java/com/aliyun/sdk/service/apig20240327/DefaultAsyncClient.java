@@ -42,9 +42,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation adds a quota rule based on consumers or consumer groups to an AI gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
+     * <p>This operation adds a quota rule based on consumers or consumer groups for an AI gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
      * <blockquote>
-     * <p> Recommended call logic:</p>
+     * <p>Recommended call logic:</p>
      * <ul>
      * <li><ol>
      * <li>Perform a dry run to check for rule conflicts.</li>
@@ -55,7 +55,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview containing a conflictHash.</li>
+     * <li>The response returns a conflict preview containing conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
@@ -63,11 +63,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ol>
      * </li>
      * <li><ul>
-     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
+     * <li>If no conflict exists: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
+     * <li>If a conflict exists and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1687,6 +1687,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the dynamic forwarding ExtProc gRPC service and port currently bound to the specified gateway. If no service is bound, the operation returns bound=false.</p>
+     * 
+     * @param request the request parameters of GetGatewayDfpExtProcService  GetGatewayDfpExtProcServiceRequest
+     * @return GetGatewayDfpExtProcServiceResponse
+     */
+    @Override
+    public CompletableFuture<GetGatewayDfpExtProcServiceResponse> getGatewayDfpExtProcService(GetGatewayDfpExtProcServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGatewayDfpExtProcService").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/dfp-ext-proc-service").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGatewayDfpExtProcServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGatewayDfpExtProcServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3580,7 +3601,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * @param request the request parameters of RevealServiceCredential  RevealServiceCredentialRequest
      * @return RevealServiceCredentialResponse

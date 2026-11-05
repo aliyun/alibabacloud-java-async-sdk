@@ -255,7 +255,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Filters the list of API operations by a specific consumer authorization rule ID. The response only includes authorized API operations.</p>
+         * <p>Filters API operations by a specific consumer authorization rule ID. The response includes only authorized API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>
@@ -291,7 +291,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway used for filtering.</p>
+         * <p>The ID of the gateway used to filter API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-001</p>
@@ -315,7 +315,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Filters API operations by exact API name.</p>
+         * <p>Searches for API operations by exact name.</p>
          * 
          * <strong>example:</strong>
          * <p>getUserInfo</p>
@@ -327,7 +327,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Filters API operations by API name prefix.</p>
+         * <p>Searches for API operations by name prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>GetUser</p>
@@ -363,7 +363,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Filters API operations by path prefix.</p>
+         * <p>Searches for API operations by path prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -375,7 +375,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the list of authorization rules for a specific consumer in a specified environment in the response for each API operation. You must also specify the withConsumerInfoById parameter.</p>
+         * <p>The ID of the environment. The response includes the list of authorization rules for the specified consumer in this environment for each API operation. You must also specify the withConsumerInfoById parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>env-xxx</p>
@@ -387,7 +387,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the list of authorization rules for a specific consumer in a specified environment in the response for each API operation. You must also specify the withConsumerInEnvironmentId parameter.</p>
+         * <p>The ID of the consumer. The response includes the list of authorization rules for this consumer in the specified environment for each API operation. You must also specify the withConsumerInEnvironmentId parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -399,7 +399,7 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the plugin used to retrieve plugin release information.</p>
+         * <p>The ID of the plugin. Retrieves the plugin release information based on this plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-xxx</p>

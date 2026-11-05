@@ -35,6 +35,10 @@ public class CreateHttpApiRouteRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dfpConfig")
+    private DfpConfig dfpConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("domainIds")
     private java.util.List<String> domainIds;
 
@@ -64,6 +68,7 @@ public class CreateHttpApiRouteRequest extends Request {
         this.backendConfig = builder.backendConfig;
         this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
+        this.dfpConfig = builder.dfpConfig;
         this.domainIds = builder.domainIds;
         this.environmentId = builder.environmentId;
         this.match = builder.match;
@@ -114,6 +119,13 @@ public class CreateHttpApiRouteRequest extends Request {
     }
 
     /**
+     * @return dfpConfig
+     */
+    public DfpConfig getDfpConfig() {
+        return this.dfpConfig;
+    }
+
+    /**
      * @return domainIds
      */
     public java.util.List<String> getDomainIds() {
@@ -160,6 +172,7 @@ public class CreateHttpApiRouteRequest extends Request {
         private BackendConfig backendConfig; 
         private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
+        private DfpConfig dfpConfig; 
         private java.util.List<String> domainIds; 
         private String environmentId; 
         private HttpRouteMatch match; 
@@ -177,6 +190,7 @@ public class CreateHttpApiRouteRequest extends Request {
             this.backendConfig = request.backendConfig;
             this.deployConfigs = request.deployConfigs;
             this.description = request.description;
+            this.dfpConfig = request.dfpConfig;
             this.domainIds = request.domainIds;
             this.environmentId = request.environmentId;
             this.match = request.match;
@@ -198,7 +212,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The backend service configuration of the route.</p>
+         * <p>The backend service configuration for the route.</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -224,6 +238,15 @@ public class CreateHttpApiRouteRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The fixed dynamic forwarding and ExtProc combination configuration. When you use this configuration, specify only serviceId, and do not specify environmentId or backendConfig.</p>
+         */
+        public Builder dfpConfig(DfpConfig dfpConfig) {
+            this.putBodyParameter("dfpConfig", dfpConfig);
+            this.dfpConfig = dfpConfig;
             return this;
         }
 
@@ -451,7 +474,7 @@ public class CreateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>The service group. Used in HTTP-to-Dubbo transcoding scenarios.</p>
+             * <p>The service group. Used in HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -462,7 +485,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The HTTP-to-Dubbo protocol transcoding configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+             * <p>The HTTP-to-Dubbo protocol conversion configuration. This configuration is supported only for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -473,7 +496,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</p>
+             * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -484,7 +507,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service namespace. Used in HTTP-to-Dubbo transcoding scenarios.</p>
+             * <p>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -532,7 +555,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service source type. Used in HTTP-to-Dubbo transcoding scenarios.</p>
+             * <p>The service source type. Used in HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>MSE_NACOS</p>
@@ -543,7 +566,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service version. This parameter takes effect only in the by-tag scenario.</p>
+             * <p>The service version. This parameter is valid only in the tag-based scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -627,7 +650,7 @@ public class CreateHttpApiRouteRequest extends Request {
              * <p>The backend service scenario. Valid values:</p>
              * <ul>
              * <li>SingleService: Single service.</li>
-             * <li>MultiServiceByRatio: Multi-service canary release by ratio.</li>
+             * <li>MultiServiceByRatio: Canary release of multiple services by ratio.</li>
              * <li>Mock: Mock service.</li>
              * <li>Redirect: Redirect service.</li>
              * </ul>
@@ -650,6 +673,63 @@ public class CreateHttpApiRouteRequest extends Request {
 
             public BackendConfig build() {
                 return new BackendConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateHttpApiRouteRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHttpApiRouteRequest</p>
+     */
+    public static class DfpConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("serviceId")
+        private String serviceId;
+
+        private DfpConfig(Builder builder) {
+            this.serviceId = builder.serviceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DfpConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public static final class Builder {
+            private String serviceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DfpConfig model) {
+                this.serviceId = model.serviceId;
+            } 
+
+            /**
+             * <p>The ID of the imported ExtProc gRPC service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-cr8k0udlhtgt80sh7png</p>
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            public DfpConfig build() {
+                return new DfpConfig(this);
             } 
 
         } 

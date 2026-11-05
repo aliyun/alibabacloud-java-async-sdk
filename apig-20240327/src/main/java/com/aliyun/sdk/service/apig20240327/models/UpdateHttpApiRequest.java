@@ -312,7 +312,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The base path of the API. The value must start with a forward slash (/).</p>
+         * <p>The base path of the API, which must start with a forward slash (/).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,7 +334,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The API description.</p>
+         * <p>The description of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>Update API description</p>
@@ -358,7 +358,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The first byte timeout period. Unit: seconds.</p>
+         * <p>The time to first byte timeout, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -370,7 +370,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the HTTP Ingress API.</p>
+         * <p>The configuration information of the HTTP Ingress API.</p>
          */
         public Builder ingressConfig(IngressConfig ingressConfig) {
             this.putBodyParameter("ingressConfig", ingressConfig);
@@ -379,7 +379,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only modify the configuration. If this parameter is set to true, only the configuration is modified without triggering redeployment.</p>
+         * <p>Specifies whether to only modify the configuration. A value of true indicates that only the configuration is modified without triggering a redeployment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -400,7 +400,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove the base path when forwarding requests.</p>
+         * <p>Specifies whether to remove the base path during forwarding.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -421,7 +421,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. If you call this operation for the same HTTP API by using the same clientToken value and request parameters, the result of the first successful call is returned.</p>
+         * <p>The idempotency token. If the same HTTP API is repeatedly called with the same client token and request parameters, the first successful result is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>update-http-api-client-token-001</p>
@@ -433,7 +433,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run. If this parameter is set to true, all synchronous validations identical to an actual update are performed, but no configurations are updated and no side effects are produced. If this parameter is not specified or is set to false, the behavior is the same as the existing version.</p>
+         * <p>Specifies whether to perform a dry run. If set to true, all synchronization checks consistent with a real update are executed, but no configurations are updated and no side effects are generated. If left empty or set to false, the behavior is consistent with the existing version.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -584,7 +584,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The namespace to listen on.</p>
+             * <p>The namespace to watch.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

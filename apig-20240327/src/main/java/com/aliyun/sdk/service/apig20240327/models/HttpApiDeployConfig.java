@@ -32,6 +32,9 @@ public class HttpApiDeployConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("customDomainInfos")
     private java.util.List<CustomDomainInfos> customDomainInfos;
 
+    @com.aliyun.core.annotation.NameInMap("dfpConfig")
+    private DfpConfig dfpConfig;
+
     @com.aliyun.core.annotation.NameInMap("enableSystemModels")
     private Boolean enableSystemModels;
 
@@ -80,6 +83,7 @@ public class HttpApiDeployConfig extends TeaModel {
         this.builtinRouteNames = builder.builtinRouteNames;
         this.customDomainIds = builder.customDomainIds;
         this.customDomainInfos = builder.customDomainInfos;
+        this.dfpConfig = builder.dfpConfig;
         this.enableSystemModels = builder.enableSystemModels;
         this.envDomainIds = builder.envDomainIds;
         this.envDomainInfos = builder.envDomainInfos;
@@ -141,6 +145,13 @@ public class HttpApiDeployConfig extends TeaModel {
      */
     public java.util.List<CustomDomainInfos> getCustomDomainInfos() {
         return this.customDomainInfos;
+    }
+
+    /**
+     * @return dfpConfig
+     */
+    public DfpConfig getDfpConfig() {
+        return this.dfpConfig;
     }
 
     /**
@@ -247,6 +258,7 @@ public class HttpApiDeployConfig extends TeaModel {
         private java.util.List<String> builtinRouteNames; 
         private java.util.List<String> customDomainIds; 
         private java.util.List<CustomDomainInfos> customDomainInfos; 
+        private DfpConfig dfpConfig; 
         private Boolean enableSystemModels; 
         private java.util.List<String> envDomainIds; 
         private java.util.List<EnvDomainInfos> envDomainInfos; 
@@ -271,6 +283,7 @@ public class HttpApiDeployConfig extends TeaModel {
             this.builtinRouteNames = model.builtinRouteNames;
             this.customDomainIds = model.customDomainIds;
             this.customDomainInfos = model.customDomainInfos;
+            this.dfpConfig = model.dfpConfig;
             this.enableSystemModels = model.enableSystemModels;
             this.envDomainIds = model.envDomainIds;
             this.envDomainInfos = model.envDomainInfos;
@@ -288,7 +301,7 @@ public class HttpApiDeployConfig extends TeaModel {
         } 
 
         /**
-         * <p>Specifies whether to automatically deploy the API.</p>
+         * <p>Specifies whether to enable automatic deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -299,7 +312,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The publishing scenario.</p>
+         * <p>The deployment scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -318,7 +331,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of custom domain name IDs.</p>
+         * <p>The list of custom domain IDs.</p>
          */
         public Builder customDomainIds(java.util.List<String> customDomainIds) {
             this.customDomainIds = customDomainIds;
@@ -326,7 +339,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of custom domain name information.</p>
+         * <p>The list of custom domain content.</p>
          */
         public Builder customDomainInfos(java.util.List<CustomDomainInfos> customDomainInfos) {
             this.customDomainInfos = customDomainInfos;
@@ -334,7 +347,15 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable gateway system models. This parameter takes effect only when the publishing scenario is AiAutoRouter. Default value: false. This parameter is used for backward compatibility with earlier clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that all are disabled.</p>
+         * <p>The combination of fixed dynamic forwarding and ExtProc. For REST APIs, submit this in the deployConfigs of the operation. For ModelAPIs, submit this in the deployConfigs of the API. When creating either, you must submit both gatewayId and dfpConfig.serviceId in the same configuration item. The server verifies that the gateway and service belong to the same entity and determines the default environment and backend. GetHttpApiOperation, ListHttpApiOperations, GetHttpApi, and ListHttpApis return the entire object only when the corresponding resource is precisely mounted with the plugin bound to the current gateway. This field is not supported for API-level configurations of standard HTTP APIs.</p>
+         */
+        public Builder dfpConfig(DfpConfig dfpConfig) {
+            this.dfpConfig = dfpConfig;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable gateway system models. This takes effect only when the deployment scenario is AiAutoRouter. The default value is false. This field is used for compatibility with legacy clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that none are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -345,7 +366,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of environment domain name IDs. If not specified, all environment domain names are bound. An empty array indicates that no environment domain names are bound.</p>
+         * <p>The list of environment domain IDs. If not provided, all environment domains are bound. An empty array indicates that no environment domains are bound.</p>
          */
         public Builder envDomainIds(java.util.List<String> envDomainIds) {
             this.envDomainIds = envDomainIds;
@@ -353,7 +374,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of environment domain name information.</p>
+         * <p>The list of environment domain names.</p>
          */
         public Builder envDomainInfos(java.util.List<EnvDomainInfos> envDomainInfos) {
             this.envDomainInfos = envDomainInfos;
@@ -418,7 +439,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The current online routing mode of the REST API. ordinary indicates per-operation routing, and compressed indicates single-prefix routing for the API. This parameter is not returned for non-REST APIs.</p>
+         * <p>The current online routing mode for REST APIs. ordinary indicates operation-by-operation routing, and compressed indicates a single prefix route for the API. This field is not returned for non-REST APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>ordinary</p>
@@ -445,7 +466,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of second-level domain name content.</p>
+         * <p>The list of subdomains.</p>
          */
         public Builder subDomains(java.util.List<SubDomains> subDomains) {
             this.subDomains = subDomains;
@@ -453,7 +474,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The set of explicitly enabled gateway system model capability tiers. Takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium. An explicitly empty array indicates that no system models are enabled.</p>
+         * <p>The set of explicitly enabled gateway system model capability tiers. This takes effect only when the deployment scenario is AiAutoRouter. Valid values: economy, standard, and premium. An explicit empty array indicates that no system models are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;economy&quot;,&quot;standard&quot;,&quot;premium&quot;]</p>
@@ -535,7 +556,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * <p>The domain name ID.</p>
+             * <p>The domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-cshee6dlhtgk******</p>
@@ -569,6 +590,63 @@ public class HttpApiDeployConfig extends TeaModel {
 
             public CustomDomainInfos build() {
                 return new CustomDomainInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpApiDeployConfig} extends {@link TeaModel}
+     *
+     * <p>HttpApiDeployConfig</p>
+     */
+    public static class DfpConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("serviceId")
+        private String serviceId;
+
+        private DfpConfig(Builder builder) {
+            this.serviceId = builder.serviceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DfpConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public static final class Builder {
+            private String serviceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DfpConfig model) {
+                this.serviceId = model.serviceId;
+            } 
+
+            /**
+             * <p>The ID of the imported ExtProc gRPC service. Required when creating a REST operation or ModelAPI. Must match the service currently bound to the resource during updates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-cr8k0udlhtgt80sh7png</p>
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            public DfpConfig build() {
+                return new DfpConfig(this);
             } 
 
         } 
@@ -640,7 +718,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * <p>The domain name ID.</p>
+             * <p>The domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-env-xxx</p>
@@ -767,7 +845,7 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * <p>The maximum traffic ratio for a single service.</p>
+             * <p>The maximum traffic proportion for a single service.</p>
              * 
              * <strong>example:</strong>
              * <p>0.8</p>
@@ -993,7 +1071,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * <p>The capability tier of the intelligent routing candidate. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
+             * <p>The capability tier for intelligent routing candidates. Fill in only when the deployment scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -1026,7 +1104,7 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * <p>The matching condition.</p>
+             * <p>The matching conditions.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -1067,7 +1145,7 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * <p>The display name of the service.</p>
+             * <p>The service display name.</p>
              * 
              * <strong>example:</strong>
              * <p>Qwen-Max-Service</p>
@@ -1078,7 +1156,7 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * <p>The observability metric-based routing configuration.</p>
+             * <p>The observability metric routing configuration.</p>
              */
             public Builder observabilityRouteConfig(ObservabilityRouteConfig observabilityRouteConfig) {
                 this.observabilityRouteConfig = observabilityRouteConfig;
@@ -1119,7 +1197,7 @@ public class HttpApiDeployConfig extends TeaModel {
             }
 
             /**
-             * <p>The service version label.</p>
+             * <p>The service version tag.</p>
              * 
              * <strong>example:</strong>
              * <p>V2</p>
@@ -1226,7 +1304,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * <p>The domain name ID.</p>
+             * <p>The domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-csmn42um******</p>

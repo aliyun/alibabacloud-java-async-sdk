@@ -101,7 +101,7 @@ public class ListConsumerAuthorizationRulesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the consumer.</p>
+         * <p>The consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-csgdi45lhtggrjcpriug</p>
@@ -137,7 +137,7 @@ public class ListConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The page size. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

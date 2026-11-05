@@ -343,7 +343,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The page size. Valid values: 1 to 500. Default value: 10.</p>
+         * <p>The number of entries per page. Valid values: 1 to 500. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -385,7 +385,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the information about APIs published to the specified environment.</p>
+         * <p>Specifies whether to return information about APIs published to the specified environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -397,7 +397,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The environment ID. If specified, the response includes consumer authentication policy information for the specified environment in the details of each API.</p>
+         * <p>The environment ID. The response includes consumer authentication policy information for the specified environment in each API entry.</p>
          * 
          * <strong>example:</strong>
          * <p>env-xxx</p>
@@ -409,7 +409,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the permission authentication policy is enabled.</p>
+         * <p>Specifies whether to include the list of authentication policies.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -421,7 +421,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The consumer ID. If specified, the response includes the list of authorization rules for the specified consumer in the details of each API.</p>
+         * <p>The consumer ID. The response includes the list of authorization rules for the specified consumer in each API entry.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -469,7 +469,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The plugin ID. If specified, the plugin release information is retrieved based on this plugin ID.</p>
+         * <p>The plugin ID. The response includes plugin release information based on the specified plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-ct9qn3um1hktue8dqol0</p>

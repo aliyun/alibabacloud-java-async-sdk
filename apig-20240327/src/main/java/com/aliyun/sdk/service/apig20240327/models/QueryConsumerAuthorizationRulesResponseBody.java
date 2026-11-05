@@ -200,7 +200,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing rule.</p>
+             * <p>The routing rules.</p>
              */
             public Builder route(HttpRoute route) {
                 this.route = route;
@@ -475,7 +475,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API information details.</p>
+             * <p>The API information.</p>
              */
             public Builder apiInfo(HttpApiApiInfo apiInfo) {
                 this.apiInfo = apiInfo;
@@ -483,7 +483,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer authorization rule ID.</p>
+             * <p>The ID of the consumer authorization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>car-csgeka5lhtggrjcprok0</p>
@@ -524,7 +524,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer information details.</p>
+             * <p>The consumer information.</p>
              */
             public Builder consumerInfo(ConsumerInfo consumerInfo) {
                 this.consumerInfo = consumerInfo;
@@ -625,7 +625,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource information details.</p>
+             * <p>The resource information.</p>
              */
             public Builder resourceInfo(ResourceInfo resourceInfo) {
                 this.resourceInfo = resourceInfo;

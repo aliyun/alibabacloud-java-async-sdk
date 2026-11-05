@@ -354,7 +354,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the consumer.</p>
+             * <p>The consumer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -395,7 +395,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration mode. Valid values: LongTerm, ShortTerm.</p>
+             * <p>The expiration mode. Valid values: LongTerm and ShortTerm.</p>
              * 
              * <strong>example:</strong>
              * <p>ShortTerm</p>
@@ -417,7 +417,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration timestamp.</p>
+             * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>172086834548</p>
@@ -436,7 +436,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2351944</p>
@@ -573,7 +573,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -584,7 +584,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>

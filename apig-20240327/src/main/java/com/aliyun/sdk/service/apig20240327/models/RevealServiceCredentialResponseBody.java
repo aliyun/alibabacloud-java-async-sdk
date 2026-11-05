@@ -93,7 +93,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value is Ok if the request is successful.</p>
+         * <p>The response code. The value is Ok for a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -338,7 +338,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API key generation mode. Valid values: Custom and Reference. Historical null values are processed as Custom.</p>
+             * <p>The API key generation mode. Valid values: Custom and Reference. Historical null values are treated as Custom.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -349,7 +349,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of Key Management Service (KMS) reference names. This parameter is returned only in Reference mode. The reference values are not returned.</p>
+             * <p>The list of Key Management Service (KMS) reference names. This list is returned only in Reference mode, and the reference values are not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;my-kms-ref&quot;]</p>
@@ -360,7 +360,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of custom API keys. This parameter is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in their original order without deduplication.</p>
+             * <p>The list of custom API keys. This list is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in the original order without deduplication.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;sk-xxxxxxxx&quot;,&quot;sk-yyyyyyyy&quot;]</p>
@@ -590,7 +590,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential object for the currently active type. Only the fields corresponding to the credentialType are populated.</p>
+             * <p>The credential object of the currently active type. Only the fields corresponding to the credentialType are populated.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;apiKeyGenerateMode&quot;:&quot;Custom&quot;,&quot;apiKeys&quot;:[&quot;sk-xxxxxxxx&quot;]}</p>
@@ -601,7 +601,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the currently active credential. Valid values: apiKey, bedrock, vertex, and kling.</p>
+             * <p>The currently active credential type. Valid values: apiKey, bedrock, vertex, and kling.</p>
              * 
              * <strong>example:</strong>
              * <p>apiKey</p>
