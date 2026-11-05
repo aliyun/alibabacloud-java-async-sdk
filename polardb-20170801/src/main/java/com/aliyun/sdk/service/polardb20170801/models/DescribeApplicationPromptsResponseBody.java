@@ -106,7 +106,7 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of Application Prompts.</p>
+         * <p>The list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -136,7 +136,7 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
@@ -147,7 +147,7 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of matching entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -255,10 +255,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether the Prompt is enabled. A value of 1 indicates enabled, and 0 indicates disabled.</p>
+             * <p>Indicates whether the prompt is enabled.</p>
              * 
              * <strong>example:</strong>
-             * <p>prompt if enabled</p>
+             * <p>1</p>
              */
             public Builder promptEnabled(Integer promptEnabled) {
                 this.promptEnabled = promptEnabled;
@@ -266,7 +266,7 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Prompt ID.</p>
+             * <p>The prompt ID.</p>
              * 
              * <strong>example:</strong>
              * <p>papt-58z96zl691otf356o4</p>
@@ -277,7 +277,7 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Prompt Name.</p>
+             * <p>The prompt name.</p>
              * 
              * <strong>example:</strong>
              * <p>prompt name</p>
@@ -288,7 +288,7 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Prompt Type.</p>
+             * <p>The prompt type.</p>
              * 
              * <strong>example:</strong>
              * <p>DELETE_RELATIONS_SYSTEM_PROMPT</p>
@@ -299,7 +299,7 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Prompt Value.</p>
+             * <p>The prompt content.</p>
              * 
              * <strong>example:</strong>
              * <p>prompt value</p>

@@ -183,10 +183,10 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The answer.</p>
+             * <p>The reply.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>Call DescribeDBClusters and check DBClusterStatus</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -205,10 +205,10 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session query. Obtain this value from the response of the API call to start a digital human.</p>
+             * <p>The session query. You can obtain this value from the response of the API operation that starts a digital human.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>How do I query the cluster status?</p>
              */
             public Builder query(String query) {
                 this.query = query;

@@ -74,11 +74,11 @@ public class DescribePolarAgentChatRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The session ID.</p>
+         * <p>The session ID. To obtain the SessionId, use Signature Version 3.0 to call GetPolarAgent to initiate a conversation and extract the SessionId from the returned stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1e28530a0da2c4755f165b1b8b9a73c9</p>
+         * <p>44dcdf31-04cd-4a44-9bae-834dd6657e29</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -87,7 +87,7 @@ public class DescribePolarAgentChatRecordsRequest extends Request {
         }
 
         /**
-         * <p>The product source. Valid value: polardb-console.</p>
+         * <p>The product type source. Valid value: polardb-console.</p>
          * 
          * <strong>example:</strong>
          * <p>polardb-console</p>

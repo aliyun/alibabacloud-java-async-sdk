@@ -67,7 +67,7 @@ public class CreateColdStorageInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cold storage instance.</p>
+         * <p>The cold storage instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pcs_2zeth2gf4i83e578t</p>

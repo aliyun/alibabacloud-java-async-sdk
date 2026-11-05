@@ -152,7 +152,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3E5CD764-xxxx-xxxx-xxxx-20E0DE84B2AF</p>
@@ -479,7 +479,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of structured element references of the source document associated with the shard, which can be used to precisely locate the original elements.</p>
+             * <p>The list of structured element references in the source document associated with the shard, which can be used to precisely locate the original elements.</p>
              */
             public Builder docItems(java.util.List<String> docItems) {
                 this.docItems = docItems;
@@ -487,7 +487,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The section heading chain to which the shard belongs.</p>
+             * <p>The chain of section headings to which the shard belongs.</p>
              */
             public Builder headings(java.util.List<String> headings) {
                 this.headings = headings;
@@ -514,7 +514,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
              * <p>The text content of the shard.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>This is sample content for a knowledge base shard</p>
              */
             public Builder shardContent(String shardContent) {
                 this.shardContent = shardContent;

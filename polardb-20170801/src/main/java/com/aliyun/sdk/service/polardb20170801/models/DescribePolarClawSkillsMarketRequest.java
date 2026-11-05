@@ -143,10 +143,10 @@ public class DescribePolarClawSkillsMarketRequest extends Request {
         } 
 
         /**
-         * <p>The sorting condition.</p>
+         * <p>The sorting condition. DOWNLOAD_COUNT indicates sorting by download count.</p>
          * 
          * <strong>example:</strong>
-         * <p>NewSessionPerSecond</p>
+         * <p>DOWNLOAD_COUNT</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -224,15 +224,10 @@ public class DescribePolarClawSkillsMarketRequest extends Request {
         }
 
         /**
-         * <p>The source of the skill. Valid values:</p>
-         * <ol>
-         * <li><code>PUBLIC</code>: Public</li>
-         * <li><code>SELF</code>: Private</li>
-         * <li><code>OTHER</code>: Other</li>
-         * </ol>
+         * <p>The source of the skill. SELF indicates private skills of the current user, and PUBLIC indicates public skills.</p>
          * 
          * <strong>example:</strong>
-         * <p>polardb-console</p>
+         * <p>PUBLIC</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

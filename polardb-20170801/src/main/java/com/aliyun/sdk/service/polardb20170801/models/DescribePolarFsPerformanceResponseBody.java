@@ -106,7 +106,10 @@ public class DescribePolarFsPerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the query. The time is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-07T03:04:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +125,10 @@ public class DescribePolarFsPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The PolarFS instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-2ze0i74ka607*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;
@@ -130,7 +136,10 @@ public class DescribePolarFsPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2921D843-433A-5FB3-A03B-4EC093B219F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribePolarFsPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. The time is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-07T02:04:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

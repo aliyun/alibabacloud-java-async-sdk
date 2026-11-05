@@ -158,7 +158,11 @@ public class DescribeApplicationBackupsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -167,7 +171,10 @@ public class DescribeApplicationBackupsRequest extends Request {
         }
 
         /**
-         * ApplicationType.
+         * <p>The application type, such as polarclaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarclaw</p>
          */
         public Builder applicationType(String applicationType) {
             this.putQueryParameter("ApplicationType", applicationType);
@@ -176,7 +183,10 @@ public class DescribeApplicationBackupsRequest extends Request {
         }
 
         /**
-         * BackupStatus.
+         * <p>The filter condition for the backup status. A value of Success indicates that the backup is completed, and a value of Failed indicates that the backup failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder backupStatus(String backupStatus) {
             this.putQueryParameter("BackupStatus", backupStatus);
@@ -185,7 +195,10 @@ public class DescribeApplicationBackupsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. This parameter is required and cannot be earlier than the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-16T00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -194,7 +207,10 @@ public class DescribeApplicationBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be an integer greater than 0 and less than or equal to 2147483647. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -203,7 +219,10 @@ public class DescribeApplicationBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 30, 50, and 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +231,10 @@ public class DescribeApplicationBackupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +243,10 @@ public class DescribeApplicationBackupsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. This parameter is required. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC and cannot be later than the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-14T00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -91,7 +91,7 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EBEAA83D-1734-42E3-85E3-E25F6E******</p>
@@ -102,7 +102,7 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scheduling time of the synchronization task.</p>
+         * <p>The scheduled time of the synchronization task.</p>
          */
         public Builder syncSchedule(String syncSchedule) {
             this.syncSchedule = syncSchedule;

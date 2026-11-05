@@ -75,7 +75,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F3322AFE-083E-4D77-A074-421301******</p>
@@ -238,7 +238,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
              * <p>The API key.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -279,7 +279,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</p>
+             * <p>The creation time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-07-18T07:32:30Z</p>
@@ -301,7 +301,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</p>
+             * <p>The last modification time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T01:48:25Z</p>
@@ -547,7 +547,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical dimension. The value is typically Consumer.</p>
+             * <p>The statistical dimension. Typically, the value is Consumer.</p>
              * 
              * <strong>example:</strong>
              * <p>Consumer</p>

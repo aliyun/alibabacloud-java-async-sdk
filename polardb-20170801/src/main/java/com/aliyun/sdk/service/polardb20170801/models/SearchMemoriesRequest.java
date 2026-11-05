@@ -173,7 +173,7 @@ public class SearchMemoriesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. Example value: pa-**************.</p>
+         * <p>The application ID. Example: pa-**************. The application must be of the mem0 type. When creating the application by using CreateApplication, set ApplicationType to mem0. Calling this operation on a non-mem0 application returns the IncorrectDBInstanceEngine (403) error.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>The number of records to display on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -271,7 +271,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>Specifies the number of top results to return.</p>
+         * <p>The number of top results to return.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

@@ -187,7 +187,11 @@ public class RefreshProxyLevelRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the PolarDB cluster.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-******************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -196,7 +200,10 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * FromTimeService.
+         * <p>Specifies whether the execution is initiated by the scheduled task service. Default value: false. If this parameter is set to false and PlannedStartTime is specified, a scheduled task is created. If this parameter is set to true, the task is executed immediately.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -223,7 +230,10 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * PlannedEndTime.
+         * <p>The latest time to start the proxy specification upgrade, in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-28T14:30:00Z</p>
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -232,7 +242,10 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * PlannedStartTime.
+         * <p>The earliest time to start the proxy specification upgrade, in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-28T14:00:00Z</p>
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -241,7 +254,11 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
+         * <p>The target proxy performance level. Valid values: ProxyStandard, ProxyStandardx2, and ProxyStandardx4.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProxyStandard</p>
          */
         public Builder proxyTargetClass(String proxyTargetClass) {
             this.putQueryParameter("ProxyTargetClass", proxyTargetClass);
@@ -250,7 +267,10 @@ public class RefreshProxyLevelRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

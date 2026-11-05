@@ -228,7 +228,7 @@ public class CreateModelApiRequest extends Request {
          * <p>The forced model.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Qwen3-32B</p>
          */
         public Builder forceModel(String forceModel) {
             this.putQueryParameter("ForceModel", forceModel);
@@ -237,7 +237,7 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
-         * <p>The gateway instance ID. You can obtain the ID from the GwClusterId returned by CreateGateway.</p>
+         * <p>The gateway instance ID. You can obtain this ID from the GwClusterId parameter returned by the CreateGateway operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -313,7 +313,7 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
-         * <p>The number of input tokens.</p>
+         * <p>The number of input points.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -325,7 +325,7 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
-         * <p>The number of output tokens.</p>
+         * <p>The number of output points.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -349,7 +349,7 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
-         * <p>The list of routing rules, which is a JSON array string.</p>
+         * <p>The list of routing rules, specified as a JSON array string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

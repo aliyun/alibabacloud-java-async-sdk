@@ -184,10 +184,10 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query.</p>
+         * <p>The end time of the query in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-04-07T04:00Z</p>
+         * <p>2022-11-16T16:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -196,7 +196,7 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -222,7 +222,7 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions under the current account, including region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view all available regions for the current account, including region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
          * <p>The skill template ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>pcpg-skill-2ze5v8n27o7x92a</p>
          */
         public Builder skillTemplateId(String skillTemplateId) {
             this.putQueryParameter("SkillTemplateId", skillTemplateId);
@@ -247,7 +247,7 @@ public class DescribePolarClawSkillTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
+         * <p>The start time of the query in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-15T16:00Z</p>

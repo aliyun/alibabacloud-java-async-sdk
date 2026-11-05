@@ -98,7 +98,7 @@ public class AddPolarFsPathMappingRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class AddPolarFsPathMappingRequest extends Request {
             } 
 
             /**
-             * <p>The bucket name.</p>
+             * <p>The name of the bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>Bucket1</p>
@@ -220,10 +220,10 @@ public class AddPolarFsPathMappingRequest extends Request {
             }
 
             /**
-             * <p>The AccessKey ID of the storage bucket.</p>
+             * <p>The AccessKey ID for the bucket.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>LTAIExampleBucketAccessKeyId</p>
              */
             public Builder bucketAccessKeyId(String bucketAccessKeyId) {
                 this.bucketAccessKeyId = bucketAccessKeyId;
@@ -231,10 +231,10 @@ public class AddPolarFsPathMappingRequest extends Request {
             }
 
             /**
-             * <p>The AccessKey secret of the storage bucket.</p>
+             * <p>The AccessKey secret for the bucket.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>ExampleBucketAccessKeySecret123</p>
              */
             public Builder bucketAccessKeySecret(String bucketAccessKeySecret) {
                 this.bucketAccessKeySecret = bucketAccessKeySecret;

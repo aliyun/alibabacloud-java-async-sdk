@@ -196,7 +196,7 @@ public class TagResourcesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pc-*****************</p>
+         * <p>[&quot;pc-***************&quot;]</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -305,9 +305,9 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. To add multiple tags to the cluster at once, click <strong>Add</strong> to specify multiple tag keys.</p>
+             * <p>The tag key. To add multiple tags to the target cluster at a time, click <strong>Add</strong> to add tag keys.</p>
              * <blockquote>
-             * <p>You can add a maximum of 20 tag pairs at a time. <code>Tag.n.Key</code> corresponds to <code>Tag.n.Value</code>.</p>
+             * <p>You can add up to 20 tags at a time. The value of <code>Tag.n.Key</code> corresponds to <code>Tag.n.Value</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -319,9 +319,9 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The tag value. To add multiple tags to the cluster at once, click <strong>Add</strong> to specify multiple tag values.</p>
+             * <p>The tag value. To add multiple tags to the target cluster at a time, click <strong>Add</strong> to add tag values.</p>
              * <blockquote>
-             * <p>You can add a maximum of 20 tag pairs at a time. <code>Tag.n.Value</code> corresponds to <code>Tag.n.Key</code>.</p>
+             * <p>You can add up to 20 tags at a time. The value of <code>Tag.n.Value</code> corresponds to <code>Tag.n.Key</code>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

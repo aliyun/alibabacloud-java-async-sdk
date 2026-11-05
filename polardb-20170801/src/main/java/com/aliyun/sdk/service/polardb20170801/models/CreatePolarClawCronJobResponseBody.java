@@ -184,7 +184,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the job was executed immediately and successfully.</p>
+         * <p>Indicates whether the job was executed immediately and succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -195,7 +195,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
@@ -303,7 +303,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The channel account ID.</p>
+             * <p>The ID of the channel account.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -336,7 +336,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery mode. Valid values: none, announce, webhook.</p>
+             * <p>The delivery mode. Valid values: none, announce, and webhook.</p>
              * 
              * <strong>example:</strong>
              * <p>announce</p>
@@ -554,7 +554,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payload type. Valid values: agentTurn, systemEvent.</p>
+             * <p>The payload type. Valid values: agentTurn and systemEvent.</p>
              * 
              * <strong>example:</strong>
              * <p>agentTurn</p>
@@ -975,7 +975,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the run was delivered.</p>
+             * <p>Indicates whether the job run has been delivered.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1030,7 +1030,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model used.</p>
+             * <p>The model used for the execution.</p>
              * 
              * <strong>example:</strong>
              * <p>bailian/qwen3.5-plus</p>
@@ -1052,7 +1052,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model provider.</p>
+             * <p>The provider of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>bailian</p>
@@ -1077,7 +1077,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
              * <p>The ID of the associated session.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>session-123</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -1096,7 +1096,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution summary text.</p>
+             * <p>The text of the execution summary.</p>
              * 
              * <strong>example:</strong>
              * <p>Generate the daily report.</p>
@@ -1118,7 +1118,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token usage details.</p>
+             * <p>The details of token usage.</p>
              */
             public Builder usage(Usage usage) {
                 this.usage = usage;
@@ -1281,7 +1281,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schedule type: cron, every, or at.</p>
+             * <p>The schedule type. Valid values: cron, every, and at.</p>
              * 
              * <strong>example:</strong>
              * <p>cron</p>
@@ -1793,7 +1793,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session target. Valid values: main, isolated, current.</p>
+             * <p>The session target. Valid values: main, isolated, and current.</p>
              * 
              * <strong>example:</strong>
              * <p>main</p>
@@ -1804,7 +1804,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution status.</p>
+             * <p>The execution state.</p>
              */
             public Builder state(State state) {
                 this.state = state;
@@ -1823,7 +1823,7 @@ public class CreatePolarClawCronJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The wake mode. Valid values: now, next-heartbeat.</p>
+             * <p>The wake mode. Valid values: now and next-heartbeat.</p>
              * 
              * <strong>example:</strong>
              * <p>now</p>

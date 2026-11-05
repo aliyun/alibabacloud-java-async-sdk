@@ -310,7 +310,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         } 
 
         /**
-         * <p>The database engine type.</p>
+         * <p>The type of the database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -360,7 +360,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable ACL-based authentication for the knowledge space.</p>
+         * <p>Specifies whether to enforce access control list (ACL) authentication for the knowledge space.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -397,11 +397,11 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * <p>OSS AK</p>
+         * <p>The AccessKey ID used to access OSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>LTAI5tExample1234</p>
          */
         public Builder OSSAccessKey(String OSSAccessKey) {
             this.putQueryParameter("OSSAccessKey", OSSAccessKey);
@@ -423,11 +423,11 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * <p>OSS SK</p>
+         * <p>The AccessKey secret used to access OSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>example-oss-secret</p>
          */
         public Builder OSSSecretKey(String OSSSecretKey) {
             this.putQueryParameter("OSSSecretKey", OSSSecretKey);
@@ -449,7 +449,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the reranking model.</p>
+         * <p>The name of the rerank model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
@@ -461,7 +461,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -489,8 +489,8 @@ public class CreateKnowledgeSpaceRequest extends Request {
         /**
          * <p>The sharding strategy. Valid values:</p>
          * <ul>
-         * <li>hierarchical (default)</li>
-         * <li>hybrid</li>
+         * <li>hierarchical: hierarchical sharding. This is the default value.</li>
+         * <li>hybrid: hybrid sharding.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -62,6 +62,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddPolarClawMCPServerResponse> addPolarClawMCPServer(AddPolarClawMCPServerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</p>
+     * 
      * @param request the request parameters of AddPolarFsPathMapping  AddPolarFsPathMappingRequest
      * @return AddPolarFsPathMappingResponse
      */
@@ -104,10 +107,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <ul>
-     * <li>Applies prompts to a specified application instance.</li>
-     * </ul>
+     * <p>Before you begin: This operation applies only to mem0 applications created by calling CreateApplication with MemApplicationSpec specified. Create a mem0 application, call CreateApplicationPrompt to create a prompt, and then call this operation to apply the prompt policy.</p>
      * 
      * @param request the request parameters of ApplyApplicationPrompts  ApplyApplicationPromptsRequest
      * @return ApplyApplicationPromptsResponse
@@ -421,13 +421,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <ul>
-     * <li>A maximum of three manually created backups can exist for each cluster at the same time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</li>
-     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</li>
-     * </ul>
-     * </blockquote>
+     * <p>Prerequisites: Call CreateGwConsumerOrder first, providing GatewayId, PackageSpec, KeyCount, RegionId, and ExpireTime to obtain a CreditToken, and then call this operation to create consumers in batches. Before the call, you must also obtain a valid ConsumerGroupId by calling DescribeConsumerGroups with GwClusterId and RegionId, and explicitly pass it in.</p>
      * 
      * @param request the request parameters of CreateBatchConsumer  CreateBatchConsumerRequest
      * @return CreateBatchConsumerResponse
@@ -636,6 +630,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateKnowledgeBaseResponse> createKnowledgeBase(CreateKnowledgeBaseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before you call this operation, you must activate the PrivateLink service in your current account. If the service is not activated, the API returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare the VpcId, VSwitchId, SecurityGroupId, and OSSBucket parameters. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</p>
+     * 
      * @param request the request parameters of CreateKnowledgeSpace  CreateKnowledgeSpaceRequest
      * @return CreateKnowledgeSpaceResponse
      */
@@ -711,7 +708,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</p>
+     * <p>This API allows you to define and create a new scheduled task (cron job). The task is triggered periodically based on a given schedule and carries specific messages or instructions. It supports advanced options such as customizing the execution frequency, time zone settings, and alert mechanisms for failures. In addition, you can configure detailed information such as the message content, destination channel, and recipients.</p>
      * 
      * @param request the request parameters of CreatePolarClawCronJob  CreatePolarClawCronJobRequest
      * @return CreatePolarClawCronJobResponse
@@ -985,6 +982,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDBLinkResponse> deleteDBLink(DeleteDBLinkRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a read-only node from a PolarDB cluster. Before you call this operation, the cluster must be in the Running state. You can call the DescribeDBClusters operation to query the DBClusterStatus parameter and check the cluster state. If the cluster is in a transitional state such as DBNodeCreating or DBNodeDeleting, wait until the cluster returns to the Running state before you call this operation.</p>
+     * 
      * @param request the request parameters of DeleteDBNodes  DeleteDBNodesRequest
      * @return DeleteDBNodesResponse
      */
@@ -1512,6 +1512,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApplicationPerformanceResponse> describeApplicationPerformance(DescribeApplicationPerformanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: First, create a PostgreSQL cluster, and then call the CreateApplication operation to create an application with ApplicationType set to mem0. When creating the application, you must prepare a VPC, a vSwitch, and a security group. After obtaining the ApplicationId, call this operation to query application prompts. Call sequence: CreateDBCluster → CreateApplication → DescribeApplicationPrompts.</p>
+     * 
      * @param request the request parameters of DescribeApplicationPrompts  DescribeApplicationPromptsRequest
      * @return DescribeApplicationPromptsResponse
      */
@@ -1536,6 +1539,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApplicationSessionIdsResponse> describeApplicationSessionIds(DescribeApplicationSessionIdsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Logs for different roles may contain different fields. User messages may include Content. Assistant messages may include the model, token usage, and cost statistics. Tool execution results may include the tool name and execution status. Cost statistics are returned exactly as provided by the log source, and this API operation does not perform currency conversion.</p>
+     * 
      * @param request the request parameters of DescribeApplicationSessionLogs  DescribeApplicationSessionLogsRequest
      * @return DescribeApplicationSessionLogsResponse
      */
@@ -1785,21 +1791,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>If the monitoring frequency is 5 seconds:
+     *     - When the query time range is less than or equal to 1 hour, the display granularity is 5 seconds.
+     *     - When the query time range is less than or equal to 1 day, the display granularity is 1 minute.
+     *     - When the query time range is less than or equal to 7 days, the display granularity is 10 minutes.
+     *     - When the query time range is less than or equal to 30 days, the display granularity is 1 hour.
+     *     - When the query time range is greater than 30 days, the display granularity is 1 day.</p>
      * <ul>
-     * <li>If the monitoring frequency is once every 5 seconds:<ul>
-     * <li>If the query time range is 1 hour or less, the data granularity is 5 seconds.</li>
-     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
-     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
-     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
-     * <li>If the query time range is more than 30 days, the data granularity is 1 day.</li>
-     * </ul>
-     * </li>
-     * <li>If the monitoring frequency is once every 60 seconds:<ul>
-     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
-     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
-     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
-     * <li>If the query time range is more than 30 days, the data granularity is 1 day.<blockquote>
-     * <p>The default monitoring frequency is once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the frequency to once every 5 seconds.</p>
+     * <li>If the monitoring frequency is 60 seconds:<ul>
+     * <li>When the query time range is less than or equal to 1 day, the display granularity is 1 minute.</li>
+     * <li>When the query time range is less than or equal to 7 days, the display granularity is 10 minutes.</li>
+     * <li>When the query time range is less than or equal to 30 days, the display granularity is 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the display granularity is 1 day.<blockquote>
+     * <p>The default monitoring frequency is 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set it to 5 seconds.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -2354,6 +2358,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePendingMaintenanceActionsResponse> describePendingMaintenanceActions(DescribePendingMaintenanceActionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Use Signature Version 3.0 to call GetPolarAgent to initiate a conversation and obtain the SessionId from the returned stream. Then, call this operation to query the chat history of the session.</p>
+     * 
      * @param request the request parameters of DescribePolarAgentChatRecords  DescribePolarAgentChatRecordsRequest
      * @return DescribePolarAgentChatRecordsResponse
      */
@@ -2399,8 +2406,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>You can use this API to retrieve all scheduled tasks in a PolarClaw application or filter specific tasks using the <code>JobIdList</code> parameter.</li>
-     * <li>If you do not specify the <code>JobIdList</code> parameter, the API returns all scheduled tasks in the application.</li>
+     * <li>You can use this API operation to retrieve all scheduled jobs in a PolarClaw application, or filter specific jobs by using the JobIdList parameter.</li>
+     * <li>If the JobIdList parameter is not provided, all scheduled jobs in the application are returned.
+     * Before you begin: Call DescribeApplications to filter applications where ApplicationType is polardb_polarclaw, obtain the ApplicationId, and then call this operation to query scheduled jobs.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribePolarClawCronJobs  DescribePolarClawCronJobsRequest
@@ -2416,10 +2424,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API gets information about all plugins for a given application, including built-in and user-installed plugins.</li>
-     * <li>Use the <code>PluginList</code> parameter to request information for specific plugins. If you omit this parameter, the API returns details for all plugins.</li>
+     * <li>Retrieves information about all plugins in a specified application, including built-in and user-installed plugins.</li>
+     * <li>You can use the PluginList parameter to request information about specific plugins. If this parameter is not provided, details of all plugins are returned.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribePolarClawPlugins  DescribePolarClawPluginsRequest
@@ -2513,6 +2521,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarFsObjectsResponse> describePolarFsObjects(DescribePolarFsObjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Use Key to specify the metric group to query and Interval to specify the sampling granularity. The end time of the query must not be earlier than the start time, and the start time must not be later than the current time.</p>
+     * 
      * @param request the request parameters of DescribePolarFsPerformance  DescribePolarFsPerformanceRequest
      * @return DescribePolarFsPerformanceResponse
      */
@@ -3333,10 +3344,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>You must activate Key Management Service (KMS) before you perform this operation. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</p>
-     * </li>
-     * <li><p>You cannot disable transparent data encryption (TDE) after you enable it.</p>
-     * </li>
+     * <li>You must activate KMS before you perform this operation. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</li>
+     * <li>TDE cannot be disabled after it is enabled.
+     * Before you call this operation, call the OpenKmsService operation of KMS (version 2016-01-20) to activate KMS, and then call this operation to enable TDE for the cluster.</li>
      * </ul>
      * </blockquote>
      * 

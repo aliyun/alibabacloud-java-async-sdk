@@ -179,7 +179,7 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A0450B18-BBD4-5DF9-8E71-610F1A921CDE</p>
@@ -348,10 +348,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API key in use.</p>
+             * <p>The API key used.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxxxxxx</p>
+             * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -392,7 +392,7 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-08-14T05:58:42Z</p>
@@ -414,7 +414,7 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>The last modification time. The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-29T09:31:37Z</p>

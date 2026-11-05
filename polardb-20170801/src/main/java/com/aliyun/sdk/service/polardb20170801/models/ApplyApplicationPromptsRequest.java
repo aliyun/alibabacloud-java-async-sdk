@@ -88,7 +88,7 @@ public class ApplyApplicationPromptsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,10 +101,10 @@ public class ApplyApplicationPromptsRequest extends Request {
         }
 
         /**
-         * <p>An array of prompt IDs to disable.</p>
+         * <p>The list of prompt IDs to disable. You must provide a non-empty list for at least one of EnabledPromptIds and DisabledPromptIds. Otherwise, the InvalidApplicationPromptId.Malformed error is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>papt-************</p>
+         * <p>[&quot;papt-************&quot;]</p>
          */
         public Builder disabledPromptIds(java.util.List<String> disabledPromptIds) {
             String disabledPromptIdsShrink = shrink(disabledPromptIds, "DisabledPromptIds", "json");
@@ -114,10 +114,10 @@ public class ApplyApplicationPromptsRequest extends Request {
         }
 
         /**
-         * <p>An array of prompt IDs to enable.</p>
+         * <p>The list of prompt IDs to enable. You must provide a non-empty list for at least one of EnabledPromptIds and DisabledPromptIds. Otherwise, the InvalidApplicationPromptId.Malformed error is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>papt-************</p>
+         * <p>[&quot;papt-************&quot;]</p>
          */
         public Builder enabledPromptIds(java.util.List<String> enabledPromptIds) {
             String enabledPromptIdsShrink = shrink(enabledPromptIds, "EnabledPromptIds", "json");

@@ -158,7 +158,10 @@ public class DescribeApplicationComponentPerformanceResponseBody extends TeaMode
         } 
 
         /**
-         * ApplicationId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -166,7 +169,10 @@ public class DescribeApplicationComponentPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * ApplicationType.
+         * <p>The type of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
          */
         public Builder applicationType(String applicationType) {
             this.applicationType = applicationType;
@@ -174,7 +180,10 @@ public class DescribeApplicationComponentPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * ApplicationVersion.
+         * <p>The version of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder applicationVersion(String applicationVersion) {
             this.applicationVersion = applicationVersion;
@@ -182,7 +191,10 @@ public class DescribeApplicationComponentPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * ComponentId.
+         * <p>The ID of the application component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pac-*******************</p>
          */
         public Builder componentId(String componentId) {
             this.componentId = componentId;
@@ -190,7 +202,10 @@ public class DescribeApplicationComponentPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * ComponentType.
+         * <p>The type of the application component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backend</p>
          */
         public Builder componentType(String componentType) {
             this.componentType = componentType;
@@ -198,7 +213,10 @@ public class DescribeApplicationComponentPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. The time is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T02:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -214,7 +232,10 @@ public class DescribeApplicationComponentPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2921D843-433A-5FB3-A03B-4EC093B219F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +243,10 @@ public class DescribeApplicationComponentPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. The time is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

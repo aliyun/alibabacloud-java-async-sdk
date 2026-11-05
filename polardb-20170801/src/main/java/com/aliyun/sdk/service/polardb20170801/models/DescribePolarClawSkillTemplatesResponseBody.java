@@ -155,7 +155,7 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries. This parameter is returned only when a list is queried.</p>
+         * <p>The total number of entries. This parameter is returned only when you query a list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -315,7 +315,7 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the skill template is actually created.</p>
+             * <p>The time when the skill template was created in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-15T16:00Z</p>
@@ -337,10 +337,10 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the parameter template.</p>
+             * <p>The time when the skill template was last modified in UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-04-07T04:00Z</p>
+             * <p>2022-11-16T16:00Z</p>
              */
             public Builder modified(String modified) {
                 this.modified = modified;
@@ -359,7 +359,7 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the skill template.</p>
+             * <p>The skill template description.</p>
              * 
              * <strong>example:</strong>
              * <p>skill template for test</p>
@@ -381,7 +381,7 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the skill template.</p>
+             * <p>The skill template name.</p>
              * 
              * <strong>example:</strong>
              * <p>skill-template-test</p>
@@ -392,7 +392,7 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The templatetype of the skill template. Valid values: 0: system template. 1: user template.</p>
+             * <p>The skill templatetype. Valid values: 0: system template. 1: user template.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

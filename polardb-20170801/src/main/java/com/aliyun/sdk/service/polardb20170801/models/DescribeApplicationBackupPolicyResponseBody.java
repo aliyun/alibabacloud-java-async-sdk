@@ -119,7 +119,10 @@ public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -127,7 +130,10 @@ public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationType.
+         * <p>The application type, such as polarclaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarclaw</p>
          */
         public Builder applicationType(String applicationType) {
             this.applicationType = applicationType;
@@ -135,7 +141,10 @@ public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * <p>The days of the week when automatic backups are performed. Separate multiple values with commas. Valid values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday,Tuesday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -143,7 +152,10 @@ public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupRetentionPeriod.
+         * <p>The retention period of level-1 backups, in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder preferredBackupRetentionPeriod(Integer preferredBackupRetentionPeriod) {
             this.preferredBackupRetentionPeriod = preferredBackupRetentionPeriod;
@@ -151,7 +163,10 @@ public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupTime.
+         * <p>The time window when automatic backups are performed. The time follows the HH:mmZ-HH:mmZ format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07:00Z-08:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -159,7 +174,10 @@ public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2921D843-433A-5FB3-A03B-4EC093B219F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

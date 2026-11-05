@@ -230,9 +230,9 @@ public class DescribeAIDBClustersRequest extends Request {
         /**
          * <p>The node type. You can specify multiple types separated by commas (,). Valid values:</p>
          * <ul>
-         * <li>vnode: managed by Kubernetes.</li>
-         * <li>container: logon-enabled container.</li>
-         * <li>maas: model service.</li>
+         * <li>vnode: managed by Kubernetes</li>
+         * <li>container: container with logon access</li>
+         * <li>maas: model service</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The cluster description. Fuzzy match is supported.</p>
+         * <p>The description of the cluster. Fuzzy search is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -282,7 +282,9 @@ public class DescribeAIDBClustersRequest extends Request {
          * <li><strong>NetAddressDeleting</strong>: The network connectivity is being deleted.</li>
          * <li><strong>NetAddressModifying</strong>: The network connectivity is being modified. </li>
          * <li><strong>Deleted</strong>: The cluster is released.</li>
-         * <li><strong>ClassChanged</strong>: Resources are being revoked after an upgrade or decrease the quota.</li>
+         * </ul>
+         * <ul>
+         * <li><strong>ClassChanged</strong>: Resources are being revoked after you increase or decrease the quota.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -453,7 +455,7 @@ public class DescribeAIDBClustersRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag key-value pairs. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</p>
+             * <p>The tag key. You can filter the cluster list by tags. A maximum of 20 tag key-value pairs are supported. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</p>
              * 
              * <strong>example:</strong>
              * <p>testKey</p>
@@ -464,7 +466,7 @@ public class DescribeAIDBClustersRequest extends Request {
             }
 
             /**
-             * <p>The tag value that corresponds to the tag key.</p>
+             * <p>The tag value corresponding to the tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>testValueData</p>

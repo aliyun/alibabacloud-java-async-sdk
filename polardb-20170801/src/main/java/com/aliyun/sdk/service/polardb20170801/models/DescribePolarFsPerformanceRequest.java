@@ -147,7 +147,13 @@ public class DescribePolarFsPerformanceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all Data Warehouse Edition clusters in the specified region.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -156,7 +162,11 @@ public class DescribePolarFsPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC and must not be earlier than the start time.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-07T03:04:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -165,7 +175,10 @@ public class DescribePolarFsPerformanceRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The sampling granularity of performance data, in seconds. The value must be a multiple of 60 and greater than 0. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -174,7 +187,11 @@ public class DescribePolarFsPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The monitoring metric group. Valid values: Capacity (capacity), Inode (file nodes), Iops (read and write operations per second), Latency (read and write latency), QpsMeta (metadata operation requests), and Throughput (read and write throughput).</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Capacity</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -183,7 +200,11 @@ public class DescribePolarFsPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-2ze0i74ka607*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.putQueryParameter("PolarFsInstanceId", polarFsInstanceId);
@@ -192,7 +213,10 @@ public class DescribePolarFsPerformanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -201,7 +225,11 @@ public class DescribePolarFsPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-07T02:04:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

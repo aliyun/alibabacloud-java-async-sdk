@@ -117,7 +117,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of PolarClaw channel objects.</p>
+         * <p>The list of channels.</p>
          */
         public Builder channels(java.util.List<Channels> channels) {
             this.channels = channels;
@@ -136,7 +136,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of <code>successful</code> indicates that the request succeeded.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -325,7 +325,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of issues related to the account.</p>
+             * <p>The list of account issues.</p>
              */
             public Builder issues(java.util.List<String> issues) {
                 this.issues = issues;
@@ -333,7 +333,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp (in milliseconds) of the last inbound message.</p>
+             * <p>The timestamp of the last inbound message in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -344,7 +344,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp (in milliseconds) of the last outbound message.</p>
+             * <p>The timestamp of the last outbound message in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -453,7 +453,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of account objects for the channel.</p>
+             * <p>The list of channel accounts.</p>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
@@ -483,7 +483,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default account ID for the channel.</p>
+             * <p>The default account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

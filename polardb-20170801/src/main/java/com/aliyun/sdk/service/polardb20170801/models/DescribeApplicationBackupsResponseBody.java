@@ -106,7 +106,7 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of application backup sets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumbers.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumbers(String pageNumbers) {
             this.pageNumbers = pageNumbers;
@@ -122,7 +125,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of backup sets returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +136,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2921D843-433A-5FB3-A03B-4EC093B219F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of backup sets that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -256,7 +268,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupEndTime.
+             * <p>The end time of the backup. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-15T07:30:20Z</p>
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -264,7 +279,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * <p>The backup set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61*******</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -272,7 +290,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * <p>The start time of the backup. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-15T07:30:05Z</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -280,7 +301,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * <p>The backup status. A value of Success indicates that the backup is completed, and a value of Failed indicates that the backup failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -288,7 +312,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * <p>The backup type. A value of FullBackup indicates a full backup, and a value of IncrementalBackup indicates an incremental backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FullBackup</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -296,7 +323,10 @@ public class DescribeApplicationBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * JobMode.
+             * <p>The backup mode. A value of Automated indicates an automatic backup, and a value of Manual indicates a manual backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder jobMode(String jobMode) {
                 this.jobMode = jobMode;

@@ -148,7 +148,11 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -157,7 +161,11 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the application component. You can obtain the ID from the Components parameter returned by the DescribeApplicationAttribute operation.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pac-*******************</p>
          */
         public Builder componentId(String componentId) {
             this.putQueryParameter("ComponentId", componentId);
@@ -166,7 +174,11 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The end time must be later than or equal to the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T02:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -175,7 +187,10 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The sampling granularity of the performance data. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -184,7 +199,11 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The performance metrics to query. Separate multiple metrics with commas (,). You can specify up to 5 metrics.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PolarDBCPU</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -193,7 +212,11 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -202,7 +225,10 @@ public class DescribeApplicationComponentPerformanceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the performance data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

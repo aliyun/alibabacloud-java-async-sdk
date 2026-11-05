@@ -161,7 +161,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
          * <p>An API key for the model service.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -191,7 +191,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the database AI DPI engine.</p>
+         * <p>The version number of the database AI engine.</p>
          * <p>  -3.0</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC.</p>
+         * <p>The end time of the query. The end time must be later than the start time. The format is YYYY-MM-DDThh:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-16T16:00Z</p>
@@ -214,7 +214,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data granularity of performance. Valid values:</p>
+         * <p>The data granularity of the performance data. Valid values:</p>
          * <ul>
          * <li>60</li>
          * <li>3600</li>
@@ -248,7 +248,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The start time of the query. The format is yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-15T16:00Z</p>
@@ -317,7 +317,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specific time point of the monitoring metric. The format is a UNIX timestamp, and the unit is milliseconds.</p>
+             * <p>The specific time point of the monitoring metric. The format is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1724206183</p>
@@ -328,7 +328,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the monitoring metric.</p>
+             * <p>The data value of the monitoring metric.</p>
              * 
              * <strong>example:</strong>
              * <p>42.38</p>
@@ -435,7 +435,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance metrics.</p>
+             * <p>The performance metric.</p>
              * 
              * <strong>example:</strong>
              * <p>PolarDBAIModelCall</p>
@@ -446,7 +446,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specific measurement name of the performance metrics.</p>
+             * <p>The name of the specific performance metric.</p>
              * 
              * <strong>example:</strong>
              * <p>model_input_amount</p>

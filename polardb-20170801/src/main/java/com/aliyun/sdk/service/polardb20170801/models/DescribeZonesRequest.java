@@ -104,7 +104,7 @@ public class DescribeZonesRequest extends Request {
          * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>POLARDB</p>
+         * <p>mysql</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -127,7 +127,7 @@ public class DescribeZonesRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view information about all available regions for your account, including region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

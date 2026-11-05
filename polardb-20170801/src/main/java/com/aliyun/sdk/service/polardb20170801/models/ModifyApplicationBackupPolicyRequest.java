@@ -130,7 +130,11 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -139,7 +143,10 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * ApplicationType.
+         * <p>The application type, such as polarclaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarclaw</p>
          */
         public Builder applicationType(String applicationType) {
             this.putQueryParameter("ApplicationType", applicationType);
@@ -148,7 +155,10 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * <p>The days of the week when automatic backups are performed. Separate multiple values with commas. Valid values: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Monday,Tuesday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -157,7 +167,10 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupRetentionPeriod.
+         * <p>The retention period of level-1 backups, in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder preferredBackupRetentionPeriod(String preferredBackupRetentionPeriod) {
             this.putQueryParameter("PreferredBackupRetentionPeriod", preferredBackupRetentionPeriod);
@@ -166,7 +179,10 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * <p>The time window when automatic backups are performed. The format is HH:mmZ-HH:mmZ in UTC. The start time and end time must be on the hour and exactly one hour apart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07:00Z-08:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);
@@ -175,7 +191,10 @@ public class ModifyApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

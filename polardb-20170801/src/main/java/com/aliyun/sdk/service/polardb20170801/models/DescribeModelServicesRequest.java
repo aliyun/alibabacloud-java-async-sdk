@@ -197,7 +197,7 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * <p>The model service IDs.</p>
+         * <p>The IDs of the model services.</p>
          * 
          * <strong>example:</strong>
          * <p>ms-xxx,ms-xxxx</p>

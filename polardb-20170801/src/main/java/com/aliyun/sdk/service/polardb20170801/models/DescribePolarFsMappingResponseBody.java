@@ -132,10 +132,10 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The default AccessKey ID at the instance level.</p>
+         * <p>The instance-level default AccessKey ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>LTAI5tExample1234</p>
          */
         public Builder defaultAccessKeyId(String defaultAccessKeyId) {
             this.defaultAccessKeyId = defaultAccessKeyId;
@@ -154,7 +154,7 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,7 +203,7 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -299,7 +299,7 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
              * <p>The AccessKey ID of the storage bucket.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>LTAI5tExample1234</p>
              */
             public Builder bucketAccessKeyId(String bucketAccessKeyId) {
                 this.bucketAccessKeyId = bucketAccessKeyId;
@@ -307,7 +307,7 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mapping path.</p>
+             * <p>The mapped path.</p>
              * 
              * <strong>example:</strong>
              * <p>/test</p>

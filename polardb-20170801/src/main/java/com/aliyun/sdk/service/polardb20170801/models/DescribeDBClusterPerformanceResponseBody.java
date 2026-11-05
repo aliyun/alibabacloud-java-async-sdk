@@ -132,7 +132,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database cluster ID.</p>
+         * <p>The ID of the database cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-*****************</p>
@@ -165,7 +165,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the time range. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+         * <p>The end time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-23T01:01:00Z</p>
@@ -184,7 +184,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>35D3E3DA-4650-407A-BFF5-59BFF1******</p>
@@ -195,7 +195,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the time range. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+         * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-23T01:00:00Z</p>

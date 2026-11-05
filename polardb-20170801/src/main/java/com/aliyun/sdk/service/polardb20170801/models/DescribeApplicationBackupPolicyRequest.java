@@ -88,7 +88,11 @@ public class DescribeApplicationBackupPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -97,7 +101,10 @@ public class DescribeApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * ApplicationType.
+         * <p>The application type, such as polarclaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarclaw</p>
          */
         public Builder applicationType(String applicationType) {
             this.putQueryParameter("ApplicationType", applicationType);
@@ -106,7 +113,10 @@ public class DescribeApplicationBackupPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -174,10 +174,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to detach all tags. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: <strong>false</strong>.</p>
-         * <blockquote>
-         * <p>This parameter takes effect only when the <code>TagKey.n</code> parameter is empty.</p>
+         * <p>Specifies whether to remove all tags. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Removes all tags.</li>
+         * <li><strong>false</strong>: Does not remove all tags.
+         * Default value: <strong>false</strong>.<blockquote>
+         * <p>This parameter takes effect only when <code>TagKey.N</code> is empty.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -209,7 +214,7 @@ public class UntagResourcesRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view available regions.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -223,11 +228,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target cluster.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pc-***************</p>
+         * <p>[&quot;pc-***************&quot;]</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -270,7 +275,7 @@ public class UntagResourcesRequest extends Request {
          * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
-         * <p>type</p>
+         * <p>[&quot;type&quot;]</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

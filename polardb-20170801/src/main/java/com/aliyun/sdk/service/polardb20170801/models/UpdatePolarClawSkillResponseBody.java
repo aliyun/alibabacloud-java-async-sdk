@@ -184,7 +184,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F45FFACC-xxx</p>
@@ -276,6 +276,9 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
 
             /**
              * <p>The environment variable configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;TOKEN&quot;:&quot;my-token&quot;}</p>
              */
             public Builder env(java.util.Map<String, String> env) {
                 this.env = env;

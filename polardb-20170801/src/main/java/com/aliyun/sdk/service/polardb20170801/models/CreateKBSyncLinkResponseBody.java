@@ -171,7 +171,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The client identifier.</p>
+         * <p>The client ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cli_xxxxxxbe8</p>
@@ -183,7 +183,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
-         * <p>The time follows the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time is displayed in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-14T05:58:42Z</p>
@@ -242,7 +242,7 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>

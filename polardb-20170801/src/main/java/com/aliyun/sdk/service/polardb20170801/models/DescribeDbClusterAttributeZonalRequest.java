@@ -130,7 +130,7 @@ public class DescribeDbClusterAttributeZonalRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the edge cluster. You can call the DescribeDBClustersZonal operation to list available edge clusters and then use the returned DBClusterId to query the attributes. IDs of common clusters are not applicable to this operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class DescribeDbClusterAttributeZonalRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retrieve AI-related node information.</p>
+         * <p>Specifies whether to retrieve information about AI nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>AI</p>

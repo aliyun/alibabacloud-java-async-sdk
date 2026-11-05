@@ -87,7 +87,7 @@ public class DescribePolarClawPluginsRequest extends Request {
         }
 
         /**
-         * <p>A list of plugin IDs. If omitted, all plugins are returned.</p>
+         * <p>The list of plugin IDs to query. If this parameter is empty, all plugins are returned.</p>
          */
         public Builder pluginList(java.util.List<String> pluginList) {
             this.putQueryParameter("PluginList", pluginList);

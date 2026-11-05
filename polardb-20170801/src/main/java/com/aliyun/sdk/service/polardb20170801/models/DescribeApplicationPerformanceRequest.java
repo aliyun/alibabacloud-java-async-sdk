@@ -231,7 +231,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         } 
 
         /**
-         * <p>The application cluster ID.</p>
+         * <p>The ID of the application cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The user.</p>
+         * <p>The consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>c-xxxxxxx</p>
@@ -256,7 +256,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The user group.</p>
+         * <p>The consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>cg-xxxxxx</p>
@@ -268,7 +268,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The downsampling policy.</p>
+         * <p>The downsampling strategy.</p>
          * 
          * <strong>example:</strong>
          * <p>raw_sample</p>
@@ -280,7 +280,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The end step number.</p>
+         * <p>The end step.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -292,7 +292,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
+         * <p>The end time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The optional filter conditions for performance data, represented as a JSON object. If this parameter is not specified, no filtering is applied based on this condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder filter(java.util.Map<String, ?> filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -315,7 +318,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The data granularity of performance data. Valid values:</p>
+         * <p>The performance data granularity. Valid values:</p>
          * <ul>
          * <li>5</li>
          * <li>30</li>
@@ -336,10 +339,9 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The performance metrics to query. Separate multiple values with commas (,).</p>
-         * <blockquote>
-         * <p> You can specify up to 5 performance metrics.</p>
-         * </blockquote>
+         * <p>The performance metrics to query. Separate multiple values with commas (,).
+         * Note
+         * You can specify up to 5 performance metrics.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +354,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data points to return.</p>
+         * <p>The maximum number of points to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -376,7 +378,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The start step number.</p>
+         * <p>The start step.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -388,7 +390,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
+         * <p>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

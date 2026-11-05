@@ -128,7 +128,7 @@ public class DescribePolarClawSkillsMarketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -336,7 +336,7 @@ public class DescribePolarClawSkillsMarketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag group.</p>
+             * <p>The tag list.</p>
              */
             public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;

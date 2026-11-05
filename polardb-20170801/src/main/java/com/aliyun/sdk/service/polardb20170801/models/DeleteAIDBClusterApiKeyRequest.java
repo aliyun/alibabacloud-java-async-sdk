@@ -89,11 +89,11 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
         } 
 
         /**
-         * <p>The API key of the model service.</p>
+         * <p>The API key for the model service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
          */
         public Builder apiKey(String apiKey) {
             this.putQueryParameter("ApiKey", apiKey);
@@ -116,7 +116,7 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

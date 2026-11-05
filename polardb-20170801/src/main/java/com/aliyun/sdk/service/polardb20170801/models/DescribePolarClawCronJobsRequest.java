@@ -116,7 +116,7 @@ public class DescribePolarClawCronJobsRequest extends Request {
         } 
 
         /**
-         * <p>Application ID</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DescribePolarClawCronJobsRequest extends Request {
         }
 
         /**
-         * <p>Include disabled tasks. Default is true.</p>
+         * <p>Specifies whether to include disabled jobs. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,7 +141,7 @@ public class DescribePolarClawCronJobsRequest extends Request {
         }
 
         /**
-         * <p>Include run history. Default is false.</p>
+         * <p>Specifies whether to include the run history. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -153,7 +153,7 @@ public class DescribePolarClawCronJobsRequest extends Request {
         }
 
         /**
-         * <p>Filter by Job ID list</p>
+         * <p>Filters the results by a list of job IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>0ee00f56-f467-4d41-858c-ca4ede2c770e,1ee00f56-f467-4d41-858c-ca4ede2c770f</p>
@@ -166,7 +166,7 @@ public class DescribePolarClawCronJobsRequest extends Request {
         }
 
         /**
-         * <p>Maximum number of run history entries per task. Default is 10.</p>
+         * <p>The maximum number of run history records per job. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

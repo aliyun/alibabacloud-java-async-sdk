@@ -233,7 +233,10 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         } 
 
         /**
-         * Agent.
+         * <p>The agent name. This parameter must be specified together with the SessionId parameter, or neither of them is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-agent</p>
          */
         public Builder agent(String agent) {
             this.putQueryParameter("Agent", agent);
@@ -242,7 +245,11 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -251,7 +258,11 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC. The end time cannot be earlier than the start time, and the query time span cannot exceed 30 days.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-04T02:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -278,7 +289,10 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Maximum value: 2147483647. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -287,7 +301,10 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 30 to 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -296,7 +313,11 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the application.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -314,7 +335,10 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>The role filter for logs. Valid values: user, assistant, and toolResult.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assistant</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -323,7 +347,10 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID. This parameter must be specified together with the Agent parameter, or neither of them is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session-123</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -332,7 +359,11 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC. The start time cannot be later than the current time, and the interval between the start time and the current time cannot exceed 31 days.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-04T01:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -341,7 +372,10 @@ public class DescribeApplicationSessionLogsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The log type. This API operation only queries session logs. Set the value to session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -129,7 +129,10 @@ public class DescribeInspectionReportListRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the query. If you specify StartTime, you must also specify EndTime. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC and cannot be earlier than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-04T02:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -138,7 +141,10 @@ public class DescribeInspectionReportListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Pages start from 1. Maximum value: 2147483647. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -147,7 +153,10 @@ public class DescribeInspectionReportListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 30, 50, and 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -156,7 +165,10 @@ public class DescribeInspectionReportListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the inspection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -165,7 +177,10 @@ public class DescribeInspectionReportListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC and cannot be later than the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-04T01:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -174,7 +189,10 @@ public class DescribeInspectionReportListRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the inspection task. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-001</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

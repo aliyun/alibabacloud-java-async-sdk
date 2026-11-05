@@ -130,7 +130,7 @@ public class DescribePolarFsQuotaListRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the PolarDB instance on which the application depends.</p>
+         * <p>The PolarDB instance ID on which the application depends.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-************</p>
@@ -154,8 +154,7 @@ public class DescribePolarFsQuotaListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 30, 50, and 100.</p>
-         * <p>Default value: 30.</p>
+         * <p>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -167,7 +166,7 @@ public class DescribePolarFsQuotaListRequest extends Request {
         }
 
         /**
-         * <p>The PolarFs instance ID.</p>
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,14 +179,10 @@ public class DescribePolarFsQuotaListRequest extends Request {
         }
 
         /**
-         * <p>The query mode. Valid values:</p>
-         * <ul>
-         * <li><strong>quotaPolicy</strong>: quota rule</li>
-         * <li><strong>quota</strong>: quota</li>
-         * </ul>
+         * <p>The quota mode. Currently, only quota is supported, which indicates that quota policies are queried.</p>
          * 
          * <strong>example:</strong>
-         * <p>quotaPolicy</p>
+         * <p>quota</p>
          */
         public Builder quotaMode(String quotaMode) {
             this.putQueryParameter("QuotaMode", quotaMode);

@@ -136,7 +136,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9D6CE7C6-1C52-5BF6-B3D7-10977D44542C</p>
