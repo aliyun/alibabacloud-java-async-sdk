@@ -139,7 +139,7 @@ public class DescribePolarClawSkillsMarketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of skills.</p>
+         * <p>The skill list.</p>
          */
         public Builder skillList(java.util.List<SkillList> skillList) {
             this.skillList = skillList;

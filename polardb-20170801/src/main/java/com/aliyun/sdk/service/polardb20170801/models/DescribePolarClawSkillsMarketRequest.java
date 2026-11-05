@@ -187,7 +187,7 @@ public class DescribePolarClawSkillsMarketRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions under the current account, including region IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribePolarClawSkillsMarketRequest extends Request {
         }
 
         /**
-         * <p>The skill name to search for.</p>
+         * <p>The skill name to search by.</p>
          * 
          * <strong>example:</strong>
          * <p>polarclawhub</p>
@@ -212,7 +212,7 @@ public class DescribePolarClawSkillsMarketRequest extends Request {
         }
 
         /**
-         * <p>The tag name to search for.</p>
+         * <p>The tag name to search by.</p>
          * 
          * <strong>example:</strong>
          * <p>PolarDB</p>
@@ -226,9 +226,9 @@ public class DescribePolarClawSkillsMarketRequest extends Request {
         /**
          * <p>The source of the skill. Valid values:</p>
          * <ol>
-         * <li><code>PUBLIC</code>: Public.</li>
-         * <li><code>SELF</code>: Private.</li>
-         * <li><code>OTHER</code>: Other.</li>
+         * <li><code>PUBLIC</code>: Public</li>
+         * <li><code>SELF</code>: Private</li>
+         * <li><code>OTHER</code>: Other</li>
          * </ol>
          * 
          * <strong>example:</strong>

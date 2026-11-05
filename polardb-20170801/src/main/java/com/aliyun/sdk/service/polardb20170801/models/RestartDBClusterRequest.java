@@ -156,7 +156,7 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the PolarDB cluster.</p>
+         * <p>The PolarDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-************</p>

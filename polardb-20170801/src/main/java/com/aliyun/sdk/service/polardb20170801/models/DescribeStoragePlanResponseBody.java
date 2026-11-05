@@ -144,7 +144,7 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D9384D30-5C9A-11EA-BFC0-F754D2Bxxxx</p>
@@ -448,7 +448,7 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource instance ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>500072****</p>
@@ -459,7 +459,7 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period capacity unit of the storage plan.</p>
+             * <p>The periodic capacity unit of the storage plan.</p>
              * 
              * <strong>example:</strong>
              * <p>GB</p>
@@ -470,7 +470,7 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period capacity of the storage plan. The period capacity gradually decreases as the storage plan is used.</p>
+             * <p>The periodic capacity of the storage plan. The periodic capacity gradually decreases as the storage plan is used.</p>
              * 
              * <strong>example:</strong>
              * <p>400.000</p>
@@ -481,7 +481,7 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period duration. This indicates that the capacity of the storage plan is measured and consumed by the hour.</p>
+             * <p>The period duration, which indicates that the capacity of the storage plan is measured and consumed on an hourly basis.</p>
              * 
              * <strong>example:</strong>
              * <p>hour</p>
@@ -527,9 +527,9 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
             /**
              * <p>The status of the storage plan. Valid values:</p>
              * <ul>
-             * <li><p><strong>Valid</strong>: Valid.</p>
+             * <li><p><strong>Valid</strong>: The storage plan is valid.</p>
              * </li>
-             * <li><p><strong>Invalid</strong>: Invalid.</p>
+             * <li><p><strong>Invalid</strong>: The storage plan is invalid.</p>
              * </li>
              * </ul>
              * 
@@ -544,11 +544,11 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
             /**
              * <p>The type of the storage plan. Valid values:</p>
              * <ul>
-             * <li><p><strong>Overseas</strong>: Hong Kong (China) and regions outside China</p>
+             * <li><p><strong>Overseas</strong>: Hong Kong (China) and regions outside the Chinese mainland.</p>
              * </li>
-             * <li><p><strong>Mainland</strong>: the Chinese mainland</p>
+             * <li><p><strong>Mainland</strong>: The Chinese mainland.</p>
              * </li>
-             * <li><p><strong>Financial</strong>: Finance Cloud</p>
+             * <li><p><strong>Financial</strong>: Alibaba Finance Cloud.</p>
              * </li>
              * </ul>
              * 
@@ -563,11 +563,11 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
             /**
              * <p>The type of the resource plan. Valid values:</p>
              * <ul>
-             * <li><p><strong>FPT_polardb_package_absolute_1540888383</strong>: the Chinese mainland</p>
+             * <li><p><strong>FPT_polardb_package_absolute_1540888383</strong>: The Chinese mainland.</p>
              * </li>
-             * <li><p><strong>FPT_polardb_package_absolute_1540890081</strong>: Hong Kong (China) and regions outside China</p>
+             * <li><p><strong>FPT_polardb_package_absolute_1540890081</strong>: Hong Kong (China) and regions outside the Chinese mainland.</p>
              * </li>
-             * <li><p><strong>FPT_polardb_package_absolute_1567151499</strong>: Finance Cloud</p>
+             * <li><p><strong>FPT_polardb_package_absolute_1567151499</strong>: Alibaba Finance Cloud.</p>
              * </li>
              * </ul>
              * 

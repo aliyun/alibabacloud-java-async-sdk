@@ -141,7 +141,7 @@ public class DescribePolarClawSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -163,7 +163,7 @@ public class DescribePolarClawSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of skills.</p>
+         * <p>The skill list.</p>
          */
         public Builder skillList(java.util.List<SkillList> skillList) {
             this.skillList = skillList;
@@ -407,7 +407,7 @@ public class DescribePolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the skill is available to the agent. The value is false if the skill is not in the workspace of the agent or is excluded by the availability policy of the agent.</p>
+             * <p>Indicates whether the skill is available to the agent. The value is false if the skill is not in the agent workspace or is excluded by the availability policy of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -473,7 +473,7 @@ public class DescribePolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the database and tables. Unit: bytes.</p>
+             * <p>The size of the databases and tables. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>18</p>
@@ -484,7 +484,7 @@ public class DescribePolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the skill.</p>
+             * <p>The skill name.</p>
              * 
              * <strong>example:</strong>
              * <p>polarclawhub</p>
@@ -495,7 +495,7 @@ public class DescribePolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the skill.</p>
+             * <p>The skill version.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0</p>
@@ -506,11 +506,11 @@ public class DescribePolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the skill. Valid values:</p>
+             * <p>The skill source. Valid values:</p>
              * <ul>
-             * <li><code>PUBLIC</code>: Public.</li>
-             * <li><code>SELF</code>: Private.</li>
-             * <li><code>OTHER</code>: Other.</li>
+             * <li>PUBLIC: public</li>
+             * <li>SELF: private</li>
+             * <li>OTHER: other</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -522,7 +522,7 @@ public class DescribePolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the skill.</p>
+             * <p>The skill status.</p>
              * 
              * <strong>example:</strong>
              * <p>ready</p>

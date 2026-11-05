@@ -150,7 +150,7 @@ public class CreateInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the task resides.</p>
+         * <p>The ID of the region where the task is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -268,7 +268,7 @@ public class CreateInspectionTaskRequest extends Request {
             }
 
             /**
-             * <p>The ID of the region where the cluster to be inspected resides.</p>
+             * <p>The ID of the region where the cluster to be inspected is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>

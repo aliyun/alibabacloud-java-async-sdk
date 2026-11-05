@@ -116,7 +116,7 @@ public class DescribePolarClawSkillsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies the agent (workspace) perspective. If this parameter is specified, the Disabled and AvailableToAgent fields are returned based on the specified agent. If this parameter is not specified, the default agent is used.</p>
+         * <p>Specifies the agent workspace perspective. If this parameter is specified, the Disabled and AvailableToAgent fields are returned based on the specified agent. If this parameter is not specified, the default agent is used.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -141,7 +141,7 @@ public class DescribePolarClawSkillsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer.</p>
+         * <p>The page number. The value must be an integer greater than 0 and less than or equal to the maximum value of the Integer data type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,10 @@ public class DescribePolarClawSkillsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

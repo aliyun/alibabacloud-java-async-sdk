@@ -116,7 +116,7 @@ public class DescribePolarClawSkillTemplateRequest extends Request {
         /**
          * <p>The application type.</p>
          * <blockquote>
-         * <p>If you are calling this operation for the first time, you do not need to specify this parameter.</p>
+         * <p>If you call this operation for the first time, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

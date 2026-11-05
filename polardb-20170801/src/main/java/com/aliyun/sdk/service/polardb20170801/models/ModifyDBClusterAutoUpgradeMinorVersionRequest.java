@@ -75,11 +75,7 @@ public class ModifyDBClusterAutoUpgradeMinorVersionRequest extends Request {
         } 
 
         /**
-         * <p>The minor engine version update policy. Valid values:</p>
-         * <ul>
-         * <li>Auto: Automatic update.</li>
-         * <li>Manual: Manual update.</li>
-         * </ul>
+         * <p>The minor engine version update policy. Valid values: Auto: automatic update. Manual: manual update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

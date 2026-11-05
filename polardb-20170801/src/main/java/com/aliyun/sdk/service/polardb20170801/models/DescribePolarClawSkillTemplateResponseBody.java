@@ -209,7 +209,7 @@ public class DescribePolarClawSkillTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether it is actually created.</p>
+             * <p>Indicates whether the skill template is actually created.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-03-21 12:00:00</p>

@@ -105,7 +105,7 @@ public class ModifyPolarFsInstanceDescriptionRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query all clusters in the target region, including cluster IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including cluster IDs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

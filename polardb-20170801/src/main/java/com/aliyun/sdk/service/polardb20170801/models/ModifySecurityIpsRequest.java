@@ -232,7 +232,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses or CIDR blocks in the whitelist. Separate multiple values with commas (,).</p>
+         * <p>The IP addresses or CIDR blocks in the whitelist. Separate multiple values with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

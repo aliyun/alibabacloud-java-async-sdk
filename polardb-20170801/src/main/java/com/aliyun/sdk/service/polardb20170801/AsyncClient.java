@@ -229,6 +229,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation prechecks a skill before it is uploaded to a PolarClaw instance.</p>
+     * 
+     * @param request the request parameters of CheckPolarClawSkill  CheckPolarClawSkillRequest
+     * @return CheckPolarClawSkillResponse
+     */
+    CompletableFuture<CheckPolarClawSkillResponse> checkPolarClawSkill(CheckPolarClawSkillRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Description</h2>
      * <p>This operation verifies the consistency of quota configurations within a specified PolarFS instance. These configurations include storage capacity and inode limits on directory paths. If inconsistencies are found, the operation returns a list of the inconsistent paths and any related error information.</p>
      * <h3>Usage notes</h3>
@@ -377,6 +387,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationAgentRelationResponse> createApplicationAgentRelation(CreateApplicationAgentRelationRequest request);
 
     /**
+     * @param request the request parameters of CreateApplicationBackup  CreateApplicationBackupRequest
+     * @return CreateApplicationBackupResponse
+     */
+    CompletableFuture<CreateApplicationBackupResponse> createApplicationBackup(CreateApplicationBackupRequest request);
+
+    /**
      * @param request the request parameters of CreateApplicationEndpointAddress  CreateApplicationEndpointAddressRequest
      * @return CreateApplicationEndpointAddressResponse
      */
@@ -523,6 +539,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDBNodesResponse
      */
     CompletableFuture<CreateDBNodesResponse> createDBNodes(CreateDBNodesRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataProcessJob  CreateDataProcessJobRequest
+     * @return CreateDataProcessJobResponse
+     */
+    CompletableFuture<CreateDataProcessJobResponse> createDataProcessJob(CreateDataProcessJobRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataProcessJobTemplate  CreateDataProcessJobTemplateRequest
+     * @return CreateDataProcessJobTemplateResponse
+     */
+    CompletableFuture<CreateDataProcessJobTemplateResponse> createDataProcessJobTemplate(CreateDataProcessJobTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -689,6 +717,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePolarClawCronJobResponse
      */
     CompletableFuture<CreatePolarClawCronJobResponse> createPolarClawCronJob(CreatePolarClawCronJobRequest request);
+
+    /**
+     * @param request the request parameters of CreatePolarClawSkill  CreatePolarClawSkillRequest
+     * @return CreatePolarClawSkillResponse
+     */
+    CompletableFuture<CreatePolarClawSkillResponse> createPolarClawSkill(CreatePolarClawSkillRequest request);
 
     /**
      * @param request the request parameters of CreatePolarClawSkillTemplate  CreatePolarClawSkillTemplateRequest
@@ -955,6 +989,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDBNodesResponse
      */
     CompletableFuture<DeleteDBNodesResponse> deleteDBNodes(DeleteDBNodesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataProcessJobTemplate  DeleteDataProcessJobTemplateRequest
+     * @return DeleteDataProcessJobTemplateResponse
+     */
+    CompletableFuture<DeleteDataProcessJobTemplateResponse> deleteDataProcessJobTemplate(DeleteDataProcessJobTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -1240,6 +1280,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAIDBClusterPerformanceResponse> describeAIDBClusterPerformance(DescribeAIDBClusterPerformanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeAIDBClusterResourceUsage  DescribeAIDBClusterResourceUsageRequest
+     * @return DescribeAIDBClusterResourceUsageResponse
+     */
+    CompletableFuture<DescribeAIDBClusterResourceUsageResponse> describeAIDBClusterResourceUsage(DescribeAIDBClusterResourceUsageRequest request);
+
+    /**
      * @param request the request parameters of DescribeAIDBClusterTaskAttribute  DescribeAIDBClusterTaskAttributeRequest
      * @return DescribeAIDBClusterTaskAttributeResponse
      */
@@ -1418,6 +1464,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApplicationAttributeResponse> describeApplicationAttribute(DescribeApplicationAttributeRequest request);
 
     /**
+     * @param request the request parameters of DescribeApplicationAvailableModels  DescribeApplicationAvailableModelsRequest
+     * @return DescribeApplicationAvailableModelsResponse
+     */
+    CompletableFuture<DescribeApplicationAvailableModelsResponse> describeApplicationAvailableModels(DescribeApplicationAvailableModelsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationAvailableVersion  DescribeApplicationAvailableVersionRequest
+     * @return DescribeApplicationAvailableVersionResponse
+     */
+    CompletableFuture<DescribeApplicationAvailableVersionResponse> describeApplicationAvailableVersion(DescribeApplicationAvailableVersionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationBackupPolicy  DescribeApplicationBackupPolicyRequest
+     * @return DescribeApplicationBackupPolicyResponse
+     */
+    CompletableFuture<DescribeApplicationBackupPolicyResponse> describeApplicationBackupPolicy(DescribeApplicationBackupPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationBackups  DescribeApplicationBackupsRequest
+     * @return DescribeApplicationBackupsResponse
+     */
+    CompletableFuture<DescribeApplicationBackupsResponse> describeApplicationBackups(DescribeApplicationBackupsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationComponentPerformance  DescribeApplicationComponentPerformanceRequest
+     * @return DescribeApplicationComponentPerformanceResponse
+     */
+    CompletableFuture<DescribeApplicationComponentPerformanceResponse> describeApplicationComponentPerformance(DescribeApplicationComponentPerformanceRequest request);
+
+    /**
      * @param request the request parameters of DescribeApplicationLogs  DescribeApplicationLogsRequest
      * @return DescribeApplicationLogsResponse
      */
@@ -1458,6 +1534,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeApplicationSessionIdsResponse
      */
     CompletableFuture<DescribeApplicationSessionIdsResponse> describeApplicationSessionIds(DescribeApplicationSessionIdsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationSessionLogs  DescribeApplicationSessionLogsRequest
+     * @return DescribeApplicationSessionLogsResponse
+     */
+    CompletableFuture<DescribeApplicationSessionLogsResponse> describeApplicationSessionLogs(DescribeApplicationSessionLogsRequest request);
 
     /**
      * @param request the request parameters of DescribeApplicationUsage  DescribeApplicationUsageRequest
@@ -1542,6 +1624,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeBudgetPoliciesResponse
      */
     CompletableFuture<DescribeBudgetPoliciesResponse> describeBudgetPolicies(DescribeBudgetPoliciesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBudgetUsage  DescribeBudgetUsageRequest
+     * @return DescribeBudgetUsageResponse
+     */
+    CompletableFuture<DescribeBudgetUsageResponse> describeBudgetUsage(DescribeBudgetUsageRequest request);
 
     /**
      * @param request the request parameters of DescribeCharacterSetName  DescribeCharacterSetNameRequest
@@ -1881,6 +1969,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDasConfigResponse> describeDasConfig(DescribeDasConfigRequest request);
 
     /**
+     * @param request the request parameters of DescribeDataProcessJobAttribute  DescribeDataProcessJobAttributeRequest
+     * @return DescribeDataProcessJobAttributeResponse
+     */
+    CompletableFuture<DescribeDataProcessJobAttributeResponse> describeDataProcessJobAttribute(DescribeDataProcessJobAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDataProcessJobTemplates  DescribeDataProcessJobTemplatesRequest
+     * @return DescribeDataProcessJobTemplatesResponse
+     */
+    CompletableFuture<DescribeDataProcessJobTemplatesResponse> describeDataProcessJobTemplates(DescribeDataProcessJobTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDataProcessJobs  DescribeDataProcessJobsRequest
+     * @return DescribeDataProcessJobsResponse
+     */
+    CompletableFuture<DescribeDataProcessJobsResponse> describeDataProcessJobs(DescribeDataProcessJobsRequest request);
+
+    /**
      * @param request the request parameters of DescribeDatabases  DescribeDatabasesRequest
      * @return DescribeDatabasesResponse
      */
@@ -1933,6 +2039,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeExtensionsResponse
      */
     CompletableFuture<DescribeExtensionsResponse> describeExtensions(DescribeExtensionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeFileSystems  DescribeFileSystemsRequest
+     * @return DescribeFileSystemsResponse
+     */
+    CompletableFuture<DescribeFileSystemsResponse> describeFileSystems(DescribeFileSystemsRequest request);
 
     /**
      * @param request the request parameters of DescribeFirewallRules  DescribeFirewallRulesRequest
@@ -2008,6 +2120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHistoryEventsResponse> describeHistoryEvents(DescribeHistoryEventsRequest request);
 
     /**
+     * @param request the request parameters of DescribeHistoryEventsStat  DescribeHistoryEventsStatRequest
+     * @return DescribeHistoryEventsStatResponse
+     */
+    CompletableFuture<DescribeHistoryEventsStatResponse> describeHistoryEventsStat(DescribeHistoryEventsStatRequest request);
+
+    /**
      * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
      */
@@ -2020,6 +2138,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHistoryTasksStatResponse> describeHistoryTasksStat(DescribeHistoryTasksStatRequest request);
 
     /**
+     * @param request the request parameters of DescribeInspectionReportList  DescribeInspectionReportListRequest
+     * @return DescribeInspectionReportListResponse
+     */
+    CompletableFuture<DescribeInspectionReportListResponse> describeInspectionReportList(DescribeInspectionReportListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInspectionTaskAttribute  DescribeInspectionTaskAttributeRequest
+     * @return DescribeInspectionTaskAttributeResponse
+     */
+    CompletableFuture<DescribeInspectionTaskAttributeResponse> describeInspectionTaskAttribute(DescribeInspectionTaskAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInspectionTaskList  DescribeInspectionTaskListRequest
+     * @return DescribeInspectionTaskListResponse
+     */
+    CompletableFuture<DescribeInspectionTaskListResponse> describeInspectionTaskList(DescribeInspectionTaskListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInstanceReportAttribute  DescribeInstanceReportAttributeRequest
+     * @return DescribeInstanceReportAttributeResponse
+     */
+    CompletableFuture<DescribeInstanceReportAttributeResponse> describeInstanceReportAttribute(DescribeInstanceReportAttributeRequest request);
+
+    /**
      * @param request the request parameters of DescribeKBSyncLinkAttribute  DescribeKBSyncLinkAttributeRequest
      * @return DescribeKBSyncLinkAttributeResponse
      */
@@ -2030,6 +2172,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeKBSyncLinksResponse
      */
     CompletableFuture<DescribeKBSyncLinksResponse> describeKBSyncLinks(DescribeKBSyncLinksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeKVCacheInstanceAttribute  DescribeKVCacheInstanceAttributeRequest
+     * @return DescribeKVCacheInstanceAttributeResponse
+     */
+    CompletableFuture<DescribeKVCacheInstanceAttributeResponse> describeKVCacheInstanceAttribute(DescribeKVCacheInstanceAttributeRequest request);
 
     /**
      * @param request the request parameters of DescribeKVCacheInstances  DescribeKVCacheInstancesRequest
@@ -2295,10 +2443,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation queries all quota rules under a specific Polarlakebase instance and supports fuzzy matching by using the QuotaNameMatch and PatternMatch parameters.</li>
+     * <li>This API operation queries all quota rules under a specific Polarlakebase instance and supports fuzzy matching by using the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters.</li>
      * <li>The pagination feature is not yet public and will be available after the kernel is ready. Currently, there is no pagination limit on the returned results.</li>
-     * <li>PolarFsInstanceId is required and specifies the Polarlakebase instance to query.</li>
-     * <li>Optional parameters such as QuotaNameMatch and PatternMatch can be used to further filter the matching quota rules.</li>
+     * <li><code>PolarFsInstanceId</code> is required and specifies the Polarlakebase instance to query.</li>
+     * <li>Optional parameters such as <code>QuotaNameMatch</code> and <code>PatternMatch</code> can be used to further filter the quota rules that meet the conditions.</li>
      * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as the rule ID, name, description, and capacity limit.</li>
      * </ul>
      * 
@@ -2306,6 +2454,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePolarClawSkillTemplateResponse
      */
     CompletableFuture<DescribePolarClawSkillTemplateResponse> describePolarClawSkillTemplate(DescribePolarClawSkillTemplateRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarClawSkillTemplates  DescribePolarClawSkillTemplatesRequest
+     * @return DescribePolarClawSkillTemplatesResponse
+     */
+    CompletableFuture<DescribePolarClawSkillTemplatesResponse> describePolarClawSkillTemplates(DescribePolarClawSkillTemplatesRequest request);
 
     /**
      * @param request the request parameters of DescribePolarClawSkills  DescribePolarClawSkillsRequest
@@ -2357,6 +2511,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePolarFsObjectsResponse
      */
     CompletableFuture<DescribePolarFsObjectsResponse> describePolarFsObjects(DescribePolarFsObjectsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarFsPerformance  DescribePolarFsPerformanceRequest
+     * @return DescribePolarFsPerformanceResponse
+     */
+    CompletableFuture<DescribePolarFsPerformanceResponse> describePolarFsPerformance(DescribePolarFsPerformanceRequest request);
 
     /**
      * <b>description</b> :
@@ -2451,6 +2611,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeScheduleTasksResponse> describeScheduleTasks(DescribeScheduleTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeSearchModifyParameterLog  DescribeSearchModifyParameterLogRequest
+     * @return DescribeSearchModifyParameterLogResponse
+     */
+    CompletableFuture<DescribeSearchModifyParameterLogResponse> describeSearchModifyParameterLog(DescribeSearchModifyParameterLogRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSearchParameters  DescribeSearchParametersRequest
+     * @return DescribeSearchParametersResponse
+     */
+    CompletableFuture<DescribeSearchParametersResponse> describeSearchParameters(DescribeSearchParametersRequest request);
+
+    /**
      * @param request the request parameters of DescribeSharedBackups  DescribeSharedBackupsRequest
      * @return DescribeSharedBackupsResponse
      */
@@ -2491,7 +2663,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is only supported in regions where the endpoint is polardb.aliyuncs.com.</p>
+     * <p>This operation is supported only in regions where the endpoint is polardb.aliyuncs.com.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeStoragePlan  DescribeStoragePlanRequest
@@ -2722,7 +2894,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path starting from the root directory rather than a mount point path. Additionally, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when a rule is missing.</p>
+     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path starting from the root directory rather than a mount point path. Additionally, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when no rules exist.</p>
      * <h3>Important notes</h3>
      * <ul>
      * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
@@ -2887,6 +3059,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAgenticDBProjectHistoryRetentionResponse
      */
     CompletableFuture<ModifyAgenticDBProjectHistoryRetentionResponse> modifyAgenticDBProjectHistoryRetention(ModifyAgenticDBProjectHistoryRetentionRequest request);
+
+    /**
+     * @param request the request parameters of ModifyApplicationBackupPolicy  ModifyApplicationBackupPolicyRequest
+     * @return ModifyApplicationBackupPolicyResponse
+     */
+    CompletableFuture<ModifyApplicationBackupPolicyResponse> modifyApplicationBackupPolicy(ModifyApplicationBackupPolicyRequest request);
 
     /**
      * @param request the request parameters of ModifyApplicationDescription  ModifyApplicationDescriptionRequest
@@ -3396,10 +3574,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyScheduleTaskResponse> modifyScheduleTask(ModifyScheduleTaskRequest request);
 
     /**
+     * @param request the request parameters of ModifySearchParameters  ModifySearchParametersRequest
+     * @return ModifySearchParametersResponse
+     */
+    CompletableFuture<ModifySearchParametersResponse> modifySearchParameters(ModifySearchParametersRequest request);
+
+    /**
      * @param request the request parameters of ModifySecurityIps  ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
      */
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
+
+    /**
+     * @param request the request parameters of ModifyTaskInfo  ModifyTaskInfoRequest
+     * @return ModifyTaskInfoResponse
+     */
+    CompletableFuture<ModifyTaskInfoResponse> modifyTaskInfo(ModifyTaskInfoRequest request);
 
     /**
      * @param request the request parameters of MovePolarFsObjects  MovePolarFsObjectsRequest
@@ -3436,6 +3626,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RefreshDBClusterStorageUsageResponse
      */
     CompletableFuture<RefreshDBClusterStorageUsageResponse> refreshDBClusterStorageUsage(RefreshDBClusterStorageUsageRequest request);
+
+    /**
+     * @param request the request parameters of RefreshProxyLevel  RefreshProxyLevelRequest
+     * @return RefreshProxyLevelResponse
+     */
+    CompletableFuture<RefreshProxyLevelResponse> refreshProxyLevel(RefreshProxyLevelRequest request);
 
     /**
      * @param request the request parameters of RegisterAIDBClusterCustomModel  RegisterAIDBClusterCustomModelRequest
@@ -3587,6 +3783,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartPolarClawGatewayResponse> restartPolarClawGateway(RestartPolarClawGatewayRequest request);
 
     /**
+     * @param request the request parameters of RestoreApplicationByBackupSet  RestoreApplicationByBackupSetRequest
+     * @return RestoreApplicationByBackupSetResponse
+     */
+    CompletableFuture<RestoreApplicationByBackupSetResponse> restoreApplicationByBackupSet(RestoreApplicationByBackupSetRequest request);
+
+    /**
      * @param request the request parameters of RestoreTable  RestoreTableRequest
      * @return RestoreTableResponse
      */
@@ -3728,8 +3930,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>PolarFsInstanceId</code> is required and identifies the Polarlakebase instance to operate on.</li>
-     * <li>The <code>FilePathIds</code> parameter is also required. It accepts a list of file path IDs in string format. These IDs correspond to the specific file paths whose quota rules need to be deleted. Ensure that each provided ID is valid and belongs to the specified Polarlakebase instance.</li>
+     * <li>PolarFsInstanceId is required to identify the Polarlakebase instance to operate.</li>
+     * <li>The FilePathIds parameter is also required. It accepts a list of file path IDs in string format, which correspond to the specific file paths whose quota rules are to be deleted. Ensure that each provided ID is valid and belongs to the specified Polarlakebase instance.</li>
      * <li>A single API call can process quota deletion requests for multiple file paths. However, control the request size to avoid performance issues.</li>
      * </ul>
      * 

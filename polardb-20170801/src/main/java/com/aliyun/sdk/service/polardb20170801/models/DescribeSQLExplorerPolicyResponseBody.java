@@ -67,7 +67,7 @@ public class DescribeSQLExplorerPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3655211B-4D74-4E13-91E6-FF2AFE******</p>

@@ -115,7 +115,7 @@ public class DescribePolarClawSkillAssessmentRequest extends Request {
         } 
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-**************</p>

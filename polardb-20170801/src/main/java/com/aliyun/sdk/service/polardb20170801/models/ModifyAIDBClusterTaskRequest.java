@@ -171,7 +171,7 @@ public class ModifyAIDBClusterTaskRequest extends Request {
         /**
          * <p>The operation to perform. Valid values:</p>
          * <ul>
-         * <li><strong>stop</strong>: Stops training. This value applies only to tasks that are being trained.</li>
+         * <li><strong>stop</strong>: Stops training. This value takes effect only for tasks that are currently in the training state.</li>
          * </ul>
          * 
          * <strong>example:</strong>
