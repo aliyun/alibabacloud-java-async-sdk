@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigNetStatusRequest} extends {@link RequestModel}
  *
  * <p>ConfigNetStatusRequest</p>
@@ -18,7 +24,7 @@ public class ConfigNetStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < String > regions;
+    private java.util.List<String> regions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleId")
@@ -32,7 +38,7 @@ public class ConfigNetStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubNets")
-    private java.util.List < String > subNets;
+    private java.util.List<String> subNets;
 
     private ConfigNetStatusRequest(Builder builder) {
         super(builder);
@@ -51,7 +57,7 @@ public class ConfigNetStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,7 +72,7 @@ public class ConfigNetStatusRequest extends Request {
     /**
      * @return regions
      */
-    public java.util.List < String > getRegions() {
+    public java.util.List<String> getRegions() {
         return this.regions;
     }
 
@@ -87,16 +93,16 @@ public class ConfigNetStatusRequest extends Request {
     /**
      * @return subNets
      */
-    public java.util.List < String > getSubNets() {
+    public java.util.List<String> getSubNets() {
         return this.subNets;
     }
 
     public static final class Builder extends Request.Builder<ConfigNetStatusRequest, Builder> {
         private String net; 
-        private java.util.List < String > regions; 
+        private java.util.List<String> regions; 
         private String saleId; 
         private String status; 
-        private java.util.List < String > subNets; 
+        private java.util.List<String> subNets; 
 
         private Builder() {
             super();
@@ -112,7 +118,11 @@ public class ConfigNetStatusRequest extends Request {
         } 
 
         /**
-         * The CIDR block of the anti-DDoS diversion instance.
+         * <p>The CIDR block of the anti-DDoS diversion instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/22</p>
          */
         public Builder net(String net) {
             this.putQueryParameter("Net", net);
@@ -121,19 +131,23 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * The regions in which the CIDR block needs to be advertised or withdrawn from advertising. If you leave this parameter empty, the CIDR blocks in all regions are configured.
-         * <p>
-         * 
-         * >  You can call the [QueryNetList](~~2639086~~) operation to obtain the regions of the CIDR blocks.
+         * <p>The regions in which the CIDR block needs to be advertised or withdrawn from advertising. If you leave this parameter empty, the CIDR blocks in all regions are configured.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2639086.html">QueryNetList</a> operation to obtain the regions of the CIDR blocks.</p>
+         * </blockquote>
          */
-        public Builder regions(java.util.List < String > regions) {
+        public Builder regions(java.util.List<String> regions) {
             this.putQueryParameter("Regions", regions);
             this.regions = regions;
             return this;
         }
 
         /**
-         * The ID of the anti-DDoS diversion instance.
+         * <p>The ID of the anti-DDoS diversion instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddos_diversion_public_cn-xxxxxxxxxxxxx</p>
          */
         public Builder saleId(String saleId) {
             this.putQueryParameter("SaleId", saleId);
@@ -142,11 +156,17 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * The status of the CIDR block. Valid values:
-         * <p>
+         * <p>The status of the CIDR block. Valid values:</p>
+         * <ul>
+         * <li><p>enable: advertises the CIDR block.</p>
+         * </li>
+         * <li><p>disable: withdraws the advertising of the CIDR block.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   enable: advertises the CIDR block.
-         * *   disable: withdraws the advertising of the CIDR block.
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -155,9 +175,9 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * The subnet CIDR blocks of the CIDR block.
+         * <p>The subnet CIDR blocks of the CIDR block.</p>
          */
-        public Builder subNets(java.util.List < String > subNets) {
+        public Builder subNets(java.util.List<String> subNets) {
             this.putQueryParameter("SubNets", subNets);
             this.subNets = subNets;
             return this;

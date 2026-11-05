@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryNetListRequest} extends {@link RequestModel}
  *
  * <p>QueryNetListRequest</p>
@@ -53,7 +59,7 @@ public class QueryNetListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +129,10 @@ public class QueryNetListRequest extends Request {
         } 
 
         /**
-         * The primary CIDR block of the anti-DDoS diversion instance for which an extended CIDR block is configured. If no extended CIDR blocks are configured for the anti-DDoS diversion instance, leave this parameter empty.
+         * <p>The primary CIDR block of the anti-DDoS diversion instance for which an extended CIDR block is configured. If no extended CIDR blocks are configured for the anti-DDoS diversion instance, leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/22</p>
          */
         public Builder mainNet(String mainNet) {
             this.putQueryParameter("MainNet", mainNet);
@@ -132,11 +141,16 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * The scheduling mode. Valid values:
-         * <p>
+         * <p>The scheduling mode. Valid values:</p>
+         * <ul>
+         * <li><p>manual: manual scheduling.</p>
+         * </li>
+         * <li><p>netflow-auto: automatic scheduling.</p>
+         * </li>
+         * </ul>
          * 
-         * - manual: manual scheduling
-         * - netflow-auto: automatic scheduling
+         * <strong>example:</strong>
+         * <p>netflow-auto</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -145,11 +159,13 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * The CIDR block of the anti-DDoS diversion instance.
-         * <p>
+         * <p>The CIDR block of the anti-DDoS diversion instance.</p>
+         * <blockquote>
+         * <p>If no extended CIDR blocks are configured for the anti-DDoS diversion instance, this parameter specifies the CIDR block of the instance. If an extended CIDR block is configured for the anti-DDoS diversion instance, this parameter specifies the extended CIDR block that is configured for the instance. If this parameter is specified, the MainNet parameter is required.</p>
+         * </blockquote>
          * 
-         * 
-         * > If no extended CIDR blocks are configured for the anti-DDoS diversion instance, this parameter specifies the CIDR block of the instance. If an extended CIDR block is configured for the anti-DDoS diversion instance, this parameter specifies the extended CIDR block that is configured for the instance. If this parameter is specified, the MainNet parameter is required.
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/24</p>
          */
         public Builder net(String net) {
             this.putQueryParameter("Net", net);
@@ -158,7 +174,10 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 100.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder num(Long num) {
             this.putQueryParameter("Num", num);
@@ -167,7 +186,10 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -176,7 +198,10 @@ public class QueryNetListRequest extends Request {
         }
 
         /**
-         * The ID of the anti-DDoS diversion instance.
+         * <p>The ID of the anti-DDoS diversion instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddos_diversion_public_cn-xxxxxxxxxxxxx</p>
          */
         public Builder saleId(String saleId) {
             this.putQueryParameter("SaleId", saleId);

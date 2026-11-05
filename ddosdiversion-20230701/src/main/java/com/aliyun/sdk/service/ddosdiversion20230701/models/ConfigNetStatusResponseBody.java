@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigNetStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ConfigNetStatusResponseBody</p>
@@ -34,6 +40,10 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -60,12 +70,26 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ConfigNetStatusResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <ul>
+         * <li><p><strong>200</strong>: The request was successful.</p>
+         * </li>
+         * <li><p>Other codes: The request failed.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **200**: The request was successful.
-         * *   Other codes: The request failed.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -73,7 +97,10 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -81,7 +108,10 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B0949F09-B9C1-1D5E-8F27-0A5BF3CD5D95</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

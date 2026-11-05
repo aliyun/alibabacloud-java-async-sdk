@@ -29,7 +29,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "DdosDiversion";
         this.version = "2023-07-01";
-        this.endpointRule = "";
+        this.endpointRule = "regional";
         this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ConfigNetStatus  ConfigNetStatusRequest
+     * @return ConfigNetStatusResponse
+     */
     @Override
     public CompletableFuture<ConfigNetStatusResponse> configNetStatus(ConfigNetStatusRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstance  ListInstanceRequest
+     * @return ListInstanceResponse
+     */
     @Override
     public CompletableFuture<ListInstanceResponse> listInstance(ListInstanceRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryNetList  QueryNetListRequest
+     * @return QueryNetListResponse
+     */
     @Override
     public CompletableFuture<QueryNetListResponse> queryNetList(QueryNetListRequest request) {
         try {

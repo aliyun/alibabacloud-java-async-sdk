@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceRequest</p>
@@ -48,7 +54,7 @@ public class ListInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -109,7 +115,10 @@ public class ListInstanceRequest extends Request {
         } 
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test instance.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -118,7 +127,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 100.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder num(Long num) {
             this.putQueryParameter("Num", num);
@@ -127,7 +139,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -136,7 +151,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the anti-DDoS diversion instance.
+         * <p>The ID of the diversion instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddos_diversion_public_cn-xxxxxxxxxxxxx</p>
          */
         public Builder saleId(String saleId) {
             this.putQueryParameter("SaleId", saleId);
@@ -145,13 +163,16 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The status of the instance. Valid values:
-         * <p>
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li>normal: The instance is running normally.</li>
+         * <li>expired: The instance has expired.</li>
+         * <li>deleting: The instance is being deleted.</li>
+         * <li>stopped: The instance is stopped.</li>
+         * </ul>
          * 
-         * - normal
-         * - expired
-         * - deleting
-         * - stopped
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -19,10 +19,22 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of ConfigNetStatus  ConfigNetStatusRequest
+     * @return ConfigNetStatusResponse
+     */
     CompletableFuture<ConfigNetStatusResponse> configNetStatus(ConfigNetStatusRequest request);
 
+    /**
+     * @param request the request parameters of ListInstance  ListInstanceRequest
+     * @return ListInstanceResponse
+     */
     CompletableFuture<ListInstanceResponse> listInstance(ListInstanceRequest request);
 
+    /**
+     * @param request the request parameters of QueryNetList  QueryNetListRequest
+     * @return QueryNetListResponse
+     */
     CompletableFuture<QueryNetListResponse> queryNetList(QueryNetListRequest request);
 
 }
