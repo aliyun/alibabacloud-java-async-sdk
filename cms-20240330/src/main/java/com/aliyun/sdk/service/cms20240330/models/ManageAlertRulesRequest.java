@@ -21,6 +21,10 @@ public class ManageAlertRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
     private ManageAlertRulesUnifiedActionInput body;
@@ -32,6 +36,7 @@ public class ManageAlertRulesRequest extends Request {
     private ManageAlertRulesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.dryRun = builder.dryRun;
         this.body = builder.body;
         this.callSource = builder.callSource;
     }
@@ -57,6 +62,13 @@ public class ManageAlertRulesRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return body
      */
     public ManageAlertRulesUnifiedActionInput getBody() {
@@ -72,6 +84,7 @@ public class ManageAlertRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ManageAlertRulesRequest, Builder> {
         private String regionId; 
+        private Boolean dryRun; 
         private ManageAlertRulesUnifiedActionInput body; 
         private String callSource; 
 
@@ -82,6 +95,7 @@ public class ManageAlertRulesRequest extends Request {
         private Builder(ManageAlertRulesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.dryRun = request.dryRun;
             this.body = request.body;
             this.callSource = request.callSource;
         } 
@@ -96,7 +110,16 @@ public class ManageAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The aggregated request body for managing alert rules. This body is shared by the CREATE, UPDATE, PATCH, and BATCH_DELETE operations. Specify fields based on the action.</p>
+         * <p>Specifies whether to perform a dry run. A dry run only validates the request and returns the validation result in dryRunResult without writing to the database, triggering template synchronization, or causing other side effects. Default value: false.</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The aggregated request body for managing alert rules. This body is shared by the CREATE, UPDATE, PATCH, and BATCH_DELETE operations. Specify the fields based on the action.</p>
          */
         public Builder body(ManageAlertRulesUnifiedActionInput body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -106,7 +129,7 @@ public class ManageAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The call source identifier, which identifies the internal integration channel to which the caller belongs (such as bailian, integrationCenter, or managed_service_for_prometheus). This parameter is used to isolate traffic from different sources. You do not need to specify this parameter for common OpenAPI calls.</p>
+         * <p>The call source identifier. It identifies the internal integration channel to which the caller belongs, such as bailian, integrationCenter, or managed_service_for_prometheus, and is used to isolate traffic from different sources. Leave this parameter empty for regular OpenAPI calls.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian</p>

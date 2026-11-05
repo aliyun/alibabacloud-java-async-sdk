@@ -114,7 +114,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records returned for the current request.</p>
+         * <p>The maximum number of entries returned for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -147,7 +147,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of notification history records that meet the query conditions.</p>
+         * <p>The total number of notification history entries that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -464,7 +464,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
              * <p>The list of contacts. Multiple contacts are separated by commas.</p>
              * 
              * <strong>example:</strong>
-             * <p>Zhang San, Li Si</p>
+             * <p>Zhang San,Li Si</p>
              */
             public Builder contacts(String contacts) {
                 this.contacts = contacts;
@@ -475,7 +475,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
              * <p>The list of contact groups. Multiple contact groups are separated by commas.</p>
              * 
              * <strong>example:</strong>
-             * <p>O&amp;M group, on-call group</p>
+             * <p>O&amp;M group,On-call group</p>
              */
             public Builder groups(String groups) {
                 this.groups = groups;
@@ -507,8 +507,8 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the notification record has no actual delivery channel. Valid values:</p>
              * <ul>
-             * <li>true: No channel. The notifyResult is NO_CHANNEL.</li>
-             * <li>false: Has an actual delivery channel.</li>
+             * <li>true: the record has no channel, which means the notifyResult is NO_CHANNEL.</li>
+             * <li>false: the record has an actual delivery channel.</li>
              * </ul>
              */
             public Builder noChannel(Boolean noChannel) {
@@ -550,7 +550,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The notification delivery result details. This is the original response content returned by the channel, such as the API response from a DingTalk or Lark bot.</p>
+             * <p>The details of the notification delivery result. This is the raw response content returned by the channel, such as the API response from a DingTalk or Lark bot.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}</p>
@@ -585,9 +585,9 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             /**
              * <p>The notification delivery type. Valid values:</p>
              * <ul>
-             * <li>SUBSCRIBE: Subscription notification.</li>
-             * <li>DIRECT: Direct event notification.</li>
-             * <li>ITSM: Ticket or action notification.</li>
+             * <li>SUBSCRIBE: subscription notifications</li>
+             * <li>DIRECT: direct event notifications</li>
+             * <li>ITSM: ticket or action notifications</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -601,10 +601,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             /**
              * <p>The alert severity. Valid values:</p>
              * <ul>
-             * <li>CRITICAL: Critical.</li>
-             * <li>ERROR: Error.</li>
-             * <li>WARNING: Warning.</li>
-             * <li>INFO: Info.</li>
+             * <li>CRITICAL: critical</li>
+             * <li>ERROR: error</li>
+             * <li>WARNING: warning</li>
+             * <li>INFO: info</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -618,15 +618,15 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             /**
              * <p>The incident status. Valid values:</p>
              * <ul>
-             * <li>TRIGGERED: Triggered.</li>
-             * <li>RESOLVED: Resolved.</li>
-             * <li>ACK: Acknowledged.</li>
-             * <li>ESCALATED: Escalated.</li>
-             * <li>MANUAL_RESOLVED: Manually resolved.</li>
-             * <li>TIMEOUT: Automatically resolved due to timeout.</li>
-             * <li>RETRIGGERED: Retriggered.</li>
-             * <li>PARTIAL_RESOLVED: Partially resolved.</li>
-             * <li>INVALID: Invalid.</li>
+             * <li>TRIGGERED: triggered</li>
+             * <li>RESOLVED: resolved</li>
+             * <li>ACK: acknowledged</li>
+             * <li>ESCALATED: escalated</li>
+             * <li>MANUAL_RESOLVED: manually resolved</li>
+             * <li>TIMEOUT: automatically resolved due to timeout</li>
+             * <li>RETRIGGERED: retriggered</li>
+             * <li>PARTIAL_RESOLVED: partially resolved</li>
+             * <li>INVALID: invalid</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -662,8 +662,8 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the notification was delivered successfully. Valid values:</p>
              * <ul>
-             * <li>true: Delivered successfully.</li>
-             * <li>false: Delivery failed.</li>
+             * <li>true: the delivery was successful.</li>
+             * <li>false: the delivery failed.</li>
              * </ul>
              */
             public Builder success(Boolean success) {
@@ -672,7 +672,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the notification record. The value is a UNIX timestamp in seconds.</p>
+             * <p>The time when the notification was recorded. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1729400000</p>

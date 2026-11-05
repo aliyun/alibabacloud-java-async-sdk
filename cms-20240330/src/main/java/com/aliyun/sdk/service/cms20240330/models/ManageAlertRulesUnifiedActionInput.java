@@ -414,7 +414,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The business source. Valid values include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls. Pass this field as needed for CREATE, UPDATE, and PATCH actions.</p>
+         * <p>The business source. Valid values include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls. Optional. Pass as needed for CREATE, UPDATE, and PATCH actions.</p>
          * 
          * <strong>example:</strong>
          * <p>示例值</p>
@@ -425,7 +425,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The condition aggregation configuration.</p>
+         * <p>The aggregated condition configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;PROMETHEUS_SIMPLE_CONDITION&quot;,&quot;durationSecs&quot;:0,&quot;severity&quot;:&quot;CRITICAL&quot;}</p>
@@ -447,7 +447,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The data source aggregation configuration.</p>
+         * <p>The aggregated datasource configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;PROMETHEUS&quot;,&quot;instanceId&quot;:&quot;prom-cn-hangzhou-xxxxx&quot;}</p>
@@ -469,7 +469,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The alert drill evaluation time in Unix milliseconds. This field is required by the backend when drillMode is ONE_SHOT. The time cannot be later than the current time or earlier than 90 days ago.</p>
+         * <p>The alert drill evaluation time in Unix milliseconds. Required by the backend when drillMode is ONE_SHOT. The time cannot be later than the current time and cannot be more than 90 days in the past.</p>
          * 
          * <strong>example:</strong>
          * <p>1783728000000</p>
@@ -480,7 +480,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The alert drill mode. This field is required by the backend when the action is DRILL_ALERT. Valid values: ONE_SHOT specifies a single point in time to simulate a complete lifecycle consisting of three events: OCCURRED, PERSISTENT, and RECOVERED. TIME_TRAVEL specifies a time range to simulate the lifecycle in multiple rounds based on the rule scheduling interval.</p>
+         * <p>The alert drill mode. Required by the backend when the action is DRILL_ALERT. Valid values: ONE_SHOT: specifies a single point in time to simulate a complete lifecycle consisting of three events (OCCURRED, PERSISTENT, and RECOVERED). TIME_TRAVEL: specifies a time range to simulate the lifecycle round by round based on the rule scheduling interval (OCCURRED, PERSISTENT, ..., RECOVERED).</p>
          * 
          * <strong>example:</strong>
          * <p>ONE_SHOT</p>
@@ -491,10 +491,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The alert drill time range in Unix milliseconds. This field is required by the backend when drillMode is TIME_TRAVEL. The endTime must be later than the startTime and cannot be later than the current time. The lifecycle is simulated in multiple rounds based on the rule scheduling interval. The maximum number of rounds is 500. If the limit is exceeded, the backend returns a 400 error.</p>
+         * <p>The alert drill time range in Unix milliseconds. Required by the backend when drillMode is TIME_TRAVEL. The endTime must be later than the startTime and cannot be later than the current time. The span between endTime and startTime cannot exceed 1 hour; otherwise, the backend returns a 400 error. The simulation runs round by round based on the rule scheduling interval, with a maximum of 500 rounds; otherwise, the backend returns a 400 error.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;startTime&quot;:1783728000000,&quot;endTime&quot;:1783814400000}</p>
+         * <p>{&quot;startTime&quot;:1783728000000,&quot;endTime&quot;:1783731600000}</p>
          */
         public Builder drillTimeRange(DrillTimeRange drillTimeRange) {
             this.drillTimeRange = drillTimeRange;
@@ -524,7 +524,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The notification aggregation configuration.</p>
+         * <p>The aggregated notification configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;DIRECT_NOTIFY&quot;,&quot;channels&quot;:[{&quot;type&quot;:&quot;GROUP&quot;,&quot;identifiers&quot;:[&quot;<contact-group-id>&quot;]}]}</p>
@@ -568,7 +568,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The query aggregation configuration.</p>
+         * <p>The aggregated query configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;PROMETHEUS_SINGLE_QUERY&quot;,&quot;expr&quot;:&quot;up &gt; 0&quot;}</p>
@@ -579,7 +579,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The root cause analysis (RCA) configuration. Pass this field as needed for CREATE, UPDATE, and PATCH actions.</p>
+         * <p>The root cause analysis (RCA) configuration. Optional. Pass as needed for CREATE, UPDATE, and PATCH actions.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enabled&quot;:false}</p>
@@ -601,7 +601,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The schedule aggregation configuration.</p>
+         * <p>The aggregated schedule configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;FIXED&quot;,&quot;intervalSecs&quot;:60}</p>
@@ -612,7 +612,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The UUID of the rule. This field is required for UPDATE and PATCH actions.</p>
+         * <p>The UUID of the rule. Required for UPDATE and PATCH actions.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx-xxx-xxx</p>
@@ -623,7 +623,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The list of UUIDs for the rules to be deleted. This is used for the BATCH_DELETE action.</p>
+         * <p>The list of UUIDs of the rules to be deleted in a BATCH_DELETE action.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;cms_v2_81d01768-fee9-459f-af49-ab2704f1db2b&quot;]</p>
@@ -634,7 +634,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>The workspace ID. This field is required for CREATE, UPDATE, PATCH, DELETE, ENABLE, DISABLE, BATCH_DELETE, BATCH_ENABLE, and BATCH_DISABLE actions. It identifies the CloudMonitor workspace to which the rule belongs.</p>
+         * <p>The workspace ID. Required for CREATE, UPDATE, PATCH, DELETE, ENABLE, DISABLE, BATCH_DELETE, BATCH_ENABLE, and BATCH_DISABLE actions. It identifies the CloudMonitor workspace to which the rule belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
@@ -703,10 +703,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
             } 
 
             /**
-             * <p>The drill end time in Unix milliseconds. The end time must be later than the start time.</p>
+             * <p>The drill end time in Unix milliseconds. It must be later than the start time, and the span between the start time and end time cannot exceed 1 hour.</p>
              * 
              * <strong>example:</strong>
-             * <p>1783814400000</p>
+             * <p>1783731600000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;

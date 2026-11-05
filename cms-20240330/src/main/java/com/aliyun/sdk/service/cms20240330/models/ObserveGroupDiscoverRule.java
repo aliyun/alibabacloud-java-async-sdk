@@ -29,6 +29,9 @@ public class ObserveGroupDiscoverRule extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private Long gmtCreate;
 
+    @com.aliyun.core.annotation.NameInMap("includeRelatedEntities")
+    private Boolean includeRelatedEntities;
+
     @com.aliyun.core.annotation.NameInMap("instanceIds")
     private java.util.List<String> instanceIds;
 
@@ -64,6 +67,7 @@ public class ObserveGroupDiscoverRule extends TeaModel {
         this.entityType = builder.entityType;
         this.entityTypes = builder.entityTypes;
         this.gmtCreate = builder.gmtCreate;
+        this.includeRelatedEntities = builder.includeRelatedEntities;
         this.instanceIds = builder.instanceIds;
         this.nameRules = builder.nameRules;
         this.regionIds = builder.regionIds;
@@ -114,6 +118,13 @@ public class ObserveGroupDiscoverRule extends TeaModel {
      */
     public Long getGmtCreate() {
         return this.gmtCreate;
+    }
+
+    /**
+     * @return includeRelatedEntities
+     */
+    public Boolean getIncludeRelatedEntities() {
+        return this.includeRelatedEntities;
     }
 
     /**
@@ -191,6 +202,7 @@ public class ObserveGroupDiscoverRule extends TeaModel {
         private String entityType; 
         private java.util.List<String> entityTypes; 
         private Long gmtCreate; 
+        private Boolean includeRelatedEntities; 
         private java.util.List<String> instanceIds; 
         private NameRules nameRules; 
         private java.util.List<String> regionIds; 
@@ -210,6 +222,7 @@ public class ObserveGroupDiscoverRule extends TeaModel {
             this.entityType = model.entityType;
             this.entityTypes = model.entityTypes;
             this.gmtCreate = model.gmtCreate;
+            this.includeRelatedEntities = model.includeRelatedEntities;
             this.instanceIds = model.instanceIds;
             this.nameRules = model.nameRules;
             this.regionIds = model.regionIds;
@@ -251,6 +264,14 @@ public class ObserveGroupDiscoverRule extends TeaModel {
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
+            return this;
+        }
+
+        /**
+         * <p>是否自动纳管同 domain、同实体 group 且由指定关系直接出边关联的子实体，历史缺省为 false。</p>
+         */
+        public Builder includeRelatedEntities(Boolean includeRelatedEntities) {
+            this.includeRelatedEntities = includeRelatedEntities;
             return this;
         }
 

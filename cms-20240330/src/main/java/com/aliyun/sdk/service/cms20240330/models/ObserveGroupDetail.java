@@ -65,8 +65,14 @@ public class ObserveGroupDetail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("ruleCounts")
+    private java.util.List<ObserveGroupRuleCount> ruleCounts;
+
     @com.aliyun.core.annotation.NameInMap("sourceOrigin")
     private String sourceOrigin;
+
+    @com.aliyun.core.annotation.NameInMap("sourceReadOnly")
+    private Boolean sourceReadOnly;
 
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tags> tags;
@@ -91,7 +97,9 @@ public class ObserveGroupDetail extends TeaModel {
         this.originGroupId = builder.originGroupId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.ruleCounts = builder.ruleCounts;
         this.sourceOrigin = builder.sourceOrigin;
+        this.sourceReadOnly = builder.sourceReadOnly;
         this.tags = builder.tags;
         this.workspaceId = builder.workspaceId;
     }
@@ -221,10 +229,24 @@ public class ObserveGroupDetail extends TeaModel {
     }
 
     /**
+     * @return ruleCounts
+     */
+    public java.util.List<ObserveGroupRuleCount> getRuleCounts() {
+        return this.ruleCounts;
+    }
+
+    /**
      * @return sourceOrigin
      */
     public String getSourceOrigin() {
         return this.sourceOrigin;
+    }
+
+    /**
+     * @return sourceReadOnly
+     */
+    public Boolean getSourceReadOnly() {
+        return this.sourceReadOnly;
     }
 
     /**
@@ -258,7 +280,9 @@ public class ObserveGroupDetail extends TeaModel {
         private String originGroupId; 
         private String regionId; 
         private String resourceGroupId; 
+        private java.util.List<ObserveGroupRuleCount> ruleCounts; 
         private String sourceOrigin; 
+        private Boolean sourceReadOnly; 
         private java.util.List<Tags> tags; 
         private String workspaceId; 
 
@@ -282,7 +306,9 @@ public class ObserveGroupDetail extends TeaModel {
             this.originGroupId = model.originGroupId;
             this.regionId = model.regionId;
             this.resourceGroupId = model.resourceGroupId;
+            this.ruleCounts = model.ruleCounts;
             this.sourceOrigin = model.sourceOrigin;
+            this.sourceReadOnly = model.sourceReadOnly;
             this.tags = model.tags;
             this.workspaceId = model.workspaceId;
         } 
@@ -416,10 +442,26 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
+         * <p>各纳管规则的主实体、关联子实体及总数。</p>
+         */
+        public Builder ruleCounts(java.util.List<ObserveGroupRuleCount> ruleCounts) {
+            this.ruleCounts = ruleCounts;
+            return this;
+        }
+
+        /**
          * <p>数据来源：native_2_0（2.0 原生）/ synced_from_1_0（从 1.0 应用分组同步）。</p>
          */
         public Builder sourceOrigin(String sourceOrigin) {
             this.sourceOrigin = sourceOrigin;
+            return this;
+        }
+
+        /**
+         * <p>源云监控 1.0 分组是否已持久只读，true 时目标 2.0 分组可独立维护。</p>
+         */
+        public Builder sourceReadOnly(Boolean sourceReadOnly) {
+            this.sourceReadOnly = sourceReadOnly;
             return this;
         }
 
@@ -464,11 +506,19 @@ public class ObserveGroupDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("entityType")
         private String entityType;
 
+        @com.aliyun.core.annotation.NameInMap("mainCount")
+        private Long mainCount;
+
+        @com.aliyun.core.annotation.NameInMap("relatedCount")
+        private Long relatedCount;
+
         private EntitySummaries(Builder builder) {
             this.entityCategory = builder.entityCategory;
             this.entityCount = builder.entityCount;
             this.entityDomain = builder.entityDomain;
             this.entityType = builder.entityType;
+            this.mainCount = builder.mainCount;
+            this.relatedCount = builder.relatedCount;
         }
 
         public static Builder builder() {
@@ -507,11 +557,27 @@ public class ObserveGroupDetail extends TeaModel {
             return this.entityType;
         }
 
+        /**
+         * @return mainCount
+         */
+        public Long getMainCount() {
+            return this.mainCount;
+        }
+
+        /**
+         * @return relatedCount
+         */
+        public Long getRelatedCount() {
+            return this.relatedCount;
+        }
+
         public static final class Builder {
             private String entityCategory; 
             private Integer entityCount; 
             private String entityDomain; 
             private String entityType; 
+            private Long mainCount; 
+            private Long relatedCount; 
 
             private Builder() {
             } 
@@ -521,6 +587,8 @@ public class ObserveGroupDetail extends TeaModel {
                 this.entityCount = model.entityCount;
                 this.entityDomain = model.entityDomain;
                 this.entityType = model.entityType;
+                this.mainCount = model.mainCount;
+                this.relatedCount = model.relatedCount;
             } 
 
             /**
@@ -552,6 +620,22 @@ public class ObserveGroupDetail extends TeaModel {
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
+                return this;
+            }
+
+            /**
+             * <p>该类型主实体数量。</p>
+             */
+            public Builder mainCount(Long mainCount) {
+                this.mainCount = mainCount;
+                return this;
+            }
+
+            /**
+             * <p>该类型关联子实体数量。</p>
+             */
+            public Builder relatedCount(Long relatedCount) {
+                this.relatedCount = relatedCount;
                 return this;
             }
 

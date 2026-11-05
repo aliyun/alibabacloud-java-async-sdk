@@ -26,6 +26,12 @@ public class ObserveGroupInstance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("entityDomain")
     private String entityDomain;
 
+    @com.aliyun.core.annotation.NameInMap("entityId")
+    private String entityId;
+
+    @com.aliyun.core.annotation.NameInMap("entityRole")
+    private String entityRole;
+
     @com.aliyun.core.annotation.NameInMap("entityType")
     private String entityType;
 
@@ -54,6 +60,8 @@ public class ObserveGroupInstance extends TeaModel {
         this.category = builder.category;
         this.dimension = builder.dimension;
         this.entityDomain = builder.entityDomain;
+        this.entityId = builder.entityId;
+        this.entityRole = builder.entityRole;
         this.entityType = builder.entityType;
         this.groupId = builder.groupId;
         this.instanceId = builder.instanceId;
@@ -95,6 +103,20 @@ public class ObserveGroupInstance extends TeaModel {
      */
     public String getEntityDomain() {
         return this.entityDomain;
+    }
+
+    /**
+     * @return entityId
+     */
+    public String getEntityId() {
+        return this.entityId;
+    }
+
+    /**
+     * @return entityRole
+     */
+    public String getEntityRole() {
+        return this.entityRole;
     }
 
     /**
@@ -157,6 +179,8 @@ public class ObserveGroupInstance extends TeaModel {
         private String category; 
         private java.util.Map<String, String> dimension; 
         private String entityDomain; 
+        private String entityId; 
+        private String entityRole; 
         private String entityType; 
         private String groupId; 
         private String instanceId; 
@@ -173,6 +197,8 @@ public class ObserveGroupInstance extends TeaModel {
             this.category = model.category;
             this.dimension = model.dimension;
             this.entityDomain = model.entityDomain;
+            this.entityId = model.entityId;
+            this.entityRole = model.entityRole;
             this.entityType = model.entityType;
             this.groupId = model.groupId;
             this.instanceId = model.instanceId;
@@ -204,6 +230,22 @@ public class ObserveGroupInstance extends TeaModel {
          */
         public Builder entityDomain(String entityDomain) {
             this.entityDomain = entityDomain;
+            return this;
+        }
+
+        /**
+         * <p>UModel 实体 ID，与实体域和类型共同标识成员。</p>
+         */
+        public Builder entityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+
+        /**
+         * <p>实体角色，main 为主实体、related 为关联子实体。</p>
+         */
+        public Builder entityRole(String entityRole) {
+            this.entityRole = entityRole;
             return this;
         }
 

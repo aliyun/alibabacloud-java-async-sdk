@@ -71,6 +71,9 @@ public class ObserveGroup extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sourceOrigin")
     private String sourceOrigin;
 
+    @com.aliyun.core.annotation.NameInMap("sourceReadOnly")
+    private Boolean sourceReadOnly;
+
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tags> tags;
 
@@ -96,6 +99,7 @@ public class ObserveGroup extends TeaModel {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.sourceOrigin = builder.sourceOrigin;
+        this.sourceReadOnly = builder.sourceReadOnly;
         this.tags = builder.tags;
         this.workspaceId = builder.workspaceId;
     }
@@ -239,6 +243,13 @@ public class ObserveGroup extends TeaModel {
     }
 
     /**
+     * @return sourceReadOnly
+     */
+    public Boolean getSourceReadOnly() {
+        return this.sourceReadOnly;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tags> getTags() {
@@ -271,6 +282,7 @@ public class ObserveGroup extends TeaModel {
         private String regionId; 
         private String resourceGroupId; 
         private String sourceOrigin; 
+        private Boolean sourceReadOnly; 
         private java.util.List<Tags> tags; 
         private String workspaceId; 
 
@@ -296,6 +308,7 @@ public class ObserveGroup extends TeaModel {
             this.regionId = model.regionId;
             this.resourceGroupId = model.resourceGroupId;
             this.sourceOrigin = model.sourceOrigin;
+            this.sourceReadOnly = model.sourceReadOnly;
             this.tags = model.tags;
             this.workspaceId = model.workspaceId;
         } 
@@ -441,6 +454,14 @@ public class ObserveGroup extends TeaModel {
          */
         public Builder sourceOrigin(String sourceOrigin) {
             this.sourceOrigin = sourceOrigin;
+            return this;
+        }
+
+        /**
+         * <p>源云监控 1.0 分组是否已持久只读，true 时目标 2.0 分组可独立维护。</p>
+         */
+        public Builder sourceReadOnly(Boolean sourceReadOnly) {
+            this.sourceReadOnly = sourceReadOnly;
             return this;
         }
 

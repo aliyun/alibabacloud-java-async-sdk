@@ -67,7 +67,10 @@ public class DeleteAlertNotifyTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * deletedCount.
+         * <p>The actual number of deleted records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deletedCount(Integer deletedCount) {
             this.deletedCount = deletedCount;
