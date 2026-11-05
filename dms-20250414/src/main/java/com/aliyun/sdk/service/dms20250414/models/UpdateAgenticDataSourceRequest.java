@@ -106,6 +106,18 @@ public class UpdateAgenticDataSourceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UseSsl")
     private Integer useSsl;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private String zoneId;
+
     private UpdateAgenticDataSourceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -130,6 +142,9 @@ public class UpdateAgenticDataSourceRequest extends Request {
         this.snowflakeWarehouse = builder.snowflakeWarehouse;
         this.syncAlias = builder.syncAlias;
         this.useSsl = builder.useSsl;
+        this.vSwitchId = builder.vSwitchId;
+        this.vpcId = builder.vpcId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -299,6 +314,27 @@ public class UpdateAgenticDataSourceRequest extends Request {
         return this.useSsl;
     }
 
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAgenticDataSourceRequest, Builder> {
         private String regionId; 
         private String adbSparkResourceGroup; 
@@ -322,6 +358,9 @@ public class UpdateAgenticDataSourceRequest extends Request {
         private String snowflakeWarehouse; 
         private Integer syncAlias; 
         private Integer useSsl; 
+        private String vSwitchId; 
+        private String vpcId; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -351,6 +390,9 @@ public class UpdateAgenticDataSourceRequest extends Request {
             this.snowflakeWarehouse = request.snowflakeWarehouse;
             this.syncAlias = request.syncAlias;
             this.useSsl = request.useSsl;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -363,7 +405,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The name of the AnalyticDB for MySQL Spark resource group. This parameter takes effect only when DbType is set to ADB_MYSQL_SPARK. If this parameter is not specified, the original resource group is retained. This parameter is independent of Schema (database name) and they cannot replace each other.</p>
+         * <p>The name of the AnalyticDB for MySQL Spark resource group. This parameter takes effect only when DbType is set to ADB_MYSQL_SPARK. If you do not specify this parameter, the original resource group is retained. This parameter is independent of Schema (database name) and they cannot be used interchangeably.</p>
          * 
          * <strong>example:</strong>
          * <p>resourceGroup1</p>
@@ -375,7 +417,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The new display name of the data source. If this parameter is not specified, the value is not updated.</p>
+         * <p>The new display name of the data source. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>demo_mysql</p>
@@ -387,7 +429,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The new logon username. If this parameter is not specified, the value is not updated.</p>
+         * <p>The new logon username. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>db_user</p>
@@ -399,7 +441,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The new logon password. If this parameter is not specified, the value is not updated. This is sensitive information. Do not record or disclose it.</p>
+         * <p>The new logon password. If you do not specify this parameter, the value is not updated. This is sensitive information. Do not record or disclose it.</p>
          * 
          * <strong>example:</strong>
          * <p>P@ss****</p>
@@ -413,11 +455,11 @@ public class UpdateAgenticDataSourceRequest extends Request {
         /**
          * <p>Optional. The authentication type. Valid values:</p>
          * <ul>
-         * <li>-1: no authentication required</li>
-         * <li>0: username and password</li>
-         * <li>1: password only</li>
-         * <li>2: password-free
-         * If this parameter is not specified, the value is not updated.</li>
+         * <li>-1: No authentication required.</li>
+         * <li>0: Username and password.</li>
+         * <li>1: Password only.</li>
+         * <li>2: Password-free.
+         * If you do not specify this parameter, the value is not updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -430,7 +472,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The new name of the metadata catalog. If this parameter is not specified, the value is not updated. The name can be up to 128 characters in length. It must start with a Chinese character, a letter, or an underscore, and can contain digits and hyphens. It cannot contain only digits.</p>
+         * <p>The new name of the metadata catalog. If you do not specify this parameter, the value is not updated. The name can be up to 128 characters in length. It must start with a Chinese character, a letter, or an underscore, and can contain digits and hyphens. It cannot contain only digits.</p>
          * 
          * <strong>example:</strong>
          * <p>demo_catalog</p>
@@ -444,9 +486,9 @@ public class UpdateAgenticDataSourceRequest extends Request {
         /**
          * <p>The registration method. Valid values:</p>
          * <ul>
-         * <li>INSTANCE_ID: select an existing cloud instance</li>
-         * <li>HOST_PORT: register by endpoint and port
-         * If this parameter is not specified, the value is not updated.</li>
+         * <li>INSTANCE_ID: Select an existing cloud instance.</li>
+         * <li>HOST_PORT: Register by endpoint and port.
+         * If you do not specify this parameter, the value is not updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -484,7 +526,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The environment type. Valid values: product, pre, dev, test, sit, uat, pet, and stag. If this parameter is not specified, the value is not updated.</p>
+         * <p>The environment type. Valid values: product, pre, dev, test, sit, uat, pet, and stag. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>
@@ -496,7 +538,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Optional. The new domain name or IP address of the database. It cannot contain the protocol, path, or port. If this parameter is not specified, the value is not updated.</p>
+         * <p>Optional. The new domain name or IP address of the database. Do not include the protocol, path, or port. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.example.com</p>
@@ -508,7 +550,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The new ID of the cloud resource instance. If this parameter is not specified, the value is not updated.</p>
+         * <p>The new cloud resource instance ID. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp1234567890</p>
@@ -520,7 +562,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The new name of the KMS-managed credential. If this parameter is not specified, the value is not updated.</p>
+         * <p>The new name of the KMS managed credential. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>datasource-secret</p>
@@ -532,7 +574,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Optional. The new ID of the data access security policy. If this parameter is not specified, the value is not updated.</p>
+         * <p>Optional. The new ID of the data access security policy. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-usr-example</p>
@@ -544,7 +586,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Optional. The new service port of the database. If this parameter is not specified, the value is not updated.</p>
+         * <p>Optional. The new service port of the database. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -556,7 +598,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>The new ARN of the Alibaba Cloud RAM role. If this parameter is not specified, the value is not updated.</p>
+         * <p>The new Alibaba Cloud RAM role ARN. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/DataSourceRole</p>
@@ -568,7 +610,7 @@ public class UpdateAgenticDataSourceRequest extends Request {
         }
 
         /**
-         * <p>Optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, specify the database name. For ORACLE, specify the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, specify the SID. For MAXCOMPUTE, specify the project name. For other types, do not specify this parameter. If this parameter is not specified, the value is not updated.</p>
+         * <p>Optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, specify the database name. For ORACLE, specify the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, specify the SID. For MAXCOMPUTE, specify the project name. For other types, leave this parameter empty. If you do not specify this parameter, the value is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>postgres</p>
@@ -606,9 +648,9 @@ public class UpdateAgenticDataSourceRequest extends Request {
         /**
          * <p>Specifies whether to use the cloud instance name as the data source name. Valid values:</p>
          * <ul>
-         * <li>1: yes</li>
-         * <li>0: no
-         * If this parameter is not specified, the value is not updated.</li>
+         * <li>1: Yes.</li>
+         * <li>0: No.
+         * If you do not specify this parameter, the value is not updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -623,10 +665,10 @@ public class UpdateAgenticDataSourceRequest extends Request {
         /**
          * <p>The new SSL setting. Valid values:</p>
          * <ul>
-         * <li>1: enable</li>
-         * <li>0: disable</li>
-         * <li>-1: use default settings
-         * If this parameter is not specified, the value is not updated. SSL is supported only for ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS.</li>
+         * <li>1: Enable.</li>
+         * <li>0: Disable.</li>
+         * <li>-1: Use the default setting.
+         * If you do not specify this parameter, the value is not updated. SSL is supported only for ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -635,6 +677,42 @@ public class UpdateAgenticDataSourceRequest extends Request {
         public Builder useSsl(Integer useSsl) {
             this.putQueryParameter("UseSsl", useSsl);
             this.useSsl = useSsl;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the vSwitch used to access the data source over a VPC NAT link. Optional. If you do not specify this parameter, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-23dscddcffvf3****</p>
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the VPC used to access the data source over a VPC NAT link. This parameter is used to supplement the missing VPC information in the instance details. Optional. If you do not specify this parameter, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-25cdvfeq58pl****</p>
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the zone used to access the data source over a VPC NAT link. Optional. If you do not specify this parameter, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

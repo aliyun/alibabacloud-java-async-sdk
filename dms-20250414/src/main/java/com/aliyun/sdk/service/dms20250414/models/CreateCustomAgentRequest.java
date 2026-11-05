@@ -26,6 +26,10 @@ public class CreateCustomAgentRequest extends Request {
     private CallbackConfig callbackConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateFrom")
+    private String createFrom;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DMSUnit")
     private String DMSUnit;
 
@@ -97,6 +101,7 @@ public class CreateCustomAgentRequest extends Request {
         super(builder);
         this.agentType = builder.agentType;
         this.callbackConfig = builder.callbackConfig;
+        this.createFrom = builder.createFrom;
         this.DMSUnit = builder.DMSUnit;
         this.dataJson = builder.dataJson;
         this.description = builder.description;
@@ -141,6 +146,13 @@ public class CreateCustomAgentRequest extends Request {
      */
     public CallbackConfig getCallbackConfig() {
         return this.callbackConfig;
+    }
+
+    /**
+     * @return createFrom
+     */
+    public String getCreateFrom() {
+        return this.createFrom;
     }
 
     /**
@@ -265,6 +277,7 @@ public class CreateCustomAgentRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCustomAgentRequest, Builder> {
         private String agentType; 
         private CallbackConfig callbackConfig; 
+        private String createFrom; 
         private String DMSUnit; 
         private String dataJson; 
         private String description; 
@@ -291,6 +304,7 @@ public class CreateCustomAgentRequest extends Request {
             super(request);
             this.agentType = request.agentType;
             this.callbackConfig = request.callbackConfig;
+            this.createFrom = request.createFrom;
             this.DMSUnit = request.DMSUnit;
             this.dataJson = request.dataJson;
             this.description = request.description;
@@ -313,8 +327,8 @@ public class CreateCustomAgentRequest extends Request {
         /**
          * <p>The type of the custom agent. Valid values:</p>
          * <ul>
-         * <li>Default: the system-built-in custom agent. Each workspace can have at most one Default agent, and it cannot be deleted.</li>
-         * <li>Common: a regular custom agent.</li>
+         * <li>Default: The system-built-in custom agent. Each workspace can have at most one Default agent, and it cannot be deleted.</li>
+         * <li>Common: A common custom agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,12 +341,28 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The callback feature configuration.</p>
+         * <p>The callback feature configuration items.</p>
          */
         public Builder callbackConfig(CallbackConfig callbackConfig) {
             String callbackConfigShrink = shrink(callbackConfig, "CallbackConfig", "json");
             this.putQueryParameter("CallbackConfig", callbackConfigShrink);
             this.callbackConfig = callbackConfig;
+            return this;
+        }
+
+        /**
+         * <p>The creation source. Valid values:</p>
+         * <ul>
+         * <li>Empty (default): Create the agent by using a form.</li>
+         * <li>SmartNew: Create the agent by using intelligent development.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SmartNew</p>
+         */
+        public Builder createFrom(String createFrom) {
+            this.putQueryParameter("CreateFrom", createFrom);
+            this.createFrom = createFrom;
             return this;
         }
 
@@ -349,23 +379,23 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The specified data scope, in <strong>JSON character string format</strong>.</p>
+         * <p>The specified data scope in <strong>JSON character string format</strong>.</p>
          * <ul>
-         * <li>General parameter descriptions<ul>
-         * <li>tableFlag: true specifies the data scope.</li>
-         * <li>scope: personal is a fixed value.</li>
-         * <li>personal: the parameters for file and database types.</li>
+         * <li>General parameter description:<ul>
+         * <li>tableFlag: Set to true to specify the data scope.</li>
+         * <li>scope: Set to personal as a fixed value.</li>
+         * <li>personal: The parameters for file and database types.</li>
          * </ul>
          * </li>
          * </ul>
-         * <p><strong>File type</strong>: pass parameters in the following format:</p>
+         * <p><strong>File type</strong>. Pass parameters in the following format:</p>
          * <ul>
-         * <li>DataSourceType: remote_data_center is a fixed value.</li>
-         * <li>FileId: the file ID.</li>
-         * <li>Database: the database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
-         * <li>Tables: the table names returned by the ListDataCenterTable operation.</li>
-         * <li>TableIds: the table IDs returned by the ListDataCenterTable operation.</li>
-         * <li>RegionId: the current region.</li>
+         * <li>DataSourceType: Set to remote_data_center as a fixed value.</li>
+         * <li>FileId: The file ID.</li>
+         * <li>Database: The database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
+         * <li>Tables: The table names returned by the ListDataCenterTable operation.</li>
+         * <li>TableIds: The table IDs returned by the ListDataCenterTable operation.</li>
+         * <li>RegionId: The current region.</li>
          * </ul>
          * <pre><code>{
          *   &quot;tableFlag&quot;: true,
@@ -384,18 +414,18 @@ public class CreateCustomAgentRequest extends Request {
          *   }
          * }
          * </code></pre>
-         * <p><strong>Database type</strong>: pass parameters in the following format:</p>
+         * <p><strong>Database type</strong>. Pass parameters in the following format:</p>
          * <ul>
-         * <li>DataSourceType: database is a fixed value.</li>
-         * <li>DmsInstanceId: the DMS instance ID returned by the data center API.</li>
-         * <li>DmsDatabaseId: the DMS database ID returned by the data center API.</li>
-         * <li>FileId: the instance name (<strong>[Deprecated]</strong>).</li>
-         * <li>DbName: the database name returned by the data center API.</li>
-         * <li>Database: the database name returned by the data center API.</li>
-         * <li>Tables: the table names returned by the data center API.</li>
-         * <li>TableIds: the table IDs returned by the data center API.</li>
-         * <li>Engine: the database engine type, such as mysql or postgresql.</li>
-         * <li>RegionId: the current region.</li>
+         * <li>DataSourceType: Set to database as a fixed value.</li>
+         * <li>DmsInstanceId: The DMS instance ID returned by the data center operation.</li>
+         * <li>DmsDatabaseId: The DMS database ID returned by the data center operation.</li>
+         * <li>FileId: The instance name. <strong>[Deprecated]</strong></li>
+         * <li>DbName: The database name returned by the data center operation.</li>
+         * <li>Database: The database name returned by the data center operation.</li>
+         * <li>Tables: The table names returned by the data center operation.</li>
+         * <li>TableIds: The table IDs returned by the data center operation.</li>
+         * <li>Engine: The database engine type, such as mysql or postgresql.</li>
+         * <li>RegionId: The current region.</li>
          * </ul>
          * <pre><code>{
          *   &quot;tableFlag&quot;: true,
@@ -462,18 +492,18 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * <p>The instructions.</p>
+         * <p>The instruction.</p>
          * <ul>
-         * <li>Input limit: up to 10,000 characters.</li>
+         * <li>Input limit: Up to 10,000 characters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
          * <ol>
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-         * <li>Order volume refers to the number of valid daily orders.</li>
-         * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
-         * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
+         * <li>Order volume refers to the number of valid orders placed per day.</li>
+         * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
+         * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         public Builder instruction(String instruction) {
@@ -485,16 +515,16 @@ public class CreateCustomAgentRequest extends Request {
         /**
          * <p>The knowledge.</p>
          * <ul>
-         * <li>Input limit: up to 10,000 characters.</li>
+         * <li>Input limit: Up to 10,000 characters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
          * <ol>
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-         * <li>Order volume refers to the number of valid daily orders.</li>
-         * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
-         * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
+         * <li>Order volume refers to the number of valid orders placed per day.</li>
+         * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
+         * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         public Builder knowledge(String knowledge) {
@@ -574,7 +604,7 @@ public class CreateCustomAgentRequest extends Request {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The text report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
+         * <p>The text report requires that all numbers be converted to Chinese numerals instead of Arabic numerals</p>
          */
         public Builder textReportConfig(String textReportConfig) {
             this.putQueryParameter("TextReportConfig", textReportConfig);
@@ -596,7 +626,7 @@ public class CreateCustomAgentRequest extends Request {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The web report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
+         * <p>The web report requires that all numbers be converted to Chinese numerals instead of Arabic numerals</p>
          */
         public Builder webReportConfig(String webReportConfig) {
             this.putQueryParameter("WebReportConfig", webReportConfig);
@@ -727,7 +757,7 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             /**
-             * <p>The parameters to invoke the callback tool.</p>
+             * <p>The parameters used to invoke the callback tool.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
@@ -738,7 +768,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The prompt for generating the parameters to invoke the callback tool.</p>
+             * <p>The prompt for generating parameters to invoke the callback tool.</p>
              * 
              * <strong>example:</strong>
              * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
@@ -1009,8 +1039,8 @@ public class CreateCustomAgentRequest extends Request {
             /**
              * <p>The access type. If you do not specify this parameter, the default value is mcp. Valid values:</p>
              * <ul>
-             * <li>mcp: access through MCP. You must pass the McpServerId parameter.</li>
-             * <li>dms_kb: access through DMS knowledge base. You must pass the KbUuid parameter.</li>
+             * <li>mcp: Access by using MCP. You must pass the McpServerId parameter.</li>
+             * <li>dms_kb: Access by using a DMS knowledge base. You must pass the KbUuid parameter.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1033,7 +1063,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The MCP server ID.</p>
+             * <p>The ID of the MCP server.</p>
              * 
              * <strong>example:</strong>
              * <p>nhdpt9adf6ac**********ca</p>
@@ -1260,7 +1290,7 @@ public class CreateCustomAgentRequest extends Request {
             }
 
             /**
-             * <p>The query for the scheduled task.</p>
+             * <p>The question for the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>Analyze this data and provide a brief report</p>

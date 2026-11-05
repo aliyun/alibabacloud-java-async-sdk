@@ -421,6 +421,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</p>
+     * 
+     * @param request the request parameters of DeleteAgenticVpcEndpoint  DeleteAgenticVpcEndpointRequest
+     * @return DeleteAgenticVpcEndpointResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAgenticVpcEndpointResponse> deleteAgenticVpcEndpoint(DeleteAgenticVpcEndpointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAgenticVpcEndpoint").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgenticVpcEndpointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAgenticVpcEndpointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAirflow  DeleteAirflowRequest
      * @return DeleteAirflowResponse
      */

@@ -160,6 +160,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAgenticDataSourceResponse> deleteAgenticDataSource(DeleteAgenticDataSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</p>
+     * 
+     * @param request the request parameters of DeleteAgenticVpcEndpoint  DeleteAgenticVpcEndpointRequest
+     * @return DeleteAgenticVpcEndpointResponse
+     */
+    CompletableFuture<DeleteAgenticVpcEndpointResponse> deleteAgenticVpcEndpoint(DeleteAgenticVpcEndpointRequest request);
+
+    /**
      * @param request the request parameters of DeleteAirflow  DeleteAirflowRequest
      * @return DeleteAirflowResponse
      */
