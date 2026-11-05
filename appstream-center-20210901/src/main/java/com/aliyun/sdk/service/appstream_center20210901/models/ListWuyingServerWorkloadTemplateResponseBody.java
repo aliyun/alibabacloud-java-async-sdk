@@ -93,7 +93,7 @@ public class ListWuyingServerWorkloadTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The compatibility field. The current version does not use this field to indicate the number of returned entries.</p>
+         * <p>A compatibility field. The current version does not use this field to indicate the number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -104,7 +104,7 @@ public class ListWuyingServerWorkloadTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The compatibility field. The current version does not generate a next page token.</p>
+         * <p>A compatibility field. The current version does not generate a next page token.</p>
          * 
          * <strong>example:</strong>
          * <p>unused</p>
@@ -115,7 +115,7 @@ public class ListWuyingServerWorkloadTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. You can use this ID to troubleshoot request issues.</p>
+         * <p>The unique identifier of the request, which can be used to troubleshoot request issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -126,7 +126,7 @@ public class ListWuyingServerWorkloadTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of workload templates. The templates are returned in the configuration order, with a maximum of 100 entries.</p>
+         * <p>The list of workload templates. Up to 100 templates are returned, sorted by template configuration order.</p>
          */
         public Builder workloadTemplates(java.util.List<WorkloadTemplates> workloadTemplates) {
             this.workloadTemplates = workloadTemplates;
@@ -205,7 +205,7 @@ public class ListWuyingServerWorkloadTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rendered template content. The original text is Base64-encoded after being UTF-8 encoded. You must perform Base64 decoding before use.</p>
+             * <p>The rendered template content. The original text is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use.</p>
              * 
              * <strong>example:</strong>
              * <p>IyB3b3JrbG9hZCB0ZW1wbGF0ZQo=</p>

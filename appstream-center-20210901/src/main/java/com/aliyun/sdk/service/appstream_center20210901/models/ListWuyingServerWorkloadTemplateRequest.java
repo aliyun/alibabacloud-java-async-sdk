@@ -88,7 +88,7 @@ public class ListWuyingServerWorkloadTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The compatibility field. The current version does not read this parameter. The operation returns a maximum of 100 templates.</p>
+         * <p>A compatibility field. The current version does not read this parameter. The operation returns a fixed maximum of the first 100 templates.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -100,7 +100,7 @@ public class ListWuyingServerWorkloadTemplateRequest extends Request {
         }
 
         /**
-         * <p>The compatibility field. The current version does not read this parameter and does not support token-based pagination.</p>
+         * <p>A compatibility field. The current version does not read this parameter and does not support token-based pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>unused</p>
@@ -112,7 +112,7 @@ public class ListWuyingServerWorkloadTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual node pool. This parameter is <strong>required</strong>. The node pool must belong to the current account. You can call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the VirtualNodePoolId.</p>
+         * <p>The ID of the virtual node pool. This parameter is <strong>required</strong>. The node pool must belong to the current account. You can call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

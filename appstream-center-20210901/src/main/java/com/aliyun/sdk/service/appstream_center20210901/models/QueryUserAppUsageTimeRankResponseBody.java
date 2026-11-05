@@ -93,7 +93,7 @@ public class QueryUserAppUsageTimeRankResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. 200 indicates that the request is successful. Other values indicate that the request failed.</p>
+         * <p>The business status code. A value of <code>200</code> indicates that the request is processed successfully. Other values indicate that the processing failed.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -112,7 +112,7 @@ public class QueryUserAppUsageTimeRankResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the request processing result. success is usually returned when the request is successful.</p>
+         * <p>The description of the request processing result. If the request is successful, <code>success</code> is usually returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -218,7 +218,7 @@ public class QueryUserAppUsageTimeRankResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app-9ciijz60n4xsv****</p>
@@ -229,7 +229,7 @@ public class QueryUserAppUsageTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>Visual Studio Code</p>
@@ -251,7 +251,7 @@ public class QueryUserAppUsageTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the application. The current version may not return this value, and callers should not rely on this field. A non-empty value indicates the application version.</p>
+             * <p>The application version. The current version may not return this value, and callers should not rely on this field. A non-empty value indicates the application version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.96.0</p>

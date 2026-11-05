@@ -181,7 +181,7 @@ public class QuerySessionReportDataRequest extends Request {
         }
 
         /**
-         * <p>The end time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The end time cannot be earlier than <code>StartDate</code>. The query span must meet the limits corresponding to <code>StatDateType</code>. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The end time of the statistics. This parameter is required. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The end time cannot be earlier than <code>StartDate</code>. The query span must meet the limit corresponding to <code>StatDateType</code>. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-02 00:00:00</p>
@@ -193,7 +193,7 @@ public class QuerySessionReportDataRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. We recommend that you explicitly specify a value starting from <code>1</code>. If you do not specify this parameter, the service processes the request as the first page, but the response may return <code>0</code>.</p>
+         * <p>The page number of the page to query. Specify this parameter starting from <code>1</code>. If you do not specify this parameter, the first page is queried, but the response may return <code>0</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,7 +205,7 @@ public class QuerySessionReportDataRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 200. If the specified value is greater than 1,500, the value is processed as 1,500.</p>
+         * <p>The number of entries to return on each page. Default value: 200. If the specified value is greater than 1500, 1500 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -217,16 +217,16 @@ public class QuerySessionReportDataRequest extends Request {
         }
 
         /**
-         * <p>The product type. Optional. If you do not specify this parameter, data is queried for Wuying Cloud App.</p>
-         * <p>Specify the value in the exact case as follows. Data that cannot be matched is not returned.</p>
+         * <p>The product type. This parameter is optional. If you do not specify this parameter, data is queried based on the Wuying Cloud App caliber.</p>
+         * <p>Specify the value in the exact case shown below. Data that does not match the specified value is not returned.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li><code>CloudApp</code>: Wuying Cloud App.</li>
          * <li><code>CloudBrowser</code>: Cloud Browser.</li>
          * <li><code>WuyingServer</code>: Enterprise Edition workstation.</li>
          * <li><code>WuyingWorkstation</code>: Personal Edition Linggou container workstation.</li>
-         * <li><code>WuyingWorkstationTeam</code>: Linggou Team Edition container workstation.</li>
-         * <li><code>WuyingWorkstationBusiness</code>: Linggou Dedicated Edition container workstation.</li>
+         * <li><code>WuyingWorkstationTeam</code>: Team Edition Linggou container workstation.</li>
+         * <li><code>WuyingWorkstationBusiness</code>: Dedicated Edition Linggou container workstation.</li>
          * <li><code>AndroidCloud</code>: Cloud Phone.</li>
          * <li><code>AIAgent</code>: AgentBay (AI agent).</li>
          * </ul>
@@ -241,7 +241,7 @@ public class QuerySessionReportDataRequest extends Request {
         }
 
         /**
-         * <p>The start time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The <code>1d</code> granularity aggregates data by date, while other granularities are accurate to the minute. The query includes both the start and end boundaries. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The start time of the statistics. This parameter is required. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The <code>1d</code> granularity aggregates data by date, while other granularities aggregate data down to the minute. The query includes both the start and end boundaries. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01 00:00:00</p>
@@ -253,13 +253,13 @@ public class QuerySessionReportDataRequest extends Request {
         }
 
         /**
-         * <p>The statistical granularity. <strong>Required</strong>.</p>
+         * <p>The statistical granularity. This parameter is required.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><code>1m</code>: Aggregates data by 1 minute. The maximum query span is 1 day.</li>
-         * <li><code>30m</code>: Aggregates data by 30 minutes. The maximum query span is 1 day.</li>
-         * <li><code>6h</code>: Aggregates data by 6 hours. The maximum query span is 15 days.</li>
-         * <li><code>1d</code>: Aggregates data by day. The maximum query span is 180 days.</li>
+         * <li><code>1m</code>: aggregates data by 1 minute. The maximum query span is 1 day.</li>
+         * <li><code>30m</code>: aggregates data by 30 minutes. The maximum query span is 1 day.</li>
+         * <li><code>6h</code>: aggregates data by 6 hours. The maximum query span is 15 days.</li>
+         * <li><code>1d</code>: aggregates data by day. The maximum query span is 180 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>

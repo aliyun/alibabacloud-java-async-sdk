@@ -132,7 +132,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of <code>200</code> indicates that the request was processed. Other values indicate that the request failed.</p>
+         * <p>The business status code. A value of 200 indicates that the request is processed successfully. Other values indicate that the processing failed.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that meet the query conditions.</p>
+         * <p>The total number of records that meet the query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -162,7 +162,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message about the request processing result. If the request is successful, <code>success</code> is returned.</p>
+         * <p>The description of the request processing result. Typically, success is returned if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -173,7 +173,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the current response.</p>
+         * <p>The page number corresponding to the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in the current response.</p>
+         * <p>The number of records per page used in the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. You can use this ID to troubleshoot issues.</p>
+         * <p>The unique identifier of the request, which can be used to troubleshoot request issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -277,7 +277,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of active users within the statistical period. Unit: users.</p>
+             * <p>The number of active users within the statistical epoch. Unit: users.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>
@@ -288,7 +288,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical date. Format: <code>yyyy-MM-dd</code>. The string does not contain time zone information and is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
+             * <p>The statistics date. Format: yyyy-MM-dd. The string does not contain a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-01</p>
@@ -299,7 +299,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of active users who initiated sessions through streaming access within the statistical period. Unit: users.</p>
+             * <p>The number of active users who generated sessions through streaming access within the statistical epoch. Unit: users.</p>
              * 
              * <strong>example:</strong>
              * <p>96</p>

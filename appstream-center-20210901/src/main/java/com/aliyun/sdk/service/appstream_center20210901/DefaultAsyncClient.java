@@ -165,6 +165,33 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Before you call this operation, make sure that the parent image is available and that an available image distribution record exists in the region where the image is to be created.</p>
+     * <ol>
+     * <li>Call ListImage to obtain the parent image ID.</li>
+     * <li>Specify the creation mode, disk capacity, and resource type, and then call this operation.</li>
+     * <li>Save the returned ImageId, VersionId, and TaskId.</li>
+     * <li>Call GetTask to query the creation progress. <strong>A successful request does not indicate that the image creation is complete.</strong></li>
+     * </ol>
+     * 
+     * @param request the request parameters of BuilderImageByParent  BuilderImageByParentRequest
+     * @return BuilderImageByParentResponse
+     */
+    @Override
+    public CompletableFuture<BuilderImageByParentResponse> builderImageByParent(BuilderImageByParentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BuilderImageByParent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BuilderImageByParentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BuilderImageByParentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>You can authorize a model group for the resources to which agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent belong in the Wuying Agent Management Center. The model group serves as the inference engine for agents in the resource group to execute tasks.
      * If an agent runtime is configured with a model group and its resource group is also configured with a model group, the model group bound to the resource group takes effect. This means that the resource group settings take precedence over the agent runtime settings.
      * Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</p>
@@ -225,6 +252,28 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ConfigRuntimeModelTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
+     * Call ListImage first to select an image. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</p>
+     * 
+     * @param request the request parameters of CreateAndBindApp  CreateAndBindAppRequest
+     * @return CreateAndBindAppResponse
+     */
+    @Override
+    public CompletableFuture<CreateAndBindAppResponse> createAndBindApp(CreateAndBindAppRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAndBindApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAndBindAppResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAndBindAppResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -392,6 +441,59 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateWuyingServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p><em>Confirm the deletion scope.</em>*</p>
+     * <ul>
+     * <li>If both ImageId and VersionId are specified: The adapter is only dissociated from the specified image version.</li>
+     * <li>If ImageId and VersionId are not both specified: The adapter deletion process is initiated. An adapter cannot be deleted if it is still referenced by multiple images. If the application has other adapters, the application cannot be deleted along with the adapter.
+     * <strong>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adapter.</strong> Verify these identifiers by checking the application and image query results first.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteAdaptor  DeleteAdaptorRequest
+     * @return DeleteAdaptorResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAdaptorResponse> deleteAdaptor(DeleteAdaptorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAdaptor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAdaptorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAdaptorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p><em>You must dissociate all image associations from the target application or version before deletion.</em>*</p>
+     * <ol>
+     * <li>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</li>
+     * <li>Use UnbindApp or DeleteAdaptor to dissociate related image associations.</li>
+     * <li>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
+     * After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of DeleteApp  DeleteAppRequest
+     * @return DeleteAppResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAppResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAppResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -573,7 +675,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the resource and session events of the current account. <code>StartTime</code> and <code>EndTime</code> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified at the same time, the intersection is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <code>PageSize</code> and <code>PageNumber</code>. The current version does not use <code>MaxResults</code> and <code>NextToken</code>.</p>
+     * <p>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</p>
      * 
      * @param request the request parameters of DescribeEvents  DescribeEventsRequest
      * @return DescribeEventsResponse
@@ -641,6 +743,33 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAppInstanceGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, you must create a task, and the building or validation resources corresponding to the task must be available.</p>
+     * <ol>
+     * <li>Obtain TaskId and the actual TaskType from the response of the task creation operation or GetTask.</li>
+     * <li>Specify ResourceType to obtain the connection information for the building or validation environment.</li>
+     * <li>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+     * The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetAuthCode  GetAuthCodeRequest
+     * @return GetAuthCodeResponse
+     */
+    @Override
+    public CompletableFuture<GetAuthCodeResponse> getAuthCode(GetAuthCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAuthCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAuthCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAuthCodeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -797,6 +926,46 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the resource scale-out pricing for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+     * <strong>Before you call this operation, verify the following conditions:</strong></p>
+     * <ul>
+     * <li>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</li>
+     * <li>The product type is Wuying Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</li>
+     * <li>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</li>
+     * <li>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the corresponding region, product, and billing method under the account.
+     * <strong>Parameter relationships:</strong></li>
+     * <li>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified together.</li>
+     * <li>ProductType must match the product corresponding to AppInstanceGroupId.</li>
+     * <li><strong>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</strong> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
+     * <strong>Call sequence:</strong></li>
+     * </ul>
+     * <ol>
+     * <li>First, confirm the target delivery group and the current number of purchased nodes. For Cloud App Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</li>
+     * <li>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the pricing, coupons, and pricing calculation rules.</li>
+     * <li>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <strong>A successful pricing query does not mean that an order has been created or the scale-out has been completed.</strong>
+     * <strong>Example scenario:</strong>
+     * If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The pricing examples only illustrate the relationship among the original price, discount amount, and discounted price, and do not represent the fixed selling price of the specifications.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetResourceModifyPrice  GetResourceModifyPriceRequest
+     * @return GetResourceModifyPriceResponse
+     */
+    @Override
+    public CompletableFuture<GetResourceModifyPriceResponse> getResourceModifyPrice(GetResourceModifyPriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetResourceModifyPrice").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetResourceModifyPriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetResourceModifyPriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetResourcePrice  GetResourcePriceRequest
      * @return GetResourcePriceResponse
      */
@@ -809,6 +978,41 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetResourcePriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
+     * <strong>Parameter relationships:</strong></p>
+     * <ul>
+     * <li><code>ResourceType</code> and <code>ProductType</code> are required.</li>
+     * <li><code>BizRegionId</code> and <code>ChargeType</code> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</li>
+     * <li>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</li>
+     * <li>If multiple quotas apply at the same time, the larger limit is returned.
+     * <strong>Call sequence:</strong></li>
+     * </ul>
+     * <ol>
+     * <li>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</li>
+     * <li>Invoke this operation to read <code>Data</code>. Query <code>AppInstanceGroup</code> before creating a delivery group, query <code>AppAuthUser</code> before adding an authorized user, and query <code>PoolNodeAmount</code> before purchasing or scaling out nodes.</li>
+     * <li>Query the current usage in combination with the resources, and then verify the current operation by using subsequent creation, authorization, or scale-out operations. <strong>This query does not reserve quotas or guarantee the success of subsequent purchases.</strong>
+     * <code>Data=2147483647</code> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GetResourceQuota  GetResourceQuotaRequest
+     * @return GetResourceQuotaResponse
+     */
+    @Override
+    public CompletableFuture<GetResourceQuotaResponse> getResourceQuota(GetResourceQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetResourceQuota").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetResourceQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetResourceQuotaResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -876,6 +1080,54 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports two query methods:</p>
+     * <ul>
+     * <li><strong>Query by task ID</strong>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</li>
+     * <li><strong>Query by resource</strong>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters. You can use the EntityVersionId parameter to specify the resource version.
+     * The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not indicate the success of the entire task. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetTask  GetTaskRequest
+     * @return GetTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When multiple filter conditions are specified simultaneously, they take effect together. AppName supports partial match. When a single-value filter and the corresponding list filter are specified simultaneously, the intersection is used. To avoid empty results, select only one of the formats.
+     * If PageSize is omitted, the value is 10. Query pages sequentially starting from PageNumber 1 until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</p>
+     * 
+     * @param request the request parameters of ListApp  ListAppRequest
+     * @return ListAppResponse
+     */
+    @Override
+    public CompletableFuture<ListAppResponse> listApp(ListAppRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAppResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAppResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAppInstanceGroup  ListAppInstanceGroupRequest
      * @return ListAppInstanceGroupResponse
      */
@@ -888,6 +1140,41 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAppInstanceGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types of the account and the business region. An empty result does not indicate a request failure.
+     * <strong>Filtering and pagination:</strong></p>
+     * <ul>
+     * <li>ProductType is required. Explicitly specify BizRegionId, PageNumber, and PageSize.</li>
+     * <li>If BizRegionId is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</li>
+     * <li>AppInstanceType and AppInstanceTypeList can be specified at the same time. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</li>
+     * <li>Instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</li>
+     * <li>PageNumber starts from 1. Use TotalCount, PageSize, and PageNumber to continue pagination until all matching results are read.
+     * <strong>Inventory and subsequent calls:</strong></li>
+     * <li>Inventory is queried only when QueryInventory is set to true. If inventory information is not obtained, do not assume that the inventory is 0.</li>
+     * <li>The inventory reflects the current query result and does not indicate a successful reservation.</li>
+     * <li>After obtaining the AppInstanceType, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</li>
+     * <li>The current query does not use AppCenterImageId to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
+     * Field examples are used to demonstrate how to specify parameters and do not guarantee that the example instance types exist in the selected region or account. The GPU count field does not currently provide values. Use the GPU memory field to understand the instance type.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListAppInstanceType  ListAppInstanceTypeRequest
+     * @return ListAppInstanceTypeResponse
+     */
+    @Override
+    public CompletableFuture<ListAppInstanceTypeResponse> listAppInstanceType(ListAppInstanceTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAppInstanceType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAppInstanceTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAppInstanceTypeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1455,6 +1742,28 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>The returned results are affected by the available region configurations of the account and the product type. If ProductType is omitted, the query defaults to CloudApp.
+     * This operation returns the regions available for image services. You cannot use this information to determine whether a specific image has been distributed to these regions. Before you create or distribute an image based on a parent image, you must also check the region information of the destination image.</p>
+     * 
+     * @param request the request parameters of ListRegionId  ListRegionIdRequest
+     * @return ListRegionIdResponse
+     */
+    @Override
+    public CompletableFuture<ListRegionIdResponse> listRegionId(ListRegionIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRegionId").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRegionIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRegionIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>The regions returned by this operation are not all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
      * </blockquote>
@@ -1545,6 +1854,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
+     * This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not treat the step index as a completion percentage.</p>
+     * 
+     * @param request the request parameters of ListTaskStep  ListTaskStepRequest
+     * @return ListTaskStepResponse
+     */
+    @Override
+    public CompletableFuture<ListTaskStepResponse> listTaskStep(ListTaskStepRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTaskStep").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTaskStepResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTaskStepResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTenantConfig  ListTenantConfigRequest
      * @return ListTenantConfigResponse
      */
@@ -1585,7 +1916,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the VirtualNodePoolId under the current account. This operation verifies the ownership of the node pool and returns up to 100 records sorted by the template configuration order. The template content is Base64-encoded after being UTF-8 encoded. You must perform Base64 decoding before use. The current version does not use MaxResults and NextToken for pagination.</p>
+     * <p>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <code>VirtualNodePoolId</code> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <code>MaxResults</code> and <code>NextToken</code> for pagination.</p>
      * 
      * @param request the request parameters of ListWuyingServerWorkloadTemplate  ListWuyingServerWorkloadTemplateRequest
      * @return ListWuyingServerWorkloadTemplateResponse
@@ -1676,6 +2007,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyAppInstanceGroupAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <strong>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</strong>
+     * <strong>Before you begin:</strong></p>
+     * <ul>
+     * <li>The resources belong to the current account, and the product and business region match those in the request. Only one delivery group can be specified per request.</li>
+     * <li>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</li>
+     * <li>Delivery groups that have been added to a valid collection cannot be converted to a different billing method individually.</li>
+     * <li>Multiple delivery groups created in the same batch of orders cannot be converted to different Billable methods separately.
+     * <strong>Parameter relationships and call sequence:</strong></li>
+     * </ul>
+     * <ol>
+     * <li>Query the resource details first to confirm the product, business region, and current <code>ChargeType</code>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</li>
+     * <li>Explicitly specify the target <code>ChargeType</code>. If you need to purchase a subscription, specify the purchase duration by combining <code>Period</code> and <code>PeriodUnit</code>. The period combination must comply with the sales rules currently supported by the resource.</li>
+     * <li>Set <code>AutoPay</code> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <code>AutoRenew</code>.</li>
+     * <li>After the call, save the returned <code>AppInstanceGroupModel.TaskId</code>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+     * This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of ModifyAppInstanceGroupChargeType  ModifyAppInstanceGroupChargeTypeRequest
+     * @return ModifyAppInstanceGroupChargeTypeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAppInstanceGroupChargeTypeResponse> modifyAppInstanceGroupChargeType(ModifyAppInstanceGroupChargeTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAppInstanceGroupChargeType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAppInstanceGroupChargeTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAppInstanceGroupChargeTypeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1839,7 +2206,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. <code>AppInstanceGroupId</code> matches the exact ID, and <code>AppInstanceGroupName</code> filters by inclusion. If multiple filter conditions are passed at the same time, the intersection is taken. When filtering by date, <code>StatDate</code> specifies a single day, and <code>StartDate</code> and <code>EndDate</code> must be passed in pairs to represent a closed interval. If both a single day and an interval are passed, the results must meet both conditions. Before using <code>EndUserId</code>, make sure that the user has a valid authorization relationship.</p>
+     * <p>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <code>AppInstanceGroupId</code> matches the exact ID, and <code>AppInstanceGroupName</code> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <code>StatDate</code> specifies a single day, and <code>StartDate</code> and <code>EndDate</code> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <code>EndUserId</code>, make sure that the user has a valid authorization relationship.</p>
      * 
      * @param request the request parameters of QueryAppInstanceGroupReportList  QueryAppInstanceGroupReportListRequest
      * @return QueryAppInstanceGroupReportListResponse
@@ -1860,7 +2227,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <code>BizRegionId</code> and <code>AppInstanceGroupId</code> parameters. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</p>
+     * <p>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <code>BizRegionId</code> and <code>AppInstanceGroupId</code> parameters. The <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> parameters are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</p>
      * 
      * @param request the request parameters of QueryConnectionReport  QueryConnectionReportRequest
      * @return QueryConnectionReportResponse
@@ -1881,7 +2248,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to <code>CloudApp</code>. You can use BizRegionId and AppInstanceGroupId to narrow the scope. If neither is specified, the query returns aggregated data for all business regions. Results are paginated, with a maximum of 1,500 records per page.</p>
+     * <p>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</p>
      * 
      * @param request the request parameters of QueryDauReportData  QueryDauReportDataRequest
      * @return QueryDauReportDataResponse
@@ -1944,7 +2311,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the node quantity report. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * <p>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
      * 
      * @param request the request parameters of QueryNodeReportData  QueryNodeReportDataRequest
      * @return QueryNodeReportDataResponse
@@ -1986,7 +2353,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</p>
+     * <p>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</p>
      * 
      * @param request the request parameters of QueryUserAppUsageAggregateByHour  QueryUserAppUsageAggregateByHourRequest
      * @return QueryUserAppUsageAggregateByHourResponse
@@ -2007,7 +2374,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the ranking of application usage duration for a specified user within a statistical range. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</p>
+     * <p>Queries the ranking of application usage duration for a specified user within a statistical range. <code>StartDate</code> and <code>EndDate</code> use the <code>yyyyMMdd</code> format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. <code>UserId</code> must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</p>
      * 
      * @param request the request parameters of QueryUserAppUsageTimeRank  QueryUserAppUsageTimeRankRequest
      * @return QueryUserAppUsageTimeRankResponse
@@ -2028,7 +2395,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <code>yyyyMMdd</code> format and aggregated based on a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</p>
+     * <p>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <code>yyyyMMdd</code> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</p>
      * 
      * @param request the request parameters of QueryUserUsageReport  QueryUserUsageReportRequest
      * @return QueryUserUsageReportResponse
@@ -2332,6 +2699,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports only custom images and community images that the current account can manage. If you omit VersionId, the current effective version is used. If you specify VersionId, it must belong to the image specified by ImageId. Verify the associations between the applications and the version by querying the image before you submit AppIdList. <strong>Dissociating applications does not directly delete the application records.</strong> To delete an application, call DeleteApp.</p>
+     * 
+     * @param request the request parameters of UnbindApp  UnbindAppRequest
+     * @return UnbindAppResponse
+     */
+    @Override
+    public CompletableFuture<UnbindAppResponse> unbindApp(UnbindAppRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnbindApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnbindAppResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnbindAppResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UntagCloudResources  UntagCloudResourcesRequest
      * @return UntagCloudResourcesResponse
      */
@@ -2398,6 +2786,28 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>The AdaptorId must correspond to a valid application adapter manageable by the current account. Pass only the configurations that need to be modified in this request.
+     * SilenceParam is used for application startup parameters. UserConfig is used for application runtime configurations. <strong>This operation does not support modifying application scripts or executable file paths through AppScript or ExecuteFileAddress. Do not pass these two parameters.</strong></p>
+     * 
+     * @param request the request parameters of UpdateAdaptor  UpdateAdaptorRequest
+     * @return UpdateAdaptorResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAdaptorResponse> updateAdaptor(UpdateAdaptorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAdaptor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAdaptorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAdaptorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
      * Before calling this API, the delivery group must be in the PUBLISHED, DEPLOYED, or MAINTAIN_FAILED state. You can call GetAppInstanceGroup to query the current state of the delivery group.
@@ -2416,6 +2826,49 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAppInstanceGroupImageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can only modify images that are owned by the current account and allow modifications. Modifying images shared with the current account is not supported.
+     * You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adaptation relationships of the selected version based on the complete list. Make sure to include the adaptations that you still want to retain.</p>
+     * 
+     * @param request the request parameters of UpdateImage  UpdateImageRequest
+     * @return UpdateImageResponse
+     */
+    @Override
+    public CompletableFuture<UpdateImageResponse> updateImage(UpdateImageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateImage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateImageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateImageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. TaskType must match the actual type of the task. <strong>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</strong> A successful request only indicates that this status update call is completed. To query the final status of the task, call GetTask.</p>
+     * 
+     * @param request the request parameters of UpdateImageTask  UpdateImageTaskRequest
+     * @return UpdateImageTaskResponse
+     */
+    @Override
+    public CompletableFuture<UpdateImageTaskResponse> updateImageTask(UpdateImageTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateImageTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateImageTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateImageTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

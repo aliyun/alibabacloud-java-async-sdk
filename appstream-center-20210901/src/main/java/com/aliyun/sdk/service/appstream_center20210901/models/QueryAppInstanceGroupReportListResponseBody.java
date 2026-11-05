@@ -119,7 +119,7 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. <code>200</code> indicates that the request is processed successfully. Other values indicate that the processing failed.</p>
+         * <p>The business status code. A value of <code>200</code> indicates that the request is processed. Other values indicate that the processing failed.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of delivery group report data.</p>
+         * <p>The list of app instance group report data.</p>
          */
         public Builder indexData(java.util.List<IndexData> indexData) {
             this.indexData = indexData;
@@ -138,7 +138,7 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the request processing result. <code>success</code> is usually returned when the request is successful.</p>
+         * <p>The description of the request processing result. If the request is successful, <code>success</code> is usually returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -253,7 +253,7 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The delivery group ID.</p>
+             * <p>The ID of the app instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-9ciijz60n4xsv****</p>
@@ -264,7 +264,7 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery group name.</p>
+             * <p>The name of the app instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>R&amp;D workstation group</p>
@@ -275,16 +275,16 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current status of the delivery group.</p>
+             * <p>The current status of the app instance group.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li><code>DEPLOYING</code>: Deploying.</li>
              * <li><code>DEPLOYED</code>: Deployed but not published.</li>
-             * <li><code>PUBLISHED</code>: Published and available for service based on the current configuration.</li>
+             * <li><code>PUBLISHED</code>: Published and available to provide services based on the current configurations.</li>
              * <li><code>STOPPING</code>: Stopping.</li>
              * <li><code>STOPPED</code>: Stopped.</li>
              * <li><code>MAINTAINING</code>: Maintaining.</li>
-             * <li><code>FAILED</code>: Deployment or operation failed.</li>
+             * <li><code>FAILED</code>: Deployment or running failed.</li>
              * <li><code>MAINTAIN_FAILED</code>: Maintenance failed.</li>
              * <li><code>DELETING</code>: Deleting.</li>
              * <li><code>DELETED</code>: Deleted.</li>

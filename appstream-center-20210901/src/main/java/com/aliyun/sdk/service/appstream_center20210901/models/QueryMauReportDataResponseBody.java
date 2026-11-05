@@ -132,7 +132,7 @@ public class QueryMauReportDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of <code>200</code> indicates that the request is successful. Other values indicate that the request failed.</p>
+         * <p>The business status code. A value of <code>200</code> indicates that the request is processed successfully. Other values indicate that the request fails to be processed.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -303,7 +303,7 @@ public class QueryMauReportDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the app instance group.</p>
+             * <p>The app instance group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-9ciijz60n4xsv****</p>
@@ -325,7 +325,7 @@ public class QueryMauReportDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the business region to which the report data belongs.</p>
+             * <p>The business region ID to which the report data belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -336,7 +336,7 @@ public class QueryMauReportDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical cutoff date used for the month. Format: <code>yyyy-MM-dd</code>. For the last month, the date is usually the day before the requested <code>EndDate</code>. The date is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</p>
+             * <p>The statistical cutoff date used for the month. Format: <code>yyyy-MM-dd</code>. For the last month, this is usually the day before the requested <code>EndDate</code>. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09-29</p>
@@ -347,7 +347,7 @@ public class QueryMauReportDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical month. Format: <code>yyyy-MM</code>. The month is interpreted as a natural month in the Asia/Shanghai (UTC+8) time zone.</p>
+             * <p>The statistical month. Format: <code>yyyy-MM</code>. The month is interpreted as a calendar month in the Asia/Shanghai (UTC+8) time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-09</p>

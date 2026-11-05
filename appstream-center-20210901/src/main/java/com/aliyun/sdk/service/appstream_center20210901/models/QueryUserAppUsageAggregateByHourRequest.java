@@ -129,7 +129,7 @@ public class QueryUserAppUsageAggregateByHourRequest extends Request {
         } 
 
         /**
-         * <p>The app instance group ID, which is used to filter data for a specified app instance group. If this parameter is not provided, data is not filtered by app instance group.</p>
+         * <p>The ID of the app instance group, which is used to filter data for a specified app instance group. If this parameter is not provided, data is not filtered by app instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -141,7 +141,7 @@ public class QueryUserAppUsageAggregateByHourRequest extends Request {
         }
 
         /**
-         * <p>The business region ID, which is used to filter application usage data. If this parameter is not provided, data is not filtered by business region. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the ID.</p>
+         * <p>The business region ID, which is used to filter application usage data. If this parameter is not provided, data is not filtered by business region. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the value.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -153,7 +153,7 @@ public class QueryUserAppUsageAggregateByHourRequest extends Request {
         }
 
         /**
-         * <p>The end date of the statistics. Format: yyyyMMdd. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than StartDate or 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The end date for statistics in the yyyyMMdd format. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than StartDate or 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>20260907</p>
@@ -177,7 +177,7 @@ public class QueryUserAppUsageAggregateByHourRequest extends Request {
         }
 
         /**
-         * <p>The start date of the statistics. Format: yyyyMMdd. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The start date for statistics in the yyyyMMdd format. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>20260901</p>
@@ -189,7 +189,7 @@ public class QueryUserAppUsageAggregateByHourRequest extends Request {
         }
 
         /**
-         * <p>The ID of the end user to be queried. This parameter must be explicitly provided. If it is not provided, no matching records are usually returned.</p>
+         * <p>The ID of the end user to query. This parameter must be explicitly provided. If it is not provided, no matching records are usually returned.</p>
          * 
          * <strong>example:</strong>
          * <p>user01</p>
