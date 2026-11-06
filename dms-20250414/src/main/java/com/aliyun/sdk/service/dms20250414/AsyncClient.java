@@ -289,6 +289,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDataAgentSessionResponse> describeDataAgentSession(DescribeDataAgentSessionRequest request);
 
     /**
+     * @param request the request parameters of DescribeDataAgentSkillDownload  DescribeDataAgentSkillDownloadRequest
+     * @return DescribeDataAgentSkillDownloadResponse
+     */
+    CompletableFuture<DescribeDataAgentSkillDownloadResponse> describeDataAgentSkillDownload(DescribeDataAgentSkillDownloadRequest request);
+
+    /**
      * @param request the request parameters of DescribeDataAgentTheme  DescribeDataAgentThemeRequest
      * @return DescribeDataAgentThemeResponse
      */
