@@ -88,7 +88,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
         } 
 
         /**
-         * <p>The batch authorization items.</p>
+         * <p>The batch authorization item.</p>
          * <p>This parameter is required.</p>
          */
         public Builder items(java.util.List<Items> items) {
@@ -99,7 +99,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
+         * <p>The batch authorization item.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -111,7 +111,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+         * <p>The ID of the tenant to which the resource belongs. If omitted, the current tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -332,7 +332,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             } 
 
             /**
-             * <p>The expiration time with the time zone. If not specified, the permissions never expire.</p>
+             * <p>The expiration time with a time zone. If omitted, the permissions never expire.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-12-31T23:59:59+08:00</p>
@@ -361,7 +361,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             }
 
             /**
-             * <p>The dot-separated resource key, where the first segment is the APP application key.</p>
+             * <p>The dot-separated resource key with the first segment as the APP application key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class RegisterAppResourcePermissionsRequest extends Request {
             }
 
             /**
-             * <p>The resource type. Set the value to APP_RESOURCE.</p>
+             * <p>The resource type. Fixed to APP_RESOURCE.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -104,7 +104,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error description.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>
@@ -115,7 +115,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request tracking ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -129,7 +129,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
          * <p>The simplified template definition that can be re-imported.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>{\&quot;name\&quot;:\&quot;客户投诉处理流程\&quot;,\&quot;schemaVersion\&quot;:2}</p>
          */
         public Builder template(Template template) {
             this.template = template;
@@ -164,6 +164,9 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ownerUserId")
         private Long ownerUserId;
 
+        @com.aliyun.core.annotation.NameInMap("reviewOutput")
+        private Boolean reviewOutput;
+
         @com.aliyun.core.annotation.NameInMap("reviewerUserIds")
         private java.util.List<Long> reviewerUserIds;
 
@@ -185,6 +188,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             this.ownerAgentName = builder.ownerAgentName;
             this.ownerType = builder.ownerType;
             this.ownerUserId = builder.ownerUserId;
+            this.reviewOutput = builder.reviewOutput;
             this.reviewerUserIds = builder.reviewerUserIds;
             this.sortOrder = builder.sortOrder;
             this.specification = builder.specification;
@@ -236,6 +240,13 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewOutput
+         */
+        public Boolean getReviewOutput() {
+            return this.reviewOutput;
+        }
+
+        /**
          * @return reviewerUserIds
          */
         public java.util.List<Long> getReviewerUserIds() {
@@ -276,6 +287,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             private String ownerAgentName; 
             private String ownerType; 
             private Long ownerUserId; 
+            private Boolean reviewOutput; 
             private java.util.List<Long> reviewerUserIds; 
             private Long sortOrder; 
             private String specification; 
@@ -291,6 +303,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
                 this.ownerAgentName = model.ownerAgentName;
                 this.ownerType = model.ownerType;
                 this.ownerUserId = model.ownerUserId;
+                this.reviewOutput = model.reviewOutput;
                 this.reviewerUserIds = model.reviewerUserIds;
                 this.sortOrder = model.sortOrder;
                 this.specification = model.specification;
@@ -313,7 +326,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
              * <p>The step name.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Customer complaint handling process</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -321,7 +334,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the responsible agent.</p>
+             * <p>The name of the agent owner.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -358,7 +371,18 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user IDs of the reviewers.</p>
+             * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder reviewOutput(Boolean reviewOutput) {
+                this.reviewOutput = reviewOutput;
+                return this;
+            }
+
+            /**
+             * <p>The user IDs of the reviewers.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -380,10 +404,10 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The step processing instructions.</p>
+             * <p>The step handling instructions.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Collect customer information and submit it to the owner for review</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -391,10 +415,10 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of structured segments for the step instructions. Supported types include text, mention, skill, app, files, and web_search. All segment fields and nested attachments are preserved exactly as returned by the backend.</p>
+             * <p>The ordered array of fragments. Supports text, mention, skill, app, files, and web_search. Preserves referenced identities and order.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
+             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;整理输入资料&quot;}]</p>
              */
             public Builder specificationJson(java.util.List<java.util.Map<String, ?>> specificationJson) {
                 this.specificationJson = specificationJson;
@@ -429,15 +453,27 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("edges")
+        private java.util.List<java.util.Map<String, ?>> edges;
+
+        @com.aliyun.core.annotation.NameInMap("layout")
+        private java.util.Map<String, ?> layout;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("schemaVersion")
+        private Long schemaVersion;
 
         @com.aliyun.core.annotation.NameInMap("steps")
         private java.util.List<Steps> steps;
 
         private Template(Builder builder) {
             this.description = builder.description;
+            this.edges = builder.edges;
+            this.layout = builder.layout;
             this.name = builder.name;
+            this.schemaVersion = builder.schemaVersion;
             this.steps = builder.steps;
         }
 
@@ -457,10 +493,31 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return edges
+         */
+        public java.util.List<java.util.Map<String, ?>> getEdges() {
+            return this.edges;
+        }
+
+        /**
+         * @return layout
+         */
+        public java.util.Map<String, ?> getLayout() {
+            return this.layout;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return schemaVersion
+         */
+        public Long getSchemaVersion() {
+            return this.schemaVersion;
         }
 
         /**
@@ -472,7 +529,10 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private java.util.List<java.util.Map<String, ?>> edges; 
+            private java.util.Map<String, ?> layout; 
             private String name; 
+            private Long schemaVersion; 
             private java.util.List<Steps> steps; 
 
             private Builder() {
@@ -480,7 +540,10 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
 
             private Builder(Template model) {
                 this.description = model.description;
+                this.edges = model.edges;
+                this.layout = model.layout;
                 this.name = model.name;
+                this.schemaVersion = model.schemaVersion;
                 this.steps = model.steps;
             } 
 
@@ -488,7 +551,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
              * <p>The template description.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Standard process for handling customer complaints</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -496,10 +559,32 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
+             * <p>节点依赖边；每项包含from/to，引用稳定stepId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
+             */
+            public Builder edges(java.util.List<java.util.Map<String, ?>> edges) {
+                this.edges = edges;
+                return this;
+            }
+
+            /**
+             * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
+             */
+            public Builder layout(java.util.Map<String, ?> layout) {
+                this.layout = layout;
+                return this;
+            }
+
+            /**
              * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Customer complaint handling process</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -507,10 +592,21 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization steps.</p>
+             * <p>模板结构版本，当前为2，与业务版本vN独立</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>2</p>
+             */
+            public Builder schemaVersion(Long schemaVersion) {
+                this.schemaVersion = schemaVersion;
+                return this;
+            }
+
+            /**
+             * <p>The standardized steps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
              */
             public Builder steps(java.util.List<Steps> steps) {
                 this.steps = steps;

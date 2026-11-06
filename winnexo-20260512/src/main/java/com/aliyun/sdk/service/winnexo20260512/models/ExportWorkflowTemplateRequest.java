@@ -107,7 +107,7 @@ public class ExportWorkflowTemplateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>group_example</p>
+         * <p>cg_9401</p>
          */
         public Builder collaborationGroupId(String collaborationGroupId) {
             this.putBodyParameter("collaborationGroupId", collaborationGroupId);
@@ -120,7 +120,7 @@ public class ExportWorkflowTemplateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>tpl_example</p>
+         * <p>tpl_9401</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("templateId", templateId);

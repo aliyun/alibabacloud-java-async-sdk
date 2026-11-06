@@ -108,7 +108,7 @@ public class CreateWorkflowTemplateDraftVersionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>group_example</p>
+         * <p>cg_9401</p>
          */
         public Builder collaborationGroupId(String collaborationGroupId) {
             this.putBodyParameter("collaborationGroupId", collaborationGroupId);
@@ -121,7 +121,7 @@ public class CreateWorkflowTemplateDraftVersionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>tpl_example</p>
+         * <p>tpl_9401</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("templateId", templateId);
@@ -142,7 +142,7 @@ public class CreateWorkflowTemplateDraftVersionRequest extends Request {
         }
 
         /**
-         * <p>The version number of the template on which the edit is based. The format is a lowercase v followed by a positive integer, such as v1. A draft version is returned as-is.</p>
+         * <p>The version number to which the returned content belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

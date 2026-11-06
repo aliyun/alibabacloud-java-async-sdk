@@ -173,7 +173,7 @@ public class ListAppResourceUserPermissionsRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +185,7 @@ public class ListAppResourceUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The permission filter.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -197,7 +197,7 @@ public class ListAppResourceUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The permission points to filter.</p>
+         * <p>The permission filter.</p>
          */
         public Builder permissions(java.util.List<String> permissions) {
             String permissionsShrink = shrink(permissions, "permissions", "json");
@@ -207,7 +207,7 @@ public class ListAppResourceUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The application key or its subpath.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class ListAppResourceUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant to which the resource belongs. If you do not specify this parameter, the current tenant of the caller is used.</p>
+         * <p>The ID of the target platform user.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -232,7 +232,7 @@ public class ListAppResourceUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Set the value to APP_RESOURCE.</p>
+         * <p>The application key or its subpath.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class ListAppResourceUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the target platform user.</p>
+         * <p>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</p>
          * 
          * <strong>example:</strong>
          * <p>10086</p>
@@ -257,7 +257,7 @@ public class ListAppResourceUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</p>
+         * <p>The fixed value APP_RESOURCE.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -269,7 +269,7 @@ public class ListAppResourceUserPermissionsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. If you do not specify this parameter, the default tenant of the caller is used.</p>
+         * <p>The ID of the tenant to which the resource belongs. If omitted, the current tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

@@ -107,7 +107,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
          * <p>The generated non-persistent template draft.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>{\&quot;schemaVersion\&quot;:2,\&quot;steps\&quot;:[]}</p>
          */
         public Builder draft(Draft draft) {
             this.draft = draft;
@@ -115,7 +115,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error description.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>
@@ -126,7 +126,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request tracking ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -164,6 +164,9 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ownerUserId")
         private Long ownerUserId;
 
+        @com.aliyun.core.annotation.NameInMap("reviewOutput")
+        private Boolean reviewOutput;
+
         @com.aliyun.core.annotation.NameInMap("reviewerUserIds")
         private java.util.List<Long> reviewerUserIds;
 
@@ -185,6 +188,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             this.ownerAgentName = builder.ownerAgentName;
             this.ownerType = builder.ownerType;
             this.ownerUserId = builder.ownerUserId;
+            this.reviewOutput = builder.reviewOutput;
             this.reviewerUserIds = builder.reviewerUserIds;
             this.sortOrder = builder.sortOrder;
             this.specification = builder.specification;
@@ -236,6 +240,13 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewOutput
+         */
+        public Boolean getReviewOutput() {
+            return this.reviewOutput;
+        }
+
+        /**
          * @return reviewerUserIds
          */
         public java.util.List<Long> getReviewerUserIds() {
@@ -276,6 +287,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             private String ownerAgentName; 
             private String ownerType; 
             private Long ownerUserId; 
+            private Boolean reviewOutput; 
             private java.util.List<Long> reviewerUserIds; 
             private Long sortOrder; 
             private String specification; 
@@ -291,6 +303,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
                 this.ownerAgentName = model.ownerAgentName;
                 this.ownerType = model.ownerType;
                 this.ownerUserId = model.ownerUserId;
+                this.reviewOutput = model.reviewOutput;
                 this.reviewerUserIds = model.reviewerUserIds;
                 this.sortOrder = model.sortOrder;
                 this.specification = model.specification;
@@ -313,7 +326,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
              * <p>The name of the step.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Customer complaint handling process</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -321,7 +334,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the responsible agent.</p>
+             * <p>The name of the agent owner.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -332,7 +345,11 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the owner. Valid values: MEMBER: Human. AGENT: Agent.</p>
+             * <p>The type of the owner. Valid values:</p>
+             * <ul>
+             * <li>MEMBER: human</li>
+             * <li>AGENT: agent</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>MEMBER</p>
@@ -354,6 +371,17 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             }
 
             /**
+             * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder reviewOutput(Boolean reviewOutput) {
+                this.reviewOutput = reviewOutput;
+                return this;
+            }
+
+            /**
              * <p>The list of user IDs of the reviewers.</p>
              * 
              * <strong>example:</strong>
@@ -365,7 +393,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order of the step.</p>
+             * <p>The sort order of the step.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -376,10 +404,10 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing instructions for the step.</p>
+             * <p>The processing instructions of the step.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Collect customer information and submit it to the owner for review</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -387,10 +415,10 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of structured segments for the step instructions. Supported types include text, mention, skill, app, files, and web_search. The fields and nested attachments of each segment are retained as returned by the backend.</p>
+             * <p>The ordered array of fragments. Supported types include text, mention, skill, app, files, and web_search. The referenced identities and order are preserved.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
+             * <p>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;收集客户信息\&quot;}]</p>
              */
             public Builder specificationJson(java.util.List<java.util.Map<String, ?>> specificationJson) {
                 this.specificationJson = specificationJson;
@@ -425,15 +453,27 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("edges")
+        private java.util.List<java.util.Map<String, ?>> edges;
+
+        @com.aliyun.core.annotation.NameInMap("layout")
+        private java.util.Map<String, ?> layout;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("schemaVersion")
+        private Long schemaVersion;
 
         @com.aliyun.core.annotation.NameInMap("steps")
         private java.util.List<Steps> steps;
 
         private Draft(Builder builder) {
             this.description = builder.description;
+            this.edges = builder.edges;
+            this.layout = builder.layout;
             this.name = builder.name;
+            this.schemaVersion = builder.schemaVersion;
             this.steps = builder.steps;
         }
 
@@ -453,10 +493,31 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         }
 
         /**
+         * @return edges
+         */
+        public java.util.List<java.util.Map<String, ?>> getEdges() {
+            return this.edges;
+        }
+
+        /**
+         * @return layout
+         */
+        public java.util.Map<String, ?> getLayout() {
+            return this.layout;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return schemaVersion
+         */
+        public Long getSchemaVersion() {
+            return this.schemaVersion;
         }
 
         /**
@@ -468,7 +529,10 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private java.util.List<java.util.Map<String, ?>> edges; 
+            private java.util.Map<String, ?> layout; 
             private String name; 
+            private Long schemaVersion; 
             private java.util.List<Steps> steps; 
 
             private Builder() {
@@ -476,7 +540,10 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
 
             private Builder(Draft model) {
                 this.description = model.description;
+                this.edges = model.edges;
+                this.layout = model.layout;
                 this.name = model.name;
+                this.schemaVersion = model.schemaVersion;
                 this.steps = model.steps;
             } 
 
@@ -484,7 +551,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
              * <p>The description of the template.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Standard process for handling customer complaints</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -492,10 +559,32 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             }
 
             /**
+             * <p>节点依赖边；每项包含from/to，引用稳定stepId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
+             */
+            public Builder edges(java.util.List<java.util.Map<String, ?>> edges) {
+                this.edges = edges;
+                return this;
+            }
+
+            /**
+             * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
+             */
+            public Builder layout(java.util.Map<String, ?> layout) {
+                this.layout = layout;
+                return this;
+            }
+
+            /**
              * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Customer complaint handling process</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -503,10 +592,21 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             }
 
             /**
+             * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder schemaVersion(Long schemaVersion) {
+                this.schemaVersion = schemaVersion;
+                return this;
+            }
+
+            /**
              * <p>The ordered steps.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
              */
             public Builder steps(java.util.List<Steps> steps) {
                 this.steps = steps;

@@ -119,7 +119,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of 200 indicates success.</p>
+         * <p>The business status code. The value 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The physical instance ID.</p>
+         * <p>The physical workflow instance ID (planId).</p>
          * 
          * <strong>example:</strong>
          * <p>plan_example</p>
@@ -141,7 +141,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error description.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>
@@ -163,7 +163,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request tracking ID.</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -408,7 +408,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the node was first run. This field is empty for historical or unrun nodes.</p>
+             * <p>The time when the node was first run. This field is empty for historical nodes or nodes that have not run.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-14T08:00:00Z</p>
@@ -433,7 +433,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
              * <p>The display name of the node assignee. This field is empty if the assignee is unknown.</p>
              * 
              * <strong>example:</strong>
-             * <p>Assistant Customer Success Manager (CSM)</p>
+             * <p>Customer Success Manager (CSM) Assistant</p>
              */
             public Builder handler(String handler) {
                 this.handler = handler;
@@ -441,7 +441,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lane position of the node in the workflow graph.</p>
+             * <p>The lane of the node in the workflow graph.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -452,7 +452,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the node (nodeKey). This is not the session ID.</p>
+             * <p>The visible nodes arranged in topological order. The number of nodes is determined by the actual dynamic graph.</p>
              * 
              * <strong>example:</strong>
              * <p>query.amount</p>
@@ -507,7 +507,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original running status of the node, such as READY, RUNNING, WAITING, SUCCEEDED, or FAILED.</p>
+             * <p>The original node running status, such as READY, RUNNING, WAITING, SUCCEEDED, or FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -518,7 +518,7 @@ public class ListInstanceNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for waiting, such as HUMAN_INPUT, HUMAN_STEP, REVIEW, MANUAL_PAUSE, or UNBLOCK. This field is empty if the node is not waiting.</p>
+             * <p>The wait reason: HUMAN_INPUT, HUMAN_STEP, REVIEW, MANUAL_PAUSE, or UNBLOCK. This field is empty when the node is not waiting.</p>
              * 
              * <strong>example:</strong>
              * <p>REVIEW</p>

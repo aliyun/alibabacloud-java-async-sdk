@@ -150,7 +150,7 @@ public class ListWorkflowTemplatesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>group_example</p>
+         * <p>cg_9401</p>
          */
         public Builder collaborationGroupId(String collaborationGroupId) {
             this.putBodyParameter("collaborationGroupId", collaborationGroupId);
@@ -162,7 +162,7 @@ public class ListWorkflowTemplatesRequest extends Request {
          * <p>The keyword for fuzzy search in the template name or description.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Weekly report</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -186,7 +186,7 @@ public class ListWorkflowTemplatesRequest extends Request {
          * <p>The pagination token. Obtain the token from the nextToken parameter in the previous response. This parameter takes precedence over page if both are specified.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>tok_9401</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("nextToken", nextToken);

@@ -26,6 +26,9 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("edges")
+    private java.util.List<java.util.Map<String, ?>> edges;
+
     @com.aliyun.core.annotation.NameInMap("effectiveVersion")
     private String effectiveVersion;
 
@@ -35,6 +38,9 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("gmtModified")
     private String gmtModified;
 
+    @com.aliyun.core.annotation.NameInMap("layout")
+    private java.util.Map<String, ?> layout;
+
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
@@ -43,6 +49,9 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("schemaVersion")
+    private Long schemaVersion;
 
     @com.aliyun.core.annotation.NameInMap("steps")
     private java.util.List<Steps> steps;
@@ -63,12 +72,15 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         this.code = builder.code;
         this.createdByUserId = builder.createdByUserId;
         this.description = builder.description;
+        this.edges = builder.edges;
         this.effectiveVersion = builder.effectiveVersion;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
+        this.layout = builder.layout;
         this.message = builder.message;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.schemaVersion = builder.schemaVersion;
         this.steps = builder.steps;
         this.templateId = builder.templateId;
         this.version = builder.version;
@@ -110,6 +122,13 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return edges
+     */
+    public java.util.List<java.util.Map<String, ?>> getEdges() {
+        return this.edges;
+    }
+
+    /**
      * @return effectiveVersion
      */
     public String getEffectiveVersion() {
@@ -131,6 +150,13 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return layout
+     */
+    public java.util.Map<String, ?> getLayout() {
+        return this.layout;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -149,6 +175,13 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return schemaVersion
+     */
+    public Long getSchemaVersion() {
+        return this.schemaVersion;
     }
 
     /**
@@ -190,12 +223,15 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         private String code; 
         private Long createdByUserId; 
         private String description; 
+        private java.util.List<java.util.Map<String, ?>> edges; 
         private String effectiveVersion; 
         private String gmtCreate; 
         private String gmtModified; 
+        private java.util.Map<String, ?> layout; 
         private String message; 
         private String name; 
         private String requestId; 
+        private Long schemaVersion; 
         private java.util.List<Steps> steps; 
         private String templateId; 
         private String version; 
@@ -209,12 +245,15 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             this.code = model.code;
             this.createdByUserId = model.createdByUserId;
             this.description = model.description;
+            this.edges = model.edges;
             this.effectiveVersion = model.effectiveVersion;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
+            this.layout = model.layout;
             this.message = model.message;
             this.name = model.name;
             this.requestId = model.requestId;
+            this.schemaVersion = model.schemaVersion;
             this.steps = model.steps;
             this.templateId = model.templateId;
             this.version = model.version;
@@ -245,10 +284,10 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The template description.</p>
+         * <p>The description of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Standard process for handling customer complaints</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -256,7 +295,18 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current effective version number of the template. An empty value indicates that only a draft exists and it cannot be used for work items.</p>
+         * <p>节点依赖边；每项包含from/to，引用稳定stepId；显式空数组表示没有依赖</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;from&quot;:&quot;collect&quot;,&quot;to&quot;:&quot;deliver&quot;}]</p>
+         */
+        public Builder edges(java.util.List<java.util.Map<String, ?>> edges) {
+            this.edges = edges;
+            return this;
+        }
+
+        /**
+         * <p>The current effective version number of the template. An empty value indicates that only a draft exists and the template cannot be used for work items.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -270,7 +320,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
          * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>2026-11-05T08:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -281,7 +331,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
          * <p>The modification time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>2026-11-05T08:00:00Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -289,7 +339,18 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error description.</p>
+         * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
+         */
+        public Builder layout(java.util.Map<String, ?> layout) {
+            this.layout = layout;
+            return this;
+        }
+
+        /**
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>
@@ -300,10 +361,10 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Customer Complaint Handling Process</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -322,10 +383,21 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder schemaVersion(Long schemaVersion) {
+            this.schemaVersion = schemaVersion;
+            return this;
+        }
+
+        /**
          * <p>The ordered steps.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
          */
         public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
@@ -333,10 +405,10 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The template ID.</p>
+         * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>tpl_example</p>
+         * <p>tpl_9401</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -344,7 +416,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number to which the returned content belongs.</p>
+         * <p>The version number to which the content belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -355,10 +427,10 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The change description of the version. An empty value indicates that no description is provided.</p>
+         * <p>The change description for this version. An empty value indicates that no description is provided.</p>
          * 
          * <strong>example:</strong>
-         * <p>Add a review step</p>
+         * <p>Added a review step</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.versionDescription = versionDescription;
@@ -408,6 +480,9 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ownerUserId")
         private Long ownerUserId;
 
+        @com.aliyun.core.annotation.NameInMap("reviewOutput")
+        private Boolean reviewOutput;
+
         @com.aliyun.core.annotation.NameInMap("reviewerUserIds")
         private java.util.List<Long> reviewerUserIds;
 
@@ -429,6 +504,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             this.ownerAgentName = builder.ownerAgentName;
             this.ownerType = builder.ownerType;
             this.ownerUserId = builder.ownerUserId;
+            this.reviewOutput = builder.reviewOutput;
             this.reviewerUserIds = builder.reviewerUserIds;
             this.sortOrder = builder.sortOrder;
             this.specification = builder.specification;
@@ -480,6 +556,13 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewOutput
+         */
+        public Boolean getReviewOutput() {
+            return this.reviewOutput;
+        }
+
+        /**
          * @return reviewerUserIds
          */
         public java.util.List<Long> getReviewerUserIds() {
@@ -520,6 +603,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             private String ownerAgentName; 
             private String ownerType; 
             private Long ownerUserId; 
+            private Boolean reviewOutput; 
             private java.util.List<Long> reviewerUserIds; 
             private Long sortOrder; 
             private String specification; 
@@ -535,6 +619,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
                 this.ownerAgentName = model.ownerAgentName;
                 this.ownerType = model.ownerType;
                 this.ownerUserId = model.ownerUserId;
+                this.reviewOutput = model.reviewOutput;
                 this.reviewerUserIds = model.reviewerUserIds;
                 this.sortOrder = model.sortOrder;
                 this.specification = model.specification;
@@ -554,10 +639,10 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The step name.</p>
+             * <p>The name of the step.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Customer Complaint Handling Process</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -565,7 +650,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the responsible agent.</p>
+             * <p>The name of the agent assignee.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -576,9 +661,9 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner type. Valid values:</p>
+             * <p>The type of the assignee. Valid values:</p>
              * <ul>
-             * <li>MEMBER: Human.</li>
+             * <li>MEMBER: Human user.</li>
              * <li>AGENT: Agent.</li>
              * </ul>
              * 
@@ -591,13 +676,24 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the human owner.</p>
+             * <p>The user ID of the human assignee.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
              */
             public Builder ownerUserId(Long ownerUserId) {
                 this.ownerUserId = ownerUserId;
+                return this;
+            }
+
+            /**
+             * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder reviewOutput(Boolean reviewOutput) {
+                this.reviewOutput = reviewOutput;
                 return this;
             }
 
@@ -613,7 +709,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The step order.</p>
+             * <p>The order of the step.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -624,10 +720,10 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The step processing instructions.</p>
+             * <p>The processing instructions for the step.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>Collect customer information and forward it to the person in charge for review</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -635,10 +731,10 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of structured segments for the step instructions. Supports text, mention, skill, app, files, and web_search. The fields and nested attachments of each segment are retained as returned by the backend.</p>
+             * <p>The ordered array of fragments. Supported types include text, mention, skill, app, files, and web_search. Referenced identities and order are preserved.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
+             * <p>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;收集客户信息\&quot;}]</p>
              */
             public Builder specificationJson(java.util.List<java.util.Map<String, ?>> specificationJson) {
                 this.specificationJson = specificationJson;
@@ -646,7 +742,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The step ID.</p>
+             * <p>The ID of the step.</p>
              * 
              * <strong>example:</strong>
              * <p>collect</p>

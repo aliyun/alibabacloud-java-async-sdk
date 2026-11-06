@@ -93,7 +93,7 @@ public class DeleteAppResourcePermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value 200 indicates success.</p>
+         * <p>The business status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -115,7 +115,7 @@ public class DeleteAppResourcePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This field is empty if the request is successful.</p>
+         * <p>The error message. Empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>

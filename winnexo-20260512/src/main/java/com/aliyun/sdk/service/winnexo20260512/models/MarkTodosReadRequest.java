@@ -87,7 +87,7 @@ public class MarkTodosReadRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to mark all to-do items as read. This parameter takes precedence over the todoIds parameter.</p>
+         * <p>Specifies whether to mark all to-do items as read. This parameter takes precedence over todoIds.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -99,7 +99,7 @@ public class MarkTodosReadRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+         * <p>The list of to-do item IDs. A maximum of 100 IDs can be specified. This parameter is ignored when markAllRead is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -111,7 +111,7 @@ public class MarkTodosReadRequest extends Request {
         }
 
         /**
-         * <p>The list of to-do item IDs. You can specify up to 100 IDs. This parameter is ignored if markAllRead is set to true.</p>
+         * <p>The list of to-do item IDs. A maximum of 100 IDs can be specified. This parameter is ignored when markAllRead is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>todo_abc123</p>

@@ -104,11 +104,11 @@ public class SetWorkflowTemplateEffectiveVersionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the collaboration workspace.</p>
+         * <p>The collaboration workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>group_example</p>
+         * <p>cg_9401</p>
          */
         public Builder collaborationGroupId(String collaborationGroupId) {
             this.putBodyParameter("collaborationGroupId", collaborationGroupId);
@@ -117,11 +117,11 @@ public class SetWorkflowTemplateEffectiveVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>tpl_example</p>
+         * <p>tpl_9401</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("templateId", templateId);
@@ -130,7 +130,7 @@ public class SetWorkflowTemplateEffectiveVersionRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -142,7 +142,7 @@ public class SetWorkflowTemplateEffectiveVersionRequest extends Request {
         }
 
         /**
-         * <p>The submitted template version number to be set as effective. The format is a lowercase v followed by a positive integer, such as v1.</p>
+         * <p>The version number of the returned content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

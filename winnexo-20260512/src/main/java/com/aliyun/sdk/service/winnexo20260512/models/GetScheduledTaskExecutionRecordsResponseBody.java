@@ -156,7 +156,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether more data is available.</p>
+         * <p>Indicates whether more data exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -178,7 +178,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +189,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of tasks per page.</p>
+         * <p>The ID of the collaboration group, such as cg_101. If you specify this parameter, the data is returned by group dimension, and the caller must be a valid group member. If you do not specify this parameter, the data is returned by personal dimension, excluding group tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -366,7 +366,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The actual hours spent, in hours.</p>
+             * <p>The actual working hours in hours.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -410,7 +410,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the execution record has been archived due to expiration.</p>
+             * <p>The time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -421,7 +421,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution output content (historical records only).</p>
+             * <p>The execution output content (history records only).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -617,7 +617,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the collaboration group to which the task belongs. An empty value indicates a personal task.</p>
+             * <p>The pre-filter for a single task. If you do not specify this parameter, the execution records of all visible tasks are returned.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleCollaborationGroupId</p>
@@ -661,12 +661,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution model tier. Valid values:</p>
-             * <ul>
-             * <li>flagship: Flagship.</li>
-             * <li>standard: Standard.</li>
-             * <li>quick: Lightweight.</li>
-             * </ul>
+             * <p>The execution model tier. Valid values: flagship (flagship), standard (standard), and quick (lightweight).</p>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -680,7 +675,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
              * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>SampleName.pdf</p>
+             * <p>Sample name.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -723,8 +718,8 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             /**
              * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Manual: Manual execution.</li>
-             * <li>Cron: Timed scheduling.</li>
+             * <li>Manual: manual execution.</li>
+             * <li>Cron: scheduled trigger.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -199,7 +199,7 @@ public class ListOutputFilesRequest extends Request {
         } 
 
         /**
-         * <p>The business ID used for exact filtering. The length is 1 to 128 characters. This value is derived from the businessId of the file registration or associated workflow instance.</p>
+         * <p>The business ID used for exact filtering. The length is 1 to 128 characters. This ID is derived from file registrations or the businessId of associated workflow instances.</p>
          * 
          * <strong>example:</strong>
          * <p>REQ-20261012-001</p>
@@ -247,7 +247,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The name of the digital employee (operating object). Filters outputs by name.</p>
+         * <p>The name of the digital employee (operating object). Filters results by name.</p>
          * 
          * <strong>example:</strong>
          * <p>Business Analysis Assistant</p>
@@ -295,7 +295,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display only shared outputs and output details.</p>
+         * <p>Specifies whether to display only the outputs and output details that have sharing enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -307,7 +307,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The tags used for exact filtering. All specified tags must be matched simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registrations or the variables.tags of associated instances.</p>
+         * <p>The tags used for exact filtering. All specified tags must match simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registrations or the variables.tags of associated instances.</p>
          */
         public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "tags", "json");

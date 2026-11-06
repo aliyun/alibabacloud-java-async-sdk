@@ -132,7 +132,7 @@ public class SubmitTodoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. A value of 200 indicates success.</p>
+         * <p>The array of answer values.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,10 +143,10 @@ public class SubmitTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The completion time in ISO 8601 UTC format. Note that this format differs from other time fields formatted in UTC+8.</p>
+         * <p>The completion time in ISO 8601 UTC format. This format differs from other fields formatted in UTC+8.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-10-12T02:00:00+00:00</p>
+         * <p>2026-10-12T02:00:00Z</p>
          */
         public Builder completedAt(String completedAt) {
             this.completedAt = completedAt;
@@ -154,7 +154,7 @@ public class SubmitTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user ID of the user who completed the item.</p>
+         * <p>The user ID of the user who completed the task.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -187,7 +187,7 @@ public class SubmitTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status after submission. This value is always COMPLETED.</p>
+         * <p>The status after submission. The value is always COMPLETED.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -198,7 +198,7 @@ public class SubmitTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the to-do item.</p>
+         * <p>The answer array. The original text of the question must align with the to-do question.</p>
          * 
          * <strong>example:</strong>
          * <p>todo_abc123</p>

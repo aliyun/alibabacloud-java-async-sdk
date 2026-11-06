@@ -147,7 +147,7 @@ public class TransferTodoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the to-do task.</p>
+         * <p>The list of target user IDs for the transfer (1 to 100).</p>
          * 
          * <strong>example:</strong>
          * <p>todo_abc123</p>
@@ -227,7 +227,7 @@ public class TransferTodoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the target user.</p>
+             * <p>The target user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>43</p>

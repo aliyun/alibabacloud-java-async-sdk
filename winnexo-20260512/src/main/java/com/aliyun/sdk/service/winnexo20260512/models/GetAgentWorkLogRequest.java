@@ -128,7 +128,7 @@ public class GetAgentWorkLogRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1.</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

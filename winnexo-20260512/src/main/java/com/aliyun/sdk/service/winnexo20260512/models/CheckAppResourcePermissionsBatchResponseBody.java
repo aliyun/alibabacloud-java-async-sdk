@@ -104,7 +104,7 @@ public class CheckAppResourcePermissionsBatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This field is empty if the request is successful.</p>
+         * <p>The error description. This field is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>
@@ -126,7 +126,7 @@ public class CheckAppResourcePermissionsBatchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The results, returned in the same order as the requested items.</p>
+         * <p>The results in the same order as the request.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -218,7 +218,7 @@ public class CheckAppResourcePermissionsBatchResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the user has the permission.</p>
+             * <p>Indicates whether the user has the required permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -240,7 +240,7 @@ public class CheckAppResourcePermissionsBatchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dot-separated resource key whose first segment is the APP application key.</p>
+             * <p>The dot-separated resource key whose first segment is the application key.</p>
              * 
              * <strong>example:</strong>
              * <p>app.demo.resource_1</p>

@@ -69,7 +69,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</p>
+     * <p>Cancels multiple to-do items based on a list of IDs. This operation is idempotent and does not return errors for completed or non-existent items.</p>
      * 
      * @param request the request parameters of BatchCancelTodos  BatchCancelTodosRequest
      * @return BatchCancelTodosResponse
@@ -174,7 +174,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After authenticating each application in the batch, reuses the constant-time query of the service.</p>
+     * <p>Authenticates applications in batches and reuses constant-time service queries.</p>
      * 
      * @param request the request parameters of CheckAppResourcePermissionsBatch  CheckAppResourcePermissionsBatchRequest
      * @return CheckAppResourcePermissionsBatchResponse
@@ -362,6 +362,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateCustomOrgResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建与页面一致的自由探索工作项及群话题，配置数字员工和可见范围；不发送消息，不自动执行；非幂等，超时先查询 queryWorkItemFeed</p>
+     * 
+     * @param request the request parameters of CreateFreeExplorationWorkItem  CreateFreeExplorationWorkItemRequest
+     * @return CreateFreeExplorationWorkItemResponse
+     */
+    @Override
+    public CompletableFuture<CreateFreeExplorationWorkItemResponse> createFreeExplorationWorkItem(CreateFreeExplorationWorkItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateFreeExplorationWorkItem").setMethod(HttpMethod.POST).setPathRegex("/openapi/createFreeExplorationWorkItem").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateFreeExplorationWorkItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateFreeExplorationWorkItemResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1411,7 +1432,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
+     * <p>Generates a draft version for editing a workflow template as a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content generation is performed to produce a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently call UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
      * 
      * @param request the request parameters of CreateWorkflowTemplateDraftVersion  CreateWorkflowTemplateDraftVersionRequest
      * @return CreateWorkflowTemplateDraftVersionResponse
@@ -1432,7 +1453,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</p>
+     * <p>Invokes the original atomic deletion capability after passing MANAGE verification for each application.</p>
      * 
      * @param request the request parameters of DeleteAppResourcePermissions  DeleteAppResourcePermissionsRequest
      * @return DeleteAppResourcePermissionsResponse
@@ -1654,7 +1675,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
+     * <p>Exports a simplified template definition that can be re-imported.</p>
      * 
      * @param request the request parameters of ExportWorkflowTemplate  ExportWorkflowTemplateRequest
      * @return ExportWorkflowTemplateResponse
@@ -1765,6 +1786,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetChatSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取数字员工对话生成文件的正文、预览地址或短期下载地址，支持工作流节点中的USER_OUTPUT_ITEM文件引用。调用者需通过租户、空间成员和文件来源权限校验。无需将文件登记为工作项产物；本接口不接受artifactId。</p>
+     * 
+     * @param request the request parameters of GetCollaborationGroupOutputItemPreview  GetCollaborationGroupOutputItemPreviewRequest
+     * @return GetCollaborationGroupOutputItemPreviewResponse
+     */
+    @Override
+    public CompletableFuture<GetCollaborationGroupOutputItemPreviewResponse> getCollaborationGroupOutputItemPreview(GetCollaborationGroupOutputItemPreviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCollaborationGroupOutputItemPreview").setMethod(HttpMethod.POST).setPathRegex("/openapi/getCollaborationGroupOutputItemPreview").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCollaborationGroupOutputItemPreviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCollaborationGroupOutputItemPreviewResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2020,15 +2062,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation uploads files to an enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this operation.</li>
-     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
-     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base folder. Otherwise, the file is bound to the default root folder of the current digital employee.</li>
-     * <li>You can add tags to resources by using <code>sourceTags</code> for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
+     * <li>This API operation uploads files to the enterprise knowledge base.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this API operation.</li>
+     * <li>When uploading a file, you must provide the OSS persistence address (<code>filePath</code>) of the file.</li>
+     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
+     * <li>You can use <code>sourceTags</code> to add tags to resources for subsequent management and retrieval.</li>
+     * <li>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
      * @param request the request parameters of GetScheduledTaskExecutionRecords  GetScheduledTaskExecutionRecordsRequest
@@ -2485,6 +2527,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetWorkItemAudit  GetWorkItemAuditRequest
+     * @return GetWorkItemAuditResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkItemAuditResponse> getWorkItemAudit(GetWorkItemAuditRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkItemAudit").setMethod(HttpMethod.POST).setPathRegex("/openapi/getWorkItemAudit").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkItemAuditResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkItemAuditResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetWorkItemRunSummaries  GetWorkItemRunSummariesRequest
+     * @return GetWorkItemRunSummariesResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkItemRunSummariesResponse> getWorkItemRunSummaries(GetWorkItemRunSummariesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkItemRunSummaries").setMethod(HttpMethod.POST).setPathRegex("/openapi/getWorkItemRunSummaries").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkItemRunSummariesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkItemRunSummariesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Retrieves the instance based on the current member and work item visibility.</p>
      * 
@@ -2500,6 +2578,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetWorkflowInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetWorkflowNodeConfiguration  GetWorkflowNodeConfigurationRequest
+     * @return GetWorkflowNodeConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkflowNodeConfigurationResponse> getWorkflowNodeConfiguration(GetWorkflowNodeConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkflowNodeConfiguration").setMethod(HttpMethod.POST).setPathRegex("/openapi/getWorkflowNodeConfiguration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkflowNodeConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkflowNodeConfigurationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2555,7 +2651,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
+     * <p>Imports a portable template in JSON format and creates a new template regardless of the template name.</p>
      * 
      * @param request the request parameters of ImportWorkflowTemplate  ImportWorkflowTemplateRequest
      * @return ImportWorkflowTemplateResponse
@@ -2706,7 +2802,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Pages results by secure application prefix after APP/MANAGE authorization.</p>
+     * <p>Pages the resource authorization records by secure application prefix after APP/MANAGE authorization.</p>
      * 
      * @param request the request parameters of ListAppResourcePermissionRecords  ListAppResourcePermissionRecordsRequest
      * @return ListAppResourcePermissionRecordsResponse
@@ -2727,7 +2823,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</p>
+     * <p>Enforces the application prefix. The VIEW permission is required for querying your own resources, and the MANAGE permission is required for querying resources on behalf of others.</p>
      * 
      * @param request the request parameters of ListAppResourceUserPermissions  ListAppResourceUserPermissionsRequest
      * @return ListAppResourceUserPermissionsResponse
@@ -2875,6 +2971,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListChatSessionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询指定空间的有效成员，支持按成员显示名称搜索。调用者必须是当前租户内该空间的有效成员。isActive表示租户账号启用状态，不表示人事在职状态。</p>
+     * 
+     * @param request the request parameters of ListCollaborationGroupMembers  ListCollaborationGroupMembersRequest
+     * @return ListCollaborationGroupMembersResponse
+     */
+    @Override
+    public CompletableFuture<ListCollaborationGroupMembersResponse> listCollaborationGroupMembers(ListCollaborationGroupMembersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListCollaborationGroupMembers").setMethod(HttpMethod.POST).setPathRegex("/openapi/listCollaborationGroupMembers").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCollaborationGroupMembersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCollaborationGroupMembersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询当前调用用户在当前租户中有效加入的协作空间，支持按空间名称搜索。仅返回ACTIVE空间；需要关联平台用户的调用身份，不支持无用户身份的部署凭证。</p>
+     * 
+     * @param request the request parameters of ListCollaborationGroups  ListCollaborationGroupsRequest
+     * @return ListCollaborationGroupsResponse
+     */
+    @Override
+    public CompletableFuture<ListCollaborationGroupsResponse> listCollaborationGroups(ListCollaborationGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListCollaborationGroups").setMethod(HttpMethod.POST).setPathRegex("/openapi/listCollaborationGroups").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCollaborationGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCollaborationGroupsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3071,9 +3209,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
-     * sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
-     * Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</p>
+     * <p>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
+     * The sessionId parameter performs an exact match on a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter performs an exact match on the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+     * Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.
+     * For versioned files, the latest published version is returned by default without expanding historical versions. This API does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
+     * For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform an automatic switchover to other versions published later. Invoke this API again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</p>
      * 
      * @param request the request parameters of ListOutputFiles  ListOutputFilesRequest
      * @return ListOutputFilesResponse
@@ -3507,7 +3647,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
+     * <p>Queries valid templates in the current collaboration space with pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</p>
      * 
      * @param request the request parameters of ListWorkflowTemplates  ListWorkflowTemplatesRequest
      * @return ListWorkflowTemplatesResponse
@@ -3528,7 +3668,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</p>
+     * <p>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over todoIds. No error is reported if both are empty.</p>
      * 
      * @param request the request parameters of MarkTodosRead  MarkTodosReadRequest
      * @return MarkTodosReadResponse
@@ -3887,7 +4027,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</p>
+     * <p>Checks the MANAGE permissions for all applications and then performs an atomic batch registration.</p>
      * 
      * @param request the request parameters of RegisterAppResourcePermissions  RegisterAppResourcePermissionsRequest
      * @return RegisterAppResourcePermissionsResponse
@@ -4215,6 +4355,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>从工作项指定节点重跑；沿用业务权限和状态校验，命令接受不代表异步执行完成</p>
+     * 
+     * @param request the request parameters of RerunWorkflowNode  RerunWorkflowNodeRequest
+     * @return RerunWorkflowNodeResponse
+     */
+    @Override
+    public CompletableFuture<RerunWorkflowNodeResponse> rerunWorkflowNode(RerunWorkflowNodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RerunWorkflowNode").setMethod(HttpMethod.POST).setPathRegex("/openapi/rerunWorkflowNode").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RerunWorkflowNodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RerunWorkflowNodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Resets the password of a user through OpenAPI.
      *     Business orchestration:
      *     1. Call UserManagementService.reset_member_password with password_encrypted (required).
@@ -4266,6 +4427,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResetTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ResetWorkflowNodeConfiguration  ResetWorkflowNodeConfigurationRequest
+     * @return ResetWorkflowNodeConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<ResetWorkflowNodeConfigurationResponse> resetWorkflowNodeConfiguration(ResetWorkflowNodeConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResetWorkflowNodeConfiguration").setMethod(HttpMethod.POST).setPathRegex("/openapi/resetWorkflowNodeConfiguration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResetWorkflowNodeConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResetWorkflowNodeConfigurationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4708,13 +4887,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
-     * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
-     * <li>You must provide an OSS persistent address (<code>filePath</code>) for the file. Other information such as the public access URL and original file name is optional.</li>
-     * <li>If you do not specify a target folder ID (<code>directoryId</code>), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure the folder belongs to the invoker\&quot;s personal folder.</li>
-     * <li>Multiple authentication methods (AK, BearerToken, and APP) are supported for security authentication.</li>
+     * <li>This API is used to upload a file to My Resources of a specified digital employee.</li>
+     * <li>The source_type is fixed to FILE, the scope is fixed to PERSONAL, and the platform is fixed to LOCAL.</li>
+     * <li>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</li>
+     * <li>If the destination folder ID (directoryId) is not specified, the file is automatically attached to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the invoker.</li>
+     * <li>Multiple methods to authenticate (such as AK, BearerToken, and APP) are supported for security authentication.</li>
      * <li>The operation type is write, and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
@@ -4762,6 +4941,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>向当前租户、指定协作空间内的已有自由探索会话发送文本消息，立即返回消息提交回执，AI回复在后台异步生成。调用者需关联平台用户并具有话题发送权限。workItemId与conversationId至少传一个，同时传入时必须指向同一会话。不创建新会话，不支持工作流节点话题或Master话题。</p>
+     * 
+     * @param request the request parameters of SendWorkItemMessage  SendWorkItemMessageRequest
+     * @return SendWorkItemMessageResponse
+     */
+    @Override
+    public CompletableFuture<SendWorkItemMessageResponse> sendWorkItemMessage(SendWorkItemMessageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SendWorkItemMessage").setMethod(HttpMethod.POST).setPathRegex("/openapi/sendWorkItemMessage").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendWorkItemMessageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendWorkItemMessageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Sets the personal pin status of a work item for a valid member.</p>
      * 
      * @param request the request parameters of SetWorkItemPinned  SetWorkItemPinnedRequest
@@ -4783,7 +4983,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</p>
+     * <p>The storage management administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before the version takes effect, it is revalidated against the current workspace members, digital employees, and capabilities. Existing work items use their own execute snapshots and remain unaffected.</p>
      * 
      * @param request the request parameters of SetWorkflowTemplateEffectiveVersion  SetWorkflowTemplateEffectiveVersionRequest
      * @return SetWorkflowTemplateEffectiveVersionResponse
@@ -4868,7 +5068,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</p>
+     * <p>Submits the answers for a to-do task. If the same user submits the answers repeatedly, the operation is idempotent and returns the first result. If another user completes the task first, a 409 AlreadyCompleted error is returned.</p>
      * 
      * @param request the request parameters of SubmitTodo  SubmitTodoRequest
      * @return SubmitTodoResponse
@@ -4973,7 +5173,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</p>
+     * <p>Transfers a to-do item to specified users, excludes the operator from the targets, and performs atomic validation for the entire task.</p>
      * 
      * @param request the request parameters of TransferTodo  TransferTodoRequest
      * @return TransferTodoResponse
@@ -5421,8 +5621,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateWorkflowNodeConfiguration  UpdateWorkflowNodeConfigurationRequest
+     * @return UpdateWorkflowNodeConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWorkflowNodeConfigurationResponse> updateWorkflowNodeConfiguration(UpdateWorkflowNodeConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWorkflowNodeConfiguration").setMethod(HttpMethod.POST).setPathRegex("/openapi/updateWorkflowNodeConfiguration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWorkflowNodeConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWorkflowNodeConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
+     * <p>Updates a workflow template by overwriting it with valid members. The last save takes effect.</p>
      * 
      * @param request the request parameters of UpdateWorkflowTemplate  UpdateWorkflowTemplateRequest
      * @return UpdateWorkflowTemplateResponse
