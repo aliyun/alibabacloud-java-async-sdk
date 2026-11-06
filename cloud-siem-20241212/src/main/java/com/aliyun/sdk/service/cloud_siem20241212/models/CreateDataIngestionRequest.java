@@ -255,10 +255,7 @@ public class CreateDataIngestionRequest extends Request {
         } 
 
         /**
-         * <p>The number of associated security capabilities.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * CapacityCount.
          */
         public Builder capacityCount(Integer capacityCount) {
             this.putBodyParameter("CapacityCount", capacityCount);
@@ -267,14 +264,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The data ingestion mode. Valid values:</p>
-         * <ul>
-         * <li>realtime</li>
-         * <li>scan</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>realtime</p>
+         * DataIngestionMode.
          */
         public Builder dataIngestionMode(String dataIngestionMode) {
             this.putBodyParameter("DataIngestionMode", dataIngestionMode);
@@ -283,10 +273,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The status code for data ingestion exceptions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>UserUnauthorized</p>
+         * DataIngestionStateCode.
          */
         public Builder dataIngestionStateCode(String dataIngestionStateCode) {
             this.putBodyParameter("DataIngestionStateCode", dataIngestionStateCode);
@@ -295,14 +282,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The data ingestion type. Valid values:</p>
-         * <ul>
-         * <li>preset</li>
-         * <li>custom</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>custom</p>
+         * DataIngestionType.
          */
         public Builder dataIngestionType(String dataIngestionType) {
             this.putBodyParameter("DataIngestionType", dataIngestionType);
@@ -311,10 +291,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the data source is editable.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * DataSourceEditable.
          */
         public Builder dataSourceEditable(Boolean dataSourceEditable) {
             this.putBodyParameter("DataSourceEditable", dataSourceEditable);
@@ -323,14 +300,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The data source ID.</p>
-         * <blockquote>
-         * <p>This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified DataSourceId is invalid.&quot;
-         * Before calling this operation, call the CreateDataSource operation to create a data source and obtain the data source ID.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>ds-3g6lyf4eonngyohaq7tr</p>
+         * DataSourceId.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("DataSourceId", dataSourceId);
@@ -339,17 +309,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong> (default): Chinese.</li>
-         * <li><strong>en</strong>: English.<blockquote>
-         * <p>This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</p>
-         * </blockquote>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -358,10 +318,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the normalization rule is editable.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * NormalizationRuleEditable.
          */
         public Builder normalizationRuleEditable(Boolean normalizationRuleEditable) {
             this.putBodyParameter("NormalizationRuleEditable", normalizationRuleEditable);
@@ -370,11 +327,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The normalization rule ID.
-         * Before calling this operation, call the CreateNormalizationRule operation to create a normalization rule and obtain the normalization rule ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>nr-hdmady54piigkjfv17yp</p>
+         * NormalizationRuleId.
          */
         public Builder normalizationRuleId(String normalizationRuleId) {
             this.putBodyParameter("NormalizationRuleId", normalizationRuleId);
@@ -383,10 +336,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The product ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_sas</p>
+         * ProductId.
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -395,15 +345,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The region of the management center for threat analysis. Specify the management center based on the region where your assets reside. Valid values:</p>
-         * <ul>
-         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Your assets reside outside China.</li>
-         * <li>cn-shanghai: The actual effective value. RegionId refers to the management center location, which is a different dimension from the API endpoint region (cn-shanghai).</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -412,10 +354,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member to which the administrator switches the view.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>173326*******</p>
+         * RoleFor.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -424,10 +363,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The data source ID for scan mode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds-014frtpy28m5ct2eoyo1</p>
+         * ScanDataSourceId.
          */
         public Builder scanDataSourceId(String scanDataSourceId) {
             this.putBodyParameter("ScanDataSourceId", scanDataSourceId);
@@ -436,10 +372,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The job ID of the stream task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>802c0129b6cfd50861d4b25deea29afb</p>
+         * StreamJobId.
          */
         public Builder streamJobId(String streamJobId) {
             this.putBodyParameter("StreamJobId", streamJobId);
@@ -448,10 +381,7 @@ public class CreateDataIngestionRequest extends Request {
         }
 
         /**
-         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
+         * UpdateTime.
          */
         public Builder updateTime(Long updateTime) {
             this.putBodyParameter("UpdateTime", updateTime);

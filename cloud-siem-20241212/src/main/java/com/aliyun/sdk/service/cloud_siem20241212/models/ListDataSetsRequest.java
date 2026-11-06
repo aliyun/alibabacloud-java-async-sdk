@@ -242,10 +242,7 @@ public class ListDataSetsRequest extends Request {
         } 
 
         /**
-         * <p>The dataset ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dataset-qt0n8246gs9nackg****</p>
+         * DataSetId.
          */
         public Builder dataSetId(String dataSetId) {
             this.putBodyParameter("DataSetId", dataSetId);
@@ -254,7 +251,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The list of dataset IDs.</p>
+         * DataSetIds.
          */
         public Builder dataSetIds(java.util.List<String> dataSetIds) {
             String dataSetIdsShrink = shrink(dataSetIds, "DataSetIds", "simple");
@@ -264,10 +261,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The dataset name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lmftest</p>
+         * DataSetName.
          */
         public Builder dataSetName(String dataSetName) {
             this.putBodyParameter("DataSetName", dataSetName);
@@ -276,14 +270,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The dataset status. Valid values:</p>
-         * <ul>
-         * <li>0: deleted.</li>
-         * <li>1: enabled.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
+         * DataSetStatus.
          */
         public Builder dataSetStatus(Integer dataSetStatus) {
             this.putBodyParameter("DataSetStatus", dataSetStatus);
@@ -292,14 +279,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The dataset type. Valid values:</p>
-         * <ul>
-         * <li>custom: custom dataset.</li>
-         * <li>preset: predefined dataset.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>custom</p>
+         * DataSetType.
          */
         public Builder dataSetType(String dataSetType) {
             this.putBodyParameter("DataSetType", dataSetType);
@@ -308,15 +288,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong> (default): Chinese.</li>
-         * <li><strong>en</strong>: English.
-         * This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.). Valid values: zh and en.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -325,10 +297,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -337,10 +306,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -349,14 +315,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values:</p>
-         * <ul>
-         * <li><strong>asc</strong> (default): ascending order.</li>
-         * <li><strong>desc</strong>: descending order.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>asc</p>
+         * OrderDirection.
          */
         public Builder orderDirection(String orderDirection) {
             this.putBodyParameter("OrderDirection", orderDirection);
@@ -365,14 +324,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting. Valid values:</p>
-         * <ul>
-         * <li>GmtCreate: creation time.</li>
-         * <li>GmtModified: update time.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>GmtCreate</p>
+         * OrderFieldName.
          */
         public Builder orderFieldName(String orderFieldName) {
             this.putBodyParameter("OrderFieldName", orderFieldName);
@@ -381,10 +333,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -393,10 +342,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -405,14 +351,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
-         * <ul>
-         * <li>cn-hangzhou: The assets reside in the Chinese mainland.</li>
-         * <li>ap-southeast-1: The assets reside outside China.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -421,10 +360,7 @@ public class ListDataSetsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member to which the administrator switches the view.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>113091674488****</p>
+         * RoleFor.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

@@ -117,7 +117,7 @@ public class DeleteDataSetRecordRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the dataset.</p>
+         * <p>The dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DeleteDataSetRecordRequest extends Request {
         }
 
         /**
-         * <p>A list of dataset record IDs in a JSON array format.</p>
+         * <p>The list of dataset record IDs in JSON array format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,12 +143,10 @@ public class DeleteDataSetRecordRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese.</p>
-         * </li>
-         * <li><p><strong>en</strong>: English.</p>
-         * </li>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,12 +159,10 @@ public class DeleteDataSetRecordRequest extends Request {
         }
 
         /**
-         * <p>The region of the Data Management center for Threat Analysis. Select a region based on where your assets are located. Valid values:</p>
+         * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-         * </li>
-         * <li><p>ap-southeast-1: Your assets are outside China.</p>
-         * </li>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,7 +175,7 @@ public class DeleteDataSetRecordRequest extends Request {
         }
 
         /**
-         * <p>The user ID of a member. An administrator can specify this parameter to operate as the member.</p>
+         * <p>The ID of the user whose perspective the administrator assumes.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>

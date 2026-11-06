@@ -143,16 +143,7 @@ public class UpdateDataIngestionTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The status of data ingestion. Valid values:</p>
-         * <ul>
-         * <li><p>enabled: Enabled.</p>
-         * </li>
-         * <li><p>disabled: Disabled.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>enabled</p>
+         * DataIngestionStatus.
          */
         public Builder dataIngestionStatus(String dataIngestionStatus) {
             this.putBodyParameter("DataIngestionStatus", dataIngestionStatus);
@@ -161,10 +152,7 @@ public class UpdateDataIngestionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data ingestion template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_actiontrail_event_ingestion_173326*******</p>
+         * DataIngestionTemplateId.
          */
         public Builder dataIngestionTemplateId(String dataIngestionTemplateId) {
             this.putBodyParameter("DataIngestionTemplateId", dataIngestionTemplateId);
@@ -173,10 +161,7 @@ public class UpdateDataIngestionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the data source template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_actiontrail_event_ingestion_173326*******</p>
+         * DataIngestionTemplateName.
          */
         public Builder dataIngestionTemplateName(String dataIngestionTemplateName) {
             this.putBodyParameter("DataIngestionTemplateName", dataIngestionTemplateName);
@@ -185,16 +170,7 @@ public class UpdateDataIngestionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese.</p>
-         * </li>
-         * <li><p><strong>en</strong>: English.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -203,10 +179,7 @@ public class UpdateDataIngestionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the normalization rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_actiontrail_event_rule</p>
+         * NormalizationRuleId.
          */
         public Builder normalizationRuleId(String normalizationRuleId) {
             this.putBodyParameter("NormalizationRuleId", normalizationRuleId);
@@ -215,16 +188,7 @@ public class UpdateDataIngestionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The region where the Data Management center for threat analysis is located. Select a region for the management center based on the region of your asset. Valid values:</p>
-         * <ul>
-         * <li><p>cn-hangzhou: The asset is in the Chinese mainland.</p>
-         * </li>
-         * <li><p>ap-southeast-1: The asset is outside China.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -233,10 +197,7 @@ public class UpdateDataIngestionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the member. This parameter is used by an administrator to switch to the perspective of the member.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>173326*******</p>
+         * RoleFor.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

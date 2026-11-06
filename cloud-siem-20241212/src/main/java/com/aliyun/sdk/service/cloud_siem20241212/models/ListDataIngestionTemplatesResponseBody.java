@@ -93,7 +93,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of data ingestion templates.</p>
+         * DataIngestionTemplates.
          */
         public Builder dataIngestionTemplates(java.util.List<DataIngestionTemplates> dataIngestionTemplates) {
             this.dataIngestionTemplates = dataIngestionTemplates;
@@ -101,10 +101,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -112,10 +109,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -123,10 +117,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -309,10 +300,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of associated security capabilities.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * CapacityCount.
              */
             public Builder capacityCount(String capacityCount) {
                 this.capacityCount = capacityCount;
@@ -320,10 +308,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1733269771123</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -331,14 +316,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data ingestion mode. Valid values:</p>
-             * <ul>
-             * <li>realtime</li>
-             * <li>scan</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>realtime</p>
+             * DataIngestionMode.
              */
             public Builder dataIngestionMode(String dataIngestionMode) {
                 this.dataIngestionMode = dataIngestionMode;
@@ -346,14 +324,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The accessed state of data ingestion. Valid values:</p>
-             * <ul>
-             * <li>enabled: Enabled.</li>
-             * <li>disabled: Disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>enabled</p>
+             * DataIngestionStatus.
              */
             public Builder dataIngestionStatus(String dataIngestionStatus) {
                 this.dataIngestionStatus = dataIngestionStatus;
@@ -361,10 +332,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data ingestion template ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alibaba_cloud_sas_account_snapshot_log</p>
+             * DataIngestionTemplateId.
              */
             public Builder dataIngestionTemplateId(String dataIngestionTemplateId) {
                 this.dataIngestionTemplateId = dataIngestionTemplateId;
@@ -372,10 +340,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source template name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alibaba_cloud_sas_account_snapshot_log</p>
+             * DataIngestionTemplateName.
              */
             public Builder dataIngestionTemplateName(String dataIngestionTemplateName) {
                 this.dataIngestionTemplateName = dataIngestionTemplateName;
@@ -383,16 +348,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the data ingestion template. Valid values:</p>
-             * <ul>
-             * <li>pending</li>
-             * <li>running</li>
-             * <li>success</li>
-             * <li>failed</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>running</p>
+             * DataIngestionTemplateStatus.
              */
             public Builder dataIngestionTemplateStatus(String dataIngestionTemplateStatus) {
                 this.dataIngestionTemplateStatus = dataIngestionTemplateStatus;
@@ -400,10 +356,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source template ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alibaba_cloud_sas_account_snapshot_log_173326*******</p>
+             * DataSourceTemplateId.
              */
             public Builder dataSourceTemplateId(String dataSourceTemplateId) {
                 this.dataSourceTemplateId = dataSourceTemplateId;
@@ -411,10 +364,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alibaba_cloud_actiontrail_event_rule</p>
+             * NormalizationRuleId.
              */
             public Builder normalizationRuleId(String normalizationRuleId) {
                 this.normalizationRuleId = normalizationRuleId;
@@ -422,10 +372,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>normalization_rule_ke1RN</p>
+             * NormalizationRuleName.
              */
             public Builder normalizationRuleName(String normalizationRuleName) {
                 this.normalizationRuleName = normalizationRuleName;
@@ -433,10 +380,7 @@ public class ListDataIngestionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>173326*******</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

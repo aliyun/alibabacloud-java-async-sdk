@@ -130,7 +130,7 @@ public class GetIncidentInvestigationRequest extends Request {
         } 
 
         /**
-         * <p>The display ID of the AI investigation report. You can obtain this value from the IncidentInvestigationDisplayId field returned by ListIncidentInvestigations. This parameter takes effect only when IncidentInvestigationId is not specified. If neither identifier is specified, the most recent successfully completed investigation result for the specified incident is returned.</p>
+         * <p>The display ID of the AI investigation report. You can obtain it from the IncidentInvestigationDisplayId parameter returned by ListIncidentInvestigations. This parameter takes effect only when IncidentInvestigationId is not specified. If neither identifier is specified, the most recent successfully completed investigation result for the specified event is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>755616bb5d63046c1e4f62ea872a****</p>
@@ -142,7 +142,7 @@ public class GetIncidentInvestigationRequest extends Request {
         }
 
         /**
-         * <p>The AI investigation report ID. You can obtain this value from the IncidentInvestigationId field returned by ListIncidentInvestigations. If both this parameter and IncidentInvestigationDisplayId are specified, this parameter takes precedence.</p>
+         * <p>The ID of the AI investigation report. You can obtain it from the IncidentInvestigationId parameter returned by ListIncidentInvestigations. If both this parameter and IncidentInvestigationDisplayId are specified, this parameter takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>951a6a0b-14c7-4332-ace6-bff21c******</p>
@@ -154,7 +154,7 @@ public class GetIncidentInvestigationRequest extends Request {
         }
 
         /**
-         * <p>The globally unique identity of the event. If neither the report ID nor the display ID is specified, the most recent successfully completed investigation result for this event is returned via event query.</p>
+         * <p>The globally unique identity of the event. If neither the report ID nor the display ID is specified, an event query is performed to retrieve the most recent successfully completed investigation result.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class GetIncidentInvestigationRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
@@ -183,10 +183,10 @@ public class GetIncidentInvestigationRequest extends Request {
         }
 
         /**
-         * <p>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</p>
+         * <p>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Chinese mainland.</li>
-         * <li>ap-southeast-1: Outside the Chinese mainland.</li>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class GetIncidentInvestigationRequest extends Request {
         }
 
         /**
-         * <p>The user ID that the administrator uses to switch to the view of another member.</p>
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>

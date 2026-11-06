@@ -173,10 +173,7 @@ public class UpdateDataSetRequest extends Request {
         } 
 
         /**
-         * <p>The description of the dataset.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lmftest desc</p>
+         * DataSetDescription.
          */
         public Builder dataSetDescription(String dataSetDescription) {
             this.putBodyParameter("DataSetDescription", dataSetDescription);
@@ -185,10 +182,7 @@ public class UpdateDataSetRequest extends Request {
         }
 
         /**
-         * <p>The name of the uploaded dataset file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloudsiem-dataset/1358117679873357_1743387731614.csv</p>
+         * DataSetFileName.
          */
         public Builder dataSetFileName(String dataSetFileName) {
             this.putBodyParameter("DataSetFileName", dataSetFileName);
@@ -197,11 +191,7 @@ public class UpdateDataSetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dataset-10iy8mbifnb4gniv****</p>
          */
         public Builder dataSetId(String dataSetId) {
             this.putBodyParameter("DataSetId", dataSetId);
@@ -210,10 +200,7 @@ public class UpdateDataSetRequest extends Request {
         }
 
         /**
-         * <p>The name of the dataset.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lmftest</p>
+         * DataSetName.
          */
         public Builder dataSetName(String dataSetName) {
             this.putBodyParameter("DataSetName", dataSetName);
@@ -222,16 +209,7 @@ public class UpdateDataSetRequest extends Request {
         }
 
         /**
-         * <p>The status of the dataset. Valid values:</p>
-         * <ul>
-         * <li><p>0: Delete.</p>
-         * </li>
-         * <li><p>1: Enable.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * DataSetStatus.
          */
         public Builder dataSetStatus(Integer dataSetStatus) {
             this.putBodyParameter("DataSetStatus", dataSetStatus);
@@ -240,7 +218,7 @@ public class UpdateDataSetRequest extends Request {
         }
 
         /**
-         * <p>The IP address types that the recognizer can detect.</p>
+         * IpWhitelistRecognizers.
          */
         public Builder ipWhitelistRecognizers(java.util.List<IpWhitelistRecognizers> ipWhitelistRecognizers) {
             this.putBodyParameter("IpWhitelistRecognizers", ipWhitelistRecognizers);
@@ -249,16 +227,7 @@ public class UpdateDataSetRequest extends Request {
         }
 
         /**
-         * <p>The language of the response message. Valid values:</p>
-         * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese.</p>
-         * </li>
-         * <li><p><strong>en</strong>: English.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -267,16 +236,7 @@ public class UpdateDataSetRequest extends Request {
         }
 
         /**
-         * <p>The region where the Data Management center for threat analysis is located. Select a region based on the location of your assets. Valid values:</p>
-         * <ul>
-         * <li><p>cn-hangzhou: Assets are in the Chinese mainland.</p>
-         * </li>
-         * <li><p>ap-southeast-1: Assets are in a region outside China.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -285,10 +245,7 @@ public class UpdateDataSetRequest extends Request {
         }
 
         /**
-         * <p>The user ID of a member. An administrator can use this parameter to switch to the member\&quot;s view.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>113091674488****</p>
+         * RoleFor.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -369,16 +326,7 @@ public class UpdateDataSetRequest extends Request {
             } 
 
             /**
-             * <p>The automatic detection status. Valid values:</p>
-             * <ul>
-             * <li><p>enabled: Enabled.</p>
-             * </li>
-             * <li><p>disabled: Disabled.</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>enabled</p>
+             * AutoRecognizeStatus.
              */
             public Builder autoRecognizeStatus(String autoRecognizeStatus) {
                 this.autoRecognizeStatus = autoRecognizeStatus;
@@ -386,30 +334,7 @@ public class UpdateDataSetRequest extends Request {
             }
 
             /**
-             * <p>The IP address type that the recognizer can detect. Valid values:</p>
-             * <ul>
-             * <li><p>sas_vulnerability_scanner_ip: The IP addresses of the Security Center web vulnerability scanner.</p>
-             * </li>
-             * <li><p>waf_back_source_ip: The back-to-origin IP addresses of Web Application Firewall (WAF).</p>
-             * </li>
-             * <li><p>ddos_back_source_ip: The back-to-origin IP addresses of Anti-DDoS.</p>
-             * </li>
-             * <li><p>esa_back_source_ip: The back-to-origin IP addresses of Edge Security Acceleration (ESA) nodes.</p>
-             * </li>
-             * <li><p>ecs_public_ip: The public IP addresses of Elastic Compute Service (ECS) instances.</p>
-             * </li>
-             * <li><p>slb_public_ip: The public IP addresses of Server Load Balancer (SLB).</p>
-             * </li>
-             * <li><p>vpc_eip: The elastic IP addresses (EIPs).</p>
-             * </li>
-             * <li><p>cdn_back_source_ip: The back-to-origin IP addresses of Alibaba Cloud CDN.</p>
-             * </li>
-             * <li><p>ga_back_source_ip: The back-to-origin IP addresses of Global Accelerator (GA).</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cdn_back_source_ip</p>
+             * IpWhitelistRecognizerType.
              */
             public Builder ipWhitelistRecognizerType(String ipWhitelistRecognizerType) {
                 this.ipWhitelistRecognizerType = ipWhitelistRecognizerType;
@@ -417,16 +342,7 @@ public class UpdateDataSetRequest extends Request {
             }
 
             /**
-             * <p>The detection scope. Valid values:</p>
-             * <ul>
-             * <li><p>current_account: The current account only.</p>
-             * </li>
-             * <li><p>rd_accounts: Multiple accounts are enabled.</p>
-             * </li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>current_account</p>
+             * RecognizeScope.
              */
             public Builder recognizeScope(String recognizeScope) {
                 this.recognizeScope = recognizeScope;

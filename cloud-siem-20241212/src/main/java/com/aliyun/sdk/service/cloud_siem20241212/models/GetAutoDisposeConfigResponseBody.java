@@ -67,7 +67,7 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The automatic response configuration.</p>
+         * <p>The automatic disposal configuration for users.</p>
          */
         public Builder autoDisposeConfig(AutoDisposeConfig autoDisposeConfig) {
             this.autoDisposeConfig = autoDisposeConfig;
@@ -75,7 +75,7 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -144,12 +144,10 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether automatic response is enabled. Valid values:</p>
+             * <p>The automatic disposal switch. Valid values:</p>
              * <ul>
-             * <li><p>enabled: Enabled.</p>
-             * </li>
-             * <li><p>disabled: Disabled.</p>
-             * </li>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -161,7 +159,7 @@ public class GetAutoDisposeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code for the cloud product.</p>
+             * <p>The code of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>alibaba_cloud_sas</p>

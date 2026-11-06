@@ -78,7 +78,7 @@ public class CreateDetectionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5CC09D0C-1CD7-54BD-A853-DCB2D945****</p>

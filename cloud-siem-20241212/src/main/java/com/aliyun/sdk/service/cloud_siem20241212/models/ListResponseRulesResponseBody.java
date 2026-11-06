@@ -133,7 +133,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of records returned in this request.</p>
+         * <p>The maximum number of records returned for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -144,7 +144,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The position from which the current call starts reading. An empty value indicates that all data has been read.</p>
+         * <p>The position to which the current call has read. An empty value indicates that all data has been read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -197,7 +197,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the request conditions. This parameter is optional and is not returned by default.</p>
+         * <p>The total number of data records that meet the request conditions. This parameter is optional and is not returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>57</p>
@@ -396,7 +396,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the rule was created.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1769843323000</p>
@@ -420,12 +420,12 @@ public class ListResponseRulesResponseBody extends TeaModel {
             /**
              * <p>The action type of the automatic response rule. Valid values:</p>
              * <ul>
-             * <li>doPlaybook: execute a playbook</li>
-             * <li>changeEventStatus: update event status</li>
-             * <li>changeThreatLevel: update event threat level</li>
-             * <li>addEventTag: add an event label</li>
-             * <li>deleteEventTag: delete an event label</li>
-             * <li>alertWhitelist: add alert to whitelist</li>
+             * <li>doPlaybook: Execute a playbook.</li>
+             * <li>changeEventStatus: Update the event status.</li>
+             * <li>changeThreatLevel: Update the event threat level.</li>
+             * <li>addEventTag: Add an event tag.</li>
+             * <li>deleteEventTag: Delete an event tag.</li>
+             * <li>alertWhitelist: Add an alert to the whitelist.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -481,7 +481,10 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRuleRemark.
+             * <p>The remarks of the response rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Send a notification when Security Center detects high-risk or critical malicious process (cloud antivirus) alerts. Only notify, do not take action</p>
              */
             public Builder responseRuleRemark(String responseRuleRemark) {
                 this.responseRuleRemark = responseRuleRemark;
@@ -491,8 +494,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
             /**
              * <p>The status of the automatic response rule. Valid values:</p>
              * <ul>
-             * <li>0: disabled</li>
-             * <li>100: enabled</li>
+             * <li>0: Disabled.</li>
+             * <li>100: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -506,8 +509,8 @@ public class ListResponseRulesResponseBody extends TeaModel {
             /**
              * <p>The type of the response rule. Valid values:</p>
              * <ul>
-             * <li>preset: predefined</li>
-             * <li>custom: custom</li>
+             * <li>preset: Preset.</li>
+             * <li>custom: Custom.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -521,9 +524,9 @@ public class ListResponseRulesResponseBody extends TeaModel {
             /**
              * <p>The trigger type of the automatic response rule. Valid values:</p>
              * <ul>
-             * <li>event: event occurred</li>
-             * <li>event_update: event updated</li>
-             * <li>alert: alert occurred</li>
+             * <li>event: Event occurrence.</li>
+             * <li>event_update: Event update.</li>
+             * <li>alert: Alert occurrence.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -535,7 +538,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the rule was last updated.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1769843323000</p>

@@ -129,14 +129,7 @@ public class UpdateProductRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response messages. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong> (default): Chinese.</li>
-         * <li><strong>en</strong>: English. This parameter is required. If not provided, the service returns a 400 error.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>en</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -145,10 +138,7 @@ public class UpdateProductRequest extends Request {
         }
 
         /**
-         * <p>The product ID. Only products with ProductType set to custom support updates. System preset products (ProductType set to preset) cannot be modified. Calling this operation on a preset product returns a 403 error. To create a custom product, use the CreateProduct API first. This parameter is the resource identifier for the Update operation and is required. Only custom products can be updated. System preset products cannot be updated.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_sas</p>
+         * ProductId.
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -157,10 +147,7 @@ public class UpdateProductRequest extends Request {
         }
 
         /**
-         * <p>The product name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_sas</p>
+         * ProductName.
          */
         public Builder productName(String productName) {
             this.putBodyParameter("ProductName", productName);
@@ -169,14 +156,7 @@ public class UpdateProductRequest extends Request {
         }
 
         /**
-         * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
-         * <ul>
-         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Assets are located outside China.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -185,10 +165,7 @@ public class UpdateProductRequest extends Request {
         }
 
         /**
-         * <p>The user ID that the administrator uses to switch to another member\&quot;s view.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1733269771123</p>
+         * RoleFor.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -197,10 +174,7 @@ public class UpdateProductRequest extends Request {
         }
 
         /**
-         * <p>The vendor name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>111</p>
+         * VendorName.
          */
         public Builder vendorName(String vendorName) {
             this.putBodyParameter("VendorName", vendorName);

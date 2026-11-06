@@ -325,7 +325,7 @@ public class ListDataSourcesRequest extends Request {
         } 
 
         /**
-         * <p>The data source origin. Valid values:</p>
+         * <p>The source of the data source. Valid values:</p>
          * <ul>
          * <li>center</li>
          * <li>custom</li>
@@ -351,7 +351,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The data source name.</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud_waf_alert_log</p>
@@ -363,7 +363,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The data source status. Valid values:</p>
+         * <p>The status of the data source. Valid values:</p>
          * <ul>
          * <li>unconfigured</li>
          * <li>normal</li>
@@ -380,7 +380,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The Logstore status. Valid values:</p>
+         * <p>The status of the Logstore. Valid values:</p>
          * <ul>
          * <li>normal</li>
          * <li>abnormal</li>
@@ -406,7 +406,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The data source type. Valid values:</p>
+         * <p>The type of the data source. Valid values:</p>
          * <ul>
          * <li>preset</li>
          * <li>custom</li>
@@ -422,12 +422,12 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
-         * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
+         * <p>Note: This parameter is required in actual API calls. If you do not specify this parameter, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -439,7 +439,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service project name.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -451,7 +451,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The log storage region ID.</p>
+         * <p>The ID of the log storage region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -463,7 +463,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The Simple Log Service Logstore name.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>audit-activity</p>
@@ -475,7 +475,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of data ingestion user IDs.</p>
+         * <p>The list of user IDs for data ingestion.</p>
          */
         public Builder logUserIds(java.util.List<Long> logUserIds) {
             String logUserIdsShrink = shrink(logUserIds, "LogUserIds", "simple");
@@ -485,7 +485,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return in this request.</p>
+         * <p>The maximum number of results to return in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -497,7 +497,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * <p>The token used to retrieve the next page of results. If this is the first request or no subsequent requests are required, leave this parameter empty. If a subsequent request is required, set this parameter to the value of NextToken returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -537,7 +537,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -561,10 +561,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <p>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
-         * <li>ap-southeast-1: The assets are located outside China.</li>
+         * <li>cn-hangzhou: Assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets are located outside China.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -577,7 +577,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the member to which the administrator switches the view.</p>
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>

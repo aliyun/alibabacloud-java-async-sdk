@@ -54,10 +54,7 @@ public class DeleteDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

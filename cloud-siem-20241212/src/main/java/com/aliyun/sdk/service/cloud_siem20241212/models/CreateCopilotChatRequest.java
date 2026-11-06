@@ -271,7 +271,7 @@ public class CreateCopilotChatRequest extends Request {
         } 
 
         /**
-         * <p>The client conversation ID.</p>
+         * <p>The client session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
@@ -296,7 +296,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The conversation ID.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>54b6c969-4b75-47be-9f43-71f88aeb****</p>
@@ -308,7 +308,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The conversation creation configuration.</p>
+         * <p>The session creation configuration.</p>
          */
         public Builder createConversation(CreateConversation createConversation) {
             String createConversationShrink = shrink(createConversation, "CreateConversation", "json");
@@ -318,7 +318,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The language of the returned messages. Valid values:</p>
+         * <p>The language of the returned message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
@@ -381,10 +381,10 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The region of the data management center for threat analysis. Specify the management center based on the region where your assets reside. Valid values:</p>
+         * <p>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets reside. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</li>
+         * <li>cn-hangzhou: Assets reside in the Chinese mainland.</li>
+         * <li>ap-southeast-1: Assets reside outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -397,7 +397,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The ID of the conversation turn to replace.</p>
+         * <p>The ID of the replaced conversation turn.</p>
          * 
          * <strong>example:</strong>
          * <p>dc18b894-19a3-45ee-8768-a59478e0****</p>
@@ -409,7 +409,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The route target identifier.</p>
+         * <p>The target route identifier for execution.</p>
          * 
          * <strong>example:</strong>
          * <p>security-agent-route-****</p>
@@ -421,7 +421,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The request source.</p>
+         * <p>The source of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>console</p>
@@ -457,7 +457,7 @@ public class CreateCopilotChatRequest extends Request {
         }
 
         /**
-         * <p>The trace ID, which is used to query specific call information.</p>
+         * <p>The trace ID used to accurately query call information.</p>
          * 
          * <strong>example:</strong>
          * <p>550e8400e29b41d4a71644665544****</p>
@@ -611,10 +611,10 @@ public class CreateCopilotChatRequest extends Request {
             }
 
             /**
-             * <p>The conversation title.</p>
+             * <p>The session title.</p>
              * 
              * <strong>example:</strong>
-             * <p>Security incident investigation</p>
+             * <p>Security event investigation</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -681,10 +681,10 @@ public class CreateCopilotChatRequest extends Request {
             } 
 
             /**
-             * <p>The message content.</p>
+             * <p>The content of the message.</p>
              * 
              * <strong>example:</strong>
-             * <p>Investigate abnormal login activities in the last hour</p>
+             * <p>Investigate the abnormal logon activities in the past hour</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -692,7 +692,7 @@ public class CreateCopilotChatRequest extends Request {
             }
 
             /**
-             * <p>The message role.</p>
+             * <p>The role of the message.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>

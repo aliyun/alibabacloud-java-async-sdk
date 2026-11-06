@@ -73,12 +73,10 @@ public class ListLogRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response message. Valid values:</p>
+         * <p>The language of the returned message. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese.</p>
-         * </li>
-         * <li><p><strong>en</strong>: English.</p>
-         * </li>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +89,7 @@ public class ListLogRegionsRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the member whose perspective the administrator wants to use.</p>
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>173326*******</p>

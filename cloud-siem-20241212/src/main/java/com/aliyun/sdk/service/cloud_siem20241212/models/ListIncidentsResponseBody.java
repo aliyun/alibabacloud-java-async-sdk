@@ -140,7 +140,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries to read in this request.</p>
+         * <p>The maximum number of entries to return in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -151,7 +151,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty for the first request or when there are no more pages. If more pages exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * <p>The token for the next query. You do not need to specify this parameter for the first query or when no subsequent query is required. If a subsequent query is required, set this parameter to the value of NextToken returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -162,7 +162,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number for pagination.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries to display per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -184,7 +184,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -512,6 +512,9 @@ public class ListIncidentsResponseBody extends TeaModel {
 
             /**
              * <p>The list of associated alert information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;alertSrcProd&quot;:&quot;aegis_suspicious_event&quot;,&quot;alertName&quot;:&quot;Sample associated alert&quot;}]</p>
              */
             public Builder alertInfos(String alertInfos) {
                 this.alertInfos = alertInfos;
@@ -528,6 +531,9 @@ public class ListIncidentsResponseBody extends TeaModel {
 
             /**
              * <p>The list of MITRE ATT&amp;CK tactics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;alertNum&quot;:3}]</p>
              */
             public Builder attckTactics(String attckTactics) {
                 this.attckTactics = attckTactics;
@@ -558,6 +564,9 @@ public class ListIncidentsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EX Sample rule</p>
              */
             public Builder detectionRuleName(String detectionRuleName) {
                 this.detectionRuleName = detectionRuleName;
@@ -566,6 +575,9 @@ public class ListIncidentsResponseBody extends TeaModel {
 
             /**
              * <p>The list of associated entity information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;entityType&quot;:&quot;host&quot;}]</p>
              */
             public Builder entityInfos(String entityInfos) {
                 this.entityInfos = entityInfos;
@@ -574,6 +586,9 @@ public class ListIncidentsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the incident.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample incident: At 2026-01-01 00:00:00, an abnormal logon occurred on the sample host 192.0.2.10 with the account example-user</p>
              */
             public Builder incidentDescription(String incidentDescription) {
                 this.incidentDescription = incidentDescription;
@@ -581,7 +596,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event name.</p>
+             * <p>The name of the incident.</p>
              * 
              * <strong>example:</strong>
              * <p>ECS unusual log in</p>
@@ -603,12 +618,12 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event status. Valid values:</p>
+             * <p>The status of the incident. Valid values:</p>
              * <ul>
-             * <li>0: Unhandled.</li>
-             * <li>1: Handling.</li>
-             * <li>5: Handling failed.</li>
-             * <li>10: Handled.</li>
+             * <li>0: Unprocessed.</li>
+             * <li>1: Processing.</li>
+             * <li>5: Processing failed.</li>
+             * <li>10: Processed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -620,7 +635,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event tags.</p>
+             * <p>The tags of the incident.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;sys:data_source:siem&quot;,&quot;sys:trigger_type:auto&quot;]</p>
@@ -642,7 +657,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the account responsible for the event.</p>
+             * <p>The UIDs of the accounts of the incident owners.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567890xxxxxx</p>
@@ -686,7 +701,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response time, in milliseconds (ms).</p>
+             * <p>The response time in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1603248483000</p>
@@ -697,7 +712,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of response types. Valid values: auto, manual, ai.</p>
+             * <p>The list of response types. Valid values: auto, manual, and ai.</p>
              */
             public Builder responseTypes(java.util.List<String> responseTypes) {
                 this.responseTypes = responseTypes;

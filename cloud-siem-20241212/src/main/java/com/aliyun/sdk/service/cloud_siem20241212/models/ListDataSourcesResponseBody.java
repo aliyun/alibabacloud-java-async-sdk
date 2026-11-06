@@ -145,7 +145,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The alert source products associated with events.</p>
+         * <p>The products from which event-associated alerts originate.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -153,7 +153,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries to return in this request.</p>
+         * <p>The maximum number of results to return in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -164,7 +164,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * <p>The token used to retrieve the next page of results. If this is the first request or no subsequent requests are required, leave this parameter empty. If a subsequent request is required, set this parameter to the value of NextToken returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -175,7 +175,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +197,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -208,7 +208,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -449,7 +449,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The check time.</p>
+             * <p>The check time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1733269771123</p>
@@ -460,7 +460,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1733269771123</p>
@@ -471,7 +471,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source origin. Valid values:</p>
+             * <p>The source of the data source. Valid values:</p>
              * <ul>
              * <li>center</li>
              * <li>custom</li>
@@ -486,7 +486,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log store ID.</p>
+             * <p>The ID of the log storage.</p>
              * 
              * <strong>example:</strong>
              * <p>di_xxxx_source_1</p>
@@ -497,7 +497,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log store status. Valid values:</p>
+             * <p>The status of the Logstore. Valid values:</p>
              * <ul>
              * <li>normal</li>
              * <li>abnormal</li>
@@ -512,7 +512,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log store status code.</p>
+             * <p>The status code of the Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>LogStoreNotExist</p>
@@ -523,7 +523,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service project name.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -534,7 +534,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log storage region ID.</p>
+             * <p>The ID of the log storage region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -545,7 +545,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service Logstore name.</p>
+             * <p>The name of the Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>audit-activity</p>
@@ -556,7 +556,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1733269771123</p>
@@ -808,7 +808,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1733269771123</p>
@@ -819,7 +819,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source origin. Valid values:</p>
+             * <p>The source of the data source. Valid values:</p>
              * <ul>
              * <li>center</li>
              * <li>custom</li>
@@ -834,7 +834,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The ID of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>ds-scpfegri73oyoknbc90c</p>
@@ -845,7 +845,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source name.</p>
+             * <p>The name of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>AD_LOG</p>
@@ -856,7 +856,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether automatic discovery of new Logstores is enabled.</p>
+             * <p>Specifies whether to automatically discover new Logstores.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -886,7 +886,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source status. Valid values:</p>
+             * <p>The status of the data source. Valid values:</p>
              * <ul>
              * <li>unconfigured</li>
              * <li>normal</li>
@@ -902,7 +902,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of log services.</p>
+             * <p>The list of Simple Log Service resources.</p>
              */
             public Builder dataSourceStores(java.util.List<DataSourceStores> dataSourceStores) {
                 this.dataSourceStores = dataSourceStores;
@@ -910,7 +910,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source template ID.</p>
+             * <p>The ID of the data source template.</p>
              * 
              * <strong>example:</strong>
              * <p>alibaba_cloud_sas_account_snapshot_log_173326*******</p>
@@ -921,7 +921,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source type. Valid values:</p>
+             * <p>The type of the data source. Valid values:</p>
              * <ul>
              * <li>preset</li>
              * <li>custom</li>
@@ -936,7 +936,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service project name.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyun-cloudsiem-data-173326*******-cn-hangzhou</p>
@@ -947,7 +947,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log storage region ID.</p>
+             * <p>The ID of the log storage region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -958,7 +958,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service Logstore name.</p>
+             * <p>The name of the Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>audit-activity</p>
@@ -969,7 +969,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data ingestion user ID.</p>
+             * <p>The user ID for data ingestion.</p>
              * 
              * <strong>example:</strong>
              * <p>173326*******</p>
@@ -980,7 +980,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1733269771123</p>

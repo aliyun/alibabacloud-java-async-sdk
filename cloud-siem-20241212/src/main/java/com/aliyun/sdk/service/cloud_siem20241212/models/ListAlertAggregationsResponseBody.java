@@ -162,7 +162,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -195,7 +195,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>57</p>
@@ -264,7 +264,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the entity attribute field that can be added to the whitelist.</p>
+             * <p>The display name of the entity property field that can be added to the whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>accesstoken</p>
@@ -275,10 +275,10 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default right-hand value displayed for the whitelist rule.</p>
+             * <p>The default right value displayed for the whitelist rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test-FutureSystemAI</p>
+             * <p>Test-Qiantu System AI</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -345,7 +345,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the entity attribute field that can be added to the whitelist.</p>
+             * <p>The display name of the entity property field that can be added to the whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://domain.com/">http://domain.com/</a></p>
@@ -356,7 +356,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The right-hand value.</p>
+             * <p>The right value.</p>
              * 
              * <strong>example:</strong>
              * <p>123.123.123.123</p>
@@ -582,7 +582,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of account display values associated with the aggregation group, in one-to-one correspondence with AccountIds. When the username is valid and differs from the account ID, the format is &quot;username/account ID&quot;. Otherwise, only the account ID is returned.</p>
+             * <p>The list of account display values involved in the aggregation group, which corresponds one-to-one with the order of AccountIds. If the username is valid and different from the account ID, the format is &quot;Username/Account ID&quot;. Otherwise, only the account ID is returned.</p>
              */
             public Builder accountDisplayValues(java.util.List<String> accountDisplayValues) {
                 this.accountDisplayValues = accountDisplayValues;
@@ -590,7 +590,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of member accounts IDs for which the report is generated. You need to specify this parameter only when you generate a multi-account report and want to limit the report to specific member accounts.</p>
+             * <p>The list of IDs of the member accounts for which the report is generated. Note: You only need to specify this parameter when you generate a multi-account report and want to generate a report for a specified range of accounts.</p>
              */
             public Builder accountIds(java.util.List<String> accountIds) {
                 this.accountIds = accountIds;
@@ -598,7 +598,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the aggregation group, which is a concatenation of AggregationType, PrimaryValue, and SecondaryValue joined by colons (:). The last segment is empty if no secondary aggregation value exists.</p>
+             * <p>The unique identifier of the aggregation group. It is concatenated by AggregationType, PrimaryValue, and SecondaryValue with colons (:). If there is no secondary aggregation value, the last segment is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>vendor_product:alibaba_cloud:sas</p>
@@ -631,7 +631,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of MITRE ATT&amp;CK attack techniques associated with alerts in the aggregation group. Each element is a JSON array string.</p>
+             * <p>The collection of MITRE ATT&amp;CK attack techniques associated with the alerts in the aggregation group. Each element is a JSON array string.</p>
              */
             public Builder attackStages(java.util.List<String> attackStages) {
                 this.attackStages = attackStages;
@@ -639,7 +639,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quantity distribution by defense action within the aggregation group. Name is the action field value, and Value is the corresponding alert count.</p>
+             * <p>The distribution of alert counts by defense action in the aggregation group. Name is the value of the action field, and Value is the corresponding alert count.</p>
              */
             public Builder defenseActionCounts(java.util.List<DefenseActionCounts> defenseActionCounts) {
                 this.defenseActionCounts = defenseActionCounts;
@@ -647,7 +647,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the first access, represented as a UNIX timestamp in seconds.</p>
+             * <p>The time of the first access. The value is a UNIX timestamp accurate to seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1785290308</p>
@@ -658,7 +658,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent time when the attack event occurred.</p>
+             * <p>The time when the attack event last occurred.</p>
              * 
              * <strong>example:</strong>
              * <p>1785293908000</p>
@@ -669,7 +669,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display text of the primary aggregation value. For account aggregation, the format is &quot;username/account ID&quot;. If no valid username exists, only the account ID is returned. For event summaries, the event name is returned based on the Lang parameter. If the name is missing, the event UUID is returned.</p>
+             * <p>The display text of the primary aggregation value. For account aggregation, it returns &quot;Username/Account ID&quot;. If there is no valid username, only the account ID is returned. For event summaries, it returns the event name based on Lang. If the name is missing, the event UUID is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>Test incident</p>
@@ -704,7 +704,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             /**
              * <p>The collection of event source codes.</p>
              * <blockquote>
-             * <p>Example: [\\\&quot;MRM\\\&quot;]</p>
+             * <p>Example: [\&quot;MRM\&quot;]</p>
              * </blockquote>
              */
             public Builder sourceCodes(java.util.List<String> sourceCodes) {
@@ -713,7 +713,7 @@ public class ListAlertAggregationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quantity distribution by alert status within the aggregation group. Name is the alert status value, and Value is the corresponding alert count.</p>
+             * <p>The distribution of alert counts by alert status in the aggregation group. Name is the alert status value, and Value is the corresponding alert count.</p>
              */
             public Builder statusCounts(java.util.List<StatusCounts> statusCounts) {
                 this.statusCounts = statusCounts;

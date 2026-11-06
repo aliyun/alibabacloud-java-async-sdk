@@ -74,6 +74,10 @@ public class ListDetectionRulesRequest extends Request {
     private String logSchemaId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogSchemaIds")
+    private java.util.List<String> logSchemaIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -122,6 +126,7 @@ public class ListDetectionRulesRequest extends Request {
         this.lang = builder.lang;
         this.logCategoryId = builder.logCategoryId;
         this.logSchemaId = builder.logSchemaId;
+        this.logSchemaIds = builder.logSchemaIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orderDirection = builder.orderDirection;
@@ -244,6 +249,13 @@ public class ListDetectionRulesRequest extends Request {
     }
 
     /**
+     * @return logSchemaIds
+     */
+    public java.util.List<String> getLogSchemaIds() {
+        return this.logSchemaIds;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -314,6 +326,7 @@ public class ListDetectionRulesRequest extends Request {
         private String lang; 
         private String logCategoryId; 
         private String logSchemaId; 
+        private java.util.List<String> logSchemaIds; 
         private Integer maxResults; 
         private String nextToken; 
         private String orderDirection; 
@@ -343,6 +356,7 @@ public class ListDetectionRulesRequest extends Request {
             this.lang = request.lang;
             this.logCategoryId = request.logCategoryId;
             this.logSchemaId = request.logSchemaId;
+            this.logSchemaIds = request.logSchemaIds;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orderDirection = request.orderDirection;
@@ -354,7 +368,7 @@ public class ListDetectionRulesRequest extends Request {
         } 
 
         /**
-         * <p>The alert ATT&amp;CK technique.</p>
+         * <p>The ATT&amp;CK technique of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>Discovery</p>
@@ -385,7 +399,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The alert tactic phase.</p>
+         * <p>The tactic phase of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>TA0042</p>
@@ -397,7 +411,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The Alarm Metric of the alerting rule.</p>
+         * <p>The alerting type.</p>
          * 
          * <strong>example:</strong>
          * <p>siem_rule_type_alert_storm</p>
@@ -469,9 +483,9 @@ public class ListDetectionRulesRequest extends Request {
         /**
          * <p>The type of the detection rule. Valid values:</p>
          * <ul>
-         * <li>preset: preset detection rule.</li>
-         * <li>custom: custom detection rule.</li>
-         * <li>custom_template: rule template.</li>
+         * <li>preset: Preset detection rule.</li>
+         * <li>custom: Custom detection rule.</li>
+         * <li>custom_template: Rule template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,10 +501,10 @@ public class ListDetectionRulesRequest extends Request {
          * <p>The event summaries type. Valid values:</p>
          * <ul>
          * <li>none: No event is generated.</li>
-         * <li>graph_compute: Graph computing (supported by predefined rules).</li>
-         * <li>expert: Expert rule.</li>
+         * <li>graph_compute: Graph computing (supported by preset rules).</li>
+         * <li>expert: Expert rules.</li>
          * <li>passthrough: Alerting pass-through (one-to-one).</li>
-         * <li>window: Same-type aggregation (window).</li>
+         * <li>window: Similar aggregation (window).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -503,12 +517,12 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
          * </ul>
-         * <p>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</p>
+         * <p>Note: This parameter is required in actual calls. If it is not provided, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -544,7 +558,17 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return in this request.</p>
+         * <p>The collection of log schema IDs, which matches any schema by its full ID. If this parameter is not provided, this condition is not applied. If an empty array is explicitly provided, zero records are returned. If both this parameter and LogSchemaId are provided, the intersection is used.</p>
+         */
+        public Builder logSchemaIds(java.util.List<String> logSchemaIds) {
+            String logSchemaIdsShrink = shrink(logSchemaIds, "LogSchemaIds", "json");
+            this.putBodyParameter("LogSchemaIds", logSchemaIdsShrink);
+            this.logSchemaIds = logSchemaIds;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of data entries to return in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -556,7 +580,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -568,7 +592,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values:</p>
+         * <p>The sort direction. Valid values:</p>
          * <ul>
          * <li><strong>asc</strong>: Ascending order. This is the default value.</li>
          * <li><strong>desc</strong>: Descending order.</li>
@@ -586,8 +610,8 @@ public class ListDetectionRulesRequest extends Request {
         /**
          * <p>The field used for sorting. Valid values:</p>
          * <ul>
-         * <li>GmtCreate: creation time.</li>
-         * <li>GmtModified: update time.</li>
+         * <li>GmtCreate: Creation time.</li>
+         * <li>GmtModified: Update time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -600,7 +624,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -624,10 +648,10 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</p>
+         * <p>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
          * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
-         * <li>ap-southeast-1: The assets are located outside China.</li>
+         * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -640,7 +664,7 @@ public class ListDetectionRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member to which the administrator switches the view.</p>
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>

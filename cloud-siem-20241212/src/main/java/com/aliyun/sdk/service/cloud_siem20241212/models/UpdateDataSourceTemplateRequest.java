@@ -199,16 +199,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to automatically discover new users.</p>
-         * <ul>
-         * <li><p>enabled: Enabled.</p>
-         * </li>
-         * <li><p>disabled: Disabled.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>enabled</p>
+         * AutoScanNew.
          */
         public Builder autoScanNew(String autoScanNew) {
             this.putBodyParameter("AutoScanNew", autoScanNew);
@@ -217,10 +208,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically discover new data sources.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * DataSourceRecognizeEnabled.
          */
         public Builder dataSourceRecognizeEnabled(Boolean dataSourceRecognizeEnabled) {
             this.putQueryParameter("DataSourceRecognizeEnabled", dataSourceRecognizeEnabled);
@@ -229,10 +217,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data source template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_actiontrail_event_ingestion</p>
+         * DataSourceTemplateId.
          */
         public Builder dataSourceTemplateId(String dataSourceTemplateId) {
             this.putBodyParameter("DataSourceTemplateId", dataSourceTemplateId);
@@ -241,10 +226,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the data source template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alibaba_cloud_actiontrail_event_ingestion</p>
+         * DataSourceTemplateName.
          */
         public Builder dataSourceTemplateName(String dataSourceTemplateName) {
             this.putBodyParameter("DataSourceTemplateName", dataSourceTemplateName);
@@ -253,16 +235,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>The language of the response message. Valid values:</p>
-         * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese.</p>
-         * </li>
-         * <li><p><strong>en</strong>: English.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -271,10 +244,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>The matching rule for the names of Simple Log Service projects.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aliyun-cloudsiem-data-173326*******</p>
+         * LogProjectPattern.
          */
         public Builder logProjectPattern(String logProjectPattern) {
             this.putBodyParameter("LogProjectPattern", logProjectPattern);
@@ -283,10 +253,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>The list of IDs of log storage regions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * LogRegionIds.
          */
         public Builder logRegionIds(String logRegionIds) {
             this.putBodyParameter("LogRegionIds", logRegionIds);
@@ -295,10 +262,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>The matching rule for the names of Simple Log Service Logstores.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>audit-activity</p>
+         * LogStorePattern.
          */
         public Builder logStorePattern(String logStorePattern) {
             this.putBodyParameter("LogStorePattern", logStorePattern);
@@ -307,7 +271,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>The list of user IDs for batch data access.</p>
+         * LogUserIds.
          */
         public Builder logUserIds(java.util.List<String> logUserIds) {
             String logUserIdsShrink = shrink(logUserIds, "LogUserIds", "simple");
@@ -317,16 +281,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>The region where the Management Hub of threat analysis is located. Select a region based on the region where your assets are located. Valid values:</p>
-         * <ul>
-         * <li><p>cn-hangzhou: Assets are in the Chinese mainland.</p>
-         * </li>
-         * <li><p>ap-southeast-1: Assets are outside the Chinese mainland.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -335,10 +290,7 @@ public class UpdateDataSourceTemplateRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the member. This parameter lets an administrator switch to the perspective of the member.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>173326*******</p>
+         * RoleFor.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

@@ -106,7 +106,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries to return in this request.</p>
+         * <p>The maximum number of entries to return in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -117,7 +117,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+         * <p>The token used to retrieve the next page of results. Leave this parameter empty for the first request or when no more results are available. For subsequent requests, set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -136,7 +136,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
@@ -398,7 +398,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the normalization schema was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1736386610000</p>
@@ -409,7 +409,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule category ID.</p>
+             * <p>The ID of the normalization rule category.</p>
              * 
              * <strong>example:</strong>
              * <p>NETWORK_CATEGORY</p>
@@ -420,10 +420,10 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field source. Valid values:</p>
+             * <p>The source of the field. Valid values:</p>
              * <ul>
-             * <li>normalized: normalized field.</li>
-             * <li>native: native field.</li>
+             * <li>normalized: Normalized field.</li>
+             * <li>native: Native field.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -435,7 +435,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization schema description.</p>
+             * <p>The description of the normalization schema.</p>
              * 
              * <strong>example:</strong>
              * <p>Network flow log</p>
@@ -446,11 +446,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization schema source. Valid values:</p>
-             * <ul>
-             * <li>preset: predefined.</li>
-             * <li>custom: custom.</li>
-             * </ul>
+             * <p>The source of the normalization schema. Valid values: preset and custom.</p>
              * 
              * <strong>example:</strong>
              * <p>preset</p>
@@ -461,7 +457,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization schema ID.</p>
+             * <p>The ID of the normalization schema.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP_ACTIVITY</p>
@@ -472,7 +468,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization schema name.</p>
+             * <p>The name of the normalization schema.</p>
              * 
              * <strong>example:</strong>
              * <p>normalization_rule_Z57np</p>
@@ -483,7 +479,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The LogStore to which the normalization output is written.</p>
+             * <p>The Logstore for normalized output.</p>
              * 
              * <strong>example:</strong>
              * <p>network-activity</p>
@@ -494,7 +490,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization schema type.</p>
+             * <p>The type of the normalization schema.</p>
              * 
              * <strong>example:</strong>
              * <p>log</p>
@@ -505,7 +501,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security domain ID.</p>
+             * <p>The ID of the security domain.</p>
              * 
              * <strong>example:</strong>
              * <p>NETWORK_AND_WEB_SECURITY</p>
@@ -516,7 +512,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product ID.</p>
+             * <p>The ID of the product.</p>
              * 
              * <strong>example:</strong>
              * <p>sas</p>
@@ -527,7 +523,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendEntities.
+             * <p>The list of recommended entities.</p>
              */
             public Builder recommendEntities(java.util.List<String> recommendEntities) {
                 this.recommendEntities = recommendEntities;
@@ -535,7 +531,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service LogStore.</p>
+             * <p>The Logstore of Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>network-activity</p>
@@ -546,7 +542,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Simple Log Service StoreView.</p>
+             * <p>The StoreView of Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>network-activity</p>
@@ -557,7 +553,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The time when the normalization schema was updated. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1736386610000</p>
@@ -568,7 +564,7 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vendor ID.</p>
+             * <p>The ID of the vendor.</p>
              * 
              * <strong>example:</strong>
              * <p>alibaba</p>

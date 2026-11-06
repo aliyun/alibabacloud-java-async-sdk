@@ -227,7 +227,7 @@ public class UpdateResponseRuleRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response messages. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
@@ -243,7 +243,7 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of data records to read in this request.</p>
+         * <p>The maximum number of data records to read in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -255,7 +255,7 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The token that marks the start position of the current read. Leave this parameter empty to start from the beginning.</p>
+         * <p>The token that specifies the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -267,10 +267,10 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</p>
+         * <p>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-         * <li>ap-southeast-1: Your assets reside outside China.</li>
+         * <li>cn-hangzhou: The assets are located in the Chinese mainland.</li>
+         * <li>ap-southeast-1: The assets are located outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,12 +297,12 @@ public class UpdateResponseRuleRequest extends Request {
         /**
          * <p>The action type of the automated response rule. Valid values:</p>
          * <ul>
-         * <li>doPlaybook: runs a playbook.</li>
-         * <li>changeEventStatus: updates the event status.</li>
-         * <li>changeThreatLevel: updates the threat level of an event.</li>
-         * <li>addEventTag: adds a label to an event.</li>
-         * <li>deleteEventTag: deletes a label from an event.</li>
-         * <li>alertWhitelist: adds an alert to the whitelist.</li>
+         * <li>doPlaybook: Executes a playbook.</li>
+         * <li>changeEventStatus: Updates the event status.</li>
+         * <li>changeThreatLevel: Updates the threat level of the event.</li>
+         * <li>addEventTag: Adds an event tag.</li>
+         * <li>deleteEventTag: Deletes an event tag.</li>
+         * <li>alertWhitelist: Adds an alert to the whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The trigger condition configuration of the rule.</p>
+         * <p>The rule trigger condition configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</p>
@@ -363,7 +363,10 @@ public class UpdateResponseRuleRequest extends Request {
         }
 
         /**
-         * <p>The remarks for the response rule.</p>
+         * <p>The remarks of the response rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Verified as a low-risk alert and scheduled for regular cleanup</p>
          */
         public Builder responseRuleRemark(String responseRuleRemark) {
             this.putBodyParameter("ResponseRuleRemark", responseRuleRemark);
@@ -374,8 +377,8 @@ public class UpdateResponseRuleRequest extends Request {
         /**
          * <p>The status of the automated response rule. Valid values:</p>
          * <ul>
-         * <li>0: disabled.</li>
-         * <li>100: enabled.</li>
+         * <li>0: Disabled.</li>
+         * <li>100: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,9 +393,9 @@ public class UpdateResponseRuleRequest extends Request {
         /**
          * <p>The trigger type of the automated response rule. Valid values:</p>
          * <ul>
-         * <li>event: an event occurs.</li>
-         * <li>event_update: an event is updated.</li>
-         * <li>alert: an alert occurs.</li>
+         * <li>event: An event occurs.</li>
+         * <li>event_update: An event is updated.</li>
+         * <li>alert: An alert is triggered.</li>
          * </ul>
          * 
          * <strong>example:</strong>

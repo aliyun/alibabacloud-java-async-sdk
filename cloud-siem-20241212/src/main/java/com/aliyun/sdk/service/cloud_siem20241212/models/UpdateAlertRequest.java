@@ -141,7 +141,7 @@ public class UpdateAlertRequest extends Request {
         }
 
         /**
-         * <p>The alert ID associated with the event.</p>
+         * <p>The ID of the alert associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_71e24437d2797ce8fc59692905a4****</p>
@@ -153,7 +153,7 @@ public class UpdateAlertRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response message. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese.</li>
          * <li><strong>en</strong>: English.</li>
@@ -169,10 +169,10 @@ public class UpdateAlertRequest extends Request {
         }
 
         /**
-         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <p>The region where the data management center for threat analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</p>
          * <ul>
-         * <li>cn-hangzhou: the Chinese mainland and Hong Kong (China).</li>
-         * <li>ap-southeast-1: regions outside China.</li>
+         * <li>cn-hangzhou: Select this value if your assets are located in the Chinese mainland and Hong Kong (China).</li>
+         * <li>ap-southeast-1: Select this value if your assets are located outside China.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class UpdateAlertRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user to which the administrator switches the view.</p>
+         * <p>The ID of the user whose perspective the administrator switches to.</p>
          * 
          * <strong>example:</strong>
          * <p>113091674488****</p>
@@ -199,7 +199,7 @@ public class UpdateAlertRequest extends Request {
         /**
          * <p>The view type. Valid values:</p>
          * <ul>
-         * <li>0: the current Alibaba Cloud account view.</li>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
          * <li>1: the view of all accounts in the enterprise.</li>
          * </ul>
          * 

@@ -102,11 +102,7 @@ public class DeleteDataSetRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the dataset.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dataset-10iy8mbifnb4gniv****</p>
          */
         public Builder dataSetId(String dataSetId) {
             this.putBodyParameter("DataSetId", dataSetId);
@@ -115,16 +111,7 @@ public class DeleteDataSetRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese.</p>
-         * </li>
-         * <li><p><strong>en</strong>: English.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -133,16 +120,7 @@ public class DeleteDataSetRequest extends Request {
         }
 
         /**
-         * <p>The region of the Data Management center for threat analysis. Select a region based on the location of your assets. Valid values:</p>
-         * <ul>
-         * <li><p>cn-hangzhou: for assets in the Chinese mainland.</p>
-         * </li>
-         * <li><p>ap-southeast-1: for assets outside the Chinese mainland.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -151,10 +129,7 @@ public class DeleteDataSetRequest extends Request {
         }
 
         /**
-         * <p>The user ID that an administrator uses to switch to the perspective of a member.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>113091674488****</p>
+         * RoleFor.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);

@@ -106,10 +106,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries to return.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -117,10 +114,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -128,7 +122,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of normalization rule versions.</p>
+         * NormalizationRuleVersions.
          */
         public Builder normalizationRuleVersions(java.util.List<NormalizationRuleVersions> normalizationRuleVersions) {
             this.normalizationRuleVersions = normalizationRuleVersions;
@@ -136,10 +130,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,10 +138,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>57</p>
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -255,10 +243,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1733269771123</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -266,12 +251,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule expression.</p>
-             * 
-             * <strong>example:</strong>
-             * <ul>
-             * <li>| pack-fields -include=\&quot;[\s\S]+\&quot; as extend_content</li>
-             * </ul>
+             * NormalizationRuleExpression.
              */
             public Builder normalizationRuleExpression(String normalizationRuleExpression) {
                 this.normalizationRuleExpression = normalizationRuleExpression;
@@ -279,10 +259,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>nr-z0b2ssjteut85uoh9nzp</p>
+             * NormalizationRuleId.
              */
             public Builder normalizationRuleId(String normalizationRuleId) {
                 this.normalizationRuleId = normalizationRuleId;
@@ -290,10 +267,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The normalization rule version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>V1</p>
+             * NormalizationRuleVersion.
              */
             public Builder normalizationRuleVersion(Integer normalizationRuleVersion) {
                 this.normalizationRuleVersion = normalizationRuleVersion;
@@ -301,10 +275,7 @@ public class ListNormalizationRuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1733269771123</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

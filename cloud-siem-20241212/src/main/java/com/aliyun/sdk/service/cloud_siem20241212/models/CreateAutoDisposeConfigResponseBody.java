@@ -54,7 +54,7 @@ public class CreateAutoDisposeConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6D7B26AD-2EDD-5A96-B9D2-CDEABFC55690</p>
