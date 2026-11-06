@@ -113,7 +113,7 @@ public class ListExternalAgentsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. You can omit this parameter in the first call. For subsequent calls, use the nextToken value returned in the previous response.</p>
+         * <p>The pagination token. You can leave this parameter empty for the first call. For subsequent calls, use the nextToken value returned in the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-1</p>

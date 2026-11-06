@@ -338,7 +338,7 @@ public class GetMcpCodePackageUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP request headers. The key is the header name, and the value is the header content.</p>
+             * <p>The HTTP request headers, where the key is the header name and the value is the header content.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Content-Type&quot;:&quot;application/zip&quot;}</p>
@@ -349,7 +349,7 @@ public class GetMcpCodePackageUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum allowed size of the code package to be uploaded, in bytes.</p>
+             * <p>The maximum allowed size of the code package to upload, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>52428800</p>

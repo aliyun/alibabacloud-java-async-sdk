@@ -41,6 +41,10 @@ public class ListSandboxSessionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceEndpointId")
+    private String serviceEndpointId;
+
     private ListSandboxSessionsRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -48,6 +52,7 @@ public class ListSandboxSessionsRequest extends Request {
         this.sandboxId = builder.sandboxId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.serviceEndpointId = builder.serviceEndpointId;
     }
 
     public static Builder builder() {
@@ -98,12 +103,20 @@ public class ListSandboxSessionsRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return serviceEndpointId
+     */
+    public String getServiceEndpointId() {
+        return this.serviceEndpointId;
+    }
+
     public static final class Builder extends Request.Builder<ListSandboxSessionsRequest, Builder> {
         private String workspaceId; 
         private String agentId; 
         private String sandboxId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String serviceEndpointId; 
 
         private Builder() {
             super();
@@ -116,6 +129,7 @@ public class ListSandboxSessionsRequest extends Request {
             this.sandboxId = request.sandboxId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.serviceEndpointId = request.serviceEndpointId;
         } 
 
         /**
@@ -178,6 +192,18 @@ public class ListSandboxSessionsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>必须与查出该 sandboxId 时使用的 ListSandboxes 入参一致。省略或传空白时查询智能体 latest 运行单元；传入时该服务端点必须属于本智能体且目标类型为 AGENT_VERSION，否则返回 Resource.NotFound；非 DEFAULT 且未独立运行时返回 ServiceEndpointTargetNotReady。sandboxId 不属于所指运行单元时返回 Sandbox.NotFound，不返回空列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>se-7f3a92c1</p>
+         */
+        public Builder serviceEndpointId(String serviceEndpointId) {
+            this.putQueryParameter("serviceEndpointId", serviceEndpointId);
+            this.serviceEndpointId = serviceEndpointId;
             return this;
         }
 

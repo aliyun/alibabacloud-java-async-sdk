@@ -448,6 +448,111 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
      *
      * <p>ListServiceEndpointsResponseBody</p>
      */
+    public static class ElasticityPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("maxSandboxCount")
+        private Integer maxSandboxCount;
+
+        @com.aliyun.core.annotation.NameInMap("minSandboxCount")
+        private Integer minSandboxCount;
+
+        private ElasticityPolicy(Builder builder) {
+            this.enabled = builder.enabled;
+            this.maxSandboxCount = builder.maxSandboxCount;
+            this.minSandboxCount = builder.minSandboxCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElasticityPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxSandboxCount
+         */
+        public Integer getMaxSandboxCount() {
+            return this.maxSandboxCount;
+        }
+
+        /**
+         * @return minSandboxCount
+         */
+        public Integer getMinSandboxCount() {
+            return this.minSandboxCount;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Integer maxSandboxCount; 
+            private Integer minSandboxCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElasticityPolicy model) {
+                this.enabled = model.enabled;
+                this.maxSandboxCount = model.maxSandboxCount;
+                this.minSandboxCount = model.minSandboxCount;
+            } 
+
+            /**
+             * <p>是否开启弹性。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * <p>最大实例数，不小于 1。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder maxSandboxCount(Integer maxSandboxCount) {
+                this.maxSandboxCount = maxSandboxCount;
+                return this;
+            }
+
+            /**
+             * <p>最小实例数，不小于 0 且不大于 maxSandboxCount。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder minSandboxCount(Integer minSandboxCount) {
+                this.minSandboxCount = minSandboxCount;
+                return this;
+            }
+
+            public ElasticityPolicy build() {
+                return new ElasticityPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListServiceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceEndpointsResponseBody</p>
+     */
     public static class Target extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
@@ -611,11 +716,20 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
+        @com.aliyun.core.annotation.NameInMap("effectivePublicAccessEnabled")
+        private Boolean effectivePublicAccessEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("elasticityPolicy")
+        private ElasticityPolicy elasticityPolicy;
+
         @com.aliyun.core.annotation.NameInMap("endpointType")
         private String endpointType;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("publicAccessEnabled")
+        private Boolean publicAccessEnabled;
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
@@ -642,8 +756,11 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             this.accessUrls = builder.accessUrls;
             this.authentication = builder.authentication;
             this.createdAt = builder.createdAt;
+            this.effectivePublicAccessEnabled = builder.effectivePublicAccessEnabled;
+            this.elasticityPolicy = builder.elasticityPolicy;
             this.endpointType = builder.endpointType;
             this.name = builder.name;
+            this.publicAccessEnabled = builder.publicAccessEnabled;
             this.regionId = builder.regionId;
             this.serviceEndpointId = builder.serviceEndpointId;
             this.status = builder.status;
@@ -683,6 +800,20 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectivePublicAccessEnabled
+         */
+        public Boolean getEffectivePublicAccessEnabled() {
+            return this.effectivePublicAccessEnabled;
+        }
+
+        /**
+         * @return elasticityPolicy
+         */
+        public ElasticityPolicy getElasticityPolicy() {
+            return this.elasticityPolicy;
+        }
+
+        /**
          * @return endpointType
          */
         public String getEndpointType() {
@@ -694,6 +825,13 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return publicAccessEnabled
+         */
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
         }
 
         /**
@@ -749,8 +887,11 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             private java.util.List<AccessUrls> accessUrls; 
             private Authentication authentication; 
             private String createdAt; 
+            private Boolean effectivePublicAccessEnabled; 
+            private ElasticityPolicy elasticityPolicy; 
             private String endpointType; 
             private String name; 
+            private Boolean publicAccessEnabled; 
             private String regionId; 
             private String serviceEndpointId; 
             private String status; 
@@ -766,8 +907,11 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
                 this.accessUrls = model.accessUrls;
                 this.authentication = model.authentication;
                 this.createdAt = model.createdAt;
+                this.effectivePublicAccessEnabled = model.effectivePublicAccessEnabled;
+                this.elasticityPolicy = model.elasticityPolicy;
                 this.endpointType = model.endpointType;
                 this.name = model.name;
+                this.publicAccessEnabled = model.publicAccessEnabled;
                 this.regionId = model.regionId;
                 this.serviceEndpointId = model.serviceEndpointId;
                 this.status = model.status;
@@ -805,6 +949,22 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>publicAccessEnabled 与工作空间公网入向上限叠加后的结果：二者均允许时为 true。仅表示策略目标，不代表公网入口已发布完成，实际状态以 accessUrls 与 status 为准。</p>
+             */
+            public Builder effectivePublicAccessEnabled(Boolean effectivePublicAccessEnabled) {
+                this.effectivePublicAccessEnabled = effectivePublicAccessEnabled;
+                return this;
+            }
+
+            /**
+             * <p>仅在服务端点设置过弹性覆盖值时返回，可设置的为 Router 类型服务端点与 GATEWAY_API_WITH_VPC_INGRESS 类型的 DEFAULT 服务端点；未设置覆盖值时不返回该对象，表示继承智能体源配置，不得当作空对象或默认策略。返回时三个字段必全。</p>
+             */
+            public Builder elasticityPolicy(ElasticityPolicy elasticityPolicy) {
+                this.elasticityPolicy = elasticityPolicy;
+                return this;
+            }
+
+            /**
              * <p>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</p>
              * 
              * <strong>example:</strong>
@@ -823,6 +983,14 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>用户在服务端点上设置的公网入向期望；未设置过的历史服务端点按 true 返回。仅表示配置期望，实际公网地址是否可用以 accessUrls 与 status 为准。</p>
+             */
+            public Builder publicAccessEnabled(Boolean publicAccessEnabled) {
+                this.publicAccessEnabled = publicAccessEnabled;
                 return this;
             }
 

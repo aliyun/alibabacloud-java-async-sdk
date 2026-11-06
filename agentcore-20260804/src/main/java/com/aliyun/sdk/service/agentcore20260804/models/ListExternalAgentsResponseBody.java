@@ -246,7 +246,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that meet the filter conditions.</p>
+         * <p>The total number of records that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -487,7 +487,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest specification version.</p>
+             * <p>The latest specification version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

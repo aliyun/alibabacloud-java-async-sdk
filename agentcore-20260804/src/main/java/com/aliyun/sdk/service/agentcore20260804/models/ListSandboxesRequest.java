@@ -41,6 +41,10 @@ public class ListSandboxesRequest extends Request {
     private String searchText;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceEndpointId")
+    private String serviceEndpointId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("sessionId")
     private String sessionId;
 
@@ -51,6 +55,7 @@ public class ListSandboxesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.searchText = builder.searchText;
+        this.serviceEndpointId = builder.serviceEndpointId;
         this.sessionId = builder.sessionId;
     }
 
@@ -103,6 +108,13 @@ public class ListSandboxesRequest extends Request {
     }
 
     /**
+     * @return serviceEndpointId
+     */
+    public String getServiceEndpointId() {
+        return this.serviceEndpointId;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -115,6 +127,7 @@ public class ListSandboxesRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String searchText; 
+        private String serviceEndpointId; 
         private String sessionId; 
 
         private Builder() {
@@ -128,6 +141,7 @@ public class ListSandboxesRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.searchText = request.searchText;
+            this.serviceEndpointId = request.serviceEndpointId;
             this.sessionId = request.sessionId;
         } 
 
@@ -190,6 +204,18 @@ public class ListSandboxesRequest extends Request {
         public Builder searchText(String searchText) {
             this.putQueryParameter("searchText", searchText);
             this.searchText = searchText;
+            return this;
+        }
+
+        /**
+         * <p>省略或传空白时查询智能体 latest 运行单元；传入时该服务端点必须属于本智能体且目标类型为 AGENT_VERSION，否则返回 Resource.NotFound。独立运行的服务端点只返回其自身运行单元的 Sandbox；DEFAULT 服务端点尚未接管独立运行时回落到 latest 运行单元；非 DEFAULT 且未独立运行时返回 ServiceEndpointTargetNotReady。运行单元尚未创建时返回空列表且 totalCount 为 0，不报错。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>se-7f3a92c1</p>
+         */
+        public Builder serviceEndpointId(String serviceEndpointId) {
+            this.putQueryParameter("serviceEndpointId", serviceEndpointId);
+            this.serviceEndpointId = serviceEndpointId;
             return this;
         }
 

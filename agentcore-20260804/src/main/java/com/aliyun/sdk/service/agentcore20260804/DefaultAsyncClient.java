@@ -195,6 +195,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>将指定托管智能体或自定义智能体当前已生效的配置保存为一个不可变的固定版本，并归档版本模板与制品。仅保存版本，不部署实例。其他类型的智能体（如外部智能体）不支持版本，返回 AgentVersionSubtypeUnsupported。Agent 最新发布必须已生效（latestSpecVersion 等于 effectiveSpecVersion）。系统按 Agent 递增生成版本号 agentVersion（v1、v2……），版本号在 Agent 内唯一且已删除版本的序号不复用，查询、删除版本及服务端点引用版本均使用该版本号。每个 Agent 最多保留 50 个未删除的版本，达到上限时返回 AgentVersionQuotaExceeded，删除不再使用的版本后可继续保存。versionName 相同且发布流水号相同的重复提交返回已有版本（不受上限限制）；versionName 相同但发布流水号不同时返回 AgentVersionAlreadyExists。</p>
+     * 
+     * @param request the request parameters of CreateAgentVersion  CreateAgentVersionRequest
+     * @return CreateAgentVersionResponse
+     */
+    @Override
+    public CompletableFuture<CreateAgentVersionResponse> createAgentVersion(CreateAgentVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAgentVersion").setMethod(HttpMethod.POST).setPathRegex("/workspaces/{workspaceId}/agents/{agentId}/versions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAgentVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAgentVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Creates an apiKey or mcpHeader credential in a workspace for agents or MCP to access external services.</p>
      * <h3>Credential types</h3>
      * <ul>
@@ -1059,6 +1080,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>删除指定托管智能体或自定义智能体已保存的固定版本。仍被服务端点引用的版本不可删除，系统维护的 latest 版本不可删除。</p>
+     * 
+     * @param request the request parameters of DeleteAgentVersion  DeleteAgentVersionRequest
+     * @return DeleteAgentVersionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAgentVersionResponse> deleteAgentVersion(DeleteAgentVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAgentVersion").setMethod(HttpMethod.DELETE).setPathRegex("/workspaces/{workspaceId}/agents/{agentId}/versions/{agentVersion}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgentVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAgentVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Deletes an access credential that is no longer used in a workspace.
      * If the credential is still bound to an MCP service, dissociate it before deletion.</p>
      * 
@@ -1871,6 +1913,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAgentSpecVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询指定托管智能体或自定义智能体已保存的固定版本详情，configuration 返回版本保存时的 Agent 配置。</p>
+     * 
+     * @param request the request parameters of GetAgentVersion  GetAgentVersionRequest
+     * @return GetAgentVersionResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentVersionResponse> getAgentVersion(GetAgentVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentVersion").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/agents/{agentId}/versions/{agentVersion}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3068,6 +3131,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>分页查询指定托管智能体或自定义智能体已保存的固定版本，按创建时间倒序返回，不包含系统维护的 latest 版本。列表项不返回 configuration，需查看配置时调用 GetAgentVersion。</p>
+     * 
+     * @param request the request parameters of ListAgentVersions  ListAgentVersionsRequest
+     * @return ListAgentVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListAgentVersionsResponse> listAgentVersions(ListAgentVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAgentVersions").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/agents/{agentId}/versions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgentVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgentVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries the official and enterprise models available for the enabled QoderCLI connector.
      * Queries the list of models available for a specified connector. Pagination is supported.</p>
      * 
@@ -3160,16 +3244,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Purpose</h3>
-     * <p>Performs a paging query for the identity, configuration version, and status summary of managed agents in a workspace.</p>
-     * <h3>Related concepts</h3>
-     * <ul>
-     * <li>A managed agent runs in a user-provided runtime environment. The platform is responsible for saving the access and capability configurations. The API uses the technical name ExternalAgent.</li>
-     * </ul>
-     * <h3>Paging</h3>
+     * <p>Performs a paging query to retrieve the identity, configuration versions, and status summary of managed agents in a workspace.</p>
+     * <h3>Paging query</h3>
      * <p>If <code>maxResults</code> is omitted or set to <code>0</code>, the default value is 20, and the maximum value is 100. Omit <code>nextToken</code> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</p>
      * <h3>Response content</h3>
-     * <p>This operation returns the summary of managed agents. To query the complete models, instructions, tools, skills, and access status, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
+     * <p>This operation returns the summary of managed agents. To query the complete models, instructions, tools, skills, and accessed state, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a>.</p>
      * 
      * @param request the request parameters of ListExternalAgents  ListExternalAgentsRequest
      * @return ListExternalAgentsResponse
