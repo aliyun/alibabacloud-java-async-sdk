@@ -104,7 +104,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The request data content.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;key\&quot;: \&quot;value\&quot;}</p>
@@ -118,7 +118,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
          * <p>The message content.</p>
          * 
          * <strong>example:</strong>
-         * <p>Hello, World!</p>
+         * <p>Hello, world!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -260,12 +260,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The period type of the existing conflicting rule on the subject. Valid values:</p>
-             * <ul>
-             * <li>day: daily.</li>
-             * <li>week: weekly.</li>
-             * <li>month: monthly.</li>
-             * </ul>
+             * <p>The period type of the existing conflicting rule on the subject. A value of day, week, or month indicates that the period of the existing conflicting rule on the subject is daily, weekly, or monthly.</p>
              * 
              * <strong>example:</strong>
              * <p>week</p>
@@ -276,11 +271,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the existing conflicting rule on the subject. Valid values:</p>
-             * <ul>
-             * <li>calendar: The existing conflicting rule uses a calendar period.</li>
-             * <li>epoch: The existing conflicting rule uses a custom period.</li>
-             * </ul>
+             * <p>The type of the existing conflicting rule on the subject. A value of calendar indicates that the existing conflicting rule on the subject uses a natural period. A value of epoch indicates that the existing conflicting rule uses a custom period.</p>
              * 
              * <strong>example:</strong>
              * <p>calendar</p>
@@ -291,7 +282,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer ID. You can use subjectId instead.</p>
+             * <p>The consumer ID. This parameter can now be uniformly replaced by subjectId.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-d82n1g6m1hkm3xxxxxxx</p>
@@ -302,7 +293,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer name. You can use subjectName instead.</p>
+             * <p>The consumer name. This parameter can now be uniformly replaced by subjectName.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer-a</p>
@@ -335,11 +326,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the conflicting subject. Valid values:</p>
-             * <ul>
-             * <li>consumer: consumer.</li>
-             * <li>consumer_group: consumer group.</li>
-             * </ul>
+             * <p>The type of the conflicting subject. Valid values: consumer and consumer_group.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer</p>
@@ -422,7 +409,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The hash of the conflict snapshot.</p>
+             * <p>The hash of the conflict.</p>
              * 
              * <strong>example:</strong>
              * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -537,7 +524,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</p>
+             * <p>Indicates whether the semantics of the current write request can be accepted by the system. A value of false is common in retryable scenarios such as unconfirmed conflict overwrites.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -556,7 +543,7 @@ public class ResetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request is a dry run.</p>
+             * <p>Indicates whether it is a dry run.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

@@ -160,7 +160,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. An empty value indicates that the last page is reached.</p>
+         * <p>The cursor for the next page. An empty value indicates that the last page has been reached.</p>
          * 
          * <strong>example:</strong>
          * <p>token-xxxxxxxx</p>
@@ -266,7 +266,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The consumer ID. You can use this ID to locate the consumer in API operations such as GetHiMarketConsumer, DeleteHiMarketConsumer, GetHiMarketConsumerCredential, and ListHiMarketConsumerSubscriptions.</p>
+             * <p>The consumer ID. You can use this ID to locate the consumer in operations such as GetHiMarketConsumer, DeleteHiMarketConsumer, GetHiMarketConsumerCredential, and ListHiMarketConsumerSubscriptions.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-xxxxxxxxxxxx</p>
@@ -392,7 +392,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of consumers. The list element is named consumer, and each element represents a HiMarket consumer.</p>
+             * <p>The list of consumers. Each element represents a HiMarket consumer.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -411,7 +411,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

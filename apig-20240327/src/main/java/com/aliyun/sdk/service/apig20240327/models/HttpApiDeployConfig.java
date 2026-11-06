@@ -312,7 +312,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The deployment scenario.</p>
+         * <p>The publishing scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -331,7 +331,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of custom domain IDs.</p>
+         * <p>The list of custom domain name IDs.</p>
          */
         public Builder customDomainIds(java.util.List<String> customDomainIds) {
             this.customDomainIds = customDomainIds;
@@ -339,7 +339,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of custom domain content.</p>
+         * <p>The list of custom domain name details.</p>
          */
         public Builder customDomainInfos(java.util.List<CustomDomainInfos> customDomainInfos) {
             this.customDomainInfos = customDomainInfos;
@@ -347,7 +347,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The combination of fixed dynamic forwarding and ExtProc. For REST APIs, submit this in the deployConfigs of the operation. For ModelAPIs, submit this in the deployConfigs of the API. When creating either, you must submit both gatewayId and dfpConfig.serviceId in the same configuration item. The server verifies that the gateway and service belong to the same entity and determines the default environment and backend. GetHttpApiOperation, ListHttpApiOperations, GetHttpApi, and ListHttpApis return the entire object only when the corresponding resource is precisely mounted with the plugin bound to the current gateway. This field is not supported for API-level configurations of standard HTTP APIs.</p>
+         * <p>The fixed dynamic forwarding and ExtProc combination. For REST APIs, submit in the deployConfigs of the operation. For ModelAPIs, submit in the deployConfigs of the API. When creating either, you must submit both gatewayId and dfpConfig.serviceId in the same configuration item. The server verifies that the gateway and service belong to the same entity and determines the default environment and backend. GetHttpApiOperation, ListHttpApiOperations, GetHttpApi, and ListHttpApis return the entire object only when the corresponding resource is precisely mounted with the current gateway-bound plugin. This field is not supported for API-level configurations of standard HTTP APIs.</p>
          */
         public Builder dfpConfig(DfpConfig dfpConfig) {
             this.dfpConfig = dfpConfig;
@@ -355,7 +355,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable gateway system models. This takes effect only when the deployment scenario is AiAutoRouter. The default value is false. This field is used for compatibility with legacy clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that none are enabled.</p>
+         * <p>Specifies whether to enable gateway system models. This takes effect only when the publishing scenario is AiAutoRouter. The default value is false. This field is used for compatibility with legacy clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that none are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -366,7 +366,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The list of environment domain IDs. If not provided, all environment domains are bound. An empty array indicates that no environment domains are bound.</p>
+         * <p>The list of environment domain name IDs. If not specified, all environment domain names are bound. An empty array indicates that no environment domain names are bound.</p>
          */
         public Builder envDomainIds(java.util.List<String> envDomainIds) {
             this.envDomainIds = envDomainIds;
@@ -439,7 +439,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The current online routing mode for REST APIs. ordinary indicates operation-by-operation routing, and compressed indicates a single prefix route for the API. This field is not returned for non-REST APIs.</p>
+         * <p>The current online routing mode for REST APIs. ordinary indicates per-operation routing, and compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>ordinary</p>
@@ -474,7 +474,7 @@ public class HttpApiDeployConfig extends TeaModel {
         }
 
         /**
-         * <p>The set of explicitly enabled gateway system model capability tiers. This takes effect only when the deployment scenario is AiAutoRouter. Valid values: economy, standard, and premium. An explicit empty array indicates that no system models are enabled.</p>
+         * <p>The set of explicitly enabled gateway system model capability tiers. This takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium. An explicit empty array indicates that no system models are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;economy&quot;,&quot;standard&quot;,&quot;premium&quot;]</p>
@@ -556,7 +556,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * <p>The domain ID.</p>
+             * <p>The domain name ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-cshee6dlhtgk******</p>
@@ -635,7 +635,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the imported ExtProc gRPC service. Required when creating a REST operation or ModelAPI. Must match the service currently bound to the resource during updates.</p>
+             * <p>The imported ExtProc gRPC service ID. Required when creating a REST operation or ModelAPI. Must match the service currently bound to the resource during updates.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-cr8k0udlhtgt80sh7png</p>
@@ -718,7 +718,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * <p>The domain ID.</p>
+             * <p>The domain name ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-env-xxx</p>
@@ -1071,7 +1071,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * <p>The capability tier for intelligent routing candidates. Fill in only when the deployment scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
+             * <p>The capability tier for intelligent routing candidates. Fill in only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</p>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -1304,7 +1304,7 @@ public class HttpApiDeployConfig extends TeaModel {
             } 
 
             /**
-             * <p>The domain ID.</p>
+             * <p>The domain name ID.</p>
              * 
              * <strong>example:</strong>
              * <p>d-csmn42um******</p>

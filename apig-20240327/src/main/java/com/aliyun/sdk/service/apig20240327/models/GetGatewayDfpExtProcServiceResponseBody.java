@@ -93,7 +93,7 @@ public class GetGatewayDfpExtProcServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request result code. The value is Ok if the request succeeds.</p>
+         * <p>The result code of the request. The value is Ok if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -115,7 +115,7 @@ public class GetGatewayDfpExtProcServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result description. This field contains the fault information if the request fails.</p>
+         * <p>The result message of the request. If the request failed, the message contains the error message of the fault.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class GetGatewayDfpExtProcServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID for troubleshooting.</p>
+         * <p>The request ID, which is used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>F7B8A1C2-1234-5678-90AB-CDEF12345678</p>
@@ -219,7 +219,7 @@ public class GetGatewayDfpExtProcServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bound ExtProc gRPC service. This field is not returned if no service is bound.</p>
+             * <p>The ID of the bound ExtProc gRPC service. This parameter is not returned if no service is bound.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-cr8k0udlhtgt80sh7png</p>
@@ -230,7 +230,7 @@ public class GetGatewayDfpExtProcServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gRPC port of the bound service. This field is not returned if no service is bound.</p>
+             * <p>The gRPC port of the bound service. This parameter is not returned if no service is bound.</p>
              * 
              * <strong>example:</strong>
              * <p>9002</p>

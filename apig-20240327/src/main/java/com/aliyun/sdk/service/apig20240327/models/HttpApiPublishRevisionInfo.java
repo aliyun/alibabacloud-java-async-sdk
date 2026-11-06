@@ -210,7 +210,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         } 
 
         /**
-         * <p>The API publish scenario.</p>
+         * <p>The API release scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -259,7 +259,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * <p>The DNS domain name configuration. In the single-service scenario, only one entry can be configured. In the by-ratio or by-content scenario, multiple entries can be configured.</p>
+         * <p>The DNS domain name configuration. Only one entry can be configured in the single service scenario, and multiple entries can be configured in the by ratio and by content scenarios.</p>
          */
         public Builder dnsConfigs(java.util.List<DnsConfigs> dnsConfigs) {
             this.dnsConfigs = dnsConfigs;
@@ -289,7 +289,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * <p>The list of API operations.</p>
+         * <p>The API operation list.</p>
          */
         public Builder operations(java.util.List<HttpApiOperationInfo> operations) {
             this.operations = operations;
@@ -297,7 +297,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * <p>The version number of the published API.</p>
+         * <p>The version number of the API release.</p>
          * 
          * <strong>example:</strong>
          * <p>apr-xxx</p>
@@ -308,7 +308,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * <p>The existing service configurations. In a single-service scenario, only one entry can be configured. In proportion-based, content-based, or tag-based scenarios, multiple entries can be configured.</p>
+         * <p>The existing service configuration. Only one entry can be configured in the single service scenario, and multiple entries can be configured in the by ratio, by content, and by tag scenarios.</p>
          */
         public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
             this.serviceConfigs = serviceConfigs;
@@ -327,7 +327,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         /**
-         * <p>The static address configurations. In a single-service scenario, only one entry can be configured. In proportion-based or content-based scenarios, multiple entries can be configured.</p>
+         * <p>The fixed address configuration. Only one entry can be configured in the single service scenario, and multiple entries can be configured in the by ratio and by content scenarios.</p>
          */
         public Builder vipConfigs(java.util.List<VipConfigs> vipConfigs) {
             this.vipConfigs = vipConfigs;
@@ -458,7 +458,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the associated service.</p>
+             * <p>The associated service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>gs-xxx</p>
@@ -510,7 +510,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * <p>The service protocol.</p>
+             * <p>The terms of service.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -630,7 +630,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the associated service.</p>
+             * <p>The associated service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>gs-xxx</p>
@@ -793,7 +793,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the associated service.</p>
+             * <p>The associated service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>gs-xxx</p>
@@ -960,7 +960,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * <p>The Function Compute (FC) configuration.</p>
+             * <p>The FC configuration.</p>
              */
             public Builder functionConfigs(java.util.List<FunctionConfigs> functionConfigs) {
                 this.functionConfigs = functionConfigs;
@@ -1056,7 +1056,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * <p>The match condition. This parameter is valid only in the by-content scenario.</p>
+             * <p>The match condition. This parameter takes effect only in the by content scenario.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -1064,7 +1064,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * <p>The weight. Valid values: 1 to 100. This parameter is valid only in the by-ratio scenario.</p>
+             * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the by ratio scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1148,7 +1148,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
              * <p>The gateway name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Instance1</p>
+             * <p>Instance 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1528,7 +1528,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             } 
 
             /**
-             * <p>The list of static addresses.</p>
+             * <p>The list of fixed addresses.</p>
              */
             public Builder endpoints(java.util.List<String> endpoints) {
                 this.endpoints = endpoints;
@@ -1536,7 +1536,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * <p>The match condition. This parameter is valid only in the by-content scenario.</p>
+             * <p>The match condition. This parameter takes effect only in the by content scenario.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -1544,7 +1544,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             }
 
             /**
-             * <p>The weight. Valid values: 1 to 100. This parameter is valid only in the by-ratio scenario.</p>
+             * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the by ratio scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -351,7 +351,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of protocols supported by the agent. This parameter is required when type is set to Agent. This field is not required for other types.</p>
+         * <p>The list of protocols supported by the agent. This parameter is required when type is set to Agent. It is not required for other types.</p>
          */
         public Builder agentProtocols(java.util.List<String> agentProtocols) {
             this.putBodyParameter("agentProtocols", agentProtocols);
@@ -360,7 +360,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of AI API protocols. This parameter is required and only one protocol can be passed when type is set to LLM. This parameter is required and multiple protocols can be passed when type is set to Ai. This parameter is not required for other types. Example protocol item: OpenAI/v1.</p>
+         * <p>The list of AI API protocols. This parameter is required and only one protocol can be passed when type is set to LLM. It is required and multiple protocols can be passed when type is set to Ai. It is not required for other types. Example: OpenAI/v1.</p>
          */
         public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.putBodyParameter("aiProtocols", aiProtocols);
@@ -390,7 +390,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The ID of the associated gateway.</p>
+         * <p>The ID of the gateway to which the API belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-abc123xyz789</p>
@@ -402,7 +402,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The list of deployment configurations for the HTTP API. This parameter is required and only one deployment configuration can be passed when type is set to LLM or Ai. Request-layer validation is not required for other types.</p>
+         * <p>The list of deployment configurations for the HTTP API. This parameter is required and only one deployment configuration can be passed when type is set to LLM or Ai. Request-layer validation is not performed for other types.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
@@ -423,7 +423,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only preview the operation without executing it.</p>
+         * <p>Specifies whether to perform a dry run without executing the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -435,7 +435,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable permission authentication. This parameter is validated when type is set to LLM, Ai, or Agent. This field is not validated at the request layer when type is set to Rest.</p>
+         * <p>Specifies whether to enable permission authentication. This parameter is validated when type is set to LLM, Ai, or Agent. It is not validated at the request layer when type is set to Rest.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -459,7 +459,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The configuration information of the HTTP Ingress API. This parameter is required and cannot be nil when type is set to HttpIngress. This field is not required for other types.</p>
+         * <p>The configuration information of the HTTP Ingress API. This parameter is required and cannot be nil when type is set to HttpIngress. It is not required for other types.</p>
          */
         public Builder ingressConfig(IngressConfig ingressConfig) {
             this.putBodyParameter("ingressConfig", ingressConfig);
@@ -480,7 +480,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The name of the HTTP API, which is used to identify the current API resource, such as test-api.</p>
+         * <p>The name of the HTTP API, which is used to identify the API resource, such as test-api.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -551,7 +551,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The API versioning configuration.</p>
+         * <p>The versioning configuration of the API.</p>
          */
         public Builder versionConfig(HttpApiVersionConfig versionConfig) {
             this.putBodyParameter("versionConfig", versionConfig);
@@ -560,7 +560,7 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The client token. It is a globally unique value generated by the caller (UUID is recommended) and can be up to 64 characters in length. Within about 24 hours after the first request succeeds, a repeated request with the same ClientToken and identical request parameters directly returns the httpApiId created by the first request without creating the HTTP API again. If the same ClientToken is used but the request parameters are different, IdempotentParameterMismatch is returned. If the first request is still being processed, IdempotentProcessing is returned. If this parameter is not specified, idempotence control is not enabled, and the behavior is consistent with the existing version.</p>
+         * <p>The idempotency token. It is a globally unique value generated by the caller. Use a UUID. The token can be up to 64 characters in length. Within about 24 hours after the first request succeeds, a repeated request with the same ClientToken and identical request parameters directly returns the httpApiId created by the first request without creating the HTTP API again. If the request parameters are different, the IdempotentParameterMismatch error is returned. If the first request is still being processed, the IdempotentProcessing error is returned. If this parameter is not specified, idempotency control is disabled, and the behavior is consistent with the existing version.</p>
          * 
          * <strong>example:</strong>
          * <p>5f7a2c1e-9b3d-4e8f-a1c6-0d2b8e4f7a13</p>

@@ -73,7 +73,7 @@ public class GetConsumerAuthorizationRuleRequest extends Request {
         } 
 
         /**
-         * <p>Filters the list of APIs by a specific consumer authorization rule ID. The list of APIs in the response includes only authorized APIs.</p>
+         * <p>Filters the API list by a specified consumer authorization rule ID. The API list in the response contains only authorized APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>car-ctgdn8em1hko5krqq03g</p>

@@ -242,8 +242,8 @@ public class ListPrivateLinkSecurityGroupsResponseBody extends TeaModel {
             /**
              * <p>Specifies whether the resource is created by a service account. Valid values:</p>
              * <ul>
-             * <li>0: The resource is not created by a service account.</li>
-             * <li>1: The resource is created by a service account.</li>
+             * <li>0: Not created by a service account.</li>
+             * <li>1: Created by a service account.</li>
              * </ul>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
@@ -343,7 +343,7 @@ public class ListPrivateLinkSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of results returned for this query.</p>
+             * <p>The maximum number of entries returned in this query.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -354,7 +354,7 @@ public class ListPrivateLinkSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token for the next page.</p>
+             * <p>The next token.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>

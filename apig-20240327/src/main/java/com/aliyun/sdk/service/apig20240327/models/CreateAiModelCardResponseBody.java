@@ -104,7 +104,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The model card information returned after successful creation.</p>
+         * <p>The model card information returned after the model card is created.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;modelCardId&quot;:&quot;mc-8c13d2b4f8a1&quot;,&quot;gatewayId&quot;:&quot;gw-8c13d2b4f8a1&quot;,&quot;modelProvider&quot;:&quot;qwen&quot;,&quot;modelName&quot;:&quot;qwen-plus&quot;,&quot;source&quot;:&quot;user&quot;,&quot;credit&quot;:{&quot;type&quot;:&quot;fixed&quot;,&quot;inputCost&quot;:1.5,&quot;outputCost&quot;:3,&quot;cacheCost&quot;:0.5},&quot;features&quot;:{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true},&quot;meta&quot;:{&quot;maxInputTokens&quot;:131072,&quot;maxOutputTokens&quot;:8192,&quot;maxTokens&quot;:131072,&quot;supportedInputModalities&quot;:[&quot;text&quot;,&quot;image&quot;],&quot;supportedOutputModalities&quot;:[&quot;text&quot;]},&quot;availablePaths&quot;:[{&quot;path&quot;:&quot;/v1/chat/completions&quot;,&quot;type&quot;:&quot;OpenAICompatible&quot;}],&quot;updateTime&quot;:&quot;2026-07-14 18:30:00&quot;}</p>
@@ -126,7 +126,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -195,7 +195,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The model invocation path.</p>
+             * <p>The model call path.</p>
              * 
              * <strong>example:</strong>
              * <p>/v1/chat/completions</p>
@@ -206,7 +206,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type of the path.</p>
+             * <p>The protocol type corresponding to the path.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAICompatible</p>
@@ -302,7 +302,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cache hit token cost, in Credits per million tokens.</p>
+             * <p>The cost of cache hit tokens, in Credits per million tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -313,7 +313,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input token cost, in Credits per million tokens.</p>
+             * <p>The cost of input tokens, in Credits per million tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>1.5</p>
@@ -324,7 +324,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output token cost, in Credits per million tokens.</p>
+             * <p>The cost of output tokens, in Credits per million tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -335,7 +335,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type. The current value is fixed.</p>
+             * <p>The billing type. Currently, fixed is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>fixed</p>
@@ -662,7 +662,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of invocation paths supported by the model.</p>
+             * <p>The list of call paths supported by the model.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;path&quot;:&quot;/v1/chat/completions&quot;,&quot;type&quot;:&quot;OpenAICompatible&quot;}]</p>
@@ -706,7 +706,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token limits and input/output modality information of the model.</p>
+             * <p>The token limits and input and output modality information of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;maxInputTokens&quot;:131072,&quot;maxOutputTokens&quot;:8192,&quot;maxTokens&quot;:131072,&quot;supportedInputModalities&quot;:[&quot;text&quot;,&quot;image&quot;],&quot;supportedOutputModalities&quot;:[&quot;text&quot;]}</p>
@@ -717,7 +717,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model card ID.</p>
+             * <p>The ID of the model card.</p>
              * 
              * <strong>example:</strong>
              * <p>mc-8c13d2b4f8a1</p>
@@ -728,7 +728,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model name.</p>
+             * <p>The name of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -739,7 +739,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model provider identifier.</p>
+             * <p>The identifier of the model provider.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen</p>
@@ -750,7 +750,7 @@ public class CreateAiModelCardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the model card. The current value is user.</p>
+             * <p>The source of the model card. Currently, user is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>

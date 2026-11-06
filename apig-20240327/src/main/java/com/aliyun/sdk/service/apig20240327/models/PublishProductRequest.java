@@ -73,7 +73,7 @@ public class PublishProductRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the API product, which is the primary ID of the API product resource. This parameter specifies the API product to publish. This operation authenticates requests based on the product dimension. You can query the publication result by calling ListProductPublications at /himarket/v1/products/{productId}/publications.</p>
+         * <p>The ID of the API product, which is the primary ID of the API product resource. This parameter specifies the API product to be published. This operation authenticates requests based on the product. You can query the publication result by calling ListProductPublications at /himarket/v1/products/{productId}/publications.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -85,7 +85,7 @@ public class PublishProductRequest extends Request {
         }
 
         /**
-         * <p>The ID of the HiMarket portal to which the API product is published. This parameter specifies the target portal for the publication. You can query the publication record by portal dimension by calling ListPortalPublications. This ID also appears in the publication record details and is paired with portalName.</p>
+         * <p>The ID of the HiMarket portal to which the API product is published. This parameter specifies the target portal for the API product. You can query the publication record by portal by calling ListPortalPublications. This ID also appears in the publication record details and is paired with portalName.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>

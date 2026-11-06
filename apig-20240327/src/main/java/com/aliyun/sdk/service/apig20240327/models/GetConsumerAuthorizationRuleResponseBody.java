@@ -218,7 +218,7 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Filters the list of APIs by a specific consumer authorization rule ID. The list of APIs in the response includes only authorized APIs.</p>
+         * <p>Filters the API list by a specified consumer authorization rule ID. The API list in the response contains only authorized APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>car-ctgdn8em1hko5krqq03g</p>
@@ -251,7 +251,7 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The publish status of the API in the current environment.</p>
+         * <p>The publishing status of the API in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -270,7 +270,7 @@ public class GetConsumerAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration mode. Valid values: LongTerm, ShortTerm.</p>
+         * <p>The expiration mode. Valid values: LongTerm and ShortTerm. Specify one of the two.</p>
          * 
          * <strong>example:</strong>
          * <p>LongTerm</p>

@@ -122,7 +122,7 @@ public class UpdatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the plugin mount.</p>
+         * <p>Specifies whether the plugin mount is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

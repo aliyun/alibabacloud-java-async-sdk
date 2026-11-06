@@ -153,7 +153,7 @@ public class UpdateGatewayMaintenancePeriodRequest extends Request {
             } 
 
             /**
-             * <p>The O&amp;M end time (HH:mm).</p>
+             * <p>The end time of the O&amp;M window (HH:mm).</p>
              * 
              * <strong>example:</strong>
              * <p>02:00</p>
@@ -164,7 +164,7 @@ public class UpdateGatewayMaintenancePeriodRequest extends Request {
             }
 
             /**
-             * <p>The O&amp;M start time (HH:mm).</p>
+             * <p>The start time of the O&amp;M window (HH:mm).</p>
              * 
              * <strong>example:</strong>
              * <p>02:00</p>

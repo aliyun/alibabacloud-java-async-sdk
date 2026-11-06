@@ -257,7 +257,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The annotation information of the tool in a map structure. The API definition declares it only as map<any> without specifying its members and purposes.</p>
+             * <p>The annotations of the tool. This is a map structure. The API definition declares it only as map<any> without specifying its members and usage.</p>
              */
             public Builder annotations(java.util.Map<String, ?> annotations) {
                 this.annotations = annotations;
@@ -268,7 +268,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
              * <p>The description of the tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>The functional description of the sample tool</p>
+             * <p>Functional description of the sample tool</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -276,7 +276,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input parameter structure definition of the tool in a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</p>
+             * <p>The input parameter schema of the tool. This is a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</p>
              */
             public Builder inputSchema(java.util.Map<String, ?> inputSchema) {
                 this.inputSchema = inputSchema;
@@ -284,7 +284,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata information of the tool in a map structure. The API definition declares it only as map<any> without specifying its members and purposes.</p>
+             * <p>The metadata of the tool. This is a map structure. The API definition declares it only as map<any> without specifying its members and usage.</p>
              */
             public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
@@ -303,7 +303,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output result structure definition of the tool in a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</p>
+             * <p>The output schema of the tool. This is a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</p>
              */
             public Builder outputSchema(java.util.Map<String, ?> outputSchema) {
                 this.outputSchema = outputSchema;
@@ -368,7 +368,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of MCP tools. The list element is named tool, and each element represents an MCP tool.</p>
+             * <p>The list of MCP tools. Each element in the list is named tool and represents an MCP tool.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;

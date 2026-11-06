@@ -104,7 +104,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response struct.</p>
+         * <p>The response structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -299,7 +299,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The credits consumption coefficient for cached tokens.</p>
+             * <p>The credit consumption coefficient for cached tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>0.015</p>
@@ -310,7 +310,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credits consumption coefficient for input tokens.</p>
+             * <p>The credit consumption coefficient for input tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>0.03</p>
@@ -321,7 +321,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credits consumption coefficient for output tokens.</p>
+             * <p>The credit consumption coefficient for output tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>0.06</p>
@@ -332,7 +332,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credits billing type.</p>
+             * <p>The billing type for credits.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -674,7 +674,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credits consumption configuration of the model.</p>
+             * <p>The credits consumption configuration for the model.</p>
              */
             public Builder credit(Credit credit) {
                 this.credit = credit;
@@ -693,7 +693,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID of the gateway to which the model card belongs.</p>
+             * <p>The associated gateway instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>gw-ucbx3s2m****</p>
@@ -704,7 +704,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model metadata.</p>
+             * <p>The metadata of the model.</p>
              */
             public Builder meta(Meta meta) {
                 this.meta = meta;
@@ -712,7 +712,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model card ID.</p>
+             * <p>The ID of the model card.</p>
              * 
              * <strong>example:</strong>
              * <p>mc-xxx****</p>
@@ -723,7 +723,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model name.</p>
+             * <p>The name of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>gpt-4</p>
@@ -734,7 +734,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the model provider to which the model card belongs.</p>
+             * <p>The identifier of the associated model provider.</p>
              * 
              * <strong>example:</strong>
              * <p>openai</p>
@@ -745,7 +745,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model source.</p>
+             * <p>The source of the model.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -756,7 +756,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the model metadata.</p>
+             * <p>The URL for the model metadata.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dashscope-intl.aliyuncs.com">https://dashscope-intl.aliyuncs.com</a></p>
@@ -977,7 +977,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model provider ID.</p>
+             * <p>The ID of the model provider.</p>
              * 
              * <strong>example:</strong>
              * <p>mp-xxx****</p>

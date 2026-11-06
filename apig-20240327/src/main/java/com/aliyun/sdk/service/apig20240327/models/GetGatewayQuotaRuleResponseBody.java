@@ -195,7 +195,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the subject (consumer).</p>
+             * <p>The subject (consumer) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c-aaa</p>
@@ -206,7 +206,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the subject (consumer).</p>
+             * <p>The subject (consumer) name.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer-a</p>
@@ -563,7 +563,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The base timestamp of the cycle, in UNIX seconds.</p>
+             * <p>The base timestamp of the period.</p>
              * 
              * <strong>example:</strong>
              * <p>1745846400000</p>
@@ -604,7 +604,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days in the custom cycle. This parameter is returned only when windowAlignment is set to epoch. Valid values: 1 to 106751. This parameter is not returned for natural cycles.</p>
+             * <p>The number of days in a custom period. This parameter is returned only when windowAlignment is set to epoch. Valid values: 1 to 106751. This parameter is not returned for natural periods.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -615,7 +615,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota cycle type.</p>
+             * <p>The quota period type.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -711,7 +711,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time zone corresponding to the natural cycle, in UTC+x format.</p>
+             * <p>The time zone corresponding to the natural period, in UTC+x format.</p>
              * 
              * <strong>example:</strong>
              * <p>GMT+8</p>
@@ -722,7 +722,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reset cycle type.</p>
+             * <p>The reset period type.</p>
              * 
              * <strong>example:</strong>
              * <p>calendar</p>

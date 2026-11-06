@@ -100,7 +100,7 @@ public class ListPrivateLinkSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-xxxxxxxx</p>
@@ -112,7 +112,7 @@ public class ListPrivateLinkSecurityGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC owned by the authorized user. The candidate security groups must belong to this VPC.</p>
+         * <p>The ID of the VPC owned by the currently authorized user. The candidate security groups must belong to this VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -59,7 +59,7 @@ public class VerifyMigrationTaskRequest extends Request {
         } 
 
         /**
-         * <p>The migration task ID. This is a path parameter and is required. The task must belong to the current user.</p>
+         * <p>The ID of the migration task. This is a path parameter and is required. The task must belong to the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>

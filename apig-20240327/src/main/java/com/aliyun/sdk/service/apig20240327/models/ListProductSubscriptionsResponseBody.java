@@ -279,7 +279,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the subscribed API product, which is the primary ID of the API product resource. This is the same identifier as the productId path parameter of this operation.</p>
+             * <p>The ID of the subscribed API product, which is the primary ID of the API product resource. This ID is the same as the productId path parameter of this operation.</p>
              * 
              * <strong>example:</strong>
              * <p>product-xxxxxxxx</p>
@@ -301,7 +301,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product type of the subscribed API. Valid values: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
+             * <p>The type of the subscribed API product. Valid values: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
              * 
              * <strong>example:</strong>
              * <p>MCP_SERVER</p>
@@ -312,7 +312,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription status. Valid values: PENDING and APPROVED. The valid values are declared in the enum of the status request parameter in this topic. This response parameter does not have the @enums annotation.</p>
+             * <p>The subscription status. Valid values: PENDING and APPROVED. The valid values are defined in the enum of the status request parameter, and this response parameter is not annotated with @enums.</p>
              * 
              * <strong>example:</strong>
              * <p>APPROVED</p>
@@ -323,7 +323,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription ID, which identifies an API product subscription record. You can use this ID to cancel the subscription by calling UnsubscribeHiMarketProduct or approve the subscription by calling ApproveProductSubscription. Both operations locate the record by using the /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId} path.</p>
+             * <p>The subscription ID, which identifies an API product subscription record. You can use this ID to cancel the subscription by calling UnsubscribeHiMarketProduct or approve the subscription by calling ApproveProductSubscription. Both operations locate the record by using the path /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId}.</p>
              * 
              * <strong>example:</strong>
              * <p>sub-xxxxxxxx</p>

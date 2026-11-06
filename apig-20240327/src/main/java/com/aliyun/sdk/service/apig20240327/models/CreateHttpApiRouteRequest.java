@@ -302,7 +302,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The policy type.</p>
+         * <p>The policy types.</p>
          */
         public Builder policyConfigs(java.util.List<HttpApiPolicyConfigs> policyConfigs) {
             this.putBodyParameter("policyConfigs", policyConfigs);
@@ -474,7 +474,7 @@ public class CreateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>The service group. Used in HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service group. Used for HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -485,7 +485,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The HTTP-to-Dubbo protocol conversion configuration. This configuration is supported only for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+             * <p>The HTTP-to-Dubbo protocol conversion configuration. This configuration only supports SingleService MSE_NACOS DUBBO backends for HTTP APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -496,7 +496,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
+             * <p>The target model name. This field is shared by multiple existing model backend scenarios, and the specific routing or model rewriting semantics are determined by backendConfig.scene. It is required for the SemanticRouter scenario. If not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -507,7 +507,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -531,8 +531,8 @@ public class CreateHttpApiRouteRequest extends Request {
             /**
              * <p>The service protocol. Valid values:</p>
              * <ul>
-             * <li>HTTP</li>
-             * <li>HTTPS</li>
+             * <li>HTTP.</li>
+             * <li>HTTPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -555,7 +555,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service source type. Used in HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service source type. Used for HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>MSE_NACOS</p>
@@ -650,7 +650,7 @@ public class CreateHttpApiRouteRequest extends Request {
              * <p>The backend service scenario. Valid values:</p>
              * <ul>
              * <li>SingleService: Single service.</li>
-             * <li>MultiServiceByRatio: Canary release of multiple services by ratio.</li>
+             * <li>MultiServiceByRatio: Multiple services with ratio-based canary release.</li>
              * <li>Mock: Mock service.</li>
              * <li>Redirect: Redirect service.</li>
              * </ul>
@@ -825,9 +825,9 @@ public class CreateHttpApiRouteRequest extends Request {
             /**
              * <p>The service protocol. Valid values:</p>
              * <ul>
-             * <li>TCP</li>
-             * <li>HTTP</li>
-             * <li>DUBBO</li>
+             * <li>TCP.</li>
+             * <li>HTTP.</li>
+             * <li>DUBBO.</li>
              * </ul>
              * 
              * <strong>example:</strong>

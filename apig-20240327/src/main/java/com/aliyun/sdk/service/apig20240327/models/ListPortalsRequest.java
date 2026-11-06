@@ -127,7 +127,7 @@ public class ListPortalsRequest extends Request {
         }
 
         /**
-         * <p>The name of the portal. This corresponds to the Name property of the portal resource and matches the name field in the response list items.</p>
+         * <p>The portal name, which is the Name property of the portal resource. This corresponds to the name field in the response list items.</p>
          * 
          * <strong>example:</strong>
          * <p>developer-portal</p>
@@ -139,7 +139,7 @@ public class ListPortalsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The cursor token for querying the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-xxxxxxxx</p>

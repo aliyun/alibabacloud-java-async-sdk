@@ -115,7 +115,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message.</p>
+         * <p>The message content.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello, world!</p>
@@ -274,7 +274,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The period type of the existing conflicting rule on the consumption subject. A value of day, week, or month indicates that the period of the existing conflicting rule on the consumption subject is day, week, or month, respectively.</p>
+             * <p>The period type of the existing conflicting rule on the consumer. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month, respectively. This is a legacy field. Use the periodType field in the actual response instead. This field is not guaranteed to be returned.</p>
              * 
              * <strong>example:</strong>
              * <p>week</p>
@@ -285,7 +285,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the existing conflicting rule on the consumption subject. A value of calendar indicates that the existing conflicting rule on the consumption subject uses a natural period. A value of epoch indicates that the existing conflicting rule uses a custom period.</p>
+             * <p>The type of the existing conflicting rule on the consumer. Valid values: calendar, which indicates that the existing conflicting rule uses a natural period, and epoch, which indicates that the existing conflicting rule uses a custom period.</p>
              * 
              * <strong>example:</strong>
              * <p>calendar</p>
@@ -296,7 +296,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer ID. You can now uniformly use subjectId instead.</p>
+             * <p>The ID of the consumer. This parameter is replaced by subjectId.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-d82n1g6m1hkm375xxxxx</p>
@@ -307,7 +307,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer name. You can now uniformly use subjectName instead.</p>
+             * <p>The name of the consumer. This parameter is replaced by subjectName.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer-a</p>
@@ -318,7 +318,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period type of the existing conflicting rule. Valid values: day, week, and month, which indicate day, week, and month, respectively.</p>
+             * <p>The period type of the existing conflicting rule. Valid values: day, week, and month.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -434,7 +434,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The conflict hash.</p>
+             * <p>The hash of the conflict.</p>
              * 
              * <strong>example:</strong>
              * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541f50xxxxxx</p>
@@ -549,7 +549,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether the semantics of the current write request can be accepted by the system. A value of false typically occurs in retryable scenarios such as unconfirmed overwrites for conflicts.</p>
+             * <p>Indicates whether the write request is accepted by the system. If dryRun=true, a value of true only indicates that the dry run is accepted, not that the configuration is saved. If a formal write request returns false, it indicates that the configuration is not saved due to conflicts, and you should check the conflictPreview. A value of false typically occurs in retryable scenarios, such as when a conflict overwrite is not confirmed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -568,7 +568,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether a dry run is performed.</p>
+             * <p>Indicates whether the request is a dry run.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -579,7 +579,7 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule ID.</p>
+             * <p>The ID of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>qr-xxxxxx</p>

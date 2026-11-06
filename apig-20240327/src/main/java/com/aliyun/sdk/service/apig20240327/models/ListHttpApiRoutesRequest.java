@@ -269,7 +269,7 @@ public class ListHttpApiRoutesRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID. This parameter is a path parameter and is required. If it is not provided, the request URL cannot be constructed. You can obtain a valid value from the versionedHttpApis[].httpApiId field returned by the ListHttpApis operation. This parameter must point to an HTTP API of the Http, HttpIngress, or WebSocket type. Route operations are not supported for the Rest type.</p>
+         * <p>The HTTP API ID. This parameter is a path parameter and is required. If this parameter is not specified, the request URL cannot be constructed. You can obtain a valid value from versionedHttpApis[].httpApiId returned by ListHttpApis. This parameter must be set to the ID of an HTTP API whose type is Http, HttpIngress, or WebSocket. The Rest type does not support route operations.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cr68g1dlhtgm31f***</p>
@@ -281,7 +281,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The backend service name used to filter routes.</p>
+         * <p>The backend service name. You can use this name to filter routes.</p>
          * 
          * <strong>example:</strong>
          * <p>test-svc</p>
@@ -293,7 +293,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The consumer authorization rule ID used to filter the API list. The API list in the response includes only authorized APIs.</p>
+         * <p>The ID of the consumer authorization rule used to filter the route list. The route list in the response contains only authorized routes.</p>
          * 
          * <strong>example:</strong>
          * <p>cas-xxx</p>
@@ -305,7 +305,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The deployment statuses of the routes.</p>
+         * <p>The deployment status of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>NotDeployed</p>
@@ -317,7 +317,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The domain name ID used to filter route information.</p>
+         * <p>The ID of the domain name used to filter route information.</p>
          * 
          * <strong>example:</strong>
          * <p>d-xxx</p>
@@ -341,7 +341,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the request is for a deployment scenario.</p>
+         * <p>Specifies whether the query is for a deployment scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -353,7 +353,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud-native API gateway.</p>
+         * <p>The cloud-native API gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl****</p>
@@ -377,7 +377,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The keyword for fuzzy match by route name.</p>
+         * <p>The route name used for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -389,7 +389,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. If you do not specify this parameter, the default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -401,7 +401,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The page size. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -413,7 +413,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>The keyword for fuzzy match by route path.</p>
+         * <p>The route path used for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -437,7 +437,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the list of authorization rules for a specified consumer ID in each route entry in the response.</p>
+         * <p>Specifies whether to include the authorization rule list of the specified consumer ID in each route in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -449,7 +449,7 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the mount information for a specified plugin ID in each route entry in the response.</p>
+         * <p>Specifies whether to include the mount information of the specified plugin ID in each route in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-xxx</p>

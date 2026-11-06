@@ -73,7 +73,7 @@ public class SubscribeProductRequest extends Request {
         } 
 
         /**
-         * <p>The consumer ID. Specifies the HiMarket consumer for which to subscribe to the API product. This operation authenticates requests based on the consumer. After the subscription record is created, it can be canceled by calling UnsubscribeHiMarketProduct or approved by calling ApproveProductSubscription.</p>
+         * <p>The consumer ID. This parameter specifies the HiMarket Consumer for which to subscribe to an API product. This operation authenticates the request based on the consumer. After this operation creates the subscription record, you can call UnsubscribeHiMarketProduct to cancel the subscription or call ApproveProductSubscription to approve the subscription.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxxxxxxxxxxx</p>
@@ -85,7 +85,7 @@ public class SubscribeProductRequest extends Request {
         }
 
         /**
-         * <p>The ID of the API product to subscribe to. This is the primary ID of the API product resource. You can obtain this ID from the productId field in the list items returned by the ListProducts operation.</p>
+         * <p>The ID of the API product to subscribe to. This is the primary ID of the Product resource. You can obtain this ID from the productId field of a list item returned by ListProducts.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>

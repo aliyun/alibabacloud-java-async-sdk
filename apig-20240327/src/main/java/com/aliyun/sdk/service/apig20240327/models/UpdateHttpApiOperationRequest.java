@@ -89,7 +89,7 @@ public class UpdateHttpApiOperationRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HTTP API to which the operation belongs.</p>
+         * <p>The ID of the HTTP API to which the operation to be updated belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

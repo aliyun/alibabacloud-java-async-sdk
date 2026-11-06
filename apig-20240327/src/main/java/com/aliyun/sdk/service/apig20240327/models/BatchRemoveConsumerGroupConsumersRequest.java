@@ -73,7 +73,7 @@ public class BatchRemoveConsumerGroupConsumersRequest extends Request {
         } 
 
         /**
-         * <p>The consumer group ID.</p>
+         * <p>The ID of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
@@ -85,7 +85,7 @@ public class BatchRemoveConsumerGroupConsumersRequest extends Request {
         }
 
         /**
-         * <p>The list of consumer IDs to remove from the consumer group.</p>
+         * <p>The list of consumer IDs to be removed from the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;cs-8c13d2b4f8a1&quot;]</p>

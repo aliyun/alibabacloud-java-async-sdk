@@ -93,7 +93,7 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response status code.</p>
+         * <p>The status code of the response.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -123,7 +123,7 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7D513911-206E-5E93-9C9E-71D63C0D68E7</p>
@@ -192,7 +192,7 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service name. After you select a Server Load Balancer (SLB) instance, the frontend populates this value into the serviceName field.</p>
+             * <p>The name of the service. After an SLB instance is selected, the frontend populates this value into the serviceName field.</p>
              * 
              * <strong>example:</strong>
              * <p>nginx-ingress-lb</p>

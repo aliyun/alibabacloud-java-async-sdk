@@ -155,7 +155,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The service name for exact match queries.</p>
+         * <p>The exact name of the service to query.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>

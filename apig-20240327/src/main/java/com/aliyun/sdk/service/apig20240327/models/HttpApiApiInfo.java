@@ -310,7 +310,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>The deployment status of the API operation.</p>
+         * <p>The API operation deployment status.</p>
          */
         public Builder deployCntMap(java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap) {
             this.deployCntMap = deployCntMap;
@@ -329,7 +329,7 @@ public class HttpApiApiInfo extends TeaModel {
          * <p>The API description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test API</p>
+         * <p>Test-specific API</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -337,7 +337,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether authentication is enabled.</p>
+         * <p>Specifies whether to enable authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -378,7 +378,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>The HTTP Ingress API information.</p>
+         * <p>The HTTP ingress API information.</p>
          */
         public Builder ingressInfo(IngressInfo ingressInfo) {
             this.ingressInfo = ingressInfo;
@@ -517,7 +517,7 @@ public class HttpApiApiInfo extends TeaModel {
             } 
 
             /**
-             * <p>The edition of the gateway instance. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
+             * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
              * 
              * <strong>example:</strong>
              * <p>MultiTenantServerless</p>
@@ -698,7 +698,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The match condition.</p>
+             * <p>The match conditions.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -1075,7 +1075,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The deployment scenario.</p>
+             * <p>The release scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>SingleService</p>
@@ -1097,7 +1097,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The information about the custom domain names published by the user.</p>
+             * <p>The published domain name information.</p>
              */
             public Builder customDomains(java.util.List<HttpApiDomainInfo> customDomains) {
                 this.customDomains = customDomains;
@@ -1105,7 +1105,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The deployment status of the API in the current environment.</p>
+             * <p>The API deployment status in the current environment.</p>
              * 
              * <strong>example:</strong>
              * <p>Deployed</p>
@@ -1127,7 +1127,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The information about the gateway instance to which the current environment belongs.</p>
+             * <p>The gateway instance information for the current environment.</p>
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
@@ -1395,7 +1395,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The Ingress class being listened to.</p>
+             * <p>The ingress class to listen on.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -1414,7 +1414,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to override the IP address in the Ingress status.</p>
+             * <p>Specifies whether to update the address in the ingress status.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

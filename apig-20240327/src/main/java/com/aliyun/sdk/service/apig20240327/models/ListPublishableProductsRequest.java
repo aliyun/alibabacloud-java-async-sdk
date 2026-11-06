@@ -113,7 +113,7 @@ public class ListPublishableProductsRequest extends Request {
         }
 
         /**
-         * <p>The name of the API product. This is the same field as the name property in the response list items.</p>
+         * <p>The name of the API product. This corresponds to the name field in the response list items.</p>
          * 
          * <strong>example:</strong>
          * <p>weather-query-api</p>

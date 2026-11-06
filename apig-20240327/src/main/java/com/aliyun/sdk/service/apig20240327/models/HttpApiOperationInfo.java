@@ -210,7 +210,7 @@ public class HttpApiOperationInfo extends TeaModel {
         } 
 
         /**
-         * <p>The authentication configuration.</p>
+         * <p>The permission authentication configuration.</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -229,7 +229,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The backend service deployment information for the API operation.</p>
+         * <p>The API operation backend service deployment information.</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.deployConfigs = deployConfigs;
@@ -248,7 +248,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether authentication is enabled.</p>
+         * <p>Specifies whether authentication is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -259,7 +259,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The HTTP method of the API operation.</p>
+         * <p>The API operation method.</p>
          * 
          * <strong>example:</strong>
          * <p>GET</p>
@@ -270,7 +270,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The mock parameter settings for the API operation.</p>
+         * <p>The API operation mock parameter settings.</p>
          */
         public Builder mock(HttpApiMockContract mock) {
             this.mock = mock;
@@ -278,7 +278,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The name of the API operation.</p>
+         * <p>The API operation name.</p>
          * 
          * <strong>example:</strong>
          * <p>GetUserInfo</p>
@@ -289,7 +289,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The ID of the API operation.</p>
+         * <p>The API operation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>op-xxx</p>
@@ -300,7 +300,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The path of the API operation.</p>
+         * <p>The API operation path.</p>
          * 
          * <strong>example:</strong>
          * <p>/user/123</p>
@@ -311,7 +311,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The request parameter definition of the API operation.</p>
+         * <p>The API operation request parameter definition.</p>
          */
         public Builder request(HttpApiRequestContract request) {
             this.request = request;
@@ -319,7 +319,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The response parameter definition of the API operation.</p>
+         * <p>The API operation response parameter definition.</p>
          */
         public Builder response(HttpApiResponseContract response) {
             this.response = response;
@@ -327,7 +327,7 @@ public class HttpApiOperationInfo extends TeaModel {
         }
 
         /**
-         * <p>The publish status of the API operation on the gateway.</p>
+         * <p>The publication status of the API operation on the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>Deployed</p>

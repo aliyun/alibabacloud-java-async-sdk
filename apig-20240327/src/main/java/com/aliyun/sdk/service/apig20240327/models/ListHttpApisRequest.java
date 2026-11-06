@@ -307,7 +307,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. Supports fuzzy search by API name or exact search by API ID.</p>
+         * <p>The search keyword. Supports fuzzy match by API name or exact search by API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test-</p>
@@ -385,7 +385,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return information about APIs published to the specified environment.</p>
+         * <p>Specifies whether to return the information about APIs published to the specified environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -397,7 +397,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The environment ID. The response includes consumer authentication policy information for the specified environment in each API entry.</p>
+         * <p>The ID of the environment. If specified, the response includes the consumer authentication policy information for each API in the specified environment.</p>
          * 
          * <strong>example:</strong>
          * <p>env-xxx</p>
@@ -409,7 +409,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the list of authentication policies.</p>
+         * <p>Specifies whether the permission authentication policy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -421,7 +421,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The consumer ID. The response includes the list of authorization rules for the specified consumer in each API entry.</p>
+         * <p>The ID of the consumer. If specified, the response includes the list of authorization rules for the specified consumer in each API information.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -445,7 +445,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The environment ID.</p>
+         * <p>The ID of the environment.</p>
          * 
          * <strong>example:</strong>
          * <p>env-ctovu5mm1hksb4q8ln40</p>
@@ -469,7 +469,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The plugin ID. The response includes plugin release information based on the specified plugin ID.</p>
+         * <p>The ID of the plug-in. If specified, the plug-in release information is retrieved based on this plug-in ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-ct9qn3um1hktue8dqol0</p>

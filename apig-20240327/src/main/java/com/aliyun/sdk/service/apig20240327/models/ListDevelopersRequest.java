@@ -143,7 +143,7 @@ public class ListDevelopersRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries to return per page. The default value and valid values are not specified in the API definition.</p>
+         * <p>The maximum number of entries per page. The default value and valid values are not specified in the API definition.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -155,7 +155,7 @@ public class ListDevelopersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Pass the nextToken returned in the previous response to retrieve the next page. Do not specify this parameter for the first request.</p>
+         * <p>The pagination token. Pass the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>token-xxxxxxxx</p>
@@ -191,7 +191,7 @@ public class ListDevelopersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the portal used to filter developers.</p>
+         * <p>The portal ID used to filter developers.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>
@@ -215,7 +215,7 @@ public class ListDevelopersRequest extends Request {
         }
 
         /**
-         * <p>The logon username of the developer used to filter developers by username.</p>
+         * <p>The logon username used to filter developers.</p>
          * 
          * <strong>example:</strong>
          * <p>developer-demo</p>

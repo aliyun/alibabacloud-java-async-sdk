@@ -171,7 +171,7 @@ public class GetDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -266,7 +266,7 @@ public class GetDashboardResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The unique ID of the gateway.</p>
+             * <p>The unique identifier of the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>gw-co370icmjeu****</p>
@@ -277,7 +277,7 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the dashboard.</p>
+             * <p>The dashboard name.</p>
              * 
              * <strong>example:</strong>
              * <p>PLUGIN</p>
@@ -288,7 +288,7 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The title of the dashboard.</p>
+             * <p>The dashboard title.</p>
              * 
              * <strong>example:</strong>
              * <p>APIG Plugin</p>
@@ -299,7 +299,7 @@ public class GetDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the dashboard.</p>
+             * <p>The dashboard URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></p>

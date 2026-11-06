@@ -103,7 +103,7 @@ public class UpdateProductCategoryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the product category to update. You can obtain this ID from the data.categoryId field in the CreateProductCategory or GetProductCategory response, or from the categoryId field of an item in the ListProductCategories response.</p>
+         * <p>The ID of the product category to update. You can obtain this ID from the data.categoryId field in the response of the CreateProductCategory or GetProductCategory operation, or from the categoryId field of an item returned by the ListProductCategories operation.</p>
          * 
          * <strong>example:</strong>
          * <p>category-xxxxxxxx</p>
@@ -127,7 +127,7 @@ public class UpdateProductCategoryRequest extends Request {
         }
 
         /**
-         * <p>The icon of the product category, which consists of the icon type (type) and icon information (value) fields.</p>
+         * <p>The icon of the product category. It consists of two fields: icon type (type) and icon information (value).</p>
          */
         public Builder icon(HiMarketIcon icon) {
             this.putBodyParameter("icon", icon);

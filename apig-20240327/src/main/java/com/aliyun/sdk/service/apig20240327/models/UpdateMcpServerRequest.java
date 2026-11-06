@@ -241,7 +241,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The list of assembled sources. This parameter is required when type is set to AssemblyMCP.</p>
+         * <p>The list of assembly sources. This parameter is required when type is set to AssemblyMCP.</p>
          */
         public Builder assembledSources(java.util.List<AssembledSources> assembledSources) {
             this.putBodyParameter("assembledSources", assembledSources);
@@ -250,7 +250,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The backend service configuration of the route. This parameter is conditionally required. If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</p>
+         * <p>The backend service configurations of the route. This parameter is conditionally required. If it is not provided, the API returns InvalidParameter.WithValue(400).</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -261,11 +261,11 @@ public class UpdateMcpServerRequest extends Request {
         /**
          * <p>The creation source type. Valid values:</p>
          * <ul>
-         * <li>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP conversion.</li>
-         * <li>ApiGatewayProxyMcpHosting: Gateway-managed MCP direct proxy.</li>
-         * <li>ApiGatewayAssembly: Gateway MCP assembly.</li>
-         * <li>NacosHttpToMCP: Gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
-         * <li>NacosMcpHosting: Gateway-managed Nacos-synced MCP direct proxy.</li>
+         * <li>ApiGatewayHttpToMCP: API gateway-hosted HTTP-to-MCP.</li>
+         * <li>ApiGatewayProxyMcpHosting: API gateway-hosted MCP direct proxy.</li>
+         * <li>ApiGatewayAssembly: API gateway MCP assembly.</li>
+         * <li>NacosHttpToMCP: API gateway-hosted Nacos-synchronized HTTP-to-MCP.</li>
+         * <li>NacosMcpHosting: API gateway-hosted Nacos-synchronized MCP direct proxy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,7 +281,7 @@ public class UpdateMcpServerRequest extends Request {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>商品中心服务路由</p>
+         * <p>Product center service route</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -290,7 +290,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The domain name ID.</p>
+         * <p>The domain name IDs.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -311,7 +311,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The list of canary release MCP server route configurations.</p>
+         * <p>The list of canary MCP server route configurations.</p>
          */
         public Builder grayMcpServerConfigs(java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs) {
             this.putBodyParameter("grayMcpServerConfigs", grayMcpServerConfigs);
@@ -320,7 +320,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The route match rule. This parameter is conditionally required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty(400).</p>
+         * <p>The route match rules. This parameter is conditionally required. If it is not provided, the API returns InvalidParameter.IsEmpty(400).</p>
          */
         public Builder match(HttpRouteMatch match) {
             this.putBodyParameter("match", match);
@@ -329,7 +329,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The HTTP-to-MCP configuration.</p>
+         * <p>The HTTP-to-MCP configurations.</p>
          */
         public Builder mcpServerConfig(McpServerConfig mcpServerConfig) {
             this.putBodyParameter("mcpServerConfig", mcpServerConfig);
@@ -352,10 +352,10 @@ public class UpdateMcpServerRequest extends Request {
         /**
          * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li>HTTP: HTTP protocol.</li>
-         * <li>HTTPS: HTTPS protocol.</li>
-         * <li>SSE: Server-Sent Events protocol.</li>
-         * <li>StreamableHTTP: Streamable HTTP protocol.</li>
+         * <li>HTTP: HTTP.</li>
+         * <li>HTTPS: HTTPS.</li>
+         * <li>SSE: Server-Sent Events.</li>
+         * <li>StreamableHTTP: Streaming HTTP.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -369,7 +369,7 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The MCP server type filter. Valid values: RealMCP, AssemblyMCP.</p>
+         * <p>The MCP server type filter. Valid values: RealMCP and AssemblyMCP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -465,7 +465,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The MCP server name.</p>
+             * <p>The name of the MCP server.</p>
              * 
              * <strong>example:</strong>
              * <p>test-mcp</p>
@@ -593,7 +593,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The Terms of Service. Valid values:</p>
+             * <p>The service protocol. Valid values:</p>
              * <ul>
              * <li>TCP.</li>
              * <li>HTTP.</li>
@@ -631,7 +631,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The percentage value of the traffic ratio.</p>
+             * <p>The percentage value of the traffic proportion.</p>
              * 
              * <strong>example:</strong>
              * <p>49</p>
@@ -829,7 +829,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The Terms of Service.</p>
+             * <p>The service protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -1023,7 +1023,7 @@ public class UpdateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>The backend configuration.</p>
+             * <p>The backend configurations.</p>
              */
             public Builder backendConfig(GrayMcpServerConfigsBackendConfig backendConfig) {
                 this.backendConfig = backendConfig;
@@ -1031,7 +1031,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The route match rule.</p>
+             * <p>The route match rules.</p>
              */
             public Builder match(HttpRouteMatch match) {
                 this.match = match;
@@ -1109,7 +1109,7 @@ public class UpdateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>The MCP server configuration. This parameter is mutually exclusive with swaggerConfig.</p>
+             * <p>The MCP server configurations. This parameter is mutually exclusive with the swaggerConfig parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-server-spec-yaml</p>
@@ -1120,7 +1120,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The Swagger document for HTTP-to-MCP conversion. The document must comply with the OpenAPI 3.0 specification.</p>
+             * <p>The Swagger document for HTTP-to-MCP. The document must comply with the OpenAPI 3.0 specification.</p>
              * 
              * <strong>example:</strong>
              * <p>swagger-content</p>

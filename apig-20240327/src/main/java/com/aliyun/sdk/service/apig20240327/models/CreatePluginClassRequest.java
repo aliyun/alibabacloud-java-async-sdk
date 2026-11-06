@@ -192,7 +192,7 @@ public class CreatePluginClassRequest extends Request {
         } 
 
         /**
-         * <p>The alias of the plugin class. This parameter is required. If this parameter is not specified, the service returns an InvalidParameter.WithValue error.</p>
+         * <p>The alias of the plug-in. This parameter is required. If it is not provided, the service returns InvalidParameter.WithValue.</p>
          * 
          * <strong>example:</strong>
          * <p>My Wasm Plugin</p>
@@ -204,7 +204,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The description of the plugin.</p>
+         * <p>The description of the plug-in.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The execution priority of the plugin. This parameter is required when executeStage is specified. The default value 0 is invalid. We recommend that you set this parameter to 200.</p>
+         * <p>The execution priority of the plug-in. This parameter is required when executeStage is specified. The default value 0 is invalid. Set this parameter to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -229,7 +229,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The execution stage of the plugin.</p>
+         * <p>The execution stage of the plug-in.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The name of the plugin class.</p>
+         * <p>The name of the plug-in class.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The minimum gateway version that the plugin is compatible with.</p>
+         * <p>The minimum supported gateway version.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.0</p>
@@ -267,7 +267,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The version number of the plugin.</p>
+         * <p>The version number of the plug-in.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The development language of the WASM plugin. Valid values: TinyGo.</p>
+         * <p>The development language of the WASM plug-in. Valid values: TinyGo.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class CreatePluginClassRequest extends Request {
         }
 
         /**
-         * <p>The download URL of the WASM plugin binary file.</p>
+         * <p>The download URL of the WASM plug-in binary file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

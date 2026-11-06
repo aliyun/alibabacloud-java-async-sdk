@@ -104,7 +104,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The service details.</p>
+         * <p>The service details data.</p>
          */
         public Builder data(Service data) {
             this.data = data;

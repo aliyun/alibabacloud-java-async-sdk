@@ -257,9 +257,9 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The conflict snapshot hash used to prevent concurrent dirty overwrites when you confirm an overwrite. You can obtain this value by first performing a dry run with dryRun=true and extracting it from the response.</p>
-         * <p>You do not need to specify this parameter in the following scenarios: no conflict exists; you are only performing a dry run with dryRun=true; or overwrite=false, which means you do not confirm the overwrite.</p>
-         * <p>If dryRun=false and overwrite=true but this parameter is not specified or has expired and does not match, the backend returns accepted=false along with a new conflict preview. In this case, you must perform a dry run again to confirm the new conflict.</p>
+         * <p>The hash of the conflict snapshot, which is used to prevent concurrent dirty overwrites when you confirm to overwrite. You can obtain this value by performing a dry run with dryRun set to true and extracting it from the response.</p>
+         * <p>You do not need to specify this parameter in the following scenarios: no conflicts exist, you perform only a dry run with dryRun set to true, or you do not confirm to overwrite with overwrite set to false.</p>
+         * <p>If you set dryRun to false and overwrite to true but do not specify this parameter or the parameter expires and does not match, the backend returns accepted=false and a new conflict preview. In this case, you must perform a dry run again to confirm the new conflicts.</p>
          * 
          * <strong>example:</strong>
          * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -271,7 +271,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of consumer group IDs to which the rule is bound.</p>
+         * <p>The IDs of the consumer groups to which the rule is bound.</p>
          * 
          * <strong>example:</strong>
          * <p>group1,group2</p>
@@ -283,7 +283,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of consumer IDs to which the rule is bound. You can specify up to 1,000 consumers in a single request.</p>
+         * <p>The IDs of the consumers to which the rule is bound. You can specify up to 1,000 consumers at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>1001,1002,1003</p>
@@ -295,7 +295,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run without saving data to the database or delivering actual configurations. This parameter is used to check whether conflicting rules exist on the bound consumption subjects. A single consumption subject cannot be configured with two natural period quotas of the same period. For example, a consumption subject that already has a natural day quota cannot be added with another natural day quota rule.</p>
+         * <p>Specifies whether to perform only a dry run without saving the configuration or delivering it to the gateway. A dry run checks whether conflicting rules exist on the bound subjects. A subject cannot have two natural period quotas with the same period. For example, if a subject already has a natural day quota, you cannot add another natural day quota rule to it.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -307,7 +307,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow overwriting when a conflict occurs. If you allow overwriting, the conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</p>
+         * <p>Specifies whether to allow overwriting when conflicts occur. If you allow overwriting, the conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -319,7 +319,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The period multiplier. This parameter applies to custom period rules.</p>
+         * <p>The period multiplier in days. This parameter is required when windowAlignment is set to epoch. Valid values: 1 to 106751. Do not set this parameter for a natural period.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -331,7 +331,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The period type. Natural periods support daily, weekly, and monthly statistics. Valid values: day, week, and month. Custom periods support only daily statistics, and the value is fixed to day.</p>
+         * <p>The period type. For a natural period, valid values are day, week, and month. For a custom period, only day is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,7 +357,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The total available quota (limit) for the period.</p>
+         * <p>The total available quota (limit) per period.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -383,7 +383,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The subject type of the rule. consumer indicates a consumer, and consumer_group indicates a consumer group. If you do not specify this parameter, the default value is consumer.</p>
+         * <p>The subject type of the rule. A value of consumer indicates a consumer, and a value of consumer_group indicates a consumer group. Default value: consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer_group</p>
@@ -395,7 +395,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The time zone corresponding to the natural period in the UTC+x format.</p>
+         * <p>The time zone for the natural period, in UTC+x format.</p>
          * 
          * <strong>example:</strong>
          * <p>UTC+8</p>
@@ -407,7 +407,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>The reset period type. Natural periods (windowAlignment=calendar) and custom periods (windowAlignment=epoch) are supported.</p>
+         * <p>The reset period type. A value of calendar indicates a natural period, and a value of epoch indicates a custom period.</p>
          * 
          * <strong>example:</strong>
          * <p>calendar</p>

@@ -323,7 +323,7 @@ public class ListPublishableProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of API products that can be published to the portal. The list element is named productInfo, and each element contains the information about an API product.</p>
+             * <p>The list of API products that can be published to the portal. Each element in the list is named productInfo and contains the information about an API product.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;
@@ -353,7 +353,7 @@ public class ListPublishableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

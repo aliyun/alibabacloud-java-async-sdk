@@ -283,7 +283,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The plugin mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
+             * <p>The type of the plugin mount resource. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
              * 
              * <strong>example:</strong>
              * <p>GatewayRoute</p>
@@ -321,7 +321,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin mount ID.</p>
+             * <p>The ID of the plugin mount.</p>
              * 
              * <strong>example:</strong>
              * <p>pa-d0j9t5em1hkncrlo51mg</p>
@@ -332,7 +332,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin type information.</p>
+             * <p>The plugin class information.</p>
              */
             public Builder pluginClassInfo(PluginClassInfo pluginClassInfo) {
                 this.pluginClassInfo = pluginClassInfo;
@@ -362,7 +362,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mount resource information.</p>
+             * <p>The mounted resource information.</p>
              */
             public Builder resourceInfos(java.util.List<ResourceInfo> resourceInfos) {
                 this.resourceInfos = resourceInfos;

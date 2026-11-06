@@ -120,7 +120,7 @@ public class CreatePolicyAttachmentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the resource to which the policy is attached.</p>
+         * <p>The ID of the attached resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class CreatePolicyAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource to which the policy is attached. Valid values: HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, and Domain.</p>
+         * <p>The type of the attached resource. Valid values: HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, and Domain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

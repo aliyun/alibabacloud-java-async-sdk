@@ -36,7 +36,6 @@ public class UpdateHttpApiRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("basePath")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String basePath;
 
     @com.aliyun.core.annotation.Body
@@ -312,8 +311,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The base path of the API, which must start with a forward slash (/).</p>
-         * <p>This parameter is required.</p>
+         * <p>The base path of the API. It must start with a forward slash (/).</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -337,7 +335,7 @@ public class UpdateHttpApiRequest extends Request {
          * <p>The description of the API.</p>
          * 
          * <strong>example:</strong>
-         * <p>Update API description</p>
+         * <p>Updated API description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -358,7 +356,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The time to first byte timeout, in seconds.</p>
+         * <p>The first byte timeout period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -412,7 +410,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The API versioning configuration.</p>
+         * <p>The versioning configuration of the API.</p>
          */
         public Builder versionConfig(HttpApiVersionConfig versionConfig) {
             this.putBodyParameter("versionConfig", versionConfig);
@@ -421,7 +419,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. If the same HTTP API is repeatedly called with the same client token and request parameters, the first successful result is returned.</p>
+         * <p>The idempotent request token. If you call the same HTTP API with the same client token and request parameters, the result of the first successful call is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>update-http-api-client-token-001</p>
@@ -433,7 +431,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. If set to true, all synchronization checks consistent with a real update are executed, but no configurations are updated and no side effects are generated. If left empty or set to false, the behavior is consistent with the existing version.</p>
+         * <p>Specifies whether to perform a dry run. If you set this parameter to true, all synchronization checks consistent with a real update are performed, but no configurations are updated and no side effects are generated. If this parameter is left empty or set to false, the behavior remains the same as the existing version.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -562,7 +560,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to update the address in the Ingress status.</p>
+             * <p>Specifies whether to update the IP address in the Ingress status.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

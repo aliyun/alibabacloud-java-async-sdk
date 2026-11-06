@@ -209,7 +209,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The backend service configuration for the route.</p>
+         * <p>The backend service configuration of the route.</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -450,7 +450,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>The service group. Used for HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service group. Used in HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -461,7 +461,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The HTTP-to-Dubbo protocol conversion configuration. This is only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+             * <p>The HTTP-to-Dubbo protocol conversion configuration. This configuration is only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -472,7 +472,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. It must be configured for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
+             * <p>The name of the target model. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -483,7 +483,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -688,7 +688,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the ExtProc service mounted to the current route. When updating a fixed DFP route, this value must match the existing service. Service switching is not supported.</p>
+             * <p>The ID of the ExtProc service mounted to the current route. When updating a fixed DFP route, this ID must match the existing service. Service switching is not supported.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-cr8k0udlhtgt80sh7png</p>

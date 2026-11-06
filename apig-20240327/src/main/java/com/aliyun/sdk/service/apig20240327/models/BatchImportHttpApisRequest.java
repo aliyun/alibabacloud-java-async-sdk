@@ -186,7 +186,7 @@ public class BatchImportHttpApisRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to overwrite existing APIs. If set to true, gatewayId is required.</p>
+         * <p>Specifies whether to allow overwriting existing APIs. The gatewayId parameter is required when this parameter is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -211,7 +211,7 @@ public class BatchImportHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Enables the dry run feature, which validates the definition without performing the actual import.</p>
+         * <p>The dry run feature that checks definitions without importing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -223,7 +223,7 @@ public class BatchImportHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The gateway instance ID. For REST APIs, this parameter is required when withGatewayExtension is set to true or allowUpdate is set to true. For batch import of HTTP APIs, this parameter is always required.</p>
+         * <p>The gateway instance ID. This parameter is required for REST APIs when withGatewayExtension or allowUpdate is set to true. This parameter is required for batch importing HTTP APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
@@ -235,7 +235,7 @@ public class BatchImportHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-xxx</p>
@@ -247,7 +247,7 @@ public class BatchImportHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The standard Base64 encoding of the raw bytes of the OAS ZIP package. The decoded size cannot exceed 10 MiB. This parameter cannot be specified together with specFileUrl or specOssConfig. Dry run is supported and returns validation results, but the dry run task result does not return a replayable importRequest.</p>
+         * <p>The standard Base64 encoding of the raw bytes of the OAS ZIP package. The maximum size after decoding is 10 MiB. This parameter cannot be specified together with specFileUrl or specOssConfig. Dry runs are supported and return check results, but the Base64 dry run task result does not return a replayable importRequest.</p>
          * 
          * <strong>example:</strong>
          * <p>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</p>
@@ -259,7 +259,7 @@ public class BatchImportHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The download URL of the OAS ZIP file. The URL must support unauthenticated downloads. OSS URLs and whitelisted backend domain names are supported. At least one of specFileUrl and specOssConfig must be specified.</p>
+         * <p>The download URL of the OAS ZIP file. The URL must support unauthenticated downloads. OSS URLs or backend whitelisted domains are supported. At least one of specFileUrl and specOssConfig must be specified.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip">https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip</a></p>
@@ -271,7 +271,7 @@ public class BatchImportHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The OSS configuration for the OAS file in ZIP format. At least one of specFileUrl and specOssConfig must be specified.</p>
+         * <p>The OSS configuration of the OAS file. The file must be in ZIP format. At least one of specFileUrl and specOssConfig must be specified.</p>
          */
         public Builder specOssConfig(SpecOssConfig specOssConfig) {
             this.putBodyParameter("specOssConfig", specOssConfig);
@@ -280,7 +280,7 @@ public class BatchImportHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The conflict merge strategy during import. Default value: ExistFirst.</p>
+         * <p>The conflict merging strategy during import. Default value: ExistFirst.</p>
          * 
          * <strong>example:</strong>
          * <p>ExistFirst</p>
@@ -292,7 +292,7 @@ public class BatchImportHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to import with gateway extension configurations. This parameter must be set to true for batch import of HTTP APIs.</p>
+         * <p>Specifies whether to import with gateway extension configurations. This parameter must be set to true for batch importing HTTP APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -379,7 +379,7 @@ public class BatchImportHttpApisRequest extends Request {
             } 
 
             /**
-             * <p>The OSS bucket name.</p>
+             * <p>The name of the OSS bucket.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -391,7 +391,7 @@ public class BatchImportHttpApisRequest extends Request {
             }
 
             /**
-             * <p>OSS Object Key。</p>
+             * <p>The OSS object key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

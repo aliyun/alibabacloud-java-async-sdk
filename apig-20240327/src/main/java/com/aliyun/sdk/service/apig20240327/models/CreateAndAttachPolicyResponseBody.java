@@ -104,7 +104,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response struct.</p>
+         * <p>The response structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -192,7 +192,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attachment information.</p>
+             * <p>The attachment relationship information.</p>
              */
             public Builder attachment(Attachment attachment) {
                 this.attachment = attachment;

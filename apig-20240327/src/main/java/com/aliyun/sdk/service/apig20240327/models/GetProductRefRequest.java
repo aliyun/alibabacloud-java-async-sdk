@@ -59,7 +59,7 @@ public class GetProductRefRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the API product.</p>
+         * <p>The ID of the API product. This parameter specifies the API product for which to query the associated configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>p-xxxxxxxx</p>

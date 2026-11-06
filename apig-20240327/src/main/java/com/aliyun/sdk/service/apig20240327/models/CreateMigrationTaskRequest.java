@@ -158,7 +158,7 @@ public class CreateMigrationTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the source ACK cluster. The value must be the same as the cluster specified in the IngressInfo of the API. Note: This parameter is actually required. If this parameter is not specified, the API returns 400 InvalidParameter.IsEmpty.</p>
+         * <p>The ID of the source ACK cluster. It must match the cluster in the IngressInfo of the API. Note: This parameter is required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error.</p>
          * 
          * <strong>example:</strong>
          * <p>c-xxxxxx</p>
@@ -170,7 +170,7 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The description of the task. The description is stored only when the task is created.</p>
+         * <p>The task description. It is stored in the database only when the task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>migration from Nginx</p>
@@ -182,7 +182,7 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination environment. The value must be the same as the Ingress import environment of the API. Note: This parameter is actually required. If this parameter is not specified, the API returns 400 InvalidParameter.IsEmpty. You can call ListEnvironments to query existing environment IDs. CreateEnvironment has been deprecated.</p>
+         * <p>The ID of the destination environment. It must match the Ingress import environment of the API. Note: This parameter is required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error. You can call ListEnvironments to query existing environment IDs. CreateEnvironment is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>env-xxxx</p>
@@ -194,7 +194,7 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination gateway to which traffic is migrated.</p>
+         * <p>The ID of the destination gateway to which migration traffic is switched.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-xxxx</p>
@@ -206,7 +206,7 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The HTTP API ID. The API must have been imported as an Ingress type (HttpIngress) API. Note: This parameter is actually required. If this parameter is not specified, the API returns 400 InvalidParameter.IsEmpty.</p>
+         * <p>The ID of the HTTP API. The API must be imported as an Ingress type (HttpIngress) API. Note: This parameter is required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxxx</p>
@@ -218,7 +218,7 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The Ingress class. If specified, the value must be the same as the API import configuration. Otherwise, an ingress class conflict error is returned.</p>
+         * <p>The Ingress class. It must match the API import configuration. Otherwise, an ingress class conflict error is reported.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx</p>
@@ -230,8 +230,7 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The migration type.
-         * [_single.params.body.props.migrationType.enum.Nginx Ingress]Nginx Ingress migration.</p>
+         * <p>The migration type.</p>
          * 
          * <strong>example:</strong>
          * <p>Nginx Ingress</p>
@@ -243,7 +242,7 @@ public class CreateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The watched namespace. If specified, the value must be the same as the API import configuration. Otherwise, a watchNamespace conflict error is returned.</p>
+         * <p>The watched namespace. It must match the API import configuration. Otherwise, a watchNamespace conflict error is reported.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

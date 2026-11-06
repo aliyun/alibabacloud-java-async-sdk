@@ -125,7 +125,7 @@ public class ListProductPublicationsRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

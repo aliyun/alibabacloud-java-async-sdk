@@ -60,7 +60,7 @@ public class DeleteProductRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the API product to delete. You can obtain the ID from the productId parameter in the CreateProduct response or the productId field of an item in the ListProducts response. The ID is used in the /himarket/v1/products/{productId} path to locate the API product, which is the same path used by the GetProduct, UpdateProduct, and DeleteProduct operations.</p>
+         * <p>The ID of the API product to delete. You can obtain the ID from the productId parameter in the CreateProduct response or the productId field of an item in the ListProducts response. This ID is used in the /himarket/v1/products/{productId} path to locate the API product, which is the same path used by the GetProduct, UpdateProduct, and DeleteProduct operations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

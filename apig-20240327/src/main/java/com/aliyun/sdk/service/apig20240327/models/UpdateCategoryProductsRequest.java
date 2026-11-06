@@ -87,7 +87,7 @@ public class UpdateCategoryProductsRequest extends Request {
         } 
 
         /**
-         * <p>The product category ID, which specifies the API products to add or remove. Product categories are created by CreateProductCategory, can be queried by ListProductCategories, and use the same /himarket/v1/product-categories/{categoryId} identifier as GetProductCategory, UpdateProductCategory, and DeleteProductCategory.</p>
+         * <p>The product category ID, which specifies the category to which API products are added or from which API products are removed. Product categories are created by calling CreateProductCategory and can be queried by calling ListProductCategories. This ID is the same as the /himarket/v1/product-categories/{categoryId} identifier used in GetProductCategory, UpdateProductCategory, and DeleteProductCategory.</p>
          * 
          * <strong>example:</strong>
          * <p>category-xxxxxxxx</p>
@@ -99,7 +99,7 @@ public class UpdateCategoryProductsRequest extends Request {
         }
 
         /**
-         * <p>The direction of the batch operation: adds the API products specified in productIds to the category, or removes these API products from the category. The set of valid values is not declared in the API definition.</p>
+         * <p>The operation type for the bulk operation. This parameter specifies whether to add the API products specified by productIds to the category or remove them from the category. The valid values are not declared in the API definition.</p>
          * 
          * <strong>example:</strong>
          * <p>action-xxxxxxxx</p>
@@ -111,7 +111,7 @@ public class UpdateCategoryProductsRequest extends Request {
         }
 
         /**
-         * <p>The list of API product IDs to process. Each element is the primary ID of the API product resource Product.</p>
+         * <p>The list of API product IDs to be processed. Each element is the primary ID of an API product resource.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
             this.putBodyParameter("productIds", productIds);

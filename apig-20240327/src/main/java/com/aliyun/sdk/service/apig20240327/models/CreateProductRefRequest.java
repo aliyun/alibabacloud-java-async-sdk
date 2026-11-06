@@ -87,7 +87,7 @@ public class CreateProductRefRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the API product. This specifies the API product to which you want to associate the API configuration. You can obtain the ID from the productId field in the ListProducts response or the CreateProduct response. This parameter shares the same /himarket/v1/products/{productId}/ref path with CreateProductRef, GetProductRef, and DeleteProductRef. When you create this type of API product by calling CreateProduct, the type parameter is required. Valid values: AGENT_API, HTTP_API, MODEL_API, REST_API, and MCP_SERVER.</p>
+         * <p>The ID of the API product. This parameter specifies the API product with which you want to associate the API configuration. You can obtain the ID from the productId field in the ListProducts or CreateProduct response. This parameter shares the /himarket/v1/products/{productId}/ref path with CreateProductRef, GetProductRef, and DeleteProductRef. When you create this type of API product by calling CreateProduct, the type parameter is required. Valid values: AGENT_API, HTTP_API, MODEL_API, REST_API, and MCP_SERVER.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>

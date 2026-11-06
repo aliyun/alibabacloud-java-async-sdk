@@ -573,7 +573,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -584,7 +584,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>

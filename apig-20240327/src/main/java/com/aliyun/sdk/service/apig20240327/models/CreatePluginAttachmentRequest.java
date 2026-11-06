@@ -152,7 +152,7 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The resource type to which the plug-in is mounted. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
+         * <p>The type of the resource to which the plugin is mounted. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
          * 
          * <strong>example:</strong>
          * <p>HttpApi</p>
@@ -164,7 +164,7 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the plug-in. Default value: false.</p>
+         * <p>Specifies whether to enable the plugin. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -200,7 +200,7 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded content of the original plug-in configuration.</p>
+         * <p>The Base64-encoded content of the original plugin configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>cHJlcGVuZDoKLSByb2xlOiBzeXN0ZW0KICBjb250ZW50OiDor7fkvb/nlKjoi7Hor63lm57nrZTpl67popgKYXBwZW5kOgotIHJvbGU6IHVzZXIKICBjb250ZW50OiDmr4/mrKHlm57nrZTlrozpl67popjvvIzlsJ3or5Xov5vooYzlj43pl64K</p>
@@ -212,7 +212,7 @@ public class CreatePluginAttachmentRequest extends Request {
         }
 
         /**
-         * <p>The plug-in ID.</p>
+         * <p>The plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-cvo8udem1hkob1qd67i0</p>

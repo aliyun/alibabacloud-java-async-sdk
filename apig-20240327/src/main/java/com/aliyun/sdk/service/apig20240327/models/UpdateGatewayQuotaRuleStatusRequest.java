@@ -101,7 +101,7 @@ public class UpdateGatewayQuotaRuleStatusRequest extends Request {
         } 
 
         /**
-         * <p>The gateway ID.</p>
+         * <p>The ID of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-123456</p>
@@ -113,7 +113,7 @@ public class UpdateGatewayQuotaRuleStatusRequest extends Request {
         }
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>qr-xxxxx</p>

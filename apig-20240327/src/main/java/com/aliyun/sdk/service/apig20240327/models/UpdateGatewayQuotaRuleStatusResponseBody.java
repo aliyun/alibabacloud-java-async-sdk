@@ -91,7 +91,7 @@ public class UpdateGatewayQuotaRuleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message content.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -102,7 +102,7 @@ public class UpdateGatewayQuotaRuleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique request ID.</p>
+         * <p>The unique ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>

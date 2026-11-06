@@ -150,7 +150,7 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * <p>The versioned API version information.</p>
+         * <p>The version information of the versioned APIs.</p>
          */
         public Builder versionedHttpApis(java.util.List<HttpApiApiInfo> versionedHttpApis) {
             this.versionedHttpApis = versionedHttpApis;
