@@ -1553,6 +1553,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportDesktopListInfoResponse> exportDesktopListInfo(ExportDesktopListInfoRequest request);
 
     /**
+     * @param request the request parameters of GenerateSceneKey  GenerateSceneKeyRequest
+     * @return GenerateSceneKeyResponse
+     */
+    CompletableFuture<GenerateSceneKeyResponse> generateSceneKey(GenerateSceneKeyRequest request);
+
+    /**
      * @param request the request parameters of GetAggregatedDesktops  GetAggregatedDesktopsRequest
      * @return GetAggregatedDesktopsResponse
      */
