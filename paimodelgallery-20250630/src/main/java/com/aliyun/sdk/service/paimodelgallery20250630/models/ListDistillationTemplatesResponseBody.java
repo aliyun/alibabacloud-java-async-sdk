@@ -106,7 +106,7 @@ public class ListDistillationTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of distillation template summaries, sorted by OrderNumber in ascending order.</p>
+         * DistillationTemplates.
          */
         public Builder distillationTemplates(java.util.List<DistillationTemplateSummary> distillationTemplates) {
             this.distillationTemplates = distillationTemplates;
@@ -114,10 +114,7 @@ public class ListDistillationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number, which echoes the PageNumber value in the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -125,10 +122,7 @@ public class ListDistillationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page, which echoes the PageSize value in the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -136,10 +130,7 @@ public class ListDistillationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40325405-579C-4D82****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,10 +138,7 @@ public class ListDistillationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of templates that match the filter conditions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15</p>
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

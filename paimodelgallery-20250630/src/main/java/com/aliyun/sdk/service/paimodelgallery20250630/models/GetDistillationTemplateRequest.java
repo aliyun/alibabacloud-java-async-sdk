@@ -59,10 +59,7 @@ public class GetDistillationTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The distillation template ID, obtained from the TemplateId field returned by the <code>ListDistillationTemplates</code> operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);

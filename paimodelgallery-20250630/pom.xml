@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-paimodelgallery20250630</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>alibabacloud-paimodelgallery20250630</name>
   <description>Alibaba Cloud PAIModelGallery (20250630) Async SDK for Java

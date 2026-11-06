@@ -59,10 +59,7 @@ public class DeleteJobPlanRequest extends Request {
         } 
 
         /**
-         * <p>The task plan ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>jp-xxxxxx</p>
+         * JobPlanId.
          */
         public Builder jobPlanId(String jobPlanId) {
             this.putPathParameter("JobPlanId", jobPlanId);

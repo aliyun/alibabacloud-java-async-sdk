@@ -282,10 +282,7 @@ public class JobPlan extends TeaModel {
         }
 
         /**
-         * <p>The distillation template ID used when creating the task plan. An empty value indicates that this is not a scenario-specific distillation task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -293,10 +290,7 @@ public class JobPlan extends TeaModel {
         }
 
         /**
-         * <p>The display name of the distillation template used, localized based on the language specified in the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Chain-of-Thought Reasoning Distillation</p>
+         * TemplateName.
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;

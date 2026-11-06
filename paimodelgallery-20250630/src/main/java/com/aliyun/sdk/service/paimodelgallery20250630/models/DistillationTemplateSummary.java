@@ -38,6 +38,9 @@ public class DistillationTemplateSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
+    @com.aliyun.core.annotation.NameInMap("TemplateKind")
+    private String templateKind;
+
     @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
@@ -52,6 +55,7 @@ public class DistillationTemplateSummary extends TeaModel {
         this.orderNumber = builder.orderNumber;
         this.pipelineStages = builder.pipelineStages;
         this.templateId = builder.templateId;
+        this.templateKind = builder.templateKind;
         this.templateName = builder.templateName;
         this.trainingOptions = builder.trainingOptions;
     }
@@ -118,6 +122,13 @@ public class DistillationTemplateSummary extends TeaModel {
     }
 
     /**
+     * @return templateKind
+     */
+    public String getTemplateKind() {
+        return this.templateKind;
+    }
+
+    /**
      * @return templateName
      */
     public String getTemplateName() {
@@ -139,6 +150,7 @@ public class DistillationTemplateSummary extends TeaModel {
         private Integer orderNumber; 
         private java.util.List<PipelineStages> pipelineStages; 
         private String templateId; 
+        private String templateKind; 
         private String templateName; 
         private java.util.List<TrainingOptions> trainingOptions; 
 
@@ -153,12 +165,13 @@ public class DistillationTemplateSummary extends TeaModel {
             this.orderNumber = model.orderNumber;
             this.pipelineStages = model.pipelineStages;
             this.templateId = model.templateId;
+            this.templateKind = model.templateKind;
             this.templateName = model.templateName;
             this.trainingOptions = model.trainingOptions;
         } 
 
         /**
-         * <p>The list of capability tags, used for scenario card display.</p>
+         * CapabilityTags.
          */
         public Builder capabilityTags(java.util.List<String> capabilityTags) {
             this.capabilityTags = capabilityTags;
@@ -166,10 +179,7 @@ public class DistillationTemplateSummary extends TeaModel {
         }
 
         /**
-         * <p>The template category. The frontend uses this value to filter scenario cards.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>reasoning</p>
+         * Category.
          */
         public Builder category(String category) {
             this.category = category;
@@ -177,10 +187,7 @@ public class DistillationTemplateSummary extends TeaModel {
         }
 
         /**
-         * <p>The template description, localized based on the language specified in the request. The description specifies applicable scenarios and outputs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Designed for scenarios that require multi-step reasoning, such as math, logic, and code. Produces an SFT dataset</p>
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -188,10 +195,7 @@ public class DistillationTemplateSummary extends TeaModel {
         }
 
         /**
-         * <p>The algorithm job type. The value is the same as TemplateId.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * JobType.
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -199,10 +203,7 @@ public class DistillationTemplateSummary extends TeaModel {
         }
 
         /**
-         * <p>The display order. A smaller value indicates a higher position.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * OrderNumber.
          */
         public Builder orderNumber(Integer orderNumber) {
             this.orderNumber = orderNumber;
@@ -210,7 +211,7 @@ public class DistillationTemplateSummary extends TeaModel {
         }
 
         /**
-         * <p>The list of pipeline stages. The order of the stages represents the execution order.</p>
+         * PipelineStages.
          */
         public Builder pipelineStages(java.util.List<PipelineStages> pipelineStages) {
             this.pipelineStages = pipelineStages;
@@ -218,10 +219,7 @@ public class DistillationTemplateSummary extends TeaModel {
         }
 
         /**
-         * <p>The distillation template ID, which is the same as the algorithm job_type. Pass this value as TemplateId when creating a task plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -229,10 +227,15 @@ public class DistillationTemplateSummary extends TeaModel {
         }
 
         /**
-         * <p>The template display name, localized based on the language specified in the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Chain-of-Thought Reasoning Distillation</p>
+         * TemplateKind.
+         */
+        public Builder templateKind(String templateKind) {
+            this.templateKind = templateKind;
+            return this;
+        }
+
+        /**
+         * TemplateName.
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -240,7 +243,7 @@ public class DistillationTemplateSummary extends TeaModel {
         }
 
         /**
-         * <p>The capability declaration for the second stage, in which the distilled data is used to train the student model. An empty value indicates that the template supports only the distillation stage.</p>
+         * TrainingOptions.
          */
         public Builder trainingOptions(java.util.List<TrainingOptions> trainingOptions) {
             this.trainingOptions = trainingOptions;
@@ -319,10 +322,7 @@ public class DistillationTemplateSummary extends TeaModel {
             } 
 
             /**
-             * <p>The stage description, localized based on the language specified in the request.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The teacher model generates reasoning-augmented responses for each question</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,10 +330,7 @@ public class DistillationTemplateSummary extends TeaModel {
             }
 
             /**
-             * <p>The stage identifier, which corresponds to the pipeline[].stage value in the algorithm configuration.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cot_distill</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -341,10 +338,7 @@ public class DistillationTemplateSummary extends TeaModel {
             }
 
             /**
-             * <p>The stage display name, localized based on the language specified in the request.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Generate Chain-of-Thought</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -424,7 +418,7 @@ public class DistillationTemplateSummary extends TeaModel {
             } 
 
             /**
-             * <p>The available Model Gallery Task values for the student model.</p>
+             * ModelTasks.
              */
             public Builder modelTasks(java.util.List<String> modelTasks) {
                 this.modelTasks = modelTasks;
@@ -432,7 +426,7 @@ public class DistillationTemplateSummary extends TeaModel {
             }
 
             /**
-             * <p>The list of supported training method families.</p>
+             * TrainingMethods.
              */
             public Builder trainingMethods(java.util.List<String> trainingMethods) {
                 this.trainingMethods = trainingMethods;
@@ -440,10 +434,7 @@ public class DistillationTemplateSummary extends TeaModel {
             }
 
             /**
-             * <p>The training type. The frontend uses this value to select the training workflow and display text.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sft</p>
+             * TrainingType.
              */
             public Builder trainingType(String trainingType) {
                 this.trainingType = trainingType;

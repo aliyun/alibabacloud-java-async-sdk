@@ -223,10 +223,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The creation time of the job plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2026-09-18 10:00:00</p>
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -234,10 +231,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last modified time of the job plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2026-09-18 10:30:00</p>
+         * GmtModifiedTime.
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -245,10 +239,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current step.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DatasetSynthesis</p>
+         * JobPlanCurrentStep.
          */
         public Builder jobPlanCurrentStep(String jobPlanCurrentStep) {
             this.jobPlanCurrentStep = jobPlanCurrentStep;
@@ -256,10 +247,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job plan ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>jp-xxxxxx</p>
+         * JobPlanId.
          */
         public Builder jobPlanId(String jobPlanId) {
             this.jobPlanId = jobPlanId;
@@ -267,10 +255,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job plan name, which is unique within the workspace.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ModelGalleryxxx</p>
+         * JobPlanName.
          */
         public Builder jobPlanName(String jobPlanName) {
             this.jobPlanName = jobPlanName;
@@ -278,7 +263,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job plan steps.</p>
+         * JobPlanSteps.
          */
         public Builder jobPlanSteps(java.util.List<JobPlanSteps> jobPlanSteps) {
             this.jobPlanSteps = jobPlanSteps;
@@ -286,10 +271,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job plan type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Distillation</p>
+         * JobPlanType.
          */
         public Builder jobPlanType(String jobPlanType) {
             this.jobPlanType = jobPlanType;
@@ -297,10 +279,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID that owns the job plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890123456</p>
+         * OwnerId.
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -308,10 +287,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40325405-579C-4D82-9624-EC2B1779848E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -319,7 +295,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * Tags.
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -327,10 +303,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The distillation template ID used to create the job plan. An empty value indicates that this is not a scenario-based distillation task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -338,10 +311,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The display name of the distillation template, localized based on the requested language.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>思维链推理蒸馏</p>
+         * TemplateName.
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -349,10 +319,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID that created the job plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567890123456</p>
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -360,10 +327,7 @@ public class GetJobPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The workspace ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>62469</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -455,10 +419,7 @@ public class GetJobPlanResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The generated PAIFlow PipelineRunId.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pipeline-xxxxx</p>
+             * JobPlanStepId.
              */
             public Builder jobPlanStepId(String jobPlanStepId) {
                 this.jobPlanStepId = jobPlanStepId;
@@ -466,10 +427,7 @@ public class GetJobPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job plan step name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DistillationDatasetSynthesis</p>
+             * JobPlanStepName.
              */
             public Builder jobPlanStepName(String jobPlanStepName) {
                 this.jobPlanStepName = jobPlanStepName;
@@ -477,7 +435,7 @@ public class GetJobPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job plan step configuration.</p>
+             * JobPlanStepSpec.
              */
             public Builder jobPlanStepSpec(java.util.Map<String, ?> jobPlanStepSpec) {
                 this.jobPlanStepSpec = jobPlanStepSpec;
@@ -485,10 +443,7 @@ public class GetJobPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job plan step type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PAIFlow</p>
+             * JobPlanStepType.
              */
             public Builder jobPlanStepType(String jobPlanStepType) {
                 this.jobPlanStepType = jobPlanStepType;
@@ -555,10 +510,7 @@ public class GetJobPlanResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>foo</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -566,10 +518,7 @@ public class GetJobPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bar</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

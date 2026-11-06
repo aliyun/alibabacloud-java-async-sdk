@@ -522,10 +522,7 @@ public class ModelGalleryModel extends TeaModel {
         } 
 
         /**
-         * <p>The collection to which the model belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>QuickStart</p>
+         * Collection.
          */
         public Builder collection(String collection) {
             this.collection = collection;
@@ -533,10 +530,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether compression is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Compressible.
          */
         public Builder compressible(Boolean compressible) {
             this.compressible = compressible;
@@ -544,10 +538,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether deep thinking is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * DeepThink.
          */
         public Builder deepThink(Boolean deepThink) {
             this.deepThink = deepThink;
@@ -555,10 +546,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether online experience is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Demonstrable.
          */
         public Builder demonstrable(Boolean demonstrable) {
             this.demonstrable = demonstrable;
@@ -566,10 +554,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether deployment is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Deployable.
          */
         public Builder deployable(Boolean deployable) {
             this.deployable = deployable;
@@ -577,10 +562,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether distillation is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Distillable.
          */
         public Builder distillable(Boolean distillable) {
             this.distillable = distillable;
@@ -588,10 +570,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The domain. For example, aigc (generative AI), nlp (natural language processing), or cv (computer vision).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aigc</p>
+         * Domain.
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -599,10 +578,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether evaluation is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Evaluable.
          */
         public Builder evaluable(Boolean evaluable) {
             this.evaluable = evaluable;
@@ -610,10 +586,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The additional information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{}</p>
+         * ExtraInfo.
          */
         public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
             this.extraInfo = extraInfo;
@@ -621,10 +594,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether FunctionCall is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * FunctionCall.
          */
         public Builder functionCall(Boolean functionCall) {
             this.functionCall = functionCall;
@@ -632,10 +602,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025-12-03T07:21:28.000Z</p>
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -643,10 +610,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The update time of the latest model version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025-12-03T07:21:28.000Z</p>
+         * GmtLatestVersionModified.
          */
         public Builder gmtLatestVersionModified(String gmtLatestVersionModified) {
             this.gmtLatestVersionModified = gmtLatestVersionModified;
@@ -654,10 +618,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The update time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2025-12-03T07:21:28.000Z</p>
+         * GmtModifiedTime.
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -665,10 +626,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The latest model version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.0.0</p>
+         * LatestVersionName.
          */
         public Builder latestVersionName(String latestVersionName) {
             this.latestVersionName = latestVersionName;
@@ -676,10 +634,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The model description.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Large language model</p>
+         * ModelDescription.
          */
         public Builder modelDescription(String modelDescription) {
             this.modelDescription = modelDescription;
@@ -687,10 +642,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The model documentation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>http://</p>
+         * ModelDoc.
          */
         public Builder modelDoc(String modelDoc) {
             this.modelDoc = modelDoc;
@@ -698,10 +650,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The model ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>model-8npjorqxl8gmdo72nj</p>
+         * ModelId.
          */
         public Builder modelId(String modelId) {
             this.modelId = modelId;
@@ -709,10 +658,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The model name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Qwen3-235B-A22B-Thinking-2507</p>
+         * ModelName.
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
@@ -720,10 +666,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The model series.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Qwen</p>
+         * ModelSeries.
          */
         public Builder modelSeries(String modelSeries) {
             this.modelSeries = modelSeries;
@@ -731,10 +674,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The model type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>LoRA</p>
+         * ModelType.
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
@@ -742,10 +682,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The ordinal number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * OrderNumber.
          */
         public Builder orderNumber(Long orderNumber) {
             this.orderNumber = orderNumber;
@@ -753,10 +690,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The model source, used to filter the list of models that belong to a specific community or organization. For example, ModelScope, PAI, or NIM.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PAI</p>
+         * Origin.
          */
         public Builder origin(String origin) {
             this.origin = origin;
@@ -764,10 +698,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The number of parameters, in millions (M).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1024</p>
+         * ParameterSize.
          */
         public Builder parameterSize(Long parameterSize) {
             this.parameterSize = parameterSize;
@@ -775,10 +706,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The search keywords.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>llm</p>
+         * SearchWords.
          */
         public Builder searchWords(String searchWords) {
             this.searchWords = searchWords;
@@ -786,16 +714,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The supported compression methods.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *   &quot;Methods&quot;: [{
-         *     &quot;Method&quot;: &quot;Quantization&quot;,
-         *     &quot;SubMethod&quot;: &quot;MinMax-8Bit&quot;,
-         *     &quot;Resource&quot;: &quot;GPU&quot;
-         *   }]
-         * }</p>
+         * SupportedCompressionMethods.
          */
         public Builder supportedCompressionMethods(java.util.Map<String, ?> supportedCompressionMethods) {
             this.supportedCompressionMethods = supportedCompressionMethods;
@@ -803,10 +722,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The resources supported for compression.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GPU,GP7V</p>
+         * SupportedCompressionResources.
          */
         public Builder supportedCompressionResources(String supportedCompressionResources) {
             this.supportedCompressionResources = supportedCompressionResources;
@@ -814,16 +730,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The supported distillation methods.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *   &quot;Methods&quot;: [{
-         *     &quot;Method&quot;: &quot;EasyDistill&quot;,
-         *     &quot;SubMethod&quot;: &quot;DataSynthesis&quot;,
-         *     &quot;Resource&quot;: &quot;GPU&quot;
-         *   }]
-         * }</p>
+         * SupportedDistillationMethods.
          */
         public Builder supportedDistillationMethods(java.util.Map<String, ?> supportedDistillationMethods) {
             this.supportedDistillationMethods = supportedDistillationMethods;
@@ -831,10 +738,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The resources supported for distillation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GPU,GP7V</p>
+         * SupportedDistillationResources.
          */
         public Builder supportedDistillationResources(String supportedDistillationResources) {
             this.supportedDistillationResources = supportedDistillationResources;
@@ -842,15 +746,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The supported evaluation methods.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *   &quot;Methods&quot;: [{
-         *     &quot;Method&quot;: &quot;Single-Node-Standard&quot;,
-         *     &quot;Resource&quot;: &quot;GPU&quot;
-         *   }]
-         * }</p>
+         * SupportedEvaluationMethods.
          */
         public Builder supportedEvaluationMethods(java.util.Map<String, ?> supportedEvaluationMethods) {
             this.supportedEvaluationMethods = supportedEvaluationMethods;
@@ -858,10 +754,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The resources supported for evaluation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GPU,GP7V</p>
+         * SupportedEvaluationResources.
          */
         public Builder supportedEvaluationResources(String supportedEvaluationResources) {
             this.supportedEvaluationResources = supportedEvaluationResources;
@@ -869,16 +762,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The supported deployment methods.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *   &quot;Methods&quot;: [{
-         *     &quot;framework&quot;: &quot;blade&quot;,
-         *     &quot;scenario&quot;: &quot;nvidia-standard&quot;,
-         *     &quot;Resource&quot;: &quot;GPU&quot;
-         *   }]
-         * }</p>
+         * SupportedInferenceMethods.
          */
         public Builder supportedInferenceMethods(java.util.Map<String, ?> supportedInferenceMethods) {
             this.supportedInferenceMethods = supportedInferenceMethods;
@@ -886,10 +770,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The resources supported for deployment.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GPU,GP7V</p>
+         * SupportedInferenceResources.
          */
         public Builder supportedInferenceResources(String supportedInferenceResources) {
             this.supportedInferenceResources = supportedInferenceResources;
@@ -897,16 +778,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The supported training methods.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *   &quot;Methods&quot;: [{
-         *     &quot;Method&quot;: &quot;SFT&quot;,
-         *     &quot;SubMethod&quot;: &quot;LoRA_LLM&quot;,
-         *     &quot;Resource&quot;: &quot;GPU&quot;
-         *   }]
-         * }</p>
+         * SupportedTrainingMethods.
          */
         public Builder supportedTrainingMethods(java.util.Map<String, ?> supportedTrainingMethods) {
             this.supportedTrainingMethods = supportedTrainingMethods;
@@ -914,10 +786,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The resources supported for training.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GPU,GP7V</p>
+         * SupportedTrainingResources.
          */
         public Builder supportedTrainingResources(String supportedTrainingResources) {
             this.supportedTrainingResources = supportedTrainingResources;
@@ -925,7 +794,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * Tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -933,10 +802,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>The task. For example, large-language-model (large language model), image-classification (image classification), or embedding.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>large-language-model</p>
+         * Task.
          */
         public Builder task(String task) {
             this.task = task;
@@ -944,10 +810,7 @@ public class ModelGalleryModel extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether training is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Trainable.
          */
         public Builder trainable(Boolean trainable) {
             this.trainable = trainable;
@@ -1013,10 +876,7 @@ public class ModelGalleryModel extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>k1</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1024,10 +884,7 @@ public class ModelGalleryModel extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

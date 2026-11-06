@@ -423,10 +423,7 @@ public class ListModelGalleryModelsRequest extends Request {
         } 
 
         /**
-         * <p>The collection to which the model belongs. The collection for ModelGallery models is QuickStart.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>QuickStart</p>
+         * Collections.
          */
         public Builder collections(String collections) {
             this.putQueryParameter("Collections", collections);
@@ -435,7 +432,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether model compression is supported.</p>
+         * Compressible.
          */
         public Builder compressible(Boolean compressible) {
             this.putQueryParameter("Compressible", compressible);
@@ -444,7 +441,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The list of conditions.</p>
+         * Conditions.
          */
         public Builder conditions(java.util.List<Conditions> conditions) {
             String conditionsShrink = shrink(conditions, "Conditions", "json");
@@ -454,7 +451,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether deep thinking is supported.</p>
+         * DeepThink.
          */
         public Builder deepThink(Boolean deepThink) {
             this.putQueryParameter("DeepThink", deepThink);
@@ -463,7 +460,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether online experience is supported.</p>
+         * Demonstrable.
          */
         public Builder demonstrable(Boolean demonstrable) {
             this.putQueryParameter("Demonstrable", demonstrable);
@@ -472,7 +469,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether deployment is supported.</p>
+         * Deployable.
          */
         public Builder deployable(Boolean deployable) {
             this.putQueryParameter("Deployable", deployable);
@@ -481,7 +478,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether distillation is supported.</p>
+         * Distillable.
          */
         public Builder distillable(Boolean distillable) {
             this.putQueryParameter("Distillable", distillable);
@@ -490,10 +487,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The domain used to filter the model list. For example, aigc (generative AI), nlp (natural language processing), or cv (computer vision).</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aigc</p>
+         * Domain.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -502,7 +496,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether evaluation is supported.</p>
+         * Evaluable.
          */
         public Builder evaluable(Boolean evaluable) {
             this.putQueryParameter("Evaluable", evaluable);
@@ -511,7 +505,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether FunctionCall is supported.</p>
+         * FunctionCall.
          */
         public Builder functionCall(Boolean functionCall) {
             this.putQueryParameter("FunctionCall", functionCall);
@@ -520,10 +514,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The model name. By default, fuzzy match is used to filter the model list. Enclose the name in double quotation marks for exact match. For example, &quot;DeepSeek-V3.2&quot; exactly matches the model DeepSeek-V3.2.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Qwen3-235B-A22B-Thinking-2507</p>
+         * ModelName.
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -532,10 +523,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The model series. For example, PAI Optimized Model, Qwen, Wan-AI, GLM, Baichuan, DeepSeek, Kimi, MiniMax, Yi, InternLM, InternVL, OpenAI, NVIDIA, Gemma, Phi, dots_vlm, Llama, Mistral, Stable Diffusion, FLUX, Byte Dance, StepFun AI, ERNIE Bot, Tencent Hunyuan, or YOLO.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Qwen</p>
+         * ModelSeries.
          */
         public Builder modelSeries(String modelSeries) {
             this.putQueryParameter("ModelSeries", modelSeries);
@@ -544,10 +532,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The model type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Endpoint</p>
+         * ModelType.
          */
         public Builder modelType(String modelType) {
             this.putQueryParameter("ModelType", modelType);
@@ -556,15 +541,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The sort order for the specified sort field in a paged query. Default value: ASC.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ASC: ascending order.</li>
-         * <li>DESC: descending order.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>DESC</p>
+         * Order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -573,10 +550,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The model source used to filter models that belong to a specific community or organization. For example, ModelScope, PAI, or NIM.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ModelScope</p>
+         * Origin.
          */
         public Builder origin(String origin) {
             this.putQueryParameter("Origin", origin);
@@ -585,10 +559,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the model list. Minimum value: 1. Default value: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -597,10 +568,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The number of models to display on each page in a paged query. Default value: 10.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -609,10 +577,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The query condition. Fuzzy match is performed across multiple fields such as ModelName, Domain, and Task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Qwen</p>
+         * Query.
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -621,18 +586,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The sort field for a paged query. Currently, the GmtCreateTime field is used for sorting. Valid values:</p>
-         * <ul>
-         * <li><p>GmtCreateTime: the model creation time.</p>
-         * </li>
-         * <li><p>GmtLatestVersionModified: the time when the latest model version was updated.</p>
-         * </li>
-         * <li><p>OrderNumber: the ordinal number.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>GmtCreateTime</p>
+         * SortBy.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -641,10 +595,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The supported compression resources, such as CPU, GPU, or GP7V. For example, if you specify GP7V, only models that support compression on GP7V resources are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GP7V</p>
+         * SupportedCompressionResource.
          */
         public Builder supportedCompressionResource(String supportedCompressionResource) {
             this.putQueryParameter("SupportedCompressionResource", supportedCompressionResource);
@@ -653,10 +604,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The supported distillation resources, such as CPU, GPU, or GP7V. For example, if you specify GP7V, only models that support distillation on GP7V resources are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GP7V</p>
+         * SupportedDistillationResource.
          */
         public Builder supportedDistillationResource(String supportedDistillationResource) {
             this.putQueryParameter("SupportedDistillationResource", supportedDistillationResource);
@@ -665,10 +613,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The supported evaluation resources, such as CPU, GPU, or GP7V. For example, if you specify GP7V, only models that support evaluation on GP7V resources are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GP7V</p>
+         * SupportedEvaluationResource.
          */
         public Builder supportedEvaluationResource(String supportedEvaluationResource) {
             this.putQueryParameter("SupportedEvaluationResource", supportedEvaluationResource);
@@ -677,10 +622,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The supported deployment resources, such as CPU, GPU, or GP7V. For example, if you specify GP7V, only models that support deployment on GP7V resources are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GP7V</p>
+         * SupportedInferenceResource.
          */
         public Builder supportedInferenceResource(String supportedInferenceResource) {
             this.putQueryParameter("SupportedInferenceResource", supportedInferenceResource);
@@ -689,10 +631,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The supported training resources, such as CPU, GPU, or GP7V. For example, if you specify GP7V, only models that support training on GP7V resources are returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GP7V</p>
+         * SupportedTrainingResource.
          */
         public Builder supportedTrainingResource(String supportedTrainingResource) {
             this.putQueryParameter("SupportedTrainingResource", supportedTrainingResource);
@@ -701,7 +640,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The list of labels.</p>
+         * Tag.
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -711,10 +650,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>The task. For example, large-language-model (large language model), image-classification (image classification), or embedding.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>large-language-model</p>
+         * Task.
          */
         public Builder task(String task) {
             this.putQueryParameter("Task", task);
@@ -723,7 +659,7 @@ public class ListModelGalleryModelsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether training is supported.</p>
+         * Trainable.
          */
         public Builder trainable(Boolean trainable) {
             this.putQueryParameter("Trainable", trainable);
@@ -804,10 +740,7 @@ public class ListModelGalleryModelsRequest extends Request {
             } 
 
             /**
-             * <p>The parameter name. ParameterSize is supported. Unit: M.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ParameterSize</p>
+             * Column.
              */
             public Builder column(String column) {
                 this.column = column;
@@ -815,10 +748,7 @@ public class ListModelGalleryModelsRequest extends Request {
             }
 
             /**
-             * <p>The operator. For example, LessThan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>LessThan</p>
+             * Operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -826,10 +756,7 @@ public class ListModelGalleryModelsRequest extends Request {
             }
 
             /**
-             * <p>The value. If Column is set to ParameterSize, the value is an integer. Unit: M.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1024</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -896,10 +823,7 @@ public class ListModelGalleryModelsRequest extends Request {
             } 
 
             /**
-             * <p>The label key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>k1</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -907,10 +831,7 @@ public class ListModelGalleryModelsRequest extends Request {
             }
 
             /**
-             * <p>The label value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>v1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

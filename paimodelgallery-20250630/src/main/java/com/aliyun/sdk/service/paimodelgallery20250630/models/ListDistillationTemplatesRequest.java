@@ -37,6 +37,10 @@ public class ListDistillationTemplatesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateKind")
+    private String templateKind;
+
     private ListDistillationTemplatesRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
@@ -44,6 +48,7 @@ public class ListDistillationTemplatesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.templateId = builder.templateId;
+        this.templateKind = builder.templateKind;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class ListDistillationTemplatesRequest extends Request {
         return this.templateId;
     }
 
+    /**
+     * @return templateKind
+     */
+    public String getTemplateKind() {
+        return this.templateKind;
+    }
+
     public static final class Builder extends Request.Builder<ListDistillationTemplatesRequest, Builder> {
         private String category; 
         private String keyword; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String templateId; 
+        private String templateKind; 
 
         private Builder() {
             super();
@@ -112,13 +125,11 @@ public class ListDistillationTemplatesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.templateId = request.templateId;
+            this.templateKind = request.templateKind;
         } 
 
         /**
-         * <p>The template category for scenario-specific template filtering.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>reasoning</p>
+         * Category.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -127,10 +138,7 @@ public class ListDistillationTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The search keyword for cross-language substring matching against template names, descriptions, and other text fields. If this parameter is left empty, no keyword filtering is applied.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>inference</p>
+         * Keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -139,10 +147,7 @@ public class ListDistillationTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1. If this parameter is not specified or is invalid, the default value 1 is used.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,10 +156,7 @@ public class ListDistillationTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. If this parameter is not specified or is invalid, the default value is used. If the value exceeds the upper limit, the upper limit is used.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,14 +165,20 @@ public class ListDistillationTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The template ID for exact filtering. If this parameter is left empty, no filtering by ID is applied.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
             this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * TemplateKind.
+         */
+        public Builder templateKind(String templateKind) {
+            this.putQueryParameter("TemplateKind", templateKind);
+            this.templateKind = templateKind;
             return this;
         }
 

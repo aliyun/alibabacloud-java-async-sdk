@@ -59,8 +59,14 @@ public class DistillationTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PresetConfig")
     private java.util.List<PresetConfig> presetConfig;
 
+    @com.aliyun.core.annotation.NameInMap("ProcessorExampleUri")
+    private String processorExampleUri;
+
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
+
+    @com.aliyun.core.annotation.NameInMap("TemplateKind")
+    private String templateKind;
 
     @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
@@ -83,7 +89,9 @@ public class DistillationTemplate extends TeaModel {
         this.orderNumber = builder.orderNumber;
         this.pipelineStages = builder.pipelineStages;
         this.presetConfig = builder.presetConfig;
+        this.processorExampleUri = builder.processorExampleUri;
         this.templateId = builder.templateId;
+        this.templateKind = builder.templateKind;
         this.templateName = builder.templateName;
         this.trainingOptions = builder.trainingOptions;
     }
@@ -199,10 +207,24 @@ public class DistillationTemplate extends TeaModel {
     }
 
     /**
+     * @return processorExampleUri
+     */
+    public String getProcessorExampleUri() {
+        return this.processorExampleUri;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    /**
+     * @return templateKind
+     */
+    public String getTemplateKind() {
+        return this.templateKind;
     }
 
     /**
@@ -234,7 +256,9 @@ public class DistillationTemplate extends TeaModel {
         private Integer orderNumber; 
         private java.util.List<PipelineStages> pipelineStages; 
         private java.util.List<PresetConfig> presetConfig; 
+        private String processorExampleUri; 
         private String templateId; 
+        private String templateKind; 
         private String templateName; 
         private java.util.List<TrainingOptions> trainingOptions; 
 
@@ -256,16 +280,15 @@ public class DistillationTemplate extends TeaModel {
             this.orderNumber = model.orderNumber;
             this.pipelineStages = model.pipelineStages;
             this.presetConfig = model.presetConfig;
+            this.processorExampleUri = model.processorExampleUri;
             this.templateId = model.templateId;
+            this.templateKind = model.templateKind;
             this.templateName = model.templateName;
             this.trainingOptions = model.trainingOptions;
         } 
 
         /**
-         * <p>The algorithm name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>easydistill</p>
+         * AlgorithmName.
          */
         public Builder algorithmName(String algorithmName) {
             this.algorithmName = algorithmName;
@@ -273,10 +296,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The algorithm provider.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pai</p>
+         * AlgorithmProvider.
          */
         public Builder algorithmProvider(String algorithmProvider) {
             this.algorithmProvider = algorithmProvider;
@@ -284,10 +304,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The algorithm version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v2.0.0</p>
+         * AlgorithmVersion.
          */
         public Builder algorithmVersion(String algorithmVersion) {
             this.algorithmVersion = algorithmVersion;
@@ -295,7 +312,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The list of capability tags used for displaying scenario cards.</p>
+         * CapabilityTags.
          */
         public Builder capabilityTags(java.util.List<String> capabilityTags) {
             this.capabilityTags = capabilityTags;
@@ -303,10 +320,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The template category. The frontend uses this value to filter scenario cards.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>reasoning</p>
+         * Category.
          */
         public Builder category(String category) {
             this.category = category;
@@ -314,10 +328,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The raw YAML content of the EasyDistill default configurations. The frontend uses this content for rendering the configuration form and supports recovering to default configurations. The model and credential fields are intentionally left empty and are populated by the user in the form upon commit.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>job_type: advanced_cot_distill</p>
+         * DefaultConfig.
          */
         public Builder defaultConfig(String defaultConfig) {
             this.defaultConfig = defaultConfig;
@@ -325,10 +336,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The template description, localized based on the requested language. The description specifies the applicable scenarios and outputs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Designed for scenarios that require multi-step reasoning such as math, logic, and code. Produces an SFT dataset</p>
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -336,7 +344,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the input data must be an entire directory. If this parameter is set to true, only a directory can be selected on the form, not a single file. If this parameter is absent or set to false, either a file or a directory can be selected. This value is true when seed files reference other files in the same directory by relative path.</p>
+         * InputDatasetMustBeDirectory.
          */
         public Builder inputDatasetMustBeDirectory(Boolean inputDatasetMustBeDirectory) {
             this.inputDatasetMustBeDirectory = inputDatasetMustBeDirectory;
@@ -344,10 +352,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The OSS address of the sample input data, rendered based on the region. Users can download the sample and prepare their own data in the same format. An empty value indicates that the template does not provide a sample.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss://pai-quickstart-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/public_datasets/distillation_examples/advanced_cot_distill/input.jsonl</p>
+         * InputExampleUri.
          */
         public Builder inputExampleUri(String inputExampleUri) {
             this.inputExampleUri = inputExampleUri;
@@ -355,10 +360,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The algorithm job type. The value is the same as TemplateId.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * JobType.
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -366,7 +368,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The list of model slots that require user selection. The frontend uses this list to render the model selection form.</p>
+         * ModelSlots.
          */
         public Builder modelSlots(java.util.List<ModelSlots> modelSlots) {
             this.modelSlots = modelSlots;
@@ -374,10 +376,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The display order. A smaller value indicates a higher priority.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * OrderNumber.
          */
         public Builder orderNumber(Integer orderNumber) {
             this.orderNumber = orderNumber;
@@ -385,7 +384,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The list of pipeline stages. The order of the stages represents the execution order.</p>
+         * PipelineStages.
          */
         public Builder pipelineStages(java.util.List<PipelineStages> pipelineStages) {
             this.pipelineStages = pipelineStages;
@@ -393,7 +392,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The content of the preset configuration card, displayed in order to show the key default configurations of the template.</p>
+         * PresetConfig.
          */
         public Builder presetConfig(java.util.List<PresetConfig> presetConfig) {
             this.presetConfig = presetConfig;
@@ -401,10 +400,15 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The distillation template ID, which is the same as the algorithm job_type. Pass this value as TemplateId when creating a task plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * ProcessorExampleUri.
+         */
+        public Builder processorExampleUri(String processorExampleUri) {
+            this.processorExampleUri = processorExampleUri;
+            return this;
+        }
+
+        /**
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -412,10 +416,15 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The template display name, localized based on the requested language.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Chain-of-thought reasoning distillation</p>
+         * TemplateKind.
+         */
+        public Builder templateKind(String templateKind) {
+            this.templateKind = templateKind;
+            return this;
+        }
+
+        /**
+         * TemplateName.
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -423,7 +432,7 @@ public class DistillationTemplate extends TeaModel {
         }
 
         /**
-         * <p>The capability declaration for the second stage (training the student model with the distilled data). An empty value indicates that the template supports only the distillation stage.</p>
+         * TrainingOptions.
          */
         public Builder trainingOptions(java.util.List<TrainingOptions> trainingOptions) {
             this.trainingOptions = trainingOptions;
@@ -489,10 +498,7 @@ public class DistillationTemplate extends TeaModel {
             } 
 
             /**
-             * <p>The channel name of the PAI-Token gateway. The frontend uses this value to retrieve the list of available models for the channel. This value must be passed back as-is upon submission. This parameter is returned only when Type is pai_token.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>distillation</p>
+             * Channel.
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -500,10 +506,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>The model access method. pai_token indicates the PAI-Token gateway, where the user selects from the list of available models for the channel. pai_eas indicates the user\&quot;s own PAI-EAS service instance, which requires the service address and token.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pai_token</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -609,7 +612,7 @@ public class DistillationTemplate extends TeaModel {
             } 
 
             /**
-             * <p>The list of model access methods supported by this slot.</p>
+             * Backends.
              */
             public Builder backends(java.util.List<Backends> backends) {
                 this.backends = backends;
@@ -617,10 +620,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>The slot description, localized based on the requested language.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The teacher model used to generate distillation data. We recommend selecting a model with strong reasoning capabilities</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -628,10 +628,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>The slot identifier, which corresponds to the backend section name in the submitted configuration.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>backend</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -639,10 +636,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>The slot display name, localized based on the requested language.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Teacher model</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -650,7 +644,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether this slot is required. If this parameter is set to false, the user can skip the selection, and the algorithm falls back to other slots.</p>
+             * Required.
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -730,10 +724,7 @@ public class DistillationTemplate extends TeaModel {
             } 
 
             /**
-             * <p>The stage description, localized based on the requested language.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The teacher model generates responses with reasoning processes for each question</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -741,10 +732,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>The stage identifier, which corresponds to the value of pipeline[].stage in the algorithm configuration.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cot_distill</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -752,10 +740,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>The stage display name, localized based on the requested language.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Generate chain of thought</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -822,10 +807,7 @@ public class DistillationTemplate extends TeaModel {
             } 
 
             /**
-             * <p>The configuration item name, localized based on the requested language. Names are matched by position across languages, so the same row can have different names in different languages.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Task type</p>
+             * Label.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -833,10 +815,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>The configuration item value, localized based on the requested language.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>advanced_cot_distill</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -916,7 +895,7 @@ public class DistillationTemplate extends TeaModel {
             } 
 
             /**
-             * <p>The range of Model Gallery tasks available for the student model.</p>
+             * ModelTasks.
              */
             public Builder modelTasks(java.util.List<String> modelTasks) {
                 this.modelTasks = modelTasks;
@@ -924,7 +903,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>The list of supported training method families.</p>
+             * TrainingMethods.
              */
             public Builder trainingMethods(java.util.List<String> trainingMethods) {
                 this.trainingMethods = trainingMethods;
@@ -932,10 +911,7 @@ public class DistillationTemplate extends TeaModel {
             }
 
             /**
-             * <p>The training type. The frontend uses this value to select the training workflow and display text.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sft</p>
+             * TrainingType.
              */
             public Builder trainingType(String trainingType) {
                 this.trainingType = trainingType;

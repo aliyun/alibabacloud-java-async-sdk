@@ -67,7 +67,7 @@ public class GetDistillationTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The distillation template details.</p>
+         * DistillationTemplate.
          */
         public Builder distillationTemplate(DistillationTemplate distillationTemplate) {
             this.distillationTemplate = distillationTemplate;
@@ -75,10 +75,7 @@ public class GetDistillationTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p><strong>Request ID</strong></p>
-         * 
-         * <strong>example:</strong>
-         * <p>40325405-579C-4D82****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

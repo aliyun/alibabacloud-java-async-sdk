@@ -87,10 +87,7 @@ public class UpdateJobPlanRequest extends Request {
         } 
 
         /**
-         * <p>The task plan ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>jp-xxxxx</p>
+         * JobPlanId.
          */
         public Builder jobPlanId(String jobPlanId) {
             this.putPathParameter("JobPlanId", jobPlanId);
@@ -99,10 +96,7 @@ public class UpdateJobPlanRequest extends Request {
         }
 
         /**
-         * <p>The current step of the task plan. Set this parameter to <code>DatasetSynthesisAndModelTrain</code> for the full process or <code>DatasetSynthesisModelTrain</code> for step-by-step execution.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DatasetSynthesisAndModelTrain</p>
+         * JobPlanCurrentStep.
          */
         public Builder jobPlanCurrentStep(String jobPlanCurrentStep) {
             this.putBodyParameter("JobPlanCurrentStep", jobPlanCurrentStep);
@@ -111,7 +105,7 @@ public class UpdateJobPlanRequest extends Request {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * Tag.
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -179,10 +173,7 @@ public class UpdateJobPlanRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. If the tag key already exists, the tag is updated. Otherwise, a new tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>foo</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -190,10 +181,7 @@ public class UpdateJobPlanRequest extends Request {
             }
 
             /**
-             * <p>The tag key. If the tag key already exists, the tag is updated. Otherwise, a new tag is added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bar</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -185,15 +185,7 @@ public class ListJobPlansRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to filter by template association. Valid values:</p>
-         * <ul>
-         * <li>true: Returns only scenario-specific job plans that have a template.</li>
-         * <li>false: Returns only general-purpose job plans that do not have a template.</li>
-         * </ul>
-         * <p>If this parameter is not specified, no filtering is applied. If both this parameter and TemplateId are specified, the value of TemplateId takes precedence.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * HasTemplate.
          */
         public Builder hasTemplate(Boolean hasTemplate) {
             this.putQueryParameter("HasTemplate", hasTemplate);
@@ -202,10 +194,7 @@ public class ListJobPlansRequest extends Request {
         }
 
         /**
-         * <p>The name of the job plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>JobPlan1</p>
+         * JobPlanName.
          */
         public Builder jobPlanName(String jobPlanName) {
             this.putQueryParameter("JobPlanName", jobPlanName);
@@ -214,10 +203,7 @@ public class ListJobPlansRequest extends Request {
         }
 
         /**
-         * <p>The type of the job plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Distillation</p>
+         * JobPlanType.
          */
         public Builder jobPlanType(String jobPlanType) {
             this.putQueryParameter("JobPlanType", jobPlanType);
@@ -226,10 +212,7 @@ public class ListJobPlansRequest extends Request {
         }
 
         /**
-         * <p>The sort order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DESC</p>
+         * Order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -238,10 +221,7 @@ public class ListJobPlansRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,10 +230,7 @@ public class ListJobPlansRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,10 +239,7 @@ public class ListJobPlansRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>GmtCreateTime</p>
+         * SortBy.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -274,7 +248,7 @@ public class ListJobPlansRequest extends Request {
         }
 
         /**
-         * <p>The list of tags.</p>
+         * Tag.
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -284,10 +258,7 @@ public class ListJobPlansRequest extends Request {
         }
 
         /**
-         * <p>The distillation template ID. Filters results to return only scenario-specific tasks that use the specified template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -296,10 +267,7 @@ public class ListJobPlansRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32495</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -367,10 +335,7 @@ public class ListJobPlansRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>key</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -378,10 +343,7 @@ public class ListJobPlansRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>value</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

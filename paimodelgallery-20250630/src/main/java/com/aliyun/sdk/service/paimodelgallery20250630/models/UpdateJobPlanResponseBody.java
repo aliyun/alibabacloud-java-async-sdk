@@ -54,10 +54,7 @@ public class UpdateJobPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40325405-579C-4D82-9624-EC2B1779848E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -129,10 +129,7 @@ public class CreateJobPlanRequest extends Request {
         } 
 
         /**
-         * <p>The name of the job plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ModelGalleryxxx</p>
+         * JobPlanName.
          */
         public Builder jobPlanName(String jobPlanName) {
             this.putBodyParameter("JobPlanName", jobPlanName);
@@ -141,7 +138,7 @@ public class CreateJobPlanRequest extends Request {
         }
 
         /**
-         * <p>The steps of the job plan.</p>
+         * JobPlanSteps.
          */
         public Builder jobPlanSteps(java.util.List<JobPlanSteps> jobPlanSteps) {
             this.putBodyParameter("JobPlanSteps", jobPlanSteps);
@@ -150,10 +147,7 @@ public class CreateJobPlanRequest extends Request {
         }
 
         /**
-         * <p>The type of the job plan.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Distillation</p>
+         * JobPlanType.
          */
         public Builder jobPlanType(String jobPlanType) {
             this.putBodyParameter("JobPlanType", jobPlanType);
@@ -162,7 +156,7 @@ public class CreateJobPlanRequest extends Request {
         }
 
         /**
-         * <p>Note: According to the Alibaba Cloud tag system specification, this parameter name is in singular form.</p>
+         * Tag.
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -171,10 +165,7 @@ public class CreateJobPlanRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scenario-specific distillation template, obtained from ListDistillationTemplates. If this parameter is not specified, a general-purpose job plan is created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>advanced_cot_distill</p>
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -183,10 +174,7 @@ public class CreateJobPlanRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>62469</p>
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -267,10 +255,7 @@ public class CreateJobPlanRequest extends Request {
             } 
 
             /**
-             * <p>The name of the job plan step.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DatasetSynthesis</p>
+             * JobPlanStepName.
              */
             public Builder jobPlanStepName(String jobPlanStepName) {
                 this.jobPlanStepName = jobPlanStepName;
@@ -278,7 +263,7 @@ public class CreateJobPlanRequest extends Request {
             }
 
             /**
-             * <p>The detailed configuration of the job plan step.</p>
+             * JobPlanStepSpec.
              */
             public Builder jobPlanStepSpec(java.util.Map<String, ?> jobPlanStepSpec) {
                 this.jobPlanStepSpec = jobPlanStepSpec;
@@ -286,10 +271,7 @@ public class CreateJobPlanRequest extends Request {
             }
 
             /**
-             * <p>The type of the job plan step.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PAIFlow</p>
+             * JobPlanStepType.
              */
             public Builder jobPlanStepType(String jobPlanStepType) {
                 this.jobPlanStepType = jobPlanStepType;
@@ -356,10 +338,7 @@ public class CreateJobPlanRequest extends Request {
             } 
 
             /**
-             * <p><strong>Key</strong></p>
-             * 
-             * <strong>example:</strong>
-             * <p>foo</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -367,10 +346,7 @@ public class CreateJobPlanRequest extends Request {
             }
 
             /**
-             * <p><strong>Value</strong></p>
-             * 
-             * <strong>example:</strong>
-             * <p>bar</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

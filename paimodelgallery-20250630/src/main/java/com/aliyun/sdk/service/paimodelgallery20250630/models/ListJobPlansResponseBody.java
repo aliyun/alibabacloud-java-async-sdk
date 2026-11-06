@@ -80,7 +80,7 @@ public class ListJobPlansResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of job plans.</p>
+         * JobPlans.
          */
         public Builder jobPlans(java.util.List<JobPlan> jobPlans) {
             this.jobPlans = jobPlans;
@@ -88,10 +88,7 @@ public class ListJobPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40325405-579C-4D82-9624-EC2B1779848E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -99,10 +96,7 @@ public class ListJobPlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15</p>
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
