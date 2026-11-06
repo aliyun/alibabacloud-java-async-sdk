@@ -36,6 +36,10 @@ public class RemoveNodePoolNodesRequest extends Request {
     private Boolean drainNode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("drain_timeout_seconds")
+    private Long drainTimeoutSeconds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("instance_ids")
     private java.util.List<String> instanceIds;
 
@@ -54,6 +58,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         this.nodepoolId = builder.nodepoolId;
         this.concurrency = builder.concurrency;
         this.drainNode = builder.drainNode;
+        this.drainTimeoutSeconds = builder.drainTimeoutSeconds;
         this.instanceIds = builder.instanceIds;
         this.nodes = builder.nodes;
         this.releaseNode = builder.releaseNode;
@@ -101,6 +106,13 @@ public class RemoveNodePoolNodesRequest extends Request {
     }
 
     /**
+     * @return drainTimeoutSeconds
+     */
+    public Long getDrainTimeoutSeconds() {
+        return this.drainTimeoutSeconds;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -126,6 +138,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         private String nodepoolId; 
         private Boolean concurrency; 
         private Boolean drainNode; 
+        private Long drainTimeoutSeconds; 
         private java.util.List<String> instanceIds; 
         private java.util.List<String> nodes; 
         private Boolean releaseNode; 
@@ -140,6 +153,7 @@ public class RemoveNodePoolNodesRequest extends Request {
             this.nodepoolId = request.nodepoolId;
             this.concurrency = request.concurrency;
             this.drainNode = request.drainNode;
+            this.drainTimeoutSeconds = request.drainTimeoutSeconds;
             this.instanceIds = request.instanceIds;
             this.nodes = request.nodes;
             this.releaseNode = request.releaseNode;
@@ -172,10 +186,10 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove the nodes concurrently. Valid values:</p>
+         * <p>Specifies whether to remove nodes concurrently. Valid values:</p>
          * <ul>
-         * <li>true: removes the nodes from the scaling group concurrently.</li>
-         * <li>false: removes the nodes from the scaling group sequentially.</li>
+         * <li>true: Nodes are removed from the scaling group concurrently.</li>
+         * <li>false: Nodes are removed from the scaling group sequentially.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -191,8 +205,8 @@ public class RemoveNodePoolNodesRequest extends Request {
         /**
          * <p>Specifies whether to drain the nodes. Valid values:</p>
          * <ul>
-         * <li>true: drains the nodes.</li>
-         * <li>false: does not drain the nodes.</li>
+         * <li>true: Drain the nodes.</li>
+         * <li>false: Do not drain the nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,7 +219,19 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * <p>The list of instances to remove.</p>
+         * <p>The drain timeout period in seconds. Valid values: (0, 1800]. Default value: 1800. This parameter takes effect only when drain_node is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        public Builder drainTimeoutSeconds(Long drainTimeoutSeconds) {
+            this.putQueryParameter("drain_timeout_seconds", drainTimeoutSeconds);
+            this.drainTimeoutSeconds = drainTimeoutSeconds;
+            return this;
+        }
+
+        /**
+         * <p>The list of instances to be removed.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "instance_ids", "json");
@@ -216,7 +242,7 @@ public class RemoveNodePoolNodesRequest extends Request {
 
         /**
          * <p><strong>[Deprecated]</strong></p>
-         * <p>The list of nodes to remove.</p>
+         * <p>The list of nodes to be removed.</p>
          * <blockquote>
          * <p>Danger: This parameter is deprecated. Use <code>instance_ids</code> instead.</danger></p>
          * </blockquote>
@@ -231,10 +257,10 @@ public class RemoveNodePoolNodesRequest extends Request {
         /**
          * <p>Specifies whether automatic release the nodes. Valid values:</p>
          * <ul>
-         * <li>true: releases the nodes.</li>
-         * <li>false: does not release the nodes.</li>
+         * <li>true: Release the nodes.</li>
+         * <li>false: Do not release the nodes.</li>
          * </ul>
-         * <p>Subscription nodes are not automatically released when you remove them. Automatic release subscription nodes, <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change the billing method of the nodes from subscription to pay-as-you-go</a> and then release them in the ECS console.</p>
+         * <p>Removing nodes does not automatically release subscription nodes. Automatic release subscription nodes, <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change the billing method of the nodes from subscription to pay-as-you-go</a>, and then log on to the ECS console automatic release them.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

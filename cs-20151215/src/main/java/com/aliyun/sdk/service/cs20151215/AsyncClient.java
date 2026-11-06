@@ -76,9 +76,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ol>
-     * <li>You must have the permissions to manage Container Service for Kubernetes (CS). The required policy is AliyunCSFullAccess. </li>
-     * <li>You cannot clear the permissions of an Alibaba Cloud account.</li>
-     * <li>You cannot clear the permissions of the user who performs this operation.</li>
+     * <li>You must have the permissions to manage Container Service for Kubernetes (CS) (AliyunCSFullAccess). </li>
+     * <li>This operation does not support clearing the permissions of an Alibaba Cloud account.</li>
+     * <li>This operation does not support clearing the permissions of the current user.</li>
      * </ol>
      * </blockquote>
      * 
@@ -91,9 +91,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Requires the permissions to manage Container Service for Kubernetes (CS) (AliyunCSFullAccess).</li>
-     * <li>Clearing the permissions of Alibaba Cloud accounts is not supported.</li>
-     * <li>Clearing the permissions of the calling user is not supported.</li>
+     * <li>You must have the permissions to manage Container Service for Kubernetes (CS) (AliyunCSFullAccess).</li>
+     * <li>You cannot clear the permissions of an Alibaba Cloud account.</li>
+     * <li>You cannot clear your own permissions.</li>
      * </ul>
      * </blockquote>
      * 
@@ -122,13 +122,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3>Generate OpenAPI request parameters by using the console</h3>
-     * <p>When you call the CreateCluster operation to create a cluster, if the API call fails due to incorrect combinations of request parameters, you can use the console to generate the required request parameter combinations. Perform the following steps:</p>
+     * <p>When you call the CreateCluster API operation to create a cluster, if the API call fails due to an incorrect combination of request parameters, you can generate the required combination of request parameters for cluster creation by using the console. Proceed as follows:</p>
      * <ol>
-     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes (ACK) console</a> and choose <strong>Clusters</strong> in the left-side navigation pane.</li>
-     * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Template</strong>.</li>
-     * <li>In the dialog box, select the cluster type that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</li>
-     * <li>After the configuration is complete, on the <strong>Confirm Configuration</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the parameter combinations required for creating the cluster. You can copy and use them.<blockquote>
-     * <p>Notice: Starting from July 04, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameter descriptions, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI request and response parameters for ACK cluster management and OpenAPI offline</a>.</notice></p>
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
+     * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Templates</strong>.</li>
+     * <li>In the dialog box, select the type of cluster that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</li>
+     * <li>After the configuration is complete, on the <strong>Confirm</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the combination of parameters required for cluster creation. You can copy and use the parameters.<blockquote>
+     * <p>Notice: Starting July 4, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters of ACK cluster management-related OpenAPIs and OpenAPI deprecation</a>.</notice></p>
      * </blockquote>
      * </li>
      * </ol>
@@ -240,11 +240,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>When removing nodes, perform standard operations by calling this API operation or using the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by running the <code>kubectl delete node</code> command.</li>
-     * <li>Do not manually release nodes or remove instances in the ECS or Auto Scaling (ESS) console or by calling related API operations, or passively release nodes when a subscription instance expires. In these cases, the nodes are directly shut down and automatically removed from the Container Service console.</li>
-     * <li>If the expected number of nodes is configured for a node pool, the node pool automatically scales out other instances based on the corresponding configurations to maintain the expected number of nodes.</li>
-     * <li>Removing nodes involves pod migration and may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up your data in advance.</li>
-     * <li>When you remove nodes, ACK executes drain operations. Make sure that other nodes in the cluster have sufficient resources to avoid application pod scheduling failures.</li>
+     * <li>When removing nodes, perform standard operations by using this API operation or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by running the <code>kubectl delete node</code> command.</li>
+     * <li>Do not manually release nodes or remove instances in the ECS or Auto Scaling (ESS) console (or by calling related API operations), or passively release nodes when a subscription instance expires. In these cases, the nodes are directly stopped and automatically removed from the Container Service console.</li>
+     * <li>If the expected number of nodes is configured for a node pool, the node pool automatically scales out other instances based on the configuration to maintain the expected number of nodes.</li>
+     * <li>Removing nodes involves pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up your data in advance.</li>
+     * <li>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application pod scheduling failures.</li>
      * <li>Check the node affinity rules and scheduling policies of the pods on the nodes to be removed to ensure that the pods can be scheduled to other nodes after the nodes are removed.</li>
      * </ul>
      * 
@@ -776,7 +776,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To call this operation, you must have the permissions to manage Container Service (CS) (AliyunCSFullAccess).</p>
+     * <p>To call this operation, you must have the AliyunCSFullAccess permission to manage Container Service for Kubernetes (CS).</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListUserKubeConfigStates  ListUserKubeConfigStatesRequest
@@ -806,7 +806,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><notice>Starting from July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></p>
+     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to request and response parameters of ACK cluster management API operations and API operation deprecation</a>.</notice></p>
      * 
      * @param request the request parameters of ModifyCluster  ModifyClusterRequest
      * @return ModifyClusterResponse
@@ -906,11 +906,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Removing nodes involves pod migration and may affect your services. Perform this operation during off-peak hours.</li>
+     * <li>Removing nodes involves pod migration, which may affect your services. Perform this operation during off-peak hours.</li>
      * <li>Unexpected risks may occur during the operation. Back up your data in advance.</li>
-     * <li>During the operation, the system sets the nodes to the unschedulable state.</li>
+     * <li>During the operation, the system sets the current nodes to the unschedulable state.</li>
      * <li>Only worker nodes are removed. Master nodes are not removed.</li>
-     * <li>Even if you choose to release nodes (by setting <code>release_node</code> to <code>true</code>), subscription nodes are not released. To release subscription nodes, you must first <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change their billing method to pay-as-you-go</a> and then release them in the <a href="https://ecs.console.aliyun.com/">ECS console</a>.</li>
+     * <li>Even if you choose to release nodes (that is, set <code>release_node</code> to <code>true</code>), subscription nodes are not released. To release subscription nodes, you must remove them first and then release them in the <a href="https://ecs.console.aliyun.com/">ECS console</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of RemoveNodePoolNodes  RemoveNodePoolNodesRequest
@@ -1103,7 +1103,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can update the cluster authorization information of a target Resource Access Management (RAM) user or RAM role by using a full update or an incremental update. A full update overwrites the existing cluster permissions of the target RAM user or RAM role. The request must include all permission configurations that you want to grant to the target RAM user or RAM role. An incremental update includes add and delete operations. It only modifies the permissions based on the cluster authorization information included in the request and does not affect other cluster permissions of the RAM user or RAM role.</p>
+     * <p>You can update the cluster authorization information of a target Resource Access Management (RAM) user or RAM role by using full update or incremental update. A full update overwrites the existing cluster permissions of the target RAM user or RAM role. The request must include all permission configurations that you want to grant to the target RAM user or RAM role. An incremental update includes add and delete operations. It only modifies the permissions based on the cluster authorization information included in the request and does not affect other cluster permissions of the RAM user or RAM role.</p>
      * 
      * @param request the request parameters of UpdateUserPermissions  UpdateUserPermissionsRequest
      * @return UpdateUserPermissionsResponse

@@ -75,7 +75,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The KubeConfig status details of the user.</p>
+         * <p>The KubeConfig status details for the user.</p>
          */
         public Builder states(java.util.List<States> states) {
             this.states = states;
@@ -176,7 +176,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total number of results.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -285,7 +285,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration time of the KubeConfig certificate. The time is displayed in UTC and follows the RFC 3339 standard.</p>
+             * <p>The expiration time of the KubeConfig certificate. The time is in UTC and follows the RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2028-04-09T06:20:47Z</p>
@@ -302,7 +302,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
              * <li>Unexpired: The certificate has not expired.</li>
              * <li>Unissued: The certificate has not been issued.</li>
              * <li>Unknown: The status is unknown.</li>
-             * <li>Removed: The certificate has been removed (the certificate has an issuance record).</li>
+             * <li>Removed: The certificate has been removed, but an issuance record exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>

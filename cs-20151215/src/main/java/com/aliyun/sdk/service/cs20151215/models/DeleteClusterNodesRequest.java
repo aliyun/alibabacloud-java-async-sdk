@@ -27,6 +27,10 @@ public class DeleteClusterNodesRequest extends Request {
     private Boolean drainNode;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("drain_timeout_seconds")
+    private Long drainTimeoutSeconds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nodes")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> nodes;
@@ -39,6 +43,7 @@ public class DeleteClusterNodesRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.drainNode = builder.drainNode;
+        this.drainTimeoutSeconds = builder.drainTimeoutSeconds;
         this.nodes = builder.nodes;
         this.releaseNode = builder.releaseNode;
     }
@@ -71,6 +76,13 @@ public class DeleteClusterNodesRequest extends Request {
     }
 
     /**
+     * @return drainTimeoutSeconds
+     */
+    public Long getDrainTimeoutSeconds() {
+        return this.drainTimeoutSeconds;
+    }
+
+    /**
      * @return nodes
      */
     public java.util.List<String> getNodes() {
@@ -87,6 +99,7 @@ public class DeleteClusterNodesRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteClusterNodesRequest, Builder> {
         private String clusterId; 
         private Boolean drainNode; 
+        private Long drainTimeoutSeconds; 
         private java.util.List<String> nodes; 
         private Boolean releaseNode; 
 
@@ -98,6 +111,7 @@ public class DeleteClusterNodesRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.drainNode = request.drainNode;
+            this.drainTimeoutSeconds = request.drainTimeoutSeconds;
             this.nodes = request.nodes;
             this.releaseNode = request.releaseNode;
         } 
@@ -116,10 +130,10 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically drain the pods on the nodes. Valid values:</p>
+         * <p>Specifies whether to automatically drain pods from the nodes. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Automatically drains the pods on the nodes.</li>
-         * <li><code>false</code>: Does not automatically drain the pods on the nodes.</li>
+         * <li><code>true</code>: Automatically drains pods from the nodes.</li>
+         * <li><code>false</code>: Does not automatically drain pods from the nodes.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -129,6 +143,18 @@ public class DeleteClusterNodesRequest extends Request {
         public Builder drainNode(Boolean drainNode) {
             this.putBodyParameter("drain_node", drainNode);
             this.drainNode = drainNode;
+            return this;
+        }
+
+        /**
+         * <p>The drain timeout period in seconds. Valid values: (0, 1800]. If this parameter is not specified, the default value 1800 is used. This parameter takes effect only when drain_node is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        public Builder drainTimeoutSeconds(Long drainTimeoutSeconds) {
+            this.putBodyParameter("drain_timeout_seconds", drainTimeoutSeconds);
+            this.drainTimeoutSeconds = drainTimeoutSeconds;
             return this;
         }
 
@@ -143,14 +169,14 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to release the ECS instances at the same time. Valid values:</p>
+         * <p>Specifies whether to release the associated ECS instances. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Releases the ECS instances at the same time.</li>
-         * <li><code>false</code>: Retains the ECS instances.</li>
+         * <li><code>true</code>: Releases the associated ECS instances.</li>
+         * <li><code>false</code>: Retains the associated ECS instances.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * <blockquote>
-         * <p>If the nodes are subscription instances, you cannot release the ECS instances at the same time.</p>
+         * <p>When a node is a subscription instance, you cannot release the associated ECS instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
