@@ -119,7 +119,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result object.</p>
+         * <p>The response object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of results returned in the current request.</p>
+         * <p>The maximum number of data entries returned in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -138,7 +138,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that specifies the starting position for the query. An empty value indicates that the query starts from the beginning.</p>
+         * <p>The token that specifies the starting position for the current query. If this parameter is left empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -332,7 +332,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credit limit period.</p>
+             * <p>The limit period.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -590,7 +590,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dimension of the current credit.</p>
+             * <p>The period of the current credit.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -632,6 +632,9 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        private String instanceName;
+
         @com.aliyun.core.annotation.NameInMap("JvsPackageId")
         private String jvsPackageId;
 
@@ -651,6 +654,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.installedSkills = builder.installedSkills;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
             this.jvsPackageId = builder.jvsPackageId;
             this.modifyTime = builder.modifyTime;
             this.status = builder.status;
@@ -708,6 +712,13 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
          * @return jvsPackageId
          */
         public String getJvsPackageId() {
@@ -742,6 +753,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             private String expireTime; 
             private java.util.List<InstalledSkills> installedSkills; 
             private String instanceId; 
+            private String instanceName; 
             private String jvsPackageId; 
             private String modifyTime; 
             private String status; 
@@ -757,6 +769,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
                 this.expireTime = model.expireTime;
                 this.installedSkills = model.installedSkills;
                 this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
                 this.jvsPackageId = model.jvsPackageId;
                 this.modifyTime = model.modifyTime;
                 this.status = model.status;
@@ -772,7 +785,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
+             * <p>The creation time. The time is in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T01:31:32Z</p>
@@ -783,7 +796,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</p>
+             * <p>The credit limit configuration. Subsequent quota configurations overwrite previous ones.</p>
              */
             public Builder creditConfig(java.util.List<CreditConfig> creditConfig) {
                 this.creditConfig = creditConfig;
@@ -791,7 +804,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
+             * <p>The expiration time. The time is in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T01:31:32Z</p>
@@ -821,6 +834,17 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceName</p>
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
              * <p>This parameter is not supported.</p>
              * 
              * <strong>example:</strong>
@@ -832,7 +856,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
+             * <p>The modification time. The time is in UTC and follows the ISO 8601 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-10T01:31:32Z</p>

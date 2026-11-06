@@ -36,6 +36,10 @@ public class BackupFileRequest extends Request {
     private String backupFilePath;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomScripts")
+    private java.util.List<CustomScripts> customScripts;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -69,6 +73,7 @@ public class BackupFileRequest extends Request {
         this.backupAll = builder.backupAll;
         this.backupFileName = builder.backupFileName;
         this.backupFilePath = builder.backupFilePath;
+        this.customScripts = builder.customScripts;
         this.description = builder.description;
         this.excludeAppList = builder.excludeAppList;
         this.excludeSourceFilePathList = builder.excludeSourceFilePathList;
@@ -117,6 +122,13 @@ public class BackupFileRequest extends Request {
      */
     public String getBackupFilePath() {
         return this.backupFilePath;
+    }
+
+    /**
+     * @return customScripts
+     */
+    public java.util.List<CustomScripts> getCustomScripts() {
+        return this.customScripts;
     }
 
     /**
@@ -173,6 +185,7 @@ public class BackupFileRequest extends Request {
         private Boolean backupAll; 
         private String backupFileName; 
         private String backupFilePath; 
+        private java.util.List<CustomScripts> customScripts; 
         private String description; 
         private java.util.List<String> excludeAppList; 
         private java.util.List<String> excludeSourceFilePathList; 
@@ -191,6 +204,7 @@ public class BackupFileRequest extends Request {
             this.backupAll = request.backupAll;
             this.backupFileName = request.backupFileName;
             this.backupFilePath = request.backupFilePath;
+            this.customScripts = request.customScripts;
             this.description = request.description;
             this.excludeAppList = request.excludeAppList;
             this.excludeSourceFilePathList = request.excludeSourceFilePathList;
@@ -244,6 +258,15 @@ public class BackupFileRequest extends Request {
         public Builder backupFilePath(String backupFilePath) {
             this.putQueryParameter("BackupFilePath", backupFilePath);
             this.backupFilePath = backupFilePath;
+            return this;
+        }
+
+        /**
+         * CustomScripts.
+         */
+        public Builder customScripts(java.util.List<CustomScripts> customScripts) {
+            this.putQueryParameter("CustomScripts", customScripts);
+            this.customScripts = customScripts;
             return this;
         }
 
@@ -329,4 +352,142 @@ public class BackupFileRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BackupFileRequest} extends {@link TeaModel}
+     *
+     * <p>BackupFileRequest</p>
+     */
+    public static class CustomScripts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
+        private String ossBucket;
+
+        @com.aliyun.core.annotation.NameInMap("OssEndpoint")
+        private String ossEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("OssObjectKey")
+        private String ossObjectKey;
+
+        @com.aliyun.core.annotation.NameInMap("OssRegion")
+        private String ossRegion;
+
+        @com.aliyun.core.annotation.NameInMap("TestInstanceIds")
+        private java.util.List<String> testInstanceIds;
+
+        private CustomScripts(Builder builder) {
+            this.ossBucket = builder.ossBucket;
+            this.ossEndpoint = builder.ossEndpoint;
+            this.ossObjectKey = builder.ossObjectKey;
+            this.ossRegion = builder.ossRegion;
+            this.testInstanceIds = builder.testInstanceIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomScripts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ossBucket
+         */
+        public String getOssBucket() {
+            return this.ossBucket;
+        }
+
+        /**
+         * @return ossEndpoint
+         */
+        public String getOssEndpoint() {
+            return this.ossEndpoint;
+        }
+
+        /**
+         * @return ossObjectKey
+         */
+        public String getOssObjectKey() {
+            return this.ossObjectKey;
+        }
+
+        /**
+         * @return ossRegion
+         */
+        public String getOssRegion() {
+            return this.ossRegion;
+        }
+
+        /**
+         * @return testInstanceIds
+         */
+        public java.util.List<String> getTestInstanceIds() {
+            return this.testInstanceIds;
+        }
+
+        public static final class Builder {
+            private String ossBucket; 
+            private String ossEndpoint; 
+            private String ossObjectKey; 
+            private String ossRegion; 
+            private java.util.List<String> testInstanceIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomScripts model) {
+                this.ossBucket = model.ossBucket;
+                this.ossEndpoint = model.ossEndpoint;
+                this.ossObjectKey = model.ossObjectKey;
+                this.ossRegion = model.ossRegion;
+                this.testInstanceIds = model.testInstanceIds;
+            } 
+
+            /**
+             * OssBucket.
+             */
+            public Builder ossBucket(String ossBucket) {
+                this.ossBucket = ossBucket;
+                return this;
+            }
+
+            /**
+             * OssEndpoint.
+             */
+            public Builder ossEndpoint(String ossEndpoint) {
+                this.ossEndpoint = ossEndpoint;
+                return this;
+            }
+
+            /**
+             * OssObjectKey.
+             */
+            public Builder ossObjectKey(String ossObjectKey) {
+                this.ossObjectKey = ossObjectKey;
+                return this;
+            }
+
+            /**
+             * OssRegion.
+             */
+            public Builder ossRegion(String ossRegion) {
+                this.ossRegion = ossRegion;
+                return this;
+            }
+
+            /**
+             * TestInstanceIds.
+             */
+            public Builder testInstanceIds(java.util.List<String> testInstanceIds) {
+                this.testInstanceIds = testInstanceIds;
+                return this;
+            }
+
+            public CustomScripts build() {
+                return new CustomScripts(this);
+            } 
+
+        } 
+
+    }
 }
