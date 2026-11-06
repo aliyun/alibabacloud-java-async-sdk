@@ -106,7 +106,7 @@ public class DeleteAppResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. Returned when the request fails. A successful response may not contain this field.</p>
+         * <p>The error code. This field is returned when the request fails. A successful response may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -117,7 +117,7 @@ public class DeleteAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. A value of true indicates that the operation is successful.</p>
+         * <p>Indicates whether the operation was successful. A value of true indicates that the operation was successful.</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -136,7 +136,7 @@ public class DeleteAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. You can provide this value when you troubleshoot issues.</p>
+         * <p>The unique identifier of the request. You can provide this value for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>01A1A962-5503-107B-AC8F-EBA85DF905AC</p>
@@ -147,7 +147,7 @@ public class DeleteAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. A value of true indicates that the request is successful. For asynchronous tasks, you must query the task status separately to check whether the task is completed.</p>
+         * <p>Indicates whether the request was successful. A value of true indicates that the request was successful. To check whether an asynchronous task is completed, you must query the task status separately.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

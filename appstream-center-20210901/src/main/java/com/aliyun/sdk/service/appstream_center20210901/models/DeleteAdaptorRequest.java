@@ -138,7 +138,7 @@ public class DeleteAdaptorRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application adapter to process. <strong>Required</strong>. It must correspond to the same application adapter as AppId and AppVersionId.</p>
+         * <p>The ID of the application adaptation to be processed. <strong>Required</strong>. It must point to the same application adaptation as AppId and AppVersionId.</p>
          * 
          * <strong>example:</strong>
          * <p>adt-bp1example****</p>
@@ -150,7 +150,7 @@ public class DeleteAdaptorRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application. <strong>Required</strong>. It must correspond to the same application as AdaptorId.</p>
+         * <p>The ID of the application. <strong>Required</strong>. It must match the application corresponding to AdaptorId.</p>
          * 
          * <strong>example:</strong>
          * <p>app-bp1example****</p>
@@ -162,7 +162,7 @@ public class DeleteAdaptorRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application version. <strong>Required</strong>. It must correspond to the same application version as AdaptorId. This parameter is not the image version ID.</p>
+         * <p>The ID of the application version. <strong>Required</strong>. It must match the application version corresponding to AdaptorId. This parameter is not the image version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>apv-bp1example****</p>
@@ -174,7 +174,7 @@ public class DeleteAdaptorRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image to dissociate. <strong>Must be provided together with VersionId</strong>. If both parameters are not specified at the same time, the adapter deletion process is initiated.</p>
+         * <p>The ID of the image to be dissociated. <strong>Must be provided together with VersionId</strong>. If both parameters are not specified at the same time, the adaptation deletion process starts.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-bp1example****</p>
@@ -186,7 +186,7 @@ public class DeleteAdaptorRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image version to dissociate. It must be provided together with ImageId and belong to the specified image.</p>
+         * <p>The ID of the image version to be dissociated. It must be provided together with ImageId and belong to the specified image.</p>
          * 
          * <strong>example:</strong>
          * <p>iv-bp1example****</p>

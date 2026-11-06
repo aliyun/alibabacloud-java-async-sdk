@@ -152,7 +152,7 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * <p>The associated resource ID. <strong>If you do not specify TaskId, you must specify EntityId, EntityType, and TaskCategory at the same time.</strong> The resource ID must match the selected resource type.</p>
+         * <p>The associated resource ID. <strong>If you do not specify the TaskId parameter, you must specify the EntityId, EntityType, and TaskCategory parameters at the same time.</strong> The resource ID must match the selected resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-bp1example****</p>
@@ -164,14 +164,14 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * <p>The associated resource type. This parameter is required if you do not specify TaskId.</p>
+         * <p>The associated resource type. This parameter is required if you do not specify the TaskId parameter.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>IMAGE</strong>: Image resource.</li>
-         * <li><strong>APP</strong>: Application resource.</li>
-         * <li><strong>SNAPSHOT</strong>: Snapshot resource.</li>
+         * <li><strong>IMAGE</strong>: image resource.</li>
+         * <li><strong>APP</strong>: application resource.</li>
+         * <li><strong>SNAPSHOT</strong>: snapshot resource.</li>
          * </ul>
-         * <p>You must also specify a valid TaskCategory. The resource type itself does not mean that all task categories can be queried by resource.</p>
+         * <p>You must also select an applicable TaskCategory. The resource type itself does not mean that all task categories can be queried by resource.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -195,11 +195,11 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * <p>The task category when you query by resource. This parameter is required if you do not specify TaskId.</p>
+         * <p>The task category when you query by resource. This parameter is required if you do not specify the TaskId parameter.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>IMAGE_BUILDER</strong>: Image creation. Queries tasks for manual creation, automatic creation, or creation based on an instance.</li>
-         * <li><strong>IMAGE_DISTRIBUTE</strong>: Image distribution across regions.</li>
+         * <li><strong>IMAGE_BUILDER</strong>: image creation. Queries tasks for manual creation, automatic creation, or creation based on an instance.</li>
+         * <li><strong>IMAGE_DISTRIBUTE</strong>: image distribution across regions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * <p>The task ID. If you specify this parameter, the system queries the task by this ID, and the resource information query conditions are ignored.</p>
+         * <p>The task ID. If you specify this parameter, the system queries the task by this ID first, and the resource information query conditions are no longer used for locating the task.</p>
          * 
          * <strong>example:</strong>
          * <p>tid-bp1example****</p>
@@ -224,8 +224,8 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * <p><strong>Not enabled. Do not specify this parameter.</strong> When you query a task, locate the task by using TaskId or the combination of resource information and TaskCategory. This parameter is not used for task filtering.</p>
-         * <p>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status and is not a valid parameter value.</p>
+         * <p><strong>Not enabled. Do not specify this parameter.</strong> When you query a task, locate the task by using the TaskId parameter or the resource information and TaskCategory parameter. This parameter is not used for task filtering.</p>
+         * <p>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status, not a valid parameter value.</p>
          * 
          * <strong>example:</strong>
          * <p>Not applicable (not enabled)</p>

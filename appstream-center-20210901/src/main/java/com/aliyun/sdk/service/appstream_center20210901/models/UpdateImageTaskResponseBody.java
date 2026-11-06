@@ -106,7 +106,7 @@ public class UpdateImageTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is returned when the request fails. A successful response may not contain this parameter.</p>
+         * <p>The error code. Returned when the request fails. A successful response may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -125,7 +125,7 @@ public class UpdateImageTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error or result message. This parameter describes the cause when the request fails. A successful response may not contain this parameter.</p>
+         * <p>The error or result message. Used to describe the cause when the request fails. A successful response may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal error.</p>

@@ -85,8 +85,8 @@ public class ListTaskStepRequest extends Request {
         /**
          * <p>The task type to which the step belongs. Valid values:</p>
          * <ul>
-         * <li><strong>ADAPTOR</strong>: application adaptation steps</li>
-         * <li><strong>IMAGE</strong>: image creation steps</li>
+         * <li><strong>ADAPTOR</strong>: Application adaptation steps.</li>
+         * <li><strong>IMAGE</strong>: Image creation steps.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

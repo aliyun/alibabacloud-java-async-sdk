@@ -114,7 +114,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number used in the current query. This corresponds to the request parameter and the total number of entries.</p>
+         * <p>The page number used in this query, which corresponds to the request parameters and the total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page used in the current query.</p>
+         * <p>The number of entries per page used in this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. You can use this ID to troubleshoot request issues.</p>
+         * <p>The unique identifier of the request, which can be used to troubleshoot request issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -147,7 +147,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instance types that meet all filtering conditions. This is not the number of entries on the current page.</p>
+         * <p>The total number of instance types that meet all filtering conditions, not the number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +216,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The available quantity in the zone obtained in the current query. Unit: instances. This value is an inventory snapshot and does not indicate that resources have been reserved for the current account.</p>
+             * <p>The available quantity in the zone obtained in this query. Unit: instances. This value is an inventory snapshot and does not indicate that resources have been reserved for the current account.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -227,7 +227,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListZones">ListZones</a> to query the zone ID.</p>
+             * <p>The zone ID, which can be queried by calling the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListZones">ListZones</a> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>
@@ -323,8 +323,8 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             /**
              * <p>The instance type inventory status obtained in the current query.</p>
              * <ul>
-             * <li>Available: The total inventory of the queried zones is greater than 0.</li>
-             * <li>SoldOut: The total inventory of the queried zones is not greater than 0.</li>
+             * <li><code>Available</code>: The total inventory of the queried zones is greater than 0.</li>
+             * <li><code>SoldOut</code>: The total inventory of the queried zones is not greater than 0.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -546,7 +546,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The session instance type code. This can be used as the session instance type parameter for subsequent operations.</p>
+             * <p>The session instance type code, which can be used as the session instance type parameter for subsequent operations.</p>
              * 
              * <strong>example:</strong>
              * <p>appstreaming.vgpu.4c8g</p>
@@ -568,7 +568,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores included in the instance type. This is represented by a numeric string. Unit: cores.</p>
+             * <p>The number of CPU cores included in the instance type, represented by a numeric string. Unit: cores.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -590,7 +590,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is not enabled. The example value is only used to demonstrate the format and does not represent the actual number of GPUs returned by this operation.</p>
+             * <p>Not enabled yet. The example value is only used to demonstrate the format and does not represent the actual number of GPUs returned by this operation.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -623,7 +623,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the instance type record. When you connect to the price inquiry or creation operation, use AppInstanceType. Do not use this field to replace the instance type code.</p>
+             * <p>The identifier of the instance type record. When integrating with pricing or creation operations, use <code>AppInstanceType</code>. Do not use this field to replace the instance type code.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -634,7 +634,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the instance type. The Chinese name is used only when Language is set to zh-CN. Otherwise, the instance type code is used.</p>
+             * <p>The display name of the instance type. The Chinese name is used only when <code>Language</code> is set to <code>zh-CN</code>. For other values or when omitted, the instance type code is used.</p>
              * 
              * <strong>example:</strong>
              * <p>appstreaming.vgpu.4c8g</p>
@@ -645,7 +645,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inventory information of the instance type. This is returned only when the inventory is queried and the relevant information is obtained. If this field is not returned, it does not mean that the inventory is 0.</p>
+             * <p>The inventory information of the instance type. This parameter is returned only when the inventory is queried and the relevant information is obtained. If this parameter is not returned, it does not mean that the inventory is 0.</p>
              */
             public Builder inventoryInfo(InventoryInfo inventoryInfo) {
                 this.inventoryInfo = inventoryInfo;
@@ -666,7 +666,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             /**
              * <p>The type of the product to which the instance type belongs. The current document displays the following values:</p>
              * <ul>
-             * <li>CloudApp: Wuying Cloud App.</li>
+             * <li><code>CloudApp</code>: Wuying Cloud Application.</li>
              * </ul>
              * 
              * <strong>example:</strong>

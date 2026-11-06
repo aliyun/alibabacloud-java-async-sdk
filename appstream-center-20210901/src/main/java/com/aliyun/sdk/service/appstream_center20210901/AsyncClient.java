@@ -85,7 +85,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the parent image is available and that an available image distribution record exists in the region where the image is to be created.</p>
+     * <p>Before you call this operation, make sure that the parent image is available and an available image distribution record exists in the region where the image is created.</p>
      * <ol>
      * <li>Call ListImage to obtain the parent image ID.</li>
      * <li>Specify the creation mode, disk capacity, and resource type, and then call this operation.</li>
@@ -132,7 +132,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
-     * Call ListImage first to select an image. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</p>
+     * Call ListImage to select an image first. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</p>
      * 
      * @param request the request parameters of CreateAndBindApp  CreateAndBindAppRequest
      * @return CreateAndBindAppResponse
@@ -176,6 +176,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateBrowserInstanceGroupResponse
      */
     CompletableFuture<CreateBrowserInstanceGroupResponse> createBrowserInstanceGroup(CreateBrowserInstanceGroupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
+     * After the task is created, save the TaskId and call DescribeExportTasks to query the task status and progress. A polling interval of 5 to 10 seconds is recommended. When the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. When the status is FAILED, check the ErrorMsg and stop polling.
+     * The task is valid for 24 hours after creation. The download URL has an independent signature validity period of up to 1 hour, which does not exceed the remaining validity period of the task. Query the latest URL before downloading. You cannot obtain a valid download URL after the task expires.
+     * Exporting the WUYING server list only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server, and a single task can export up to 100,000 records. Exporting cloud browser bookmarks and the URL whitelist exports the complete list of the target delivery group, regardless of list search terms or the current page. The system verifies the delivery group ownership and product type before execution. Data is paginated during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, querying, or file generation will succeed.</p>
+     * 
+     * @param request the request parameters of CreateExportTask  CreateExportTaskRequest
+     * @return CreateExportTaskResponse
+     */
+    CompletableFuture<CreateExportTaskResponse> createExportTask(CreateExportTaskRequest request);
 
     /**
      * @param request the request parameters of CreateImageByInstance  CreateImageByInstanceRequest
@@ -224,11 +236,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>Confirm the deletion scope.</em>*</p>
+     * <p><em>Confirm the deletion scope first.</em>*</p>
      * <ul>
-     * <li>If both ImageId and VersionId are specified: The adapter is only dissociated from the specified image version.</li>
-     * <li>If ImageId and VersionId are not both specified: The adapter deletion process is initiated. An adapter cannot be deleted if it is still referenced by multiple images. If the application has other adapters, the application cannot be deleted along with the adapter.
-     * <strong>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adapter.</strong> Verify these identifiers by checking the application and image query results first.</li>
+     * <li>If both ImageId and VersionId are specified: only the association between the adaptation and the specified image version is dissociated.</li>
+     * <li>If ImageId and VersionId are not both specified: the adaptation deletion process starts. The adaptation cannot be deleted if it is still referenced by multiple images. If the application still has other adaptations, the application cannot be deleted along with it.
+     * <strong>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adaptation.</strong> Verify these identifiers by querying the application and image first.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteAdaptor  DeleteAdaptorRequest
@@ -241,7 +253,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p><em>You must dissociate all image associations from the target application or version before deletion.</em>*</p>
      * <ol>
      * <li>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</li>
-     * <li>Use UnbindApp or DeleteAdaptor to dissociate related image associations.</li>
+     * <li>Use UnbindApp or DeleteAdaptor to dissociate the related image associations.</li>
      * <li>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
      * After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</li>
      * </ol>
@@ -339,6 +351,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEventsResponse> describeEvents(DescribeEventsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calls this operation to use paging to query the export tasks under the current Alibaba Cloud account to obtain the task status, execution progress, export file names, and download URLs. Export tasks are created by calling CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
+     * The query results are returned in descending order of task creation time, with the most recently created tasks listed first. Only tasks in the INIT, RUNNING, FINISHED, and FAILED states are returned. Tasks marked as EXPIRED are not included in the results.
+     * When polling a single task by TaskId, set PageNumber to 1 and PageSize to 1, set the polling interval to 5 to 10 seconds, and stop polling after the task enters the FINISHED or FAILED state.
+     * A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, a FINISHED task may still be queried, but its DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
+     * If the query result is an empty array, it may be because there are no visible tasks under the current account, the task type does not match, the page number is out of bounds, or the tasks have expired. This operation always returns an array structure and does not return an error when the query result is empty.
+     * DownloadUrl is an OSS pre-signed URL. The default maximum validity period is 1 hour and does not exceed the remaining validity period of the task. The server automatically refreshes the URL when it is about to expire. Use the URL returned by the most recent query for downloading and do not cache the initially returned URL for a long time.</p>
+     * 
+     * @param request the request parameters of DescribeExportTasks  DescribeExportTasksRequest
+     * @return DescribeExportTasksResponse
+     */
+    CompletableFuture<DescribeExportTasksResponse> describeExportTasks(DescribeExportTasksRequest request);
+
+    /**
      * @param request the request parameters of DescribeWuyingServer  DescribeWuyingServerRequest
      * @return DescribeWuyingServerResponse
      */
@@ -351,6 +377,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeWuyingServerEipInfoResponse> describeWuyingServerEipInfo(DescribeWuyingServerEipInfoRequest request);
 
     /**
+     * @param request the request parameters of GetAgentRuntimeStatistic  GetAgentRuntimeStatisticRequest
+     * @return GetAgentRuntimeStatisticResponse
+     */
+    CompletableFuture<GetAgentRuntimeStatisticResponse> getAgentRuntimeStatistic(GetAgentRuntimeStatisticRequest request);
+
+    /**
      * @param request the request parameters of GetAppInstanceGroup  GetAppInstanceGroupRequest
      * @return GetAppInstanceGroupResponse
      */
@@ -358,10 +390,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, you must create a task, and the building or validation resources corresponding to the task must be available.</p>
+     * <p>Before calling this operation, you must create a task, and the creation or validation resources corresponding to the task must be available.</p>
      * <ol>
-     * <li>Obtain TaskId and the actual TaskType from the response of the task creation operation or GetTask.</li>
-     * <li>Specify ResourceType to obtain the connection information for the building or validation environment.</li>
+     * <li>Obtain the TaskId and actual TaskType from the response of the task creation operation or GetTask.</li>
+     * <li>Specify ResourceType to obtain the connection information for the creation or validation environment.</li>
      * <li>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
      * The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</li>
      * </ol>
@@ -450,26 +482,32 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetOtaTaskByTaskIdResponse> getOtaTaskByTaskId(GetOtaTaskByTaskIdRequest request);
 
     /**
+     * @param request the request parameters of GetResourceGroupAgentModelSettings  GetResourceGroupAgentModelSettingsRequest
+     * @return GetResourceGroupAgentModelSettingsResponse
+     */
+    CompletableFuture<GetResourceGroupAgentModelSettingsResponse> getResourceGroupAgentModelSettings(GetResourceGroupAgentModelSettingsRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>This operation queries the resource scale-out pricing for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
-     * <strong>Before you call this operation, verify the following conditions:</strong></p>
+     * <p>This operation queries the resource scale-out price of an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+     * <strong>Verify the following conditions before you call this operation:</strong></p>
      * <ul>
      * <li>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</li>
-     * <li>The product type is Wuying Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</li>
+     * <li>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and billed by node. Pay-as-you-go or browser groups billed by monthly active user (MAU) are not supported.</li>
      * <li>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</li>
-     * <li>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the corresponding region, product, and billing method under the account.
+     * <li>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the account in the corresponding region, product, and billing method.
      * <strong>Parameter relationships:</strong></li>
-     * <li>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified together.</li>
+     * <li>ProductType, AppInstanceGroupId, and Amount are all required and must be specified together.</li>
      * <li>ProductType must match the product corresponding to AppInstanceGroupId.</li>
-     * <li><strong>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</strong> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
-     * <strong>Call sequence:</strong></li>
+     * <li><strong>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</strong> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be specified.
+     * <strong>Procedure:</strong></li>
      * </ul>
      * <ol>
-     * <li>First, confirm the target delivery group and the current number of purchased nodes. For Cloud App Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</li>
-     * <li>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the pricing, coupons, and pricing calculation rules.</li>
-     * <li>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <strong>A successful pricing query does not mean that an order has been created or the scale-out has been completed.</strong>
+     * <li>Confirm the target delivery group and the current number of purchased nodes. For common scenarios of cloud apps, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and <code>NodePool.NodeAmount</code>.</li>
+     * <li>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and pricing rules.</li>
+     * <li>After confirming the quote, if you want to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and specify the target total number in <code>NodePool.NodeAmount</code> as required by the operation. <strong>A successful price inquiry does not mean that an order is created or the scale-out is completed.</strong>
      * <strong>Example scenario:</strong>
-     * If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The pricing examples only illustrate the relationship among the original price, discount amount, and discounted price, and do not represent the fixed selling price of the specifications.</li>
+     * If a cloud app delivery group currently has 1 purchased subscription node and you want to scale out to 2 nodes, specify ProductType=CloudApp, the AppInstanceGroupId of the delivery group, and Amount=2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The price examples only illustrate the relationship among the original price, discount amount, and final price, and do not represent the fixed selling price of the specifications.</li>
      * </ol>
      * 
      * @param request the request parameters of GetResourceModifyPrice  GetResourceModifyPriceRequest
@@ -488,17 +526,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
      * <strong>Parameter relationships:</strong></p>
      * <ul>
-     * <li><code>ResourceType</code> and <code>ProductType</code> are required.</li>
-     * <li><code>BizRegionId</code> and <code>ChargeType</code> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</li>
+     * <li>ResourceType and ProductType are required.</li>
+     * <li>BizRegionId and ChargeType are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</li>
      * <li>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</li>
      * <li>If multiple quotas apply at the same time, the larger limit is returned.
      * <strong>Call sequence:</strong></li>
      * </ul>
      * <ol>
-     * <li>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</li>
-     * <li>Invoke this operation to read <code>Data</code>. Query <code>AppInstanceGroup</code> before creating a delivery group, query <code>AppAuthUser</code> before adding an authorized user, and query <code>PoolNodeAmount</code> before purchasing or scaling out nodes.</li>
-     * <li>Query the current usage in combination with the resources, and then verify the current operation by using subsequent creation, authorization, or scale-out operations. <strong>This query does not reserve quotas or guarantee the success of subsequent purchases.</strong>
-     * <code>Data=2147483647</code> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</li>
+     * <li>Select the resource type, product, business region, and billing method for the payer based on subsequent business needs.</li>
+     * <li>Invoke this operation to read <code>Data</code>. Query <code>AppInstanceGroup</code> before creating a delivery group, query <code>AppAuthUser</code> before authorizing an authorized user, and query <code>PoolNodeAmount</code> before purchasing or scaling out nodes.</li>
+     * <li>Query the current usage in combination with the resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <strong>This query does not reserve quotas or guarantee the success of subsequent purchases.</strong>
+     * Data=2147483647 indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</li>
      * </ol>
      * 
      * @param request the request parameters of GetResourceQuota  GetResourceQuotaRequest
@@ -535,9 +573,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Supports two query methods:</p>
      * <ul>
-     * <li><strong>Query by task ID</strong>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</li>
-     * <li><strong>Query by resource</strong>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters. You can use the EntityVersionId parameter to specify the resource version.
-     * The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not indicate the success of the entire task. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</li>
+     * <li><strong>By task ID</strong>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</li>
+     * <li><strong>By resource</strong>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters at the same time. You can use the EntityVersionId parameter to specify the resource version.
+     * The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not mean the entire task is successful. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</li>
      * </ul>
      * 
      * @param request the request parameters of GetTask  GetTaskRequest
@@ -547,8 +585,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When multiple filter conditions are specified simultaneously, they take effect together. AppName supports partial match. When a single-value filter and the corresponding list filter are specified simultaneously, the intersection is used. To avoid empty results, select only one of the formats.
-     * If PageSize is omitted, the value is 10. Query pages sequentially starting from PageNumber 1 until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</p>
+     * <p>When multiple filter conditions are specified at the same time, they take effect together. AppName supports contains matching. When a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of the forms.
+     * If PageSize is omitted, the value is 10. Start from 1 for PageNumber and query page by page until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</p>
      * 
      * @param request the request parameters of ListApp  ListAppRequest
      * @return ListAppResponse
@@ -563,20 +601,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types of the account and the business region. An empty result does not indicate a request failure.
+     * <p>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types for the account and the business region. An empty result does not indicate a request failure.
      * <strong>Filtering and pagination:</strong></p>
      * <ul>
-     * <li>ProductType is required. Explicitly specify BizRegionId, PageNumber, and PageSize.</li>
-     * <li>If BizRegionId is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</li>
-     * <li>AppInstanceType and AppInstanceTypeList can be specified at the same time. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</li>
-     * <li>Instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</li>
-     * <li>PageNumber starts from 1. Use TotalCount, PageSize, and PageNumber to continue pagination until all matching results are read.
+     * <li><code>ProductType</code> is required. Explicitly specify <code>BizRegionId</code>, <code>PageNumber</code>, and <code>PageSize</code>.</li>
+     * <li>If <code>BizRegionId</code> is not provided, the region of the current request is used. You can call the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> operation to obtain the business region.</li>
+     * <li>You can specify both <code>AppInstanceType</code> and <code>AppInstanceTypeList</code>. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</li>
+     * <li>The instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</li>
+     * <li>Pass <code>PageNumber</code> starting from 1. Use <code>TotalCount</code>, <code>PageSize</code>, and <code>PageNumber</code> to continue pagination until all matching results are read.
      * <strong>Inventory and subsequent calls:</strong></li>
-     * <li>Inventory is queried only when QueryInventory is set to true. If inventory information is not obtained, do not assume that the inventory is 0.</li>
+     * <li>Inventory is queried only when <code>QueryInventory</code> is set to <code>true</code>. If inventory information is not obtained, do not assume that the inventory is 0.</li>
      * <li>The inventory reflects the current query result and does not indicate a successful reservation.</li>
-     * <li>After obtaining the AppInstanceType, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</li>
-     * <li>The current query does not use AppCenterImageId to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
-     * Field examples are used to demonstrate how to specify parameters and do not guarantee that the example instance types exist in the selected region or account. The GPU count field does not currently provide values. Use the GPU memory field to understand the instance type.</li>
+     * <li>After obtaining the <code>AppInstanceType</code>, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</li>
+     * <li>The current query does not use <code>AppCenterImageId</code> to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
+     * Field examples are used to demonstrate how to fill in the fields and do not guarantee that the example instance types exist in the selected region or account. The GPU count field currently does not provide a value. Use the GPU memory field to understand the instance type.</li>
      * </ul>
      * 
      * @param request the request parameters of ListAppInstanceType  ListAppInstanceTypeRequest
@@ -786,6 +824,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListModelProviderEndpointsResponse> listModelProviderEndpoints(ListModelProviderEndpointsRequest request);
 
     /**
+     * @param request the request parameters of ListModelProviderLlmCodes  ListModelProviderLlmCodesRequest
+     * @return ListModelProviderLlmCodesResponse
+     */
+    CompletableFuture<ListModelProviderLlmCodesResponse> listModelProviderLlmCodes(ListModelProviderLlmCodesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
      * Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</p>
@@ -894,7 +938,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The returned results are affected by the available region configurations of the account and the product type. If ProductType is omitted, the query defaults to CloudApp.
+     * <p>The returned results are affected by the available region configurations of the account and the product type. If ProductType is omitted, the query is performed based on CloudApp.
      * This operation returns the regions available for image services. You cannot use this information to determine whether a specific image has been distributed to these regions. Before you create or distribute an image based on a parent image, you must also check the region information of the destination image.</p>
      * 
      * @param request the request parameters of ListRegionId  ListRegionIdRequest
@@ -960,7 +1004,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
-     * This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not treat the step index as a completion percentage.</p>
+     * This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not use the step index as the completion percentage.</p>
      * 
      * @param request the request parameters of ListTaskStep  ListTaskStepRequest
      * @return ListTaskStepResponse
@@ -1035,20 +1079,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <strong>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</strong>
-     * <strong>Before you begin:</strong></p>
+     * <strong>Prerequisites:</strong></p>
      * <ul>
-     * <li>The resources belong to the current account, and the product and business region match those in the request. Only one delivery group can be specified per request.</li>
-     * <li>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</li>
-     * <li>Delivery groups that have been added to a valid collection cannot be converted to a different billing method individually.</li>
-     * <li>Multiple delivery groups created in the same batch of orders cannot be converted to different Billable methods separately.
+     * <li>The resources belong to the current account, and the product and business region match the request. Only one delivery group can be specified per request.</li>
+     * <li>The target billing method must be different from the current billing method, and the target resource specifications must support the corresponding sales and Billable methods.</li>
+     * <li>Delivery groups that have been added to a valid collection cannot have their Billable methods converted individually.</li>
+     * <li>Multiple delivery groups created in the same batch of orders cannot have their Billable methods converted separately.
      * <strong>Parameter relationships and call sequence:</strong></li>
      * </ul>
      * <ol>
-     * <li>Query the resource details first to confirm the product, business region, and current <code>ChargeType</code>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</li>
-     * <li>Explicitly specify the target <code>ChargeType</code>. If you need to purchase a subscription, specify the purchase duration by combining <code>Period</code> and <code>PeriodUnit</code>. The period combination must comply with the sales rules currently supported by the resource.</li>
-     * <li>Set <code>AutoPay</code> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <code>AutoRenew</code>.</li>
-     * <li>After the call, save the returned <code>AppInstanceGroupModel.TaskId</code>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
-     * This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</li>
+     * <li>Query the resource details first to confirm the product, business region, and current ChargeType. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</li>
+     * <li>Explicitly specify the target ChargeType. If you need to purchase a subscription, specify the purchase duration by combining Period and PeriodUnit. The period combination must comply with the sales rules currently supported by the resource.</li>
+     * <li>Set AutoPay based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set AutoRenew.</li>
+     * <li>After the call, save the returned AppInstanceGroupModel.TaskId. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+     * This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for real task IDs.</li>
      * </ol>
      * 
      * @param request the request parameters of ModifyAppInstanceGroupChargeType  ModifyAppInstanceGroupChargeTypeRequest
@@ -1336,7 +1380,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only custom images and community images that the current account can manage. If you omit VersionId, the current effective version is used. If you specify VersionId, it must belong to the image specified by ImageId. Verify the associations between the applications and the version by querying the image before you submit AppIdList. <strong>Dissociating applications does not directly delete the application records.</strong> To delete an application, call DeleteApp.</p>
+     * <p>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId. Verify the association between the applications and the version through the image query results before submitting AppIdList. <strong>Dissociating applications does not directly delete application records.</strong> To delete applications, call DeleteApp separately.</p>
      * 
      * @param request the request parameters of UnbindApp  UnbindAppRequest
      * @return UnbindAppResponse
@@ -1409,8 +1453,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can only modify images that are owned by the current account and allow modifications. Modifying images shared with the current account is not supported.
-     * You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adaptation relationships of the selected version based on the complete list. Make sure to include the adaptations that you still want to retain.</p>
+     * <p>You can only modify images that are owned by the current account and allow modifications. Images shared with the current account cannot be modified.
+     * You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations for the selected version based on the complete list. Make sure to include the adapters that you still want to retain.</p>
      * 
      * @param request the request parameters of UpdateImage  UpdateImageRequest
      * @return UpdateImageResponse
@@ -1419,7 +1463,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. TaskType must match the actual type of the task. <strong>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</strong> A successful request only indicates that this status update call is completed. To query the final status of the task, call GetTask.</p>
+     * <p>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task.
+     * <strong>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</strong> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</p>
      * 
      * @param request the request parameters of UpdateImageTask  UpdateImageTaskRequest
      * @return UpdateImageTaskResponse

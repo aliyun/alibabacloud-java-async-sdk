@@ -112,7 +112,7 @@ public class UnbindAppRequest extends Request {
         }
 
         /**
-         * <p>The list of application IDs to dissociate from the specified image version. Verify that each application is associated with the selected image version.</p>
+         * <p>The list of application IDs to dissociate from the specified image version. Verify that each application is associated with the selected image version beforehand.</p>
          * <p>This parameter is required.</p>
          */
         public Builder appIdList(java.util.List<String> appIdList) {
@@ -122,7 +122,7 @@ public class UnbindAppRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image from which to dissociate the applications. The image must be a custom image or a community image that the current account can manage.</p>
+         * <p>The ID of the image from which the applications are to be dissociated. The image must be a custom image or community image manageable by the current account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class UnbindAppRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image version from which to dissociate the applications. If you omit this parameter, the current effective version of the image is used. If you specify this parameter, it must belong to the image specified by ImageId.</p>
+         * <p>The ID of the image version from which the applications are to be dissociated. If omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.</p>
          * 
          * <strong>example:</strong>
          * <p>iv-bp1example****</p>

@@ -96,7 +96,7 @@ public class DeleteAppRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application to be deleted. <strong>This parameter is required</strong>, and the application must belong to the current account. You must dissociate image references from the target application or version before deletion.</p>
+         * <p>The ID of the application to be deleted. <strong>This parameter is required</strong>, and the application must belong to the current account. You must dissociate the image references from the target application or version before deletion.</p>
          * 
          * <strong>example:</strong>
          * <p>app-bp1example****</p>
@@ -108,7 +108,7 @@ public class DeleteAppRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application version to be deleted. If specified, only the adapters corresponding to this application version are deleted. If omitted, the entire application and its adapters are deleted. If the application has no other adapters after the version is deleted, the application record is also deleted.</p>
+         * <p>The ID of the application version to be deleted. If specified, only the adapter corresponding to this application version is deleted. If omitted, the entire application and its adapters are deleted. If the application has no other adapters after the version is deleted, the application record is also deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>apv-bp1example****</p>

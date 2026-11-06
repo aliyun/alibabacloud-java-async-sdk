@@ -106,7 +106,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This field is returned when the request fails. A successful response may not contain this field.</p>
+         * <p>The error code. It is returned when the request fails. A success response may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -125,7 +125,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error or result message. This field describes the cause when the request fails. A successful response may not contain this field.</p>
+         * <p>The error or result message. It describes the cause when the request fails. A success response may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal error.</p>
@@ -292,7 +292,6 @@ public class GetAuthCodeResponseBody extends TeaModel {
 
             /**
              * <p>The network access type supported by the connection resource.</p>
-             * <p>Valid values:</p>
              * <ul>
              * <li><strong>INTERNET</strong>: Supports Internet access.</li>
              * <li><strong>VPC</strong>: Supports virtual private cloud (VPC) access.</li>
@@ -319,7 +318,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery group ID of the building or validation resource. This ID is used together with the user and application information in the current response during connection.</p>
+             * <p>The delivery group ID of the creation or validation resource. It is used together with the user and application information in this response during connection.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-bp1example****</p>
@@ -341,8 +340,8 @@ public class GetAuthCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization code used to connect to the current building or validation resource. <strong>The validity period is 180 seconds (3 minutes) from the time of issuance. Use it promptly after obtaining it.</strong> Use this code together with the user, delivery group, and application information in the same response, and keep it confidential as a connection credential.</p>
-             * <p>Do not reuse the authorization code after it is successfully redeemed. If the code has been used or has expired, call this operation again to obtain a new one.</p>
+             * <p>The authorization code used to connect to the creation or validation resource. <strong>The validity period is 180 seconds (3 minutes) from the time of issuance. Use it promptly after obtaining it.</strong> Use it together with the user, delivery group, and application information in the same response, and keep it confidential as a connection credential.</p>
+             * <p>Do not reuse the authorization code after it is redeemed. If it has been used or expired, call this operation again to obtain a new one.</p>
              * 
              * <strong>example:</strong>
              * <p>e4e169bea1cc48e8afac53**********</p>
@@ -353,11 +352,10 @@ public class GetAuthCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage type of the connection resource.</p>
-             * <p>Valid values:</p>
+             * <p>The purpose type of the connection resource.</p>
              * <ul>
-             * <li><strong>ImageBuilder</strong>: image or application building resource</li>
-             * <li><strong>ImageValidate</strong>: image or application validation resource</li>
+             * <li><strong>ImageBuilder</strong>: Image or application creation resource.</li>
+             * <li><strong>ImageValidate</strong>: Image or application validation resource.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -369,7 +367,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID in the current response.</p>
+             * <p>The region ID in this response.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -380,7 +378,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID used when connecting to the building or validation environment. Use the value returned in the current response.</p>
+             * <p>The user ID used when connecting to the creation or validation environment. Use the value returned in this response.</p>
              * 
              * <strong>example:</strong>
              * <p><strong>vhd_builder</strong></p>

@@ -103,7 +103,7 @@ public class GetResourceQuotaRequest extends Request {
         } 
 
         /**
-         * <p>The business region ID. If this parameter is omitted, the general quota that is not limited by region is queried. The quotas of different regions are not added together. This parameter must be consistent with the business region in What to do next.</p>
+         * <p>The business region ID. If this parameter is omitted, the general quota that is not limited by region is queried. The quotas of different regions are not added together. This parameter must be consistent with the business region for What to do next.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -117,8 +117,8 @@ public class GetResourceQuotaRequest extends Request {
         /**
          * <p>The billing method query condition. If this parameter is omitted, the general quota that is not limited by billing method is queried. The quotas of different billing methods are not added together. Valid values:</p>
          * <ul>
-         * <li><code>PrePaid</code>: subscription.</li>
-         * <li><code>PostPaid</code>: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class GetResourceQuotaRequest extends Request {
         /**
          * <p>The product type. Set this parameter to the following value when you call the operation:</p>
          * <ul>
-         * <li><code>CloudApp</code>: WUYING Cloud App.</li>
+         * <li>CloudApp: WUYING Cloud App.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -149,9 +149,9 @@ public class GetResourceQuotaRequest extends Request {
         /**
          * <p>The business resource type to query. Valid values:</p>
          * <ul>
-         * <li><code>AppInstanceGroup</code>: the quantity quota for delivery groups. Unit: groups.</li>
-         * <li><code>AppAuthUser</code>: the quantity quota for authorized users. Unit: users.</li>
-         * <li><code>PoolNodeAmount</code>: the quantity quota for purchased resource nodes. Unit: nodes.</li>
+         * <li>AppInstanceGroup: the quantity quota for delivery groups. Unit: count.</li>
+         * <li>AppAuthUser: the quantity quota for authorized users. Unit: users.</li>
+         * <li>PoolNodeAmount: the quantity quota for purchased resource nodes. Unit: count.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

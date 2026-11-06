@@ -117,7 +117,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business data returned by the operation.</p>
+         * <p>The business data returned by this operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -147,7 +147,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether the asynchronous task is complete, you must query the task status separately.</p>
+         * <p>Indicates whether the request is processed successfully. A value of true indicates that the request is processed successfully. To check whether the asynchronous task is completed, you must query the task status separately.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -226,7 +226,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the image, which is used to query or modify the image later.</p>
+             * <p>The image ID, which is used for subsequent queries or modifications of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-bp1example****</p>
@@ -237,7 +237,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task, which can be used to call GetTask to query the task status.</p>
+             * <p>The task ID, which can be used to call GetTask to query the task status.</p>
              * 
              * <strong>example:</strong>
              * <p>tid-bp1example****</p>
@@ -248,7 +248,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image version, which is used to query or operate on the specified version of the image.</p>
+             * <p>The image version ID, which is used to query or manage the specified version of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>iv-bp1example****</p>

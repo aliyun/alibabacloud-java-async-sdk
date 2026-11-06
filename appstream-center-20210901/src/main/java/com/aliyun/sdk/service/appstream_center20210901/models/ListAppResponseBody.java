@@ -175,7 +175,7 @@ public class ListAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error or result message. This field describes the cause when the request fails. A successful response may not contain this field.</p>
+         * <p>The error or result message. This field describes the cause when a request fails. A successful response may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal error.</p>
@@ -186,7 +186,7 @@ public class ListAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the current query. The name of this response field is PageNmuber.</p>
+         * <p>The page number of this query. The name of this response field is PageNmuber.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +197,7 @@ public class ListAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page in the paged query.</p>
+         * <p>The number of records per page in this paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -208,7 +208,7 @@ public class ListAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. You can provide this value when troubleshooting issues.</p>
+         * <p>The unique identifier of the request. You can provide this value for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>01A1A962-5503-107B-AC8F-EBA85DF905AC</p>
@@ -219,7 +219,7 @@ public class ListAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was processed successfully. A value of true indicates that the current request was processed successfully. To check whether an asynchronous task is completed, you must query the task status separately.</p>
+         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, query the task status separately.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -502,7 +502,7 @@ public class ListAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application ID, which is used for subsequent application queries or unbinding the image.</p>
+             * <p>The application ID, which is used to query the application or unbind an image later.</p>
              * 
              * <strong>example:</strong>
              * <p>app-bp1example****</p>
@@ -537,9 +537,9 @@ public class ListAppResponseBody extends TeaModel {
             /**
              * <p>The source type of the application. Valid values:</p>
              * <ul>
-             * <li><strong>USER_APP</strong>: user-created application</li>
-             * <li><strong>SYS_APP</strong>: system-provided application</li>
-             * <li><strong>VIRTUAL_APP</strong>: virtual application</li>
+             * <li><strong>USER_APP</strong>: User-created applications.</li>
+             * <li><strong>SYS_APP</strong>: System-provided applications.</li>
+             * <li><strong>VIRTUAL_APP</strong>: Virtual applications.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -553,13 +553,13 @@ public class ListAppResponseBody extends TeaModel {
             /**
              * <p>The business type to which the application belongs. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: basic product</li>
-             * <li><strong>2</strong>: personal cloud</li>
-             * <li><strong>3</strong>: cloud office</li>
-             * <li><strong>4</strong>: cloud flow</li>
-             * <li><strong>10</strong>: personal edition</li>
-             * <li><strong>20</strong>: business edition</li>
-             * <li><strong>60</strong>: Linggou team edition</li>
+             * <li><strong>1</strong>: Basic products.</li>
+             * <li><strong>2</strong>: Personal cloud.</li>
+             * <li><strong>3</strong>: Cloud office.</li>
+             * <li><strong>4</strong>: Cloud Flow.</li>
+             * <li><strong>10</strong>: Personal Edition.</li>
+             * <li><strong>20</strong>: Business Edition.</li>
+             * <li><strong>60</strong>: Linggou Team Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -571,7 +571,7 @@ public class ListAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the current application is not referenced by any image. A value of true indicates that no image references the application. A value of false indicates that the application is still referenced by an image, and the reference must be removed before deletion.</p>
+             * <p>Indicates whether the current application is not referenced by any image. A value of true indicates that no image references the application. A value of false indicates that the application is still referenced by an image. You must remove the reference before deleting the application.</p>
              */
             public Builder deletable(Boolean deletable) {
                 this.deletable = deletable;
@@ -614,11 +614,11 @@ public class ListAppResponseBody extends TeaModel {
             /**
              * <p>The form of the application. Valid values:</p>
              * <ul>
-             * <li><strong>CLIENT_BASE</strong>: client application</li>
-             * <li><strong>WEB_BASE</strong>: browser application</li>
-             * <li><strong>CLOUD_NATIVE_BASE</strong>: cloud-native application</li>
-             * <li><strong>PORT_SERVICE_BASE</strong>: port service application</li>
-             * <li><strong>AGENT_SERVICE_BASE</strong>: agent application</li>
+             * <li><strong>CLIENT_BASE</strong>: Client applications.</li>
+             * <li><strong>WEB_BASE</strong>: Browser applications.</li>
+             * <li><strong>CLOUD_NATIVE_BASE</strong>: Cloud-native applications.</li>
+             * <li><strong>PORT_SERVICE_BASE</strong>: Port service applications.</li>
+             * <li><strong>AGENT_SERVICE_BASE</strong>: Agent applications.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -630,12 +630,12 @@ public class ListAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operating system used by the application. Valid values:</p>
+             * <p>The type of operating system used by the application. Valid values:</p>
              * <ul>
-             * <li><strong>Unknown</strong>: unknown operating system</li>
-             * <li><strong>Windows</strong>: Windows operating system</li>
-             * <li><strong>Linux</strong>: Linux operating system</li>
-             * <li><strong>Android</strong>: Android operating system</li>
+             * <li><strong>Unknown</strong>: The operating system is unknown.</li>
+             * <li><strong>Windows</strong>: Windows operating system.</li>
+             * <li><strong>Linux</strong>: Linux operating system.</li>
+             * <li><strong>Android</strong>: Android operating system.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -649,23 +649,23 @@ public class ListAppResponseBody extends TeaModel {
             /**
              * <p>The product to which the resource belongs. Valid values:</p>
              * <ul>
-             * <li><strong>CloudGame</strong>: cloud game</li>
-             * <li><strong>CloudApp</strong>: Wuying cloud application</li>
-             * <li><strong>CloudBrowser</strong>: secure browser</li>
-             * <li><strong>CloudDesktop</strong>: Wuying cloud computer</li>
-             * <li><strong>ImageBuilder</strong>: image building resource</li>
-             * <li><strong>ImageValidate</strong>: image validation resource</li>
-             * <li><strong>AndroidCloud</strong>: Android cloud</li>
-             * <li><strong>GpuRender</strong>: GPU rendering</li>
-             * <li><strong>AndroidGpuRender</strong>: Android cloud GPU rendering</li>
-             * <li><strong>WuyingServer</strong>: enterprise edition workstation</li>
-             * <li><strong>GpuProxy</strong>: GPU remote rendering proxy</li>
-             * <li><strong>GpuCache</strong>: GPU remote rendering cache</li>
-             * <li><strong>AIAgent</strong>: AI agent service</li>
-             * <li><strong>HostedDesktop</strong>: hosted computer</li>
-             * <li><strong>WuyingWorkstation</strong>: personal edition container workstation</li>
-             * <li><strong>WuyingWorkstationBusiness</strong>: business edition container workstation</li>
-             * <li><strong>WuyingWorkstationTeam</strong>: Linggou team edition container workstation</li>
+             * <li><strong>CloudGame</strong>: Cloud game.</li>
+             * <li><strong>CloudApp</strong>: Wuying cloud application.</li>
+             * <li><strong>CloudBrowser</strong>: Secure browser.</li>
+             * <li><strong>CloudDesktop</strong>: Wuying cloud desktop.</li>
+             * <li><strong>ImageBuilder</strong>: Image builder resources.</li>
+             * <li><strong>ImageValidate</strong>: Image validation resources.</li>
+             * <li><strong>AndroidCloud</strong>: Android cloud.</li>
+             * <li><strong>GpuRender</strong>: GPU rendering.</li>
+             * <li><strong>AndroidGpuRender</strong>: Android cloud GPU rendering.</li>
+             * <li><strong>WuyingServer</strong>: Enterprise Edition workstation.</li>
+             * <li><strong>GpuProxy</strong>: GPU remote rendering proxy.</li>
+             * <li><strong>GpuCache</strong>: GPU remote rendering cache.</li>
+             * <li><strong>AIAgent</strong>: AI Agent service.</li>
+             * <li><strong>HostedDesktop</strong>: Hosted desktop.</li>
+             * <li><strong>WuyingWorkstation</strong>: Personal Edition container workstation.</li>
+             * <li><strong>WuyingWorkstationBusiness</strong>: Business Edition container workstation.</li>
+             * <li><strong>WuyingWorkstationTeam</strong>: Linggou Team Edition container workstation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -701,10 +701,10 @@ public class ListAppResponseBody extends TeaModel {
             /**
              * <p>The subtype of the application. Valid values:</p>
              * <ul>
-             * <li><strong>PWA</strong>: progressive web application</li>
-             * <li><strong>SAAS</strong>: software as a service (SaaS) application</li>
-             * <li><strong>SANDBOX</strong>: sandbox application</li>
-             * <li><strong>CONTAINER</strong>: container application</li>
+             * <li><strong>PWA</strong>: Progressive web applications.</li>
+             * <li><strong>SAAS</strong>: Software as a Service (SaaS) applications.</li>
+             * <li><strong>SANDBOX</strong>: Sandbox applications.</li>
+             * <li><strong>CONTAINER</strong>: Container applications.</li>
              * </ul>
              * 
              * <strong>example:</strong>

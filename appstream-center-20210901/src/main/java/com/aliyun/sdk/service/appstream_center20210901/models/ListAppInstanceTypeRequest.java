@@ -282,7 +282,7 @@ public class ListAppInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The session instance type code. An exact match is performed based on the complete code. If this parameter and AppInstanceTypeList are specified at the same time, the results are filtered by intersection. You can first call this operation without this condition, and then select a returned code.</p>
+         * <p>The session instance type code. Exact match is performed based on the complete code. If this parameter and <code>AppInstanceTypeList</code> are specified at the same time, the results are filtered by intersection. You can perform a conditional query without this condition first, and then select the returned codes.</p>
          * 
          * <strong>example:</strong>
          * <p>appstreaming.vgpu.4c8g</p>
@@ -306,7 +306,7 @@ public class ListAppInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The list of session instance type codes. A maximum of 100 items can be specified. This parameter takes effect by intersection with other filtering conditions. If this parameter and AppInstanceType are specified at the same time, the results must also match the single code.</p>
+         * <p>The list of session instance type codes. A maximum of 100 items are supported. This parameter takes effect by intersection with other filtering conditions. If this parameter and <code>AppInstanceType</code> are specified at the same time, the results must also match the single code.</p>
          */
         public Builder appInstanceTypeList(java.util.List<String> appInstanceTypeList) {
             this.putQueryParameter("AppInstanceTypeList", appInstanceTypeList);
@@ -315,7 +315,7 @@ public class ListAppInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The business region ID. If this parameter is omitted, the region of the current request is used. The available instance types may vary by region and account. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region ID.</p>
+         * <p>The business region ID. If this parameter is omitted, the region of the current request is used. The available instance types may vary by region and account. You can call the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> operation to obtain the business region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -329,8 +329,8 @@ public class ListAppInstanceTypeRequest extends Request {
         /**
          * <p>The instance type category filtering condition. If this parameter is omitted, no category filtering condition is added. Valid values:</p>
          * <ul>
-         * <li>Cpu: CPU instance type.</li>
-         * <li>Gpu: GPU instance type.</li>
+         * <li><code>Cpu</code>: CPU instance type.</li>
+         * <li><code>Gpu</code>: GPU instance type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,10 +343,10 @@ public class ListAppInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The billing method for filtering available instance types. If this parameter is omitted, no billing method condition is added. Valid values:</p>
+         * <p>The billing method used to filter available instance types. If this parameter is omitted, no billing method condition is added. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription.</li>
-         * <li>PostPaid: pay-as-you-go.</li>
+         * <li><code>PrePaid</code>: subscription.</li>
+         * <li><code>PostPaid</code>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -385,10 +385,10 @@ public class ListAppInstanceTypeRequest extends Request {
         /**
          * <p>The language of the instance type name.</p>
          * <ul>
-         * <li>zh-CN: The Chinese name of the instance type.</li>
-         * <li>Other values or omitted: The instance type code is used as the name.</li>
+         * <li><code>zh-CN</code>: Use the Chinese name of the instance type.</li>
+         * <li>Other values or omitted: Use the instance type code as the name.</li>
          * </ul>
-         * <p>This parameter only affects the display of InstanceTypeName and does not change the instance type code.</p>
+         * <p>This parameter only affects the display of <code>InstanceTypeName</code> and does not change the instance type code.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -412,9 +412,9 @@ public class ListAppInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The operating system type. For the Wuying Cloud App (CloudApp) scenario, use the following values:</p>
+         * <p>The operating system type. In the Wuying Cloud Application (CloudApp) scenario, set the value to:</p>
          * <ul>
-         * <li>Windows: Windows operating system.</li>
+         * <li><code>Windows</code>: Windows operating system.</li>
          * </ul>
          * <p>If this parameter is omitted, no operating system filtering condition is added.</p>
          * 
@@ -440,7 +440,7 @@ public class ListAppInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The number of instance types to return on each page. Unit: entries. Default value: 200. Explicitly set a positive integer that meets your business requirements. The default value here does not indicate the maximum value allowed by the service.</p>
+         * <p>The number of instance types returned per page. Unit: entries. Default value: 200. Explicitly set a positive integer that meets your business requirements. The default value here does not represent the maximum value allowed by the service.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -454,7 +454,7 @@ public class ListAppInstanceTypeRequest extends Request {
         /**
          * <p>The product type. Set the value to the following fixed value when you call this operation:</p>
          * <ul>
-         * <li>CloudApp: Wuying Cloud App.</li>
+         * <li><code>CloudApp</code>: Wuying Cloud Application.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -468,10 +468,10 @@ public class ListAppInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the instance type inventory at the same time. Default value: false.</p>
+         * <p>Specifies whether to query the instance type inventory at the same time. Default value: <code>false</code>.</p>
          * <ul>
-         * <li>true: Queries the inventory and returns InventoryInfo if the inventory information is available.</li>
-         * <li>false: Queries only the instance types and does not query the inventory.</li>
+         * <li><code>true</code>: Queries the inventory and returns InventoryInfo when the inventory information is available.</li>
+         * <li><code>false</code>: Queries only the instance types and does not query the inventory.</li>
          * </ul>
          * 
          * <strong>example:</strong>

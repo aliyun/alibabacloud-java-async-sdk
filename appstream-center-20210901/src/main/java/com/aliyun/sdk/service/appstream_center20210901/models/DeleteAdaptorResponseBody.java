@@ -106,7 +106,7 @@ public class DeleteAdaptorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. Returned when a request fails. A successful response may not contain this field.</p>
+         * <p>The error code. This field is returned when the request fails. A successful response may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -125,7 +125,7 @@ public class DeleteAdaptorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message or result prompt. Used to describe the cause when a request fails. A successful response may not contain this field.</p>
+         * <p>The error message or result prompt. This field describes the cause when the request fails. A successful response may not contain this field.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal error.</p>
@@ -136,7 +136,7 @@ public class DeleteAdaptorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. You can provide this value for troubleshooting.</p>
+         * <p>The unique identifier of the request. You can provide this value when troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>01A1A962-5503-107B-AC8F-EBA85DF905AC</p>
@@ -147,7 +147,7 @@ public class DeleteAdaptorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. A value of true indicates that the request was successful. To determine whether an asynchronous task is completed, query the task status separately.</p>
+         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether the asynchronous task is completed, query the task status separately.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

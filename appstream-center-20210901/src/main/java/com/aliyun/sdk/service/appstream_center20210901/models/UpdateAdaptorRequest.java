@@ -164,7 +164,7 @@ public class UpdateAdaptorRequest extends Request {
         }
 
         /**
-         * <p><strong>Not enabled. Do not pass this parameter.</strong> This parameter does not support modifying application scripts.</p>
+         * <p><strong>Not enabled. Do not pass this parameter.</strong> This operation does not support modifying application scripts through this parameter.</p>
          * <p>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status and is not a valid parameter value.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class UpdateAdaptorRequest extends Request {
         }
 
         /**
-         * <p><strong>Not enabled. Do not pass this parameter.</strong> This parameter does not support modifying executable file paths.</p>
+         * <p><strong>Not enabled. Do not pass this parameter.</strong> This operation does not support modifying executable file paths through this parameter.</p>
          * <p>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status and is not a valid parameter value.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class UpdateAdaptorRequest extends Request {
         }
 
         /**
-         * <p>The command-line parameters used when the application starts. If this parameter is not empty, it is used to update the startup parameters of the application adapter. Specify the parameters based on the startup requirements of the application.</p>
+         * <p>The command-line parameters used when the application starts. If not empty, this parameter is used to update the startup parameters of the application adapter. Specify the value based on the startup requirements of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>--lang=zh-CN</p>
@@ -215,7 +215,7 @@ public class UpdateAdaptorRequest extends Request {
 
         /**
          * <p>The application runtime configuration object. If this parameter is omitted, the existing user configuration is not modified.</p>
-         * <p><strong>If this parameter is passed, the original UserConfig is completely replaced and not merged item by item.</strong> Submit the complete configuration and include the configuration items that need to be retained. Subfields that are not provided do not automatically inherit the original values.</p>
+         * <p><strong>If passed, the original UserConfig is entirely replaced and not merged item by item.</strong> Submit the complete configuration and include the configuration items that need to be retained. Subfields that are not provided do not automatically inherit the original values.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;FixedResolution&quot;:&quot;1440x2560&quot;,&quot;DisconnectAction&quot;:&quot;KEEP_CURRENT&quot;,&quot;ShowWindow&quot;:&quot;HIDE&quot;}</p>

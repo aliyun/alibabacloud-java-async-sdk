@@ -67,7 +67,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The quote for the resource scale-out of the delivery group, which includes the pricing details and pricing calculation rules.</p>
+         * <p>The quote for the resource scale-out of the delivery group, which includes the price details and pricing rules.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -194,7 +194,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the coupon, which is used to display the information about the discount.</p>
+             * <p>The description of the coupon, which is used to display information about the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>**Discount during the promotion</p>
@@ -216,7 +216,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the coupon, which is used to display the optional discount in the current quote.</p>
+             * <p>The name of the coupon, which is used to display the available discount in the quote.</p>
              * 
              * <strong>example:</strong>
              * <p>**Discount</p>
@@ -340,7 +340,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The currency code of the price amount. CNY indicates Chinese Yuan. Refer to this field to understand the amounts of OriginalPrice, DiscountPrice, and TradePrice.</p>
+             * <p>The currency code of the price amount. CNY indicates Chinese Yuan. Use this field to interpret the amounts in OriginalPrice, DiscountPrice, and TradePrice.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -351,8 +351,8 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount amount that can be deducted from the scale-out price, not the discount percentage.</p>
-             * <p>The discounted price TradePrice is obtained by subtracting this field from the original price OriginalPrice. For the currency of the amount, see Currency.</p>
+             * <p>The discount amount for the scale-out, not the discount percentage.</p>
+             * <p>The final price TradePrice is obtained by subtracting this value from the original price OriginalPrice. For the currency, see Currency.</p>
              * 
              * <strong>example:</strong>
              * <p>1.00</p>
@@ -363,7 +363,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price of the scale-out, which is the amount before discounts. For the currency of the amount, see Currency.</p>
+             * <p>The original price of the scale-out, which is the amount before discounts. For the currency, see Currency.</p>
              * 
              * <strong>example:</strong>
              * <p>11.00</p>
@@ -374,7 +374,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of optional coupons returned in the quote. Each item includes the coupon ID, name, description, and selection status.</p>
+             * <p>The list of available coupons returned in the quote. Each item includes the coupon ID, name, description, and selection status.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -382,8 +382,8 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discounted price of the scale-out.</p>
-             * <p>Calculation relationship: TradePrice = OriginalPrice - DiscountPrice. For the currency of the amount, see Currency. This operation returns only a quote and does not execute payment.</p>
+             * <p>The final price of the scale-out after discounts.</p>
+             * <p>Calculation formula: TradePrice = OriginalPrice - DiscountPrice. For the currency, see Currency. This operation returns only a quote and does not execute payment.</p>
              * 
              * <strong>example:</strong>
              * <p>10.00</p>
@@ -453,7 +453,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the pricing calculation rule, such as the user discount applicable to the current quote.</p>
+             * <p>The description of the pricing rule, such as the user discount applicable to the quote.</p>
              * 
              * <strong>example:</strong>
              * <p>User discount</p>
@@ -464,7 +464,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the pricing calculation rule, which is used to identify the rule applied in the quote.</p>
+             * <p>The ID of the pricing rule, which is used to identify the rule applied in the quote.</p>
              * 
              * <strong>example:</strong>
              * <p>102002100393****</p>
@@ -534,7 +534,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The pricing details of the scale-out. For the currency of the amounts, see Currency. For the coupon selection status, see Promotions.</p>
+             * <p>The price details of the scale-out. For the currency, see Currency. For the coupon selection status, see Promotions.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -542,7 +542,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of pricing calculation rules for the quote, which is used to describe the applicable pricing or discount rules.</p>
+             * <p>The list of pricing rules for the quote, which describes the applicable pricing or discount rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

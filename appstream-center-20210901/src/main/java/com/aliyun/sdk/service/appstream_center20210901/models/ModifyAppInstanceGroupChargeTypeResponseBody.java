@@ -67,7 +67,7 @@ public class ModifyAppInstanceGroupChargeTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The task information for the billing method conversion.</p>
+         * <p>The task information for this billing method conversion.</p>
          */
         public Builder appInstanceGroupModel(AppInstanceGroupModel appInstanceGroupModel) {
             this.appInstanceGroupModel = appInstanceGroupModel;
@@ -75,7 +75,7 @@ public class ModifyAppInstanceGroupChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request. You can use the ID to troubleshoot request issues.</p>
+         * <p>The unique ID of the request, which can be used to troubleshoot request issues.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -131,7 +131,7 @@ public class ModifyAppInstanceGroupChargeTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the billing conversion order task, used to associate with the current conversion. It is returned only when a related order task is required and created. It does not indicate that the payment is completed or the new billing method has taken effect.</p>
+             * <p>The ID of the billing conversion order task, used to associate with this conversion. It is returned only when a related order task is required and created. It does not indicate that the payment is completed or the new billing method has taken effect.</p>
              * 
              * <strong>example:</strong>
              * <p>task-123</p>

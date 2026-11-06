@@ -168,7 +168,7 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The URL of the application icon. Specify an accessible icon URL when a custom icon needs to be displayed.</p>
+         * <p>The URL of the application icon. Specify an accessible icon URL to display a custom icon.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/apps/business/icon.png">https://example.com/apps/business/icon.png</a></p>
@@ -206,13 +206,13 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The application form. If omitted, the default value is CLIENT_BASE. Valid values:</p>
+         * <p>The application type. If omitted, the default value is CLIENT_BASE. Valid values:</p>
          * <ul>
-         * <li><strong>CLIENT_BASE</strong>: client application</li>
-         * <li><strong>WEB_BASE</strong>: browser application</li>
-         * <li><strong>CLOUD_NATIVE_BASE</strong>: cloud-native application</li>
-         * <li><strong>PORT_SERVICE_BASE</strong>: port service application</li>
-         * <li><strong>AGENT_SERVICE_BASE</strong>: agent application</li>
+         * <li><strong>CLIENT_BASE</strong>: Client application.</li>
+         * <li><strong>WEB_BASE</strong>: Browser application.</li>
+         * <li><strong>CLOUD_NATIVE_BASE</strong>: Cloud-native application.</li>
+         * <li><strong>PORT_SERVICE_BASE</strong>: Port service application.</li>
+         * <li><strong>AGENT_SERVICE_BASE</strong>: Agent application.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The service port of the application. For applications that require port-based access, specify the actual port number that the application listens on.</p>
+         * <p>The application service port. For applications that require port-based access, specify the actual port number that the application listens on.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -237,7 +237,7 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The path suffix of the application access URL, which describes the access entry point together with the application service port.</p>
+         * <p>The path suffix of the application access URL, which is used together with the application service port to describe the access entry point.</p>
          * 
          * <strong>example:</strong>
          * <p>/console</p>
