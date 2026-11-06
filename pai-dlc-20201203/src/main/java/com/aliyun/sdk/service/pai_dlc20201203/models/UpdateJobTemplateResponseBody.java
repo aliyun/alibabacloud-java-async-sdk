@@ -129,7 +129,7 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request, used for diagnostics and troubleshooting.</p>
+         * <p>The ID of the request, which is used for diagnostics and troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
@@ -151,7 +151,7 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a new version was created.</p>
+         * <p>Indicates whether a new version is created.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

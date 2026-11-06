@@ -53,6 +53,9 @@ public class JobSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableErrorMonitoringInAIMaster")
     private Boolean enableErrorMonitoringInAIMaster;
 
+    @com.aliyun.core.annotation.NameInMap("EnableIntraJobSSH")
+    private Boolean enableIntraJobSSH;
+
     @com.aliyun.core.annotation.NameInMap("EnableOssAppend")
     private Boolean enableOssAppend;
 
@@ -108,6 +111,7 @@ public class JobSettings extends TeaModel {
         this.enableCPUAffinity = builder.enableCPUAffinity;
         this.enableDSWDev = builder.enableDSWDev;
         this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
+        this.enableIntraJobSSH = builder.enableIntraJobSSH;
         this.enableOssAppend = builder.enableOssAppend;
         this.enableRDMA = builder.enableRDMA;
         this.enableSanityCheck = builder.enableSanityCheck;
@@ -221,6 +225,13 @@ public class JobSettings extends TeaModel {
     }
 
     /**
+     * @return enableIntraJobSSH
+     */
+    public Boolean getEnableIntraJobSSH() {
+        return this.enableIntraJobSSH;
+    }
+
+    /**
      * @return enableOssAppend
      */
     public Boolean getEnableOssAppend() {
@@ -331,6 +342,7 @@ public class JobSettings extends TeaModel {
         private Boolean enableCPUAffinity; 
         private Boolean enableDSWDev; 
         private Boolean enableErrorMonitoringInAIMaster; 
+        private Boolean enableIntraJobSSH; 
         private Boolean enableOssAppend; 
         private Boolean enableRDMA; 
         private Boolean enableSanityCheck; 
@@ -362,6 +374,7 @@ public class JobSettings extends TeaModel {
             this.enableCPUAffinity = model.enableCPUAffinity;
             this.enableDSWDev = model.enableDSWDev;
             this.enableErrorMonitoringInAIMaster = model.enableErrorMonitoringInAIMaster;
+            this.enableIntraJobSSH = model.enableIntraJobSSH;
             this.enableOssAppend = model.enableOssAppend;
             this.enableRDMA = model.enableRDMA;
             this.enableSanityCheck = model.enableSanityCheck;
@@ -387,7 +400,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to allocate all RDMA NICs.</p>
+         * <p>Specifies whether to mount all RDMA NICs.</p>
          */
         public Builder allocateAllRDMADevices(Boolean allocateAllRDMADevices) {
             this.allocateAllRDMADevices = allocateAllRDMADevices;
@@ -395,7 +408,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to allow jobs to be scheduled to nodes that are marked as unschedulable or are in the workspace blacklist. If enabled, node status checks are skipped and the corresponding bypass configurations are applied.</p>
+         * <p>Specifies whether to allow the job to be scheduled to nodes that are marked as unschedulable or included in the workspace blacklist. If enabled, node status checks are skipped and corresponding bypass configurations are applied.</p>
          */
         public Builder allowUnschedulableNodes(Boolean allowUnschedulableNodes) {
             this.allowUnschedulableNodes = allowUnschedulableNodes;
@@ -433,7 +446,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to skip the ECS inventory check. Valid values:</p>
+         * <p>Specifies whether to skip the inventory check. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -470,7 +483,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The CPU affinity settings. These settings take effect only when general-purpose computing subscription resources are used.</p>
+         * <p>The CPU affinity settings. This setting takes effect only when general-purpose computing subscription resources are used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -504,7 +517,22 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to allow OSS append writes. Valid values:</p>
+         * <p>Specifies whether to allow job nodes to communicate with each other over SSH. The image must have SSHD built-in. This parameter takes effect only for PyTorch jobs that use self-managed computing resources. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder enableIntraJobSSH(Boolean enableIntraJobSSH) {
+            this.enableIntraJobSSH = enableIntraJobSSH;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to allow OSS append operations. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -534,7 +562,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to enable computing power health checks for the job. Valid values:</p>
+         * <p>Specifies whether to enable the computing power health check for the job. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -549,7 +577,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to allow the job to use tide resources. Valid values:</p>
+         * <p>Specifies whether to allow the job to use tidal resources. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -564,7 +592,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The configuration parameters for fault tolerance monitoring when it is enabled, such as specifying whether to enable log hang-based detection.</p>
+         * <p>The configuration parameters for fault tolerance monitoring after it is enabled, such as specifying whether to enable log hang-based detection.</p>
          * 
          * <strong>example:</strong>
          * <p>--enable-log-hang-detection true</p>
@@ -616,7 +644,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The workflow ID.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pid-12****</p>
@@ -627,7 +655,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The configuration parameters for computing power health checks.</p>
+         * <p>The configuration parameters for the computing power health check.</p>
          * 
          * <strong>example:</strong>
          * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFail</p>
@@ -638,7 +666,7 @@ public class JobSettings extends TeaModel {
         }
 
         /**
-         * <p>The shell used to execute job commands. Valid values: /bin/sh and /bin/bash.</p>
+         * <p>The shell used to execute job commands, such as /bin/sh or /bin/bash.</p>
          * 
          * <strong>example:</strong>
          * <p>/bin/bash</p>

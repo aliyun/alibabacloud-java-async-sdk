@@ -74,7 +74,7 @@ public class DeleteTensorboardRequest extends Request {
         } 
 
         /**
-         * <p>The TensorBoard ID. For more information about how to obtain the TensorBoard ID, see <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a>.</p>
+         * <p>The Tensorboard ID. For more information about how to obtain the Tensorboard ID, see <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

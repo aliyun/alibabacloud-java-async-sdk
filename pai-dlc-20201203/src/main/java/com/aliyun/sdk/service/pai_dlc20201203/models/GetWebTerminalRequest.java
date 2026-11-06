@@ -26,6 +26,10 @@ public class GetWebTerminalRequest extends Request {
     private String podId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
+    private String containerName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsShared")
     private Boolean isShared;
 
@@ -37,6 +41,7 @@ public class GetWebTerminalRequest extends Request {
         super(builder);
         this.jobId = builder.jobId;
         this.podId = builder.podId;
+        this.containerName = builder.containerName;
         this.isShared = builder.isShared;
         this.podUid = builder.podUid;
     }
@@ -69,6 +74,13 @@ public class GetWebTerminalRequest extends Request {
     }
 
     /**
+     * @return containerName
+     */
+    public String getContainerName() {
+        return this.containerName;
+    }
+
+    /**
      * @return isShared
      */
     public Boolean getIsShared() {
@@ -85,6 +97,7 @@ public class GetWebTerminalRequest extends Request {
     public static final class Builder extends Request.Builder<GetWebTerminalRequest, Builder> {
         private String jobId; 
         private String podId; 
+        private String containerName; 
         private Boolean isShared; 
         private String podUid; 
 
@@ -96,6 +109,7 @@ public class GetWebTerminalRequest extends Request {
             super(request);
             this.jobId = request.jobId;
             this.podId = request.podId;
+            this.containerName = request.containerName;
             this.isShared = request.isShared;
             this.podUid = request.podUid;
         } 
@@ -125,10 +139,22 @@ public class GetWebTerminalRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to create a shared link for accessing the container. Valid values:</p>
+         * <p>The name of the container. If this parameter is not specified, the WebTerminal of the primary container is accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sidecar-test</p>
+         */
+        public Builder containerName(String containerName) {
+            this.putQueryParameter("ContainerName", containerName);
+            this.containerName = containerName;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to create a shareable link for accessing the container. Valid values:</p>
          * <ul>
-         * <li>true: Returns a shared link for accessing the container. The link expires after 30 seconds and can be used only once. After someone accesses the container through this link, subsequent requests using the same link are invalid.</li>
-         * <li>false: Returns a regular link for accessing the container. Alibaba Cloud identity authentication is required when using this link. The link expires after 30 seconds.</li>
+         * <li>true: Returns a shareable link for accessing the container. The link expires after 30 seconds and can be used only once. After the container is accessed through this link, subsequent requests to access the container by using the same link become invalid.</li>
+         * <li>false: Returns a regular link for accessing the container. Alibaba Cloud identity verification is required when you use the link. The link expires after 30 seconds.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +167,7 @@ public class GetWebTerminalRequest extends Request {
         }
 
         /**
-         * <p>Pod UID。</p>
+         * <p>The Pod UID.</p>
          * 
          * <strong>example:</strong>
          * <p>94a7cc7c-0033-48b5-85bd-71c63592****</p>

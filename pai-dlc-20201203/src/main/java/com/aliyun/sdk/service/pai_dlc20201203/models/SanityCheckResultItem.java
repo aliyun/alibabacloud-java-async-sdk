@@ -119,7 +119,7 @@ public class SanityCheckResultItem extends TeaModel {
         } 
 
         /**
-         * <p>The sequence number of the check.</p>
+         * <p>The check number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * <p>The end time of the check.</p>
+         * <p>The check end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-30T16:47:30.378817+08:00</p>
@@ -141,7 +141,7 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * <p>The details of the check result.</p>
+         * <p>The check result details.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +149,7 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * <p>The phase of the check.</p>
+         * <p>The check phase.</p>
          * 
          * <strong>example:</strong>
          * <p>CheckInit</p>
@@ -160,7 +160,7 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * <p>The start time of the check.</p>
+         * <p>The check start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-30T16:47:30.343005+08:00</p>
@@ -171,7 +171,7 @@ public class SanityCheckResultItem extends TeaModel {
         }
 
         /**
-         * <p>The status of the check.</p>
+         * <p>The check status.</p>
          * 
          * <strong>example:</strong>
          * <p>Succeeded</p>

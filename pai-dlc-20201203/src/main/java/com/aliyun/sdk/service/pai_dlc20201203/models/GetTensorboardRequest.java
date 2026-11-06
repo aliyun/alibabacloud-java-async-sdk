@@ -102,7 +102,7 @@ public class GetTensorboardRequest extends Request {
         } 
 
         /**
-         * <p>The TensorBoard ID. See <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a> to obtain the TensorBoard ID.</p>
+         * <p>The Tensorboard ID. See <a href="https://help.aliyun.com/document_detail/459689.html">ListTensorboards</a> to obtain the Tensorboard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class GetTensorboardRequest extends Request {
         }
 
         /**
-         * <p>The sharing token. Specify this parameter to use the sharing token to obtain the permissions to view a TensorBoard job. You can extract the token from the URL obtained by calling <a href="https://help.aliyun.com/document_detail/2557813.html">GetTensorboardSharedUrl</a>.</p>
+         * <p>The share token. Specify this parameter to use the share token to obtain permissions to view a Tensorboard job. You can extract the token from the URL obtained by calling <a href="https://help.aliyun.com/document_detail/2557813.html">GetTensorboardSharedUrl</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e

@@ -620,7 +620,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The job name. Fuzzy match is supported. The match is case-insensitive and does not support wildcards. For example, if you enter test, it can match test-job1, job-test, job-test2, or job-Test, but cannot match job-t1. Default value: empty, which indicates any job name.</p>
+         * <p>The job name. Supports fuzzy match. The match is case-insensitive and does not support wildcards. For example, if you enter test, it can match test-job1, job-test, job-test2, or job-Test, but it cannot match job-t1. Default value: empty, which indicates any job name.</p>
          * 
          * <strong>example:</strong>
          * <p>tf-mnist-test</p>
@@ -644,7 +644,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter jobs that run on specified nodes.</p>
+         * <p>Specifies whether to filter jobs that are configured to run on specified nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -668,7 +668,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retrieve jobs across workspaces. This parameter must be used together with ShowOwn=true to query the jobs recently submitted by the current user.</p>
+         * <p>Specifies whether to retrieve the job list across workspaces. This parameter must be used together with the ShowOwn=true parameter to query the jobs recently submitted by the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -680,7 +680,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Uses the full-text index to retrieve data in the images field. Chinese and English tokenization are supported.</p>
+         * <p>Retrieves data from the full-text index in the image (images) field. Chinese and English tokenization is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>pytorch</p>
@@ -735,7 +735,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The field name for numeric range filtering. This parameter must be used together with NumericRangeMin and NumericRangeMax.</p>
+         * <p>The field name used for numeric range filtering. This parameter must be used together with NumericRangeMin and NumericRangeMax.</p>
          * 
          * <strong>example:</strong>
          * <p>RequestGPU</p>
@@ -747,7 +747,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The maximum value for numeric range filtering, inclusive. This parameter must be used together with NumericRangeField.</p>
+         * <p>The maximum value (inclusive) for numeric range filtering. This parameter must be used together with NumericRangeField.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -759,7 +759,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The minimum value for numeric range filtering, inclusive. This parameter must be used together with NumericRangeField.</p>
+         * <p>The minimum value (inclusive) for numeric range filtering. This parameter must be used together with NumericRangeField.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -787,11 +787,11 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The idle resource information. Valid values:</p>
+         * <p>The off-peak resource information. Valid values:</p>
          * <ul>
          * <li>ForbiddenQuotaOverSold</li>
          * <li>ForceQuotaOverSold</li>
-         * <li>AcceptQuotaOverSold-true: true indicates that the job actually used idle resources.</li>
+         * <li>AcceptQuotaOverSold-true: true indicates that the job actually used off-peak resources.</li>
          * <li>AcceptQuotaOverSold-false: false indicates that the job actually used guaranteed resources.</li>
          * </ul>
          * 
@@ -805,7 +805,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number for paging in a paged query. The start value is 1. Default value: 1.</p>
+         * <p>The page number for paging in a paged query. The starting value is 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -817,7 +817,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of jobs to return on each page.</p>
+         * <p>The number of jobs to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -846,7 +846,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The pipeline ID used to filter jobs.</p>
+         * <p>The pipeline ID. Only jobs created by this pipeline are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>flow-*******</p>
@@ -858,7 +858,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Uses the full-text index to retrieve data in the reason field of the failed node. Chinese and English tokenization are supported.</p>
+         * <p>Retrieves data from the full-text index in the failed node reason field. Chinese and English tokenization is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>OOM</p>
@@ -915,7 +915,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort. Valid values:</p>
+         * <p>The field used for sorting. Valid values:</p>
          * <ul>
          * <li>DisplayName</li>
          * <li>JobType</li>
@@ -950,7 +950,7 @@ public class ListJobsRequest extends Request {
          * <ul>
          * <li>Creating</li>
          * <li>Queuing</li>
-         * <li>Bidding (currently limited to Lingjun spot jobs)</li>
+         * <li>Bidding (currently only available for Lingjun spot jobs)</li>
          * <li>EnvPreparing</li>
          * <li>SanityChecking</li>
          * <li>Running</li>
@@ -983,7 +983,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>The template ID used to filter jobs created by the specified template.</p>
+         * <p>The template ID used to filter jobs created by a specified template.</p>
          * 
          * <strong>example:</strong>
          * <p>tmlabc123</p>
@@ -1007,7 +1007,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * <p>Uses the full-text index to retrieve data in the user_command field. Chinese and English tokenization are supported.</p>
+         * <p>Retrieves data from the full-text index in the user command (user_command) field. Chinese and English tokenization is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>python train.py</p>
