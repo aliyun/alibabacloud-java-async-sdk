@@ -154,7 +154,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The partition name. Fuzzy match is supported. This parameter is valid only for MaxCompute tables.</p>
+         * <p>The name of the partition. Fuzzy match is supported. This parameter is valid only for MaxCompute tables.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20250101</p>
@@ -166,7 +166,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The sort direction. Default value: Asc. Valid values:</p>
+         * <p>The sort order. Default value: Asc. Valid values:</p>
          * <ul>
          * <li>Asc: ascending order.</li>
          * <li>Desc: descending order.</li>
@@ -206,11 +206,11 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results. Default value: CreateTime. Valid values:</p>
+         * <p>The field used for sorting. Default value: CreateTime. Valid values:</p>
          * <ul>
          * <li>CreateTime: the creation time. Only MaxCompute tables are supported.</li>
          * <li>ModifyTime: the modification time. Only MaxCompute tables are supported.</li>
-         * <li>Name: the name. This is the sort method used for HMS tables.</li>
+         * <li>Name: the name. Used for HMS tables.</li>
          * <li>RecordCount: the number of records. Only MaxCompute tables are supported.</li>
          * <li>DataSize: the storage size. Only MaxCompute tables are supported.</li>
          * </ul>
@@ -225,7 +225,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the table. You can obtain this value from the response of the <a href="https://help.aliyun.com/document_detail/2880092.html">ListTables</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+         * <p>The ID of the table. You can refer to the response of the ListTables API operation and <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

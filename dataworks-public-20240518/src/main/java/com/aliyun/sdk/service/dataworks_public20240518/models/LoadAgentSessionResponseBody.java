@@ -145,7 +145,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error message in the SSE frame information. The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
+         * <p>The error message in the SSE frame information. The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;code&quot;: 400, &quot;errorCode&quot;: &quot;0x50000000001&quot;, &quot;message&quot;: &quot;not exist session&quot;, &quot;data&quot;: null}</p>
@@ -156,7 +156,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID provided by the requester. This ID is echoed back as is.</p>
+         * <p>The ID passed by the requester. The value is returned as is.</p>
          * 
          * <strong>example:</strong>
          * <p>676303114031776</p>
@@ -167,7 +167,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The JSON-RPC version. Fixed to 2.0.</p>
+         * <p>The JSON-RPC version. The value is fixed to 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -178,7 +178,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The method of the SSE. The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
+         * <p>The method of the SSE. The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>session/update</p>
@@ -189,7 +189,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameters of the SSE. The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
+         * <p>The parameters of the SSE. The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;sessionId&quot;:&quot;af4f5ef8-e8f5-481c-ad1f-94886c6c0aed&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;hello world&quot;}}}</p>
@@ -211,7 +211,7 @@ public class LoadAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result set of the SSE frame. The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
+         * <p>The result set of the SSE frame. The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;stopReason&quot;:&quot;end_turn&quot;}</p>

@@ -237,7 +237,7 @@ public class ListCrossProjectDeploymentCandidatesRequest extends Request {
         }
 
         /**
-         * <p>The start of the commit time range. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The start of the commit time range. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1788739200000</p>
@@ -249,7 +249,7 @@ public class ListCrossProjectDeploymentCandidatesRequest extends Request {
         }
 
         /**
-         * <p>The end of the commit time range. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end of the commit time range. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1788825599999</p>
@@ -261,7 +261,7 @@ public class ListCrossProjectDeploymentCandidatesRequest extends Request {
         }
 
         /**
-         * <p>The committer.</p>
+         * <p>The submitter.</p>
          * 
          * <strong>example:</strong>
          * <p>operator</p>

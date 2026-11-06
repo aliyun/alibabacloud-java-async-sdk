@@ -67,7 +67,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The JSON-RPC response.</p>
+         * <p>The JSON-RPC response result.</p>
          */
         public Builder jsonRpcResponse(JsonRpcResponse jsonRpcResponse) {
             this.jsonRpcResponse = jsonRpcResponse;
@@ -75,7 +75,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID for this OpenAPI call. You can use it to troubleshoot issues with the call.</p>
          * 
          * <strong>example:</strong>
          * <p>8A9D5E6C-5817-5837-9715-6E3967EC6123</p>
@@ -369,7 +369,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The JSON-RPC error message. This field is not returned if the request is successful.</p>
+             * <p>The JSON-RPC error message. This field is not returned when the request is successful.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -388,7 +388,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSON-RPC version. This value is always 2.0.</p>
+             * <p>The JSON-RPC version. Fixed to 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0</p>
@@ -399,7 +399,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business data. The value is null if an error occurs.</p>
+             * <p>The business data. The value is null when an error occurs.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -407,7 +407,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response time. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The response time. It is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1789549200000</p>

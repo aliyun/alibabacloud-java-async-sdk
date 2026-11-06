@@ -80,7 +80,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business response.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;RequestId&quot;:&quot;735894D1-D5E5-50B8-8A6D-041C90A98B23&quot;,&quot;PageNumber&quot;:1,&quot;PageSize&quot;:10,&quot;TotalCount&quot;:1,&quot;PipelineRunItems&quot;:[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;IsRoot&quot;:true,&quot;Status&quot;:&quot;Ready&quot;}]}</p>
@@ -91,7 +91,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot this API call.</p>
+         * <p>The request ID used to locate and troubleshoot the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>735894D1-D5E5-50B8-8A6D-041C90A98B23</p>
@@ -102,7 +102,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -319,7 +319,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the publish object.</p>
+             * <p>The ID of the deployment object.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -330,7 +330,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the publish object.</p>
+             * <p>The name of the deployment object.</p>
              * 
              * <strong>example:</strong>
              * <p>object-1</p>
@@ -341,7 +341,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object type of the publish object.</p>
+             * <p>The deployment object type.</p>
              * 
              * <strong>example:</strong>
              * <p>ODPS_SQL</p>
@@ -352,7 +352,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the publish object.</p>
+             * <p>The version of the deployment object.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -374,7 +374,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the publish item.</p>
+             * <p>The status of the deployment item.</p>
              * 
              * <strong>example:</strong>
              * <p>Ready</p>
@@ -494,7 +494,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The number of items per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -505,7 +505,7 @@ public class ListCrossProjectPipelineRunItemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of publish items for the root objects and their child objects that are fixed in the cross-workspace publish pipeline.</p>
+             * <p>The list of publish items for the root object and its child objects in the cross-workspace publish pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;IsRoot&quot;:true,&quot;Status&quot;:&quot;Ready&quot;}]</p>

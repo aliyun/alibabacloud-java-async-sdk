@@ -108,10 +108,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         private String displayName;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
-        private String gmtCreateTime;
+        private Long gmtCreateTime;
 
         @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
-        private String gmtModifiedTime;
+        private Long gmtModifiedTime;
 
         @com.aliyun.core.annotation.NameInMap("ModifierId")
         private String modifierId;
@@ -165,14 +165,14 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         /**
          * @return gmtCreateTime
          */
-        public String getGmtCreateTime() {
+        public Long getGmtCreateTime() {
             return this.gmtCreateTime;
         }
 
         /**
          * @return gmtModifiedTime
          */
-        public String getGmtModifiedTime() {
+        public Long getGmtModifiedTime() {
             return this.gmtModifiedTime;
         }
 
@@ -201,8 +201,8 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             private String creatorId; 
             private String description; 
             private String displayName; 
-            private String gmtCreateTime; 
-            private String gmtModifiedTime; 
+            private Long gmtCreateTime; 
+            private Long gmtModifiedTime; 
             private String modifierId; 
             private String name; 
             private String visibility; 
@@ -256,24 +256,22 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
             /**
              * <p><strong>The creation time (UNIX timestamp in milliseconds).</strong></p>
-             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
              * <p>1780555634000</p>
              */
-            public Builder gmtCreateTime(String gmtCreateTime) {
+            public Builder gmtCreateTime(Long gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
                 return this;
             }
 
             /**
              * <p><strong>The last modification time (UNIX timestamp in milliseconds).</strong></p>
-             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
              * <p>1780555634000</p>
              */
-            public Builder gmtModifiedTime(String gmtModifiedTime) {
+            public Builder gmtModifiedTime(Long gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
                 return this;
             }

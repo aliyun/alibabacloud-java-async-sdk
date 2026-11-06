@@ -91,7 +91,7 @@ public class CreateCrossProjectPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to locate and troubleshoot this API call.</p>
+         * <p>The request ID, which is used to locate and troubleshoot the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>735894D1-D5E5-50B8-8A6D-041C90A98B23</p>
@@ -102,7 +102,7 @@ public class CreateCrossProjectPipelineRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -171,7 +171,7 @@ public class CreateCrossProjectPipelineRunResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cross-workspace deployment flow ID.</p>
+             * <p>The ID of the cross-workspace deployment pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>fcfd4160-e2ff-4603-9719-09128fe733df</p>

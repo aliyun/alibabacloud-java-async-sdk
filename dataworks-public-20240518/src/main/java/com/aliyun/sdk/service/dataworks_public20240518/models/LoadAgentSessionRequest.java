@@ -87,7 +87,7 @@ public class LoadAgentSessionRequest extends Request {
         } 
 
         /**
-         * <p>The ID provided by the requester. This ID is echoed back as is.</p>
+         * <p>The ID passed by the requester. The value is returned as is.</p>
          * 
          * <strong>example:</strong>
          * <p>4as3dasf654a</p>
@@ -99,7 +99,7 @@ public class LoadAgentSessionRequest extends Request {
         }
 
         /**
-         * <p>The JSON-RPC version. Fixed to 2.0.</p>
+         * <p>The JSON-RPC version. The value is fixed to 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -180,7 +180,7 @@ public class LoadAgentSessionRequest extends Request {
             } 
 
             /**
-             * <p>The offset from which to pull subsequent SSE outputs in a resumable transmission scenario.</p>
+             * <p>Pulls the subsequent SSE output from the specified position in a resumable transfer scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -191,7 +191,7 @@ public class LoadAgentSessionRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether this is a resumable transmission scenario. If the SSE stream is interrupted due to network instability, you can set this flag to repull the SSE response data from the breakpoint.</p>
+             * <p>Specifies whether this is a resumable transfer scenario. In scenarios where the SSE stream is unstable, such as network instability that causes the SSE connection to drop midway, you can use this flag to pull the SSE response data again from the breakpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -261,7 +261,7 @@ public class LoadAgentSessionRequest extends Request {
             } 
 
             /**
-             * <p>The ACP extension parameters for DataWorks.</p>
+             * <p>The ACP extension parameters of DataWorks.</p>
              */
             public Builder meta(Meta meta) {
                 this.meta = meta;

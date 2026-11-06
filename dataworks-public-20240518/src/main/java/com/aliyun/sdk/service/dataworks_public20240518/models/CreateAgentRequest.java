@@ -290,7 +290,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The released expert suites bound to the agent. For personal or enterprise suites, use SuiteId and optionally specify a fixed Version or VersionSelector. For official suites, you must explicitly set Source to OFFICIAL and specify the SuiteId from the official catalog. Do not specify Version or VersionSelector. If this parameter is not specified, an empty list is created, and official suites are not loaded by default.</p>
+         * <p>The published expert suites bound to the agent. For personal or enterprise suites, use SuiteId, and optionally specify a fixed Version or VersionSelector. For official suites, you must explicitly specify Source=OFFICIAL and the SuiteId from the official catalog, and do not specify Version or VersionSelector. If not specified, an empty list is created, and all official suites are not loaded by default.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Source&quot;:&quot;OFFICIAL&quot;,&quot;SuiteId&quot;:&quot;dataworks-data-analysis-extension&quot;},{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:1}]</p>
@@ -303,7 +303,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The extended metadata as key-value pairs.</p>
+         * <p>The extended metadata in key-value pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -331,7 +331,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The name of the agent. It must be unique within the current account.</p>
+         * <p>The name of the agent. The name must be unique within the current account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,12 +344,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to publish the agent immediately after creation. Valid values:</p>
-         * <ul>
-         * <li>true: Publishes the created version.</li>
-         * <li>false or omitted: Retains the original behavior of creating a draft only.
-         * Saving and publishing are not atomic operations. If publishing fails, the draft may already exist. Query the agent before retrying to avoid duplicate creation.</li>
-         * </ul>
+         * <p>Specifies whether to publish the agent immediately after creation. A value of true publishes the created version. A value of false or omitting this parameter maintains the original behavior of creating a draft only. Saving and publishing are not atomic operations. If publishing fails, the draft may already exist. Before retrying, query the agent first to avoid duplicate creation.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -418,7 +413,7 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * <p>The visibility scope. The corresponding fields are used based on the Visibility parameter.</p>
+         * <p>The visibility scope. Specify the corresponding fields based on the Visibility value.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -570,7 +565,7 @@ public class CreateAgentRequest extends Request {
             } 
 
             /**
-             * <p>The source of the expert suite. Valid values: OFFICIAL: official catalog resources. DB: personal or enterprise resources. If this parameter is omitted, the original database resource query semantics are retained. For official resources, the artifact version is fixed when the agent is released.</p>
+             * <p>OFFICIAL indicates an official catalog resource. DB indicates a personal or enterprise resource. If omitted, the original database resource query semantics are maintained. For official resources, the artifact version is fixed when the agent is published.</p>
              * 
              * <strong>example:</strong>
              * <p>OFFICIAL</p>
@@ -581,7 +576,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>The ID of the expert suite. When you specify expert suite references, each item must include a SuiteId, which is verified by the server. When Source is set to OFFICIAL, this is the official catalog ID. Otherwise, this is the ID returned by expert suite management. The referenced resource must be visible to the caller.</p>
+             * <p>When passing expert suite references, each item must provide a SuiteId, which is validated by the server. When Source is OFFICIAL, this is the official catalog ID. Otherwise, this is the ID returned by expert suite management. The referenced resource must be visible to the caller.</p>
              * 
              * <strong>example:</strong>
              * <p>dataworks-data-analysis-extension</p>
@@ -592,7 +587,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>The fixed integer revision number of a released snapshot. This parameter applies only to personal or enterprise suites and is mutually exclusive with VersionSelector. Releasing a new version does not change the fixed reference. If both parameters are omitted, the latest version is used for each new session. Do not specify this parameter when Source is set to OFFICIAL.</p>
+             * <p>Used only for personal or enterprise suites. Specifies the fixed integer revision number of a published snapshot. This parameter is mutually exclusive with VersionSelector. Publishing a new version does not change the fixed reference. If both are omitted, the latest version is used for each new session. Do not specify this parameter when Source is OFFICIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -603,7 +598,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>The version selection expression. This parameter applies only to personal or enterprise resources and is mutually exclusive with Version. It supports exact semantic versions, latest, and the full npm/node-semver range syntax, such as 1.2.*, ^1.2.3, ~1.2.3, &gt;=1.0.0 &lt;2.0.0, and 1.x || 2.x. If both parameters are omitted, latest is used, and the highest matching released version is selected for each new session. Existing fixed integer references remain unchanged. Do not specify this parameter when Source is set to OFFICIAL.</p>
+             * <p>Used only for personal or enterprise resources. This parameter is mutually exclusive with Version. Supports exact semantic versions, latest, and full npm/node-semver range syntax, such as 1.2.*, ^1.2.3, ~1.2.3, &gt;=1.0.0 &lt;2.0.0, and 1.x || 2.x. If both are omitted, the latest version is used, and the highest matching published version is selected for each new session. Existing fixed integer references remain unchanged. Do not specify this parameter when Source is OFFICIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>^1.2.3</p>
@@ -723,7 +718,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>The official catalog ID. Specify this parameter when Source is set to OFFICIAL. Do not specify Name, Version, or VersionSelector. Do not specify this parameter for personal or enterprise skills.</p>
+             * <p>When Source is OFFICIAL, specify the official catalog ID. Do not specify Name, Version, or VersionSelector. Do not specify this field for personal or enterprise skills.</p>
              * 
              * <strong>example:</strong>
              * <p>dataworks-semantic</p>
@@ -734,7 +729,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>The source of the skill. Valid values: OFFICIAL: official catalog resources. DB: personal or enterprise resources. If this parameter is omitted, the original query-by-name semantics are retained.</p>
+             * <p>OFFICIAL indicates an official catalog resource. DB indicates a personal or enterprise resource. If omitted, the original query-by-name semantics are maintained.</p>
              * 
              * <strong>example:</strong>
              * <p>OFFICIAL</p>
@@ -745,7 +740,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>The fixed integer revision number of a released snapshot. This parameter applies only to personal or enterprise skills and is mutually exclusive with VersionSelector. Releasing a new version does not change the fixed reference. If both parameters are omitted, the latest version is used for each new session. Do not specify this parameter when Source is set to OFFICIAL.</p>
+             * <p>Used only for personal or enterprise skills. Specifies the fixed integer revision number of a published snapshot. This parameter is mutually exclusive with VersionSelector. Publishing a new version does not change the fixed reference. If both are omitted, the latest version is used for each new session. Do not specify this parameter when Source is OFFICIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -756,7 +751,7 @@ public class CreateAgentRequest extends Request {
             }
 
             /**
-             * <p>The version selection expression. This parameter applies only to personal or enterprise resources and is mutually exclusive with Version. It supports exact semantic versions, latest, and the full npm/node-semver range syntax, such as 1.2.*, ^1.2.3, ~1.2.3, &gt;=1.0.0 &lt;2.0.0, and 1.x || 2.x. If both parameters are omitted, latest is used, and the highest matching released version is selected for each new session. Existing fixed integer references remain unchanged. Do not specify this parameter when Source is set to OFFICIAL.</p>
+             * <p>Used only for personal or enterprise resources. This parameter is mutually exclusive with Version. Supports exact semantic versions, latest, and full npm/node-semver range syntax, such as 1.2.*, ^1.2.3, ~1.2.3, &gt;=1.0.0 &lt;2.0.0, and 1.x || 2.x. If both are omitted, the latest version is used, and the highest matching published version is selected for each new session. Existing fixed integer references remain unchanged. Do not specify this parameter when Source is OFFICIAL.</p>
              * 
              * <strong>example:</strong>
              * <p>^1.2.3</p>
@@ -780,10 +775,26 @@ public class CreateAgentRequest extends Request {
      * <p>CreateAgentRequest</p>
      */
     public static class Tools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BuiltinName")
+        private String builtinName;
+
+        @com.aliyun.core.annotation.NameInMap("Kind")
+        private String kind;
+
+        @com.aliyun.core.annotation.NameInMap("McpItems")
+        private java.util.List<String> mcpItems;
+
+        @com.aliyun.core.annotation.NameInMap("McpServerName")
+        private String mcpServerName;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Tools(Builder builder) {
+            this.builtinName = builder.builtinName;
+            this.kind = builder.kind;
+            this.mcpItems = builder.mcpItems;
+            this.mcpServerName = builder.mcpServerName;
             this.name = builder.name;
         }
 
@@ -796,6 +807,34 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
+         * @return builtinName
+         */
+        public String getBuiltinName() {
+            return this.builtinName;
+        }
+
+        /**
+         * @return kind
+         */
+        public String getKind() {
+            return this.kind;
+        }
+
+        /**
+         * @return mcpItems
+         */
+        public java.util.List<String> getMcpItems() {
+            return this.mcpItems;
+        }
+
+        /**
+         * @return mcpServerName
+         */
+        public String getMcpServerName() {
+            return this.mcpServerName;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -803,14 +842,66 @@ public class CreateAgentRequest extends Request {
         }
 
         public static final class Builder {
+            private String builtinName; 
+            private String kind; 
+            private java.util.List<String> mcpItems; 
+            private String mcpServerName; 
             private String name; 
 
             private Builder() {
             } 
 
             private Builder(Tools model) {
+                this.builtinName = model.builtinName;
+                this.kind = model.kind;
+                this.mcpItems = model.mcpItems;
+                this.mcpServerName = model.mcpServerName;
                 this.name = model.name;
             } 
+
+            /**
+             * <p>Required when Kind is BUILTIN_TOOLSET. Specifies the name of the built-in toolset supported by the target server. Omit this parameter when Kind is MCP_TOOLSET.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web_search</p>
+             */
+            public Builder builtinName(String builtinName) {
+                this.builtinName = builtinName;
+                return this;
+            }
+
+            /**
+             * <p>Required for valid tool references. BUILTIN_TOOLSET indicates a built-in toolset, and BuiltinName must be specified. MCP_TOOLSET indicates an MCP toolset, and McpServerName must be specified. The target server validates the parameter based on the tool type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MCP_TOOLSET</p>
+             */
+            public Builder kind(String kind) {
+                this.kind = kind;
+                return this;
+            }
+
+            /**
+             * <p>Optional when Kind is MCP_TOOLSET. If specified, only the listed tools are used. If omitted or left as an empty array, tools are not filtered by name. Each item must be the name of an actual tool in the target MCP service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;only-this-tool&quot;]</p>
+             */
+            public Builder mcpItems(java.util.List<String> mcpItems) {
+                this.mcpItems = mcpItems;
+                return this;
+            }
+
+            /**
+             * <p>Required when Kind is MCP_TOOLSET. Specifies the MCP service name that the current caller has permission to reference and that has an active published version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-a</p>
+             */
+            public Builder mcpServerName(String mcpServerName) {
+                this.mcpServerName = mcpServerName;
+                return this;
+            }
 
             /**
              * <p>The name of the MCP server.</p>

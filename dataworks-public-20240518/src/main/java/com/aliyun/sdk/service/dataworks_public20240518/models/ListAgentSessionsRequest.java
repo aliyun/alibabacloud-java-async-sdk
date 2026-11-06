@@ -87,7 +87,7 @@ public class ListAgentSessionsRequest extends Request {
         } 
 
         /**
-         * <p>The ID passed by the requester, which is returned as is.</p>
+         * <p>The request ID provided by the caller. This ID is returned as is in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>676303114031776</p>
@@ -99,7 +99,7 @@ public class ListAgentSessionsRequest extends Request {
         }
 
         /**
-         * <p>The JSON-RPC version. Fixed to 2.0.</p>
+         * <p>The JSON-RPC version, which is fixed to 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -258,7 +258,7 @@ public class ListAgentSessionsRequest extends Request {
             } 
 
             /**
-             * <p>The exact filter for the <strong>agent name</strong>. You must specify at least one of this parameter and SessionSourceList.</p>
+             * <p>The <strong>agent name</strong> for exact match filtering. You must specify at least one of this parameter and <code>SessionSourceList</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>chat_cli_chatbi</p>
@@ -269,11 +269,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to return only archived sessions. Valid values:</p>
-             * <ul>
-             * <li>true: Only archived sessions are returned.</li>
-             * <li>false or not specified: Only unarchived sessions are returned.</li>
-             * </ul>
+             * <p>Specifies whether to query archived sessions. If you set this parameter to true, only archived sessions are returned. If you set this parameter to false or omit it, only unarchived sessions are returned. A value of false does not mean all sessions. To query both types of sessions, send separate requests and handle the pagination for each.</p>
              */
             public Builder archived(Boolean archived) {
                 this.archived = archived;
@@ -303,7 +299,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p>The exact match for the session ID.</p>
+             * <p>The session ID for exact matching.</p>
              * 
              * <strong>example:</strong>
              * <p>sess_0f12abc34</p>
@@ -314,7 +310,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p>The filter for the <strong>session source list</strong>. You must specify at least one of this parameter and AgentName.</p>
+             * <p>The <strong>session source list</strong> for filtering. You must specify at least one of this parameter and <code>AgentName</code>.</p>
              */
             public Builder sessionSourceList(java.util.List<String> sessionSourceList) {
                 this.sessionSourceList = sessionSourceList;
@@ -322,7 +318,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p>The fuzzy filter for the session title.</p>
+             * <p>The session title for fuzzy match filtering.</p>
              * 
              * <strong>example:</strong>
              * <p>Sales in the last 30 days</p>
@@ -333,7 +329,7 @@ public class ListAgentSessionsRequest extends Request {
             }
 
             /**
-             * <p>The filter for the session tag code list.</p>
+             * <p>The session tag code list for filtering.</p>
              */
             public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;

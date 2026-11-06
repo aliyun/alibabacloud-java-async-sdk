@@ -226,6 +226,29 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.
+     * Archiving only modifies the archive flag of the session and does not stop or delete the session. If Archived is set to true, the session is archived. If Archived is set to false, the session is unarchived. If this parameter is omitted, the default value true is used. You can use the Archived parameter of ListAgentSessions to query archived and unarchived sessions separately.
+     * The caller must have access permissions on the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate that the business operation is successful. You must check JsonRpcResponse.Error. The successful result is located in JsonRpcResponse.Result.</p>
+     * 
+     * @param request the request parameters of ArchiveAgentSession  ArchiveAgentSessionRequest
+     * @return ArchiveAgentSessionResponse
+     */
+    @Override
+    public CompletableFuture<ArchiveAgentSessionResponse> archiveAgentSession(ArchiveAgentSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ArchiveAgentSession").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ArchiveAgentSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ArchiveAgentSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <ol>
      * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
      * <li><strong>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</strong></li>
@@ -461,13 +484,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request instructions</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li><strong>Agent name</strong>: Must be unique within the current account.</li>
-     * <li><strong>Model configuration</strong>: Optional parameter used to specify the model used by the agent and its related settings.</li>
-     * <li><strong>Visibility level</strong>: Defines who can access the agent. Supports visibility within the account, project, or specific users.</li>
-     * <li><strong>Visibility scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, you must further specify the specific project IDs or user ID lists.</li>
-     * <li><strong>Other parameters</strong>: Display name and description are optional and can be filled in as needed.</li>
+     * <li><strong>Model configuration</strong>: Optional. Specifies the model used by the agent and its related settings.</li>
+     * <li><strong>Visibility level</strong>: Defines who can access the agent. Supports account-wide, project-specific, or user-specific visibility.</li>
+     * <li><strong>Visibility scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, you must specify the specific project IDs or user IDs.</li>
+     * <li><strong>Other parameters</strong>: Parameters such as the display name and description are optional. Specify them as needed.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateAgent  CreateAgentRequest
@@ -491,15 +514,16 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation creates an agent session.</li>
-     * <li>You must specify the name of the bound agent by using <code>_meta.agent.agentName</code>. This parameter is required.<ul>
+     * <li>This operation creates a new agent session.</li>
+     * <li>Specify the name of the bound agent by using <code>Params.Meta.Agent.AgentName</code>. This parameter is required.<ul>
      * <li>dataworks_data_agent: DataWorks built-in agent - Data Agent. It provides AI capabilities for the entire data development lifecycle, including data integration, development, O&amp;M, governance, and analysis.</li>
      * <li>dataworks_chatbi_agent: DataWorks built-in agent - ChatBI. Based on natural language processing and intelligent analysis technologies, it automates the entire analysis process from requirement parsing, data extraction, and automatic code generation to visual report output through conversational interaction.</li>
      * <li>dataworks_ai_assistant_agent: DataWorks built-in agent - AI Assistant. An enterprise-grade AI assistant for DataWorks built on open-source frameworks such as OpenClaw and Hermes Agent.</li>
      * </ul>
      * </li>
-     * <li>You can pass through the session source identifier by using <code>_meta.config.sessionSource</code> to facilitate subsequent retrieval by source.</li>
-     * <li>You can pass session tags by using <code>_meta.config.sessionTags[].sessionTagCode</code>.</li>
+     * <li>You can specify the session source by using <code>Params.Meta.Config.SessionSource</code> to facilitate subsequent retrieval by source.</li>
+     * <li>You can pass session tags by using <code>Params.Meta.Config.SessionTags[].SessionTagCode</code>.</li>
+     * <li>Set optional initial session configurations by using <code>Params.Meta.InitialConfigOptions</code>. Use <code>Model</code>, <code>Mode</code>, and <code>ReasoningEffort</code> for the model, authorization mode, and reasoning configuration, respectively. After the session is created, save the session ID from the response to send prompts or subscribe to session events later.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateAgentSession  CreateAgentSessionRequest
@@ -571,6 +595,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateCalendarResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateCodeReview  CreateCodeReviewRequest
+     * @return CreateCodeReviewResponse
+     */
+    @Override
+    public CompletableFuture<CreateCodeReviewResponse> createCodeReview(CreateCodeReviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCodeReview").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCodeReviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCodeReviewResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -656,7 +698,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates and persists a cross-workspace deployment flow. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Child objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects, call ExecCrossProjectPipelineRun to execute the deployment after creation, and call GetCrossProjectPipelineRun to query the deployment status.</p>
+     * <p>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</p>
      * 
      * @param request the request parameters of CreateCrossProjectPipelineRun  CreateCrossProjectPipelineRunRequest
      * @return CreateCrossProjectPipelineRunResponse
@@ -1398,9 +1440,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or later is required.</li>
-     * <li><strong>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</strong></li>
-     * <li><strong>Before you call this operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</li>
+     * <li><strong>Before you call this API operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</strong></li>
+     * <li><strong>Before you call this API operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</strong></li>
      * </ol>
      * 
      * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
@@ -1627,6 +1669,29 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+     * Verify the target session before proceeding. A deleted session cannot be recovered by unarchiving it through ArchiveAgentSession. To temporarily hide a session, use ArchiveAgentSession. To stop the current execution, use CancelAgentSession.
+     * The caller must have access permissions for the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate a successful business operation. You must check JsonRpcResponse.Error for errors. Successful results are located in JsonRpcResponse.Result.</p>
+     * 
+     * @param request the request parameters of DeleteAgentSession  DeleteAgentSessionRequest
+     * @return DeleteAgentSessionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAgentSessionResponse> deleteAgentSession(DeleteAgentSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAgentSession").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgentSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAgentSessionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2598,7 +2663,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
@@ -2983,8 +3048,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</p>
      * 
      * @param request the request parameters of GetAgent  GetAgentRequest
      * @return GetAgentResponse
@@ -3026,6 +3091,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.
+     * This API operation provides a read-only SSE subscription and does not submit questions. Use a GET request and maintain streaming reads. Do not read the response as a standard JSON object at once. For long-running tasks that may exceed the timeout of a single request, establish an independent event subscription before calling PromptAgentSession. After creating a session, set SessionCode to the SessionId and read both streams in parallel. The Events stream displays real-time progress, while the built-in SSE of the Prompt stream is used to read the final state and business errors of the current turn.
+     * Events display messages, tool invoke, and execution progress. The establishment of a subscription connection, heartbeats, or an HTTP 200 status code does not indicate task completion. Determine task completion based on the actual final state events and the Prompt invoke results.
+     * When resuming after a disconnection, pass the ID of the last consumed remote event as Last-Event-Id. Also, save and pass back the EventEpoch of the same event stream if the server has returned it. When subscribing for the first time without a cursor, omit these two parameters to receive only real-time events after the subscription is established. Explicitly setting Last-Event-Id to 0 attempts to replay from the starting point still in the cache, which does not mean the complete history can be retrieved. Retrieve the complete history by calling LoadAgentSession. Do not generate cursors or epochs yourself, or use local message sequence numbers as replacements.
+     * The event cache is bounded. If you receive a resynchronization prompt such as state_resync_required or the cursor is no longer available, restore the history by calling LoadAgentSession and then re-establish the subscription. LoadAgentSession is used for refreshing and exception recovery, and should not be called repeatedly to replace real-time event subscriptions. If the Prompt stream times out or disconnects before receiving the business final state, the result of the current turn is unknown, and you can continue to observe the progress through the Events stream. Avoid automatically resending the Prompt. Closing the Events subscription does not trigger CancelAgentSession.
+     * Servers that support epoch information return eventEpoch in the data of the stream_open control frame and provide a mapping between the business sessionId and nativeSessionId. Save the identifiers returned by the server. Do not assume that the business session ID is the same as the native session ID. The cursor and eventEpoch must come from the same event stream epoch of the same native session, and cannot be reused across native sessions or epochs. Do not advance the cursor when the control frame does not have an ID.</p>
+     * 
+     * @param request the request parameters of GetAgentSessionEvents  GetAgentSessionEventsRequest
+     * @return GetAgentSessionEventsResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentSessionEventsResponse> getAgentSessionEvents(GetAgentSessionEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgentSessionEvents").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentSessionEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentSessionEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<GetAgentSessionEventsResponseBody> getAgentSessionEventsWithResponseIterable(GetAgentSessionEventsRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("GetAgentSessionEvents").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        GetAgentSessionEventsResponseBodyIterator iterator = GetAgentSessionEventsResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**
@@ -3196,6 +3297,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCertificateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCodeReview  GetCodeReviewRequest
+     * @return GetCodeReviewResponse
+     */
+    @Override
+    public CompletableFuture<GetCodeReviewResponse> getCodeReview(GetCodeReviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCodeReview").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCodeReviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCodeReviewResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4603,7 +4722,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This feature requires DataWorks Basic Edition or later.</p>
+     * <p>This feature requires DataWorks Basic Edition or a higher edition.</p>
      * 
      * @param request the request parameters of GetWorkflow  GetWorkflowRequest
      * @return GetWorkflowResponse
@@ -4767,13 +4886,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Request instructions</h2>
      * <ul>
-     * <li>You must specify at least one of agentName and sessionSourceList.</li>
-     * <li>You can combine tagList, sessionId, and sessionTitle for filtering.</li>
-     * <li>The response follows the Alibaba Cloud OpenAPI paging specification, including totalCount, maxResults, nextToken, and sessionList.</li>
-     * <li>If nextToken is an invalid string, it is processed as 1 by default.</li>
-     * <li>By default, 50 records are returned per page. You can adjust this by using the maxResults parameter.</li>
+     * <li>You must specify at least one of <code>Params.AgentName</code> and <code>Params.SessionSourceList</code>. You can also filter sessions by <code>Params.TagList</code>, <code>Params.SessionId</code>, and <code>Params.SessionTitle</code>.</li>
+     * <li>If <code>Params.Archived</code> is set to <code>true</code>, only archived sessions are queried. If it is set to <code>false</code> or omitted, only unarchived sessions are queried. To query both types of sessions, send separate requests and handle the pagination for each.</li>
+     * <li>The session list is located in <code>JsonRpcResponse.Result.AgentSessions</code>. The pagination information is located in <code>TotalCount</code>, <code>MaxResults</code>, and <code>NextToken</code> under the same <code>Result</code>.</li>
+     * <li>The default value of <code>Params.MaxResults</code> is 50. For the first page, you can pass <code>Params.NextToken=1</code>. For subsequent pages, pass the <code>NextToken</code> value from the response as is.</li>
      * </ul>
      * 
      * @param request the request parameters of ListAgentSessions  ListAgentSessionsRequest
@@ -4938,6 +5056,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCertificatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCodeReviews  ListCodeReviewsRequest
+     * @return ListCodeReviewsResponse
+     */
+    @Override
+    public CompletableFuture<ListCodeReviewsResponse> listCodeReviews(ListCodeReviewsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCodeReviews").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCodeReviewsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCodeReviewsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5320,7 +5456,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Enterprise Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or higher to use this operation.</p>
      * 
      * @param request the request parameters of ListDataAssetTags  ListDataAssetTagsRequest
      * @return ListDataAssetTagsResponse
@@ -5403,7 +5539,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.  * @description You must purchase DataWorks Basic Edition or later to use this feature.
+     * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.  * @description You must purchase DataWorks Basic Edition or a higher edition to use this API operation.
      * 
      * @param request the request parameters of ListDataQualityEvaluationTasks  ListDataQualityEvaluationTasksRequest
      * @return ListDataQualityEvaluationTasksResponse
@@ -5722,7 +5858,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or later is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * @param request the request parameters of ListDownstreamTasks  ListDownstreamTasksRequest
      * @return ListDownstreamTasksResponse
@@ -6225,9 +6361,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
-     * <li>Only MaxCompute and HMS (EMR cluster) table types are supported.</li>
-     * <li>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>Currently, only MaxCompute and HMS (EMR cluster) tables are supported.</li>
+     * <li>Before you call this API operation, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, and then call ListDatabases to obtain the database ID. For MaxCompute projects with the schema feature enabled, call ListSchemas to obtain the schema ID. Then, call ListTables to obtain the TableId, and pass the returned table ID to this API operation.</li>
      * </ol>
      * 
      * @param request the request parameters of ListPartitions  ListPartitionsRequest
@@ -6779,7 +6915,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this API.
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this API.
      * You can only query operation logs generated within the past 31 days.</p>
      * 
      * @param request the request parameters of ListTaskInstanceOperationLogs  ListTaskInstanceOperationLogsRequest
@@ -6969,11 +7105,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation is used to recover the details of a specified session and return the agent response in a Server-Sent Events (SSE) stream.</li>
-     * <li>If the target session does not exist, an error frame with an error code of 400 is returned.</li>
-     * <li>The response contains process information about how the agent handles the request, such as message chunks, reasoning steps, and tool call status updates.</li>
-     * <li>The stopReason field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum turn limit and being canceled.</li>
-     * <li>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
+     * <li>This operation recovers the details of a specified session and returns the agent response in a streaming manner by using Server-Sent Events (SSE).</li>
+     * <li>If the target session does not exist, an error frame with the error code 400 is returned.</li>
+     * <li>The response includes processing information about how the agent handles the request, such as message chunks, thinking process, and tool invocation status updates.</li>
+     * <li>The <code>stopReason</code> field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum number of turns and being canceled.</li>
+     * <li>The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of LoadAgentSession  LoadAgentSessionRequest
@@ -7098,17 +7234,47 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Previews the parameter parsing results for each cycle based on the provided script parameters, business date, and scheduling configuration. A task ID is not required.</p>
+     * <ul>
+     * <li>This operation only performs a simulated preview and does not create or run actual tasks. The simulated cycles returned for weekly and monthly schedules cannot be used as the basis for determining actual trigger dates.</li>
+     * <li><code>Bizdate</code> is the starting business date, normalized to 00:00:00 on that date in the time zone of the service region. <code>TriggerTime</code> is the scheduled trigger time for the corresponding simulated cycle.</li>
+     * <li>System identifiers such as <code>$nodeid</code> use a simulated context. The preview value of <code>$nodeid</code> is <code>0</code>, which does not represent an actual task.</li>
+     * <li>The parsing result for each cycle is indicated by <code>Success</code>. If the parsing is successful, <code>Parameters</code> is returned. If the parsing fails, <code>ErrorMessage</code> is returned, and partial parsing results for the cycle are not returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of PreviewTaskParameters  PreviewTaskParametersRequest
+     * @return PreviewTaskParametersResponse
+     */
+    @Override
+    public CompletableFuture<PreviewTaskParametersResponse> previewTaskParameters(PreviewTaskParametersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PreviewTaskParameters").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreviewTaskParametersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PreviewTaskParametersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation sends a user prompt to a specified session ID and accepts the response from the agent in a streaming manner by using Server-Sent Events (SSE).</li>
-     * <li>The response may include information such as message chunks, thinking procedures, and tool calling status updates.</li>
-     * <li>If the specified session does not exist, a 400 fault is returned in an SSE fault frame.</li>
-     * <li>The stopReason field indicates the reason why the agent stopped the current conversation.</li>
-     * <li>Multiple types of content blocks are supported as prompt inputs, such as text and OSS file download links.</li>
-     * <li>You can optionally provide additional metadata in the Meta field to pass more context to the server.</li>
+     * <li>This API operation sends a user prompt to a specified session ID and accepts the agent response as Server-Sent Events (SSE) streams.</li>
+     * <li>The response may include message chunks, thinking procedures, and tool invocation status updates.</li>
+     * <li>If the specified session does not exist, a 400 error is returned in an SSE error frame.</li>
+     * <li>The <code>stopReason</code> field indicates the reason why the agent stopped the current conversation turn.</li>
+     * <li>This operation supports multiple types of content blocks as prompt input, such as text and OSS file download links.</li>
+     * <li>You can optionally provide additional metadata in <code>Meta</code> to pass more context to the server.</li>
      * <li>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
-     * <li><strong>Before you invoke this operation, make sure that you fully understand the billing methods and pricing of the Data Agent product</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
+     * <li><strong>Before you use this API operation, make sure that you fully understand the billing methods and pricing of Data Agent</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
      * </ul>
+     * <h2>Long-running tasks and timeout recovery</h2>
+     * <p>For long-running tasks that may exceed the single-request timeout, after the GetAgentSessionEvents canary release is enabled for the current account and target region, first establish an Events subscription and then call PromptAgentSession to read both streams in parallel. Use Events to display real-time progress, and use the Prompt stream to read the final state and business errors of the current turn. Each message is displayed only once.
+     * If the Prompt stream times out or disconnects before the final business state is received, the result of the current turn is unknown. Continue to observe Events, and call LoadAgentSession when you need to verify the session history. Do not automatically resend the prompt.</p>
      * 
      * @param request the request parameters of PromptAgentSession  PromptAgentSessionRequest
      * @return PromptAgentSessionResponse
@@ -7802,7 +7968,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires DataWorks Enterprise Edition or later.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or higher to use this operation.</p>
      * 
      * @param request the request parameters of TagDataAssets  TagDataAssetsRequest
      * @return TagDataAssetsResponse
@@ -7890,6 +8056,31 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
+     * Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
+     * Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
+     * For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+     * If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</p>
+     * 
+     * @param request the request parameters of UpdateAgent  UpdateAgentRequest
+     * @return UpdateAgentResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAgentResponse> updateAgent(UpdateAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAgent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</p>
      * 
      * @param request the request parameters of UpdateAgentSessionTitle  UpdateAgentSessionTitleRequest
@@ -7962,6 +8153,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateCalendarResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateCodeReview  UpdateCodeReviewRequest
+     * @return UpdateCodeReviewResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCodeReviewResponse> updateCodeReview(UpdateCodeReviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCodeReview").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCodeReviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCodeReviewResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
