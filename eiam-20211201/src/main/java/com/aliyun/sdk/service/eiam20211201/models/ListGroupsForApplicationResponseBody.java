@@ -80,7 +80,7 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of groups.</p>
+         * <p>The list of group IDs.</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -155,7 +155,7 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application role.</p>
+             * <p>The application role ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -225,7 +225,7 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of application roles. This parameter is not returned for SAML applications.</p>
+             * <p>The list of application roles. No roles are returned for SAML applications.</p>
              */
             public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
                 this.applicationRoles = applicationRoles;

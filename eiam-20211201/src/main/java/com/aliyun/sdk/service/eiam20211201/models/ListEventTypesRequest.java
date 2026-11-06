@@ -96,7 +96,7 @@ public class ListEventTypesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the query.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -108,7 +108,7 @@ public class ListEventTypesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

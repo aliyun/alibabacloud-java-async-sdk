@@ -102,7 +102,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of accounts.</p>
+         * <p>The list of account IDs.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -225,7 +225,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of application roles.</p>
+             * <p>The list of application roles. No roles are returned for SAML applications.</p>
              */
             public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
                 this.applicationRoles = applicationRoles;

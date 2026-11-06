@@ -120,7 +120,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of rows per page in a paged query.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -131,7 +131,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The pagination token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -142,7 +142,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The pagination token returned by the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -175,7 +175,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of third-party account login bindings.</p>
+         * <p>The list of third-party account logon bindings.</p>
          */
         public Builder userAuthnSourceMappings(java.util.List<UserAuthnSourceMappings> userAuthnSourceMappings) {
             this.userAuthnSourceMappings = userAuthnSourceMappings;
@@ -319,7 +319,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication source type of the source IdP.</p>
+             * <p>The source IdP authentication source type.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:authntype:oidc</p>
@@ -341,7 +341,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The association information of the third-party account.</p>
+             * <p>The third-party account association information.</p>
              * 
              * <strong>example:</strong>
              * <p>{\&quot;userId\&quot;:\&quot;xxxx\&quot;,\&quot;name\&quot;:\&quot;xxx\&quot;,\&quot;bindTime\&quot;:\&quot;1766050298872\&quot;,\&quot;description\&quot;:\&quot;bind request id: reqpre_xxx\&quot;}</p>

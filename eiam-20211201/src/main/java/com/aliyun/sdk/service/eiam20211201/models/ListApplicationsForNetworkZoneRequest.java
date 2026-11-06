@@ -153,7 +153,7 @@ public class ListApplicationsForNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries to return per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -165,7 +165,7 @@ public class ListApplicationsForNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network zone associated with the application.</p>
+         * <p>The ID of the network zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class ListApplicationsForNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -190,7 +190,7 @@ public class ListApplicationsForNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the previous page.</p>
+         * <p>The previous token.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>

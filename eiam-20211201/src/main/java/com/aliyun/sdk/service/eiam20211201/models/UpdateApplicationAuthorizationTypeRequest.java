@@ -113,7 +113,7 @@ public class UpdateApplicationAuthorizationTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application that you want to modify.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,10 +126,10 @@ public class UpdateApplicationAuthorizationTypeRequest extends Request {
         }
 
         /**
-         * <p>The authorization type of the application. Valid values:</p>
+         * <p>The access authorization type of the application. Valid values:</p>
          * <ul>
-         * <li>authorize_required: Only the user with explicit authorization can access the application.</li>
-         * <li>default_all: By default, all users can access the application.</li>
+         * <li>authorize_required: Explicit authorization is required for access.</li>
+         * <li>default_all: All members have access permissions by default.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -143,7 +143,7 @@ public class UpdateApplicationAuthorizationTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

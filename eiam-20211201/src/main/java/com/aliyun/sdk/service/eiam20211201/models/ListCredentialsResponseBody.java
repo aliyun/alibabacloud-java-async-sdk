@@ -114,7 +114,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page for paging.</p>
+         * <p>The number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in this call.</p>
+         * <p>The pagination token returned by the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -147,7 +147,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -203,7 +203,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client_id of the OAuth protocol.</p>
+             * <p>The client ID of the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>dmvncmxersdxxxxxx</p>
@@ -260,7 +260,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The credential content of the OAuth client authentication credential type.</p>
+             * <p>The content of an OAuth client credential.</p>
              */
             public Builder oAuthClientContent(OAuthClientContent oAuthClientContent) {
                 this.oAuthClientContent = oAuthClientContent;
@@ -522,7 +522,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830225000</p>
@@ -544,7 +544,7 @@ public class ListCredentialsResponseBody extends TeaModel {
              * <p>The creation type of the credential. Valid values:</p>
              * <ul>
              * <li>system_init: Created by the system.</li>
-             * <li>user_custom: Created by the user.</li>
+             * <li>user_custom: Created by a user.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -556,7 +556,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialExternalId.
+             * <p>The external unique identifiers of the credentials.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23528e9957304f57b98112c72788b5xxxxx</p>
              */
             public Builder credentialExternalId(String credentialExternalId) {
                 this.credentialExternalId = credentialExternalId;
@@ -597,10 +600,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scenarios label of the credential. Valid values:</p>
+             * <p>The Scenarios label of the credential. Valid values:</p>
              * <ul>
-             * <li>llm: large language model.</li>
-             * <li>saas: third-party SaaS service.</li>
+             * <li>llm: Large model.</li>
+             * <li>saas: Third-party SaaS service.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -612,7 +615,14 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialSharingScope.
+             * <p>The credential sharing scope. Valid values:</p>
+             * <ul>
+             * <li>common: General.</li>
+             * <li>user_exclusive: Account-specific.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>common</p>
              */
             public Builder credentialSharingScope(String credentialSharingScope) {
                 this.credentialSharingScope = credentialSharingScope;
@@ -620,7 +630,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject ID to which the credential belongs.</p>
+             * <p>The ID of the subject to which the credential belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>apt_werthgfdsasffxxxxx</p>
@@ -633,7 +643,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             /**
              * <p>The subject type to which the credential belongs. Valid values:</p>
              * <ul>
-             * <li>authentication_token_provider: authentication token provider.</li>
+             * <li>authentication_token_provider: Authentication token provider.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -647,8 +657,8 @@ public class ListCredentialsResponseBody extends TeaModel {
             /**
              * <p>The credential type. Valid values:</p>
              * <ul>
-             * <li>api_key: API key authentication credential.</li>
-             * <li>oauth_client: OAuth client authentication credential.</li>
+             * <li>api_key: API key credential.</li>
+             * <li>oauth_client: OAuth client credential.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -671,7 +681,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * ExclusiveUserId.
+             * <p>The ID of the exclusive user for the credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder exclusiveUserId(String exclusiveUserId) {
                 this.exclusiveUserId = exclusiveUserId;
@@ -705,7 +718,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830227000</p>

@@ -175,7 +175,7 @@ public class ListAuthorizationResourcesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records per page.</p>
+         * <p>The maximum number of entries to return per page.</p>
          * <ul>
          * <li><p>If you do not specify this parameter, the default value is 20.</p>
          * </li>
@@ -193,9 +193,9 @@ public class ListAuthorizationResourcesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that marks the starting position of the next page.</p>
+         * <p>The pagination token that specifies the starting position for the next page.</p>
          * <ul>
-         * <li>If you do not specify this parameter, the query starts from the first page.</li>
+         * <li>If you do not specify this parameter, the query starts from the first page by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,9 +269,9 @@ public class ListAuthorizationResourcesRequest extends Request {
             /**
              * <p>The name of the filter field. Valid values:</p>
              * <ul>
-             * <li><p>AuthorizationResourceEntityType: the type of the resource entity associated with the authorized resource.</p>
+             * <li><p>AuthorizationResourceEntityType: the type of the resource entity associated with the authorization resource.</p>
              * </li>
-             * <li><p>AuthorizationResourceEntityId: the ID of the resource entity associated with the authorized resource.</p>
+             * <li><p>AuthorizationResourceEntityId: the ID of the resource entity associated with the authorization resource.</p>
              * </li>
              * </ul>
              * 
@@ -284,7 +284,7 @@ public class ListAuthorizationResourcesRequest extends Request {
             }
 
             /**
-             * <p>The list of filter field values.</p>
+             * <p>The list of values for the filter field.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

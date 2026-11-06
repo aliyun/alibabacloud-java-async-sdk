@@ -180,7 +180,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The number of rows per page in a paged query. Maximum value: 100.</p>
+         * <p>The number of entries to return per page in a paging query. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -214,7 +214,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
          * <p>The type of the network access endpoint. Valid values:</p>
          * <ul>
          * <li>shared: shared network access endpoint.</li>
-         * <li>private: dedicated network access endpoint.</li>
+         * <li>private: private network access endpoint.</li>
          * </ul>
          * <p>Default value: private.</p>
          * 
@@ -228,7 +228,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</p>
+         * <p>The pagination token. Set the value to the NextToken value returned from the previous API call. Leave this parameter empty for the first call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -240,7 +240,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID of the dedicated network access endpoint. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
+         * <p>The ID of the VPC to which the private network access endpoint is connected. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-examplexxx</p>
@@ -252,7 +252,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The region of the VPC for the dedicated network access endpoint. The region must be one of the regions returned by the ListNetworkAccessEndpointAvailableRegions operation. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
+         * <p>The region of the VPC to which the private network access endpoint is connected. The region must be returned by the ListNetworkAccessEndpointAvailableRegions operation. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

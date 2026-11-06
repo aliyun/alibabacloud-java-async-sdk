@@ -119,7 +119,7 @@ public class ListBrandsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of brand data.</p>
+         * <p>The list of brands.</p>
          */
         public Builder brands(java.util.List<Brands> brands) {
             this.brands = brands;
@@ -127,7 +127,7 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -138,7 +138,7 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The next token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -149,7 +149,7 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The next token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -171,7 +171,7 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

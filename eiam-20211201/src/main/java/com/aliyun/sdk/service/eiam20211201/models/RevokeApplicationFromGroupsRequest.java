@@ -153,7 +153,7 @@ public class RevokeApplicationFromGroupsRequest extends Request {
         }
 
         /**
-         * <p>The list of group IDs. You can specify up to 100 group IDs in a single request.</p>
+         * <p>The list of group IDs. A single operation supports a maximum of 100 group IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

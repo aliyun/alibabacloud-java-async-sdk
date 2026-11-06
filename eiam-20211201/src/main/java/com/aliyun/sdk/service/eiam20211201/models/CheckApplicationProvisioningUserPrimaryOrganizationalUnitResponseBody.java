@@ -157,7 +157,7 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBo
             } 
 
             /**
-             * <p>Indicates whether authorization is allowed.</p>
+             * <p>Indicates whether authorization is granted.</p>
              */
             public Builder allowAuthorization(Boolean allowAuthorization) {
                 this.allowAuthorization = allowAuthorization;

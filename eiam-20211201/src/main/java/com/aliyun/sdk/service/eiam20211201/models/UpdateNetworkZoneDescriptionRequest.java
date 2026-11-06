@@ -127,7 +127,7 @@ public class UpdateNetworkZoneDescriptionRequest extends Request {
         }
 
         /**
-         * <p>A client token. It is used to ensure the idempotence of the request.</p>
+         * <p>The client token used to ensure idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-examplexxxx</p>
@@ -139,7 +139,7 @@ public class UpdateNetworkZoneDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The description of the network zone.</p>
+         * <p>The network zone description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

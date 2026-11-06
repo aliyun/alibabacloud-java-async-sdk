@@ -163,7 +163,7 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
-         * <p>The account ID.</p>
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

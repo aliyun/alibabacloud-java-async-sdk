@@ -126,7 +126,7 @@ public class AddCustomPrivacyPoliciesToBrandRequest extends Request {
         }
 
         /**
-         * <p>The list of term IDs.</p>
+         * <p>The IDs of the custom privacy policies.</p>
          * <p>This parameter is required.</p>
          */
         public Builder customPrivacyPolicyIds(java.util.List<String> customPrivacyPolicyIds) {

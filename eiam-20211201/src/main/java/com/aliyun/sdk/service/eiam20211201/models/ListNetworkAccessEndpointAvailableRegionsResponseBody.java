@@ -67,7 +67,7 @@ public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The collection of available regions.</p>
+         * <p>The list of available regions.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;

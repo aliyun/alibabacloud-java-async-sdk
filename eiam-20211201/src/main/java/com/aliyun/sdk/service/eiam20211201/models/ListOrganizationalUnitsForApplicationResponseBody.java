@@ -80,7 +80,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The list of organizations.</p>
+         * <p>The list of organizational unit IDs.</p>
          */
         public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -155,7 +155,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The ID of the application role.</p>
+             * <p>The application role ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -225,7 +225,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The list of application roles.</p>
+             * <p>The application roles.</p>
              */
             public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
                 this.applicationRoles = applicationRoles;
@@ -233,7 +233,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The organization ID.</p>
+             * <p>The organizational unit ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_wovwffm62xifdziem7an7xxxxx</p>

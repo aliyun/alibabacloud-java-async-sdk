@@ -166,7 +166,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
         }
 
         /**
-         * <p>The list of account IDs. A maximum of 100 account IDs are supported in a single operation.</p>
+         * <p>The list of account IDs. You can specify up to 100 account IDs in a single request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

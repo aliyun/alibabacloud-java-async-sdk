@@ -78,7 +78,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody extends Te
         }
 
         /**
-         * <p>Information about the WebAuthn authenticator registration URL.</p>
+         * <p>The WebAuthn authenticator registration URL information.</p>
          */
         public Builder webAuthnAuthenticatorRegistrationUrl(WebAuthnAuthenticatorRegistrationUrl webAuthnAuthenticatorRegistrationUrl) {
             this.webAuthnAuthenticatorRegistrationUrl = webAuthnAuthenticatorRegistrationUrl;
@@ -155,7 +155,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody extends Te
             }
 
             /**
-             * <p>The parameters for the WebAuthn authenticator registration URL.</p>
+             * <p>The WebAuthn authenticator registration URL parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoia2V5X29ueWNzbXNib3Y1bmV2anlncHgyZnlsbjdhIn0</p>

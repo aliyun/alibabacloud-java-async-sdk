@@ -98,7 +98,7 @@ public class DeleteConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the conditional access policy.</p>
+         * <p>The conditional access policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

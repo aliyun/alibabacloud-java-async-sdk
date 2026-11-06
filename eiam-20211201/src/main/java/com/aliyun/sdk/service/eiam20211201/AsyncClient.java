@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ActivateCloudAccountPrivilege  ActivateCloudAccountPrivilegeRequest
+     * @return ActivateCloudAccountPrivilegeResponse
+     */
+    CompletableFuture<ActivateCloudAccountPrivilegeResponse> activateCloudAccountPrivilege(ActivateCloudAccountPrivilegeRequest request);
+
+    /**
      * @param request the request parameters of AddApplicationAccountToUser  AddApplicationAccountToUserRequest
      * @return AddApplicationAccountToUserResponse
      */
@@ -207,6 +213,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCloudAccountRoleResponse> createCloudAccountRole(CreateCloudAccountRoleRequest request);
 
     /**
+     * @param request the request parameters of CreateCloudPermissionTemplate  CreateCloudPermissionTemplateRequest
+     * @return CreateCloudPermissionTemplateResponse
+     */
+    CompletableFuture<CreateCloudPermissionTemplateResponse> createCloudPermissionTemplate(CreateCloudPermissionTemplateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Creates a conditional access policy.</p>
      * 
@@ -324,6 +336,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
 
     /**
+     * @param request the request parameters of DeactivateCloudAccountPrivilege  DeactivateCloudAccountPrivilegeRequest
+     * @return DeactivateCloudAccountPrivilegeResponse
+     */
+    CompletableFuture<DeactivateCloudAccountPrivilegeResponse> deactivateCloudAccountPrivilege(DeactivateCloudAccountPrivilegeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before deleting a specified EIAM application, make sure the application is no longer in use. After the application is deleted, all configuration data is permanently deleted and cannot be recovered.</p>
      * 
@@ -396,8 +414,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCloudAccountRoleResponse> deleteCloudAccountRole(DeleteCloudAccountRoleRequest request);
 
     /**
+     * @param request the request parameters of DeleteCloudPermissionTemplate  DeleteCloudPermissionTemplateRequest
+     * @return DeleteCloudPermissionTemplateResponse
+     */
+    CompletableFuture<DeleteCloudPermissionTemplateResponse> deleteCloudPermissionTemplate(DeleteCloudPermissionTemplateRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>Before you delete a conditional access policy, make sure that the policy is no longer in use. After the policy is deleted, all configuration data is permanently removed and cannot be recovered.</p>
+     * <p>Before deleting a specified conditional access policy, ensure that the policy is no longer in use. After the policy is deleted, all configuration data is deleted and cannot be recovered.</p>
      * 
      * @param request the request parameters of DeleteConditionalAccessPolicy  DeleteConditionalAccessPolicyRequest
      * @return DeleteConditionalAccessPolicyResponse
@@ -460,7 +484,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
+     * <p>Ensure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -577,7 +601,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</p>
+     * <p>When you disable an application, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the risks associated with this operation.</p>
      * 
      * @param request the request parameters of DisableApplicationToken  DisableApplicationTokenRequest
      * @return DisableApplicationTokenResponse
@@ -603,10 +627,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableClientPublicKeyResponse> disableClientPublicKey(DisableClientPublicKeyRequest request);
 
     /**
+     * @param request the request parameters of DisableCloudAccountPrivilege  DisableCloudAccountPrivilegeRequest
+     * @return DisableCloudAccountPrivilegeResponse
+     */
+    CompletableFuture<DisableCloudAccountPrivilegeResponse> disableCloudAccountPrivilege(DisableCloudAccountPrivilegeRequest request);
+
+    /**
      * @param request the request parameters of DisableCloudAccountRole  DisableCloudAccountRoleRequest
      * @return DisableCloudAccountRoleResponse
      */
     CompletableFuture<DisableCloudAccountRoleResponse> disableCloudAccountRole(DisableCloudAccountRoleRequest request);
+
+    /**
+     * @param request the request parameters of DisableCloudPermissionTemplate  DisableCloudPermissionTemplateRequest
+     * @return DisableCloudPermissionTemplateResponse
+     */
+    CompletableFuture<DisableCloudPermissionTemplateResponse> disableCloudPermissionTemplate(DisableCloudPermissionTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -780,14 +816,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableClientPublicKeyResponse> enableClientPublicKey(EnableClientPublicKeyRequest request);
 
     /**
+     * @param request the request parameters of EnableCloudAccountPrivilege  EnableCloudAccountPrivilegeRequest
+     * @return EnableCloudAccountPrivilegeResponse
+     */
+    CompletableFuture<EnableCloudAccountPrivilegeResponse> enableCloudAccountPrivilege(EnableCloudAccountPrivilegeRequest request);
+
+    /**
      * @param request the request parameters of EnableCloudAccountRole  EnableCloudAccountRoleRequest
      * @return EnableCloudAccountRoleResponse
      */
     CompletableFuture<EnableCloudAccountRoleResponse> enableCloudAccountRole(EnableCloudAccountRoleRequest request);
 
     /**
+     * @param request the request parameters of EnableCloudPermissionTemplate  EnableCloudPermissionTemplateRequest
+     * @return EnableCloudPermissionTemplateResponse
+     */
+    CompletableFuture<EnableCloudPermissionTemplateResponse> enableCloudPermissionTemplate(EnableCloudPermissionTemplateRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Confirm that you are aware of the risks that this operation may cause.</p>
+     * <p>When a conditional access policy is changed from the enabled state to the disabled state, it no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * @param request the request parameters of EnableConditionalAccessPolicy  EnableConditionalAccessPolicyRequest
      * @return EnableConditionalAccessPolicyResponse
@@ -842,7 +890,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</p>
+     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * @param request the request parameters of EnableIdentityProviderAuthn  EnableIdentityProviderAuthnRequest
      * @return EnableIdentityProviderAuthnResponse
@@ -1036,6 +1084,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCloudAccountRoleResponse> getCloudAccountRole(GetCloudAccountRoleRequest request);
 
     /**
+     * @param request the request parameters of GetCloudPermissionTemplate  GetCloudPermissionTemplateRequest
+     * @return GetCloudPermissionTemplateResponse
+     */
+    CompletableFuture<GetCloudPermissionTemplateResponse> getCloudPermissionTemplate(GetCloudPermissionTemplateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Queries a conditional access policy.</p>
      * 
@@ -1091,6 +1145,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetForgetPasswordConfigurationResponse
      */
     CompletableFuture<GetForgetPasswordConfigurationResponse> getForgetPasswordConfiguration(GetForgetPasswordConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of GetGlobalCloudAccountSystemRolePolicy  GetGlobalCloudAccountSystemRolePolicyRequest
+     * @return GetGlobalCloudAccountSystemRolePolicyResponse
+     */
+    CompletableFuture<GetGlobalCloudAccountSystemRolePolicyResponse> getGlobalCloudAccountSystemRolePolicy(GetGlobalCloudAccountSystemRolePolicyRequest request);
 
     /**
      * @param request the request parameters of GetGroup  GetGroupRequest
@@ -1349,7 +1409,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of the organization, which are applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * @param request the request parameters of ListApplicationsForOrganizationalUnit  ListApplicationsForOrganizationalUnitRequest
      * @return ListApplicationsForOrganizationalUnitResponse
@@ -1364,7 +1424,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organization, which are applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * @param request the request parameters of ListAuthorizationResources  ListAuthorizationResourcesRequest
      * @return ListAuthorizationResourcesResponse
@@ -1424,6 +1484,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCloudAccountsResponse
      */
     CompletableFuture<ListCloudAccountsResponse> listCloudAccounts(ListCloudAccountsRequest request);
+
+    /**
+     * @param request the request parameters of ListCloudPermissionTemplates  ListCloudPermissionTemplatesRequest
+     * @return ListCloudPermissionTemplatesResponse
+     */
+    CompletableFuture<ListCloudPermissionTemplatesResponse> listCloudPermissionTemplates(ListCloudPermissionTemplatesRequest request);
 
     /**
      * <b>description</b> :
@@ -1637,11 +1703,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The following two methods are supported for viewing returned data:</p>
+     * <p>You can view the returned data in one of the following ways:</p>
      * <ul>
-     * <li>Method 1: When querying the first page, you only need to set MaxResults to limit the number of entries returned. The NextToken in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of entries returned. If there are no more pages, NextToken is no longer returned. The maximum value of MaxResults is 100.</li>
-     * <li>Method 2: Set the number of entries returned per page using PageSize, and set the page number using PageNumber.
-     * You can only choose one of the above two methods. When a large number of entries are returned, Method 1 is recommended. If the MaxResults or NextToken parameter is set, the PageSize and PageNumber request parameters become invalid.</li>
+     * <li>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
+     * You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</li>
      * </ul>
      * 
      * @param request the request parameters of ListSynchronizationJobs  ListSynchronizationJobsRequest
@@ -1660,7 +1726,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organization, namely the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * @param request the request parameters of ListUserAuthnSourceMappings  ListUserAuthnSourceMappingsRequest
      * @return ListUserAuthnSourceMappingsResponse
@@ -1669,7 +1735,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
@@ -2113,6 +2179,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCloudAccountRoleDescriptionResponse
      */
     CompletableFuture<UpdateCloudAccountRoleDescriptionResponse> updateCloudAccountRoleDescription(UpdateCloudAccountRoleDescriptionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of application templates.</p>
+     * 
+     * @param request the request parameters of UpdateCloudPermissionTemplate  UpdateCloudPermissionTemplateRequest
+     * @return UpdateCloudPermissionTemplateResponse
+     */
+    CompletableFuture<UpdateCloudPermissionTemplateResponse> updateCloudPermissionTemplate(UpdateCloudPermissionTemplateRequest request);
 
     /**
      * <b>description</b> :

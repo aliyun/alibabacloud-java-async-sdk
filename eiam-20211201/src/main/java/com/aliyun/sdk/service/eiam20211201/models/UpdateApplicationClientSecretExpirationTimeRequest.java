@@ -141,7 +141,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends Request 
         }
 
         /**
-         * <p>The expiration time of the client secret. The value is a UNIX timestamp in milliseconds. The minimum validity period that can be set is 1 day, and the maximum validity period is 3 years.</p>
+         * <p>The expiration time of the client secret. The value is a UNIX timestamp in milliseconds. The minimum validity period is 1 day, and the maximum validity period is 3 years.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends Request 
         }
 
         /**
-         * <p>The client secret.</p>
+         * <p>The client secret ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

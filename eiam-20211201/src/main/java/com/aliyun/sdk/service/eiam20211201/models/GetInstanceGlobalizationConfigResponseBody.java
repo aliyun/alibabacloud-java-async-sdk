@@ -67,7 +67,7 @@ public class GetInstanceGlobalizationConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The language and time zone configuration of the instance.</p>
+         * <p>The language and time zone configuration information of the instance.</p>
          */
         public Builder globalizationConfig(GlobalizationConfig globalizationConfig) {
             this.globalizationConfig = globalizationConfig;

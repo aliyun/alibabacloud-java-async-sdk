@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ActivateCloudAccountPrivilege  ActivateCloudAccountPrivilegeRequest
+     * @return ActivateCloudAccountPrivilegeResponse
+     */
+    @Override
+    public CompletableFuture<ActivateCloudAccountPrivilegeResponse> activateCloudAccountPrivilege(ActivateCloudAccountPrivilegeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ActivateCloudAccountPrivilege").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ActivateCloudAccountPrivilegeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ActivateCloudAccountPrivilegeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddApplicationAccountToUser  AddApplicationAccountToUserRequest
      * @return AddApplicationAccountToUserResponse
      */
@@ -587,6 +605,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateCloudPermissionTemplate  CreateCloudPermissionTemplateRequest
+     * @return CreateCloudPermissionTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateCloudPermissionTemplateResponse> createCloudPermissionTemplate(CreateCloudPermissionTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCloudPermissionTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCloudPermissionTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCloudPermissionTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Creates a conditional access policy.</p>
      * 
@@ -932,6 +968,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeactivateCloudAccountPrivilege  DeactivateCloudAccountPrivilegeRequest
+     * @return DeactivateCloudAccountPrivilegeResponse
+     */
+    @Override
+    public CompletableFuture<DeactivateCloudAccountPrivilegeResponse> deactivateCloudAccountPrivilege(DeactivateCloudAccountPrivilegeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeactivateCloudAccountPrivilege").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeactivateCloudAccountPrivilegeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeactivateCloudAccountPrivilegeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before deleting a specified EIAM application, make sure the application is no longer in use. After the application is deleted, all configuration data is permanently deleted and cannot be recovered.</p>
      * 
@@ -1136,8 +1190,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteCloudPermissionTemplate  DeleteCloudPermissionTemplateRequest
+     * @return DeleteCloudPermissionTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCloudPermissionTemplateResponse> deleteCloudPermissionTemplate(DeleteCloudPermissionTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCloudPermissionTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCloudPermissionTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCloudPermissionTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Before you delete a conditional access policy, make sure that the policy is no longer in use. After the policy is deleted, all configuration data is permanently removed and cannot be recovered.</p>
+     * <p>Before deleting a specified conditional access policy, ensure that the policy is no longer in use. After the policy is deleted, all configuration data is deleted and cannot be recovered.</p>
      * 
      * @param request the request parameters of DeleteConditionalAccessPolicy  DeleteConditionalAccessPolicyRequest
      * @return DeleteConditionalAccessPolicyResponse
@@ -1320,7 +1392,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
+     * <p>Ensure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -1653,7 +1725,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</p>
+     * <p>When you disable an application, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the risks associated with this operation.</p>
      * 
      * @param request the request parameters of DisableApplicationToken  DisableApplicationTokenRequest
      * @return DisableApplicationTokenResponse
@@ -1727,6 +1799,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableCloudAccountPrivilege  DisableCloudAccountPrivilegeRequest
+     * @return DisableCloudAccountPrivilegeResponse
+     */
+    @Override
+    public CompletableFuture<DisableCloudAccountPrivilegeResponse> disableCloudAccountPrivilege(DisableCloudAccountPrivilegeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableCloudAccountPrivilege").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableCloudAccountPrivilegeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableCloudAccountPrivilegeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableCloudAccountRole  DisableCloudAccountRoleRequest
      * @return DisableCloudAccountRoleResponse
      */
@@ -1739,6 +1829,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DisableCloudAccountRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DisableCloudPermissionTemplate  DisableCloudPermissionTemplateRequest
+     * @return DisableCloudPermissionTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DisableCloudPermissionTemplateResponse> disableCloudPermissionTemplate(DisableCloudPermissionTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableCloudPermissionTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableCloudPermissionTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableCloudPermissionTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2240,6 +2348,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnableCloudAccountPrivilege  EnableCloudAccountPrivilegeRequest
+     * @return EnableCloudAccountPrivilegeResponse
+     */
+    @Override
+    public CompletableFuture<EnableCloudAccountPrivilegeResponse> enableCloudAccountPrivilege(EnableCloudAccountPrivilegeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableCloudAccountPrivilege").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableCloudAccountPrivilegeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableCloudAccountPrivilegeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EnableCloudAccountRole  EnableCloudAccountRoleRequest
      * @return EnableCloudAccountRoleResponse
      */
@@ -2258,8 +2384,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnableCloudPermissionTemplate  EnableCloudPermissionTemplateRequest
+     * @return EnableCloudPermissionTemplateResponse
+     */
+    @Override
+    public CompletableFuture<EnableCloudPermissionTemplateResponse> enableCloudPermissionTemplate(EnableCloudPermissionTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableCloudPermissionTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableCloudPermissionTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableCloudPermissionTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Confirm that you are aware of the risks that this operation may cause.</p>
+     * <p>When a conditional access policy is changed from the enabled state to the disabled state, it no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * @param request the request parameters of EnableConditionalAccessPolicy  EnableConditionalAccessPolicyRequest
      * @return EnableConditionalAccessPolicyResponse
@@ -2410,7 +2554,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</p>
+     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * @param request the request parameters of EnableIdentityProviderAuthn  EnableIdentityProviderAuthnRequest
      * @return EnableIdentityProviderAuthnResponse
@@ -2976,6 +3120,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCloudPermissionTemplate  GetCloudPermissionTemplateRequest
+     * @return GetCloudPermissionTemplateResponse
+     */
+    @Override
+    public CompletableFuture<GetCloudPermissionTemplateResponse> getCloudPermissionTemplate(GetCloudPermissionTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCloudPermissionTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCloudPermissionTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCloudPermissionTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Queries a conditional access policy.</p>
      * 
@@ -3135,6 +3297,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetForgetPasswordConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetGlobalCloudAccountSystemRolePolicy  GetGlobalCloudAccountSystemRolePolicyRequest
+     * @return GetGlobalCloudAccountSystemRolePolicyResponse
+     */
+    @Override
+    public CompletableFuture<GetGlobalCloudAccountSystemRolePolicyResponse> getGlobalCloudAccountSystemRolePolicy(GetGlobalCloudAccountSystemRolePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetGlobalCloudAccountSystemRolePolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGlobalCloudAccountSystemRolePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGlobalCloudAccountSystemRolePolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3889,7 +4069,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of the organization, which are applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * @param request the request parameters of ListApplicationsForOrganizationalUnit  ListApplicationsForOrganizationalUnitRequest
      * @return ListApplicationsForOrganizationalUnitResponse
@@ -3928,7 +4108,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organization, which are applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * @param request the request parameters of ListAuthorizationResources  ListAuthorizationResourcesRequest
      * @return ListAuthorizationResourcesResponse
@@ -4104,6 +4284,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCloudAccountsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCloudPermissionTemplates  ListCloudPermissionTemplatesRequest
+     * @return ListCloudPermissionTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<ListCloudPermissionTemplatesResponse> listCloudPermissionTemplates(ListCloudPermissionTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCloudPermissionTemplates").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCloudPermissionTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCloudPermissionTemplatesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4729,11 +4927,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The following two methods are supported for viewing returned data:</p>
+     * <p>You can view the returned data in one of the following ways:</p>
      * <ul>
-     * <li>Method 1: When querying the first page, you only need to set MaxResults to limit the number of entries returned. The NextToken in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of entries returned. If there are no more pages, NextToken is no longer returned. The maximum value of MaxResults is 100.</li>
-     * <li>Method 2: Set the number of entries returned per page using PageSize, and set the page number using PageNumber.
-     * You can only choose one of the above two methods. When a large number of entries are returned, Method 1 is recommended. If the MaxResults or NextToken parameter is set, the PageSize and PageNumber request parameters become invalid.</li>
+     * <li>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
+     * You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</li>
      * </ul>
      * 
      * @param request the request parameters of ListSynchronizationJobs  ListSynchronizationJobsRequest
@@ -4776,7 +4974,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organization, namely the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * @param request the request parameters of ListUserAuthnSourceMappings  ListUserAuthnSourceMappingsRequest
      * @return ListUserAuthnSourceMappingsResponse
@@ -4797,7 +4995,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of an organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
@@ -6101,6 +6299,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateCloudAccountRoleDescriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the list of application templates.</p>
+     * 
+     * @param request the request parameters of UpdateCloudPermissionTemplate  UpdateCloudPermissionTemplateRequest
+     * @return UpdateCloudPermissionTemplateResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCloudPermissionTemplateResponse> updateCloudPermissionTemplate(UpdateCloudPermissionTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCloudPermissionTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCloudPermissionTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCloudPermissionTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

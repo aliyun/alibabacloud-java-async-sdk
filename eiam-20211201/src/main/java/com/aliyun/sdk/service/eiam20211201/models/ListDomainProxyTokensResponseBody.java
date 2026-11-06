@@ -67,7 +67,7 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of domain proxy token objects.</p>
+         * <p>The list of proxy tokens for the domain name.</p>
          */
         public Builder domainProxyTokens(java.util.List<DomainProxyTokens> domainProxyTokens) {
             this.domainProxyTokens = domainProxyTokens;
@@ -222,7 +222,7 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the domain proxy token, in Unix timestamp format, in milliseconds.</p>
+             * <p>The creation time of the domain proxy token. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -233,7 +233,7 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain ID.</p>
+             * <p>The domain name ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dm_examplexxxx</p>
@@ -277,7 +277,7 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent usage time of the domain proxy token, in Unix timestamp format, in milliseconds.</p>
+             * <p>The last used time of the domain proxy token. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -290,9 +290,9 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             /**
              * <p>The token status. Valid values:</p>
              * <ul>
-             * <li><p>enabled: The token is enabled.</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
-             * <li><p>disabled: The token is disabled.</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
              * </ul>
              * 
@@ -305,7 +305,7 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent update time of the domain proxy token, in Unix timestamp format, in milliseconds.</p>
+             * <p>The last update time of the domain proxy token. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>

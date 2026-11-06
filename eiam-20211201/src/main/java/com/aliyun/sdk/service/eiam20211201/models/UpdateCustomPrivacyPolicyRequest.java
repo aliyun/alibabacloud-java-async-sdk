@@ -188,7 +188,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The default language of the policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
+         * <p>The default language code for the privacy policy items. The value is the LanguageCode returned by the ListLanguages API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>
@@ -295,7 +295,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
             }
 
             /**
-             * <p>The endpoint of the custom privacy policy item. The value must start with https\://.</p>
+             * <p>The access URL of the custom privacy policy item. The URL must start with https://.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com">https://example.com</a></p>
@@ -386,7 +386,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
             }
 
             /**
-             * <p>The prompt for the custom privacy policy content.</p>
+             * <p>The tip for the custom privacy policy content.</p>
              * 
              * <strong>example:</strong>
              * <p>Please read and agree：</p>
@@ -397,7 +397,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
             }
 
             /**
-             * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
+             * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages API operation.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-Hans-CN</p>

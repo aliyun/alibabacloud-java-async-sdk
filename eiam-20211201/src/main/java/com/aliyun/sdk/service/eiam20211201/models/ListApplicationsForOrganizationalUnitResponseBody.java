@@ -80,7 +80,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The list of applications that are authorized for access.</p>
+         * <p>The list of applications that the organization is authorized to access.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -99,7 +99,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -155,7 +155,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The application role ID.</p>
+             * <p>The application role identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -236,7 +236,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The list of application roles.</p>
+             * <p>The list of application roles. No roles are returned for SAML applications.</p>
              */
             public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
                 this.applicationRoles = applicationRoles;

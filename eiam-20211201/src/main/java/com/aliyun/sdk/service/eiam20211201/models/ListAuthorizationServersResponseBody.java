@@ -114,7 +114,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The next token returned in the current call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>

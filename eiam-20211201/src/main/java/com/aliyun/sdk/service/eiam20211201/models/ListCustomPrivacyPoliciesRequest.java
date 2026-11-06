@@ -140,7 +140,7 @@ public class ListCustomPrivacyPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The custom term name. Left fuzzy match is supported.</p>
+         * <p>The prefix of the custom privacy policy name for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -165,7 +165,7 @@ public class ListCustomPrivacyPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -189,7 +189,7 @@ public class ListCustomPrivacyPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The token for the previous page.</p>
+         * <p>The pagination token for the previous page.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>

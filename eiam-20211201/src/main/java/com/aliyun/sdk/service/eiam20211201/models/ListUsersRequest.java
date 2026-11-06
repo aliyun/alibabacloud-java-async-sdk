@@ -303,7 +303,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The display name prefix. A left-match query is used.</p>
+         * <p>The prefix of the display name. A left-match query is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -340,7 +340,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paging.</p>
+         * <p>The number of entries per page for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -352,7 +352,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The query token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxexample</p>
@@ -412,7 +412,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The phone region code. Example: The region code for the Chinese mainland is 86, without the 00 or + prefix.</p>
+         * <p>The phone region code. Example: 86 for the Chinese mainland, without 00 or +.</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -424,7 +424,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The account status. Valid values:</p>
+         * <p>The status of the account. Valid values:</p>
          * <ul>
          * <li>enabled: Enabled.</li>
          * <li>disabled: Disabled.</li>
@@ -440,7 +440,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The external ID, which is used to associate external data with IDaaS accounts.</p>
+         * <p>The external ID, which is used to map external data to IDaaS accounts.</p>
          * <p>Note: The external ID must be unique within the same source type and source ID.</p>
          * 
          * <strong>example:</strong>
@@ -466,7 +466,7 @@ public class ListUsersRequest extends Request {
 
         /**
          * <p>The source ID of the account.</p>
-         * <p>For self-built accounts, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, for a DingTalk source, the value corresponds to the corpId of the DingTalk enterprise.</p>
+         * <p>For the build-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, for the DingTalk source, the value is the corpId of the DingTalk enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -480,11 +480,11 @@ public class ListUsersRequest extends Request {
         /**
          * <p>The source type of the account. Valid values:</p>
          * <ul>
-         * <li>build_in: self-built.</li>
-         * <li>ding_talk: imported from DingTalk.</li>
-         * <li>ad: imported from AD.</li>
-         * <li>ldap: imported from LDAP.</li>
-         * <li>we_com: imported from WeCom.</li>
+         * <li>build_in: Built-in.</li>
+         * <li>ding_talk: Imported from DingTalk.</li>
+         * <li>ad: Imported from AD.</li>
+         * <li>ldap: Imported from LDAP.</li>
+         * <li>we_com: Imported from WeCom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -497,7 +497,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The username prefix. A left-match query is used.</p>
+         * <p>The prefix of the username. A left-match query is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>name_001</p>

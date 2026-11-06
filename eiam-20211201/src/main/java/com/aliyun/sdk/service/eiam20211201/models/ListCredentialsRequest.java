@@ -195,7 +195,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * CredentialExternalIds.
+         * <p>The external unique identifiers of the credentials.</p>
          */
         public Builder credentialExternalIds(java.util.List<String> credentialExternalIds) {
             this.putQueryParameter("CredentialExternalIds", credentialExternalIds);
@@ -204,7 +204,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>The list of credential IDs.</p>
+         * <p>The credential IDs.</p>
          */
         public Builder credentialIds(java.util.List<String> credentialIds) {
             this.putQueryParameter("CredentialIds", credentialIds);
@@ -213,7 +213,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * CredentialSharingScopes.
+         * <p>The credential sharing scopes.</p>
          */
         public Builder credentialSharingScopes(java.util.List<String> credentialSharingScopes) {
             this.putQueryParameter("CredentialSharingScopes", credentialSharingScopes);
@@ -222,7 +222,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * CredentialTypes.
+         * <p>The credential types.</p>
          */
         public Builder credentialTypes(java.util.List<String> credentialTypes) {
             this.putQueryParameter("CredentialTypes", credentialTypes);
@@ -253,11 +253,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
-         * <ul>
-         * <li>Default value: 20.</li>
-         * <li>Maximum value: 100.</li>
-         * </ul>
+         * <p>The maximum number of records per page. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -281,7 +277,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>The list of credential statuses.</p>
+         * <p>The credential statuses.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -351,7 +347,7 @@ public class ListCredentialsRequest extends Request {
             /**
              * <p>The name of the filter field. Valid values:</p>
              * <ul>
-             * <li>CredentialIdentifier: the credential identifier.</li>
+             * <li>CredentialIdentifier: The credential identifier.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -363,7 +359,7 @@ public class ListCredentialsRequest extends Request {
             }
 
             /**
-             * <p>The list of filter field values.</p>
+             * <p>The values for the filter field.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

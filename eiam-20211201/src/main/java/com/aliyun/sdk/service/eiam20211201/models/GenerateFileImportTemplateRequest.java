@@ -22,9 +22,17 @@ public class GenerateFileImportTemplateRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FieldSelectionEnabled")
+    private Boolean fieldSelectionEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectedFieldNames")
+    private java.util.List<String> selectedFieldNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetType")
@@ -34,7 +42,9 @@ public class GenerateFileImportTemplateRequest extends Request {
     private GenerateFileImportTemplateRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.fieldSelectionEnabled = builder.fieldSelectionEnabled;
         this.instanceId = builder.instanceId;
+        this.selectedFieldNames = builder.selectedFieldNames;
         this.targetType = builder.targetType;
     }
 
@@ -59,10 +69,24 @@ public class GenerateFileImportTemplateRequest extends Request {
     }
 
     /**
+     * @return fieldSelectionEnabled
+     */
+    public Boolean getFieldSelectionEnabled() {
+        return this.fieldSelectionEnabled;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return selectedFieldNames
+     */
+    public java.util.List<String> getSelectedFieldNames() {
+        return this.selectedFieldNames;
     }
 
     /**
@@ -74,7 +98,9 @@ public class GenerateFileImportTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<GenerateFileImportTemplateRequest, Builder> {
         private String regionId; 
+        private Boolean fieldSelectionEnabled; 
         private String instanceId; 
+        private java.util.List<String> selectedFieldNames; 
         private String targetType; 
 
         private Builder() {
@@ -84,7 +110,9 @@ public class GenerateFileImportTemplateRequest extends Request {
         private Builder(GenerateFileImportTemplateRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.fieldSelectionEnabled = request.fieldSelectionEnabled;
             this.instanceId = request.instanceId;
+            this.selectedFieldNames = request.selectedFieldNames;
             this.targetType = request.targetType;
         } 
 
@@ -94,6 +122,15 @@ public class GenerateFileImportTemplateRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether field selection mode is enabled.</p>
+         */
+        public Builder fieldSelectionEnabled(Boolean fieldSelectionEnabled) {
+            this.putQueryParameter("FieldSelectionEnabled", fieldSelectionEnabled);
+            this.fieldSelectionEnabled = fieldSelectionEnabled;
             return this;
         }
 
@@ -111,12 +148,16 @@ public class GenerateFileImportTemplateRequest extends Request {
         }
 
         /**
-         * <p>The synchronization target type. Valid values:</p>
-         * <ul>
-         * <li>identity_provider: identity provider</li>
-         * <li>application: application</li>
-         * <li>eiam_v2_user_import: IDaaS 2.0 user import.</li>
-         * </ul>
+         * <p>The selected fields.</p>
+         */
+        public Builder selectedFieldNames(java.util.List<String> selectedFieldNames) {
+            this.putQueryParameter("SelectedFieldNames", selectedFieldNames);
+            this.selectedFieldNames = selectedFieldNames;
+            return this;
+        }
+
+        /**
+         * <p>The synchronization target type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

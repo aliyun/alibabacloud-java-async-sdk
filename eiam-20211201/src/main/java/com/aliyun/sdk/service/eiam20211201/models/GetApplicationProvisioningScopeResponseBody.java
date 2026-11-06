@@ -67,7 +67,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The scope of account synchronization.</p>
+         * <p>The account synchronization scope.</p>
          */
         public Builder applicationProvisioningScope(ApplicationProvisioningScope applicationProvisioningScope) {
             this.applicationProvisioningScope = applicationProvisioningScope;
@@ -75,7 +75,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -170,7 +170,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Synchronize the list of authorized groups.</p>
+             * <p>The list of groups authorized for synchronization.</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -178,7 +178,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance Indicates the maximum quota number of authorized agents.</p>
+             * <p>The maximum quota of authorized principals for the tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -189,7 +189,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of organizational units that are authorized for account synchronization.</p>
+             * <p>The list of organizational unit scopes authorized for account synchronization.</p>
              */
             public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
                 this.organizationalUnitIds = organizationalUnitIds;
@@ -197,7 +197,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates the quota number of used authorized agents.</p>
+             * <p>The used quota of authorized principals.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

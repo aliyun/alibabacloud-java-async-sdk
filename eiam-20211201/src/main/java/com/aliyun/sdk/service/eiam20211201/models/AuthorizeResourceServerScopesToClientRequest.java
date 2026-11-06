@@ -128,7 +128,7 @@ public class AuthorizeResourceServerScopesToClientRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the Client application.</p>
+         * <p>The ID of the client application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class AuthorizeResourceServerScopesToClientRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the ResourceServer application.</p>
+         * <p>The ID of the resource server application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class AuthorizeResourceServerScopesToClientRequest extends Request {
         }
 
         /**
-         * <p>The list of Scope permission IDs under the ResourceServer.</p>
+         * <p>The IDs of the scope permissions under the resource server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

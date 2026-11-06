@@ -143,12 +143,10 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The scope of the authorized resources. Valid values:</p>
+         * <p>The authorization resource scope. Valid values:</p>
          * <ul>
-         * <li><p>global: global resources within the project.</p>
-         * </li>
-         * <li><p>custom: specified resources within the project.</p>
-         * </li>
+         * <li>global: global resources under the project</li>
+         * <li>custom: resources under a specified project scope</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +172,7 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the authorization rule. The name can be up to 64 characters long.</p>
+         * <p>The name of the authorization rule. The name can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>test_rule</p>
@@ -186,7 +184,7 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>A client token that ensures the idempotence of the request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

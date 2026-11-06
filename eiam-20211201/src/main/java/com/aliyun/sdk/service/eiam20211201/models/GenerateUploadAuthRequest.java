@@ -111,7 +111,7 @@ public class GenerateUploadAuthRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class GenerateUploadAuthRequest extends Request {
         }
 
         /**
-         * <p>File purpose.</p>
+         * <p>The file purpose.</p>
          * 
          * <strong>example:</strong>
          * <p>user_import</p>
@@ -136,7 +136,7 @@ public class GenerateUploadAuthRequest extends Request {
         }
 
         /**
-         * <p>File type.</p>
+         * <p>The file type.</p>
          * 
          * <strong>example:</strong>
          * <p>image</p>

@@ -111,7 +111,7 @@ public class DeleteUsersRequest extends Request {
         }
 
         /**
-         * <p>A list of account IDs.</p>
+         * <p>The list of account IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

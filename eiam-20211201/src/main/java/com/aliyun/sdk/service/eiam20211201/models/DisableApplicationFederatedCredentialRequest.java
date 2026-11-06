@@ -113,7 +113,7 @@ public class DisableApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>The application federated identity credential ID.</p>
+         * <p>The application federated credential ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

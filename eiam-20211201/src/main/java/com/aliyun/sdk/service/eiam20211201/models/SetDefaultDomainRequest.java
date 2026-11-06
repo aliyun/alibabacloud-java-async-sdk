@@ -98,7 +98,7 @@ public class SetDefaultDomainRequest extends Request {
         }
 
         /**
-         * <p>The domain name ID.</p>
+         * <p>The domain ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

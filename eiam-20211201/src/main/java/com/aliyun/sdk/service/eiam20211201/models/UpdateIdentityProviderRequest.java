@@ -250,7 +250,7 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The DingTalk configuration basic information.</p>
+         * <p>The basic DingTalk configuration information.</p>
          */
         public Builder dingtalkAppConfig(DingtalkAppConfig dingtalkAppConfig) {
             this.putQueryParameter("DingtalkAppConfig", dingtalkAppConfig);
@@ -306,7 +306,7 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The AD/LDAP basic information.</p>
+         * <p>The basic AD/LDAP information.</p>
          */
         public Builder ldapConfig(LdapConfig ldapConfig) {
             this.putQueryParameter("LdapConfig", ldapConfig);
@@ -327,7 +327,7 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The network endpoint ID.</p>
+         * <p>The network access endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxxx</p>
@@ -357,7 +357,7 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The WeCom basic information.</p>
+         * <p>The basic WeCom information.</p>
          */
         public Builder weComConfig(WeComConfig weComConfig) {
             this.putQueryParameter("WeComConfig", weComConfig);
@@ -486,7 +486,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The DingTalk QR code login version.</p>
+             * <p>The DingTalk scan-to-logon version.</p>
              * 
              * <strong>example:</strong>
              * <p>new_version</p>
@@ -626,7 +626,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The encryptKey of the custom Lark application.</p>
+             * <p>The EncryptKey of the custom Lark application.</p>
              * 
              * <strong>example:</strong>
              * <p>VkdWw91mdkrjVFr3ObNwefap21dfbZbKxxxx</p>
@@ -637,7 +637,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The verificationToken of the custom Lark application.</p>
+             * <p>The VerificationToken of the custom Lark application.</p>
              * 
              * <strong>example:</strong>
              * <p>feishuVerifyTokenxxxxx</p>
@@ -788,7 +788,7 @@ public class UpdateIdentityProviderRequest extends Request {
              * <p>The administrator password.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxxxx</p>
+             * <p>ExamplePassword123!</p>
              */
             public Builder administratorPassword(String administratorPassword) {
                 this.administratorPassword = administratorPassword;
@@ -796,7 +796,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The administrator account.</p>
+             * <p>The administrator username.</p>
              * 
              * <strong>example:</strong>
              * <p>DC=example,DC=com</p>
@@ -865,7 +865,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether StartTLS is enabled. Valid values:</p>
+             * <p>Specifies whether to enable StartTLS. Valid values:</p>
              * <ul>
              * <li><p>disabled: Disabled.</p>
              * </li>
@@ -1111,7 +1111,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The OIDC UserInfo endpoint.</p>
+             * <p>The OIDC userinfo endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/oauth/userinfo">https://example.com/oauth/userinfo</a></p>
@@ -1288,7 +1288,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use PKCE in the AuthorizationCode grant mode.</p>
+             * <p>Specifies whether to use PKCE in authorization code mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1345,7 +1345,7 @@ public class UpdateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>The content of the certificate.</p>
+             * <p>The certificate content.</p>
              * 
              * <strong>example:</strong>
              * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX-----END CERTIFICATE-----</p>
@@ -1493,7 +1493,7 @@ public class UpdateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>The binding type.</p>
+             * <p>The binding method.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP-REDIRECT</p>
@@ -1504,7 +1504,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The list of IdP certificates.</p>
+             * <p>The list of certificates for the IdP.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -1545,7 +1545,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the request must be signed.</p>
+             * <p>Specifies whether to require the request to be signed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1556,7 +1556,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the external IdP is required to sign the Assertion.</p>
+             * <p>Specifies whether to require the external IdP to sign the assertion.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1567,7 +1567,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the external IdP is required to sign the Response.</p>
+             * <p>Specifies whether to require the external IdP to sign the response.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1678,7 +1678,7 @@ public class UpdateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>The AgentId of the WeCom self-built application.</p>
+             * <p>The AgentId of the WeCom custom application.</p>
              * 
              * <strong>example:</strong>
              * <p>1237403</p>
@@ -1711,7 +1711,7 @@ public class UpdateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The CorpSecret of the WeCom self-built application.</p>
+             * <p>The CorpSecret of the WeCom custom application.</p>
              * 
              * <strong>example:</strong>
              * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>

@@ -155,7 +155,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the custom privacy policy item. The URL must start with https://.</p>
+             * <p>The access URL of the custom privacy policy item. The URL must start with https://.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com">https://example.com</a></p>
@@ -246,7 +246,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tip for the custom privacy policy content.</p>
+             * <p>The prompt for the custom privacy policy content.</p>
              * 
              * <strong>example:</strong>
              * <p>Please read and agree：</p>
@@ -257,7 +257,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</p>
+             * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-Hans-CN</p>
@@ -392,7 +392,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content details of the custom privacy policy.</p>
+             * <p>The details of the custom privacy policy content.</p>
              */
             public Builder customPrivacyPolicyContents(java.util.List<CustomPrivacyPolicyContents> customPrivacyPolicyContents) {
                 this.customPrivacyPolicyContents = customPrivacyPolicyContents;
@@ -422,7 +422,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</p>
+             * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-Hans-CN</p>
@@ -444,7 +444,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the custom privacy policy. Valid values:</p>
+             * <p>The account status. Valid values:</p>
              * <ul>
              * <li>enabled: Enabled.</li>
              * <li>disabled: Disabled.</li>

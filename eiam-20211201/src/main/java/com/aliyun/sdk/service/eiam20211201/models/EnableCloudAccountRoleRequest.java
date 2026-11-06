@@ -128,7 +128,7 @@ public class EnableCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class EnableCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The cloud account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class EnableCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud role.</p>
+         * <p>The cloud role ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

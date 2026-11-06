@@ -106,7 +106,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of network zones.</p>
+         * <p>The network zones.</p>
          */
         public Builder networkZones(java.util.List<NetworkZones> networkZones) {
             this.networkZones = networkZones;
@@ -114,7 +114,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The pagination token returned for this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -147,7 +147,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -316,7 +316,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv4 CIDR blocks of the network zone.</p>
+             * <p>The IPv4 CIDR blocks.</p>
              */
             public Builder ipv4Cidrs(java.util.List<String> ipv4Cidrs) {
                 this.ipv4Cidrs = ipv4Cidrs;
@@ -324,7 +324,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv6 CIDR blocks of the network zone.</p>
+             * <p>The IPv6 CIDR blocks.</p>
              */
             public Builder ipv6Cidrs(java.util.List<String> ipv6Cidrs) {
                 this.ipv6Cidrs = ipv6Cidrs;

@@ -141,7 +141,7 @@ public class RevokeApplicationFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>应用角色ID。</p>
+         * <p>The application role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -166,7 +166,7 @@ public class RevokeApplicationFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>A list of organizational unit IDs. A single operation supports up to 100 organizational unit IDs.</p>
+         * <p>The list of organizational unit IDs. You can specify up to 100 organizational unit IDs in a single request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

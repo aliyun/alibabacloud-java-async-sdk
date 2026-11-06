@@ -27,6 +27,10 @@ public class RunSynchronizationJobRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FieldSelectionEnabled")
+    private Boolean fieldSelectionEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
@@ -34,6 +38,10 @@ public class RunSynchronizationJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PasswordInitialization")
     private Boolean passwordInitialization;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectedFieldNames")
+    private java.util.List<String> selectedFieldNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SynchronizationScopeConfig")
@@ -57,8 +65,10 @@ public class RunSynchronizationJobRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.description = builder.description;
+        this.fieldSelectionEnabled = builder.fieldSelectionEnabled;
         this.instanceId = builder.instanceId;
         this.passwordInitialization = builder.passwordInitialization;
+        this.selectedFieldNames = builder.selectedFieldNames;
         this.synchronizationScopeConfig = builder.synchronizationScopeConfig;
         this.targetId = builder.targetId;
         this.targetType = builder.targetType;
@@ -93,6 +103,13 @@ public class RunSynchronizationJobRequest extends Request {
     }
 
     /**
+     * @return fieldSelectionEnabled
+     */
+    public Boolean getFieldSelectionEnabled() {
+        return this.fieldSelectionEnabled;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -104,6 +121,13 @@ public class RunSynchronizationJobRequest extends Request {
      */
     public Boolean getPasswordInitialization() {
         return this.passwordInitialization;
+    }
+
+    /**
+     * @return selectedFieldNames
+     */
+    public java.util.List<String> getSelectedFieldNames() {
+        return this.selectedFieldNames;
     }
 
     /**
@@ -137,8 +161,10 @@ public class RunSynchronizationJobRequest extends Request {
     public static final class Builder extends Request.Builder<RunSynchronizationJobRequest, Builder> {
         private String regionId; 
         private String description; 
+        private Boolean fieldSelectionEnabled; 
         private String instanceId; 
         private Boolean passwordInitialization; 
+        private java.util.List<String> selectedFieldNames; 
         private SynchronizationScopeConfig synchronizationScopeConfig; 
         private String targetId; 
         private String targetType; 
@@ -152,8 +178,10 @@ public class RunSynchronizationJobRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.description = request.description;
+            this.fieldSelectionEnabled = request.fieldSelectionEnabled;
             this.instanceId = request.instanceId;
             this.passwordInitialization = request.passwordInitialization;
+            this.selectedFieldNames = request.selectedFieldNames;
             this.synchronizationScopeConfig = request.synchronizationScopeConfig;
             this.targetId = request.targetId;
             this.targetType = request.targetType;
@@ -178,6 +206,15 @@ public class RunSynchronizationJobRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether field selection is enabled.</p>
+         */
+        public Builder fieldSelectionEnabled(Boolean fieldSelectionEnabled) {
+            this.putQueryParameter("FieldSelectionEnabled", fieldSelectionEnabled);
+            this.fieldSelectionEnabled = fieldSelectionEnabled;
             return this;
         }
 
@@ -207,6 +244,15 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
+         * <p>The selected fields.</p>
+         */
+        public Builder selectedFieldNames(java.util.List<String> selectedFieldNames) {
+            this.putQueryParameter("SelectedFieldNames", selectedFieldNames);
+            this.selectedFieldNames = selectedFieldNames;
+            return this;
+        }
+
+        /**
          * <p>The synchronization scope configuration.</p>
          */
         public Builder synchronizationScopeConfig(SynchronizationScopeConfig synchronizationScopeConfig) {
@@ -216,7 +262,7 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>The synchronization target ID.</p>
+         * <p>The ID of the synchronization target.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,10 +275,12 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>The synchronization target type. Valid values:</p>
+         * <p>The type of the synchronization target. Valid values:</p>
          * <ul>
-         * <li>identity_provider: identity provider</li>
-         * <li>application: application</li>
+         * <li><p>identity_provider: identity provider</p>
+         * </li>
+         * <li><p>application: application</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

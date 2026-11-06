@@ -126,7 +126,7 @@ public class SetPasswordHistoryConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The number of recent password records to retain. This parameter is required when PasswordHistoryStatus is set to enabled.</p>
+         * <p>The maximum number of recent password records to retain. This parameter is required when PasswordHistoryStatus is set to enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -138,7 +138,7 @@ public class SetPasswordHistoryConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The status of the password history configuration. Valid values:</p>
+         * <p>The password history configuration status. Valid values:</p>
          * <ul>
          * <li>enabled: Enabled.</li>
          * <li>disabled: Disabled.</li>

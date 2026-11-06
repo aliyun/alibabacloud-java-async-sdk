@@ -115,8 +115,8 @@ public class SetForgetPasswordConfigurationRequest extends Request {
         /**
          * <p>The list of authentication channels. Valid values:</p>
          * <ul>
-         * <li>email: email.</li>
-         * <li>sms: text message.</li>
+         * <li>email: Email.</li>
+         * <li>sms: SMS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,8 +131,8 @@ public class SetForgetPasswordConfigurationRequest extends Request {
         /**
          * <p>The forgot password configuration status. Valid values:</p>
          * <ul>
-         * <li>enabled: enabled.</li>
-         * <li>disabled: disabled.</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

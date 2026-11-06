@@ -139,7 +139,7 @@ public class DeleteApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * <p>The client secret ID of the application.</p>
+         * <p>The ID of the client secret for the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

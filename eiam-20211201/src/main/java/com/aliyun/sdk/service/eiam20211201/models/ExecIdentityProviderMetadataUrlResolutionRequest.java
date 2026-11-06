@@ -140,7 +140,7 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
         }
 
         /**
-         * <p>The identity provider ID in IDaaS.</p>
+         * <p>The IDaaS identity provider ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_mwpcwnhrimlr2horxXXXX</p>
@@ -165,7 +165,7 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
         }
 
         /**
-         * <p>The network endpoint ID.</p>
+         * <p>The network access endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>inae_public</p>

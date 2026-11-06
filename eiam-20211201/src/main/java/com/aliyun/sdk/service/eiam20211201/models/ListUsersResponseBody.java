@@ -106,7 +106,7 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page for paging.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The query token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -139,7 +139,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -150,7 +150,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of account data.</p>
+         * <p>The list of accounts.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -463,7 +463,7 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account expiration time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The expiration time of the account. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -474,7 +474,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The creation time of the account. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -496,7 +496,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the account.</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
              * <p>display_name001</p>
@@ -518,7 +518,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or set as verified by the administrator. A value of false indicates that the email address has not been verified.</p>
+             * <p>Indicates whether the email address is verified. A value of true indicates that the email address has been verified by the user or set as verified by the administrator. A value of false indicates that the email address is not verified.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -540,7 +540,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account lock expiration time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The expiration time of the account lock. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -551,7 +551,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password expiration time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The expiration time of the password. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -562,7 +562,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a password has been set.</p>
+             * <p>Indicates whether the password is set.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -573,7 +573,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number of the account.</p>
+             * <p>The phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>156xxxxxxx</p>
@@ -584,7 +584,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the phone number has been verified. A value of true indicates that the phone number has been verified by the user or set as verified by the administrator. A value of false indicates that the phone number has not been verified.</p>
+             * <p>Indicates whether the phone number is verified. A value of true indicates that the phone number has been verified by the user or set as verified by the administrator. A value of false indicates that the phone number is not verified.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -595,7 +595,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone region code. Example: The region code for the Chinese mainland is 86, without the 00 or + prefix.</p>
+             * <p>The phone region code. Example: 86 for the Chinese mainland, without 00 or +.</p>
              * 
              * <strong>example:</strong>
              * <p>86</p>
@@ -606,7 +606,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account registration time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The registration time of the account. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -617,10 +617,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account status. Valid values:</p>
+             * <p>The status of the account. Valid values:</p>
              * <ul>
-             * <li>enabled: Enabled.</li>
-             * <li>disabled: Disabled.</li>
+             * <li>enabled: enabled</li>
+             * <li>disabled: disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -632,7 +632,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The last update time of the account. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -643,8 +643,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external ID of the account, which is used to associate external data with IDaaS accounts. The default value is the IDaaS account ID.</p>
-             * <p>Note: The external ID must be unique within the same source type and source ID.</p>
+             * <p>The external ID of the account. This ID is used to map external data to IDaaS accounts. The default value is the IDaaS account ID. Note: The external ID must be unique within the same source type and source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -667,7 +666,7 @@ public class ListUsersResponseBody extends TeaModel {
 
             /**
              * <p>The source ID of the account.</p>
-             * <p>For self-built accounts, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, for a DingTalk source, the value corresponds to the corpId of the DingTalk enterprise.</p>
+             * <p>For the build-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, for the DingTalk source, the value is the corpId of the DingTalk enterprise.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -680,10 +679,10 @@ public class ListUsersResponseBody extends TeaModel {
             /**
              * <p>The source type of the account. Valid values:</p>
              * <ul>
-             * <li>build_in: self-built.</li>
-             * <li>ding_talk: imported from DingTalk.</li>
-             * <li>ad: imported from AD.</li>
-             * <li>ldap: imported from LDAP.</li>
+             * <li>build_in: self-managed</li>
+             * <li>ding_talk: imported from DingTalk</li>
+             * <li>ad: imported from AD</li>
+             * <li>ldap: imported from LDAP</li>
              * </ul>
              * 
              * <strong>example:</strong>

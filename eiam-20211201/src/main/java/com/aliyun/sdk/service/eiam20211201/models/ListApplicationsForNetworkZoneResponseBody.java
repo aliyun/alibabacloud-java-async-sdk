@@ -127,7 +127,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries to return per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -138,7 +138,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The next token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -149,7 +149,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The next token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -171,7 +171,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

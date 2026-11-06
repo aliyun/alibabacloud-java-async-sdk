@@ -152,7 +152,7 @@ public class ListNetworkZonesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The maximum number of entries to return per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -164,7 +164,7 @@ public class ListNetworkZonesRequest extends Request {
         }
 
         /**
-         * <p>The collection of network zone IDs.</p>
+         * <p>The network zone IDs.</p>
          */
         public Builder networkZoneIds(java.util.List<String> networkZoneIds) {
             this.putQueryParameter("NetworkZoneIds", networkZoneIds);
