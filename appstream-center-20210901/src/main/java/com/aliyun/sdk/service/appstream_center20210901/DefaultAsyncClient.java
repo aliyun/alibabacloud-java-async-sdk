@@ -1192,6 +1192,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAgentInstanceVersions  ListAgentInstanceVersionsRequest
+     * @return ListAgentInstanceVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListAgentInstanceVersionsResponse> listAgentInstanceVersions(ListAgentInstanceVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAgentInstanceVersions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgentInstanceVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgentInstanceVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>When multiple filter conditions are specified at the same time, they take effect together. AppName supports contains matching. When a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of the forms.
      * If PageSize is omitted, the value is 10. Start from 1 for PageNumber and query page by page until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</p>
@@ -1507,6 +1525,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListBrowserBookmarks  ListBrowserBookmarksRequest
+     * @return ListBrowserBookmarksResponse
+     */
+    @Override
+    public CompletableFuture<ListBrowserBookmarksResponse> listBrowserBookmarks(ListBrowserBookmarksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListBrowserBookmarks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBrowserBookmarksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBrowserBookmarksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>This topic describes how paged query cloud browser groups in the monthly active user (MAU) billing scenario.</p>
      * <h2>Query conditions</h2>
@@ -1530,6 +1566,29 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListBrowserInstanceGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>调用本接口分页查询云浏览器交付组或交付组集合下配置的访问限制 URL（Restricted URL）列表，用于查看当前访问控制策略中已配置的 URL 明细。
+     * BrowserInstanceGroupId 与 BrowserInstanceGroupSetId 必须且只能指定一个：指定 BrowserInstanceGroupId 时查询该交付组的访问限制 URL；指定 BrowserInstanceGroupSetId 时查询该交付组集合的访问限制 URL。两者同时指定或同时不指定都会返回参数错误。
+     * 可通过 Keyword 对访问限制 URL 做包含匹配筛选（英文不区分大小写），不传时返回全部。分页由 PageNumber 和 PageSize 控制：PageSize 取值范围 1~200，默认 200；PageNumber 默认 0，传入值小于 1 时按第 1 页处理。响应中的 TotalCount 为满足筛选条件的总记录数，Data 为当前页记录，没有数据时返回空数组。</p>
+     * 
+     * @param request the request parameters of ListBrowserRestrictedURLs  ListBrowserRestrictedURLsRequest
+     * @return ListBrowserRestrictedURLsResponse
+     */
+    @Override
+    public CompletableFuture<ListBrowserRestrictedURLsResponse> listBrowserRestrictedURLs(ListBrowserRestrictedURLsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListBrowserRestrictedURLs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBrowserRestrictedURLsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBrowserRestrictedURLsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2436,6 +2495,30 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>调用本接口查询当前阿里云账号在指定日期的会话数量趋势数据。数据为离线统计结果，按天组织，返回该日期内各时间点的会话数量。
+     * 返回结果按 10 分钟粒度聚合：每条数据由小时（Hh，取值 00-23）和分钟（Mi，取值 00、10、20、30、40、50）标识一个时间点，SessionCntMi 为该时间点所在 10 分钟区间内的会话数量汇总值。结果按小时、分钟升序排列。
+     * 可通过 BizRegionId 指定业务地域、通过 AppInstanceGroupId 指定交付组进行过滤；两者均不传时，返回当前账号下所有地域、所有交付组的会话数据汇总。实际用于过滤会话数据的地域以 BizRegionId 为准。
+     * StatDate 为统计日期，格式 yyyyMMdd，不传时默认查询昨天，仅支持查询最近 90 天内的日期。当指定日期没有会话数据时返回空列表，且返回码为 NO_DATA。</p>
+     * 
+     * @param request the request parameters of QuerySessionData  QuerySessionDataRequest
+     * @return QuerySessionDataResponse
+     */
+    @Override
+    public CompletableFuture<QuerySessionDataResponse> querySessionData(QuerySessionDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QuerySessionData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuerySessionDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuerySessionDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries session quantity reports. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 records per page.</p>
      * 
      * @param request the request parameters of QuerySessionReportData  QuerySessionReportDataRequest
@@ -3036,6 +3119,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateWuyingServerImageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ValidateLlmTemplateConfig  ValidateLlmTemplateConfigRequest
+     * @return ValidateLlmTemplateConfigResponse
+     */
+    @Override
+    public CompletableFuture<ValidateLlmTemplateConfigResponse> validateLlmTemplateConfig(ValidateLlmTemplateConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ValidateLlmTemplateConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ValidateLlmTemplateConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ValidateLlmTemplateConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
