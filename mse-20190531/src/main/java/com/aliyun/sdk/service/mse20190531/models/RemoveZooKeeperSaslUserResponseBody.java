@@ -67,7 +67,10 @@ public class RemoveZooKeeperSaslUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data overview.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class RemoveZooKeeperSaslUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56D9E600-6348-4260-B35F-583413F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

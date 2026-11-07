@@ -119,7 +119,7 @@ public class PullServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -138,7 +138,7 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>You are not authorized to perform this operation. Action: mse:PullServices, Resource: acs:mse:cn-shenzhen:1228932054837788:*</p>
@@ -160,7 +160,7 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EC0A99B9-8BA3-5FE3-8FE7-D7C719CF7BD2</p>
@@ -171,10 +171,10 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,7 +309,7 @@ public class PullServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the group.</p>
+             * <p>The group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -320,7 +320,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -342,7 +342,10 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SaeAppId.
+             * <p>The SAE application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
              */
             public Builder saeAppId(String saeAppId) {
                 this.saeAppId = saeAppId;
@@ -350,7 +353,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the service source.</p>
+             * <p>The source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -361,7 +364,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIdList.
+             * <p>The list of associated service source IDs.</p>
              */
             public Builder sourceIdList(java.util.List<Long> sourceIdList) {
                 this.sourceIdList = sourceIdList;
@@ -369,7 +372,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service source.</p>
+             * <p>The source type.</p>
              * 
              * <strong>example:</strong>
              * <p>MSE</p>
@@ -465,7 +468,7 @@ public class PullServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the group.</p>
+             * <p>The group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -487,7 +490,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the namespace.</p>
+             * <p>The namespace alias.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -498,7 +501,7 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about services.</p>
+             * <p>The list of services.</p>
              */
             public Builder services(java.util.List<Services> services) {
                 this.services = services;

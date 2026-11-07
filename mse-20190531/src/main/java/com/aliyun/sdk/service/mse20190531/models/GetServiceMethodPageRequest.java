@@ -259,7 +259,10 @@ public class GetServiceMethodPageRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want the results to be displayed. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -268,7 +271,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhonxxxxx@f3f75ed8ffxxxxx</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -277,7 +283,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -286,7 +295,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>The IP address of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223.5.5.5</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -295,7 +307,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * MethodController.
+         * <p>The full name of the Controller class to which the interface belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibabacloud.mse.demo.a.AController</p>
          */
         public Builder methodController(String methodController) {
             this.putQueryParameter("MethodController", methodController);
@@ -304,7 +319,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The method name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aMethod</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -313,7 +331,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The Microservices Engine (MSE) namespace to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -322,7 +343,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -331,7 +355,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -340,7 +367,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The request path that corresponds to the interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/a</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -349,7 +379,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -358,7 +391,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * ServiceGroup.
+         * <p>The group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         public Builder serviceGroup(String serviceGroup) {
             this.putQueryParameter("ServiceGroup", serviceGroup);
@@ -367,7 +403,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc-A</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -376,7 +415,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * <p>The engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -385,7 +427,10 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

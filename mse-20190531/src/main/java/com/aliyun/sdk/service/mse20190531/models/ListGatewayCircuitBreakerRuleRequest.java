@@ -74,7 +74,10 @@ public class ListGatewayCircuitBreakerRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which the returned results are displayed. Valid values: zh (default): Chinese, en: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

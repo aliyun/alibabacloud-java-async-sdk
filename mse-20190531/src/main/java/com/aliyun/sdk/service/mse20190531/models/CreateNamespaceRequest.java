@@ -102,7 +102,10 @@ public class CreateNamespaceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -111,7 +114,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * Describe.
+         * <p>The description of the namespace that you want to create for Microservices Governance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test namespace 1.</p>
          */
         public Builder describe(String describe) {
             this.putQueryParameter("Describe", describe);
@@ -120,7 +126,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the namespace that you want to create for Microservices Governance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myNamespace</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -129,7 +138,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -198,7 +207,10 @@ public class CreateNamespaceRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key of the resource. You cannot specify an empty string as a tag key. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespaceTagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -206,7 +218,10 @@ public class CreateNamespaceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespaceTagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

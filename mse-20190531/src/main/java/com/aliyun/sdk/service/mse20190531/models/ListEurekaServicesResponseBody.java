@@ -158,7 +158,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -166,7 +166,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -177,7 +177,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>202</p>
@@ -188,10 +188,10 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +199,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -210,7 +210,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of instances to return per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -221,7 +221,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
@@ -232,9 +232,9 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request succeeded.</li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 
@@ -247,7 +247,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned instances.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -329,7 +329,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the instance.</p>
+             * <p>The instance information.</p>
              */
             public Builder instancesId(java.util.List<String> instancesId) {
                 this.instancesId = instancesId;
@@ -337,7 +337,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>CONTACTINFO</p>
@@ -348,7 +348,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.</p>
+             * <p>The number of service providers, in the format of healthy instances/total instances.</p>
              * 
              * <strong>example:</strong>
              * <p>1/1</p>

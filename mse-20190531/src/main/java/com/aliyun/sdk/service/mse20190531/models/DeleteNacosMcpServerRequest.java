@@ -101,7 +101,10 @@ public class DeleteNacosMcpServerRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the returned results. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -110,7 +113,10 @@ public class DeleteNacosMcpServerRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-u0t2xzvxa06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -119,7 +125,10 @@ public class DeleteNacosMcpServerRequest extends Request {
         }
 
         /**
-         * McpServerId.
+         * <p>The ID of the MCP Server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5e3c5211-d365-4013-8540-c4106ec2a5dc</p>
          */
         public Builder mcpServerId(String mcpServerId) {
             this.putQueryParameter("McpServerId", mcpServerId);
@@ -128,7 +137,10 @@ public class DeleteNacosMcpServerRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc0f6e40-****-946b-45e3af313707</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

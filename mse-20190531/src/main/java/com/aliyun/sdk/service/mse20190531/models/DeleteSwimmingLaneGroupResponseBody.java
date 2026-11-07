@@ -106,7 +106,7 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -120,7 +120,7 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
          * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>mse-100-000</p>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -128,10 +128,10 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +139,7 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
@@ -150,10 +150,10 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -119,11 +119,7 @@ public class AddGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
-         * </ul>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -134,7 +130,7 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the gateway.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -142,11 +138,7 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
-         * <ul>
-         * <li>If the request is successful, a success message is returned.</li>
-         * <li>If the request fails, an error message is returned.</li>
-         * </ul>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -157,10 +149,14 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request is successfully processed.</p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, the cause of the failure is returned.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The return value.</p>
+         * <p>Succ</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -168,7 +164,7 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
@@ -179,7 +175,11 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -235,7 +235,7 @@ public class AddGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>code</p>
+             * <p>The unique ID of the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>gw-5017305290e14cebbrvec4a5****</p>

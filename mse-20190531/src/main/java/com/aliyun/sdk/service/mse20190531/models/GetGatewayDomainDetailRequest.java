@@ -87,7 +87,7 @@ public class GetGatewayDomainDetailRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -115,7 +115,7 @@ public class GetGatewayDomainDetailRequest extends Request {
         }
 
         /**
-         * <p>The domain ID.</p>
+         * <p>The domain name ID.</p>
          * 
          * <strong>example:</strong>
          * <p>29</p>

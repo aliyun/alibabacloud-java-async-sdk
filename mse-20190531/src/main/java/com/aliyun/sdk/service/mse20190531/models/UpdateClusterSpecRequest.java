@@ -160,8 +160,10 @@ public class UpdateClusterSpecRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +176,10 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to automatically pay after placing an order. If this value is false, this interface will return a payment URL for the order, which you can manually confirm to pay</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -183,7 +188,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-09k1q11****</p>
@@ -219,7 +224,7 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +249,10 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * PubNetworkFlow.
+         * <p>Internet bandwidth</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pubNetworkFlow(Integer pubNetworkFlow) {
             this.putQueryParameter("PubNetworkFlow", pubNetworkFlow);

@@ -67,7 +67,10 @@ public class CreateNacosMcpServerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class CreateNacosMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF21683A-29C7-4853-AC0F-B5ADEE4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

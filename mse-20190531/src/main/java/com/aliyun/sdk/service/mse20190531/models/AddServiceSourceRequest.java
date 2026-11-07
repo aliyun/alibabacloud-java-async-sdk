@@ -185,11 +185,11 @@ public class AddServiceSourceRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The supported languages. Valid values:</p>
          * <ul>
-         * <li>zh-CN (default): Chinese</li>
-         * <li>en-US: English</li>
-         * <li>ja: Japanese</li>
+         * <li>zh-CN: Chinese. This is the default value.</li>
+         * <li>en-US: English.</li>
+         * <li>ja: Japanese.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,10 +202,17 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to monitor Ingress classes.</p>
+         * <p>The access address. This parameter is required.</p>
+         * <ul>
+         * <li>Container Service: the ID of the Container Service cluster.</li>
+         * <li>MSE Nacos: the internal endpoint of the instance.</li>
+         * <li>MSE ZooKeeper: the internal endpoint of the instance.</li>
+         * <li>SAE registry: the namespace TID.</li>
+         * <li>EDAS registry: the microservice namespace.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>c9ad2a0717032427e920754e25b49e3b5</p>
+         * <p>mse-********-nacos-ans.mse.aliyuncs.com:8848</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -214,7 +221,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to update the Ingress status.</p>
+         * <p>The unique ID of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-c70622ff52fe49beb29bea9a6f52****</p>
@@ -226,7 +233,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * <p>The data structure.</p>
+         * <p>The list of service groups.</p>
          */
         public Builder groupList(java.util.List<String> groupList) {
             String groupListShrink = shrink(groupList, "GroupList", "json");
@@ -236,7 +243,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * <p>The list of service groups.</p>
+         * <p>The Ingress configurations. This parameter is used when the service source type is K8s.</p>
          */
         public Builder ingressOptionsRequest(IngressOptionsRequest ingressOptionsRequest) {
             String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
@@ -246,10 +253,17 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * <p>The namespace whose resources you want to monitor.</p>
+         * <p>The name.</p>
+         * <blockquote>
+         * <p>Descriptions for different source types.</p>
+         * </blockquote>
+         * <ul>
+         * <li>When the type is K8s, the input parameter is the name.</li>
+         * <li>When the type is NACOS, the input parameter is the instance ID.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>istio</p>
+         * <p>nacos</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -258,7 +272,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The array of service root paths.</p>
          */
         public Builder pathList(java.util.List<String> pathList) {
             String pathListShrink = shrink(pathList, "PathList", "json");
@@ -268,14 +282,17 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * <p>The service source.</p>
+         * <p>The service source type:</p>
          * <ul>
-         * <li>K8s: ACK cluster</li>
-         * <li>NACOS: MSE Nacos instance</li>
+         * <li>Container Service: K8S</li>
+         * <li>MSE Nacos: MSE</li>
+         * <li>MSE ZooKeeper: MSE_ZK</li>
+         * <li>SAE registry: SAE</li>
+         * <li>EDAS registry: EDAS</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>K8s,MSE</p>
+         * <p>MSE</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -284,7 +301,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * <p>The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.</p>
+         * <p>The list of security groups to be authorized. This parameter is used to remove security group restrictions for backend services when creating a source.</p>
          */
         public Builder toAuthorizeSecurityGroups(java.util.List<ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups) {
             String toAuthorizeSecurityGroupsShrink = shrink(toAuthorizeSecurityGroups, "ToAuthorizeSecurityGroups", "json");
@@ -294,14 +311,17 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The service registration type. Specify the corresponding value based on the source type:</p>
          * <ul>
-         * <li>K8s: Container Service for Kubernetes (ACK) cluster</li>
-         * <li>NACOS: Nacos instance</li>
+         * <li>Container Service: K8S</li>
+         * <li>MSE Nacos: NACOS</li>
+         * <li>MSE ZooKeeper: ZOOKEEPER</li>
+         * <li>SAE registry: NACOS</li>
+         * <li>EDAS registry: NACOS</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The Ingress configuration.</p>
+         * <p>NACOS</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -395,7 +415,7 @@ public class AddServiceSourceRequest extends Request {
             } 
 
             /**
-             * <p>The group to which the service belongs.</p>
+             * <p>Specifies whether to enable Ingress.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -406,12 +426,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * <p>The language of the response. Valid values:</p>
-             * <ul>
-             * <li>zh-CN: Chinese. This is the default value.</li>
-             * <li>en-US: English.</li>
-             * <li>ja: Japanese.</li>
-             * </ul>
+             * <p>Specifies whether to update the Ingress status.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -422,7 +437,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * <p>An array of service root paths.</p>
+             * <p>The Ingress class to listen on.</p>
              * 
              * <strong>example:</strong>
              * <p>com.test.xxx</p>
@@ -433,7 +448,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * <p>The root path of the service.</p>
+             * <p>The target namespace to watch.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -527,7 +542,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * <p>The authorized port range of the security group. You can select multiple port ranges. Separate each port range with a comma (,).</p>
+             * <p>The authorized port range of the security group. You can specify multiple port ranges separated by commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>8080/8080,9000/10000</p>

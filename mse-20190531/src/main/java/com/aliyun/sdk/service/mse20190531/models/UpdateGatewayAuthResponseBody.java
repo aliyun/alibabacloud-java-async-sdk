@@ -119,7 +119,10 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. The value is synchronized with the success parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The authentication rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>719</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,14 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.                                </li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

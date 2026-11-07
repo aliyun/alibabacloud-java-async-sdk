@@ -103,10 +103,10 @@ public class UpgradeClusterRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters in the JSON format.</p>
+         * <p>The extended request parameters in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -144,7 +144,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * <p>The destination version.</p>
+         * <p>The target upgrade version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,10 +149,10 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>Succ</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -160,7 +160,7 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
@@ -171,9 +171,9 @@ public class AddMockRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request succeeded.</li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 
@@ -400,7 +400,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>178432728867xxxx</p>
@@ -411,7 +411,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the consumer application.</p>
+             * <p>The ID of the service consumer application.</p>
              * 
              * <strong>example:</strong>
              * <p>hkhon1po62@a000601b265xxxx</p>
@@ -422,7 +422,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the consumer application.</p>
+             * <p>The name of the application to be queried.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-xxxx</p>
@@ -433,10 +433,10 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the mock rule is enabled.</p>
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enabled</li>
-             * <li><code>false</code>: disabled</li>
+             * <li><code>true</code>: Enabled.</li>
+             * <li><code>false</code>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -459,7 +459,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the rule.</p>
+             * <p>The rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>275</p>
@@ -470,10 +470,10 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mock type. Valid values:</p>
+             * <p>The model type. Valid values:</p>
              * <ul>
-             * <li>- <code>[unk]0[unk]</code>: desktop client</li>
-             * <li>- <code>[unk]1[unk]</code>: mobile client</li>
+             * <li><code>[unk]0[unk]</code>: Desktop model</li>
+             * <li><code>[unk]1[unk]</code>: Mobile model</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -496,7 +496,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
+             * <p>The namespace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -529,7 +529,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -540,10 +540,10 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP mock rule.</p>
+             * <p>The mock rule for the HTTP protocol.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;oper&quot;:&quot;return+json&quot;,&quot;Path&quot;:&quot;/mock&quot;,&quot;Value&quot;:&quot;{\n &quot;date&quot;: &quot;2021-09-10T07:45:12.357+0000&quot;,\n &quot;name&quot;: &quot;name&quot;,\n &quot;id&quot;: &quot;1&quot;\n}&quot;,&quot;Method&quot;:&quot;GET&quot;,&quot;Condition&quot;:&quot;AND&quot;,&quot;Timeout&quot;:1,&quot;ArgumentMockItems&quot;:[{&quot;type&quot;:&quot;param&quot;,&quot;name&quot;:&quot;id&quot;,&quot;value&quot;:&quot;1&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;},{&quot;type&quot;:&quot;param&quot;,&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;aliyun&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;}]}]</p>
+             * <p>[{&quot;oper&quot;:&quot;return+json&quot;,&quot;Path&quot;:&quot;/mock&quot;,&quot;Value&quot;:&quot;{\n \&quot;date\&quot;: \&quot;2021-09-10T07:45:12.357+0000\&quot;,\n \&quot;name\&quot;: \&quot;name\&quot;,\n \&quot;id\&quot;: \&quot;1\&quot;\n}&quot;,&quot;Method&quot;:&quot;GET&quot;,&quot;Condition&quot;:&quot;AND&quot;,&quot;Timeout&quot;:1,&quot;ArgumentMockItems&quot;:[{&quot;type&quot;:&quot;param&quot;,&quot;name&quot;:&quot;id&quot;,&quot;value&quot;:&quot;1&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;},{&quot;type&quot;:&quot;param&quot;,&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;aliyun&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;}]}]</p>
              */
             public Builder scMockItemJson(String scMockItemJson) {
                 this.scMockItemJson = scMockItemJson;
@@ -551,7 +551,7 @@ public class AddMockRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service source.</p>
+             * <p>The source.</p>
              * 
              * <strong>example:</strong>
              * <p>edasmsc</p>

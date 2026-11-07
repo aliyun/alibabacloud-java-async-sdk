@@ -171,7 +171,10 @@ public class GatewayDomain extends TeaModel {
         } 
 
         /**
-         * CertIdentifier.
+         * <p>The ID of the certificate in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>595xx36-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -179,7 +182,10 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * GatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.gatewayId = gatewayId;
@@ -187,7 +193,10 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * GatewayName.
+         * <p>The name of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = gatewayName;
@@ -195,7 +204,10 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c9bc5afd61014165bd58f621b491****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.gatewayUniqueId = gatewayUniqueId;
@@ -203,7 +215,10 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * GmtCreate.
+         * <p>The time when the gateway was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-31 10:16:46</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -211,7 +226,10 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * <p>The time when the gateway was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-11 15:28:47</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -219,7 +237,10 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -227,7 +248,10 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * MustHttps.
+         * <p>Indicates whether HTTPS is forcibly used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder mustHttps(String mustHttps) {
             this.mustHttps = mustHttps;
@@ -235,7 +259,10 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -243,7 +270,10 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * <p>The domain protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;

@@ -218,8 +218,10 @@ public class ListAnsServicesRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +236,7 @@ public class ListAnsServicesRequest extends Request {
         /**
          * <p>The ID of the cluster.</p>
          * <blockquote>
-         * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+         * <p>You must specify either this parameter or InstanceId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -247,7 +249,10 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * <p>查询服务下某个集群的实例列表是所需要的参数</p>
+         * <p>The parameter that is required to query the list of instances in a specific cluster of a service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -268,7 +273,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the number of instances that are used for the service.</p>
+         * <p>Specifies whether to query the number of service instances.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -282,7 +287,7 @@ public class ListAnsServicesRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          * <blockquote>
-         * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+         * <p>You must specify either this parameter or ClusterId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -307,7 +312,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +325,7 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of instances to display on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,7 +338,10 @@ public class ListAnsServicesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

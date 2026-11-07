@@ -103,7 +103,11 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         } 
 
         /**
-         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese. This is the default value.</li>
+         * <li>en: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -128,7 +132,7 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         }
 
         /**
-         * <p>The name of the MSE namespace that you want to query.</p>
+         * <p>The name of the Microservices Engine (MSE) namespace to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +145,7 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends Request {
         }
 
         /**
-         * <p>The tag based on which you want to list applications.</p>
+         * <p>The tags to query.</p>
          */
         public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

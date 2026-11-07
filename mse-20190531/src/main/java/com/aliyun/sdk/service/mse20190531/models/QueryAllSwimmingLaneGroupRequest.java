@@ -76,8 +76,10 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,7 +92,7 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the Microservices Engine (MSE) namespace that you want to query.</p>
+         * <p>The name of the MSE namespace to query.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

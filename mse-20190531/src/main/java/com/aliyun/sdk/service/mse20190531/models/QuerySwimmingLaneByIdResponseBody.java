@@ -106,7 +106,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>{id:102,name:&quot;test&quot;}</p>
@@ -117,7 +117,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -128,10 +128,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +139,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
@@ -150,10 +150,12 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +329,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * cond.
+             * <p>The matching character.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -335,7 +340,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * datum.
+             * <p>The number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x</p>
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -343,7 +351,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * divisor.
+             * <p>The divisor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -351,7 +362,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -359,7 +373,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * nameList.
+             * <p>The names.</p>
              */
             public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
@@ -367,7 +381,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>The filter operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rawvalue</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -375,7 +392,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * rate.
+             * <p>The percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -383,7 +403,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * remainder.
+             * <p>The remainder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -391,7 +414,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cookie</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -399,7 +425,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -492,7 +521,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * condition.
+             * <p>The condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -500,7 +532,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -508,7 +543,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * paths.
+             * <p>The list of paths.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -516,7 +551,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * restItems.
+             * <p>The Restful matching rules.</p>
              */
             public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
@@ -739,7 +774,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * PathIndependentPercentageEnable.
+             * <p>This parameter is discontinued. This parameter is used to specify whether to enable grayscale by path when Java gateway is used as the entry for the swimming lane group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder pathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
                 this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
@@ -747,7 +785,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>The swimming lane switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -755,7 +796,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * enableRules.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableRules(Boolean enableRules) {
                 this.enableRules = enableRules;
@@ -763,7 +807,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * entryRule.
+             * <p>The entry application rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder entryRule(String entryRule) {
                 this.entryRule = entryRule;
@@ -771,7 +818,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * entryRules.
+             * <p>The details of the entry application rules.</p>
              */
             public Builder entryRules(java.util.List<EntryRules> entryRules) {
                 this.entryRules = entryRules;
@@ -779,7 +826,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * gatewaySwimmingLaneRouteJson.
+             * <p>The MSE gateway routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder gatewaySwimmingLaneRouteJson(String gatewaySwimmingLaneRouteJson) {
                 this.gatewaySwimmingLaneRouteJson = gatewaySwimmingLaneRouteJson;
@@ -787,7 +837,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Rule Created At</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683598484000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -795,7 +848,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Rule Modified At</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683598484000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -803,7 +859,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * groupId.
+             * <p>The swimming lane group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -811,7 +870,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The swimming lane ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -819,7 +881,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The swimming lane name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -827,7 +892,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -835,7 +903,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The swimming lane status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -843,7 +914,10 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * <p>The tag corresponding to the swimming lane.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

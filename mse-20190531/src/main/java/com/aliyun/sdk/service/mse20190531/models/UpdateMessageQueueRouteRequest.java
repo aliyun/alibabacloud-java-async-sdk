@@ -175,10 +175,10 @@ public class UpdateMessageQueueRouteRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,10 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -213,10 +216,10 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the canary release for messaging feature is enabled for the application. Valid values:</p>
+         * <p>Specifies whether message canary release is enabled. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enabled</li>
-         * <li><code>false</code>: disabled</li>
+         * <li><code>true</code>: Enabled.</li>
+         * <li><code>false</code>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,7 +232,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+         * <p>The filtering side for message canary release.</p>
          * 
          * <strong>example:</strong>
          * <p>Server</p>
@@ -241,7 +244,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * GrayBaseTags.
+         * <p>The list of baseline environment labels for MSMQ grayscale rules.</p>
          */
         public Builder grayBaseTags(java.util.List<String> grayBaseTags) {
             String grayBaseTagsShrink = shrink(grayBaseTags, "GrayBaseTags", "json");
@@ -251,7 +254,10 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The MSE namespace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -260,7 +266,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +279,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * <p>The tag that is negligible for the untagged environment of the application.</p>
+         * <p>The ignored tags for the untagged environments of the application.</p>
          */
         public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

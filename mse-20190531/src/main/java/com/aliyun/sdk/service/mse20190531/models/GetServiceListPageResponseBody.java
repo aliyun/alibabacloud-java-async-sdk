@@ -93,7 +93,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response to the request.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -123,7 +123,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -292,7 +292,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the service was last updated.</p>
+             * <p>The last update time of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -303,7 +303,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group to which the service belongs.</p>
+             * <p>The service group.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -314,7 +314,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of service nodes.</p>
+             * <p>The number of instances for the service.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -336,7 +336,10 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>springCloud</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -440,7 +443,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -470,7 +473,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

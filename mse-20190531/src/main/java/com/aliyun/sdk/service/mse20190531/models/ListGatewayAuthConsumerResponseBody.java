@@ -227,7 +227,7 @@ public class ListGatewayAuthConsumerResponseBody extends TeaModel {
          * <p>The error message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -190,8 +190,10 @@ public class UpdateFlowRuleRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,26 +232,6 @@ public class UpdateFlowRuleRequest extends Request {
 
         /**
          * <p>The throttling effect.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>0</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>fast failure</p>
-         * <!-- -->
-         * </li>
-         * <li><p>2</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>in queue</p>
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -262,22 +244,6 @@ public class UpdateFlowRuleRequest extends Request {
 
         /**
          * <p>Specifies whether to enable the rule.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -289,7 +255,10 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * LimitApp.
+         * <p>The source application of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Spring-cloud-a</p>
          */
         public Builder limitApp(String limitApp) {
             this.putQueryParameter("LimitApp", limitApp);
@@ -298,7 +267,7 @@ public class UpdateFlowRuleRequest extends Request {
         }
 
         /**
-         * <p>The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.</p>
+         * <p>The timeout period. Unit: milliseconds. This parameter is required if the ControlBehavior parameter is set to 2.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>

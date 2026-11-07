@@ -160,7 +160,10 @@ public class UpdateIsolationRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which the response is displayed. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -169,7 +172,10 @@ public class UpdateIsolationRuleRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -178,6 +184,7 @@ public class UpdateIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +197,10 @@ public class UpdateIsolationRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>Specifies whether the rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -199,7 +209,10 @@ public class UpdateIsolationRuleRequest extends Request {
         }
 
         /**
-         * LimitApp.
+         * <p>The source application of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder limitApp(String limitApp) {
             this.putQueryParameter("LimitApp", limitApp);
@@ -208,6 +221,7 @@ public class UpdateIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The microservice namespace to which the application belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +234,7 @@ public class UpdateIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +247,10 @@ public class UpdateIsolationRuleRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * <p>The concurrency threshold of the isolation rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder threshold(Float threshold) {
             this.putQueryParameter("Threshold", threshold);

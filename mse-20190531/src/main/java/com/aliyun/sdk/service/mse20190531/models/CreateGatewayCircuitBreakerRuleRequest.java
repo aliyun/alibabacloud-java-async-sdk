@@ -293,7 +293,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -302,6 +305,9 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>The type of the web fallback behavior.</p>
+         * <p>0: returns the specified content.</p>
+         * <p>1: redirects to the specified page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,7 +320,12 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * BodyEncoding.
+         * <p>The encoding type.</p>
+         * <p>0: plain text</p>
+         * <p>1: JSON</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder bodyEncoding(Integer bodyEncoding) {
             this.putQueryParameter("BodyEncoding", bodyEncoding);
@@ -323,6 +334,9 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the rule.</p>
+         * <p>0: disables the rule.</p>
+         * <p>1: enables the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,7 +349,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14407</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -344,6 +361,7 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,7 +374,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * MaxAllowedMs.
+         * <p>The threshold in slow call proportion mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxAllowedMs(Integer maxAllowedMs) {
             this.putQueryParameter("MaxAllowedMs", maxAllowedMs);
@@ -365,6 +386,7 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>The minimum number of requests to trigger circuit breaking.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -377,6 +399,7 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>The circuit breaking timeout period.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -389,7 +412,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * ResponseContentBody.
+         * <p>The HTTP text to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder responseContentBody(String responseContentBody) {
             this.putQueryParameter("ResponseContentBody", responseContentBody);
@@ -398,7 +424,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * ResponseRedirectUrl.
+         * <p>The redirection URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www.******.com</p>
          */
         public Builder responseRedirectUrl(String responseRedirectUrl) {
             this.putQueryParameter("ResponseRedirectUrl", responseRedirectUrl);
@@ -407,7 +436,10 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * ResponseStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>429</p>
          */
         public Builder responseStatusCode(Integer responseStatusCode) {
             this.putQueryParameter("ResponseStatusCode", responseStatusCode);
@@ -416,6 +448,7 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>The route ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -428,6 +461,7 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>The route name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -440,6 +474,7 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>The statistical duration for triggering circuit breaking.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -452,6 +487,9 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>The type of the threshold.</p>
+         * <p>0: slow call proportion</p>
+         * <p>1: failure proportion</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -464,6 +502,7 @@ public class CreateGatewayCircuitBreakerRuleRequest extends Request {
         }
 
         /**
+         * <p>The request percentage that triggers circuit breaking.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -148,8 +148,8 @@ public class ListListenersByConfigRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data.</p>
+         * <p>The data ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * ExtGrayRules.
+         * <p>The list of additional canary release rules. When performing listener matching, the additional canary release rules are merged with existing rules for matching.</p>
          */
         public Builder extGrayRules(java.util.List<ExtGrayRules> extGrayRules) {
             String extGrayRulesShrink = shrink(extGrayRules, "ExtGrayRules", "json");
@@ -185,7 +185,7 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * <p>The name of the group.</p>
+         * <p>The group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID. Default value: public.</p>
          * 
          * <strong>example:</strong>
          * <p>aaeb4d28-c9eb-4fa2-85f5-d03ce7ee8df1</p>
@@ -223,10 +223,10 @@ public class ListListenersByConfigRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters in the JSON format.</p>
+         * <p>This parameter is deprecated and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;appGroup\&quot;:\&quot;emas-zfive_prehost\&quot;,\&quot;appName\&quot;:\&quot;emas-zfive\&quot;,\&quot;appStage\&quot;:\&quot;PRE_PUBLISH\&quot;,\&quot;appUnit\&quot;:\&quot;\&quot;,\&quot;bucId\&quot;:\&quot;225902\&quot;,\&quot;bucName\&quot;:\&quot;Wireless\&quot;,\&quot;provider\&quot;:\&quot;aliyun\&quot;}</p>
+         * <p>...</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -320,7 +320,10 @@ public class ListListenersByConfigRequest extends Request {
             } 
 
             /**
-             * GrayRule.
+             * <p>The canary release rule. If it is a Beta canary release, this field contains the IP addresses of the canary release clients, separated by commas. If it is a tag-based canary release, this field contains tag_name=tag_value, with multiple tag values separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder grayRule(String grayRule) {
                 this.grayRule = grayRule;
@@ -328,7 +331,10 @@ public class ListListenersByConfigRequest extends Request {
             }
 
             /**
-             * GrayRuleName.
+             * <p>The name of the canary release version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder grayRuleName(String grayRuleName) {
                 this.grayRuleName = grayRuleName;
@@ -336,7 +342,10 @@ public class ListListenersByConfigRequest extends Request {
             }
 
             /**
-             * GrayRulePriority.
+             * <p>The priority of the canary release version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder grayRulePriority(Integer grayRulePriority) {
                 this.grayRulePriority = grayRulePriority;
@@ -344,7 +353,10 @@ public class ListListenersByConfigRequest extends Request {
             }
 
             /**
-             * GrayRuleType.
+             * <p>The type of the canary release rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tags</p>
              */
             public Builder grayRuleType(String grayRuleType) {
                 this.grayRuleType = grayRuleType;

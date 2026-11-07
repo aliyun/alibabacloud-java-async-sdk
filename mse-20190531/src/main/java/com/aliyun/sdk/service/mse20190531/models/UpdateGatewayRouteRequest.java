@@ -271,7 +271,7 @@ public class UpdateGatewayRouteRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -287,7 +287,10 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a route for xxx</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -296,7 +299,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The destination service type.</p>
+         * <p>The type of the destination service.</p>
          * 
          * <strong>example:</strong>
          * <p>Mock</p>
@@ -308,7 +311,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The information about service mocking.</p>
+         * <p>The mock content.</p>
          */
         public Builder directResponseJSON(DirectResponseJSON directResponseJSON) {
             String directResponseJSONShrink = shrink(directResponseJSON, "DirectResponseJSON", "json");
@@ -318,7 +321,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The associated domain name.</p>
+         * <p>The associated domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>[90]</p>
@@ -330,7 +333,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+         * <p><strong>[Deprecated]</strong> Use UpdateGatewayRouteWafStatus to update the WAF status of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -342,7 +345,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Fallback service.</p>
+         * <p>Specifies whether to enable the fallback service.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -354,7 +357,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The information about the Fallback service.</p>
+         * <p>The fallback services.</p>
          */
         public Builder fallbackServices(java.util.List<FallbackServices> fallbackServices) {
             String fallbackServicesShrink = shrink(fallbackServices, "FallbackServices", "json");
@@ -412,7 +415,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The route matching conditions.</p>
+         * <p>The matching conditions of the route.</p>
          */
         public Builder predicates(Predicates predicates) {
             String predicatesShrink = shrink(predicates, "Predicates", "json");
@@ -422,7 +425,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The information about redirection.</p>
+         * <p>The redirect configuration.</p>
          */
         public Builder redirectJSON(RedirectJSON redirectJSON) {
             String redirectJSONShrink = shrink(redirectJSON, "RedirectJSON", "json");
@@ -432,7 +435,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The sequence number of the route.</p>
+         * <p>The order of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -444,7 +447,7 @@ public class UpdateGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The information about destination services.</p>
+         * <p>The destination services. Specify this parameter when the route points to a single service, multiple services, or tag-based routing.</p>
          */
         public Builder services(java.util.List<Services> services) {
             String servicesShrink = shrink(services, "Services", "json");
@@ -513,7 +516,7 @@ public class UpdateGatewayRouteRequest extends Request {
             } 
 
             /**
-             * <p>The mock return value.</p>
+             * <p>The mock response body.</p>
              * 
              * <strong>example:</strong>
              * <p>hello</p>
@@ -524,7 +527,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The mock return code.</p>
+             * <p>The mock response code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -685,7 +688,7 @@ public class UpdateGatewayRouteRequest extends Request {
             } 
 
             /**
-             * <p>The type of the protocol. Valid values:</p>
+             * <p>The protocol type.</p>
              * 
              * <strong>example:</strong>
              * <p>DUBBO</p>
@@ -696,7 +699,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The name of the group to which the service belongs.</p>
+             * <p>The name of the service group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -718,7 +721,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The namespace in which the service resides.</p>
+             * <p>The namespace where the service resides.</p>
              * 
              * <strong>example:</strong>
              * <p>Namespace</p>
@@ -729,7 +732,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The weight in the form of a percentage value.</p>
+             * <p>The weight percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -751,7 +754,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The service port number.</p>
+             * <p>The service port.</p>
              * 
              * <strong>example:</strong>
              * <p>8848</p>
@@ -773,7 +776,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The version of the service.</p>
+             * <p>The service version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -961,7 +964,7 @@ public class UpdateGatewayRouteRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to perform case-insensitive matching.</p>
+             * <p>Specifies whether to ignore case.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -972,7 +975,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The path used for route matching.</p>
+             * <p>The path of the route.</p>
              * 
              * <strong>example:</strong>
              * <p>/test</p>
@@ -1088,7 +1091,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The value of the parameter.</p>
+             * <p>The matching value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1184,7 +1187,7 @@ public class UpdateGatewayRouteRequest extends Request {
             } 
 
             /**
-             * <p>The information about header matching.</p>
+             * <p>The request header matching conditions.</p>
              */
             public Builder headerPredicates(java.util.List<HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
@@ -1192,7 +1195,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The information about method matching.</p>
+             * <p>The method matching conditions.</p>
              */
             public Builder methodPredicates(java.util.List<String> methodPredicates) {
                 this.methodPredicates = methodPredicates;
@@ -1200,7 +1203,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The information about path matching.</p>
+             * <p>The path matching conditions.</p>
              */
             public Builder pathPredicates(PathPredicates pathPredicates) {
                 this.pathPredicates = pathPredicates;
@@ -1208,7 +1211,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The information about parameter matching.</p>
+             * <p>The query parameter matching conditions.</p>
              */
             public Builder queryPredicates(java.util.List<QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
@@ -1288,7 +1291,7 @@ public class UpdateGatewayRouteRequest extends Request {
             } 
 
             /**
-             * <p>The status code returned.</p>
+             * <p>The status code.</p>
              * 
              * <strong>example:</strong>
              * <p>302</p>
@@ -1299,7 +1302,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The hostname to be redirected to.</p>
+             * <p>The redirect hostname.</p>
              * 
              * <strong>example:</strong>
              * <p>test.com</p>
@@ -1310,7 +1313,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The path to be redirected to.</p>
+             * <p>The redirect path.</p>
              * 
              * <strong>example:</strong>
              * <p>/test</p>
@@ -1393,7 +1396,7 @@ public class UpdateGatewayRouteRequest extends Request {
             } 
 
             /**
-             * <p>The key extracted from the input parameter.</p>
+             * <p>The key extracted from the input parameter position.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -1406,18 +1409,14 @@ public class UpdateGatewayRouteRequest extends Request {
             /**
              * <p>The position of the input parameter.</p>
              * <blockquote>
-             * <p>Valid values:</p>
-             * </blockquote>
+             * <p>Valid values for the position of the input parameter:</p>
              * <ul>
-             * <li><p><code>ALL_QUERY_PARAMETER</code>: request parameter</p>
-             * </li>
-             * <li><p><code>ALL_HEADER</code>: request header</p>
-             * </li>
-             * <li><p><code>ALL_PATH</code>: request path</p>
-             * </li>
-             * <li><p><code>ALL_BODY</code>: request body</p>
-             * </li>
+             * <li>Request parameter: <code>ALL_QUERY_PARAMETER</code></li>
+             * <li>Request header: <code>ALL_HEADER</code></li>
+             * <li>Request path: <code>ALL_PATH</code></li>
+             * <li>Request body: <code>ALL_BODY</code></li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>ALL_QUERY_PARAMETER</p>
@@ -1428,7 +1427,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The type of the backend service parameter.</p>
+             * <p>The backend parameter type.</p>
              * 
              * <strong>example:</strong>
              * <p>java.lang.String</p>
@@ -1550,7 +1549,7 @@ public class UpdateGatewayRouteRequest extends Request {
             } 
 
             /**
-             * <p>The method name of the Dubbo service.</p>
+             * <p>The name of the Dubbo method.</p>
              * 
              * <strong>example:</strong>
              * <p>sayHello</p>
@@ -1563,20 +1562,15 @@ public class UpdateGatewayRouteRequest extends Request {
             /**
              * <p>The HTTP method.</p>
              * <blockquote>
-             * <p>Valid values:</p>
-             * </blockquote>
+             * <p>Supported HTTP method parameter values:</p>
              * <ul>
-             * <li><p>ALL_GET</p>
-             * </li>
-             * <li><p>ALL_POST</p>
-             * </li>
-             * <li><p>ALL_PUT</p>
-             * </li>
-             * <li><p>ALL_DELETE</p>
-             * </li>
-             * <li><p>ALL_PATCH</p>
-             * </li>
+             * <li>ALL_GET</li>
+             * <li>ALL_POST</li>
+             * <li>ALL_PUT</li>
+             * <li>ALL_DELETE</li>
+             * <li>ALL_PATCH</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>ALL_GET</p>
@@ -1587,7 +1581,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The path that is used to match a method.</p>
+             * <p>The matching path of the method.</p>
              * 
              * <strong>example:</strong>
              * <p>/mytestzbk/sayhello</p>
@@ -1598,7 +1592,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The information of parameter mappings.</p>
+             * <p>The list of parameter mappings.</p>
              */
             public Builder paramMapsList(java.util.List<ParamMapsList> paramMapsList) {
                 this.paramMapsList = paramMapsList;
@@ -1606,18 +1600,15 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The pass-through type of the header.</p>
+             * <p>The header pass-through type.</p>
              * <blockquote>
-             * <p>Valid values:</p>
-             * </blockquote>
+             * <p>Valid values for the pass-through type:</p>
              * <ul>
-             * <li><p>PASS_ALL: All headers are passed through.</p>
-             * </li>
-             * <li><p>PASS_NOT: All headers are not passed through.</p>
-             * </li>
-             * <li><p>PASS_ASSIGN: Specified headers are passed through.</p>
-             * </li>
+             * <li>PASS_ALL: Passes through all headers.</li>
+             * <li>PASS_NOT: Does not pass through any headers.</li>
+             * <li>PASS_ASSIGN: Passes through specified headers.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>PASS_NOT</p>
@@ -1628,7 +1619,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The list of headers to be passed through.</p>
+             * <p>The list of specified headers to pass through.</p>
              */
             public Builder passThroughList(java.util.List<String> passThroughList) {
                 this.passThroughList = passThroughList;
@@ -1732,7 +1723,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The name of the Dubbo service.</p>
+             * <p>The Dubbo service name.</p>
              * 
              * <strong>example:</strong>
              * <p>org.apache.dubbo.samples.basic.api.DemoService</p>
@@ -1754,7 +1745,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The forwarding rules of the Dubbo service.</p>
+             * <p>The list of Dubbo forwarding rules.</p>
              */
             public Builder mothedMapList(java.util.List<MothedMapList> mothedMapList) {
                 this.mothedMapList = mothedMapList;
@@ -1925,7 +1916,7 @@ public class UpdateGatewayRouteRequest extends Request {
             } 
 
             /**
-             * <p>The type of the protocol. Valid values:</p>
+             * <p>The protocol type.</p>
              * 
              * <strong>example:</strong>
              * <p>DUBBO</p>
@@ -1936,7 +1927,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The name of the group to which the service belongs.</p>
+             * <p>The name of the service group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1947,7 +1938,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The transcoder of the Dubbo protocol.</p>
+             * <p>The Dubbo protocol transcoding configuration.</p>
              */
             public Builder httpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
                 this.httpDubboTranscoder = httpDubboTranscoder;
@@ -1966,7 +1957,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The namespace in which the service resides.</p>
+             * <p>The namespace where the service resides.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -1977,7 +1968,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The percentage.</p>
+             * <p>The traffic distribution percentage of the current service or service version. Specify this parameter only when multiple services or tag-based routing is used.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -1999,7 +1990,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The Dubbo port number.</p>
+             * <p>The Dubbo port.</p>
              * 
              * <strong>example:</strong>
              * <p>20880</p>
@@ -2021,7 +2012,7 @@ public class UpdateGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The version of the service.</p>
+             * <p>The service version. Specify this parameter only when tag-based routing is used.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

@@ -119,7 +119,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The code returned in synchronization with the Success parameter. When Success is true, the value is 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,14 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -472,7 +491,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientId.
+             * <p>The application ID registered for the service. This parameter is used for OIDC or IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-app</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -480,7 +502,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * ClientSecret.
+             * <p>The application secret registered for the service. This parameter is used for OIDC or IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -488,7 +513,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * CookieDomain.
+             * <p>The domain name of the cookie. After authentication, the cookie is sent to the specified domain name to maintain the logon status. This parameter is used for OIDC or IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder cookieDomain(String cookieDomain) {
                 this.cookieDomain = cookieDomain;
@@ -496,7 +524,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>399</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -504,7 +535,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -512,7 +546,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07 18:07:57</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -520,7 +557,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07 18:07:57</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -528,7 +568,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The authentication ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -536,7 +579,14 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * IsWhite.
+             * <p>The authorization blacklist and whitelist mode. Valid values:</p>
+             * <ul>
+             * <li>true: whitelist mode. Hosts and paths in the whitelist can be accessed without verification, while all other hosts and paths require verification.</li>
+             * <li>false: blacklist mode. Hosts and paths in the blacklist require verification, while all other hosts and paths can be accessed directly.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isWhite(Boolean isWhite) {
                 this.isWhite = isWhite;
@@ -544,7 +594,14 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>The issuer used when the authentication type is JWT or OIDC:</p>
+             * <ul>
+             * <li>JWT: the iss (issuer) claim of the JWT, which represents the issuer.</li>
+             * <li>OIDC: the iss (issuer) claim of the OIDC, which represents the issuer.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/auth">https://example.com/auth</a></p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -552,7 +609,19 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Jwks.
+             * <p>The JWT public key in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;keys&quot;: [
+             *             {
+             *                   &quot;e&quot;: &quot;AQAB&quot;,
+             *                   &quot;kid&quot;: &quot;DHFbpoIUqrY8t2zpA2qXfCmr5VO5ZEr4RzHU_-envvQ&quot;,
+             *                   &quot;kty&quot;: &quot;RSA&quot;,
+             *                   &quot;n&quot;: &quot;xAE7eB6qugXyCAG3yhh7pkDkT65pHymX-P7KfIupjf59vsdo91bSP9C8H07pSAGQO1MV_xFj9VswgsCg4R6otmg5PV2He95lZdHtOcU5DXIg_pbhLdKXbi66GlVeK6ABZOUW3WYtnNHD-91gVuoeJT_DwtGGcp4ignkgXfkiEm4sw-4sfb4qdt5oLbyVpmW6x9cfa7vs2WTfURiCrBoUqgBo_-4WTiULmmHSGZHOjzwa8WtrtOQGsAFjIbno85jp6MnGGGZPYZbDAa_b3y5u-YpW7ypZrvD8BgtKVjgtQgZhLAGezMt0ua3DRrWnKqTZ0BJ_EyxOGuHJrLsn00fnMQ&quot;
+             *             }
+             *       ]
+             * }</p>
              */
             public Builder jwks(String jwks) {
                 this.jwks = jwks;
@@ -560,7 +629,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * LoginUrl.
+             * <p>The URL of the user logon page for the IDaaS instance. This parameter is used for IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://daxxxxcn.aliyunidaas.com/">https://daxxxxcn.aliyunidaas.com/</a></p>
              */
             public Builder loginUrl(String loginUrl) {
                 this.loginUrl = loginUrl;
@@ -568,7 +640,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The authentication name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -576,7 +651,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * RedirectUrl.
+             * <p>The redirect URL after successful authorization. This parameter is used for OIDC or IDaaS and must be consistent with the redirect URL configured in OIDC or IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://yourdomain/path">https://yourdomain/path</a></p>
              */
             public Builder redirectUrl(String redirectUrl) {
                 this.redirectUrl = redirectUrl;
@@ -584,7 +662,7 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * ScopesList.
+             * <p>The OIDC scopes. This parameter is used for OIDC.</p>
              */
             public Builder scopesList(java.util.List<String> scopesList) {
                 this.scopesList = scopesList;
@@ -592,7 +670,14 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The enabling status. Valid values:</p>
+             * <ul>
+             * <li>true: enabled.</li>
+             * <li>false: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -600,7 +685,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TokenName.
+             * <p>The name of the token parameter to be verified. By default, the token is prefixed with Bearer and placed in the Authorization header. Example: <code>Authorization: Bearer token</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authorization</p>
              */
             public Builder tokenName(String tokenName) {
                 this.tokenName = tokenName;
@@ -608,7 +696,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TokenNamePrefix.
+             * <p>The prefix of the JWT token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bearer</p>
              */
             public Builder tokenNamePrefix(String tokenNamePrefix) {
                 this.tokenNamePrefix = tokenNamePrefix;
@@ -616,7 +707,10 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TokenPass.
+             * <p>Specifies whether to pass through the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tokenPass(Boolean tokenPass) {
                 this.tokenPass = tokenPass;
@@ -624,7 +718,14 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TokenPosition.
+             * <p>The position of the JWT token. Valid values:</p>
+             * <ul>
+             * <li>HEADER: transmitted through the header.
+             * The token parameter to be verified. By default, the token is prefixed with Bearer and placed in the Authorization header. Example: <code>Authorization: Bearer token</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HEADER</p>
              */
             public Builder tokenPosition(String tokenPosition) {
                 this.tokenPosition = tokenPosition;
@@ -632,7 +733,16 @@ public class DeleteGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The authentication type. Valid values:</p>
+             * <ul>
+             * <li>JWT</li>
+             * <li>OIDC</li>
+             * <li>IDaaS</li>
+             * <li>ExternalAuthZ: custom authentication service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>JWT</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -74,7 +74,10 @@ public class GetGatewayConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the returned results. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -83,6 +86,7 @@ public class GetGatewayConfigRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

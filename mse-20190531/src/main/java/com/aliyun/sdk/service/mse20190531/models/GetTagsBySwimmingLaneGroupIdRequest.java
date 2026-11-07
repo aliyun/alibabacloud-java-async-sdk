@@ -91,8 +91,8 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lane group.</p>
+         * <p>The ID of the traffic lane group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends Request {
         }
 
         /**
-         * <p>The name of the Microservices Engine (MSE) namespace that you want to query.</p>
+         * <p>The name of the MSE namespace to query.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

@@ -158,7 +158,7 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * <p>The code used only to synchronize with the success status.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,10 +169,12 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * <p>Indicates whether the execution was successful. Valid values:</p>
+         * <p>Indicates whether the execution succeeded. Valid values:</p>
          * <ul>
-         * <li>true: The execution was successful.</li>
-         * <li>false: The execution failed.</li>
+         * <li><p>true: Succeeded.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +186,7 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * <p>The dynamic part in the error message.</p>
+         * <p>The placeholder in the dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -195,9 +197,9 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in the <code>ErrMessage</code> parameter.</p>
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the error message of the ErrMessage response parameter.</p>
          * <blockquote>
-         * <p> If the return value of the <code>ErrMessage</code> parameter is <code>The Value of Input Parameter %s is not valid</code> and the return value of the <code>DynamicMessage</code> parameter is <code>DtsJobId</code>, the specified <code>DtsJobId</code> parameter is invalid.</p>
+         * <p>If ErrMessage returns <code>The Value of Input Parameter %s is not valid</code> and DynamicMessage returns DtsJobId, it indicates that the DtsJobId request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -209,7 +211,7 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * <p>The error code that is returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -220,7 +222,7 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -231,10 +233,10 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -242,7 +244,7 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
@@ -253,9 +255,9 @@ public class UpdateGatewayAuthConsumerResourceStatusResponseBody extends TeaMode
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The request result. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request succeeded.</li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 

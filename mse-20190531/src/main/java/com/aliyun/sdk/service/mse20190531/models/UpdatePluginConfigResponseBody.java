@@ -145,7 +145,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the plug-in configuration.</p>
+         * <p>The ID value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message.</p>
+         * <p>The placeholder in the dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -178,7 +178,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code that is returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -189,7 +189,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -200,7 +200,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

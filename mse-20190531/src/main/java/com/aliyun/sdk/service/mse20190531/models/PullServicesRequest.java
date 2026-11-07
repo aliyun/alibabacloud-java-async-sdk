@@ -117,8 +117,8 @@ public class PullServicesRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,10 @@ public class PullServicesRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The service source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder sourceId(Long sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -164,10 +167,10 @@ public class PullServicesRequest extends Request {
         }
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The service source type.</p>
          * 
          * <strong>example:</strong>
-         * <p>K8s</p>
+         * <p>K8S</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

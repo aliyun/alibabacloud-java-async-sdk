@@ -158,7 +158,7 @@ public class UpdateGatewayAuthConsumerResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * <p>The code is used only to synchronize with the success field.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,10 +169,12 @@ public class UpdateGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the list of the resources was updated. Valid values:</p>
+         * <p>Indicates whether the execution is successful. Valid values:</p>
          * <ul>
-         * <li>true: The list of the resources was updated.</li>
-         * <li>false: The list of the resources was not updated.</li>
+         * <li><p>true: Successful.</p>
+         * </li>
+         * <li><p>false: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +186,7 @@ public class UpdateGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message.</p>
+         * <p>The placeholder in the dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -195,9 +197,9 @@ public class UpdateGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -209,7 +211,7 @@ public class UpdateGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -220,7 +222,7 @@ public class UpdateGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -231,10 +233,10 @@ public class UpdateGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -253,9 +255,9 @@ public class UpdateGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request is successful.</li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 

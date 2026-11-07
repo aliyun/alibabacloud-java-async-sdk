@@ -242,7 +242,10 @@ public class CreateNacosConfigRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The content of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -267,7 +270,7 @@ public class CreateNacosConfigRequest extends Request {
          * <p>The description of the configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>Basic module configuration.</p>
+         * <p>Base module configuration</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -317,7 +320,7 @@ public class CreateNacosConfigRequest extends Request {
          * <p>The tags of the configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>Basic configurations</p>
+         * <p>Basic configuration</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

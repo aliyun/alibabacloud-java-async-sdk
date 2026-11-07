@@ -106,7 +106,10 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5E7D4E3-D30C-56C1-817F-F2B8CE6BXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,16 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +235,10 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * RequiredPermission.
+             * <p>The permission that is granted to the RAM user to call the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ram:CreateServiceLinkedRole</p>
              */
             public Builder requiredPermission(String requiredPermission) {
                 this.requiredPermission = requiredPermission;
@@ -225,7 +246,10 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The name of the created service-linked role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunServiceRoleForMSE</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -233,7 +257,10 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service to which the service-linked role belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse.aliyuncs.com</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

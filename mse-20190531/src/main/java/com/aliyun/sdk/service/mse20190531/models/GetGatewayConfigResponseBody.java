@@ -158,7 +158,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The code used to synchronize with the success field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -166,7 +169,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data overview.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -174,7 +177,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>This field is not used. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -182,7 +188,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>This field is not used. Ignore this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter is invalid.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -190,7 +199,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -198,7 +210,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -206,7 +221,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -214,7 +232,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6092602-C357-4750-89D9-E572FBEA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +243,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request result. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -314,7 +342,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable tag filtering for Kubernetes service source workloads.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -322,7 +350,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FilterOpt.
+             * <p>The tag filtering method. Valid values: EQUAL (matches the specified tag) and NOT_EQUAL (excludes the specified tag).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EQUAL</p>
              */
             public Builder filterOpt(String filterOpt) {
                 this.filterOpt = filterOpt;
@@ -330,7 +361,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LabelKey.
+             * <p>The tag key used to filter Kubernetes workloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder labelKey(String labelKey) {
                 this.labelKey = labelKey;
@@ -338,7 +372,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LabelValue.
+             * <p>The tag value used to filter Kubernetes workloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder labelValue(String labelValue) {
                 this.labelValue = labelValue;
@@ -405,7 +442,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable the configuration for trusted X-Forwarded-For source CIDR blocks.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -413,7 +450,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IpListContent.
+             * <p>The list of trusted source IP addresses or CIDR blocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder ipListContent(String ipListContent) {
                 this.ipListContent = ipListContent;
@@ -571,7 +611,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * GatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -579,7 +622,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-61f465fa2dd044069e2208c4912*****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -587,7 +633,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Not available for use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -595,7 +644,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Not available for use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -603,7 +655,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Not available for use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -611,7 +666,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LogOn.
+             * <p>Specifies whether log delivery is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logOn(Boolean logOn) {
                 this.logOn = logOn;
@@ -619,7 +677,16 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The destination Logstore for log delivery. Valid values:</p>
+             * <ul>
+             * <li><p>mse_gw_access_log: Nginx Ingress compatibility is disabled.</p>
+             * </li>
+             * <li><p>nginx-ingress: Nginx Ingress compatibility is enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mse_gw_access_log</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -627,7 +694,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NginxCompatible.
+             * <p>Specifies whether Nginx Ingress compatibility is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nginxCompatible(Boolean nginxCompatible) {
                 this.nginxCompatible = nginxCompatible;
@@ -635,7 +705,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The destination Simple Log Service project for log delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -806,7 +879,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * GatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -814,7 +890,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-61f465fa2dd044069e2208c4912*****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -822,7 +901,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the Tracing Analysis information was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-12T09:39:07.000+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -830,7 +912,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the Tracing Analysis information was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-12T09:39:07.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -838,7 +923,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the Tracing Analysis information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -846,7 +934,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Sample.
+             * <p>The sampling rate (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sample(Integer sample) {
                 this.sample = sample;
@@ -854,7 +945,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The SkyWalking service ID for self-managed SkyWalking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>333</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -862,7 +956,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePort.
+             * <p>The SkyWalking service port for self-managed SkyWalking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8888</p>
              */
             public Builder servicePort(String servicePort) {
                 this.servicePort = servicePort;
@@ -870,7 +967,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TraceOn.
+             * <p>Specifies whether Tracing Analysis is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;
@@ -878,7 +978,20 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TraceType.
+             * <p>The Tracing Analysis type. Valid values:</p>
+             * <ul>
+             * <li><p>XTRACE: Managed Service for OpenTelemetry with the Zipkin Tracing Analysis protocol.</p>
+             * </li>
+             * <li><p>SKYWALKING: Self-managed SkyWalking.</p>
+             * </li>
+             * <li><p>OPENTELEMETRY: Managed Service for OpenTelemetry with the OpenTelemetry Tracing Analysis protocol.</p>
+             * </li>
+             * <li><p>OTSKYWALKING: Managed Service for OpenTelemetry with the SkyWalking Tracing Analysis protocol.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OPENTELEMETRY</p>
              */
             public Builder traceType(String traceType) {
                 this.traceType = traceType;
@@ -965,6 +1078,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogFilterConfig")
         private String logFilterConfig;
 
+        @com.aliyun.core.annotation.NameInMap("LogRequestResponseConfig")
+        private String logRequestResponseConfig;
+
         @com.aliyun.core.annotation.NameInMap("NoSupportedConfigList")
         private String noSupportedConfigList;
 
@@ -1021,6 +1137,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             this.keepaliveHeaderTimeout = builder.keepaliveHeaderTimeout;
             this.liteMetrics = builder.liteMetrics;
             this.logFilterConfig = builder.logFilterConfig;
+            this.logRequestResponseConfig = builder.logRequestResponseConfig;
             this.noSupportedConfigList = builder.noSupportedConfigList;
             this.pathWithEscapedSlashes = builder.pathWithEscapedSlashes;
             this.preserveExternalRequestID = builder.preserveExternalRequestID;
@@ -1197,6 +1314,13 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return logRequestResponseConfig
+         */
+        public String getLogRequestResponseConfig() {
+            return this.logRequestResponseConfig;
+        }
+
+        /**
          * @return noSupportedConfigList
          */
         public String getNoSupportedConfigList() {
@@ -1296,6 +1420,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             private Integer keepaliveHeaderTimeout; 
             private Boolean liteMetrics; 
             private String logFilterConfig; 
+            private String logRequestResponseConfig; 
             private String noSupportedConfigList; 
             private String pathWithEscapedSlashes; 
             private Boolean preserveExternalRequestID; 
@@ -1334,6 +1459,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
                 this.keepaliveHeaderTimeout = model.keepaliveHeaderTimeout;
                 this.liteMetrics = model.liteMetrics;
                 this.logFilterConfig = model.logFilterConfig;
+                this.logRequestResponseConfig = model.logRequestResponseConfig;
                 this.noSupportedConfigList = model.noSupportedConfigList;
                 this.pathWithEscapedSlashes = model.pathWithEscapedSlashes;
                 this.preserveExternalRequestID = model.preserveExternalRequestID;
@@ -1348,7 +1474,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessLogHeader.
+             * <p>The custom log format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;requestMetadata&quot;:[],&quot;responseHeaders&quot;:[],&quot;requestHeaders&quot;:[&quot;x-test&quot;],&quot;responseMetadata&quot;:[]}</p>
              */
             public Builder accessLogHeader(String accessLogHeader) {
                 this.accessLogHeader = accessLogHeader;
@@ -1356,7 +1485,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DownstreamConnectionBufferLimits.
+             * <p>The buffer size for a single gateway connection. Configuring this parameter affects throughput and gateway memory usage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32768</p>
              */
             public Builder downstreamConnectionBufferLimits(Integer downstreamConnectionBufferLimits) {
                 this.downstreamConnectionBufferLimits = downstreamConnectionBufferLimits;
@@ -1364,7 +1496,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DownstreamHttp2MaxConcurrentStream.
+             * <p>The maximum number of concurrent streams on a single connection when the client uses HTTP/2. This parameter takes effect at the request level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder downstreamHttp2MaxConcurrentStream(Integer downstreamHttp2MaxConcurrentStream) {
                 this.downstreamHttp2MaxConcurrentStream = downstreamHttp2MaxConcurrentStream;
@@ -1372,7 +1507,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DownstreamIdleTime.
+             * <p>The idle timeout period for connections from the client to the gateway. Unit: seconds. If no request is received within the specified period, the gateway disconnects the connection. Valid values: 0 to 600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder downstreamIdleTime(Integer downstreamIdleTime) {
                 this.downstreamIdleTime = downstreamIdleTime;
@@ -1380,7 +1518,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableCustomAuthConfigPush.
+             * <p>Specifies whether to enable custom authentication configuration push for self-managed authentication services. When enabled, changes to authentication rules do not cause connection interruptions. This feature is applicable to WebSocket and online business scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableCustomAuthConfigPush(String enableCustomAuthConfigPush) {
                 this.enableCustomAuthConfigPush = enableCustomAuthConfigPush;
@@ -1388,7 +1529,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableGenerateRequestId.
+             * <p>Specifies whether to generate a request ID in the request header for request tracking. This parameter takes effect at the request level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableGenerateRequestId(Boolean enableGenerateRequestId) {
                 this.enableGenerateRequestId = enableGenerateRequestId;
@@ -1396,7 +1540,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableGzip.
+             * <p>Specifies whether to enable Gzip compression for requests and responses. Enabling this feature reduces gateway traffic but increases gateway CPU consumption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableGzip(Boolean enableGzip) {
                 this.enableGzip = enableGzip;
@@ -1404,7 +1551,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableGzipHardwareAccelerate.
+             * <p>Specifies whether to enable Gzip hardware acceleration.</p>
              */
             public Builder enableGzipHardwareAccelerate(Boolean enableGzipHardwareAccelerate) {
                 this.enableGzipHardwareAccelerate = enableGzipHardwareAccelerate;
@@ -1412,7 +1559,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableHardwareAccelerate.
+             * <p>Specifies whether to enable hardware acceleration. This configuration fails if the region does not support hardware acceleration at the underlying layer or if hardware acceleration was not specified during purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableHardwareAccelerate(Boolean enableHardwareAccelerate) {
                 this.enableHardwareAccelerate = enableHardwareAccelerate;
@@ -1420,7 +1570,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableHttp2.
+             * <p>Specifies whether to use HTTP/2 during negotiation between the server and the client. This parameter takes effect at the request level. Changes take effect after 1 to 2 minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableHttp2(Boolean enableHttp2) {
                 this.enableHttp2 = enableHttp2;
@@ -1428,7 +1581,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableHttp3.
+             * <p>Specifies whether the HTTP/3 protocol is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableHttp3(Boolean enableHttp3) {
                 this.enableHttp3 = enableHttp3;
@@ -1436,7 +1592,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableK8sSourceWorkloadFilter.
+             * <p>The tag filtering configuration for Kubernetes service source workloads.</p>
              */
             public Builder enableK8sSourceWorkloadFilter(EnableK8sSourceWorkloadFilter enableK8sSourceWorkloadFilter) {
                 this.enableK8sSourceWorkloadFilter = enableK8sSourceWorkloadFilter;
@@ -1444,7 +1600,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableProxyProtocol.
+             * <p>Specifies whether to enable the PROXY protocol. If the gateway ingress traffic is routed through a Network Load Balancer (NLB) and this feature is disabled, the real IP address of the client cannot be obtained. Enabling this feature does not affect non-PROXY protocol requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
                 this.enableProxyProtocol = enableProxyProtocol;
@@ -1452,7 +1611,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSlashMerge.
+             * <p>Specifies whether to merge consecutive slashes in a request URL. For example, if this feature is enabled, the extra slash in <code>www.a.com//b</code> is merged, making it equivalent to <code>www.a.com/b</code>. This parameter takes effect at the request level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSlashMerge(Boolean enableSlashMerge) {
                 this.enableSlashMerge = enableSlashMerge;
@@ -1460,7 +1622,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableWaf.
+             * <p>Specifies whether WAF is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableWaf(Boolean enableWaf) {
                 this.enableWaf = enableWaf;
@@ -1468,7 +1633,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableXffTrustedCidrs.
+             * <p>The configuration for trusted X-Forwarded-For source CIDR blocks.</p>
              */
             public Builder enableXffTrustedCidrs(EnableXffTrustedCidrs enableXffTrustedCidrs) {
                 this.enableXffTrustedCidrs = enableXffTrustedCidrs;
@@ -1476,7 +1641,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-61f465fa2dd044069e2208c4912*****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -1484,7 +1652,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InitialConnectionWindowSize.
+             * <p>The initial connection-level window size negotiated between the gateway and the client when HTTP/2 is used. Unit: bytes. This parameter takes effect at the request level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1048576</p>
              */
             public Builder initialConnectionWindowSize(Integer initialConnectionWindowSize) {
                 this.initialConnectionWindowSize = initialConnectionWindowSize;
@@ -1492,7 +1663,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InitialStreamWindowSize.
+             * <p>The initial stream window size negotiated between the gateway and the client when HTTP/2 is used. Unit: bytes. This parameter takes effect at the request level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65535</p>
              */
             public Builder initialStreamWindowSize(Integer initialStreamWindowSize) {
                 this.initialStreamWindowSize = initialStreamWindowSize;
@@ -1500,7 +1674,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * KeepaliveHeaderTimeout.
+             * <p>The keep-alive time in the Keep-Alive response header. Unit: seconds. If this parameter is set to 0, the response header is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder keepaliveHeaderTimeout(Integer keepaliveHeaderTimeout) {
                 this.keepaliveHeaderTimeout = keepaliveHeaderTimeout;
@@ -1508,7 +1685,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LiteMetrics.
+             * <p>Indicates whether lightweight metric collection is enabled.</p>
              */
             public Builder liteMetrics(Boolean liteMetrics) {
                 this.liteMetrics = liteMetrics;
@@ -1516,7 +1693,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LogFilterConfig.
+             * <p>Not available for use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder logFilterConfig(String logFilterConfig) {
                 this.logFilterConfig = logFilterConfig;
@@ -1524,7 +1704,21 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NoSupportedConfigList.
+             * <p>The log collection configuration for request and response headers and bodies. The content is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;request&quot;:{&quot;headers&quot;:{&quot;enabled&quot;:true}}}</p>
+             */
+            public Builder logRequestResponseConfig(String logRequestResponseConfig) {
+                this.logRequestResponseConfig = logRequestResponseConfig;
+                return this;
+            }
+
+            /**
+             * <p>The list of unsupported configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;EnableProxyProtocol,EnableCustomAuthConfigPush&quot;</p>
              */
             public Builder noSupportedConfigList(String noSupportedConfigList) {
                 this.noSupportedConfigList = noSupportedConfigList;
@@ -1532,7 +1726,20 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PathWithEscapedSlashes.
+             * <p>The action to take when a URI path contains escaped slashes such as %2F, %2f, %5C, or %5c. Default value: KEEP_UNCHANGED. Valid values:</p>
+             * <ul>
+             * <li><p>KEEP_UNCHANGED</p>
+             * </li>
+             * <li><p>REJECT_REQUEST</p>
+             * </li>
+             * <li><p>UNESCAPE_AND_REDIRECT</p>
+             * </li>
+             * <li><p>UNESCAPE_AND_FORWARD</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>KEEP_UNCHANGED</p>
              */
             public Builder pathWithEscapedSlashes(String pathWithEscapedSlashes) {
                 this.pathWithEscapedSlashes = pathWithEscapedSlashes;
@@ -1540,7 +1747,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PreserveExternalRequestID.
+             * <p>Specifies whether to preserve the request ID passed by the client.</p>
              */
             public Builder preserveExternalRequestID(Boolean preserveExternalRequestID) {
                 this.preserveExternalRequestID = preserveExternalRequestID;
@@ -1548,7 +1755,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PreserveHeaderFormat.
+             * <p>Specifies whether to preserve the original case of request and response headers. In HTTP/1.1, headers are case-insensitive. To ensure compatibility with HTTP/2, headers are converted to lowercase by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder preserveHeaderFormat(Boolean preserveHeaderFormat) {
                 this.preserveHeaderFormat = preserveHeaderFormat;
@@ -1556,7 +1766,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SlsConfigDetails.
+             * <p>The log delivery information.</p>
              */
             public Builder slsConfigDetails(SlsConfigDetails slsConfigDetails) {
                 this.slsConfigDetails = slsConfigDetails;
@@ -1564,7 +1774,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SupportWaf.
+             * <p>Indicates whether the gateway supports Web Application Firewall (WAF).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportWaf(Boolean supportWaf) {
                 this.supportWaf = supportWaf;
@@ -1572,7 +1785,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamIdleTimeout.
+             * <p>The default idle timeout period for upstream connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder upstreamIdleTimeout(Integer upstreamIdleTimeout) {
                 this.upstreamIdleTimeout = upstreamIdleTimeout;
@@ -1580,7 +1796,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * WebsocketTermGracePeriod.
+             * <p>The keep-alive time maintained for WebSocket connections when connections must be closed during gateway instance upgrades or restarts. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder websocketTermGracePeriod(Integer websocketTermGracePeriod) {
                 this.websocketTermGracePeriod = websocketTermGracePeriod;
@@ -1588,7 +1807,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * XffTrustedNum.
+             * <p>The number of trusted proxies in front of the gateway. This parameter affects whether the gateway uses request headers such as X-Forwarded-For and X-Request-ID generated by the client. This parameter takes effect at the request level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder xffTrustedNum(Integer xffTrustedNum) {
                 this.xffTrustedNum = xffTrustedNum;
@@ -1596,7 +1818,7 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * XtraceDetails.
+             * <p>The Tracing Analysis information.</p>
              */
             public Builder xtraceDetails(XtraceDetails xtraceDetails) {
                 this.xtraceDetails = xtraceDetails;
@@ -1604,7 +1826,10 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ZipAlgorithm.
+             * <p>The compression algorithm used when compression is enabled. Valid values: brotli and gzip. If this parameter is set and EnableGzip is disabled, EnableGzip is automatically enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;gzip&quot;]</p>
              */
             public Builder zipAlgorithm(String zipAlgorithm) {
                 this.zipAlgorithm = zipAlgorithm;

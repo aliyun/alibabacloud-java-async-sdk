@@ -273,8 +273,8 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,10 +287,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of applications. Separate application IDs with commas (,).</p>
+         * <p>The IDs of the applications. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
-         * <p>hkhon1po62@c3df23522baa898,hkhon1po62@66e5235415730a5,hkhon1po62@958bba95910341f</p>
+         * <p>xxxxn1po62@492b8f98d4bxxxx,xxxxn1po62@2d8f5d1b7f2xxxx</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -299,7 +299,14 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * CanaryModel.
+         * <p>The end-to-end canary release mode. Valid values:</p>
+         * <ul>
+         * <li>0: Route by request content.</li>
+         * <li>1: Route by proportion.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder canaryModel(Integer canaryModel) {
             this.putQueryParameter("CanaryModel", canaryModel);
@@ -308,7 +315,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable database canary release.</p>
+         * <p><strong>[Deprecated]</strong> Specifies whether to enable canary release for databases.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -320,10 +327,15 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>The ingress application.</p>
+         * <p>The entry application. Format: Source system:ID. Examples:</p>
+         * <ul>
+         * <li>mse:${MSE application ID}</li>
+         * <li>mse-gw:${MSE cloud-native gateway ID}</li>
+         * <li>apig:${cloud-native API gateway ID}</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Ingress</p>
+         * <p>mse-gw:gw-2b1407e050f1446xxxcd2a65fd9xxxx</p>
          */
         public Builder entryApp(String entryApp) {
             this.putQueryParameter("EntryApp", entryApp);
@@ -332,7 +344,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the lane group. A value of -1 is used to create a lane group. A value greater than 0 is used to modify the specified lane group.</p>
+         * <p>The ID of the swimlane group. A value of -1 indicates that a swimlane group is created. A value greater than 0 indicates that a specified swimlane group is updated.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -344,7 +356,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+         * <p>The side where message queue canary release filtering is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>Server</p>
@@ -356,7 +368,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable canary release for messaging.</p>
+         * <p>Specifies whether to enable canary release for message queues.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -368,7 +380,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>The name.</p>
+         * <p>The name of the swimlane group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -381,7 +393,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the Microservices Engine (MSE) namespace.</p>
+         * <p>The name of the MSE namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -393,7 +405,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Paths.
+         * <p><strong>[Deprecated]</strong> The paths. This parameter is required when a Java gateway is used as the entry point.</p>
          */
         public Builder paths(java.util.List<String> paths) {
             String pathsShrink = shrink(paths, "Paths", "json");
@@ -404,6 +416,9 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to record request details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
             this.putQueryParameter("RecordCanaryDetail", recordCanaryDetail);
@@ -412,7 +427,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -424,7 +439,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * RouteIds.
+         * <p>The IDs of the routes. If a cloud-native gateway is used as the entry point, you must call this operation to pass the IDs of the selected cloud-native gateway routes before creating a swimlane for the swimlane group.</p>
          */
         public Builder routeIds(java.util.List<Long> routeIds) {
             String routeIdsShrink = shrink(routeIds, "RouteIds", "json");
@@ -434,7 +449,11 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * <p>The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.</p>
+         * <p>The status of the swimlane group. Valid values:</p>
+         * <ul>
+         * <li>0: Inactive.</li>
+         * <li>1: Active.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -446,7 +465,14 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * SwimVersion.
+         * <p>The version of the end-to-end canary release. Valid values:</p>
+         * <ul>
+         * <li>0: Not recommended. Routes must be specified.</li>
+         * <li>2: Recommended. Routes do not need to be specified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder swimVersion(Integer swimVersion) {
             this.putQueryParameter("SwimVersion", swimVersion);

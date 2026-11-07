@@ -176,8 +176,10 @@ public class ListNacosHistoryConfigsRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +216,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +229,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID. Default value: public</p>
          * 
          * <strong>example:</strong>
          * <p>fc0f6e40-****-946b-45e3af313707</p>
@@ -239,7 +241,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +254,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries to return per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +267,7 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+         * <p>The region where the cluster is located. MSE supports specific regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -277,10 +279,10 @@ public class ListNacosHistoryConfigsRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters in the JSON format.</p>
+         * <p>The extended request parameter in the JSON format.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;appGroup\&quot;:\&quot;aliyun-phecda-service-staging\&quot;,\&quot;appName\&quot;:\&quot;aliyun-phecda-service\&quot;,\&quot;appStage\&quot;:\&quot;DAILY\&quot;,\&quot;appUnit\&quot;:\&quot;center\&quot;,\&quot;bucId\&quot;:\&quot;250858\&quot;,\&quot;bucName\&quot;:\&quot;Alibaba Cloud\&quot;,\&quot;provider\&quot;:\&quot;aliyun\&quot;}</p>
+         * <p>{\&quot;appGroup\&quot;:\&quot;aliyun-phecda-service-staging\&quot;,\&quot;appName\&quot;:\&quot;aliyun-phecda-service\&quot;,\&quot;appStage\&quot;:\&quot;DAILY\&quot;,\&quot;appUnit\&quot;:\&quot;center\&quot;,\&quot;bucId\&quot;:\&quot;250858\&quot;,\&quot;bucName\&quot;:\&quot; Alibaba Cloud\&quot;,\&quot;provider\&quot;:\&quot;aliyun\&quot;}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

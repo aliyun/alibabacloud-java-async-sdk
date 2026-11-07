@@ -155,7 +155,7 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
          * <p>Message.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;

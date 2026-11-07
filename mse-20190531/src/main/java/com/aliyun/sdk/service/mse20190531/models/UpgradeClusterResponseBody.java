@@ -106,7 +106,7 @@ public class UpgradeClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -117,7 +117,7 @@ public class UpgradeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>202</p>
@@ -128,14 +128,14 @@ public class UpgradeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * <ul>
-         * <li>If the request is successful, a success message is returned.</li>
-         * <li>If the request fails, an error message is returned.</li>
+         * <li>If the request succeeds, a success message is returned.</li>
+         * <li>If the request fails, the cause of the failure is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +143,7 @@ public class UpgradeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8D855418-177B-5FF8-A021-75B930AD890A</p>
@@ -154,9 +154,9 @@ public class UpgradeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request succeeded. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request succeeded.</li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 

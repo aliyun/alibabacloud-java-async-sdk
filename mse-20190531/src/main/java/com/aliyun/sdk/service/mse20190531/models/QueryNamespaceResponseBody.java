@@ -106,7 +106,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The data that is returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,7 +125,10 @@ public class QueryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,7 +136,10 @@ public class QueryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde-fg</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +147,10 @@ public class QueryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

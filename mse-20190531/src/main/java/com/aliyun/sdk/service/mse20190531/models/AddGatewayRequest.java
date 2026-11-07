@@ -387,8 +387,8 @@ public class AddGatewayRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -401,12 +401,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The billing method you specify when you purchase an ordinary instance.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PREPAY: subscription</li>
-         * <li>POSTPAY: pay-as-you-go</li>
-         * </ul>
+         * <p>The billing method. This parameter is specified when you purchase a traditional instance.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -418,12 +413,18 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The network type of the purchased Classic Load Balancer (CLB) instance that is billed based on LCUs.</p>
+         * <p>The network type of the pay-by-LCU Classic Load Balancer (CLB) to be purchased. Valid values:</p>
          * <ul>
-         * <li>pubnet: Internet</li>
-         * <li>privatenet: private network</li>
-         * <li>privatepubnet: Internet and private network</li>
+         * <li>pubnet: Internet.</li>
+         * <li>privatenet: Internal network.</li>
+         * <li>privatepubnet: Internet and internal network.</li>
          * </ul>
+         * <blockquote>
+         * <p>Traditional instance: When you create a traditional instance, you can purchase only one of the following load balancers: an NLB, a pay-by-LCU CLB, or a pay-by-specification CLB.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Serverless instance: When you create a Serverless instance, you can purchase only one of the following load balancers: an NLB or a pay-by-LCU CLB.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>pubnet</p>
@@ -435,7 +436,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to activate Tracing Analysis.</p>
+         * <p>Specifies whether to enable hardware acceleration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -447,7 +448,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The tag of the gateway.</p>
+         * <p>Specifies whether to enable log delivery to Simple Log Service (SLS).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -459,7 +460,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The sampling rate of Tracing Analysis. Valid values: [1,100].</p>
+         * <p>Specifies whether to enable Tracing Analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -471,7 +472,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable hardware acceleration.</p>
+         * <p>Specifies whether the security group is an advanced security group.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -483,15 +484,21 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:</p>
+         * <p>The specifications of the Internet-facing SLB instance. This parameter is applicable to traditional instances. Valid values:</p>
          * <ul>
-         * <li>slb.s1.small</li>
-         * <li>slb.s2.smal</li>
-         * <li>slb.s2.medium</li>
-         * <li>slb.s3.small</li>
-         * <li>slb.s3.medium</li>
-         * <li>slb.s3.large</li>
+         * <li>Basic (slb.s1.small)</li>
+         * <li>Standard 1 (slb.s2.small)</li>
+         * <li>Standard I (slb.s2.medium)</li>
+         * <li>Advanced 1 (slb.s3.small)</li>
+         * <li>Advanced I (slb.s3.medium)</li>
+         * <li>Ultra-high I (slb.s3.large)</li>
          * </ul>
+         * <blockquote>
+         * <p>Traditional instance: When you create a traditional instance, you can purchase only one of the following load balancers: an NLB, a pay-by-LCU CLB, or a pay-by-specification CLB.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Serverless instance: When you create a Serverless instance, you can purchase only one of the following load balancers: an NLB or a pay-by-LCU CLB.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>slb.s2.small</p>
@@ -503,7 +510,15 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * ManagedEntryNetworkType.
+         * <p>The gateway ingress type. This parameter is applicable to the Professional Edition of a standard instance. Valid values:</p>
+         * <ul>
+         * <li>pubnet: Internet.</li>
+         * <li>privatenet: Internal network.</li>
+         * <li>privatepubnet: Internet and internal network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pubnet</p>
          */
         public Builder managedEntryNetworkType(String managedEntryNetworkType) {
             this.putQueryParameter("ManagedEntryNetworkType", managedEntryNetworkType);
@@ -512,10 +527,11 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The MSE instance type. Valid values:</p>
+         * <p>The gateway product type. Valid values:</p>
          * <ul>
-         * <li>mse_pro: ordinary instance</li>
-         * <li>mse_serverless: serverless instance</li>
+         * <li>mse_premium: Professional Edition of a standard instance.</li>
+         * <li>mse_pro: Standard Edition of a standard instance.</li>
+         * <li>mse_serverless: Serverless.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -528,7 +544,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The name of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>test-ceshi</p>
@@ -540,12 +556,18 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The network type of the Network Load Balancer (NLB) instance you specify when you purchase a serverless instance.</p>
+         * <p>The network type of the Network Load Balancer (NLB) to be purchased. Valid values:</p>
          * <ul>
-         * <li>pubnet: Internet</li>
-         * <li>privatenet: private network</li>
-         * <li>privatepubnet: Internet and private network</li>
+         * <li>pubnet: Internet.</li>
+         * <li>privatenet: Internal network.</li>
+         * <li>privatepubnet: Internet and internal network.</li>
          * </ul>
+         * <blockquote>
+         * <p>Traditional instance: When you create a traditional instance, you can purchase only one of the following load balancers: an NLB, a pay-by-LCU Classic Load Balancer (CLB), or a pay-by-specification CLB.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Serverless instance: When you create a Serverless instance, you can purchase only one of the following load balancers: an NLB or a pay-by-LCU CLB.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>pubnet</p>
@@ -557,15 +579,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
-         * <ul>
-         * <li>slb.s1.small</li>
-         * <li>slb.s2.small</li>
-         * <li>slb.s2.medium</li>
-         * <li>slb.s3.small</li>
-         * <li>slb.s3.medium</li>
-         * <li>slb.s3.large</li>
-         * </ul>
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -578,7 +592,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The number of nodes you specify when you purchase an ordinary instance.</p>
+         * <p>The number of nodes. This parameter is specified when you purchase a traditional instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -590,7 +604,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The extended field.</p>
+         * <p>The extended fields.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -602,11 +616,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
-         * </ul>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm34x43l*****</p>
@@ -618,15 +628,21 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
+         * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. This parameter is applicable to traditional instances. Valid values:</p>
          * <ul>
-         * <li>slb.s1.small</li>
-         * <li>slb.s2.small</li>
-         * <li>slb.s2.medium</li>
-         * <li>slb.s3.small</li>
-         * <li>slb.s3.medium</li>
-         * <li>slb.s3.large</li>
+         * <li>Basic (slb.s1.small)</li>
+         * <li>Standard 1 (slb.s2.small)</li>
+         * <li>Standard I (slb.s2.medium)</li>
+         * <li>Advanced 1 (slb.s3.small)</li>
+         * <li>Advanced I (slb.s3.medium)</li>
+         * <li>Ultra-high I (slb.s3.large)</li>
          * </ul>
+         * <blockquote>
+         * <p>Traditional instance: When you create a traditional instance, you can purchase only one of the following load balancers: an NLB, a pay-by-LCU CLB, or a pay-by-specification CLB.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Serverless instance: When you create a Serverless instance, you can purchase only one of the following load balancers: an NLB or a pay-by-LCU CLB.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>slb.s2.small</p>
@@ -638,7 +654,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The node specifications you specify when you purchase an ordinary instance. Valid values:</p>
+         * <p>The node specifications. This parameter is specified when you purchase a traditional instance. Valid values:</p>
          * <ul>
          * <li>MSE_GTW_16_32_200_c(16C32G)</li>
          * <li>MSE_GTW_2_4_200_c(2C4G)</li>
@@ -656,7 +672,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The tag object.</p>
+         * <p>The tags of the gateway.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -677,7 +693,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use an advanced security group.</p>
+         * <p>The ID of the secondary vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-wz9bu6o5vsvitt5mrxo6s</p>
@@ -689,7 +705,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The ID of the primary vSwitch.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -702,7 +718,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to activate Log Service.</p>
+         * <p>The sampling rate for Tracing Analysis. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -714,7 +730,7 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * <p>The details of the zone.</p>
+         * <p>The zone information.</p>
          */
         public Builder zoneInfo(java.util.List<ZoneInfo> zoneInfo) {
             String zoneInfoShrink = shrink(zoneInfo, "ZoneInfo", "json");
@@ -783,7 +799,7 @@ public class AddGatewayRequest extends Request {
             } 
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -794,7 +810,7 @@ public class AddGatewayRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>

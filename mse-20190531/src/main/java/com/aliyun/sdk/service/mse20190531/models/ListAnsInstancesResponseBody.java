@@ -158,7 +158,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -166,7 +166,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -177,7 +177,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>202</p>
@@ -188,10 +188,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +199,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -210,7 +210,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of instances to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -221,7 +221,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
@@ -232,10 +232,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned instances.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -550,7 +550,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>app</p>
@@ -561,7 +561,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cluster.</p>
+             * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT</p>
@@ -572,7 +572,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reference key.</p>
+             * <p>The datum key.</p>
              * 
              * <strong>example:</strong>
              * <p>30.5.XX.XX:unknown:DEFAULT</p>
@@ -594,10 +594,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective status of the instance. Valid values:</p>
+             * <p>Indicates whether the instance is enabled. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: The instance takes effect.</li>
-             * <li><code>false</code>: The instance does not take effect.</li>
+             * <li><code>true</code>: Enabled.</li>
+             * <li><code>false</code>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -609,10 +609,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the information about the ephemeral node is obtained. Valid values:</p>
+             * <p>Indicates whether the node is ephemeral. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: yes</li>
-             * <li><code>false</code>: no</li>
+             * <li><code>true</code>: Obtained successfully.</li>
+             * <li><code>false</code>: Failed to obtain.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -624,7 +624,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of counted failures.</p>
+             * <p>The failure count.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -661,7 +661,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of the instance heartbeat.</p>
+             * <p>The instance heartbeat timeout.</p>
              * 
              * <strong>example:</strong>
              * <p>15000</p>
@@ -672,7 +672,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30.5.XX.XX#0#DEFAULT#DEFAULT_GROUP@@consumers:com.alibaba.edas.IHelloService</p>
@@ -694,7 +694,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for removing an IP address.</p>
+             * <p>The IP address deletion timeout.</p>
              * 
              * <strong>example:</strong>
              * <p>30000</p>
@@ -705,7 +705,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last heartbeat time.</p>
+             * <p>The time of the last heartbeat.</p>
              * 
              * <strong>example:</strong>
              * <p>20201010</p>
@@ -716,10 +716,10 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance was marked. Valid values:</p>
+             * <p>Indicates whether the instance is marked. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: The instance marking was successful.</li>
-             * <li><code>false</code>: The instance marking failed.</li>
+             * <li><code>true</code>: Marked successfully.</li>
+             * <li><code>false</code>: Failed to mark.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -742,7 +742,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of counted successes.</p>
+             * <p>The success count.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -764,7 +764,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP@@consumers:com.alibaba.edas.IHelloService::</p>

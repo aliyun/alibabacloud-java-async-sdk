@@ -119,7 +119,7 @@ public class DeleteFlowRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class DeleteFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the rules that were deleted.</p>
+         * <p>The IDs of the deleted rules.</p>
          */
         public Builder data(java.util.List<Long> data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class DeleteFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -171,9 +171,9 @@ public class DeleteFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request succeeded.</li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 

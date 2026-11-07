@@ -101,10 +101,10 @@ public class DeleteEngineNamespaceRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DeleteEngineNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-0c738****</p>
@@ -129,7 +129,7 @@ public class DeleteEngineNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>678ca857-****-b1bf-d0a98c5ca84b</p>
@@ -141,7 +141,7 @@ public class DeleteEngineNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-7pp2d1****</p>

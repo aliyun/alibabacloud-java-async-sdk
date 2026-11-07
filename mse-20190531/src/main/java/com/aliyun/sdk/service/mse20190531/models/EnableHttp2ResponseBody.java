@@ -191,7 +191,7 @@ public class EnableHttp2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
          * <blockquote>
          * <p> The request parameter <strong>DtsJobId</strong> is invalid if <strong>The Value of Input Parameter %s is not valid</strong> is returned for <strong>ErrMessage</strong> and <strong>DtsJobId</strong> is returned for <strong>DynamicMessage</strong>.</p>
          * </blockquote>

@@ -158,7 +158,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -177,7 +177,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -188,10 +188,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message that is returned for the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +199,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,7 +221,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>53338ECA-F880-54D8-A9B3-5606355A1B89</p>
@@ -234,8 +234,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -381,7 +383,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application tag.</p>
+             * <p>The tags of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>gateway</p>
@@ -414,7 +416,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the configuration.</p>
+             * <p>The configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>23fdsf</p>
@@ -428,7 +430,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
              * <p>The timestamp when the configuration was last modified.</p>
              * 
              * <strong>example:</strong>
-             * <p>16434400</p>
+             * <p>1643440066000</p>
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -447,7 +449,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcUser.
+             * <p>The user who modified this version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder srcUser(String srcUser) {
                 this.srcUser = srcUser;

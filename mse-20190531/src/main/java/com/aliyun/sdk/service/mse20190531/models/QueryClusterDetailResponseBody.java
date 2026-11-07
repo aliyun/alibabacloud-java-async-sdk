@@ -106,7 +106,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -125,10 +125,10 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>Request processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,7 +136,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9515ACA4-E94D-440D-989E-C379FCED****</p>
@@ -149,8 +149,8 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,7 +298,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp when the instance was created.</p>
+             * <p>The creation timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1578575377732</p>
@@ -364,7 +364,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The single-thread IP address.</p>
+             * <p>The single-tunnel IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -375,7 +375,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
+             * <p>The zone.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai-f</p>
@@ -924,7 +924,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the whitelist.</p>
+             * <p>The whitelist ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acl-bp17020kiqvzutwwj****</p>
@@ -946,7 +946,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method, such as subscription or pay-as-you-go.</p>
+             * <p>The billing method, including subscription and pay-as-you-go.</p>
              * 
              * <strong>example:</strong>
              * <p>Pay-as-you-go</p>
@@ -957,7 +957,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the instance.</p>
+             * <p>The alias of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-7413****</p>
@@ -968,7 +968,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The name of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-bc1a29b0-160230875****</p>
@@ -990,7 +990,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+             * <p>The cluster type, including ZooKeeper, Nacos-Ans, and Eureka.</p>
              * 
              * <strong>example:</strong>
              * <p>Nacos-Ans</p>
@@ -1001,7 +1001,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the instance.</p>
+             * <p>The cluster version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.2.1</p>
@@ -1012,7 +1012,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network connection type. Valid values:</p>
+             * <p>The network connectivity type. Valid values:</p>
              * <ul>
              * <li>slb</li>
              * <li>eni</li>
@@ -1027,7 +1027,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs.</p>
+             * <p>The number of CPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1038,7 +1038,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The time when the cluster was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-07-31 11:36:08</p>
@@ -1049,7 +1049,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the disk. Unit: GB.</p>
+             * <p>The disk capacity. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -1060,7 +1060,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk.</p>
+             * <p>The disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>alicloud-disk-ssd-multi-zone</p>
@@ -1071,7 +1071,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The health status of the instance.</p>
+             * <p>The health status of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>RESTART_SUCCESS</p>
@@ -1082,7 +1082,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time taken to create the instance. Unit: milliseconds.</p>
+             * <p>The time taken to create the cluster. Unit: ms.</p>
              * 
              * <strong>example:</strong>
              * <p>98408</p>
@@ -1093,7 +1093,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation status of the instance.</p>
+             * <p>The creation status of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>RESTART_SUCCESS</p>
@@ -1104,7 +1104,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instance nodes.</p>
+             * <p>The number of instances in the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1115,7 +1115,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-cn-st21ri2****</p>
@@ -1126,7 +1126,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of instance nodes.</p>
+             * <p>The list of instances.</p>
              */
             public Builder instanceModels(java.util.List<InstanceModels> instanceModels) {
                 this.instanceModels = instanceModels;
@@ -1134,7 +1134,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the instance.</p>
+             * <p>The public endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>47.98.XX.XX</p>
@@ -1145,7 +1145,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint of the instance.</p>
+             * <p>The public domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-7413****-p.eureka.mse.aliyuncs.com</p>
@@ -1156,7 +1156,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private port number.</p>
+             * <p>The private port.</p>
              * 
              * <strong>example:</strong>
              * <p>8761</p>
@@ -1167,7 +1167,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal IP address.</p>
+             * <p>The private endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -1178,7 +1178,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal endpoint of the instance.</p>
+             * <p>The private domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-7413****-eureka.mse.aliyuncs.com</p>
@@ -1189,7 +1189,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private port number.</p>
+             * <p>The private port.</p>
              * 
              * <strong>example:</strong>
              * <p>8761</p>
@@ -1200,7 +1200,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the memory. Unit: GB.</p>
+             * <p>The memory size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1211,7 +1211,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of Microservices Engine (MSE).</p>
+             * <p>The MSE version.</p>
              * 
              * <strong>example:</strong>
              * <p>mse_basic</p>
@@ -1222,10 +1222,10 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance. Valid values:</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
-             * <li><code>privatenet</code>: VPC</li>
-             * <li><code>pubnet</code>: Internet</li>
+             * <li>privatenet: VPC.</li>
+             * <li>pubnet: Internet.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1237,7 +1237,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the original order.</p>
+             * <p>The original order version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1.2.0</p>
@@ -1248,7 +1248,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method, such as subscription or pay-as-you-go.</p>
+             * <p>The billing method, including subscription and pay-as-you-go.</p>
              * 
              * <strong>example:</strong>
              * <p>Pay-as-you-go</p>
@@ -1259,7 +1259,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public bandwidth. Unit: Mbit/s.<br>Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+             * <p>The Internet bandwidth. Unit: Mbit/s. Valid values: 0 to 5000. A value of 0 indicates that the cluster is not connected to the Internet.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1281,7 +1281,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aek2dhgysj*****</p>
@@ -1292,7 +1292,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are attached to the instance.</p>
+             * <p>The tags bound to the instance.</p>
              */
             public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
@@ -1300,7 +1300,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-xxx-xxxx</p>
@@ -1311,7 +1311,10 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VersionLifecycle.
+             * <p>The version lifecycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STABLE</p>
              */
             public Builder versionLifecycle(String versionLifecycle) {
                 this.versionLifecycle = versionLifecycle;
@@ -1319,7 +1322,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1hcg467ekqsv0zr****</p>

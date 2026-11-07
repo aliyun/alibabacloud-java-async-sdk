@@ -119,7 +119,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+         * <p>The status code. A value of 200 indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>You are not authorized to perform this operation.</p>
@@ -160,7 +160,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CAA9A229-141D-5FBA-AC5C-516C02026A11</p>
@@ -171,10 +171,12 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,10 +350,10 @@ public class ListSSLCertResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the certificate expired. The time was formatted as a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-04-01 02:35:12</p>
+             * <p>1726039184803</p>
              */
             public Builder afterDate(String afterDate) {
                 this.afterDate = afterDate;
@@ -370,10 +372,10 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate took effect. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the certificate took effect. The time was formatted as a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
-             * <p>2031-03-30 02:35:12</p>
+             * <p>1694503184803</p>
              */
             public Builder beforeDate(String beforeDate) {
                 this.beforeDate = beforeDate;
@@ -381,7 +383,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate.</p>
+             * <p>The certificate ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -392,7 +394,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate.</p>
+             * <p>The certificate name.</p>
              * 
              * <strong>example:</strong>
              * <p>test.com</p>
@@ -414,10 +416,10 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expires. This value is a GMT timestamp.</p>
+             * <p>The time when the certificate expired. The time was formatted as a GMT timestamp.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-04-01 02:35:12</p>
+             * <p>2024-09-11T07:19:44.803+0000</p>
              */
             public Builder gmtAfter(String gmtAfter) {
                 this.gmtAfter = gmtAfter;
@@ -425,10 +427,10 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate took effect. This value is a GMT timestamp.</p>
+             * <p>The time when the certificate took effect. The time was formatted as a GMT timestamp.</p>
              * 
              * <strong>example:</strong>
-             * <p>2031-03-30 02:35:12</p>
+             * <p>2023-09-12T07:19:44.803+0000</p>
              */
             public Builder gmtBefore(String gmtBefore) {
                 this.gmtBefore = gmtBefore;
@@ -436,7 +438,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The issuer of the certificate.</p>
+             * <p>The issuer.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

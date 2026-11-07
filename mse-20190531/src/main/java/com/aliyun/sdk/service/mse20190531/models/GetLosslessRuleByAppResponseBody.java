@@ -143,7 +143,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -162,7 +162,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -173,7 +173,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -195,9 +195,9 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
+         * <li>true: The request succeeded.</li>
          * <li>false: The request failed.</li>
          * </ul>
          * 
@@ -385,7 +385,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether service registration is complete before readiness probe.</p>
+             * <p>Indicates whether service registration is completed before the readiness check is passed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -396,7 +396,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>hkhon1po62@24810bf4364a***</p>
@@ -407,7 +407,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>spring-cloud-a</p>
@@ -429,7 +429,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The registration latency. Unit: seconds.</p>
+             * <p>The delayed registration time in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -440,10 +440,10 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether graceful start is enabled. Valid values:</p>
+             * <p>The enabling status of graceful start. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enabled</li>
-             * <li><code>false</code>: disabled</li>
+             * <li><code>true</code>: Enabled.</li>
+             * <li><code>false</code>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -455,7 +455,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slope of the prefetching curve.</p>
+             * <p>The slope of the warm-up curve.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -466,7 +466,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether online and offline processing details are displayed.</p>
+             * <p>Indicates whether the processing details for graceful start and shutdown are enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -477,7 +477,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether notification is enabled.</p>
+             * <p>Indicates whether proactive notification is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -488,7 +488,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether service prefetching is complete before readiness probe.</p>
+             * <p>Indicates whether service warm-up is completed before the readiness check is passed.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -499,7 +499,7 @@ public class GetLosslessRuleByAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefetching duration. Unit: seconds.</p>
+             * <p>The warm-up duration in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>

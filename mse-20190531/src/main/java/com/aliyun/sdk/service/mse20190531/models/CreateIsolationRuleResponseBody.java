@@ -106,7 +106,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The rule information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +307,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hpn9ac29kz@e31a4b871******</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -303,7 +318,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -311,7 +329,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The enabling status of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -319,7 +340,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -327,7 +351,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LimitApp.
+             * <p>The source application of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder limitApp(String limitApp) {
                 this.limitApp = limitApp;
@@ -335,7 +362,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The microservice namespace to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -343,7 +373,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region where the cluster is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -351,7 +384,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The name of the interface to which the rule applies. The name must be the same as the interface name displayed in the interface details on the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/a</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -359,7 +395,10 @@ public class CreateIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The concurrency threshold of the isolation rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

@@ -173,7 +173,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -226,7 +226,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * <p>The edition of the MSE instance that you want to purchase.</p>
+         * <p>The version of the Microservices Engine (MSE) cluster to be activated. Valid values:</p>
          * <ul>
          * <li>mse_pro: Professional Edition.</li>
          * <li>mse_dev: Developer Edition.</li>
@@ -242,13 +242,13 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides. Examples:</p>
+         * <p>The region where the cluster is located, including but not limited to:</p>
          * <ul>
-         * <li>cn-hangzhou: China (Hangzhou)</li>
-         * <li>cn-beijing: China (Beijing)</li>
-         * <li>cn-shanghai: China (Shanghai)</li>
-         * <li>cn-zhangjiakou: China (Zhangjiakou)</li>
-         * <li>cn-shenzhen: China (Shenzhen)</li>
+         * <li>cn-hangzhou: Hangzhou</li>
+         * <li>cn-beijing: Beijing</li>
+         * <li>cn-shanghai: Shanghai</li>
+         * <li>cn-zhangjiakou: Zhangjiakou</li>
+         * <li>cn-shenzhen: Shenzhen</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -262,7 +262,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+         * <p>Specifies whether to enable Sentinel.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -274,7 +274,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * <p>The service source.</p>
+         * <p>The source.</p>
          * 
          * <strong>example:</strong>
          * <p>edasmsc</p>
@@ -286,7 +286,7 @@ public class CreateMseServiceApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable switching.</p>
+         * <p>Specifies whether to enable Switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

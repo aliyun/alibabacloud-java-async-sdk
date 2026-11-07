@@ -158,7 +158,7 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
          * <p>The description of user header settings.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;status&quot;:&quot;on&quot;,&quot;headerOpItems&quot;:[{&quot;directionType&quot;:&quot;Request&quot;,&quot;opType&quot;:&quot;Update&quot;,&quot;key&quot;:&quot;hosts&quot;,&quot;value&quot;:&quot;test.com&quot;}]}</p>
+         * <p>{\&quot;status\&quot;:\&quot;on\&quot;,\&quot;headerOpItems\&quot;:[{\&quot;directionType\&quot;:\&quot;Request\&quot;,\&quot;opType\&quot;:\&quot;Update\&quot;,\&quot;key\&quot;:\&quot;hosts\&quot;,\&quot;value\&quot;:\&quot;test.com\&quot;}]}</p>
          */
         public Builder headerOpJSON(String headerOpJSON) {
             this.putQueryParameter("HeaderOpJSON", headerOpJSON);

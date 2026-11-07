@@ -101,10 +101,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -123,10 +123,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The request result. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,7 +326,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application ID.</p>
+             * <p>The ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxxxx@xxxxxxxxxx</p>
@@ -348,7 +348,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1631001140913</p>
@@ -381,7 +381,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The license key in use.</p>
+             * <p>The license key of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxxxx@xxxxxxxxxx</p>
@@ -392,7 +392,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -414,7 +414,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status. Valid values: 1: available; 2: deleted.</p>
+             * <p>The status. A value of 1 indicates the available state, and a value of 2 indicates the deleted state.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -425,7 +425,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1632979237663</p>

@@ -101,7 +101,10 @@ public class DeleteBlackWhiteListRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -110,7 +113,10 @@ public class DeleteBlackWhiteListRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>430</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -119,7 +125,10 @@ public class DeleteBlackWhiteListRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-9cdcf8e4f58144059e73ff4c5ef9****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -128,7 +137,10 @@ public class DeleteBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the blacklists and whitelists entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

@@ -159,7 +159,10 @@ public class QueryNacosGrayConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -168,6 +171,7 @@ public class QueryNacosGrayConfigRequest extends Request {
         }
 
         /**
+         * <p>The DataId of the configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +184,10 @@ public class QueryNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * GrayName.
+         * <p>The name of the canary release rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder grayName(String grayName) {
             this.putQueryParameter("GrayName", grayName);
@@ -189,7 +196,10 @@ public class QueryNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * Group.
+         * <p>The configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -198,6 +208,7 @@ public class QueryNacosGrayConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +221,10 @@ public class QueryNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6bafdde3-4fa7-4d67-b3da-a607ab87f7e4</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -219,7 +233,10 @@ public class QueryNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -228,7 +245,10 @@ public class QueryNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * <p>This field is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

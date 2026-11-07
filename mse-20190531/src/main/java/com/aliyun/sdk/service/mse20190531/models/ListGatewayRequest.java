@@ -129,7 +129,7 @@ public class ListGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -145,7 +145,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the sorting feature. This feature is not available.</p>
+         * <p>The sorting order. This parameter is currently not used.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -157,7 +157,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * <p>The details of parameters.</p>
+         * <p>The filter parameters.</p>
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -179,7 +179,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +191,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of instances per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -327,7 +327,7 @@ public class ListGatewayRequest extends Request {
             } 
 
             /**
-             * <p>The type of the gateway.</p>
+             * <p>The gateway type.</p>
              * 
              * <strong>example:</strong>
              * <p>Ingress</p>
@@ -349,7 +349,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mse_ingresspre-cn-****</p>
@@ -360,7 +360,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * <p>The tag of the instance.</p>
+             * <p>The resource tag.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;key&quot;:&quot;tagkey&quot;,&quot;value&quot;:&quot;tagvalue&quot;}]</p>
@@ -371,7 +371,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * <p>The name of the gateway.</p>
+             * <p>The gateway name.</p>
              * 
              * <strong>example:</strong>
              * <p>rutain-test</p>
@@ -382,7 +382,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-7y2uye*****</p>
@@ -393,7 +393,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp13hhyjntbab7w****</p>

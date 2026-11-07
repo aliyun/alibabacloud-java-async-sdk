@@ -171,7 +171,10 @@ public class CreateNacosMcpServerRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (Chinese, default) and en (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -180,7 +183,11 @@ public class CreateNacosMcpServerRequest extends Request {
         }
 
         /**
-         * EncryptToolSpec.
+         * <p>Specifies whether to encrypt the MCP tool specification. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Encrypts the specification.</li>
+         * <li><code>false</code>: Does not encrypt the specification. This is the default value.</li>
+         * </ul>
          */
         public Builder encryptToolSpec(Boolean encryptToolSpec) {
             this.putQueryParameter("EncryptToolSpec", encryptToolSpec);
@@ -189,7 +196,10 @@ public class CreateNacosMcpServerRequest extends Request {
         }
 
         /**
-         * EndpointSpecification.
+         * <p>The JSON string of the endpoint specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;REF&quot;,&quot;data&quot;:{&quot;namespaceId&quot;:&quot;public&quot;,&quot;groupName&quot;:&quot;mcp-endpoints&quot;,&quot;serviceName&quot;:&quot;mcp-demo&quot;}}</p>
          */
         public Builder endpointSpecification(String endpointSpecification) {
             this.putBodyParameter("EndpointSpecification", endpointSpecification);
@@ -198,7 +208,10 @@ public class CreateNacosMcpServerRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -207,7 +220,10 @@ public class CreateNacosMcpServerRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -216,7 +232,10 @@ public class CreateNacosMcpServerRequest extends Request {
         }
 
         /**
-         * ServerName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp-demo</p>
          */
         public Builder serverName(String serverName) {
             this.putQueryParameter("ServerName", serverName);
@@ -225,7 +244,10 @@ public class CreateNacosMcpServerRequest extends Request {
         }
 
         /**
-         * ServerSpecification.
+         * <p>The JSON string of the server specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;description&quot;:&quot;a mcp demo service&quot;,&quot;capabilities&quot;:[],&quot;allVersions&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;,&quot;release_date&quot;:&quot;2025-08-13T01:58:42Z&quot;,&quot;is_latest&quot;:true}],&quot;remoteServerConfig&quot;:{&quot;exportPath&quot;:&quot;/sse&quot;},&quot;enabled&quot;:true,&quot;versionDetail&quot;:{&quot;version&quot;:&quot;1.0.1&quot;},&quot;backendEndpoints&quot;:[{&quot;path&quot;:&quot;/sse&quot;,&quot;address&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:8080}],&quot;protocol&quot;:&quot;mcp-sse&quot;,&quot;name&quot;:&quot;mcp-demo&quot;,&quot;frontProtocol&quot;:&quot;mcp-sse&quot;}</p>
          */
         public Builder serverSpecification(String serverSpecification) {
             this.putBodyParameter("ServerSpecification", serverSpecification);
@@ -234,7 +256,10 @@ public class CreateNacosMcpServerRequest extends Request {
         }
 
         /**
-         * ToolSpecification.
+         * <p>The JSON string of the tool specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tools&quot;:[{&quot;name&quot;:&quot;demo-tool&quot;,&quot;description&quot;:&quot;a demo tool&quot;,&quot;inputSchema&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;name&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;name&quot;}}}}],&quot;toolsMeta&quot;:{&quot;demo-tool&quot;:{&quot;enabled&quot;:true}}}</p>
          */
         public Builder toolSpecification(String toolSpecification) {
             this.putBodyParameter("ToolSpecification", toolSpecification);
@@ -243,7 +268,25 @@ public class CreateNacosMcpServerRequest extends Request {
         }
 
         /**
-         * YamlConfig.
+         * <p>The YAML configuration of the AI gateway. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allowTools:</p>
+         * <ul>
+         * <li>demo-tool
+         * securityScheme: {}
+         * server:
+         * name: mcp-demo
+         * tools:</li>
+         * <li>args:<ul>
+         * <li>name: name
+         * description: name
+         * type: string
+         * description: a demo tool
+         * name: demo-tool</li>
+         * </ul>
+         * </li>
+         * </ul>
          */
         public Builder yamlConfig(String yamlConfig) {
             this.putBodyParameter("YamlConfig", yamlConfig);

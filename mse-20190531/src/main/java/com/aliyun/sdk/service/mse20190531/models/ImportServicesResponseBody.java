@@ -119,7 +119,7 @@ public class ImportServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returned.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,7 +141,7 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,10 +152,10 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>Succ</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -163,7 +163,7 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0F0FBA7D-5AC5-5DC4-A1E9-E9656BFAE1B9</p>
@@ -174,10 +174,10 @@ public class ImportServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

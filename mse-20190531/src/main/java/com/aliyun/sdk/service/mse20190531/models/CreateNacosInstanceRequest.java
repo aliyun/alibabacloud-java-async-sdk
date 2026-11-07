@@ -317,7 +317,7 @@ public class CreateNacosInstanceRequest extends Request {
          * <p>The node metadata of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;grayversion&quot;:&quot;1.0&quot;,&quot;preserved.register.source&quot;:&quot;SPRING_CLOUD&quot;,&quot;management.context-path&quot;:&quot;&quot;}</p>
+         * <p>{\&quot;grayversion\&quot;:\&quot;1.0\&quot;,\&quot;preserved.register.source\&quot;:\&quot;SPRING_CLOUD\&quot;,\&quot;management.context-path\&quot;:\&quot;\&quot;}</p>
          */
         public Builder metadata(String metadata) {
             this.putBodyParameter("Metadata", metadata);

@@ -181,7 +181,10 @@ public class ListWebFlowRulesRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which the returned results are displayed. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -190,7 +193,10 @@ public class ListWebFlowRulesRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b22qb1****@2f0586be4b1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -199,6 +205,7 @@ public class ListWebFlowRulesRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +218,10 @@ public class ListWebFlowRulesRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -220,7 +230,10 @@ public class ListWebFlowRulesRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The first page to export. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -229,7 +242,10 @@ public class ListWebFlowRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -238,7 +254,10 @@ public class ListWebFlowRulesRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>The interface to which the protection rule applies. This parameter is mutually exclusive with the ResourceSearchKey parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/flow</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -247,7 +266,10 @@ public class ListWebFlowRulesRequest extends Request {
         }
 
         /**
-         * ResourceSearchKey.
+         * <p>The interface keyword that you can search from protection rules. This parameter is mutually exclusive with the Resource parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder resourceSearchKey(String resourceSearchKey) {
             this.putQueryParameter("ResourceSearchKey", resourceSearchKey);

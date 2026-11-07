@@ -145,7 +145,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data overview.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -164,9 +164,9 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message, used to replace the <strong>%s</strong> in the <strong>ErrMessage</strong> error message.</p>
+         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> error message.</p>
          * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -189,7 +189,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -200,7 +200,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Clone Completed Successfully</p>
@@ -211,7 +211,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6678DBA9-5600-5948-ACF8-ED3105B288A3</p>
@@ -222,10 +222,10 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request result, with the following values:</p>
+         * <p>The request result. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Request succeeded.</li>
-         * <li><code>false</code>: Request failed.</li>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,7 +308,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data ID.</p>
+             * <p>The data ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test2.yaml</p>
@@ -319,7 +319,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Group ID.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -330,10 +330,10 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the current operation.</p>
+             * <p>The error reason.</p>
              * 
              * <strong>example:</strong>
-             * <p>param not support</p>
+             * <p>The current import configuration format is invalid.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -400,7 +400,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data ID.</p>
+             * <p>The data ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test.yaml</p>
@@ -411,7 +411,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Group ID.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -507,7 +507,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Failed configuration information.</p>
+             * <p>The failed configuration information.</p>
              */
             public Builder failData(java.util.List<FailData> failData) {
                 this.failData = failData;
@@ -515,7 +515,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of skips.</p>
+             * <p>The number of skipped configurations.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -526,7 +526,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Skipped configuration information.</p>
+             * <p>The skipped configuration information.</p>
              */
             public Builder skipData(java.util.List<SkipData> skipData) {
                 this.skipData = skipData;
@@ -534,7 +534,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of successes.</p>
+             * <p>The number of successful configurations.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

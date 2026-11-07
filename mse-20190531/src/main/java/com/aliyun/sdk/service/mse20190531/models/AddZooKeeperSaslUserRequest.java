@@ -103,7 +103,10 @@ public class AddZooKeeperSaslUserRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -112,6 +115,7 @@ public class AddZooKeeperSaslUserRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +128,10 @@ public class AddZooKeeperSaslUserRequest extends Request {
         }
 
         /**
-         * Reload.
+         * <p>Specifies whether to restart the cluster to immediately load the SASL users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reload(Boolean reload) {
             this.putQueryParameter("Reload", reload);
@@ -133,6 +140,7 @@ public class AddZooKeeperSaslUserRequest extends Request {
         }
 
         /**
+         * <p>The list of SASL users to add.</p>
          * <p>This parameter is required.</p>
          */
         public Builder saslUser(java.util.List<SaslUser> saslUser) {
@@ -216,7 +224,10 @@ public class AddZooKeeperSaslUserRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -224,7 +235,10 @@ public class AddZooKeeperSaslUserRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>traaqwrasdf</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -232,7 +246,10 @@ public class AddZooKeeperSaslUserRequest extends Request {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

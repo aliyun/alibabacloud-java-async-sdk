@@ -101,7 +101,7 @@ public class ListGatewayDomainRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -117,7 +117,10 @@ public class ListGatewayDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name used for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -138,7 +141,7 @@ public class ListGatewayDomainRequest extends Request {
         }
 
         /**
-         * <p>The type of the domain name.</p>
+         * <p>The domain name type.</p>
          * 
          * <strong>example:</strong>
          * <p>All</p>

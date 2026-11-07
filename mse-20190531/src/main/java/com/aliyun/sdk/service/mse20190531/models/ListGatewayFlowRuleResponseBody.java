@@ -67,7 +67,7 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The Meta return information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0951EBF0-798E-5E0B-8D38-460A14AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,12 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * BehaviorType.
+             * <p>The Web fallback behavior type.</p>
+             * <p>0: Return specified content</p>
+             * <p>1: Redirect to specified page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder behaviorType(Integer behaviorType) {
                 this.behaviorType = behaviorType;
@@ -279,7 +287,12 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * BodyEncoding.
+             * <p>The encoding type.</p>
+             * <p>0: Plain text</p>
+             * <p>1: JSON</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bodyEncoding(Integer bodyEncoding) {
                 this.bodyEncoding = bodyEncoding;
@@ -287,7 +300,12 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the rule is enabled.</p>
+             * <p>0: Disabled.</p>
+             * <p>1: Enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -295,7 +313,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14407</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -303,7 +324,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique gateway identity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -311,7 +335,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The routing throttle rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>549</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -319,7 +346,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseContentBody.
+             * <p>The HTTP response text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder responseContentBody(String responseContentBody) {
                 this.responseContentBody = responseContentBody;
@@ -327,7 +357,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRedirectUrl.
+             * <p>The redirect URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www.******.com</p>
              */
             public Builder responseRedirectUrl(String responseRedirectUrl) {
                 this.responseRedirectUrl = responseRedirectUrl;
@@ -335,7 +368,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseStatusCode.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>429</p>
              */
             public Builder responseStatusCode(Integer responseStatusCode) {
                 this.responseStatusCode = responseStatusCode;
@@ -343,7 +379,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteId.
+             * <p>The routing ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48811</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -351,7 +390,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * <p>The routing name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>routeA</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -359,7 +401,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The overall QPS threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder threshold(Integer threshold) {
                 this.threshold = threshold;
@@ -608,7 +653,12 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * BehaviorType.
+             * <p>The Web fallback behavior type.</p>
+             * <p>0: Return specified content</p>
+             * <p>1: Redirect to specified page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder behaviorType(Integer behaviorType) {
                 this.behaviorType = behaviorType;
@@ -616,7 +666,12 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * BodyEncoding.
+             * <p>The encoding type.</p>
+             * <p>0: Plain text</p>
+             * <p>1: JSON</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bodyEncoding(Integer bodyEncoding) {
                 this.bodyEncoding = bodyEncoding;
@@ -624,7 +679,12 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the rule is enabled.</p>
+             * <p>0: Disabled.</p>
+             * <p>1: Enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -632,7 +692,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14407</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -640,7 +703,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique gateway identity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -648,7 +714,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The routing throttle rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>549</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -656,7 +725,7 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IdList.
+             * <p>The filtered rule IDs.</p>
              */
             public Builder idList(java.util.List<Long> idList) {
                 this.idList = idList;
@@ -664,7 +733,13 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LimitMode.
+             * <p>The threshold conversion mode.</p>
+             * <p>0: Single machine.</p>
+             * <p>1: Cluster.</p>
+             * <p>2: Cluster to single machine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder limitMode(Integer limitMode) {
                 this.limitMode = limitMode;
@@ -672,7 +747,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseAdditionalHeaders.
+             * <p>The custom headers, entered as key-value pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key=value</p>
              */
             public Builder responseAdditionalHeaders(String responseAdditionalHeaders) {
                 this.responseAdditionalHeaders = responseAdditionalHeaders;
@@ -680,7 +758,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseContentBody.
+             * <p>The HTTP response text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder responseContentBody(String responseContentBody) {
                 this.responseContentBody = responseContentBody;
@@ -688,7 +769,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRedirectUrl.
+             * <p>The redirect URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www.******.com</p>
              */
             public Builder responseRedirectUrl(String responseRedirectUrl) {
                 this.responseRedirectUrl = responseRedirectUrl;
@@ -696,7 +780,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseStatusCode.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>429</p>
              */
             public Builder responseStatusCode(Integer responseStatusCode) {
                 this.responseStatusCode = responseStatusCode;
@@ -704,7 +791,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteId.
+             * <p>The routing ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48811</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -712,7 +802,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * <p>The routing name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>routeA</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -720,7 +813,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * StatDurationMs.
+             * <p>The statistics duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder statDurationMs(Integer statDurationMs) {
                 this.statDurationMs = statDurationMs;
@@ -728,7 +824,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The overall QPS threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder threshold(Integer threshold) {
                 this.threshold = threshold;
@@ -834,7 +933,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number of the instance list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -842,7 +944,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of rows per page set during input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -850,7 +955,7 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The returned data.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -858,7 +963,7 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The paged data collection.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;
@@ -866,7 +971,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total number of instances queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

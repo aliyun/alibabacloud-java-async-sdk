@@ -119,7 +119,7 @@ public class GetGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the gateway.</p>
+         * <p>The gateway information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,10 +149,10 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message that indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -160,7 +160,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9C96CDF8-9E6C-5AB6-B83C-8F87A10117E6</p>
@@ -171,10 +171,10 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of expected replicas.</p>
+             * <p>The expected number of replicas.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -268,7 +268,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of auto scale-out.</p>
+             * <p>The end time in the HH:mm format (24-hour clock).</p>
              * 
              * <strong>example:</strong>
              * <p>18:00</p>
@@ -279,7 +279,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of auto scale-out.</p>
+             * <p>The start time in the HH:mm format (24-hour clock).</p>
              * 
              * <strong>example:</strong>
              * <p>16:00</p>
@@ -362,9 +362,9 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of auto scale-out. Valid value:</p>
+             * <p>The auto-scaling type. Valid values:</p>
              * <ul>
-             * <li>CronHPA: scale-out by time</li>
+             * <li>CronHPA: Time-based scaling.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -376,7 +376,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.</p>
+             * <p>The maximum number of instances for auto-scaling, which is used for horizontal scaling.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -387,7 +387,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy of scale-out by time.</p>
+             * <p>The time-based scaling policy.</p>
              */
             public Builder timePolicyList(java.util.List<TimePolicyList> timePolicyList) {
                 this.timePolicyList = timePolicyList;
@@ -467,7 +467,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether Log Service is activated.</p>
+             * <p>Specifies whether log delivery is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -478,7 +478,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Logstore.</p>
+             * <p>The Logstore name.</p>
              * 
              * <strong>example:</strong>
              * <p>mse_access_log</p>
@@ -489,7 +489,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the project.</p>
+             * <p>The project name.</p>
              * 
              * <strong>example:</strong>
              * <p>k8s-log-c173117256e934a96b7fefdf2ef8a8057</p>
@@ -559,7 +559,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The sampling rate of Tracing Analysis.</p>
+             * <p>The XTrace sampling rate.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -570,7 +570,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether sampling by using Tracing Analysis is enabled.</p>
+             * <p>Specifies whether XTrace sampling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -965,7 +965,7 @@ public class GetGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing method, such as subscription or pay-as-you-go.</p>
+             * <p>The billing method. Valid values: subscription and pay-as-you-go.</p>
              * 
              * <strong>example:</strong>
              * <p>POSTPAY</p>
@@ -976,7 +976,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether auto scale-out is enabled.</p>
+             * <p>Specifies whether auto-scaling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -987,7 +987,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto scale-out policy.</p>
+             * <p>The auto-scaling policy.</p>
              */
             public Builder elasticPolicy(ElasticPolicy elasticPolicy) {
                 this.elasticPolicy = elasticPolicy;
@@ -995,7 +995,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of replicas that are automatically scaled out.</p>
+             * <p>The number of auto-scaling replicas.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1006,9 +1006,9 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of auto scale-out. Valid value:</p>
+             * <p>The auto-scaling type. Valid values:</p>
              * <ul>
-             * <li>CronHPA: scale-out by time</li>
+             * <li>CronHPA: Time-based scaling.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1020,7 +1020,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the gateway expires.</p>
+             * <p>The expiration time of the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-08-01 00:00:00</p>
@@ -1042,7 +1042,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the gateway was created. The time is displayed in GMT. The time is the local time of the region in which the gateway resides.</p>
+             * <p>The time when the gateway was created. The time is in GMT and represents the local time of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-07T10:07:57.000+0000</p>
@@ -1053,7 +1053,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the gateway was last modified.</p>
+             * <p>The time when the instance was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-07T10:07:57.000+0000</p>
@@ -1064,7 +1064,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the gateway.</p>
+             * <p>The gateway ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -1075,7 +1075,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-cn-st21ri2****</p>
@@ -1094,7 +1094,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the resource.</p>
+             * <p>The resource tags.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;TagKey&quot;:&quot;TagValue&quot;}</p>
@@ -1105,7 +1105,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the gateway.</p>
+             * <p>The gateway name.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT</p>
@@ -1116,7 +1116,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the user who created the gateway.</p>
+             * <p>The ID of the primary user who created the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>1231254</p>
@@ -1127,7 +1127,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1141,7 +1141,7 @@ public class GetGatewayResponseBody extends TeaModel {
              * <p>The number of gateway replicas.</p>
              * 
              * <strong>example:</strong>
-             * <p>2</p>
+             * <p>1</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -1149,7 +1149,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfm34x43l*****</p>
@@ -1160,7 +1160,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group.</p>
+             * <p>The security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp11ufzqn6mmb8dtzz82</p>
@@ -1171,7 +1171,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the gateway.</p>
+             * <p>The gateway specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>MSE_GTW_16_32_200_c</p>
@@ -1182,19 +1182,19 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the gateway. Valid values:</p>
+             * <p>The result status of the data integration synchronization node. Valid values:</p>
              * <ul>
-             * <li>0: The gateway is being created.</li>
-             * <li>1: The gateway fails to be created.</li>
-             * <li>2: The gateway is running.</li>
-             * <li>3: The gateway is changing.</li>
-             * <li>4: The gateway is scaling in.</li>
-             * <li>6: The gateway is scaling out.</li>
-             * <li>8: The gateway is being deleted.</li>
-             * <li>10: The gateway is restarting.</li>
-             * <li>11: The gateway is being rebuilt.</li>
-             * <li>12: The gateway is updating.</li>
-             * <li>13: The gateway fails to be updated.</li>
+             * <li>0: Creating.</li>
+             * <li>1: Creation failed.</li>
+             * <li>2: Running.</li>
+             * <li>3: Modifying.</li>
+             * <li>4: Scaling in.</li>
+             * <li>6: Scaling out.</li>
+             * <li>8: delete.</li>
+             * <li>10: Restarting.</li>
+             * <li>11: Rebuilding.</li>
+             * <li>12: Upgrading.</li>
+             * <li>13: Upgrade failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1206,7 +1206,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the status.</p>
+             * <p>The status description.</p>
              * 
              * <strong>example:</strong>
              * <p>Restarting</p>
@@ -1217,7 +1217,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of replicas, including the number of replicas that are automatically scaled out.</p>
+             * <p>The total number of replicas, including auto-scaling replicas.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1228,7 +1228,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1328cm01m6uel42b5zb</p>
@@ -1239,7 +1239,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp18zeqxx6mpuq843z4n5</p>
@@ -1250,7 +1250,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the secondary vSwitch.</p>
+             * <p>The secondary vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1j6ivhav15ve7q54kq2</p>
@@ -1261,7 +1261,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of Tracing Analysis.</p>
+             * <p>The XTrace details.</p>
              */
             public Builder xtraceDetails(XtraceDetails xtraceDetails) {
                 this.xtraceDetails = xtraceDetails;

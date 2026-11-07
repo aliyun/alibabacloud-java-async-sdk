@@ -145,7 +145,7 @@ public class GatewayService extends TeaModel {
         } 
 
         /**
-         * GatewayTrafficPolicy.
+         * <p>The traffic policy of the service.</p>
          */
         public Builder gatewayTrafficPolicy(TrafficPolicy gatewayTrafficPolicy) {
             this.gatewayTrafficPolicy = gatewayTrafficPolicy;
@@ -153,7 +153,10 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-913a49bab6c5461187a3305fb8da****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.gatewayUniqueId = gatewayUniqueId;
@@ -161,7 +164,10 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -169,7 +175,10 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -177,7 +186,10 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * MetaInfo.
+         * <p>The metadata of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;192.168.0.xxx:80\&quot;]</p>
          */
         public Builder metaInfo(String metaInfo) {
             this.metaInfo = metaInfo;
@@ -185,7 +197,10 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -193,7 +208,10 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -201,7 +219,10 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * SourceType.
+         * <p>The source type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;

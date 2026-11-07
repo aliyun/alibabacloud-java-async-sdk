@@ -159,8 +159,8 @@ public class AddAuthResourceRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the authorization record.</p>
+         * <p>The authorization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -185,7 +185,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * <p>The authentication resource headers.</p>
+         * <p>The list of authentication resource headers.</p>
          */
         public Builder authResourceHeaderList(java.util.List<AuthResourceHeaderList> authResourceHeaderList) {
             String authResourceHeaderListShrink = shrink(authResourceHeaderList, "AuthResourceHeaderList", "json");
@@ -195,7 +195,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * <p>The domain ID.</p>
+         * <p>The domain name ID.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -207,7 +207,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the gateway.</p>
+         * <p>The unique gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-86575c0bc9f04ecfbacb92b8e392****</p>
@@ -219,7 +219,7 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the matching is not case-sensitive. Default value: true.</p>
+         * <p>Specifies whether to ignore case. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -231,15 +231,15 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * <p>The matching type. Valid values:</p>
+         * <p>The match type. Valid values:</p>
          * <ul>
-         * <li>EQUAL</li>
-         * <li>PRE</li>
-         * <li>ERGULAR</li>
+         * <li>EQUAL: Exact match.</li>
+         * <li>PRE: Prefix match.</li>
+         * <li>ERGULAR: Regular expression match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>exact</p>
+         * <p>PRE</p>
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -332,7 +332,7 @@ public class AddAuthResourceRequest extends Request {
             } 
 
             /**
-             * <p>The parameter of the HTTP header.</p>
+             * <p>The HTTP header parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>Access-Control-Allow-Origin</p>
@@ -343,72 +343,7 @@ public class AddAuthResourceRequest extends Request {
             }
 
             /**
-             * <p>The header matching mode.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>SUFFIX</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>EXIST</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>PREFIX</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>EQUAL</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>EXCLUDE</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>NOT_EQUAL</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>NOT_EXIST</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>REGREX</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>INCLUDE</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The header match method.</p>
              * 
              * <strong>example:</strong>
              * <p>EQUAL</p>
@@ -419,7 +354,7 @@ public class AddAuthResourceRequest extends Request {
             }
 
             /**
-             * <p>The parameter value of the HTTP header.</p>
+             * <p>The value of the HTTP header parameter.</p>
              * 
              * <strong>example:</strong>
              * <ul>

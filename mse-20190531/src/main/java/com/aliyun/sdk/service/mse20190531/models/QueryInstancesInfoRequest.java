@@ -129,10 +129,10 @@ public class QueryInstancesInfoRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-09k1q11****</p>
@@ -157,7 +157,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse_prepaid_public_cn-tl32g1u9k01</p>
@@ -169,7 +169,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20574710974****</p>
@@ -181,7 +181,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -193,7 +193,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters in the JSON format.</p>
+         * <p>The extended request parameters in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

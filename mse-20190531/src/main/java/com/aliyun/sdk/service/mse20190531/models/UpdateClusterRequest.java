@@ -129,10 +129,10 @@ public class UpdateClusterRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The alias of the instance.</p>
+         * <p>The alias of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster-1</p>
@@ -157,7 +157,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-78v1l83****</p>
@@ -193,7 +193,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters in the JSON format.</p>
+         * <p>The extended request parameters in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

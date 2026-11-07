@@ -126,7 +126,10 @@ public class DeleteIsolationRulesRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which the response is displayed. Valid values: zh (default): Chinese; en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -135,6 +138,7 @@ public class DeleteIsolationRulesRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +151,7 @@ public class DeleteIsolationRulesRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The list of rule IDs to be deleted.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -157,6 +161,7 @@ public class DeleteIsolationRulesRequest extends Request {
         }
 
         /**
+         * <p>The microservice namespace to which the application belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

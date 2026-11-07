@@ -162,7 +162,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -214,7 +214,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -252,7 +252,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * <p>The source of the routing rule. Default value: edasmsc.</p>
+         * <p>The data source. Default value: edasmsc.</p>
          * 
          * <strong>example:</strong>
          * <p>edasmsc</p>

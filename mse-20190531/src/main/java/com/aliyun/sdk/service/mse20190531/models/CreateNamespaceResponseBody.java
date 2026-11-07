@@ -106,7 +106,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1F1A6F3-7E03-5EAD-B3F1-123456789ABC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
             } 
 
             /**
-             * Namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myNamespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -212,7 +227,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region to which the namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;

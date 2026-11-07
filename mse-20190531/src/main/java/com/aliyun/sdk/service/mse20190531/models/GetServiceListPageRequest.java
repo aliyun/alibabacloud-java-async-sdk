@@ -187,7 +187,7 @@ public class GetServiceListPageRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+         * <p>The language of the response. Valid values: zh: Chinese, en: English. Default value: zh.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -223,7 +223,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * <p>The IP address from which the query is initiated.</p>
+         * <p>The IP address to query.</p>
          * 
          * <strong>example:</strong>
          * <p>223.5.5.5</p>
@@ -235,7 +235,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * <p>The name of the MSE namespace.</p>
+         * <p>The MSE namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -271,7 +271,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

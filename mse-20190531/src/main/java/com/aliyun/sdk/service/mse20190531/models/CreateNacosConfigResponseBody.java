@@ -155,7 +155,7 @@ public class CreateNacosConfigResponseBody extends TeaModel {
          * <p>The error message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -132,7 +132,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,13 +154,14 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code that is returned.</p>
+         * <p>The error code.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>InvalidParameter: The parameter is invalid. For example, the parameter is incomplete or the parameter format is invalid.</li>
-         * <li>IllegalRequest: The request is invalid. Unauthorized access to data initiated by parameters is identified.</li>
-         * <li>NoPermission: You are not authorized to perform this operation.</li>
-         * <li>NotFound: The resource does not exist and error 404 is returned.</li>
-         * <li>InternalError: An internal error occurred.</li>
+         * <li>InvalidParameter: Parameter error: missing or invalid format.</li>
+         * <li>IllegalRequest: Illegal request: unauthorized parameter.</li>
+         * <li>NoPermission: Permission denied.</li>
+         * <li>NotFound: Resource not found.</li>
+         * <li>InternalError: Internal error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -183,10 +184,10 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -194,7 +195,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>03A3E2F4-6804-5663-9D5D-2EC47A1*****</p>
@@ -205,9 +206,9 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request succeeded. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request succeeded.</li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 

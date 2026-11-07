@@ -104,7 +104,10 @@ public class DeleteGatewayFlowRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -113,6 +116,7 @@ public class DeleteGatewayFlowRuleRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,7 @@ public class DeleteGatewayFlowRuleRequest extends Request {
         }
 
         /**
+         * <p>The route ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class DeleteGatewayFlowRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the throttling rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

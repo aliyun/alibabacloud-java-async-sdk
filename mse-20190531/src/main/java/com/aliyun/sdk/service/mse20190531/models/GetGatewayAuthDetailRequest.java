@@ -101,7 +101,14 @@ public class GetGatewayAuthDetailRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese. This is the default value.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -110,7 +117,10 @@ public class GetGatewayAuthDetailRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The gateway ID. Specify either this parameter or GatewayUniqueId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2274</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -119,7 +129,10 @@ public class GetGatewayAuthDetailRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>The unique ID of the gateway. Specify either this parameter or GatewayId. If both are specified, GatewayUniqueId takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-6f0dbd108a0249d2b675b3ef50b*****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -128,7 +141,10 @@ public class GetGatewayAuthDetailRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The authentication ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1100</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

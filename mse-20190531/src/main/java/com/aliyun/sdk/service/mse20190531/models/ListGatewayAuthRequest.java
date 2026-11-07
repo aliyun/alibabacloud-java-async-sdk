@@ -129,7 +129,10 @@ public class ListGatewayAuthRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -138,7 +141,10 @@ public class ListGatewayAuthRequest extends Request {
         }
 
         /**
-         * DescSort.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -147,7 +153,7 @@ public class ListGatewayAuthRequest extends Request {
         }
 
         /**
-         * FilterParams.
+         * <p>The filter conditions. Refer to the examples.</p>
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -157,7 +163,10 @@ public class ListGatewayAuthRequest extends Request {
         }
 
         /**
-         * OrderItem.
+         * <p>This parameter is not available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -166,7 +175,10 @@ public class ListGatewayAuthRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +187,10 @@ public class ListGatewayAuthRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -282,7 +297,10 @@ public class ListGatewayAuthRequest extends Request {
             } 
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-5017305290e14centbrveca****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -290,7 +308,10 @@ public class ListGatewayAuthRequest extends Request {
             }
 
             /**
-             * IsWhite.
+             * <p>The whitelist mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isWhite(Boolean isWhite) {
                 this.isWhite = isWhite;
@@ -298,7 +319,10 @@ public class ListGatewayAuthRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rutain-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -306,7 +330,10 @@ public class ListGatewayAuthRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The enabling status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -314,7 +341,10 @@ public class ListGatewayAuthRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JWT</p>
              */
             public Builder type(String type) {
                 this.type = type;

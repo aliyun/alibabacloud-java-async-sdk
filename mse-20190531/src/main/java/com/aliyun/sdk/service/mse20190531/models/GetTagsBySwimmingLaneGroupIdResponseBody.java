@@ -106,7 +106,7 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data of the tag.</p>
+         * <p>The tag data.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;gray&quot;]</p>
@@ -117,7 +117,7 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -128,10 +128,10 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +139,7 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
@@ -150,9 +150,9 @@ public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request is successful.</li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 

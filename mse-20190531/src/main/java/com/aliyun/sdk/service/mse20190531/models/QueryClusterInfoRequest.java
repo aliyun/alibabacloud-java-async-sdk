@@ -143,10 +143,10 @@ public class QueryClusterInfoRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language type of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the configuration of a public IP address whitelist.</p>
+         * <p>Specifies whether to query the public network whitelist configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -171,7 +171,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-09k1q11****</p>
@@ -183,7 +183,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse_prepaid_public_cn-7mz2t63ci03</p>
@@ -195,7 +195,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20574710974****</p>
@@ -207,7 +207,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -219,7 +219,7 @@ public class QueryClusterInfoRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters in the JSON format.</p>
+         * <p>The extended request parameters in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

@@ -127,7 +127,10 @@ public class DeleteWebFlowRulesRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -136,6 +139,7 @@ public class DeleteWebFlowRulesRequest extends Request {
         }
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +152,7 @@ public class DeleteWebFlowRulesRequest extends Request {
         }
 
         /**
+         * <p>The IDs of the rules to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +165,7 @@ public class DeleteWebFlowRulesRequest extends Request {
         }
 
         /**
+         * <p>The name of the MSE namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

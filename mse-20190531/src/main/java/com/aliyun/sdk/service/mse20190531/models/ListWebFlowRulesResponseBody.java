@@ -119,7 +119,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AE73569-304C-5AA9-AE11-C1D99C7D1689</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -420,7 +441,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkhon1XXXX@c3df23522bXXXXX</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -428,7 +452,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -436,7 +463,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Burst.
+             * <p>The number of additional requests allowed for burst requests. The effect is equivalent to the maximum number of tokens for the token bucket algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder burst(Integer burst) {
                 this.burst = burst;
@@ -444,7 +474,16 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ControlBehavior.
+             * <p>The flow control method. Valid values:</p>
+             * <ul>
+             * <li><p>0: fast failure</p>
+             * </li>
+             * <li><p>2: wait in queue</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder controlBehavior(Integer controlBehavior) {
                 this.controlBehavior = controlBehavior;
@@ -452,7 +491,16 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the rule is enabled or disabled.</p>
+             * <ul>
+             * <li><p><code>true</code>: enabled.</p>
+             * </li>
+             * <li><p><code>false</code>: disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -460,7 +508,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * FallbackObject.
+             * <p>The behavior that was bound to the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;appName\&quot;:\&quot;spring-cloud-a\&quot;,\&quot;fallbackBehavior\&quot;:{\&quot;webFallbackMode\&quot;:0,\&quot;webRespContentType\&quot;:0,\&quot;webRespMessage\&quot;:\&quot;Blocked\&quot;,\&quot;webRespStatusCode\&quot;:429},\&quot;id\&quot;:977,\&quot;name\&quot;:\&quot;Fallback\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;,\&quot;resourceClassification\&quot;:1}</p>
              */
             public Builder fallbackObject(String fallbackObject) {
                 this.fallbackObject = fallbackObject;
@@ -468,7 +519,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueueingTimeMs.
+             * <p>The timeout period for queuing when the ControlBehavior parameter is set to 2. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
                 this.maxQueueingTimeMs = maxQueueingTimeMs;
@@ -476,7 +530,13 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MetricType.
+             * <p>The threshold type. Valid values:</p>
+             * <ul>
+             * <li>1: number of requests</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder metricType(Integer metricType) {
                 this.metricType = metricType;
@@ -484,7 +544,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -492,7 +555,20 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ParamItem.
+             * <p>The parameter description item, which is a JSON string containing the following key-value pairs:</p>
+             * <ul>
+             * <li><p>parseStrategy: the parameter property (0: client IP address. 1: remote host. 2: header. 3: URL parameter)</p>
+             * </li>
+             * <li><p>fieldName: the header name or URL parameter name. You must specify this key only if parseStrategy is set to 2 or 3</p>
+             * </li>
+             * <li><p>matchStrategy: the method to match the property value. You must specify this key only if parseStrategy is set to 2 or 3 and the property value is matched. Valid values: 0 (exact match), 2 (regular expression match), and 3 (substring match)</p>
+             * </li>
+             * <li><p>pattern: the match string. You must specify this key only if parseStrategy is set to 2 or 3 and the property value is matched</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fieldName&quot;:&quot;testKey&quot;,&quot;matchStrategy&quot;:2,&quot;parseStrategy&quot;:2,&quot;pattern&quot;:&quot;testValue&quot;}</p>
              */
             public Builder paramItem(String paramItem) {
                 this.paramItem = paramItem;
@@ -500,7 +576,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -508,7 +587,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The name of the interface resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/flow</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -516,7 +598,13 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceMode.
+             * <p>The resource mode. Valid values:</p>
+             * <ul>
+             * <li>0: resource name mode</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder resourceMode(Integer resourceMode) {
                 this.resourceMode = resourceMode;
@@ -524,7 +612,18 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type</p>
+             * <ul>
+             * <li><p>0: custom interface</p>
+             * </li>
+             * <li><p>1: WEB</p>
+             * </li>
+             * <li><p>2: RPC</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceType(Integer resourceType) {
                 this.resourceType = resourceType;
@@ -532,7 +631,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -540,7 +642,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StatIntervalMs.
+             * <p>The length of the time window. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder statIntervalMs(Integer statIntervalMs) {
                 this.statIntervalMs = statIntervalMs;
@@ -548,7 +653,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -641,7 +749,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -649,7 +760,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -657,7 +771,7 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The returned results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -665,7 +779,10 @@ public class ListWebFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total number of queried rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

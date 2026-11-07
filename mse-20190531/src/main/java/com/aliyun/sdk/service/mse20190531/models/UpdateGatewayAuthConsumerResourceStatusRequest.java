@@ -119,10 +119,10 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the consumer.</p>
+         * <p>The ID of the gateway authentication consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * <p>The list of IDs of the authorized resources that a user wants to update.</p>
+         * <p>The list of authorization IDs to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,10 +174,12 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * <p>The resource authorization status. Valid values:</p>
+         * <p>The resource status. Valid values:</p>
          * <ul>
-         * <li>true: enabled</li>
-         * <li>false: disabled</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

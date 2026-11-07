@@ -478,7 +478,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
              * <p>The mock return value.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;key&quot;:&quot;h68d13466.sqa.eu95&quot;,&quot;dims&quot;:&quot;groupName=All}]</p>
+             * <p>[{\&quot;key\&quot;:\&quot;h68d13466.sqa.eu95\&quot;,\&quot;dims\&quot;:\&quot;groupName=All}]</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -2438,7 +2438,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
              * <p>The matching rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;PathPredicates&quot;:{&quot;Path&quot;:&quot;/metas&quot;,&quot;Type&quot;:&quot;PRE&quot;,&quot;IgnoreCase&quot;:false}}</p>
+             * <p>{\&quot;PathPredicates\&quot;:{\&quot;Path\&quot;:\&quot;/metas\&quot;,\&quot;Type\&quot;:\&quot;PRE\&quot;,\&quot;IgnoreCase\&quot;:false}}</p>
              */
             public Builder predicates(String predicates) {
                 this.predicates = predicates;
@@ -2492,7 +2492,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
              * <p>The information about services.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;Percent&quot;:100,&quot;ServiceId&quot;:126}]</p>
+             * <p>[{\&quot;Percent\&quot;:100,\&quot;ServiceId\&quot;:126}]</p>
              */
             public Builder services(String services) {
                 this.services = services;

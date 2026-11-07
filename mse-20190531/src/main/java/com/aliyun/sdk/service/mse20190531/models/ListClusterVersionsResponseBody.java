@@ -145,7 +145,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -164,7 +164,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message.</p>
+         * <p>The dynamic error message related to the request.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified parameter is invalid.</p>
@@ -175,7 +175,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -186,7 +186,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -197,10 +197,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -208,7 +208,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7717BE5B-C958-5F87-BF49-464AA276EDD1</p>
@@ -219,10 +219,10 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the instance.</p>
+             * <p>The cluster type.</p>
              * 
              * <strong>example:</strong>
              * <p>Nacos-Ans</p>
@@ -316,7 +316,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the instance type.</p>
+             * <p>The cluster type code.</p>
              * 
              * <strong>example:</strong>
              * <p>NACOS_2_0_0</p>
@@ -327,7 +327,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the instance.</p>
+             * <p>The cluster version.</p>
              * 
              * <strong>example:</strong>
              * <p>2.1.0</p>

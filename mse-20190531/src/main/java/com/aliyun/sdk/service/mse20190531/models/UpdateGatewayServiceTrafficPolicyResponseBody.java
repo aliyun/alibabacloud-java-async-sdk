@@ -133,7 +133,7 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
          * <p>The details of the data.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;GatewayUniqueId&quot;: &quot;gw-2b8ebd75dc554c37a4279ba9917379f2&quot;, &quot;Id&quot;: 417, &quot;GatewayTrafficPolicy&quot;: {&quot;LoadBalancerSettings&quot;: {&quot;LoadbalancerType&quot;: &quot;ROUND_ROBIN&quot;}, &quot;TlsSetting&quot;: {&quot;TlsMode&quot;: &quot;DISABLE&quot;}}}</p>
+         * <p>{\&quot;GatewayUniqueId\&quot;: \&quot;gw-2b8ebd75dc554c37a4279ba9917379f2\&quot;, \&quot;Id\&quot;: 417, \&quot;GatewayTrafficPolicy\&quot;: {\&quot;LoadBalancerSettings\&quot;: {\&quot;LoadbalancerType\&quot;: \&quot;ROUND_ROBIN\&quot;}, \&quot;TlsSetting\&quot;: {\&quot;TlsMode\&quot;: \&quot;DISABLE\&quot;}}}</p>
          */
         public Builder data(GatewayService data) {
             this.data = data;
@@ -155,7 +155,7 @@ public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
          * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;

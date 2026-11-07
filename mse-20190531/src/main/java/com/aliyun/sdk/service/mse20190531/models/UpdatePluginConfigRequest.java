@@ -202,8 +202,11 @@ public class UpdatePluginConfigRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <p>zh: Chinese en: English</p>
+         * <p>The language of the returned information. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -215,7 +218,16 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The configuration content of the plug-in. Use YAML for Wasm plug-ins and Lua code for Lua plug-ins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name: John
+         * age: 18
+         * friends:</p>
+         * <ul>
+         * <li>David</li>
+         * <li>Anne</li>
+         * </ul>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -224,11 +236,14 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * <p>The application scope of the plug-in.</p>
+         * <p>The application scope of the plug-in. Valid values:</p>
          * <ul>
-         * <li>0: global</li>
-         * <li>1: route</li>
-         * <li>2: domain name</li>
+         * <li><p>0: Global.</p>
+         * </li>
+         * <li><p>1: Route.</p>
+         * </li>
+         * <li><p>2: Domain name.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +340,7 @@ public class UpdatePluginConfigRequest extends Request {
         }
 
         /**
-         * ResourceIdList.
+         * <p>The list of domain name IDs or route IDs, which depends on the value of ConfigLevel.</p>
          */
         public Builder resourceIdList(java.util.List<Long> resourceIdList) {
             String resourceIdListShrink = shrink(resourceIdList, "ResourceIdList", "json");

@@ -182,7 +182,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -198,7 +198,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hkhon1po62@c3df23522******</p>
@@ -210,7 +210,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The target page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -260,7 +260,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          * 
          * <strong>example:</strong>
          * <p>/a</p>
@@ -272,7 +272,7 @@ public class ListFlowRulesRequest extends Request {
         }
 
         /**
-         * <p>The keyword that is used for the search.</p>
+         * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>/a</p>

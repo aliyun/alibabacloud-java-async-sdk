@@ -171,7 +171,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The returned code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -182,7 +182,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations.</p>
+         * <p>The list of configurations.</p>
          */
         public Builder configurations(java.util.List<Configurations> configurations) {
             this.configurations = configurations;
@@ -190,7 +190,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -201,7 +201,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -212,10 +212,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>Request processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -223,7 +223,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -234,7 +234,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of instances displayed on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -245,7 +245,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4081087F-3429-5873-A1E7-D4B5479D0B84</p>
@@ -256,10 +256,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +271,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned instances.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -392,7 +392,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -403,7 +403,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigTags.
+             * <p>The tags of the configuration. Multiple tags are separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1,tag2</p>
              */
             public Builder configTags(String configTags) {
                 this.configTags = configTags;
@@ -411,7 +414,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the configuration.</p>
+             * <p>The configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>log.yaml</p>
@@ -422,7 +425,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -430,7 +436,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the group.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -441,7 +447,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>132****</p>

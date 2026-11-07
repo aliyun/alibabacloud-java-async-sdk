@@ -119,7 +119,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADDD8AB7-8D1C-4697-A83E-410D2607****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -290,7 +311,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
             } 
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -298,7 +322,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
             }
 
             /**
-             * FallbackBehavior.
+             * <p>The behavior details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;webRespStatusCode&quot;:429,&quot;webRespMessage&quot;:&quot;test&quot;,&quot;webFallbackMode&quot;:0,&quot;webRespContentType&quot;:0}</p>
              */
             public Builder fallbackBehavior(String fallbackBehavior) {
                 this.fallbackBehavior = fallbackBehavior;
@@ -306,7 +333,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
             }
 
             /**
-             * Id.
+             * <p>The behavior ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34726</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -314,7 +344,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
             }
 
             /**
-             * Name.
+             * <p>The behavior name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -322,7 +355,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
             }
 
             /**
-             * Namespace.
+             * <p>The microservice namespace to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -330,7 +366,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
             }
 
             /**
-             * ResourceClassification.
+             * <p>The target resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceClassification(Integer resourceClassification) {
                 this.resourceClassification = resourceClassification;
@@ -338,7 +377,10 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

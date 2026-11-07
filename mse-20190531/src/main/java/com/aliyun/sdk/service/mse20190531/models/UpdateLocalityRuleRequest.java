@@ -175,7 +175,10 @@ public class UpdateLocalityRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -184,7 +187,10 @@ public class UpdateLocalityRuleRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -193,7 +199,10 @@ public class UpdateLocalityRuleRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -202,6 +211,7 @@ public class UpdateLocalityRuleRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable zone affinity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +224,10 @@ public class UpdateLocalityRuleRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The name of the MSE namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myNamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -223,6 +236,7 @@ public class UpdateLocalityRuleRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +249,10 @@ public class UpdateLocalityRuleRequest extends Request {
         }
 
         /**
-         * Rules.
+         * <p>The reserved parameter. This parameter is not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No input required</p>
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);
@@ -244,7 +261,10 @@ public class UpdateLocalityRuleRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -253,7 +273,10 @@ public class UpdateLocalityRuleRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * <p>The threshold for zone affinity to take effect. The zone affinity routing feature is enabled for a zone only when the proportion of instances of the current application deployed in the zone exceeds this threshold. That is, when a consumer sends a request to the application, the request is preferentially routed to an instance in the same zone as the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         public Builder threshold(Double threshold) {
             this.putQueryParameter("Threshold", threshold);

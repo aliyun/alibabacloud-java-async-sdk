@@ -130,7 +130,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the rule.</p>
+         * <p>The rules.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -160,7 +160,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
@@ -171,7 +171,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>The result of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -457,7 +457,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the rule was enabled.</p>
+             * <p>Indicates whether the rule is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -471,7 +471,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
              * <p>The behavior that was bound to the rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;{&quot;appName&quot;:&quot;spring-cloud-a&quot;,&quot;fallbackBehavior&quot;:{&quot;webFallbackMode&quot;:0,&quot;webRespContentType&quot;:0,&quot;webRespMessage&quot;:&quot;Blocked&quot;,&quot;webRespStatusCode&quot;:429},&quot;id&quot;:977,&quot;name&quot;:&quot;Fallback&quot;,&quot;namespace&quot;:&quot;default&quot;,&quot;resourceClassification&quot;:1}&quot;</p>
+             * <p>&quot;{\&quot;appName\&quot;:\&quot;spring-cloud-a\&quot;,\&quot;fallbackBehavior\&quot;:{\&quot;webFallbackMode\&quot;:0,\&quot;webRespContentType\&quot;:0,\&quot;webRespMessage\&quot;:\&quot;Blocked\&quot;,\&quot;webRespStatusCode\&quot;:429},\&quot;id\&quot;:977,\&quot;name\&quot;:\&quot;Fallback\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;,\&quot;resourceClassification\&quot;:1}&quot;</p>
              */
             public Builder fallbackObject(String fallbackObject) {
                 this.fallbackObject = fallbackObject;
@@ -534,7 +534,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region in which the instance resides.</p>
+             * <p>The region in which the cluster resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -545,7 +545,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the interface to which the rule is applicable. The interface name must be the same as the name on the interface details page in the console.</p>
+             * <p>The name of the interface to which the rule applies. The interface name must be the same as that displayed on the API Details page in the console.</p>
              * 
              * <strong>example:</strong>
              * <p>/a</p>
@@ -556,7 +556,10 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The interface resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceType(Integer resourceType) {
                 this.resourceType = resourceType;
@@ -564,7 +567,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period.</p>
+             * <p>The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the resources, all requests quickly fail in the configured duration.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -598,26 +601,6 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
 
             /**
              * <p>The threshold type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>0</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>slow call proportion</p>
-             * <!-- -->
-             * </li>
-             * <li><p>1</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>abnormal proportion</p>
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -724,7 +707,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
+             * <p>The first page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -158,7 +158,7 @@ public class AddGatewayAuthConsumerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code. A value of 200 is returned if the request is successful.</p>
+         * <p>The code used only to synchronize with the success status.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class AddGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the consumer.</p>
+         * <p>The ID of the authentication consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -180,7 +180,7 @@ public class AddGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message.</p>
+         * <p>The placeholder in the dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -191,9 +191,9 @@ public class AddGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in the <code>ErrMessage</code> parameter.</p>
+         * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <code>ErrMessage</code> error message.</p>
          * <blockquote>
-         * <p> If the return value of the <code>ErrMessage</code> parameter is <code>The Value of Input Parameter %s is not valid</code> and the return value of the <code>DynamicMessage</code> parameter is <code>DtsJobId</code>, the specified <code>DtsJobId</code> parameter is invalid.</p>
+         * <p>If <code>ErrMessage</code> returns <code>The Value of Input Parameter %s is not valid</code> and <code>DynamicMessage</code> returns <code>DtsJobId</code>, it indicates that the passed request parameter <code>DtsJobId</code> is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -205,7 +205,7 @@ public class AddGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code that is returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -216,7 +216,7 @@ public class AddGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -227,10 +227,10 @@ public class AddGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -238,7 +238,7 @@ public class AddGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
@@ -249,10 +249,10 @@ public class AddGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The request result. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

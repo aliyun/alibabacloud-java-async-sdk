@@ -159,7 +159,7 @@ public class DeleteGatewaySlbResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;

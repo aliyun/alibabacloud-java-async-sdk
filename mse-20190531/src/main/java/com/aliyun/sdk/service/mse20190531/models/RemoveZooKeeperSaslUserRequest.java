@@ -103,7 +103,10 @@ public class RemoveZooKeeperSaslUserRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the returned results. Valid values: zh (default): Chinese, en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -112,6 +115,7 @@ public class RemoveZooKeeperSaslUserRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +128,10 @@ public class RemoveZooKeeperSaslUserRequest extends Request {
         }
 
         /**
-         * Reload.
+         * <p>Specifies whether the changes take effect immediately.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reload(Boolean reload) {
             this.putQueryParameter("Reload", reload);
@@ -133,6 +140,7 @@ public class RemoveZooKeeperSaslUserRequest extends Request {
         }
 
         /**
+         * <p>The list of usernames to remove.</p>
          * <p>This parameter is required.</p>
          */
         public Builder userNames(java.util.List<String> userNames) {

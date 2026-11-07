@@ -133,7 +133,7 @@ public class UpdateGatewayOptionResponseBody extends TeaModel {
          * <p>The data returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;LogConfigDetails&quot;: {&quot;LogEnabled&quot;: True}, &quot;TraceDetails&quot;: {&quot;Sample&quot;: 17, &quot;TraceEnabled&quot;: True}}</p>
+         * <p>{\&quot;LogConfigDetails\&quot;: {\&quot;LogEnabled\&quot;: True}, \&quot;TraceDetails\&quot;: {\&quot;Sample\&quot;: 17, \&quot;TraceEnabled\&quot;: True}}</p>
          */
         public Builder data(GatewayOption data) {
             this.data = data;
@@ -159,7 +159,7 @@ public class UpdateGatewayOptionResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;

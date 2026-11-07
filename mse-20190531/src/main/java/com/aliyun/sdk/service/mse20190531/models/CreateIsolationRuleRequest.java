@@ -176,7 +176,14 @@ public class CreateIsolationRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese. This is the default value.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -185,7 +192,10 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522bXXXXX</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -194,6 +204,7 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +217,7 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The enabling status of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +230,10 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
-         * LimitApp.
+         * <p>The source application of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder limitApp(String limitApp) {
             this.putQueryParameter("LimitApp", limitApp);
@@ -227,6 +242,7 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The microservice namespace to which the application belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +255,10 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the cluster is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,6 +267,7 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the interface to which the rule applies. The name must be the same as the interface name displayed in the interface details on the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,6 +280,7 @@ public class CreateIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The concurrency threshold of the isolation rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

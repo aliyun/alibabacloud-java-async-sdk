@@ -144,7 +144,7 @@ public class DeleteGatewayServiceVersionRequest extends Request {
          * <p>The version of the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;app&quot;,&quot;labels&quot;:[{&quot;key&quot;:&quot;app&quot;,&quot;value&quot;:&quot;demo-server&quot;}]}</p>
+         * <p>{\&quot;name\&quot;:\&quot;app\&quot;,\&quot;labels\&quot;:[{\&quot;key\&quot;:\&quot;app\&quot;,\&quot;value\&quot;:\&quot;demo-server\&quot;}]}</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

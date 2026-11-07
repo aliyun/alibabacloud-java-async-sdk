@@ -158,7 +158,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>Error code.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE-100-000</p>
@@ -169,7 +169,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>202</p>
@@ -180,7 +180,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about listeners.</p>
+         * <p>Listener information.</p>
          */
         public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
@@ -188,10 +188,10 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>Response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +199,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>Current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -210,7 +210,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>Size of the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -221,7 +221,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
@@ -232,14 +232,16 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Request result, with the following values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><p><code>true</code>: The request is successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -247,7 +249,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned instances.</p>
+         * <p>Total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -342,7 +344,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the data.</p>
+             * <p>Data ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test.yaml</p>
@@ -353,7 +355,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group.</p>
+             * <p>Group.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -364,7 +366,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification string.</p>
+             * <p>Verification string.</p>
              * 
              * <strong>example:</strong>
              * <p>23sdfdf</p>
@@ -375,7 +377,10 @@ public class ListListenersByIpResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>Namespace ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;

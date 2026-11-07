@@ -144,7 +144,7 @@ public class UpdateGatewayServiceVersionRequest extends Request {
          * <p>The version of the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;v3&quot;,&quot;labels&quot;:[{&quot;key&quot;:&quot;version&quot;,&quot;value&quot;:&quot;v3&quot;}]}</p>
+         * <p>{\&quot;name\&quot;:\&quot;v3\&quot;,\&quot;labels\&quot;:[{\&quot;key\&quot;:\&quot;version\&quot;,\&quot;value\&quot;:\&quot;v3\&quot;}]}</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

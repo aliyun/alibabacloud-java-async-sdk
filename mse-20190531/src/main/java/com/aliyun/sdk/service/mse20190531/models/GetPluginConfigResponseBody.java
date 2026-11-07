@@ -158,7 +158,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -199,7 +199,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -210,7 +210,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -221,7 +221,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The API message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -232,7 +232,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>03A3E2F4-6804-5663-9D5D-2EC47A1*****</p>
@@ -312,7 +312,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -320,7 +323,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The resource name, which is the domain name or route name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-route</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -494,7 +500,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
              * <p>The plug-in configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p># Configure a check for the required fields of the plug-in, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
+             * <h1>Validate required configuration fields. In the following example, the plug-in configuration must contain the &quot;name&quot;, &quot;age&quot;, and &quot;friends&quot; fields.</h1>
+             * <p>name: John
+             * age: 18
+             * friends:</p>
+             * <ul>
+             * <li>David</li>
+             * <li>Anne</li>
+             * </ul>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -502,10 +515,12 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application scope of the plug-in. Valid values:</p>
-             * <p>0: global</p>
-             * <p>1: domain names</p>
-             * <p>2: routes</p>
+             * <p>The plug-in application scope. Valid values:</p>
+             * <ul>
+             * <li>0: Global.</li>
+             * <li>1: Domain name.</li>
+             * <li>2: Route.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -527,7 +542,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the gateway.</p>
+             * <p>The gateway ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -571,7 +586,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the plug-in configuration.</p>
+             * <p>The plug-in configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -593,7 +608,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceList.
+             * <p>The list of domain name and route resources, distinguished by ConfigLevel.</p>
              */
             public Builder resourceList(java.util.List<ResourceList> resourceList) {
                 this.resourceList = resourceList;
@@ -946,13 +961,15 @@ public class GetPluginConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the plug-in. Valid values:</p>
-             * <p>0: user-defined</p>
-             * <p>1: permission authentication</p>
-             * <p>2: security protection</p>
-             * <p>3: transmission protocol</p>
-             * <p>4: traffic control</p>
-             * <p>5: traffic observation</p>
+             * <p>The plug-in category. Valid values:</p>
+             * <ul>
+             * <li>0: Custom.</li>
+             * <li>1: Authentication and authorization.</li>
+             * <li>2: Security protection.</li>
+             * <li>3: Transport protocol.</li>
+             * <li>4: Traffic control.</li>
+             * <li>5: Traffic observation.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -963,10 +980,17 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the plug-in configuration used for checking.</p>
+             * <p>The configuration validation.</p>
              * 
              * <strong>example:</strong>
-             * <p># The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
+             * <h1>Validate required configuration fields. In the following example, the plug-in configuration must contain the &quot;name&quot;, &quot;age&quot;, and &quot;friends&quot; fields.</h1>
+             * <p>name: John
+             * age: 18
+             * friends:</p>
+             * <ul>
+             * <li>David</li>
+             * <li>Anne</li>
+             * </ul>
              */
             public Builder configCheck(String configCheck) {
                 this.configCheck = configCheck;
@@ -974,7 +998,11 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigExample.
+             * <p>The plug-in configuration example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>blocked_code: 404
+             * blocked_message: resource not found</p>
              */
             public Builder configExample(String configExample) {
                 this.configExample = configExample;
@@ -982,7 +1010,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DomainConfigStartIndex.
+             * <p>The start index of domain-level rules in GatewayConfigList. If no domain-level rules exist, the value is -1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder domainConfigStartIndex(Integer domainConfigStartIndex) {
                 this.domainConfigStartIndex = domainConfigStartIndex;
@@ -998,7 +1029,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayConfigStartIndex.
+             * <p>The index of instance-level rules in GatewayConfigList. If no instance-level rules exist, the value is -1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder gatewayConfigStartIndex(Integer gatewayConfigStartIndex) {
                 this.gatewayConfigStartIndex = gatewayConfigStartIndex;
@@ -1006,7 +1040,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the plug-in.</p>
+             * <p>The plug-in ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1017,7 +1051,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
+             * <p>The image name.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -1039,7 +1073,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the plug-in.</p>
+             * <p>The plug-in name.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -1050,11 +1084,13 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution stage of the plug-in. Valid values:</p>
-             * <p>0: default stage</p>
-             * <p>1: authorization stage</p>
-             * <p>2: authentication stage</p>
-             * <p>3: statistics stage</p>
+             * <p>The plug-in execution phase. Valid values:</p>
+             * <ul>
+             * <li>0: Default phase.</li>
+             * <li>1: Authentication phase.</li>
+             * <li>2: Authorization phase.</li>
+             * <li>3: Statistics phase.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1076,7 +1112,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+             * <p>The plug-in execution priority. A larger value indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1098,7 +1134,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the README file.</p>
+             * <p>The README description.</p>
              * 
              * <strong>example:</strong>
              * <p>read me</p>
@@ -1109,7 +1145,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the README file that is edited in English.</p>
+             * <p>The README description in English.</p>
              * 
              * <strong>example:</strong>
              * <p>read me</p>
@@ -1120,7 +1156,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RouteConfigStartIndex.
+             * <p>The start index of route-level rules in GatewayConfigList. If no route-level rules exist, the value is -1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder routeConfigStartIndex(Integer routeConfigStartIndex) {
                 this.routeConfigStartIndex = routeConfigStartIndex;
@@ -1128,9 +1167,11 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the plug-in is enabled. Valid values:</p>
-             * <p>0: disabled</p>
-             * <p>1: enabled</p>
+             * <p>The enabling status. Valid values:</p>
+             * <ul>
+             * <li>0: Disabled.</li>
+             * <li>1: Enabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1141,10 +1182,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The summary of the plug-in.</p>
+             * <p>The plug-in summary.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is a plug-in.</p>
+             * <p>This is a plug-in</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -1152,7 +1193,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SummaryEn.
+             * <p>The plug-in summary in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Convert request/response headers, request query parameters, and request/response body parameters.</p>
              */
             public Builder summaryEn(String summaryEn) {
                 this.summaryEn = summaryEn;
@@ -1160,7 +1204,11 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type.</p>
+             * <p>The plug-in type. Valid values:</p>
+             * <ul>
+             * <li>0: HTTP filter.</li>
+             * <li>1: Network filter.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1171,7 +1219,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the plug-in.</p>
+             * <p>The plug-in version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -1182,7 +1230,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VersionJson.
+             * <p>The list of gateway plug-in version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;id&quot;:1, &quot;version&quot;: &quot;1.0.0&quot;}]</p>
              */
             public Builder versionJson(String versionJson) {
                 this.versionJson = versionJson;
@@ -1190,12 +1241,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The WebAssembly language. Valid values:</p>
-             * <p>0: C++</p>
-             * <p>1: TinyGo</p>
-             * <p>2: Rust</p>
-             * <p>3: AssemblyScript</p>
-             * <p>4: Zig</p>
+             * <p>The WebAssembly (Wasm) implementation language. Valid values:</p>
+             * <ul>
+             * <li>0: C++.</li>
+             * <li>1: TinyGo.</li>
+             * <li>2: Rust.</li>
+             * <li>3: AssemblyScript.</li>
+             * <li>4: Zig.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>

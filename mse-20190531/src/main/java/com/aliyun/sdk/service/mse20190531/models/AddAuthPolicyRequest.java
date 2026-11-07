@@ -205,7 +205,10 @@ public class AddAuthPolicyRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh-CN (Chinese, default) and en-US (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -214,7 +217,10 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e9clba2xlc@***</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -223,6 +229,7 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
+         * <p>The content of the service authentication rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +242,14 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * AuthType.
+         * <p>The type of the rule. Valid values:</p>
+         * <ul>
+         * <li>0: application dimension.</li>
+         * <li>1: namespace dimension.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder authType(Integer authType) {
             this.putQueryParameter("AuthType", authType);
@@ -244,6 +258,11 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the authentication rule is enabled. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Enabled.</li>
+         * <li><code>false</code>: Disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +275,10 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * K8sNamespace.
+         * <p>The ID of the namespace in the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c19c6c500e1ff4d7abc7***</p>
          */
         public Builder k8sNamespace(String k8sNamespace) {
             this.putQueryParameter("K8sNamespace", k8sNamespace);
@@ -265,6 +287,7 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
+         * <p>The name of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +300,10 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The MSE namespace to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -286,6 +312,12 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><strong>SPRING_CLOUD</strong></li>
+         * <li><strong>DUBBO</strong></li>
+         * <li><strong>istio</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,6 +330,7 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,6 +343,7 @@ public class AddAuthPolicyRequest extends Request {
         }
 
         /**
+         * <p>The source. Valid values: edasmsc.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

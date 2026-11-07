@@ -119,7 +119,7 @@ public class UpdateMessageQueueRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.</p>
+         * <p>The status code. A status code of 200 indicates success, and other values indicate failure.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class UpdateMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data of the node.</p>
+         * <p>The node data.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -141,7 +141,7 @@ public class UpdateMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class UpdateMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -174,10 +174,10 @@ public class UpdateMessageQueueRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

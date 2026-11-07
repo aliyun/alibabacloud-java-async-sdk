@@ -129,10 +129,12 @@ public class ListGatewayRouteRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>Language type for returned information:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +147,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable sorting. This parameter is unavailable.</p>
+         * <p>Sorting. This field is currently unavailable and being deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -157,7 +159,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The parameters that specify filter conditions. The parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</p>
+         * <p>Filter conditions in the format {&quot;key1&quot;:&quot;value1&quot;}</p>
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -167,7 +169,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The item based on which entries are sorted.</p>
+         * <p>Sorting property.</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreate</p>
@@ -179,7 +181,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>Page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +193,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>Number of instances displayed per page (currently not in effect, queries all instances by default).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -355,7 +357,7 @@ public class ListGatewayRouteRequest extends Request {
             } 
 
             /**
-             * <p>The default service ID.</p>
+             * <p>Default service ID</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -366,7 +368,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The domain ID.</p>
+             * <p>Domain ID</p>
              * 
              * <strong>example:</strong>
              * <p>284</p>
@@ -377,7 +379,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The associated domain name.</p>
+             * <p>Associated domain</p>
              * 
              * <strong>example:</strong>
              * <p>*.alites.com</p>
@@ -388,7 +390,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The ID of the gateway.</p>
+             * <p>Gateway ID</p>
              * 
              * <strong>example:</strong>
              * <p>81</p>
@@ -399,7 +401,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The unique ID of the gateway.</p>
+             * <p>Gateway unique identifier ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -411,7 +413,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The name of the gateway.</p>
+             * <p>Route name</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -422,7 +424,10 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>Route path</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -430,7 +435,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The order.</p>
+             * <p>Order (unused)</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -441,10 +446,24 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * <p>The status.</p>
+             * <p>Route status:</p>
+             * <ul>
+             * <li><p>Unpublished: 0</p>
+             * </li>
+             * <li><p>Publishing: 2</p>
+             * </li>
+             * <li><p>Published: 3</p>
+             * </li>
+             * <li><p>Editing (updates not published): 4</p>
+             * </li>
+             * <li><p>Unpublishing: 5</p>
+             * </li>
+             * <li><p>Unavailable: 6</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>3</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

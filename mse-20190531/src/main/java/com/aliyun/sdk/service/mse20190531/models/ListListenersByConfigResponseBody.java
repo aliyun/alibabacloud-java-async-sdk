@@ -158,7 +158,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -169,7 +169,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>202</p>
@@ -180,7 +180,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about listeners.</p>
+         * <p>The listener information.</p>
          */
         public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
@@ -188,7 +188,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -199,7 +199,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -210,7 +210,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The size of the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -221,7 +221,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>75E1442F-11EC-567A-9CF0-5A36F7904F39</p>
@@ -232,7 +232,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The request result. Valid values:</p>
          * <ul>
          * <li><code>true</code>: The request was successful.</li>
          * <li><code>false</code>: The request failed.</li>
@@ -247,7 +247,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -381,7 +381,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address.</p>
+             * <p>IP。</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.1.1</p>
@@ -392,7 +392,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label of the listener.</p>
+             * <p>The labels of the listener.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -400,7 +400,10 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MatchRuleName.
+             * <p>The name of the canary release rule matched by the current listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name of the matched canary release rule</p>
              */
             public Builder matchRuleName(String matchRuleName) {
                 this.matchRuleName = matchRuleName;
@@ -408,7 +411,10 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MatchRuleType.
+             * <p>The type of the matched canary release rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beta</p>
              */
             public Builder matchRuleType(String matchRuleType) {
                 this.matchRuleType = matchRuleType;
@@ -416,7 +422,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification string.</p>
+             * <p>The checksum string.</p>
              * 
              * <strong>example:</strong>
              * <p>23sdfdf</p>
@@ -427,10 +433,10 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status.</p>
+             * <p>Indicates whether the push is successful.</p>
              * 
              * <strong>example:</strong>
-             * <p>beta</p>
+             * <p>true</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -438,7 +444,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current version of the listener. Valid values: gray and normal.</p>
+             * <p>The current version of the listener. Valid values: gray (canary release version) or normal (production version).</p>
              * 
              * <strong>example:</strong>
              * <p>gray</p>

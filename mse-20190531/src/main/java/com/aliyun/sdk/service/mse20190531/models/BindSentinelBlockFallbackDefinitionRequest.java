@@ -189,7 +189,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * <p>Interface Name: The resource to which the rule applies. It must match the interface name in the console&quot;s interface details.</p>
+         * <p>Interface Name: The resource to which the rule applies. It must match the interface name in the console\&quot;s interface details.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class GatewayOption extends TeaModel {
         } 
 
         /**
-         * DisableHttp2Alpn.
+         * <p>Specifies whether to disable the HTTP/2 protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableHttp2Alpn(Boolean disableHttp2Alpn) {
             this.disableHttp2Alpn = disableHttp2Alpn;
@@ -114,7 +117,10 @@ public class GatewayOption extends TeaModel {
         }
 
         /**
-         * EnableHardwareAcceleration.
+         * <p>Specifies whether to enable hardware acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableHardwareAcceleration(Boolean enableHardwareAcceleration) {
             this.enableHardwareAcceleration = enableHardwareAcceleration;
@@ -122,7 +128,10 @@ public class GatewayOption extends TeaModel {
         }
 
         /**
-         * EnableWaf.
+         * <p>Specifies whether to enable Web Application Firewall (WAF).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.enableWaf = enableWaf;
@@ -130,7 +139,7 @@ public class GatewayOption extends TeaModel {
         }
 
         /**
-         * LogConfigDetails.
+         * <p>The description of Simple Log Service.</p>
          */
         public Builder logConfigDetails(LogConfigDetails logConfigDetails) {
             this.logConfigDetails = logConfigDetails;
@@ -138,7 +147,7 @@ public class GatewayOption extends TeaModel {
         }
 
         /**
-         * TraceDetails.
+         * <p>The data structure.</p>
          */
         public Builder traceDetails(TraceDetails traceDetails) {
             this.traceDetails = traceDetails;
@@ -218,7 +227,27 @@ public class GatewayOption extends TeaModel {
             } 
 
             /**
+             * <p>Specifies whether to activate Simple Log Service.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logEnabled(Boolean logEnabled) {
                 this.logEnabled = logEnabled;
@@ -226,7 +255,10 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -234,7 +266,10 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the destination Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -341,7 +376,10 @@ public class GatewayOption extends TeaModel {
             } 
 
             /**
-             * Sample.
+             * <p>The sampling rate of Tracing Analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sample(Long sample) {
                 this.sample = sample;
@@ -349,7 +387,10 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The ID of the SkyWalking service. This parameter is required if TraceType is set to SKYWALKING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10458</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -357,7 +398,10 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
-             * ServicePort.
+             * <p>The port of the SkyWalking service. This parameter is required if TraceType is set to SKYWALKING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder servicePort(String servicePort) {
                 this.servicePort = servicePort;
@@ -365,7 +409,27 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
+             * <p>Specifies whether to activate Tracing Analysis.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li><p>false</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>true</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder traceEnabled(Boolean traceEnabled) {
                 this.traceEnabled = traceEnabled;
@@ -373,7 +437,10 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
-             * TraceType.
+             * <p>The type of Tracing Analysis. Valid values: XTRACE and SKYWALKING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XTRACE</p>
              */
             public Builder traceType(String traceType) {
                 this.traceType = traceType;

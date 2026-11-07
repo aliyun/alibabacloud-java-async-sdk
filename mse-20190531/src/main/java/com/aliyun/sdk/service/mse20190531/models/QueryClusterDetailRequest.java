@@ -101,10 +101,10 @@ public class QueryClusterDetailRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query access control lists (ACLs).</p>
+         * <p>Specifies whether to query the access control list (ACL).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -129,7 +129,7 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-st21ri2****</p>
@@ -141,7 +141,7 @@ public class QueryClusterDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20576750143****</p>

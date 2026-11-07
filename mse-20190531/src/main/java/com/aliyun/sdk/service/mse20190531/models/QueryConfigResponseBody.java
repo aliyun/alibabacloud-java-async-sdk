@@ -119,7 +119,7 @@ public class QueryConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The result code returned.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class QueryConfigResponseBody extends TeaModel {
          * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,8 +173,10 @@ public class QueryConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -366,7 +368,7 @@ public class QueryConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether empty list protection is enabled.</p>
+             * <p>The switch for push-empty protection.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -876,7 +878,10 @@ public class QueryConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether Simple Authentication and Security Layer (SASL) forced identity authentication is enabled for the ZooKeeper instance.</p>
+             * <p>The switch for ZooKeeper SASL-based forced identity authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authEnabled(Boolean authEnabled) {
                 this.authEnabled = authEnabled;
@@ -884,7 +889,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
+             * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -895,7 +900,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
+             * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -906,7 +911,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The name of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -917,10 +922,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:</p>
+             * <p>The Nacos configuration. This parameter indicates whether RAM authentication is enabled for the configuration center. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enabled.</li>
-             * <li><code>false</code>: disabled.</li>
+             * <li><p><code>true</code>: enabled</p>
+             * </li>
+             * <li><p><code>false</code>: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -932,10 +939,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:</p>
+             * <p>The Nacos configuration. This parameter indicates whether the configuration center of the current cluster supports RAM authentication. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: supported.</li>
-             * <li><code>false</code>: not supported.</li>
+             * <li><p><code>true</code>: supported</p>
+             * </li>
+             * <li><p><code>false</code>: not supported</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -947,7 +956,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum size of contents in a configuration. Unit: KB.</p>
+             * <p>The maximum size of the content of a single configuration. Unit: KB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -958,10 +967,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:</p>
+             * <p>The Nacos configuration. This parameter indicates whether configuration encryption is enabled for the cluster. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enabled.</li>
-             * <li><code>false</code>: disabled.</li>
+             * <li><p><code>true</code>: enabled</p>
+             * </li>
+             * <li><p><code>false</code>: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -973,10 +984,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:</p>
+             * <p>The Nacos configuration. This parameter indicates whether the cluster supports configuration encryption. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: supported.</li>
-             * <li><code>false</code>: not supported.</li>
+             * <li><p><code>true</code>: supported</p>
+             * </li>
+             * <li><p><code>false</code>: not supported</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -988,7 +1001,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Nacos open source console is enabled.</p>
+             * <p>Specifies whether to enable the Nacos open source console.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -999,7 +1012,10 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Enable4lw.
+             * <p>Specifies whether to enable the four-letter words command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable4lw(Boolean enable4lw) {
                 this.enable4lw = enable4lw;
@@ -1007,7 +1023,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether access port 8761 was enabled for Eureka. If this port is disabled, applications cannot use the Eureka protocol for service registration and discovery.</p>
+             * <p>Specifies whether to enable port 8761 for access to the Eureka protocol. If you disable this port, applications cannot use the Eureka protocol for service registration and discovery.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1018,7 +1034,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.</p>
+             * <p>The ZooKeeper parameter that specifies whether to enable the TTL configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1029,7 +1045,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.</p>
+             * <p>The ZooKeeper configuration. This parameter indicates the maximum connection duration of an instance. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1040,7 +1056,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.</p>
+             * <p>The ZooKeeper configuration. This parameter indicates the maximum data size of each node. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1051,7 +1067,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
+             * <p>A reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -1062,10 +1078,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:</p>
+             * <p>The Nacos configuration. This parameter indicates whether Mesh Configuration Protocol (MCP) is enabled. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enabled.</li>
-             * <li><code>false</code>: disabled.</li>
+             * <li><p><code>true</code>: enabled</p>
+             * </li>
+             * <li><p><code>false</code>: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1077,10 +1095,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:</p>
+             * <p>The Nacos configuration. This parameter indicates whether MCP is supported. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: supported.</li>
-             * <li><code>false</code>: not supported.</li>
+             * <li><p><code>true</code>: supported</p>
+             * </li>
+             * <li><p><code>false</code>: not supported</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1092,7 +1112,8 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.<br>If this parameter is set to 0, no limits are imposed on the number of connections.</p>
+             * <p>The ZooKeeper configuration. This parameter indicates the number of connections between a client and a server.<br>
+             * If this parameter is set to 0, no limit is imposed.<br></p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1103,7 +1124,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum timeout period. This parameter is valid for ZooKeeper instances.</p>
+             * <p>The ZooKeeper configuration. This parameter indicates the maximum timeout duration.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -1114,7 +1135,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum timeout period. This parameter is valid for ZooKeeper instances.</p>
+             * <p>The ZooKeeper configuration. This parameter indicates the minimum timeout duration.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -1125,7 +1146,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime configuration of the Nacos instance.</p>
+             * <p>The runtime configuration of Nacos.</p>
              */
             public Builder nacosRunningEnv(NacosRunningEnv nacosRunningEnv) {
                 this.nacosRunningEnv = nacosRunningEnv;
@@ -1133,10 +1154,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:</p>
+             * <p>The Nacos configuration. This parameter indicates whether RAM authentication is enabled for the service registry. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enabled.</li>
-             * <li><code>false</code>: disabled.</li>
+             * <li><p><code>true</code>: enabled</p>
+             * </li>
+             * <li><p><code>false</code>: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1148,10 +1171,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:</p>
+             * <p>The Nacos configuration. This parameter indicates whether the cluster supports RAM authentication for services. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: supported.</li>
-             * <li><code>false</code>: not supported.</li>
+             * <li><p><code>true</code>: supported</p>
+             * </li>
+             * <li><p><code>false</code>: not supported</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1163,10 +1188,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:</p>
+             * <p>The Nacos configuration. This parameter indicates whether the cluster supports service creation. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: supported.</li>
-             * <li><code>false</code>: not supported.</li>
+             * <li><p><code>true</code>: supported</p>
+             * </li>
+             * <li><p><code>false</code>: not supported</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1178,10 +1205,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:</p>
+             * <p>The ZooKeeper configuration. This parameter indicates whether the super permission is enabled. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: enabled.</li>
-             * <li><code>false</code>: disabled.</li>
+             * <li><p><code>true</code>: enabled</p>
+             * </li>
+             * <li><p><code>false</code>: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1193,7 +1222,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password that corresponds to the username. This parameter is valid only if OpenSuperAcl is set to true.</p>
+             * <p>The password. This parameter is returned only when OpenSuperAcl is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -1212,10 +1241,12 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance was restarted and new configurations have taken effect. Valid values:</p>
+             * <p>Indicates whether the cluster is restarted and the new configuration is applied. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: The restart was successful.</li>
-             * <li><code>false</code>: The restart failed.</li>
+             * <li><p><code>true</code>: The cluster is restarted.</p>
+             * </li>
+             * <li><p><code>false</code>: The cluster fails to be restarted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1227,7 +1258,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.</p>
+             * <p>The ZooKeeper configuration. This parameter indicates the frequency of generating snapshots.</p>
              * 
              * <strong>example:</strong>
              * <p>100000</p>
@@ -1238,7 +1269,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.</p>
+             * <p>The ZooKeeper configuration. This parameter indicates the connection timeout duration of an instance. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1249,7 +1280,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MSE Nacos supports TLS transmission link encryption since version 2.1.2.1. Nacos clients must be upgraded to version 2.2.1 or later. After TLS is enabled, the system performance will decrease by about 10%. You must evaluate the system capacity. For more information about the relevant operations, see Nacos TLS transmission encryption.</p>
+             * <p>MSE Nacos instances of version 2.1.2.1 or later support Transport Layer Security (TLS) encryption. The version of the Nacos client must be 2.2.1 or later. After you enable TLS, the performance may decrease by about 10%. You must evaluate the system capacity. For more information about the operations, see Nacos TLS transport encryption.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1260,7 +1291,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.</p>
+             * <p>The ZooKeeper configuration. This parameter indicates a unit of time in the engine. The default value is 2000. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2000</p>
@@ -1271,7 +1302,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the user. This parameter is valid only if OpenSuperAcl is set to true.</p>
+             * <p>The username. This parameter is returned only when OpenSuperAcl is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>

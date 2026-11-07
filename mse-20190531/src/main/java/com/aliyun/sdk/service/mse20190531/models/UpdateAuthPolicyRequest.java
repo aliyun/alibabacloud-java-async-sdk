@@ -186,7 +186,7 @@ public class UpdateAuthPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</p>
+         * <p>The language in which you want the results to be displayed. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -213,7 +213,7 @@ public class UpdateAuthPolicyRequest extends Request {
          * <p>The content of the service authentication rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;all&quot;:true,&quot;appIds&quot;:[&quot;f6xqzbao96@4adfaf3c92c947a&quot;],&quot;black&quot;:false}]</p>
+         * <p>[{\&quot;all\&quot;:true,\&quot;appIds\&quot;:[\&quot;f6xqzbao96@4adfaf3c92c947a\&quot;],\&quot;black\&quot;:false}]</p>
          */
         public Builder authRule(String authRule) {
             this.putQueryParameter("AuthRule", authRule);
@@ -247,7 +247,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ACK cluster namespace.</p>
+         * <p>The namespace ID of the Kubernetes cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c19c6c500e1ff4d7abc7bed9b8236***</p>
@@ -259,7 +259,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-test</p>
@@ -271,11 +271,14 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The Protocol Type. Valid values:</p>
          * <ul>
-         * <li><strong>SPRING_CLOUD</strong></li>
-         * <li><strong>DUBBO</strong></li>
-         * <li><strong>istio</strong></li>
+         * <li><p><strong>SPRING_CLOUD</strong>.</p>
+         * </li>
+         * <li><p><strong>DUBBO</strong>.</p>
+         * </li>
+         * <li><p><strong>istio</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +291,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -300,7 +303,7 @@ public class UpdateAuthPolicyRequest extends Request {
         }
 
         /**
-         * <p>The source for application access.</p>
+         * <p>The service source that the application accesses.</p>
          * 
          * <strong>example:</strong>
          * <p>edasmsc</p>

@@ -119,7 +119,7 @@ public class CreateClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -130,7 +130,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-st21ri2****</p>
@@ -141,10 +141,10 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -152,7 +152,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Order ID.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20574710974****</p>
@@ -163,7 +163,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dc63-465d-8ef5-20dc18af****</p>
@@ -174,10 +174,10 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request result, with the following values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Request succeeded.</li>
-         * <li><code>false</code>: Request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

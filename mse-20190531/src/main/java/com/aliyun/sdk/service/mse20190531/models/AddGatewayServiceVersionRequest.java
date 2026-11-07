@@ -101,10 +101,10 @@ public class AddGatewayServiceVersionRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class AddGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the gateway.</p>
+         * <p>The unique gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-913a49bab6c5461187a3305fb8da****</p>
@@ -129,7 +129,7 @@ public class AddGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the service.</p>
+         * <p>The service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>33</p>
@@ -141,10 +141,10 @@ public class AddGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * <p>The version of the service.</p>
+         * <p>The service version.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;v1&quot;,&quot;labels&quot;:[{&quot;key&quot;:&quot;version&quot;,&quot;value&quot;:&quot;v1&quot;}]}</p>
+         * <p>{\&quot;name\&quot;:\&quot;v1\&quot;,\&quot;labels\&quot;:[{\&quot;key\&quot;:\&quot;version\&quot;,\&quot;value\&quot;:\&quot;v1\&quot;}]}</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

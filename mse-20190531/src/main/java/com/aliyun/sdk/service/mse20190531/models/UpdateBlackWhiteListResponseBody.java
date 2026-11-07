@@ -119,7 +119,7 @@ public class UpdateBlackWhiteListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return value.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class UpdateBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the record.</p>
+         * <p>The record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -141,7 +141,7 @@ public class UpdateBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -152,7 +152,7 @@ public class UpdateBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>You are not authorized to perform this operation.</p>
@@ -163,7 +163,7 @@ public class UpdateBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AD5DEDA0-C82A-50D9-AF54-BD3576CCFB4C</p>
@@ -174,10 +174,10 @@ public class UpdateBlackWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

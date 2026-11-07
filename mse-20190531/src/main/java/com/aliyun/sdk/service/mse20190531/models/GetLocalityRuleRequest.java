@@ -132,7 +132,10 @@ public class GetLocalityRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want the results to be displayed. Valid values: zh and en. zh is the default value, which indicates Chinese. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -141,7 +144,10 @@ public class GetLocalityRuleRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgxznfcvbe@be2c0228f******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -150,7 +156,10 @@ public class GetLocalityRuleRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -159,7 +168,10 @@ public class GetLocalityRuleRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The name of the Microservices Engine (MSE) namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -168,6 +180,7 @@ public class GetLocalityRuleRequest extends Request {
         }
 
         /**
+         * <p>The region of the gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +193,10 @@ public class GetLocalityRuleRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the rule. This field is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

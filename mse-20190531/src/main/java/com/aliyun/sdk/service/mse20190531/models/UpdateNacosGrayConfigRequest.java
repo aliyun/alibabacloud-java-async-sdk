@@ -258,7 +258,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -267,7 +270,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -276,7 +282,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The configuration content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdf</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -285,6 +294,7 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
+         * <p>The data ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +307,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * GrayRule.
+         * <p>The canary release rule. For a beta release, you can specify one or more client IP addresses for this parameter. You must separate multiple IP addresses with commas (,). For a tag-based canary release, the value is in the format of Tag name=Tag value. You must separate multiple tag values with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key=value1,value2</p>
          */
         public Builder grayRule(String grayRule) {
             this.putQueryParameter("GrayRule", grayRule);
@@ -306,7 +319,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * GrayRuleName.
+         * <p>The canary version name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder grayRuleName(String grayRuleName) {
             this.putQueryParameter("GrayRuleName", grayRuleName);
@@ -315,7 +331,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * GrayRulePriority.
+         * <p>The canary version priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder grayRulePriority(Integer grayRulePriority) {
             this.putQueryParameter("GrayRulePriority", grayRulePriority);
@@ -324,6 +343,7 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
+         * <p>The canary release type. Beta release (IP address-based canary release) and tag-based canary release are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +356,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * Group.
+         * <p>The group name. Default value: DEFAULT_GROUP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -345,6 +368,7 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,7 +381,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID. Default value: public.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cf708a5-****-89f2-3ba62c5ee9ba</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -366,7 +393,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * OpType.
+         * <p>The operation type. Valid values: Create (create a canary release configuration) and Update (update an existing canary release configuration).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create</p>
          */
         public Builder opType(String opType) {
             this.putQueryParameter("OpType", opType);
@@ -375,7 +405,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -384,7 +417,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * <p>The extended request parameter in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -393,7 +429,10 @@ public class UpdateNacosGrayConfigRequest extends Request {
         }
 
         /**
-         * StopGray.
+         * <p>Specifies whether to stop the canary release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stopGray(Boolean stopGray) {
             this.putQueryParameter("StopGray", stopGray);

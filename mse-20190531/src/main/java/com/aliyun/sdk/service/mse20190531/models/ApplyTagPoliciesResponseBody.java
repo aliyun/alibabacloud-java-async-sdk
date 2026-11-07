@@ -93,7 +93,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -112,7 +112,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
@@ -123,7 +123,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>The request result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -296,7 +296,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the field is the primary key.</p>
+             * <p>Indicates whether it is a primary key.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -307,10 +307,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <p>Indicates whether the feature is enabled. Valid values:</p>
              * <ul>
-             * <li><code>true</code>: The rule is enabled.</li>
-             * <li><code>false</code>: The rule is disabled.</li>
+             * <li><code>true</code>: Enabled.</li>
+             * <li><code>false</code>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the primary key.</p>
+             * <p>The primary key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -355,7 +355,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rate.</p>
+             * <p>The ratio.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -366,7 +366,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the routing rule was deleted.</p>
+             * <p>Indicates whether the deletion is successful.</p>
              */
             public Builder remove(Boolean remove) {
                 this.remove = remove;
@@ -374,10 +374,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the routing rule.</p>
+             * <p>The tag rules.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;_base&quot;: {&quot;rate&quot;: 100, &quot;remove&quot;: true}, &quot;blue&quot;: {&quot;rate&quot;: 0}}</p>
+             * <p>{\&quot;_base\&quot;: {\&quot;rate\&quot;: 100, \&quot;remove\&quot;: true}, \&quot;blue\&quot;: {\&quot;rate\&quot;: 0}}</p>
              */
             public Builder rules(String rules) {
                 this.rules = rules;
@@ -385,7 +385,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status.</p>
+             * <p>The effective status.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

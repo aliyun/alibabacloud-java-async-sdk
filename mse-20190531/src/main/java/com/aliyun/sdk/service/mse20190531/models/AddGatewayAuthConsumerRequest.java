@@ -230,7 +230,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -246,7 +246,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * <p>The description of the consumer.</p>
+         * <p>The description of the authentication consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -260,8 +260,10 @@ public class AddGatewayAuthConsumerRequest extends Request {
         /**
          * <p>The encryption type. Valid values:</p>
          * <ul>
-         * <li>RSA</li>
-         * <li>OCT</li>
+         * <li><p>RSA</p>
+         * </li>
+         * <li><p>OCT</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +289,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * <p>The JWT public key. The JSON format is supported.</p>
+         * <p>The JWT public key in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;keys&quot;:[{&quot;e&quot;:&quot;AQAB&quot;,&quot;kid&quot;:&quot;DHFbpoIUqrY8t2zpA2qXfCmr5VO5ZEr4RzHU_-envvQ&quot;,&quot;kty&quot;:&quot;RSA&quot;,&quot;n&quot;:&quot;xAE7eB6qugXyCAG3yhh7pkDkT65pHymX-P7KfIupjf59vsdo91bSP9C8H07pSAGQO1MV_xFj9VswgsCg4R6otmg5PV2He95lZdHtOcU5DXIg_pbhLdKXbi66GlVeK6ABZOUW3WYtnNHD-91gVuoeJT_DwtGGcp4ignkgXfkiEm4sw-4sfb4qdt5oLbyVpmW6x9cfa7vs2WTfURiCrBoUqgBo_-4WTiULmmHSGZHOjzwa8WtrtOQGsAFjIbno85jp6MnGGGZPYZbDAa_b3y5u-YpW7ypZrvD8BgtKVjgtQgZhLAGezMt0ua3DRrWnKqTZ0BJ_EyxOGuHJrLsn00fnMQ&quot;}]}</p>
@@ -299,7 +301,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * <p>The name of the key used for JWT-based identity authentication.</p>
+         * <p>The KeyName identity in the JWT.</p>
          * 
          * <strong>example:</strong>
          * <p>iss</p>
@@ -311,7 +313,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * <p>The value of the key used for JWT-based identity authentication.</p>
+         * <p>The KeyValue identity in the JWT.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -323,7 +325,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * <p>The name of the consumer.</p>
+         * <p>The name of the authentication consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +338,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * <p>The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+         * <p>The name of the token parameter to be verified. By default, the token is prefixed with Bearer and placed in the Authorization header, such as <code>Authorization: Bearer token</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Authorization</p>
@@ -348,7 +350,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable pass-through.</p>
+         * <p>Specifies whether to pass through the token.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -360,7 +362,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * <p>The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+         * <p>The position of the token parameter to be verified. By default, the token is prefixed with Bearer and placed in the Authorization header, such as <code>Authorization: Bearer token</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>HEADER</p>
@@ -372,7 +374,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * <p>The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+         * <p>The prefix of the token parameter to be verified. By default, the token is prefixed with Bearer and placed in the Authorization header, such as <code>Authorization: Bearer token</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Bearer</p>

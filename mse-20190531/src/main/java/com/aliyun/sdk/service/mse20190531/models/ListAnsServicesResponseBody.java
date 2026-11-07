@@ -158,7 +158,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -166,7 +166,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -177,7 +177,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>202</p>
@@ -191,7 +191,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
          * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +199,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -210,7 +210,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of instances displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -232,10 +232,12 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The result of the request. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +249,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instances returned.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -390,7 +392,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of instances with healthy heartbeats.</p>
+             * <p>The total number of service instances with healthy heartbeats.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -401,7 +403,7 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of instances that are used for the current service.</p>
+             * <p>The total number of instances of the current service.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -423,7 +425,18 @@ public class ListAnsServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The type of the service. Valid values:</p>
+             * <ul>
+             * <li><p>console: registered on the console.</p>
+             * </li>
+             * <li><p>sdk: registered using an SDK.</p>
+             * </li>
+             * <li><p>governance: registered using service administration.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>console</p>
              */
             public Builder source(String source) {
                 this.source = source;

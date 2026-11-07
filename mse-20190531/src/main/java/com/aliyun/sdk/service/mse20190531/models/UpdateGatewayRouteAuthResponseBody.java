@@ -158,7 +158,7 @@ public class UpdateGatewayRouteAuthResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * <p>The code is used only to synchronize with the success field.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -180,7 +180,7 @@ public class UpdateGatewayRouteAuthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message.</p>
+         * <p>The placeholder in the dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -191,9 +191,9 @@ public class UpdateGatewayRouteAuthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the error message of the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -205,7 +205,7 @@ public class UpdateGatewayRouteAuthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -227,10 +227,10 @@ public class UpdateGatewayRouteAuthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -249,10 +249,10 @@ public class UpdateGatewayRouteAuthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The result of the request. Valid values:</p>
          * <ul>
-         * <li><code>true</code></li>
-         * <li><code>false</code></li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

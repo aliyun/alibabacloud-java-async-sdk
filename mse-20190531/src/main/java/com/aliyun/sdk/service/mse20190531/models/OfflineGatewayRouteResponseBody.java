@@ -119,7 +119,7 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the route is unpublished.</p>
+         * <p>Indicates whether the offline operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -152,10 +152,10 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -163,7 +163,7 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8EB24742-AB15-5953-BEFB-1FA18E770EEE</p>
@@ -174,9 +174,9 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request is successful.                                </li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 

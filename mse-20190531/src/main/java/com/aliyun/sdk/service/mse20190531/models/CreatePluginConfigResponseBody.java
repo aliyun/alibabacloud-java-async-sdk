@@ -67,7 +67,7 @@ public class CreatePluginConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The plug-in configuration ID.</p>
+         * <p>The ID of the plug-in configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

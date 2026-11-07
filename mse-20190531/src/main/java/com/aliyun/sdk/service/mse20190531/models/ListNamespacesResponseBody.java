@@ -67,7 +67,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Return results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1F1A6F3-7E03-5EAD-B3F1-123456789ABC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppCount.
+             * <p>Number of applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder appCount(Integer appCount) {
                 this.appCount = appCount;
@@ -253,7 +259,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-02T09:49:48.000+0000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -261,7 +270,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Describe.
+             * <p>Namespace description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace 1 for testing</p>
              */
             public Builder describe(String describe) {
                 this.describe = describe;
@@ -269,7 +281,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * <p>Number of online nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder instanceCount(Long instanceCount) {
                 this.instanceCount = instanceCount;
@@ -277,7 +292,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>Namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myNamespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -285,7 +303,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>Region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -293,7 +314,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>Alibaba Cloud tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;1&quot;:&quot;1&quot;,&quot;2&quot;:&quot;2&quot;}</p>
              */
             public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
@@ -301,7 +325,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-02T09:49:48.000+0000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -309,7 +336,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>178*******</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -317,7 +347,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Version. Basic Edition 0, Professional Edition 1, Enterprise Edition 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -475,7 +508,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppCount.
+             * <p>Number of applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder appCount(Integer appCount) {
                 this.appCount = appCount;
@@ -483,7 +519,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-02T09:49:48.000+0000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -491,7 +530,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Describe.
+             * <p>Namespace description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace 1 for testing</p>
              */
             public Builder describe(String describe) {
                 this.describe = describe;
@@ -499,7 +541,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * <p>Number of online nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder instanceCount(Long instanceCount) {
                 this.instanceCount = instanceCount;
@@ -507,7 +552,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>Namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myNamespace</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -515,7 +563,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>Region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -523,7 +574,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-02T09:49:48.000+0000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -531,7 +585,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>178*******</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -539,7 +596,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Version. Basic Edition 0, Professional Edition 1, Enterprise Edition 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -645,7 +705,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>Result page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -653,7 +716,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size for the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -661,7 +727,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Return results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -669,7 +735,7 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>Result set.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;
@@ -677,7 +743,10 @@ public class ListNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>Total number of query results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

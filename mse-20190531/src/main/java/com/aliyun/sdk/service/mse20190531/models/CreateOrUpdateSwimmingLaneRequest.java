@@ -231,7 +231,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+         * <p>The language in which the results are returned. Valid values: zh (Chinese, default) and en (English).</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -243,7 +243,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the lane.</p>
+         * <p>Specifies whether the lane is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,7 +255,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.</p>
+         * <p>Specifies whether to configure routing rules for the lane. Configuration is not required if the ingress is a gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -270,7 +270,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
          * <p>The JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>[{&quot;Priority&quot;:1,&quot;Paths&quot;:[],&quot;Condition&quot;:&quot;AND&quot;,&quot;RestItems&quot;:[{&quot;Type&quot;:&quot;param&quot;,&quot;Name&quot;:&quot;name&quot;,&quot;Value&quot;:&quot;xiaoming&quot;,&quot;Cond&quot;:&quot;==&quot;,&quot;Operator&quot;:&quot;rawvalue&quot;}]}]</p>
          */
         public Builder entryRule(String entryRule) {
             this.putQueryParameter("EntryRule", entryRule);
@@ -279,7 +279,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * EntryRules.
+         * <p>The collection of lane rules.</p>
          */
         public Builder entryRules(java.util.List<EntryRules> entryRules) {
             this.putBodyParameter("EntryRules", entryRules);
@@ -288,7 +288,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.</p>
+         * <p>The gateway routing information. This parameter is used when a cloud-native gateway is used as the ingress.</p>
          */
         public Builder gatewaySwimmingLaneRouteJson(GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson) {
             String gatewaySwimmingLaneRouteJsonShrink = shrink(gatewaySwimmingLaneRouteJson, "GatewaySwimmingLaneRouteJson", "json");
@@ -298,14 +298,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:****</p>
-         * <ul>
-         * <li><strong>zh-CN</strong>: Chinese</li>
-         * <li><strong>en-US</strong>: English</li>
-         * </ul>
-         * <blockquote>
-         * <p>Default value: <strong>zh-CN</strong>.</p>
-         * </blockquote>
+         * <p>The ID of the lane group to which the lane belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>115</p>
@@ -317,7 +310,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.</p>
+         * <p>The primary key ID. A value of -1 indicates that a lane is created. A value greater than 0 indicates that a specified lane is updated.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -333,7 +326,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test lane</p>
+         * <p>gray</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -342,7 +335,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The name of the MSE namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -351,7 +347,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * PathIndependentPercentageEnable.
+         * <p><strong>[Deprecated]</strong> The Java gateway-related configuration for percentage-based routing by path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder pathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
             this.putQueryParameter("PathIndependentPercentageEnable", pathIndependentPercentageEnable);
@@ -360,7 +359,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -372,7 +371,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * <p>The tag.</p>
+         * <p>The identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>gray</p>
@@ -547,7 +546,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             } 
 
             /**
-             * Cond.
+             * <p>The match operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -555,7 +557,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Datum.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x</p>
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -563,7 +568,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Divisor.
+             * <p>The divisor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -571,11 +579,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The name of the lane.</p>
-             * <p>This parameter is required.</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test lane</p>
+             * <p>x-mse-tag</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -583,7 +590,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * NameList.
+             * <p>The list of matching items.</p>
              */
             public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
@@ -591,7 +598,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rawvalue</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -599,7 +609,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Rate.
+             * <p>The percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -607,7 +620,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Remainder.
+             * <p>The remainder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -615,7 +631,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The match type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>header</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -623,7 +642,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -716,7 +738,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             } 
 
             /**
-             * Condition.
+             * <p>Specifies how RestItems are combined to form the final condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -724,7 +749,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Paths.
+             * <p>The list of paths.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -732,7 +757,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -740,7 +768,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * RestItems.
+             * <p>The list of matching items.</p>
              */
             public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
@@ -833,12 +861,22 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             } 
 
             /**
-             * <p>The matching condition. Valid values:</p>
+             * <p>If you use the legacy version of end-to-end canary release (swimversion is 0, which uses tag-based routing and canary routing), the following values are supported:</p>
              * <ul>
-             * <li>PRE: prefix matching</li>
-             * <li>EQUAL: exact matching</li>
-             * <li>ERGULAR: regular expression matching</li>
+             * <li>PRE: prefix match</li>
+             * <li>ERGULAR: regular expression match</li>
+             * <li>EQUAL: exact match</li>
              * </ul>
+             * <p>If you use the new version of end-to-end canary release (swimversion is 1 or 2, which uses single-service routing), the following values are supported:</p>
+             * <ul>
+             * <li>PRE: prefix match</li>
+             * <li>regexp: regular expression match</li>
+             * <li>==: equal to</li>
+             * <li>!=: not equal to</li>
+             * <li>list: in</li>
+             * <li>%: percentage</li>
+             * </ul>
+             * <p>The new version of end-to-end canary release provides the same features as the legacy version but delivers better performance and simpler configuration. Migrate to the new version of end-to-end canary release.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE</p>
@@ -862,8 +900,8 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * <p>The type of the parameter. Valid values:</p>
              * <ul>
-             * <li>header</li>
-             * <li>param</li>
+             * <li>header: header</li>
+             * <li>param: parameter</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -945,7 +983,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             } 
 
             /**
-             * Percentage.
+             * <p>The traffic percentage. This parameter is used for percentage-based routing. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -953,7 +994,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * RouteId.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -1111,7 +1155,16 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             } 
 
             /**
-             * CanaryModel.
+             * <p>The end-to-end canary release mode. Valid values:</p>
+             * <ul>
+             * <li><p>0: route by request content</p>
+             * </li>
+             * <li><p>1: route by percentage</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder canaryModel(Integer canaryModel) {
                 this.canaryModel = canaryModel;
@@ -1119,7 +1172,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Condition.
+             * <p>The canary release condition. Valid values: AND (all conditions must be met) and OR (any condition must be met).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -1127,7 +1183,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The matching conditions.</p>
+             * <p>The list of matching conditions.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -1157,7 +1213,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * Percentage.
+             * <p>The traffic percentage. This parameter is used for percentage-based routing. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -1165,7 +1224,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * <p>The route IDs.</p>
+             * <p>The list of route IDs.</p>
              */
             public Builder routeIdList(java.util.List<Long> routeIdList) {
                 this.routeIdList = routeIdList;
@@ -1173,7 +1232,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * RouteIndependentPercentageEnable.
+             * <p><strong>[Deprecated]</strong> This parameter is used to specify the percentage-based routing setting by route when an MSE cloud-native gateway is used as the ingress.</p>
              */
             public Builder routeIndependentPercentageEnable(Boolean routeIndependentPercentageEnable) {
                 this.routeIndependentPercentageEnable = routeIndependentPercentageEnable;
@@ -1181,7 +1240,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * RouteIndependentPercentageList.
+             * <p><strong>[Deprecated]</strong> The list of routes for independent percentage-based canary releases by route.</p>
              */
             public Builder routeIndependentPercentageList(java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList) {
                 this.routeIndependentPercentageList = routeIndependentPercentageList;

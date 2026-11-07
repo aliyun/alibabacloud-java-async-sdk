@@ -119,7 +119,7 @@ public class DeleteZnodeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class DeleteZnodeRequest extends Request {
         }
 
         /**
-         * <p>The path of the node.</p>
+         * <p>The node path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class DeleteZnodeRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters in the JSON format.</p>
+         * <p>The extended request parameters in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

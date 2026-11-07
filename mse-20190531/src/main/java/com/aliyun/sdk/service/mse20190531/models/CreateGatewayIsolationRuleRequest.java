@@ -219,7 +219,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh is the default value, which indicates Chinese. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -228,6 +231,9 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The type of a web fallback behavior.</p>
+         * <p>0: The specified content is returned.</p>
+         * <p>1: The specified page is displayed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +246,12 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * BodyEncoding.
+         * <p>The encoding type.</p>
+         * <p>0: plain text</p>
+         * <p>1: JSON</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder bodyEncoding(Integer bodyEncoding) {
             this.putQueryParameter("BodyEncoding", bodyEncoding);
@@ -249,6 +260,9 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the rule.</p>
+         * <p>0: disabled.</p>
+         * <p>1: enabled.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +275,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14407</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -270,6 +287,7 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,6 +300,7 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of concurrent requests.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,7 +313,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * ResponseContentBody.
+         * <p>The HTTP text to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder responseContentBody(String responseContentBody) {
             this.putQueryParameter("ResponseContentBody", responseContentBody);
@@ -303,7 +325,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * ResponseRedirectUrl.
+         * <p>The address to be redirected to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www.******.com</p>
          */
         public Builder responseRedirectUrl(String responseRedirectUrl) {
             this.putQueryParameter("ResponseRedirectUrl", responseRedirectUrl);
@@ -312,7 +337,10 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
-         * ResponseStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>429</p>
          */
         public Builder responseStatusCode(Integer responseStatusCode) {
             this.putQueryParameter("ResponseStatusCode", responseStatusCode);
@@ -321,6 +349,7 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The route ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,6 +362,7 @@ public class CreateGatewayIsolationRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the route.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

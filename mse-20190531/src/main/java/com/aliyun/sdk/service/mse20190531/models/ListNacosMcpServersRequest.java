@@ -143,7 +143,10 @@ public class ListNacosMcpServersRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -152,7 +155,10 @@ public class ListNacosMcpServersRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,7 +167,10 @@ public class ListNacosMcpServersRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The MCP server name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -170,7 +179,10 @@ public class ListNacosMcpServersRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5e3ee449-b5c0-4aee-b857-32c0acbebf26</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -179,7 +191,10 @@ public class ListNacosMcpServersRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -188,7 +203,10 @@ public class ListNacosMcpServersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +215,10 @@ public class ListNacosMcpServersRequest extends Request {
         }
 
         /**
-         * Search.
+         * <p>The query pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>blur</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("Search", search);

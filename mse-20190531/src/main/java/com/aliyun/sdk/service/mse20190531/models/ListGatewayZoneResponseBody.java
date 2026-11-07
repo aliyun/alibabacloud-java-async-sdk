@@ -158,7 +158,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * <p>The status code. A value of <code>200</code> is returned when <code>Success</code> is <code>true</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried zones.</p>
+         * <p>A list of zones.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -177,7 +177,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message.</p>
+         * <p>The placeholder in the dynamic error message.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -188,7 +188,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace %s in <strong>ErrMessage</strong>.</p>
+         * <p>The dynamic error message that is used to replace the <strong>%s</strong> placeholder in the ErrMessage parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified parameter is invalid.</p>
@@ -199,7 +199,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code.</p>
+         * <p>The error code returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>NO_PERMISSION</p>
@@ -221,7 +221,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -245,8 +245,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><p><code>true</code></p>
+         * </li>
+         * <li><p><code>false</code></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +331,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The local name of the zone.</p>
+             * <p>The name of the zone.</p>
              * 
              * <strong>example:</strong>
              * <p>I</p>
@@ -340,7 +342,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
             }
 
             /**
-             * SupportQat.
+             * <p>Indicates whether the zone supports QAT.</p>
              */
             public Builder supportQat(Boolean supportQat) {
                 this.supportQat = supportQat;

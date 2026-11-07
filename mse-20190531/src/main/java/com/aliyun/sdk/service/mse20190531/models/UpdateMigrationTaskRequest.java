@@ -215,8 +215,10 @@ public class UpdateMigrationTaskRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,11 +231,14 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the instance. Valid values:</p>
+         * <p>The type of a cluster.</p>
          * <ul>
-         * <li>Nacos-Ans</li>
-         * <li>ZooKeeper</li>
-         * <li>Eureka</li>
+         * <li><p>Nacos-Ans</p>
+         * </li>
+         * <li><p>ZooKeeper</p>
+         * </li>
+         * <li><p>Eureka</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,7 +251,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -258,7 +263,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The address of the source instance node.</p>
+         * <p>The source instance node address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1:8848</p>
@@ -273,7 +278,7 @@ public class UpdateMigrationTaskRequest extends Request {
          * <p>The name of the source instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Source instance</p>
+         * <p>Source cluster</p>
          */
         public Builder originInstanceName(String originInstanceName) {
             this.putQueryParameter("OriginInstanceName", originInstanceName);
@@ -282,7 +287,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.</p>
+         * <p>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</p>
          * 
          * <strong>example:</strong>
          * <p>namesapceId1,namesapceId2</p>
@@ -294,7 +299,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a description.</p>
@@ -306,7 +311,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters in the JSON format.</p>
+         * <p>The extended request parameter in the JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -318,7 +323,10 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * SyncType.
+         * <p>The synchronization type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder syncType(String syncType) {
             this.putQueryParameter("SyncType", syncType);
@@ -330,7 +338,7 @@ public class UpdateMigrationTaskRequest extends Request {
          * <p>The name of the destination instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Destination instance</p>
+         * <p>Target cluster</p>
          */
         public Builder targetClusterName(String targetClusterName) {
             this.putQueryParameter("TargetClusterName", targetClusterName);

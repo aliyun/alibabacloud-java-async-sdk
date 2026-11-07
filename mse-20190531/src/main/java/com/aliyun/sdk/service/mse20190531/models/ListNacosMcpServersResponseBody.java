@@ -67,7 +67,7 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADDD8AB7-8D1C-4697-A83E-410D2607****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * Is_latest.
+             * <p>Indicates whether this is the latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isLatest(Boolean isLatest) {
                 this.isLatest = isLatest;
@@ -162,7 +168,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Release_date.
+             * <p>The release date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-16</p>
              */
             public Builder releaseDate(String releaseDate) {
                 this.releaseDate = releaseDate;
@@ -170,7 +179,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -315,7 +327,7 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * Capabilities.
+             * <p>The capabilities of the MCP server.</p>
              */
             public Builder capabilities(java.util.List<String> capabilities) {
                 this.capabilities = capabilities;
@@ -323,7 +335,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -331,7 +346,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * FrontProtocol.
+             * <p>The frontend protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-sse</p>
              */
             public Builder frontProtocol(String frontProtocol) {
                 this.frontProtocol = frontProtocol;
@@ -350,7 +368,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -358,7 +379,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The type of the MCP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stdio</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -366,7 +390,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The current latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -374,7 +401,7 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * VersionDetail.
+             * <p>The version details.</p>
              */
             public Builder versionDetail(VersionDetail versionDetail) {
                 this.versionDetail = versionDetail;
@@ -467,7 +494,7 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             } 
 
             /**
-             * PageItems.
+             * <p>The paginated list of MCP servers.</p>
              */
             public Builder pageItems(java.util.List<PageItems> pageItems) {
                 this.pageItems = pageItems;
@@ -497,7 +524,10 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

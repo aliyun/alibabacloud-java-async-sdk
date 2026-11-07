@@ -182,7 +182,10 @@ public class ListIsolationRulesRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -191,7 +194,10 @@ public class ListIsolationRulesRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522bXXXXX</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -200,6 +206,7 @@ public class ListIsolationRulesRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,6 +219,7 @@ public class ListIsolationRulesRequest extends Request {
         }
 
         /**
+         * <p>The microservice namespace to which the application belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +232,10 @@ public class ListIsolationRulesRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The first page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -233,7 +244,10 @@ public class ListIsolationRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Default value: 6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,7 +256,10 @@ public class ListIsolationRulesRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>Find protection rules for specified interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/a</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -251,7 +268,10 @@ public class ListIsolationRulesRequest extends Request {
         }
 
         /**
-         * ResourceSearchKey.
+         * <p>Find protection rules that contain the interface keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder resourceSearchKey(String resourceSearchKey) {
             this.putQueryParameter("ResourceSearchKey", resourceSearchKey);

@@ -155,7 +155,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
          * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>Request succeeded.</p>
          */
         public Builder message(String message) {
             this.message = message;

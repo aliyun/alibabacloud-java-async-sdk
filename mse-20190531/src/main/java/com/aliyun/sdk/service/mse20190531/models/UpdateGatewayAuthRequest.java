@@ -395,7 +395,10 @@ public class UpdateGatewayAuthRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -404,7 +407,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * AuthResourceConfig.
+         * <p>The YAML configuration for complex mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\&quot;\&quot;</p>
          */
         public Builder authResourceConfig(String authResourceConfig) {
             this.putQueryParameter("AuthResourceConfig", authResourceConfig);
@@ -413,7 +419,7 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * AuthResourceList.
+         * <p>The list of authorization rules for authentication. Multiple rule conditions have an OR relationship. Multiple matching items within a rule condition have an AND relationship.</p>
          */
         public Builder authResourceList(java.util.List<AuthResourceList> authResourceList) {
             String authResourceListShrink = shrink(authResourceList, "AuthResourceList", "json");
@@ -423,7 +429,14 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * AuthResourceMode.
+         * <p>The authorization resource mode. Valid values:</p>
+         * <ul>
+         * <li>0: simple mode.</li>
+         * <li>1: complex mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder authResourceMode(Integer authResourceMode) {
             this.putQueryParameter("AuthResourceMode", authResourceMode);
@@ -432,7 +445,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * ClientId.
+         * <p>The application ID registered with the service. This parameter is used for OIDC/IDaaS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mnvxaavggw7hcdcnr6usi6***</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -441,7 +457,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * ClientSecret.
+         * <p>The application secret registered with the OIDC authentication service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CS6EYfx3k9yTRR9EtQ2MXWP97P6UAUwFg4teoWJ19Z****</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.putQueryParameter("ClientSecret", clientSecret);
@@ -450,7 +469,11 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * CookieDomain.
+         * <p>The cookie domain name. After authentication succeeds, the cookie is sent to the specified domain name to maintain the logon state.</p>
+         * <p>Example: If you set <code>Cookie-domain=a.example.com</code>, the cookie is sent to the domain name <code>a.example.com</code>. If you set <code>Cookie-domain=.example.com</code>, the cookie is sent to all subdomains of <code>example.com</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder cookieDomain(String cookieDomain) {
             this.putQueryParameter("CookieDomain", cookieDomain);
@@ -459,7 +482,7 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * DeleteResourceIdList.
+         * <p>The list of resource record IDs to delete.</p>
          */
         public Builder deleteResourceIdList(java.util.List<Long> deleteResourceIdList) {
             String deleteResourceIdListShrink = shrink(deleteResourceIdList, "DeleteResourceIdList", "json");
@@ -469,7 +492,7 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * ExternalAuthZJSON.
+         * <p>The custom authentication information.</p>
          */
         public Builder externalAuthZJSON(ExternalAuthZJSON externalAuthZJSON) {
             String externalAuthZJSONShrink = shrink(externalAuthZJSON, "ExternalAuthZJSON", "json");
@@ -479,7 +502,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-9cdcf8e4f58144059e73ff4c5ef9****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -488,7 +514,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The authentication rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>719</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -497,7 +526,14 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * IsWhite.
+         * <p>The authorization blacklist/whitelist mode. Valid values:</p>
+         * <ul>
+         * <li>true: whitelist mode. Hosts and paths in the list can be accessed without verification. All others require verification.</li>
+         * <li>false: blacklist mode. Hosts and paths in the list require verification. All others can be accessed directly.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -506,7 +542,14 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * Issuer.
+         * <p>Used when the authentication type is JWT or OIDC:</p>
+         * <ul>
+         * <li>JWT: the iss (issuer) in JWT claims, which specifies the token issuer.</li>
+         * <li>OIDC: the iss (issuer) in OIDC claims, which specifies the token issuer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder issuer(String issuer) {
             this.putQueryParameter("Issuer", issuer);
@@ -515,7 +558,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * Jwks.
+         * <p>The JWT public key. JSON format is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;keys&quot;:[{&quot;e&quot;:&quot;AQAB&quot;,&quot;kid&quot;:&quot;DHFbpoIUqrY8t2zpA2qXfCmr5VO5ZEr4RzHU_-envvQ&quot;,&quot;kty&quot;:&quot;RSA&quot;,&quot;n&quot;:&quot;xAE7eB6qugXyCAG3yhh7pkDkT65pHymX-P7KfIupjf59vsdo91bSP9C8H07pSAGQO1MV_xFj9VswgsCg4R6otmg5PV2He95lZdHtOcU5DXIg_pbhLdKXbi66GlVeK6ABZOUW3WYtnNHD-91gVuoeJT_DwtGGcp4ignkgXfkiEm4sw-4sfb4qdt5oLbyVpmW6x9cfa7vs2WTfURiCrBoUqgBo_-4WTiULmmHSGZHOjzwa8WtrtOQGsAFjIbno85jp6MnGGGZPYZbDAa_b3y5u-YpW7ypZrvD8BgtKVjgtQgZhLAGezMt0ua3DRrWnKqTZ0BJ_EyxOGuHJrLsn00fnMQ&quot;}]}</p>
          */
         public Builder jwks(String jwks) {
             this.putQueryParameter("Jwks", jwks);
@@ -524,7 +570,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * LoginUrl.
+         * <p>The user logon page URL of the IDaaS instance. This parameter is used for IDaaS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://daxxxxcn.aliyunidaas.com/">https://daxxxxcn.aliyunidaas.com/</a></p>
          */
         public Builder loginUrl(String loginUrl) {
             this.putQueryParameter("LoginUrl", loginUrl);
@@ -533,7 +582,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The authentication name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -542,7 +594,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * RedirectUrl.
+         * <p>The redirect URL after successful authorization. This parameter is used for OIDC/IDaaS and must be consistent with the redirect URL configured in OIDC/IDaaS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test-.com/oauth2/callback">https://test-.com/oauth2/callback</a></p>
          */
         public Builder redirectUrl(String redirectUrl) {
             this.putQueryParameter("RedirectUrl", redirectUrl);
@@ -551,7 +606,7 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * ScopesList.
+         * <p>The OIDC authorization scopes. This parameter is used for OIDC.</p>
          */
         public Builder scopesList(java.util.List<String> scopesList) {
             String scopesListShrink = shrink(scopesList, "ScopesList", "json");
@@ -561,7 +616,14 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The enabled status. Valid values:</p>
+         * <ul>
+         * <li>false: disabled.</li>
+         * <li>true: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);
@@ -570,7 +632,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * Sub.
+         * <p>Used when the authentication type is JWT. The sub (subject) in JWT claims, which specifies the principal. Make sure that the value of the sub field in the JWT payload is consistent with the value configured here. If this parameter is not set or is empty, the value defaults to the value of the Issuer parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder sub(String sub) {
             this.putQueryParameter("Sub", sub);
@@ -579,7 +644,11 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * TokenName.
+         * <p>The location where the JWT token is stored.</p>
+         * <p>The token parameter information to be verified. By default, the token is placed in the Authorization header with the Bearer prefix. Example: <code>Authorization: Bearer token</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authorization</p>
          */
         public Builder tokenName(String tokenName) {
             this.putQueryParameter("TokenName", tokenName);
@@ -588,7 +657,11 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * TokenNamePrefix.
+         * <p>The prefix of the JWT token.</p>
+         * <p>The token parameter information to be verified. By default, the token is placed in the Authorization header with the Bearer prefix. Example: <code>Authorization: Bearer token</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer</p>
          */
         public Builder tokenNamePrefix(String tokenNamePrefix) {
             this.putQueryParameter("TokenNamePrefix", tokenNamePrefix);
@@ -597,7 +670,10 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * TokenPass.
+         * <p>Specifies whether to pass through the token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tokenPass(Boolean tokenPass) {
             this.putQueryParameter("TokenPass", tokenPass);
@@ -606,7 +682,14 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * TokenPosition.
+         * <p>The JWT token type. Valid values:</p>
+         * <ul>
+         * <li>HEADER: transmitted through a header.</li>
+         * </ul>
+         * <p>The token parameter information to be verified. By default, the token is placed in the Authorization header with the Bearer prefix. Example: Authorization: Bearer token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HEADER</p>
          */
         public Builder tokenPosition(String tokenPosition) {
             this.putQueryParameter("TokenPosition", tokenPosition);
@@ -615,7 +698,16 @@ public class UpdateGatewayAuthRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The authentication type. Valid values:</p>
+         * <ul>
+         * <li>JWT</li>
+         * <li>OIDC</li>
+         * <li>IDaaS</li>
+         * <li>ExternalAuthZ: a self-managed authentication service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ExternalAuthZ</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -696,7 +788,10 @@ public class UpdateGatewayAuthRequest extends Request {
             } 
 
             /**
-             * HeaderKey.
+             * <p>The request header name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x-req</p>
              */
             public Builder headerKey(String headerKey) {
                 this.headerKey = headerKey;
@@ -704,7 +799,21 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * HeaderMethod.
+             * <p>The matching condition. Valid values:</p>
+             * <ul>
+             * <li>EQUAL: equal to.</li>
+             * <li>NOT_EQUAL: not equal to.</li>
+             * <li>EXIST: exists.</li>
+             * <li>NOT_EXIST: does not exist.</li>
+             * <li>INCLUDE: contains.</li>
+             * <li>EXCLUDE: does not contain.</li>
+             * <li>PREFIX: prefix.</li>
+             * <li>SUFFIX: suffix.</li>
+             * <li>REGREX: regular expression.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EQUAL</p>
              */
             public Builder headerMethod(String headerMethod) {
                 this.headerMethod = headerMethod;
@@ -712,7 +821,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * HeaderValue.
+             * <p>The value of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder headerValue(String headerValue) {
                 this.headerValue = headerValue;
@@ -831,7 +943,7 @@ public class UpdateGatewayAuthRequest extends Request {
             } 
 
             /**
-             * AuthResourceHeaderList.
+             * <p>The request headers of the rule. Currently only used for custom authentication.</p>
              */
             public Builder authResourceHeaderList(java.util.List<AuthResourceHeaderList> authResourceHeaderList) {
                 this.authResourceHeaderList = authResourceHeaderList;
@@ -839,7 +951,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * DomainId.
+             * <p>The ID of the domain name in the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765</p>
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -847,7 +962,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The resource record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -855,7 +973,11 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * IgnoreCase.
+             * <p>Specifies whether case sensitivity is enabled for the path. This parameter is used when creating custom authentication. Other authentication types enable case sensitivity by default. Valid values:</p>
+             * <ul>
+             * <li>true: case sensitivity is enabled.</li>
+             * <li>false: case sensitivity is disabled.</li>
+             * </ul>
              */
             public Builder ignoreCase(Boolean ignoreCase) {
                 this.ignoreCase = ignoreCase;
@@ -863,7 +985,15 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * MatchType.
+             * <p>The matching type for the request path. Valid values:</p>
+             * <ul>
+             * <li>EQUAL: exact match.</li>
+             * <li>PRE: prefix match.</li>
+             * <li>ERGULAR: regular expression match.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EQUAL</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -871,7 +1001,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>The matching path of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1042,7 +1175,7 @@ public class UpdateGatewayAuthRequest extends Request {
             } 
 
             /**
-             * AllowRequestHeaders.
+             * <p>The allowed request header names.</p>
              */
             public Builder allowRequestHeaders(java.util.List<String> allowRequestHeaders) {
                 this.allowRequestHeaders = allowRequestHeaders;
@@ -1050,7 +1183,7 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * AllowUpstreamHeaders.
+             * <p>The allowed response header names.</p>
              */
             public Builder allowUpstreamHeaders(java.util.List<String> allowUpstreamHeaders) {
                 this.allowUpstreamHeaders = allowUpstreamHeaders;
@@ -1058,7 +1191,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * BodyMaxBytes.
+             * <p>The maximum number of bytes for the body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000000</p>
              */
             public Builder bodyMaxBytes(Integer bodyMaxBytes) {
                 this.bodyMaxBytes = bodyMaxBytes;
@@ -1066,7 +1202,14 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * IsRestrict.
+             * <p>The custom authentication mode. Valid values:</p>
+             * <ul>
+             * <li>true: strict mode. When the authentication service is unavailable (connection establishment fails or a 5xx response is returned), the gateway rejects client requests.</li>
+             * <li>false: loose mode. When the authentication service is unavailable (connection establishment fails or a 5xx response is returned), the gateway allows client requests.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRestrict(Boolean isRestrict) {
                 this.isRestrict = isRestrict;
@@ -1074,7 +1217,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * PrefixPath.
+             * <p>The path of the authentication API provided by the authentication service. The API path must use prefix matching.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/auth</p>
              */
             public Builder prefixPath(String prefixPath) {
                 this.prefixPath = prefixPath;
@@ -1082,7 +1228,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * ServiceId.
+             * <p>The authentication service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37396</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -1090,7 +1239,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of the authentication service. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1098,7 +1250,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * TokenKey.
+             * <p>The header in which the token is located in the request message. Common values include Authorization and Cookie.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authorization</p>
              */
             public Builder tokenKey(String tokenKey) {
                 this.tokenKey = tokenKey;
@@ -1106,7 +1261,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * WithRematchRoute.
+             * <p>Specifies whether to re-match routes after authentication is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder withRematchRoute(Boolean withRematchRoute) {
                 this.withRematchRoute = withRematchRoute;
@@ -1114,7 +1272,10 @@ public class UpdateGatewayAuthRequest extends Request {
             }
 
             /**
-             * WithRequestBody.
+             * <p>Specifies whether to allow carrying the body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder withRequestBody(Boolean withRequestBody) {
                 this.withRequestBody = withRequestBody;

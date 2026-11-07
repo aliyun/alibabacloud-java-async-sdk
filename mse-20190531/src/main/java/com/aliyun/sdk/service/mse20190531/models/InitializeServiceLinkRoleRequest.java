@@ -87,7 +87,10 @@ public class InitializeServiceLinkRoleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which the returned results are displayed. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -96,7 +99,10 @@ public class InitializeServiceLinkRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>The name of the server-linked role. Set this parameter to AliyunServiceRoleForMSE</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForMSE</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -105,7 +111,10 @@ public class InitializeServiceLinkRoleRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>This parameter is reserved and not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

@@ -173,8 +173,8 @@ public class ImportServicesRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,10 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * FcAlias.
+         * <p>The Function Compute service alias. This parameter is required when the service source is Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-alias</p>
          */
         public Builder fcAlias(String fcAlias) {
             this.putQueryParameter("FcAlias", fcAlias);
@@ -196,7 +199,10 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * FcServiceName.
+         * <p>The Function Compute service name. This parameter is required when the service source is Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guide</p>
          */
         public Builder fcServiceName(String fcServiceName) {
             this.putQueryParameter("FcServiceName", fcServiceName);
@@ -205,7 +211,10 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * FcVersion.
+         * <p>The Function Compute service version. This parameter is required when the service source is Function Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder fcVersion(String fcVersion) {
             this.putQueryParameter("FcVersion", fcVersion);
@@ -226,7 +235,7 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * <p>The information about services.</p>
+         * <p>The service list.</p>
          * 
          * <strong>example:</strong>
          * <p>DNS</p>
@@ -239,7 +248,10 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The service source ID. This parameter is used when you add a service from a specified source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder sourceId(Long sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -250,10 +262,10 @@ public class ImportServicesRequest extends Request {
         /**
          * <p>The service source. Valid values:</p>
          * <ul>
-         * <li>MSE: MSE Nacos instance</li>
-         * <li>K8s: ACK cluster</li>
-         * <li>VIP: fixed address</li>
-         * <li>DNS: DNS domain</li>
+         * <li>MSE: Microservices Engine (MSE Nacos).</li>
+         * <li>K8s: Container Service for Kubernetes (ACK).</li>
+         * <li>VIP: Fixed address.</li>
+         * <li>DNS: DNS domain name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,13 +278,18 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * <p>The Transport Layer Security (TLS) settings. Valid values:</p>
+         * <p>The TLS settings.</p>
          * <ul>
-         * <li>mode: TLS mode</li>
-         * <li>certId: certificate ID</li>
-         * <li>caCertId: CA certificate ID</li>
-         * <li>caCertContent: CA certificate public key</li>
-         * <li>sni: service name identification</li>
+         * <li><p>TLS pattern: mode</p>
+         * </li>
+         * <li><p>Certificate ID: certId</p>
+         * </li>
+         * <li><p>CA certificate ID: caCertId</p>
+         * </li>
+         * <li><p>CA certificate public key: caCertContent</p>
+         * </li>
+         * <li><p>Service name identity: sni</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -427,7 +444,7 @@ public class ImportServicesRequest extends Request {
             } 
 
             /**
-             * DnsServerList.
+             * <p>The list of DNS servers (for DNS domain name services only).</p>
              */
             public Builder dnsServerList(java.util.List<String> dnsServerList) {
                 this.dnsServerList = dnsServerList;
@@ -435,7 +452,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * <p>The group.</p>
+             * <p>The group name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -446,7 +463,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * <p>The IP addresses of the service.</p>
+             * <p>The list of IP addresses.</p>
              */
             public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
@@ -454,7 +471,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -476,7 +493,10 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * SaeAppId.
+             * <p>The SAE application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
              */
             public Builder saeAppId(String saeAppId) {
                 this.saeAppId = saeAppId;
@@ -484,7 +504,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * <p>The port of the service.</p>
+             * <p>The service port.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -495,7 +515,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * <p>The protocol of the service.</p>
+             * <p>The service protocol version.</p>
              * 
              * <strong>example:</strong>
              * <p>GRPC, HTTP</p>

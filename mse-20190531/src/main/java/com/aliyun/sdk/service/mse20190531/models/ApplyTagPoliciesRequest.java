@@ -163,8 +163,8 @@ public class ApplyTagPoliciesRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the routing rule.</p>
+         * <p>Specifies whether the rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -214,7 +214,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The Microservices Engine (MSE) namespace to which the application belongs.</p>
+         * <p>The MSE namespace to which the application belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -226,7 +226,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Optional. The ID of the namespace.</p>
+         * <p>The namespace ID. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>12233****</p>
@@ -238,7 +238,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -250,10 +250,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The details of the routing rule.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{ &quot;blue&quot;: { # Tag key. &quot;rate&quot;: 20, # Rate. A value of 20 indicates that 20% of the traffic is routed to the node identified by the tag. &quot;name&quot;: &quot;luoye-route-test&quot;, # Routing rule name. &quot;carryData&quot;: false, # Specifies whether to enable pass-through. This parameter is applicable to end-to-end canary release. &quot;rules&quot;: { # Rule information. &quot;dubbo&quot;: [{ # Dubbo rule. The system also supports Spring Cloud and Istio rule. &quot;serviceName&quot;: &quot;com.taobao.hsf.common.DemoService&quot;, # Service name (operation name). &quot;group&quot;: &quot;&quot;, # Group name. &quot;version&quot;: &quot;&quot;, # Service version. &quot;methodName&quot;: &quot;sayHello&quot;, # Method name. &quot;condition&quot;: &quot;AND&quot;, # Logical operator used by the following items. Valid values: AND and OR. &quot;argumentItems&quot;: [{ # Array of rule details. &quot;index&quot;: 0, # Index field. &quot;expr&quot;: &quot;&quot;, # Expression. Its details is described below. &quot;operator&quot;: &quot;rawvalue&quot;, # The comparison mode. A value of rawvalue indicates direct comparison. A value of mode indicates the modulo operation. A value of list indicates using a whitelist. &quot;value&quot;: &quot;jim&quot;, # Base value. The value obtained by the expression will be compared with this value. If operator is set to list, separate the items specified for this parameter with commas (,). Example: 1,2,3. &quot;cond&quot;: &quot;==&quot; # Comparison operator. Valid values: &gt;=, &lt;=, &gt;, &lt;, and ==. }] }] } }, &quot;_base&quot;: { # Another tag key. &quot;rate&quot;: 80 # Rate. A value of 20 indicates that 20% of the traffic is routed to the node identified by the tag. } }</p>
+         * <p>The routing rules.</p>
          */
         public Builder rules(java.util.Map<String, RulesValue> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");

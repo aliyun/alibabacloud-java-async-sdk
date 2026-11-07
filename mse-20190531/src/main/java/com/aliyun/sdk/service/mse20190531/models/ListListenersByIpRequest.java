@@ -117,10 +117,12 @@ public class ListListenersByIpRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>Language type of the returned information:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +135,7 @@ public class ListListenersByIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +148,7 @@ public class ListListenersByIpRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the listener.</p>
+         * <p>Listener IP address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +161,7 @@ public class ListListenersByIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>Namespace ID, default is public</p>
          * 
          * <strong>example:</strong>
          * <p>ea02a522-9482-4255-bb65-dc0636d783f2</p>
@@ -171,7 +173,7 @@ public class ListListenersByIpRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters in the JSON format.</p>
+         * <p>Extended request parameters in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

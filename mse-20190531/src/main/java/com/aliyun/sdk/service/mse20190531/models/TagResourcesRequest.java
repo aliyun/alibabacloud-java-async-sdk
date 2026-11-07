@@ -120,8 +120,10 @@ public class TagResourcesRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,13 +149,23 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The resource ID.</p>
+         * <ul>
+         * <li><p><em>Registration and configuration center</em>: the instance ID.</p>
+         * </li>
+         * <li><p><em>Cloud-native gateway</em>: the unique ID of the gateway.</p>
+         * </li>
+         * <li><p><em>Microservice administration application</em>: the AppID of the microservice administration application. Note that this is not the LicenseKey.</p>
+         * </li>
+         * </ul>
          * <blockquote>
-         * <p>This parameter specifies the instance ID that is passed. Examples:</p>
+         * <p>The number in the parameter name specifies the index of the instance ID. For example:</p>
          * </blockquote>
          * <ul>
-         * <li>ResourceId.0 specifies the first instance ID that is passed.</li>
-         * <li>ResourceId.1 specifies the second instance ID that is passed.</li>
+         * <li><p><strong>ResourceId.0</strong> specifies the first instance ID.</p>
+         * </li>
+         * <li><p><strong>ResourceId.1</strong> specifies the second instance ID.</p>
+         * </li>
          * </ul>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -163,15 +175,19 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resources. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>CLUSTER: Microservices Engine (MSE) instance</li>
-         * <li>GATEWAY: cloud-native gateway</li>
+         * <li><p>CLUSTER: a registration and configuration center.</p>
+         * </li>
+         * <li><p>GATEWAY: a cloud-native gateway.</p>
+         * </li>
+         * <li><p>GOVERNANCEAPPLICATION: a microservice administration application.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CLUSTER</p>
+         * <p>CLUSTER、GATEWAY、GOVERNANCEAPPLICATION</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -180,7 +196,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of tags. You can specify a maximum of 20 tags.</p>
+         * <p>A list of tags. You can specify up to 20 tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -249,7 +265,7 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+             * <p>The tag key. The tag key cannot be an empty string. It can be up to 128 characters in length. The tag key cannot start with \<code>aliyun\\</code> or \<code>acs:\\</code>. The tag key cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -260,7 +276,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>prd</p>

@@ -54,7 +54,10 @@ public class UpdateGatewayConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF21683A-29C7-4853-AC0F-B5ADEE4D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -106,7 +106,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned in the response.</p>
          */
         public Builder data(java.util.Map<String, java.util.List<DataValue>> data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional request information.</p>
+         * <p>The additional information about the request.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6832e76b-bb5f-4dea-<strong><strong>-</strong></strong>********</p>
@@ -147,7 +147,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

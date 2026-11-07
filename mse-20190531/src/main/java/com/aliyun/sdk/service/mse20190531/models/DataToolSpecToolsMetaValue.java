@@ -67,7 +67,10 @@ public class DataToolSpecToolsMetaValue extends TeaModel {
         } 
 
         /**
-         * Enabled.
+         * <p>Indicates whether the tool is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -75,7 +78,7 @@ public class DataToolSpecToolsMetaValue extends TeaModel {
         }
 
         /**
-         * Templates.
+         * <p>The protocol conversion template configuration.</p>
          */
         public Builder templates(java.util.Map<String, ?> templates) {
             this.templates = templates;

@@ -67,7 +67,7 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -253,7 +259,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The configuration content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -261,7 +270,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataId.
+             * <p>The DataId of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.yaml</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -269,7 +281,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GrayRule.
+             * <p>The canary release rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nacos.config.gray.label=test</p>
              */
             public Builder grayRule(String grayRule) {
                 this.grayRule = grayRule;
@@ -277,7 +292,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GrayRuleName.
+             * <p>The name of the canary release version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beta(IP)</p>
              */
             public Builder grayRuleName(String grayRuleName) {
                 this.grayRuleName = grayRuleName;
@@ -285,7 +303,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GrayRulePriority.
+             * <p>The priority of the canary release version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder grayRulePriority(String grayRulePriority) {
                 this.grayRulePriority = grayRulePriority;
@@ -293,7 +314,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GrayType.
+             * <p>The canary release type. Valid values: Beta or Tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tags</p>
              */
             public Builder grayType(String grayType) {
                 this.grayType = grayType;
@@ -301,7 +325,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * <p>The configuration group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dubbo</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -309,7 +336,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LastModified.
+             * <p>The last modification time of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742277568000</p>
              */
             public Builder lastModified(String lastModified) {
                 this.lastModified = lastModified;
@@ -317,7 +347,10 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * <p>The MD5 hash of the configuration content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87d14faf58a103ac8840b9c5f1c2a0fe</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;

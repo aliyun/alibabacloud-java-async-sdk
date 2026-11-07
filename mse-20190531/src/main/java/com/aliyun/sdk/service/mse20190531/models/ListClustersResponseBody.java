@@ -158,7 +158,7 @@ public class ListClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -166,7 +166,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -177,7 +177,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>202</p>
@@ -188,10 +188,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +199,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -210,7 +210,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of instances returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -221,7 +221,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
@@ -232,10 +232,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned instances.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -316,7 +316,10 @@ public class ListClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the O&amp;M time window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>06:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -324,7 +327,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the O&amp;M time window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -662,7 +668,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance can be upgraded.</p>
+             * <p>Indicates whether the cluster can be upgraded.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -673,10 +679,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method, such as subscription or pay-as-you-go.</p>
+             * <p>The billing method, including subscription and pay-as-you-go.</p>
              * 
              * <strong>example:</strong>
-             * <p>Pay-as-you-go</p>
+             * <p>subscription</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -706,7 +712,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+             * <p>The cluster type, including ZooKeeper, Nacos-Ans, and Eureka.</p>
              * 
              * <strong>example:</strong>
              * <p>Eureka</p>
@@ -728,7 +734,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster expires.</p>
+             * <p>The expiration time of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-08-01 00:00:00</p>
@@ -739,7 +745,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initialization status of the instance.</p>
+             * <p>The initialization status.</p>
              * 
              * <strong>example:</strong>
              * <p>RESTART_SUCCESS</p>
@@ -772,7 +778,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address.</p>
+             * <p>The public address.</p>
              * 
              * <strong>example:</strong>
              * <p>47.98.XX.XX</p>
@@ -783,7 +789,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint.</p>
+             * <p>The public domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-7413****-p.eureka.mse.aliyuncs.com</p>
@@ -794,7 +800,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal IP address.</p>
+             * <p>The private network address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -805,7 +811,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal endpoint.</p>
+             * <p>The internal domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-7413****-eureka.mse.aliyuncs.com</p>
@@ -816,7 +822,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * MaintenancePeriod.
+             * <p>The O&amp;M time window.</p>
              */
             public Builder maintenancePeriod(MaintenancePeriod maintenancePeriod) {
                 this.maintenancePeriod = maintenancePeriod;
@@ -846,7 +852,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are attached to the instance.</p>
+             * <p>The tags bound to the instance.</p>
              */
             public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
@@ -865,7 +871,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VersionLifecycle.
+             * <p>The version lifecycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STABLE</p>
              */
             public Builder versionLifecycle(String versionLifecycle) {
                 this.versionLifecycle = versionLifecycle;
@@ -873,7 +882,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC where the cluster is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1hcg467ekqsv0zr****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

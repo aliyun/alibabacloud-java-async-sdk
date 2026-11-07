@@ -87,7 +87,14 @@ public class DeleteGatewayAuthRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese. This is the default value.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -96,7 +103,10 @@ public class DeleteGatewayAuthRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -105,7 +115,10 @@ public class DeleteGatewayAuthRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The authentication ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

@@ -119,7 +119,10 @@ public class GetLocalityRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,23 @@ public class GetLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;pageNumber&quot;:0,
+         *   &quot;namespaceId&quot;:&quot;cn-hangzhou&quot;,
+         *   &quot;enable&quot;:false,
+         *   &quot;appId&quot;:&quot;hkhon1po62@3aa3582********&quot;,
+         *   &quot;pageSize&quot;:0,
+         *   &quot;region&quot;:&quot;cn-hangzhou&quot;,
+         *   &quot;routeRules&quot;:[
+         *     {
+         *       &quot;threshold&quot;:0.2,
+         *       &quot;tags&quot;:[]
+         *     }
+         *   ]
+         * }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +154,10 @@ public class GetLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +165,10 @@ public class GetLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +176,10 @@ public class GetLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D3971C60-3F07-58B0-8EA0-A194********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +187,16 @@ public class GetLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

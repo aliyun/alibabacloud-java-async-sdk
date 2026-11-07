@@ -119,7 +119,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>403</p>
@@ -130,7 +130,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>You are not authorized to perform this operation.</p>
@@ -160,7 +160,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>88B83302-CD88-54D3-8DF2-208BFDC73F0D</p>
@@ -171,10 +171,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,10 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigType.
+             * <p>The TLS cipher suite configuration type. DEFAULT indicates the default configuration, and CUSTOM indicates the custom configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -252,7 +255,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TlsCipherSuites.
+             * <p>The list of TLS cipher suite names.</p>
              */
             public Builder tlsCipherSuites(java.util.List<String> tlsCipherSuites) {
                 this.tlsCipherSuites = tlsCipherSuites;
@@ -293,6 +296,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
+
+        @com.aliyun.core.annotation.NameInMap("EnableWaf")
+        private Boolean enableWaf;
 
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
@@ -339,6 +345,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
+        @com.aliyun.core.annotation.NameInMap("SupportWaf")
+        private Boolean supportWaf;
+
         @com.aliyun.core.annotation.NameInMap("TlsCipherSuitesConfig")
         private TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
@@ -356,6 +365,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             this.certIdentifier = builder.certIdentifier;
             this.certName = builder.certName;
             this.commonName = builder.commonName;
+            this.enableWaf = builder.enableWaf;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.gmtAfter = builder.gmtAfter;
@@ -371,6 +381,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             this.name = builder.name;
             this.protocol = builder.protocol;
             this.sans = builder.sans;
+            this.supportWaf = builder.supportWaf;
             this.tlsCipherSuitesConfig = builder.tlsCipherSuitesConfig;
             this.tlsMax = builder.tlsMax;
             this.tlsMin = builder.tlsMin;
@@ -431,6 +442,13 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
          */
         public String getCommonName() {
             return this.commonName;
+        }
+
+        /**
+         * @return enableWaf
+         */
+        public Boolean getEnableWaf() {
+            return this.enableWaf;
         }
 
         /**
@@ -539,6 +557,13 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportWaf
+         */
+        public Boolean getSupportWaf() {
+            return this.supportWaf;
+        }
+
+        /**
          * @return tlsCipherSuitesConfig
          */
         public TlsCipherSuitesConfig getTlsCipherSuitesConfig() {
@@ -567,6 +592,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private String certIdentifier; 
             private String certName; 
             private String commonName; 
+            private Boolean enableWaf; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private String gmtAfter; 
@@ -582,6 +608,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             private String name; 
             private String protocol; 
             private String sans; 
+            private Boolean supportWaf; 
             private TlsCipherSuitesConfig tlsCipherSuitesConfig; 
             private String tlsMax; 
             private String tlsMin; 
@@ -597,6 +624,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
                 this.certIdentifier = model.certIdentifier;
                 this.certName = model.certName;
                 this.commonName = model.commonName;
+                this.enableWaf = model.enableWaf;
                 this.gatewayId = model.gatewayId;
                 this.gatewayUniqueId = model.gatewayUniqueId;
                 this.gmtAfter = model.gmtAfter;
@@ -612,13 +640,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
                 this.name = model.name;
                 this.protocol = model.protocol;
                 this.sans = model.sans;
+                this.supportWaf = model.supportWaf;
                 this.tlsCipherSuitesConfig = model.tlsCipherSuitesConfig;
                 this.tlsMax = model.tlsMax;
                 this.tlsMin = model.tlsMin;
             } 
 
             /**
-             * <p>The start time.</p>
+             * <p>The certificate expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-04-01 02:35:12</p>
@@ -640,7 +669,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The certificate issuance time.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-04-01 02:35:12</p>
@@ -651,7 +680,40 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CaCertIdentifier.
+             * <p>The CA certificate content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----
+             * MIIFazCCA1OgAwIBAgIRAIIQz7DSQONZRGPgu2OCiwAwDQYJKoZIhvcNAQELBQAw
+             * TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh
+             * cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMTUwNjA0MTEwNDM4
+             * WhcNMzUwNjA0MTEwNDM4WjBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJu
+             * ZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBY
+             * MTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAK3oJHP0FDfzm54rVygc
+             * h77ct984kIxuPOZXoHj3dcKi/vVqbvYATyjb3miGbESTtrFj/RQSa78f0uoxmyF+
+             * 0TM8ukj13Xnfs7j/EvEhmkvBioZxaUpmZmyPfjxwv60pIgbz5MDmgK7iS4+3mX6U
+             * A5/TR5d8mUgjU+g4rk8Kb4Mu0UlXjIB0ttov0DiNewNwIRt18jA8+o+u3dpjq+sW
+             * T8KOEUt+zwvo/7V3LvSye0rgTBIlDHCNAymg4VMk7BPZ7hm/ELNKjD+Jo2FR3qyH
+             * B5T0Y3HsLuJvW5iB4YlcNHlsdu87kGJ55tukmi8mxdAQ4Q7e2RCOFvu396j3x+UC
+             * B5iPNgiV5+I3lg02dZ77DnKxHZu8A/lJBdiB3QW0KtZB6awBdpUKD9jf1b0SHzUv
+             * KBds0pjBqAlkd25HN7rOrFleaJ1/ctaJxQZBKT5ZPt0m9STJEadao0xAH0ahmbWn
+             * OlFuhjuefXKnEgV4We0+UXgVCwOPjdAvBbI+e0ocS3MFEvzG6uBQE3xDk3SzynTn
+             * jh8BCNAw1FtxNrQHusEwMFxIt4I7mKZ9YIqioymCzLq9gwQbooMDQaHWBfEbwrbw
+             * qHyGO0aoSCqI3Haadr8faqU9GY/rOPNk3sgrDQoo//fb4hVC1CLQJ13hef4Y53CI
+             * rU7m2Ys6xt0nUW7/vGT1M0NPAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNV
+             * HRMBAf8EBTADAQH/MB0GA1UdDgQWBBR5tFnme7bl5AFzgAiIyBpY9umbbjANBgkq
+             * hkiG9w0BAQsFAAOCAgEAVR9YqbyyqFDQDLHYGmkgJykIrGF1XIpu+ILlaS/V9lZL
+             * ubhzEFnTIZd+50xx+7LSYK05qAvqFyFWhfFQDlnrzuBZ6brJFe+GnY+EgPbk6ZGQ
+             * 3BebYhtF8GaV0nxvwuo77x/Py9auJ/GpsMiu/X1+mvoiBOv/2X/qkSsisRcOj/KK
+             * NFtY2PwByVS5uCbMiogziUwthDyC3+6WVwW6LLv3xLfHTjuCvjHIInNzktHCgKQ5
+             * ORAzI4JMPJ+GslWYHb4phowim57iaztXOoJwTdwJx4nLCgdNbOhdjsnvzqvHu7Ur
+             * TkXWStAmzOVyyghqpZXjFaH3pO3JLF+l+/+sKAIuvtd7u+Nxe5AW0wdeRlN8NwdC
+             * jNPElpzVmbUq4JUagEiuTDkHzsxHpFKVK7q4+63SM1N95R1NbdWhscdCb+ZAJzVc
+             * oyi3B43njTOQ5yOf+1CceWxG1bQVs5ZufpsMljq4Ui0/1lvh+wjChP4kqKOJ2qxq
+             * 4RgqsahDYVvTH9w7jXbyLeiNdd8XM2w9U/t7y0Ff/9yi0GE44Za4rF2LN9d11TPA
+             * mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d
+             * emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
+             * -----END CERTIFICATE-----</p>
              */
             public Builder caCertIdentifier(String caCertIdentifier) {
                 this.caCertIdentifier = caCertIdentifier;
@@ -659,7 +721,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate.</p>
+             * <p>The certificate identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>234-cn-hangzhou</p>
@@ -670,7 +732,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate.</p>
+             * <p>The certificate name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -692,7 +754,15 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the gateway.</p>
+             * <p>Indicates whether WAF protection is enabled for the domain name.</p>
+             */
+            public Builder enableWaf(Boolean enableWaf) {
+                this.enableWaf = enableWaf;
+                return this;
+            }
+
+            /**
+             * <p>The gateway ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -714,7 +784,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time.</p>
+             * <p>The certificate expiration time in GMT.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-04-01 02:35:12</p>
@@ -725,7 +795,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The certificate issuance time in GMT.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-04-01 02:35:12</p>
@@ -758,11 +828,11 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether <code>HTTP/2</code> is enabled.</p>
+             * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
              * <ul>
-             * <li><code>open</code>: <code>HTTP/2</code> is enabled.</li>
-             * <li><code>close</code>: <code>HTTP/2</code> is disabled.</li>
-             * <li><code>globalConfig</code>: Global configurations are used.</li>
+             * <li><code>open</code>: HTTP/2 is enabled.</li>
+             * <li><code>close</code>: HTTP/2 is disabled.</li>
+             * <li><code>globalConfig</code>: The global configuration is used.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -785,7 +855,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsManaged.
+             * <p>Indicates whether the domain name is managed.</p>
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -804,7 +874,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MtlsEnabled.
+             * <p>Indicates whether mTLS is enabled.</p>
              */
             public Builder mtlsEnabled(Boolean mtlsEnabled) {
                 this.mtlsEnabled = mtlsEnabled;
@@ -812,7 +882,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether HTTPS is forcibly used.</p>
+             * <p>Indicates whether HTTPS is forced.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -823,7 +893,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name.</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
              * <p>test.com</p>
@@ -834,7 +904,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol of the gateway.</p>
+             * <p>The gateway protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -845,7 +915,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the extended field.</p>
+             * <p>The subject alternative names.</p>
              * 
              * <strong>example:</strong>
              * <p>test.com</p>
@@ -856,7 +926,15 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TlsCipherSuitesConfig.
+             * <p>Indicates whether the gateway supports WAF protection.</p>
+             */
+            public Builder supportWaf(Boolean supportWaf) {
+                this.supportWaf = supportWaf;
+                return this;
+            }
+
+            /**
+             * <p>The TLS cipher suite configuration, including the configuration type and the list of cipher suite names.</p>
              */
             public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
                 this.tlsCipherSuitesConfig = tlsCipherSuitesConfig;
@@ -864,7 +942,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum version of Transport Layer Security (TLS).</p>
+             * <p>The maximum TLS version.</p>
              * 
              * <strong>example:</strong>
              * <p>TLS 1.3</p>
@@ -875,7 +953,7 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum version of TLS.</p>
+             * <p>The minimum TLS version.</p>
              * 
              * <strong>example:</strong>
              * <p>TLS 1.0</p>

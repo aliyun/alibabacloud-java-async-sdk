@@ -106,7 +106,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The data overview.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -120,7 +120,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
          * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>mse-100-000</p>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -128,10 +128,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>Succ</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +139,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
@@ -150,8 +150,11 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <p>true: The request was successful. false: The request failed.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -363,7 +366,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * AppIds.
+             * <p>The IDs of the applications, separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd1@abcde123,abcd1@abcde124</p>
              */
             public Builder appIds(String appIds) {
                 this.appIds = appIds;
@@ -371,7 +377,14 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CanaryModel.
+             * <p>The end-to-end canary release mode. Valid values:</p>
+             * <ul>
+             * <li>0: Route by request content.</li>
+             * <li>1: Route by proportion.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder canaryModel(Integer canaryModel) {
                 this.canaryModel = canaryModel;
@@ -379,7 +392,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DbGrayEnable.
+             * <p>Indicates whether canary release is enabled for databases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dbGrayEnable(String dbGrayEnable) {
                 this.dbGrayEnable = dbGrayEnable;
@@ -387,7 +403,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EntryApp.
+             * <p>The entry application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse:abcd1@a2345</p>
              */
             public Builder entryApp(String entryApp) {
                 this.entryApp = entryApp;
@@ -395,7 +414,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the swimlane group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2047</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -403,7 +425,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MessageQueueFilterSide.
+             * <p>The side where message queue canary release filtering is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Client</p>
              */
             public Builder messageQueueFilterSide(String messageQueueFilterSide) {
                 this.messageQueueFilterSide = messageQueueFilterSide;
@@ -411,7 +436,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MessageQueueGrayEnable.
+             * <p>Specifies whether to enable canary release for message queues.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder messageQueueGrayEnable(Boolean messageQueueGrayEnable) {
                 this.messageQueueGrayEnable = messageQueueGrayEnable;
@@ -419,7 +447,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-app</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -427,7 +458,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The name of the MSE namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -435,7 +469,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Paths.
+             * <p><strong>[Deprecated]</strong> The paths. This parameter is a list of paths when a Java gateway is used as the entry point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/a&quot;]</p>
              */
             public Builder paths(String paths) {
                 this.paths = paths;
@@ -443,7 +480,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RecordCanaryDetail.
+             * <p>Specifies whether to record request details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
                 this.recordCanaryDetail = recordCanaryDetail;
@@ -451,7 +491,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -459,7 +502,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -132,7 +132,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -140,9 +140,9 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
          * <blockquote>
-         * <p>If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -165,7 +165,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -176,14 +176,14 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          * <ul>
-         * <li>If the request is successful, a success message is returned.</li>
-         * <li>If the request fails, an error message is returned.</li>
+         * <li>If the request succeeds, a success message is returned.</li>
+         * <li>If the request fails, the cause of the failure is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>Request processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -191,7 +191,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25EA0A83-9007-4E87-808C-637BE1A****</p>
@@ -202,9 +202,9 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The request result. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>true</code>: The request succeeded.</li>
          * <li><code>false</code>: The request failed.</li>
          * </ul>
          * 
@@ -366,7 +366,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of a task.</p>
+             * <p>The task content.</p>
              */
             public Builder contentMap(java.util.Map<String, ?> contentMap) {
                 this.contentMap = contentMap;
@@ -374,7 +374,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the task was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1631001140913</p>
@@ -385,10 +385,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the object that is exported. Valid values:</p>
+             * <p>The export type. Valid values:</p>
              * <ul>
-             * <li>transactionLog: transaction logs</li>
-             * <li>snapshot: snapshots</li>
+             * <li>transactionLog: transaction log</li>
+             * <li>snapshot: snapshot file</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -411,7 +411,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -422,7 +422,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mse-cn-st21ri2****</p>
@@ -433,7 +433,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the associated task at the underlying layer. This parameter is used only to troubleshoot failures.</p>
+             * <p>The associated underlying task ID. This parameter is used only for troubleshooting when a task fails.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -444,13 +444,13 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li>CREATE: The object is being created.</li>
-             * <li>RUNNING: The task is running.</li>
-             * <li>FINISH: The task is completed.</li>
-             * <li>FAILED: The task fails.</li>
-             * <li>EXPIRE: The task has expired.</li>
+             * <li>CREATE: creating</li>
+             * <li>RUNNING: running</li>
+             * <li>FINISH: completed</li>
+             * <li>FAILED: failed</li>
+             * <li>EXPIRE: expired</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -462,7 +462,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time.</p>
+             * <p>The time when the task was updated. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1632979237663</p>

@@ -67,7 +67,7 @@ public class ListZooKeeperSaslUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListZooKeeperSaslUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C075654-E42F-5F58-914F-E11DA70881B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -168,7 +171,10 @@ public class ListZooKeeperSaslUserResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631001140913</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -176,7 +182,10 @@ public class ListZooKeeperSaslUserResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the SASL user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -184,7 +193,10 @@ public class ListZooKeeperSaslUserResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The current status of the SASL user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserAddNeedReload</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -192,7 +204,10 @@ public class ListZooKeeperSaslUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The SASL username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

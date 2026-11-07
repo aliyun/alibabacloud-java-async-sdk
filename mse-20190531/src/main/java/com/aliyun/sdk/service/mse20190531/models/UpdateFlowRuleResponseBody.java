@@ -106,7 +106,7 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The return value.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,10 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -144,27 +147,7 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>The request was successful.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>The request failed.</p>
-         * <!-- --></li>
-         * </ul>
+         * <p>The result of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -360,26 +343,6 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
 
             /**
              * <p>The throttling effect.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>0</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>fast failure</p>
-             * <!-- -->
-             * </li>
-             * <li><p>2</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>in queue</p>
-             * <!-- --></li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -390,23 +353,7 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the rule was enabled.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li><p>true</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>false</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>Indicates whether the rule is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -428,7 +375,10 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LimitApp.
+             * <p>The source application of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Spring-cloud-a</p>
              */
             public Builder limitApp(String limitApp) {
                 this.limitApp = limitApp;
@@ -436,7 +386,7 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</p>
+             * <p>The timeout period for queuing when the ControlBehavior parameter is set to 2. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -458,7 +408,7 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the API resource.</p>
+             * <p>The interface resource name.</p>
              * 
              * <strong>example:</strong>
              * <p>/c</p>

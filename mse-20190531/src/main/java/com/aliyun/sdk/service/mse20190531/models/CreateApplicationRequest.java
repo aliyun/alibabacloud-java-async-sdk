@@ -174,7 +174,7 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -215,7 +215,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>MSE命名空间名字。</p>
+         * <p>The name of the MSE namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>prod</p>
@@ -240,7 +240,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to start the switch.</p>
+         * <p>Specifies whether to enable Sentinel.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -252,7 +252,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.</p>
+         * <p>The deployment method of the application. ACK indicates Container Service for Kubernetes (ACK).</p>
          * 
          * <strong>example:</strong>
          * <p>ACK</p>
@@ -264,7 +264,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The name of the Microservices Engine (MSE) namespace.</p>
+         * <p>Specifies whether to enable Switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -276,7 +276,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The Alibaba Cloud tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -345,7 +345,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The custom tag key entered by the user. It can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -353,7 +356,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. It can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -130,7 +130,10 @@ public class ListNamespacesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>Language for displaying results. Values: zh (default): Chinese, en: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -139,7 +142,10 @@ public class ListNamespacesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Namespace name for fuzzy query. If not specified, all namespaces are queried by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myNamespace</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,7 +154,10 @@ public class ListNamespacesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number for paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -157,7 +166,10 @@ public class ListNamespacesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of entries per page for paged queries. The default is 5. To return more data, increase this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,6 +178,7 @@ public class ListNamespacesRequest extends Request {
         }
 
         /**
+         * <p>Region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +191,7 @@ public class ListNamespacesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>Alibaba Cloud tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -247,7 +260,10 @@ public class ListNamespacesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,7 +271,10 @@ public class ListNamespacesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

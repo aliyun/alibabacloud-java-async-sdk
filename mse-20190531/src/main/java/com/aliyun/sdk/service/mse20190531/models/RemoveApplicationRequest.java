@@ -116,7 +116,14 @@ public class RemoveApplicationRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the returned results. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese. This is the default value.</li>
+         * <li>en: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -125,7 +132,10 @@ public class RemoveApplicationRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The ID of the application to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde@12345</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -134,7 +144,10 @@ public class RemoveApplicationRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the application to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -143,7 +156,10 @@ public class RemoveApplicationRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The microservice namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -152,7 +168,10 @@ public class RemoveApplicationRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

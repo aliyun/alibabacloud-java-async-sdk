@@ -103,7 +103,10 @@ public class UpdateZooKeeperSaslUserRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -112,6 +115,7 @@ public class UpdateZooKeeperSaslUserRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +128,10 @@ public class UpdateZooKeeperSaslUserRequest extends Request {
         }
 
         /**
-         * Reload.
+         * <p>Specifies whether the changes take effect immediately.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reload(Boolean reload) {
             this.putQueryParameter("Reload", reload);
@@ -133,6 +140,7 @@ public class UpdateZooKeeperSaslUserRequest extends Request {
         }
 
         /**
+         * <p>The list of SASL users to update.</p>
          * <p>This parameter is required.</p>
          */
         public Builder saslUser(java.util.List<SaslUser> saslUser) {
@@ -229,7 +237,10 @@ public class UpdateZooKeeperSaslUserRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -237,7 +248,10 @@ public class UpdateZooKeeperSaslUserRequest extends Request {
             }
 
             /**
-             * OriginPassword.
+             * <p>The original password. This parameter is required if you want to change the password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>origin-password</p>
              */
             public Builder originPassword(String originPassword) {
                 this.originPassword = originPassword;
@@ -245,7 +259,10 @@ public class UpdateZooKeeperSaslUserRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxx</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -253,7 +270,10 @@ public class UpdateZooKeeperSaslUserRequest extends Request {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

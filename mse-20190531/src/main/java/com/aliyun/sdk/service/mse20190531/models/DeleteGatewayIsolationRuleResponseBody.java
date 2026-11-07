@@ -67,7 +67,10 @@ public class DeleteGatewayIsolationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class DeleteGatewayIsolationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94B12406-E44D-57C9-BF93-A8B35BFF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -273,7 +273,10 @@ public class CreateWebFlowRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -282,7 +285,10 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1****@c3df23522******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -291,6 +297,7 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
+         * <p>The application name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +310,10 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * Burst.
+         * <p>The number of additional requests allowed for burst requests. The effect is equivalent to the maximum number of tokens of the token bucket algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder burst(Integer burst) {
             this.putQueryParameter("Burst", burst);
@@ -312,7 +322,16 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * ControlBehavior.
+         * <p>The flow control method. Valid values:</p>
+         * <ul>
+         * <li><p>0: fast failure</p>
+         * </li>
+         * <li><p>2: wait in queue</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder controlBehavior(Integer controlBehavior) {
             this.putQueryParameter("ControlBehavior", controlBehavior);
@@ -321,7 +340,16 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>The rule status. Valid values:</p>
+         * <ul>
+         * <li><p>true: enabled</p>
+         * </li>
+         * <li><p>false: disabled</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -330,7 +358,10 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * MaxQueueingTimeMs.
+         * <p>The timeout period. Unit: milliseconds. This parameter is required if the ControlBehavior parameter is set to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
             this.putQueryParameter("MaxQueueingTimeMs", maxQueueingTimeMs);
@@ -339,7 +370,13 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>The threshold type. Valid values:</p>
+         * <ul>
+         * <li>1 (number of requests)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder metricType(Integer metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -348,7 +385,10 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -357,7 +397,20 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * ParamItem.
+         * <p>The parameter description, which is a JSON string containing the following key-value pairs:</p>
+         * <ul>
+         * <li><p>parseStrategy: the parameter property (0: client IP address, 1: remote host, 2: header, 3: URL parameter)</p>
+         * </li>
+         * <li><p>fieldName: the header name or URL parameter name. You must specify this key only if parseStrategy is set to 2 or 3</p>
+         * </li>
+         * <li><p>matchStrategy: the method to match the property value. You must specify this key only if parseStrategy is set to 2 or 3 and the property value is matched. Valid values: 0 (exact match), 2 (regular expression match), and 3 (substring match)</p>
+         * </li>
+         * <li><p>pattern: the match string. You must specify this key only if parseStrategy is set to 2 or 3 and the property value is matched</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fieldName&quot;:&quot;testKey&quot;,&quot;matchStrategy&quot;:2,&quot;parseStrategy&quot;:2,&quot;pattern&quot;:&quot;testValue&quot;}</p>
          */
         public Builder paramItem(String paramItem) {
             this.putQueryParameter("ParamItem", paramItem);
@@ -366,7 +419,10 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -375,6 +431,7 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
+         * <p>The interface name: The application resources to which the rule applies. The interface name must be the same as the name on the interface details page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -387,6 +444,10 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
+         * <p>Resource mode</p>
+         * <ul>
+         * <li>0: resource name mode</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -399,7 +460,18 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><p>0: custom interface</p>
+         * </li>
+         * <li><p>1: WEB</p>
+         * </li>
+         * <li><p>2: RPC</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -408,7 +480,10 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
-         * StatIntervalMs.
+         * <p>The length of the time window. Unit: milliseconds. The default value is 1000, which indicates 1 second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder statIntervalMs(Integer statIntervalMs) {
             this.putQueryParameter("StatIntervalMs", statIntervalMs);
@@ -417,6 +492,7 @@ public class CreateWebFlowRuleRequest extends Request {
         }
 
         /**
+         * <p>Threshold</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -375,7 +378,14 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * BehaviorType.
+             * <p>The web fallback behavior type. Valid values:</p>
+             * <ul>
+             * <li>0: Return specified text.</li>
+             * <li>1: Redirect to a specified page.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder behaviorType(Integer behaviorType) {
                 this.behaviorType = behaviorType;
@@ -383,7 +393,14 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * BodyEncoding.
+             * <p>The encoding type. Valid values:</p>
+             * <ul>
+             * <li>0: Plain text.</li>
+             * <li>1: JSON.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bodyEncoding(Integer bodyEncoding) {
                 this.bodyEncoding = bodyEncoding;
@@ -391,7 +408,14 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li>0: Disabled.</li>
+             * <li>1: Enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -399,7 +423,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14407</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -407,7 +434,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-c9bc5afd61014165bd58f621b491****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -415,7 +445,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the circuit breaker rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>369</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -423,7 +456,7 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IdList.
+             * <p>The IDs of the filter rules.</p>
              */
             public Builder idList(java.util.List<Long> idList) {
                 this.idList = idList;
@@ -431,7 +464,15 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LimitMode.
+             * <p>The threshold conversion mode. Valid values:</p>
+             * <ul>
+             * <li>0: Standalone.</li>
+             * <li>1: Cluster.</li>
+             * <li>2: Cluster to standalone.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder limitMode(Integer limitMode) {
                 this.limitMode = limitMode;
@@ -439,7 +480,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAllowedMs.
+             * <p>The slow call threshold in slow call mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxAllowedMs(Integer maxAllowedMs) {
                 this.maxAllowedMs = maxAllowedMs;
@@ -447,7 +491,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MinRequestAmount.
+             * <p>The minimum number of requests that triggers circuit breaking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder minRequestAmount(Integer minRequestAmount) {
                 this.minRequestAmount = minRequestAmount;
@@ -455,7 +502,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RecoveryTimeoutSec.
+             * <p>The recovery duration for circuit breaking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder recoveryTimeoutSec(Integer recoveryTimeoutSec) {
                 this.recoveryTimeoutSec = recoveryTimeoutSec;
@@ -463,7 +513,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseAdditionalHeaders.
+             * <p>The custom headers, which are entered as key-value pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key=value</p>
              */
             public Builder responseAdditionalHeaders(String responseAdditionalHeaders) {
                 this.responseAdditionalHeaders = responseAdditionalHeaders;
@@ -471,7 +524,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseContentBody.
+             * <p>The HTTP response text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder responseContentBody(String responseContentBody) {
                 this.responseContentBody = responseContentBody;
@@ -479,7 +535,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRedirectUrl.
+             * <p>The redirect URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www.******.com</p>
              */
             public Builder responseRedirectUrl(String responseRedirectUrl) {
                 this.responseRedirectUrl = responseRedirectUrl;
@@ -487,7 +546,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseStatusCode.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>201</p>
              */
             public Builder responseStatusCode(Integer responseStatusCode) {
                 this.responseStatusCode = responseStatusCode;
@@ -495,7 +557,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteId.
+             * <p>The ID of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>645</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -503,7 +568,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>routeName</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -511,7 +579,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * StatDurationSec.
+             * <p>The statistical duration for circuit breaking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder statDurationSec(Integer statDurationSec) {
                 this.statDurationSec = statDurationSec;
@@ -519,7 +590,14 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * <p>The threshold type. Valid values:</p>
+             * <ul>
+             * <li>0: Slow call.</li>
+             * <li>1: Exception.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder strategy(Integer strategy) {
                 this.strategy = strategy;
@@ -527,7 +605,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerRatio.
+             * <p>The percentage that triggers circuit breaking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder triggerRatio(Integer triggerRatio) {
                 this.triggerRatio = triggerRatio;

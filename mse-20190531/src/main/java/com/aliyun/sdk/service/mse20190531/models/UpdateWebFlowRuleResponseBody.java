@@ -106,7 +106,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,16 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -373,7 +391,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkhon1XXXX@54e1f42f37cXXXX</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -381,7 +402,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -389,7 +413,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Burst.
+             * <p>The number of additional requests allowed for burst requests. The effect is equivalent to the maximum number of tokens for the token bucket algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder burst(Integer burst) {
                 this.burst = burst;
@@ -397,7 +424,16 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ControlBehavior.
+             * <p>The flow control method. Valid values:</p>
+             * <ul>
+             * <li><p>0: fast failure</p>
+             * </li>
+             * <li><p>2: wait in queue</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder controlBehavior(Integer controlBehavior) {
                 this.controlBehavior = controlBehavior;
@@ -405,7 +441,16 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>The rule status. Valid values:</p>
+             * <ul>
+             * <li><p>true (enabled)</p>
+             * </li>
+             * <li><p>false (disabled)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -413,7 +458,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -421,7 +469,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueueingTimeMs.
+             * <p>The timeout period for queuing when the ControlBehavior parameter is set to 2. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
                 this.maxQueueingTimeMs = maxQueueingTimeMs;
@@ -429,7 +480,13 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MetricType.
+             * <p>The threshold type. Valid values:</p>
+             * <ul>
+             * <li>1: number of requests</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder metricType(Integer metricType) {
                 this.metricType = metricType;
@@ -437,7 +494,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -445,7 +505,20 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ParamItem.
+             * <p>The parameter description item, which is a JSON string containing the following key-value pairs:</p>
+             * <ul>
+             * <li><p>parseStrategy: the parameter property (0: client IP address. 1: remote host. 2: header. 3: URL parameter)</p>
+             * </li>
+             * <li><p>fieldName: the header name or URL parameter name. You must specify this key only if parseStrategy is set to 2 or 3</p>
+             * </li>
+             * <li><p>matchStrategy: the method to match the property value. You must specify this key only if parseStrategy is set to 2 or 3 and the property value is matched. Valid values: 0 (exact match), 2 (regular expression match), and 3 (substring match)</p>
+             * </li>
+             * <li><p>pattern: the match string. You must specify this key only if parseStrategy is set to 2 or 3 and the property value is matched</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fieldName&quot;:&quot;testKey&quot;,&quot;matchStrategy&quot;:2,&quot;parseStrategy&quot;:2,&quot;pattern&quot;:&quot;testValue&quot;}</p>
              */
             public Builder paramItem(String paramItem) {
                 this.paramItem = paramItem;
@@ -453,7 +526,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -461,7 +537,13 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ReourceMode.
+             * <p>The resource mode. Valid values:</p>
+             * <ul>
+             * <li>0: resource name mode</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reourceMode(Integer reourceMode) {
                 this.reourceMode = reourceMode;
@@ -469,7 +551,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The interface resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/flow</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -477,7 +562,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * StatIntervalMs.
+             * <p>The length of the time window. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder statIntervalMs(Integer statIntervalMs) {
                 this.statIntervalMs = statIntervalMs;
@@ -485,7 +573,10 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

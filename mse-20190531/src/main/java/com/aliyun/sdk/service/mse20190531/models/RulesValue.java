@@ -145,7 +145,10 @@ public class RulesValue extends TeaModel {
         } 
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -153,7 +156,10 @@ public class RulesValue extends TeaModel {
         }
 
         /**
-         * Rate.
+         * <p>The percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder rate(Integer rate) {
             this.rate = rate;
@@ -161,7 +167,10 @@ public class RulesValue extends TeaModel {
         }
 
         /**
-         * Enable.
+         * <p>Specifies whether the rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -169,7 +178,10 @@ public class RulesValue extends TeaModel {
         }
 
         /**
-         * Tag.
+         * <p>The environment of this routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;
@@ -177,7 +189,10 @@ public class RulesValue extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -185,7 +200,10 @@ public class RulesValue extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -193,7 +211,10 @@ public class RulesValue extends TeaModel {
         }
 
         /**
-         * InstanceNum.
+         * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder instanceNum(Integer instanceNum) {
             this.instanceNum = instanceNum;
@@ -201,7 +222,7 @@ public class RulesValue extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The rule information.</p>
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -371,7 +392,10 @@ public class RulesValue extends TeaModel {
             } 
 
             /**
-             * datum.
+             * <p>The value to be compared for operators such as rawvalue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -379,7 +403,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates a modulo operation. A value of list indicates a whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rawvalue</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -387,7 +414,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * nameList.
+             * <p>The field required for the list operator.</p>
              */
             public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
@@ -395,7 +422,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * cond.
+             * <p>The comparison operator. Valid values: &gt;=, &lt;=, &gt;, &lt;, and ==.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -403,7 +433,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * divisor.
+             * <p>The divisor field required for the mod operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -411,7 +444,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * remainder.
+             * <p>The percentage value field required for the percentage operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -419,7 +455,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * rate.
+             * <p>The proportion rule. For example, 20% indicates that 20% of the traffic is routed to the node corresponding to the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -427,7 +466,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -435,7 +477,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -443,7 +488,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -601,7 +649,10 @@ public class RulesValue extends TeaModel {
             } 
 
             /**
-             * condition.
+             * <p>The logical operator used between the following items. Valid values: AND and OR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -609,7 +660,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * restItems.
+             * <p>The list of matching conditions for REST requests.</p>
              */
             public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
@@ -617,7 +668,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * triggerPolicy.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTENT</p>
              */
             public Builder triggerPolicy(String triggerPolicy) {
                 this.triggerPolicy = triggerPolicy;
@@ -625,7 +679,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Specifies whether the rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -633,7 +690,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * appId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>@</strong></em></p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -641,7 +701,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -649,7 +712,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -657,7 +720,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * paths.
+             * <p>The list of paths.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -665,7 +728,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/hello</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -836,7 +902,10 @@ public class RulesValue extends TeaModel {
             } 
 
             /**
-             * operator.
+             * <p>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates a modulo operation. A value of list indicates a whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rawvalue</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -844,7 +913,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * nameList.
+             * <p>The list of names.</p>
              */
             public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
@@ -852,7 +921,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * datum.
+             * <p>The value to be compared for operators such as rawvalue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -860,7 +932,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * cond.
+             * <p>The comparison operator. Valid values: &gt;=, &lt;=, &gt;, &lt;, and ==.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -868,7 +943,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * divisor.
+             * <p>The divisor field required for the mod operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -876,7 +954,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * remainder.
+             * <p>The percentage value field required for the percentage operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -884,7 +965,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * rate.
+             * <p>The proportion rule. For example, 20% indicates that 20% of the traffic is routed to the node corresponding to the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -892,7 +976,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * index.
+             * <p>The position of the parameter, starting from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -900,7 +987,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * expr.
+             * <p>The expression. See other field descriptions for details.</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -908,7 +995,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value to compare. The value obtained from the expression is compared with this value. If the operator is a list whitelist, separate values with commas (,), such as 1,2,3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2,3</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -1079,7 +1169,10 @@ public class RulesValue extends TeaModel {
             } 
 
             /**
-             * appId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>@</strong></em></p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1087,7 +1180,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -1095,7 +1188,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * triggerPolicy.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTENT</p>
              */
             public Builder triggerPolicy(String triggerPolicy) {
                 this.triggerPolicy = triggerPolicy;
@@ -1103,7 +1199,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * serviceName.
+             * <p>The service name (interface).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HelloService</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -1111,7 +1210,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * group.
+             * <p>The Dubbo service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -1119,7 +1221,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The Dubbo service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1127,7 +1232,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * methodName.
+             * <p>The method name of the Dubbo service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder methodName(String methodName) {
                 this.methodName = methodName;
@@ -1135,7 +1243,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * paramTypes.
+             * <p>The list of parameter types.</p>
              */
             public Builder paramTypes(java.util.List<String> paramTypes) {
                 this.paramTypes = paramTypes;
@@ -1143,7 +1251,10 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * condition.
+             * <p>The logical operator used between the following items. Valid values: AND and OR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -1151,7 +1262,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * argumentItems.
+             * <p>The list of parameter content.</p>
              */
             public Builder argumentItems(java.util.List<ArgumentItems> argumentItems) {
                 this.argumentItems = argumentItems;
@@ -1218,7 +1329,7 @@ public class RulesValue extends TeaModel {
             } 
 
             /**
-             * springcloud.
+             * <p>The Spring Cloud rules.</p>
              */
             public Builder springcloud(java.util.List<Springcloud> springcloud) {
                 this.springcloud = springcloud;
@@ -1226,7 +1337,7 @@ public class RulesValue extends TeaModel {
             }
 
             /**
-             * dubbo.
+             * <p>The Dubbo rules.</p>
              */
             public Builder dubbo(java.util.List<Dubbo> dubbo) {
                 this.dubbo = dubbo;

@@ -145,7 +145,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The code.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -156,7 +156,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of configurations that are imported.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -164,7 +164,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>The specified parameter is invalid.</p>
@@ -175,7 +178,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-100</p>
@@ -186,7 +189,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -197,13 +200,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request is successfully processed.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
-         * <blockquote>
-         * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
-         * </blockquote>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,11 +211,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
-         * </ul>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AF21683A-29C7-4853-AC0F-B5ADEE4****</p>
@@ -226,7 +222,11 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code that is returned.</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -308,7 +308,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the group.</p>
+             * <p>The data ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test2.yaml</p>
@@ -319,7 +319,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -327,7 +330,10 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The cause of the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The import configuration format is incorrect.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -394,7 +400,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the group.</p>
+             * <p>The data ID.</p>
              * 
              * <strong>example:</strong>
              * <p>test.yaml</p>
@@ -405,7 +411,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about configurations that are failed to be imported.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -501,7 +507,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data structure.</p>
+             * <p>The list of failed imports.</p>
              */
             public Builder failData(java.util.List<FailData> failData) {
                 this.failData = failData;
@@ -509,7 +515,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about skipped configurations.</p>
+             * <p>The number of skipped messages.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -520,7 +526,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data structure.</p>
+             * <p>The list of skipped configurations.</p>
              */
             public Builder skipData(java.util.List<SkipData> skipData) {
                 this.skipData = skipData;
@@ -528,7 +534,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of configurations that are skipped.</p>
+             * <p>The number of successfully imported instances.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

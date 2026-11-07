@@ -177,7 +177,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
          * <blockquote>
          * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
          * </blockquote>
@@ -227,7 +227,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
          * <p>The request was successfully processed.</p>
          * 
          * <strong>example:</strong>
-         * <p>The dynamic part in the error message.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;

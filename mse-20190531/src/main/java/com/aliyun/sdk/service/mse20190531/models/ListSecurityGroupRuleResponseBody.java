@@ -119,7 +119,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -138,7 +138,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>9EC7BDBF-3C38-5C9C-95DD-61E298CD43E8</p>
@@ -171,10 +171,10 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>The request result. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,7 +348,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthCidrs.
+             * <p>The list of IP address CIDR blocks with authorization to access the gateway.</p>
              */
             public Builder authCidrs(java.util.List<String> authCidrs) {
                 this.authCidrs = authCidrs;
@@ -367,7 +367,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway ID.</p>
+             * <p>The ID of the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>81</p>

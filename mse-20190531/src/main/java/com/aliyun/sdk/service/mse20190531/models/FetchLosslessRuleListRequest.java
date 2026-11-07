@@ -146,10 +146,10 @@ public class FetchLosslessRuleListRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,10 +162,10 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>hyaziyb6sc@86827c61f5ed8fc</p>
+         * <p>hyaziyb6sc@86827c61f5ed***</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -174,7 +174,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-boot-sample</p>
@@ -224,7 +224,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

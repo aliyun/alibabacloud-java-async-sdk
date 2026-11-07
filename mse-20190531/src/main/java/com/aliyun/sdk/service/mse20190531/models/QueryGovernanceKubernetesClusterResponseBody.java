@@ -93,7 +93,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DE34D413-2B79-5E77-9696-36D875E822AD</p>
@@ -123,7 +123,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -303,7 +303,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the namespace.</p>
+             * <p>The namespace information.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;Name&quot;:&quot;ack-onepilot&quot;,&quot;Tags&quot;:{&quot;name&quot;:&quot;ack-onepilot&quot;}}]</p>
@@ -314,7 +314,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the pilot component was started.</p>
+             * <p>The start time of Pilot.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-05-17T05:39:43.000+0000</p>
@@ -325,7 +325,10 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * PilotVersion.
+             * <p>The Pilot version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.1.1</p>
              */
             public Builder pilotVersion(String pilotVersion) {
                 this.pilotVersion = pilotVersion;
@@ -333,7 +336,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region where the cluster resides.</p>
+             * <p>The region where the cluster is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -344,7 +347,10 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * VersionLifeCycle.
+             * <p>The version lifecycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STABLE</p>
              */
             public Builder versionLifeCycle(String versionLifeCycle) {
                 this.versionLifeCycle = versionLifeCycle;
@@ -437,7 +443,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -448,7 +454,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The size of the current page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -459,7 +465,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the data.</p>
+             * <p>The data structure.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;

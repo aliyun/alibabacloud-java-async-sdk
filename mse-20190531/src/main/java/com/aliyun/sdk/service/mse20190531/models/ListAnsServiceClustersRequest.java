@@ -176,8 +176,10 @@ public class ListAnsServiceClustersRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,11 +194,11 @@ public class ListAnsServiceClustersRequest extends Request {
         /**
          * <p>The ID of the MSE cluster.</p>
          * <blockquote>
-         * <p> The MSE cluster is different from the cluster of the Nacos service.</p>
+         * <p>The MSE cluster is different from the cluster of the Nacos service.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>mse-09k1q110q01</p>
+         * <p>mse-09k1xxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -208,7 +210,7 @@ public class ListAnsServiceClustersRequest extends Request {
          * <p>The alias of the cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>mse-7413****</p>
+         * <p>qewr</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);

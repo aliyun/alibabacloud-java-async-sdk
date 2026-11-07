@@ -119,7 +119,10 @@ public class UpdateLocalityRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,16 @@ public class UpdateLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;Message&quot;:&quot;updateLocalityPolicy success&quot;,
+         *   &quot;RequestId&quot;:&quot;3B519913-7348-16AB-AD71-******&quot;,
+         *   &quot;HttpStatusCode&quot;:200,
+         *   &quot;Code&quot;:200,
+         *   &quot;Success&quot;:true
+         * }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +147,10 @@ public class UpdateLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +158,10 @@ public class UpdateLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +169,10 @@ public class UpdateLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78F05E89-D387-50CE-8186-2E27A8AB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +180,14 @@ public class UpdateLocalityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

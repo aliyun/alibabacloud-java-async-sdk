@@ -67,7 +67,10 @@ public class CreateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The ID of the circuit breaking rule that you create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class CreateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

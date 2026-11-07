@@ -119,7 +119,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,14 @@ public class ListGatewayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +270,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The name of the service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.mse.console.test.3YXO</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -262,7 +281,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The authentication service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>updatetime</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +292,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -278,7 +303,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source type of the authentication service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -462,7 +490,7 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowRequestHeaders.
+             * <p>The names of the allowed request headers.</p>
              */
             public Builder allowRequestHeaders(java.util.List<String> allowRequestHeaders) {
                 this.allowRequestHeaders = allowRequestHeaders;
@@ -470,7 +498,7 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * AllowUpstreamHeaders.
+             * <p>The names of the allowed response headers.</p>
              */
             public Builder allowUpstreamHeaders(java.util.List<String> allowUpstreamHeaders) {
                 this.allowUpstreamHeaders = allowUpstreamHeaders;
@@ -478,7 +506,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * BodyMaxBytes.
+             * <p>The maximum number of bytes for the request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder bodyMaxBytes(Integer bodyMaxBytes) {
                 this.bodyMaxBytes = bodyMaxBytes;
@@ -486,7 +517,14 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * IsRestrict.
+             * <p>The custom authentication mode. Valid values:</p>
+             * <ul>
+             * <li>true: strict mode. When the authentication service is unavailable (connection establishment fails or a 5xx status code is returned), the gateway rejects the client request.</li>
+             * <li>false: loose mode. When the authentication service is unavailable (connection establishment fails or a 5xx status code is returned), the gateway allows the client request.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRestrict(Boolean isRestrict) {
                 this.isRestrict = isRestrict;
@@ -494,7 +532,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixPath.
+             * <p>The path of the authentication API provided by the authentication service. The API path must be prefix-matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/auth</p>
              */
             public Builder prefixPath(String prefixPath) {
                 this.prefixPath = prefixPath;
@@ -502,7 +543,7 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * <p>The authentication service information.</p>
              */
             public Builder service(Service service) {
                 this.service = service;
@@ -510,7 +551,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The ID of the authentication service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45186</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -518,7 +562,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of the authentication service. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -526,7 +573,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TokenKey.
+             * <p>The token location, which indicates the header in the request message where the token is located. Common values include Authorization and Cookie.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authorization</p>
              */
             public Builder tokenKey(String tokenKey) {
                 this.tokenKey = tokenKey;
@@ -534,7 +584,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * WithRematchRoute.
+             * <p>Specifies whether to rematch the route after authentication is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder withRematchRoute(Boolean withRematchRoute) {
                 this.withRematchRoute = withRematchRoute;
@@ -542,7 +595,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * WithRequestBody.
+             * <p>Specifies whether to include the request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder withRequestBody(Boolean withRequestBody) {
                 this.withRequestBody = withRequestBody;
@@ -895,7 +951,14 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthResourceMode.
+             * <p>The authorization resource mode. Valid values:</p>
+             * <ul>
+             * <li>0: simple mode.</li>
+             * <li>1: complex mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder authResourceMode(Integer authResourceMode) {
                 this.authResourceMode = authResourceMode;
@@ -903,7 +966,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * <p>The application ID registered in the service. This parameter is used for OIDC or IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mnvxaavggw7hcdcnr6usi6***</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -911,7 +977,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * ClientSecret.
+             * <p>The application secret registered in the service. This parameter is used for OIDC or IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CS6EYfx3k9yTRR9EtQ2MXWP97P6UAUwFg4teoWJ19Z****</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -919,7 +988,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * CookieDomain.
+             * <p>The domain name of the cookie. After authentication, the cookie is sent to the specified domain name to maintain the logon status. This parameter is used for OIDC or IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder cookieDomain(String cookieDomain) {
                 this.cookieDomain = cookieDomain;
@@ -927,7 +999,7 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalAuthZ.
+             * <p>The custom authentication information.</p>
              */
             public Builder externalAuthZ(ExternalAuthZ externalAuthZ) {
                 this.externalAuthZ = externalAuthZ;
@@ -935,7 +1007,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -943,7 +1018,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -951,7 +1029,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-13 19:24:23</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -959,7 +1040,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-13 19:24:23</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -967,7 +1051,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The authentication ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>549</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -975,7 +1062,14 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * IsWhite.
+             * <p>The authorization blacklists and whitelists mode. Valid values:</p>
+             * <ul>
+             * <li>true: whitelist mode. Hosts and paths in the whitelist can be accessed without verification, while all other hosts and paths require verification.</li>
+             * <li>false: blacklist mode. Hosts and paths in the blacklist require verification, while all other hosts and paths can be accessed directly.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isWhite(Boolean isWhite) {
                 this.isWhite = isWhite;
@@ -983,7 +1077,14 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>Used when the authentication type is JWT or OIDC:</p>
+             * <ul>
+             * <li>JWT: the iss (issuer) claim in the JWT, which represents the issuer.</li>
+             * <li>OIDC: the iss (issuer) claim in the OIDC token, which represents the issuer.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/auth">https://example.com/auth</a></p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -991,7 +1092,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Jwks.
+             * <p>The JWT public key in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;keys\&quot;:[{\&quot;kty\&quot;:\&quot;oct\&quot;,\&quot;k\&quot;:\&quot;9V9lpiuAQsME1efQChI0kEQz6fdVlJbDRFFa1lvEB_A\&quot;,\&quot;alg\&quot;:\&quot;HS256\&quot;}]}</p>
              */
             public Builder jwks(String jwks) {
                 this.jwks = jwks;
@@ -999,7 +1103,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * LoginUrl.
+             * <p>The URL of the user logon page for the IDaaS instance. This parameter is used for IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://daxxxxcn.aliyunidaas.com/">https://daxxxxcn.aliyunidaas.com/</a></p>
              */
             public Builder loginUrl(String loginUrl) {
                 this.loginUrl = loginUrl;
@@ -1007,7 +1114,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the authentication rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1015,7 +1125,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * RedirectUrl.
+             * <p>The redirect URL after successful authorization. This parameter is used for OIDC or IDaaS and must be consistent with the redirect URL configured in OIDC or IDaaS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test.com/oauth2/callback">http://test.com/oauth2/callback</a></p>
              */
             public Builder redirectUrl(String redirectUrl) {
                 this.redirectUrl = redirectUrl;
@@ -1023,7 +1136,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * ScopesList.
+             * <p>The OIDC authorization scopes. This parameter is used for OIDC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;openid&quot;]</p>
              */
             public Builder scopesList(String scopesList) {
                 this.scopesList = scopesList;
@@ -1031,7 +1147,14 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The enabling status. Valid values:</p>
+             * <ul>
+             * <li>false: disabled.</li>
+             * <li>true: enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -1039,7 +1162,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Sub.
+             * <p>Used when the authentication type is JWT. The sub (subject) claim in the JWT, which represents the subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-app</p>
              */
             public Builder sub(String sub) {
                 this.sub = sub;
@@ -1047,7 +1173,11 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TokenName.
+             * <p>The location where the JWT token is stored.</p>
+             * <p>By default, the token to be verified is prefixed with Bearer and placed in the Authorization header, for example, <code>Authorization: Bearer token</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Authorization</p>
              */
             public Builder tokenName(String tokenName) {
                 this.tokenName = tokenName;
@@ -1055,7 +1185,11 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TokenNamePrefix.
+             * <p>The prefix of the JWT token.</p>
+             * <p>By default, the token to be verified is prefixed with Bearer and placed in the Authorization header, for example, <code>Authorization: Bearer token</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bearer</p>
              */
             public Builder tokenNamePrefix(String tokenNamePrefix) {
                 this.tokenNamePrefix = tokenNamePrefix;
@@ -1063,7 +1197,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TokenPass.
+             * <p>Specifies whether to pass through the token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tokenPass(Boolean tokenPass) {
                 this.tokenPass = tokenPass;
@@ -1071,7 +1208,14 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TokenPosition.
+             * <p>The JWT token position. Valid values:</p>
+             * <ul>
+             * <li>HEADER: transmitted through the header.</li>
+             * </ul>
+             * <p>By default, the token to be verified is prefixed with Bearer and placed in the Authorization header, for example, Authorization: Bearer token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HEADER</p>
              */
             public Builder tokenPosition(String tokenPosition) {
                 this.tokenPosition = tokenPosition;
@@ -1079,7 +1223,16 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The authentication type. Valid values:</p>
+             * <ul>
+             * <li>JWT</li>
+             * <li>OIDC</li>
+             * <li>IDaaS</li>
+             * <li>ExternalAuthZ: self-managed authentication service</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>JWT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1172,7 +1325,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1180,7 +1336,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1188,7 +1347,7 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The returned results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -1196,7 +1355,10 @@ public class ListGatewayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

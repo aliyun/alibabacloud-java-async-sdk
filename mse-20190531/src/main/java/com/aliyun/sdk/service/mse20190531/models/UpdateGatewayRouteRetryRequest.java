@@ -117,8 +117,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +133,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>501</p>
@@ -167,7 +169,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         }
 
         /**
-         * <p>The information about the retry policy.</p>
+         * <p>The retry policy.</p>
          */
         public Builder retryJSON(RetryJSON retryJSON) {
             String retryJSONShrink = shrink(retryJSON, "RetryJSON", "json");
@@ -281,7 +283,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * <p>The retry conditions.</p>
+             * <p>The conditions that trigger a retry.</p>
              */
             public Builder retryOn(java.util.List<String> retryOn) {
                 this.retryOn = retryOn;
@@ -289,7 +291,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             }
 
             /**
-             * <p>The status of the policy.</p>
+             * <p>The status of the retry policy.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>

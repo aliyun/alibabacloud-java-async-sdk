@@ -130,7 +130,7 @@ public class UpdateAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -152,7 +152,10 @@ public class UpdateAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message that is returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,7 +174,7 @@ public class UpdateAuthPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+         * <p>The result of the request. Valid values: - true: The request is successful. - false: The request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

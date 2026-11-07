@@ -103,10 +103,10 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * <p>The gateway authentication consumer ID.</p>
+         * <p>The ID of the gateway authentication consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the gateway.</p>
+         * <p>UpdateGatewayAuthConsumerResource</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * <p>The gateway authentication consumer ID.</p>
+         * <p>The list of resources.</p>
          */
         public Builder resourceList(java.util.List<ResourceList> resourceList) {
             String resourceListShrink = shrink(resourceList, "ResourceList", "json");
@@ -225,7 +225,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
             }
 
             /**
-             * <p>The name of the route.</p>
+             * <p>The route name.</p>
              * 
              * <strong>example:</strong>
              * <p>helo</p>

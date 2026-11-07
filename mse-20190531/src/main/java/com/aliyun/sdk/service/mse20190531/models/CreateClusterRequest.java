@@ -361,10 +361,10 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * <p>The language type of the returned information:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -377,8 +377,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Billing method, including PREPAY (Subscription) and POSTPAY (Pay-As-You-Go).</p>
-         * <p>This parameter is ignored for the Serverless edition.</p>
+         * <p>The billing method. Valid values: PREPAY (subscription) and POSTPAY (pay-as-you-go). This parameter is ignored for Serverless Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -390,22 +389,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Engine specifications, with the following values:</p>
-         * <p>[Professional Edition] </p>
-         * <ul>
-         * <li><code>MSE_SC_2_4_60_c</code>: 2 cores, 4GB</li>
-         * <li><code>MSE_SC_1_2_60_c</code>: 1 core, 2GB</li>
-         * <li><code>MSE_SC_4_8_60_c</code>: 4 cores, 8GB</li>
-         * <li><code>MSE_SC_8_16_60_c</code>: 8 cores, 16GB</li>
-         * <li><code>MSE_SC_16_32_60_c</code>: 16 cores, 32GB</li>
-         * </ul>
-         * <p>[Developer Edition] </p>
-         * <ul>
-         * <li><code>MSE_SC_1_2_60_c</code>: 1 core, 2GB</li>
-         * <li><code>MSE_SC_2_4_60_c</code>: 2 cores, 4GB</li>
-         * </ul>
-         * <p>[Serverless Edition]</p>
-         * <p>Ignore this parameter, or you can fill in <code>MSE_SC_SERVERLESS</code>.</p>
+         * <p>The engine specifications. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -418,7 +402,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Cluster type, including ZooKeeper, Nacos-Ans.</p>
+         * <p>The cluster type. Valid values: ZooKeeper and Nacos-Ans.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -431,22 +415,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Cluster version, with the following values:</p>
-         * <p>[Professional Edition] </p>
-         * <ul>
-         * <li><code>NACOS_2_0_0</code>: indicates Nacos 2.x.x version.</li>
-         * <li><code>ZooKeeper_3_8_0</code>: indicates ZooKeeper 3.8.x version.</li>
-         * </ul>
-         * <p>[Developer Edition] </p>
-         * <ul>
-         * <li><code>NACOS_2_0_0</code>: indicates Nacos 2.x version.</li>
-         * <li><code>ZooKeeper_3_8_0</code>: indicates ZooKeeper 3.8.x version.</li>
-         * </ul>
-         * <p>[Serverless Edition]</p>
-         * <ul>
-         * <li><code>NACOS_2_0_0</code>: indicates Nacos 2.x version.</li>
-         * <li><code>ZooKeeper_3_8_0</code>: indicates ZooKeeper 3.8.x version.</li>
-         * </ul>
+         * <p>The cluster version. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -459,7 +428,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Network access type, <code>slb</code> or <code>single_eni</code>; some regions&quot; Developer Edition only support the <code>single_eni</code> type.</p>
+         * <p>The network access type. Valid values: <code>slb</code> and <code>single_eni</code>. In some regions, Developer Edition supports only <code>single_eni</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>slb</p>
@@ -471,7 +440,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>No longer in use</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>alicloud-disk-ssd</p>
@@ -483,7 +452,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Valid when <code>ConnectionType</code> is <code>single_eni</code>, indicating whether to enable public network access (Elastic IP).</p>
+         * <p>Specifies whether to enable public network access by using an elastic IP address (EIP). This parameter takes effect only when ConnectionType is set to <code>single_eni</code>.</p>
          */
         public Builder eipEnabled(Boolean eipEnabled) {
             this.putQueryParameter("EipEnabled", eipEnabled);
@@ -492,17 +461,24 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Number of instance nodes, with a range limit of 1 to 9.</p>
-         * <p>[Professional Edition] </p>
+         * <p>The number of nodes in the instance. Valid values: 1 to 9.
+         * [Professional Edition] </p>
          * <ul>
-         * <li>The number of instances must be 3 or more and must be an odd number.</li>
+         * <li><p><code>NACOS_2_0_0</code>: Nacos 2.x.x.</p>
+         * </li>
+         * <li><p><code>ZooKeeper_3_8_0</code>: ZooKeeper 3.8.x.
+         * [Developer Edition] </p>
+         * </li>
+         * <li><p><code>NACOS_2_0_0</code>: Nacos 2.x.</p>
+         * </li>
+         * <li><p><code>ZooKeeper_3_8_0</code>: ZooKeeper 3.8.x.
+         * [Serverless Edition]</p>
+         * </li>
+         * <li><p><code>NACOS_2_0_0</code>: Nacos 2.x.</p>
+         * </li>
+         * <li><p><code>ZooKeeper_3_8_0</code>: ZooKeeper 3.8.x.</p>
+         * </li>
          * </ul>
-         * <p>[Developer Edition] </p>
-         * <ul>
-         * <li>The number of instances can only be 1.</li>
-         * </ul>
-         * <p>[Serverless Edition]</p>
-         * <p>Ignore this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -515,7 +491,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Custom instance name</p>
+         * <p>The custom name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>tanshuyingtest001</p>
@@ -527,11 +503,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Required unless under special circumstances, with the following values:</p>
+         * <p>The instance edition. This parameter is required unless otherwise specified. Valid values:</p>
          * <ul>
-         * <li><code>mse_pro</code>: indicates Professional Edition.</li>
-         * <li><code>mse_dev</code>: indicates Developer Edition.</li>
-         * <li><code>mse_serverless</code>: indicates Serverless Edition.</li>
+         * <li><code>mse_pro</code>: Professional Edition.</li>
+         * <li><code>mse_dev</code>: Developer Edition.</li>
+         * <li><code>mse_serverless</code>: Serverless Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -544,10 +520,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Network type, with the following values:</p>
+         * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><code>privatenet</code>: indicates a private network.</li>
-         * <li><code>pubnet</code>: indicates a public network.</li>
+         * <li><code>privatenet</code>: virtual private cloud (VPC).</li>
+         * <li><code>pubnet</code>: Internet.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -561,7 +537,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>No longer in use</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>slb.s1.small</p>
@@ -573,8 +549,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Valid when <code>ConnectionType</code> is <code>slb</code>. 0 indicates no public network access SLB creation, and values above 1 indicate a fixed bandwidth for public network access SLB; unit: Mbps.</p>
-         * <p>Value range: 0~5000.</p>
+         * <p>The bandwidth of the Internet-facing Server Load Balancer (SLB) instance. This parameter takes effect only when ConnectionType is set to <code>slb</code>. A value of 0 indicates that no Internet-facing SLB instance is created. A value greater than 1 indicates the fixed bandwidth of the Internet-facing SLB instance. Unit: Mbit/s. Valid values: 0 to 5000.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -586,7 +561,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>No longer in use</p>
+         * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>slb.s1.small</p>
@@ -598,13 +573,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The region where the cluster is located, including but not limited to the following regions:</p>
+         * <p>The region where the cluster is deployed. Valid values include but are not limited to:</p>
          * <ul>
-         * <li><code>cn-hangzhou</code>: Hangzhou</li>
-         * <li><code>cn-beijing</code>: Beijing</li>
-         * <li><code>cn-shanghai</code>: Shanghai</li>
-         * <li><code>cn-zhangjiakou</code>: Zhangjiakou</li>
-         * <li><code>cn-shenzhen</code>: Shenzhen</li>
+         * <li><code>cn-hangzhou</code>: China (Hangzhou)</li>
+         * <li><code>cn-beijing</code>: China (Beijing)</li>
+         * <li><code>cn-shanghai</code>: China (Shanghai)</li>
+         * <li><code>cn-zhangjiakou</code>: China (Zhangjiakou)</li>
+         * <li><code>cn-shenzhen</code>: China (Shenzhen)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -617,7 +592,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Extended request parameters, in JSON format.</p>
+         * <p>The extended request parameters in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -629,7 +604,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID. For more details about the resource group, see <a href="https://help.aliyun.com/document_detail/457230.html">Basic Information of Resource Group</a>.</p>
+         * <p>The resource group ID. For more information, see <a href="https://help.aliyun.com/document_detail/457230.html">View the basic information of a resource group</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzcqmoay3dlyq</p>
@@ -641,7 +616,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Valid when <code>ConnectionType</code> is <code>single_eni</code>, indicating the security group type of the instance.</p>
+         * <p>The type of the security group to which the instance belongs. This parameter takes effect only when ConnectionType is set to <code>single_eni</code>. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>enterprise</p>
@@ -653,7 +628,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>List of tags to be added. Contains up to 20 items.</p>
+         * <p>The tags to be added. You can add up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -662,7 +637,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Switch ID.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp17opt4v18sto39k****</p>
@@ -674,7 +649,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>VPC ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1t50e045b5g7i3p****</p>
@@ -745,7 +720,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>Tag key.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -756,7 +731,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Tag value.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>prd</p>

@@ -402,7 +402,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>The current OpenAPI is not a Nacos-SDK API. For information about Nacos-SDK APIs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CloneNacosConfig  CloneNacosConfigRequest
@@ -478,7 +478,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Please ensure that you fully understand the billing method and pricing of the MSE (Microservice Engine) product before using this interface.</p>
+     * <p>Make sure that you fully understand the billing methods and pricing of Microservices Engine (MSE) before you call this operation.</p>
      * 
      * @param request the request parameters of CreateCluster  CreateClusterRequest
      * @return CreateClusterResponse
@@ -1225,7 +1225,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>The current OpenAPI is not the Nacos SDK API. For information about the Nacos SDK API, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteNacosConfigs  DeleteNacosConfigsRequest
@@ -1535,7 +1535,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the rules for graceful start and shutdown.</p>
+     * <p>Calls the FetchLosslessRuleList operation to retrieve the list of configuration rules for graceful start and shutdown.</p>
      * 
      * @param request the request parameters of FetchLosslessRuleList  FetchLosslessRuleListRequest
      * @return FetchLosslessRuleListResponse
@@ -1906,9 +1906,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the rules for graceful start and shutdown of an application.
-     * You can query the rules for graceful start and shutdown of an application preferentially by using the AppId parameter.
-     * If the AppId parameter is left empty, you can use the RegionId, Namespace, and AppName parameters to query the rules for graceful start and shutdown of an application.</p>
+     * <p>Calls the GetLosslessRuleByApp operation to retrieve the graceful start and shutdown configuration rules for a specified application. The query prioritizes the AppId parameter. If AppId is not specified, the system queries by using RegionId, Namespace, and AppName.</p>
      * 
      * @param request the request parameters of GetLosslessRuleByApp  GetLosslessRuleByAppRequest
      * @return GetLosslessRuleByAppResponse
@@ -2029,7 +2027,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query overview information about service governance.</p>
+     * <p>Queries the service governance overview information.</p>
      * 
      * @param request the request parameters of GetOverview  GetOverviewRequest
      * @return GetOverviewResponse
@@ -2195,7 +2193,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>The current OpenAPI is not the Nacos-SDK API. For information about the Nacos-SDK API, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ImportNacosConfig  ImportNacosConfigRequest
@@ -2235,7 +2233,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p><em>Danger</em>* This operation clears existing data. Exercise caution when you call this API operation.</p>
+     * <blockquote>
+     * <p>Danger: This operation clears all existing data. Proceed with caution.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of ImportZookeeperData  ImportZookeeperDataRequest
      * @return ImportZookeeperDataResponse
@@ -2275,7 +2275,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>The current OpenAPI is not the Nacos-SDK API. For information about the Nacos-SDK API, refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListAnsInstances  ListAnsInstancesRequest
@@ -2321,7 +2321,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>This OpenAPI is not a Nacos SDK API. For more information about Nacos SDK APIs, see <a href="https://nacos.io/zh-cn/docs/sdk.html">the official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListAnsServices  ListAnsServicesRequest
@@ -2905,7 +2905,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>The current OpenAPI is not a Nacos-SDK API. For information about Nacos-SDK APIs, refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListListenersByConfig  ListListenersByConfigRequest
@@ -2928,7 +2928,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>The current OpenAPI is not a Nacos-SDK API. For more information about the Nacos-SDK API, see <a href="https://nacos.io/zh-cn/docs/sdk.html">Official Documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListListenersByIp  ListListenersByIpRequest
@@ -2969,7 +2969,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>The current OpenAPI is not the Nacos SDK API. For information about the Nacos SDK API, refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListNacosConfigs  ListNacosConfigsRequest
@@ -2992,7 +2992,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>The current OpenAPI is not the Nacos-SDK API. For information about the Nacos-SDK API, see <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListNacosHistoryConfigs  ListNacosHistoryConfigsRequest
@@ -3932,7 +3932,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing] (<code>~~1806469~~</code>).</p>
+     * <p>Updates the number of nodes or specifications of a registry and configuration center cluster (supports both pay-as-you-go and subscription). Adding nodes or upgrading specifications will incur corresponding fees. For more information, see [Pricing]\(<code>~~1806469~~</code>).</p>
      * 
      * @param request the request parameters of UpdateClusterSpec  UpdateClusterSpecRequest
      * @return UpdateClusterSpecResponse

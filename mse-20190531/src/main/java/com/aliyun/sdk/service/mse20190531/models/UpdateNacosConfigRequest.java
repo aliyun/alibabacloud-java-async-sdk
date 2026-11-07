@@ -270,7 +270,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>The content of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -295,7 +298,7 @@ public class UpdateNacosConfigRequest extends Request {
          * <p>The description of the configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>Basic configurations</p>
+         * <p>Base configuration</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);

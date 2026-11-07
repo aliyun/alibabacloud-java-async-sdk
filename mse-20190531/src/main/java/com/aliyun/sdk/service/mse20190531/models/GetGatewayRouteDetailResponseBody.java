@@ -119,7 +119,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+         * <p>Status code. Note that 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>Error message.</p>
          * 
          * <strong>example:</strong>
          * <p>You are not authorized to perform this operation.</p>
@@ -160,7 +160,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FDF2D16C-5D28-5FAA-A56B-30BDE3559880</p>
@@ -171,10 +171,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Request result, with the following values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><p><code>true</code>: The request is successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +324,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The credentials allowed.</p>
+             * <p>Allow credentials.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -333,7 +335,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The headers allowed.</p>
+             * <p>Cross-domain Header.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -346,7 +348,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The methods allowed.</p>
+             * <p>Cross-domain methods.</p>
              * 
              * <strong>example:</strong>
              * <p>GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH</p>
@@ -357,7 +359,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origins allowed.</p>
+             * <p>Cross-domain.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -370,7 +372,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response headers.</p>
+             * <p>Response header.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -383,7 +385,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status.</p>
+             * <p>Status.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -394,7 +396,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time unit.</p>
+             * <p>Time unit.</p>
              * 
              * <strong>example:</strong>
              * <p>h</p>
@@ -405,7 +407,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit number.</p>
+             * <p>Time number.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>
@@ -475,7 +477,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The mock return value.</p>
+             * <p>Mock return value.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -486,7 +488,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The response code returned.</p>
+             * <p>Response code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -660,7 +662,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The protocol type.</p>
+             * <p>Protocol Type.</p>
              * 
              * <strong>example:</strong>
              * <p>DUBBO</p>
@@ -671,7 +673,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the group to which the service belongs.</p>
+             * <p>Service group name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -682,7 +684,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name.</p>
+             * <p>Name.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -693,7 +695,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the service belongs.</p>
+             * <p>Service namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>namespace</p>
@@ -704,7 +706,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight in the form of a percentage value.</p>
+             * <p>Weight percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -715,7 +717,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service ID.</p>
+             * <p>Service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -726,7 +728,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service name.</p>
+             * <p>Service name.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -737,7 +739,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number of the service.</p>
+             * <p>Service port.</p>
              * 
              * <strong>example:</strong>
              * <p>8848</p>
@@ -748,7 +750,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the service.</p>
+             * <p>Source type.</p>
              * 
              * <strong>example:</strong>
              * <p>MSE</p>
@@ -759,7 +761,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service version.</p>
+             * <p>Service version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -868,7 +870,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>流量复制比例（%），取值0-100。</p>
+             * <p>Traffic replication percentage (%), value range 0-100.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -879,7 +881,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目标服务端口。</p>
+             * <p>Target service port.</p>
              * 
              * <strong>example:</strong>
              * <p>8790</p>
@@ -890,10 +892,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>开启状态，取值：</p>
+             * <p>Enabling status, values:</p>
              * <ul>
-             * <li>on：开启</li>
-             * <li>off：关闭</li>
+             * <li><p>on: enabled</p>
+             * </li>
+             * <li><p>off: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -905,7 +909,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目标服务ID。</p>
+             * <p>Target service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>21</p>
@@ -916,7 +920,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目标服务名称。</p>
+             * <p>Target service name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1038,7 +1042,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The hostname of the gateway.</p>
+             * <p>Instance address.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyuncs.com</p>
@@ -1049,7 +1053,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the node.</p>
+             * <p>Node path.</p>
              * 
              * <strong>example:</strong>
              * <p>/test/client</p>
@@ -1060,7 +1064,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rewrite type.</p>
+             * <p>Rewrite type.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE</p>
@@ -1071,7 +1075,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching pattern.</p>
+             * <p>Matching Pattern.</p>
              * 
              * <strong>example:</strong>
              * <p>/test</p>
@@ -1082,7 +1086,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the policy.</p>
+             * <p>Enabling status.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -1093,7 +1097,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The replacement.</p>
+             * <p>Replacement.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1189,7 +1193,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The request or response.</p>
+             * <p>Request or response.</p>
              * 
              * <strong>example:</strong>
              * <p>Response</p>
@@ -1200,7 +1204,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The header key.</p>
+             * <p>Header Key.</p>
              * 
              * <strong>example:</strong>
              * <p>debug</p>
@@ -1211,7 +1215,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operation.</p>
+             * <p>Operation type.</p>
              * 
              * <strong>example:</strong>
              * <p>Add</p>
@@ -1222,7 +1226,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The header value.</p>
+             * <p>Setting value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1292,7 +1296,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about headers.</p>
+             * <p>Header field objects.</p>
              */
             public Builder headerOpItems(java.util.List<HeaderOpItems> headerOpItems) {
                 this.headerOpItems = headerOpItems;
@@ -1300,7 +1304,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status.</p>
+             * <p>Status.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -1383,7 +1387,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response code returned.</p>
+             * <p>Response code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -1394,7 +1398,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hostname.</p>
+             * <p>Host.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -1405,7 +1409,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path.</p>
+             * <p>Path.</p>
              * 
              * <strong>example:</strong>
              * <p>10111</p>
@@ -1501,7 +1505,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of retries allowed.</p>
+             * <p>Number of retry attempts.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1512,7 +1516,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP status codes.</p>
+             * <p>HTTP status codes.</p>
              */
             public Builder httpCodes(java.util.List<String> httpCodes) {
                 this.httpCodes = httpCodes;
@@ -1520,7 +1524,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retry condition.</p>
+             * <p>Retry conditions.</p>
              */
             public Builder retryOn(java.util.List<String> retryOn) {
                 this.retryOn = retryOn;
@@ -1528,7 +1532,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retry status.</p>
+             * <p>Retry status.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -1611,7 +1615,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the request header.</p>
+             * <p>Request header KEY.</p>
              * 
              * <strong>example:</strong>
              * <p>id</p>
@@ -1622,7 +1626,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route type.</p>
+             * <p>Type.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE</p>
@@ -1633,7 +1637,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the request header.</p>
+             * <p>Matching value.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -1716,7 +1720,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether case sensitivity is ignored.</p>
+             * <p>Whether to ignore case.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1727,7 +1731,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path.</p>
+             * <p>Path.</p>
              * 
              * <strong>example:</strong>
              * <p>/api</p>
@@ -1738,7 +1742,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching type.</p>
+             * <p>Matching type.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE</p>
@@ -1821,7 +1825,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The parameter name.</p>
+             * <p>Parameter name.</p>
              * 
              * <strong>example:</strong>
              * <p>userid</p>
@@ -1832,7 +1836,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route type.</p>
+             * <p>Type.</p>
              * 
              * <strong>example:</strong>
              * <p>PRE</p>
@@ -1843,7 +1847,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
+             * <p>Matching value.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1939,7 +1943,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about header matching.</p>
+             * <p>Header matching.</p>
              */
             public Builder headerPredicates(java.util.List<HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
@@ -1947,7 +1951,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about method matching.</p>
+             * <p>Method matching.</p>
              */
             public Builder methodPredicates(java.util.List<String> methodPredicates) {
                 this.methodPredicates = methodPredicates;
@@ -1955,7 +1959,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about route matching.</p>
+             * <p>Route matching.</p>
              */
             public Builder pathPredicates(PathPredicates pathPredicates) {
                 this.pathPredicates = pathPredicates;
@@ -1963,7 +1967,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about parameter matching.</p>
+             * <p>Parameter matching.</p>
              */
             public Builder queryPredicates(java.util.List<QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
@@ -2043,7 +2047,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtractKey.
+             * <p>Input parameter extraction Key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder extractKey(String extractKey) {
                 this.extractKey = extractKey;
@@ -2051,7 +2058,23 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExtractKeySpec.
+             * <p>Input parameter position.</p>
+             * <blockquote>
+             * <p>Input parameter position enumeration values.</p>
+             * <ul>
+             * <li><p>Request parameter: <code>ALL_QUERY_PARAMETER</code></p>
+             * </li>
+             * <li><p>Request header: <code>ALL_HEADER</code></p>
+             * </li>
+             * <li><p>URI of the request: <code>ALL_PATH</code></p>
+             * </li>
+             * <li><p>Request body: <code>ALL_BODY</code></p>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL_QUERY_PARAMETER</p>
              */
             public Builder extractKeySpec(String extractKeySpec) {
                 this.extractKeySpec = extractKeySpec;
@@ -2059,7 +2082,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MappingType.
+             * <p>Backend parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder mappingType(String mappingType) {
                 this.mappingType = mappingType;
@@ -2178,7 +2204,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * DubboMothedName.
+             * <p>Dubbo method name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sayHello</p>
              */
             public Builder dubboMothedName(String dubboMothedName) {
                 this.dubboMothedName = dubboMothedName;
@@ -2186,7 +2215,25 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HttpMothed.
+             * <p>Http method.</p>
+             * <blockquote>
+             * <p>Supported http method parameter values.</p>
+             * <ul>
+             * <li><p>ALL_GET</p>
+             * </li>
+             * <li><p>ALL_POST</p>
+             * </li>
+             * <li><p>ALL_PUT</p>
+             * </li>
+             * <li><p>ALL_DELETE</p>
+             * </li>
+             * <li><p>ALL_PATCH</p>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL_GET</p>
              */
             public Builder httpMothed(String httpMothed) {
                 this.httpMothed = httpMothed;
@@ -2194,7 +2241,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Mothedpath.
+             * <p>Method matching path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mytestzbk/sayhello</p>
              */
             public Builder mothedpath(String mothedpath) {
                 this.mothedpath = mothedpath;
@@ -2202,7 +2252,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ParamMapsList.
+             * <p>Parameter mapping list.</p>
              */
             public Builder paramMapsList(java.util.List<ParamMapsList> paramMapsList) {
                 this.paramMapsList = paramMapsList;
@@ -2210,7 +2260,21 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PassThroughAllHeaders.
+             * <p>Header pass-through type.</p>
+             * <blockquote>
+             * <p>Pass-through type enumeration values.</p>
+             * <ul>
+             * <li><p>Pass through all: PASS_ALL</p>
+             * </li>
+             * <li><p>No pass-through: PASS_NOT</p>
+             * </li>
+             * <li><p>Specified parameters: PASS_ASSIGN</p>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>PASS_NOT</p>
              */
             public Builder passThroughAllHeaders(String passThroughAllHeaders) {
                 this.passThroughAllHeaders = passThroughAllHeaders;
@@ -2218,7 +2282,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PassThroughList.
+             * <p>Specified Header pass-through list.</p>
              */
             public Builder passThroughList(java.util.List<String> passThroughList) {
                 this.passThroughList = passThroughList;
@@ -2311,7 +2375,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * DubboServiceGroup.
+             * <p>Dubbo service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service group</p>
              */
             public Builder dubboServiceGroup(String dubboServiceGroup) {
                 this.dubboServiceGroup = dubboServiceGroup;
@@ -2319,7 +2386,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DubboServiceName.
+             * <p>Dubbo service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>org.apache.dubbo.samples.basic.api.DemoService</p>
              */
             public Builder dubboServiceName(String dubboServiceName) {
                 this.dubboServiceName = dubboServiceName;
@@ -2327,7 +2397,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DubboServiceVersion.
+             * <p>Dubbo service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0</p>
              */
             public Builder dubboServiceVersion(String dubboServiceVersion) {
                 this.dubboServiceVersion = dubboServiceVersion;
@@ -2335,7 +2408,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MothedMapList.
+             * <p>Dubbo forwarding rule list.</p>
              */
             public Builder mothedMapList(java.util.List<MothedMapList> mothedMapList) {
                 this.mothedMapList = mothedMapList;
@@ -2545,7 +2618,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The protocol type.</p>
+             * <p>Protocol Type.</p>
              * 
              * <strong>example:</strong>
              * <p>DUBBO</p>
@@ -2556,7 +2629,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the group to which the service belongs.</p>
+             * <p>Service group name.</p>
              * 
              * <strong>example:</strong>
              * <p>api</p>
@@ -2567,7 +2640,20 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * <p>Health status</p>
+             * <ul>
+             * <li><p>Health</p>
+             * </li>
+             * <li><p>Unhealthy</p>
+             * </li>
+             * <li><p>Checking</p>
+             * </li>
+             * <li><p>Unknown</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Health</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -2575,7 +2661,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HttpDubboTranscoder.
+             * <p>Dubbo protocol conversion body.</p>
              */
             public Builder httpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
                 this.httpDubboTranscoder = httpDubboTranscoder;
@@ -2583,7 +2669,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service name.</p>
+             * <p>Service name.</p>
              * 
              * <strong>example:</strong>
              * <p>dubbo4</p>
@@ -2594,7 +2680,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace.</p>
+             * <p>Namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>acs_ecs_dashboard</p>
@@ -2605,7 +2691,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight.</p>
+             * <p>Weight.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -2616,7 +2702,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service ID.</p>
+             * <p>Service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>782</p>
@@ -2627,7 +2713,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service name.</p>
+             * <p>Service name.</p>
              * 
              * <strong>example:</strong>
              * <p>xkc-crm</p>
@@ -2638,7 +2724,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number of the service.</p>
+             * <p>Service port.</p>
              * 
              * <strong>example:</strong>
              * <p>20880</p>
@@ -2649,7 +2735,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the service.</p>
+             * <p>Service source.</p>
              * 
              * <strong>example:</strong>
              * <p>MSE</p>
@@ -2660,7 +2746,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UnhealthyEndpoints.
+             * <p>Unhealthy Endpoint list</p>
              */
             public Builder unhealthyEndpoints(java.util.List<String> unhealthyEndpoints) {
                 this.unhealthyEndpoints = unhealthyEndpoints;
@@ -2668,7 +2754,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service version.</p>
+             * <p>Service version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -2751,7 +2837,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status.</p>
+             * <p>Status.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -2762,7 +2848,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time unit.</p>
+             * <p>Time unit.</p>
              * 
              * <strong>example:</strong>
              * <p>s</p>
@@ -2773,7 +2859,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit number.</p>
+             * <p>Unit number.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3246,7 +3332,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of Application High Availability Service (AHAS).</p>
+             * <p>Ahas status.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3257,7 +3343,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration for cross-origin resource sharing (CORS).</p>
+             * <p>Cross-domain configuration.</p>
              */
             public Builder cors(Cors cors) {
                 this.cors = cors;
@@ -3265,7 +3351,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default service ID.</p>
+             * <p>Default service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -3276,7 +3362,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default service name.</p>
+             * <p>Default service name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -3287,7 +3373,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Route description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a route for xxx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3295,7 +3384,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination service type.</p>
+             * <p>Target service type.</p>
              * 
              * <strong>example:</strong>
              * <p>Single</p>
@@ -3306,7 +3395,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about service mocking.</p>
+             * <p>Mock information.</p>
              */
             public Builder directResponse(DirectResponse directResponse) {
                 this.directResponse = directResponse;
@@ -3314,7 +3403,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain ID.</p>
+             * <p>Domain ID.</p>
              * 
              * <strong>example:</strong>
              * <p>235</p>
@@ -3325,7 +3414,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of domains.</p>
+             * <p>Domain list</p>
              */
             public Builder domainIdList(java.util.List<Long> domainIdList) {
                 this.domainIdList = domainIdList;
@@ -3333,7 +3422,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name.</p>
+             * <p>Domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>123.com</p>
@@ -3344,7 +3433,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of domain names.</p>
+             * <p>Domain name list</p>
              */
             public Builder domainNameList(java.util.List<String> domainNameList) {
                 this.domainNameList = domainNameList;
@@ -3352,7 +3441,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Web Application Firewall (WAF) is activated.</p>
+             * <p>Whether to enable Waf.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3363,7 +3452,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Fallback service is enabled.</p>
+             * <p>Whether to enable Fallback service.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3374,7 +3463,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of the Fallback service.</p>
+             * <p>Fallback services.</p>
              */
             public Builder fallbackServices(java.util.List<FallbackServices> fallbackServices) {
                 this.fallbackServices = fallbackServices;
@@ -3382,7 +3471,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>流量镜像配置。</p>
+             * <p>Traffic mirroring configuration.</p>
              */
             public Builder flowMirror(FlowMirror flowMirror) {
                 this.flowMirror = flowMirror;
@@ -3390,7 +3479,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the gateway.</p>
+             * <p>Gateway ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3401,7 +3490,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the gateway.</p>
+             * <p>Gateway unique identifier ID.</p>
              * 
              * <strong>example:</strong>
              * <p>gw-7ea3da97b96543e19f6c597c****</p>
@@ -3412,7 +3501,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>Creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-07 18:07:57</p>
@@ -3423,7 +3512,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>Last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-01-07T10:07:57.000+0000</p>
@@ -3434,7 +3523,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the rewrite policy.</p>
+             * <p>Rewrite policy information.</p>
              */
             public Builder HTTPRewrite(HTTPRewrite HTTPRewrite) {
                 this.HTTPRewrite = HTTPRewrite;
@@ -3442,7 +3531,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The header settings.</p>
+             * <p>Header settings information.</p>
              */
             public Builder headerOp(HeaderOp headerOp) {
                 this.headerOp = headerOp;
@@ -3450,7 +3539,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID.</p>
+             * <p>ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1050</p>
@@ -3461,7 +3550,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name.</p>
+             * <p>Name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -3472,16 +3561,16 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routing policy in a JSON string.</p>
+             * <p>Routing policy Json string.</p>
              * 
              * <strong>example:</strong>
              * <p>{
-             *       &quot;CORS&quot;: &quot;{&quot;allowMethods&quot;:&quot;GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH&quot;,&quot;allowHeaders&quot;:&quot;<em>&quot;,&quot;exposeHeaders&quot;:&quot;</em>&quot;,&quot;unitNum&quot;:12,&quot;allowCredentials&quot;:true,&quot;status&quot;:&quot;off&quot;,&quot;allowOrigins&quot;:&quot;*&quot;,&quot;timeUnit&quot;:&quot;h&quot;}&quot;,
-             *       &quot;Timeout&quot;: &quot;{&quot;unitNum&quot;:10,&quot;timeUnit&quot;:&quot;s&quot;,&quot;status&quot;:&quot;off&quot;}&quot;,
-             *       &quot;Retry&quot;: &quot;{&quot;attempts&quot;:2,&quot;retryOn&quot;:[&quot;5xx&quot;],&quot;status&quot;:&quot;off&quot;}&quot;,
-             *       &quot;HTTPRewrite&quot;: &quot;{&quot;pathType&quot;:&quot;EQUAL&quot;,&quot;path&quot;:&quot;/o&quot;,&quot;status&quot;:&quot;off&quot;}&quot;,
-             *       &quot;Waf&quot;: &quot;{&quot;enabled&quot;:false}&quot;,
-             *       &quot;HeaderOp&quot;: &quot;{&quot;status&quot;:&quot;off&quot;,&quot;headerOpItems&quot;:[{&quot;directionType&quot;:&quot;Request&quot;,&quot;opType&quot;:&quot;Add&quot;,&quot;key&quot;:&quot;kkk&quot;,&quot;value&quot;:&quot;ll&quot;}]}&quot;
+             *       &quot;CORS&quot;: &quot;{\&quot;allowMethods\&quot;:\&quot;GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH\&quot;,\&quot;allowHeaders\&quot;:\&quot;<em>\&quot;,\&quot;exposeHeaders\&quot;:\&quot;</em>\&quot;,\&quot;unitNum\&quot;:12,\&quot;allowCredentials\&quot;:true,\&quot;status\&quot;:\&quot;off\&quot;,\&quot;allowOrigins\&quot;:\&quot;*\&quot;,\&quot;timeUnit\&quot;:\&quot;h\&quot;}&quot;,
+             *       &quot;Timeout&quot;: &quot;{\&quot;unitNum\&quot;:10,\&quot;timeUnit\&quot;:\&quot;s\&quot;,\&quot;status\&quot;:\&quot;off\&quot;}&quot;,
+             *       &quot;Retry&quot;: &quot;{\&quot;attempts\&quot;:2,\&quot;retryOn\&quot;:[\&quot;5xx\&quot;],\&quot;status\&quot;:\&quot;off\&quot;}&quot;,
+             *       &quot;HTTPRewrite&quot;: &quot;{\&quot;pathType\&quot;:\&quot;EQUAL\&quot;,\&quot;path\&quot;:\&quot;/o\&quot;,\&quot;status\&quot;:\&quot;off\&quot;}&quot;,
+             *       &quot;Waf&quot;: &quot;{\&quot;enabled\&quot;:false}&quot;,
+             *       &quot;HeaderOp&quot;: &quot;{\&quot;status\&quot;:\&quot;off\&quot;,\&quot;headerOpItems\&quot;:[{\&quot;directionType\&quot;:\&quot;Request\&quot;,\&quot;opType\&quot;:\&quot;Add\&quot;,\&quot;key\&quot;:\&quot;kkk\&quot;,\&quot;value\&quot;:\&quot;ll\&quot;}]}&quot;
              * }</p>
              */
             public Builder policies(String policies) {
@@ -3490,7 +3579,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching conditions.</p>
+             * <p>Matching conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -3501,7 +3590,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the redirection.</p>
+             * <p>Redirection configuration</p>
              */
             public Builder redirect(Redirect redirect) {
                 this.redirect = redirect;
@@ -3509,7 +3598,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retry configuration.</p>
+             * <p>Retry configuration.</p>
              */
             public Builder retry(Retry retry) {
                 this.retry = retry;
@@ -3517,7 +3606,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the route.</p>
+             * <p>Route order.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3528,7 +3617,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about route matching.</p>
+             * <p>Route matching.</p>
              */
             public Builder routePredicates(RoutePredicates routePredicates) {
                 this.routePredicates = routePredicates;
@@ -3536,7 +3625,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The services.</p>
+             * <p>Services.</p>
              */
             public Builder routeServices(java.util.List<RouteServices> routeServices) {
                 this.routeServices = routeServices;
@@ -3544,10 +3633,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of services.</p>
+             * <p>Service configuration information.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;Percent&quot;:100,&quot;ServiceId&quot;:126}]</p>
+             * <p>[{\&quot;Percent\&quot;:100,\&quot;ServiceId\&quot;:126}]</p>
              */
             public Builder services(String services) {
                 this.services = services;
@@ -3555,14 +3644,20 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the route. Valid values:</p>
+             * <p>Route status.</p>
              * <ul>
-             * <li>0: unpublished</li>
-             * <li>2: publishing</li>
-             * <li>3: published</li>
-             * <li>4: editing (updated but not published)</li>
-             * <li>5: unpublishing</li>
-             * <li>6: unavailable</li>
+             * <li><p>Not published: 0</p>
+             * </li>
+             * <li><p>Publishing: 2</p>
+             * </li>
+             * <li><p>Published: 3</p>
+             * </li>
+             * <li><p>Editing (updates not published): 4</p>
+             * </li>
+             * <li><p>Unpublishing: 5</p>
+             * </li>
+             * <li><p>Unavailable: 6</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3574,7 +3669,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout configuration.</p>
+             * <p>Timeout configuration.</p>
              */
             public Builder timeout(Timeout timeout) {
                 this.timeout = timeout;

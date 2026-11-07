@@ -218,7 +218,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>fpx-pds-pns</p>
@@ -230,7 +230,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data.</p>
+         * <p>The data ID.</p>
          * 
          * <strong>example:</strong>
          * <p>zeekr-*</p>
@@ -242,7 +242,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * <p>The name of the group. Default value: <code>default</code></p>
+         * <p>The group type. Default value: <code>default</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>crm</p>
@@ -254,7 +254,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fad732a7-ff1a-4f21-8126-4edd4****</p>
@@ -279,7 +279,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
+         * <p>The region where the cluster is located. Only regions supported by Microservices Engine (MSE) are valid.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -317,7 +317,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * <p>The extended request parameters. The JSON format is supported.</p>
+         * <p>The extended request parameters. JSON format is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;appGroup\&quot;:\&quot;sm_zk_asi_na610\&quot;,\&quot;appName\&quot;:\&quot;sm-zk\&quot;,\&quot;appStage\&quot;:\&quot;PUBLISH\&quot;,\&quot;appUnit\&quot;:\&quot;center\&quot;,\&quot;bucId\&quot;:\&quot;193554\&quot;,\&quot;bucName\&quot;:\&quot;Alibaba Mobile Business Group-UC\&quot;,\&quot;provider\&quot;:\&quot;aliyun\&quot;}</p>

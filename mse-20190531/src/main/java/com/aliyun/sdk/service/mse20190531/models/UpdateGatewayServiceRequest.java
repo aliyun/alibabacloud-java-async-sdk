@@ -185,7 +185,10 @@ public class UpdateGatewayServiceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -194,7 +197,7 @@ public class UpdateGatewayServiceRequest extends Request {
         }
 
         /**
-         * DnsServerList.
+         * <p>The list of Domain Name System (DNS) servers (for DNS domain name services only).</p>
          */
         public Builder dnsServerList(java.util.List<String> dnsServerList) {
             String dnsServerListShrink = shrink(dnsServerList, "DnsServerList", "json");
@@ -204,7 +207,10 @@ public class UpdateGatewayServiceRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>501</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -213,7 +219,10 @@ public class UpdateGatewayServiceRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c9bc5afd61014165bd58f621b491*****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -222,7 +231,10 @@ public class UpdateGatewayServiceRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>322</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -231,7 +243,7 @@ public class UpdateGatewayServiceRequest extends Request {
         }
 
         /**
-         * IpList.
+         * <p>The address list of fixed address services or domain name list of Domain Name System (DNS) services.</p>
          */
         public Builder ipList(java.util.List<String> ipList) {
             String ipListShrink = shrink(ipList, "IpList", "json");
@@ -241,7 +253,10 @@ public class UpdateGatewayServiceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The service name. This parameter is deprecated and cannot be modified. The value of this parameter must be the same as the current service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -250,7 +265,10 @@ public class UpdateGatewayServiceRequest extends Request {
         }
 
         /**
-         * ServicePort.
+         * <p>The service port. Specify this parameter for DNS services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder servicePort(String servicePort) {
             this.putQueryParameter("ServicePort", servicePort);
@@ -259,7 +277,22 @@ public class UpdateGatewayServiceRequest extends Request {
         }
 
         /**
-         * ServiceProtocol.
+         * <p>The service protocol.</p>
+         * <ul>
+         * <li><p>HTTP</p>
+         * </li>
+         * <li><p>HTTPS</p>
+         * </li>
+         * <li><p>HTTP2</p>
+         * </li>
+         * <li><p>GRPC</p>
+         * </li>
+         * <li><p>DUBBO</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder serviceProtocol(String serviceProtocol) {
             this.putQueryParameter("ServiceProtocol", serviceProtocol);
@@ -268,7 +301,27 @@ public class UpdateGatewayServiceRequest extends Request {
         }
 
         /**
-         * TlsSetting.
+         * <p>The Transport Layer Security (TLS) settings. Valid values:</p>
+         * <ul>
+         * <li><p>mode: TLS mode</p>
+         * </li>
+         * <li><p>certId: certificate ID</p>
+         * </li>
+         * <li><p>caCertId: CA certificate ID</p>
+         * </li>
+         * <li><p>caCertContent: CA certificate public key</p>
+         * </li>
+         * <li><p>sni: service name identification</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;mode&quot;: &quot;MUTUAL&quot;,
+         *       &quot;certId&quot;: &quot;1*****-cn-hangzhou&quot;,
+         *       &quot;caCertContent&quot;: &quot;123&quot;,
+         *       &quot;sni&quot;: &quot;ceshi&quot;
+         * }</p>
          */
         public Builder tlsSetting(String tlsSetting) {
             this.putQueryParameter("TlsSetting", tlsSetting);

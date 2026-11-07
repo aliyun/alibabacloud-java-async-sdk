@@ -59,7 +59,7 @@ public class ListGatewayZoneRequest extends Request {
         } 
 
         /**
-         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * <p>The language of the response. Valid values: <code>zh</code> (Chinese) and <code>en</code> (English). Default value: <code>zh</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

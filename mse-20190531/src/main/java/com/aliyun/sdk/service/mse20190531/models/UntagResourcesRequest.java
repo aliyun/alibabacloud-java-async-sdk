@@ -132,7 +132,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the response information:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -148,7 +148,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:</p>
+         * <p>Specifies whether to delete all tags. This parameter takes effect only when TagKey.N is empty. Valid values: </p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -165,7 +165,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs. A maximum of 50 resource IDs can be specified.</p>
+         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -188,10 +188,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>CLUSTER: MSE instance</li>
-         * <li>GATEWAY: cloud-native gateway</li>
+         * <li><p>CLUSTER: registration and configuration center.</p>
+         * </li>
+         * <li><p>GATEWAY: cloud-native gateway.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -205,7 +207,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag keys. A maximum of 20 tag keys are supported.</p>
+         * <p>The tag keys. You can specify up to 20 tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

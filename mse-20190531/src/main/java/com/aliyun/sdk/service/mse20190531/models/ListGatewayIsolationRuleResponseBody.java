@@ -67,7 +67,7 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6F025D43-8632-5716-AE9B-7EDDF16C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -310,7 +313,14 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * BehaviorType.
+             * <p>The web fallback behavior type. Valid values:</p>
+             * <ul>
+             * <li>0: return specified content.</li>
+             * <li>1: redirect to a specified page.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder behaviorType(Integer behaviorType) {
                 this.behaviorType = behaviorType;
@@ -318,7 +328,14 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * BodyEncoding.
+             * <p>The encoding type. Valid values:</p>
+             * <ul>
+             * <li>0: plain text.</li>
+             * <li>1: JSON.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bodyEncoding(Integer bodyEncoding) {
                 this.bodyEncoding = bodyEncoding;
@@ -326,7 +343,14 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Specifies whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>0: disabled.</li>
+             * <li>1: enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -334,7 +358,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14407</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -342,7 +369,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -350,7 +380,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the concurrency rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>358</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -358,7 +391,7 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IdList.
+             * <p>The IDs of the filter rules.</p>
              */
             public Builder idList(java.util.List<Long> idList) {
                 this.idList = idList;
@@ -366,7 +399,15 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LimitMode.
+             * <p>The threshold conversion mode. Valid values:</p>
+             * <ul>
+             * <li>0: standalone.</li>
+             * <li>1: cluster.</li>
+             * <li>2: cluster to standalone.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder limitMode(Integer limitMode) {
                 this.limitMode = limitMode;
@@ -374,7 +415,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrency.
+             * <p>The overall concurrency threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxConcurrency(Integer maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -382,7 +426,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseAdditionalHeaders.
+             * <p>The custom headers, specified as key-value pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key:value</p>
              */
             public Builder responseAdditionalHeaders(String responseAdditionalHeaders) {
                 this.responseAdditionalHeaders = responseAdditionalHeaders;
@@ -390,7 +437,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseContentBody.
+             * <p>The HTTP response body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder responseContentBody(String responseContentBody) {
                 this.responseContentBody = responseContentBody;
@@ -398,7 +448,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRedirectUrl.
+             * <p>The redirect URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www.******.com</p>
              */
             public Builder responseRedirectUrl(String responseRedirectUrl) {
                 this.responseRedirectUrl = responseRedirectUrl;
@@ -406,7 +459,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseStatusCode.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>429</p>
              */
             public Builder responseStatusCode(Integer responseStatusCode) {
                 this.responseStatusCode = responseStatusCode;
@@ -414,7 +470,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteId.
+             * <p>The ID of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52853</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -422,7 +481,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>routeName</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -658,7 +720,14 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * BehaviorType.
+             * <p>The web fallback behavior type. Valid values:</p>
+             * <ul>
+             * <li>0: return specified content.</li>
+             * <li>1: redirect to a specified page.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder behaviorType(Integer behaviorType) {
                 this.behaviorType = behaviorType;
@@ -666,7 +735,14 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * BodyEncoding.
+             * <p>The encoding type. Valid values:</p>
+             * <ul>
+             * <li>0: plain text.</li>
+             * <li>1: JSON.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bodyEncoding(Integer bodyEncoding) {
                 this.bodyEncoding = bodyEncoding;
@@ -674,7 +750,14 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Specifies whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>0: disabled.</li>
+             * <li>1: enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -682,7 +765,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14407</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -690,7 +776,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -698,7 +787,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the concurrency rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>358</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -706,7 +798,7 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IdList.
+             * <p>The IDs of the filter rules.</p>
              */
             public Builder idList(java.util.List<Long> idList) {
                 this.idList = idList;
@@ -714,7 +806,15 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LimitMode.
+             * <p>The threshold conversion type. Valid values:</p>
+             * <ul>
+             * <li>0: standalone.</li>
+             * <li>1: cluster.</li>
+             * <li>2: standalone to cluster.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder limitMode(Integer limitMode) {
                 this.limitMode = limitMode;
@@ -722,7 +822,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrency.
+             * <p>The overall concurrency threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxConcurrency(Integer maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -730,7 +833,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseAdditionalHeaders.
+             * <p>The custom headers, specified as key-value pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key=value</p>
              */
             public Builder responseAdditionalHeaders(String responseAdditionalHeaders) {
                 this.responseAdditionalHeaders = responseAdditionalHeaders;
@@ -738,7 +844,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseContentBody.
+             * <p>The HTTP response body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder responseContentBody(String responseContentBody) {
                 this.responseContentBody = responseContentBody;
@@ -746,7 +855,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRedirectUrl.
+             * <p>The redirect URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www.******.com</p>
              */
             public Builder responseRedirectUrl(String responseRedirectUrl) {
                 this.responseRedirectUrl = responseRedirectUrl;
@@ -754,7 +866,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseStatusCode.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>429</p>
              */
             public Builder responseStatusCode(Integer responseStatusCode) {
                 this.responseStatusCode = responseStatusCode;
@@ -762,7 +877,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteId.
+             * <p>The ID of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52853</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -770,7 +888,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * <p>The name of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>routeName</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -876,7 +997,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number of the instance list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -884,7 +1008,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -892,7 +1019,7 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The returned results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -900,7 +1027,7 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The returned result collection.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;
@@ -908,7 +1035,10 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total number of queried instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

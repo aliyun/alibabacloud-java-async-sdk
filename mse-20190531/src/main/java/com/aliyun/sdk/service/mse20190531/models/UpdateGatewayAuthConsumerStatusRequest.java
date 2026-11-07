@@ -104,10 +104,12 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese.</p>
+         * </li>
+         * <li><p>en: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,10 +122,12 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         }
 
         /**
-         * <p>The status of the consumer. Valid values:</p>
+         * <p>Specifies whether the authentication consumer is enabled. Valid values:</p>
          * <ul>
-         * <li>true: The consumer is enabled.</li>
-         * <li>false: The consumer is disabled.</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -150,7 +154,7 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         }
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>The ID of the authentication consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

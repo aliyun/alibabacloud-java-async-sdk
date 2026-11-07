@@ -116,8 +116,11 @@ public class GetPluginsRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
-         * <p>zh: Chinese en: English</p>
+         * <p>The language of the returned information. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -129,14 +132,14 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * <p>The type of the plug-in. Valid values:</p>
+         * <p>The plug-in type. Valid values:</p>
          * <ul>
-         * <li>0: custom</li>
-         * <li>1: permission authorization</li>
-         * <li>2: security protection</li>
-         * <li>3: transmission protocol</li>
-         * <li>4: traffic control</li>
-         * <li>5: traffic observation</li>
+         * <li>0: Custom.</li>
+         * <li>1: Authentication and authorization.</li>
+         * <li>2: Security protection.</li>
+         * <li>3: Transport protocol.</li>
+         * <li>4: Traffic control.</li>
+         * <li>5: Traffic observability.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +152,7 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the plug-in.</p>
+         * <p>Specifies whether the plug-in is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -161,7 +164,7 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

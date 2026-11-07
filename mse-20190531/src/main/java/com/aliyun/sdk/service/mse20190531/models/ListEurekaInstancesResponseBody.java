@@ -191,7 +191,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
          * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request is successfully processed.</p>
+         * <p>The request is processed successfully.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -483,7 +483,8 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of the instance.<br>After the specified timeout period expires, the service is unavailable by default and is deleted.</p>
+             * <p>The timeout period of the instance.\
+             * After the specified timeout period expires, the service is unavailable by default and is deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -582,7 +583,8 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum interval between two heartbeat checks after a heartbeat check times out.<br>Default value: 10.</p>
+             * <p>The maximum interval between two heartbeat checks after a heartbeat check times out.\
+             * Default value: 10.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

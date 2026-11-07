@@ -219,8 +219,10 @@ public class GetApplicationListRequest extends Request {
         /**
          * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +235,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * <p>The ID of an application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hkhon1po62@c3df23522b*****</p>
@@ -245,7 +247,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * <p>The name of an application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>rest-container</p>
@@ -257,7 +259,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * <p>The programming language of the application, such as Java and Go.</p>
+         * <p>The programming language, such as Java or Go.</p>
          * 
          * <strong>example:</strong>
          * <p>Java</p>
@@ -281,7 +283,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,7 +296,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -307,7 +309,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +322,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+         * <p>Specifies whether to enable the Sentinel component.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -344,7 +346,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable switching.</p>
+         * <p>Specifies whether to enable the switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -356,7 +358,7 @@ public class GetApplicationListRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>Alibaba Cloud tags. You can perform filtering by Alibaba Cloud tag.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -425,7 +427,10 @@ public class GetApplicationListRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The custom tag key. It can contain up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -433,7 +438,10 @@ public class GetApplicationListRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

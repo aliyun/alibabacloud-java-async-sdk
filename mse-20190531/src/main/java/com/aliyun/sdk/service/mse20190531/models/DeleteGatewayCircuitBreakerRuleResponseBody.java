@@ -67,7 +67,10 @@ public class DeleteGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class DeleteGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

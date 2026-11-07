@@ -67,7 +67,7 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2B74E7F7-DF54-5AB1-B8F2-67391B83****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -323,7 +326,12 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * BehaviorType.
+             * <p>The type of the web fallback behavior.</p>
+             * <p>0: The specified content is returned.</p>
+             * <p>1: The specified page is displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder behaviorType(Integer behaviorType) {
                 this.behaviorType = behaviorType;
@@ -331,7 +339,12 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * BodyEncoding.
+             * <p>The encoding type.</p>
+             * <p>0: plain text</p>
+             * <p>1: JSON</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bodyEncoding(Integer bodyEncoding) {
                 this.bodyEncoding = bodyEncoding;
@@ -339,7 +352,12 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable the rule.</p>
+             * <p>0: The rule is not enabled.</p>
+             * <p>1: The rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -347,7 +365,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14407</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -355,7 +376,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -363,7 +387,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the throttling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>549</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -371,7 +398,7 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IdList.
+             * <p>The IDs of the circuit breaking rules that are used to filter data.</p>
              */
             public Builder idList(java.util.List<Long> idList) {
                 this.idList = idList;
@@ -379,7 +406,13 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * LimitMode.
+             * <p>The threshold conversion mode.</p>
+             * <p>0: standalone.</p>
+             * <p>1: cluster.</p>
+             * <p>2: cluster-to-standalone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder limitMode(Integer limitMode) {
                 this.limitMode = limitMode;
@@ -387,7 +420,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseAdditionalHeaders.
+             * <p>The custom header. The input is a key-value pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key=value</p>
              */
             public Builder responseAdditionalHeaders(String responseAdditionalHeaders) {
                 this.responseAdditionalHeaders = responseAdditionalHeaders;
@@ -395,7 +431,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseContentBody.
+             * <p>The HTTP return text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text</p>
              */
             public Builder responseContentBody(String responseContentBody) {
                 this.responseContentBody = responseContentBody;
@@ -403,7 +442,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseRedirectUrl.
+             * <p>The redirection URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www.******.com</p>
              */
             public Builder responseRedirectUrl(String responseRedirectUrl) {
                 this.responseRedirectUrl = responseRedirectUrl;
@@ -411,7 +453,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseStatusCode.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>429</p>
              */
             public Builder responseStatusCode(Integer responseStatusCode) {
                 this.responseStatusCode = responseStatusCode;
@@ -419,7 +464,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteId.
+             * <p>The route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48811</p>
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -427,7 +475,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * <p>The route name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>routeA</p>
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -435,7 +486,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * StatDurationMs.
+             * <p>The duration of the statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder statDurationMs(Integer statDurationMs) {
                 this.statDurationMs = statDurationMs;
@@ -443,7 +497,10 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The overall queries per second (QPS) threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder threshold(Integer threshold) {
                 this.threshold = threshold;

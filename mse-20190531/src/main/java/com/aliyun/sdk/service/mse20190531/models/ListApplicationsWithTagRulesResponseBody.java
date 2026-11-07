@@ -106,7 +106,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
          * <p>The returned message.</p>
          * <ul>
          * <li>If the request is successful, a success message is returned.</li>
-         * <li>If the request fails, an error message is returned.</li>
+         * <li>If the request fails, the cause of the failure is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7466566F-F30F-4A29-965D-3E0AF21D****</p>
@@ -151,10 +151,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The request was successful.</li>
-         * <li><code>false</code>: The request failed.</li>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,7 +328,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * cond.
+             * <p>The comparison operator. Valid values: &gt;=, &lt;=, &gt;, &lt;, and ==.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -336,7 +339,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * datum.
+             * <p>The value to be compared for operators such as rawvalue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -344,7 +350,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * divisor.
+             * <p>The field required for the mod operator, which is the divisor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -352,7 +361,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * expr.
+             * <p>The expression. For more information, see the descriptions of other fields.</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -360,7 +369,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * <p>The parameter position, starting from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -368,7 +380,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * nameList.
+             * <p>The list of names.</p>
              */
             public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
@@ -376,7 +388,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>The operator. A value of rawvalue indicates direct comparison, mode indicates modulo operation, and list indicates a whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rawvalue</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -384,7 +399,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * rate.
+             * <p>The proportion rule, where 20% of traffic is routed to the node corresponding to this tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -392,7 +410,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * remainder.
+             * <p>The field required for the percentage operation, which is the percentage value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -400,7 +421,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value used for comparison. The value obtained from the expression is compared with this value. If the operator is a list whitelist, separate multiple values with commas (,), such as 1,2,3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2,3</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -571,7 +595,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * appId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>@</strong></em></p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -579,7 +606,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * argumentItems.
+             * <p>The list of parameter arguments.</p>
              */
             public Builder argumentItems(java.util.List<ArgumentItems> argumentItems) {
                 this.argumentItems = argumentItems;
@@ -587,7 +614,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * condition.
+             * <p>The logical relationship among the following items. Valid values: AND and OR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -595,7 +625,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * group.
+             * <p>The Dubbo service group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -603,7 +636,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * methodName.
+             * <p>The Dubbo service method name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder methodName(String methodName) {
                 this.methodName = methodName;
@@ -611,7 +647,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * paramTypes.
+             * <p>The list of parameter types.</p>
              */
             public Builder paramTypes(java.util.List<String> paramTypes) {
                 this.paramTypes = paramTypes;
@@ -619,7 +655,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * serviceName.
+             * <p>The service name (interface).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HelloService</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -627,7 +666,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -635,7 +674,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * triggerPolicy.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTENT</p>
              */
             public Builder triggerPolicy(String triggerPolicy) {
                 this.triggerPolicy = triggerPolicy;
@@ -643,7 +685,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The Dubbo service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -814,7 +859,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * cond.
+             * <p>The comparison operator. Valid values: &gt;=, &lt;=, &gt;, &lt;, and ==.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -822,7 +870,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * datum.
+             * <p>The value to be compared for operators such as rawvalue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -830,7 +881,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * divisor.
+             * <p>The field required for the mod operator, which is the divisor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -838,7 +892,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -846,7 +903,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * nameList.
+             * <p>The field required for the list operator.</p>
              */
             public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
@@ -854,7 +911,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>The operator. A value of rawvalue indicates direct comparison, mode indicates modulo operation, and list indicates a whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rawvalue</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -862,7 +922,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * rate.
+             * <p>The proportion rule, where 20% of traffic is routed to the node corresponding to this tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -870,7 +933,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * remainder.
+             * <p>The field required for the percentage operation, which is the percentage value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -878,7 +944,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -886,7 +955,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1044,7 +1116,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * appId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>@</strong></em></p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1052,7 +1127,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * condition.
+             * <p>The logical relationship among the following items. Valid values: AND and OR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -1060,7 +1138,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Specifies whether the feature is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1068,7 +1146,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/hello</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1076,7 +1157,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * paths.
+             * <p>The list of paths.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -1084,7 +1165,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1092,7 +1176,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * restItems.
+             * <p>The list of matching conditions for REST requests.</p>
              */
             public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
@@ -1100,7 +1184,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -1108,7 +1192,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * triggerPolicy.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTENT</p>
              */
             public Builder triggerPolicy(String triggerPolicy) {
                 this.triggerPolicy = triggerPolicy;
@@ -1175,7 +1262,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * dubbo.
+             * <p>The Dubbo rule.</p>
              */
             public Builder dubbo(java.util.List<Dubbo> dubbo) {
                 this.dubbo = dubbo;
@@ -1183,7 +1270,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * springcloud.
+             * <p>The Spring Cloud rule.</p>
              */
             public Builder springcloud(java.util.List<Springcloud> springcloud) {
                 this.springcloud = springcloud;
@@ -1328,10 +1415,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+             * <p>The enabling status of the alert rule. Valid values:</p>
              * <ul>
-             * <li><code>true</code></li>
-             * <li><code>false</code></li>
+             * <li><code>true</code>: Enabled.</li>
+             * <li><code>false</code>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1376,7 +1463,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rate.</p>
+             * <p>The proportion.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1387,7 +1474,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the routing rule.</p>
+             * <p>The applicable routes of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -1533,7 +1620,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application ID.</p>
+             * <p>The ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>daqijp6c31@xxx</p>
@@ -1566,7 +1653,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried rules.</p>
+             * <p>The list of rules.</p>
              */
             public Builder routeRules(java.util.List<RouteRules> routeRules) {
                 this.routeRules = routeRules;
@@ -1574,10 +1661,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route state. Valid values:</p>
+             * <p>The routing status. Valid values:</p>
              * <ul>
-             * <li>0: disabled</li>
-             * <li>1: enabled</li>
+             * <li><p>0: Disabled.</p>
+             * </li>
+             * <li><p>1: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1674,7 +1763,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1685,7 +1774,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1696,7 +1785,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned data.</p>
+             * <p>The data structure.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -1704,7 +1793,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

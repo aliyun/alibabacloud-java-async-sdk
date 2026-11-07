@@ -220,7 +220,7 @@ public class AddMockRuleRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language of the returned information. Valid values:</p>
          * <ul>
          * <li>zh: Chinese</li>
          * <li>en: English</li>
@@ -236,11 +236,11 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom application.</p>
+         * <p>The IDs of the custom applications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;appName&quot;:&quot;provide&quot;,&quot;appId&quot;:&quot;bst8l6o735@f6d8aaf6e56e67d&quot;}]</p>
+         * <p>[{\&quot;appName\&quot;:\&quot;provide\&quot;,\&quot;appId\&quot;:\&quot;bst8l6o735@f6d8aaf6e56e67d\&quot;}]</p>
          */
         public Builder consumerAppIds(String consumerAppIds) {
             this.putQueryParameter("ConsumerAppIds", consumerAppIds);
@@ -262,10 +262,10 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the alert rule. Valid values:</p>
+         * <p>Specifies whether the alert rule is enabled. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enables the alert rule.</li>
-         * <li><code>false</code>: disables the alert rule.</li>
+         * <li><code>true</code>: Enabled.</li>
+         * <li><code>false</code>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,12 +291,12 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * <p>The response time (RT) threshold of slow calls. Valid values:</p>
+         * <p>The response time (RT) for slow calls. Valid values:</p>
          * <ul>
-         * <li>- 15: 15 ms</li>
-         * <li>- 30: 30 ms</li>
-         * <li>- 60: 60 ms</li>
-         * <li>- 120: 120 ms</li>
+         * <li>15: 15 ms</li>
+         * <li>30: 30 ms</li>
+         * <li>60: 60 ms</li>
+         * <li>120: 120 ms</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,7 +346,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -359,7 +359,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * <p>The input parameters. The JSON format is supported.</p>
+         * <p>The input parameters. JSON format is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -372,7 +372,7 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule source.</p>
+         * <p>The source of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

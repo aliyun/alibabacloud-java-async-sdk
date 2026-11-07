@@ -143,7 +143,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data overview.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-100-000</p>
@@ -162,7 +162,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -173,10 +173,10 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The request was successfully processed.</p>
+         * <p>Request processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -184,7 +184,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
@@ -281,7 +281,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The engine specifications that can be used.</p>
+             * <p>The available engine specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>MSE_SC_1_2_200_c</p>
@@ -292,7 +292,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs in the specifications.</p>
+             * <p>The number of CPU cores for this specification.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -303,7 +303,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size in the specifications. Unit: GB.</p>
+             * <p>The memory size for this specification. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

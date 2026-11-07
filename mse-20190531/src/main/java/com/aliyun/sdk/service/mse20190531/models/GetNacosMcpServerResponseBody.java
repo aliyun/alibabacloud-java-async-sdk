@@ -67,7 +67,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72FC625E-9629-591B-9C01-3F0BFDAB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * Is_latest.
+             * <p>Indicates whether it is the latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isLatest(Boolean isLatest) {
                 this.isLatest = isLatest;
@@ -162,7 +168,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Release_date.
+             * <p>The release date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-16</p>
              */
             public Builder releaseDate(String releaseDate) {
                 this.releaseDate = releaseDate;
@@ -170,7 +179,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.9</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -250,7 +262,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -258,7 +273,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/sse</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -266,7 +284,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -346,7 +367,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The group to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -354,7 +378,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -362,7 +389,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-service</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -429,7 +459,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * ExportPath.
+             * <p>The exposed path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/sse</p>
              */
             public Builder exportPath(String exportPath) {
                 this.exportPath = exportPath;
@@ -437,7 +470,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceRef.
+             * <p>The service reference.</p>
              */
             public Builder serviceRef(ServiceRef serviceRef) {
                 this.serviceRef = serviceRef;
@@ -517,7 +550,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a weather query tool</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -525,7 +561,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * InputSchema.
+             * <p>The input schema of the tool.</p>
              */
             public Builder inputSchema(java.util.Map<String, ?> inputSchema) {
                 this.inputSchema = inputSchema;
@@ -533,7 +569,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The tool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get_weather</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -639,7 +678,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * SecuritySchemes.
+             * <p>The list of security authentication schemes in the MCP tool definition.</p>
              */
             public Builder securitySchemes(Object securitySchemes) {
                 this.securitySchemes = securitySchemes;
@@ -647,7 +686,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * SpecificationType.
+             * <p>The storage format type of the MCP tool definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cipher-kms-256</p>
              */
             public Builder specificationType(String specificationType) {
                 this.specificationType = specificationType;
@@ -655,7 +697,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * ToolDecryptStatus.
+             * <p>The decryption result status of the MCP tool definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder toolDecryptStatus(String toolDecryptStatus) {
                 this.toolDecryptStatus = toolDecryptStatus;
@@ -663,7 +708,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Tools.
+             * <p>The list of tools.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
@@ -671,7 +716,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * ToolsMeta.
+             * <p>The tool metadata map.</p>
              */
             public Builder toolsMeta(java.util.Map<String, DataToolSpecToolsMetaValue> toolsMeta) {
                 this.toolsMeta = toolsMeta;
@@ -751,7 +796,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * IsLatest.
+             * <p>Indicates whether it is the latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isLatest(Boolean isLatest) {
                 this.isLatest = isLatest;
@@ -759,7 +807,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseDate.
+             * <p>The release date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-16</p>
              */
             public Builder releaseDate(String releaseDate) {
                 this.releaseDate = releaseDate;
@@ -767,7 +818,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.11.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -990,7 +1044,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * AllVersions.
+             * <p>All version information of the current MCP server.</p>
              */
             public Builder allVersions(java.util.List<AllVersions> allVersions) {
                 this.allVersions = allVersions;
@@ -998,7 +1052,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * BackendEndpoints.
+             * <p>The backend service endpoints.</p>
              */
             public Builder backendEndpoints(java.util.List<BackendEndpoints> backendEndpoints) {
                 this.backendEndpoints = backendEndpoints;
@@ -1006,7 +1060,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Capabilities.
+             * <p>The capabilities of the current MCP server.</p>
              */
             public Builder capabilities(java.util.List<String> capabilities) {
                 this.capabilities = capabilities;
@@ -1014,7 +1068,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1022,7 +1079,16 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the gateway is enabled.</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1030,7 +1096,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * FrontProtocol.
+             * <p>The exposed protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-sse</p>
              */
             public Builder frontProtocol(String frontProtocol) {
                 this.frontProtocol = frontProtocol;
@@ -1038,7 +1107,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID。</p>
+             * <p>The ID.</p>
              * 
              * <strong>example:</strong>
              * <p>5e3c5211-d365-4013-8540-c4106ec2a5dc</p>
@@ -1049,7 +1118,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * LocalServerConfig.
+             * <p>The local MCP server configuration.</p>
              */
             public Builder localServerConfig(java.util.Map<String, ?> localServerConfig) {
                 this.localServerConfig = localServerConfig;
@@ -1057,7 +1126,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1065,7 +1137,10 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-sse</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1073,7 +1148,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteServerConfig.
+             * <p>The remote server configuration.</p>
              */
             public Builder remoteServerConfig(RemoteServerConfig remoteServerConfig) {
                 this.remoteServerConfig = remoteServerConfig;
@@ -1081,7 +1156,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * ToolSpec.
+             * <p>The tool specification.</p>
              */
             public Builder toolSpec(ToolSpec toolSpec) {
                 this.toolSpec = toolSpec;
@@ -1089,7 +1164,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * VersionDetail.
+             * <p>The version details.</p>
              */
             public Builder versionDetail(VersionDetail versionDetail) {
                 this.versionDetail = versionDetail;
@@ -1097,7 +1172,25 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * YamlConfig.
+             * <p>The YAML configuration of the AI gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>allowTools:</p>
+             * <ul>
+             * <li>demo-tool
+             * securityScheme: {}
+             * server:
+             * name: mcp-demo
+             * tools:</li>
+             * <li>args:<ul>
+             * <li>name: name
+             * description: name
+             * type: string
+             * description: a demo tool
+             * name: demo-tool</li>
+             * </ul>
+             * </li>
+             * </ul>
              */
             public Builder yamlConfig(String yamlConfig) {
                 this.yamlConfig = yamlConfig;

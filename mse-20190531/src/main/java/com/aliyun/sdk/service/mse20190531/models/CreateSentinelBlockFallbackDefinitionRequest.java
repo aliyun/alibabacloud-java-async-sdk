@@ -199,7 +199,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh is the default value, which indicates Chinese. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -208,7 +211,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID, which can be omitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde@12345</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -217,7 +223,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -226,7 +235,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * FallbackBehavior.
+         * <p>The behavior details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;webFallbackMode&quot;:0,&quot;webRespMessage&quot;:&quot;{}&quot;,&quot;webRespStatusCode&quot;:429,&quot;webRespContentType&quot;:0}</p>
          */
         public Builder fallbackBehavior(String fallbackBehavior) {
             this.putQueryParameter("FallbackBehavior", fallbackBehavior);
@@ -235,7 +247,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The programming language, such as Java or Go.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAVA</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -244,7 +259,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The behavior name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyFallback</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -253,7 +271,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The name of the Microservices Engine (MSE) namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -262,7 +283,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -271,7 +295,11 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * ResourceClassification.
+         * <p>The target resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 Web
+         * 2 Rpc</p>
          */
         public Builder resourceClassification(Integer resourceClassification) {
             this.putQueryParameter("ResourceClassification", resourceClassification);
@@ -280,7 +308,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * Scenario.
+         * <p>The scenario, uniformly fill in default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);
@@ -289,7 +320,10 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>Redundant parameter, currently ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

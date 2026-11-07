@@ -146,10 +146,10 @@ public class CloneNacosConfigRequest extends Request {
         } 
 
         /**
-         * <p>Language type of the returned message:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>Configuration items to be cloned, in the format of dataId+group, with multiple items separated by commas.</p>
+         * <p>The configuration items to clone, in the format of dataId+group. Separate multiple configuration items with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>test+test,test1+test1</p>
@@ -174,7 +174,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>List of configuration IDs.</p>
+         * <p>The list of configuration IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>253661,253662</p>
@@ -186,7 +186,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>Source namespace ID.</p>
+         * <p>The source namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>be821963-6d48-4ea5-9910-6057d****</p>
@@ -211,11 +211,11 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>The strategy used when a write conflict occurs.</p>
+         * <p>The policy used when a write conflict occurs. Valid values:</p>
          * <ul>
          * <li>ABORT</li>
          * <li>SKIP</li>
-         * <li>OVERWRITE</li>
+         * <li>OVERWRITE.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -229,7 +229,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * <p>Target namespace ID.</p>
+         * <p>The destination namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>08be4b5d-2d1c-4e6e-aa85-83b9****</p>
