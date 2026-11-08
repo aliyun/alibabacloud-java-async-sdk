@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateMonitorGroupInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private String dryRun;
 
@@ -33,6 +37,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
 
     private CreateMonitorGroupInstancesRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.groupId = builder.groupId;
         this.instances = builder.instances;
@@ -49,6 +54,13 @@ public class CreateMonitorGroupInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -73,6 +85,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateMonitorGroupInstancesRequest, Builder> {
+        private String clientToken; 
         private String dryRun; 
         private String groupId; 
         private java.util.List<Instances> instances; 
@@ -83,13 +96,30 @@ public class CreateMonitorGroupInstancesRequest extends Request {
 
         private Builder(CreateMonitorGroupInstancesRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.groupId = request.groupId;
             this.instances = request.instances;
         } 
 
         /**
-         * DryRun.
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to only perform a dry run on the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. A check request is sent, and no security group is bound to the instance. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -111,7 +141,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instances that you want to add to the application group.</p>
+         * <p>The list of instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
@@ -211,7 +241,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
 
             /**
              * <p>The abbreviation of the Alibaba Cloud service name.</p>
-             * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <code>metricCategory</code> tag in the <code>Labels</code> response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+             * <p>For more information about how to obtain the abbreviation of the Alibaba Cloud service name, see the <code>metricCategory</code> field in the <code>Labels</code> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -235,7 +265,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             }
 
             /**
-             * <p>The instance name.</p>
+             * <p>The name of the instance.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -247,7 +277,7 @@ public class CreateMonitorGroupInstancesRequest extends Request {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The region where the instance resides.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

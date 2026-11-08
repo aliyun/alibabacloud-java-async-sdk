@@ -106,10 +106,8 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
-         * <blockquote>
-         * <p>The status code 200 indicates that the request was successful.</p>
-         * </blockquote>
+         * <p>The status code.
+         * A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -150,11 +148,11 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
+         * <li><p>true: Successful.</p>
          * </li>
-         * <li><p>false</p>
+         * <li><p>false: Failed.</p>
          * </li>
          * </ul>
          * 

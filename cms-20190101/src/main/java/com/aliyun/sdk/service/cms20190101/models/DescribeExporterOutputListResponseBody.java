@@ -132,9 +132,9 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p>The status code 200 indicates that the call was successful. Other status codes indicate that the call failed.</p>
+         * <p>A status code of 200 indicates success, and other values indicate failure.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -189,8 +189,8 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the call was successful. Valid values:  </p>
          * <ul>
-         * <li><code>true</code>: successful</li>
-         * <li><code>false</code>: failed</li>
+         * <li><code>true</code>: The call was successful.</li>
+         * <li><code>false</code>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>

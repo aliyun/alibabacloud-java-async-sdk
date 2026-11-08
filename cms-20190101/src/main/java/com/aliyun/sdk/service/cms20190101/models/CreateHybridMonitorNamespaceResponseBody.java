@@ -93,7 +93,7 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The call result.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -128,8 +128,8 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li>true: Successful.</li>
-         * <li>false: Failed.</li>
+         * <li>true: The operation was successful.</li>
+         * <li>false: The operation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

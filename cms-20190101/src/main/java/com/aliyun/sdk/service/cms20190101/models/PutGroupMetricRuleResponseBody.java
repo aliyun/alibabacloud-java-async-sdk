@@ -212,7 +212,7 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the alert rule.</p>
+             * <p>The alert rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>

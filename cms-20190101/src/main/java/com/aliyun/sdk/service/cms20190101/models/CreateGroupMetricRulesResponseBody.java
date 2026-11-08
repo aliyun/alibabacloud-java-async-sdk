@@ -106,9 +106,9 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The HTTP status code.</p>
          * <blockquote>
-         * <p>A value of 200 indicates success.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,9 +150,9 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the operation was successful. Valid values:</p>
          * <ul>
-         * <li><p>true: The operation is successful.</p>
+         * <li><p>true: The operation was successful.</p>
          * </li>
          * <li><p>false: The operation failed.</p>
          * </li>
@@ -264,9 +264,9 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status code.</p>
+             * <p>The HTTP status code.</p>
              * <blockquote>
-             * <p>A value of 200 indicates success.</p>
+             * <p>200 indicates success.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -305,9 +305,9 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the operation is successful. Valid values:</p>
+             * <p>Indicates whether the operation was successful. Valid values:</p>
              * <ul>
-             * <li><p>true: The operation is successful.</p>
+             * <li><p>true: The operation was successful.</p>
              * </li>
              * <li><p>false: The operation failed.</p>
              * </li>

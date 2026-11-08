@@ -129,7 +129,7 @@ public class DeleteMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Specifies whether the operation is successful. Valid values:</p>
          * <ul>
          * <li>true: The operation is successful.</li>
          * <li>false: The operation fails.</li>

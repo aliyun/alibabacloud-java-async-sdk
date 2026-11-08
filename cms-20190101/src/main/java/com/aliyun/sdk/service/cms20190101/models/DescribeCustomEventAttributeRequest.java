@@ -157,8 +157,8 @@ public class DescribeCustomEventAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end time.</p>
+         * <p>The value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since January 1, 1970.</p>
          * 
          * <strong>example:</strong>
          * <p>1552227965971</p>
@@ -182,7 +182,7 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The application group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123****</p>
@@ -230,12 +230,10 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * <p>The keywords that are used to search for the event.</p>
+         * <p>The keywords used to search event content.</p>
          * <ul>
-         * <li><p>If you need to query the custom event whose content contains a and b, set the value to a and b.</p>
-         * </li>
-         * <li><p>If you need to query the custom event whose content contains a or b, set the value to a or b.</p>
-         * </li>
+         * <li>If the event content contains both A and B, you can search for A and B.</li>
+         * <li>If the event content contains either A or B, you can search for A or B.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,8 +246,8 @@ public class DescribeCustomEventAttributeRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time.</p>
+         * <p>The value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since January 1, 1970.</p>
          * 
          * <strong>example:</strong>
          * <p>1552224365971</p>

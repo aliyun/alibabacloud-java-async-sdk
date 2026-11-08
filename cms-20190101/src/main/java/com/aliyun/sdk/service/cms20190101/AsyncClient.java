@@ -30,7 +30,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of applying the alert template <code>700****</code> to the application group <code>123456</code>. The generated alert rule has the ID <code>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</code> and the name <code>test123</code>.</p>
+     * <p>This topic provides an example to show how to apply the alert template <code>700****</code> to the application group <code>123456</code>. The ID of the generated alert rule is <code>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</code>, and the name is <code>test123</code>.</p>
      * 
      * @param request the request parameters of ApplyMetricRuleTemplate  ApplyMetricRuleTemplateRequest
      * @return ApplyMetricRuleTemplateResponse
@@ -60,8 +60,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The Alibaba Cloud services supported by this operation include cloud servers (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
-     * This topic provides an example on how to automatically create an application group for resources that are attached with the tag key <code>ecs_instance</code>. The alert contact group of the application group is <code>ECS_Group</code>.</p>
+     * <p>The Alibaba Cloud services supported by this operation include Elastic Compute Service (ECS) servers, ApsaraDB RDS, and Server Load Balancer (SLB).
+     * This topic provides an example to show how to automatically create an application group for resources that are attached to the tag key <code>ecs_instance</code>. The alert contact group for the application group is <code>ECS_Group</code>.</p>
      * 
      * @param request the request parameters of CreateDynamicTagGroup  CreateDynamicTagGroupRequest
      * @return CreateDynamicTagGroupResponse
@@ -70,7 +70,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an alert rule for the monitoring metric <code>cpu_total</code> of Elastic Computing Service (ECS) in the application group <code>123456</code>. The alert rule ID is <code>456789</code>, the alert rule name is <code>ECS_Rule1</code>, the alert severity is <code>Critical</code>, the statistical method is <code>Average</code>, the comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the threshold is <code>90</code>, and the retry count is <code>3</code>. The response shows that the alert rule <code>ECS_Rule1</code> is created.</p>
+     * <p>This topic provides an example of creating an alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance in the application group <code>123456</code>. The alert rule ID is <code>456789</code>, the alert rule name is <code>ECS_Rule1</code>, the alert level is <code>Critical</code>, the statistical method is <code>Average</code>, the threshold comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the alert threshold is <code>90</code>, and the alert retry count is <code>3</code>. The response indicates that the alert rule <code>ECS_Rule1</code> was created successfully.</p>
      * 
      * @param request the request parameters of CreateGroupMetricRules  CreateGroupMetricRulesRequest
      * @return CreateGroupMetricRulesResponse
@@ -85,7 +85,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an availability monitoring task named <code>task1</code> with the detection type set to <code>HTTP</code> in application group <code>123456</code>. Alert notifications are sent by email and DingTalk chatbot.</p>
+     * <p>This topic provides an example of creating an availability monitoring task named <code>task1</code> with the <code>HTTP</code> probe type in the application group <code>123456</code>. Alert notifications are sent to you by email and DingTalk chatbot.</p>
      * 
      * @param request the request parameters of CreateHostAvailability  CreateHostAvailabilityRequest
      * @return CreateHostAvailabilityResponse
@@ -95,9 +95,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Before you begin</h2>
-     * <p>Make sure that you have activated Hybrid Cloud Monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
-     * <h2>Operation description</h2>
-     * <p>This topic provides an example on how to create a metric repository named <code>aliyun</code> with a data storage duration of <code>cms.s1.3xlarge</code>. The response indicates that the metric repository is created.</p>
+     * <p>Make sure that Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
+     * <h2>Usage notes</h2>
+     * <p>This topic provides an example of creating a metric namespace named <code>aliyun</code> with a data storage duration of <code>cms.s1.3xlarge</code>. The response indicates that the metric namespace is created.</p>
      * 
      * @param request the request parameters of CreateHybridMonitorNamespace  CreateHybridMonitorNamespaceRequest
      * @return CreateHybridMonitorNamespaceResponse
@@ -118,12 +118,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before calling this operation, make sure that Hybrid Cloud Monitoring is activated.</li>
-     * <li>To create a metric for SLS logs, make sure that SLS is activated and that you have created a project and a Logstore.</li>
-     * <li>Depending on the value of <code>TaskType</code>, some parameters are required. For example, when <code>TaskType</code> is set to <code>aliyun_fc</code>, you must set <code>YARMConfig</code>. When <code>TaskType</code> is set to <code>aliyun_sls</code>, you must configure parameters such as <code>CollectInterval</code>.</li>
-     * <li>For cross-account operations, specify <code>TargetUserId</code> or <code>TargetUserIdList</code> to import resources of other members into Hybrid Cloud Monitoring.</li>
+     * <li>Before you call this operation, make sure that Hybrid Cloud Monitoring is activated.</li>
+     * <li>To create a metric for SLS logs, make sure that Simple Log Service is activated, and a project and a Logstore are created.</li>
+     * <li>Some parameters are required based on the TaskType. For example, if TaskType is set to aliyun_fc, you must configure YARMConfig. If TaskType is set to aliyun_sls, you must configure parameters such as CollectInterval.</li>
+     * <li>For cross-account operations, you can specify TargetUserId or TargetUserIdList to import resources of other members to Hybrid Cloud Monitoring.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateHybridMonitorTask  CreateHybridMonitorTaskRequest
@@ -145,8 +145,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h3>Background information</h3>
      * <ul>
-     * <li>CloudMonitor blocks alert notifications based on the blacklist policies that take effect. To block alert notifications when the value of a metric that belongs to a cloud service reaches the threshold that you specified, add the metric to a blacklist policy.</li>
-     * <li>CloudMonitor allows you to create blacklist policies only based on threshold metrics. You cannot create blacklist policies based on system events. For more information about the cloud services and the thresholds of the metrics that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</li>
+     * <li>An alert blacklist allows CloudMonitor to block alert notifications based on an alert blacklist policy. If you do not need to receive alert notifications for a specific metric of an instance of an Alibaba Cloud service in a threshold alert rule, you can configure an alert blacklist policy to block the alert notifications.</li>
+     * <li>Currently, CloudMonitor supports alert blacklist policies only for threshold metrics, not for system events. For more information about the Alibaba Cloud services and threshold metrics supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateMetricRuleBlackList  CreateMetricRuleBlackListRequest
@@ -183,7 +183,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an application group by using the resource group <code>CloudMonitor</code> and the alert contact group <code>ECS_Group</code>. The region ID of the resource group is <code>cn-hangzhou</code>.</p>
+     * <p>This topic provides an example of creating an application group for the <code>CloudMonitor</code> resource group in the <code>cn-hangzhou</code> region. The alert contact group of the application group is <code>ECS_Group</code>.</p>
      * 
      * @param request the request parameters of CreateMonitorGroupByResourceGroupId  CreateMonitorGroupByResourceGroupIdRequest
      * @return CreateMonitorGroupByResourceGroupIdResponse
@@ -192,8 +192,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can add a maximum of 1,000 instances to an application group at a time. You can add a maximum of 3,000 instances of an Alibaba Cloud service to an application group. The total number of instances that you can add to an application group is unlimited.
-     * In this example, an Elastic Compute Service (ECS) instance in the <code>China (Hangzhou)</code> region is added to the <code>3607****</code> application group. The instance ID is <code>i-2ze26xj5wwy12****</code> and the instance name is <code>test-instance-ecs</code>.</p>
+     * <p>In an application group, you can add up to 3,000 resources for a single Alibaba Cloud service, and up to 1,000 resources per request. There is no limit on the total number of resources in an application group.
+     * This topic provides an example of adding a cloud server (ECS) instance in the <code>cn-hangzhou</code> region (instance ID: <code>i-2ze26xj5wwy12****</code>, instance name: <code>test-instance-ecs</code>) to the application group <code>3607****</code>.</p>
      * 
      * @param request the request parameters of CreateMonitorGroupInstances  CreateMonitorGroupInstancesRequest
      * @return CreateMonitorGroupInstancesResponse
@@ -217,7 +217,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to create a site monitoring task. The example creates a task named <code>HanZhou_ECS1</code> to monitor the URL <code>https://www.aliyun.com</code> over <code>HTTPS</code>.</p>
+     * <p>This topic provides an example of creating a site monitoring task named <code>HanZhou_ECS1</code>. The monitored address of the task is <code>https://www.aliyun.com</code> and the monitoring type is <code>HTTPS</code>.</p>
      * 
      * @param request the request parameters of CreateSiteMonitor  CreateSiteMonitorRequest
      * @return CreateSiteMonitorResponse
@@ -275,15 +275,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEventRulesResponse> deleteEventRules(DeleteEventRulesRequest request);
 
     /**
-     * @param request the request parameters of DeleteExporterOutput  DeleteExporterOutputRequest
+     * @deprecated OpenAPI DeleteExporterOutput is deprecated  * @param request  the request parameters of DeleteExporterOutput  DeleteExporterOutputRequest
      * @return DeleteExporterOutputResponse
      */
+    @Deprecated
     CompletableFuture<DeleteExporterOutputResponse> deleteExporterOutput(DeleteExporterOutputRequest request);
 
     /**
-     * @param request the request parameters of DeleteExporterRule  DeleteExporterRuleRequest
+     * @deprecated OpenAPI DeleteExporterRule is deprecated  * @param request  the request parameters of DeleteExporterRule  DeleteExporterRuleRequest
      * @return DeleteExporterRuleResponse
      */
+    @Deprecated
     CompletableFuture<DeleteExporterRuleResponse> deleteExporterRule(DeleteExporterRuleRequest request);
 
     /**
@@ -417,8 +419,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation can query only the alert history within the last year.
-     * This topic provides an example on how to query the alert history statistics of Elastic Compute Service (ECS) from the <code>product</code> dimension of Alibaba Cloud services.</p>
+     * <p>This operation can only query the statistics of alert history within the last year.
+     * This topic provides an example to query the alert history statistics of Elastic Compute Service (ECS) by the <code>product</code> dimension of Alibaba Cloud services.</p>
      * 
      * @param request the request parameters of DescribeAlertLogCount  DescribeAlertLogCountRequest
      * @return DescribeAlertLogCountResponse
@@ -427,7 +429,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the histogram list of ECS alert history from the Alibaba Cloud service <code>product</code> dimension.</p>
+     * <p>This topic provides an example of querying the histogram list of Elastic Compute Service (ECS) alert history by the <code>product</code> dimension of cloud services.</p>
      * 
      * @param request the request parameters of DescribeAlertLogHistogram  DescribeAlertLogHistogramRequest
      * @return DescribeAlertLogHistogramResponse
@@ -542,18 +544,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEventRuleTargetListResponse> describeEventRuleTargetList(DescribeEventRuleTargetListRequest request);
 
     /**
-     * @param request the request parameters of DescribeExporterOutputList  DescribeExporterOutputListRequest
+     * @deprecated OpenAPI DescribeExporterOutputList is deprecated  * @param request  the request parameters of DescribeExporterOutputList  DescribeExporterOutputListRequest
      * @return DescribeExporterOutputListResponse
      */
+    @Deprecated
     CompletableFuture<DescribeExporterOutputListResponse> describeExporterOutputList(DescribeExporterOutputListRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <code>Rule_01</code> and has an ID of <code>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</code>.</p>
+     * @deprecated OpenAPI DescribeExporterRuleList is deprecated  * @description This topic provides an example to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that there is only one alert rule in the list. The name of the alert rule is `Rule_01` and the ID is `applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****`.
      * 
      * @param request the request parameters of DescribeExporterRuleList  DescribeExporterRuleListRequest
      * @return DescribeExporterRuleListResponse
      */
+    @Deprecated
     CompletableFuture<DescribeExporterRuleListResponse> describeExporterRuleList(DescribeExporterRuleListRequest request);
 
     /**
@@ -888,7 +891,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of querying the details of the site monitoring task <code>cc641dff-c19d-45f3-ad0a-818a0c4f****</code>. The response shows that the task name is <code>test123</code>, the monitored address is <code>https://aliyun.com</code>, and the carrier is <code>Alibaba</code>.</p>
+     * <p>This topic provides an example of querying the details of the site monitoring task <code>cc641dff-c19d-45f3-ad0a-818a0c4f****</code>. The response shows that the name of the site monitoring task is <code>test123</code>, the probe address is <code>https://aliyun.com</code>, and the carrier is <code>Alibaba</code>.</p>
      * 
      * @param request the request parameters of DescribeSiteMonitorAttribute  DescribeSiteMonitorAttributeRequest
      * @return DescribeSiteMonitorAttributeResponse
@@ -1076,12 +1079,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Before you begin</h2>
-     * <p>Make sure that the Cloud Assistant agent is installed on the Alibaba Cloud host. For more information about how to install the Cloud Assistant agent, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</p>
+     * <p>Make sure that Cloud Assistant is installed on the Alibaba Cloud host. For more information about how to install Cloud Assistant, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</p>
      * <h2>Background information</h2>
-     * <p>This operation applies only to Alibaba Cloud hosts, namely ECS instances.
-     * The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent for C++</a>.</p>
+     * <p>This operation applies only to Alibaba Cloud hosts, which are ECS instances.
+     * The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the C++ agent</a>.</p>
      * <h2>Usage notes</h2>
-     * <p>This topic provides an example on how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host i-m5e0k0bexac8tykr****.</p>
+     * <p>This topic provides an example to show how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host <code>i-m5e0k0bexac8tykr****</code>.</p>
      * 
      * @param request the request parameters of InstallMonitoringAgent  InstallMonitoringAgentRequest
      * @return InstallMonitoringAgentResponse
@@ -1236,25 +1239,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutEventRuleTargetsResponse> putEventRuleTargets(PutEventRuleTargetsRequest request);
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>Only Log Service (SLS) is supported. More products will be supported in the future.</p>
-     * </blockquote>
+     * @deprecated OpenAPI PutExporterOutput is deprecated  * @description > Currently, only Simple Log Service (SLS) is supported. Export to more Alibaba Cloud services will be supported in the future.
      * 
      * @param request the request parameters of PutExporterOutput  PutExporterOutputRequest
      * @return PutExporterOutputResponse
      */
+    @Deprecated
     CompletableFuture<PutExporterOutputResponse> putExporterOutput(PutExporterOutputRequest request);
 
     /**
-     * @param request the request parameters of PutExporterRule  PutExporterRuleRequest
+     * @deprecated OpenAPI PutExporterRule is deprecated  * @param request  the request parameters of PutExporterRule  PutExporterRuleRequest
      * @return PutExporterRuleResponse
      */
+    @Deprecated
     CompletableFuture<PutExporterRuleResponse> putExporterRule(PutExporterRuleRequest request);
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of creating an alert rule for the <code>cpu_total</code> monitoring metric of the Elastic Computing Service server (an Alibaba Cloud service) in the application group <code>17285****</code>. The alert rule ID is <code>123456</code>, the alert rule name is <code>Rule_test</code>, the alert level is <code>Critical</code>, the statistical method is <code>Average</code>, the threshold comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the threshold is <code>90</code>, and the retry count is <code>3</code>. The response shows that the alert rule is created and the alert rule ID is <code>123456</code>.</p>
+     * <p>This topic provides an example on how to create an alert rule for the cpu_total metric of the ECS instance in the application group 17285****. The ID of the alert rule is 123456, the alert rule name is Rule_test, the alert level is Critical, the statistical method is Average, the threshold comparison operator is GreaterThanOrEqualToThreshold, the threshold is 90, and the number of retries is 3. The response indicates that the alert rule is created and the alert rule ID is 123456.</p>
      * 
      * @param request the request parameters of PutGroupMetricRule  PutGroupMetricRuleRequest
      * @return PutGroupMetricRuleResponse
@@ -1308,9 +1310,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to configure a threshold-based alert rule for the <code>cpu_total</code> metric of a cloud server (ECS) instance <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example to show the Settings of a threshold alert rule for the <code>cpu_total</code> metric of the cloud server ECS instance <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>On August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation is added. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of PutResourceMetricRule  PutResourceMetricRuleRequest
@@ -1320,9 +1322,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of the Settings for a threshold alert rule for the <code>cpu_total</code> monitoring metric of the ECS server <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example on how to configure the Settings for a threshold alert rule for the <code>cpu_total</code> metric of the ECS server <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>On August 15, 2024, Statistics validation was increased. The statistical value must match the Statistics value of the corresponding metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation was added. The statistical value must be the Statistics value corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of PutResourceMetricRules  PutResourceMetricRulesRequest

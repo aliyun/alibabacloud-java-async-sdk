@@ -118,7 +118,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * <p>The alert rule configurations.</p>
+         * <p>The list of alert rule configurations.</p>
          * <p>Valid values of N: 1 to 3.</p>
          * <p>This parameter is required.</p>
          */
@@ -129,8 +129,8 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application group.</p>
-         * <p>For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * <p>The application group ID.</p>
+         * <p>For information about how to obtain the application group ID, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * <p>The expressions used to match instances.</p>
+         * <p>The list of match conditional expressions.</p>
          * <p>Valid values of N: 1 to 3.</p>
          */
         public Builder matchExpress(java.util.List<MatchExpress> matchExpress) {
@@ -153,14 +153,11 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
+         * <p>The logical relation for matching instances. Valid values:</p>
          * <ul>
-         * <li><p>all</p>
-         * </li>
-         * <li><p>and</p>
-         * </li>
-         * <li><p>or</p>
-         * </li>
+         * <li>all: all.</li>
+         * <li>and: AND.</li>
+         * <li>or: OR.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,29 +269,25 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
-             * <p>For more information about how to query the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
-             * <p>Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
+             * <p>For information about how to obtain the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+             * <p>The ARN is in the following format: <code>acs:{service abbreviation}:{regionId}:{userId}:/{resource type}/{resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The parameters are described as follows:</p>
              * <ul>
-             * <li><p>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</p>
+             * <li><p>{service abbreviation}: the abbreviation of the cloud service. Only Simple Message Queue (formerly MNS) is supported.</p>
              * </li>
-             * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
+             * <li><p>{userId}: the Alibaba Cloud account ID.</p>
              * </li>
-             * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
+             * <li><p>{regionId}: the region where the Simple Message Queue (formerly MNS) queue or topic resides.</p>
              * </li>
-             * <li><p>{Resource type}: the type of the resource that triggers the alert. Valid values:</p>
+             * <li><p>{resource type}: the type of the resource that receives alert notifications. Valid values:</p>
              * <ul>
-             * <li><p><strong>queues</strong></p>
-             * </li>
-             * <li><p><strong>topics</strong></p>
-             * </li>
+             * <li><strong>queues</strong>: queue.</li>
+             * <li><strong>topics</strong>: topic.</li>
              * </ul>
              * </li>
-             * <li><p>{Resource name}: the resource name.</p>
+             * <li><p>{resource name}: the name of the resource.</p>
              * <ul>
-             * <li><p>If the resource type is <strong>queues</strong>, the resource name is the queue name.</p>
-             * </li>
-             * <li><p>If the resource type is <strong>topics</strong>, the resource name is the topic name.</p>
-             * </li>
+             * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
+             * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
              * </ul>
              * </li>
              * </ul>
@@ -308,8 +301,8 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource for which alerts are triggered.</p>
-             * <p>For more information about how to obtain the ID of a resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+             * <p>The ID of the alert target.</p>
+             * <p>For information about how to obtain the ID of an alert target, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -320,7 +313,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+             * <p>The JSON-formatted parameters for the alert callback.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
@@ -333,12 +326,9 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             /**
              * <p>The alert level. Valid values:</p>
              * <ul>
-             * <li><p>INFO</p>
-             * </li>
-             * <li><p>WARN</p>
-             * </li>
-             * <li><p>CRITICAL</p>
-             * </li>
+             * <li>INFO: informational.</li>
+             * <li>WARN: warning.</li>
+             * <li>CRITICAL: critical.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -518,30 +508,19 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             } 
 
             /**
-             * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
+             * <p>The comparison operator for the threshold. Valid values:</p>
              * <ul>
-             * <li><p>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-             * </li>
-             * <li><p>GreaterThanThreshold: greater than the threshold</p>
-             * </li>
-             * <li><p>LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-             * </li>
-             * <li><p>LessThanThreshold: less than the threshold</p>
-             * </li>
-             * <li><p>NotEqualToThreshold: not equal to the threshold</p>
-             * </li>
-             * <li><p>GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-             * </li>
-             * <li><p>LessThanYesterday: less than the metric value at the same time yesterday</p>
-             * </li>
-             * <li><p>GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-             * </li>
-             * <li><p>LessThanLastWeek: less than the metric value at the same time last week</p>
-             * </li>
-             * <li><p>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-             * </li>
-             * <li><p>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</p>
-             * </li>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to.</li>
+             * <li>GreaterThanThreshold: greater than.</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to.</li>
+             * <li>LessThanThreshold: less than.</li>
+             * <li>NotEqualToThreshold: not equal to.</li>
+             * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
+             * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
+             * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
+             * <li>LessThanLastWeek: less than the value at the same time last week.</li>
+             * <li>GreaterThanLastPeriod: greater than the value in the previous period.</li>
+             * <li>LessThanLastPeriod: less than the value in the previous period.</li>
              * </ul>
              * <p>Valid values of N: 1 to 3.</p>
              * <p>This parameter is required.</p>
@@ -555,7 +534,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The period of time during which the alert rule is effective.</p>
+             * <p>The effective period of the alert rule.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * 
              * <strong>example:</strong>
@@ -569,12 +548,9 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             /**
              * <p>The alert level. Valid values:</p>
              * <ul>
-             * <li><p>critical (default)</p>
-             * </li>
-             * <li><p>warn</p>
-             * </li>
-             * <li><p>info</p>
-             * </li>
+             * <li>critical: critical. This is the default value.</li>
+             * <li>warn: warning.</li>
+             * <li>info: informational.</li>
              * </ul>
              * <p>Valid values of N: 1 to 3.</p>
              * <p>This parameter is required.</p>
@@ -588,7 +564,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and no longer requires attention.</p>
              * 
              * <strong>example:</strong>
              * <p>00:00-05:30</p>
@@ -599,10 +575,10 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
+             * <p>The mute period. Unit: seconds. Minimum value: 3600, which indicates 1 hour. Default value: 86400, which indicates 1 day.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * <blockquote>
-             * <p>Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</p>
+             * <p>If the monitoring data continuously exceeds the alert rule threshold, the system sends only one alert notification within each mute period.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -614,10 +590,10 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The statistical aggregation method that is used to calculate the metric values.</p>
+             * <p>The statistical method for alerts.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * <blockquote>
-             * <p>Set the value to Average.</p>
+             * <p>Only Average is supported.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -630,7 +606,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The alert triggers.</p>
+             * <p>The list of alert targets.</p>
              */
             public Builder targetList(java.util.List<TargetList> targetList) {
                 this.targetList = targetList;
@@ -640,6 +616,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             /**
              * <p>The alert threshold.</p>
              * <p>Valid values of N: 1 to 3.</p>
+             * <p>Unit: count.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -651,10 +628,10 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The number of times for which the threshold can be consecutively exceeded. Default value: 3.</p>
+             * <p>The number of consecutive times the alert level is triggered. Default value: 3.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * <blockquote>
-             * <p>A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+             * <p>An alert is triggered only when the alert level is reached for the specified number of consecutive times and the alert threshold is met.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -667,7 +644,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The callback URL.</p>
+             * <p>The webhook URL for alert callbacks.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * 
              * <strong>example:</strong>
@@ -751,20 +728,14 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             } 
 
             /**
-             * <p>The matching condition. Valid values:</p>
+             * <p>The match condition. Valid values:</p>
              * <ul>
-             * <li><p>all (default value): matches all</p>
-             * </li>
-             * <li><p>startWith: starts with a prefix</p>
-             * </li>
-             * <li><p>endWith: ends with a suffix</p>
-             * </li>
-             * <li><p>contains: contains</p>
-             * </li>
-             * <li><p>notContains: does not contain</p>
-             * </li>
-             * <li><p>equals: equals</p>
-             * </li>
+             * <li>all: matches all. This is the default value.</li>
+             * <li>startWith: matches the prefix.</li>
+             * <li>endWith: matches the suffix.</li>
+             * <li>contains: contains the specified string.</li>
+             * <li>notContains: does not contain the specified string.</li>
+             * <li>equals: exactly matches.</li>
              * </ul>
              * <p>Valid values of N: 1 to 3.</p>
              * 
@@ -777,10 +748,10 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The criteria based on which the instances are matched.</p>
+             * <p>The type of the match condition.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * <blockquote>
-             * <p>Set the value to name. The value name indicates that the instances are matched based on the instance name.</p>
+             * <p>Only Name, which indicates the instance name, is supported.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -792,7 +763,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * <p>The keyword used to match the instance name.</p>
+             * <p>The name of the matched instance.</p>
              * <p>Valid values of N: 1 to 3.</p>
              * 
              * <strong>example:</strong>

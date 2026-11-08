@@ -95,7 +95,7 @@ public class PutExporterOutputResponseBody extends TeaModel {
         /**
          * <p>The status code.</p>
          * <blockquote>
-         * <p>The value 200 indicates that the call is successful.</p>
+         * <p>200 indicates success.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class PutExporterOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. The value true indicates that the call was successful. The value false indicates that the call failed.</p>
+         * <p>Indicates whether the operation was successful. A value of true indicates success, and a value of false indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

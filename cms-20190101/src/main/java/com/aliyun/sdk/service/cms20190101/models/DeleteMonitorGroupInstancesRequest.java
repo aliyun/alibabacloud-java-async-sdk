@@ -23,6 +23,10 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
     private String category;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -39,6 +43,7 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
     private DeleteMonitorGroupInstancesRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.groupId = builder.groupId;
         this.instanceIdList = builder.instanceIdList;
@@ -65,6 +70,13 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -87,6 +99,7 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteMonitorGroupInstancesRequest, Builder> {
         private String category; 
+        private String clientToken; 
         private Boolean dryRun; 
         private Long groupId; 
         private String instanceIdList; 
@@ -98,6 +111,7 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         private Builder(DeleteMonitorGroupInstancesRequest request) {
             super(request);
             this.category = request.category;
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.groupId = request.groupId;
             this.instanceIdList = request.instanceIdList;
@@ -120,10 +134,19 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         }
 
         /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and service limits, but does not delete the instances. If the request fails the check, an error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a normal request. If the request passes the check, the instances are deleted.</li>
+         * <li><strong>true</strong>: performs a dry run and does not delete the VPN connection. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends a normal request. If the request passes the dry run, the VPN connection is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +172,7 @@ public class DeleteMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances to be deleted. Separate multiple instance IDs with commas (,). You can delete up to 20 instances at a time.</p>
+         * <p>The instances to delete. Separate multiple instance IDs with commas (,). You can delete up to 20 instances at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

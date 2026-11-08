@@ -22,6 +22,10 @@ public class PutResourceMetricRuleRequest extends Request {
     private Escalations escalations;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CompositeExpression")
     private CompositeExpression compositeExpression;
 
@@ -105,6 +109,7 @@ public class PutResourceMetricRuleRequest extends Request {
     private PutResourceMetricRuleRequest(Builder builder) {
         super(builder);
         this.escalations = builder.escalations;
+        this.clientToken = builder.clientToken;
         this.compositeExpression = builder.compositeExpression;
         this.contactGroups = builder.contactGroups;
         this.dryRun = builder.dryRun;
@@ -144,6 +149,13 @@ public class PutResourceMetricRuleRequest extends Request {
      */
     public Escalations getEscalations() {
         return this.escalations;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -281,6 +293,7 @@ public class PutResourceMetricRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<PutResourceMetricRuleRequest, Builder> {
         private Escalations escalations; 
+        private String clientToken; 
         private CompositeExpression compositeExpression; 
         private String contactGroups; 
         private Boolean dryRun; 
@@ -308,6 +321,7 @@ public class PutResourceMetricRuleRequest extends Request {
         private Builder(PutResourceMetricRuleRequest request) {
             super(request);
             this.escalations = request.escalations;
+            this.clientToken = request.clientToken;
             this.compositeExpression = request.compositeExpression;
             this.contactGroups = request.contactGroups;
             this.dryRun = request.dryRun;
@@ -335,6 +349,15 @@ public class PutResourceMetricRuleRequest extends Request {
         public Builder escalations(Escalations escalations) {
             this.putQueryParameter("Escalations", escalations);
             this.escalations = escalations;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -368,10 +391,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <p>Specifies whether to only precheck this request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is prechecked but not executed. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): The request is sent and executed. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: The system only checks the request and does not bind the security group to the instance. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default value): The system sends a normal request. If the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,9 +431,9 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The trigger epoch of the alert rule. Unit: seconds.</p>
+         * <p>The trigger period of the alert rule. Unit: seconds.</p>
          * <blockquote>
-         * <p>For more information about how to query the statistical epoch of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
+         * <p>For more information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -435,9 +458,9 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the metric. For more information about how to query the name of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
+         * <p>The metric name. For more information about how to query the metric name, see <a href="https://help.aliyun.com/document_detail/163515.html">CloudMonitor metrics</a>.</p>
          * <blockquote>
-         * <p>When you create a Prometheus alert rule for CloudMonitor, this parameter specifies the name of the metric repository. For more information about how to obtain the name of a metric repository, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+         * <p>If you create a Prometheus alert rule for Hybrid Cloud Monitoring, this parameter specifies the metric repository name. For more information about how to obtain the metric repository name, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -451,9 +474,9 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The data namespace of the Alibaba Cloud service. For more information about how to query the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
+         * <p>The data namespace of the Alibaba Cloud service. For more information about how to query the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">CloudMonitor metrics</a>.</p>
          * <blockquote>
-         * <p>When you create a Prometheus alert rule for CloudMonitor, you must configure this parameter to <code>acs_prometheus</code>.</p>
+         * <p>If you create a Prometheus alert rule for Hybrid Cloud Monitoring, you must set this parameter to <code>acs_prometheus</code>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -467,10 +490,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The action to take when no monitoring data is found. Valid values:</p>
+         * <p>The action to take when no monitoring data is available. Valid values:</p>
          * <ul>
-         * <li>KEEP_LAST_STATE (default): No action is taken.</li>
-         * <li>INSUFFICIENT_DATA: The alert content indicates that no data is found.</li>
+         * <li>KEEP_LAST_STATE (default value): No action is taken.</li>
+         * <li>INSUFFICIENT_DATA: The alert notification indicates that no data is available.</li>
          * <li>OK: The status is normal.</li>
          * </ul>
          * 
@@ -484,7 +507,7 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The time range during which the alert rule is inactive.</p>
+         * <p>The ineffective time range of the alert rule.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00-06:00</p>
@@ -496,9 +519,9 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The statistical epoch of the metric. Unit: seconds. The default value is the original reporting epoch of the metric.</p>
+         * <p>The statistical period of the metric. Unit: seconds. The default value is the original reporting period of the metric.</p>
          * <blockquote>
-         * <p>For more information about how to query the statistical epoch of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
+         * <p>For more information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -511,7 +534,7 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The Prometheus alert.</p>
+         * <p>The Prometheus alert configurations.</p>
          * <blockquote>
          * <p>You need to configure this parameter only when you create a Prometheus alert rule for Hybrid Cloud Monitoring.</p>
          * </blockquote>
@@ -525,7 +548,7 @@ public class PutResourceMetricRuleRequest extends Request {
 
         /**
          * <p>The resource information. Examples: <code>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</code> and <code>[{&quot;userId&quot;:&quot;100931896542****&quot;}]</code>.</p>
-         * <p>For more information about the dimensions supported by resource information, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
+         * <p>For more information about the dimensions supported by the resource information, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</p>
@@ -537,10 +560,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the alert rule.</p>
-         * <p>You can enter a new alert rule ID or use an existing alert rule ID in CloudMonitor. For more information about how to query the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>The alert rule ID.</p>
+         * <p>You can enter a new alert rule ID or use an existing alert rule ID in CloudMonitor. For more information about how to query the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * <blockquote>
-         * <p>Entering a new alert rule ID indicates that a threshold-based alert rule is created.</p>
+         * <p>If you enter a new alert rule ID, a threshold alert rule is created.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -554,10 +577,10 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the alert rule.</p>
-         * <p>You can enter a new alert rule name or use an existing alert rule name in CloudMonitor. For more information about how to query the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>The alert rule name.</p>
+         * <p>You can enter a new alert rule name or use an existing alert rule name in CloudMonitor. For more information about how to query the alert rule name, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
          * <blockquote>
-         * <p>Entering a new alert rule name indicates that a threshold-based alert rule is created.</p>
+         * <p>If you enter a new alert rule name, a threshold alert rule is created.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -571,7 +594,7 @@ public class PutResourceMetricRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to send a recovery notification.</p>
+         * <p>Specifies whether to send recovery notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -585,7 +608,7 @@ public class PutResourceMetricRuleRequest extends Request {
         /**
          * <p>The mute epoch. Unit: seconds. Default value: 86400.</p>
          * <blockquote>
-         * <p>The mute epoch refers to the interval at which to send an alert notification again if the alert does not recover to Normal after it is triggered.</p>
+         * <p>The mute epoch refers to the interval at which the system will send an alert notification again if the alert does not recover to Normal after it is triggered.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -697,12 +720,12 @@ public class PutResourceMetricRuleRequest extends Request {
             /**
              * <p>The comparison operator for the Critical-level threshold. Valid values:</p>
              * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
-             * <li>GreaterThanThreshold: greater than the threshold.</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
-             * <li>LessThanThreshold: less than the threshold.</li>
-             * <li>NotEqualToThreshold: not equal to the threshold.</li>
-             * <li>EqualToThreshold: equal to the threshold.</li>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to.</li>
+             * <li>GreaterThanThreshold: greater than.</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to.</li>
+             * <li>LessThanThreshold: less than.</li>
+             * <li>NotEqualToThreshold: not equal to.</li>
+             * <li>EqualToThreshold: equal to.</li>
              * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
              * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
              * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
@@ -723,10 +746,10 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The statistical method for the Critical-level alert.</p>
-             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
+             * <p>The statistical method for Critical-level alerts.</p>
+             * <p>The valid values are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
              * <blockquote>
-             * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+             * <p>You must configure the Settings for at least one of the following alert levels: Critical, Warn, and Info. For the alert level you set, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -738,7 +761,7 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The threshold for the Critical-level alert.</p>
+             * <p>The threshold for Critical-level alerts.</p>
              * <blockquote>
              * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
@@ -752,7 +775,7 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The number of retries for the Critical-level alert.</p>
+             * <p>The number of retries for Critical-level alerts.</p>
              * <blockquote>
              * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
@@ -853,12 +876,12 @@ public class PutResourceMetricRuleRequest extends Request {
             /**
              * <p>The comparison operator for the Info-level threshold. Valid values:</p>
              * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
-             * <li>GreaterThanThreshold: greater than the threshold.</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
-             * <li>LessThanThreshold: less than the threshold.</li>
-             * <li>NotEqualToThreshold: not equal to the threshold.</li>
-             * <li>EqualToThreshold: equal to the threshold.</li>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to.</li>
+             * <li>GreaterThanThreshold: greater than.</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to.</li>
+             * <li>LessThanThreshold: less than.</li>
+             * <li>NotEqualToThreshold: not equal to.</li>
+             * <li>EqualToThreshold: equal to.</li>
              * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
              * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
              * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
@@ -879,10 +902,10 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The statistical method for the Info-level alert.</p>
-             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
+             * <p>The statistical method for Info-level alerts.</p>
+             * <p>The valid values are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
              * <blockquote>
-             * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+             * <p>You must configure the Settings for at least one of the following alert levels: Critical, Warn, and Info. For the alert level you set, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -894,7 +917,7 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The threshold for the Info-level alert.</p>
+             * <p>The threshold for Info-level alerts.</p>
              * <blockquote>
              * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
@@ -908,7 +931,7 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The number of retries for the Info-level alert.</p>
+             * <p>The number of retries for Info-level alerts.</p>
              * <blockquote>
              * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
@@ -1009,12 +1032,12 @@ public class PutResourceMetricRuleRequest extends Request {
             /**
              * <p>The comparison operator for the Warn-level threshold. Valid values:</p>
              * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
-             * <li>GreaterThanThreshold: greater than the threshold.</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
-             * <li>LessThanThreshold: less than the threshold.</li>
-             * <li>NotEqualToThreshold: not equal to the threshold.</li>
-             * <li>EqualToThreshold: equal to the threshold.</li>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to.</li>
+             * <li>GreaterThanThreshold: greater than.</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to.</li>
+             * <li>LessThanThreshold: less than.</li>
+             * <li>NotEqualToThreshold: not equal to.</li>
+             * <li>EqualToThreshold: equal to.</li>
              * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
              * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
              * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
@@ -1035,10 +1058,10 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The statistical method for the Warn-level alert.</p>
-             * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
+             * <p>The statistical method for Warn-level alerts.</p>
+             * <p>The valid values are determined by the Statistics column corresponding to the MetricName of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
              * <blockquote>
-             * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
+             * <p>You must configure the Settings for at least one of the following alert levels: Critical, Warn, and Info. For the alert level you set, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1050,7 +1073,7 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The threshold for the Warn-level alert.</p>
+             * <p>The threshold for Warn-level alerts.</p>
              * <blockquote>
              * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
@@ -1064,7 +1087,7 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The number of retries for the Warn-level alert.</p>
+             * <p>The number of retries for Warn-level alerts.</p>
              * <blockquote>
              * <p>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
              * </blockquote>
@@ -1272,14 +1295,14 @@ public class PutResourceMetricRuleRequest extends Request {
             } 
 
             /**
-             * <p>The comparison operator for the threshold. Valid values:</p>
+             * <p>The threshold comparison operator. Valid values:</p>
              * <ul>
-             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</li>
-             * <li>GreaterThanThreshold: greater than the threshold.</li>
-             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold.</li>
-             * <li>LessThanThreshold: less than the threshold.</li>
-             * <li>NotEqualToThreshold: not equal to the threshold.</li>
-             * <li>EqualToThreshold: equal to the threshold.</li>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to.</li>
+             * <li>GreaterThanThreshold: greater than.</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to.</li>
+             * <li>LessThanThreshold: less than.</li>
+             * <li>NotEqualToThreshold: not equal to.</li>
+             * <li>EqualToThreshold: equal to.</li>
              * <li>GreaterThanYesterday: greater than the value at the same time yesterday.</li>
              * <li>LessThanYesterday: less than the value at the same time yesterday.</li>
              * <li>GreaterThanLastWeek: greater than the value at the same time last week.</li>
@@ -1297,7 +1320,7 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The name of the metric for the Alibaba Cloud service.</p>
+             * <p>The metric name of the Alibaba Cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>cpu_total</p>
@@ -1325,10 +1348,10 @@ public class PutResourceMetricRuleRequest extends Request {
              * <li>$Maximum: the maximum value.</li>
              * <li>$Minimum: the minimum value.</li>
              * <li>$Average: the average value.</li>
-             * <li>$Availability: the active rate. This is typically used for site monitoring.</li>
+             * <li>$Availability: the active rate. This value is typically used for site monitoring.</li>
              * </ul>
              * <blockquote>
-             * <p><code>$</code> is the unified prefix for metrics. For more information about supported Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
+             * <p><code>$</code> is the unified prefix for metrics. For more information about supported Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1449,7 +1472,7 @@ public class PutResourceMetricRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of standard alert conditions.</p>
+             * <p>The list of alert conditions created by using the standard method.</p>
              */
             public Builder expressionList(java.util.List<ExpressionList> expressionList) {
                 this.expressionList = expressionList;
@@ -1457,7 +1480,7 @@ public class PutResourceMetricRuleRequest extends Request {
             }
 
             /**
-             * <p>The logical relationship between multi-metric alert conditions. Valid values: </p>
+             * <p>The logical relationship between the alert conditions for multiple metrics. Valid values: </p>
              * <ul>
              * <li><p><code>&amp;&amp;</code>: An alert is triggered only when all metrics meet the alert conditions. An alert is triggered only when all expressions in ExpressionList evaluate to <code>true</code>.</p>
              * </li>
@@ -1478,7 +1501,7 @@ public class PutResourceMetricRuleRequest extends Request {
              * <ul>
              * <li>Configure an alert blacklist for specific resources. Example: <code>$instanceId != \\&quot;i-io8kfvcpp7x5****\\&quot; ``&amp;&amp;`` $Average &gt; 50</code>. This indicates that no alert is triggered even if the <code>Average</code> value of the instance <code>i-io8kfvcpp7x5****</code> in the alert rule is greater than 50.</li>
              * <li>Configure a special alert threshold for a specific instance in the rule. Example: <code>$Average &gt; ($instanceId == \\&quot;i-io8kfvcpp7x5****\\&quot;? 80: 50)</code>. This indicates that an alert is triggered only when the <code>Average</code> value of the instance <code>i-io8kfvcpp7x5****</code> in the alert rule is greater than 80. For other instances, an alert is triggered when the <code>Average</code> value is greater than 50.</li>
-             * <li>Limit the number of instances that exceed the threshold in the rule. Example: <code>count($Average &gt; 20) &gt; 3</code>. This indicates that an alert is triggered only when the number of instances whose <code>Average</code> value is greater than 20 exceeds 3.</li>
+             * <li>Limit the number of instances that exceed the threshold in the rule. Example: <code>count($Average &gt; 20) &gt; 3</code>. This indicates that an alert is triggered only when the number of instances whose <code>Average</code> value is greater than 20 in the alert rule is greater than 3.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1767,7 +1790,7 @@ public class PutResourceMetricRuleRequest extends Request {
             } 
 
             /**
-             * <p>The annotations that are rendered with their keys and values during a Prometheus alert to help you understand the metric or alert rule.</p>
+             * <p>The annotations that are rendered with their keys and values during Prometheus alerts to help you understand the metrics or alert rules.</p>
              * <blockquote>
              * <p>This feature is equivalent to the Annotation feature in Prometheus.</p>
              * </blockquote>
@@ -1796,7 +1819,7 @@ public class PutResourceMetricRuleRequest extends Request {
             /**
              * <p>The PromQL query statement.</p>
              * <blockquote>
-             * <p>The data obtained by using the PromQL query statement is used as the alert data. You must include the alert threshold in this statement.</p>
+             * <p>The data obtained by using the PromQL query statement is used as the alert data. You must specify the alert threshold in this statement.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

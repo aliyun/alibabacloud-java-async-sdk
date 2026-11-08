@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteMetricRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -28,6 +32,7 @@ public class DeleteMetricRulesRequest extends Request {
 
     private DeleteMetricRulesRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.id = builder.id;
     }
@@ -46,6 +51,13 @@ public class DeleteMetricRulesRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -60,6 +72,7 @@ public class DeleteMetricRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteMetricRulesRequest, Builder> {
+        private String clientToken; 
         private Boolean dryRun; 
         private java.util.List<String> id; 
 
@@ -69,15 +82,25 @@ public class DeleteMetricRulesRequest extends Request {
 
         private Builder(DeleteMetricRulesRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.id = request.id;
         } 
 
         /**
-         * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. No actual operation is performed. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: A check request is sent, and no security group is bound to the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): A normal request is sent. If the check succeeds, an HTTP 2xx status code is returned and the operation is directly performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

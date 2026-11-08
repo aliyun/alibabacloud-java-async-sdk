@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteMonitorGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -28,6 +32,7 @@ public class DeleteMonitorGroupRequest extends Request {
 
     private DeleteMonitorGroupRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.groupId = builder.groupId;
     }
@@ -46,6 +51,13 @@ public class DeleteMonitorGroupRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -60,6 +72,7 @@ public class DeleteMonitorGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteMonitorGroupRequest, Builder> {
+        private String clientToken; 
         private Boolean dryRun; 
         private Long groupId; 
 
@@ -69,15 +82,25 @@ public class DeleteMonitorGroupRequest extends Request {
 
         private Builder(DeleteMonitorGroupRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.groupId = request.groupId;
         } 
 
         /**
-         * <p>Specifies whether to perform a dry run on the request. A dry run includes checks on permissions and instance status. Valid values:</p>
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform a dry run on the request. The dry run checks permissions and instance status. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the name and description of the route table are modified.</li>
-         * <li><strong>true</strong>: Sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. Check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, the name and description of the route table are modified.</li>
+         * <li><strong>true</strong>: sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>

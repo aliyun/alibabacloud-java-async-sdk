@@ -60,11 +60,8 @@ public class DeleteHostAvailabilityRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the tasks.</p>
+         * <p>The ID of the task.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12456</p>
          */
         public Builder id(java.util.List<Long> id) {
             this.putQueryParameter("Id", id);
