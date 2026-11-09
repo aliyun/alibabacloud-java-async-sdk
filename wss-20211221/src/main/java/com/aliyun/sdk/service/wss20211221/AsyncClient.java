@@ -101,6 +101,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Filters instances by resource type, instance, and region, and uses paging to query the auto-renewal status.</p>
+     * 
+     * @param request the request parameters of DescribeInstanceAutoRenewalAttribute  DescribeInstanceAutoRenewalAttributeRequest
+     * @return DescribeInstanceAutoRenewalAttributeResponse
+     */
+    CompletableFuture<DescribeInstanceAutoRenewalAttributeResponse> describeInstanceAutoRenewalAttribute(DescribeInstanceAutoRenewalAttributeRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</p>
      * 
      * @param request the request parameters of DescribeMultiPrice  DescribeMultiPriceRequest
