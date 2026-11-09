@@ -835,12 +835,20 @@ public class GetManagedAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configuration")
         private Configuration configuration;
 
+        @com.aliyun.core.annotation.NameInMap("outdatedInstanceCount")
+        private Long outdatedInstanceCount;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
         private Harness(Builder builder) {
             this.configuration = builder.configuration;
+            this.outdatedInstanceCount = builder.outdatedInstanceCount;
             this.type = builder.type;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -859,22 +867,40 @@ public class GetManagedAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return outdatedInstanceCount
+         */
+        public Long getOutdatedInstanceCount() {
+            return this.outdatedInstanceCount;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
             return this.type;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private Configuration configuration; 
+            private Long outdatedInstanceCount; 
             private String type; 
+            private String version; 
 
             private Builder() {
             } 
 
             private Builder(Harness model) {
                 this.configuration = model.configuration;
+                this.outdatedInstanceCount = model.outdatedInstanceCount;
                 this.type = model.type;
+                this.version = model.version;
             } 
 
             /**
@@ -886,6 +912,17 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>仅查询返回。服务端按完整实例分布统计，不受实例列表分页和筛选影响。镜像 tag 缺失、分页不完整或无法确认时为空，不等同于 0。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder outdatedInstanceCount(Long outdatedInstanceCount) {
+                this.outdatedInstanceCount = outdatedInstanceCount;
+                return this;
+            }
+
+            /**
              * <p>The type of the runtime framework.</p>
              * 
              * <strong>example:</strong>
@@ -893,6 +930,17 @@ public class GetManagedAgentResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>仅查询返回。当前返回 Pool 目标镜像 tag；无法解析时为空，不能用 Agent 配置版本代替。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202611031754</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 
@@ -1120,10 +1168,14 @@ public class GetManagedAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("quota")
         private Quota quota;
 
+        @com.aliyun.core.annotation.NameInMap("thinkingLevel")
+        private String thinkingLevel;
+
         private Model(Builder builder) {
             this.modelConnectionId = builder.modelConnectionId;
             this.modelName = builder.modelName;
             this.quota = builder.quota;
+            this.thinkingLevel = builder.thinkingLevel;
         }
 
         public static Builder builder() {
@@ -1155,10 +1207,18 @@ public class GetManagedAgentResponseBody extends TeaModel {
             return this.quota;
         }
 
+        /**
+         * @return thinkingLevel
+         */
+        public String getThinkingLevel() {
+            return this.thinkingLevel;
+        }
+
         public static final class Builder {
             private String modelConnectionId; 
             private String modelName; 
             private Quota quota; 
+            private String thinkingLevel; 
 
             private Builder() {
             } 
@@ -1167,6 +1227,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
                 this.modelConnectionId = model.modelConnectionId;
                 this.modelName = model.modelName;
                 this.quota = model.quota;
+                this.thinkingLevel = model.thinkingLevel;
             } 
 
             /**
@@ -1196,6 +1257,17 @@ public class GetManagedAgentResponseBody extends TeaModel {
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
+                return this;
+            }
+
+            /**
+             * <p>未配置时表示 default，空字符串、null 或省略均按模型和 Harness 默认行为处理。可选值 off、low、medium、high、xhigh、max。创建未传或 null 时使用 default；更新提交模型配置时，思考强度未传或为 null 均恢复 default。除 off 转为 none 外原样传给运行框架，不校验模型支持情况、不自动降档；模型不支持时请调整强度。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
+             */
+            public Builder thinkingLevel(String thinkingLevel) {
+                this.thinkingLevel = thinkingLevel;
                 return this;
             }
 

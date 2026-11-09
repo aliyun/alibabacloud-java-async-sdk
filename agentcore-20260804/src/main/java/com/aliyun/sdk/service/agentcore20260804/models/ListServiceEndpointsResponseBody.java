@@ -188,7 +188,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned on a single page for this query.</p>
+         * <p>The maximum number of records per page returned in this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -199,7 +199,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. An error description is returned when the request fails.</p>
+         * <p>The response message. Returns an error description if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +210,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cursor for the next page. This parameter is empty if no next page exists.</p>
+         * <p>The cursor for the next page. Empty if there is no next page.</p>
          * 
          * <strong>example:</strong>
          * <p>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</p>
@@ -335,7 +335,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the access URL. Valid values: INTERNET and VPC.</p>
+             * <p>The access URL type. Valid values: INTERNET and VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>INTERNET</p>
@@ -357,7 +357,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the access URL status. The specific reason is returned when the status is abnormal.</p>
+             * <p>The reason for the access URL status. Returns the specific reason when the status is abnormal.</p>
              * 
              * <strong>example:</strong>
              * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
@@ -425,7 +425,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the <code>x-api-key</code> request header.</p>
+             * <p>The authentication method. NONE indicates that no authentication is required, and API_KEY indicates that authentication is performed by passing an API key through the x-api-key request header.</p>
              * 
              * <strong>example:</strong>
              * <p>API_KEY</p>
@@ -508,7 +508,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>是否开启弹性。</p>
+             * <p>Indicates whether elasticity is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -519,7 +519,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最大实例数，不小于 1。</p>
+             * <p>The maximum number of instances, which must be no less than 1.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -530,7 +530,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最小实例数，不小于 0 且不大于 maxSandboxCount。</p>
+             * <p>The minimum number of instances, which must be no less than 0 and no greater than maxSandboxCount.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -639,7 +639,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the target agent. This parameter is returned when the target type is AGENT_VERSION.</p>
+             * <p>The ID of the target agent. Returned when the target type is AGENT_VERSION.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-123456</p>
@@ -650,7 +650,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the target agent. This parameter is returned when the target type is AGENT_VERSION.</p>
+             * <p>The version number of the target agent. Returned when the target type is AGENT_VERSION.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -661,7 +661,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+             * <p>The type of the collaboration component. Returned when the target type is TEAM_COLLABORATION.</p>
              * 
              * <strong>example:</strong>
              * <p>ELEMENT_WEB</p>
@@ -672,7 +672,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace resource binding ID associated with the target collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+             * <p>The workspace resource binding ID associated with the target collaboration component. Returned when the target type is TEAM_COLLABORATION.</p>
              * 
              * <strong>example:</strong>
              * <p>wrb-123456</p>
@@ -938,7 +938,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC format compliant with RFC 3339.</p>
+             * <p>The creation time in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>
@@ -949,7 +949,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>publicAccessEnabled 与工作空间公网入向上限叠加后的结果：二者均允许时为 true。仅表示策略目标，不代表公网入口已发布完成，实际状态以 accessUrls 与 status 为准。</p>
+             * <p>The result of combining publicAccessEnabled with the workspace public access inbound upper limit. It is true only when both allow it. This only indicates the policy target and does not mean that the public access entry has been published. The actual status is subject to accessUrls and status.</p>
              */
             public Builder effectivePublicAccessEnabled(Boolean effectivePublicAccessEnabled) {
                 this.effectivePublicAccessEnabled = effectivePublicAccessEnabled;
@@ -957,7 +957,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>仅在服务端点设置过弹性覆盖值时返回，可设置的为 Router 类型服务端点与 GATEWAY_API_WITH_VPC_INGRESS 类型的 DEFAULT 服务端点；未设置覆盖值时不返回该对象，表示继承智能体源配置，不得当作空对象或默认策略。返回时三个字段必全。</p>
+             * <p>Returned only when elastic override values are set for the service endpoint. Can be set for Router-type service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS type. If no override values are set, this object is not returned, indicating that the source configuration of the agent is inherited. It must not be treated as an empty object or a default policy. When returned, all three fields are always included.</p>
              */
             public Builder elasticityPolicy(ElasticityPolicy elasticityPolicy) {
                 this.elasticityPolicy = elasticityPolicy;
@@ -965,7 +965,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</p>
+             * <p>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform, and NAMED indicates a named endpoint explicitly created by a user.</p>
              * 
              * <strong>example:</strong>
              * <p>NAMED</p>
@@ -976,7 +976,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service endpoint. The name must be unique within the workspace and be 1 to 128 characters in length.</p>
+             * <p>The name of the service endpoint. It must be unique within the workspace and 1 to 128 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>my-agent-endpoint</p>
@@ -987,7 +987,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户在服务端点上设置的公网入向期望；未设置过的历史服务端点按 true 返回。仅表示配置期望，实际公网地址是否可用以 accessUrls 与 status 为准。</p>
+             * <p>The expected public access inbound setting configured by the user on the service endpoint. For legacy service endpoints where this has not been set, true is returned. This only indicates the configuration expectation. The actual availability of the public access URL is subject to accessUrls and status.</p>
              */
             public Builder publicAccessEnabled(Boolean publicAccessEnabled) {
                 this.publicAccessEnabled = publicAccessEnabled;
@@ -1028,7 +1028,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the service endpoint status. The specific reason is returned when the status is abnormal.</p>
+             * <p>The reason for the service endpoint status. Returns the specific reason when the status is abnormal.</p>
              * 
              * <strong>example:</strong>
              * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
@@ -1047,7 +1047,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
+             * <p>The time of the last modification in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T03:04:05Z</p>

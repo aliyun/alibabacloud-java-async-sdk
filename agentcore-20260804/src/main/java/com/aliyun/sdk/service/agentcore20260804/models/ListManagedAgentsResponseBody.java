@@ -158,7 +158,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS when the request is successful.</p>
+         * <p>The business status code. A value of SUCCESS indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -169,7 +169,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 when the request is successful.</p>
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -315,7 +315,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the connector account key record bound to qodercli, not the original service account key.</p>
+             * <p>The ID of the connector account key record bound to qodercli, which is not the original service account key.</p>
              * 
              * <strong>example:</strong>
              * <p>key-xxxx</p>
@@ -353,12 +353,20 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configuration")
         private Configuration configuration;
 
+        @com.aliyun.core.annotation.NameInMap("outdatedInstanceCount")
+        private Long outdatedInstanceCount;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
         private Harness(Builder builder) {
             this.configuration = builder.configuration;
+            this.outdatedInstanceCount = builder.outdatedInstanceCount;
             this.type = builder.type;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -377,22 +385,40 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return outdatedInstanceCount
+         */
+        public Long getOutdatedInstanceCount() {
+            return this.outdatedInstanceCount;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
             return this.type;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private Configuration configuration; 
+            private Long outdatedInstanceCount; 
             private String type; 
+            private String version; 
 
             private Builder() {
             } 
 
             private Builder(Harness model) {
                 this.configuration = model.configuration;
+                this.outdatedInstanceCount = model.outdatedInstanceCount;
                 this.type = model.type;
+                this.version = model.version;
             } 
 
             /**
@@ -404,6 +430,17 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Returned only in queries. The server calculates this value based on the complete instance distribution, which is not affected by the pagination and filtering of the instance list. If the image tag is missing, pagination is incomplete, or the value cannot be confirmed, this parameter is empty, which is not equivalent to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder outdatedInstanceCount(Long outdatedInstanceCount) {
+                this.outdatedInstanceCount = outdatedInstanceCount;
+                return this;
+            }
+
+            /**
              * <p>The runtime framework type.</p>
              * 
              * <strong>example:</strong>
@@ -411,6 +448,17 @@ public class ListManagedAgentsResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>Returned only in queries. Currently returns the tag of the pool target image. If the tag cannot be parsed, this parameter is empty and cannot be replaced by the agent configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202611031754</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

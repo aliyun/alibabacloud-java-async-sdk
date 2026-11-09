@@ -119,7 +119,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码，请求成功时为 SUCCESS，失败时为错误码。</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful, or an error code if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -130,7 +130,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>智能体固定版本详情，configuration 为版本保存时的 Agent 配置。</p>
+         * <p>The details of the fixed agent version. The configuration field contains the agent configuration at the time the version was saved.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP 状态码。</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -149,7 +149,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>响应消息，请求成功时为 success，失败时为错误信息。</p>
+         * <p>The response message. The value is success if the request is successful, or an error message if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -160,7 +160,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID，用于定位和排查请求。</p>
+         * <p>The request ID, which is used to locate and troubleshoot the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5E8F3C2A-1B4D-4F6E-9A7C-0D2B8E6F4A1C</p>
@@ -171,7 +171,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求是否成功。</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -341,7 +341,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>版本所属的托管智能体或自定义智能体 ID。</p>
+             * <p>The ID of the managed or custom agent that owns the version.</p>
              * 
              * <strong>example:</strong>
              * <p>agent-0123456789abcdef0123456789abcdef</p>
@@ -352,7 +352,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>系统按 Agent 递增生成的版本号，例如 v1、v2。查询、删除版本及服务端点引用版本时使用。</p>
+             * <p>The system-generated version number that increments for each agent, such as v1 and v2. This is used when querying or deleting versions, and when referencing versions in service endpoints.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -363,7 +363,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>仅表示版本模板与制品归档是否完整，不代表部署或运行状态。READY 为完整，INVALID 为归档缺失或不一致。</p>
+             * <p>Indicates only whether the version template and artifact archiving are complete, and does not represent the deployment or running status. A value of READY indicates that the archiving is complete. A value of INVALID indicates that the archiving is missing or inconsistent.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -374,10 +374,10 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>托管智能体与 GetManagedAgent 的 data 结构一致，自定义智能体与 GetCustomAgent 的 data 结构一致，脱敏规则相同。</p>
+             * <p>For managed agents, the structure is consistent with the data structure of GetManagedAgent. For custom agents, the structure is consistent with the data structure of GetCustomAgent. The desensitization rules are the same.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;agentId&quot;:&quot;agent-0123456789abcdef0123456789abcdef&quot;,&quot;workspaceId&quot;:&quot;ws-0123456789abcdef01234&quot;,&quot;name&quot;:&quot;customer-service&quot;,&quot;description&quot;:&quot;客服智能体&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:2,&quot;instruction&quot;:&quot;你是一名客服助手。&quot;}</p>
+             * <p>{&quot;agentId&quot;:&quot;agent-0123456789abcdef0123456789abcdef&quot;,&quot;workspaceId&quot;:&quot;ws-0123456789abcdef01234&quot;,&quot;name&quot;:&quot;customer-service&quot;,&quot;description&quot;:&quot;Customer service agent&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:2,&quot;instruction&quot;:&quot;You are a customer service assistant.&quot;}</p>
              */
             public Builder configuration(java.util.Map<String, ?> configuration) {
                 this.configuration = configuration;
@@ -385,7 +385,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>版本保存的时间，采用 ISO 8601 UTC 格式。</p>
+             * <p>The time when the version was saved, in ISO 8601 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-12T01:02:03Z</p>
@@ -396,7 +396,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>保存该版本的调用者阿里云账号 UID；RAM 用户调用时为其所属阿里云主账号 UID。</p>
+             * <p>The UID of the Alibaba Cloud account of the caller who saved the version. If the API is called by a RAM user, this value is the UID of the Alibaba Cloud account to which the RAM user belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567890123456</p>
@@ -407,10 +407,10 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>保存版本时填写的版本描述，最多 1024 个字符；保存时未填写则为空。</p>
+             * <p>The version description provided when the version was saved. It can contain up to 1,024 characters. If no description was provided when the version was saved, this field is empty.</p>
              * 
              * <strong>example:</strong>
-             * <p>生产环境稳定版本</p>
+             * <p>Stable version for the production environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -418,7 +418,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>保存版本时 Agent 已生效的发布流水号，即当时的 effectiveSpecVersion。版本保存后该值不再变化。</p>
+             * <p>The effective release serial number of the agent when the version was saved, which is the effectiveSpecVersion at that time. This value does not change after the version is saved.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -429,10 +429,10 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>保存版本时用户指定的展示名称。早期保存且未记录名称的版本返回 agentVersion。</p>
+             * <p>The display name specified by the user when the version was saved. For earlier saved versions that did not record a name, the agentVersion is returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>生产稳定版 V1.0</p>
+             * <p>Production stable version V1.0</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -440,7 +440,7 @@ public class GetAgentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>版本所属智能体所在的 AgentCore 工作空间 ID。</p>
+             * <p>The ID of the AgentCore workspace where the agent that owns the version resides.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-0123456789abcdef01234</p>

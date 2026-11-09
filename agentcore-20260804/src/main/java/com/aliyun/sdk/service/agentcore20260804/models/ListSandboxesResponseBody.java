@@ -158,7 +158,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business status code. The value is SUCCESS when the request is successful.</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -169,7 +169,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. The value is 200 when the request is successful.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -199,7 +199,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. The value is success when the request is successful.</p>
+         * <p>The response message. The value is success if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -269,11 +269,17 @@ public class ListSandboxesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
+        @com.aliyun.core.annotation.NameInMap("harnessVersion")
+        private String harnessVersion;
+
         @com.aliyun.core.annotation.NameInMap("lastActiveAt")
         private String lastActiveAt;
 
         @com.aliyun.core.annotation.NameInMap("lastHeartbeatAt")
         private String lastHeartbeatAt;
+
+        @com.aliyun.core.annotation.NameInMap("lastRebuildOperationId")
+        private String lastRebuildOperationId;
 
         @com.aliyun.core.annotation.NameInMap("maxConcurrentSessions")
         private Integer maxConcurrentSessions;
@@ -284,14 +290,24 @@ public class ListSandboxesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sandboxId")
         private String sandboxId;
 
+        @com.aliyun.core.annotation.NameInMap("updateAvailable")
+        private Boolean updateAvailable;
+
+        @com.aliyun.core.annotation.NameInMap("updateFailed")
+        private Boolean updateFailed;
+
         private Items(Builder builder) {
             this.activeSessionCount = builder.activeSessionCount;
             this.createdAt = builder.createdAt;
+            this.harnessVersion = builder.harnessVersion;
             this.lastActiveAt = builder.lastActiveAt;
             this.lastHeartbeatAt = builder.lastHeartbeatAt;
+            this.lastRebuildOperationId = builder.lastRebuildOperationId;
             this.maxConcurrentSessions = builder.maxConcurrentSessions;
             this.phase = builder.phase;
             this.sandboxId = builder.sandboxId;
+            this.updateAvailable = builder.updateAvailable;
+            this.updateFailed = builder.updateFailed;
         }
 
         public static Builder builder() {
@@ -317,6 +333,13 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
 
         /**
+         * @return harnessVersion
+         */
+        public String getHarnessVersion() {
+            return this.harnessVersion;
+        }
+
+        /**
          * @return lastActiveAt
          */
         public String getLastActiveAt() {
@@ -328,6 +351,13 @@ public class ListSandboxesResponseBody extends TeaModel {
          */
         public String getLastHeartbeatAt() {
             return this.lastHeartbeatAt;
+        }
+
+        /**
+         * @return lastRebuildOperationId
+         */
+        public String getLastRebuildOperationId() {
+            return this.lastRebuildOperationId;
         }
 
         /**
@@ -351,14 +381,32 @@ public class ListSandboxesResponseBody extends TeaModel {
             return this.sandboxId;
         }
 
+        /**
+         * @return updateAvailable
+         */
+        public Boolean getUpdateAvailable() {
+            return this.updateAvailable;
+        }
+
+        /**
+         * @return updateFailed
+         */
+        public Boolean getUpdateFailed() {
+            return this.updateFailed;
+        }
+
         public static final class Builder {
             private Integer activeSessionCount; 
             private String createdAt; 
+            private String harnessVersion; 
             private String lastActiveAt; 
             private String lastHeartbeatAt; 
+            private String lastRebuildOperationId; 
             private Integer maxConcurrentSessions; 
             private String phase; 
             private String sandboxId; 
+            private Boolean updateAvailable; 
+            private Boolean updateFailed; 
 
             private Builder() {
             } 
@@ -366,11 +414,15 @@ public class ListSandboxesResponseBody extends TeaModel {
             private Builder(Items model) {
                 this.activeSessionCount = model.activeSessionCount;
                 this.createdAt = model.createdAt;
+                this.harnessVersion = model.harnessVersion;
                 this.lastActiveAt = model.lastActiveAt;
                 this.lastHeartbeatAt = model.lastHeartbeatAt;
+                this.lastRebuildOperationId = model.lastRebuildOperationId;
                 this.maxConcurrentSessions = model.maxConcurrentSessions;
                 this.phase = model.phase;
                 this.sandboxId = model.sandboxId;
+                this.updateAvailable = model.updateAvailable;
+                this.updateFailed = model.updateFailed;
             } 
 
             /**
@@ -385,7 +437,7 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the sandbox was created. The time is in the RFC 3339 UTC format.</p>
+             * <p>The time when the sandbox was created, in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-29T00:00:00Z</p>
@@ -396,7 +448,18 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last activity of the sandbox. The time is in the RFC 3339 UTC format.</p>
+             * <p>The tag of the actual observed image of the currently returned instance. This parameter is empty if the tag cannot be parsed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202611031754</p>
+             */
+            public Builder harnessVersion(String harnessVersion) {
+                this.harnessVersion = harnessVersion;
+                return this;
+            }
+
+            /**
+             * <p>The time of the last activity of the sandbox, in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-29T00:02:00Z</p>
@@ -407,7 +470,7 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last heartbeat of the sandbox. The time is in the RFC 3339 UTC format.</p>
+             * <p>The time of the last heartbeat of the sandbox, in RFC 3339 UTC format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-29T00:01:00Z</p>
@@ -418,7 +481,18 @@ public class ListSandboxesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent sessions allowed for the sandbox. This value is obtained from the auto-scaling configuration that takes effect at runtime. If auto-scaling is disabled or the configuration is unavailable, this value is empty.</p>
+             * <p>Used to continue calling GetSandboxRebuildOperation to query the overall result after a page refresh. This parameter is empty if there is no historical rebuild. Do not use the ID of a subsequently created task instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01a19f98-906d-7e82-96aa-8b7ea1d1a29d</p>
+             */
+            public Builder lastRebuildOperationId(String lastRebuildOperationId) {
+                this.lastRebuildOperationId = lastRebuildOperationId;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of concurrent sessions allowed for the sandbox, which is obtained from the effective auto-scaling configuration at runtime. This parameter is empty if auto-scaling is disabled or the configuration is unavailable.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -447,6 +521,28 @@ public class ListSandboxesResponseBody extends TeaModel {
              */
             public Builder sandboxId(String sandboxId) {
                 this.sandboxId = sandboxId;
+                return this;
+            }
+
+            /**
+             * <p>The server compares the actual image tag of the instance with the pool target image tag. The value is true if the tags are different during the RUNNING, HIBERNATED, or FAILED phase. The value is false if the tags are the same or during other known phases. This parameter is empty if the tag or phase cannot be confirmed, and it cannot be treated as false. The version sequence is not determined by the tag size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder updateAvailable(Boolean updateAvailable) {
+                this.updateAvailable = updateAvailable;
+                return this;
+            }
+
+            /**
+             * <p>A value of true indicates that the most recent rebuild corresponding to the current instance generation failed as a whole. A value of false indicates that there is no historical rebuild or the rebuild succeeded as a whole. This parameter is empty if the rebuild is in progress, canceled, replaced, the generation does not match, or the result cannot be confirmed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder updateFailed(Boolean updateFailed) {
+                this.updateFailed = updateFailed;
                 return this;
             }
 

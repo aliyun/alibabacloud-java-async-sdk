@@ -138,7 +138,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. 200 indicates success.</p>
+         * <p>The HTTP status code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -277,7 +277,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The existing non-empty relative directory under the AccessPoint. This field is required and validated by the backend for each mount item. The root directory, absolute paths, or parent directory segments are not allowed.</p>
+             * <p>The existing non-empty relative directory under the AccessPoint. This field is required and validated by the backend for each mount item. Root directories, absolute paths, and parent directory segments are not allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace/data</p>
@@ -288,7 +288,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to mount as read-only. The default value is false if omitted. This is not a RAM role read-only policy.</p>
+             * <p>Specifies whether the mount is read-only. If omitted, the default value is false. This is not a RAM role read-only policy.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -299,7 +299,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AccessPoint domain name. This field is required and validated by the backend for each mount item. It does not contain a protocol, port, or path, and takes the DomainName from the NAS ListAccessPoints response.</p>
+             * <p>The AccessPoint domain name. This field is required and validated by the backend for each mount item. It does not include a protocol, port, or path. Use the DomainName from the NAS ListAccessPoints response.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -369,7 +369,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the version selector. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</p>
+             * <p>The version selector type.</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -380,7 +380,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the selector. If the type is LABEL, specify a tag name such as latest. If the type is VERSION, specify a specific version number.</p>
+             * <p>The selector value. When the type is LABEL, this is the tag name, such as latest. When the type is VERSION, this is the specific version number.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -489,7 +489,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the skill. REFERENCE indicates that the skill references an AI Registry asset. STATIC indicates that the skill is statically provided with the deployment package.</p>
+             * <p>The skill source type.</p>
              * 
              * <strong>example:</strong>
              * <p>REFERENCE</p>
@@ -500,7 +500,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The legacy compatibility field. For new requests, use sourceType and versionSelector.</p>
+             * <p>The legacy compatibility field. Use sourceType and versionSelector for new requests.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -511,7 +511,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version selector for the skill reference. Supports LABEL for tag-based selection and VERSION for specific version selection. If omitted, LABEL/latest is used. Do not specify a selector for STATIC sources.</p>
+             * <p>The version selector for the skill reference. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -639,7 +639,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the environment variable.</p>
+             * <p>The environment variable name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -651,7 +651,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the environment variable.</p>
+             * <p>The environment variable value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -835,12 +835,20 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configuration")
         private Configuration configuration;
 
+        @com.aliyun.core.annotation.NameInMap("outdatedInstanceCount")
+        private Long outdatedInstanceCount;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
         private Harness(Builder builder) {
             this.configuration = builder.configuration;
+            this.outdatedInstanceCount = builder.outdatedInstanceCount;
             this.type = builder.type;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -859,22 +867,40 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return outdatedInstanceCount
+         */
+        public Long getOutdatedInstanceCount() {
+            return this.outdatedInstanceCount;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
             return this.type;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private Configuration configuration; 
+            private Long outdatedInstanceCount; 
             private String type; 
+            private String version; 
 
             private Builder() {
             } 
 
             private Builder(Harness model) {
                 this.configuration = model.configuration;
+                this.outdatedInstanceCount = model.outdatedInstanceCount;
                 this.type = model.type;
+                this.version = model.version;
             } 
 
             /**
@@ -886,6 +912,17 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Returned only in query responses. The server calculates this based on the complete instance distribution, which is not affected by pagination and filtering of the instance list. The value is empty if the image tag is missing, pagination is incomplete, or it cannot be confirmed. An empty value does not equal 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder outdatedInstanceCount(Long outdatedInstanceCount) {
+                this.outdatedInstanceCount = outdatedInstanceCount;
+                return this;
+            }
+
+            /**
              * <p>The type of the runtime framework.</p>
              * 
              * <strong>example:</strong>
@@ -893,6 +930,17 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>Returned only in query responses. Currently returns the tag of the pool target image. The value is empty if it cannot be parsed. Do not use the agent configuration version as a substitute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202611031754</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 
@@ -1043,7 +1091,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the quota is exceeded in the current period. This field is read-only and returned by the backend.</p>
+             * <p>Indicates whether the quota is exceeded in the current cycle. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1054,7 +1102,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical period of the quota. Valid values: day and month.</p>
+             * <p>The quota statistical period. A value of day indicates daily, and a value of month indicates monthly.</p>
              * 
              * <strong>example:</strong>
              * <p>day</p>
@@ -1076,7 +1124,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of tokens allowed to be consumed in a single period.</p>
+             * <p>The maximum number of tokens allowed to be consumed in a single cycle.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -1087,7 +1135,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens consumed in the current period. This field is read-only and returned by the backend.</p>
+             * <p>The number of tokens consumed in the current cycle. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -1120,10 +1168,14 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("quota")
         private Quota quota;
 
+        @com.aliyun.core.annotation.NameInMap("thinkingLevel")
+        private String thinkingLevel;
+
         private Model(Builder builder) {
             this.modelConnectionId = builder.modelConnectionId;
             this.modelName = builder.modelName;
             this.quota = builder.quota;
+            this.thinkingLevel = builder.thinkingLevel;
         }
 
         public static Builder builder() {
@@ -1155,10 +1207,18 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             return this.quota;
         }
 
+        /**
+         * @return thinkingLevel
+         */
+        public String getThinkingLevel() {
+            return this.thinkingLevel;
+        }
+
         public static final class Builder {
             private String modelConnectionId; 
             private String modelName; 
             private Quota quota; 
+            private String thinkingLevel; 
 
             private Builder() {
             } 
@@ -1167,6 +1227,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
                 this.modelConnectionId = model.modelConnectionId;
                 this.modelName = model.modelName;
                 this.quota = model.quota;
+                this.thinkingLevel = model.thinkingLevel;
             } 
 
             /**
@@ -1181,7 +1242,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upstream model name.</p>
+             * <p>The name of the upstream model.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-max</p>
@@ -1192,10 +1253,21 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model token quota configuration and the quota usage status for the current cycle. This field is empty if no quota is configured.</p>
+             * <p>The model token quota configuration and quota usage status for the current cycle. The value is empty if no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
+                return this;
+            }
+
+            /**
+             * <p>The thinking level. If not configured, the value defaults to default. Empty strings, null values, or omitted fields are processed according to the default behavior of the model and Harness. Valid values: off, low, medium, high, xhigh, and max. If this parameter is not passed or is null during creation, default is used. When updating the model configuration, if the thinking level is not passed or is null, it reverts to default. Except for off, which is converted to none, the value is passed to the runtime framework as-is without validating model support or automatically downgrading. If the model does not support the specified level, adjust the level accordingly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
+             */
+            public Builder thinkingLevel(String thinkingLevel) {
+                this.thinkingLevel = thinkingLevel;
                 return this;
             }
 
@@ -1246,7 +1318,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to allow access to the Internet.</p>
+             * <p>Specifies whether to allow Internet access.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1303,7 +1375,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to allow access to the VPC.</p>
+             * <p>Specifies whether to allow VPC access.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1474,7 +1546,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the OSS bucket. This parameter is required and validated by the backend for each mount item.</p>
+             * <p>The OSS bucket name. This parameter is required and validated by the backend for each mount item.</p>
              * 
              * <strong>example:</strong>
              * <p>bucket-001</p>
@@ -1496,7 +1568,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The non-empty relative directory prefix in the currently configured bucket.</p>
+             * <p>The non-empty relative directory prefix within the configured bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>datasets</p>
@@ -1507,7 +1579,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the mount is read-only. Default value: false.</p>
+             * <p>Specifies whether to mount the directory in read-only mode. Default value: false.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1598,7 +1670,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the variable.</p>
+             * <p>The variable description.</p>
              * 
              * <strong>example:</strong>
              * <p>desc</p>
@@ -1609,7 +1681,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the variable.</p>
+             * <p>The variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>brand</p>
@@ -1667,7 +1739,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute specifications.</p>
+             * <p>The compute specification.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1779,7 +1851,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether elastic scaling is enabled in the current configuration.</p>
+             * <p>Indicates whether elastic scaling is enabled in the current configuration.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -2073,7 +2145,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the version selector. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</p>
+             * <p>The version selector type.</p>
              * 
              * <strong>example:</strong>
              * <p>LABEL</p>
@@ -2084,7 +2156,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the selector. If the type is LABEL, specify a tag name such as latest. If the type is VERSION, specify a specific version number.</p>
+             * <p>The selector value. When the type is LABEL, this is the tag name, such as latest. When the type is VERSION, this is the specific version number.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -2219,7 +2291,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The applied runtime version. This field is read-only.</p>
+             * <p>The effective version at runtime. This field is read-only.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -2241,7 +2313,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the skill.</p>
+             * <p>The skill name.</p>
              * 
              * <strong>example:</strong>
              * <p>code-analysis</p>
@@ -2263,7 +2335,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the skill. REFERENCE indicates that the skill references an AI Registry asset. STATIC indicates that the skill is statically provided with the deployment package.</p>
+             * <p>The skill source type.</p>
              * 
              * <strong>example:</strong>
              * <p>REFERENCE</p>
@@ -2274,7 +2346,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current target version compatible with legacy clients. New clients use resolvedVersion and determine the applied runtime version based on appliedVersion.</p>
+             * <p>The current target version for compatibility with legacy clients. New clients use resolvedVersion and determine the effective runtime version based on appliedVersion.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -2285,7 +2357,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version selector for the skill reference. Supports LABEL for tag-based selection and VERSION for specific version selection. If omitted, LABEL/latest is used. Do not specify a selector for STATIC sources.</p>
+             * <p>The version selector for the skill reference. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
              */
             public Builder versionSelector(SkillsVersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -2352,7 +2424,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the skill.</p>
+             * <p>The skill name.</p>
              * 
              * <strong>example:</strong>
              * <p>web-search</p>
@@ -2363,7 +2435,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the skill.</p>
+             * <p>The skill version.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -2448,11 +2520,11 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instruction for the sub-agent.</p>
+             * <p>The sub-agent instruction.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Please review the code</p>
+             * <p>Review the code</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -2460,7 +2532,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the sub-agent.</p>
+             * <p>The sub-agent name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2472,7 +2544,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of skills for the sub-agent.</p>
+             * <p>The list of sub-agent skills.</p>
              */
             public Builder skills(java.util.List<SubAgentsSkills> skills) {
                 this.skills = skills;
@@ -2678,7 +2750,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the tool.</p>
+             * <p>The tool name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2690,7 +2762,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the tool.</p>
+             * <p>The tool type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -3145,7 +3217,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAS storage mount configuration. Currently, only the AgenticFS type is supported, which is used to mount file directories in access points to agent runtime instances. The total number of NAS mounts and ossMounts cannot exceed 10.</p>
+             * <p>The NAS storage mount configuration. Currently, only the AgenticFS type is supported, which is used to mount file directories in the access point to the agent runtime instance. The total number of NAS mounts and ossMounts cannot exceed 10.</p>
              */
             public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
                 this.agenticFsMounts = agenticFsMounts;
@@ -3316,7 +3388,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of managed Harness agent instances grouped by sandbox phase. Current keys: PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed at runtime). Only the phases that actually occur are returned. Missing keys are treated as 0. This field is a dynamic mapping and new keys may be added in the future. The frontend can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
+             * <p>The number of managed Harness agent instances by sandbox phase. Current keys: PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed at runtime). Only phases that actually occur are returned. Missing keys are treated as 0. This field is a dynamic map and new keys may be added in the future. The frontend can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
              */
             public Builder sandboxPhaseCounts(java.util.Map<String, Long> sandboxPhaseCounts) {
                 this.sandboxPhaseCounts = sandboxPhaseCounts;
@@ -3359,7 +3431,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tool configurations.</p>
+             * <p>The tool configuration list.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;

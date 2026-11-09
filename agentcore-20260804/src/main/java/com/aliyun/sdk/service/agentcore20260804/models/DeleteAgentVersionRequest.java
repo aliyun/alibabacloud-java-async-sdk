@@ -104,7 +104,7 @@ public class DeleteAgentVersionRequest extends Request {
         } 
 
         /**
-         * <p>智能体所在的 AgentCore 工作空间 ID。</p>
+         * <p>The ID of the AgentCore workspace where the agent resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DeleteAgentVersionRequest extends Request {
         }
 
         /**
-         * <p>托管智能体或自定义智能体 ID。</p>
+         * <p>The ID of the managed or custom agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DeleteAgentVersionRequest extends Request {
         }
 
         /**
-         * <p>系统生成的版本号，例如 v1，即 CreateAgentVersion 或 ListAgentVersions 返回的 agentVersion，不是 versionName。</p>
+         * <p>The system-generated version number, such as v1. This is the agentVersion returned by CreateAgentVersion or ListAgentVersions, not the versionName.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class DeleteAgentVersionRequest extends Request {
         }
 
         /**
-         * <p>客户端生成的幂等令牌，当前为预留参数，后端暂不提供持久化幂等保证。</p>
+         * <p>The client-generated idempotency token. This is a reserved parameter, and the backend does not currently provide persistent idempotency guarantees.</p>
          * 
          * <strong>example:</strong>
          * <p>c2d8a6f0-3b1e-4a7d-9f25-6e4b0c1a8d37</p>

@@ -104,7 +104,7 @@ public class ListAgentVersionsRequest extends Request {
         } 
 
         /**
-         * <p>智能体所在的 AgentCore 工作空间 ID。</p>
+         * <p>The ID of the AgentCore workspace where the agent resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ListAgentVersionsRequest extends Request {
         }
 
         /**
-         * <p>托管智能体或自定义智能体 ID。</p>
+         * <p>The ID of the managed or custom agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ListAgentVersionsRequest extends Request {
         }
 
         /**
-         * <p>单页最大记录数，取值范围 1 至 100，默认 20。</p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -142,7 +142,7 @@ public class ListAgentVersionsRequest extends Request {
         }
 
         /**
-         * <p>查询下一页时传入上一次 ListAgentVersions 响应返回的 nextToken；首次查询不传。</p>
+         * <p>The token used to query the next page. Pass the nextToken returned in the previous ListAgentVersions response. Do not pass this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>YWdlbnQtdmVyc2lvbnM6MjA</p>

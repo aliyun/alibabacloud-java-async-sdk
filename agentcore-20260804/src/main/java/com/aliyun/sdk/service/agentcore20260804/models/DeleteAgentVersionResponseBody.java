@@ -106,7 +106,7 @@ public class DeleteAgentVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码，请求成功时为 SUCCESS，失败时为错误码。</p>
+         * <p>The business status code. The value is SUCCESS if the request is successful, or an error code if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -117,7 +117,7 @@ public class DeleteAgentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP 状态码。</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class DeleteAgentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>响应消息，请求成功时为 success，失败时为错误信息。</p>
+         * <p>The response message. The value is success if the request is successful, or an error message if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -139,7 +139,7 @@ public class DeleteAgentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID，用于定位和排查请求。</p>
+         * <p>The request ID, which is used to locate and troubleshoot requests.</p>
          * 
          * <strong>example:</strong>
          * <p>5E8F3C2A-1B4D-4F6E-9A7C-0D2B8E6F4A1C</p>
@@ -150,7 +150,7 @@ public class DeleteAgentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求是否成功。</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
