@@ -178,7 +178,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If the API operation incurs fees, add the bold text &quot;<strong>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</strong>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
+     * <p>If the API operation involves fees, add the bold text &quot;<strong>Make sure that you fully understand the billing methods and pricing of the XXX service before you call this API operation.</strong>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
      * 
      * @param request the request parameters of MultiModalGuardAsyncResult  MultiModalGuardAsyncResultRequest
      * @return MultiModalGuardAsyncResultResponse

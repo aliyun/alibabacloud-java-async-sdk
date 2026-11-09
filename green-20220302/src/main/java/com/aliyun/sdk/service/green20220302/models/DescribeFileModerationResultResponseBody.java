@@ -104,7 +104,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -205,7 +205,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The risk score.</p>
+             * <p>The confidence score.</p>
              * 
              * <strong>example:</strong>
              * <p>25.0</p>
@@ -345,7 +345,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The X value of the coordinate point.</p>
+             * <p>The X-coordinate of the point.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -356,7 +356,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Y value of the coordinate point.</p>
+             * <p>The Y-coordinate of the point.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -503,7 +503,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The invoked service.</p>
+             * <p>The called service.</p>
              * 
              * <strong>example:</strong>
              * <p>baselineCheck</p>
@@ -573,10 +573,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The hit keyword.</p>
+             * <p>The matched keywords.</p>
              * 
              * <strong>example:</strong>
-             * <p>Popular among everyone</p>
+             * <p>Popular items</p>
              */
             public Builder keyWords(String keyWords) {
                 this.keyWords = keyWords;
@@ -584,10 +584,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vocabulary name.</p>
+             * <p>The name of the dictionary.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestVocabulary22</p>
+             * <p>Test dictionary 22</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -678,10 +678,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The violation word.</p>
+             * <p>The prohibited word.</p>
              * 
              * <strong>example:</strong>
-             * <p>Visit pornographic website</p>
+             * <p>Visit porn websites</p>
              */
             public Builder riskWord(String riskWord) {
                 this.riskWord = riskWord;
@@ -824,7 +824,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The label confidence score.</p>
+             * <p>The confidence level of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>90.50</p>
@@ -835,7 +835,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom vocabulary hit results.</p>
+             * <p>The custom dictionary.</p>
              */
             public Builder customizedHit(java.util.List<CustomizedHit> customizedHit) {
                 this.customizedHit = customizedHit;
@@ -854,10 +854,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text label in page results.</p>
+             * <p>The text labels in the page results.</p>
              * 
              * <strong>example:</strong>
-             * <p>Political sensitivity</p>
+             * <p>Political content</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -876,7 +876,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The positions of the violation words.</p>
+             * <p>The positions of the prohibited words.</p>
              */
             public Builder riskPositions(java.util.List<RiskPositions> riskPositions) {
                 this.riskPositions = riskPositions;
@@ -884,10 +884,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hit violation words.</p>
+             * <p>The matched prohibited words.</p>
              * 
              * <strong>example:</strong>
-             * <p>Popular among everyone</p>
+             * <p>Popular items</p>
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -1091,7 +1091,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text plus version result.</p>
+             * <p>The generation results of the text plus version.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -1110,7 +1110,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hit risk details.</p>
+             * <p>The details of the matched risks.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -1121,7 +1121,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hit risk keywords.</p>
+             * <p>The matched risk keywords.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -1146,7 +1146,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
              * <p>The text content.</p>
              * 
              * <strong>example:</strong>
-             * <p>blah blah</p>
+             * <p>Sample text</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -1301,7 +1301,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL where the text content is stored.</p>
+             * <p>The storage URL for the text content.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt</a></p>
@@ -1406,7 +1406,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the label appears.</p>
+             * <p>The number of occurrences of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1619,7 +1619,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content producer code.</p>
+             * <p>The code of the content producer.</p>
              * 
              * <strong>example:</strong>
              * <p>00119144030008867405X210001</p>
@@ -1630,7 +1630,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content propagator code.</p>
+             * <p>The code of the content distributor.</p>
              * 
              * <strong>example:</strong>
              * <p>00119144030008867405X220001</p>
@@ -1644,7 +1644,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
              * <p>The content attribute declared by the implicit label.</p>
              * 
              * <strong>example:</strong>
-             * <p>AI-generated or synthetic content</p>
+             * <p>Classified as AI-generated and synthetic content</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1652,7 +1652,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content production ID.</p>
+             * <p>The production ID of the content.</p>
              * 
              * <strong>example:</strong>
              * <p>tos-cn-i-tb4s082cfz/ad88d9b125694f57b2c72235e5c42af1</p>
@@ -1663,7 +1663,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content propagation ID.</p>
+             * <p>The distribution ID of the content.</p>
              * 
              * <strong>example:</strong>
              * <p>tos-cn-i-tb4s082cfz/ad88d9b125694f57b2c72235e5c42af1</p>
@@ -1674,7 +1674,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reserved field 1.</p>
+             * <p>The first reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -1685,7 +1685,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reserved field 2.</p>
+             * <p>The second reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -1755,7 +1755,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The implicit label information of AI-generated or synthetic content.</p>
+             * <p>The implicit identification information of AI-generated and synthetic content.</p>
              */
             public Builder AIGC(AIGC AIGC) {
                 this.AIGC = AIGC;
@@ -1763,13 +1763,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The comprehensive analysis report for forgery detection by the large language model.</p>
+             * <p>The comprehensive forgery detection analysis report generated by the large model.</p>
              * 
              * <strong>example:</strong>
-             * <h3>Comprehensive Report for Users</h3>
-             * <h4>Quick Image Overview</h4>
+             * <h3>Comprehensive user-facing report</h3>
+             * <h4>Quick overall image inspection</h4>
              * <ul>
-             * <li><strong>Image Subject</strong>: A scanned document titled &quot;Letter of Authorization&quot;, containing the names of the authorizing and authorized companies and red official seals</li>
+             * <li><strong>Image subject</strong>: A scanned document titled &quot;Letter of Authorization&quot;, containing the company names of both authorizing parties and a red official seal.</li>
              * </ul>
              */
             public Builder explain(String explain) {
@@ -1824,7 +1824,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of AI-generated or synthetic content detection.</p>
+             * <p>The AI-generated and synthetic content detection details.</p>
              */
             public Builder aigcData(AigcData aigcData) {
                 this.aigcData = aigcData;
@@ -1915,7 +1915,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the risk label in Chinese.</p>
+             * <p>The Chinese description of the risk label.</p>
              * 
              * <strong>example:</strong>
              * <p>疑似AI生成合成内容</p>
@@ -2111,7 +2111,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
              * <p>The label descriptions.</p>
              * 
              * <strong>example:</strong>
-             * <p>No risk detected</p>
+             * <p>No risks detected</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2130,7 +2130,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times the label appears.</p>
+             * <p>The number of occurrences of the label.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2361,6 +2361,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocType")
         private String docType;
 
+        @com.aliyun.core.annotation.NameInMap("ManualTaskId")
+        private String manualTaskId;
+
         @com.aliyun.core.annotation.NameInMap("PageResult")
         private java.util.List<PageResult> pageResult;
 
@@ -2370,6 +2373,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
@@ -2377,9 +2383,11 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             this.accountId = builder.accountId;
             this.dataId = builder.dataId;
             this.docType = builder.docType;
+            this.manualTaskId = builder.manualTaskId;
             this.pageResult = builder.pageResult;
             this.pageSummary = builder.pageSummary;
             this.riskLevel = builder.riskLevel;
+            this.taskId = builder.taskId;
             this.url = builder.url;
         }
 
@@ -2413,6 +2421,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return manualTaskId
+         */
+        public String getManualTaskId() {
+            return this.manualTaskId;
+        }
+
+        /**
          * @return pageResult
          */
         public java.util.List<PageResult> getPageResult() {
@@ -2434,6 +2449,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        /**
          * @return url
          */
         public String getUrl() {
@@ -2444,9 +2466,11 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String accountId; 
             private String dataId; 
             private String docType; 
+            private String manualTaskId; 
             private java.util.List<PageResult> pageResult; 
             private PageSummary pageSummary; 
             private String riskLevel; 
+            private String taskId; 
             private String url; 
 
             private Builder() {
@@ -2456,14 +2480,16 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
                 this.accountId = model.accountId;
                 this.dataId = model.dataId;
                 this.docType = model.docType;
+                this.manualTaskId = model.manualTaskId;
                 this.pageResult = model.pageResult;
                 this.pageSummary = model.pageSummary;
                 this.riskLevel = model.riskLevel;
+                this.taskId = model.taskId;
                 this.url = model.url;
             } 
 
             /**
-             * <p>The AccountId specified by the caller.</p>
+             * <p>The AccountId provided in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>accountIdtest123</p>
@@ -2485,13 +2511,24 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The document type. This parameter is optional.</p>
+             * <p>Optional. The document type.</p>
              * 
              * <strong>example:</strong>
              * <p>doc</p>
              */
             public Builder docType(String docType) {
                 this.docType = docType;
+                return this;
+            }
+
+            /**
+             * <p>The manual review task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m_fi_xxx</p>
+             */
+            public Builder manualTaskId(String manualTaskId) {
+                this.manualTaskId = manualTaskId;
                 return this;
             }
 
@@ -2523,7 +2560,18 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL for downloading the file.</p>
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fi_xxx</p>
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * <p>The file download URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf</a></p>

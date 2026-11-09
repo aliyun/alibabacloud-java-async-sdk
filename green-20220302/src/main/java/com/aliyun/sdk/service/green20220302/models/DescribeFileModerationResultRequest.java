@@ -73,7 +73,7 @@ public class DescribeFileModerationResultRequest extends Request {
         } 
 
         /**
-         * <p>The service supported by the enhanced file moderation feature.</p>
+         * <p>The services supported by the enhanced file moderation edition.</p>
          * 
          * <strong>example:</strong>
          * <p>document_detection</p>
@@ -85,9 +85,9 @@ public class DescribeFileModerationResultRequest extends Request {
         }
 
         /**
-         * <p>The set of parameters required by the moderation service, in JSON character string format.</p>
+         * <p>The parameter set required by the moderation service, in JSON character string format.</p>
          * <ul>
-         * <li>taskId: Required. The URL of the object to be moderated. Make sure that the URL is accessible through public network access.</li>
+         * <li>taskId: Required. The URL of the object to be moderated. Make sure that the URL is accessible via public network access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
