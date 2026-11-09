@@ -67,7 +67,7 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The validation result of the LLM template configuration, which includes whether the configuration is valid and a list of validation errors.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code, such as MISSING_FIELD, UNKNOWN_FIELD, INVALID_TYPE, or INVALID_JSON.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNKNOWN_FIELD</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -162,7 +168,10 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Field.
+             * <p>The name of the field where the error occurred, such as id, name, or contextWindow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unknownField</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -170,7 +179,10 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unknown field &quot;unknownField&quot; is not recognized by Agent and will be ignored.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -237,7 +249,7 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Valid.
+             * <p>Indicates whether the configuration is valid. The value is true if all validation items pass.</p>
              */
             public Builder valid(Boolean valid) {
                 this.valid = valid;
@@ -245,7 +257,7 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ValidationErrors.
+             * <p>The list of validation errors. This list is empty if Valid is true.</p>
              */
             public Builder validationErrors(java.util.List<ValidationErrors> validationErrors) {
                 this.validationErrors = validationErrors;

@@ -74,7 +74,10 @@ public class ListAgentInstanceVersionsRequest extends Request {
         } 
 
         /**
-         * AgentPlatform.
+         * <p>The agent platform used to filter version numbers by business type. If not specified, the default value is ENTERPRISE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putQueryParameter("AgentPlatform", agentPlatform);
@@ -83,6 +86,7 @@ public class ListAgentInstanceVersionsRequest extends Request {
         }
 
         /**
+         * <p>The name of the agent provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The paginated data object that contains the list of LLM information.</p>
+         * <p>The paginated data object that contains a list of LLM information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -216,7 +216,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The upper limit of the multiplier. An empty value indicates no upper limit. For example, if the minimum multiplier is 1 and the maximum multiplier is empty, it is displayed as starting from 1x.</p>
+             * <p>The upper limit of the multiplier. An empty value indicates no upper limit. For example, if the minimum value is 1 and the maximum value is empty, it is displayed as starting from 1x.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -227,7 +227,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lower limit of the multiplier. If this value is equal to the maximum multiplier, it is a fixed multiplier. For example, if both the minimum and maximum multipliers are 2, it is displayed as 2x.</p>
+             * <p>The lower limit of the multiplier. If this value is equal to the maximum value, the multiplier is fixed. For example, if both the minimum and maximum values are 2, it is displayed as 2x.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -709,7 +709,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
              * <p>The model description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Qwen image generation model that supports text-to-image and image editing capabilities</p>
+             * <p>Qwen image generation model that supports text-to-image generation and image editing</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -755,7 +755,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model information, such as the context window size and the maximum number of input/output tokens.</p>
+             * <p>The model information, such as context window size and maximum input/output tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;contextWindow&quot;:1000000,&quot;maxInputTokens&quot;:991808,&quot;maxReasoningTokens&quot;:262144,&quot;reasoningMaxInputTokens&quot;:983616,&quot;maxOutputTokens&quot;:131072,&quot;reasoningMaxOutputTokens&quot;:131072}</p>
@@ -807,7 +807,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the model is recommended. Valid values: true (recommended), false (explicitly not recommended), and null (not applicable, such as non-Bailian or unannotated models).</p>
+             * <p>Indicates whether the model is recommended. This is a tri-state value: true indicates that the model is recommended for display, false indicates that the model is explicitly not recommended, and null indicates that the status is not applicable, such as for non-Bailian models or unannotated models.</p>
              */
             public Builder recommended(Boolean recommended) {
                 this.recommended = recommended;
@@ -872,7 +872,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of LLM information.</p>
+             * <p>The LLM information list.</p>
              */
             public Builder llmInfoList(java.util.List<LlmInfoList> llmInfoList) {
                 this.llmInfoList = llmInfoList;

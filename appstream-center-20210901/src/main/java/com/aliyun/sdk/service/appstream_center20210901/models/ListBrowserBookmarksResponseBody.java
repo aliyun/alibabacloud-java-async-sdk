@@ -106,7 +106,7 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of bookmarks on the current page.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01A0C2ED-95F2-1A37-9FC6-4A395179****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of bookmarks that meet the filtering conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +242,10 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
             } 
 
             /**
-             * BookmarkFolder.
+             * <p>The bookmark folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Work</p>
              */
             public Builder bookmarkFolder(String bookmarkFolder) {
                 this.bookmarkFolder = bookmarkFolder;
@@ -238,7 +253,10 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
             }
 
             /**
-             * BookmarkId.
+             * <p>The bookmark ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bm-0c7loey7fzjq****</p>
              */
             public Builder bookmarkId(String bookmarkId) {
                 this.bookmarkId = bookmarkId;
@@ -246,7 +264,10 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
             }
 
             /**
-             * BookmarkName.
+             * <p>The bookmark name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud</p>
              */
             public Builder bookmarkName(String bookmarkName) {
                 this.bookmarkName = bookmarkName;
@@ -254,7 +275,10 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
             }
 
             /**
-             * BookmarkURL.
+             * <p>The bookmark URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
              */
             public Builder bookmarkURL(String bookmarkURL) {
                 this.bookmarkURL = bookmarkURL;

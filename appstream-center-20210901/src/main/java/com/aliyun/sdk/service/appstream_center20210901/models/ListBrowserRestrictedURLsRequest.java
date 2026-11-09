@@ -115,7 +115,10 @@ public class ListBrowserRestrictedURLsRequest extends Request {
         } 
 
         /**
-         * BrowserInstanceGroupId.
+         * <p>The ID of the browser delivery group. You must specify either this parameter or BrowserInstanceGroupSetId, but not both. If you specify this parameter, the restricted URLs configured for the delivery group are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>big-3jm9d0abc00example</p>
          */
         public Builder browserInstanceGroupId(String browserInstanceGroupId) {
             this.putQueryParameter("BrowserInstanceGroupId", browserInstanceGroupId);
@@ -124,7 +127,10 @@ public class ListBrowserRestrictedURLsRequest extends Request {
         }
 
         /**
-         * BrowserInstanceGroupSetId.
+         * <p>The ID of the browser delivery group set. You must specify either this parameter or BrowserInstanceGroupId, but not both.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set-3jm9d0abc00example</p>
          */
         public Builder browserInstanceGroupSetId(String browserInstanceGroupSetId) {
             this.putQueryParameter("BrowserInstanceGroupSetId", browserInstanceGroupSetId);
@@ -133,7 +139,10 @@ public class ListBrowserRestrictedURLsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword used to filter access control URLs by using a contains match. The match is case-insensitive for English characters. The keyword can be up to 1,024 characters in length after leading and trailing spaces are removed. If you do not specify this parameter or specify only spaces, no filtering is performed. Special characters are matched literally.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -142,7 +151,10 @@ public class ListBrowserRestrictedURLsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number during paging. Default value: 0. If the value is less than 1, such as 0, the first page is returned. If the value is less than 0, a parameter error is returned. Set this parameter to 1 or greater.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +163,10 @@ public class ListBrowserRestrictedURLsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records to return on each page during paging. Valid values: 1 to 200. Default value: 200. If the value is less than or equal to 0 or greater than 200, a parameter error is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

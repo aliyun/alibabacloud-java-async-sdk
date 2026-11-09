@@ -75,6 +75,7 @@ public class ValidateLlmTemplateConfigRequest extends Request {
         } 
 
         /**
+         * <p>The JSON string of the LLM configuration to be validated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ValidateLlmTemplateConfigRequest extends Request {
         }
 
         /**
+         * <p>The ID of the provider template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

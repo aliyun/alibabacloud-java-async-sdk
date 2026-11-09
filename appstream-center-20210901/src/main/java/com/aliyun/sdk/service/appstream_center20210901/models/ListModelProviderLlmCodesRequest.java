@@ -174,7 +174,7 @@ public class ListModelProviderLlmCodesRequest extends Request {
         } 
 
         /**
-         * <p>The display language for models. Valid values: zh-CN (Simplified Chinese), en-US (English), ja-JP (Japanese), and zh-TW (Traditional Chinese). Default value: zh-CN. Currently, zh-TW returns Simplified Chinese, and ja-JP returns English. If the text is not included in Model Studio or the English text is missing, the original source text is retained without automatic translation.</p>
+         * <p>The display language of the model. Valid values: zh-CN (Simplified Chinese), en-US (English), ja-JP (Japanese), and zh-TW (Traditional Chinese). Default value: zh-CN. Currently, zh-TW returns Simplified Chinese, and ja-JP returns English. If the model is not included in Model Studio or the English text is missing, the original source text is retained without automatic translation.</p>
          * 
          * <strong>example:</strong>
          * <p>en-US</p>
@@ -198,7 +198,7 @@ public class ListModelProviderLlmCodesRequest extends Request {
         }
 
         /**
-         * <p>The list of model brands as a JSON array string. Supports multi-select filtering and returns results that match any of the specified brands.</p>
+         * <p>The list of model brands in a JSON array string. Supports multi-select filtering. Models matching any of the specified brands are returned.</p>
          */
         public Builder modelBrands(java.util.List<String> modelBrands) {
             this.putQueryParameter("ModelBrands", modelBrands);
@@ -207,7 +207,7 @@ public class ListModelProviderLlmCodesRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -257,7 +257,7 @@ public class ListModelProviderLlmCodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter by recommended models. If this parameter is not specified, no filtering is applied.</p>
+         * <p>Specifies whether to filter models by recommendation status. If this parameter is not specified, models are not filtered by recommendation status.</p>
          */
         public Builder recommended(Boolean recommended) {
             this.putQueryParameter("Recommended", recommended);
@@ -266,7 +266,7 @@ public class ListModelProviderLlmCodesRequest extends Request {
         }
 
         /**
-         * <p>The list of recommended levels. This parameter takes effect only for wuying-plan. Results must match any of the selected levels and intersect with other filtering conditions such as region and brand. If this parameter is not specified or an empty array is passed, filtering by level is not applied.</p>
+         * <p>The list of recommendation levels. This parameter takes effect only for wuying-plan. Models matching any of the specified levels and meeting other filter conditions such as region and brand are returned. If this parameter is not specified or an empty array is passed, models are not filtered by recommendation level.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;Standard&quot;,&quot;Advanced&quot;]</p>

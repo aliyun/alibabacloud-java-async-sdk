@@ -115,7 +115,10 @@ public class ListBrowserBookmarksRequest extends Request {
         } 
 
         /**
-         * BrowserInstanceGroupId.
+         * <p>The ID of the cloud browser group. You must specify either this parameter or BrowserInstanceGroupSetId, but not both.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>big-0c7loey7fzjq****</p>
          */
         public Builder browserInstanceGroupId(String browserInstanceGroupId) {
             this.putQueryParameter("BrowserInstanceGroupId", browserInstanceGroupId);
@@ -124,7 +127,10 @@ public class ListBrowserBookmarksRequest extends Request {
         }
 
         /**
-         * BrowserInstanceGroupSetId.
+         * <p>The ID of the browser delivery group set. You must specify either this parameter or BrowserInstanceGroupId, but not both.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set-3jm9d0abc00example</p>
          */
         public Builder browserInstanceGroupSetId(String browserInstanceGroupSetId) {
             this.putQueryParameter("BrowserInstanceGroupSetId", browserInstanceGroupSetId);
@@ -133,7 +139,10 @@ public class ListBrowserBookmarksRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword used for substring matching in bookmark names or URLs. The matching is case-insensitive for English characters. The keyword can be up to 1,024 characters in length after leading and trailing spaces are removed. If this parameter is not specified or contains only spaces, no filtering is applied. Special characters are matched literally.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -142,7 +151,10 @@ public class ListBrowserBookmarksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +163,10 @@ public class ListBrowserBookmarksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 1 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -80,7 +80,7 @@ public class ListAgentInstanceVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of agent instance version numbers, deduplicated and sorted in ascending order by version number.</p>
          */
         public Builder data(java.util.List<String> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class ListAgentInstanceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C5A2E8F-9B3D-4E7A-A1C6-2F8D0E5B7A91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListAgentInstanceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

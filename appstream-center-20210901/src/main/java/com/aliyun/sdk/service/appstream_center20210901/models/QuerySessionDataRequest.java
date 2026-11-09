@@ -101,7 +101,10 @@ public class QuerySessionDataRequest extends Request {
         } 
 
         /**
-         * AppInstanceGroupId.
+         * <p>The delivery group ID, used to filter session data for a specified delivery group. If not provided, the summary of session data for all delivery groups under the current account is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-89ibriac2wudyph38</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -110,7 +113,10 @@ public class QuerySessionDataRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The business region ID, which specifies the region for which to query session data. The server uses this value as the region filter condition for session data. If not provided, no region filtering is applied, and the summary of session data for all regions is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putBodyParameter("BizRegionId", bizRegionId);
@@ -119,7 +125,10 @@ public class QuerySessionDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID, which is a common request parameter for the gateway. The actual region used to filter session data in this operation is specified by BizRegionId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -128,7 +137,10 @@ public class QuerySessionDataRequest extends Request {
         }
 
         /**
-         * StatDate.
+         * <p>The statistical date in the yyyyMMdd format (without hyphens), such as 20261106. If not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If the date exceeds 90 days or the format is invalid, a parameter error is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20261106</p>
          */
         public Builder statDate(String statDate) {
             this.putBodyParameter("StatDate", statDate);
