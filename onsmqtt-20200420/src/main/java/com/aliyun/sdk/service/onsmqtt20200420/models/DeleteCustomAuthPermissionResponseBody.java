@@ -93,7 +93,7 @@ public class DeleteCustomAuthPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DeleteCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message returned.</p>
+         * <p>The message returned by the request.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -115,7 +115,7 @@ public class DeleteCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>34063BCA-0946-49C1-B824-2ED2C905****</p>
@@ -126,7 +126,11 @@ public class DeleteCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>True</p>

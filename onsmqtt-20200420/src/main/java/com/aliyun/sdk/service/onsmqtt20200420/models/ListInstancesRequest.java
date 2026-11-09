@@ -59,7 +59,10 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * Tags.
+         * <p>A list of resource tags in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;test&quot;,&quot;value&quot;:&quot;test&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

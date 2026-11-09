@@ -93,7 +93,7 @@ public class AddCustomAuthPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+         * <p>The status code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class AddCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success.</p>
@@ -115,7 +115,7 @@ public class AddCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>82B9E503-F4A1-4F30-976F-C6999FF9****</p>
@@ -126,7 +126,11 @@ public class AddCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>True</p>

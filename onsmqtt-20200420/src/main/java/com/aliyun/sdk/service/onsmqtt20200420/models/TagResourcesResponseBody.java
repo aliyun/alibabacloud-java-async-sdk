@@ -93,7 +93,10 @@ public class TagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,7 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>82B9E503-F4A1-4F30-976F-C6999FF9****</p>

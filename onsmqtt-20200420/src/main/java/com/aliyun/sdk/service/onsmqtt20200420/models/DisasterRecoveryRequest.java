@@ -75,6 +75,7 @@ public class DisasterRecoveryRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DisasterRecoveryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance to recover.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

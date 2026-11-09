@@ -32,15 +32,15 @@ public class CreateGroupIdRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Tags")
-    private String tags;
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateGroupIdRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.groupId = builder.groupId;
         this.instanceId = builder.instanceId;
-        this.tags = builder.tags;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -78,17 +78,17 @@ public class CreateGroupIdRequest extends Request {
     }
 
     /**
-     * @return tags
+     * @return tag
      */
-    public String getTags() {
-        return this.tags;
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateGroupIdRequest, Builder> {
         private String regionId; 
         private String groupId; 
         private String instanceId; 
-        private String tags; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -99,7 +99,7 @@ public class CreateGroupIdRequest extends Request {
             this.regionId = request.regionId;
             this.groupId = request.groupId;
             this.instanceId = request.instanceId;
-            this.tags = request.tags;
+            this.tag = request.tag;
         } 
 
         /**
@@ -112,10 +112,10 @@ public class CreateGroupIdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the group that you want to create. The group ID must meet the following conventions:</p>
+         * <p>The group ID to be created. Valid values:</p>
          * <ul>
-         * <li>The ID must be 7 to 64 characters in length. It must start with GID_ or GID- and can contain only letters, digits, hyphens (-), and underscores (_).</li>
-         * <li>The ID cannot be changed after the group is created. For more information, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</li>
+         * <li>The value must start with <code>GID_</code> or <code>GID-</code> and can contain only letters, digits, hyphens (-), and underscores (_). The value must be 7 to 64 characters in length.</li>
+         * <li>A group ID cannot be modified after it is created. For more information, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -129,7 +129,7 @@ public class CreateGroupIdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraMQ for MQTT instance to which the group belongs.</p>
+         * <p>The ID of the instance where the group ID resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,11 +142,11 @@ public class CreateGroupIdRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The array of tag key-value pairs.</p>
          */
-        public Builder tags(String tags) {
-            this.putQueryParameter("Tags", tags);
-            this.tags = tags;
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -157,4 +157,85 @@ public class CreateGroupIdRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGroupIdRequest} extends {@link TeaModel}
+     *
+     * <p>CreateGroupIdRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

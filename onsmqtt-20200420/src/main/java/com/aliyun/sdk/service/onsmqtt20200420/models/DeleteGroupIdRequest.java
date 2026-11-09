@@ -98,7 +98,7 @@ public class DeleteGroupIdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the group that you want to delete.</p>
+         * <p>The group ID that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DeleteGroupIdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraMQ for MQTT instance from which you want to delete a group.</p>
+         * <p>The ID of the instance to which the group ID that you want to delete belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

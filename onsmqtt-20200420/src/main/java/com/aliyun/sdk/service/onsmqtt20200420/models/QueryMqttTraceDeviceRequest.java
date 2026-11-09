@@ -187,7 +187,7 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * <p>The client ID of the device whose trace you want to query.</p>
+         * <p>The client ID of the device whose trace information you want to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page 1. If the input parameter value is greater than the total number of pages, the returned result is empty.</p>
+         * <p>The number of the page to return. Pages start from page 1. If the value of this parameter exceeds the total number of pages, an empty result is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can view the instance ID in the <strong>Basic Information</strong> section on the <strong>Instance Details</strong> page that corresponds to the instance in the ApsaraMQ for MQTT console.</p>
+         * <p>The ID of the ApsaraMQ for MQTT instance. This value must match the instance ID that the client actually uses. You can view the instance ID in the <strong>Basic Information</strong> area on the <strong>Instance Details</strong> page in the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +252,7 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the ApsaraMQ for MQTT instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/181438.html">Endpoints</a>.</p>
+         * <p>The region ID of the ApsaraMQ for MQTT instance. For more information, see <a href="https://help.aliyun.com/document_detail/181438.html">Endpoints</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * <p>The maximum number of MSMQ to display on each page for paging. Minimum value: 1. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -278,12 +278,14 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the returned results are displayed in reverse chronological order. Valid values:</p>
+         * <p>Specifies whether to display the results in reverse chronological order. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The returned results are displayed in reverse time order of actions on the device. This means that the information about the latest action on the device is displayed as the first entry and the information about the earliest action on the device is displayed as the last entry.</li>
-         * <li><strong>false</strong>: The returned results are displayed in time order of actions on the device. This means that the information about the earliest action on the device is displayed as the first entry and the information about the latest action on the device is displayed as the last entry.</li>
+         * <li><p><strong>true</strong>: Results are displayed in reverse chronological order of device activity time. The most recent device activity is displayed first, and the earliest device activity is displayed last.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Results are displayed in chronological order of device activity time. The earliest device activity is displayed first, and the most recent device activity is displayed last.</p>
+         * </li>
          * </ul>
-         * <p>If you do not specify this parameter, the returned results are displayed in time order of actions on the device by default.</p>
+         * <p>If this parameter is not specified, results are displayed in chronological order by default.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

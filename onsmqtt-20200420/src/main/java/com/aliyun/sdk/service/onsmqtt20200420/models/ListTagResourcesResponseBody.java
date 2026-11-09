@@ -119,7 +119,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,7 +141,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAaFXUH1VTHnBlds7StUakOQ=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -154,7 +163,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -162,7 +174,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * <p>A list of resource-tag mappings.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -254,7 +266,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mqtt-cn-5yd3xxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -262,7 +277,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type. The only valid value is instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -270,7 +288,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -278,7 +299,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -93,7 +93,7 @@ public class DeleteCustomAuthIdentityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed.</p>
+         * <p>The status code. A value of 200 indicates success, and other status codes indicate errors.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -115,7 +115,7 @@ public class DeleteCustomAuthIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>11568B5B-13A8-4E72-9DBA-3A14F7D3****</p>
@@ -126,7 +126,11 @@ public class DeleteCustomAuthIdentityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The operation is successful.</li>
+         * <li>false: The operation fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>True</p>

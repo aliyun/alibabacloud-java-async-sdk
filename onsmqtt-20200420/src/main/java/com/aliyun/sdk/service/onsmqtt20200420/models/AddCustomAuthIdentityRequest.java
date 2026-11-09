@@ -134,7 +134,7 @@ public class AddCustomAuthIdentityRequest extends Request {
         } 
 
         /**
-         * <p>The client ID if you set IdentityType to CLIENT.</p>
+         * <p>The client ID of the device. Specify this parameter when the identity type is CLIENT.</p>
          * 
          * <strong>example:</strong>
          * <p>GID_test@@@test</p>
@@ -146,10 +146,12 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * <p>The identity type. Valid values:</p>
+         * <p>The identity type.</p>
          * <ul>
-         * <li>USER</li>
-         * <li>CLIENT</li>
+         * <li><p>USER: Username only.</p>
+         * </li>
+         * <li><p>CLIENT: Specific to a client.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -163,7 +165,7 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Message Queue for MQTT instance.</p>
+         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +178,7 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey secret.</p>
+         * <p>The secret.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +191,11 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * <p>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
+         * <p>The signature verification method. Valid values:</p>
+         * <ul>
+         * <li>ORIGIN: Original value comparison. The password is compared with the secret.</li>
+         * <li>SIGNED: Signature verification. An HmacSHA1 signature is generated for the clientId by using the secret, and then the signature is compared with the password.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

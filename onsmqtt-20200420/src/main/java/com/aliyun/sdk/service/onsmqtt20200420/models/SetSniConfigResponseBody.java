@@ -80,7 +80,7 @@ public class SetSniConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -88,7 +88,7 @@ public class SetSniConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>E4581CCF-62AF-44D9-B5B4-D1DQDC0E****</p>
@@ -99,7 +99,10 @@ public class SetSniConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of \<code>true\\</code> indicates that the call was successful. A value of \<code>false\\</code> indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -230,7 +233,10 @@ public class SetSniConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The unauthorized operation that was attempted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SetSniConfig</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -238,7 +244,10 @@ public class SetSniConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The display name of the authorization entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2063xxxxxxxx533</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -246,7 +255,10 @@ public class SetSniConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The ID of the Alibaba Cloud account that owns the authorization entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1245xxxxx34343</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -254,7 +266,10 @@ public class SetSniConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The type of the authorization entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubUser</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -262,7 +277,10 @@ public class SetSniConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQFma6gWZmuoFkMxQ0M3MUVCLTRFQzQtNTI1OS1BQ0Q0LTlBMTFGQkVDOTA3Qw==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -270,7 +288,10 @@ public class SetSniConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The type of permission denial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -278,7 +299,10 @@ public class SetSniConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccountLevelIdentityBasedPolicy</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

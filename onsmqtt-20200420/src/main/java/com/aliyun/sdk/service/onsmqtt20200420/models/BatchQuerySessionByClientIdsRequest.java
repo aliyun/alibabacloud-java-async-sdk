@@ -98,7 +98,7 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
         }
 
         /**
-         * <p>The ApsaraMQ for MQTT clients.</p>
+         * <p>The list of clients.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the <strong>Instance Details</strong> page that corresponds to the instance in the <a href="https://mqtt.console.aliyun.com">ApsaraMQ for MQTT console</a>.</p>
+         * <p>The ID of the ApsaraMQ for MQTT instance. The ID must match the actual instance ID used by the client. You can obtain the ID on the <strong>Instance Details</strong> page in the <a href="https://mqtt.console.aliyun.com">console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

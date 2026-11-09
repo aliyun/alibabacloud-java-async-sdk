@@ -90,6 +90,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>A list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -99,6 +100,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. The value must be instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +113,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>A list of tags. You can add up to 20 tags at a time. A resource can have a maximum of 20 tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -179,7 +182,10 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +193,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

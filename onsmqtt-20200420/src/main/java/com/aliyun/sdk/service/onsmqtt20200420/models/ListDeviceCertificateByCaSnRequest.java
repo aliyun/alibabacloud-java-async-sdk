@@ -105,7 +105,7 @@ public class ListDeviceCertificateByCaSnRequest extends Request {
         } 
 
         /**
-         * <p>The SN serial number of the CA certificate to be queried, indicating which CA certificate&quot;s registered device certificates are to be retrieved.</p>
+         * <p>The SN serial number of the CA certificate to be queried, indicating which CA certificate\&quot;s registered device certificates are to be retrieved.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

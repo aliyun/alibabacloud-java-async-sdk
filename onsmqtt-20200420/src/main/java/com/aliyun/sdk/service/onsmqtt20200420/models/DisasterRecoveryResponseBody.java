@@ -106,7 +106,10 @@ public class DisasterRecoveryResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details that are returned when the access is denied. This field is returned only when the RAM authentication fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -114,7 +117,10 @@ public class DisasterRecoveryResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates that the call is successful. Other values indicate error codes. For more information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +128,10 @@ public class DisasterRecoveryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class DisasterRecoveryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>135F8639-F262-4417-98D1-4DE4595C****</p>
@@ -141,7 +150,10 @@ public class DisasterRecoveryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

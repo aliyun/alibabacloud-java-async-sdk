@@ -75,7 +75,7 @@ public class InactivateCaCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ApsaraMQ for MQTT instance to which the CA certificate is bound.</p>
+         * <p>The ID of the ApsaraMQ for MQTT instance to which the CA certificate is attached.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,8 +88,8 @@ public class InactivateCaCertificateRequest extends Request {
         }
 
         /**
-         * <p>The serial number of the CA certificate that you want to deregister. The serial number is the unique identifier of a CA certificate.</p>
-         * <p>The serial number of a CA certificate cannot exceed 128 bytes in size.</p>
+         * <p>The serial number (SN) of the CA certificate that you want to unregister. The SN uniquely identifies a CA certificate.</p>
+         * <p>The value can be up to 128 bytes long.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

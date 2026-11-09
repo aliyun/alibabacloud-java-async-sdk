@@ -191,7 +191,7 @@ public class ListDeviceCredentialClientIdRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of query records to display per page. 
+         * <p>The maximum number of query records to display per page.
          * Value range: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 

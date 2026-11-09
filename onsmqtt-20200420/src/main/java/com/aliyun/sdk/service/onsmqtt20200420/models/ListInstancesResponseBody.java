@@ -106,7 +106,10 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Instances.
+         * <p>The list of instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -122,7 +125,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>294F5B26-FADF-41D0-BE68-14ABE4EB****</p>
@@ -141,7 +147,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -207,7 +216,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -215,7 +227,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -399,7 +414,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1739345768000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -407,7 +425,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1741795200000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -415,7 +436,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mqtt-cn-xxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -423,7 +447,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mqtt-cn-xxxxxxx</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -431,7 +458,28 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The instance status.</p>
+             * <ul>
+             * <li><p>0: Preparing</p>
+             * </li>
+             * <li><p>5: In Service</p>
+             * </li>
+             * <li><p>7: Upgrading</p>
+             * </li>
+             * <li><p>15: Frozen</p>
+             * </li>
+             * <li><p>10: Released</p>
+             * </li>
+             * <li><p>1: Not Activated</p>
+             * </li>
+             * <li><p>2: Overdue</p>
+             * </li>
+             * <li><p>3: Expired</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder instanceStatus(Integer instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -439,7 +487,24 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type:</p>
+             * <ul>
+             * <li><p>0: Basic Edition</p>
+             * </li>
+             * <li><p>1: Platinum Edition</p>
+             * </li>
+             * <li><p>2: Pay-as-you-go</p>
+             * </li>
+             * <li><p>3: Subscription Lightweight</p>
+             * </li>
+             * <li><p>4: Professional Edition</p>
+             * </li>
+             * <li><p>5: Serverless Edition</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder instanceType(Integer instanceType) {
                 this.instanceType = instanceType;
@@ -447,7 +512,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KernelVersion.
+             * <p>The Milvus version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V3.3.0</p>
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -455,7 +523,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MqttTags.
+             * <p>The list of tags.</p>
              */
             public Builder mqttTags(java.util.List<MqttTags> mqttTags) {
                 this.mqttTags = mqttTags;
@@ -463,7 +531,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>245949616640095</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -471,7 +542,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -479,7 +553,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Specific.
+             * <p>The instance type of the Professional Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mqtt.p2.1xlarge</p>
              */
             public Builder specific(String specific) {
                 this.specific = specific;

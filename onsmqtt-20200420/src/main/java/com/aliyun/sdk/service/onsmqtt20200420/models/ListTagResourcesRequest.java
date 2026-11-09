@@ -102,7 +102,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * <p>The token to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAaFXUH1VTHnBlds7StUakOQ=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -111,7 +114,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>A list of resource IDs.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -120,6 +123,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. The only valid value is instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>A list of resource tags. ResourceId and Tag cannot both be empty.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -200,7 +204,10 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -208,7 +215,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -93,7 +93,10 @@ public class UntagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B3C2F69B-B543-49B0-8B21-C8843AE0****</p>

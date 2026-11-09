@@ -67,7 +67,7 @@ public class ListGroupIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of a queried group.</p>
+         * <p>The details of the returned group IDs.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. This parameter is a common parameter.</p>
+         * <p>The unique ID for the request. This is a common parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>95996EEB-D894-44FA-A87C-940F5CD9****</p>
@@ -144,7 +144,10 @@ public class ListGroupIdResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -152,7 +155,10 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -271,7 +277,7 @@ public class ListGroupIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the group was created.</p>
+             * <p>The creation timestamp of the group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1564577317000</p>
@@ -282,7 +288,7 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The queried group that belongs to the ApsaraMQ for MQTT instance.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>GID_test1</p>
@@ -293,10 +299,12 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a separate namespace is configured for the ApsaraMQ for MQTT instance. Valid values:</p>
+             * <p>Indicates whether the instance has an independent namespace. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: A separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be unique within an ApsaraMQ for MQTT instance but can be the same across ApsaraMQ for MQTT instances.</li>
-             * <li><strong>false</strong>: No separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be globally unique within an ApsaraMQ for MQTT instance and across ApsaraMQ for MQTT instances.</li>
+             * <li><p><strong>true</strong>: The instance has an independent namespace. In this case, resource names must be unique within the instance, but they can be the same as resource names in other instances.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The instance does not have an independent namespace. In this case, resource names must be globally unique across all instances.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -308,7 +316,7 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ApsaraMQ for MQTT instance to which the group belongs.</p>
+             * <p>The ID of the instance to which the group ID belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>post-cn-45910tj****</p>
@@ -319,7 +327,7 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags attached to the group ID.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -327,7 +335,7 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the group was last updated.</p>
+             * <p>The timestamp of the last update for the group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1564577317000</p>

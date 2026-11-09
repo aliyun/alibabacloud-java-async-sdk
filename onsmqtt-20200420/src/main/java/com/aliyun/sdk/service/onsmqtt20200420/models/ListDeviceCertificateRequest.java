@@ -90,7 +90,7 @@ public class ListDeviceCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the Cloud Message Queue MQTT version, indicating which instance&quot;s device certificates need to be viewed.</p>
+         * <p>The instance ID of the Cloud Message Queue MQTT version, indicating which instance\&quot;s device certificates need to be viewed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

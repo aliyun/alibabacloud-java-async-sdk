@@ -75,7 +75,7 @@ public class DeleteCustomAuthConnectBlackRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ApsaraMQ for MQTT client.</p>
+         * <p>The client ID of the device.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteCustomAuthConnectBlackRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+         * <p>The ID of the MSMQ for MQTT instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
