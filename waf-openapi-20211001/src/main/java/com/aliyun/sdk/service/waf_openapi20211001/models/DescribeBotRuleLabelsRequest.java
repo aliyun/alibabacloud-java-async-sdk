@@ -161,7 +161,7 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * <p>The type of bot rule tag to query.</p>
+         * <p>The type of the bot rule label to query.</p>
          * 
          * <strong>example:</strong>
          * <p>human_machine_challenge</p>
@@ -173,7 +173,7 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20.</p>
+         * <p>The number of entries to return per paging in a paged query. Valid values: 1 to 200. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -185,9 +185,9 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next page. If a next page exists, this field returns a value.</p>
+         * <p>The pagination token for the next page. This parameter is returned only if a next page exists.</p>
          * <blockquote>
-         * <p>If this parameter returns a value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</p>
+         * <p>If this parameter is returned, it indicates that there is a next page. You can use the returned <strong>NextToken</strong> as a request parameter to obtain the data of the next page until no value is returned, which indicates that all data is obtained.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
          * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
          * </li>
@@ -230,7 +230,7 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * <p>The bot management protection scenario type.</p>
+         * <p>The type of the bot management protection scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>app</p>

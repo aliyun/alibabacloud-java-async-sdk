@@ -67,7 +67,7 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The statistics information about assets detected by the basic API security feature.</p>
+         * <p>The asset statistics information for basic detection.</p>
          */
         public Builder asset(Asset asset) {
             this.asset = asset;

@@ -67,7 +67,7 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The risk types detected by API security and the number of risks for each type.</p>
+         * <p>The list of risk types and statistics.</p>
          */
         public Builder abnormal(java.util.List<Abnormal> abnormal) {
             this.abnormal = abnormal;
@@ -75,7 +75,7 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3E1CB966-1407-5988-9432-7***D784</p>
@@ -170,7 +170,7 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code that identifies the specific risk, such as <code>Risk_InternalWeakPasswd</code>.</p>
+             * <p>The risk code.</p>
              * 
              * <strong>example:</strong>
              * <p>Risk_InternalWeakPasswd</p>
@@ -181,7 +181,7 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of risks detected for this risk type.</p>
+             * <p>The number of risks.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -192,7 +192,7 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent category of the risk, such as <code>RiskType_Account</code>.</p>
+             * <p>The parent type of the risk.</p>
              * 
              * <strong>example:</strong>
              * <p>RiskType_Account</p>
@@ -203,9 +203,9 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the risk detected by API security.</p>
+             * <p>The risk type.</p>
              * <blockquote>
-             * <p>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported risk types.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported risk types.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

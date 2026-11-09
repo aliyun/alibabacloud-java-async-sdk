@@ -67,7 +67,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The abnormal cloud resources that are added in cloud native mode.</p>
+         * <p>The information about resources with abnormal status in cloud native mode.</p>
          */
         public Builder abnormalCloudResources(java.util.List<AbnormalCloudResources> abnormalCloudResources) {
             this.abnormalCloudResources = abnormalCloudResources;
@@ -75,7 +75,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>66A98669-CC6E-4F3E-80A6-***</p>
@@ -222,11 +222,11 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the certificate for the HTTPS protocol. Valid values:</p>
+             * <p>The type of the certificate used for the HTTPS protocol. Valid values:</p>
              * <ul>
-             * <li><p><strong>default</strong>: default certificate.</p>
+             * <li><p><strong>default</strong>: The default certificate.</p>
              * </li>
-             * <li><p><strong>extension</strong>: additional certificate.</p>
+             * <li><p><strong>extension</strong>: The extension certificate.</p>
              * </li>
              * </ul>
              * 
@@ -239,7 +239,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate in SSL Certificate Service.</p>
+             * <p>The name of the certificate in Certificate Management Service.</p>
              * 
              * <strong>example:</strong>
              * <p>test-name</p>
@@ -253,11 +253,11 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
              * <p>The cause of the exception. Valid values:</p>
              * <p>InvalidCert: The certificate is invalid.</p>
              * <p>ClientCertOpend: Mutual authentication is enabled.</p>
-             * <p>NetworkConfigLost: A network error occurred.</p>
-             * <p>UserUploadCert: A custom certificate is uploaded.</p>
-             * <p>CertNotExistInCertCenter: The certificate ID does not exist in SSL Certificate Service.</p>
+             * <p>NetworkConfigLost: A network exception occurred.</p>
+             * <p>UserUploadCert: A user-uploaded certificate exists.</p>
+             * <p>CertNotExistInCertCenter: The certificate ID does not exist in Certificate Management Service.</p>
              * <p>CertExpired: The certificate has expired.</p>
-             * <p>EmptyCertCN: The common name (CN) is empty.</p>
+             * <p>EmptyCertCN: The Common Name (CN) is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>CertExpired</p>
@@ -268,7 +268,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The common name (CN) of the certificate.</p>
+             * <p>The Common Name (CN).</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.test.com">www.test.com</a></p>
@@ -279,7 +279,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The expiration time of the certificate. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1735009193</p>
@@ -290,7 +290,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate that is configured in the cloud service console.</p>
+             * <p>The ID of the certificate configured in the cloud service console.</p>
              * 
              * <strong>example:</strong>
              * <p>123-cn-hangzhou</p>
@@ -301,7 +301,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate that is configured in the cloud service console.</p>
+             * <p>The name of the certificate configured in the cloud service console.</p>
              * 
              * <strong>example:</strong>
              * <p>test-cert-name</p>
@@ -312,7 +312,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The additional domain name that is configured in the cloud service console.</p>
+             * <p>The domain extension configured in the cloud service console.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.test.com">www.test.com</a></p>
@@ -447,7 +447,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cloud resource. This ID is automatically generated by WAF when the resource is added.</p>
+             * <p>The ID of the added resource, which is automatically generated by WAF.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-***-80-clb7</p>
@@ -458,7 +458,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the exception.</p>
+             * <p>The detailed information about the exception.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -472,15 +472,15 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
              * </li>
              * <li><p><strong>ClientCertOpend</strong>: Mutual authentication is enabled.</p>
              * </li>
-             * <li><p><strong>NetworkConfigLost</strong>: A network error occurred.</p>
+             * <li><p><strong>NetworkConfigLost</strong>: A network exception occurred.</p>
              * </li>
-             * <li><p><strong>UserUploadCert</strong>: A custom certificate is uploaded.</p>
+             * <li><p><strong>UserUploadCert</strong>: A user-uploaded certificate exists.</p>
              * </li>
-             * <li><p><strong>CertNotExistInCertCenter</strong>: The certificate ID does not exist in SSL Certificate Service.</p>
+             * <li><p><strong>CertNotExistInCertCenter</strong>: The certificate ID does not exist in Certificate Management Service.</p>
              * </li>
              * <li><p><strong>CertExpired</strong>: The certificate has expired.</p>
              * </li>
-             * <li><p><strong>EmptyCertCN</strong>: The common name (CN) is empty.</p>
+             * <li><p><strong>EmptyCertCN</strong>: The Common Name (CN) is empty.</p>
              * </li>
              * </ul>
              * 
@@ -493,7 +493,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance that is added to WAF.</p>
+             * <p>The instance ID added to WAF.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-***</p>
@@ -504,7 +504,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance that is added to WAF.</p>
+             * <p>The name of the instance added to WAF.</p>
              * 
              * <strong>example:</strong>
              * <p>test-name</p>
@@ -515,7 +515,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port of the instance that is added to WAF.</p>
+             * <p>The port of the instance added to WAF.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -526,7 +526,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud service to which the resource belongs. By default, instances of Application Load Balancer (ALB), MSE, FC, and SAE are returned. Valid values:</p>
+             * <p>The cloud service to which the resource belongs. By default, instances of ALB, MSE, FC, and SAE are returned. Valid values:</p>
              * <ul>
              * <li><p><strong>alb</strong>: ALB.</p>
              * </li>
@@ -538,15 +538,15 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
              * </li>
              * <li><p><strong>ecs</strong>: ECS.</p>
              * </li>
-             * <li><p><strong>clb4</strong>: Classic Load Balancer (CLB) that uses TCP.</p>
+             * <li><p><strong>clb4</strong>: CLB (TCP).</p>
              * </li>
-             * <li><p><strong>clb7</strong>: CLB that uses HTTP or HTTPS.</p>
+             * <li><p><strong>clb7</strong>: CLB (HTTP/HTTPS).</p>
              * </li>
-             * <li><p><strong>nlb</strong>: Network Load Balancer (NLB).</p>
+             * <li><p><strong>nlb</strong>: NLB.</p>
              * </li>
              * </ul>
              * <blockquote>
-             * <p>Each cloud service is supported in different regions. If you specify this parameter, make sure that the specified cloud service is supported in the selected region. Otherwise, the request may fail.</p>
+             * <p>Different cloud services are supported in different regions. If you specify a value for the product filter field, check the cloud services supported in the region. Otherwise, the filtering may fail.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

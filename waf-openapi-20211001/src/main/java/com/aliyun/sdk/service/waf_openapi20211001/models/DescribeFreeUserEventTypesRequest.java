@@ -90,7 +90,7 @@ public class DescribeFreeUserEventTypesRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the current WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -104,7 +104,7 @@ public class DescribeFreeUserEventTypesRequest extends Request {
         }
 
         /**
-         * <p>The region of the WAF instance. Valid values:</p>
+         * <p>The region to which the WAF instance belongs. Valid values:</p>
          * <ul>
          * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
          * </li>
@@ -122,7 +122,7 @@ public class DescribeFreeUserEventTypesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>

@@ -118,7 +118,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the new resource group. You can view available resource groups in the resource group console.</p>
+         * <p>The ID of the new resource group. You can view available resource groups in the Resource Management console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF resource to operate on.</p>
+         * <p>The ID of the WAF resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud resource group ID.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -174,7 +174,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Fixed value: defenseresource.</p>
+         * <p>The resource type. Set the value to defenseresource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

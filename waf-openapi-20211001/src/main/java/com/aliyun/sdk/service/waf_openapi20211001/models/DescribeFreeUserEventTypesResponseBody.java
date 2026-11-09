@@ -67,7 +67,7 @@ public class DescribeFreeUserEventTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of security event types detected by the basic detection feature.</p>
+         * <p>The list of security event types for basic detection.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;

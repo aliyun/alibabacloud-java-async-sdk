@@ -106,7 +106,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of country information outside China.</p>
+         * <p>The list of overseas country information.</p>
          */
         public Builder abroadInfos(java.util.List<AbroadInfos> abroadInfos) {
             this.abroadInfos = abroadInfos;
@@ -114,7 +114,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 20.</p>
+         * <p>The number of entries to return on each page for a paging query. Valid values: 1 to 500. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -136,7 +136,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
@@ -147,7 +147,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -216,7 +216,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>US-CA</p>
@@ -227,7 +227,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region name.</p>
              * 
              * <strong>example:</strong>
              * <p>California</p>
@@ -334,7 +334,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the country.</p>
+             * <p>The country ID.</p>
              * 
              * <strong>example:</strong>
              * <p>US</p>
@@ -345,7 +345,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the country.</p>
+             * <p>The country name.</p>
              * 
              * <strong>example:</strong>
              * <p>United States</p>
@@ -356,7 +356,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of region information outside China.</p>
+             * <p>The list of overseas region information.</p>
              */
             public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;

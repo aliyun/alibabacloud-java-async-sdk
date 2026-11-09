@@ -73,11 +73,11 @@ public class DescribeRoleAuthStatusRequest extends Request {
         } 
 
         /**
-         * <p>The region in which the WAF instance resides. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
          * </li>
-         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
          * </li>
          * </ul>
          * 

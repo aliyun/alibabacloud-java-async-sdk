@@ -144,9 +144,9 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the hybrid cloud cluster.</p>
+         * <p>The ID of the hybrid cloud cluster. </p>
          * <blockquote>
-         * <p>This parameter applies only to hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the IDs of hybrid cloud clusters.</p>
+         * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain the hybrid cloud cluster information.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time as a UNIX timestamp in seconds. The time is in UTC.</p>
+         * <p>The end time of the query, in UNIX timestamp format (UTC). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1726113600</p>
@@ -171,9 +171,9 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF instance.</p>
+         * <p>Instance ID of the WAF instance. </p>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -217,7 +217,7 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time as a UNIX timestamp in seconds. The time is in UTC.</p>
+         * <p>The start time of the query, in UNIX timestamp format (UTC). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1723435200</p>
@@ -229,9 +229,9 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         }
 
         /**
-         * <p>The list of risk states for which to collect statistics.</p>
+         * <p>The list of statuses for risk statistics.</p>
          * <blockquote>
-         * <p>By default, statistics are collected for risks in the <strong>toBeConfirmed</strong>, <strong>toBeFixed</strong>, <strong>toBeVerified</strong>, and <strong>notFixed</strong> states.</p>
+         * <p>By default, risk data in the <strong>toBeConfirmed</strong>, <strong>toBeFixed</strong>, <strong>toBeVerified</strong>, and <strong>notFixed</strong> states is collected.</p>
          * </blockquote>
          */
         public Builder userStatusList(java.util.List<String> userStatusList) {
