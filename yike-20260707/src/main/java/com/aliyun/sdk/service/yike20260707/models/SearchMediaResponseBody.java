@@ -119,7 +119,7 @@ public class SearchMediaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The collection of media assets that meet the specified criteria.</p>
+         * <p>The collection of media assets that meet the requirements.</p>
          */
         public Builder mediaInfoList(java.util.List<MediaInfoList> mediaInfoList) {
             this.mediaInfoList = mediaInfoList;
@@ -149,7 +149,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The scroll token.</p>
          * 
          * <strong>example:</strong>
          * <p>F8C4F642184DBDA5D93907A70AAE****</p>
@@ -160,7 +160,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -171,7 +171,7 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of media assets that meet the specified criteria.</p>
+         * <p>The total number of media assets that meet the requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>163</p>
@@ -440,7 +440,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size, in bytes.</p>
+             * <p>The file size in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>48524</p>
@@ -528,7 +528,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file storage region.</p>
+             * <p>The storage region of the file.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -596,7 +596,7 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The basic file information, including duration and size.</p>
+             * <p>The basic file information, including the duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -1345,7 +1345,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic information of the media asset.</p>
+             * <p>The basic media asset information.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;

@@ -305,8 +305,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This API is used to query a media asset content understanding job.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media content understanding jobs.</p>
      * 
      * @param request the request parameters of GetMediaComprehensionJob  GetMediaComprehensionJobRequest
      * @return GetMediaComprehensionJobResponse
@@ -338,6 +338,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetRemakeScriptJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetVideoCreativeGenerationJob  GetVideoCreativeGenerationJobRequest
+     * @return GetVideoCreativeGenerationJobResponse
+     */
+    @Override
+    public CompletableFuture<GetVideoCreativeGenerationJobResponse> getVideoCreativeGenerationJob(GetVideoCreativeGenerationJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetVideoCreativeGenerationJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVideoCreativeGenerationJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVideoCreativeGenerationJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -499,8 +517,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API is used to query media asset content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media asset content understanding jobs.</p>
      * 
      * @param request the request parameters of ListInfiniteCanvases  ListInfiniteCanvasesRequest
      * @return ListInfiniteCanvasesResponse
@@ -575,8 +593,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <h2>Request description</h2>
+     * <p>This operation performs content understanding based on the provided media asset files, such as video URLs. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * @param request the request parameters of SubmitMediaComprehensionJob  SubmitMediaComprehensionJobRequest
      * @return SubmitMediaComprehensionJobResponse
@@ -597,7 +615,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
+     * <p>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</p>
      * 
      * @param request the request parameters of SubmitRemakeScriptJob  SubmitRemakeScriptJobRequest
      * @return SubmitRemakeScriptJobResponse
@@ -611,6 +629,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitRemakeScriptJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitVideoCreativeGenerationJob  SubmitVideoCreativeGenerationJobRequest
+     * @return SubmitVideoCreativeGenerationJobResponse
+     */
+    @Override
+    public CompletableFuture<SubmitVideoCreativeGenerationJobResponse> submitVideoCreativeGenerationJob(SubmitVideoCreativeGenerationJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitVideoCreativeGenerationJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitVideoCreativeGenerationJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitVideoCreativeGenerationJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -675,7 +711,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</p>
+     * <p>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</p>
      * 
      * @param request the request parameters of SubmitVideoTranslationJob  SubmitVideoTranslationJobRequest
      * @return SubmitVideoTranslationJobResponse

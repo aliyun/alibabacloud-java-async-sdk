@@ -80,7 +80,10 @@ public class CancelGenerationJobResponseBody extends TeaModel {
         } 
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag_77b5f78b***</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -88,7 +91,10 @@ public class CancelGenerationJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CancelGenerationJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. The value is Canceled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Canceled</p>
          */
         public Builder status(String status) {
             this.status = status;

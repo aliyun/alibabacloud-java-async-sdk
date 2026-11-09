@@ -166,7 +166,7 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
-         * <p>The keyword for querying site monitoring tasks. Supports fuzzy match based on task name or task address.</p>
+         * <p>The keyword used to query site monitoring tasks. Note: Fuzzy match is supported based on the task name or task address.</p>
          * 
          * <strong>example:</strong>
          * <p>v2_</p>
@@ -202,7 +202,10 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
-         * ProductionId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd_abc1234567</p>
          */
         public Builder productionId(String productionId) {
             this.putQueryParameter("ProductionId", productionId);
@@ -223,11 +226,10 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
-         * <p>The sort direction.</p>
-         * <p>Valid values:</p>
+         * <p>The sort direction. Valid values:</p>
          * <ul>
-         * <li>Asc: Ascending order.</li>
-         * <li>Desc: Descending order.</li>
+         * <li>Asc: ascending order</li>
+         * <li>Desc: descending order</li>
          * </ul>
          * <p>Default value: Desc.</p>
          * 
@@ -241,7 +243,10 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_abc1234567</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -160,7 +160,7 @@ public class SubmitVideoTranslationJobRequest extends Request {
         } 
 
         /**
-         * <p>The user-level idempotency token, up to 40 characters. If the same user submits a request with the same token, the original job is returned.</p>
+         * <p>The user-level idempotency token, which can be up to 40 characters in length. If the same user submits the request repeatedly with the same token, the original task is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>vt-client-20260820-001</p>
@@ -172,10 +172,10 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <p>The job description, used to record business purposes or processing requirements.</p>
+         * <p>The job description, which is used to record the business purpose or processing requirements.</p>
          * 
          * <strong>example:</strong>
-         * <p>Translate a Chinese product introduction video into English</p>
+         * <p>Translate the Chinese product introduction video into English</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -184,7 +184,7 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <p>The input configuration JSON string. You must specify either Video or VideoMediaId, but not both. You can specify at most one of Audio or AudioMediaId. Subtitle is optional.</p>
+         * <p>The input configuration JSON string. You must specify either Video or VideoMediaId, but not both. You can specify at most one of Audio and AudioMediaId. Subtitle is optional.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <p>The job parameters JSON string. It must contain at least SourceLanguage and TargetLanguage. You can also configure main subtitle erasure, voice translation, on-screen text translation, and final editing.</p>
+         * <p>The job parameters JSON string. It must include at least SourceLanguage and TargetLanguage. You can also configure primary subtitle erasure, voice translation, on-screen text translation, and final editing.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <p>The job type. SubtitleTranslate indicates subtitle translation. VoiceTranslate indicates voice translation.</p>
+         * <p>The job type. SubtitleTranslate indicates subtitle translation, and VoiceTranslate indicates voice translation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <p>The output configuration JSON string. OssUri is an optional customer OSS output directory. If not specified, a signed URL of the service-owned artifact is returned.</p>
+         * <p>The output configuration JSON string. OssUri is the optional customer OSS output directory. If OssUri is not specified, a signed URL for the service-owned output is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;OssUri&quot;:&quot;oss://example-bucket/video-translation/output/&quot;}</p>
@@ -238,7 +238,7 @@ public class SubmitVideoTranslationJobRequest extends Request {
          * <p>The job title. If not specified, the service generates a default title.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product introduction video English translation</p>
+         * <p>English translation of product introduction video</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);
@@ -247,10 +247,10 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <p>The custom user data JSON string. It can contain the asynchronous notification address NotifyAddress.</p>
+         * <p>The user-defined data JSON string. When specifying an MNS queue to receive asynchronous notifications, set <code>NotifyAddress</code> to the pure queue name starting with <code>yike-callback-</code> instead of the full queue URL. You can optionally set <code>NotifyMnsEndpoint</code> to the MNS endpoint of the task account.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;NotifyAddress&quot;:&quot;mns://account.mns.cn-shanghai.aliyuncs.com/queues/video-translation-result&quot;}</p>
+         * <p>{&quot;NotifyAddress&quot;:&quot;yike-callback-test&quot;,&quot;NotifyMnsEndpoint&quot;:&quot;<a href="https://1234567890123456.mns.cn-shanghai.aliyuncs.com%22%7D">https://1234567890123456.mns.cn-shanghai.aliyuncs.com&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);

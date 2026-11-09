@@ -80,7 +80,7 @@ public class SubmitMediaComprehensionJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The business error code. An empty string is returned when the submission is successful.</p>
+         * <p>The business error code. It is an empty string if the submission is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

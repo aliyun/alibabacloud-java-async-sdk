@@ -82,7 +82,7 @@ public class GetRemakeScriptJobRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>68ca759e798b40b4903b255*******</p>
