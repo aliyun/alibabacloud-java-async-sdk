@@ -106,7 +106,7 @@ public class ListListenersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The listeners.</p>
+         * <p>The list of Network Load Balancer (NLB) listeners.</p>
          */
         public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
@@ -125,10 +125,10 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is used for the next query. Valid values:</p>
+         * <p>The pagination token. Valid values:</p>
          * <ul>
-         * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</li>
-         * <li>If a value of <strong>NextToken</strong> is returned, the value is the token used for the next query.</li>
+         * <li>If <strong>NextToken</strong> is empty, no next query is required.</li>
+         * <li>If <strong>NextToken</strong> returns a value, the value indicates the token for the next query.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -151,7 +151,7 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -174,6 +174,9 @@ public class ListListenersResponseBody extends TeaModel {
      * <p>ListListenersResponseBody</p>
      */
     public static class ProxyProtocolV2Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ppv2CnIdEnabled")
+        private Boolean ppv2CnIdEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Ppv2PrivateLinkEpIdEnabled")
         private Boolean ppv2PrivateLinkEpIdEnabled;
 
@@ -184,6 +187,7 @@ public class ListListenersResponseBody extends TeaModel {
         private Boolean ppv2VpcIdEnabled;
 
         private ProxyProtocolV2Config(Builder builder) {
+            this.ppv2CnIdEnabled = builder.ppv2CnIdEnabled;
             this.ppv2PrivateLinkEpIdEnabled = builder.ppv2PrivateLinkEpIdEnabled;
             this.ppv2PrivateLinkEpsIdEnabled = builder.ppv2PrivateLinkEpsIdEnabled;
             this.ppv2VpcIdEnabled = builder.ppv2VpcIdEnabled;
@@ -195,6 +199,13 @@ public class ListListenersResponseBody extends TeaModel {
 
         public static ProxyProtocolV2Config create() {
             return builder().build();
+        }
+
+        /**
+         * @return ppv2CnIdEnabled
+         */
+        public Boolean getPpv2CnIdEnabled() {
+            return this.ppv2CnIdEnabled;
         }
 
         /**
@@ -219,6 +230,7 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean ppv2CnIdEnabled; 
             private Boolean ppv2PrivateLinkEpIdEnabled; 
             private Boolean ppv2PrivateLinkEpsIdEnabled; 
             private Boolean ppv2VpcIdEnabled; 
@@ -227,16 +239,36 @@ public class ListListenersResponseBody extends TeaModel {
             } 
 
             private Builder(ProxyProtocolV2Config model) {
+                this.ppv2CnIdEnabled = model.ppv2CnIdEnabled;
                 this.ppv2PrivateLinkEpIdEnabled = model.ppv2PrivateLinkEpIdEnabled;
                 this.ppv2PrivateLinkEpsIdEnabled = model.ppv2PrivateLinkEpsIdEnabled;
                 this.ppv2VpcIdEnabled = model.ppv2VpcIdEnabled;
             } 
 
             /**
-             * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:</p>
+             * <p>Indicates whether the Common Name (CN) field of the client certificate is passed to backend servers by using Proxy Protocol V2. Note: This parameter takes effect only when the listener protocol is TCPSSL, mutual authentication (mTLS) is enabled, and Proxy Protocol V2 is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder ppv2CnIdEnabled(Boolean ppv2CnIdEnabled) {
+                this.ppv2CnIdEnabled = ppv2CnIdEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the Proxy Protocol is enabled to pass the PrivateLinkEpId to backend servers. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -248,10 +280,12 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:</p>
+             * <p>Indicates whether the Proxy Protocol is enabled to pass the PrivateLinkEpsId to backend servers. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -263,10 +297,12 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:</p>
+             * <p>Indicates whether the Proxy Protocol is enabled to pass the VpcId to backend servers. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -693,8 +729,10 @@ public class ListListenersResponseBody extends TeaModel {
             /**
              * <p>Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -723,9 +761,9 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of CA certificates.</p>
+             * <p>The list of CA certificates.</p>
              * <blockquote>
-             * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+             * <p>This parameter takes effect only for TCPSSL listeners.</p>
              * </blockquote>
              */
             public Builder caCertificateIds(java.util.List<String> caCertificateIds) {
@@ -736,8 +774,10 @@ public class ListListenersResponseBody extends TeaModel {
             /**
              * <p>Indicates whether mutual authentication is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -749,9 +789,9 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server certificate.</p>
+             * <p>The list of server certificates.</p>
              * <blockquote>
-             * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+             * <p>This parameter takes effect only for TCPSSL listeners.</p>
              * </blockquote>
              */
             public Builder certificateIds(java.util.List<String> certificateIds) {
@@ -760,7 +800,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
+             * <p>The maximum number of new connections per second that the listener can process in each zone (VIP). Valid values: <strong>0</strong> to <strong>1000000</strong>. A value of <strong>0</strong> indicates that no limit is applied.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -771,7 +811,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last port in the listener port range.</p>
+             * <p>The end port for all-port listening.</p>
              * 
              * <strong>example:</strong>
              * <p>455</p>
@@ -782,7 +822,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of idle connections. Unit: seconds. Valid values: <strong>1</strong> to <strong>900</strong>. Default value: <strong>900</strong>.</p>
+             * <p>The idle timeout period for connections. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -793,8 +833,8 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the listener.</p>
-             * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
+             * <p>The custom name of the listener.</p>
+             * <p>The name must be 2 to 256 characters in length and can contain Chinese characters, English letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>tcpssl_443</p>
@@ -816,7 +856,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the listener port of your server.</p>
+             * <p>The listener port.</p>
              * 
              * <strong>example:</strong>
              * <p>443</p>
@@ -840,14 +880,22 @@ public class ListListenersResponseBody extends TeaModel {
             /**
              * <p>The status of the listener. Valid values:</p>
              * <ul>
-             * <li><strong>Provisioning</strong>: The listener is being created.</li>
-             * <li><strong>Running</strong>: The listener is running.</li>
-             * <li><strong>Configuring</strong>: The listener is being configured.</li>
-             * <li><strong>Stopping</strong>: The listener is being stopped.</li>
-             * <li><strong>Stopped</strong>: The listener is stopped.</li>
-             * <li><strong>Starting</strong>: The listener is being started.</li>
-             * <li><strong>Deleting</strong>: The listener is being deleted.</li>
-             * <li><strong>Deleted</strong>: The listener is deleted.</li>
+             * <li><p><strong>Provisioning</strong>: The listener is being created.</p>
+             * </li>
+             * <li><p><strong>Running</strong>: The listener is running.</p>
+             * </li>
+             * <li><p><strong>Configuring</strong>: The listener is being configured.</p>
+             * </li>
+             * <li><p><strong>Stopping</strong>: The listener is being stopped.</p>
+             * </li>
+             * <li><p><strong>Stopped</strong>: The listener is stopped.</p>
+             * </li>
+             * <li><p><strong>Starting</strong>: The listener is being started.</p>
+             * </li>
+             * <li><p><strong>Deleting</strong>: The listener is being deleted.</p>
+             * </li>
+             * <li><p><strong>Deleted</strong>: The listener is deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -859,7 +907,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CLB instance ID.</p>
+             * <p>The ID of the Network Load Balancer (NLB) instance.</p>
              * 
              * <strong>example:</strong>
              * <p>nlb-83ckzc8d4xlp8o****</p>
@@ -870,9 +918,9 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the largest TCP packet segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> indicates that the Mss value of TCP packets remains unchanged.</p>
+             * <p>The maximum segment size (MSS) of TCP packets. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. A value of <strong>0</strong> indicates that the MSS value of user TCP packets is not modified.</p>
              * <blockquote>
-             * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+             * <p>This parameter is supported only by TCP and TCPSSL listeners.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -884,10 +932,12 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Proxy protocol passes source client IP addresses to backend servers. Valid values:</p>
+             * <p>Indicates whether the Proxy Protocol is enabled to pass the client source IP address to backend servers. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -899,7 +949,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
+             * <p>The configuration for passing the VpcId, PrivateLinkEpId, and PrivateLinkEpsId information to backend servers by using the Proxy Protocol.</p>
              */
             public Builder proxyProtocolV2Config(ProxyProtocolV2Config proxyProtocolV2Config) {
                 this.proxyProtocolV2Config = proxyProtocolV2Config;
@@ -907,7 +957,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the NLB instance.</p>
+             * <p>The region ID of the Network Load Balancer (NLB) instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -918,10 +968,12 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether fine-grained monitoring is enabled. Valid values:</p>
+             * <p>Indicates whether second-level monitoring is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -935,7 +987,7 @@ public class ListListenersResponseBody extends TeaModel {
             /**
              * <p>The ID of the security policy.</p>
              * <blockquote>
-             * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+             * <p>This parameter takes effect only for TCPSSL listeners.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -947,7 +999,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server group ID.</p>
+             * <p>The ID of the server group.</p>
              * 
              * <strong>example:</strong>
              * <p>sgp-ppdpc14gdm3x4o****</p>
@@ -958,7 +1010,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The first port in the listener port range.</p>
+             * <p>The start port for all-port listening.</p>
              * 
              * <strong>example:</strong>
              * <p>233</p>
@@ -969,7 +1021,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

@@ -67,7 +67,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
@@ -78,7 +78,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of zones.</p>
+         * <p>The list of zones.</p>
          */
         public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
@@ -147,7 +147,7 @@ public class DescribeZonesResponseBody extends TeaModel {
              * <p>The zone name.</p>
              * 
              * <strong>example:</strong>
-             * <p>ap_southeast_2</p>
+             * <p>Hangzhou Zone G</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;

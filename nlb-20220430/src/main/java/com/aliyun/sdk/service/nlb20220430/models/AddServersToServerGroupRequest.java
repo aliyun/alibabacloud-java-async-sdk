@@ -117,10 +117,10 @@ public class AddServersToServerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The client token used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,10 +133,10 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: prechecks the request without adding the servers. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, an error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,8 +149,8 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the NLB instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region where the Network Load Balancer (NLB) instance is deployed. </p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -162,7 +162,7 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The server group ID.</p>
+         * <p>The ID of the server group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,9 +175,9 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The backend servers that you want to add.</p>
+         * <p>The list of backend servers.</p>
          * <blockquote>
-         * <p> You can add up to 200 backend servers in each call.</p>
+         * <p>You can specify up to 200 servers in a single call.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -301,8 +301,8 @@ public class AddServersToServerGroupRequest extends Request {
             } 
 
             /**
-             * <p>The description of the backend server.</p>
-             * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at sings (@), underscores (_), and hyphens (-).</p>
+             * <p>The description of the server.</p>
+             * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, Chinese characters, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>ECS</p>
@@ -313,8 +313,8 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The port that is used by the backend server to provide services. Valid values: <strong>0 to 65535</strong>. If you do not set this parameter, the default value <strong>0</strong> is used.</p>
-             * <p>If multi-port forwarding is enabled, you do not need to set this parameter. The default value 0 is used. NLB forwards requests to the requested ports. To determine whether multi-port forwarding is enabled, call the <a href="https://help.aliyun.com/document_detail/445895.html">ListServerGroups</a> operation and check the value of the <strong>AnyPortEnabled</strong> parameter.</p>
+             * <p>The port used by the backend server. Valid values: <strong>0</strong> to <strong>65535</strong>. If you do not specify this parameter, the default value <strong>0</strong> is used.</p>
+             * <p>If the all-port forwarding feature is enabled for the server group, you do not need to specify a port when you add a backend server. In this case, the default value 0 is used, and NLB forwards traffic to the backend server based on the frontend request port. You can check whether the all-port forwarding feature is enabled by querying the <strong>AnyPortEnabled</strong> field returned by the <a href="https://help.aliyun.com/document_detail/445895.html">ListServerGroups</a> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>443</p>
@@ -325,10 +325,12 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The backend server ID.</p>
+             * <p>The ID of the backend server.</p>
              * <ul>
-             * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of <strong>Elastic Compute Service (ECS) instances</strong>, <strong>elastic network interfaces (ENIs)</strong>, or <strong>elastic container instances</strong>.</li>
-             * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
+             * <li><p>If the server group is of the <strong>Instance</strong> type, this parameter specifies the resource ID of an <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> resource.</p>
+             * </li>
+             * <li><p>If the server group is of the <strong>Ip</strong> type, this parameter specifies an IP address.</p>
+             * </li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -341,7 +343,7 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the backend server. If the server group type is <strong>Ip</strong>, set the ServerId parameter to IP addresses.</p>
+             * <p>The IP address of the server. This parameter is required when the server group is of the <strong>Ip</strong> type.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.6.6</p>
@@ -352,12 +354,12 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the backend server. Valid values:</p>
+             * <p>The backend server type. Valid values:</p>
              * <ul>
-             * <li><strong>Ecs</strong>: the ECS instance</li>
-             * <li><strong>Eni</strong>: the ENI</li>
-             * <li><strong>Eci</strong>: the elastic container instance</li>
-             * <li><strong>Ip</strong>: the IP address</li>
+             * <li><strong>Ecs</strong>: an ECS instance.</li>
+             * <li><strong>Eni</strong>: an elastic network interface (ENI).</li>
+             * <li><strong>Eci</strong>: an Elastic Container Instance (ECI).</li>
+             * <li><strong>Ip</strong>: an IP address.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -370,7 +372,7 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If this parameter is set to <strong>0</strong>, no requests are forwarded to the server.</p>
+             * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the weight is set to <strong>0</strong>, no requests are forwarded to the backend server.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -27,10 +27,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</p>
+     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. The system returns a request ID, but the additional certificates are not immediately added. The addition task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> to query the addition status of the additional certificates:</p>
      * <ul>
-     * <li>If the listener is in the <strong>Associating</strong> state, the additional certificates are being associated.</li>
-     * <li>If the listener is in the <strong>Associated</strong> state, the additional certificates are associated.</li>
+     * <li>When the TCPSSL listener is in the <strong>Associating</strong> state, the additional certificates are being added.</li>
+     * <li>When the TCPSSL listener is in the <strong>Associated</strong> state, the additional certificates are added.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateAdditionalCertificatesWithListener  AssociateAdditionalCertificatesWithListenerRequest
@@ -46,7 +46,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> API operation.</p>
+     * <p>When you call this operation, you must have already removed a zone from the NLB instance by calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> operation or in the console.</p>
      * 
      * @param request the request parameters of CancelShiftLoadBalancerZones  CancelShiftLoadBalancerZonesRequest
      * @return CancelShiftLoadBalancerZonesResponse
@@ -61,11 +61,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.</p>
      * <ul>
-     * <li><strong>CreateLoadBalancer</strong> is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> to query the status of an NLB instance.<ul>
-     * <li>If an NLB instance is in the <strong>Provisioning</strong> state, the NLB instance is being created.</li>
-     * <li>If an NLB instance is in the <strong>Active</strong> state, the NLB instance is created.</li>
+     * <li>When you create a Network Load Balancing (NLB) instance, the system automatically creates the AliyunServiceRoleForNlb service-linked role for you.</li>
+     * <li>The <strong>CreateLoadBalancer</strong> operation is asynchronous. The system returns an instance ID, but the Network Load Balancing (NLB) instance is not yet created and the creation task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the creation status of the Network Load Balancing (NLB) instance:<ul>
+     * <li>If the Network Load Balancing (NLB) instance is in the <strong>Provisioning</strong> state, the Network Load Balancing (NLB) instance is being created.</li>
+     * <li>If the Network Load Balancing (NLB) instance is in the <strong>Active</strong> state, the Network Load Balancing (NLB) instance is created.</li>
      * </ul>
      * </li>
      * </ul>
@@ -83,10 +83,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</p>
+     * <p>The <strong>CreateServerGroup</strong> operation is asynchronous. The system returns a request ID, but the server group of the Network Load Balancer (NLB) is not yet created, and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the server group:</p>
      * <ul>
-     * <li>If the task is in the <strong>Succeeded</strong> status, the server group is created.</li>
-     * <li>If the task is in the <strong>Processing</strong> status, the server group is being created.</li>
+     * <li>If the task status is <strong>Succeeded</strong>, the server group is created.</li>
+     * <li>If the task status is <strong>Processing</strong>, the server group is being created. In this state, you can only perform query operations and cannot perform other operations.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateServerGroup  CreateServerGroupRequest
@@ -114,7 +114,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can delete server groups that are not associated with listeners.</p>
+     * <p>You can delete a server group only when it is not used by any listener.</p>
      * 
      * @param request the request parameters of DeleteServerGroup  DeleteServerGroupRequest
      * @return DeleteServerGroupResponse
@@ -122,6 +122,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServerGroupResponse> deleteServerGroup(DeleteServerGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the data warehouse configured for second-level monitoring storage in the current region.</p>
+     * 
      * @param request the request parameters of DescribeHdMonitorRegionConfig  DescribeHdMonitorRegionConfigRequest
      * @return DescribeHdMonitorRegionConfigResponse
      */
@@ -365,11 +368,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLoadBalancerAttributeResponse> updateLoadBalancerAttribute(UpdateLoadBalancerAttributeRequest request);
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the details about deletion protection and the configuration read-only mode.</p>
-     * </blockquote>
-     * 
      * @param request the request parameters of UpdateLoadBalancerProtection  UpdateLoadBalancerProtectionRequest
      * @return UpdateLoadBalancerProtectionResponse
      */

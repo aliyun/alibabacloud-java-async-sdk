@@ -80,7 +80,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the NLB instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nlb-83ckzc8d4xlp8o****</p>
@@ -91,7 +91,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order for the NLB instance.</p>
+         * <p>The order ID of the Network Load Balancing (NLB) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>20230000</p>
@@ -102,7 +102,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>

@@ -159,8 +159,8 @@ public class CreateSecurityPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The cipher suites supported by the security policy. Valid values of this parameter vary based on the value of TlsVersions. You can specify up to 32 cipher suites.</p>
-         * <p>TLSv1.0 and TLSv1.1 support the following cipher suites:</p>
+         * <p>The supported cipher suites, which depend on the TLSVersion value. You can add up to 32 cipher suites.</p>
+         * <p>Supported by TLSv1.0 and TLSv1.1:</p>
          * <ul>
          * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
          * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
@@ -170,7 +170,7 @@ public class CreateSecurityPolicyRequest extends Request {
          * <li><strong>AES256-SHA</strong></li>
          * <li><strong>DES-CBC3-SHA</strong></li>
          * </ul>
-         * <p>TLSv1.2 supports the following cipher suites:</p>
+         * <p>Supported by TLSv1.2:</p>
          * <ul>
          * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
          * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
@@ -191,8 +191,10 @@ public class CreateSecurityPolicyRequest extends Request {
          * <li><strong>AES256-GCM-SHA384</strong></li>
          * <li><strong>AES128-SHA256</strong></li>
          * <li><strong>AES256-SHA256</strong></li>
+         * <li><strong>ECDHE-ECDSA-CHACHA20-POLY1305</strong></li>
+         * <li><strong>ECDHE-RSA-CHACHA20-POLY1305</strong></li>
          * </ul>
-         * <p>TLSv1.3 supports the following cipher suites:</p>
+         * <p>Supported by TLSv1.3:</p>
          * <ul>
          * <li><strong>TLS_AES_128_GCM_SHA256</strong></li>
          * <li><strong>TLS_AES_256_GCM_SHA384</strong></li>
@@ -209,10 +211,10 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>The client token used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -225,10 +227,10 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: prechecks the request without creating the custom security policy. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, an error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,8 +243,8 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the NLB instance is deployed.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the Network Load Balancer (NLB) instance. </p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -254,7 +256,7 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the security policy belongs.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-atstuj3rtop****</p>
@@ -266,8 +268,8 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the security policy.</p>
-         * <p>It must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>Policy Name of the security policy.</p>
+         * <p>Policy Name must be 1 to 200 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>TLSCipherPolicy</p>
@@ -279,7 +281,7 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -288,7 +290,7 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * <p>The Transport Layer Security (TLS) versions supported by the security policy. Valid values: <strong>TLSv1.0</strong>, <strong>TLSv1.1</strong>, <strong>TLSv1.2</strong>, and <strong>TLSv1.3</strong>.</p>
+         * <p>The supported TLS versions. Valid values: <strong>TLSv1.0</strong>, <strong>TLSv1.1</strong>, <strong>TLSv1.2</strong>, and <strong>TLSv1.3</strong>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tlsVersions(java.util.List<String> tlsVersions) {
@@ -357,8 +359,8 @@ public class CreateSecurityPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag. It must be 1 to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), minus signs (-), and at signs (@).</p>
-             * <p>You can add up to 20 tags for the security policy in each call.</p>
+             * <p>The tag key. The key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. Supported characters include letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</p>
+             * <p>You can add up to 20 tags in a single call.</p>
              * 
              * <strong>example:</strong>
              * <p>KeyTest</p>
@@ -369,8 +371,8 @@ public class CreateSecurityPolicyRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. It must be 1 to 128 characters in length, cannot start with <code>acs:</code> or <code>aliyun</code>, and cannot contain <code>http://</code> or <code>https://</code>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), minus signs (-), and at signs (@).</p>
-             * <p>You can add up to 20 tags for the security policy in each call.</p>
+             * <p>The tag value. The value can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. Supported characters include letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</p>
+             * <p>You can add up to 20 tags in a single call.</p>
              * 
              * <strong>example:</strong>
              * <p>ValueTest</p>
