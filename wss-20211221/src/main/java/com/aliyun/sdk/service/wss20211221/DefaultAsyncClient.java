@@ -64,6 +64,37 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</li>
+     * <li>支持按模型调用请求ID、请求模型和用户ID进行筛选。</li>
+     * <li>查询结果按调用时间倒序返回。</li>
+     * <li>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</li>
+     * <li>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</li>
+     * <li><code>PageNumber</code>与<code>PageSize</code>的乘积不得超过1000000。</li>
+     * <li><code>BizType</code>不传时默认为企业版。</li>
+     * <li><code>GatewayRegion</code>不传时国内站默认上海，国际站默认新加坡。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeAICallDetails  DescribeAICallDetailsRequest
+     * @return DescribeAICallDetailsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAICallDetailsResponse> describeAICallDetails(DescribeAICallDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAICallDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAICallDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAICallDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li><strong>Paging</strong>: Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging. Set <code>NextToken</code> to an empty character string for the first request.</li>
