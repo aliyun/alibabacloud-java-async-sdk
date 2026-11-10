@@ -87,7 +87,7 @@ public class GetDomainRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return production resource information.</p>
+         * <p>Specifies whether to return online resource information.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

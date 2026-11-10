@@ -173,7 +173,7 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * <p>The domain name filter. This parameter performs an exact match against the authority field in Simple Log Service (SLS).</p>
+         * <p>The domain name filter. This parameter performs an exact match on the authority field in Simple Log Service (SLS).</p>
          * 
          * <strong>example:</strong>
          * <p>api.example.com</p>
@@ -185,7 +185,7 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * <p>The end of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span cannot exceed 24 hours.</p>
+         * <p>The end time of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span must be less than or equal to 24 hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * <p>The gateway request ID (x-acs-request-id) for exact match filtering.</p>
+         * <p>The exact filter for the gateway request ID (x-acs-request-id).</p>
          * 
          * <strong>example:</strong>
          * <p>E5D4xxxx</p>
@@ -222,7 +222,7 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * <p>The HTTP error code. Only three-digit numbers in the 400–599 range are accepted. This parameter is required. If you do not specify this parameter, the API returns InvalidParameter.WithDetail (400).</p>
+         * <p>The specific HTTP error code. Only three-digit numbers in the range of 400 to 599 are accepted. This parameter is required. If it is not provided, the API returns the InvalidParameter.WithDetail(400) error.</p>
          * 
          * <strong>example:</strong>
          * <p>502</p>
@@ -246,7 +246,7 @@ public class ListGatewayErrorAccessLogsRequest extends Request {
         }
 
         /**
-         * <p>The start of the query window, in UNIX seconds. The value must be no earlier than 24 hours before the current time.</p>
+         * <p>The start time of the query window, in UNIX seconds. The value must be greater than or equal to the current time minus 24 hours.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

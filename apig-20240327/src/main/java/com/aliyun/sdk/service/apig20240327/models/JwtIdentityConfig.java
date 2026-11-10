@@ -143,7 +143,7 @@ public class JwtIdentityConfig extends TeaModel {
          * <p>The JWKS configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p><a href="https://example.com/.well-known/jwks.json">https://example.com/.well-known/jwks.json</a></p>
          */
         public Builder jwks(String jwks) {
             this.jwks = jwks;
@@ -282,7 +282,7 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * <p>The HTTP header name after conversion.</p>
+             * <p>The converted HTTP header name.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Consumer-Id</p>
@@ -293,7 +293,7 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to overwrite an existing header with the same name.</p>
+             * <p>Specifies whether to override an existing header with the same name.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -470,7 +470,7 @@ public class JwtIdentityConfig extends TeaModel {
             } 
 
             /**
-             * <p>The key configuration of the JWT.</p>
+             * <p>The JWT key configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>Authorization</p>
@@ -481,7 +481,7 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the request is passed through.</p>
+             * <p>Specifies whether to pass the token.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -492,7 +492,7 @@ public class JwtIdentityConfig extends TeaModel {
             }
 
             /**
-             * <p>The position where the JWT is stored.</p>
+             * <p>The JWT storage location.</p>
              * 
              * <strong>example:</strong>
              * <p>HEADER</p>

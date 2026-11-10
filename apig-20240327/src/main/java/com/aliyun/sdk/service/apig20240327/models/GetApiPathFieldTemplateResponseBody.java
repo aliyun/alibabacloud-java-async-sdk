@@ -243,6 +243,9 @@ public class GetApiPathFieldTemplateResponseBody extends TeaModel {
 
             /**
              * <p>The set of fields defined by the field template, grouped by mapping key, where each group contains a set of template field items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;model&quot;:[&quot;$.model&quot;],&quot;messages&quot;:[&quot;$.messages[*].content&quot;]}</p>
              */
             public Builder fieldPaths(java.util.Map<String, java.util.List<DataFieldPathsValue>> fieldPaths) {
                 this.fieldPaths = fieldPaths;
@@ -250,7 +253,7 @@ public class GetApiPathFieldTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URI of the request corresponding to the field template.</p>
+             * <p>The API request path corresponding to the field template.</p>
              * 
              * <strong>example:</strong>
              * <p>/v1/chat/completions</p>

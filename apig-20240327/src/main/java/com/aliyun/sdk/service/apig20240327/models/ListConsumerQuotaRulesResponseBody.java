@@ -126,7 +126,7 @@ public class ListConsumerQuotaRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -334,7 +334,7 @@ public class ListConsumerQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period multiplier, which specifies the number of periods after which the quota resets. This parameter is returned when the rule uses a custom period. Minimum value: 1. Maximum value: 60.</p>
+             * <p>The period multiplier, which indicates the number of periods after which the quota is reset. This parameter is returned when the rule uses a custom period. Minimum value: 1. Maximum value: 60.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -411,7 +411,7 @@ public class ListConsumerQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time zone corresponding to the calendar period, in UTC+x format.</p>
+             * <p>The time zone corresponding to the natural period, in UTC+x format.</p>
              * 
              * <strong>example:</strong>
              * <p>UTC+8</p>
@@ -422,11 +422,7 @@ public class ListConsumerQuotaRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period type. Valid values:</p>
-             * <ul>
-             * <li>calendar: calendar period.</li>
-             * <li>epoch: custom period.</li>
-             * </ul>
+             * <p>The period type. calendar indicates a natural period, and epoch indicates a custom period.</p>
              * 
              * <strong>example:</strong>
              * <p>calendar</p>

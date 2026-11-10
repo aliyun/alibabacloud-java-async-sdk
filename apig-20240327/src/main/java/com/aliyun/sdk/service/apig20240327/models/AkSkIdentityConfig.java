@@ -96,7 +96,7 @@ public class AkSkIdentityConfig extends TeaModel {
          * <p>The AK configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>ak-xxxxxxxx</p>
          */
         public Builder ak(String ak) {
             this.ak = ak;
@@ -118,7 +118,7 @@ public class AkSkIdentityConfig extends TeaModel {
          * <p>The SK configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>sk-xxxxxxxx</p>
          */
         public Builder sk(String sk) {
             this.sk = sk;

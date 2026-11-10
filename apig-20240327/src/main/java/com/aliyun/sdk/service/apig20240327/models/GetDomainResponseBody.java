@@ -123,7 +123,7 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to trace the API call chain.</p>
+         * <p>The request ID used to trace the API call chain.</p>
          * 
          * <strong>example:</strong>
          * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
@@ -633,9 +633,7 @@ public class GetDomainResponseBody extends TeaModel {
              * <p>The error code for the certificate details.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>0</p>
              */
             public Builder certDetailErrorCode(String certDetailErrorCode) {
                 this.certDetailErrorCode = certDetailErrorCode;
@@ -646,9 +644,7 @@ public class GetDomainResponseBody extends TeaModel {
              * <p>The error message for the certificate details.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>Certificate details retrieved successfully</p>
              */
             public Builder certDetailErrorMessage(String certDetailErrorMessage) {
                 this.certDetailErrorMessage = certDetailErrorMessage;
@@ -656,12 +652,10 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate detail status.</p>
+             * <p>The status of the certificate details.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>success</p>
              */
             public Builder certDetailStatus(String certDetailStatus) {
                 this.certDetailStatus = certDetailStatus;
@@ -709,7 +703,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source from which the domain name was created.</p>
+             * <p>The creation source.</p>
              * 
              * <strong>example:</strong>
              * <p>Console</p>
@@ -764,7 +758,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTPS protocol type settings. Specifies whether forced HTTPS redirection is enabled.</p>
+             * <p>The settings for the HTTPS protocol type. Indicates whether forced HTTPS redirection is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -786,7 +780,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate issuer.</p>
+             * <p>The certification authority.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba</p>
@@ -797,7 +791,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether mTLS mutual authentication is enabled.</p>
+             * <p>Specifies whether mTLS mutual authentication is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -830,7 +824,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective period of the certificate.</p>
+             * <p>The effective time of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>1719386834548</p>
@@ -843,8 +837,8 @@ public class GetDomainResponseBody extends TeaModel {
             /**
              * <p>The protocol types supported by the domain name. Valid values:</p>
              * <ul>
-             * <li>HTTP: Only the HTTP protocol is supported.</li>
-             * <li>HTTPS: Only the HTTPS protocol is supported.</li>
+             * <li>HTTP: Supports only the HTTP protocol.</li>
+             * <li>HTTPS: Supports only the HTTPS protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -878,7 +872,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The production resource information.</p>
+             * <p>The online resource information.</p>
              */
             public Builder statisticsInfo(StatisticsInfo statisticsInfo) {
                 this.statisticsInfo = statisticsInfo;

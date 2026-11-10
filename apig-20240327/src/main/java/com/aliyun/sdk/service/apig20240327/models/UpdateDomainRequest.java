@@ -279,7 +279,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is set. When the protocol is HTTPS, forceHttps is required.</p>
+         * <p>The Settings for the HTTPS Protocol Type. Specifies whether to enable forced HTTPS redirection. This parameter is required when the protocol is HTTPS.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -303,7 +303,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable mutual TLS (mTLS) authentication.</p>
+         * <p>Specifies whether to enable mTLS mutual authentication.</p>
          */
         public Builder mTLSEnabled(Boolean mTLSEnabled) {
             this.putBodyParameter("mTLSEnabled", mTLSEnabled);
@@ -312,10 +312,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The protocol type supported by the domain name.</p>
+         * <p>The protocol types supported by the domain name.</p>
          * <ul>
-         * <li>HTTP: Only the HTTP protocol is supported.</li>
-         * <li>HTTPS: Only the HTTPS protocol is supported.</li>
+         * <li>HTTP: Supports only the HTTP protocol.</li>
+         * <li>HTTPS: Supports only the HTTPS protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -328,7 +328,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The cipher suite configuration.</p>
+         * <p>The cipher suite configurations.</p>
          */
         public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
             this.putBodyParameter("tlsCipherSuitesConfig", tlsCipherSuitesConfig);
@@ -337,7 +337,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The maximum TLS protocol version. TLS 1.3 is the maximum supported version.</p>
+         * <p>The maximum TLS protocol version. The maximum supported version is TLS 1.3.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.3</p>
@@ -349,7 +349,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>The minimum TLS protocol version. TLS 1.0 is the minimum supported version.</p>
+         * <p>The minimum TLS protocol version. The minimum supported version is TLS 1.0.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.0</p>

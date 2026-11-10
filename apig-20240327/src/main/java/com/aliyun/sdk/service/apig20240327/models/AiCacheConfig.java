@@ -135,9 +135,7 @@ public class AiCacheConfig extends TeaModel {
          * <p>The cache key generation strategy.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>default</p>
          */
         public Builder cacheKeyStrategy(String cacheKeyStrategy) {
             this.cacheKeyStrategy = cacheKeyStrategy;
@@ -156,7 +154,7 @@ public class AiCacheConfig extends TeaModel {
         }
 
         /**
-         * <p>The cache expiration time, in seconds.</p>
+         * <p>The cache expiration time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -175,7 +173,7 @@ public class AiCacheConfig extends TeaModel {
         }
 
         /**
-         * <p>The plugin running status.</p>
+         * <p>The running status of the plugin.</p>
          */
         public Builder pluginStatus(AiPluginStatus pluginStatus) {
             this.pluginStatus = pluginStatus;
@@ -283,7 +281,7 @@ public class AiCacheConfig extends TeaModel {
             } 
 
             /**
-             * <p>The embedding model name.</p>
+             * <p>The name of the embedding model.</p>
              * 
              * <strong>example:</strong>
              * <p>text-embedding-v2</p>
@@ -294,7 +292,7 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * <p>The embedding service ID.</p>
+             * <p>The ID of the embedding service.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-xxx</p>
@@ -305,7 +303,7 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * <p>The request timeout period, in milliseconds.</p>
+             * <p>The request timeout in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>5000</p>
@@ -438,7 +436,7 @@ public class AiCacheConfig extends TeaModel {
             } 
 
             /**
-             * <p>The vector database API key.</p>
+             * <p>The API key for the vector database.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-xxx</p>
@@ -449,7 +447,7 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * <p>The vector collection ID.</p>
+             * <p>The ID of the vector collection.</p>
              * 
              * <strong>example:</strong>
              * <p>col-xxx</p>
@@ -460,7 +458,7 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * <p>The vector database service address.</p>
+             * <p>The vector database service endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>vdb-xxx.dashvector.aliyuncs.com</p>
@@ -482,7 +480,7 @@ public class AiCacheConfig extends TeaModel {
             }
 
             /**
-             * <p>The request timeout period, in milliseconds.</p>
+             * <p>The request timeout in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>5000</p>

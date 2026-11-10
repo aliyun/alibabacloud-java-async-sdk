@@ -311,7 +311,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The base path of the API. It must start with a forward slash (/).</p>
+         * <p>The base path of the API, which must start with a forward slash (/).</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -377,7 +377,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to only modify the configuration. A value of true indicates that only the configuration is modified without triggering a redeployment.</p>
+         * <p>Specifies whether to modify only the configuration. A value of true indicates that only the configuration is modified without triggering a redeployment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -419,7 +419,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The idempotent request token. If you call the same HTTP API with the same client token and request parameters, the result of the first successful call is returned.</p>
+         * <p>The idempotency token. If the same HTTP API is repeatedly called with the same client token and request parameters, the first successful result is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>update-http-api-client-token-001</p>
@@ -431,7 +431,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. If you set this parameter to true, all synchronization checks consistent with a real update are performed, but no configurations are updated and no side effects are generated. If this parameter is left empty or set to false, the behavior remains the same as the existing version.</p>
+         * <p>Specifies whether to perform a dry run. A value of true indicates that all synchronization checks identical to a real update are executed without updating any configurations or causing side effects. If omitted or set to false, the behavior remains consistent with the current version.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -549,7 +549,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The Ingress class to listen on.</p>
+             * <p>The Ingress class to listen to.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -560,7 +560,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to update the IP address in the Ingress status.</p>
+             * <p>Specifies whether to update the address in the Ingress status.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

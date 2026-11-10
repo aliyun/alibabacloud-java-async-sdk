@@ -459,7 +459,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action to be performed after the dry run. Valid values:</p>
+             * <p>The action to be performed after the dry run.</p>
              * <ul>
              * <li>Create: Create.</li>
              * <li>Update: Update.</li>
@@ -570,7 +570,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action to be performed after the dry run. Valid values:</p>
+             * <p>The action to be performed after the dry run.</p>
              * <ul>
              * <li>Create: Create.</li>
              * <li>Update: Update.</li>
@@ -862,7 +862,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error messages. If the error messages are not empty, the API cannot be imported.</p>
+             * <p>The error messages. If the error messages are not empty, the API cannot be imported successfully.</p>
              */
             public Builder errorMessages(java.util.List<String> errorMessages) {
                 this.errorMessages = errorMessages;
@@ -894,7 +894,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of routes that failed to be imported.</p>
+             * <p>The list of failed routes.</p>
              */
             public Builder failureRoutes(java.util.List<FailureRoutes> failureRoutes) {
                 this.failureRoutes = failureRoutes;
@@ -929,7 +929,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of routes that were successfully imported.</p>
+             * <p>The list of successfully imported routes.</p>
              */
             public Builder successRoutes(java.util.List<SuccessRoutes> successRoutes) {
                 this.successRoutes = successRoutes;

@@ -283,7 +283,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Elastic IP Address (EIP) allocation ID that corresponds to the public address.</p>
+             * <p>The allocation ID of the elastic IP address (EIP) corresponding to the public IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>eip-bp1xxxx</p>
@@ -294,7 +294,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the elastic network interface (ENI).</p>
+             * <p>The ID of the elastic network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p>eni-bp1xxxx</p>
@@ -480,7 +480,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID that corresponds to the zone.</p>
+             * <p>The vSwitch ID corresponding to the zone.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1xxxx</p>
@@ -653,7 +653,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listener protocol. No backend enumeration validation is performed. The actual values are returned from SLB or NLB OpenAPI. Common values include tcp, udp, http, https, and tls.</p>
+             * <p>The listener protocol. No backend enumeration validation is performed. The actual value is obtained from the SLB or NLB API. Common values include tcp, udp, http, https, and tls.</p>
              * 
              * <strong>example:</strong>
              * <p>https</p>
@@ -744,7 +744,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual server group ID. For CLB, this is the VServerGroupId. For NLB, this is the ServerGroupId.</p>
+             * <p>The ID of the virtual server group. This is VServerGroupId for Classic Load Balancer (CLB) and ServerGroupId for Network Load Balancer (NLB).</p>
              * 
              * <strong>example:</strong>
              * <p>rsp-xxxx</p>
@@ -755,7 +755,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The group name.</p>
+             * <p>The name of the group.</p>
              * 
              * <strong>example:</strong>
              * <p>80-tcp</p>
@@ -1033,7 +1033,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether this is the default ingress of the gateway.</p>
+             * <p>Indicates whether the load balancer is the default ingress of the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1044,7 +1044,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the load balancer can be edited. This parameter serves as an edit switch for load balancers that are being migrated.</p>
+             * <p>Indicates whether the load balancer can be edited. This serves as an edit switch for load balancers during migration.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1066,7 +1066,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancer address (IP address or domain name).</p>
+             * <p>The load balancer address, which can be an IP address or a domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>47.x.x.x</p>
@@ -1099,7 +1099,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The load balancer availability status.</p>
+             * <p>The availability status of the load balancer.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -1121,7 +1121,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The binding mode.</p>
+             * <p>The association mode.</p>
              * 
              * <strong>example:</strong>
              * <p>Managed</p>
@@ -1192,7 +1192,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway service weight, which ranges from 0 to 100. This parameter is used in migration and traffic shifting scenarios.</p>
+             * <p>The gateway service weight, which ranges from 0 to 100 and is used in migration and traffic switching scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1203,12 +1203,10 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VServerGroup metadata.</p>
+             * <p>The metadata of the vServer group.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>default-vserver-group</p>
              */
             public Builder vServerGroupMetaInfo(String vServerGroupMetaInfo) {
                 this.vServerGroupMetaInfo = vServerGroupMetaInfo;

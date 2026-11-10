@@ -143,7 +143,7 @@ public class ListGatewayLoadBalancersRequest extends Request {
         } 
 
         /**
-         * <p>The gateway ID. This parameter is used for RAM resource authorization.</p>
+         * <p>The gateway ID used for RAM resource authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-xxxx</p>
@@ -155,7 +155,7 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return all instances in the selectable list mode. This parameter affects pagination and filtering behavior.</p>
+         * <p>Specifies whether to return all instances in the optional list mode. This parameter affects the pagination and filtering strategies.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -167,7 +167,7 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The load balancer instance ID. Specify this parameter to query details of a specific load balancer in the selectable list mode.</p>
+         * <p>The exact load balancer instance ID used to query details by ID in the optional list mode.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-xxxx</p>
@@ -179,7 +179,7 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The network type used to filter results.</p>
+         * <p>The network type filter.</p>
          * 
          * <strong>example:</strong>
          * <p>Internet</p>
@@ -191,12 +191,7 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The mode switch. Valid values:</p>
-         * <ul>
-         * <li>true: Returns the list of load balancers that are already associated with the gateway by reading database relationships.</li>
-         * <li>false (default): Returns the selectable list by calling SLB or NLB OpenAPI to filter bindable instances.</li>
-         * </ul>
-         * <p>Use related=true to retrieve the list of associated load balancers. The default mode (related=false) calls SLB or NLB OpenAPI to filter bindable instances, which may return a 500 error in common scenarios due to backend data issues.</p>
+         * <p>Specifies whether to return the list of load balancers associated with the gateway. If set to true, the associated load balancers are returned based on database relationships. We recommend setting this parameter to true to retrieve the associated load balancers. If set to false or left empty, the optional list mode is used to call the SLB or NLB API and filter bindable instances. In the default mode where related is false, calling the SLB or NLB API may return a 500 error due to backend data issues in common scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -208,7 +203,7 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The load balancer type used to filter results.</p>
+         * <p>The load balancer type filter.</p>
          * 
          * <strong>example:</strong>
          * <p>NLB</p>
@@ -220,7 +215,7 @@ public class ListGatewayLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID used to filter instances within the specified VPC in the selectable list mode. This parameter is required when type is set to NLB and related is not set to true. Otherwise, the API returns a 500 error.</p>
+         * <p>The VPC filter used to filter instances within the specified VPC in the optional list mode. This parameter is required when type is set to NLB and related is not set to true. Otherwise, the API returns a 500 error.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxxx</p>

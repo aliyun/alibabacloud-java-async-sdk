@@ -150,14 +150,14 @@ public class CreateServiceRequest extends Request {
         /**
          * <p>The source of the service. Valid values:</p>
          * <ul>
-         * <li>MSE_NACOS: services in MSE Nacos.</li>
-         * <li>K8S: services in Container Service for Kubernetes clusters.</li>
-         * <li>VIP: fixed address services.</li>
+         * <li>MSE_NACOS: Services in MSE Nacos.</li>
+         * <li>K8S: Services in Kubernetes clusters of Container Service.</li>
+         * <li>VIP: Fixed-address services.</li>
          * <li>DNS: DNS domain name services.</li>
-         * <li>FC3: services in Function Compute.</li>
+         * <li>FC3: Services in Function Compute.</li>
          * <li>SAE_K8S_SERVICE: SAE Kubernetes services.</li>
          * <li>AI: AI services.</li>
-         * <li>AGENT: agent services.</li>
+         * <li>AGENT: Agent services.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class CreateServiceRequest extends Request {
          * <p>The client token.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>create-service-client-token-001</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -433,7 +433,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The agent service configuration. This parameter is required when the sourceType is AGENT.</p>
+             * <p>The agent service configuration. This parameter is required when the source type is AGENT.</p>
              */
             public Builder agentServiceConfig(AgentServiceConfig agentServiceConfig) {
                 this.agentServiceConfig = agentServiceConfig;
@@ -441,7 +441,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The AI service configuration. This parameter is required when the sourceType is AI.</p>
+             * <p>The AI service configuration. This parameter is required when the source type is AI.</p>
              */
             public Builder aiServiceConfig(AiServiceConfig aiServiceConfig) {
                 this.aiServiceConfig = aiServiceConfig;
@@ -468,7 +468,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The name of the service group. This parameter is required when the sourceType is MSE_NACOS.</p>
+             * <p>The name of the service group. This parameter is required when the source type is MSE_NACOS.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -490,7 +490,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The name of the service. This parameter is required when the sourceType is FC3.</p>
+             * <p>The name of the service. This parameter is required when the source type is FC3.</p>
              * 
              * <strong>example:</strong>
              * <p>user-service</p>
@@ -503,10 +503,10 @@ public class CreateServiceRequest extends Request {
             /**
              * <p>The namespace of the service:</p>
              * <ul>
-             * <li>When the sourceType is K8S, this parameter specifies the namespace where the Kubernetes service resides.</li>
-             * <li>When the sourceType is MSE_NACOS, this parameter specifies the namespace in Nacos.
-             * This parameter is required when the sourceType is K8S or MSE_NACOS.</li>
+             * <li>If the source type is K8S, this parameter specifies the namespace where the Kubernetes service resides.</li>
+             * <li>If the source type is MSE_NACOS, this parameter specifies the namespace in Nacos.</li>
              * </ul>
+             * <p>This parameter is required when the source type is K8S or MSE_NACOS.</p>
              * 
              * <strong>example:</strong>
              * <p>PUBLIC</p>
@@ -539,7 +539,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The validation options, which are configuration options related to service validation.</p>
+             * <p>The validation options, which include configuration options related to service validation.</p>
              */
             public Builder validationOptions(ValidationOptions validationOptions) {
                 this.validationOptions = validationOptions;

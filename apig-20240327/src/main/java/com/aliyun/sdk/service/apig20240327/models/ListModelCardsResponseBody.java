@@ -416,7 +416,10 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feature configuration of the model card, structured as a key-value pair mapping. The set of keys is not declared in the API definition.</p>
+             * <p>The feature configuration of the model card, which is a key-value map structure. The set of keys is not declared in the API definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;functionCall&quot;:true}</p>
              */
             public Builder features(java.util.Map<String, ?> features) {
                 this.features = features;
@@ -443,7 +446,10 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pricing information of the model card, structured as a key-value pair mapping. The set of keys and billing metrics are not declared in the API definition.</p>
+             * <p>The pricing information of the model card, which is a key-value map structure. The set of keys and the billing criteria are not declared in the API definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;input&quot;:0.004,&quot;output&quot;:0.012}</p>
              */
             public Builder pricing(java.util.Map<String, ?> pricing) {
                 this.pricing = pricing;
@@ -451,7 +457,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model provider identifier corresponding to the model card.</p>
+             * <p>The identifier of the model provider corresponding to the model card.</p>
              * 
              * <strong>example:</strong>
              * <p>provider-xxxxxxxx</p>
@@ -462,7 +468,7 @@ public class ListModelCardsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of snapshots for the model card. Array items are mapping structures with undeclared members. The snapshot content and generation rules are not specified in the API definition.</p>
+             * <p>The list of snapshots for the model card. Each array item is a map structure with undeclared members. The snapshot content and generation rules are not specified in the API definition.</p>
              */
             public Builder snapshots(java.util.List<java.util.Map<String, ?>> snapshots) {
                 this.snapshots = snapshots;

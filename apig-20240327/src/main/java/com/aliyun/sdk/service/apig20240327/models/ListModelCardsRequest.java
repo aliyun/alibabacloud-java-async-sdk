@@ -59,7 +59,7 @@ public class ListModelCardsRequest extends Request {
         } 
 
         /**
-         * <p>The model provider identifier used to filter model cards by provider.</p>
+         * <p>The identifier of the model provider used to filter model cards by provider.</p>
          * 
          * <strong>example:</strong>
          * <p>provider-xxxxxxxx</p>

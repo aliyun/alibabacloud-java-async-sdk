@@ -123,7 +123,7 @@ public class InvokeAIAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>
@@ -205,7 +205,7 @@ public class InvokeAIAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response body of the debug result.</p>
+             * <p>The response body of the test result.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot;Analysis result...&quot;}}]}</p>
@@ -217,6 +217,9 @@ public class InvokeAIAgentResponseBody extends TeaModel {
 
             /**
              * <p>The response headers, such as Content-Type: text/event-stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Content-Type&quot;:&quot;text/event-stream&quot;}</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -224,7 +227,7 @@ public class InvokeAIAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP status code of the debug result.</p>
+             * <p>The HTTP status code of the test result.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>

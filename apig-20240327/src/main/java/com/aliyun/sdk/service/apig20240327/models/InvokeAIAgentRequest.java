@@ -116,7 +116,7 @@ public class InvokeAIAgentRequest extends Request {
         } 
 
         /**
-         * <p>The agent name.</p>
+         * <p>The name of the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,10 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * <p>The business parameters. Each agent performs custom validation on these parameters, such as the SLS context passed for log diagnostics.</p>
+         * <p>The business parameters. Each agent performs custom validation. For example, pass the Simple Log Service context for log diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;app&quot;:&quot;log-diagnosis&quot;,&quot;logStore&quot;:&quot;apig-logstore&quot;}</p>
          */
         public Builder bizParams(java.util.Map<String, String> bizParams) {
             this.putBodyParameter("bizParams", bizParams);
@@ -138,7 +141,7 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * <p>The conversation history. Each element contains role (user/assistant) and content. The role and content fields in each element cannot be empty.</p>
+         * <p>The conversation history, which includes the role (user or assistant) and content. The role and content in each element cannot be empty.</p>
          */
         public Builder history(java.util.List<History> history) {
             this.putBodyParameter("history", history);
@@ -147,7 +150,7 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * <p>The output language. When set to en, fallback error messages are displayed in English.</p>
+         * <p>The output language. If this parameter is set to en, the default error message is displayed in English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh / en</p>
@@ -159,7 +162,7 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * <p>The user input for the current turn. If left empty, a default prompt is used based on the scenario, such as &quot;Start&quot;.</p>
+         * <p>The current user input. If this parameter is empty, a default value is used based on the scenario, such as Start.</p>
          * 
          * <strong>example:</strong>
          * <p>Help me diagnose this error log</p>
@@ -230,7 +233,7 @@ public class InvokeAIAgentRequest extends Request {
             } 
 
             /**
-             * <p>The content of the message. The returned data is in rich text format.</p>
+             * <p>The content. The returned data is in rich text format.</p>
              * 
              * <strong>example:</strong>
              * <p>Previous question</p>

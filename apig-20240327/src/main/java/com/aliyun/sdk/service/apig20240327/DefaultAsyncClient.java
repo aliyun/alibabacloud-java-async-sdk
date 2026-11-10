@@ -346,9 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateConsumerAuthorizationRule  CreateConsumerAuthorizationRuleRequest
+     * @deprecated OpenAPI CreateConsumerAuthorizationRule is deprecated  * @param request  the request parameters of CreateConsumerAuthorizationRule  CreateConsumerAuthorizationRuleRequest
      * @return CreateConsumerAuthorizationRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateConsumerAuthorizationRuleResponse> createConsumerAuthorizationRule(CreateConsumerAuthorizationRuleRequest request) {
         try {
@@ -475,6 +476,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>调用流程</h2>
+     * <p>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</p>
+     * <ol>
+     * <li>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</li>
+     * <li>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</li>
+     * <li>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</li>
+     * </ol>
+     * <h2>使用条件与限制</h2>
+     * <ul>
+     * <li>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</li>
+     * <li>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</li>
+     * <li>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</li>
+     * <li>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</li>
+     * <li>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</li>
+     * <li>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateGatewayQuotaRuleSubjectUsageExportTask  CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
+     * @return CreateGatewayQuotaRuleSubjectUsageExportTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateGatewayQuotaRuleSubjectUsageExportTaskResponse> createGatewayQuotaRuleSubjectUsageExportTask(CreateGatewayQuotaRuleSubjectUsageExportTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGatewayQuotaRuleSubjectUsageExportTask").setMethod(HttpMethod.POST).setPathRegex("/v1/gateways/{gatewayId}/quota-rules/{ruleId}/subjects/{subjectId}/usage/export-tasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGatewayQuotaRuleSubjectUsageExportTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGatewayQuotaRuleSubjectUsageExportTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -791,7 +828,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of CreateService  CreateServiceRequest
      * @return CreateServiceResponse
@@ -904,9 +941,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteConsumerAuthorizationRule  DeleteConsumerAuthorizationRuleRequest
+     * @deprecated OpenAPI DeleteConsumerAuthorizationRule is deprecated  * @param request  the request parameters of DeleteConsumerAuthorizationRule  DeleteConsumerAuthorizationRuleRequest
      * @return DeleteConsumerAuthorizationRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteConsumerAuthorizationRuleResponse> deleteConsumerAuthorizationRule(DeleteConsumerAuthorizationRuleRequest request) {
         try {
@@ -1565,9 +1603,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetConsumerAuthorizationRule  GetConsumerAuthorizationRuleRequest
+     * @deprecated OpenAPI GetConsumerAuthorizationRule is deprecated  * @param request  the request parameters of GetConsumerAuthorizationRule  GetConsumerAuthorizationRuleRequest
      * @return GetConsumerAuthorizationRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetConsumerAuthorizationRuleResponse> getConsumerAuthorizationRule(GetConsumerAuthorizationRuleRequest request) {
         try {
@@ -1767,6 +1806,39 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetGatewayQuotaRuleSubjectUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Call flow</h2>
+     * <p>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</p>
+     * <ul>
+     * <li>Pending or Running: The task is not completed. You can query again after a period of time.</li>
+     * <li>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</li>
+     * <li>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</li>
+     * </ul>
+     * <h2>Download link and file validity period</h2>
+     * <p>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
+     * After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</p>
+     * <h2>Query scope and task progress</h2>
+     * <p>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+     * If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</p>
+     * 
+     * @param request the request parameters of GetGatewayQuotaRuleSubjectUsageExportTask  GetGatewayQuotaRuleSubjectUsageExportTaskRequest
+     * @return GetGatewayQuotaRuleSubjectUsageExportTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetGatewayQuotaRuleSubjectUsageExportTaskResponse> getGatewayQuotaRuleSubjectUsageExportTask(GetGatewayQuotaRuleSubjectUsageExportTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGatewayQuotaRuleSubjectUsageExportTask").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/quota-rules/{ruleId}/subjects/{subjectId}/usage/export-tasks/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGatewayQuotaRuleSubjectUsageExportTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGatewayQuotaRuleSubjectUsageExportTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2425,9 +2497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ListConsumerAuthorizationRules  ListConsumerAuthorizationRulesRequest
+     * @deprecated OpenAPI ListConsumerAuthorizationRules is deprecated  * @param request  the request parameters of ListConsumerAuthorizationRules  ListConsumerAuthorizationRulesRequest
      * @return ListConsumerAuthorizationRulesResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListConsumerAuthorizationRulesResponse> listConsumerAuthorizationRules(ListConsumerAuthorizationRulesRequest request) {
         try {
@@ -3599,7 +3672,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the currently active credentials for an AI service.</p>
+     * <p>Queries the currently active credentials for the AI service.</p>
      * 
      * @param request the request parameters of RevealServiceCredential  RevealServiceCredentialRequest
      * @return RevealServiceCredentialResponse
@@ -3889,12 +3962,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
+     * @deprecated OpenAPI UpdateConsumerAuthorizationRule is deprecated  * @description This API operation has been replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.
      * 
      * @param request the request parameters of UpdateConsumerAuthorizationRule  UpdateConsumerAuthorizationRuleRequest
      * @return UpdateConsumerAuthorizationRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateConsumerAuthorizationRuleResponse> updateConsumerAuthorizationRule(UpdateConsumerAuthorizationRuleRequest request) {
         try {
@@ -3947,7 +4020,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type can update the listener Ingress configuration.</p>
+     * <p>Only sources of the <strong>container service</strong> type are allowed to update the listener Ingress configurations.</p>
      * 
      * @param request the request parameters of UpdateDomain  UpdateDomainRequest
      * @return UpdateDomainResponse
