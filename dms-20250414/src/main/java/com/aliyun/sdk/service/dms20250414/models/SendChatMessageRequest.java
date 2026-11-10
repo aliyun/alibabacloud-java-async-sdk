@@ -280,7 +280,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The data source information. This parameter can be left empty. You can specify only one data source for this parameter. We recommend that you use the DataSources parameter instead.</p>
+         * <p>The data source information. This parameter can be left empty. You can pass only one data source in this parameter. We recommend that you use the DataSources parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -303,7 +303,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The content of the message sent to the agent.</p>
+         * <p>The content of the message sent to the agent in the current request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,12 +316,16 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The message type. Default value: primary.</p>
+         * <p>The message type. Default value: <code>[primary]</code>.  </p>
          * <ul>
-         * <li>In normal interactions with the agent, the message type is primary.</li>
-         * <li>When the message is a response to a human-in-the-loop question from the agent, the type must be additional.</li>
-         * <li>When the message is intended to trigger report generation, the type must be report.</li>
-         * <li>When the message is intended to cancel the current session, the type must be cancel.</li>
+         * <li><p>For regular interactions with the agent, set the message type to <code>[primary]</code>.</p>
+         * </li>
+         * <li><p>If the message responds to a human-in-the-loop question from the agent, set the type to <code>[additional]</code>.</p>
+         * </li>
+         * <li><p>If the message triggers report generation, set the type to <code>[report]</code>.</p>
+         * </li>
+         * <li><p>If the message cancels the current session, set the type to <code>[cancel]</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,7 +350,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>Required when the message type is additional. Specifies the specific question asked by the agent to the user through human-in-the-loop.</p>
+         * <p>The specific question asked by the agent to the user through human-in-the-loop. This field is required when the message type is <code>additional</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Provide the calculation criteria for GMV</p>
@@ -358,7 +362,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The current quoted content. This is typically used during interactions with the agent.</p>
+         * <p>The quoted content passed in the current request. This is typically used during interactions with the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;version&quot;:&quot;v0&quot;}</p>
@@ -371,7 +375,7 @@ public class SendChatMessageRequest extends Request {
 
         /**
          * <p><strong>Important</strong></p>
-         * <p>When this message is a reply to an agent message (such as the agent asking for clarification through ASK_HUMAN), reply_to must exactly match the Checkpoint sequence number carried by that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave reply_to empty or set it to 0.  </p>
+         * <p>If this message replies to an agent message, such as an agent clarifying a question through ASK_HUMAN, you must accurately pass the checkpoint sequence number carried in that agent message to <code>reply_to</code>. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave <code>reply_to</code> empty or set it to &quot;0&quot;.  </p>
          * <p>This field affects how the agent decides to process the message. Passing an incorrect value may lead to suboptimal analysis results.</p>
          * 
          * <strong>example:</strong>
@@ -384,7 +388,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The special configurations for the current session. For the same session, only the configurations passed during the first SendMessage call take effect.</p>
+         * <p>The special configurations for the current session. For the same session, only the configurations passed in the first SendMessage request take effect.</p>
          */
         public Builder sessionConfig(SessionConfig sessionConfig) {
             String sessionConfigShrink = shrink(sessionConfig, "SessionConfig", "json");
@@ -396,9 +400,9 @@ public class SendChatMessageRequest extends Request {
         /**
          * <p>The session ID. This is an optional field used for multi-turn sessions.</p>
          * <ul>
-         * <li>You can start a session without specifying this field, and the response will include the SessionID for the current session.</li>
+         * <li>You can start a session without specifying this field. The response will include the session ID for the current session.</li>
          * <li>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating the session.</li>
-         * <li>If you need multi-turn conversations (such as follow-up questions or confirming execution plans), include the SessionID returned by the previous SendChatMessage operation in this API call.</li>
+         * <li>If you need multi-turn conversations, such as follow-up questions or confirming execution plans, include the session ID returned by the previous SendChatMessage operation in this request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -421,7 +425,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>The Object Storage Service (OSS) bucket of the user. If you do not specify this parameter, the analysis process is securely stored in the built-in storage.</p>
+         * <p>The Object Storage Service (OSS) bucket of the user. If this parameter is left empty, the analysis process is securely stored in the built-in storage.</p>
          * 
          * <strong>example:</strong>
          * <p>my-bucket</p>
@@ -530,7 +534,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * <p>The list of fields that are allowed to be queried in the current table. If you do not specify this parameter, all fields can be queried. If you specify this parameter, SQL statements that query fields outside the allowed range, such as the <code>SELECT *</code> syntax, will be blocked. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include fields outside the allowed range. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
+             * <p>The list of columns allowed for querying in the current table. If left empty, all columns can be queried. If specified, SQL statements that exceed the allowed scope, such as <code>SELECT *</code>, will be blocked. To ensure optimal analysis results of DataAgent, avoid providing out-of-scope columns in modules such as prompts, knowledge, and instructions. Otherwise, generated SQL statements without permissions will be blocked, which degrades the analysis speed and results of DataAgent.</p>
              */
             public Builder allowedColumns(java.util.List<String> allowedColumns) {
                 this.allowedColumns = allowedColumns;
@@ -538,9 +542,9 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The list of fields that are prohibited from being queried in the current table. If you do not specify this parameter, all fields <strong>can be queried</strong>. If you specify this parameter, SQL statements that query fields outside the allowed range, such as the <code>SELECT *</code> syntax, will be blocked.  </p>
-             * <p>If both the prohibited list and the allowed list are configured, the prohibited list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as non-queryable while configuring columns B and C as queryable, only column C is ultimately queryable.</p>
-             * <p>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include fields outside the allowed range. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
+             * <p>The list of columns prohibited from querying in the current table. If left empty, all columns <strong>can be queried</strong>. If specified, SQL statements that exceed the allowed scope, such as <code>SELECT *</code>, will be blocked.  </p>
+             * <p>If both the prohibited list and the allowed list are configured, the prohibited list takes higher priority. For example, if Table 1 has columns A, B, C, and D, and columns A and B are configured as non-queryable while columns B and C are configured as queryable, only column C is ultimately queryable.</p>
+             * <p>To ensure optimal analysis results of DataAgent, avoid providing out-of-scope columns in modules such as prompts, knowledge, and instructions. Otherwise, generated SQL statements without permissions will be blocked, which degrades the analysis speed and results of DataAgent.</p>
              */
             public Builder disallowedColumns(java.util.List<String> disallowedColumns) {
                 this.disallowedColumns = disallowedColumns;
@@ -548,7 +552,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The row filter condition that must be included for the current table. If you do not specify this parameter, it is ignored. If you specify this parameter, the system checks whether all SQL statements involving this table include the filter field and whether the WHERE condition meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</p>
+             * <p>The required row filter condition for the current table. If left empty, this field is ignored. If specified, the system checks whether all SQL statements involving this table include the filter column and whether the WHERE clause meets the constraints. SQL statements that do not meet the constraints will be rejected. Ensure the correct format of the validation condition.</p>
              * 
              * <strong>example:</strong>
              * <p>region = \&quot;east\&quot;</p>
@@ -826,7 +830,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * <p><strong>[Deprecated]</strong> You do not need to specify this field.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated. You do not need to specify it.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -837,7 +841,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The data source type. Valid values: remote_data_center and database, which indicate that the analysis target is a file or a database, respectively.</p>
+             * <p>The data source type. Valid values: <code>[remote_data_center, database]</code>, which indicate that the current analysis is based on a file or a database, respectively.</p>
              * 
              * <strong>example:</strong>
              * <p>remote_data_center</p>
@@ -848,7 +852,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> You do not need to specify this field.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated. You do not need to specify it.</p>
              * 
              * <strong>example:</strong>
              * <p>test_db</p>
@@ -892,7 +896,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The type of the database.</p>
+             * <p>The database engine type.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql</p>
@@ -914,7 +918,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> You do not need to specify this field.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated. You do not need to specify it.</p>
              * 
              * <strong>example:</strong>
              * <p>localhost</p>
@@ -952,7 +956,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The data source resource identifier.</p>
+             * <p>The Uniform Resource Identifier (URI) of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>datalake://abc/def</p>
@@ -1048,7 +1052,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * <p>The list of columns that are allowed to be queried in the current table. If you do not specify this parameter, all columns can be queried. If you specify this parameter, SQL statements that query columns beyond the allowed scope are blocked. For example, syntax such as SELECT * is blocked. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements are generated and blocked, which reduces the analysis speed and performance of DataAgent.</p>
+             * <p>The list of columns that are allowed to be queried in the current table. If this parameter is left empty, all columns can be queried. If this parameter is specified, SQL statements that query columns beyond the allowed scope are blocked. For example, syntax similar to SELECT * is blocked. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements are generated and blocked, which reduces the analysis speed and effectiveness of DataAgent.</p>
              */
             public Builder allowedColumns(java.util.List<String> allowedColumns) {
                 this.allowedColumns = allowedColumns;
@@ -1056,9 +1060,9 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The list of fields that are prohibited from being queried in the current table. If you do not specify this parameter, all fields <strong>can be queried</strong>. If you specify this parameter, SQL statements that query fields outside the allowed range, such as the <code>SELECT *</code> syntax, will be blocked.  </p>
-             * <p>If both the prohibited list and the allowed list are configured, the prohibited list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as non-queryable while configuring columns B and C as queryable, only column C is ultimately queryable.</p>
-             * <p>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include fields outside the allowed range. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
+             * <p>The list of columns prohibited from querying in the current table. If left empty, all columns <strong>can be queried</strong>. If specified, SQL statements that exceed the allowed scope, such as <code>SELECT *</code>, will be blocked.  </p>
+             * <p>If both the prohibited list and the allowed list are configured, the prohibited list takes higher priority. For example, if Table 1 has columns A, B, C, and D, and columns A and B are configured as non-queryable while columns B and C are configured as queryable, only column C is ultimately queryable.</p>
+             * <p>To ensure optimal analysis results of DataAgent, avoid providing out-of-scope columns in modules such as prompts, knowledge, and instructions. Otherwise, generated SQL statements without permissions will be blocked, which degrades the analysis speed and results of DataAgent.</p>
              */
             public Builder disallowedColumns(java.util.List<String> disallowedColumns) {
                 this.disallowedColumns = disallowedColumns;
@@ -1066,7 +1070,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The row filter condition that must be included for the current table. If you do not specify this parameter, it is ignored. If you specify this parameter, the system checks whether all SQL statements involving this table include the filter field and whether the WHERE condition meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</p>
+             * <p>The required row filter condition for the current table. If left empty, this field is ignored. If specified, the system checks whether all SQL statements involving this table include the filter column and whether the WHERE clause meets the constraints. SQL statements that do not meet the constraints will be rejected. Ensure the correct format of the validation condition.</p>
              * 
              * <strong>example:</strong>
              * <p>region = \&quot;east\&quot;</p>
@@ -1344,7 +1348,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * <p><strong>[Deprecated]</strong> You do not need to specify this field.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated. You do not need to specify it.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -1370,7 +1374,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> You do not need to specify this field.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated. You do not need to specify it.</p>
              * 
              * <strong>example:</strong>
              * <p>test_db</p>
@@ -1414,7 +1418,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The type of the database.</p>
+             * <p>The database engine type.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql</p>
@@ -1436,7 +1440,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> You do not need to specify this field.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated. You do not need to specify it.</p>
              * 
              * <strong>example:</strong>
              * <p>localhost</p>
@@ -1474,7 +1478,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The data source resource identifier.</p>
+             * <p>The Uniform Resource Identifier (URI) of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>datalake://abc/def</p>
@@ -1533,8 +1537,10 @@ public class SendChatMessageRequest extends Request {
             /**
              * <p>The default behavior for table-level permissions. This parameter controls whether tables not configured in DataSources.[item].Permission can be queried. Valid values:</p>
              * <ul>
-             * <li>allow: Works in blacklist mode. This is the default value. By default, all tables can be queried, and the actual permissions are subject to the permissions configured in DMS. Only when you configure <strong>row- and column-level</strong> permissions in DataSources.[item].Permission will row- and column-level permissions be enforced.</li>
-             * <li>deny: Works in whitelist mode. You must manually specify this value. By default, no tables can be queried. A table can be queried only when you configure permissions for it in DataSources.[item].Permission. You can grant full access to a table by not configuring any row- or column-level restrictions.</li>
+             * <li><p>allow: Default value. Works in blacklist mode. By default, all tables can be queried, and the actual permissions are subject to the permissions configured in DMS. Row-level and column-level permissions are enforced only when you configure <strong>row-level and column-level</strong> permissions in DataSources.[item].Permission.</p>
+             * </li>
+             * <li><p>deny: Works in whitelist mode. You must manually pass this value. By default, no tables can be queried. A table can be queried only when you configure permissions for it in DataSources.[item].Permission. You can grant full access to a table by not configuring any row-level or column-level restrictions.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1607,6 +1613,9 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("WebReportTheme")
         private String webReportTheme;
 
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
+        private String workMode;
+
         private SessionConfig(Builder builder) {
             this.customAgentId = builder.customAgentId;
             this.customAgentStage = builder.customAgentStage;
@@ -1624,6 +1633,7 @@ public class SendChatMessageRequest extends Request {
             this.skipWebReportConfirm = builder.skipWebReportConfirm;
             this.userSpecifiedSkillList = builder.userSpecifiedSkillList;
             this.webReportTheme = builder.webReportTheme;
+            this.workMode = builder.workMode;
         }
 
         public static Builder builder() {
@@ -1746,6 +1756,13 @@ public class SendChatMessageRequest extends Request {
             return this.webReportTheme;
         }
 
+        /**
+         * @return workMode
+         */
+        public String getWorkMode() {
+            return this.workMode;
+        }
+
         public static final class Builder {
             private String customAgentId; 
             private String customAgentStage; 
@@ -1763,6 +1780,7 @@ public class SendChatMessageRequest extends Request {
             private Boolean skipWebReportConfirm; 
             private java.util.List<String> userSpecifiedSkillList; 
             private String webReportTheme; 
+            private String workMode; 
 
             private Builder() {
             } 
@@ -1784,10 +1802,11 @@ public class SendChatMessageRequest extends Request {
                 this.skipWebReportConfirm = model.skipWebReportConfirm;
                 this.userSpecifiedSkillList = model.userSpecifiedSkillList;
                 this.webReportTheme = model.webReportTheme;
+                this.workMode = model.workMode;
             } 
 
             /**
-             * <p>The custom agent ID. A custom agent is an entity used to customize the analysis process. You can create it in the DataAgent console or by calling the CreateCustomAgent operation. A custom agent ID must be a string starting with ca-.</p>
+             * <p>The custom agent ID. A custom agent is an entity used to customize the analysis process. You can create it in the DataAgent console or by calling the CreateCustomAgent operation. A custom agent ID must be a string starting with <code>ca-</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>ca-asfkjhqwe***aesrfqa</p>
@@ -1831,7 +1850,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The language. Only Chinese and English are supported. The default value is Chinese. Only uppercase letters are supported.</p>
+             * <p>The language. Only uppercase values are supported. Currently, only Chinese and English are supported. Default value: Chinese.</p>
              * 
              * <strong>example:</strong>
              * <p>ENGLISH</p>
@@ -1869,7 +1888,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The data permission settings at the session level. If configured multiple times in multi-turn conversations within the same session, the last configuration prevails.</p>
+             * <p>The session level data permission settings. If configured multiple times in multi-turn conversations within the same session, the last configuration prevails.</p>
              */
             public Builder permissionConfig(PermissionConfig permissionConfig) {
                 this.permissionConfig = permissionConfig;
@@ -1877,7 +1896,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the plan feature. Valid values: disable, enable, and force. Default value: enable.</p>
+             * <p>Specifies whether to enable the plan feature. Valid values: <code>[disable, enable, force]</code>. Default value: <code>enable</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>disable</p>
@@ -1888,7 +1907,7 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The text to be added as a watermark to the generated PDF report. The text can be up to 64 characters in length.</p>
+             * <p>The text used to add a watermark to the generated PDF report. The text can be up to 64 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>sample-watermark</p>
@@ -1958,6 +1977,17 @@ public class SendChatMessageRequest extends Request {
              */
             public Builder webReportTheme(String webReportTheme) {
                 this.webReportTheme = webReportTheme;
+                return this;
+            }
+
+            /**
+             * <p>交互模式，可选值 analysis（数据分析，默认）/ chat（聊天）</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ANALYSIS</p>
+             */
+            public Builder workMode(String workMode) {
+                this.workMode = workMode;
                 return this;
             }
 
@@ -2034,7 +2064,7 @@ public class SendChatMessageRequest extends Request {
             } 
 
             /**
-             * <p>The prompt that the current report must follow.</p>
+             * <p>The prompt that must be followed for the current report.</p>
              * 
              * <strong>example:</strong>
              * <p>generate a report</p>
@@ -2045,7 +2075,8 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
-             * <p>The report theme. System themes include default, journal, legacy, and neobrutalism, which are globally available theme IDs. You can call the ListDataAgentTheme operation to obtain other available theme IDs.</p>
+             * <p>The report theme.
+             * The system themes include default, journal, legacy, and neobrutalism, which are globally available theme IDs. You can call the ListDataAgentTheme operation to obtain the IDs of other available themes.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -2058,8 +2089,8 @@ public class SendChatMessageRequest extends Request {
             /**
              * <p>The service type. Valid values:</p>
              * <ul>
-             * <li>TextReport: The task generates a text report.</li>
-             * <li>WebReport: The task generates a web report.
+             * <li>TextReport: A text report is generated for the current task.</li>
+             * <li>WebReport: A web report is generated for the current task.
              * Currently, only WebReport is supported.</li>
              * </ul>
              * 

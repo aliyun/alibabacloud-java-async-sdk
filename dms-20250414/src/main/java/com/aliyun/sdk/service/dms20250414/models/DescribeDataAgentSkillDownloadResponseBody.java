@@ -114,7 +114,7 @@ public class DescribeDataAgentSkillDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. This parameter is returned when a request exception occurs.</p>
+         * <p>The error code returned when a request exception occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidTid</p>
