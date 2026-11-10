@@ -106,7 +106,7 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of records associated with the edge function.</p>
+         * <p>The list of association records for the Edge Routine.</p>
          */
         public Builder relatedRecords(java.util.List<RelatedRecords> relatedRecords) {
             this.relatedRecords = relatedRecords;
@@ -136,7 +136,7 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -147,7 +147,7 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -242,7 +242,7 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The record ID of the domain name.</p>
+             * <p>The ID of the record.</p>
              * 
              * <strong>example:</strong>
              * <p>509348423011904</p>
@@ -264,7 +264,7 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website ID.</p>
+             * <p>The ID of the site.</p>
              * 
              * <strong>example:</strong>
              * <p>54362329990032</p>
@@ -275,7 +275,7 @@ public class ListRoutineRelatedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website name.</p>
+             * <p>The name of the site.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>

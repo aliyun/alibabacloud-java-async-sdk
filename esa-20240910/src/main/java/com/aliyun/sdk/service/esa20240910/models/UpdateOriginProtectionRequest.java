@@ -89,7 +89,10 @@ public class UpdateOriginProtectionRequest extends Request {
         } 
 
         /**
-         * AutoConfirmIPList.
+         * <p>Specifies whether to automatically enable the latest list of back-to-origin IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder autoConfirmIPList(String autoConfirmIPList) {
             this.putQueryParameter("AutoConfirmIPList", autoConfirmIPList);
@@ -98,12 +101,10 @@ public class UpdateOriginProtectionRequest extends Request {
         }
 
         /**
-         * <p>The origin fetch convergence switch.</p>
+         * <p>Specifies whether to enable back-to-origin convergence. Valid values:</p>
          * <ul>
-         * <li><p>on: Enable origin fetch convergence.</p>
-         * </li>
-         * <li><p>off: Disable origin fetch convergence.</p>
-         * </li>
+         * <li>on: Enables back-to-origin convergence.</li>
+         * <li>off: Disables back-to-origin convergence.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -117,7 +118,7 @@ public class UpdateOriginProtectionRequest extends Request {
         }
 
         /**
-         * <p>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API to get it.</p>
+         * <p>The site ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

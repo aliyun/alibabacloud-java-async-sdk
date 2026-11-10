@@ -102,7 +102,10 @@ public class UpdateSiteInstanceRequest extends Request {
         }
 
         /**
-         * ResourceOwner.
+         * <p>The UID of the Alibaba Cloud account that owns the new plan instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700594193617909</p>
          */
         public Builder resourceOwner(Long resourceOwner) {
             this.putQueryParameter("ResourceOwner", resourceOwner);
@@ -111,7 +114,7 @@ public class UpdateSiteInstanceRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> to obtain the site ID.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

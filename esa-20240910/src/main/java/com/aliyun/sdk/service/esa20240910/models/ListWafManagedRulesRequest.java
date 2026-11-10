@@ -189,14 +189,14 @@ public class ListWafManagedRulesRequest extends Request {
          * <p>The attack type of the vulnerability prevention event. Valid values:</p>
          * <ul>
          * <li>SQL injection</li>
-         * <li>cross-site scripting (XSS)</li>
-         * <li>code execute</li>
+         * <li>Cross-site scripting (XSS)</li>
+         * <li>Code execute</li>
          * <li>CRLF</li>
-         * <li>local file inclusion (LFI)</li>
-         * <li>remote file inclusion (RFI)</li>
+         * <li>Local file inclusion (LFI)</li>
+         * <li>Remote file inclusion (RFI)</li>
          * <li>webshell</li>
-         * <li>cross-site request forgery</li>
-         * <li>Others</li>
+         * <li>Cross-site request forgery</li>
+         * <li>Other</li>
          * <li>SEMA</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -251,8 +251,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>The managed ruleset configuration in JSON string format.</p>
-         * <p>Contains the AttackType, ProtectionLevel, Action, and ManagedRules subfields. When ProtectionLevel is set to -1 (custom mode), specify the status and action for each rule through the ManagedRules array.</p>
+         * <p>The managed rule set configuration in JSON string format. This parameter includes the AttackType, ProtectionLevel, Action, and ManagedRules sub-fields. If ProtectionLevel is set to -1 (custom mode), you must specify the status and action for each rule in the ManagedRules array.</p>
          */
         public Builder managedRuleset(ManagedRuleset managedRuleset) {
             String managedRulesetShrink = shrink(managedRuleset, "ManagedRuleset", "json");
@@ -274,7 +273,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -286,9 +285,15 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>The currently saved protection level, which represents the existing configuration state in the database.</p>
-         * <p>Valid values: -1 (custom mode), 1 (loose), 2 (medium), 3 (strict), 4 (super strict).</p>
-         * <p>Difference from ManagedRuleset.ProtectionLevel: this parameter indicates the currently effective configuration, while ManagedRuleset.ProtectionLevel indicates the target value being passed in.</p>
+         * <p>The currently saved protection level, which represents the existing configuration status in the database. Valid values:</p>
+         * <ul>
+         * <li>-1: custom mode.</li>
+         * <li>1: loose.</li>
+         * <li>2: medium.</li>
+         * <li>3: strict.</li>
+         * <li>4: super strict.
+         * Difference from ManagedRuleset.ProtectionLevel: This field indicates the currently effective configuration, whereas ManagedRuleset.ProtectionLevel indicates the target value passed in the request.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -397,8 +402,7 @@ public class ListWafManagedRulesRequest extends Request {
             } 
 
             /**
-             * <p>The action for a single rule. This parameter takes effect only in custom mode (ProtectionLevel = -1).</p>
-             * <p>Common valid values: monitor, deny, js, captcha. The actual available values depend on the instance quota.</p>
+             * <p>The action to take for a single rule. This parameter takes effect only in custom mode (ProtectionLevel = -1). Common valid values include monitor, deny, js, and captcha. The actual valid values depend on the instance quota.</p>
              * 
              * <strong>example:</strong>
              * <p>js</p>
@@ -420,8 +424,7 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>The rule enabled status.</p>
-             * <p>Valid values:</p>
+             * <p>The enabled status of the rule. Valid values:</p>
              * <ul>
              * <li>on: enabled.</li>
              * <li>off: disabled.</li>
@@ -521,8 +524,7 @@ public class ListWafManagedRulesRequest extends Request {
             } 
 
             /**
-             * <p>The unified action when ProtectionLevel is greater than 0. This parameter cannot be empty in this case.</p>
-             * <p>Common valid values: monitor, deny, js, captcha. The actual available values depend on the instance quota.</p>
+             * <p>The unified action to take when ProtectionLevel is greater than 0. This parameter cannot be empty when ProtectionLevel is greater than 0. Common valid values include monitor, deny, js, and captcha. The actual valid values depend on the instance quota.</p>
              * 
              * <strong>example:</strong>
              * <p>monitor</p>
@@ -533,8 +535,7 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>The attack type encoding. The value cannot be 0.</p>
-             * <p>Example values: 11 (SQL injection), 12 (XSS), 13 (code execute), 14 (CRLF), 15 (local file inclusion (LFI)), 16 (remote file inclusion (RFI)), 17 (WebShell), 22 (command injection), 26 (SSRF), 27 (path traversal), 28 (protocol violation), 31 (scanner behavior).</p>
+             * <p>The attack type encoding. The value cannot be 0. Example values: 11 (SQL injection), 12 (cross-site scripting), 13 (code execute), 14 (CRLF), 15 (local file inclusion (LFI)), 16 (remote file inclusion (RFI)), 17 (WebShell), 22 (command injection), 26 (server-side request forgery), 27 (path traversal), 28 (protocol violation), and 31 (scanner behavior).</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -545,8 +546,7 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>The rule configuration list in custom mode. This parameter is used only when ProtectionLevel is set to -1.</p>
-             * <p>Each element contains Id, Status, and Action, which are used to specify the enabled status and action for each managed rule.</p>
+             * <p>The list of rule configurations in custom mode. This parameter is used only when ProtectionLevel is set to -1. Each element includes Id, Status, and Action, which are used to specify the enabled status and action for each managed rule.</p>
              */
             public Builder managedRules(java.util.List<ManagedRules> managedRules) {
                 this.managedRules = managedRules;
@@ -554,9 +554,15 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>The protection level within the ruleset.</p>
-             * <p>Valid values: -1 (custom mode, specify each rule through ManagedRules), 1 (loose), 2 (medium), 3 (strict), 4 (super strict).</p>
-             * <p>When the value is -1, ManagedRules cannot be empty. When the value is greater than 0, Action cannot be empty.</p>
+             * <p>The protection level of the rule set. Valid values:</p>
+             * <ul>
+             * <li>-1: custom mode. Specify rules one by one by using ManagedRules.</li>
+             * <li>1: loose.</li>
+             * <li>2: medium.</li>
+             * <li>3: strict.</li>
+             * <li>4: super strict.
+             * If the value is -1, ManagedRules cannot be empty. If the value is greater than 0, Action cannot be empty.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -663,7 +669,7 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>Fuzzy match by rule ID or rule name.</p>
+             * <p>The keyword for fuzzy query of the rule ID or rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>

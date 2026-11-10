@@ -132,7 +132,7 @@ public class ListListsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total item usage.</p>
+         * <p>The total usage of items.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -195,7 +195,7 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The amount of usage consumed by the user.</p>
+         * <p>The usage of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -317,7 +317,7 @@ public class ListListsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list description.</p>
+             * <p>The description of the list.</p>
              * 
              * <strong>example:</strong>
              * <p>a custom list</p>
@@ -339,7 +339,7 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The kind of the list.</p>
+             * <p>The type of the list.</p>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -350,7 +350,7 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the list content array, which indicates the number of items in the list.</p>
+             * <p>The length of the list content array, which indicates the number of items contained in the list.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -361,7 +361,7 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list name.</p>
+             * <p>The name of the list.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -372,8 +372,8 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the list was last modified.</p>
-             * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+             * <p>The last update time of the list.</p>
+             * <p>Format: RFC 3339 / ISO 8601, UTC standard time zone (ending with Z).</p>
              * <p>Example: 2026-06-10T14:23:45Z</p>
              * 
              * <strong>example:</strong>

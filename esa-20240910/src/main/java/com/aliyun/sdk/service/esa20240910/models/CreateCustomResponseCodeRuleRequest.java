@@ -186,10 +186,10 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule content. Conditional expressions are used to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
+         * <p>The rule content, which uses conditional expressions to match user requests. You do not need to specify this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
          * <li>Match all incoming requests: Set the value to true.</li>
-         * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
+         * <p>Specifies whether to enable the rule. You do not need to specify this parameter when adding a global configuration. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -218,7 +218,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
+         * <p>The name of the rule. You do not need to specify this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -230,7 +230,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
+         * <p>The execution sequence of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,7 +242,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> to obtain the site ID.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. Default value: 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

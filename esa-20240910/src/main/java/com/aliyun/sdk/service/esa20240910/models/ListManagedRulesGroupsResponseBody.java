@@ -147,7 +147,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records after filtering.</p>
+         * <p>The total number of filtered records.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

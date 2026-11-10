@@ -119,7 +119,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of origin pools.</p>
+         * <p>The list of origin address pools.</p>
          */
         public Builder originPools(java.util.List<OriginPools> originPools) {
             this.originPools = originPools;
@@ -138,7 +138,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of items returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -160,7 +160,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of origin pools found.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -279,7 +279,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Access Key ID required for private authentication.</p>
+             * <p>The AccessKey required for private authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>yourAccessKeyID</p>
@@ -292,14 +292,10 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             /**
              * <p>The authentication type. Valid values:</p>
              * <ul>
-             * <li><p><code>public</code>: Public read/write. Use for OSS or AWS S3 origins that have public access permissions.</p>
-             * </li>
-             * <li><p><code>private_same_account</code>: Private, same account. Use for OSS origins that use private authentication within the same account.</p>
-             * </li>
-             * <li><p><code>private_cross_account</code>: Private, cross-account. Use for OSS origins that use private authentication from a different account.</p>
-             * </li>
-             * <li><p><code>private</code>: Private. Use for AWS S3 origins that require private authentication.</p>
-             * </li>
+             * <li>public: public read/write. Used when the origin server is an OSS or S3 origin server with public read/write permissions.</li>
+             * <li>private_same_account: private within the same account. Used when the origin server is an OSS origin server and the authentication type is private authentication within the same account.</li>
+             * <li>private_cross_account: private across accounts. Used when the origin server is an OSS origin server and the authentication type is private authentication across accounts.</li>
+             * <li>private: private. Used when the origin server is an S3 origin server and the authentication type is private.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -311,7 +307,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region of the origin. Required for AWS S3 origins.</p>
+             * <p>The region of the origin server required when the origin server is an AWS S3 origin server.</p>
              * 
              * <strong>example:</strong>
              * <p>us-east-1</p>
@@ -322,7 +318,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Secret Access Key required for private authentication.</p>
+             * <p>The SecretKey required for private authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>yourAccessKeySecret</p>
@@ -333,7 +329,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signature version. Required for AWS S3 origins.</p>
+             * <p>The signature version required when the origin server is an AWS S3 origin server.</p>
              * 
              * <strong>example:</strong>
              * <p>v2</p>
@@ -494,7 +490,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The address of the origin, such as <code>www.example.com</code>.</p>
+             * <p>The addresses of the origin server, such as <a href="http://www.example.com">www.example.com</a>.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -505,7 +501,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication configuration. This parameter is required if the origin is an OSS or AWS S3 bucket that requires authentication.</p>
+             * <p>The authentication information. If the origin server is an OSS or S3 origin server that requires authentication, you must provide the authentication configuration information.</p>
              */
             public Builder authConf(AuthConf authConf) {
                 this.authConf = authConf;
@@ -513,12 +509,10 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the origin is enabled.</p>
+             * <p>Indicates whether the origin server is enabled. Valid values:</p>
              * <ul>
-             * <li><p><code>true</code>: Enabled.</p>
-             * </li>
-             * <li><p><code>false</code>: Disabled.</p>
-             * </li>
+             * <li>true: enabled.</li>
+             * <li>false: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -530,7 +524,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request header to include in origin fetches. Only the <code>Host</code> header is supported.</p>
+             * <p>The request header included in back-to-origin requests. Only the Host header is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -545,7 +539,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the origin.</p>
+             * <p>The origin server ID.</p>
              * 
              * <strong>example:</strong>
              * <p>997502094872132</p>
@@ -556,16 +550,12 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP protocol version used for origin fetch requests. Valid values:</p>
+             * <p>The IP protocol version used for back-to-origin requests. Valid values:</p>
              * <ul>
-             * <li><p><code>round_robin</code>: Randomly selects an IPv4 or IPv6 origin.</p>
-             * </li>
-             * <li><p><code>ipv4_first</code>: Prioritizes IPv4 origins.</p>
-             * </li>
-             * <li><p><code>ipv6_first</code>: Prioritizes IPv6 origins.</p>
-             * </li>
-             * <li><p><code>follow</code>: Follows the IP version used by the client.</p>
-             * </li>
+             * <li>round_robin: the default policy. Randomly polls IPv4 or IPv6 origin servers.</li>
+             * <li>ipv4_first: prioritizes IPv4 origin servers.</li>
+             * <li>ipv6_first: prioritizes IPv6 origin servers.</li>
+             * <li>follow: prioritizes the IP version used by the client.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -577,7 +567,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the origin.</p>
+             * <p>The origin server name.</p>
              * 
              * <strong>example:</strong>
              * <p>origin1</p>
@@ -588,14 +578,11 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the origin. Valid values:</p>
+             * <p>The origin server type. Valid values:</p>
              * <ul>
-             * <li><p><code>ip_domain</code>: An origin with an IP address or domain name.</p>
-             * </li>
-             * <li><p><code>OSS</code>: An Alibaba Cloud Object Storage Service (OSS) origin.</p>
-             * </li>
-             * <li><p><code>S3</code>: An AWS S3 origin.</p>
-             * </li>
+             * <li>ip_domain: an origin server that uses an IP address or a domain name.</li>
+             * <li>OSS: an OSS origin server.</li>
+             * <li>S3: an AWS S3 origin server.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -607,7 +594,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the origin, an integer from 0 to 100.</p>
+             * <p>The weight. The value must be an integer from 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -677,7 +664,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the record.</p>
+             * <p>The record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1042852886352704</p>
@@ -688,7 +675,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the record.</p>
+             * <p>The record name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -758,7 +745,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the record.</p>
+             * <p>The record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1042852886352704</p>
@@ -769,7 +756,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the record.</p>
+             * <p>The record name.</p>
              * 
              * <strong>example:</strong>
              * <p>ipa.example.com</p>
@@ -839,7 +826,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the load balancer.</p>
+             * <p>The load balancing instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>998740660522624</p>
@@ -850,7 +837,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the load balancer.</p>
+             * <p>The name of the load balancing instance.</p>
              * 
              * <strong>example:</strong>
              * <p>lb1.example.com</p>
@@ -933,7 +920,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of Layer 7 records that use this origin pool as an origin.</p>
+             * <p>The list of Layer 7 records that use this origin address pool as the origin server.</p>
              */
             public Builder dnsRecords(java.util.List<DnsRecords> dnsRecords) {
                 this.dnsRecords = dnsRecords;
@@ -941,7 +928,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of Layer 4 records that use this origin pool as an origin.</p>
+             * <p>The list of Layer 4 records that use this origin address pool as the origin server.</p>
              */
             public Builder IPARecords(java.util.List<IPARecords> IPARecords) {
                 this.IPARecords = IPARecords;
@@ -949,7 +936,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of load balancers that use this origin pool.</p>
+             * <p>The list of load balancing instances that use this origin IPAM pool.</p>
              */
             public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
                 this.loadBalancers = loadBalancers;
@@ -1094,12 +1081,10 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the origin pool is enabled.</p>
+             * <p>Indicates whether the origin address pool is enabled. Valid values:</p>
              * <ul>
-             * <li><p><code>true</code>: Enabled.</p>
-             * </li>
-             * <li><p><code>false</code>: Disabled.</p>
-             * </li>
+             * <li>true: enabled.</li>
+             * <li>false: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1111,7 +1096,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the origin pool.</p>
+             * <p>The origin address pool ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1038520525196928</p>
@@ -1122,7 +1107,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the origin pool. The name must be unique within a site.</p>
+             * <p>The name of the origin address pool. The name must be unique within a site.</p>
              * 
              * <strong>example:</strong>
              * <p>pool1</p>
@@ -1133,7 +1118,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origins in the origin pool.</p>
+             * <p>The origin server information added to the origin address pool.</p>
              */
             public Builder origins(java.util.List<Origins> origins) {
                 this.origins = origins;
@@ -1141,7 +1126,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name assigned to the origin pool. This can be used as the origin address for records within the site.</p>
+             * <p>The domain name allocated to the origin IPAM pool. It can be used as the addresses of the origin server for records under the site.</p>
              * 
              * <strong>example:</strong>
              * <p>pool1.example.com</p>
@@ -1152,7 +1137,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of load balancers that reference this origin pool.</p>
+             * <p>The number of load balancing instances that reference this origin IPAM pool.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1163,7 +1148,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resources that reference this origin pool. An origin pool is considered referenced when it is configured as an origin for a load balancer or a record.</p>
+             * <p>The reference information of the origin IPAM pool. An origin IPAM pool is considered referenced when it is configured for load balancing or configured as an origin server in a record.</p>
              */
             public Builder references(References references) {
                 this.references = references;
@@ -1171,7 +1156,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the site to which the origin pool belongs.</p>
+             * <p>The ID of the site to which the origin address pool belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>216558609793952</p>

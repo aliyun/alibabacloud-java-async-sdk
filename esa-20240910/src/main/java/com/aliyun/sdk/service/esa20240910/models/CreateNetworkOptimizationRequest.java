@@ -200,10 +200,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable gRPC. This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable gRPC. Default value: off. Valid values:</p>
          * <ul>
-         * <li>on: enabled</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,10 +216,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable HTTP/2 back-to-origin. This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable HTTP/2 back-to-origin. Default value: off. Valid values:</p>
          * <ul>
-         * <li>on: enabled</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,10 +232,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>The rule content, which uses a conditional expression to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
+         * <p>The content of the rule. It uses a conditional expression to match user requests. You do not need to specify this parameter when you add a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: set the value to true.</li>
-         * <li>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,10 +248,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
+         * <p>Specifies whether to enable the rule. You do not need to specify this parameter when you add a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,7 +264,7 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
+         * <p>The name of the rule. You do not need to specify this parameter when you add a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -276,7 +276,7 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
+         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,7 +288,7 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -313,10 +313,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable smart routing. This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable the smart routing service. Default value: off. Valid values:</p>
          * <ul>
-         * <li>on: enabled</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +329,7 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>The maximum upload file size, in MB. Valid values: 100 to 500.</p>
+         * <p>The maximum size of an uploaded file. Unit: MB. Valid values: 100 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -341,10 +341,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable WebSocket. This feature is enabled by default. Valid values:</p>
+         * <p>Specifies whether to enable WebSocket. Default value: on. Valid values:</p>
          * <ul>
-         * <li>on: enabled</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

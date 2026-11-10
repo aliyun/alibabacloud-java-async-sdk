@@ -102,7 +102,7 @@ public class CreateListRequest extends Request {
         } 
 
         /**
-         * <p>The description of the custom list. This parameter provides detailed information about the custom list.</p>
+         * <p>The description of the list, which provides details about the custom list.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom list</p>
@@ -114,7 +114,7 @@ public class CreateListRequest extends Request {
         }
 
         /**
-         * <p>The list items. This parameter provides the specific item data for the list.</p>
+         * <p>The content of the list, which provides specific data for the list items.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom list</p>
@@ -127,7 +127,7 @@ public class CreateListRequest extends Request {
         }
 
         /**
-         * <p>The kind of the custom list. This parameter specifies the type of the custom list.</p>
+         * <p>The kind of the list, which specifies the type of the custom list.</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -140,7 +140,7 @@ public class CreateListRequest extends Request {
 
         /**
          * <p>The name of the custom list.</p>
-         * <p><strong>Naming rules</strong>: Only letters, digits, and underscores are supported (<code>^\\w{1,64}$</code>). The name must be 1 to 64 characters in length.</p>
+         * <p><strong>Naming rules</strong>: Only letters, digits, and underscores are supported. The value must match the regular expression <code>^\\w{1,64}$</code> and be 1 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

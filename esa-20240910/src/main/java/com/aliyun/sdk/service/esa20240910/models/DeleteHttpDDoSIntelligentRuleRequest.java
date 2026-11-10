@@ -116,7 +116,7 @@ public class DeleteHttpDDoSIntelligentRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the site. Call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

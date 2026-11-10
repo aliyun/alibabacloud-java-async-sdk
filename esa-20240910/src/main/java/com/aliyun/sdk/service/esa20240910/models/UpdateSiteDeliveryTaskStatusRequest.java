@@ -89,7 +89,7 @@ public class UpdateSiteDeliveryTaskStatusRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the delivery task.</p>
+         * <p>Specifies whether to enable or disable task delivery.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class UpdateSiteDeliveryTaskStatusRequest extends Request {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -114,7 +114,7 @@ public class UpdateSiteDeliveryTaskStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the delivery task.</p>
+         * <p>The name of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

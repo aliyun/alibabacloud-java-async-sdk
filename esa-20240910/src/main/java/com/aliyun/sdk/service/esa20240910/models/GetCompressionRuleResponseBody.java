@@ -184,10 +184,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Brotli compression. Possible values:</p>
+         * <p>Brotli compression. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The ID of the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
@@ -210,10 +210,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Configuration type. Possible values:</p>
+         * <p>The type of the configuration. Valid values:</p>
          * <ul>
-         * <li>global: Global configuration.</li>
-         * <li>rule: Rule-based configuration.</li>
+         * <li>global: global configuration.</li>
+         * <li>rule: rule configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,10 +225,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Gzip compression. Possible values:</p>
+         * <p>Gzip compression. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>186C6DF2-D96A-5102-B04E-FB92C16C9867</p>
@@ -251,10 +251,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+         * <li>Match all incoming requests: set the value to true.</li>
+         * <li>Match specific requests: set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,10 +266,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,7 +281,7 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The name of the rule. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -292,7 +292,7 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+         * <p>The execution sequence of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -303,7 +303,7 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, this parameter can specify the effective version of the configuration, defaulting to version 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -314,9 +314,9 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Zstd compression. Value range: </p>
+         * <p>Zstd compression. Valid values:</p>
          * <ul>
-         * <li>on: enabled. </li>
+         * <li>on: enabled.</li>
          * <li>off: disabled.</li>
          * </ul>
          * 

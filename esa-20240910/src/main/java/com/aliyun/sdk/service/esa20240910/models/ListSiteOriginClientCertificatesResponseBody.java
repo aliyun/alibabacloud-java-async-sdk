@@ -444,7 +444,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
+             * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-24 07:48:51</p>
@@ -477,7 +477,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certification authority.</p>
+             * <p>The certificate issuer.</p>
              * 
              * <strong>example:</strong>
              * <p>DigiCert</p>
@@ -499,7 +499,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
+             * <p>The expiration time of the certificate. Format: YYYY-MM-DD HH:MM:SS, UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-31 02:08:00</p>
@@ -510,7 +510,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
+             * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-31 02:08:00</p>
@@ -532,7 +532,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+             * <p>The subject alternative name of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -543,7 +543,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the certificate.</p>
+             * <p>The certificate serial number.</p>
              * 
              * <strong>example:</strong>
              * <p>babaded901474b9693acf530e0fb1d**</p>
@@ -587,7 +587,7 @@ public class ListSiteOriginClientCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
+             * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-22 05:33:13</p>

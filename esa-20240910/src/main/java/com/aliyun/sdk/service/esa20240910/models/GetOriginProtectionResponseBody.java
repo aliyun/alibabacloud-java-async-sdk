@@ -197,7 +197,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Automatically enable the latest origin IP list.</p>
+         * <p>Specifies whether to automatically enable the latest back-to-origin IP addresses list.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -208,7 +208,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current origin IP whitelist used by the site.</p>
+         * <p>The current back-to-origin IP addresses whitelist used by the site.</p>
          */
         public Builder currentIPWhitelist(CurrentIPWhitelist currentIPWhitelist) {
             this.currentIPWhitelist = currentIPWhitelist;
@@ -216,7 +216,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The changed origin IP whitelist.</p>
+         * <p>The changed back-to-origin IP addresses whitelist.</p>
          */
         public Builder diffIPWhitelist(DiffIPWhitelist diffIPWhitelist) {
             this.diffIPWhitelist = diffIPWhitelist;
@@ -224,7 +224,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The latest origin IP whitelist.</p>
+         * <p>The latest back-to-origin IP addresses whitelist.</p>
          */
         public Builder latestIPWhitelist(LatestIPWhitelist latestIPWhitelist) {
             this.latestIPWhitelist = latestIPWhitelist;
@@ -232,10 +232,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the origin IP whitelist needs to be updated. When the current origin IP whitelist differs from the latest origin IP whitelist, an update is needed and this value returns true.</p>
+         * <p>Specifies whether the back-to-origin IP addresses whitelist needs to be updated. If the back-to-origin IP addresses whitelist in use differs from the latest back-to-origin IP addresses whitelist, it must be updated and this parameter returns true. Valid values:</p>
          * <ul>
-         * <li>true: Update is needed.</li>
-         * <li>false: No update is needed.</li>
+         * <li>true: Needs to be updated.</li>
+         * <li>false: Does not need to be updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Origin convergence switch:</p>
+         * <p>The back-to-origin convergence switch. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -262,7 +262,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Origin protection switch:</p>
+         * <p>The origin server protection switch. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -277,7 +277,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The regional origin IP whitelist currently used by the site.</p>
+         * <p>The current area back-to-origin IP addresses whitelist used by the site.</p>
          */
         public Builder regionalCurrentIPWhitelist(RegionalCurrentIPWhitelist regionalCurrentIPWhitelist) {
             this.regionalCurrentIPWhitelist = regionalCurrentIPWhitelist;
@@ -285,7 +285,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The changed regional origin IP whitelist.</p>
+         * <p>The changed area back-to-origin IP addresses whitelist.</p>
          */
         public Builder regionalDiffIPWhitelist(RegionalDiffIPWhitelist regionalDiffIPWhitelist) {
             this.regionalDiffIPWhitelist = regionalDiffIPWhitelist;
@@ -293,7 +293,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The latest regional origin IP whitelist.</p>
+         * <p>The latest area back-to-origin IP addresses whitelist.</p>
          */
         public Builder regionalLatestIPWhitelist(RegionalLatestIPWhitelist regionalLatestIPWhitelist) {
             this.regionalLatestIPWhitelist = regionalLatestIPWhitelist;
@@ -301,7 +301,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
@@ -312,7 +312,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Site ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -381,7 +381,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The current origin IP whitelist used by the site, IPv4 addresses or CIDR blocks.</p>
+             * <p>The IPv4 addresses or CIDR blocks in the current back-to-origin IP addresses whitelist used by the site.</p>
              */
             public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
@@ -389,7 +389,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current origin IP whitelist used by the site, IPv6 addresses or CIDR blocks.</p>
+             * <p>The IPv6 addresses or CIDR blocks in the current back-to-origin IP addresses whitelist used by the site.</p>
              */
             public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
@@ -456,7 +456,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Origin IP whitelist, IPv4 addresses or CIDR blocks.</p>
+             * <p>The IPv4 addresses or CIDR blocks in the added back-to-origin IP addresses whitelist.</p>
              */
             public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
@@ -464,7 +464,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Origin IP whitelist, IPv6 addresses or CIDR blocks.</p>
+             * <p>The IPv6 addresses or CIDR blocks in the added back-to-origin IP addresses whitelist.</p>
              */
             public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
@@ -531,7 +531,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Origin IP whitelist, IPv4 addresses or CIDR blocks.</p>
+             * <p>The IPv4 addresses or CIDR blocks in the unchanged back-to-origin IP addresses whitelist.</p>
              */
             public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
@@ -539,7 +539,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Origin IP whitelist, IPv6 addresses or CIDR blocks.</p>
+             * <p>The IPv6 addresses or CIDR blocks in the unchanged back-to-origin IP addresses whitelist.</p>
              */
             public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
@@ -606,7 +606,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Origin IP whitelist, IPv4 addresses or CIDR blocks.</p>
+             * <p>The IPv4 addresses or CIDR blocks in the deleted back-to-origin IP addresses whitelist.</p>
              */
             public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
@@ -614,7 +614,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Origin IP whitelist, IPv6 addresses or CIDR blocks.</p>
+             * <p>The IPv6 addresses or CIDR blocks in the deleted back-to-origin IP addresses whitelist.</p>
              */
             public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
@@ -694,7 +694,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The added origin IP whitelist entries.</p>
+             * <p>The added back-to-origin IP addresses whitelist.</p>
              */
             public Builder addedIPWhitelist(AddedIPWhitelist addedIPWhitelist) {
                 this.addedIPWhitelist = addedIPWhitelist;
@@ -702,7 +702,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unchanged origin IP whitelist entries.</p>
+             * <p>The unchanged back-to-origin IP addresses whitelist.</p>
              */
             public Builder noChangeIpWhitelist(NoChangeIpWhitelist noChangeIpWhitelist) {
                 this.noChangeIpWhitelist = noChangeIpWhitelist;
@@ -710,7 +710,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The removed origin IP whitelist entries.</p>
+             * <p>The deleted back-to-origin IP addresses whitelist.</p>
              */
             public Builder removedIPWhitelist(RemovedIPWhitelist removedIPWhitelist) {
                 this.removedIPWhitelist = removedIPWhitelist;
@@ -777,7 +777,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The latest origin IP whitelist, IPv4 addresses or CIDR blocks.</p>
+             * <p>The IPv4 addresses or CIDR blocks in the latest back-to-origin IP addresses whitelist.</p>
              */
             public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
@@ -785,7 +785,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest origin IP whitelist, IPv6 addresses or CIDR blocks.</p>
+             * <p>The IPv6 addresses or CIDR blocks in the latest back-to-origin IP addresses whitelist.</p>
              */
             public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
@@ -852,7 +852,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv4 CIDR block.</p>
+             * <p>The IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -863,10 +863,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv4 region. Valid values:</p>
+             * <p>The IPv4 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -937,7 +937,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv6 CIDR block.</p>
+             * <p>The IPv6 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -948,10 +948,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv6 region. Valid values:</p>
+             * <p>The IPv6 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1022,7 +1022,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The regional origin IP whitelist currently used by the site, IPv4 CIDR blocks and regions.</p>
+             * <p>The IPv4 CIDR blocks and areas in the current area back-to-origin IP addresses whitelist used by the site.</p>
              */
             public Builder regionalIPv4(java.util.List<RegionalIPv4> regionalIPv4) {
                 this.regionalIPv4 = regionalIPv4;
@@ -1030,7 +1030,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The regional origin IP whitelist currently used by the site, IPv6 CIDR blocks and regions.</p>
+             * <p>The IPv6 CIDR blocks and areas in the current area back-to-origin IP addresses whitelist used by the site.</p>
              */
             public Builder regionalIPv6(java.util.List<RegionalIPv6> regionalIPv6) {
                 this.regionalIPv6 = regionalIPv6;
@@ -1097,7 +1097,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv4 CIDR block.</p>
+             * <p>The IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -1108,10 +1108,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv4 region. Valid values:</p>
+             * <p>The IPv4 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1182,7 +1182,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv6 CIDR block.</p>
+             * <p>The IPv6 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -1193,10 +1193,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv6 region. Valid values:</p>
+             * <p>The IPv6 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1267,7 +1267,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Regional origin IP whitelist, IPv4 CIDR blocks and regions.</p>
+             * <p>The IPv4 CIDR blocks and areas in the added area back-to-origin IP addresses whitelist.</p>
              */
             public Builder regionalIPv4(java.util.List<AddedIPRegionWhitelistRegionalIPv4> regionalIPv4) {
                 this.regionalIPv4 = regionalIPv4;
@@ -1275,7 +1275,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Regional origin IP whitelist, IPv6 CIDR blocks and regions.</p>
+             * <p>The IPv6 CIDR blocks and areas in the added area back-to-origin IP addresses whitelist.</p>
              */
             public Builder regionalIPv6(java.util.List<AddedIPRegionWhitelistRegionalIPv6> regionalIPv6) {
                 this.regionalIPv6 = regionalIPv6;
@@ -1342,7 +1342,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv4 CIDR block.</p>
+             * <p>The IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -1353,10 +1353,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv4 region. Valid values:</p>
+             * <p>The IPv4 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1427,7 +1427,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv6 CIDR block.</p>
+             * <p>The IPv6 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -1438,10 +1438,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv6 region. Valid values:</p>
+             * <p>The IPv6 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1512,7 +1512,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Regional origin IP whitelist, IPv4 CIDR blocks and regions.</p>
+             * <p>The area back-to-origin IP addresses whitelist, IPv4 CIDR blocks, and areas.</p>
              */
             public Builder regionalIPv4(java.util.List<NoChangeIpWhitelistRegionalIPv4> regionalIPv4) {
                 this.regionalIPv4 = regionalIPv4;
@@ -1520,7 +1520,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Regional origin IP whitelist, IPv6 CIDR blocks and regions.</p>
+             * <p>The area back-to-origin IP addresses whitelist, IPv6 CIDR blocks, and areas.</p>
              */
             public Builder regionalIPv6(java.util.List<NoChangeIpWhitelistRegionalIPv6> regionalIPv6) {
                 this.regionalIPv6 = regionalIPv6;
@@ -1587,7 +1587,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv4 CIDR block.</p>
+             * <p>The IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -1598,10 +1598,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv4 region. Valid values:</p>
+             * <p>The IPv4 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1672,7 +1672,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv6 CIDR block.</p>
+             * <p>The IPv6 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -1683,10 +1683,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv6 region. Valid values:</p>
+             * <p>The IPv6 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1757,7 +1757,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Regional origin IP whitelist, IPv4 CIDR blocks and regions.</p>
+             * <p>The area back-to-origin IP addresses whitelist, IPv4 CIDR blocks, and areas.</p>
              */
             public Builder regionalIPv4(java.util.List<RemovedIPRegionWhitelistRegionalIPv4> regionalIPv4) {
                 this.regionalIPv4 = regionalIPv4;
@@ -1765,7 +1765,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Regional origin IP whitelist, IPv6 CIDR blocks and regions.</p>
+             * <p>The area back-to-origin IP addresses whitelist, IPv6 CIDR blocks, and areas.</p>
              */
             public Builder regionalIPv6(java.util.List<RemovedIPRegionWhitelistRegionalIPv6> regionalIPv6) {
                 this.regionalIPv6 = regionalIPv6;
@@ -1845,7 +1845,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The added regional origin IP whitelist entries.</p>
+             * <p>The added area back-to-origin IP addresses whitelist.</p>
              */
             public Builder addedIPRegionWhitelist(AddedIPRegionWhitelist addedIPRegionWhitelist) {
                 this.addedIPRegionWhitelist = addedIPRegionWhitelist;
@@ -1853,7 +1853,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unchanged regional origin IP whitelist entries.</p>
+             * <p>The unchanged area back-to-origin IP addresses whitelist.</p>
              */
             public Builder noChangeIpWhitelist(RegionalDiffIPWhitelistNoChangeIpWhitelist noChangeIpWhitelist) {
                 this.noChangeIpWhitelist = noChangeIpWhitelist;
@@ -1861,7 +1861,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The removed regional origin IP whitelist entries.</p>
+             * <p>The deleted area back-to-origin IP addresses whitelist.</p>
              */
             public Builder removedIPRegionWhitelist(RemovedIPRegionWhitelist removedIPRegionWhitelist) {
                 this.removedIPRegionWhitelist = removedIPRegionWhitelist;
@@ -1928,7 +1928,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv4 CIDR block.</p>
+             * <p>The IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -1939,10 +1939,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv4 region. Valid values:</p>
+             * <p>The IPv4 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2013,7 +2013,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IPv6 CIDR block.</p>
+             * <p>The IPv6 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>101.66.250.0/25</p>
@@ -2024,10 +2024,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IPv6 region. Valid values:</p>
+             * <p>The IPv6 region. Valid values:</p>
              * <ul>
-             * <li>chinese_mainland: Chinese mainland.</li>
-             * <li>global_excluding_chinese_mainland: Global (excluding Chinese mainland).</li>
+             * <li>chinese_mainland: the Chinese mainland</li>
+             * <li>global_excluding_chinese_mainland: global (excluding the Chinese mainland)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2098,7 +2098,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The latest regional origin IP whitelist, IPv4 CIDR blocks and regions.</p>
+             * <p>The IPv4 CIDR blocks and areas in the latest area back-to-origin IP addresses whitelist.</p>
              */
             public Builder regionalIPv4(java.util.List<RegionalLatestIPWhitelistRegionalIPv4> regionalIPv4) {
                 this.regionalIPv4 = regionalIPv4;
@@ -2106,7 +2106,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest regional origin IP whitelist, IPv6 CIDR blocks and regions.</p>
+             * <p>The IPv6 CIDR blocks and areas in the latest area back-to-origin IP addresses whitelist.</p>
              */
             public Builder regionalIPv6(java.util.List<RegionalLatestIPWhitelistRegionalIPv6> regionalIPv6) {
                 this.regionalIPv6 = regionalIPv6;

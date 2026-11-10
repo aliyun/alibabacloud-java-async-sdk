@@ -91,7 +91,7 @@ public class UpdateUserDeliveryTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the delivery task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>online</p>
@@ -102,7 +102,7 @@ public class UpdateUserDeliveryTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the delivery task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_project</p>

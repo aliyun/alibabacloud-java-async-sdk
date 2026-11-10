@@ -133,11 +133,11 @@ public class UpdateEnvironmentRequest extends Request {
         } 
 
         /**
-         * <p>The environment name.</p>
+         * <p>The name of the environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>默认环境</p>
+         * <p>Default environment</p>
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -146,10 +146,10 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>The new environment name.</p>
+         * <p>The new name of the environment.</p>
          * 
          * <strong>example:</strong>
-         * <p>环境A</p>
+         * <p>Environment A</p>
          */
         public Builder newName(String newName) {
             this.putQueryParameter("NewName", newName);
@@ -184,7 +184,7 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The ID of the site. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>The new site version number. Only the environment with the highest priority can be modified.</p>
+         * <p>The new version number of the site. You can modify this parameter only for the environment with the highest priority.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -132,7 +132,7 @@ public class GetSliderCaptchaPageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The predefined configurations for the custom slider page.</p>
+         * <p>The predefined configurations of the custom slider page.</p>
          */
         public Builder configs(Configs configs) {
             this.configs = configs;
@@ -151,7 +151,7 @@ public class GetSliderCaptchaPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The forced language.</p>
+         * <p>The forcibly specified language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -195,7 +195,7 @@ public class GetSliderCaptchaPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of bound site IDs.</p>
+         * <p>The list of associated site IDs.</p>
          */
         public Builder siteIds(java.util.List<Long> siteIds) {
             this.siteIds = siteIds;
@@ -287,7 +287,7 @@ public class GetSliderCaptchaPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to display the footer.</p>
+             * <p>Specifies whether to show the footer.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -298,7 +298,7 @@ public class GetSliderCaptchaPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to display the request ID.</p>
+             * <p>Specifies whether to show the request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -309,7 +309,7 @@ public class GetSliderCaptchaPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slider color.</p>
+             * <p>The color of the slider.</p>
              * 
              * <strong>example:</strong>
              * <p>#FFFFFF</p>
@@ -416,7 +416,7 @@ public class GetSliderCaptchaPageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to display the footer.</p>
+             * <p>Specifies whether to show the footer.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -427,7 +427,7 @@ public class GetSliderCaptchaPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to display the request ID.</p>
+             * <p>Specifies whether to show the request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -438,7 +438,7 @@ public class GetSliderCaptchaPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slider color.</p>
+             * <p>The color of the slider.</p>
              * 
              * <strong>example:</strong>
              * <p>#FFFFFF</p>

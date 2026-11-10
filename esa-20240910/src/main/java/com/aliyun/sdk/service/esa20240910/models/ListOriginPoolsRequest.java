@@ -130,12 +130,11 @@ public class ListOriginPoolsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies how to match the origin pool name. The default is <code>exact</code>. Valid values:</p>
+         * <p>The match type for name-based queries. Valid values:</p>
          * <ul>
-         * <li><p><code>fuzzy</code>: Performs a fuzzy search.</p>
-         * </li>
-         * <li><p><code>exact</code>: Performs an exact match.</p>
-         * </li>
+         * <li>fuzzy: fuzzy search.</li>
+         * <li>exact: exact search.
+         * Default value: exact.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,7 +147,7 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
-         * <p>The name of the origin pool.</p>
+         * <p>The name of the origin address pool.</p>
          * 
          * <strong>example:</strong>
          * <p>pool1</p>
@@ -160,12 +159,10 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
-         * <p>Specifies how the results are sorted. By default, results are sorted by ID in descending order. To sort by ID in ascending order, set this parameter to <code>id</code>. IDs increase with creation time.</p>
+         * <p>The sort order. Supports ascending or descending order by ID. The ID is positively correlated with the creation time. Default value: descending order by ID. Valid values:</p>
          * <ul>
-         * <li><p>id: Sorts by ID in descending order.</p>
-         * </li>
-         * <li><p>id: Sorts by ID in ascending order.</p>
-         * </li>
+         * <li>id: descending order by ID.</li>
+         * <li>id: ascending order by ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +175,7 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The default value is 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,7 +187,7 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The value must be an integer from 1 to 500. If you specify a value greater than 500, the system uses 500.</p>
+         * <p>The number of entries per page. The value must be a positive integer. Maximum value: 500. If the value exceeds 500, it is reset to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -202,7 +199,7 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
-         * <p>The site ID. To get this ID, call the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

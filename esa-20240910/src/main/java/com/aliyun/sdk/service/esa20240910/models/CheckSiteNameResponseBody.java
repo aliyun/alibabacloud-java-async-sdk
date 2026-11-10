@@ -106,18 +106,13 @@ public class CheckSiteNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The description of the verification result. Valid values:</p>
+         * <p>The description of the validation result. Valid values:</p>
          * <ul>
-         * <li><p><strong>success</strong>: The verification is successful.</p>
-         * </li>
-         * <li><p><strong>Site.AlreadyExist</strong>: The website domain name has already been added.</p>
-         * </li>
-         * <li><p><strong>Site.InvalidName</strong>: Invalid website domain name.</p>
-         * </li>
-         * <li><p><strong>Site.SubSiteUnavailable</strong>: Subdomains are not allowed.</p>
-         * </li>
-         * <li><p><strong>Site.InternalError</strong>: An internal error occurs.</p>
-         * </li>
+         * <li><strong>success</strong>: Success.</li>
+         * <li><strong>Site.AlreadyExist</strong>: The user has already added this site.</li>
+         * <li><strong>Site.InvalidName</strong>: The site name is invalid.</li>
+         * <li><strong>Site.SubSiteUnavailable</strong>: The subsite is unavailable.</li>
+         * <li><strong>Site.InternalError</strong>: Other errors.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,12 +124,10 @@ public class CheckSiteNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a subdomain is specified. Valid values:</p>
+         * <p>Indicates whether the site is a subsite. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: The site is a subsite.</li>
+         * <li><strong>false</strong>: The site is not a subsite.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +139,7 @@ public class CheckSiteNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The verification message.</p>
+         * <p>The validation message.</p>
          * 
          * <strong>example:</strong>
          * <p>Site name is available.</p>
@@ -157,12 +150,10 @@ public class CheckSiteNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the verification passed.</p>
+         * <p>Indicates whether the validation is passed. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Passed.</li>
+         * <li><strong>false</strong>: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

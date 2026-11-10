@@ -106,7 +106,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number returned.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The delivery tasks.</p>
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -147,7 +147,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of delivery tasks.</p>
+         * <p>The total number of tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>68</p>
@@ -255,7 +255,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The log category.</p>
+             * <p>The business type.</p>
              * 
              * <strong>example:</strong>
              * <p>dcdn_log_er</p>
@@ -267,10 +267,10 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
 
             /**
              * <p>The data center. Valid values:</p>
-             * <ol>
-             * <li>cn: the Chinese mainland.</li>
-             * <li>sg: outside the Chinese mainland.</li>
-             * </ol>
+             * <ul>
+             * <li><strong>cn</strong>: The Chinese mainland.</li>
+             * <li><strong>sg</strong>: Global (excluding the Chinese mainland).</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>cn</p>
@@ -281,7 +281,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery destination.</p>
+             * <p>The delivery type.</p>
              * 
              * <strong>example:</strong>
              * <p>oss</p>
@@ -292,7 +292,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the delivery task.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>online</p>
@@ -303,7 +303,7 @@ public class ListUserDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the delivery task.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>testoss11</p>

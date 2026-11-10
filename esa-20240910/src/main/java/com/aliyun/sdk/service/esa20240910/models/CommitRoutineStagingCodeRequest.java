@@ -100,7 +100,7 @@ public class CommitRoutineStagingCodeRequest extends Request {
         }
 
         /**
-         * <p>The deployment environment. The environment variable configuration of the specified environment is used. If you do not specify this parameter, environment variables are not used.</p>
+         * <p>Specifies the deployment environment. The environment variables configured for the specified environment are used. If you do not specify this parameter, environment variables are not used.</p>
          * 
          * <strong>example:</strong>
          * <p>production</p>

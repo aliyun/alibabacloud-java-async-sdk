@@ -54,7 +54,7 @@ public class UpdateSiteInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0E50DBC5-0F50-583C-AC2D-87B2764776CF</p>

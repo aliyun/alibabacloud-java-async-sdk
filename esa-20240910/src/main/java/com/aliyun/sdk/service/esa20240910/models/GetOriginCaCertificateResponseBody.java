@@ -420,7 +420,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
+             * <p>The creation time. The time follows the YYYY-MM-DD HH:MM:SS format and is in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-05 18:24:04</p>
@@ -475,7 +475,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
+             * <p>The expiration time of the certificate. The time follows the YYYY-MM-DD HH:MM:SS format and is in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-31 02:08:00</p>
@@ -486,7 +486,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
+             * <p>The start time of the certificate validity period. The time follows the YYYY-MM-DD HH:MM:SS format and is in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-31 02:08:00</p>
@@ -508,7 +508,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Subject Alternative Name (SAN) of the certificate.</p>
+             * <p>The subject alternative name (SAN) of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -563,7 +563,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
+             * <p>The update time. The time follows the YYYY-MM-DD HH:MM:SS format and is in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-05 18:24:04</p>

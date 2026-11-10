@@ -60,7 +60,7 @@ public class ActivateVersionManagementRequest extends Request {
         } 
 
         /**
-         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The ID of the site. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

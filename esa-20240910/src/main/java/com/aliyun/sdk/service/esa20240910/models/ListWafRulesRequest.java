@@ -169,16 +169,16 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * <p>The WAF rule execution phase. Valid values:</p>
+         * <p>The execution phase of the WAF rule. Valid values:</p>
          * <ul>
-         * <li>http_whitelist: whitelist rule</li>
-         * <li>http_custom: custom rule</li>
-         * <li>http_managed: managed rule</li>
-         * <li>http_anti_scan: scan protection rule</li>
-         * <li>http_ratelimit: frequency control rule</li>
-         * <li>ip_access_rule: IP access rule</li>
-         * <li>http_bot: advanced mode bots</li>
-         * <li>http_security_level_rule: security rule</li>
+         * <li>http_whitelist: whitelist rules</li>
+         * <li>http_custom: custom rules</li>
+         * <li>http_managed: managed rules</li>
+         * <li>http_anti_scan: scan protection rules</li>
+         * <li>http_ratelimit: rate limiting rules</li>
+         * <li>ip_access_rule: IP access rules</li>
+         * <li>http_bot: advanced bot management</li>
+         * <li>http_security_level_rule: security rules</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -230,7 +230,7 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -366,7 +366,7 @@ public class ListWafRulesRequest extends Request {
             } 
 
             /**
-             * <p>The value in IP access control for fuzzy match.</p>
+             * <p>The fuzzy value to search for in IP access control.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.1</p>
@@ -388,7 +388,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>The WAF rule ID for exact match.</p>
+             * <p>The exact WAF rule ID to query.</p>
              * 
              * <strong>example:</strong>
              * <p>20000001</p>
@@ -399,7 +399,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>The WAF rule ID or name for fuzzy match.</p>
+             * <p>The fuzzy WAF rule ID or name to query.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -410,7 +410,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>The WAF rule name for fuzzy match.</p>
+             * <p>The fuzzy WAF rule name to query.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -421,7 +421,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>Sorts the returned list by a specified column.</p>
+             * <p>The column by which to sort the returned list.</p>
              * 
              * <strong>example:</strong>
              * <p>position</p>
@@ -432,7 +432,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>The WAF rule status for exact match.</p>
+             * <p>The exact WAF rule status to query.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>

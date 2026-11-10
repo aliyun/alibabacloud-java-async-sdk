@@ -91,10 +91,12 @@ public class UpdateSiteDeliveryTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the delivery task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong></li>
-         * <li><strong>offline</strong></li>
+         * <li><p><strong>online</strong>: Delivering.</p>
+         * </li>
+         * <li><p><strong>offline</strong>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +108,7 @@ public class UpdateSiteDeliveryTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the delivery task.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>cdn-test-task</p>

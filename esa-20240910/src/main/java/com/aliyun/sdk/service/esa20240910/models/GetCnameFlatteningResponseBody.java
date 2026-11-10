@@ -67,10 +67,10 @@ public class GetCnameFlatteningResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The CNAME flattening mode. Valid values:</p>
+         * <p>The flattening mode. Valid values:</p>
          * <ul>
-         * <li>flatten_all: flattens all CNAMEs.</li>
-         * <li>flatten_all (default): flattens only the root domain.</li>
+         * <li>flatten_all: Flattens all.</li>
+         * <li>flatten_at_root: Flattens only the root domain. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>

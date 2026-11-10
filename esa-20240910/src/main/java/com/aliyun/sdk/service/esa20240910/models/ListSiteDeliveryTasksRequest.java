@@ -102,12 +102,12 @@ public class ListSiteDeliveryTasksRequest extends Request {
         } 
 
         /**
-         * <p>The log category. Valid values:</p>
+         * <p>The real-time log type. Valid values:</p>
          * <ul>
-         * <li>dcdn_log_access_l1 (default): access logs.</li>
-         * <li>dcdn_log_er: Edge Routine logs.</li>
-         * <li>dcdn_log_waf: firewall logs.</li>
-         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+         * <li><strong>dcdn_log_access_l1</strong> (default): Access logs.</li>
+         * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
+         * <li><strong>dcdn_log_waf</strong>: Security protection logs.</li>
+         * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ListSiteDeliveryTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -132,7 +132,7 @@ public class ListSiteDeliveryTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -144,7 +144,7 @@ public class ListSiteDeliveryTasksRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

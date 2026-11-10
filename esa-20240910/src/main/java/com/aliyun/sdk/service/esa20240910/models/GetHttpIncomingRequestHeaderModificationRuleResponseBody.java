@@ -158,7 +158,7 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
         } 
 
         /**
-         * <p>The ID of the configuration.</p>
+         * <p>The configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>402411533580288</p>
@@ -169,10 +169,10 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
         }
 
         /**
-         * <p>The type of the configuration. Valid values:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>global: the global configuration.</li>
-         * <li>rule: the rule configuration.</li>
+         * <li>global: global configuration</li>
+         * <li>rule: rule configuration</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
         }
 
         /**
-         * <p>The configurations for modifying request headers. You can add, delete, or edit a request header.</p>
+         * <p>The request header modification settings. Add, delete, and modify operations are supported.</p>
          */
         public Builder requestHeaderModification(java.util.List<RequestHeaderModification> requestHeaderModification) {
             this.requestHeaderModification = requestHeaderModification;
@@ -203,10 +203,10 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
         }
 
         /**
-         * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>true: Match all incoming requests.</li>
-         * <li>Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,10 +218,10 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
         }
 
         /**
-         * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled</li>
+         * <li>off: disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +233,7 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
         }
 
         /**
-         * <p>The rule name. You do not need to set this parameter when you add global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -244,7 +244,7 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
         }
 
         /**
-         * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+         * <p>The execution sequence of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,7 +255,7 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
         }
 
         /**
-         * <p>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -361,11 +361,11 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
             }
 
             /**
-             * <p>The action. Valid values:</p>
+             * <p>The operation type. Valid values:</p>
              * <ul>
-             * <li>add: adds a response header.</li>
-             * <li>del: deletes a response header.</li>
-             * <li>modify: modifies a response header.</li>
+             * <li>add: add</li>
+             * <li>del: delete</li>
+             * <li>modify: modify</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -379,8 +379,8 @@ public class GetHttpIncomingRequestHeaderModificationRuleResponseBody extends Te
             /**
              * <p>The value type. Valid values:</p>
              * <ul>
-             * <li>static</li>
-             * <li>dynamic</li>
+             * <li>static: static pattern</li>
+             * <li>dynamic: dynamic schema</li>
              * </ul>
              * 
              * <strong>example:</strong>

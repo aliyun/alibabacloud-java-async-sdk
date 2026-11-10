@@ -90,11 +90,10 @@ public class DeleteRoutineEnvironmentVariablesRequest extends Request {
         } 
 
         /**
-         * <p>The environment name.</p>
-         * <p>Valid values:</p>
+         * <p>The environment name. Valid values:</p>
          * <ul>
-         * <li><code>staging</code>: staging environment</li>
-         * <li><code>production</code>: production environment</li>
+         * <li><code>staging</code>: the staging environment.</li>
+         * <li><code>production</code>: the production environment.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -108,7 +107,7 @@ public class DeleteRoutineEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * <p>The list of environment variable keys to delete.</p>
+         * <p>The keys of the environment variables to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,7 +121,7 @@ public class DeleteRoutineEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * <p>The name of the Routine function.</p>
+         * <p>The name of the routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

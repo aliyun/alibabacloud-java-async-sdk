@@ -303,12 +303,12 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action of the rule. Valid values:</p>
+             * <p>The action corresponding to the rule. Valid values:</p>
              * <ul>
-             * <li>deny: Block.</li>
-             * <li>monitor: Monitor.</li>
-             * <li>js: JavaScript Challenge.</li>
-             * <li>captcha: Slider challenge.</li>
+             * <li>deny: block</li>
+             * <li>monitor: monitor</li>
+             * <li>js: JavaScript challenge</li>
+             * <li>captcha: slider challenge</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of statistics fields for the WAF rule.</p>
+             * <p>The list of statistical fields for the WAF rule.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;http.host&quot;]</p>
@@ -380,13 +380,13 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phase in which the WAF rule runs. Valid values:</p>
+             * <p>The execution phase of the WAF ruleset. Valid values:</p>
              * <ul>
-             * <li>http_whitelist: whitelist rule</li>
-             * <li>http_custom: custom rule</li>
-             * <li>http_managed: managed rule</li>
-             * <li>http_anti_scan: scan protection rule</li>
-             * <li>http_ratelimit: frequency control rule</li>
+             * <li>http_whitelist: whitelist rules</li>
+             * <li>http_custom: custom rules</li>
+             * <li>http_managed: managed rules</li>
+             * <li>http_anti_scan: scan protection rules</li>
+             * <li>http_ratelimit: frequency control rules</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -420,7 +420,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skip mode of the WAF rule.</p>
+             * <p>The skip method for the WAF rule.</p>
              * 
              * <strong>example:</strong>
              * <p>all</p>
@@ -442,7 +442,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of phases to skip for the WAF rule.</p>
+             * <p>The list of skip phases for the WAF rule.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;http_custom&quot;]</p>
@@ -464,8 +464,8 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the WAF rule was last updated.</p>
-             * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+             * <p>The update time of the WAF rule.</p>
+             * <p>Format: RFC 3339 / ISO 8601, UTC standard time zone (ending with Z).</p>
              * <p>Example: 2025-07-07T15:00:00Z</p>
              * 
              * <strong>example:</strong>
@@ -671,13 +671,13 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phase in which the WAF rule runs. Valid values:</p>
+             * <p>The execution phase of the WAF ruleset. Valid values:</p>
              * <ul>
-             * <li>http_whitelist: whitelist rule</li>
-             * <li>http_custom: custom rule</li>
-             * <li>http_managed: managed rule</li>
-             * <li>http_anti_scan: scan protection rule</li>
-             * <li>http_ratelimit: frequency control rule</li>
+             * <li>http_whitelist: whitelist rules</li>
+             * <li>http_custom: custom rules</li>
+             * <li>http_managed: managed rules</li>
+             * <li>http_anti_scan: scan protection rules</li>
+             * <li>http_ratelimit: frequency control rules</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -700,7 +700,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of rule configurations in the WAF ruleset.</p>
+             * <p>The list of rule configurations under the WAF ruleset.</p>
              * 
              * <strong>example:</strong>
              * <p>[{}]</p>
@@ -711,7 +711,7 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The shared configuration of the WAF ruleset.</p>
+             * <p>The sharing configuration of the WAF ruleset.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>

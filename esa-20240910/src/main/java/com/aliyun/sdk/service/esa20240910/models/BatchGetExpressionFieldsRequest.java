@@ -142,7 +142,7 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
-         * <p>The plan instance ID.</p>
+         * <p>The instance ID of the plan.</p>
          * 
          * <strong>example:</strong>
          * <p>esa-site-bitkull7uubk</p>
@@ -178,7 +178,7 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
-         * <p>The plan name (in English).</p>
+         * <p>The name of the plan in English.</p>
          * 
          * <strong>example:</strong>
          * <p>entranceplan</p>

@@ -133,8 +133,8 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         /**
          * <p>The real-time log type. Valid values:</p>
          * <ul>
-         * <li><strong>dcdn_log_access_l1 (default)</strong>: access logs.</li>
-         * <li><strong>dcdn_log_er</strong>: Edge Routine function logs.</li>
+         * <li><strong>dcdn_log_access_l1</strong> (default): access logs.</li>
+         * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
          * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
          * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
          * </ul>
@@ -149,7 +149,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The list of ER PODs to configure.</p>
+         * <p>The list of pods configured for Edge Routine.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx,xxx</p>
@@ -161,7 +161,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The discard rate. If not specified, the default value is 0.</p>
+         * <p>The discard rate. If you do not specify this parameter, the default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -188,7 +188,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         /**
          * <p>The version of the filter rule.</p>
          * <blockquote>
-         * <p>Compatible with legacy filter rules. The default value is v1. Newly created tasks use v2.</p>
+         * <p>Compatible with earlier versions of filter rules. The default value is v1. For newly created rules, the value is v2.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

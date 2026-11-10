@@ -130,10 +130,10 @@ public class ListLoadBalancersRequest extends Request {
         } 
 
         /**
-         * <p>The name matching strategy when querying by name. Valid values:</p>
+         * <p>The name matching policy used when querying by name. Valid values:</p>
          * <ul>
-         * <li>fuzzy: fuzzy match.</li>
-         * <li>exact: exact match.</li>
+         * <li>fuzzy: fuzzy match</li>
+         * <li>exact: exact match</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The sort field. Currently, only sorting by ID is supported. id indicates ascending order by ID, and -id indicates descending order by ID. The ID value is positively correlated with the creation time. If this parameter is not specified, the default sort order is descending by ID.</p>
+         * <p>The sort field. Only sorting by ID is supported. id indicates ascending order by ID, and -id indicates descending order by ID. The ID value is positively correlated with the creation time. If this parameter is not specified, the default sort order is descending by ID.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -170,7 +170,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The page number settings for the paging query. The value must be greater than or equal to 1.</p>
+         * <p>The page number Settings for paging in a paged query. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -182,7 +182,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for the paging query. Valid values: 1 to 500.</p>
+         * <p>The page size for paging in a paged query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -194,7 +194,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class CommitRoutineStagingCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The newly generated code version number.</p>
+         * <p>The version number of the newly generated code.</p>
          * 
          * <strong>example:</strong>
          * <p>1710120201067203242</p>

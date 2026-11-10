@@ -75,7 +75,7 @@ public class DeleteRewriteUrlRuleRequest extends Request {
         } 
 
         /**
-         * <p>The configuration ID, which can be obtained by calling the <a href="~~ListRewriteUrlRules~~">ListRewriteUrlRules</a> operation.</p>
+         * <p>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2867480.html">ListRewriteUrlRules</a> operation to obtain the configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

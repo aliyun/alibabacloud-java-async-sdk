@@ -75,7 +75,7 @@ public class DeleteSiteDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * <p>The site ID. You can obtain the site ID by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
+         * <p>The ID of the site. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

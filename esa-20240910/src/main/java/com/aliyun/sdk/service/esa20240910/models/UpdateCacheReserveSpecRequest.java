@@ -101,7 +101,7 @@ public class UpdateCacheReserveSpecRequest extends Request {
         } 
 
         /**
-         * <p>Automatic payment.</p>
+         * <p>Specifies whether to enable automatic payment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -113,10 +113,10 @@ public class UpdateCacheReserveSpecRequest extends Request {
         }
 
         /**
-         * <p>Billing type. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PREPAY</li>
-         * <li>POSTPAY</li>
+         * <li>PREPAY: Subscription.</li>
+         * <li>POSTPAY: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateCacheReserveSpecRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>esa-cr-9tuv*********</p>
@@ -141,7 +141,7 @@ public class UpdateCacheReserveSpecRequest extends Request {
         }
 
         /**
-         * <p>Cache requested size, in GB.</p>
+         * <p>The requested cache size, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

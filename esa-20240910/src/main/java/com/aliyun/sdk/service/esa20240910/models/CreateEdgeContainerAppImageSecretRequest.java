@@ -105,7 +105,7 @@ public class CreateEdgeContainerAppImageSecretRequest extends Request {
         } 
 
         /**
-         * <p>Application ID, which can be obtained using the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> interface.</p>
+         * <p>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to retrieve the application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class CreateEdgeContainerAppImageSecretRequest extends Request {
         }
 
         /**
-         * <p>Image repository password.</p>
+         * <p>The password for the image registry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class CreateEdgeContainerAppImageSecretRequest extends Request {
         }
 
         /**
-         * <p>Image repository address.</p>
+         * <p>The address of the image registry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class CreateEdgeContainerAppImageSecretRequest extends Request {
         }
 
         /**
-         * <p>Image repository username.</p>
+         * <p>The username for the image registry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

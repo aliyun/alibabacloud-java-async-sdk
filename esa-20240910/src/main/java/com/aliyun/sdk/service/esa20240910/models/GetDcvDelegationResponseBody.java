@@ -93,7 +93,7 @@ public class GetDcvDelegationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The DCV managed domain name.</p>
+         * <p>The DCV delegation domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****.dcv.aliyun-esa.com</p>

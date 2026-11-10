@@ -160,7 +160,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>83</p>
@@ -398,8 +398,8 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             /**
              * <p>The bypass mode. Valid values:</p>
              * <ul>
-             * <li>on: enabled.</li>
-             * <li>off: disabled.</li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -424,8 +424,8 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             /**
              * <p>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</p>
              * <ul>
-             * <li>global: queries global configurations.</li>
-             * <li>rule: queries rule configurations.</li>
+             * <li>global: Global configurations.</li>
+             * <li>rule: Rule configurations.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -437,10 +437,10 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fallback-to-origin switch. After this switch is enabled, requests are sent to the origin server if the function encounters an exception such as CPU usage exceeding the limit. Valid values:</p>
+             * <p>The fallback to origin switch. When enabled, if a function exception occurs, such as CPU usage exceeding the limit, the request is routed back to the origin. Valid values:</p>
              * <ul>
-             * <li>on: enabled.</li>
-             * <li>off: disabled.</li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -454,8 +454,8 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             /**
              * <p>The configuration mode. Valid values:</p>
              * <ul>
-             * <li>simple: simple mode.</li>
-             * <li>custom: custom mode.</li>
+             * <li>simple: Simple mode.</li>
+             * <li>custom: Custom mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -469,8 +469,8 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             /**
              * <p>The route switch. Valid values:</p>
              * <ul>
-             * <li>on: enabled.</li>
-             * <li>off: disabled.</li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -515,7 +515,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule execution order.</p>
+             * <p>The execution sequence of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -559,7 +559,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ER timeout period. Valid values: 5 to 60. Unit: seconds.</p>
+             * <p>The Edge Routine (ER) timeout period. Valid values: 5 to 60. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

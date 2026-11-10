@@ -105,7 +105,7 @@ public class UpdateListRequest extends Request {
         } 
 
         /**
-         * <p>The new description of the list.</p>
+         * <p>The updated description of the list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,15 +131,15 @@ public class UpdateListRequest extends Request {
         }
 
         /**
-         * <p>The new list content. The value is a JSON array string, for example, <code>[&quot;1.1.1.1&quot;,&quot;2.2.2.2&quot;]</code>.</p>
-         * <p><strong>Full overwrite semantics</strong>: The specified <code>Items</code> value completely overwrites the existing list content instead of appending to it.</p>
+         * <p>The updated items in the list. The value is a JSON array string, such as <code>[&quot;1.1.1.1&quot;,&quot;2.2.2.2&quot;]</code>.</p>
+         * <p><strong>Full overwrite semantics</strong>: The specified <code>Items</code> completely overwrites the original list content instead of appending to it.</p>
          * <blockquote>
-         * <p>⚠️ <strong>If this parameter is not specified or is set to an empty value, the existing list content is cleared</strong>. To retain existing items and append new ones, call <code>GetList</code> to retrieve the current <code>Items</code>, merge them, and then submit the combined list.</p>
+         * <p>⚠️ <strong>If this parameter is not specified or is left empty, the original list content is cleared</strong>. To retain the original items and append new ones, call <code>GetList</code> to retrieve the existing <code>Items</code>, concatenate them, and submit them at once.</p>
          * </blockquote>
-         * <p><strong>Element format</strong>: The format depends on the <code>Kind</code> value specified when the list was created. UpdateList does not support modifying Kind.</p>
+         * <p><strong>Element format</strong>: The format depends on the <code>Kind</code> specified when the list was created. UpdateList does not support modifying the kind.</p>
          * <ul>
          * <li>Kind = <code>ip</code>: Each element must be a valid IP address or CIDR block. If an element is invalid, <code>WrongValueMatched</code> is returned.</li>
-         * <li>Other Kind values: The element format is subject to the relevant specifications. The number of elements is limited by the tenant quota <code>NumberItemsPerList</code>. This limit does not apply to the <code>ip</code> Kind.</li>
+         * <li>Other kinds: The element format is subject to conventions, and the number of elements is limited by the tenant quota <code>NumberItemsPerList</code>. Only the <code>ip</code> kind is not subject to this limit.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -154,8 +154,8 @@ public class UpdateListRequest extends Request {
         }
 
         /**
-         * <p>The new name of the custom list. If this parameter is not specified, the original name is retained.</p>
-         * <p><strong>Naming rules</strong>: Only letters, digits, and underscores are supported (<code>^\\w{1,64}$</code>). The name must be 1 to 64 characters in length.</p>
+         * <p>The updated name of the custom list. If this parameter is not specified, the original name is retained.</p>
+         * <p><strong>Naming rules</strong>: Only letters, digits, and underscores are supported. The regular expression is <code>^\\w{1,64}$</code>, and the length is 1 to 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

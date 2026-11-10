@@ -437,7 +437,7 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the custom response page. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
+             * <p>The ID of the custom response page. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>50000001</p>
@@ -482,7 +482,7 @@ public class ListPagesResponseBody extends TeaModel {
 
             /**
              * <p>The last modification time of the custom response page.</p>
-             * <p>Format: RFC 3339/ISO 8601, UTC standard time zone (ending with Z).</p>
+             * <p>Format: RFC 3339 / ISO 8601, UTC standard time zone (ending with Z).</p>
              * <p>Example: 2026-06-10T14:23:45Z</p>
              * 
              * <strong>example:</strong>

@@ -173,7 +173,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         } 
 
         /**
-         * <p>The description of the WAF ruleset.</p>
+         * <p>The description of the WAF rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -185,7 +185,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>The expression of the WAF ruleset.</p>
+         * <p>The expression of the WAF rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>ip.src == 1.1.1.1</p>
@@ -197,7 +197,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>The WAF ruleset ID.</p>
+         * <p>The WAF rule set ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>The name of the WAF ruleset.</p>
+         * <p>The name of the WAF rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -235,7 +235,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>The position of the WAF ruleset.</p>
+         * <p>The position of the WAF rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -247,7 +247,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>A list of rule configurations in the WAF ruleset.</p>
+         * <p>The list of rule configurations in the WAF rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -266,7 +266,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>The shared configuration of the WAF ruleset.</p>
+         * <p>The sharing configuration of the WAF rule set.</p>
          */
         public Builder shared(WafBatchRuleShared shared) {
             String sharedShrink = shrink(shared, "Shared", "json");
@@ -276,7 +276,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>The status of the WAF ruleset.</p>
+         * <p>The status of the WAF rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>

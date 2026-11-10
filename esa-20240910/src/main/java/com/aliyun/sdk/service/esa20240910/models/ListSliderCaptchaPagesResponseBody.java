@@ -80,7 +80,7 @@ public class ListSliderCaptchaPagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of custom slider CAPTCHA pages.</p>
+         * <p>The list of custom slider pages.</p>
          */
         public Builder pages(java.util.List<Pages> pages) {
             this.pages = pages;
@@ -99,7 +99,7 @@ public class ListSliderCaptchaPagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -181,7 +181,7 @@ public class ListSliderCaptchaPagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the custom slider CAPTCHA page.</p>
+             * <p>The ID of the custom slider page.</p>
              * 
              * <strong>example:</strong>
              * <p>50000001</p>
@@ -192,7 +192,7 @@ public class ListSliderCaptchaPagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the custom slider CAPTCHA page.</p>
+             * <p>The name of the custom slider page.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>

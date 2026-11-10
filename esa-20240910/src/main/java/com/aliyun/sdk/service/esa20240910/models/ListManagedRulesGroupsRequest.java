@@ -73,7 +73,7 @@ public class ListManagedRulesGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The page number for the paged query.</p>
+         * <p>The page number for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class ListManagedRulesGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for the paged query.</p>
+         * <p>The number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -261,7 +261,7 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * <p>The cross-origin address pool back-to-origin configuration.</p>
+         * <p>The back-to-origin configuration across origin address pools.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -274,7 +274,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The list of default address pool IDs.</p>
+         * <p>The list of default address pools.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The description of the load balancer for management and identification purposes.</p>
+         * <p>The detailed description of the load balancer for easy management and identification.</p>
          * 
          * <strong>example:</strong>
          * <p>Load Balancer Description</p>
@@ -303,7 +303,7 @@ public class CreateLoadBalancerRequest extends Request {
          * <p>Specifies whether the load balancer is enabled. Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
-         * <li>false: Not enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -316,7 +316,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The fallback address pool ID. Traffic is directed to this pool when all other pools are unavailable.</p>
+         * <p>The ID of the fallback address pool. Traffic is routed to this pool when all other pools are unavailable.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The name of the load balancer. The name must be in a valid domain name format and must be a subdomain of the site.</p>
+         * <p>The name of the load balancer. The name must pass the domain name format validation and be a subdomain of the site.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,7 +356,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The weighted round-robin configuration that controls the traffic distribution weight across different address pools.</p>
+         * <p>The weighted round-robin configuration used to control the traffic distribution weights of different address pools.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -369,7 +369,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The address pools mapped to primary regions.</p>
+         * <p>The address pools corresponding to primary regions.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -410,12 +410,12 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The session persistence mode. Valid values:</p>
+         * <p>The session persistence configuration. Valid values:</p>
          * <ul>
-         * <li>off: disabled.</li>
-         * <li>ip: IP-based session persistence.</li>
-         * <li>cookie: cookie-based session persistence.</li>
-         * <li>http_header: HTTP header-based session persistence.</li>
+         * <li>off: Disabled.</li>
+         * <li>ip: Session persistence based on IP addresses.</li>
+         * <li>cookie: Session persistence based on cookies.</li>
+         * <li>http_header: Session persistence based on HTTP headers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,7 +428,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -443,9 +443,9 @@ public class CreateLoadBalancerRequest extends Request {
         /**
          * <p>The load balancing policy. Valid values:</p>
          * <ul>
-         * <li>geo: geo-based routing.</li>
-         * <li>random: weighted round-robin.</li>
-         * <li>order: primary/secondary mode.</li>
+         * <li>geo: Geolocation-based policy.</li>
+         * <li>random: Weighted round-robin.</li>
+         * <li>order: Active/standby mode.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -459,7 +459,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The address pools mapped to secondary regions. If multiple secondary regions share the same set of address pools, you can concatenate the secondary region names with commas as the key.</p>
+         * <p>The address pools corresponding to secondary regions. When multiple secondary regions share the same set of address pools, you can concatenate the secondary regions with commas (,) to use as the key.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
@@ -471,7 +471,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The TTL value, which specifies the time-to-live of the DNS record. Default value: 30 seconds. Valid values: 10 to 600.</p>
+         * <p>The time-to-live (TTL) value of the DNS record. Default value: 30. Unit: seconds. Valid values: 10 to 600.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -542,10 +542,10 @@ public class CreateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable cross-origin address pool failover. Valid values:</p>
+             * <p>Specifies whether to route traffic back to the origin across origin address pools. Valid values:</p>
              * <ul>
-             * <li>true: Enabled.</li>
-             * <li>false: Not enabled.</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -557,7 +557,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to retry the next IP address when back-to-origin fails and the origin server is a domain name that resolves to multiple IP addresses.</p>
+             * <p>Specifies whether to retry the next IP address if a back-to-origin request fails, the origin server is a domain name, and the domain name is resolved to multiple IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -757,7 +757,7 @@ public class CreateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The number of consecutive failed probes required to consider the check failed, such as <code>5</code>.</p>
+             * <p>The number of consecutive failed probes required to determine a failed health check, such as <code>5</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -768,7 +768,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The number of consecutive successful probes required to consider the check successful, such as <code>3</code>.</p>
+             * <p>The number of consecutive successful probes required to determine a successful health check, such as <code>3</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -779,7 +779,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The expected status codes, such as <code>200,202</code>. These are the HTTP response codes that indicate success.</p>
+             * <p>The expected status codes for successful HTTP responses, such as <code>200,202</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -792,8 +792,8 @@ public class CreateLoadBalancerRequest extends Request {
             /**
              * <p>Specifies whether to follow redirects. Valid values:</p>
              * <ul>
-             * <li>true: Follow redirects.</li>
-             * <li>false: Do not follow redirects.</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -805,7 +805,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The header information included in the probe request. This is the HTTP header.</p>
+             * <p>The HTTP headers included in the probe requests.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -821,7 +821,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The monitoring interval in seconds, such as <code>60</code>. This specifies the check frequency.</p>
+             * <p>The monitoring interval, such as <code>60</code> seconds. This parameter specifies the check frequency.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -832,7 +832,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The monitor request method, such as <code>GET</code>. This is the HTTP method used for health checks.</p>
+             * <p>The request method of the monitor, such as <code>GET</code> in the HTTP protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>GET</p>
@@ -845,9 +845,9 @@ public class CreateLoadBalancerRequest extends Request {
             /**
              * <p>The region where the probe nodes are located. Default value: Global. Valid values:</p>
              * <ul>
-             * <li>Global: worldwide.</li>
-             * <li>ChineseMainland: the Chinese mainland.</li>
-             * <li>OutsideChineseMainland: worldwide (excluding the Chinese mainland).</li>
+             * <li>Global: Global.</li>
+             * <li>ChineseMainland: The Chinese mainland.</li>
+             * <li>OutsideChineseMainland: Global (excluding the Chinese mainland).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -859,7 +859,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The monitor check path, such as <code>/healthcheck</code>. This is the URI of the request.</p>
+             * <p>The health check path of the monitor, such as <code>/healthcheck</code>, the URI of the request.</p>
              * 
              * <strong>example:</strong>
              * <p>/health</p>
@@ -881,7 +881,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The health check timeout period. Unit: seconds. Valid values: 1 to 10.</p>
+             * <p>The timeout period for health checks. Unit: seconds. Valid values: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -892,7 +892,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The monitor protocol type used for health checks. A value of off indicates that health checks are disabled. Valid values:</p>
+             * <p>The protocol type of the monitor for health checks, such as HTTP. A value of off indicates that health checks are disabled. Valid values:</p>
              * <ul>
              * <li>TCP</li>
              * <li>UDP</li>
@@ -971,7 +971,7 @@ public class CreateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The default round-robin weight applied to all address pools that do not have an individually specified weight. Valid values: integers from 0 to 100.</p>
+             * <p>The default round-robin weight for all address pools that do not have a specified weight. Valid values: integers from 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -982,7 +982,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The weight configuration for each backend server pool. The key is the pool ID and the value is the weight coefficient. The weight coefficient represents the relative proportion of traffic distribution.</p>
+             * <p>The weight configuration for each backend server pool. The key is the pool ID and the value is the weight coefficient. The weight coefficient indicates the proportion of relative traffic distribution.</p>
              */
             public Builder poolWeights(java.util.Map<String, Integer> poolWeights) {
                 this.poolWeights = poolWeights;
@@ -1086,7 +1086,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The location field in the HTTP response.</p>
+             * <p>The Location field in the HTTP response.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com/index.html">http://www.example.com/index.html</a></p>
@@ -1097,7 +1097,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The response body value.</p>
+             * <p>The body value of the response.</p>
              * 
              * <strong>example:</strong>
              * <p>Hello World!</p>
@@ -1243,7 +1243,7 @@ public class CreateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The fixed response content returned after a rule is matched.</p>
+             * <p>The specified content to return in the response after a rule is matched.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;content_type&quot;: &quot;application/json&quot;, &quot;location&quot;: &quot;<a href="http://www.example.com">www.example.com</a>&quot;, &quot;message_body&quot;: &quot;Testing Hello&quot;, &quot;status_code&quot;: 0}</p>
@@ -1254,7 +1254,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The load balancing configuration that overwrites the corresponding fields in the load balancer configuration when a rule is matched. The specified fields overwrite the corresponding fields in the load balancer configuration.</p>
+             * <p>The load balancing configuration modified for the corresponding request rewrite after a rule is matched. The configured fields override the corresponding fields in the load balancer configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -1306,10 +1306,10 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The rule content that uses conditional expressions to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
+             * <p>The content of the rule. A conditional expression is used to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
              * <ul>
              * <li>Match all incoming requests: Set the value to true.</li>
-             * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
+             * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1321,7 +1321,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
+             * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -1336,7 +1336,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The rule name. This parameter is not required when you add a global configuration.</p>
+             * <p>The name of the rule. You do not need to set this parameter when adding a global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_1</p>
@@ -1347,7 +1347,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The rule execution order. This parameter is optional. If not specified, rules are executed in list order. If specified, the value must be a positive integer. A larger value indicates a higher priority.</p>
+             * <p>The execution sequence of the rule. This parameter is optional. If you do not specify this parameter, rules are executed in the order they are listed. If you specify this parameter, the value must be an integer greater than 0. A larger value indicates a higher execution priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1360,8 +1360,8 @@ public class CreateLoadBalancerRequest extends Request {
             /**
              * <p>Specifies whether to stop executing subsequent rules. Valid values:</p>
              * <ul>
-             * <li>true: Stop executing subsequent rules.</li>
-             * <li>false: Continue executing subsequent rules. This is the default value.</li>
+             * <li>true: Yes.</li>
+             * <li>false: No. This is the default value.</li>
              * </ul>
              * 
              * <strong>example:</strong>

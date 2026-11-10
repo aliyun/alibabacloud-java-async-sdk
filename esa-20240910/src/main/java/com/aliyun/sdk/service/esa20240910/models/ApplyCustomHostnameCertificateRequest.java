@@ -60,7 +60,7 @@ public class ApplyCustomHostnameCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the SaaS domain name. Call the <a href="https://help.aliyun.com/document_detail/3018667.html">ListCustomHostnames</a> operation to obtain the ID.</p>
+         * <p>The ID of the SaaS domain name. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/3018667.html">ListCustomHostnames</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

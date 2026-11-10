@@ -264,7 +264,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number Settings for a paging query. Default value: <strong>1</strong>. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * <p>The page number Settings for paging in a paged query. Default value: <strong>1</strong>. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -276,7 +276,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paging query. Valid values: 1 to 500.</p>
+         * <p>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -316,7 +316,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>Queries plan instances whose remaining validity period is less than or equal to the specified number of days. The value must be a positive integer. Unit: days.</p>
+         * <p>Queries plan instances whose remaining validity period is within the specified number of days. The value must be a positive integer. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -337,10 +337,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort the results. By default, the results are sorted by creation time. Valid values:</p>
+         * <p>The sort field. By default, the instances are sorted by creation time. Valid values:</p>
          * <ul>
-         * <li><strong>CreateTime</strong>: Sorts by creation time.</li>
-         * <li><strong>ExpireTime</strong>: Sorts by expiration time.</li>
+         * <li><strong>CreateTime</strong>: The creation time.</li>
+         * <li><strong>ExpireTime</strong>: The expiration time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -353,7 +353,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The sort order. By default, the results are sorted in descending order. Valid values:</p>
+         * <p>The sort order. By default, the instances are sorted in descending order. Valid values:</p>
          * <ul>
          * <li><strong>asc</strong>: Ascending order.</li>
          * <li><strong>desc</strong>: Descending order.</li>
@@ -369,12 +369,12 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance status. Valid values:</p>
+         * <p>The instance status of the plan. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: The instance is in normal service status.</li>
-         * <li><strong>offline</strong>: The instance has expired but is not overdue, and is in an inactive state.</li>
-         * <li><strong>disable</strong>: The instance is released.</li>
-         * <li><strong>overdue</strong>: The instance has an overdue payment.</li>
+         * <li><strong>online</strong>: The normal service status.</li>
+         * <li><strong>offline</strong>: The instance has expired but not overdue, and is in an inactive state.</li>
+         * <li><strong>disable</strong>: The released status.</li>
+         * <li><strong>overdue</strong>: The overdue payment status.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -389,12 +389,12 @@ public class ListUserRatePlanInstancesRequest extends Request {
         /**
          * <p>The subscription type of the plan. Valid values:</p>
          * <ul>
-         * <li>entranceplan: Free Edition (Chinese mainland)</li>
-         * <li>entranceplan_intl: Free Edition (International)</li>
-         * <li>basicplan: Basic Edition</li>
-         * <li>standardplan: Standard Edition</li>
-         * <li>advancedplan: Advanced Edition</li>
-         * <li>enterpriseplan: Enterprise Edition</li>
+         * <li>entranceplan: Free Edition (Chinese mainland).</li>
+         * <li>entranceplan_intl: Free Edition (International).</li>
+         * <li>basicplan: Basic Edition.</li>
+         * <li>standardplan: Standard Edition.</li>
+         * <li>advancedplan: Advanced Edition.</li>
+         * <li>enterpriseplan: Enterprise Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>

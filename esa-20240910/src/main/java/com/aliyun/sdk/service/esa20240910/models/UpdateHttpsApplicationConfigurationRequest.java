@@ -313,12 +313,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the <code>Alt-Svc</code> header. This feature is disabled by default. Valid values:</p>
+         * <p>The feature switch. Default value: off. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Enables the Alt-Svc header.</p>
-         * </li>
-         * <li><p><code>off</code>: Disables the Alt-Svc header.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -331,12 +329,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the <code>clear</code> directive in the <code>Alt-Svc</code> header. The directive is not included by default. Valid values:</p>
+         * <p>Specifies whether the Alt-Svc header includes the clear parameter. Default value: off. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Includes the directive.</p>
-         * </li>
-         * <li><p><code>off</code>: Does not include the directive.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -349,7 +345,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The max-age for the Alt-Svc header, in seconds. The default is 86400.</p>
+         * <p>The validity period of the Alt-Svc header, in seconds. Default value: 86400.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -361,12 +357,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include the <code>persist</code> directive in the <code>Alt-Svc</code> header. The directive is not included by default. Valid values:</p>
+         * <p>Specifies whether the Alt-Svc header includes the persist parameter. Default value: off. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Includes the directive.</p>
-         * </li>
-         * <li><p><code>off</code>: Does not include the directive.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,12 +386,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable HTTP Strict Transport Security (HSTS). This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable HTTP Strict Transport Security (HSTS). Default value: off. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Enables HSTS.</p>
-         * </li>
-         * <li><p><code>off</code>: Disables HSTS.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -410,12 +402,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include subdomains in the HSTS policy. Subdomains are not included by default. Valid values:</p>
+         * <p>Specifies whether to include subdomains in HSTS. Default value: off. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Includes subdomains.</p>
-         * </li>
-         * <li><p><code>off</code>: Does not include subdomains.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -428,7 +418,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The HSTS max-age in seconds.</p>
+         * <p>The expiration time of HSTS, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -440,12 +430,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable HSTS Preload. HSTS Preload is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable HSTS preload. Default value: off. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Enables Preload.</p>
-         * </li>
-         * <li><p><code>off</code>: Disables Preload.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -458,12 +446,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Force HTTPS. This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable forced HTTPS. Default value: off. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Enables Force HTTPS.</p>
-         * </li>
-         * <li><p><code>off</code>: Disables Force HTTPS.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -476,16 +462,12 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The redirect status code for Force HTTPS. Valid values:</p>
+         * <p>The HTTP status code for forced HTTPS redirection. Valid values:</p>
          * <ul>
-         * <li><p><code>301</code></p>
-         * </li>
-         * <li><p><code>302</code></p>
-         * </li>
-         * <li><p><code>307</code></p>
-         * </li>
-         * <li><p><code>308</code></p>
-         * </li>
+         * <li>301</li>
+         * <li>302</li>
+         * <li>307</li>
+         * <li>308</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -498,12 +480,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to deny TLS handshake requests that do not include an SNI. This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to reject TLS handshake requests without SNI. Default value: off. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Denies requests without an SNI.</p>
-         * </li>
-         * <li><p><code>off</code>: Allows requests without an SNI.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -516,12 +496,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Server Name Indication (SNI) verification. This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable Server Name Indication (SNI) verification. Default value: off. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Enables SNI verification.</p>
-         * </li>
-         * <li><p><code>off</code>: Disables SNI verification.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -534,7 +512,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The SNI allowlist. Separate multiple hostnames with spaces.</p>
+         * <p>The SNI whitelist. Separate multiple SNI values with spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>abc edf</p>
@@ -546,12 +524,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The conditional expression that the rule uses to match requests. This parameter is not required for a global configuration.</p>
+         * <p>The rule content. A conditional expression is used to match user requests. Settings for this parameter are not required when you add a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
-         * </li>
-         * <li><p>To match specific requests, provide a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code></p>
-         * </li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -564,12 +540,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the rule. This parameter is not required for a global configuration. Valid values:</p>
+         * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Enables the rule.</p>
-         * </li>
-         * <li><p><code>off</code>: Disables the rule.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -582,7 +556,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The rule name. This parameter is not required for a global configuration.</p>
+         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -594,7 +568,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The execution order of the rule. A lower value indicates a higher priority.</p>
+         * <p>The execution sequence of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -606,7 +580,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The site ID. To obtain this ID, call the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

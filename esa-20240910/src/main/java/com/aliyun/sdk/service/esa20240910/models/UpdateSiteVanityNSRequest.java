@@ -87,7 +87,7 @@ public class UpdateSiteVanityNSRequest extends Request {
         }
 
         /**
-         * <p>The list of custom NS names. You can specify 2 to 5 custom NS names, separated by commas (,).</p>
+         * <p>The list of custom NS names. You can specify 2 to 5 custom NS names. Separate multiple names with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>ns1.example.com,ns2.example.com</p>

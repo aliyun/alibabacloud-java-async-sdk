@@ -119,7 +119,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The plan instances that meet the query conditions under the user.</p>
+         * <p>The plan instances that meet the conditions under the user.</p>
          */
         public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -280,7 +280,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
              * <li><strong>pending</strong>: The site is pending configuration.</li>
              * <li><strong>active</strong>: The site is activated.</li>
              * <li><strong>offline</strong>: The site is offline.</li>
-             * <li><strong>moved</strong>: The site is replaced.</li>
+             * <li><strong>moved</strong>: The site has been replaced.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -732,10 +732,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             /**
              * <p>If this parameter is empty, no bot protection instance is purchased for the plan. If a value is returned, a bot protection instance is purchased for the plan. Valid values:</p>
              * <ul>
-             * <li><p>enterprise_bot: Web edition.</p>
-             * </li>
-             * <li><p>enterprise_bot_with_app: App edition.</p>
-             * </li>
+             * <li>enterprise_bot: Web edition.</li>
+             * <li>enterprise_bot_with_app: App edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -760,7 +758,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             /**
              * <p>The acceleration regions where the site can be bound. Multiple regions are separated by commas (,). Valid values:</p>
              * <ul>
-             * <li><strong>domestic</strong>: Chinese mainland.</li>
+             * <li><strong>domestic</strong>: The Chinese mainland.</li>
              * <li><strong>overseas</strong>: Global (excluding the Chinese mainland).</li>
              * <li><strong>global</strong>: Global (including the Chinese mainland).</li>
              * </ul>
@@ -774,7 +772,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the plan instance. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with ISO 8601.</p>
+             * <p>The creation time of the plan instance. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-19T11:15:20Z</p>
@@ -796,7 +794,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the Anti-DDoS instance in the plan for the Chinese mainland.</p>
+             * <p>The specifications of the Anti-DDoS instance in the Chinese mainland for the plan.</p>
              * 
              * <strong>example:</strong>
              * <p>cn_300</p>
@@ -807,7 +805,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the Anti-DDoS instance in the plan for regions outside the Chinese mainland.</p>
+             * <p>The specifications of the Anti-DDoS instance outside the Chinese mainland for the plan.</p>
              * 
              * <strong>example:</strong>
              * <p>overseas_300</p>
@@ -851,7 +849,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prepaid number of Web Application Firewall (WAF) requests in the plan. Unit: 10,000 requests.</p>
+             * <p>The prepaid number of WAF requests in the plan. Unit: 10,000 requests.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -862,7 +860,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the plan instance. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with ISO 8601.</p>
+             * <p>The expiration time of the plan instance. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-19T11:15:20Z</p>
@@ -873,7 +871,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The instance ID of the plan.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-xcdn-96wblslz****</p>
@@ -994,7 +992,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota for the number of sites under the plan instance.</p>
+             * <p>The site quota under the plan instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1035,11 +1033,11 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance status. Valid values:</p>
+             * <p>The instance status of the plan. Valid values:</p>
              * <ul>
-             * <li><strong>online</strong>: The instance is in normal service status.</li>
-             * <li><strong>offline</strong>: The instance has expired but is not overdue, and is in an inactive state.</li>
-             * <li><strong>disable</strong>: The instance is released.</li>
+             * <li><strong>online</strong>: The normal service status.</li>
+             * <li><strong>offline</strong>: The instance has expired but not overdue, and is in an inactive state.</li>
+             * <li><strong>disable</strong>: The released status.</li>
              * </ul>
              * 
              * <strong>example:</strong>

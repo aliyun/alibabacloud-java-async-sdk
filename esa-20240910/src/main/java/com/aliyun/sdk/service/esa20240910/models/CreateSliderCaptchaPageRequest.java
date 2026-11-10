@@ -126,7 +126,7 @@ public class CreateSliderCaptchaPageRequest extends Request {
         }
 
         /**
-         * <p>The custom slider configurations. The value is a JSON string.</p>
+         * <p>The custom slider configuration, in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;language&quot;:&quot;ko&quot;,&quot;description&quot;:&quot;더 나은 경험을 위해 웹 페이지에 접속하기 전에 슬라이드하여 인증을 완료해 주세요.&quot;,&quot;captcha_color&quot;:&quot;#28870d&quot;,&quot;show_trace_id&quot;:true,&quot;show_footer&quot;:true,&quot;mandatory_lang&quot;:false}]</p>
@@ -284,7 +284,7 @@ public class CreateSliderCaptchaPageRequest extends Request {
             }
 
             /**
-             * <p>The color of the slider.</p>
+             * <p>The slider color.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -421,7 +421,7 @@ public class CreateSliderCaptchaPageRequest extends Request {
             }
 
             /**
-             * <p>The color of the slider.</p>
+             * <p>The slider color.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

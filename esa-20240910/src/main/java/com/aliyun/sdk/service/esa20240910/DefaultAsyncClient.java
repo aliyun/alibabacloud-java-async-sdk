@@ -61,7 +61,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>Prerequisites for enabling site version management:</p>
      * <ol>
-     * <li>The site plan must include the version management quota item <code>version_management_available</code>, and its value must be <code>true</code>.</li>
+     * <li>The site plan must include the version management quota item <code>version_management_available</code> with the value set to <code>true</code>.</li>
      * </ol>
      * 
      * @param request the request parameters of ActivateVersionManagement  ActivateVersionManagementRequest
@@ -137,8 +137,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows you to create or update multiple DNS records at a time. It is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as Priority, Flag, Tag, and Weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
-     * Successfully and unsuccessfully processed records are listed separately in the response, so that you can identify which records are processed, which records failed, and the failure reasons.</p>
+     * <p>This API operation allows you to create or update multiple DNS record entries at a time, which is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as priority, flag, tag, and weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
+     * Successful and failed record operations are listed separately in the response, so that you can understand which records are processed successfully and which records fail and the reasons for the failures.</p>
      * 
      * @param request the request parameters of BatchCreateRecords  BatchCreateRecordsRequest
      * @return BatchCreateRecordsResponse
@@ -596,6 +596,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateErrorPagesRedirectRule  CreateErrorPagesRedirectRuleRequest
+     * @return CreateErrorPagesRedirectRuleResponse
+     */
+    @Override
+    public CompletableFuture<CreateErrorPagesRedirectRuleResponse> createErrorPagesRedirectRule(CreateErrorPagesRedirectRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateErrorPagesRedirectRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateErrorPagesRedirectRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateErrorPagesRedirectRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateHttpIncomingRequestHeaderModificationRule  CreateHttpIncomingRequestHeaderModificationRuleRequest
      * @return CreateHttpIncomingRequestHeaderModificationRuleResponse
      */
@@ -762,8 +780,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a load balancing service based on your business requirements. You can configure settings such as adaptive routing, weighted polling, rule matching, and health checks to effectively manage and optimize traffic.
-     * Only Enterprise plans support the load balancing service. To use this feature, contact Alibaba Cloud sales to apply for an Enterprise plan.</p>
+     * <p>This API allows you to configure load balancing services based on your business requirements, including but not limited to adaptive routing, weighted round-robin, rule matching, and health checks, to achieve effective traffic management and optimization.
+     * Only the Enterprise Edition plan supports the load balancer service. To use this service, contact Alibaba Cloud sales to apply for the Enterprise Edition plan.</p>
      * 
      * @param request the request parameters of CreateLoadBalancer  CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -784,7 +802,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The site plan must be Standard Edition or higher to use the WebSocket feature. When calling this API, you must provide at least one feature configuration parameter. Providing only SiteId returns an error.</p>
+     * <p>The site plan must be Standard Edition or higher to use the WebSocket feature. In addition, when you call this API operation, you must specify at least one feature configuration parameter. Specifying only SiteId returns an error.</p>
      * 
      * @param request the request parameters of CreateNetworkOptimization  CreateNetworkOptimizationRequest
      * @return CreateNetworkOptimizationResponse
@@ -1681,6 +1699,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteErrorPagesRedirectRule  DeleteErrorPagesRedirectRuleRequest
+     * @return DeleteErrorPagesRedirectRuleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteErrorPagesRedirectRuleResponse> deleteErrorPagesRedirectRule(DeleteErrorPagesRedirectRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteErrorPagesRedirectRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteErrorPagesRedirectRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteErrorPagesRedirectRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteHttpDDoSIntelligentRule  DeleteHttpDDoSIntelligentRuleRequest
      * @return DeleteHttpDDoSIntelligentRuleResponse
      */
@@ -2153,10 +2189,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>When you create a Routine code version for deployment, the environment name <code>Env</code> supports only the staging environment <code>staging</code> or the production environment <code>production</code>.</li>
-     * <li>The <code>CodeVersions</code> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</li>
+     * <li>When you create a deployment for a routine code version, the <code>Env</code> parameter only supports <code>staging</code> for the staging environment and <code>production</code> for the production environment.</li>
+     * <li>The <code>CodeVersions</code> parameter supports canary releases for up to two versions, and the sum of the traffic ratios for these versions must equal 100%.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteRoutineEnvironmentVariables  DeleteRoutineEnvironmentVariablesRequest
@@ -2358,12 +2394,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to delete an existing task delivery configuration based on the specified <strong>task name</strong> and <strong>Alibaba Cloud UID</strong>. Before proceeding, verify that the provided information is accurate to avoid disrupting the processing of related logs or data.
+     * <p>This operation allows you to delete a configured task delivery configuration based on the specified <strong>task name</strong> and <strong>Alibaba Cloud UID</strong>. Before the operation, ensure that the provided information is accurate to avoid affecting the normal processing of related logs or data.
      * <strong>Note:</strong></p>
      * <ul>
-     * <li>The deletion operation is irreversible. Proceed with caution.</li>
+     * <li>The delete operation is irreversible. Proceed with caution.</li>
      * <li>Only accounts with the required permissions can call this operation.</li>
-     * <li>You can use the returned <code>RequestId</code> to track the request progress and troubleshoot issues.</li>
+     * <li>The returned <code>RequestId</code> can be used to track the request processing progress and troubleshoot issues.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteUserDeliveryTask  DeleteUserDeliveryTaskRequest
@@ -3924,6 +3960,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetErrorPagesRedirectRule  GetErrorPagesRedirectRuleRequest
+     * @return GetErrorPagesRedirectRuleResponse
+     */
+    @Override
+    public CompletableFuture<GetErrorPagesRedirectRuleResponse> getErrorPagesRedirectRule(GetErrorPagesRedirectRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetErrorPagesRedirectRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetErrorPagesRedirectRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetErrorPagesRedirectRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetFailFile  GetFailFileRequest
      * @return GetFailFileResponse
      */
@@ -5125,8 +5179,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>By calling the <code>GetUserWafRuleset</code> operation, you can retrieve information about a specific Web Application Firewall (WAF) ruleset based on the instance ID and ruleset ID. The returned information includes but is not limited to the position, name, description, status, and specific rules of the ruleset. Make sure that you correctly specify the required parameters to avoid request failures.</p>
+     * <h2>Request instructions</h2>
+     * <p>By calling the <code>GetUserWafRuleset</code> operation, you can retrieve specific Web Application Firewall (WAF) ruleset information based on the provided instance ID and ruleset ID. The information returned by this operation includes but is not limited to the position, name, description, and status of the ruleset, as well as detailed content such as the specific rules it contains. Correctly specify the required parameters when making a request to avoid request failures.</p>
      * 
      * @param request the request parameters of GetUserWafRuleset  GetUserWafRulesetRequest
      * @return GetUserWafRulesetResponse
@@ -5712,6 +5766,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListErrorPagesRedirectRules  ListErrorPagesRedirectRulesRequest
+     * @return ListErrorPagesRedirectRulesResponse
+     */
+    @Override
+    public CompletableFuture<ListErrorPagesRedirectRulesResponse> listErrorPagesRedirectRules(ListErrorPagesRedirectRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListErrorPagesRedirectRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListErrorPagesRedirectRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListErrorPagesRedirectRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListHttpIncomingRequestHeaderModificationRules  ListHttpIncomingRequestHeaderModificationRulesRequest
      * @return ListHttpIncomingRequestHeaderModificationRulesResponse
      */
@@ -6139,7 +6211,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries pay-as-you-go plan instances under your account and supports filtering and sorting by various conditions.</p>
+     * <p>Queries the pay-as-you-go plan instances under your account. You can filter and sort the instances based on various conditions.</p>
      * 
      * @param request the request parameters of ListPostpaidRatePlanInstances  ListPostpaidRatePlanInstancesRequest
      * @return ListPostpaidRatePlanInstancesResponse
@@ -6199,7 +6271,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DNS records corresponding to edge containers, edge functions, and Layer 4 acceleration will not be returned by this API.</p>
+     * <p>DNS records associated with edge containers, Edge Routines, and Layer 4 acceleration are not returned by this API operation.</p>
      * 
      * @param request the request parameters of ListRecords  ListRecordsRequest
      * @return ListRecordsResponse
@@ -6353,7 +6425,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of related records for a specified edge routine. You can use pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific record entries.</p>
+     * <p>Queries the association records of a specified Edge Routine. You can set pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific records.</p>
      * 
      * @param request the request parameters of ListRoutineRelatedRecords  ListRoutineRelatedRecordsRequest
      * @return ListRoutineRelatedRecordsResponse
@@ -6855,7 +6927,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to query details of all waiting room events related to a waiting room in a website.</p>
+     * <p>Queries the details of all waiting room events associated with a specified site ID and waiting room ID.</p>
      * 
      * @param request the request parameters of ListWaitingRoomEvents  ListWaitingRoomEventsRequest
      * @return ListWaitingRoomEventsResponse
@@ -8020,6 +8092,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateErrorPagesRedirectRule  UpdateErrorPagesRedirectRuleRequest
+     * @return UpdateErrorPagesRedirectRuleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateErrorPagesRedirectRuleResponse> updateErrorPagesRedirectRule(UpdateErrorPagesRedirectRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateErrorPagesRedirectRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateErrorPagesRedirectRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateErrorPagesRedirectRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateHttpIncomingRequestHeaderModificationRule  UpdateHttpIncomingRequestHeaderModificationRuleRequest
      * @return UpdateHttpIncomingRequestHeaderModificationRuleResponse
      */
@@ -8183,7 +8273,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation modifies multiple configurations for a load balancer, including its name, acceleration status, session persistence policy, and advanced traffic routing settings.&gt;Notice: Changes to certain parameters might affect the stability of existing services. Proceed with caution.</p>
+     * <p>This operation allows you to modify multiple configurations of a load balancing instance, including but not limited to the load balancing instance name, acceleration status, session persistence policy, and various advanced settings related to traffic routing.&gt;Notice: Changes to certain parameters may affect the stability of existing services. Proceed with caution.</p>
      * 
      * @param request the request parameters of UpdateLoadBalancer  UpdateLoadBalancerRequest
      * @return UpdateLoadBalancerResponse
@@ -8366,14 +8456,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows you to update a DNS record, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI record types. You can modify the record content by specifying the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin authentication information to ensure secure access.</p>
-     * <h3>Before you begin</h3>
+     * <p>This API operation allows you to update DNS records, including but not limited to A, AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI types. You can modify the record content by passing the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin server authentication information to ensure secure access.</p>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>The record value (Value) must match the record type. For example, a CNAME record must correspond to a target domain name.</li>
-     * <li>Certain record types, such as MX and SRV, require a priority (Priority) value.</li>
-     * <li>CAA records require specific fields such as Flag and Tag.</li>
-     * <li>When updating security records such as CERT and SSHFP, accurately set the Type, Algorithm, and other fields.</li>
-     * <li>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permission settings.</li>
+     * <li>The record value must match the record type. For example, a CNAME record must correspond to the target domain name.</li>
+     * <li>You must specify the priority for certain record types, such as MX and SRV.</li>
+     * <li>You must provide specific fields such as Flag and Tag for CAA records.</li>
+     * <li>When updating security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</li>
+     * <li>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permissions.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateRecord  UpdateRecordRequest
@@ -8675,7 +8765,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The site plan must be Enterprise Edition or higher to use the custom NS feature.</p>
+     * <p>The custom NS feature is available only for sites on the Enterprise edition plan.</p>
      * 
      * @param request the request parameters of UpdateSiteVanityNS  UpdateSiteVanityNSRequest
      * @return UpdateSiteVanityNSResponse
@@ -8732,8 +8822,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If ListTransportLayerApplications returns an empty Layer 4 acceleration application list, use CreateTransportLayerApplication to create a Layer 4 acceleration application, and then use this API to modify the configurations of the Layer 4 acceleration application.
-     * When creating a Layer 4 acceleration application, the selected site must be an activated site. After creating a site, call the VerifySite API to verify it. A site that passes verification is automatically activated, indicated by the response parameter Passed=true.</p>
+     * <p>If ListTransportLayerApplications returns an empty list of Layer 4 accelerated applications, you must use CreateTransportLayerApplication to create a Layer 4 accelerated application, and then use this API operation to modify multiple configurations of the application.
+     * When you create a Layer 4 accelerated application, the selected site must be activated. After you create a site, call the VerifySite API operation to verify the site. A site that passes the verification is automatically activated, which means the response parameter Passed is set to true.</p>
      * 
      * @param request the request parameters of UpdateTransportLayerApplication  UpdateTransportLayerApplicationRequest
      * @return UpdateTransportLayerApplicationResponse
@@ -8772,7 +8862,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</p>
+     * <p>Before calling this operation, you must create a task with the specified TaskName by calling CreateUserDeliveryTask. You can then use this operation to update the delivery task configuration.</p>
      * 
      * @param request the request parameters of UpdateUserDeliveryTask  UpdateUserDeliveryTaskRequest
      * @return UpdateUserDeliveryTaskResponse
@@ -8793,8 +8883,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a></h2>
-     * <p>Use this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</p>
+     * <p>This operation enables or disables the data delivery feature of a task based on the task name and method. The method must be specified as online or offline. The response returns the latest status of the task and the operation result details.</p>
      * 
      * @param request the request parameters of UpdateUserDeliveryTaskStatus  UpdateUserDeliveryTaskStatusRequest
      * @return UpdateUserDeliveryTaskStatusResponse
@@ -8817,9 +8906,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation updates an existing WAF ruleset. You can modify the position, name, description, status, and expression of the ruleset.</li>
-     * <li>Include only the parameters that you want to modify. Omit parameters that you do not want to change.</li>
-     * <li>Note: Before you call this operation, ensure that the <code>InstanceId</code> and <code>Id</code> values are correct. Otherwise, the request may fail.</li>
+     * <li>This operation allows you to update an existing WAF rule set. You can modify the position, name, description, status, and expression of the rule set.</li>
+     * <li>Specify only the parameters that you want to modify. You do not need to pass the key of a parameter that remains unchanged.</li>
+     * <li>Note: Make sure that you have obtained the correct <code>InstanceId</code> and <code>Id</code> values before you call this operation. Otherwise, the request may fail.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateUserWafRuleset  UpdateUserWafRulesetRequest

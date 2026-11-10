@@ -75,7 +75,7 @@ public class DeleteOriginClientCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteOriginClientCertificateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the site.</p>
+         * <p>The site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

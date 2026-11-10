@@ -152,7 +152,7 @@ public class AddUserBusinessFormRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx有限公司</p>
+         * <p>xxxx Co., Ltd</p>
          */
         public Builder company(String company) {
             this.putQueryParameter("Company", company);
@@ -191,7 +191,7 @@ public class AddUserBusinessFormRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>经理</p>
+         * <p>Manager</p>
          */
         public Builder position(String position) {
             this.putQueryParameter("Position", position);
@@ -203,7 +203,7 @@ public class AddUserBusinessFormRequest extends Request {
          * <p>Additional remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>请尽快联系我们</p>
+         * <p>Please contact us as soon as possible</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -216,7 +216,7 @@ public class AddUserBusinessFormRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

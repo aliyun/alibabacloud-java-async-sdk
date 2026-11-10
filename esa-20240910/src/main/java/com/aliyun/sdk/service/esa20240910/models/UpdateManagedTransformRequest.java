@@ -116,12 +116,10 @@ public class UpdateManagedTransformRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to add a header that contains visitor geolocation information. Valid values:</p>
+         * <p>Specifies whether to add the visitor geolocation header. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Add the header.</p>
-         * </li>
-         * <li><p><code>off</code>: Do not add the header.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,12 +132,10 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to add the <code>ali-real-client-ip</code> header, which contains the real client IP. Valid values:</p>
+         * <p>Specifies whether to add the ali-real-client-ip header that contains the real client IP address. Valid values:</p>
          * <ul>
-         * <li><p><code>on</code>: Add the header.</p>
-         * </li>
-         * <li><p><code>off</code>: Do not add the header.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,7 +148,7 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>The name of the header that contains the real client IP. The name must start with a letter and can contain letters, digits (0-9), and hyphens (-).</p>
+         * <p>The name of the real client IP address header. The name must start with a letter and can contain digits and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>test-header</p>
@@ -164,7 +160,7 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
+         * <p>The ID of the site. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +173,7 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>The version of the site. For sites with version management enabled, this parameter specifies the version to which the configuration applies. Default value: 0.</p>
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version to which the configuration applies. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

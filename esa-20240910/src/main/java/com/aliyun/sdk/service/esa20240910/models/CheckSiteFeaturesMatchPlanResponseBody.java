@@ -91,7 +91,7 @@ public class CheckSiteFeaturesMatchPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>65705631-908C-5D24-997C-17E0397721C8</p>
@@ -181,7 +181,7 @@ public class CheckSiteFeaturesMatchPlanResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The quota value of the current site.</p>
+             * <p>The current quota value of the site.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -203,7 +203,7 @@ public class CheckSiteFeaturesMatchPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota name.</p>
+             * <p>The name of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>cache_reserve</p>

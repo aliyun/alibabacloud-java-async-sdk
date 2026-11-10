@@ -75,7 +75,7 @@ public class DeleteRedirectRuleRequest extends Request {
         } 
 
         /**
-         * <p>The configuration ID, which can be obtained by calling the <a href="~~ListRedirectRules~~">ListRedirectRules</a> operation.</p>
+         * <p>The ID of the configuration. You can call the <a href="~~ListRedirectRules~~">ListRedirectRules</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteRedirectRuleRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

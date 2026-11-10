@@ -93,10 +93,10 @@ public class CheckSiteProjectNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Valid values:</p>
+         * <p>Indicates whether the project name can be added. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Can be added.</li>
-         * <li><strong>false</strong>: Cannot be added.</li>
+         * <li><strong>true</strong>: The name can be added.</li>
+         * <li><strong>false</strong>: The name cannot be added.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class CheckSiteProjectNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result description.</p>
+         * <p>The description of the result.</p>
          * 
          * <strong>example:</strong>
          * <p>project name pass the check</p>
@@ -119,7 +119,7 @@ public class CheckSiteProjectNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The real-time log project name.</p>
+         * <p>The name of the real-time log project.</p>
          * 
          * <strong>example:</strong>
          * <p>dcdn_waf_userAccount_log</p>

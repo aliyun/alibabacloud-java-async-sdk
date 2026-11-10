@@ -75,7 +75,7 @@ public class BatchCreateRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The list of DNS records to create.</p>
+         * <p>The list of DNS records to be created.</p>
          * <p>This parameter is required.</p>
          */
         public Builder recordList(java.util.List<RecordList> recordList) {
@@ -86,7 +86,7 @@ public class BatchCreateRecordsRequest extends Request {
         }
 
         /**
-         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class BatchCreateRecordsRequest extends Request {
             } 
 
             /**
-             * <p>The AccessKey of the account to which the origin belongs. This parameter is required when the origin type is OSS and the authentication type is private cross-account read, or when the origin type is S3 and the authentication type is private read.</p>
+             * <p>The AccessKey of the account to which the origin server belongs. This parameter is required when the origin server type is OSS and the origin server authentication type is private cross-account read, or when the origin server type is S3 and the origin server authentication type is private read.</p>
              * 
              * <strong>example:</strong>
              * <p>u0Nkg5gBK*******QF5wvKMM504JUHt</p>
@@ -208,12 +208,12 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The origin authentication type. Different origin types support different authentication types. The origin type refers to the SourceType parameter in this operation. When the origin type is OSS or S3, you must specify the authentication type. Valid values:</p>
+             * <p>The origin server authentication type. Different origin server types support different authentication types. The origin server type refers to the SourceType parameter in this operation. When the origin server type is OSS or S3, this parameter is required. Valid values:</p>
              * <ul>
-             * <li><strong>public</strong>: public read. Select this value when the origin type is OSS or S3 and the origin allows public read access.</li>
-             * <li><strong>private</strong>: private read. Select this value when the origin type is S3 and the origin allows only private read access.</li>
-             * <li><strong>private_same_account</strong>: private same-account read. Select this value when the origin type is OSS, the origin is under the same Alibaba Cloud account, and the origin allows only private read access.</li>
-             * <li><strong>private_cross_account</strong>: private cross-account read. Select this value when the origin type is OSS, the origin is under a different Alibaba Cloud account, and the origin allows only private read access.</li>
+             * <li><strong>public</strong>: public read. Select this value when the origin server type is OSS or S3 and the origin server is publicly readable.</li>
+             * <li><strong>private</strong>: private read. Select this value when the origin server type is S3 and the origin server is privately readable.</li>
+             * <li><strong>private_same_account</strong>: private same-account read. Select this value when the origin server type is OSS, the origin server is under the same Alibaba Cloud account, and the origin server is privately readable.</li>
+             * <li><strong>private_cross_account</strong>: private cross-account read. Select this value when the origin server type is OSS, the origin server is under a different Alibaba Cloud account, and the origin server is privately readable.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The region of the origin. This parameter is required when the origin type is S3. Obtain the region from the official S3 website.</p>
+             * <p>The region to which the origin server belongs. This parameter is required when the origin server type is S3. You can obtain the region of the origin server from the official website of S3.</p>
              * 
              * <strong>example:</strong>
              * <p>us-east-1</p>
@@ -236,7 +236,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The SecretKey of the account to which the origin belongs. This parameter is required when the origin type is OSS and the authentication type is private cross-account read, or when the origin type is S3 and the authentication type is private read.</p>
+             * <p>The SecretKey of the account to which the origin server belongs. This parameter is required when the origin server type is OSS and the origin server authentication type is private cross-account read, or when the origin server type is S3 and the origin server authentication type is private read.</p>
              * 
              * <strong>example:</strong>
              * <p>VIxuvJSA2S03f******kp208dy5w7</p>
@@ -247,12 +247,12 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The signature algorithm version. This parameter is available when the origin type is S3 and the authentication type is private read. Valid values:</p>
+             * <p>The signature algorithm version. This parameter is available when the origin server type is S3 and the origin server authentication type is private read. Valid values:</p>
              * <ul>
              * <li><strong>v2</strong></li>
              * <li><strong>v4</strong></li>
              * </ul>
-             * <p>Default value: v4.</p>
+             * <p>If this parameter is not specified, the default value is v4.</p>
              * 
              * <strong>example:</strong>
              * <p>v4</p>
@@ -478,7 +478,7 @@ public class BatchCreateRecordsRequest extends Request {
             } 
 
             /**
-             * <p>The encryption algorithm used by the record. Value range: <strong>0 to 255</strong>. This parameter applies to CERT and SSHFP records.</p>
+             * <p>The encryption algorithm used by the record. Valid values: <strong>0</strong> to <strong>255</strong>. This parameter applies to CERT and SSHFP records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -511,7 +511,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The flag of the CAA record, which indicates its priority and processing method. Value range: <strong>0 to 255</strong>.</p>
+             * <p>The flag of the CAA record, which indicates its priority and processing method. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>
@@ -522,7 +522,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The public key identifier of the record. Value range: <strong>0 to 65535</strong>. This parameter applies to CERT records.</p>
+             * <p>The public key identifier of the record. Valid values: <strong>0</strong> to <strong>65535</strong>. This parameter applies to CERT records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -533,7 +533,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The algorithm policy used to match or verify certificates. Value range: <strong>0 to 255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
+             * <p>The algorithm policy used by the record to match or verify the certificate. Valid values: <strong>0</strong> to <strong>255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -544,7 +544,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The port of the record. Value range: <strong>0 to 65535</strong>. This parameter applies only to SRV records.</p>
+             * <p>The port of the record. Valid values: <strong>0</strong> to <strong>65535</strong>. This parameter applies only to SRV records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -555,7 +555,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The priority of the record. Value range: <strong>0 to 65535</strong>. A smaller value indicates a higher priority. This parameter is required when you add MX, SRV, or URI records.</p>
+             * <p>The priority of the record. Valid values: <strong>0</strong> to <strong>65535</strong>. A smaller value indicates a higher priority. This parameter is required when you add MX, SRV, or URI records.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -566,7 +566,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The type of certificate or public key used by the record. Value range: <strong>0 to 255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
+             * <p>The type of the certificate or public key used by the record. Valid values: <strong>0</strong> to <strong>255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -577,7 +577,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The tag of the CAA record, which indicates its specific type and purpose, such as issue, issuewild, or iodef.</p>
+             * <p>The tag of the CAA record, which indicates its specific type and usage, such as issue, issuewild, and iodef.</p>
              * 
              * <strong>example:</strong>
              * <p>issue</p>
@@ -588,7 +588,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The certificate type (for CERT records) or public key type (for SSHFP records) of the record.</p>
+             * <p>The certificate type for CERT records or the public key type for SSHFP records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -599,7 +599,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The usage identifier of the record. Value range: <strong>0 to 255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
+             * <p>The usage identifier of the record. Valid values: <strong>0</strong> to <strong>255</strong>. This parameter applies to SMIMEA and TLSA records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -610,15 +610,15 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The record value or partial content. The meaning varies by record type:</p>
+             * <p>The record value or partial content.</p>
              * <ul>
              * <li><strong>A/AAAA</strong>: the IP address.</li>
              * <li><strong>CNAME</strong>: the target domain name.</li>
-             * <li><strong>MX</strong>: a valid target mail server domain name.</li>
-             * <li><strong>TXT</strong>: a valid text string.</li>
-             * <li><strong>CAA</strong>: a valid certification authority domain name.</li>
-             * <li><strong>SRV</strong>: a valid target host domain name.</li>
-             * <li><strong>URI</strong>: a valid URI string.</li>
+             * <li><strong>MX</strong>: the valid target mail server domain name.</li>
+             * <li><strong>TXT</strong>: the valid character string.</li>
+             * <li><strong>CAA</strong>: the valid domain name of the certification authority to issue certificates.</li>
+             * <li><strong>SRV</strong>: the valid target host domain name.</li>
+             * <li><strong>URI</strong>: the valid URI string.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -630,7 +630,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The weight of the record. Value range: <strong>0 to 65535</strong>. This parameter applies to SRV and URI records.</p>
+             * <p>The weight of the record. Valid values: <strong>0</strong> to <strong>65535</strong>. This parameter applies to SRV and URI records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -809,7 +809,7 @@ public class BatchCreateRecordsRequest extends Request {
             } 
 
             /**
-             * <p>The origin authentication information of the CNAME record.</p>
+             * <p>The origin server authentication information for the CNAME record.</p>
              */
             public Builder authConf(AuthConf authConf) {
                 this.authConf = authConf;
@@ -819,9 +819,9 @@ public class BatchCreateRecordsRequest extends Request {
             /**
              * <p>The business scenario for record acceleration. Valid values:</p>
              * <ul>
-             * <li><strong>image_video</strong>: video and image.</li>
-             * <li><strong>api</strong>: API.</li>
-             * <li><strong>web</strong>: web page.</li>
+             * <li><strong>image_video</strong>: images and videos.</li>
+             * <li><strong>api</strong>: API operations.</li>
+             * <li><strong>web</strong>: web pages.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -833,7 +833,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The DNS information of the record. Different fields are required based on the record type.</p>
+             * <p>The DNS information of the record. Specify different fields based on the record type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -847,7 +847,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * HttpPorts.
+             * <p>The HTTP port. By default, port 80 is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80,2052,2082,2086,2095,8080,8880</p>
              */
             public Builder httpPorts(String httpPorts) {
                 this.httpPorts = httpPorts;
@@ -855,7 +858,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * HttpsPorts.
+             * <p>The HTTPS port. By default, port 443 is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443,2053,2083,2087,2096,8443</p>
              */
             public Builder httpsPorts(String httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -863,10 +869,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable proxied acceleration for the record. Only CNAME records and A/AAAA records support proxied acceleration. Valid values:</p>
+             * <p>Specifies whether to enable proxy acceleration for the record. Only CNAME and A/AAAA records can enable proxy acceleration. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Proxied acceleration is enabled.</li>
-             * <li><strong>false</strong>: Proxied acceleration is disabled.</li>
+             * <li><strong>true</strong>: enables proxy acceleration.</li>
+             * <li><strong>false</strong>: disables proxy acceleration.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -891,15 +897,15 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The origin type of the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
+             * <p>The origin server type for the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
              * <ul>
-             * <li><strong>OSS</strong>: OSS origin.</li>
-             * <li><strong>S3</strong>: S3 origin.</li>
-             * <li><strong>LB</strong>: load balancing origin.</li>
-             * <li><strong>OP</strong>: IPAM pool origin.</li>
-             * <li><strong>Domain</strong>: common domain name origin.</li>
+             * <li><strong>OSS</strong>: an OSS origin server.</li>
+             * <li><strong>S3</strong>: an S3 origin server.</li>
+             * <li><strong>LB</strong>: a load balancing origin server.</li>
+             * <li><strong>OP</strong>: an IPAM pool origin server.</li>
+             * <li><strong>Domain</strong>: a common domain name origin server.</li>
              * </ul>
-             * <p>If this parameter is left empty or not specified, the default value is Domain, which indicates a common domain name origin.</p>
+             * <p>If this parameter is not specified or is left empty, the default value is Domain, which indicates a common domain name origin server type.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -910,7 +916,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The time-to-live (TTL) of the record, in seconds. A value of 1 indicates that the TTL is set to automatic.</p>
+             * <p>The time-to-live (TTL) of the record, in seconds. A value of 1 indicates that the TTL is automatic.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -922,7 +928,7 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * <p>The DNS type of the record.</p>
+             * <p>The DNS record type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

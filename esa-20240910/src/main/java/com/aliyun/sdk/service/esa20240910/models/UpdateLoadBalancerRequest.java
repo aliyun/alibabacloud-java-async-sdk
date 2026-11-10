@@ -257,7 +257,7 @@ public class UpdateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * <p>Configures origin-pull behavior across address pools.</p>
+         * <p>The cross-pool back-to-origin configuration.</p>
          */
         public Builder adaptiveRouting(AdaptiveRouting adaptiveRouting) {
             String adaptiveRoutingShrink = shrink(adaptiveRouting, "AdaptiveRouting", "json");
@@ -267,7 +267,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>A list of default address pool IDs.</p>
+         * <p>The list of default pool IDs.</p>
          */
         public Builder defaultPools(java.util.List<Long> defaultPools) {
             String defaultPoolsShrink = shrink(defaultPools, "DefaultPools", "json");
@@ -277,7 +277,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>An optional description of the load balancer for easier identification and management.</p>
+         * <p>The detailed description of the load balancing instance. This description facilitates management and identification.</p>
          * 
          * <strong>example:</strong>
          * <p>Load balancer description</p>
@@ -289,12 +289,10 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the load balancer is enabled.</p>
+         * <p>Specifies whether the load balancing instance is enabled.</p>
          * <ul>
-         * <li><p><code>true</code>: The load balancer is enabled.</p>
-         * </li>
-         * <li><p><code>false</code>: The load balancer is disabled.</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,7 +305,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the fallback address pool. Traffic is routed to this pool when all other address pools are unavailable.</p>
+         * <p>The fallback pool ID. Traffic is routed to this pool when all other pools are unavailable.</p>
          * 
          * <strong>example:</strong>
          * <p>96228666776****</p>
@@ -319,7 +317,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the load balancer. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> API operation.</p>
+         * <p>The load balancing instance ID. You can invoke the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> operation to obtain the load balancing instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +330,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The health check monitor configuration.</p>
+         * <p>The monitor configuration for health checks.</p>
          */
         public Builder monitor(Monitor monitor) {
             String monitorShrink = shrink(monitor, "Monitor", "json");
@@ -342,7 +340,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The configuration for weighted round-robin. This setting controls the weight of traffic distributed to different address pools.</p>
+         * <p>The weighted round-robin configuration. This configuration controls the traffic distribution weights for different pools.</p>
          */
         public Builder randomSteering(RandomSteering randomSteering) {
             String randomSteeringShrink = shrink(randomSteering, "RandomSteering", "json");
@@ -352,7 +350,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>A map of primary regions to their corresponding address pools.</p>
+         * <p>The pools that correspond to the primary regions.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -372,7 +370,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>A list of rules that define behavior overrides for specific conditions.</p>
+         * <p>The list of rule configurations. This list is used to define behavior overrides under specific conditions.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
@@ -382,14 +380,11 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The method for session affinity, which ensures that requests from the same client are routed to the same origin server. Valid values:</p>
+         * <p>The session persistence policy. Valid values:</p>
          * <ul>
-         * <li><p><code>off</code>: Disables session affinity.</p>
-         * </li>
-         * <li><p><code>ip</code>: Enables session affinity based on the client IP address.</p>
-         * </li>
-         * <li><p><code>cookie</code>: Enables session affinity based on a cookie.</p>
-         * </li>
+         * <li>off: Disabled.</li>
+         * <li>ip: Session persistence based on IP address.</li>
+         * <li>cookie: Session persistence based on cookie.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,7 +397,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Site. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> API operation.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -415,7 +410,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The traffic steering policy, which determines how traffic is distributed among the address pools.</p>
+         * <p>The load balancing policy.</p>
          * 
          * <strong>example:</strong>
          * <p>order</p>
@@ -427,7 +422,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>A map of secondary regions to their corresponding address pools. To assign the same address pools to multiple secondary regions, combine their codes into a single, comma-separated key.</p>
+         * <p>The pools that correspond to the secondary regions. When multiple secondary regions share the same set of pools, you can concatenate multiple secondary regions with commas (,) to use as the key.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
@@ -439,7 +434,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The Time to Live (TTL) for the DNS record, in seconds. The default is 30. The value must be between 10 and 600, inclusive.</p>
+         * <p>The time-to-live (TTL) value of the DNS record. Default value: 30. Valid values: 10 to 600.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -510,12 +505,10 @@ public class UpdateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to perform origin-pull across address pools.</p>
+             * <p>Specifies whether to enable cross-pool back-to-origin routing.</p>
              * <ul>
-             * <li><p><code>true</code>: Enables origin-pull across address pools.</p>
-             * </li>
-             * <li><p><code>false</code>: Disables origin-pull across address pools.</p>
-             * </li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -724,7 +717,7 @@ public class UpdateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The number of consecutive failed health checks required to declare an origin server unhealthy. For example, <code>5</code>.</p>
+             * <p>The number of consecutive failed probes required to consider the target unhealthy, such as 5.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -735,7 +728,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The number of consecutive successful health checks required to declare an origin server healthy. For example, <code>3</code>.</p>
+             * <p>The number of consecutive successful probes required to consider the target healthy, such as 3.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -746,7 +739,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The expected HTTP status codes that indicate a healthy response. For example, <code>200,202</code>.</p>
+             * <p>The expected status codes for a successful HTTP response, such as 200 and 202.</p>
              * 
              * <strong>example:</strong>
              * <p>200,202</p>
@@ -757,12 +750,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the health check monitor follows HTTP redirections.</p>
+             * <p>Specifies whether to follow redirects.</p>
              * <ul>
-             * <li><p><code>true</code>: The monitor follows HTTP redirections.</p>
-             * </li>
-             * <li><p><code>false</code>: The monitor does not follow HTTP redirections.</p>
-             * </li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -774,7 +765,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The HTTP request headers to send with each health check.</p>
+             * <p>The monitor request header configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -790,7 +781,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The interval in seconds between each health check. For example, <code>60</code>.</p>
+             * <p>The monitor interval, such as 60 seconds. This parameter specifies the check frequency.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -801,7 +792,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The HTTP method to use for the health check. For example, <code>GET</code>.</p>
+             * <p>The monitor request method, such as GET in the HTTP protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>GET</p>
@@ -812,14 +803,11 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The regions from which the health checks are performed. The default value is <code>Global</code>.</p>
+             * <p>The region where the probe nodes are located. Default value: Global. Valid values:</p>
              * <ul>
-             * <li><p><code>Global</code>: From probe locations worldwide.</p>
-             * </li>
-             * <li><p><code>ChineseMainland</code>: From probe locations within the Chinese mainland.</p>
-             * </li>
-             * <li><p><code>OutsideChineseMainland</code>: From probe locations outside the Chinese mainland.</p>
-             * </li>
+             * <li>Global: Global.</li>
+             * <li>ChineseMainland: The Chinese mainland.</li>
+             * <li>OutsideChineseMainland: Global (excluding the Chinese mainland).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -831,7 +819,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The path on the origin server to request for the health check. For example, <code>/healthcheck</code>.</p>
+             * <p>The health check path of the monitor, such as /healthcheck, which is the URI of the request.</p>
              * 
              * <strong>example:</strong>
              * <p>/health</p>
@@ -842,7 +830,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The port on the origin server to use for the health check.</p>
+             * <p>The origin server port.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -853,7 +841,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The timeout for the health check, in seconds. The value must be between 1 and 10, inclusive.</p>
+             * <p>The health check timeout period, in seconds. Valid values: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -864,7 +852,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The protocol to use for the health check, such as <code>HTTP</code>. If you set this to <code>off</code>, no health check is performed.</p>
+             * <p>The monitor protocol type for health checks, such as HTTP. A value of off indicates that health checks are disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -934,7 +922,7 @@ public class UpdateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The default weight applied to all address pools that do not have a specific weight defined. The value must be an integer from 0 to 100, inclusive.</p>
+             * <p>The default round-robin weight for all pools that do not have a specific weight configured. Valid values: integers from 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -945,7 +933,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>A map of pool IDs to their corresponding weights. These weights determine the proportion of traffic routed to each backend server pool.</p>
+             * <p>The weight configuration for each backend server pool. The key is the pool ID and the value is the weight coefficient. The weight coefficient indicates the proportion of relative traffic distribution.</p>
              */
             public Builder poolWeights(java.util.Map<String, Integer> poolWeights) {
                 this.poolWeights = poolWeights;
@@ -1038,7 +1026,7 @@ public class UpdateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The value of the <code>Content-Type</code> field in the HTTP response header.</p>
+             * <p>The Content-Type field in the HTTP header.</p>
              * 
              * <strong>example:</strong>
              * <p>application/json</p>
@@ -1049,7 +1037,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The value of the <code>Location</code> field in the HTTP response header. This is typically used for redirections.</p>
+             * <p>The Location field in the HTTP response.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com/index.html">http://www.example.com/index.html</a></p>
@@ -1060,7 +1048,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The content of the response body.</p>
+             * <p>The response body value.</p>
              * 
              * <strong>example:</strong>
              * <p>Hello World!</p>
@@ -1071,7 +1059,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The HTTP status code of the response.</p>
+             * <p>The response status code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -1206,7 +1194,7 @@ public class UpdateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The fixed response to return when the rule\&quot;s condition is met.</p>
+             * <p>The specified content to return in the response after a rule is matched.</p>
              */
             public Builder fixedResponse(FixedResponse fixedResponse) {
                 this.fixedResponse = fixedResponse;
@@ -1214,7 +1202,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The settings to override for requests that match this rule\&quot;s condition. These settings take precedence over the load balancer\&quot;s main configuration.</p>
+             * <p>The load balancing configuration to modify for request rewriting after a rule is matched. The configured fields overwrite the corresponding fields in the load balancing instance configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -1266,12 +1254,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The content of the rule, specified as a conditional expression to match user requests. This parameter is not required when you configure global settings. Use cases:</p>
+             * <p>The rule content. This parameter uses conditional expressions to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
              * <ul>
-             * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
-             * </li>
-             * <li><p>To match specific requests, set the value to a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
-             * </li>
+             * <li>Match all incoming requests: Set the value to true.</li>
+             * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1283,12 +1269,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the rule is enabled. This parameter is not required when you configure global settings. Valid values:</p>
+             * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
              * <ul>
-             * <li><p><code>on</code>: Enabled.</p>
-             * </li>
-             * <li><p><code>off</code>: Disabled.</p>
-             * </li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1300,7 +1284,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The name of the rule. This parameter is not required when you configure global settings.</p>
+             * <p>The rule name. This parameter is not required when you add a global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_1</p>
@@ -1311,7 +1295,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The execution priority of the rule. This parameter is optional. If you do not specify this parameter, rules are executed in the order they are listed. If specified, the value must be an integer greater than 0. A larger value indicates a higher priority.</p>
+             * <p>The rule execution sequence. This parameter is optional. If you do not specify this parameter, rules are executed in the order they appear in the list. If you specify this parameter, the value must be an integer greater than 0. A larger value indicates a higher execution priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1322,12 +1306,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to stop processing subsequent rules after this rule is matched.</p>
+             * <p>Specifies whether to stop executing subsequent rules.</p>
              * <ul>
-             * <li><p><code>true</code>: Stop processing subsequent rules.</p>
-             * </li>
-             * <li><p><code>false</code>: Continue processing subsequent rules. This is the default value.</p>
-             * </li>
+             * <li>true: Yes.</li>
+             * <li>false: No. This is the default value.</li>
              * </ul>
              * 
              * <strong>example:</strong>

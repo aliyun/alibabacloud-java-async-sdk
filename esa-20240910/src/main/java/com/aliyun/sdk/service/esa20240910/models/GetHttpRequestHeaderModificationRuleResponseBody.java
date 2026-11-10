@@ -158,7 +158,7 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration ID.</p>
+         * <p>The ID of the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>3528160969****</p>
@@ -171,10 +171,8 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
         /**
          * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li><p>global: A global configuration.</p>
-         * </li>
-         * <li><p>rule: A rule-based configuration.</p>
-         * </li>
+         * <li>global: Global configuration.</li>
+         * <li>rule: Rule configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,7 +184,7 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request header modifications. The add, delete, and modify operations are supported.</p>
+         * <p>The request header modification settings. Add, delete, and modify operations are supported.</p>
          */
         public Builder requestHeaderModification(java.util.List<RequestHeaderModification> requestHeaderModification) {
             this.requestHeaderModification = requestHeaderModification;
@@ -194,7 +192,7 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -205,12 +203,10 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of the rule, which uses a conditional expression to match user requests. This parameter is not required for global configurations. There are two scenarios:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li><p>To match all incoming requests, set the value to true.</p>
-         * </li>
-         * <li><p>To match specific requests, set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</p>
-         * </li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,12 +218,10 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the rule is enabled. This parameter is not required for global configurations. Valid values:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li><p>on: The rule is enabled.</p>
-         * </li>
-         * <li><p>off: The rule is disabled.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,7 +233,7 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the rule. This parameter is not required for global configurations.</p>
+         * <p>The name of the rule. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -250,7 +244,7 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution order of the rule. Rules with smaller values are executed first.</p>
+         * <p>The execution sequence of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -261,7 +255,7 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, this parameter specifies the site version to which the configuration applies. The default value is 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -367,14 +361,11 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation to perform. Valid values:</p>
+             * <p>The operation type. Valid values:</p>
              * <ul>
-             * <li><p>add: Adds a header.</p>
-             * </li>
-             * <li><p>del: Deletes a header.</p>
-             * </li>
-             * <li><p>modify: Modifies a header.</p>
-             * </li>
+             * <li>add: Add.</li>
+             * <li>del: Delete.</li>
+             * <li>modify: Modify.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -386,12 +377,10 @@ public class GetHttpRequestHeaderModificationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the value. Valid values:</p>
+             * <p>The value type. Valid values:</p>
              * <ul>
-             * <li><p>static: A static value.</p>
-             * </li>
-             * <li><p>dynamic: A dynamic value.</p>
-             * </li>
+             * <li>static: Static pattern.</li>
+             * <li>dynamic: Dynamic schema.</li>
              * </ul>
              * 
              * <strong>example:</strong>

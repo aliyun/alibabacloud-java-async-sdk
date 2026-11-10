@@ -117,7 +117,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -147,7 +147,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of rules after filtering.</p>
+         * <p>The total number of filtered rules.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -266,7 +266,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The managed rule ID.</p>
+             * <p>The ID of the managed rule.</p>
              * 
              * <strong>example:</strong>
              * <p>100001</p>
@@ -277,7 +277,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The managed rule name.</p>
+             * <p>The name of the managed rule.</p>
              * 
              * <strong>example:</strong>
              * <p>SQL injection</p>

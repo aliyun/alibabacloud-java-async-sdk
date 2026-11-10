@@ -78,7 +78,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of template rules.</p>
+         * <p>The list of returned template rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -202,7 +202,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The WAF running phase.</p>
+             * <p>The WAF phase.</p>
              * 
              * <strong>example:</strong>
              * <p>http_anti_scan</p>

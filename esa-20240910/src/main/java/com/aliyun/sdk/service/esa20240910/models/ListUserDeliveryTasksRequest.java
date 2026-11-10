@@ -87,13 +87,13 @@ public class ListUserDeliveryTasksRequest extends Request {
         } 
 
         /**
-         * <p>The log category. Valid values:</p>
-         * <ol>
-         * <li>dcdn_log_access_l1 (default): access logs.</li>
-         * <li>dcdn_log_er: Edge Routine logs.</li>
-         * <li>dcdn_log_waf: firewall logs.</li>
-         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
-         * </ol>
+         * <p>The real-time log type. Valid values:</p>
+         * <ul>
+         * <li><strong>dcdn_log_access_l1</strong> (default): Access logs.</li>
+         * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
+         * <li><strong>dcdn_log_waf</strong>: Security protection logs.</li>
+         * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>dcdn_log_access_l1</p>
@@ -105,7 +105,7 @@ public class ListUserDeliveryTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The number of the page to return. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListUserDeliveryTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The number of entries to return on each page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

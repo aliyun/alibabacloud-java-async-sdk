@@ -89,7 +89,7 @@ public class ListWaitingRoomEventsRequest extends Request {
         } 
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class ListWaitingRoomEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the waiting room event. This parameter is optional. You can specify this parameter to query a specific waiting room event.</p>
+         * <p>The waiting room event ID. This parameter is optional and is used to query a specific waiting room event.</p>
          * 
          * <strong>example:</strong>
          * <p>89677721098****</p>
@@ -114,7 +114,7 @@ public class ListWaitingRoomEventsRequest extends Request {
         }
 
         /**
-         * <p>The unique ID of the waiting room, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> operation.</p>
+         * <p>The waiting room ID, which is used to identify a specific waiting room. You can call the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> operation to obtain the waiting room ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

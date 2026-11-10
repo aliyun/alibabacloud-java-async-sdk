@@ -129,7 +129,7 @@ public class ListWafRulesetsRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Specifies the current page number for paging queries.</p>
+         * <p>The page number. This parameter specifies the current page number for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListWafRulesetsRequest extends Request {
         }
 
         /**
-         * <p>The page size. Specifies the number of records per page for paging queries.</p>
+         * <p>The page size. This parameter specifies the number of records per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -175,7 +175,7 @@ public class ListWafRulesetsRequest extends Request {
         }
 
         /**
-         * <p>The query parameters, passed in JSON format, including various filter conditions.</p>
+         * <p>The query parameters. The parameters are passed in JSON format and contain various filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>http_bot</p>
@@ -188,7 +188,7 @@ public class ListWafRulesetsRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -297,7 +297,7 @@ public class ListWafRulesetsRequest extends Request {
             } 
 
             /**
-             * <p>The fuzzy match string for the ruleset ID, ruleset name, rule ID, or rule name.</p>
+             * <p>The ruleset ID, ruleset name, rule ID, or rule name for fuzzy match.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -316,7 +316,7 @@ public class ListWafRulesetsRequest extends Request {
             }
 
             /**
-             * <p>The fuzzy match string for the ruleset name.</p>
+             * <p>The ruleset name for fuzzy match.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>

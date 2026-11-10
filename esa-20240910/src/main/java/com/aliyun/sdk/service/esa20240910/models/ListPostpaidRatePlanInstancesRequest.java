@@ -173,7 +173,7 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         /**
          * <p>Specifies whether to check for remaining site quotas. Valid values:</p>
          * <ul>
-         * <li><p>true: Queries instances that have remaining site quotas.</p>
+         * <li><p>true: Queries instances with remaining site quotas.</p>
          * </li>
          * <li><p>false: Does not filter by this condition.</p>
          * </li>
@@ -189,7 +189,7 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID, which is used to query a specific instance.</p>
+         * <p>The instance ID, which is used to precisely query a single instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-dps-xxxxxx</p>
@@ -201,7 +201,7 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number Settings for paging in a paged query. The value must be greater than or equal to 1.</p>
+         * <p>The page number for paging. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +213,7 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</p>
+         * <p>The page size for paging. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -234,9 +234,9 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies the field by which to sort the results. Valid values:</p>
+         * <p>The field by which to sort the results. Valid values:</p>
          * <ul>
-         * <li>CreateTime: sorts by creation time</li>
+         * <li>CreateTime: Sorts by creation time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,9 +251,9 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><p>asc: ascending order</p>
+         * <li><p>asc: Ascending order.</p>
          * </li>
-         * <li><p>desc: descending order</p>
+         * <li><p>desc: Descending order.</p>
          * </li>
          * </ul>
          * 
@@ -269,11 +269,11 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><p>online: normal status</p>
+         * <li><p>online: Normal.</p>
          * </li>
-         * <li><p>overdue: overdue payment</p>
+         * <li><p>overdue: Overdue payment.</p>
          * </li>
-         * <li><p>disable: released</p>
+         * <li><p>disable: Released.</p>
          * </li>
          * </ul>
          * 
@@ -287,7 +287,7 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether bot or DDoS protection is added to the instance.</p>
+         * <p>Specifies whether the instance has the Bot Management or Anti-DDoS add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>bot</p>

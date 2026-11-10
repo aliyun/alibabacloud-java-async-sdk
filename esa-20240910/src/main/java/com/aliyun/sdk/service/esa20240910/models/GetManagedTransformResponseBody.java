@@ -106,12 +106,10 @@ public class GetManagedTransformResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether a header that contains the visitor\&quot;s geolocation is added. Valid values:</p>
+         * <p>Indicates whether the visitor geolocation header is added. Valid values:</p>
          * <ul>
-         * <li><p>on: Enables this feature.</p>
-         * </li>
-         * <li><p>off: Disables this feature.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,12 +121,10 @@ public class GetManagedTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the &quot;ali-real-client-ip&quot; header is added to include the real client IP. Valid values:</p>
+         * <p>Indicates whether the ali-real-client-ip header containing the real client IP address is added. Valid values:</p>
          * <ul>
-         * <li><p>on: Enables this feature.</p>
-         * </li>
-         * <li><p>off: Disables this feature.</p>
-         * </li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +136,7 @@ public class GetManagedTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The real client IP header name.</p>
+         * <p>The name of the real client IP address header.</p>
          * 
          * <strong>example:</strong>
          * <p>test-header</p>
@@ -162,7 +158,7 @@ public class GetManagedTransformResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the site for which the configuration is returned.</p>
+         * <p>The site version number. For sites with version management enabled, you can use this parameter to specify the site version to which the configuration applies. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

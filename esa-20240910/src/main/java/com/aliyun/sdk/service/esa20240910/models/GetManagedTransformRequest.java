@@ -74,7 +74,7 @@ public class GetManagedTransformRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>The site version. If version management is enabled for the site, use this parameter to specify the version whose configuration you want to retrieve. The default is 0.</p>
+         * <p>The site version number. For sites with version management enabled, you can use this parameter to specify the site version to which the configuration applies. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

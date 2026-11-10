@@ -106,7 +106,7 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number. Default value: 0.</p>
+         * <p>The page number. Default value: <strong>0</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -117,7 +117,7 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>20</strong>. Valid values: <strong>1 to 500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -139,7 +139,7 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The delivery tasks.</p>
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -147,7 +147,7 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of log delivery tasks.</p>
+         * <p>The total number of real-time log projects.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -255,12 +255,12 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The log category. Valid values:</p>
+             * <p>The real-time log type. Valid values:</p>
              * <ul>
-             * <li>dcdn_log_access_l1 (default): access logs.</li>
-             * <li>dcdn_log_er: Edge Routine logs.</li>
-             * <li>dcdn_log_waf: firewall logs.</li>
-             * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+             * <li><strong>dcdn_log_access_l1</strong> (default): Access logs.</li>
+             * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
+             * <li><strong>dcdn_log_waf</strong>: Security protection logs.</li>
+             * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -274,8 +274,8 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
             /**
              * <p>The data center. Valid values:</p>
              * <ul>
-             * <li>cn: the Chinese mainland.</li>
-             * <li>sg: outside the Chinese mainland.</li>
+             * <li><strong>cn</strong>: The Chinese mainland.</li>
+             * <li><strong>sg</strong>: Global (excluding the Chinese mainland).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -287,15 +287,15 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination of the delivery. Valid values:</p>
-             * <ol>
-             * <li>sls: Alibaba Cloud Simple Log Service (SLS).</li>
-             * <li>http: HTTP server.</li>
-             * <li>aws3: Amazon Simple Storage Service (S3).</li>
-             * <li>oss: Alibaba Cloud Object Storage Service (OSS).</li>
-             * <li>kafka: Kafka.</li>
-             * <li>aws3cmpt: S3-compatible storage service.</li>
-             * </ol>
+             * <p>The delivery type. Valid values:</p>
+             * <ul>
+             * <li><strong>sls</strong>: Simple Log Service.</li>
+             * <li><strong>http</strong>: HTTP service.</li>
+             * <li><strong>aws3</strong>: Amazon S3 service.</li>
+             * <li><strong>oss</strong>: Object Storage Service (OSS).</li>
+             * <li><strong>kafka</strong>: Kafka service.</li>
+             * <li><strong>aws3cmpt</strong>: Amazon S3-compatible service.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>sls</p>
@@ -306,10 +306,12 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the delivery task.</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>online</strong></li>
-             * <li><strong>offline</strong></li>
+             * <li><p><strong>online</strong>: Pushing.</p>
+             * </li>
+             * <li><p><strong>offline</strong>: Paused.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -321,7 +323,7 @@ public class ListSiteDeliveryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the delivery task.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
              * <p>cdn-test-task</p>

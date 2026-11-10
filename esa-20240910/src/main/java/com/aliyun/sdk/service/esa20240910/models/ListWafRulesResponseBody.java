@@ -176,7 +176,7 @@ public class ListWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of rules returned.</p>
+         * <p>The returned list of rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -433,12 +433,12 @@ public class ListWafRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action associated with the rule. Valid values:</p>
+             * <p>The action corresponding to the rule. Valid values:</p>
              * <ul>
-             * <li>deny: Block.</li>
-             * <li>monitor: Monitor.</li>
-             * <li>js: JavaScript Challenge.</li>
-             * <li>captcha: Slider challenge.</li>
+             * <li>deny: block</li>
+             * <li>monitor: monitor</li>
+             * <li>js: JavaScript challenge</li>
+             * <li>captcha: slider challenge</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -450,7 +450,7 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of statistical objects for frequency control rules.</p>
+             * <p>The list of statistical objects for rate limiting rules.</p>
              */
             public Builder characteristicsFields(java.util.List<String> characteristicsFields) {
                 this.characteristicsFields = characteristicsFields;
@@ -466,7 +466,7 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of matching fields for the rule.</p>
+             * <p>The list of match fields for the rule.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -496,16 +496,16 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The WAF rule execution phase. Valid values:</p>
+             * <p>The execution phase of the WAF rule. Valid values:</p>
              * <ul>
-             * <li>http_whitelist: whitelist rule</li>
-             * <li>http_custom: custom rule</li>
-             * <li>http_managed: managed rule</li>
-             * <li>http_anti_scan: scan protection rule</li>
-             * <li>http_ratelimit: frequency control rule</li>
-             * <li>ip_access_rule: IP access rule</li>
-             * <li>http_bot: advanced mode bots</li>
-             * <li>http_security_level_rule: security rule</li>
+             * <li>http_whitelist: whitelist rules</li>
+             * <li>http_custom: custom rules</li>
+             * <li>http_managed: managed rules</li>
+             * <li>http_anti_scan: scan protection rules</li>
+             * <li>http_ratelimit: rate limiting rules</li>
+             * <li>ip_access_rule: IP access rules</li>
+             * <li>http_bot: advanced bot management</li>
+             * <li>http_security_level_rule: security rules</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -517,7 +517,7 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The position of the rule in the corresponding ruleset.</p>
+             * <p>The position sequence of the rule in the corresponding ruleset.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -561,7 +561,7 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of WAF phases to skip for whitelist rules.</p>
+             * <p>The list of skipped WAF phases for whitelist rules.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -588,8 +588,8 @@ public class ListWafRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the rule.</p>
-             * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+             * <p>The last update time of the rule.</p>
+             * <p>Format: RFC 3339 or ISO 8601, UTC time zone (ending with Z).</p>
              * <p>Example: 2026-06-10T14:23:45Z</p>
              * 
              * <strong>example:</strong>

@@ -75,7 +75,7 @@ public class GetCompressionRuleRequest extends Request {
         } 
 
         /**
-         * <p>Configuration ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867498.html">ListCompressionRules</a> interface.</p>
+         * <p>The ID of the configuration. You can call the <a href="https://help.aliyun.com/document_detail/2867498.html">ListCompressionRules</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetCompressionRuleRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

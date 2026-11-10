@@ -67,7 +67,7 @@ public class GetSiteCurrentNSResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The nameservers of the website.</p>
+         * <p>The list of current name servers for the site.</p>
          */
         public Builder NSList(java.util.List<String> NSList) {
             this.NSList = NSList;

@@ -54,7 +54,7 @@ public class DeleteRedirectRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>BF9B849D-D847-5B16-9371-8ECB557A5921</p>

@@ -67,7 +67,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID, which is used to trace a call.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>f3c3700a-4c0f-4a24-b576-fd7dbf9e7c55</p>
@@ -78,7 +78,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the waiting room events.</p>
+         * <p>The list of waiting room events, which contains the specific information of each event.</p>
          */
         public Builder waitingRoomEvents(java.util.List<WaitingRoomEvents> waitingRoomEvents) {
             this.waitingRoomEvents = waitingRoomEvents;
@@ -378,7 +378,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the custom waiting room page. This parameter is returned when the waiting room type is set to custom. The content is URL-encoded.</p>
+             * <p>The custom content of the waiting room page. This parameter is required when the waiting room type is custom. The content must be URL-encoded.</p>
              * 
              * <strong>example:</strong>
              * <p>html-yets-maqi1111</p>
@@ -389,7 +389,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event description.</p>
+             * <p>The detailed description of the event.</p>
              * 
              * <strong>example:</strong>
              * <p>terraform-example</p>
@@ -400,12 +400,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether session renewal is disabled. Valid values:</p>
+             * <p>Specifies whether session renewal is disabled. Valid values:</p>
              * <ul>
-             * <li><p>on</p>
-             * </li>
-             * <li><p>off</p>
-             * </li>
+             * <li><strong>on</strong>: Enabled.</li>
+             * <li><strong>off</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -417,12 +415,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event status. Valid values:</p>
+             * <p>The enabled status of the event. Valid values:</p>
              * <ul>
-             * <li><p>on</p>
-             * </li>
-             * <li><p>off</p>
-             * </li>
+             * <li><strong>on</strong>: Enabled.</li>
+             * <li><strong>off</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -434,7 +430,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the event. This value is a UNIX timestamp.</p>
+             * <p>The end time of the event. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1719814497</p>
@@ -445,12 +441,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether JOSN response is enabled. If JSON response is enabled, a JSON body is returned for requests to the waiting room with the header Accept: application/json. Valid values:</p>
+             * <p>Specifies whether to enable JSON responses. If this feature is enabled and the Accept request header contains &quot;application/json&quot;, JSON data is returned. Valid values:</p>
              * <ul>
-             * <li><p>on</p>
-             * </li>
-             * <li><p>off</p>
-             * </li>
+             * <li><strong>on</strong>: Enabled.</li>
+             * <li><strong>off</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -462,14 +456,11 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the waiting room page. This parameter is returned when the waiting room type is set to default. Valid values:</p>
+             * <p>The language of the waiting room page. This parameter is required when the waiting room type is default. Valid values:</p>
              * <ul>
-             * <li><p>enus: English.</p>
-             * </li>
-             * <li><p>zhcn: Simplified Chinese.</p>
-             * </li>
-             * <li><p>zhhk: Traditional Chinese.</p>
-             * </li>
+             * <li><strong>enus</strong>: English.</li>
+             * <li><strong>zhcn</strong>: Simplified Chinese.</li>
+             * <li><strong>zhhk</strong>: Traditional Chinese.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -481,7 +472,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom event name.</p>
+             * <p>The event name, which is a custom event description.</p>
              * 
              * <strong>example:</strong>
              * <p>test event</p>
@@ -492,7 +483,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of new users per minute.</p>
+             * <p>The number of new users per minute.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -503,12 +494,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether pre-queuing is enabled. Valid values:</p>
+             * <p>Specifies whether to enable pre-queuing. Valid values:</p>
              * <ul>
-             * <li><p>on</p>
-             * </li>
-             * <li><p>off</p>
-             * </li>
+             * <li><strong>on</strong>: Enabled.</li>
+             * <li><strong>off</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -520,7 +509,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time for pre-queuing. This value is a UNIX timestamp. This parameter is valid only when pre-queuing is enabled.</p>
+             * <p>The start time of pre-queuing. The value is a UNIX timestamp. This parameter is valid only when pre-queuing is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1719814097</p>
@@ -533,14 +522,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>The queuing method. Valid values:</p>
              * <ul>
-             * <li><p>random: Users gain access to the origin randomly, regardless of the arrival time.</p>
-             * </li>
-             * <li><p>fifo: Users gain access to the origin in order of arrival.</p>
-             * </li>
-             * <li><p>passthrough: Users pass through the waiting room and go straight to the origin.</p>
-             * </li>
-             * <li><p>reject-all: Users are blocked from reaching the origin.</p>
-             * </li>
+             * <li><strong>random</strong>: Random.</li>
+             * <li><strong>fifo</strong>: First-in, first-out (FIFO).</li>
+             * <li><strong>passthrough</strong>: Passthrough.</li>
+             * <li><strong>reject-all</strong>: Reject all.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -552,14 +537,11 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
+             * <p>The waiting room status code. Valid values:</p>
              * <ul>
-             * <li><p>200</p>
-             * </li>
-             * <li><p>202</p>
-             * </li>
-             * <li><p>429</p>
-             * </li>
+             * <li><strong>200</strong></li>
+             * <li><strong>202</strong></li>
+             * <li><strong>429</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -571,12 +553,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether random queuing is enabled. Valid values:</p>
+             * <p>Specifies whether to enable random pre-queuing. Valid values:</p>
              * <ul>
-             * <li><p>on</p>
-             * </li>
-             * <li><p>off</p>
-             * </li>
+             * <li><strong>on</strong>: Enabled.</li>
+             * <li><strong>off</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -588,7 +568,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum duration for which a session remains valid after a user leaves the origin. Unit: minutes.</p>
+             * <p>The session duration, in minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -599,7 +579,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the event. This value is a UNIX timestamp.</p>
+             * <p>The start time of the event. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1719814398</p>
@@ -610,7 +590,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of active users.</p>
+             * <p>The total number of active users.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -621,7 +601,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the waiting room event.</p>
+             * <p>The event ID, which uniquely identifies a waiting room event.</p>
              * 
              * <strong>example:</strong>
              * <p>89677721098****</p>
@@ -632,7 +612,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the waiting room associated with the event.</p>
+             * <p>The ID of the associated waiting room.</p>
              * 
              * <strong>example:</strong>
              * <p>5c938a045c9ca46607163d34966****</p>
@@ -643,12 +623,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the waiting room. Valid values:</p>
+             * <p>The waiting room type. Valid values:</p>
              * <ul>
-             * <li><p>default</p>
-             * </li>
-             * <li><p>custom</p>
-             * </li>
+             * <li><strong>default</strong>: Default type.</li>
+             * <li><strong>custom</strong>: Custom type.</li>
              * </ul>
              * 
              * <strong>example:</strong>

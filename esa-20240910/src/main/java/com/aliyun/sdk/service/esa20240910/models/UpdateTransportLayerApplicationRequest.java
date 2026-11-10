@@ -159,7 +159,7 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The Layer 4 application ID. You can call the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> operation to obtain the application ID.</p>
+         * <p>The Layer 4 application ID. You can obtain the ID by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> API operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,10 +172,10 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable network access optimization for the Chinese mainland. This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable network access optimization for the Chinese mainland. Default value: off. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,10 +188,10 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         }
 
         /**
-         * <p>The IP access rule switch. When enabled, WAF IP access rules take effect for the Layer 4 application. Valid values:</p>
+         * <p>Specifies whether to enable the IP access rule. After this feature is enabled, the IP access rules in WAF take effect for the Layer 4 application. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,10 +204,10 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         }
 
         /**
-         * <p>The IPv6 switch. Valid values:</p>
+         * <p>Specifies whether to enable IPv6. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,10 +220,10 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable keep-alive protection. This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable connection keep-alive protection. Default value: off. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         }
 
         /**
-         * <p>The list of forwarding rules. For each rule, all parameters except the comment are required.</p>
+         * <p>The list of forwarding rules. For rule details, all parameters except the comment are required for each rule.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
@@ -246,7 +246,7 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the ID by calling the <a href="~~ListSites~~">ListSites</a> API operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,10 +259,10 @@ public class UpdateTransportLayerApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable static IP. This feature is disabled by default. Valid values:</p>
+         * <p>Specifies whether to enable the static IP address feature. Default value: off. Valid values:</p>
          * <ul>
-         * <li>on: enabled.</li>
-         * <li>off: disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -399,12 +399,12 @@ public class UpdateTransportLayerApplicationRequest extends Request {
             } 
 
             /**
-             * <p>The client IP pass-through protocol. Valid values:</p>
+             * <p>The client IP address pass-through protocol. Valid values:</p>
              * <ul>
-             * <li><strong>off</strong>: disabled.</li>
-             * <li><strong>PPv1</strong>: PROXY Protocol v1, which supports client IP pass-through for TCP.</li>
-             * <li><strong>PPv2</strong>: PROXY Protocol v2, which supports client IP pass-through for TCP and UDP.</li>
-             * <li><strong>SPP</strong>: Simple Proxy Protocol, which supports client IP pass-through for UDP.</li>
+             * <li><strong>off</strong>: Do not pass through.</li>
+             * <li><strong>PPv1</strong>: PROXY protocol v1, which supports client IP address pass-through for the TCP protocol.</li>
+             * <li><strong>PPv2</strong>: PROXY protocol v2, which supports client IP address pass-through for the TCP and UDP protocols.</li>
+             * <li><strong>SPP</strong>: Simple Proxy Protocol, which supports client IP address pass-through for the UDP protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -431,8 +431,8 @@ public class UpdateTransportLayerApplicationRequest extends Request {
              * <ul>
              * <li>A single port, such as 80.</li>
              * <li>A port range, such as 81-85, which represents ports 81, 82, 83, 84, and 85.</li>
-             * <li>A combination of ports and port ranges separated by commas, such as 80,81-85,90, which represents ports 80, 81, 82, 83, 84, 85, and 90.</li>
-             * <li>Edge ports within a single rule and across multiple rules cannot overlap.</li>
+             * <li>A combination of ports and port ranges, separated by commas, such as 80,81-85,90, which represents ports 80, 81, 82, 83, 84, 85, and 90.</li>
+             * <li>The edge ports within a single rule and the edge ports across multiple rules must not overlap.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -444,10 +444,10 @@ public class UpdateTransportLayerApplicationRequest extends Request {
             }
 
             /**
-             * <p>The forwarding rule protocol. Valid values:</p>
+             * <p>The protocol of the forwarding rule. Valid values:</p>
              * <ul>
-             * <li>TCP: TCP protocol.</li>
-             * <li>UDP: UDP protocol.</li>
+             * <li>TCP: TCP.</li>
+             * <li>UDP: UDP.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -459,7 +459,7 @@ public class UpdateTransportLayerApplicationRequest extends Request {
             }
 
             /**
-             * <p>The specific value of the origin.</p>
+             * <p>The specific value of the origin server.</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.1.1</p>
@@ -470,10 +470,10 @@ public class UpdateTransportLayerApplicationRequest extends Request {
             }
 
             /**
-             * <p>Origin Server Port. Valid values:</p>
+             * <p>The origin server port. Valid values:</p>
              * <ul>
-             * <li>A single port. When Origin Server Port is a single port, any valid edge port combination is supported.</li>
-             * <li>A port range. Origin Server Port can be set to a port range only when the edge port is a port range, and the range size must match the edge port range. For example, if the edge port is 90-93, you cannot set Origin Server Port to 81-85 because Origin Server Port range is 5 while the edge port range is 4, which are inconsistent.</li>
+             * <li>A single port. If the origin server port is a single port, any valid combination of edge ports is supported.</li>
+             * <li>A port range. The origin server port can be set to a port range only when the edge port is a port range, and the range size must be the same as that of the edge port. For example, if the edge port is 90-93, you cannot set the origin server port to 81-85 because the origin server port range is 5 and the edge port range is 3, which are inconsistent.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -485,12 +485,12 @@ public class UpdateTransportLayerApplicationRequest extends Request {
             }
 
             /**
-             * <p>The origin type. Valid values:</p>
+             * <p>The origin server type. Valid values:</p>
              * <ul>
              * <li><strong>ip</strong>: IP address.</li>
-             * <li><strong>domain</strong>: domain name.</li>
-             * <li><strong>OP</strong>: origin IPAM pool.</li>
-             * <li><strong>LB</strong>: load balancing.</li>
+             * <li><strong>domain</strong>: Domain name.</li>
+             * <li><strong>OP</strong>: Origin IPAM pool.</li>
+             * <li><strong>LB</strong>: Load balancing.</li>
              * </ul>
              * 
              * <strong>example:</strong>

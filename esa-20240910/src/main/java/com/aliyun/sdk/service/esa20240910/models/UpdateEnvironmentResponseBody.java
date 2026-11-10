@@ -54,7 +54,7 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>52DD50C2-C381-13BD-A269-5FAEEB848ACD</p>

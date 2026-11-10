@@ -102,7 +102,7 @@ public class ListRoutineRelatedRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the function.</p>
+         * <p>The name of the Edge Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ListRoutineRelatedRecordsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the returned page. Default value: 1</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,7 @@ public class ListRoutineRelatedRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: an integer from 1 to 20.</p>
+         * <p>The number of entries per page. Valid values: any integer from 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -139,7 +139,7 @@ public class ListRoutineRelatedRecordsRequest extends Request {
         }
 
         /**
-         * <p>The keyword used for fuzzy search.</p>
+         * <p>The keyword for fuzzy search.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>

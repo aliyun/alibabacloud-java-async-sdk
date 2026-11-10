@@ -99,7 +99,7 @@ public class ListSliderCaptchaPagesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -167,7 +167,7 @@ public class ListSliderCaptchaPagesRequest extends Request {
             } 
 
             /**
-             * <p>The fuzzy search keyword for the name.</p>
+             * <p>The fuzzy name search.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>

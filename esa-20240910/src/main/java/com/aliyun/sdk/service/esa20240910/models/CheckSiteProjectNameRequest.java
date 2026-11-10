@@ -74,9 +74,9 @@ public class CheckSiteProjectNameRequest extends Request {
         } 
 
         /**
-         * <p>The real-time log project name.</p>
+         * <p>The name of the real-time log project.</p>
          * <blockquote>
-         * <p>Allowed character set (hyphens only, no underscores), length range, and naming rule examples (such as \&quot;ali-dcdn-log-56\&quot;)</p>
+         * <p>Allowed character set (hyphens only, no underscores), length limits, and naming convention examples (such as \&quot;ali-dcdn-log-56\&quot;).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -90,7 +90,7 @@ public class CheckSiteProjectNameRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>12312312213212</p>

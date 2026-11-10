@@ -130,17 +130,17 @@ public class BatchCreateWafRulesRequest extends Request {
         } 
 
         /**
-         * <p>The list of rule configurations. Specifies the detailed configuration for each rule.</p>
-         * <p><strong>Required subfields for each phase</strong> (applicable only to the two phases supported by this batch operation):</p>
+         * <p>The list of rule configurations, which specifies the detailed configuration of each rule.</p>
+         * <p><strong>Required subfields for each phase</strong> (only applicable to the two phases supported by this batch operation):</p>
          * <ul>
-         * <li><code>http_anti_scan</code>: You must specify <code>Type</code> and at least one of <code>ManagedList</code> or <code>RateLimit</code>.</li>
-         * <li><code>http_bot</code>: You must specify the advanced mode bots configuration. The subfields are defined in the <code>WafRuleConfig</code> data structure.</li>
+         * <li>http_anti_scan: You must provide Type and at least one of ManagedList or RateLimit.</li>
+         * <li>http_bot: You must provide configurations related to advanced bots. The subfields are subject to the WafRuleConfig data structure definition.</li>
          * </ul>
          * <blockquote>
-         * <p>Note: Other phases such as <code>http_custom</code> and <code>http_whitelist</code> cannot use this batch operation. Use the single-rule operation <code>CreateWafRule</code> instead. The subfield constraints are described in the single-rule operation documentation.</p>
+         * <p>Note: Other phases such as http_custom and http_whitelist cannot use this batch operation. Use the single-item operation CreateWafRule instead. The subfield constraints are subject to the single-item operation documentation.</p>
          * </blockquote>
          * <blockquote>
-         * <p>If <code>Configs</code> is not specified or required subfields are missing, the service returns <code>InvalidParameter(400)</code> or <code>Rule.Config.Malformed</code>.</p>
+         * <p>Notice: If Configs is missing or subfields are missing, the service returns InvalidParameter(400) or Rule.Config.Malformed.</p>
          * </blockquote>
          */
         public Builder configs(java.util.List<WafRuleConfig> configs) {
@@ -151,16 +151,16 @@ public class BatchCreateWafRulesRequest extends Request {
         }
 
         /**
-         * <p>The WAF rule execution phase. This <strong>batch operation supports only</strong> the following two phases. For other phases, use the single-rule operations <code>CreateWafRule</code> or <code>UpdateWafRule</code>:</p>
+         * <p>The execution phase of the WAF rule. This <strong>batch operation only supports</strong> the following two phases. For other phases, use the single-item operations CreateWafRule or UpdateWafRule:</p>
          * <ul>
-         * <li><code>http_anti_scan</code>: scan protection rules</li>
-         * <li><code>http_bot</code>: advanced mode bots</li>
+         * <li>http_anti_scan: Scan protection rules.</li>
+         * <li>http_bot: Advanced bots.</li>
          * </ul>
          * <blockquote>
-         * <p>Note: The <code>http_anti_scan</code> and <code>http_bot</code> phases <strong>support only batch creation</strong>. The single-rule operation <code>CreateWafRule</code> does not accept these two values. Conversely, other phases such as <code>http_custom</code> and <code>http_whitelist</code> can be created only by using single-rule operations and cannot use this batch operation.</p>
+         * <p>Note: The http_anti_scan and http_bot phases <strong>only support batch creation</strong>. The single-item operation CreateWafRule does not accept these two values. Conversely, other phases (such as http_custom and http_whitelist) can only be created by using the single-item operation and cannot use this batch operation.</p>
          * </blockquote>
-         * <p><strong>Required constraint</strong>: Although this parameter is marked as optional (required: false) in the specification, it is <strong>required</strong> when you call this batch operation. If this parameter is not specified, the service returns <code>InvalidParameter(400)</code>.</p>
-         * <p><strong>Plan prerequisite</strong>: <code>http_anti_scan</code> requires the site to have a <strong>high or higher plan</strong>. Calling this operation with a basic plan returns <code>Phase.HttpAntiScan.NotSupport</code>. Verify the site plan before calling this operation.</p>
+         * <p><strong>Required constraint</strong>: Although this parameter is marked as optional (required: false) in the specification, it <strong>must be provided</strong> when you call this batch operation. If it is not provided, the service returns InvalidParameter(400).</p>
+         * <p><strong>Edition prerequisite</strong>: http_anti_scan requires the site to have the <strong>High edition or higher</strong>. Calls from the Basic edition return Phase.HttpAntiScan.NotSupport. Verify the site edition before you call the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>http_anti_scan</p>
@@ -172,7 +172,7 @@ public class BatchCreateWafRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</p>
+         * <p>The ID of the WAF ruleset. You can obtain the ruleset ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -184,9 +184,9 @@ public class BatchCreateWafRulesRequest extends Request {
         }
 
         /**
-         * <p>The shared configuration for multiple rules. Specifies the common properties of multiple rules.</p>
-         * <p><strong>Conditionally required</strong>: Although this parameter is marked as optional (required: false) in the specification, it is <strong>required</strong> when <code>Phase=http_anti_scan</code>. If this parameter is not specified, the service returns <code>InvalidParameter(400)</code>.</p>
-         * <p><strong>Subfield requirements</strong>: In the <code>http_anti_scan</code> phase, Shared must include shared fields such as <code>Name</code> (rule name) and <code>Action</code> (rule action). For other phases, the required subfields of Shared vary depending on the specific phase.</p>
+         * <p>The shared configuration for multiple rules, which specifies the common attributes of the rules.</p>
+         * <p><strong>Conditionally required</strong>: Although this parameter is marked as optional (required: false) in the specification, it is <strong>actually required</strong> when Phase is set to http_anti_scan. If it is not provided, the service returns InvalidParameter(400).</p>
+         * <p><strong>Subfield requirements</strong>: In the http_anti_scan phase, Shared must include shared fields such as Name (rule name) and Action (rule action). For other phases, the required subfields of Shared depend on the specific phase.</p>
          */
         public Builder shared(WafBatchRuleShared shared) {
             String sharedShrink = shrink(shared, "Shared", "json");
@@ -196,7 +196,7 @@ public class BatchCreateWafRulesRequest extends Request {
         }
 
         /**
-         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class BatchCreateWafRulesRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version where the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

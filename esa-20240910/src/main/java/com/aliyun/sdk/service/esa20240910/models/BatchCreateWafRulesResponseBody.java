@@ -80,7 +80,7 @@ public class BatchCreateWafRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the WAF rules. You can call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation to obtain the rule IDs.</p>
+         * <p>The IDs of the WAF rules. You can obtain the rule IDs by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             this.ids = ids;
@@ -99,7 +99,7 @@ public class BatchCreateWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</p>
+         * <p>The ID of the WAF ruleset. You can obtain the ruleset ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>

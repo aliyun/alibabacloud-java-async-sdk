@@ -106,7 +106,7 @@ public class GetOriginClientCertificateHostnamesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The associated hostnames.</p>
+         * <p>The list of bound domain names.</p>
          */
         public Builder hostnames(java.util.List<String> hostnames) {
             this.hostnames = hostnames;

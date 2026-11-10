@@ -186,11 +186,11 @@ public class ListRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The business scenario for record acceleration. Used as a filter condition for queries. Valid values:</p>
+         * <p>The business scenario for record acceleration. This parameter is used as a filter condition for the query. Valid values:</p>
          * <ul>
-         * <li><strong>image_video</strong>: Image and video.</li>
-         * <li><strong>api</strong>: API.</li>
-         * <li><strong>web</strong>: Web page.</li>
+         * <li><strong>image_video</strong>: images and videos</li>
+         * <li><strong>api</strong>: APIs</li>
+         * <li><strong>web</strong>: web pages</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,14 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * CustomPort.
+         * <p>Specifies whether a custom port is enabled for the record. Valid values:</p>
+         * <ul>
+         * <li>on: enabled</li>
+         * <li>off: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder customPort(String customPort) {
             this.putQueryParameter("CustomPort", customPort);
@@ -212,7 +219,7 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * <p>The page number for paginated queries. The value must be greater than or equal to 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number for paging. The value must be greater than or equal to 1. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,7 +231,7 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for paginated queries. Valid values: 1 to 500. Default value: <strong>500</strong>.</p>
+         * <p>The number of entries per page for paging. Valid values: 1 to 500. Default value: <strong>500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -236,10 +243,10 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether proxy acceleration is enabled for the record. Used as a filter condition for queries. Valid values:</p>
+         * <p>Specifies whether proxy acceleration is enabled for the record. This parameter is used as a filter condition for the query. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Proxy enabled.</li>
-         * <li><strong>false</strong>: Proxy acceleration disabled.</li>
+         * <li><strong>true</strong>: Proxy acceleration is enabled.</li>
+         * <li><strong>false</strong>: Proxy acceleration is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -252,12 +259,12 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * <p>The search matching mode for record names. Defaults to exact match. Valid values:</p>
+         * <p>The search match mode for the record name. Default value: exact. Valid values:</p>
          * <ul>
-         * <li><strong>prefix</strong>: Prefix match.</li>
-         * <li><strong>suffix</strong>: Suffix match.</li>
-         * <li><strong>exact</strong>: Exact match.</li>
-         * <li><strong>fuzzy</strong>: Fuzzy match.</li>
+         * <li><strong>prefix</strong>: prefix match</li>
+         * <li><strong>suffix</strong>: suffix match</li>
+         * <li><strong>exact</strong>: exact match</li>
+         * <li><strong>fuzzy</strong>: fuzzy match</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +277,7 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * <p>Record name. Used as a filter condition for queries.</p>
+         * <p>The record name. This parameter is used as a filter condition for the query.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -282,7 +289,7 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,13 +302,13 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * <p>The origin type of the record. Used as a filter condition for queries (only CNAME records can be filtered by this field). Valid values:</p>
+         * <p>The origin server type of the record. This parameter is used as a filter condition for the query. Only CNAME records can be filtered by this field. Valid values:</p>
          * <ul>
-         * <li><strong>OSS</strong>: OSS origin.</li>
-         * <li><strong>S3</strong>: S3 origin.</li>
-         * <li><strong>LB</strong>: Load balancer origin.</li>
-         * <li><strong>OP</strong>: Origin pool.</li>
-         * <li><strong>Domain</strong>: Standard domain origin.</li>
+         * <li><strong>OSS</strong>: OSS origin server</li>
+         * <li><strong>S3</strong>: S3 origin server</li>
+         * <li><strong>LB</strong>: load balancing origin server</li>
+         * <li><strong>OP</strong>: IPAM pool origin server</li>
+         * <li><strong>Domain</strong>: regular domain name origin server</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,7 +321,7 @@ public class ListRecordsRequest extends Request {
         }
 
         /**
-         * <p>The DNS record type of the record. Used as a filter condition for queries.</p>
+         * <p>The DNS record type of the record. This parameter is used as a filter condition for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>CNAME</p>
