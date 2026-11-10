@@ -683,6 +683,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallNodePoolComponentsResponse> installNodePoolComponents(InstallNodePoolComponentsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</p>
+     * 
+     * @param request the request parameters of InvokeAgent  InvokeAgentRequest
+     * @return InvokeAgentResponse
+     */
+    CompletableFuture<InvokeAgentResponse> invokeAgent(InvokeAgentRequest request);
+
+    ResponseIterable<InvokeAgentResponseBody> invokeAgentWithResponseIterable(InvokeAgentRequest request);
+
+    /**
      * @param request the request parameters of ListAddons  ListAddonsRequest
      * @return ListAddonsResponse
      */

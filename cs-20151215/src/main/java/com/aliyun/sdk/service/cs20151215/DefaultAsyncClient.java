@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cs20151215;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.cs20151215.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -1799,6 +1800,37 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</p>
+     * 
+     * @param request the request parameters of InvokeAgent  InvokeAgentRequest
+     * @return InvokeAgentResponse
+     */
+    @Override
+    public CompletableFuture<InvokeAgentResponse> invokeAgent(InvokeAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvokeAgent").setMethod(HttpMethod.POST).setPathRegex("/intelligence/invoke").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InvokeAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InvokeAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<InvokeAgentResponseBody> invokeAgentWithResponseIterable(InvokeAgentRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("InvokeAgent").setMethod(HttpMethod.POST).setPathRegex("/intelligence/invoke").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        InvokeAgentResponseBodyIterator iterator = InvokeAgentResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**
