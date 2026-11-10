@@ -287,7 +287,7 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * <p>The list of evaluators. If this parameter is omitted, the list remains unchanged. If an empty array is passed, the list is cleared.</p>
+         * <p>The list of evaluators. If omitted, the list is not modified. If an empty array is passed, the list is cleared. When configured, evaluation is automatically triggered upon experiment completion.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</p>
@@ -299,7 +299,7 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * <p>The experiment type. Valid values: OFFLINE (offline experiment) and ONLINE (online experiment).</p>
+         * <p>The type of the experiment. Valid values: OFFLINE (offline experiment) and ONLINE (online experiment).</p>
          * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>
@@ -326,7 +326,7 @@ public class UpdateExperimentPlanRequest extends Request {
          * <p>Optional.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;question&quot;: &quot;How do I get a refund?&quot;}</p>
+         * <p>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</p>
          */
         public Builder input(java.util.Map<String, ?> input) {
             this.putBodyParameter("input", input);
@@ -335,7 +335,7 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * <p>The name of the associated data processing pipeline. This parameter is optional. If it is not passed, the association is not updated. If an empty character string is passed, the pipeline is dissociated. After the association is configured, when an experiment under this plan executes and completes writing the experiment results to the Logstore, the system filters the results by the traceId of the current experiment trace and invokes PreviewPipeline to write the results processed by the pipeline.</p>
+         * <p>The name of the associated data processing pipeline. This parameter is optional. If you do not specify this parameter, the association is not updated. If you specify an empty string, the association is removed. After the association is established, when an experiment under this plan completes and writes experiment results to a Logstore, the system filters the data by the traceId of the current experiment trace and calls PreviewPipeline to write the pipeline-processed trace results together with the experiment results.</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putBodyParameter("pipelineName", pipelineName);
@@ -368,7 +368,7 @@ public class UpdateExperimentPlanRequest extends Request {
         }
 
         /**
-         * <p>The list of selected data item IDs in partial dataset mode. If an empty array is passed, the list is cleared.</p>
+         * <p>The list of selected data item IDs in partial dataset mode. Passing an empty array clears the list.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>

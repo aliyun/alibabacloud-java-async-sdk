@@ -85,7 +85,7 @@ public class GetExperimentPlanRequest extends Request {
         }
 
         /**
-         * <p>The experiment plan ID.</p>
+         * <p>The ID of the experiment plan.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-plan-0242d983f5d340fd8479cf2c19eb279e</p>

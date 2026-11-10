@@ -96,7 +96,7 @@ public class UpdateExperimentPlanResponseBody extends TeaModel {
          * <p>The message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The experiment plan is updated successfully</p>
+         * <p>Experiment plan updated successfully</p>
          */
         public Builder message(String message) {
             this.message = message;

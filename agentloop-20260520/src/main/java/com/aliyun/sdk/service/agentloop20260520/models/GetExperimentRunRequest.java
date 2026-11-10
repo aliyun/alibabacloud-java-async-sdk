@@ -73,7 +73,7 @@ public class GetExperimentRunRequest extends Request {
         } 
 
         /**
-         * <p>The AgentSpace name.</p>
+         * <p>The name of the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>al-playground-cn-hongkong</p>
@@ -85,7 +85,7 @@ public class GetExperimentRunRequest extends Request {
         }
 
         /**
-         * <p>The experiment run record ID.</p>
+         * <p>The ID of the experiment run.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-run-f6d419b0ed3d43a7b585948a55efc07b</p>

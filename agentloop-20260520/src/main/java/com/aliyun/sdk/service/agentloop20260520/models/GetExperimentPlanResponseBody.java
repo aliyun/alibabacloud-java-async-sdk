@@ -236,7 +236,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The creation time. The value is a millisecond-level UNIX timestamp.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816000000</p>
@@ -247,7 +247,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The associated dataset ID.</p>
+         * <p>The ID of the associated dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>arms_customer_agent_level1</p>
@@ -261,7 +261,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Compare checkout Agent baseline with optimized version</p>
+         * <p>Compare the checkout agent baseline with the optimized version</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -280,7 +280,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The experiment type.</p>
+         * <p>The type of the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>online</p>
@@ -305,7 +305,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          * <p>Optional.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</p>
+         * <p>{&quot;question&quot;: &quot;How do I get a refund?&quot;}</p>
          */
         public Builder input(java.util.Map<String, ?> input) {
             this.input = input;
@@ -313,7 +313,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the associated data processing pipeline. This value is empty if no pipeline is associated.</p>
+         * <p>The name of the associated data processing pipeline. This field is empty if no pipeline is associated.</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.pipelineName = pipelineName;
@@ -321,7 +321,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The experiment plan ID.</p>
+         * <p>The ID of the experiment plan.</p>
          * 
          * <strong>example:</strong>
          * <p>exp-plan-0242d983f5d340fd8479cf2c19eb279e</p>
@@ -332,7 +332,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The experiment plan name.</p>
+         * <p>The name of the experiment plan.</p>
          * 
          * <strong>example:</strong>
          * <p>arms_agent_experiment</p>
@@ -376,7 +376,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The plan status.</p>
+         * <p>The status of the plan.</p>
          * 
          * <strong>example:</strong>
          * <p>stopped</p>
@@ -387,7 +387,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The update time. The value is a millisecond-level UNIX timestamp.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782816600000</p>
