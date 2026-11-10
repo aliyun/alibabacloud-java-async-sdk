@@ -173,13 +173,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to delete all tags. Valid values:</p>
+         * <p>Specifies whether to remove all tags. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Yes</li>
-         * <li><strong>false</strong> (default): No</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong> (default): no.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect only when the <strong>TagKey.N</strong> parameter is empty.</p>
+         * <p>This parameter takes effect only when <strong>TagKey.N</strong> is left empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -210,8 +210,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
-         * <p>This parameter is not required when the resource type is Cen or BandwidthPackage. For all other resource types, this parameter is required.</p>
+         * <p>The region ID of the resource.</p>
+         * <p>This parameter is not required when the resource type is Cen or BandwidthPackage. This parameter is required for other resource types.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -223,7 +223,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Resource ID. The value of <strong>N</strong> ranges from <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The resource ID. <strong>N</strong> ranges from <strong>1</strong> to <strong>50</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,17 +254,17 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Resource type. Valid values:</p>
-         * <p><strong>Cen</strong>: Cloud Enterprise Network (CEN).</p>
-         * <p><strong>BandwidthPackage</strong>: Bandwidth package.</p>
-         * <p><strong>TransitRouter</strong>: Transit router.</p>
-         * <p><strong>TransitRouterVpcAttachment</strong>: VPC attachment.</p>
-         * <p><strong>TransitRouterVbrAttachment</strong>: VBR attachment.</p>
-         * <p><strong>TransitRouterPeerAttachment</strong>: Inter-region attachment.</p>
-         * <p><strong>TransitRouterVpnAttachment</strong>: VPN attachment.</p>
-         * <p><strong>TransitRouterRouteTable</strong>: Route table.</p>
-         * <p><strong>Flowlog</strong>: Flow log.</p>
-         * <p><strong>TransitRouterMulticastDomain</strong>: Multicast domain.</p>
+         * <p>The resource type. Valid values:</p>
+         * <p><strong>Cen</strong>: Cloud Enterprise Network (CEN) instance.</p>
+         * <p><strong>BandwidthPackage</strong>: bandwidth plan instance.</p>
+         * <p><strong>TransitRouter</strong>: transit router instance.</p>
+         * <p><strong>TransitRouterVpcAttachment</strong>: VPC connection instance.</p>
+         * <p><strong>TransitRouterVbrAttachment</strong>: VBR connection instance.</p>
+         * <p><strong>TransitRouterPeerAttachment</strong>: cross-region connection instance.</p>
+         * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection instance.</p>
+         * <p><strong>TransitRouterRouteTable</strong>: route table instance.</p>
+         * <p><strong>Flowlog</strong>: flow log instance.</p>
+         * <p><strong>TransitRouterMulticastDomain</strong>: multicast domain instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,9 +277,9 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Tag key.</p>
-         * <p>A tag key can contain up to 64 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>If you specify multiple tag keys, the logical relation among these tag keys is <strong>OR</strong>. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The tag key.</p>
+         * <p>A tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>If you specify multiple tag keys, they are evaluated by using the <strong>OR</strong> logical operator. <strong>N</strong> ranges from <strong>1</strong> to <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>

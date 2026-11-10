@@ -200,6 +200,31 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>The AssociateTransitRouterPolicyTable API operation is asynchronous. The system returns an association ID before the association is fully created, and the creation task continues in the background. You can call the DescribeTransitRouterPolicyTableAssociations API operation to query the status of the policy route table association.</p>
+     * <ul>
+     * <li>When the policy route table association is in the Associating state, the association is being created. In this state, you can only perform query operations.</li>
+     * <li>When the policy route table association is in the Active state, the association is created.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateTransitRouterPolicyTable  AssociateTransitRouterPolicyTableRequest
+     * @return AssociateTransitRouterPolicyTableResponse
+     */
+    @Override
+    public CompletableFuture<AssociateTransitRouterPolicyTableResponse> associateTransitRouterPolicyTable(AssociateTransitRouterPolicyTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AssociateTransitRouterPolicyTable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AssociateTransitRouterPolicyTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AssociateTransitRouterPolicyTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>CEN supports attaching cross-account network instances. Before attaching a cross-account network instance, the CEN instance must be authorized by the network instance:</p>
      * <ul>
      * <li>To authorize a cross-account VPC instance, see <a href="https://help.aliyun.com/document_detail/126224.html">GrantInstanceToCen</a>.</li>
@@ -482,10 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The <code>CreateRouteMap</code> operation is asynchronous. The system first returns a route map ID, but the route map is not yet created. The creation task continues to run in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
+     * <p>The <code>CreateRouteMap</code> operation is asynchronous. The system returns a route map ID before the route map is created, and the creation task continues in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
      * <ul>
-     * <li>When the route map is in the <strong>Creating</strong> state, the route map is being created. In this state, you can only perform query operations and cannot perform other operations.</li>
-     * <li>When the route map is in the <strong>Active</strong> state, the route map is created.</li>
+     * <li>If the route map is in the <strong>Creating</strong> state, the route map is being created. In this state, you can only perform query operations.</li>
+     * <li>If the route map is in the <strong>Active</strong> state, the route map is created.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRouteMap  CreateRouteMapRequest
@@ -509,11 +534,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>RouteMapId</code> is a required parameter that specifies the route map to which the new rule belongs.</li>
-     * <li><code>Priority</code> is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</li>
-     * <li><code>Name</code> and <code>Description</code> are optional parameters used to identify the rule and describe its purpose.</li>
-     * <li><code>MatchConditions</code> defines the match conditions for the rule, and <code>SetActions</code> defines the actions to be executed when a route meets all match conditions. Both are passed as JSON strings.</li>
-     * <li><code>DryRun</code> is an optional parameter used to precheck the request without actually creating the route map rule.</li>
+     * <li>RouteMapId is a required parameter that specifies the route map to which the new rule belongs.</li>
+     * <li>Priority is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</li>
+     * <li>Name and Description are optional parameters used to identify the rule and describe its purpose.</li>
+     * <li>MatchConditions defines the match conditions for the rule, and SetActions defines the actions to be performed when a route meets all match conditions. Both are passed as JSON strings.</li>
+     * <li>DryRun is an optional parameter used to perform a dry run of the request without actually creating the route map rule.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRouteMapRule  CreateRouteMapRuleRequest
@@ -618,18 +643,18 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
-     * The <strong>CreateTransitRouterCidr</strong> operation is used only to add a CIDR block to a transit router after the transit router is created.
-     * Before you create a transit router CIDR block, take note of the following information:</p>
+     * <p>A transit router CIDR block is a custom CIDR block that you configure for a transit router. It is similar to the IP address block assigned to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
+     * The <strong>CreateTransitRouterCidr</strong> operation is applicable only for adding a CIDR block to a transit router after the transit router is created.
+     * Before you create a transit router CIDR block, take note of the following items:</p>
      * <ul>
      * <li>Only Enterprise Edition transit routers support transit router CIDR blocks.</li>
-     * <li>For limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</li>
-     * <li>A maximum of five CIDR blocks can be configured for a transit router. The subnet mask of each CIDR block must be 16 to 24 bits in length.</li>
-     * <li>CIDR blocks that fall within 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, or 169.254.0.0/16 and their subnets are not supported.</li>
-     * <li>Each CIDR block cannot conflict with any CIDR block that needs to communicate within the Cloud Enterprise Network (CEN) instance.</li>
+     * <li>For the limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</li>
+     * <li>A transit router supports up to five CIDR blocks. The subnet mask of each CIDR block must be 16 to 26 bits in length.</li>
+     * <li>You cannot create CIDR blocks for 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets.</li>
+     * <li>Each CIDR block cannot overlap with the CIDR blocks of the network instances that need to communicate with each other in the Cloud Enterprise Network (CEN) instance.</li>
      * <li>Each CIDR block must be unique within the same CEN instance.</li>
-     * <li>After you add a CIDR block to a transit router, the system automatically reserves three CIDR blocks from the CIDR block when you create the first VPN connection on the transit router. The reserved CIDR blocks are used by the system to create VPN connections in the background. The system assigns IP addresses to IPsec connections from the remaining CIDR blocks.
-     *   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the CIDR blocks that are reserved by the system or from which IP addresses are allocated.</li>
+     * <li>After you add a CIDR block to a transit router and create the first VPN connection under the transit router, the system automatically allocates three CIDR blocks from the CIDR block as system-reserved CIDR blocks for creating VPN connections in the background. The system assigns IP addresses to the IPsec connection from the remaining CIDR blocks.
+     *   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the system-reserved or assigned CIDR blocks.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateTransitRouterCidr  CreateTransitRouterCidrRequest
@@ -747,6 +772,59 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateTransitRouterPeerAttachmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The <strong>CreateTransitRouterPolicyBasedRoute</strong> API operation is asynchronous. The system returns a route entry ID before the route entry is created, and the creation task continues in the background. You can call the <strong>DescribeTransitRouterPolicyBasedRoutes</strong> API operation to query the status of the route entry. </p>
+     * <ul>
+     * <li>If the route entry is in the <strong>Creating</strong> state, the route entry is being created. In this state, you can only query the route entry and cannot perform other operations.</li>
+     * <li>If the route entry is in the <strong>Active</strong> state, the route entry is created.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateTransitRouterPolicyBasedRoute  CreateTransitRouterPolicyBasedRouteRequest
+     * @return CreateTransitRouterPolicyBasedRouteResponse
+     */
+    @Override
+    public CompletableFuture<CreateTransitRouterPolicyBasedRouteResponse> createTransitRouterPolicyBasedRoute(CreateTransitRouterPolicyBasedRouteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateTransitRouterPolicyBasedRoute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTransitRouterPolicyBasedRouteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTransitRouterPolicyBasedRouteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>当前仅企业版转发路由器支持创建策略路由表。关于企业版转发路由器支持的地域和可用区信息，请参见<a href="https://help.aliyun.com/document_detail/181681.html">什么是云企业网</a>。</li>
+     * <li><strong>CreateTransitRouterPolicyTable</strong>接口属于异步接口，即系统会先返回一个策略路由表ID，但该策略路由表并未创建完成，系统后台的创建任务仍在进行。您可以调用<strong>DescribeTransitRouterPolicyTables</strong>接口查询策略路由表的状态。<ul>
+     * <li>当策略路由表处于<strong>Creating</strong>状态时，表示策略路由表正在创建中。在该状态下，您只能执行查询操作，不能执行其他操作。</li>
+     * <li>当策略路由表处于<strong>Active</strong>状态时，表示策略路由表创建完成。</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateTransitRouterPolicyTable  CreateTransitRouterPolicyTableRequest
+     * @return CreateTransitRouterPolicyTableResponse
+     */
+    @Override
+    public CompletableFuture<CreateTransitRouterPolicyTableResponse> createTransitRouterPolicyTable(CreateTransitRouterPolicyTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateTransitRouterPolicyTable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTransitRouterPolicyTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTransitRouterPolicyTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1188,10 +1266,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>If the route map to be deleted is still associated with any resources, this operation fails.
      * If route map rules exist under the route map, this operation is not supported.
-     * The DeleteRouteMap operation is asynchronous. The system returns a <strong>RequestId</strong>, but the route map is not completely deleted. The deletion task continues in the background. You can call the ListRouteMaps operation to query the status of the route map.</p>
+     * The <code>DeleteRouteMap</code> operation is asynchronous. The system first returns a <strong>RequestId</strong>, but the route map is not completely deleted. The deletion task is still running in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
      * <ul>
-     * <li>If the route map is in the <strong>Deleting</strong> state, the route map is being deleted. In this state, you can only perform query operations.</li>
-     * <li>If the route map cannot be queried by using the ListRouteMaps operation, the route map is completely deleted.</li>
+     * <li>When the route map is in the <strong>Deleting</strong> state, it indicates that the route map is being deleted. In this state, you can only perform query operations and cannot perform other operations.</li>
+     * <li>When the route map cannot be queried by calling the <code>ListRouteMaps</code> operation, it indicates that the route map is completely deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteRouteMap  DeleteRouteMapRequest
@@ -1453,6 +1531,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteTransitRouterPeerAttachmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>DeleteTransitRouterPolicyBasedRoute</strong> operation is asynchronous. After you call this operation, the system returns a <strong>RequestId</strong>, but the policy-based route is not immediately deleted. The deletion task is still running in the background. You can call the <strong>DescribeTransitRouterPolicyBasedRoutes</strong> operation to query the status of the policy-based route. <ul>
+     * <li>If the policy-based route is in the <strong>Deleting</strong> state, the policy-based route is being deleted. In this state, you can only query the policy-based route and cannot perform other operations.</li>
+     * <li>If the specified policy-based route cannot be queried, the policy-based route is deleted.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteTransitRouterPolicyBasedRoute  DeleteTransitRouterPolicyBasedRouteRequest
+     * @return DeleteTransitRouterPolicyBasedRouteResponse
+     */
+    @Override
+    public CompletableFuture<DeleteTransitRouterPolicyBasedRouteResponse> deleteTransitRouterPolicyBasedRoute(DeleteTransitRouterPolicyBasedRouteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteTransitRouterPolicyBasedRoute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteTransitRouterPolicyBasedRouteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteTransitRouterPolicyBasedRouteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>DeleteTransitRouterPolicyTable</strong>接口属于异步接口，即系统会先返回一个<strong>RequestId</strong>，但策略路由表并未删除完成，系统后台的删除任务仍在进行。您可以调用<strong>DescribeTransitRouterPolicyTables</strong>接口查询策略路由表的状态。 <ul>
+     * <li>当策略路由表处于Deleting状态时，表示策略路由表正在删除中。在该状态下，您只能对策略路由表执行查询操作，不能执行其他操作。</li>
+     * <li>当查询不到指定策略路由表时，表示该策略路由表删除完成。</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteTransitRouterPolicyTable  DeleteTransitRouterPolicyTableRequest
+     * @return DeleteTransitRouterPolicyTableResponse
+     */
+    @Override
+    public CompletableFuture<DeleteTransitRouterPolicyTableResponse> deleteTransitRouterPolicyTable(DeleteTransitRouterPolicyTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteTransitRouterPolicyTable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteTransitRouterPolicyTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteTransitRouterPolicyTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2101,6 +2233,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeTransitRouterPolicyBasedRoutes  DescribeTransitRouterPolicyBasedRoutesRequest
+     * @return DescribeTransitRouterPolicyBasedRoutesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeTransitRouterPolicyBasedRoutesResponse> describeTransitRouterPolicyBasedRoutes(DescribeTransitRouterPolicyBasedRoutesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeTransitRouterPolicyBasedRoutes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeTransitRouterPolicyBasedRoutesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeTransitRouterPolicyBasedRoutesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeTransitRouterPolicyTableAssociations  DescribeTransitRouterPolicyTableAssociationsRequest
+     * @return DescribeTransitRouterPolicyTableAssociationsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeTransitRouterPolicyTableAssociationsResponse> describeTransitRouterPolicyTableAssociations(DescribeTransitRouterPolicyTableAssociationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeTransitRouterPolicyTableAssociations").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeTransitRouterPolicyTableAssociationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeTransitRouterPolicyTableAssociationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeTransitRouterPolicyTables  DescribeTransitRouterPolicyTablesRequest
+     * @return DescribeTransitRouterPolicyTablesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeTransitRouterPolicyTablesResponse> describeTransitRouterPolicyTables(DescribeTransitRouterPolicyTablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeTransitRouterPolicyTables").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeTransitRouterPolicyTablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeTransitRouterPolicyTablesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>The <strong>DetachCenChildInstance</strong> operation supports detaching only specified network instances from Basic Edition transit routers.</p>
      * 
@@ -2191,6 +2377,31 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DisassociateTransitRouterMulticastDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The <strong>DisassociateTransitRouterPolicyTable</strong> operation is asynchronous. The system first returns a request ID, but the transit router policy routing table association is not immediately deleted. The deletion node continues to run in the background. You can invoke the <strong>DescribeTransitRouterPolicyTableAssociations</strong> operation to query the status of the transit router policy routing table association.</p>
+     * <ul>
+     * <li>When the transit router policy routing table association is in the <strong>Dissociating</strong> state, the association is being deleted. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the <strong>DescribeTransitRouterPolicyTableAssociations</strong> operation cannot query the association between the network instance connection and the transit router policy routing table, the association is successfully dissociated.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DisassociateTransitRouterPolicyTable  DisassociateTransitRouterPolicyTableRequest
+     * @return DisassociateTransitRouterPolicyTableResponse
+     */
+    @Override
+    public CompletableFuture<DisassociateTransitRouterPolicyTableResponse> disassociateTransitRouterPolicyTable(DisassociateTransitRouterPolicyTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisassociateTransitRouterPolicyTable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisassociateTransitRouterPolicyTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisassociateTransitRouterPolicyTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2430,11 +2641,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>RouteMapId: specifies the route map whose rules you want to query.</li>
-     * <li>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and they have an OR relationship.</li>
-     * <li>Filter: the filter. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</li>
+     * <li>RouteMapId: specifies the route map to which the rules to be queried belong.</li>
+     * <li>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and the relationship is OR.</li>
+     * <li>Filter: the filter conditions. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</li>
      * <li>DryRun: specifies whether to enable the dry run mode. Default value: false.
-     * You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of the specified rules are returned.</li>
+     * You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of these rules are returned.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRouteMapRules  ListRouteMapRulesRequest
@@ -2458,12 +2669,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>RouteMapIds</strong>: optional. Specifies a list of one or more route map IDs to query. If you do not specify this parameter, all route maps are queried by default.</li>
-     * <li><strong>Filter</strong>: optional. Filters route maps based on specific conditions such as the name and direction.</li>
-     * <li><strong>ResourceGroupId</strong>: optional. Specifies the ID of the resource group to further filter the results.</li>
-     * <li><strong>DryRun</strong>: optional. Specifies whether to check the request without actually performing the operation.</li>
-     * <li><strong>MaxResults</strong> and <strong>NextToken</strong>: pagination parameters. Used to control the number of returned results and obtain the next page of data.
-     * Note: If you specify both <code>RouteMapIds</code> and <code>Filter</code>, they are connected by an OR logical operator. Route maps that meet either condition are queried.</li>
+     * <li><strong>RouteMapIds</strong>: Optional. The IDs of the route maps to query. If you do not specify this parameter, all route maps are queried.</li>
+     * <li><strong>Filter</strong>: Optional. The filter conditions used to filter route maps based on specific attributes such as name and direction.</li>
+     * <li><strong>ResourceGroupId</strong>: Optional. The ID of the resource group used to further filter the results.</li>
+     * <li><strong>DryRun</strong>: Optional. Specifies whether to perform a dry run.</li>
+     * <li><strong>MaxResults</strong> and <strong>NextToken</strong>: The pagination parameters used to control the number of returned results and retrieve the next page.
+     * Note: If you specify both RouteMapIds and Filter, the logical OR operator is used. A route map that meets either condition is returned.</li>
      * </ul>
      * 
      * @param request the request parameters of ListRouteMaps  ListRouteMapsRequest
@@ -2485,13 +2696,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you call the ListTagResources operation, you must specify at least one of the request parameters <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong>:</p>
+     * <p>When you call the ListTagResources operation, you must specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong> request parameters:</p>
      * <ul>
-     * <li>If you specify only <strong>ResourceId.N</strong>, the tags bound to the specified CEN instance are queried.</li>
-     * <li>If you specify only <strong>Tag.N.Key</strong>, all CEN instances that have the specified tag key bound are queried.</li>
-     * <li>If you specify both <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong>, the specified tags bound to the specified CEN instance are queried.<ul>
+     * <li>If you specify only <strong>ResourceId.N</strong>, the system queries the tags associated with the specified CEN instances.</li>
+     * <li>If you specify only <strong>Tag.N.Key</strong>, the system queries all CEN instances associated with the specified tag key.</li>
+     * <li>If you specify both <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong>, the system queries the specified tags associated with the specified CEN instances.<ul>
      * <li>Make sure that the values of <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong> correspond to each other. Otherwise, an empty result is returned.</li>
-     * <li>If you specify multiple tag keys, the tag keys are evaluated by using the logical AND operator.</li>
+     * <li>If you specify multiple tag keys, the logical <strong>AND</strong> relation is applied to the tag keys.</li>
      * </ul>
      * </li>
      * </ul>
@@ -3494,22 +3705,22 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Cloud services refer to Alibaba Cloud services that use the 100.64.0.0/10 CIDR block, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the Virtual Border Router (VBR) instance or Cloud Connect Network (CCN) instance associated with your on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud service resides to the same CEN instance. After loading, your on-premises network can access the VPC-connected instance in the region of the cloud service through CEN, and then access the cloud service through the VPC by forwarding traffic. The CEN handles the routing accordingly.</p>
+     * <p>Cloud services refer to Alibaba Cloud products that provide services by using the cloud service CIDR block 100.64.0.0/10, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the virtual border router (VBR) instance that handles routing or the Cloud Connect Network (CCN) instance associated with the on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud services are deployed to the CEN instance. After the instances are loaded, your on-premises network can access the VPC-connected instance in the region where the cloud services are deployed through the CEN instance, and then access the cloud services through the VPC-connected instance.</p>
      * <ul>
-     * <li>Limits: This operation applies only to Basic Edition transit routers. On-premises networks associated with VBR instances can access only cloud services in the same region through CEN.
-     *   For example, if the cloud service resides in the China (Beijing) region, only on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud service.</li>
-     * <li>The <strong>ResolveAndRouteServiceInCen</strong> operation is asynchronous. After you send a request, the system returns a <strong>RequestId</strong> but the cloud service configuration is not yet complete. The background node for adding the configuration continues to run. You can invoke the <strong>DescribeRouteServicesInCen</strong> operation to query the status of the cloud service. <ul>
-     * <li>If the cloud service is in the <strong>Creating</strong> state, the cloud service configuration is being added. In this state, you can only execute a query on the cloud service configuration and cannot execute other operations.</li>
-     * <li>If the cloud service is in the <strong>Active</strong> state, the cloud service configuration is added.</li>
-     * <li>If the cloud service is in the <strong>Failed</strong> state, the cloud service configuration failed to be added.</li>
+     * <li>Limits: This operation is applicable only to Basic Edition transit routers that forward traffic. An on-premises network associated with a VBR instance can access only cloud services in the same region through the CEN instance.
+     *   For example, if the cloud services are deployed in the China (Beijing) region, only the on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud services.</li>
+     * <li>The <strong>ResolveAndRouteServiceInCen</strong> operation is asynchronous. After you invoke this operation, the system returns a <strong>RequestId</strong>, but the cloud service configurations are not completely added. The addition task is still running in the background. You can invoke the <strong>DescribeRouteServicesInCen</strong> operation to query the status of the cloud services. <ul>
+     * <li>If the cloud services are in the <strong>Creating</strong> state, the cloud service configurations are being added. In this state, you can only execute query operations on the cloud service configurations and cannot execute other operations.</li>
+     * <li>If the cloud services are in the <strong>Active</strong> state, the cloud service configurations are added.</li>
+     * <li>If the cloud services are in the <strong>Failed</strong> state, the cloud service configurations fail to be added.</li>
      * </ul>
      * </li>
      * </ul>
      * <h3>Before you begin</h3>
      * <p>Before you invoke the ResolveAndRouteServiceInCen operation, make sure that the following conditions are met:</p>
      * <ul>
-     * <li>The VBR or CCN instance with network connectivity to your on-premises network is loaded to the CEN instance.</li>
-     * <li>A VPC-connected instance in the region where the cloud service resides is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</li>
+     * <li>The VBR or CCN instance that has network connectivity to your on-premises network is loaded to the CEN instance.</li>
+     * <li>A VPC-connected instance in the region where the cloud services are deployed is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ResolveAndRouteServiceInCen  ResolveAndRouteServiceInCenRequest
@@ -3637,8 +3848,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>A tag consists of a tag key and a tag value. Both the tag key and tag value are required when you add a tag.</li>
-     * <li>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags must be unique within the instance.</li>
+     * <li>A tag consists of a tag key and a tag value. Both the tag key and the tag value are required when you add a tag.</li>
+     * <li>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags attached to the instance must be unique.</li>
      * <li>You can attach up to 20 tags to a CEN instance.</li>
      * </ul>
      * 
@@ -3792,7 +4003,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The UpdateRouteMap operation is asynchronous. After you call this operation, the system returns a <strong>RequestId</strong>, but the route map is not immediately updated. The update task continues to run in the background. You can call the ListRouteMaps operation to query the status of the route map.</p>
+     * <p>The <code>UpdateRouteMap</code> operation is asynchronous. After you call this operation, the system returns a <strong>RequestId</strong>, but the route map is not immediately updated. The update task continues to run in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
      * <ul>
      * <li>If the route map is in the <strong>Updating</strong> state, the route map is being updated. In this state, you can only perform query operations.</li>
      * <li>If the route map is in the <strong>Active</strong> state, the route map is updated.</li>
@@ -3821,7 +4032,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li><code>RouteMapRuleId</code> specifies the route map rule to be updated.</li>
      * <li><code>Name</code>, <code>Description</code>, and <code>Priority</code> are used to update the name, description, and priority of the rule. Rule priorities under the same route map must be unique.</li>
-     * <li><code>MatchConditions</code> is used to update the match conditions of the rule, and <code>SetActions</code> is used to update the actions to be performed when a route meets the match conditions.</li>
+     * <li><code>MatchConditions</code> is used to update the match conditions of the rule, and <code>SetActions</code> is used to update the actions to be executed after a route meets the match conditions.</li>
      * <li><code>DryRun</code> is an optional parameter used to precheck the request without actually updating the route map rule.</li>
      * </ul>
      * 
@@ -3928,6 +4139,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateTransitRouterPeerAttachmentAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateTransitRouterPolicyBasedRoute  UpdateTransitRouterPolicyBasedRouteRequest
+     * @return UpdateTransitRouterPolicyBasedRouteResponse
+     */
+    @Override
+    public CompletableFuture<UpdateTransitRouterPolicyBasedRouteResponse> updateTransitRouterPolicyBasedRoute(UpdateTransitRouterPolicyBasedRouteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateTransitRouterPolicyBasedRoute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateTransitRouterPolicyBasedRouteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateTransitRouterPolicyBasedRouteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateTransitRouterPolicyTable  UpdateTransitRouterPolicyTableRequest
+     * @return UpdateTransitRouterPolicyTableResponse
+     */
+    @Override
+    public CompletableFuture<UpdateTransitRouterPolicyTableResponse> updateTransitRouterPolicyTable(UpdateTransitRouterPolicyTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateTransitRouterPolicyTable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateTransitRouterPolicyTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateTransitRouterPolicyTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

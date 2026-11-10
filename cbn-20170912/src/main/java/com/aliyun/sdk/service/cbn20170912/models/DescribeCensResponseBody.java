@@ -114,7 +114,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paging query.</p>
+         * <p>The number of entries returned per page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

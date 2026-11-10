@@ -190,7 +190,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The instance ID of the deployment set configured in the specified active zone of the transit router, which handles forward and routing tasks.</p>
+             * <p>The instance ID of the deployment set configured in the specified active zone of the transit router for forward routing.</p>
              * 
              * <strong>example:</strong>
              * <p>ds-badxcs*****</p>
@@ -201,7 +201,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             }
 
             /**
-             * <p>The zone for which you want to modify the deployment set of the resource reservation.</p>
+             * <p>The zone for which the deployment set of the resource reservation needs to be modified.</p>
              * <ul>
              * <li>To cancel the deployment set, specify the zone and leave the deployment set instance ID empty.</li>
              * </ul>
@@ -274,9 +274,9 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The effective reserved value for the specified zone in the resource reservation.</p>
+             * <p>The effective reserved value of the specified zone for the resource reservation.</p>
              * <ul>
-             * <li>The effective reserved value refers to the current billed value for the resource reservation.</li>
+             * <li>The effective reserved value refers to the current billed value of the resource reservation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -288,10 +288,10 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             }
 
             /**
-             * <p>The target reserved value for the specified active zone in the resource reservation.</p>
+             * <p>The target reserved value of the specified zone for the resource reservation.</p>
              * <ul>
-             * <li>In scenarios where you decrease the quota, the change takes effect in the next month, and the effective reserved value is updated in synchronization.</li>
-             * <li>Upgrade and initial reservation scenarios require spooling by Alibaba Cloud and take effect immediately after the spooling is complete.</li>
+             * <li>When you decrease the quota, the change takes effect in the next month, and the active reserved value is updated in synchronization.</li>
+             * <li>Upgrades and initial reservations require spooling by Alibaba Cloud and take effect immediately after the spooling is complete.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -362,7 +362,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The reason for failure when the reservation status is ProvisionFailed.</p>
+             * <p>The reason for the failure when the reservation status is ProvisionFailed.</p>
              * <ul>
              * <li>For example, Reservation.InsufficientCapacity indicates that resources are insufficient to meet the target reserved value.</li>
              * </ul>
@@ -376,9 +376,9 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             }
 
             /**
-             * <p>The resource reservation status. Valid values:</p>
+             * <p>The resource reservation status.</p>
              * <ul>
-             * <li>Pending: The initial reservation is initiated and is pending processing by Alibaba Cloud.</li>
+             * <li>Pending: The initial reservation is initiated and is waiting to be processed by Alibaba Cloud.</li>
              * <li>Provisioning: Alibaba Cloud is processing the reservation request.</li>
              * <li>Provisioned: The reservation is successful.</li>
              * <li>ProvisionFailed: The reservation failed. You can refer to the failure reason.</li>
@@ -466,7 +466,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The reserved capacity information for the specified zone in the resource reservation.</p>
+             * <p>The reserved capacity information of the specified zone for the resource reservation.</p>
              */
             public Builder dataProcessGbps(DataProcessGbps dataProcessGbps) {
                 this.dataProcessGbps = dataProcessGbps;
@@ -474,7 +474,7 @@ public class DescribeTransitRouterCapacityReservationsResponseBody extends TeaMo
             }
 
             /**
-             * <p>The status information of the specified zone in the resource reservation.</p>
+             * <p>The status information of the specified zone for the resource reservation.</p>
              */
             public Builder state(State state) {
                 this.state = state;
