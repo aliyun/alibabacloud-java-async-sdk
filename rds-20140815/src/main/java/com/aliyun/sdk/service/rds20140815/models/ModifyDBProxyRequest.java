@@ -259,9 +259,9 @@ public class ModifyDBProxyRequest extends Request {
         /**
          * <p>Specifies whether to enable or disable the database proxy. Valid values:</p>
          * <ul>
-         * <li><strong>Startup</strong>: Enables the proxy service.</li>
-         * <li><strong>Shutdown</strong>: Disables the proxy service.</li>
-         * <li><strong>Modify</strong>: Modifies the proxy service.</li>
+         * <li><strong>Startup</strong>: enables the proxy service.</li>
+         * <li><strong>Shutdown</strong>: disables the proxy service.</li>
+         * <li><strong>Modify</strong>: modifies the proxy service.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -317,8 +317,8 @@ public class ModifyDBProxyRequest extends Request {
         /**
          * <p>The type of the database proxy instance. Valid values:</p>
          * <ul>
-         * <li><strong>common</strong>: General-purpose database proxy.</li>
-         * <li><strong>exclusive</strong>: Dedicated proxy (default).</li>
+         * <li><strong>common</strong>: general-purpose database proxy</li>
+         * <li><strong>exclusive</strong>: dedicated proxy (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -331,7 +331,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * <p>The list of proxy nodes.</p>
+         * <p>The proxy nodes.</p>
          */
         public Builder DBProxyNodes(java.util.List<DBProxyNodes> DBProxyNodes) {
             String DBProxyNodesShrink = shrink(DBProxyNodes, "DBProxyNodes", "json");
@@ -367,12 +367,12 @@ public class ModifyDBProxyRequest extends Request {
         /**
          * <p>Specifies whether to enable connection keep-alive. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: Enables connection keep-alive.</li>
-         * <li><strong>Disabled</strong>: Disables connection keep-alive.</li>
+         * <li><strong>Enabled</strong>: enables connection keep-alive.</li>
+         * <li><strong>Disabled</strong>: disables connection keep-alive.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>Only ApsaraDB RDS for MySQL supports this parameter.</li>
+         * <li>This parameter is supported only for ApsaraDB RDS for MySQL.</li>
          * <li>When you modify the connection keep-alive status, set <strong>ConfigDBProxyService</strong> to <strong>Modify</strong>.</li>
          * </ul>
          * </blockquote>

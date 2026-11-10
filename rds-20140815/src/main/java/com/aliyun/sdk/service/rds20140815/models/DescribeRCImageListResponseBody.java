@@ -275,7 +275,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attribute of the cloud disk. Valid values:</p>
+             * <p>The property of the cloud disk. Valid values:</p>
              * <ul>
              * <li><strong>system</strong>: System cloud disk.</li>
              * <li><strong>data</strong>: Data cloud disk.</li>
@@ -568,7 +568,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mappings between cloud disks and snapshots included in the image.</p>
+             * <p>The mapping between cloud disks and snapshots included in the image.</p>
              */
             public Builder diskDeviceMappings(java.util.List<DiskDeviceMappings> diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -609,10 +609,10 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image is public. Public images include public images provided by Alibaba Cloud and custom images that you have published as community images. Valid values:</p>
+             * <p>Indicates whether the image is a public image. Public images include public images provided by Alibaba Cloud and custom images that you have published as community images. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: The image is public.</li>
-             * <li><strong>false</strong>: The image is not public.</li>
+             * <li><strong>true</strong>: The image is a public image.</li>
+             * <li><strong>false</strong>: The image is not a public image.</li>
              * </ul>
              * 
              * <strong>example:</strong>

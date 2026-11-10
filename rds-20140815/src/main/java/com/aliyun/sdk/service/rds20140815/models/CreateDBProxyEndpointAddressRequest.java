@@ -232,7 +232,7 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the database proxy endpoint ID.</p>
+         * <p>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The reserved parameter. You do not need to specify this parameter.</p>
+         * <p>A reserved parameter. No configuration is required.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -257,7 +257,7 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The port of the new database proxy endpoint. Default values:</p>
+         * <p>The port number of the new database proxy endpoint. Default values:</p>
          * <ul>
          * <li>MySQL: <strong>3306</strong></li>
          * <li>PostgreSQL: <strong>5432</strong></li>

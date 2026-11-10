@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifySecurityIpsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchMode")
+    private Boolean batchMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayAttribute")
     private String DBInstanceIPArrayAttribute;
 
@@ -35,6 +39,10 @@ public class ModifySecurityIpsRequest extends Request {
     private String freshWhiteListReadins;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupItems")
+    private java.util.List<GroupItems> groupItems;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModifyMode")
     private String modifyMode;
 
@@ -48,7 +56,6 @@ public class ModifySecurityIpsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityIps")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String securityIps;
 
     @com.aliyun.core.annotation.Query
@@ -57,10 +64,12 @@ public class ModifySecurityIpsRequest extends Request {
 
     private ModifySecurityIpsRequest(Builder builder) {
         super(builder);
+        this.batchMode = builder.batchMode;
         this.DBInstanceIPArrayAttribute = builder.DBInstanceIPArrayAttribute;
         this.DBInstanceIPArrayName = builder.DBInstanceIPArrayName;
         this.DBInstanceId = builder.DBInstanceId;
         this.freshWhiteListReadins = builder.freshWhiteListReadins;
+        this.groupItems = builder.groupItems;
         this.modifyMode = builder.modifyMode;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityIPType = builder.securityIPType;
@@ -79,6 +88,13 @@ public class ModifySecurityIpsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return batchMode
+     */
+    public Boolean getBatchMode() {
+        return this.batchMode;
     }
 
     /**
@@ -107,6 +123,13 @@ public class ModifySecurityIpsRequest extends Request {
      */
     public String getFreshWhiteListReadins() {
         return this.freshWhiteListReadins;
+    }
+
+    /**
+     * @return groupItems
+     */
+    public java.util.List<GroupItems> getGroupItems() {
+        return this.groupItems;
     }
 
     /**
@@ -145,10 +168,12 @@ public class ModifySecurityIpsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifySecurityIpsRequest, Builder> {
+        private Boolean batchMode; 
         private String DBInstanceIPArrayAttribute; 
         private String DBInstanceIPArrayName; 
         private String DBInstanceId; 
         private String freshWhiteListReadins; 
+        private java.util.List<GroupItems> groupItems; 
         private String modifyMode; 
         private Long resourceOwnerId; 
         private String securityIPType; 
@@ -161,10 +186,12 @@ public class ModifySecurityIpsRequest extends Request {
 
         private Builder(ModifySecurityIpsRequest request) {
             super(request);
+            this.batchMode = request.batchMode;
             this.DBInstanceIPArrayAttribute = request.DBInstanceIPArrayAttribute;
             this.DBInstanceIPArrayName = request.DBInstanceIPArrayName;
             this.DBInstanceId = request.DBInstanceId;
             this.freshWhiteListReadins = request.freshWhiteListReadins;
+            this.groupItems = request.groupItems;
             this.modifyMode = request.modifyMode;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityIPType = request.securityIPType;
@@ -173,10 +200,24 @@ public class ModifySecurityIpsRequest extends Request {
         } 
 
         /**
-         * <p>The attribute of the whitelist group.</p>
+         * <p>Specifies whether to enable the batch modification mode. Valid values:</p>
+         * <p>true: batch mode. Modifies multiple whitelist groups at a time based on the GroupItems parameter. In this case, the single-group parameters such as SecurityIps, DBInstanceIPArrayName, and DBInstanceIPArrayAttribute do not take effect.</p>
+         * <p>false: single-group mode. Modifies a single whitelist group based on parameters such as SecurityIps. This is the default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder batchMode(Boolean batchMode) {
+            this.putQueryParameter("BatchMode", batchMode);
+            this.batchMode = batchMode;
+            return this;
+        }
+
+        /**
+         * <p>The attribute of the IP whitelist group.</p>
          * <ul>
          * <li>If you do not specify this parameter, the group is a regular group. This is the default value.</li>
-         * <li>If you set this parameter to <code>hidden</code>, the group is a hidden group that is automatically created by the system for services such as DMS, DTS, and DAS. Hidden groups are not displayed in the console. If you delete or modify a hidden group, services such as DMS, DTS, and DAS cannot access the ApsaraDB RDS instance. Proceed with caution.</li>
+         * <li>If you set this parameter to <code>hidden</code>, the group is a system-generated group used by services such as DMS, DTS, and DAS. These groups are not displayed in the console. Deleting or modifying these groups causes services such as DMS, DTS, and DAS to fail to access the ApsaraDB RDS instance. Proceed with caution.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,9 +230,9 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The name of the IP address whitelist group to be modified. Default value: Default. If the specified group does not exist, the system automatically creates the group.</p>
+         * <p>The name of the IP whitelist group to be modified. Default value: Default. If the specified group does not exist, the system automatically creates the group.</p>
          * <blockquote>
-         * <p>You can create up to 200 whitelist groups for a single instance.</p>
+         * <p>A single instance supports up to 200 IP whitelist groups.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -204,7 +245,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID of the target instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,9 +258,9 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The read-only instances to which the whitelist is synchronized.</p>
+         * <p>The list of read-only instances to which the whitelist is synchronized.</p>
          * <ul>
-         * <li>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances that have read-only instances.</li>
+         * <li>This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which read-only instances are created.</li>
          * <li>If multiple read-only instances exist, separate their IDs with commas (,).</li>
          * </ul>
          * 
@@ -233,11 +274,23 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
+         * <p>The details of the whitelist groups. This parameter is required when BatchMode is set to true. In each group, GroupName is required and must be unique. You must specify at least one of SecurityIPList and GroupTag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;GroupName&quot;:&quot;default&quot;,&quot;SecurityIPList&quot;:&quot;127.0.0.1&quot;},{&quot;GroupName&quot;:&quot;test&quot;,&quot;SecurityIPList&quot;:&quot;10.23.XX.XX,10.24.XX.XX&quot;}]</p>
+         */
+        public Builder groupItems(java.util.List<GroupItems> groupItems) {
+            this.putQueryParameter("GroupItems", groupItems);
+            this.groupItems = groupItems;
+            return this;
+        }
+
+        /**
          * <p>The modification mode. Valid values:</p>
          * <ul>
-         * <li><strong>Cover</strong>: overwrites the original IP address whitelist with the IP addresses specified by the <strong>SecurityIps</strong> parameter. This is the default value.</li>
-         * <li><strong>Append</strong>: appends the IP addresses specified by the <strong>SecurityIps</strong> parameter to the original IP address whitelist.</li>
-         * <li><strong>Delete</strong>: deletes the IP addresses specified by the <strong>SecurityIps</strong> parameter from the original IP address whitelist. You must retain at least one IP address in the whitelist.</li>
+         * <li><strong>Cover</strong>: overwrites the original IP whitelist with the value of the <strong>SecurityIps</strong> parameter. This is the default value.</li>
+         * <li><strong>Append</strong>: appends the IP addresses specified in the <strong>SecurityIps</strong> parameter to the original IP whitelist.</li>
+         * <li><strong>Delete</strong>: deletes the IP addresses specified in the <strong>SecurityIps</strong> parameter from the original IP whitelist. You must retain at least one IP address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,19 +324,18 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * <p>The IP address whitelist. Before you modify the IP address whitelist, call the <a href="https://help.aliyun.com/document_detail/610518.html">DescribeDBInstanceIPArrayList</a> operation to query the existing IP address whitelist of the instance.</p>
+         * <p>The IP whitelist. Before you modify the IP whitelist, call the <a href="https://help.aliyun.com/document_detail/610518.html">DescribeDBInstanceIPArrayList</a> operation to query the existing IP whitelist of the instance.</p>
          * <details>
          * <summary>Configuration rules</summary>
          * 
          * <ul>
-         * <li><p>You can enter IP addresses (such as 10.23.XX.XX) or CIDR blocks (such as 10.23.XX.XX/24).</p>
+         * <li><p>IP addresses (such as 10.23.XX.XX) and CIDR blocks (such as 10.23.XX.XX/24) are supported.</p>
          * </li>
          * <li><p>Separate multiple IP addresses or CIDR blocks with commas (,). Do not add spaces before or after the commas.</p>
          * </li>
-         * <li><p>You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of a single instance. If you have a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</p>
+         * <li><p>You can add up to 1,000 IP addresses or CIDR blocks to a single instance. If you have a large number of IP addresses, we recommend that you merge scattered IP addresses into CIDR blocks, such as 10.23.XX.XX/24.</p>
          * </details></li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10.23.XX.XX</p>
@@ -297,13 +349,13 @@ public class ModifySecurityIpsRequest extends Request {
         /**
          * <p>The network type of the whitelist. Valid values:</p>
          * <ul>
-         * <li><strong>MIX</strong>: the general mode. This is the default value.</li>
-         * <li><strong>Classic</strong>: the classic network in the enhanced whitelist mode.</li>
-         * <li><strong>VPC</strong>: the VPC in the enhanced whitelist mode.</li>
+         * <li><strong>MIX</strong>: general mode. This is the default value.</li>
+         * <li><strong>Classic</strong>: classic network in enhanced whitelist mode.</li>
+         * <li><strong>VPC</strong>: VPC in enhanced whitelist mode.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>For ApsaraDB RDS for PostgreSQL instances with cloud disks, the network type is fixed to the general mode (MIX). If you configure another mode, the system automatically changes it to the general mode.</li>
+         * <li>For ApsaraDB RDS for PostgreSQL instances with cloud disks, the network type is fixed to MIX. If you configure another mode, the system automatically converts it to MIX.</li>
          * <li>The enhanced whitelist mode is supported only by ApsaraDB RDS for MySQL 5.1, 5.5, 5.6, and 5.7 instances with premium local SSDs, and ApsaraDB RDS for PostgreSQL 9.4 and 10 instances with premium local SSDs.</li>
          * </ul>
          * </blockquote>
@@ -324,4 +376,109 @@ public class ModifySecurityIpsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifySecurityIpsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifySecurityIpsRequest</p>
+     */
+    public static class GroupItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GroupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("GroupTag")
+        private String groupTag;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
+        private String securityIPList;
+
+        private GroupItems(Builder builder) {
+            this.groupName = builder.groupName;
+            this.groupTag = builder.groupTag;
+            this.securityIPList = builder.securityIPList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GroupItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return groupTag
+         */
+        public String getGroupTag() {
+            return this.groupTag;
+        }
+
+        /**
+         * @return securityIPList
+         */
+        public String getSecurityIPList() {
+            return this.securityIPList;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private String groupTag; 
+            private String securityIPList; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupItems model) {
+                this.groupName = model.groupName;
+                this.groupTag = model.groupTag;
+                this.securityIPList = model.securityIPList;
+            } 
+
+            /**
+             * <p>The name of the whitelist group. This parameter is required in batch mode and must be unique within the same GroupItems list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * <p>The attribute of the whitelist group. If you set this parameter to hidden, the group is a system-generated group used by services such as DMS, DTS, and DAS. These groups are not displayed in the console. Proceed with caution. Generally, you do not need to specify this parameter. You must specify at least one of this parameter and SecurityIPList.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hidden</p>
+             */
+            public Builder groupTag(String groupTag) {
+                this.groupTag = groupTag;
+                return this;
+            }
+
+            /**
+             * <p>The modified IP address whitelist of the group. Separate multiple IP addresses with commas (,). You must specify at least one of this parameter and GroupTag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.23.XX.XX,10.24.XX.XX</p>
+             */
+            public Builder securityIPList(String securityIPList) {
+                this.securityIPList = securityIPList;
+                return this;
+            }
+
+            public GroupItems build() {
+                return new GroupItems(this);
+            } 
+
+        } 
+
+    }
 }

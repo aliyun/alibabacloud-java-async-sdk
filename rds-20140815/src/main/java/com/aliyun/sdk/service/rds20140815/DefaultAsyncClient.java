@@ -1244,14 +1244,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported DPI engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
+     * <p>Notice: Before you invoke this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of the operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></li>
@@ -3095,7 +3095,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -7525,10 +7525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure the automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Configure the automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Configure the automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Configure the automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
@@ -8242,12 +8242,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBInstanceSSL  ModifyDBInstanceSSLRequest
@@ -8424,17 +8424,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</p>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy node in each unit. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated proxy service with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></li>
@@ -8460,14 +8460,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported DPI engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
@@ -9484,13 +9484,13 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * @param request the request parameters of ModifySecurityIps  ModifySecurityIpsRequest

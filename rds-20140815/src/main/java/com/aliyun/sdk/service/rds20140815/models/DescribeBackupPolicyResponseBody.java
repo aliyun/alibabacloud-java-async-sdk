@@ -59,6 +59,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private String enableBackupLog;
 
+    @com.aliyun.core.annotation.NameInMap("EnableImmutableBackup")
+    private Boolean enableImmutableBackup;
+
     @com.aliyun.core.annotation.NameInMap("EnableIncrementDataBackup")
     private Boolean enableIncrementDataBackup;
 
@@ -131,6 +134,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.category = builder.category;
         this.compressType = builder.compressType;
         this.enableBackupLog = builder.enableBackupLog;
+        this.enableImmutableBackup = builder.enableImmutableBackup;
         this.enableIncrementDataBackup = builder.enableIncrementDataBackup;
         this.enablePitrProtection = builder.enablePitrProtection;
         this.highSpaceUsageProtection = builder.highSpaceUsageProtection;
@@ -260,6 +264,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     public String getEnableBackupLog() {
         return this.enableBackupLog;
+    }
+
+    /**
+     * @return enableImmutableBackup
+     */
+    public Boolean getEnableImmutableBackup() {
+        return this.enableImmutableBackup;
     }
 
     /**
@@ -410,6 +421,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String category; 
         private String compressType; 
         private String enableBackupLog; 
+        private Boolean enableImmutableBackup; 
         private Boolean enableIncrementDataBackup; 
         private Boolean enablePitrProtection; 
         private String highSpaceUsageProtection; 
@@ -448,6 +460,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             this.category = model.category;
             this.compressType = model.compressType;
             this.enableBackupLog = model.enableBackupLog;
+            this.enableImmutableBackup = model.enableImmutableBackup;
             this.enableIncrementDataBackup = model.enableIncrementDataBackup;
             this.enablePitrProtection = model.enablePitrProtection;
             this.highSpaceUsageProtection = model.highSpaceUsageProtection;
@@ -497,7 +510,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of archive backups retained for the <strong>MySQL</strong> instance.</p>
+         * <p>The number of archived backups retained for an <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -508,7 +521,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retention period of archive backups for the <strong>MySQL</strong> instance.</p>
+         * <p>The retention cycle of archived backups for an <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ByMonth</p>
@@ -519,7 +532,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of days for which archive backups are retained for the <strong>MySQL</strong> instance.</p>
+         * <p>The number of days for which archived backups are retained for an <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
          * 
          * <strong>example:</strong>
          * <p>365</p>
@@ -532,8 +545,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         /**
          * <p>The backup interval. Unit: minutes.</p>
          * <ul>
-         * <li>For MySQL instances: the <a href="https://help.aliyun.com/document_detail/98818.html">snapshot backup frequency</a>, not the snapshot backup cycle.</li>
-         * <li>For SQL Server instances: the log backup frequency.</li>
+         * <li>For an ApsaraDB RDS for MySQL instance, this parameter indicates the <a href="https://help.aliyun.com/document_detail/98818.html">snapshot backup frequency</a> rather than the snapshot backup cycle.</li>
+         * <li>For an ApsaraDB RDS for SQL Server instance, this parameter indicates the log backup frequency.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -550,10 +563,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <li><strong>Enable</strong>: yes</li>
          * <li><strong>Disabled</strong>: no</li>
          * </ul>
-         * <p><strong>For SQL Server instances:</strong></p>
+         * <p><strong>For an ApsaraDB RDS for SQL Server instance:</strong></p>
          * <ul>
-         * <li><strong>Enable</strong> is returned only when instance log backup frequency is <strong>every 5 minutes</strong>.</li>
-         * <li><strong>Disabled</strong> is returned when instance log backup frequency is <strong>every 30 minutes</strong> or <strong>the same as the data backup frequency</strong>. <strong>Refer to the value of BackupInterval</strong>.</li>
+         * <li><strong>Enable</strong> is returned only when instance log backup frequency of the instance is set to <strong>Every 5 Minutes</strong>.</li>
+         * <li><strong>Disabled</strong> is returned when instance log backup frequency is set to <strong>Every 30 Minutes</strong> or <strong>Same as Data Backup</strong>. <strong>Refer to the value of BackupInterval</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -565,7 +578,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The backup method for <strong>SQL Server instances with cloud disks</strong>. Valid values:</p>
+         * <p>The backup method for an <strong>ApsaraDB RDS for SQL Server instance with cloud disks</strong>. Valid values:</p>
          * <ul>
          * <li><strong>Physical</strong>: physical backup</li>
          * <li><strong>Snapshot</strong>: snapshot backup</li>
@@ -580,13 +593,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The secondary node backup setting for <strong>SQL Server Enterprise Cluster Edition</strong> instances. Valid values:</p>
+         * <p>The secondary node backup setting for an <strong>ApsaraDB RDS for SQL Server Cluster Edition</strong> instance. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Prefer secondary node.</li>
-         * <li><strong>2</strong>: Force primary node.</li>
+         * <li><strong>1</strong>: prefer secondary node</li>
+         * <li><strong>2</strong>: force primary node</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is returned only when SupportModifyBackupPriority is True.</p>
+         * <p>This parameter is returned only when SupportModifyBackupPriority is set to True.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -609,7 +622,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether backup within seconds is enabled for <strong>MySQL</strong> and <strong>PostgreSQL</strong> instances. Valid values:</p>
+         * <p>Indicates whether backup within seconds is enabled for <strong>ApsaraDB RDS for MySQL</strong> and <strong>ApsaraDB RDS for PostgreSQL</strong> instances. Valid values:</p>
          * <ul>
          * <li><strong>Flash</strong>: enabled</li>
          * <li><strong>Standard</strong>: disabled</li>
@@ -632,8 +645,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <li><strong>0</strong>: no compression</li>
          * <li><strong>1</strong>: zlib compression</li>
          * <li><strong>2</strong>: parallel zlib compression</li>
-         * <li><strong>4</strong>: quicklz compression with database and table restoration enabled</li>
-         * <li><strong>8</strong>: quicklz compression without database and table restoration supported</li>
+         * <li><strong>4</strong>: QuickLZ compression with database and table restoration enabled</li>
+         * <li><strong>8</strong>: QuickLZ compression without database and table restoration supported</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -650,10 +663,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          * <li><strong>1</strong>: enabled</li>
          * <li><strong>0</strong>: disabled</li>
          * </ul>
-         * <p><strong>For SQL Server instances:</strong></p>
+         * <p><strong>For an ApsaraDB RDS for SQL Server instance:</strong></p>
          * <ul>
-         * <li><strong>1</strong> is returned only when instance log backup frequency is <strong>every 5 minutes</strong>.</li>
-         * <li><strong>0</strong> is returned when instance log backup frequency is <strong>every 30 minutes</strong> or <strong>the same as the data backup frequency</strong>. <strong>Refer to the value of BackupInterval</strong>.</li>
+         * <li><strong>1</strong> is returned only when instance log backup frequency of the instance is set to <strong>Every 5 Minutes</strong>.</li>
+         * <li><strong>0</strong> is returned when instance log backup frequency is set to <strong>Every 30 Minutes</strong> or <strong>Same as Data Backup</strong>. <strong>Refer to the value of BackupInterval</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -665,7 +678,18 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether incremental backup is enabled for the <strong>SQL Server</strong> instance. Valid values:</p>
+         * <p>Indicates whether immutable backup is enabled. This parameter takes effect only when Engine is set to PostgreSQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
+        public Builder enableImmutableBackup(Boolean enableImmutableBackup) {
+            this.enableImmutableBackup = enableImmutableBackup;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether incremental backup is enabled for an <strong>ApsaraDB RDS for SQL Server</strong> instance. Valid values:</p>
          * <ul>
          * <li><strong>True</strong>: yes</li>
          * <li><strong>False</strong>: no</li>
@@ -680,7 +704,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether point-in-time recovery (PITR), an upgraded version of log backup, is enabled for the <strong>MySQL</strong> instance. Valid values:</p>
+         * <p>Indicates whether point-in-time recovery (PITR) is enabled for an <strong>ApsaraDB RDS for MySQL</strong> instance. PITR is an upgraded version of log backup. Valid values:</p>
          * <ul>
          * <li><strong>True</strong>: yes</li>
          * <li><strong>False</strong>: no</li>
@@ -698,7 +722,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether binary logs are forcibly deleted when the storage usage of the <strong>MySQL</strong> instance exceeds 80% or the remaining storage is less than 5 GB. Valid values:</p>
+         * <p>Indicates whether binary logs are forcibly deleted when the storage usage of an <strong>ApsaraDB RDS for MySQL</strong> instance exceeds 80% or the remaining storage is less than 5 GB. Valid values:</p>
          * <ul>
          * <li><strong>Disable</strong>: no</li>
          * <li><strong>Enable</strong>: yes</li>
@@ -724,7 +748,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of hours for which local log backups are retained for the <strong>MySQL</strong> instance.</p>
+         * <p>The number of hours for which local binary log backups are retained for an <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -735,7 +759,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum storage usage of local binary logs for the <strong>MySQL</strong> instance.</p>
+         * <p>The maximum storage usage of binary logs for an <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -746,10 +770,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The log backup frequency for the <strong>SQL Server</strong> instance. Valid values:</p>
+         * <p>The log backup frequency for an <strong>ApsaraDB RDS for SQL Server</strong> instance. Valid values:</p>
          * <ul>
          * <li><strong>LogInterval</strong>: every 30 minutes</li>
-         * <li>Default: the same as the data backup cycle specified by <strong>PreferredBackupPeriod</strong></li>
+         * <li>Default value: the same as the data backup cycle specified by <strong>PreferredBackupPeriod</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -761,7 +785,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of local binary logs retained for the <strong>MySQL</strong> instance.</p>
+         * <p>The number of local binary logs retained for an <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -783,7 +807,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of days for which point-in-time recovery is available for the <strong>MySQL</strong> instance.</p>
+         * <p>The number of days to which an <strong>ApsaraDB RDS for MySQL</strong> instance can be restored by using PITR.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -836,11 +860,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data retention policy for archive backups of deleted <strong>MySQL</strong> instances. Valid values:</p>
+         * <p>The data retention policy for archived backups of a deleted <strong>ApsaraDB RDS for MySQL</strong> instance. Valid values:</p>
          * <ul>
-         * <li><strong>None</strong>: no retention</li>
-         * <li><strong>Lastest</strong>: retains the last archive backup</li>
-         * <li><strong>All</strong>: retains all archive backups</li>
+         * <li><strong>None</strong>: does not retain archived backups</li>
+         * <li><strong>Lastest</strong>: retains only the last archived backup</li>
+         * <li><strong>All</strong>: retains all archived backups</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -863,7 +887,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the <strong>SQL Server</strong> instance supports modifying the secondary node backup option. Valid values:</p>
+         * <p>Indicates whether the secondary node backup option can be modified for an <strong>ApsaraDB RDS for SQL Server</strong> instance. Valid values:</p>
          * <ul>
          * <li><strong>True</strong>: yes</li>
          * <li><strong>False</strong>: no</li>
@@ -889,7 +913,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the <strong>SQL Server</strong> instance supports snapshot backup. Valid values:</p>
+         * <p>Indicates whether snapshot backup is supported for an <strong>ApsaraDB RDS for SQL Server</strong> instance. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: yes</li>
          * <li><strong>0</strong>: no</li>
@@ -904,7 +928,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the <strong>SQL Server</strong> instance supports the <a href="https://help.aliyun.com/document_detail/95717.html">5-minute log backup feature</a>. Valid values:</p>
+         * <p>Indicates whether the <a href="https://help.aliyun.com/document_detail/95717.html">5-minute log backup feature</a> is supported for an <strong>ApsaraDB RDS for SQL Server</strong> instance. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: not supported</li>
          * <li><strong>1</strong>: supported</li>
