@@ -50,6 +50,10 @@ public class ListColumnsRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyColumnName")
+    private Integer onlyColumnName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -83,6 +87,7 @@ public class ListColumnsRequest extends Request {
         this.instanceName = builder.instanceName;
         this.lang = builder.lang;
         this.name = builder.name;
+        this.onlyColumnName = builder.onlyColumnName;
         this.pageSize = builder.pageSize;
         this.productCode = builder.productCode;
         this.riskLevelId = builder.riskLevelId;
@@ -161,6 +166,13 @@ public class ListColumnsRequest extends Request {
     }
 
     /**
+     * @return onlyColumnName
+     */
+    public Integer getOnlyColumnName() {
+        return this.onlyColumnName;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -211,6 +223,7 @@ public class ListColumnsRequest extends Request {
         private String instanceName; 
         private String lang; 
         private String name; 
+        private Integer onlyColumnName; 
         private Integer pageSize; 
         private String productCode; 
         private Long riskLevelId; 
@@ -232,6 +245,7 @@ public class ListColumnsRequest extends Request {
             this.instanceName = request.instanceName;
             this.lang = request.lang;
             this.name = request.name;
+            this.onlyColumnName = request.onlyColumnName;
             this.pageSize = request.pageSize;
             this.productCode = request.productCode;
             this.riskLevelId = request.riskLevelId;
@@ -262,7 +276,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The cloud database instance identity. Set this parameter to the InstanceId in the instance list.</p>
+         * <p>The instance identity of the cloud database. Set this parameter to the InstanceId in the instance list.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
@@ -298,7 +312,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The compatible parameter for the instance identity. DataAssetSourceId takes precedence. If both are specified, DataAssetSourceId is used.</p>
+         * <p>The compatible parameter for the instance identity. DataAssetSourceId takes precedence. If both parameters are specified, DataAssetSourceId is used.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
@@ -310,7 +324,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response description. Valid values: zh: Chinese; en: English.</p>
+         * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -330,6 +344,18 @@ public class ListColumnsRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether the API operation returns only column names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder onlyColumnName(Integer onlyColumnName) {
+            this.putQueryParameter("OnlyColumnName", onlyColumnName);
+            this.onlyColumnName = onlyColumnName;
             return this;
         }
 
@@ -358,7 +384,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The identifier of the sensitivity level. You can obtain this value from the return list of ListRiskLevels.</p>
+         * <p>The identifier of the sensitivity level. You can obtain the value from the return list of ListRiskLevels.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -394,7 +420,7 @@ public class ListColumnsRequest extends Request {
         }
 
         /**
-         * <p>The identifier of the data classification and grading template. You can obtain this value from Items[].Id returned by ListTemplates. Keep this parameter consistent with the selected sensitivity level and detection model.</p>
+         * <p>The identifier of the data classification template. You can obtain the value from Items[].Id returned by ListTemplates. Keep this parameter consistent with the selected sensitivity level and detection model.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
