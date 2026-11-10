@@ -180,7 +180,10 @@ public class DescribeRestoreTaskListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup schedule.</p>
+         * <p>The ID of the backup plan.</p>
+         * <blockquote>
+         * <p>You must specify either this parameter or <code>RestoreTaskId</code>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>dbs1hvb0wwwXXXXX</p>
@@ -192,7 +195,7 @@ public class DescribeRestoreTaskListRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>A client-generated token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -204,7 +207,7 @@ public class DescribeRestoreTaskListRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end of the time range to query restore tasks. Specify the time in the UNIX timestamp format. The timestamp is a millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1570701361528</p>
@@ -225,7 +228,7 @@ public class DescribeRestoreTaskListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be a positive integer. Default value: 0.</p>
+         * <p>The page number. The value must be an integer that is greater than or equal to 0. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,14 +240,9 @@ public class DescribeRestoreTaskListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
-         * <ul>
-         * <li>30</li>
-         * <li>50</li>
-         * <li>100</li>
-         * </ul>
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
          * <blockquote>
-         * <p>Default value: 30.</p>
+         * <p>The default value is 30.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -257,9 +255,9 @@ public class DescribeRestoreTaskListRequest extends Request {
         }
 
         /**
-         * <p>The restoration task ID. Separate multiple IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2869836.html">CreateRestoreTask</a> operation to obtain the ID.</p>
+         * <p>The ID of the restore task. You can specify multiple IDs, separated by commas. You can call the <a href="https://help.aliyun.com/document_detail/2869836.html">CreateRestoreTask</a> operation to obtain the restore task ID.</p>
          * <blockquote>
-         * <p> Configure the BackupPlanId or RestoreTaskId parameter. If you configure the two parameters, an error is returned.</p>
+         * <p>You must specify either this parameter or <code>BackupPlanId</code>. Specifying both parameters returns an error.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -272,7 +270,7 @@ public class DescribeRestoreTaskListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The beginning of the time range to query restore tasks. Specify the time in the UNIX timestamp format. The timestamp is a millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1570701361528</p>

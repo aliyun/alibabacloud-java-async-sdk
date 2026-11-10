@@ -547,7 +547,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * AutoOpenDatabase.
+         * <p>Specifies whether to automatically start the instance after an Oracle physical backup is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoOpenDatabase(String autoOpenDatabase) {
             this.putQueryParameter("AutoOpenDatabase", autoOpenDatabase);
@@ -556,7 +559,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * AutoShutdownDatabase.
+         * <p>Specifies whether to automatically shut down the instance after an Oracle physical backup is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoShutdownDatabase(String autoShutdownDatabase) {
             this.putQueryParameter("AutoShutdownDatabase", autoShutdownDatabase);
@@ -567,7 +573,7 @@ public class CreateRestoreTaskRequest extends Request {
         /**
          * <p>The ID of the backup gateway.</p>
          * <blockquote>
-         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to Agent.</p>
+         * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to Agent.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -580,7 +586,7 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup schedule.</p>
+         * <p>The ID of the backup plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -593,7 +599,7 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the full backup set.</p>
+         * <p>The ID of the full backup set used for restoration. This parameter and RestoreTime are mutually exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>dbs1hvb0w*****</p>
@@ -605,7 +611,7 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOC********</p>
@@ -617,7 +623,7 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The unique ID (UID) of the Alibaba Cloud account to which the source database belongs.</p>
+         * <p>The UID of the Alibaba Cloud account used for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>2749528728********</p>
@@ -629,7 +635,7 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role that is used to perform backups across Alibaba Cloud accounts.</p>
+         * <p>The name of the RAM role used for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -641,7 +647,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestDatabaseInstanceClass.
+         * <p>The instance specifications of the new database instance to which data is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.x4.large.2</p>
          */
         public Builder destDatabaseInstanceClass(String destDatabaseInstanceClass) {
             this.putQueryParameter("DestDatabaseInstanceClass", destDatabaseInstanceClass);
@@ -650,7 +659,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestDatabaseInstanceDatabaseVersion.
+         * <p>The database engine version of the new database instance to which data is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder destDatabaseInstanceDatabaseVersion(String destDatabaseInstanceDatabaseVersion) {
             this.putQueryParameter("DestDatabaseInstanceDatabaseVersion", destDatabaseInstanceDatabaseVersion);
@@ -659,7 +671,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestDatabaseInstanceRegion.
+         * <p>The region of the new database instance to which data is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder destDatabaseInstanceRegion(String destDatabaseInstanceRegion) {
             this.putQueryParameter("DestDatabaseInstanceRegion", destDatabaseInstanceRegion);
@@ -668,7 +683,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestDatabaseInstanceStorageSize.
+         * <p>The instance storage size of the new database to recover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder destDatabaseInstanceStorageSize(String destDatabaseInstanceStorageSize) {
             this.putQueryParameter("DestDatabaseInstanceStorageSize", destDatabaseInstanceStorageSize);
@@ -677,7 +695,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestDatabaseInstanceType.
+         * <p>The instance type of the new database to which data is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder destDatabaseInstanceType(String destDatabaseInstanceType) {
             this.putQueryParameter("DestDatabaseInstanceType", destDatabaseInstanceType);
@@ -686,7 +707,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestDatabaseInstanceVSwitch.
+         * <p>The vSwitch of the new database instance to which data is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xx</p>
          */
         public Builder destDatabaseInstanceVSwitch(String destDatabaseInstanceVSwitch) {
             this.putQueryParameter("DestDatabaseInstanceVSwitch", destDatabaseInstanceVSwitch);
@@ -695,7 +719,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * DestDatabaseInstanceVpc.
+         * <p>The VPC of the new database instance to which data is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xx</p>
          */
         public Builder destDatabaseInstanceVpc(String destDatabaseInstanceVpc) {
             this.putQueryParameter("DestDatabaseInstanceVpc", destDatabaseInstanceVpc);
@@ -706,7 +733,7 @@ public class CreateRestoreTaskRequest extends Request {
         /**
          * <p>The name of the database.</p>
          * <blockquote>
-         * <p>This parameter is required if the database is a PostgreSQL database or a MongoDB database.</p>
+         * <p>This parameter is required if the database engine is PostgreSQL or MongoDB.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -719,9 +746,9 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The endpoint that is used to connect to the database.</p>
+         * <p>The database connection address.</p>
          * <blockquote>
-         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to Express, Agent, or Other.</p>
+         * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to Express, Agent, or Other.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -734,9 +761,9 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the database instance.</p>
+         * <p>The instance ID of the database.</p>
          * <blockquote>
-         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to RDS, ECS, DDS, or Express.</p>
+         * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to RDS, ECS, DDS, or Express.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -751,13 +778,13 @@ public class CreateRestoreTaskRequest extends Request {
         /**
          * <p>The location of the database. Valid values:</p>
          * <ul>
-         * <li><strong>RDS</strong>: The database is deployed on an ApsaraDB RDS instance.</li>
-         * <li><strong>ECS</strong>: The database is deployed on an Elastic Compute Service (ECS) instance.</li>
-         * <li><strong>Express</strong>: The database is connected to Database Backup (DBS) by using Express Connect, VPN Gateway, or Smart Access Gateway.</li>
-         * <li><strong>Agent</strong>: The database is connected over a DBS backup gateway.</li>
-         * <li><strong>DDS</strong>: The database is an ApsaraDB for MongoDB database.</li>
-         * <li><strong>Other</strong>: The database is connected to DBS by using the IP address and port of the database.</li>
-         * <li><strong>dg</strong>: The database is a self-managed database that does not have public IP addresses or port numbers and is connected to DBS over Database Gateway.</li>
+         * <li><strong>RDS</strong></li>
+         * <li><strong>ECS</strong></li>
+         * <li><strong>Express</strong>: databases connected over Express Connect circuits, VPN gateways, or Smart Access Gateway (SAG)</li>
+         * <li><strong>Agent</strong>: databases connected over backup gateways</li>
+         * <li><strong>DDS</strong>: ApsaraDB for MongoDB</li>
+         * <li><strong>Other</strong>: databases connected by using IP addresses and port numbers</li>
+         * <li><strong>dg</strong>: self-managed databases that have no public IP addresses or port numbers and are connected over Database Gateway</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -771,9 +798,9 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The system ID (SID) of the Oracle database.</p>
+         * <p>The Oracle SID.</p>
          * <blockquote>
-         * <p>This parameter is required if the source database is an Oracle database.</p>
+         * <p>This parameter is required if the database engine is Oracle.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -786,9 +813,9 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The password of the account that is used to connect to the source database.</p>
+         * <p>The password of the database account.</p>
          * <blockquote>
-         * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+         * <p>This parameter is not required if the database engine is Redis, or if the database is connected over a backup gateway and the database engine is SQL Server. In other scenarios, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -801,9 +828,9 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The port of the database.</p>
+         * <p>The port number of the database.</p>
          * <blockquote>
-         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to Express, Agent, Other, or ECS.</p>
+         * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to Express, Agent, Other, or ECS.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -816,9 +843,9 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the destination database instance.</p>
+         * <p>The region of the database instance.</p>
          * <blockquote>
-         * <p> You must specify this parameter if <strong>DestinationEndpointInstanceType</strong> is set to RDS, ECS, DDS, Express, or Agent.</p>
+         * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to RDS, ECS, DDS, Express, or Agent.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -831,9 +858,9 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The username of the account that is used to connect to the database.</p>
+         * <p>The username of the database account.</p>
          * <blockquote>
-         * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+         * <p>This parameter is not required if the database engine is Redis, or if the database is connected over a backup gateway and the database engine is SQL Server. In other scenarios, this parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -846,10 +873,9 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The method of processing objects with the same name. Valid values:</p>
+         * <p>The method used to handle conflicts between objects with the same name. Valid values:</p>
          * <ul>
-         * <li>failure: The restore task fails if the system detects objects with the same name. This is the default value.</li>
-         * <li>renamenew: The restore task renames objects with the same name starting from the second occurrence.</li>
+         * <li><strong>renamenew</strong>: renames the object if an object with the same name exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -862,7 +888,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * EnableDestinationEndpointSsl.
+         * <p>Specifies whether to connect to the destination by using an SSL-encrypted connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableDestinationEndpointSsl(Boolean enableDestinationEndpointSsl) {
             this.putQueryParameter("EnableDestinationEndpointSsl", enableDestinationEndpointSsl);
@@ -880,7 +909,14 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * RestoreDestinationMode.
+         * <p>The method used to restore data to the destination. Valid values:</p>
+         * <ul>
+         * <li><strong>EXIST_INSTANCE</strong>: restores data to an existing instance.</li>
+         * <li><strong>NEW_INSTANCE</strong>: restores data to a new instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EXIST_INSTANCE</p>
          */
         public Builder restoreDestinationMode(String restoreDestinationMode) {
             this.putQueryParameter("RestoreDestinationMode", restoreDestinationMode);
@@ -889,7 +925,7 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required if the DestinationEndpointInstanceType parameter is set to Agent and the backup object of the backup schedule is a MySQL database.</p>
+         * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to Agent and the backup plan is for MySQL.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -901,7 +937,7 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The program directory of the database.</p>
+         * <p>The directory of the database program.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -914,12 +950,17 @@ public class CreateRestoreTaskRequest extends Request {
 
         /**
          * <p>The objects to be restored.</p>
+         * <ul>
+         * <li>For more information, see the definition of the <strong>RestoreObjects</strong> parameter below. This parameter is not required if the database is connected over a backup gateway. In other scenarios, this parameter is required.</li>
+         * <li>Template: <code>[{ &quot;DBName&quot;: &quot;Name of the database to be restored&quot;, &quot;NewDBName&quot;: &quot;Name of the destination database&quot; }]</code></li>
+         * </ul>
          * <blockquote>
-         * <p>This parameter is required except that the DestinationEndpointInstanceType parameter is set to Agent. For information about the parameter definition, see RestoreObjects.</p>
+         * <p>Restoring objects by calling this API operation only supports restoration at the database level. To restore specific tables, go to the console. For more information, see <a href="https://help.aliyun.com/document_detail/85543.html">Restore a database</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>[ { &quot;DBName&quot;:&quot;Name of the database to be restored&quot;, &quot;NewDBName&quot;:&quot;Name of the database to which the objects will be restored&quot;, &quot;SchemaName&quot;:&quot;Schema name of the database to be restored&quot;, &quot;NewSchemaName&quot;:&quot;Schema name of the destination database to which the objects will be restored&quot;}]</p>
+         * <p>Example of MySQL table-level restoration:
+         * [{\&quot;DBName\&quot;:\&quot;dbname\&quot;, \&quot;NewDBName\&quot;:\&quot;dbname1\&quot;}]</p>
          */
         public Builder restoreObjects(String restoreObjects) {
             this.putQueryParameter("RestoreObjects", restoreObjects);
@@ -941,7 +982,7 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * <p>The time to run the restore task, such as 1554560477000.</p>
+         * <p>The point in time to which you want to restore the database. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1554560477000</p>
@@ -953,7 +994,10 @@ public class CreateRestoreTaskRequest extends Request {
         }
 
         /**
-         * SslCaPem.
+         * <p>The credential for the SSL-encrypted connection to the destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----</p>
          */
         public Builder sslCaPem(String sslCaPem) {
             this.putQueryParameter("SslCaPem", sslCaPem);

@@ -124,13 +124,13 @@ public class DescribePreCheckProgressListRequest extends Request {
         }
 
         /**
-         * <p>The backup schedule ID.</p>
+         * <p>The ID of the backup plan.</p>
          * <blockquote>
-         * <p> You must specify one of BackupPlanId and RestoreTaskId.</p>
+         * <p>Specify BackupPlanId or RestoreTaskId.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01XXXX</p>
+         * <p>dbsr1l3ro21****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -139,10 +139,10 @@ public class DescribePreCheckProgressListRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -160,10 +160,10 @@ public class DescribePreCheckProgressListRequest extends Request {
         }
 
         /**
-         * <p>The restoration task ID.</p>
+         * <p>The ID of the restore task.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbasdsaXXXX</p>
+         * <p>dbasdsa****</p>
          */
         public Builder restoreTaskId(String restoreTaskId) {
             this.putQueryParameter("RestoreTaskId", restoreTaskId);

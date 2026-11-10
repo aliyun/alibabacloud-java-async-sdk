@@ -575,10 +575,10 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic backup feature.</p>
+         * <p>Specifies whether to enable automatic backup. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the automatic backup feature.</li>
-         * <li><strong>false</strong>: disables the automatic backup feature.</li>
+         * <li><strong>true</strong>: enables automatic backup</li>
+         * <li><strong>false</strong>: disables automatic backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -591,9 +591,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The backup gateway ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+         * <p>The ID of the backup gateway. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpointInstanceType</strong> to <strong>Agent</strong>, this parameter is required.</p>
+         * <p>This parameter is required when <strong>SourceEndpointInstanceType</strong> is set to <strong>agent</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -606,9 +606,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The interval at which you want to perform incremental log backups. Unit: seconds.</p>
+         * <p>The interval for incremental backup, in seconds.</p>
          * <blockquote>
-         * <p> Only physical backup supports this parameter.</p>
+         * <p>This parameter is supported only for physical backup.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -621,10 +621,10 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The objects to be backed up. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the objects.</p>
+         * <p>The objects to be backed up. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>[ { &quot;DBName&quot;:&quot;Name of the database to be backed up&quot;, &quot;SchemaName&quot;:&quot;Name of the schema to be backed up&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be backed up&quot; }], &quot;TableExcludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be excluded during the backup&quot; }] } ]</p>
+         * <p>[     {         &quot;DBName&quot;:&quot;DatabaseToBackUp&quot;,         &quot;SchemaName&quot;:&quot;SchemaToBackUp&quot;,         &quot;TableIncludes&quot;:[{             &quot;TableName&quot;:&quot;TableToBackUp&quot;         }],         &quot;TableExcludes&quot;:[{             &quot;TableName&quot;:&quot;TableToExclude&quot;         }]     } ]</p>
          */
         public Builder backupObjects(String backupObjects) {
             this.putQueryParameter("BackupObjects", backupObjects);
@@ -633,15 +633,15 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The day of each week when the full backup task runs. Valid values:</p>
+         * <p>The full backup cycle. Valid values:</p>
          * <ul>
-         * <li><strong>Monday</strong></li>
-         * <li><strong>Tuesday</strong></li>
-         * <li><strong>Wednesday</strong></li>
-         * <li><strong>Thursday</strong></li>
-         * <li><strong>Friday</strong></li>
-         * <li><strong>Saturday</strong></li>
-         * <li><strong>Sunday</strong></li>
+         * <li><strong>Monday</strong>: Monday</li>
+         * <li><strong>Tuesday</strong>: Tuesday</li>
+         * <li><strong>Wednesday</strong>: Wednesday</li>
+         * <li><strong>Thursday</strong>: Thursday</li>
+         * <li><strong>Friday</strong>: Friday</li>
+         * <li><strong>Saturday</strong>: Saturday</li>
+         * <li><strong>Sunday</strong>: Sunday</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -654,7 +654,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+         * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -667,7 +667,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The name of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the name.</p>
+         * <p>The custom name of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -680,9 +680,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The network bandwidth throttling. Unit: KB/s. DBS allows a maximum bandwidth of 10 GB/s.</p>
+         * <p>The network bandwidth throttling. Unit: KB/s. Maximum value: 10 GB.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when physical backups for MySQL databases are performed.</p>
+         * <p>This parameter takes effect only for MySQL physical backup.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -695,7 +695,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The number of days for which the backup data is retained. Valid values: 0 to 1825. Default value: 730.</p>
+         * <p>The retention period of backup data. Valid values: 0 to 1825. Default value: 730. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>730</p>
@@ -709,7 +709,7 @@ public class ConfigureBackupPlanRequest extends Request {
         /**
          * <p>The disk I/O limit. Unit: KB/s.</p>
          * <blockquote>
-         * <p> This parameter takes effect only during the physical backup of a MySQL database.</p>
+         * <p>This parameter takes effect only for MySQL physical backup.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -722,7 +722,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The start time of the full backup. Specify the time in the <em>HH:mm</em>Z format. The time must be in UTC. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the start time of full backup tasks.</p>
+         * <p>The start time of the full backup. The time is in the <i>HH:mm</i>Z format and displayed in UTC. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>14:22</p>
@@ -734,7 +734,10 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * BackupStorageEncryptMethod.
+         * <p>The encryption method for backup storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>encrypted</p>
          */
         public Builder backupStorageEncryptMethod(String backupStorageEncryptMethod) {
             this.putQueryParameter("BackupStorageEncryptMethod", backupStorageEncryptMethod);
@@ -743,14 +746,14 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The storage type. Valid values:</p>
+         * <p>The built-in storage type. Valid values:</p>
          * <ul>
-         * <li>Empty: If you do not specify this parameter, the system stores backup data in your OSS bucket.</li>
-         * <li>system: The system stores backup data in the built-in OSS bucket of DBS.</li>
+         * <li>Empty string (default): Backup data is stored in your OSS bucket.</li>
+         * <li>system: Backup data is stored in the built-in OSS bucket of DBS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>N/A</p>
+         * <p>None</p>
          */
         public Builder backupStorageType(String backupStorageType) {
             this.putQueryParameter("BackupStorageType", backupStorageType);
@@ -759,10 +762,10 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The backup method that you want to use for full backups. Valid values:</p>
+         * <p>The full backup epoch. Valid values:</p>
          * <ul>
-         * <li><strong>simple</strong>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</li>
-         * <li><strong>Manual</strong>: manual backup.</li>
+         * <li><strong>simple</strong>: periodic backup, which is used together with BackupPeriod and BackupStartTime</li>
+         * <li><strong>manual</strong>: manual backup</li>
          * </ul>
          * <blockquote>
          * <p>Default value: <strong>simple</strong>.</p>
@@ -778,7 +781,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -790,7 +793,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The unique ID (UID) of the Alibaba Cloud account to which the backup schedule belongs. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the UID.</p>
+         * <p>The UID of the Alibaba Cloud account for cross-account backup. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to query the value of this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>2xxx7778xxxxxxxxxx</p>
@@ -802,7 +805,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role that is used to perform backup across Alibaba Cloud accounts. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the RAM role.</p>
+         * <p>The name of the RAM role for cross-account backup. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to query the value of this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -814,7 +817,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The number of days after which the storage class of the backup data is changed to Archive. Default value: 365.</p>
+         * <p>The period after which backup data is transitioned to Archive storage. Default value: 365. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>365</p>
@@ -826,7 +829,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The number of days after which the storage class of the backup data is changed to Infrequent Access (IA). Default value: 180.</p>
+         * <p>The period after which backup data is transitioned to Infrequent Access (IA) storage. Default value: 180. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -838,10 +841,10 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the incremental log backup feature. Valid values:</p>
+         * <p>Specifies whether to enable incremental log backup. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the incremental log backup feature.</li>
-         * <li><strong>false</strong>: disables the incremental log backup feature.</li>
+         * <li><strong>true</strong>: enables incremental log backup</li>
+         * <li><strong>false</strong>: disables incremental log backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -854,7 +857,10 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * EnableMysqlPhysicalBackupBinlog.
+         * <p>Specifies whether to enable log backup for MySQL physical backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableMysqlPhysicalBackupBinlog(String enableMysqlPhysicalBackupBinlog) {
             this.putQueryParameter("EnableMysqlPhysicalBackupBinlog", enableMysqlPhysicalBackupBinlog);
@@ -863,7 +869,10 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * EnableSourceEndpointSsl.
+         * <p>Specifies whether to enable an SSL-encrypted connection to the source database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSourceEndpointSsl(String enableSourceEndpointSsl) {
             this.putQueryParameter("EnableSourceEndpointSsl", enableSourceEndpointSsl);
@@ -874,7 +883,7 @@ public class ConfigureBackupPlanRequest extends Request {
         /**
          * <p>The name of the OSS bucket.</p>
          * <blockquote>
-         * <p> By default, the system automatically generates an OSS bucket name.</p>
+         * <p>By default, the system automatically generates a new name.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -896,7 +905,7 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzecovzti****</p>
@@ -908,9 +917,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The source database name. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+         * <p>The name of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <blockquote>
-         * <p> If the source database runs the <strong>PostgreSQL</strong> database engine or <strong>MongoDB</strong> database engine, this parameter is required.</p>
+         * <p>This parameter is required when the database engine is <strong>PostgreSQL</strong> or <strong>MongoDB</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -923,9 +932,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The source database endpoint. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+         * <p>The database connection address. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpointInstanceType</strong> to <strong>Express</strong>, <strong>Agent</strong>, or <strong>Other</strong>, this parameter is required.</p>
+         * <p>This parameter is required when <strong>SourceEndpointInstanceType</strong> is set to <strong>express</strong>, <strong>agent</strong>, or <strong>other</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -938,9 +947,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The database instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+         * <p>The database instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpoint****InstanceType</strong> to <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, or <strong>Express</strong>, this parameter is required.</p>
+         * <p>This parameter is required when <strong>SourceEndpoint</strong>.<strong>InstanceType</strong> is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>DDS</strong>, or <strong>Express</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -953,14 +962,14 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The location of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the location. Valid values:</p>
+         * <p>The location of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter. Valid values:</p>
          * <ul>
          * <li><strong>RDS</strong></li>
          * <li><strong>ECS</strong></li>
-         * <li><strong>Express</strong>: The database is connected to Database Backup (DBS) via Express Connect, VPN Gateway, or Smart Access Gateway.</li>
-         * <li><strong>Agent</strong>: The database is connected over a DBS backup gateway.</li>
-         * <li><strong>DDS</strong>: The database is an ApsaraDB for MongoDB database.</li>
-         * <li><strong>Other</strong>: The database is connected to DBS by using the IP address and port of the database.</li>
+         * <li><strong>Express</strong>: databases connected over Express Connect circuits, VPN gateways, or Smart Access Gateway (SAG)</li>
+         * <li><strong>Agent</strong>: databases connected over backup gateways</li>
+         * <li><strong>DDS</strong>: ApsaraDB for MongoDB</li>
+         * <li><strong>Other</strong>: databases connected by using IP addresses and port numbers</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -974,7 +983,10 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceEndpointOracleHome.
+         * <p>Oracle Home</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/test</p>
          */
         public Builder sourceEndpointOracleHome(String sourceEndpointOracleHome) {
             this.putQueryParameter("SourceEndpointOracleHome", sourceEndpointOracleHome);
@@ -983,9 +995,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The system ID (SID) of the Oracle database.</p>
+         * <p>The Oracle system identifier (SID).</p>
          * <blockquote>
-         * <p>This parameter is required if the database is an Oracle database.</p>
+         * <p>This parameter is required when the database engine is Oracle.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -998,9 +1010,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The password of the account that is used to connect to the database.</p>
+         * <p>The password of the database account.</p>
          * <blockquote>
-         * <p>This parameter is required except that the database is an <strong>SQL Server</strong> database that is connected to DBS over a DBS backup gateway or a <strong>Redis</strong> database.</p>
+         * <p>This parameter is not required when the database engine is <strong>Redis</strong>, or when the database is connected over a backup gateway (<strong>agent</strong>) and the database engine is <strong>SQL Server</strong>. This parameter is required in other scenarios.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1013,9 +1025,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The port that is used to connect to the source database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the port.</p>
+         * <p>The port number of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpoint****InstanceType</strong> to <strong>Express</strong>, <strong>Agent</strong>, <strong>Other</strong>, or <strong>ECS</strong>, this parameter is required.</p>
+         * <p>This parameter is required when <strong>SourceEndpoint</strong>.<strong>InstanceType</strong> is set to <strong>express</strong>, <strong>agent</strong>, <strong>other</strong>, or <strong>ECS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1028,9 +1040,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The region in which the source database resides. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the region.</p>
+         * <p>The region of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpointInstanceType</strong> to RDS, ECS, DDS, Express, or Agent, this parameter is required.</p>
+         * <p>This parameter is required when <strong>SourceEndpointInstanceType</strong> is set to RDS, ECS, DDS, Express, or Agent.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1043,9 +1055,9 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>The username of the account that is used to connect to the database.</p>
+         * <p>The username of the database account.</p>
          * <blockquote>
-         * <p>This parameter is required except that the database is an <strong>SQL Server</strong> database that is connected to DBS over a DBS backup gateway or a <strong>Redis</strong> database.</p>
+         * <p>This parameter is not required when the database engine is <strong>Redis</strong>, or when the database is connected over a backup gateway (<strong>agent</strong>) and the database engine is <strong>SQL Server</strong>. This parameter is required in other scenarios.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1058,7 +1070,10 @@ public class ConfigureBackupPlanRequest extends Request {
         }
 
         /**
-         * SslCaPem.
+         * <p>The PEM certificate for the SSL-encrypted connection to the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----</p>
          */
         public Builder sslCaPem(String sslCaPem) {
             this.putQueryParameter("SslCaPem", sslCaPem);

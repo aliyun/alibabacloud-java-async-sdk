@@ -125,11 +125,11 @@ public class EnableBackupLogRequest extends Request {
         }
 
         /**
-         * <p>The backup schedule ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+         * <p>The backup plan ID. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01xxxx</p>
+         * <p>dbstooi******</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -138,7 +138,7 @@ public class EnableBackupLogRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>A client-generated token that ensures the idempotency of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>dbs</p>
@@ -150,7 +150,10 @@ public class EnableBackupLogRequest extends Request {
         }
 
         /**
-         * EnableMysqlPhysicalBackupBinlog.
+         * <p>Specifies whether to enable log backup for MySQL physical backups. Set the value to <code>true</code> to enable this feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableMysqlPhysicalBackupBinlog(String enableMysqlPhysicalBackupBinlog) {
             this.putQueryParameter("EnableMysqlPhysicalBackupBinlog", enableMysqlPhysicalBackupBinlog);

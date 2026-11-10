@@ -204,7 +204,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the backup schedules.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -212,7 +212,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -223,7 +223,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -234,7 +234,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6DC3D286-E0E6-5988-A558-2184984B****</p>
@@ -260,7 +260,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of backup set download tasks.</p>
+         * <p>The total number of backup set download records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -271,7 +271,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -561,10 +561,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The backup gateway that is used to download the backup set. This parameter is available only if the value of the BackupSetDownloadWay parameter is auto.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>N/A</p>
+             * BackupGatewayId.
              */
             public Builder backupGatewayId(Long backupGatewayId) {
                 this.backupGatewayId = backupGatewayId;
@@ -572,10 +569,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup schedule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qhnuhyw3****</p>
+             * BackupPlanId.
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;
@@ -583,10 +577,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mysql-bin.00XXXX</p>
+             * BackupSetCode.
              */
             public Builder backupSetCode(String backupSetCode) {
                 this.backupSetCode = backupSetCode;
@@ -594,16 +585,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format in which the backup set is downloaded. Valid values:</p>
-             * <ul>
-             * <li><strong>Native</strong></li>
-             * <li><strong>SQL</strong></li>
-             * <li><strong>CSV</strong></li>
-             * <li><strong>JSON</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Native</p>
+             * BackupSetDataFormat.
              */
             public Builder backupSetDataFormat(String backupSetDataFormat) {
                 this.backupSetDataFormat = backupSetDataFormat;
@@ -611,10 +593,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data in the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>237837</p>
+             * BackupSetDataSize.
              */
             public Builder backupSetDataSize(Long backupSetDataSize) {
                 this.backupSetDataSize = backupSetDataSize;
@@ -622,10 +601,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MySQL</p>
+             * BackupSetDbType.
              */
             public Builder backupSetDbType(String backupSetDbType) {
                 this.backupSetDbType = backupSetDbType;
@@ -633,10 +609,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates when the backup set download task was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1642044001000</p>
+             * BackupSetDownloadCreateTime.
              */
             public Builder backupSetDownloadCreateTime(Long backupSetDownloadCreateTime) {
                 this.backupSetDownloadCreateTime = backupSetDownloadCreateTime;
@@ -644,13 +617,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server directory to which the backup set is downloaded.</p>
-             * <blockquote>
-             * <p>This parameter is available only if the value of the BackupSetDownloadWay parameter is auto.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>N/A</p>
+             * BackupSetDownloadDir.
              */
             public Builder backupSetDownloadDir(String backupSetDownloadDir) {
                 this.backupSetDownloadDir = backupSetDownloadDir;
@@ -658,10 +625,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates when the backup set download task is complete.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1642044013000</p>
+             * BackupSetDownloadFinishTime.
              */
             public Builder backupSetDownloadFinishTime(Long backupSetDownloadFinishTime) {
                 this.backupSetDownloadFinishTime = backupSetDownloadFinishTime;
@@ -669,13 +633,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public download URL of the backup set.</p>
-             * <blockquote>
-             * <p>This parameter is available only if the value of the BackupSetDownloadWay parameter is manual and the conversion is complete.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;//dbs-137XXXX-cn-hangzhou-1hr5cpbtmXXXX.oss-cn-hangzhou.example&quot;</p>
+             * BackupSetDownloadInternetUrl.
              */
             public Builder backupSetDownloadInternetUrl(String backupSetDownloadInternetUrl) {
                 this.backupSetDownloadInternetUrl = backupSetDownloadInternetUrl;
@@ -683,13 +641,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal download URL of the backup set.</p>
-             * <blockquote>
-             * <p>This parameter is available only if the value of the BackupSetDownloadWay parameter is manual and the conversion is complete.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;//dbs-13XXXX-cn-hangzhou-1hr5cpbtmXXXX.oss-cn-hangzhou-internal.example&quot;</p>
+             * BackupSetDownloadIntranetUrl.
              */
             public Builder backupSetDownloadIntranetUrl(String backupSetDownloadIntranetUrl) {
                 this.backupSetDownloadIntranetUrl = backupSetDownloadIntranetUrl;
@@ -697,20 +649,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the backup set download task. Valid values:</p>
-             * <ul>
-             * <li><strong>checking</strong>: The backup set download task is being prechecked.</li>
-             * <li><strong>init</strong>: The backup set download task is not started and fails to pass the precheck.</li>
-             * <li><strong>check_pass</strong>: The backup set download task passes the precheck.</li>
-             * <li><strong>pause</strong>: The backup set download task is paused.</li>
-             * <li><strong>schedule</strong>: The backup set download task is waiting to be scheduled</li>
-             * <li><strong>running</strong>: The backup set download task is running.</li>
-             * <li><strong>stop</strong>: The backup set download task fails.</li>
-             * <li><strong>finish</strong>: The backup set download task is complete.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>finish</p>
+             * BackupSetDownloadStatus.
              */
             public Builder backupSetDownloadStatus(String backupSetDownloadStatus) {
                 this.backupSetDownloadStatus = backupSetDownloadStatus;
@@ -718,13 +657,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the destination server to which the backup set is downloaded.</p>
-             * <blockquote>
-             * <p>This parameter is available only if the value of the BackupSetDownloadWay parameter is auto. A value of agent indicates a server on which a backup gateway is installed.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>N/A</p>
+             * BackupSetDownloadTargetType.
              */
             public Builder backupSetDownloadTargetType(String backupSetDownloadTargetType) {
                 this.backupSetDownloadTargetType = backupSetDownloadTargetType;
@@ -732,10 +665,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup set download task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>urxgrxt7****</p>
+             * BackupSetDownloadTaskId.
              */
             public Builder backupSetDownloadTaskId(String backupSetDownloadTaskId) {
                 this.backupSetDownloadTaskId = backupSetDownloadTaskId;
@@ -743,10 +673,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the backup set download task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1h7za2yws****-ManualCont</p>
+             * BackupSetDownloadTaskName.
              */
             public Builder backupSetDownloadTaskName(String backupSetDownloadTaskName) {
                 this.backupSetDownloadTaskName = backupSetDownloadTaskName;
@@ -754,14 +681,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method in which the backup set is downloaded. Valid values:</p>
-             * <ul>
-             * <li><strong>manual</strong>: The backup set is manually downloaded.</li>
-             * <li><strong>auto</strong>: The backup set is automatically downloaded.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>manual</p>
+             * BackupSetDownloadWay.
              */
             public Builder backupSetDownloadWay(String backupSetDownloadWay) {
                 this.backupSetDownloadWay = backupSetDownloadWay;
@@ -769,10 +689,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1h7za2yws****</p>
+             * BackupSetId.
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -780,14 +697,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the backup set task. Valid values:</p>
-             * <ul>
-             * <li><strong>cbs_backup_sub_full</strong>: logical full backup set download task</li>
-             * <li><strong>cbs_backup_sub_cont</strong>: logical incremental backup set download task</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>cbs_backup_sub_cont</p>
+             * BackupSetJobType.
              */
             public Builder backupSetJobType(String backupSetJobType) {
                 this.backupSetJobType = backupSetJobType;
@@ -798,7 +708,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>java.lang.IndexOutOfBoundsException.</p>
+             * <p>The specified parameter %s value is not valid.</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;

@@ -152,7 +152,7 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error information.</p>
+         * <p>The details of the error code.</p>
          */
         public Builder item(Item item) {
             this.item = item;
@@ -160,7 +160,7 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1FC2F86D-AFF4-4ED9-BB25-ADDE196CB2B5</p>
@@ -171,7 +171,7 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -303,7 +303,7 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The standard error message.</p>
+             * <p>The standardized error message.</p>
              * 
              * <strong>example:</strong>
              * <p>Describe preCheck progress failed.</p>
@@ -314,10 +314,10 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the full backup or restore task.</p>
+             * <p>The ID of the full backup or restore job.</p>
              * 
              * <strong>example:</strong>
-             * <p>tooi0****</p>
+             * <p>r1iv62ud****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -325,7 +325,7 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task.</p>
+             * <p>The state of the job.</p>
              * 
              * <strong>example:</strong>
              * <p>init</p>
@@ -336,7 +336,7 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal ID of the DBS task type.</p>
+             * <p>The internal job type ID in DBS.</p>
              * 
              * <strong>example:</strong>
              * <p>testId</p>

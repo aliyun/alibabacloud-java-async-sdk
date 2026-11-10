@@ -119,7 +119,7 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the databases.</p>
+         * DbList.
          */
         public Builder dbList(DbList dbList) {
             this.dbList = dbList;
@@ -127,7 +127,7 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code string.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
@@ -141,7 +141,7 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>This backupPlan can&quot;t support this action</p>
+         * <p>This backupPlan can\&quot;t support this action</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;

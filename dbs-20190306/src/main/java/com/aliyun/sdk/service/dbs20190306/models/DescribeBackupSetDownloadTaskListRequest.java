@@ -152,9 +152,9 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         }
 
         /**
-         * <p>The backup schedule ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+         * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <blockquote>
-         * <p> You must configure the <strong>BackupPlanId</strong> or <strong>BackupSetDownloadTaskId</strong> parameter.</p>
+         * <p>You must specify either <strong>BackupPlanId</strong> or <strong>BackupSetDownloadTaskId</strong> as a required request parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -169,8 +169,8 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         /**
          * <p>The ID of the backup set download task.</p>
          * <ul>
-         * <li>Full backup set download task: You can call the <a href="https://help.aliyun.com/document_detail/2869842.html">CreateFullBackupSetDownload</a> operation to create a full backup set download task and obtain the task ID.</li>
-         * <li>Incremental backup set download task: You can call the <a href="https://help.aliyun.com/document_detail/2869843.html">CreateIncrementBackupSetDownload</a> operation to create an incremental backup set download task and obtain the task ID.</li>
+         * <li>Full backup: You can call the <a href="https://help.aliyun.com/document_detail/2869842.html">CreateFullBackupSetDownload</a> operation to query the value of this parameter.</li>
+         * <li>Incremental backup: You can call the <a href="https://help.aliyun.com/document_detail/2869843.html">CreateIncrementBackupSetDownload</a> operation to query the value of this parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token used to ensure the idempotence of the request and prevent duplicate submissions. You can enter any value.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCzXXXXXX</p>
@@ -204,7 +204,7 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be a positive integer. Default value: 0.</p>
+         * <p>The page number. The value must be greater than or equal to 0 and cannot exceed the maximum value of an integer. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +216,7 @@ public class DescribeBackupSetDownloadTaskListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 30, 50, and 100.</p>
+         * <p>The number of entries per page. Valid values: 30, 50, and 100.</p>
          * <blockquote>
          * <p>Default value: 30.</p>
          * </blockquote>

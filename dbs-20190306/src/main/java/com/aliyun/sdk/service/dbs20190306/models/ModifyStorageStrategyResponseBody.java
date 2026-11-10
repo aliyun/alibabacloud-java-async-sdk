@@ -132,7 +132,7 @@ public class ModifyStorageStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the backup schedule.</p>
+         * <p>The ID of the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsqdss5tmh****</p>
@@ -176,9 +176,9 @@ public class ModifyStorageStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a precheck is triggered. Valid values:</p>
+         * <p>Indicates whether the modification triggers a precheck. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A precheck is triggered. You must manually call the <a href="https://help.aliyun.com/document_detail/2869818.html">StartBackupPlan</a> operation to start the backup schedule.</li>
+         * <li><strong>true</strong>: A precheck is triggered. You must manually call the <a href="https://help.aliyun.com/document_detail/2869818.html">StartBackupPlan</a> operation to start the backup plan.</li>
          * <li><strong>false</strong>: No precheck is triggered.</li>
          * </ul>
          * 
@@ -191,7 +191,7 @@ public class ModifyStorageStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E995F91F-6F89-503B-9F7D-502F58FD****</p>

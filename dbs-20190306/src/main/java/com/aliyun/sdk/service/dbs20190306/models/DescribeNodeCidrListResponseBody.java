@@ -165,7 +165,7 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The public CIDR blocks.</p>
+         * InternetIPs.
          */
         public Builder internetIPs(InternetIPs internetIPs) {
             this.internetIPs = internetIPs;
@@ -173,7 +173,7 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal CIDR blocks.</p>
+         * IntranetIPs.
          */
         public Builder intranetIPs(IntranetIPs intranetIPs) {
             this.intranetIPs = intranetIPs;

@@ -122,7 +122,7 @@ public class CreateFullBackupSetDownloadResponseBody extends TeaModel {
          * <p>The ID of the backup set download task.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01e****</p>
+         * <p>dbstooi01exxxxx</p>
          */
         public Builder backupSetDownloadTaskId(String backupSetDownloadTaskId) {
             this.backupSetDownloadTaskId = backupSetDownloadTaskId;
@@ -163,7 +163,7 @@ public class CreateFullBackupSetDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
@@ -174,7 +174,7 @@ public class CreateFullBackupSetDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

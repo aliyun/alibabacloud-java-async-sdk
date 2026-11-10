@@ -204,7 +204,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of backup gateways.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -212,7 +212,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -223,7 +223,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of records on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -234,7 +234,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>46361705-8531-492F-807E-A97E482DD4A1</p>
@@ -245,7 +245,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -267,7 +267,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -440,10 +440,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the backup gateway was created, such as 1554560477000.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554560477000</p>
+             * BackupGatewayCreateTime.
              */
             public Builder backupGatewayCreateTime(Long backupGatewayCreateTime) {
                 this.backupGatewayCreateTime = backupGatewayCreateTime;
@@ -451,10 +448,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2321313123</p>
+             * BackupGatewayId.
              */
             public Builder backupGatewayId(String backupGatewayId) {
                 this.backupGatewayId = backupGatewayId;
@@ -462,16 +456,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the backup gateway. Valid values:</p>
-             * <ul>
-             * <li>ONLINE: The backup gateway is online.</li>
-             * <li>OFFLINE: The backup gateway is offline.</li>
-             * <li>STOPPED: The backup gateway is stopped.</li>
-             * <li>UPGRADING: The backup gateway is being upgraded.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ONLINE</p>
+             * BackupGatewayStatus.
              */
             public Builder backupGatewayStatus(String backupGatewayStatus) {
                 this.backupGatewayStatus = backupGatewayStatus;
@@ -479,10 +464,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the backup gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -490,10 +472,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the backup gateway.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sgdsajhdgu</p>
+             * Identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -501,10 +480,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last time when a heartbeat message was sent, such as 1554560477000.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554560477000</p>
+             * LastHeartbeatTime.
              */
             public Builder lastHeartbeatTime(Long lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -512,10 +488,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -523,10 +496,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the host on which the backup gateway is installed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * SourceEndpointHostname.
              */
             public Builder sourceEndpointHostname(String sourceEndpointHostname) {
                 this.sourceEndpointHostname = sourceEndpointHostname;
@@ -534,10 +504,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the host on which the backup gateway is installed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>XX.XX.XX.XX</p>
+             * SourceEndpointInternetIP.
              */
             public Builder sourceEndpointInternetIP(String sourceEndpointInternetIP) {
                 this.sourceEndpointInternetIP = sourceEndpointInternetIP;
@@ -545,10 +512,7 @@ public class DescribeBackupGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the host on which the backup gateway is installed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>XX.XX.XX.XX</p>
+             * SourceEndpointIntranetIP.
              */
             public Builder sourceEndpointIntranetIP(String sourceEndpointIntranetIP) {
                 this.sourceEndpointIntranetIP = sourceEndpointIntranetIP;

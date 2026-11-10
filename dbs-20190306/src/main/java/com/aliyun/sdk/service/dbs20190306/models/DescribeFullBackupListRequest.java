@@ -223,11 +223,11 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The ID of the backup plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>The total number of full backup tasks.</p>
+         * <p>dbsr179qz******</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -236,10 +236,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * <p>The end time of the backup task, such as 1554560477000.</p>
+         * <p>The ID of the backup set.</p>
          * 
          * <strong>example:</strong>
-         * <p>The point in time when the backup set expires, such as 1554560477000.</p>
+         * <p>1iukx5h******</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -248,7 +248,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * BackupSetStatus.
+         * <p>The status of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>finish</p>
          */
         public Builder backupSetStatus(String backupSetStatus) {
             this.putQueryParameter("BackupSetStatus", backupSetStatus);
@@ -257,7 +260,7 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The client token that is used to ensure request idempotence and prevent duplicate submissions.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -269,7 +272,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * EndTimestamp.
+         * <p>The end time of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676887128</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -287,7 +293,7 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The page number. The value must be greater than or equal to 0 and less than or equal to the maximum value of the Integer data type. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -299,7 +305,13 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * <p>Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -311,7 +323,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * ShowProgress.
+         * <p>Specifies whether to display the backup progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showProgress(String showProgress) {
             this.putQueryParameter("ShowProgress", showProgress);
@@ -320,7 +335,7 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Specifies whether to display the storage type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -332,7 +347,10 @@ public class DescribeFullBackupListRequest extends Request {
         }
 
         /**
-         * <p>Queries full backup tasks.</p>
+         * <p>The start time of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676887100</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

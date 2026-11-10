@@ -119,10 +119,10 @@ public class ModifyBackupSetDownloadRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the backup schedule.</p>
+         * <p>The ID of the backup plan.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01e****</p>
+         * <p>dbstooi01exxxx</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = backupPlanId;
@@ -163,7 +163,7 @@ public class ModifyBackupSetDownloadRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>

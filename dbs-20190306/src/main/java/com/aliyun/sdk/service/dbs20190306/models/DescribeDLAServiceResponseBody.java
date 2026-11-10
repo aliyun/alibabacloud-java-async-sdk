@@ -145,10 +145,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Specifies whether to enable the feature of automatically adding incremental data to a data lake. If this feature is enabled, DBS adds the backup sets that are newly generated to the data lake that is created for the backup schedule. Valid values:</p>
+         * <p>Indicates whether automatic data ingestion into the data lake for incremental data is enabled. If this feature is enabled, the system automatically adds newly generated backup sets to the data lake. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the feature.</li>
-         * <li><strong>false</strong>: disables the feature.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,10 +182,10 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a failed DLA task exists in the return result. Valid values:</p>
+         * <p>Indicates whether the response contains failed DLA tasks. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A failed DLA task exists.</li>
-         * <li><strong>false</strong>: No failed DLA task exists.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,11 +219,11 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the DLA service for the backup schedule. Valid values:</p>
+         * <p>The DLA service status of the backup plan. Valid values:</p>
          * <ul>
-         * <li><strong>Running</strong>: DLA is running.</li>
-         * <li><strong>Closing</strong>: DLA is being disabled.</li>
-         * <li><strong>Closed</strong>: DLA is disabled.</li>
+         * <li><strong>Running</strong>: The service is running.</li>
+         * <li><strong>Closing</strong>: The service is being closed.</li>
+         * <li><strong>Closed</strong>: The service is closed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,7 +235,7 @@ public class DescribeDLAServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

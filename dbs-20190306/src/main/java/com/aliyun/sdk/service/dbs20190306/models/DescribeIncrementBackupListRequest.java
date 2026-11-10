@@ -181,7 +181,7 @@ public class DescribeIncrementBackupListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+         * <p>The ID of the backup plan. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class DescribeIncrementBackupListRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>A client-generated token that ensures the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -206,7 +206,7 @@ public class DescribeIncrementBackupListRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end timestamp of the backup query time range, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1570701361600</p>
@@ -227,7 +227,7 @@ public class DescribeIncrementBackupListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be a positive integer. Default value: 0.</p>
+         * <p>The page number. The value starts from 0, and the default is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -239,7 +239,7 @@ public class DescribeIncrementBackupListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 30, 50, and 100.</p>
+         * <p>The number of entries per page. Valid values: 30, 50, and 100.</p>
          * <blockquote>
          * <p>Default value: 30.</p>
          * </blockquote>
@@ -256,8 +256,10 @@ public class DescribeIncrementBackupListRequest extends Request {
         /**
          * <p>Specifies whether to return the storage class. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>Default value: true.</p>
@@ -273,7 +275,7 @@ public class DescribeIncrementBackupListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start timestamp of the backup query time range, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1570701361528</p>

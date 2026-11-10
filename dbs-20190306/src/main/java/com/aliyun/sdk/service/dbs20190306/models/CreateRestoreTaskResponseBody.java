@@ -174,11 +174,7 @@ public class CreateRestoreTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
-         * <li><strong>false</strong>: The request fails.</li>
-         * </ul>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

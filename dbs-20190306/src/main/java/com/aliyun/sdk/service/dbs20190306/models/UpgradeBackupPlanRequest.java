@@ -130,7 +130,7 @@ public class UpgradeBackupPlanRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01e****</p>
+         * <p>dbstooi01eXXXX</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -142,7 +142,7 @@ public class UpgradeBackupPlanRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCz****</p>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -153,11 +153,16 @@ public class UpgradeBackupPlanRequest extends Request {
         /**
          * <p>The specifications of the instance. Valid values:</p>
          * <ul>
-         * <li>micro</li>
-         * <li>small</li>
-         * <li>medium</li>
-         * <li>large</li>
-         * <li>xlarge</li>
+         * <li><p>micro</p>
+         * </li>
+         * <li><p>small</p>
+         * </li>
+         * <li><p>medium</p>
+         * </li>
+         * <li><p>large</p>
+         * </li>
+         * <li><p>xlarge</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

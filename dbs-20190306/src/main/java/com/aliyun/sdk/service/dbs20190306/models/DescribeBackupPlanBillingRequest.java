@@ -125,11 +125,11 @@ public class DescribeBackupPlanBillingRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup gateway.</p>
+         * <p>The ID of the backup plan. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>160813</p>
+         * <p>dbstooi01ex****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -138,7 +138,7 @@ public class DescribeBackupPlanBillingRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>A client token to ensure the idempotence of the request. The client generates this value. It must be unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
@@ -159,7 +159,7 @@ public class DescribeBackupPlanBillingRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the storage type is displayed.</p>
+         * <p>Specifies whether to display the storage class.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

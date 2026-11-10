@@ -125,13 +125,20 @@ public class CreateFullBackupSetDownloadRequest extends Request {
         }
 
         /**
-         * <p>The format in which the full backup set is downloaded. Valid values:</p>
+         * <p>The format of the downloaded full backup set. Valid values:</p>
          * <ul>
-         * <li><strong>Native</strong></li>
-         * <li><strong>SQL</strong></li>
-         * <li><strong>CSV</strong>(Default value)</li>
-         * <li><strong>JSON</strong></li>
+         * <li><p><strong>Native</strong></p>
+         * </li>
+         * <li><p><strong>SQL</strong></p>
+         * </li>
+         * <li><p><strong>CSV</strong></p>
+         * </li>
+         * <li><p><strong>JSON</strong></p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <p>The default value is CSV.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>SQL</p>
@@ -147,7 +154,7 @@ public class CreateFullBackupSetDownloadRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbs1hv****</p>
+         * <p>dbs1hvXXXXX</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -156,10 +163,10 @@ public class CreateFullBackupSetDownloadRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>A client token used to ensure the idempotence of the request. This prevents the same request from being sent multiple times.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCz****</p>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

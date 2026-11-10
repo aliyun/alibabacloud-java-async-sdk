@@ -133,7 +133,7 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>This backupPlan can&quot;t support this action</p>
+         * <p>This backupPlan can\&quot;t support this action</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +141,7 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>

@@ -132,10 +132,10 @@ public class EnableBackupLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backup schedule ID.</p>
+         * <p>The backup plan ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01xxxx</p>
+         * <p>dbstooi******</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = backupPlanId;
@@ -176,14 +176,16 @@ public class EnableBackupLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a precheck is triggered. Valid values:</p>
+         * <p>Indicates whether this change triggers a precheck. Valid values:</p>
          * <ul>
-         * <li>true: A precheck is triggered. You must call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup schedule.</li>
-         * <li>false: No precheck is triggered.</li>
+         * <li><p><code>true</code>: A precheck is triggered. You must call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup plan.</p>
+         * </li>
+         * <li><p><code>false</code>: No precheck is triggered.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>true</p>
          */
         public Builder needPrecheck(Boolean needPrecheck) {
             this.needPrecheck = needPrecheck;
@@ -191,7 +193,7 @@ public class EnableBackupLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
@@ -202,10 +204,12 @@ public class EnableBackupLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the operation succeeded. Valid values:</p>
          * <ul>
-         * <li>true: The request is successful.</li>
-         * <li>false: The request fails.</li>
+         * <li><p><code>true</code>: The operation succeeded.</p>
+         * </li>
+         * <li><p><code>false</code>: The operation failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

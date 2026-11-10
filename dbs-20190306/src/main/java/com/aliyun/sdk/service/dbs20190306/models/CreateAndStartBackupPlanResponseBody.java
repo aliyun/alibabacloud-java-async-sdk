@@ -145,10 +145,10 @@ public class CreateAndStartBackupPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backup schedule ID.</p>
+         * <p>The ID of the backup plan.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbs1hvb0wwweusfa</p>
+         * <p>dbs1hvb0wwwe****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = backupPlanId;
@@ -156,10 +156,12 @@ public class CreateAndStartBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a backup is performed immediately after the backup schedule is configured. Valid values:</p>
+         * <p>Indicates whether the backup set is enabled. The return value is one of the following:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Enabled</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +217,7 @@ public class CreateAndStartBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
@@ -226,7 +228,7 @@ public class CreateAndStartBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

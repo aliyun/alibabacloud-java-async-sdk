@@ -132,7 +132,7 @@ public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the backup schedule.</p>
+         * <p>The backup plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dbs1h****usfa</p>
@@ -176,7 +176,7 @@ public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a precheck is triggered. If the value of this parameter is true, you must start the backup schedule by calling the StartBackupPlan operation.</p>
+         * <p>Indicates whether the modification triggers a precheck. If this parameter is set to true, you must call the StartBackupPlan operation to start the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -187,7 +187,7 @@ public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D6E068C3-25BC-455A-85FE-45F0B22E****</p>
@@ -198,10 +198,12 @@ public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
-         * <li><strong>false</strong>: The request fails.</li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

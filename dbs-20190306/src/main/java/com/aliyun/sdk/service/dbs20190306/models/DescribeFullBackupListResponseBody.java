@@ -171,7 +171,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -179,7 +182,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -187,7 +193,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -203,7 +212,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -211,7 +223,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -219,7 +234,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>636BC118-6080-4119-A6B5-C199CEC1037D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +245,14 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -235,7 +260,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalElements.
+         * <p>The total number of full backup tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalElements(Integer totalElements) {
             this.totalElements = totalElements;
@@ -243,7 +271,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -688,7 +719,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified parameter %s value is not valid.</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;

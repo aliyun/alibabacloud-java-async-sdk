@@ -336,9 +336,9 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The backup gateway ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+         * <p>The backup gateway ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to get this value.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpointInstanceType</strong> to Agent, this parameter is required.</p>
+         * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <code>Agent</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -351,10 +351,10 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The backup object. If you set SourceEndpointInstanceType to Agent, this parameter is optional. Otherwise, it is required. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the backup object.</p>
+         * <p>Backup objects: This parameter is optional if the database is located on an agent, but required for all other scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{ &quot;DBName&quot;:&quot;Name of the database to be backed up&quot;, &quot;SchemaName&quot;:&quot;Name of the schema to be backed up&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;Name of the table to be backed up&quot; }], &quot;TableExcludes&quot;:[{&quot;TableName&quot;:&quot;Name of the table to be excluded during the backup&quot; }] } ]</p>
+         * <p>[{  &quot;DBName&quot;:&quot;待备份库名&quot;, &quot;SchemaName&quot;:&quot;待备份 Schema 名&quot;, &quot;TableIncludes&quot;:[{ &quot;TableName&quot;:&quot;待备份表表名&quot; }],  &quot;TableExcludes&quot;:[{&quot;TableName&quot;:&quot;待备份库名不需要备份表的表名&quot; }] } ]</p>
          */
         public Builder backupObjects(String backupObjects) {
             this.putQueryParameter("BackupObjects", backupObjects);
@@ -363,7 +363,7 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it.</p>
+         * <p>The backup plan ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to get this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -376,7 +376,7 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>A client-generated token to ensure request idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -388,7 +388,7 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The unique ID (UID) of the Alibaba Cloud account to which the backup schedule belongs. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the UID.</p>
+         * <p>The UID for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>2xxx7778xxxxxxxxxx</p>
@@ -400,7 +400,7 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role that is used to perform backups across Alibaba Cloud accounts. You can call the <a href="https://help.aliyun.com/document_detail/2869838.html">DescribeRestoreTaskList</a> operation to obtain the RAM role.</p>
+         * <p>The RAM role name for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -412,7 +412,10 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * EnableSourceEndpointSsl.
+         * <p>Specifies whether to use an SSL connection to back up the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSourceEndpointSsl(String enableSourceEndpointSsl) {
             this.putQueryParameter("EnableSourceEndpointSsl", enableSourceEndpointSsl);
@@ -430,10 +433,12 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * <ul>
-         * <li>This parameter is required if the database is a PostgreSQL or MongoDB database.</li>
-         * <li>This parameter is required if the database is an SQL Server database that is connected to DBS over a DBS backup gateway.</li>
+         * <li><p>This parameter is required for PostgreSQL and MongoDB databases.</p>
+         * </li>
+         * <li><p>This parameter is also required for Microsoft SQL Server databases when the <strong>SourceEndpointInstanceType</strong> parameter is set to \&quot;Agent\&quot;.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -446,9 +451,9 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the endpoint.</p>
+         * <p>The IP address of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to get this value.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpointInstanceType</strong> to Express, Agent, or Other, this parameter is required.</p>
+         * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <code>Express</code>, <code>Agent</code>, or <code>Other</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -461,9 +466,9 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The database instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+         * <p>The database instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to get this value.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpointInstanceType</strong> to RDS, ECS, DDS, or Express, this parameter is required.</p>
+         * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <code>RDS</code>, <code>ECS</code>, <code>DDS</code>, or <code>Express</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -476,14 +481,20 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The location of the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain it. Valid values:</p>
+         * <p>The type of the source instance. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to get this value. Valid values:</p>
          * <ul>
-         * <li><strong>RDS</strong></li>
-         * <li><strong>ECS</strong></li>
-         * <li><strong>Express</strong>: The database is connected to DBS via Express Connect, VPN Gateway, or Smart Access Gateway.</li>
-         * <li><strong>Agent</strong>: The database is connected to DBS over a DBS backup gateway.</li>
-         * <li><strong>DDS</strong>: The database is an ApsaraDB for MongoDB database.</li>
-         * <li><strong>Other</strong>: The database is connected to DBS using the IP address and port of the database.</li>
+         * <li><p><strong>RDS</strong>: an RDS instance</p>
+         * </li>
+         * <li><p><strong>ECS</strong>: a self-managed database on an ECS instance</p>
+         * </li>
+         * <li><p><strong>Express</strong>: a database connected over a leased line, VPN Gateway, or Smart Access Gateway</p>
+         * </li>
+         * <li><p><strong>Agent</strong>: a database connected over a backup gateway</p>
+         * </li>
+         * <li><p><strong>DDS</strong>: an ApsaraDB for MongoDB instance</p>
+         * </li>
+         * <li><p><strong>Other</strong>: a database connected over an IP address and port</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -497,7 +508,10 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * SourceEndpointOracleHome.
+         * <p>The Oracle Home path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/test</p>
          */
         public Builder sourceEndpointOracleHome(String sourceEndpointOracleHome) {
             this.putQueryParameter("SourceEndpointOracleHome", sourceEndpointOracleHome);
@@ -506,7 +520,7 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The SID of the Oracle source database. If the database is an Oracle database, this parameter is required.</p>
+         * <p>The Oracle SID. This parameter is required for Oracle databases.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -518,8 +532,8 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The password of the account that is used to connect to the database.</p>
-         * <p>This parameter is required except that the database is an SQL Server database that is connected to DBS over a DBS backup gateway or a Redis database.</p>
+         * <p>The password for the database account.</p>
+         * <p>This parameter is required for all database engines except for Redis and Microsoft SQL Server (when the <strong>SourceEndpointInstanceType</strong> parameter is set to \&quot;Agent\&quot;).</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -531,9 +545,9 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The port that is used to connect to the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the port.</p>
+         * <p>The database port. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to get this value.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpointInstanceType</strong> to Express, Agent, Other, or ECS, this parameter is required.</p>
+         * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <code>Express</code>, <code>Agent</code>, <code>Other</code>, or <code>ECS</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -546,9 +560,9 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The region in which the database you want to back up resides. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the region.</p>
+         * <p>The database region. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to get this value.</p>
          * <blockquote>
-         * <p> If you set <strong>SourceEndpointInstanceType</strong> to RDS, ECS, DDS, Express, or Agent, this parameter is required.</p>
+         * <p>This parameter is required if the <strong>SourceEndpointInstanceType</strong> parameter is set to <code>RDS</code>, <code>ECS</code>, <code>DDS</code>, <code>Express</code>, or <code>Agent</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -561,8 +575,8 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * <p>The account that is used to log on to the database. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the account.</p>
-         * <p>If the database is an SQL Server database connected to DBS over a DBS backup gateway or a Redis database, this parameter is optional. Otherwise, it is required.</p>
+         * <p>The username of the database account. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to get this value.</p>
+         * <p>This parameter is required for all database engines except for Redis and Microsoft SQL Server (when the <strong>SourceEndpointInstanceType</strong> parameter is set to \&quot;Agent\&quot;).</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -574,7 +588,10 @@ public class ModifyBackupSourceEndpointRequest extends Request {
         }
 
         /**
-         * SslCaPem.
+         * <p>The PEM certificate for the SSL connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----</p>
          */
         public Builder sslCaPem(String sslCaPem) {
             this.putQueryParameter("SslCaPem", sslCaPem);

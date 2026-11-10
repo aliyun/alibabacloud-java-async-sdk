@@ -133,7 +133,7 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>This backupPlan can&quot;t support this action</p>
+         * <p>This backupPlan can\&quot;t support this action</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -152,7 +152,7 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The billing information of the backup schedule.</p>
+         * <p>The billing information of the backup plan.</p>
          */
         public Builder item(Item item) {
             this.item = item;
@@ -160,10 +160,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>EB4DFD5E-3618-498D-BE35-4DBEA0072122</p>
+         * <p>DD7BC7F5-4E3A-5DF3-BFF9-831503C4D9E3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -396,10 +396,12 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The billing method of the instance. Valid values:</p>
              * <ul>
-             * <li>PREPAY</li>
-             * <li>POSTPAY</li>
+             * <li><p><strong>PREPAY</strong>: subscription</p>
+             * </li>
+             * <li><p><strong>POSTPAY</strong>: pay-as-you-go</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -414,7 +416,7 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
              * <p>The timestamp that indicates when the instance was purchased.</p>
              * 
              * <strong>example:</strong>
-             * <p>1554560477000</p>
+             * <p>1658372830000</p>
              */
             public Builder buyCreateTimestamp(Long buyCreateTimestamp) {
                 this.buyCreateTimestamp = buyCreateTimestamp;
@@ -424,11 +426,11 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             /**
              * <p>The timestamp that indicates when the instance expires.</p>
              * <blockquote>
-             * <p>This parameter is available only if the value of the BuyChargeType parameter is PREPAY.</p>
+             * <p>This parameter is returned only when BuyChargeType is set to PREPAY.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>1554560477000</p>
+             * <p>1661097600000</p>
              */
             public Builder buyExpiredTimestamp(Long buyExpiredTimestamp) {
                 this.buyExpiredTimestamp = buyExpiredTimestamp;
@@ -436,7 +438,7 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the instance.</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>micro</p>
@@ -447,10 +449,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the built-in storage for storing incremental backup data.</p>
+             * <p>The storage space used by incremental backup data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>12134</p>
+             * <p>10437039</p>
              */
             public Builder contStorageSize(Long contStorageSize) {
                 this.contStorageSize = contStorageSize;
@@ -458,10 +460,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the built-in storage for storing full backup data.</p>
+             * <p>The storage space used by full backup data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>13123</p>
+             * <p>151</p>
              */
             public Builder fullStorageSize(Long fullStorageSize) {
                 this.fullStorageSize = fullStorageSize;
@@ -469,9 +471,9 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance expired.</p>
+             * <p>Indicates whether the instance has expired.</p>
              * <blockquote>
-             * <p>This parameter is available only if the value of the BuyChargeType parameter is PREPAY.</p>
+             * <p>This parameter is returned only when BuyChargeType is set to PREPAY.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -483,7 +485,7 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the instance has no backup traffic limit.</p>
+             * <p>Indicates whether the instance provides unlimited free backup traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -494,10 +496,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total paid backup traffic in the current month.</p>
+             * <p>The total paid backup traffic in the current month. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>213213</p>
+             * <p>0</p>
              */
             public Builder paiedBytes(Long paiedBytes) {
                 this.paiedBytes = paiedBytes;
@@ -505,10 +507,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates when the billing cycle of free backup traffic ends.</p>
+             * <p>The timestamp that indicates the end of the billing cycle for the free backup traffic.</p>
              * 
              * <strong>example:</strong>
-             * <p>1554560477000</p>
+             * <p>1659283200000</p>
              */
             public Builder quotaEndTimestamp(Long quotaEndTimestamp) {
                 this.quotaEndTimestamp = quotaEndTimestamp;
@@ -516,10 +518,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp that indicates when the billing cycle of free backup traffic starts.</p>
+             * <p>The timestamp that indicates the start of the billing cycle for the free backup traffic.</p>
              * 
              * <strong>example:</strong>
-             * <p>1554560477000</p>
+             * <p>1656604800000</p>
              */
             public Builder quotaStartTimestamp(Long quotaStartTimestamp) {
                 this.quotaStartTimestamp = quotaStartTimestamp;
@@ -527,13 +529,13 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total free backup traffic in the current month.</p>
+             * <p>The total free backup traffic in the current month. Unit: bytes.</p>
              * <blockquote>
-             * <p>This parameter is available only if the value of the BuyChargeType parameter is PREPAY and the value of the IsFreeBytesUnlimited parameter is false.</p>
+             * <p>This parameter is returned only when BuyChargeType is set to PREPAY and IsFreeBytesUnlimited is false.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>13123</p>
+             * <p>858993459200</p>
              */
             public Builder totalFreeBytes(Long totalFreeBytes) {
                 this.totalFreeBytes = totalFreeBytes;
@@ -541,10 +543,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The paid full backup traffic in the current month.</p>
+             * <p>The paid traffic for full backups in the current month. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>1312313</p>
+             * <p>0</p>
              */
             public Builder usedFullBytes(Long usedFullBytes) {
                 this.usedFullBytes = usedFullBytes;
@@ -552,10 +554,10 @@ public class DescribeBackupPlanBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The paid incremental backup traffic in the current month.</p>
+             * <p>The paid traffic for incremental backups in the current month. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>131231</p>
+             * <p>9406734</p>
              */
             public Builder usedIncrementBytes(Long usedIncrementBytes) {
                 this.usedIncrementBytes = usedIncrementBytes;

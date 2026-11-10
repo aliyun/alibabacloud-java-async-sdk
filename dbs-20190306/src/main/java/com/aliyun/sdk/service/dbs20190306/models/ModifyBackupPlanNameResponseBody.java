@@ -119,7 +119,7 @@ public class ModifyBackupPlanNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the backup schedule.</p>
+         * <p>The ID of the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>dbstooi0XXXX</p>
@@ -174,7 +174,7 @@ public class ModifyBackupPlanNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

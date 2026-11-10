@@ -135,7 +135,7 @@ public class RenewBackupPlanResponseBody extends TeaModel {
          * <p>The ID of the backup schedule.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01e****</p>
+         * <p>dbstooi01exxx</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = backupPlanId;
@@ -179,7 +179,7 @@ public class RenewBackupPlanResponseBody extends TeaModel {
          * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
-         * <p>20202****</p>
+         * <p>202020202020</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

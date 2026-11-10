@@ -142,10 +142,14 @@ public class CreateIncrementBackupSetDownloadRequest extends Request {
         /**
          * <p>The format in which the incremental backup set is downloaded. Valid values:</p>
          * <ul>
-         * <li><strong>Native</strong></li>
-         * <li><strong>SQL</strong></li>
-         * <li><strong>CSV</strong></li>
-         * <li><strong>JSON</strong></li>
+         * <li><p><strong>Native</strong></p>
+         * </li>
+         * <li><p><strong>SQL</strong></p>
+         * </li>
+         * <li><p><strong>CSV</strong></p>
+         * </li>
+         * <li><p><strong>JSON</strong></p>
+         * </li>
          * </ul>
          * <blockquote>
          * <p>Default value: Native.</p>
@@ -165,7 +169,7 @@ public class CreateIncrementBackupSetDownloadRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01e****</p>
+         * <p>t4yh0g0g****</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -178,7 +182,7 @@ public class CreateIncrementBackupSetDownloadRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>mysql-bin.000054</p>
          */
         public Builder backupSetName(String backupSetName) {
             this.putQueryParameter("BackupSetName", backupSetName);
@@ -190,7 +194,7 @@ public class CreateIncrementBackupSetDownloadRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCz****</p>
+         * <p>ETnLKlblzczshOTUbOCz********</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

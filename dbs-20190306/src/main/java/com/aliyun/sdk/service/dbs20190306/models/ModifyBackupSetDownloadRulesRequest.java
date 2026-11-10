@@ -209,10 +209,10 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup gateway that is used to download the backup set.</p>
+         * <p>The ID of the backup gateway used to download the backup set.</p>
          * 
          * <strong>example:</strong>
-         * <p>2331****</p>
+         * <p>23312323</p>
          */
         public Builder backupGatewayId(Long backupGatewayId) {
             this.putQueryParameter("BackupGatewayId", backupGatewayId);
@@ -221,11 +221,11 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup schedule.</p>
+         * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01****</p>
+         * <p>dbstooi01xxxx</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -246,9 +246,9 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * <p>The type of the destination server to which the backup set is downloaded.</p>
+         * <p>The target type for downloading the backup set.</p>
          * <blockquote>
-         * <p>Set the value to agent, which indicates a server on which a backup gateway is installed.</p>
+         * <p>Default value: agent. A backup gateway is installed. This is the only supported value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * <p>The type of the destination directory to which the backup set is downloaded. This parameter is required if the automatic download feature is enabled. Valid values:</p>
+         * <p>The target directory type for downloading the backup set. This parameter is required if automatic download is enabled. Valid values:</p>
          * <ul>
          * <li>local</li>
          * <li>nas</li>
@@ -282,10 +282,10 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token used to ensure the idempotence of the request and prevent duplicate request submissions.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzx****</p>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -294,7 +294,7 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * <p>The format in which the full backup set is downloaded. Valid values:</p>
+         * <p>The format of the full data downloaded from the backup set. Valid values:</p>
          * <ul>
          * <li>Native</li>
          * <li>SQL</li>
@@ -315,7 +315,7 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * <p>The format in which the incremental backup set is downloaded. Valid values:</p>
+         * <p>The format of the incremental data downloaded from the backup set. Valid values:</p>
          * <ul>
          * <li>Native</li>
          * <li>SQL</li>
@@ -336,7 +336,7 @@ public class ModifyBackupSetDownloadRulesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic download feature. Default value: false.</p>
+         * <p>Specifies whether to enable automatic download. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

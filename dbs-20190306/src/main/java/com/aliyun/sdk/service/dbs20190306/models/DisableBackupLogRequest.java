@@ -125,11 +125,11 @@ public class DisableBackupLogRequest extends Request {
         }
 
         /**
-         * <p>The backup schedule ID. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID of the backup schedule.</p>
+         * <p>The ID of the backup plan. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01xxxx</p>
+         * <p>dbstooi01****</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -138,10 +138,10 @@ public class DisableBackupLogRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>A client token to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbs</p>
+         * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -150,7 +150,10 @@ public class DisableBackupLogRequest extends Request {
         }
 
         /**
-         * DisableMysqlPhysicalBackupBinlogOnly.
+         * <p>Specifies whether to disable only the log backup feature for a physical backup of a MySQL database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableMysqlPhysicalBackupBinlogOnly(String disableMysqlPhysicalBackupBinlogOnly) {
             this.putQueryParameter("DisableMysqlPhysicalBackupBinlogOnly", disableMysqlPhysicalBackupBinlogOnly);

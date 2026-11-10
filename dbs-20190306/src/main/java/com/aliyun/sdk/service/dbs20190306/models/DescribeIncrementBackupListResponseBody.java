@@ -204,7 +204,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of incremental backup tasks.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -212,7 +212,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -223,7 +223,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -234,7 +234,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A5D52069-E8AA-5056-8C5C-654C3610****</p>
@@ -245,10 +245,12 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request succeeded. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
-         * <li><strong>false</strong>: The request fails.</li>
+         * <li><p><strong>true</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +262,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of incremental backup tasks.</p>
+         * <p>The total number of incremental backups.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -271,7 +273,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -496,10 +498,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The point in time when the backup set expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1711506719000</p>
+             * BackupSetExpiredTime.
              */
             public Builder backupSetExpiredTime(Long backupSetExpiredTime) {
                 this.backupSetExpiredTime = backupSetExpiredTime;
@@ -507,10 +506,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mysql-bin.00****</p>
+             * BackupSetId.
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -518,10 +514,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the incremental backup task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1hv5g9wk4****</p>
+             * BackupSetJobId.
              */
             public Builder backupSetJobId(String backupSetJobId) {
                 this.backupSetJobId = backupSetJobId;
@@ -529,10 +522,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>18535</p>
+             * BackupSize.
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -540,16 +530,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the incremental backup task. Valid values:</p>
-             * <ul>
-             * <li><strong>INIT</strong>: The incremental backup task is not started.</li>
-             * <li><strong>FILLING</strong>: The incremental backup task is in progress.</li>
-             * <li><strong>COMPLETED</strong>: The incremental backup task is complete.</li>
-             * <li><strong>UNCOMPLETED</strong>: The incremental backup task is not complete.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>FILLING</p>
+             * BackupStatus.
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -557,10 +538,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the incremental backup task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1648434713000</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -592,10 +570,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint that is used to connect to the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.1XX.103.1:4XXX</p>
+             * SourceEndpointIpPort.
              */
             public Builder sourceEndpointIpPort(String sourceEndpointIpPort) {
                 this.sourceEndpointIpPort = sourceEndpointIpPort;
@@ -619,10 +594,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the incremental backup task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1648433764000</p>
+             * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -630,16 +602,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage class of the backup data. Valid values:</p>
-             * <ul>
-             * <li><strong>Standard</strong>: The storage class is Standard.</li>
-             * <li><strong>IA</strong>: The storage class is Infrequent Access (IA).</li>
-             * <li><strong>Archive</strong>: The storage class is Archive.</li>
-             * <li><strong>UNKNOWN</strong>: The storage class is unknown. This value is returned because the task is not complete.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Standard</p>
+             * StorageMethod.
              */
             public Builder storageMethod(String storageMethod) {
                 this.storageMethod = storageMethod;

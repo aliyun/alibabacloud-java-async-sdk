@@ -132,7 +132,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the backup schedule.</p>
+         * <p>The backup plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsrhahrsu2****</p>
@@ -176,7 +176,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>21437345592****</p>
@@ -187,7 +187,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7BCF6D62-885F-5A4A-91A1-679760E7****</p>
@@ -198,10 +198,12 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
-         * <li><strong>false</strong>: The request fails.</li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

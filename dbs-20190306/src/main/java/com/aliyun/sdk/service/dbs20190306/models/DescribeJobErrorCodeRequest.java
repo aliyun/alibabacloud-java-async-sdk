@@ -139,8 +139,10 @@ public class DescribeJobErrorCodeRequest extends Request {
         /**
          * <p>The language of the error message. Valid values:</p>
          * <ul>
-         * <li><strong>en</strong> (default): English</li>
-         * <li><strong>cn</strong>: Chinese</li>
+         * <li><p><strong>en</strong>: English (Default)</p>
+         * </li>
+         * <li><p><strong>cn</strong>: Chinese</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,11 +164,11 @@ public class DescribeJobErrorCodeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the full backup or restore task.</p>
+         * <p>The ID of the full backup or restore job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi0****</p>
+         * <p>r1iv62ud****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -26,6 +26,10 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
     private Long backupGatewayId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupGatewayIdentifier")
+    private String backupGatewayIdentifier;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -53,6 +57,7 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.backupGatewayId = builder.backupGatewayId;
+        this.backupGatewayIdentifier = builder.backupGatewayIdentifier;
         this.clientToken = builder.clientToken;
         this.databaseType = builder.databaseType;
         this.ownerId = builder.ownerId;
@@ -86,6 +91,13 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
      */
     public Long getBackupGatewayId() {
         return this.backupGatewayId;
+    }
+
+    /**
+     * @return backupGatewayIdentifier
+     */
+    public String getBackupGatewayIdentifier() {
+        return this.backupGatewayIdentifier;
     }
 
     /**
@@ -133,6 +145,7 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateGetDBListFromAgentTaskRequest, Builder> {
         private String regionId; 
         private Long backupGatewayId; 
+        private String backupGatewayIdentifier; 
         private String clientToken; 
         private String databaseType; 
         private String ownerId; 
@@ -148,6 +161,7 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.backupGatewayId = request.backupGatewayId;
+            this.backupGatewayIdentifier = request.backupGatewayIdentifier;
             this.clientToken = request.clientToken;
             this.databaseType = request.databaseType;
             this.ownerId = request.ownerId;
@@ -168,7 +182,7 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
         /**
          * <p>The ID of the backup gateway. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</p>
          * <blockquote>
-         * <p> This parameter is required.</p>
+         * <p>This parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -181,7 +195,19 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The unique identifier of the backup gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DF900B7082BC3****489D765C8D2ABE</p>
+         */
+        public Builder backupGatewayIdentifier(String backupGatewayIdentifier) {
+            this.putQueryParameter("BackupGatewayIdentifier", backupGatewayIdentifier);
+            this.backupGatewayIdentifier = backupGatewayIdentifier;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
@@ -224,10 +250,10 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The URL that is used to access the database.</p>
+         * <p>The database connection address.</p>
          * 
          * <strong>example:</strong>
-         * <p>123.0.0.1</p>
+         * <p>123.0.XX.XX</p>
          */
         public Builder sourceEndpointIP(String sourceEndpointIP) {
             this.putQueryParameter("SourceEndpointIP", sourceEndpointIP);
@@ -236,7 +262,7 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The port that is used to connect to the database.</p>
+         * <p>The database connection port.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -248,7 +274,7 @@ public class CreateGetDBListFromAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>The region in which the backup gateway resides.</p>
+         * <p>The region ID of the backup gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

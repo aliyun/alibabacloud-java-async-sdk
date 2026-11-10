@@ -111,11 +111,11 @@ public class DescribeDLAServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID of the backup schedule.</p>
+         * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbstooi01ex****</p>
+         * <p>dbstooi01exXXXX</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -124,7 +124,7 @@ public class DescribeDLAServiceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>A custom string.</p>
          * 
          * <strong>example:</strong>
          * <p>DBS</p>

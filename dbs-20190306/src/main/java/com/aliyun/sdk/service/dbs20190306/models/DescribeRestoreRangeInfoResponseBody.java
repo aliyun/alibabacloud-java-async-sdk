@@ -152,7 +152,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the time ranges to which you can restore data.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -160,7 +160,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E2BD9DFC-6760-5F49-97C5-DA739E29****</p>
@@ -171,10 +171,10 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request is successful.</li>
-         * <li><strong>false</strong>: The request fails.</li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,10 +257,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>qecnsxkd****</p>
+             * BackupSetId.
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -268,10 +265,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the full backup task. Example: 1646760308000.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1646760308000</p>
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -279,10 +273,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the full backup task. Example: 1646760282000.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1646760282000</p>
+             * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -539,10 +530,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to which you can restore data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1646760282000</p>
+             * BeginTimestampForRestore.
              */
             public Builder beginTimestampForRestore(Long beginTimestampForRestore) {
                 this.beginTimestampForRestore = beginTimestampForRestore;
@@ -550,10 +538,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range to which you can restore data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1646760308000</p>
+             * EndTimestampForRestore.
              */
             public Builder endTimestampForRestore(Long endTimestampForRestore) {
                 this.endTimestampForRestore = endTimestampForRestore;
@@ -561,7 +546,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the value of the RangeType parameter is point, this parameter is returned. The value of this parameter describes information about all backup points in the time range.</p>
+             * FullBackupList.
              */
             public Builder fullBackupList(FullBackupList fullBackupList) {
                 this.fullBackupList = fullBackupList;
@@ -569,14 +554,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the time range to which you can restore data.</p>
-             * <ul>
-             * <li><strong>point</strong>: The time range contains discrete points in time at which full backups were performed.</li>
-             * <li><strong>range</strong>: The time range is a period of time for which continuous backup is performed. You can specify a random point in time in the time range to restore data.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>point</p>
+             * RangeType.
              */
             public Builder rangeType(String rangeType) {
                 this.rangeType = rangeType;
@@ -584,10 +562,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the database instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-bp106x9tk2c91****</p>
+             * SourceEndpointInstanceID.
              */
             public Builder sourceEndpointInstanceID(String sourceEndpointInstanceID) {
                 this.sourceEndpointInstanceID = sourceEndpointInstanceID;
@@ -595,10 +570,7 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rds</p>
+             * SourceEndpointInstanceType.
              */
             public Builder sourceEndpointInstanceType(String sourceEndpointInstanceType) {
                 this.sourceEndpointInstanceType = sourceEndpointInstanceType;

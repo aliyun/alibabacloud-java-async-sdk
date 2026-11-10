@@ -254,7 +254,7 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID.</p>
+         * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * <p>The number of days for which the backup data is retained. Valid values: 0 to 1825.</p>
+         * <p>The retention period of backup data. Unit: days. Valid values: 0 to 1825.</p>
          * <blockquote>
          * <p>Default value: 730.</p>
          * </blockquote>
@@ -283,7 +283,10 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * BackupStorageEncryptMethod.
+         * <p>The encryption method for backup data storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>encrypted</p>
          */
         public Builder backupStorageEncryptMethod(String backupStorageEncryptMethod) {
             this.putQueryParameter("BackupStorageEncryptMethod", backupStorageEncryptMethod);
@@ -292,7 +295,7 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</p>
          * 
          * <strong>example:</strong>
          * <p>dbstest</p>
@@ -304,7 +307,7 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * <p>The number of days after which the storage class of the backup data is changed to Archive. The value of this parameter must be smaller than the value of the BackupRetentionPeriod parameter. For more information about the Archive storage class, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage class overview</a>.</p>
+         * <p>The period after which backup data is transitioned to Archive storage. The value must be less than the retention period of backup data (specified by the BackupRetentionPeriod parameter). For more information about Archive storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage types</a>.</p>
          * <blockquote>
          * <p>Default value: 365.</p>
          * </blockquote>
@@ -320,7 +323,7 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * <p>The number of days after which the storage class of the backup data is changed to Infrequent Access (IA). The value of this parameter must be smaller than the value of the DuplicationArchivePeriod parameter. For more information about the IA storage class, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage class overview</a>.</p>
+         * <p>The period after which backup data is transitioned to Infrequent Access storage. The value must be less than the period after which backup data is transitioned to Archive storage (specified by the DuplicationArchivePeriod parameter). For more information about Infrequent Access storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage types</a>.</p>
          * <blockquote>
          * <p>Default value: 180.</p>
          * </blockquote>
@@ -336,7 +339,10 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * IncrementBackupRetentionPeriod.
+         * <p>The retention period of incremental backup data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder incrementBackupRetentionPeriod(String incrementBackupRetentionPeriod) {
             this.putQueryParameter("IncrementBackupRetentionPeriod", incrementBackupRetentionPeriod);
@@ -345,7 +351,10 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * IncrementDuplicationArchivePeriod.
+         * <p>The period after which incremental backup data is transitioned to Archive storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder incrementDuplicationArchivePeriod(String incrementDuplicationArchivePeriod) {
             this.putQueryParameter("IncrementDuplicationArchivePeriod", incrementDuplicationArchivePeriod);
@@ -354,7 +363,10 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * IncrementDuplicationInfrequentAccessPeriod.
+         * <p>The period after which incremental backup data is transitioned to Infrequent Access storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder incrementDuplicationInfrequentAccessPeriod(String incrementDuplicationInfrequentAccessPeriod) {
             this.putQueryParameter("IncrementDuplicationInfrequentAccessPeriod", incrementDuplicationInfrequentAccessPeriod);
@@ -363,7 +375,10 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * <p>The retention period of log backup data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -372,7 +387,10 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * LogDuplicationArchivePeriod.
+         * <p>The period after which log backup data is transitioned to Infrequent Access storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder logDuplicationArchivePeriod(String logDuplicationArchivePeriod) {
             this.putQueryParameter("LogDuplicationArchivePeriod", logDuplicationArchivePeriod);
@@ -381,7 +399,10 @@ public class ModifyStorageStrategyRequest extends Request {
         }
 
         /**
-         * LogDuplicationInfrequentAccessPeriod.
+         * <p>The period after which log backup data is transitioned to Infrequent Access storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder logDuplicationInfrequentAccessPeriod(String logDuplicationInfrequentAccessPeriod) {
             this.putQueryParameter("LogDuplicationInfrequentAccessPeriod", logDuplicationInfrequentAccessPeriod);

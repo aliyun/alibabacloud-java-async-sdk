@@ -132,7 +132,7 @@ public class ModifyBackupObjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the backup schedule.</p>
+         * <p>The ID of the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>dbs1h****usfa</p>
@@ -143,10 +143,10 @@ public class ModifyBackupObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>Param.NotFound</p>
+         * <p>InvalidParameter</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -176,7 +176,7 @@ public class ModifyBackupObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a precheck is triggered. If true is returned, you must call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup schedule.</p>
+         * <p>Indicates whether the modification triggers a precheck. If this parameter is set to true, call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -187,7 +187,7 @@ public class ModifyBackupObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
@@ -200,8 +200,10 @@ public class ModifyBackupObjectsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

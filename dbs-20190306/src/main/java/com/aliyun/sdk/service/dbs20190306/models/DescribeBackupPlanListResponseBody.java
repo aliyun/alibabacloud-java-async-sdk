@@ -171,7 +171,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameterValid</p>
@@ -182,7 +182,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified parameter %s value is not valid.</p>
@@ -193,7 +193,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -204,7 +204,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the backup plans.</p>
+         * <p>The response items.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -212,7 +212,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -223,7 +223,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -234,7 +234,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
@@ -245,7 +245,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -256,7 +256,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of backup plans.</p>
+         * <p>The total number of backup plans.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -267,7 +267,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -986,10 +986,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Backup gateway ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>827362187368736</p>
+             * BackupGatewayId.
              */
             public Builder backupGatewayId(Long backupGatewayId) {
                 this.backupGatewayId = backupGatewayId;
@@ -1005,15 +1002,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup method. The return values are as follows:</p>
-             * <ul>
-             * <li><strong>logical</strong>: Logical backup</li>
-             * <li><strong>physical</strong>: Physical backup</li>
-             * <li><strong>duplication</strong>: Replication backup</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>logical</p>
+             * BackupMethod.
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -1021,7 +1010,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup objects.</p>
+             * BackupObjects.
              */
             public Builder backupObjects(String backupObjects) {
                 this.backupObjects = backupObjects;
@@ -1029,19 +1018,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Full backup cycle. The return values are as follows:</p>
-             * <ul>
-             * <li><strong>Monday</strong>: Monday</li>
-             * <li><strong>Tuesday</strong>: Tuesday</li>
-             * <li><strong>Wednesday</strong>: Wednesday</li>
-             * <li><strong>Thursday</strong>: Thursday</li>
-             * <li><strong>Friday</strong>: Friday</li>
-             * <li><strong>Saturday</strong>: Saturday</li>
-             * <li><strong>Sunday</strong>: Sunday</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Monday</p>
+             * BackupPeriod.
              */
             public Builder backupPeriod(String backupPeriod) {
                 this.backupPeriod = backupPeriod;
@@ -1049,10 +1026,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Timestamp of the backup plan creation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1582527713000</p>
+             * BackupPlanCreateTime.
              */
             public Builder backupPlanCreateTime(Long backupPlanCreateTime) {
                 this.backupPlanCreateTime = backupPlanCreateTime;
@@ -1060,10 +1034,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup plan ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dbstooi01eXXXX</p>
+             * BackupPlanId.
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;
@@ -1071,10 +1042,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup plan name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dbstooi01e****</p>
+             * BackupPlanName.
              */
             public Builder backupPlanName(String backupPlanName) {
                 this.backupPlanName = backupPlanName;
@@ -1090,19 +1058,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup plan status. The return values are as follows:</p>
-             * <ul>
-             * <li><strong>wait</strong>: Not configured</li>
-             * <li><strong>init</strong>: Not started (pre-check failed)</li>
-             * <li><strong>running</strong>: Running</li>
-             * <li><strong>stop</strong>: Failed</li>
-             * <li><strong>pause</strong>: Paused</li>
-             * <li><strong>locked</strong>: Locked</li>
-             * <li><strong>check_pass</strong>: Pre-check passed</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>init</p>
+             * BackupPlanStatus.
              */
             public Builder backupPlanStatus(String backupPlanStatus) {
                 this.backupPlanStatus = backupPlanStatus;
@@ -1110,10 +1066,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup data retention period, with a value range of 0 to 1825 days.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>365</p>
+             * BackupRetentionPeriod.
              */
             public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
                 this.backupRetentionPeriod = backupRetentionPeriod;
@@ -1121,7 +1074,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Download server directory of the backup set</p>
+             * BackupSetDownloadDir.
              */
             public Builder backupSetDownloadDir(String backupSetDownloadDir) {
                 this.backupSetDownloadDir = backupSetDownloadDir;
@@ -1129,16 +1082,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Full data format for backup set download:</p>
-             * <ul>
-             * <li><strong>Native</strong></li>
-             * <li><strong>SQL</strong></li>
-             * <li><strong>CSV</strong></li>
-             * <li><strong>JSON</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SQL</p>
+             * BackupSetDownloadFullDataFormat.
              */
             public Builder backupSetDownloadFullDataFormat(String backupSetDownloadFullDataFormat) {
                 this.backupSetDownloadFullDataFormat = backupSetDownloadFullDataFormat;
@@ -1146,10 +1090,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup set download backup gateway ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123123</p>
+             * BackupSetDownloadGatewayId.
              */
             public Builder backupSetDownloadGatewayId(Long backupSetDownloadGatewayId) {
                 this.backupSetDownloadGatewayId = backupSetDownloadGatewayId;
@@ -1157,16 +1098,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup set download full data format:</p>
-             * <ul>
-             * <li><strong>Native</strong></li>
-             * <li><strong>SQL</strong></li>
-             * <li><strong>CSV</strong></li>
-             * <li><strong>JSON</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SQL</p>
+             * BackupSetDownloadIncrementDataFormat.
              */
             public Builder backupSetDownloadIncrementDataFormat(String backupSetDownloadIncrementDataFormat) {
                 this.backupSetDownloadIncrementDataFormat = backupSetDownloadIncrementDataFormat;
@@ -1174,13 +1106,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup set download target type.</p>
-             * <blockquote>
-             * <p>The only value is: agent, indicating that the backup gateway is installed.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>agent</p>
+             * BackupSetDownloadTargetType.
              */
             public Builder backupSetDownloadTargetType(String backupSetDownloadTargetType) {
                 this.backupSetDownloadTargetType = backupSetDownloadTargetType;
@@ -1188,10 +1114,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Full backup start time, in the format HH:mm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>14:22</p>
+             * BackupStartTime.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -1199,14 +1122,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Built-in storage type. The return values are as follows:</p>
-             * <ul>
-             * <li>Empty (default): Backup data is stored on the user&quot;s OSS.</li>
-             * <li>system: Backup data is stored on the built-in OSS of DBS.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>system</p>
+             * BackupStorageType.
              */
             public Builder backupStorageType(String backupStorageType) {
                 this.backupStorageType = backupStorageType;
@@ -1214,10 +1130,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Start time for the database restore period, with a return value of 1554560477000.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554560477000</p>
+             * BeginTimestampForRestore.
              */
             public Builder beginTimestampForRestore(Long beginTimestampForRestore) {
                 this.beginTimestampForRestore = beginTimestampForRestore;
@@ -1225,10 +1138,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>UID for cross-Aliyun account backup.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2xxx7778xxxxxxxxxx</p>
+             * CrossAliyunId.
              */
             public Builder crossAliyunId(String crossAliyunId) {
                 this.crossAliyunId = crossAliyunId;
@@ -1236,10 +1146,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>RAM role name for cross-Aliyun account backup.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test123</p>
+             * CrossRoleName.
              */
             public Builder crossRoleName(String crossRoleName) {
                 this.crossRoleName = crossRoleName;
@@ -1247,10 +1154,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MySQL</p>
+             * DatabaseType.
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
@@ -1258,10 +1162,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Time (in days) to convert to archive cold backup storage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>365</p>
+             * DuplicationArchivePeriod.
              */
             public Builder duplicationArchivePeriod(Integer duplicationArchivePeriod) {
                 this.duplicationArchivePeriod = duplicationArchivePeriod;
@@ -1269,10 +1170,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Time (in days) to convert to infrequent access storage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>180</p>
+             * DuplicationInfrequentAccessPeriod.
              */
             public Builder duplicationInfrequentAccessPeriod(Integer duplicationInfrequentAccessPeriod) {
                 this.duplicationInfrequentAccessPeriod = duplicationInfrequentAccessPeriod;
@@ -1280,14 +1178,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether incremental log backup is enabled, with return values as follows:</p>
-             * <ul>
-             * <li><strong>true</strong>: Enabled</li>
-             * <li><strong>false</strong>: Disabled</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * EnableBackupLog.
              */
             public Builder enableBackupLog(Boolean enableBackupLog) {
                 this.enableBackupLog = enableBackupLog;
@@ -1303,10 +1194,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>End time of the database restorable period, in timestamp format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1554560477000</p>
+             * EndTimestampForRestore.
              */
             public Builder endTimestampForRestore(Long endTimestampForRestore) {
                 this.endTimestampForRestore = endTimestampForRestore;
@@ -1314,10 +1202,10 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pre-check task error message.</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>can not connect to oracle instance orcl with user dbs</p>
+             * <p>The specified parameter %s value is not valid.</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -1357,17 +1245,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance class, with return values as follows:</p>
-             * <ul>
-             * <li><strong>micro</strong>: Entry-level</li>
-             * <li><strong>small</strong>: Low-spec</li>
-             * <li><strong>medium</strong>: Medium-spec</li>
-             * <li><strong>large</strong>: High-spec</li>
-             * <li><strong>xlarge</strong>: High-spec (no traffic limit)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>micro</p>
+             * InstanceClass.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -1407,10 +1285,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Bucket name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dbs-backup-1857XXXXX489</p>
+             * OSSBucketName.
              */
             public Builder OSSBucketName(String OSSBucketName) {
                 this.OSSBucketName = OSSBucketName;
@@ -1418,10 +1293,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS Bucket region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * OSSBucketRegion.
              */
             public Builder OSSBucketRegion(String OSSBucketRegion) {
                 this.OSSBucketRegion = OSSBucketRegion;
@@ -1429,10 +1301,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the automatic backup set download feature is enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * OpenBackupSetAutoDownload.
              */
             public Builder openBackupSetAutoDownload(Boolean openBackupSetAutoDownload) {
                 this.openBackupSetAutoDownload = openBackupSetAutoDownload;
@@ -1440,10 +1309,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-aekzecovzti****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1451,10 +1317,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * SourceEndpointDatabaseName.
              */
             public Builder sourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
                 this.sourceEndpointDatabaseName = sourceEndpointDatabaseName;
@@ -1478,10 +1341,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * SourceEndpointInstanceID.
              */
             public Builder sourceEndpointInstanceID(String sourceEndpointInstanceID) {
                 this.sourceEndpointInstanceID = sourceEndpointInstanceID;
@@ -1489,18 +1349,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Location of the database, the return values are as follows:</p>
-             * <ul>
-             * <li><strong>rds</strong></li>
-             * <li><strong>ecs</strong></li>
-             * <li><strong>express</strong>: Database connected via dedicated line/VPN gateway/smart gateway</li>
-             * <li><strong>agent</strong>: Database connected via backup gateway</li>
-             * <li><strong>dds</strong>: Cloud MongoDB</li>
-             * <li><strong>other</strong>: Database connected directly via IP:Port</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>rds</p>
+             * SourceEndpointInstanceType.
              */
             public Builder sourceEndpointInstanceType(String sourceEndpointInstanceType) {
                 this.sourceEndpointInstanceType = sourceEndpointInstanceType;
@@ -1508,10 +1357,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database connection address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100.<em>.</em>.10:33204</p>
+             * SourceEndpointIpPort.
              */
             public Builder sourceEndpointIpPort(String sourceEndpointIpPort) {
                 this.sourceEndpointIpPort = sourceEndpointIpPort;
@@ -1519,10 +1365,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Oracle SID name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * SourceEndpointOracleSID.
              */
             public Builder sourceEndpointOracleSID(String sourceEndpointOracleSID) {
                 this.sourceEndpointOracleSID = sourceEndpointOracleSID;
@@ -1538,10 +1381,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * SourceEndpointRegion.
              */
             public Builder sourceEndpointRegion(String sourceEndpointRegion) {
                 this.sourceEndpointRegion = sourceEndpointRegion;
@@ -1549,10 +1389,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Database username.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * SourceEndpointUserName.
              */
             public Builder sourceEndpointUserName(String sourceEndpointUserName) {
                 this.sourceEndpointUserName = sourceEndpointUserName;

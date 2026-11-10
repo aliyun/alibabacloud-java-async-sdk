@@ -250,7 +250,10 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * BackupMethod.
+         * <p>The backup method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logical</p>
          */
         public Builder backupMethod(String backupMethod) {
             this.putQueryParameter("BackupMethod", backupMethod);
@@ -259,7 +262,7 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup schedule. You can query multiple backup schedule IDs. Separate multiple IDs with commas (,).</p>
+         * <p>The ID of the backup plan. You can specify multiple backup plan IDs, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>dbstooi01exXXXX</p>
@@ -271,7 +274,7 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * <p>Backup plan name.</p>
+         * <p>The name of the backup plan.</p>
          * 
          * <strong>example:</strong>
          * <p>test123</p>
@@ -283,15 +286,22 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * <p>Backup plan status, the values are as follows:</p>
+         * <p>The status of the backup plan. Valid values:</p>
          * <ul>
-         * <li><strong>wait</strong>: Not configured</li>
-         * <li><strong>init</strong>: Not started (pre-check failed)</li>
-         * <li><strong>running</strong>: Running</li>
-         * <li><strong>stop</strong>: Failed</li>
-         * <li><strong>pause</strong>: Paused</li>
-         * <li><strong>locked</strong>: Locked</li>
-         * <li><strong>check_pass</strong>: Pre-check passed</li>
+         * <li><p><strong>wait</strong>: The backup plan is not configured.</p>
+         * </li>
+         * <li><p><strong>init</strong>: The backup plan is not started because a precheck failed.</p>
+         * </li>
+         * <li><p><strong>running</strong>: The backup plan is running.</p>
+         * </li>
+         * <li><p><strong>stop</strong>: The backup plan has failed.</p>
+         * </li>
+         * <li><p><strong>pause</strong>: The backup plan is paused.</p>
+         * </li>
+         * <li><p><strong>locked</strong>: The backup plan is locked.</p>
+         * </li>
+         * <li><p><strong>check_pass</strong>: The precheck is passed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +314,7 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * <p>Used to ensure the idempotence of the request, preventing duplicate submissions.</p>
+         * <p>A client-generated token that ensures the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ASDASDASDSADASFCZXVZ</p>
@@ -325,7 +335,7 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * <p>Page number, must be greater than or equal to 0 and not exceed the maximum value of Integer. The default value is 0.</p>
+         * <p>The page number to return. The value must be an integer that is greater than or equal to 0. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -337,9 +347,9 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * <p>Number of records per page, the value should be between 1 and 100.</p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
          * <blockquote>
-         * <p>The default is <strong>30</strong>.</p>
+         * <p>The default value is <strong>30</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -352,7 +362,7 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * <p>DBS region, you can view the supported DBS regions by calling the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> interface.</p>
+         * <p>The ID of the region where the backup plan is located. You can call the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> operation to query the list of supported regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -364,7 +374,7 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzecovzti****</p>
@@ -376,7 +386,10 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * ShowBackupStrategyInfo.
+         * <p>Specifies whether to return information about the backup strategy. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showBackupStrategyInfo(Boolean showBackupStrategyInfo) {
             this.putQueryParameter("ShowBackupStrategyInfo", showBackupStrategyInfo);
@@ -385,7 +398,10 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * ShowRecoverTimeRange.
+         * <p>Specifies whether to return the recovery time range. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showRecoverTimeRange(Boolean showRecoverTimeRange) {
             this.putQueryParameter("ShowRecoverTimeRange", showRecoverTimeRange);
@@ -394,7 +410,10 @@ public class DescribeBackupPlanListRequest extends Request {
         }
 
         /**
-         * ShowStorageStrategyInfo.
+         * <p>Specifies whether to return information about the storage strategy. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showStorageStrategyInfo(Boolean showStorageStrategyInfo) {
             this.putQueryParameter("ShowStorageStrategyInfo", showStorageStrategyInfo);
