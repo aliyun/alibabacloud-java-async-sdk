@@ -298,7 +298,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The team name.</p>
+         * <p>The name of the team.</p>
          * 
          * <strong>example:</strong>
          * <p>my-team</p>
@@ -378,7 +378,7 @@ public class GetTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>project</p>
@@ -389,7 +389,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>

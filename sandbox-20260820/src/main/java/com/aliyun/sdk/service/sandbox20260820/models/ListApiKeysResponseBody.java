@@ -151,7 +151,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of success indicates a successful request.</p>
+         * <p>The response message. The value is success if the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -184,7 +184,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>

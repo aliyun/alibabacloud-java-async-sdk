@@ -44,6 +44,9 @@ public class E2BListedSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sandboxID")
     private String sandboxID;
 
+    @com.aliyun.core.annotation.NameInMap("snapshotID")
+    private String snapshotID;
+
     @com.aliyun.core.annotation.NameInMap("startedAt")
     private String startedAt;
 
@@ -78,6 +81,7 @@ public class E2BListedSandbox extends TeaModel {
         this.resourceGroupID = builder.resourceGroupID;
         this.resourceTags = builder.resourceTags;
         this.sandboxID = builder.sandboxID;
+        this.snapshotID = builder.snapshotID;
         this.startedAt = builder.startedAt;
         this.state = builder.state;
         this.teamID = builder.teamID;
@@ -164,6 +168,13 @@ public class E2BListedSandbox extends TeaModel {
     }
 
     /**
+     * @return snapshotID
+     */
+    public String getSnapshotID() {
+        return this.snapshotID;
+    }
+
+    /**
      * @return startedAt
      */
     public String getStartedAt() {
@@ -229,6 +240,7 @@ public class E2BListedSandbox extends TeaModel {
         private String resourceGroupID; 
         private java.util.List<ResourceTags> resourceTags; 
         private String sandboxID; 
+        private String snapshotID; 
         private String startedAt; 
         private String state; 
         private String teamID; 
@@ -251,6 +263,7 @@ public class E2BListedSandbox extends TeaModel {
             this.resourceGroupID = model.resourceGroupID;
             this.resourceTags = model.resourceTags;
             this.sandboxID = model.sandboxID;
+            this.snapshotID = model.snapshotID;
             this.startedAt = model.startedAt;
             this.state = model.state;
             this.teamID = model.teamID;
@@ -273,7 +286,7 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * <p>The ephemeral disk specification.</p>
+         * <p>The ephemeral disk size.</p>
          * 
          * <strong>example:</strong>
          * <p>10240</p>
@@ -306,7 +319,7 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
-         * <p>The memory specification.</p>
+         * <p>The memory size.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -351,6 +364,17 @@ public class E2BListedSandbox extends TeaModel {
          */
         public Builder sandboxID(String sandboxID) {
             this.sandboxID = sandboxID;
+            return this;
+        }
+
+        /**
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d66****b374</p>
+         */
+        public Builder snapshotID(String snapshotID) {
+            this.snapshotID = snapshotID;
             return this;
         }
 

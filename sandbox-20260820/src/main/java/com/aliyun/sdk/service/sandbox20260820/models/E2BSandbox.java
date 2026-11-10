@@ -74,6 +74,9 @@ public class E2BSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sandboxID")
     private String sandboxID;
 
+    @com.aliyun.core.annotation.NameInMap("snapshotID")
+    private String snapshotID;
+
     @com.aliyun.core.annotation.NameInMap("startedAt")
     private String startedAt;
 
@@ -121,6 +124,7 @@ public class E2BSandbox extends TeaModel {
         this.resourceTags = builder.resourceTags;
         this.runtime = builder.runtime;
         this.sandboxID = builder.sandboxID;
+        this.snapshotID = builder.snapshotID;
         this.startedAt = builder.startedAt;
         this.state = builder.state;
         this.teamID = builder.teamID;
@@ -278,6 +282,13 @@ public class E2BSandbox extends TeaModel {
     }
 
     /**
+     * @return snapshotID
+     */
+    public String getSnapshotID() {
+        return this.snapshotID;
+    }
+
+    /**
      * @return startedAt
      */
     public String getStartedAt() {
@@ -360,6 +371,7 @@ public class E2BSandbox extends TeaModel {
         private java.util.List<ResourceTags> resourceTags; 
         private InnerSandboxRuntimeConfig runtime; 
         private String sandboxID; 
+        private String snapshotID; 
         private String startedAt; 
         private String state; 
         private String teamID; 
@@ -393,6 +405,7 @@ public class E2BSandbox extends TeaModel {
             this.resourceTags = model.resourceTags;
             this.runtime = model.runtime;
             this.sandboxID = model.sandboxID;
+            this.snapshotID = model.snapshotID;
             this.startedAt = model.startedAt;
             this.state = model.state;
             this.teamID = model.teamID;
@@ -509,7 +522,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * <p>The Function Compute session ID corresponding to the sandbox, in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
+         * <p>The Function Compute session ID of the sandbox, in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
          * 
          * <strong>example:</strong>
          * <p>3a7ecd09-****</p>
@@ -569,7 +582,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * resourceTags.
+         * <p>The resource tags.</p>
          */
         public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
             this.resourceTags = resourceTags;
@@ -596,6 +609,17 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d66****b374</p>
+         */
+        public Builder snapshotID(String snapshotID) {
+            this.snapshotID = snapshotID;
+            return this;
+        }
+
+        /**
          * <p>The start time.</p>
          * 
          * <strong>example:</strong>
@@ -609,15 +633,15 @@ public class E2BSandbox extends TeaModel {
         /**
          * <p>The sandbox state. Valid values:</p>
          * <ul>
-         * <li>running: The sandbox is running.</li>
-         * <li>pausing: The sandbox is pausing.</li>
-         * <li>paused: The sandbox is paused.</li>
-         * <li>resuming: The sandbox is resuming.</li>
-         * <li>pause_fail: The pause operation failed.</li>
-         * <li>resume_fail: The resume operation failed.</li>
-         * <li>snapshotting: A snapshot is being created.</li>
-         * <li>snapshot_failed: Snapshot creation failed.</li>
-         * <li>terminated: The sandbox is terminated.</li>
+         * <li>running: Running.</li>
+         * <li>pausing: Pausing.</li>
+         * <li>paused: Paused.</li>
+         * <li>resuming: Resuming.</li>
+         * <li>pause_fail: Pause failed.</li>
+         * <li>resume_fail: Resume failed.</li>
+         * <li>snapshotting: Snapshotting.</li>
+         * <li>snapshot_failed: Snapshot failed.</li>
+         * <li>terminated: Terminated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -651,7 +675,7 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * <p>The QoS version.</p>
+         * <p>The QoS edition.</p>
          * 
          * <strong>example:</strong>
          * <p>eco</p>
@@ -761,7 +785,10 @@ public class E2BSandbox extends TeaModel {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -769,7 +796,10 @@ public class E2BSandbox extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

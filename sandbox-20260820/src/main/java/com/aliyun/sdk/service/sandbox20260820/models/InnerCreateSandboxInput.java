@@ -41,6 +41,12 @@ public class InnerCreateSandboxInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("secure")
     private Boolean secure;
 
+    @com.aliyun.core.annotation.NameInMap("snapshotID")
+    private String snapshotID;
+
+    @com.aliyun.core.annotation.NameInMap("snapshotName")
+    private String snapshotName;
+
     @com.aliyun.core.annotation.NameInMap("teamID")
     private String teamID;
 
@@ -62,6 +68,8 @@ public class InnerCreateSandboxInput extends TeaModel {
         this.network = builder.network;
         this.runtime = builder.runtime;
         this.secure = builder.secure;
+        this.snapshotID = builder.snapshotID;
+        this.snapshotName = builder.snapshotName;
         this.teamID = builder.teamID;
         this.templateID = builder.templateID;
         this.timeout = builder.timeout;
@@ -137,6 +145,20 @@ public class InnerCreateSandboxInput extends TeaModel {
     }
 
     /**
+     * @return snapshotID
+     */
+    public String getSnapshotID() {
+        return this.snapshotID;
+    }
+
+    /**
+     * @return snapshotName
+     */
+    public String getSnapshotName() {
+        return this.snapshotName;
+    }
+
+    /**
      * @return teamID
      */
     public String getTeamID() {
@@ -173,6 +195,8 @@ public class InnerCreateSandboxInput extends TeaModel {
         private E2BNetwork network; 
         private InnerSandboxRuntimeConfig runtime; 
         private Boolean secure; 
+        private String snapshotID; 
+        private String snapshotName; 
         private String teamID; 
         private String templateID; 
         private Integer timeout; 
@@ -190,6 +214,8 @@ public class InnerCreateSandboxInput extends TeaModel {
             this.network = model.network;
             this.runtime = model.runtime;
             this.secure = model.secure;
+            this.snapshotID = model.snapshotID;
+            this.snapshotName = model.snapshotName;
             this.teamID = model.teamID;
             this.templateID = model.templateID;
             this.timeout = model.timeout;
@@ -208,7 +234,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to automatically pause after timeout.</p>
+         * <p>Specifies whether to automatically pause the sandbox after a timeout.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -219,7 +245,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether to automatically resume.</p>
+         * <p>Specifies whether to automatically resume the sandbox.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -273,6 +299,28 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d66****b374</p>
+         */
+        public Builder snapshotID(String snapshotID) {
+            this.snapshotID = snapshotID;
+            return this;
+        }
+
+        /**
+         * <p>The snapshot name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
+        public Builder snapshotName(String snapshotName) {
+            this.snapshotName = snapshotName;
+            return this;
+        }
+
+        /**
          * <p>The unique identifier of the team.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +343,7 @@ public class InnerCreateSandboxInput extends TeaModel {
         }
 
         /**
-         * <p>The timeout period. Unit: seconds.</p>
+         * <p>The timeout period, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>

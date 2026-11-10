@@ -127,7 +127,7 @@ public class ListTemplateCacheRequest extends Request {
         }
 
         /**
-         * <p>The pagination token returned from the previous response.</p>
+         * <p>The pagination token returned from the previous request.</p>
          * 
          * <strong>example:</strong>
          * <p>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</p>
@@ -139,7 +139,7 @@ public class ListTemplateCacheRequest extends Request {
         }
 
         /**
-         * <p>Filters by cache status. Valid values: InProgress, Success, Failed, Deleting, and Evicted.</p>
+         * <p>Filters results by cache status. Valid values: InProgress, Success, Failed, Deleting, and Evicted.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

@@ -29,11 +29,15 @@ public class DescribeQuotaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("usage")
+    private QuotaUsage usage;
+
     private DescribeQuotaResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.quota = builder.quota;
         this.requestId = builder.requestId;
+        this.usage = builder.usage;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class DescribeQuotaResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return usage
+     */
+    public QuotaUsage getUsage() {
+        return this.usage;
+    }
+
     public static final class Builder {
         private String code; 
         private String message; 
         private Quota quota; 
         private String requestId; 
+        private QuotaUsage usage; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class DescribeQuotaResponseBody extends TeaModel {
             this.message = model.message;
             this.quota = model.quota;
             this.requestId = model.requestId;
+            this.usage = model.usage;
         } 
 
         /**
@@ -104,7 +117,7 @@ public class DescribeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. The value is success if the request succeeds.</p>
+         * <p>The response message. The value is success for a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -130,6 +143,17 @@ public class DescribeQuotaResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>Team 当前配额用量。用量不可用时省略；成功查询且无占用时返回三项零值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cpuCores&quot;:1,&quot;memoryGB&quot;:1.5,&quot;instanceCount&quot;:1}</p>
+         */
+        public Builder usage(QuotaUsage usage) {
+            this.usage = usage;
             return this;
         }
 

@@ -104,7 +104,7 @@ public class GetVolumeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. A value of success indicates that the request is successful.</p>
+         * <p>The response message. The value is success for a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

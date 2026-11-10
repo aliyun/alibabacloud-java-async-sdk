@@ -119,7 +119,7 @@ public class ListQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value is 200 for a successful request.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The value of maxResults specified in the request. This field is returned only if a positive integer is specified for maxResults in the request.</p>
+         * <p>The maximum number of entries returned per page. This field is returned only if a positive integer is specified for maxResults in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -141,7 +141,7 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message. The value is success for a successful request.</p>
+         * <p>The response message. The value is success if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,7 +152,7 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page, which can be used for subsequent queries.</p>
+         * <p>The pagination token for the next page, which can be used in subsequent queries.</p>
          * 
          * <strong>example:</strong>
          * <p>qxGrXje86XMrYQ51aJMy</p>
@@ -171,7 +171,7 @@ public class ListQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>

@@ -93,7 +93,7 @@ public class UpdateTeamResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. A value of 200 indicates success.</p>
+         * <p>The response code. The value is 200 if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
