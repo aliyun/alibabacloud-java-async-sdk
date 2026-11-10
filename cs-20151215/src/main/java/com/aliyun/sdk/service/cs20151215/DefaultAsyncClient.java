@@ -1767,6 +1767,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of HibernateCluster  HibernateClusterRequest
+     * @return HibernateClusterResponse
+     */
+    @Override
+    public CompletableFuture<HibernateClusterResponse> hibernateCluster(HibernateClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("HibernateCluster").setMethod(HttpMethod.POST).setPathRegex("/clusters/{clusterId}/hibernate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(HibernateClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<HibernateClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of InstallClusterAddons  InstallClusterAddonsRequest
      * @return InstallClusterAddonsResponse
      */
@@ -1804,7 +1822,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</p>
+     * <p>The standalone native AG-UI API that returns a text/event-stream response upon successful stream establishment.</p>
      * 
      * @param request the request parameters of InvokeAgent  InvokeAgentRequest
      * @return InvokeAgentResponse
@@ -3010,6 +3028,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpgradeClusterNodepoolResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of WakeUpCluster  WakeUpClusterRequest
+     * @return WakeUpClusterResponse
+     */
+    @Override
+    public CompletableFuture<WakeUpClusterResponse> wakeUpCluster(WakeUpClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("WakeUpCluster").setMethod(HttpMethod.POST).setPathRegex("/clusters/{clusterId}/wakeUp").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(WakeUpClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<WakeUpClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

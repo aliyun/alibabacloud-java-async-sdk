@@ -671,6 +671,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantPermissionsResponse> grantPermissions(GrantPermissionsRequest request);
 
     /**
+     * @param request the request parameters of HibernateCluster  HibernateClusterRequest
+     * @return HibernateClusterResponse
+     */
+    CompletableFuture<HibernateClusterResponse> hibernateCluster(HibernateClusterRequest request);
+
+    /**
      * @param request the request parameters of InstallClusterAddons  InstallClusterAddonsRequest
      * @return InstallClusterAddonsResponse
      */
@@ -684,7 +690,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</p>
+     * <p>The standalone native AG-UI API that returns a text/event-stream response upon successful stream establishment.</p>
      * 
      * @param request the request parameters of InvokeAgent  InvokeAgentRequest
      * @return InvokeAgentResponse
@@ -1166,5 +1172,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeClusterNodepoolResponse
      */
     CompletableFuture<UpgradeClusterNodepoolResponse> upgradeClusterNodepool(UpgradeClusterNodepoolRequest request);
+
+    /**
+     * @param request the request parameters of WakeUpCluster  WakeUpClusterRequest
+     * @return WakeUpClusterResponse
+     */
+    CompletableFuture<WakeUpClusterResponse> wakeUpCluster(WakeUpClusterRequest request);
 
 }

@@ -250,7 +250,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code for the RUN_ERROR event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -258,7 +261,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * content.
+         * <p>The tool output text for the TOOL_CALL_RESULT event. The text may be truncated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>done</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -266,7 +272,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * delta.
+         * <p>The incremental fragment of text, reasoning, or tool parameters. Fragments with the same ID are concatenated in order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello</p>
          */
         public Builder delta(String delta) {
             this.delta = delta;
@@ -274,7 +283,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error description for the RUN_ERROR event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request failed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -282,7 +294,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * messageId.
+         * <p>The ID of the message to which the text, reasoning, or tool result belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-1</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -290,7 +305,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the CUSTOM extension event, such as analysis_result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analysis_result</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -298,7 +316,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * outcome.
+         * <p>The completion reason for the RUN_FINISHED event. A value of success indicates normal completion, and interrupt indicates waiting for a response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;success&quot;}</p>
          */
         public Builder outcome(Outcome outcome) {
             this.outcome = outcome;
@@ -306,7 +327,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * parentMessageId.
+         * <p>The optional parent message ID for the TOOL_CALL_START event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-1</p>
          */
         public Builder parentMessageId(String parentMessageId) {
             this.parentMessageId = parentMessageId;
@@ -314,7 +338,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * role.
+         * <p>The role of the message. The role is assistant for text messages and tool for tool results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assistant</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -322,7 +349,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * runId.
+         * <p>The run ID of the current run for RUN_STARTED and RUN_FINISHED events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-1</p>
          */
         public Builder runId(String runId) {
             this.runId = runId;
@@ -330,7 +360,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * snapshot.
+         * <p>The thread snapshot for the STATE_SNAPSHOT event, including sessionId and requestId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sessionId&quot;:&quot;abcdef0123456789abcdef0123456789&quot;,&quot;requestId&quot;:&quot;req-1&quot;}</p>
          */
         public Builder snapshot(Object snapshot) {
             this.snapshot = snapshot;
@@ -338,7 +371,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * threadId.
+         * <p>The thread ID for RUN_STARTED and RUN_FINISHED events. It is consistent with the request and the thread snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdef0123456789abcdef0123456789</p>
          */
         public Builder threadId(String threadId) {
             this.threadId = threadId;
@@ -346,7 +382,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * toolCallId.
+         * <p>The tool invoke ID. It associates TOOL_CALL_START/ARGS/END/RESULT events with approval interrupts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>call-1</p>
          */
         public Builder toolCallId(String toolCallId) {
             this.toolCallId = toolCallId;
@@ -354,7 +393,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * toolCallName.
+         * <p>The name of the tool for the TOOL_CALL_START event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_tool</p>
          */
         public Builder toolCallName(String toolCallName) {
             this.toolCallName = toolCallName;
@@ -362,6 +404,7 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The event type of the SSE data object. For the required fields of each event type, see the response description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -373,7 +416,10 @@ public class InvokeAgentResponseBody extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The extension value of the CUSTOM event. It can be any JSON object or null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;reference&quot;:null,&quot;actions&quot;:[],&quot;messageId&quot;:null}</p>
          */
         public Builder value(Object value) {
             this.value = value;
@@ -506,7 +552,10 @@ public class InvokeAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * expiresAt.
+             * <p>The optional expiration time string of the interrupt. This field is not output for current tool approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-11-04T00:00:00Z</p>
              */
             public Builder expiresAt(String expiresAt) {
                 this.expiresAt = expiresAt;
@@ -514,6 +563,7 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The ID of the interrupt. It is used as resume[].interruptId when resuming the run.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -525,7 +575,10 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The approval description or follow-up question text displayed to the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Proceed with execution?</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -533,7 +586,10 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
-             * metadata.
+             * <p>The optional extension information of the interrupt. It cannot replace tool events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -541,6 +597,7 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The reason for the interrupt. The value is tool_call_approve for tool approval and ask_human for follow-up questions.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -552,7 +609,10 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
-             * responseSchema.
+             * <p>The JSON Schema for the response. Tool approval requires decision=yes/no, and follow-up questions use strings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;decision&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;enum&quot;:[&quot;yes&quot;,&quot;no&quot;]}},&quot;required&quot;:[&quot;decision&quot;]}</p>
              */
             public Builder responseSchema(java.util.Map<String, ?> responseSchema) {
                 this.responseSchema = responseSchema;
@@ -560,7 +620,10 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
-             * toolCallId.
+             * <p>The optional associated tool invoke ID. It is the same as the toolCallId of the preceding TOOL_CALL_START event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call-1</p>
              */
             public Builder toolCallId(String toolCallId) {
                 this.toolCallId = toolCallId;
@@ -628,7 +691,10 @@ public class InvokeAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * interrupts.
+             * <p>The list of interrupts waiting for a response. This field appears only when outcome.type is interrupt and contains at least one item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;id&quot;:&quot;i-1&quot;,&quot;reason&quot;:&quot;tool_call_approve&quot;,&quot;toolCallId&quot;:&quot;call-1&quot;}]</p>
              */
             public Builder interrupts(java.util.List<Interrupts> interrupts) {
                 this.interrupts = interrupts;
@@ -636,6 +702,7 @@ public class InvokeAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The outcome type. A value of success indicates normal completion. A value of interrupt indicates waiting for a response, in which case the interrupts array contains at least one item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
