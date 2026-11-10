@@ -104,7 +104,7 @@ public class ExecuteRegistryModuleRequest extends Request {
         } 
 
         /**
-         * <p>The workspace to which the Module belongs. The workspaces for official registry modules are alibaba, alibabacloud-automation, aliyun, and terraform-alicloud-modules.</p>
+         * <p>The workspace to which the module belongs. The current workspaces for official registry modules are alibaba, alibabacloud-automation, aliyun, and terraform-alicloud-modules.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ExecuteRegistryModuleRequest extends Request {
         }
 
         /**
-         * <p>The template name. You can call ListExplorerRegistryModules to query available modules.</p>
+         * <p>The name of the template. You can call the ListExplorerRegistryModules operation to query the template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ExecuteRegistryModuleRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

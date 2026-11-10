@@ -136,7 +136,7 @@ public class ListGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page size, which indicates the maximum number of results returned per page.</p>
+         * <p>The page size, which specifies the maximum number of results returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -401,7 +401,7 @@ public class ListGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-14T07:19:13Z</p>

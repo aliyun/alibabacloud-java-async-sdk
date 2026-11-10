@@ -146,9 +146,9 @@ public class OperateJobRequest extends Request {
         /**
          * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li>execute: continues the Apply operation after the Plan is complete.</li>
-         * <li>abolish: abandons a job that has completed the Plan preview.</li>
-         * <li>cancel: cancels a job that is running or queued.</li>
+         * <li>execute: Continues to perform the apply operation after the plan is completed.</li>
+         * <li>abolish: Aborts a job for which the plan preview is completed.</li>
+         * <li>cancel: Cancels a job that is running or queued.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class OperateJobRequest extends Request {
         }
 
         /**
-         * <p>The description. The length is 0 to 128 characters.</p>
+         * <p>The description. The length ranges from 0 to 128 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,8 +176,8 @@ public class OperateJobRequest extends Request {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>Task: regular task (default).</li>
-         * <li>SceneTestingTask: scenario-based testing task.</li>
+         * <li>Task: Regular task. This is the default value.</li>
+         * <li>SceneTestingTask: Scenario-based testing task.</li>
          * </ul>
          * 
          * <strong>example:</strong>

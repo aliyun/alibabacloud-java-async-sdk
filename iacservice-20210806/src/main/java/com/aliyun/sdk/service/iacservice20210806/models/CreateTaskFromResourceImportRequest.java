@@ -105,7 +105,11 @@ public class CreateTaskFromResourceImportRequest extends Request {
         } 
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request. The token must be 1 to 64 characters in length and can contain only letters, digits, and hyphens (-). A UUID is recommended.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -114,7 +118,11 @@ public class CreateTaskFromResourceImportRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource export task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex-a1b2c3d4e5f60718293a4b5cd</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.putBodyParameter("exportTaskId", exportTaskId);
@@ -123,7 +131,11 @@ public class CreateTaskFromResourceImportRequest extends Request {
         }
 
         /**
+         * <p>The resource export version.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder exportVersion(String exportVersion) {
             this.putBodyParameter("exportVersion", exportVersion);
@@ -132,7 +144,11 @@ public class CreateTaskFromResourceImportRequest extends Request {
         }
 
         /**
+         * <p>The name of the task.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-vpc-hangzhou</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("taskName", taskName);

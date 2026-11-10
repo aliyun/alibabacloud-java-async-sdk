@@ -78,7 +78,7 @@ public class CreateStackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The stack ID. This is the unique identifier of the stack after it is created.</p>
+         * <p>The stack ID, which is the unique identifier of the stack after it is created.</p>
          * 
          * <strong>example:</strong>
          * <p>stack-as1d4vld898ppnqbxxxxx</p>

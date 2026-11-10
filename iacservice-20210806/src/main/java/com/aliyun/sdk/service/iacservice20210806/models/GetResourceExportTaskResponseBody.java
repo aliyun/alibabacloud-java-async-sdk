@@ -157,9 +157,9 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The module type in which the exported template is saved. Valid values:</p>
+             * <p>The type of the module where the exported template is saved. Valid values:</p>
              * <ul>
-             * <li>OSS: OSS.</li>
+             * <li>OSS: Object Storage Service (OSS).</li>
              * <li>Registry: Terraform Registry.</li>
              * </ul>
              * 
@@ -174,9 +174,9 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             /**
              * <p>The path where the template content is saved.</p>
              * <ul>
-             * <li><p>If Source is set to Registry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
+             * <li><p>If Source is set to Registry, the format is cloudregistry::iacservice//.</p>
              * </li>
-             * <li><p>If Source is set to OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</p>
+             * <li><p>If Source is set to OSS, the format is oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip.</p>
              * </li>
              * </ul>
              * 
@@ -259,15 +259,15 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the include rule for resource export. Valid values:</p>
+             * <p>The name of the inclusion rule for resource export. Valid values:</p>
              * <ul>
              * <li>ResourceType: required. The resource type. Example: ALIYUN::VPC::VPC.</li>
              * <li>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</li>
-             * <li>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</li>
+             * <li><ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</li>
              * <li>ResourceGroupId: the resource group ID. Example: rg-1234.</li>
              * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</li>
              * </ul>
-             * <p>By default, the relationship between multiple filter conditions is AND, which means a resource must match all filter conditions to be considered a match.</p>
+             * <p>By default, multiple filter conditions are connected by the AND operator. A resource matches the filter conditions only if it meets all the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>RegionId</p>
@@ -278,7 +278,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The values of the include rules for resource export.</p>
+             * <p>The inclusion rules for resource export.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -358,7 +358,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The module type where the exported template is located. Two formats are supported: CloudRegistry and OSS. If you specify the ExportToModule parameter, both formats are returned. Otherwise, only CloudRegistry is returned.</p>
+             * <p>The type of the module where the exported template is located. Two formats are supported: CloudRegistry and OSS. If the ExportToModule parameter is specified, both formats are returned. Otherwise, only CloudRegistry is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -369,11 +369,11 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download address of the exported template in the module.</p>
+             * <p>The download URL of the module where the exported template is located.</p>
              * <ul>
-             * <li><p>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
+             * <li><p>If Source is set to CloudRegistry, the format is cloudregistry::iacservice//.</p>
              * </li>
-             * <li><p>If Source is set to OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</p>
+             * <li><p>If Source is set to OSS, the format is oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip.</p>
              * </li>
              * </ul>
              * 
@@ -456,7 +456,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of properties of the Terraform resource that corresponds to the resource type.</p>
+             * <p>The list of properties for the Terraform resource that corresponds to the resource type.</p>
              */
             public Builder properties(java.util.List<String> properties) {
                 this.properties = properties;
@@ -755,7 +755,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created, in UTC in ISO 8601 format (YYYY-MM-DDTHH:mm:ssZ).</p>
+             * <p>The time when the task was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-06-15T02:44:37Z</p>
@@ -766,7 +766,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task description.</p>
+             * <p>The description of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>this is description</p>
@@ -799,7 +799,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Saves the exported template as a module. If this parameter is not set, the template is automatically saved in the Registry.</p>
+             * <p>Saves the exported template as a module. If this parameter is not specified, the template is automatically saved in the registry.</p>
              */
             public Builder exportToModule(ExportToModule exportToModule) {
                 this.exportToModule = exportToModule;
@@ -818,7 +818,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The failure reason.</p>
+             * <p>The cause of the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>Reason</p>
@@ -829,7 +829,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The values of the include rules for resource export.</p>
+             * <p>The inclusion rules for resource export.</p>
              */
             public Builder includeRules(java.util.List<IncludeRules> includeRules) {
                 this.includeRules = includeRules;
@@ -837,7 +837,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The time when the task was modified. The time is displayed in UTC and follows the ISO 8601 standard.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -849,7 +849,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The module configurations after resource export.</p>
+             * <p>The module configurations after the resources are exported.</p>
              */
             public Builder modules(java.util.List<Modules> modules) {
                 this.modules = modules;
@@ -857,7 +857,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task name.</p>
+             * <p>The name of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc_all</p>
@@ -868,7 +868,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The RAM role.</p>
+             * <p>The Resource Access Management (RAM) role.</p>
              * 
              * <strong>example:</strong>
              * <p>role</p>
@@ -879,10 +879,10 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status. Valid values:</p>
+             * <p>The status of the task. Valid values:</p>
              * <ul>
-             * <li>Available: the task is available and no job is running.</li>
-             * <li>Running: a job is currently running.</li>
+             * <li>Available: The task is available and no jobs are running.</li>
+             * <li>Running: The task is running and a job is in progress.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -894,7 +894,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task output path.</p>
+             * <p>The output path of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -905,7 +905,7 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Terraform context.</p>
+             * <p>The Terraform content.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -940,8 +940,8 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
             /**
              * <p>The trigger strategy. Valid values:</p>
              * <ul>
-             * <li>Auto: triggered when rules are modified or the trigger strategy is changed to Auto.</li>
-             * <li>Manual: manually triggered.</li>
+             * <li>Auto: The task is automatically triggered when the rules or trigger strategy are modified.</li>
+             * <li>Manual: The task is manually triggered.</li>
              * </ul>
              * <p>Default value: Manual.</p>
              * 

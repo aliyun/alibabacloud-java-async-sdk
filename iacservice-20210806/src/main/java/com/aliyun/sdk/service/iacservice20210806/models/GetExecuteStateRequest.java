@@ -60,7 +60,7 @@ public class GetExecuteStateRequest extends Request {
         } 
 
         /**
-         * <p>The state file ID.</p>
+         * <p>The ID of the state file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

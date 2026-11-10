@@ -131,7 +131,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+         * <p>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -145,11 +145,11 @@ public class ListResourcesRequest extends Request {
         /**
          * <p>The type of the resource source. Valid values:</p>
          * <ul>
-         * <li><p>ExportTaskId: resource export ID</p>
+         * <li><p>ExportTaskId: The resource export ID.</p>
          * </li>
-         * <li><p>TaskId: Module execution task ID</p>
+         * <li><p>TaskId: The ID of the module execution task.</p>
          * </li>
-         * <li><p>StatePath: the OSS path where the resource state is stored.</p>
+         * <li><p>StatePath: The OSS address where the resource state is stored.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -170,7 +170,7 @@ public class ListResourcesRequest extends Request {
          * </li>
          * <li><p>If sourceType is set to TaskId, the format is TaskId.</p>
          * </li>
-         * <li><p>If sourceType is set to StatePath, the format is the download URL of the State file.</p>
+         * <li><p>If sourceType is set to StatePath, the format is the download URL of the state file.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -185,7 +185,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The specification that resource properties follow in the response. Valid values: CloudSpec, Terraform.
+         * <p>The specification that resource properties follow in the response. Valid values: CloudSpec and Terraform.
          * Default value: CloudSpec.</p>
          * <p>This parameter is required.</p>
          * 

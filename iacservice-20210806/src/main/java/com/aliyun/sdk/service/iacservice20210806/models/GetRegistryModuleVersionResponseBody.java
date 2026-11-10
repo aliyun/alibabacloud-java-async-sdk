@@ -235,7 +235,7 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-02-08T02:22:16Z</p>
@@ -246,7 +246,7 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product page URL.</p>
+             * <p>The URL of the details page.</p>
              * 
              * <strong>example:</strong>
              * <p>URL</p>
@@ -268,7 +268,7 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs-cluster</p>
@@ -279,7 +279,7 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace name.</p>
+             * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>alibabacloud</p>
@@ -315,7 +315,7 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template source URL.</p>
+             * <p>The URL of the template source.</p>
              * 
              * <strong>example:</strong>
              * <p>URL</p>

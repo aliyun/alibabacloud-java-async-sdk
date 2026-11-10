@@ -118,7 +118,7 @@ public class UpdateRegistryModuleAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class UpdateRegistryModuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The Registry template name.</p>
+         * <p>The name of the Registry template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,10 +144,7 @@ public class UpdateRegistryModuleAttributeRequest extends Request {
         }
 
         /**
-         * <p>The access permission. Valid values:</p>
-         * <ul>
-         * <li>private: private.</li>
-         * </ul>
+         * <p>The permissions. Valid values: private: Private.</p>
          * 
          * <strong>example:</strong>
          * <p>private</p>

@@ -87,7 +87,7 @@ public class SetEncryptionConfigRequest extends Request {
         } 
 
         /**
-         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
          * 
          * <strong>example:</strong>
          * <p>a65451293e64979ba7a4b573950217fe</p>
@@ -111,7 +111,7 @@ public class SetEncryptionConfigRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the KMS key.</p>
+         * <p>The ID of the region to which the KMS key belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

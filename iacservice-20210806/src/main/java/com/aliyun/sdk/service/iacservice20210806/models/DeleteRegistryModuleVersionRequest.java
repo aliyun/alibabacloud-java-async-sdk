@@ -90,7 +90,7 @@ public class DeleteRegistryModuleVersionRequest extends Request {
         } 
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DeleteRegistryModuleVersionRequest extends Request {
         }
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

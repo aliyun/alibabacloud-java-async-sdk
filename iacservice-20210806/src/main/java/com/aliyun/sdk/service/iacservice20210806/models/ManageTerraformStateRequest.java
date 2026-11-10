@@ -134,10 +134,10 @@ public class ManageTerraformStateRequest extends Request {
         } 
 
         /**
-         * <p>The action to perform on the state file. Supports import and removal. Valid values:</p>
+         * <p>The modification action for the state file. Valid values:</p>
          * <ul>
          * <li>Import</li>
-         * <li>StateRemove.</li>
+         * <li>StateRemove</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -151,7 +151,7 @@ public class ManageTerraformStateRequest extends Request {
         }
 
         /**
-         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class ManageTerraformStateRequest extends Request {
         }
 
         /**
-         * <p>The task identifier. For Stack tasks, the format is &lt;$stackId&gt;:&lt;$deploymentName&gt;. For Task tasks, the format is &lt;$TaskId&gt;.</p>
+         * <p>The task identifier. For stack tasks, the format is &lt;$stackId&gt;:&lt;$deploymentName&gt;. For regular tasks, the format is &lt;$TaskId&gt;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class ManageTerraformStateRequest extends Request {
         }
 
         /**
-         * <p>The actual resource ID of the Terraform resource.</p>
+         * <p>The actual ID of the Terraform resource.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-xxxxxxxx</p>
@@ -189,7 +189,7 @@ public class ManageTerraformStateRequest extends Request {
         }
 
         /**
-         * <p>The resource identifier in the Terraform template. For Stack tasks, the format is &lt;$componetName&gt;:&lt;$resourceName&gt;. For Task tasks, the format is &lt;$resourceName&gt;.</p>
+         * <p>The identifier of the resource in the Terraform template. For stack tasks, the format is &lt;$componetName&gt;:&lt;$resourceName&gt;. For regular tasks, the format is &lt;$resourceName&gt;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +205,7 @@ public class ManageTerraformStateRequest extends Request {
          * <p>The task type. Valid values:</p>
          * <ul>
          * <li>Stack</li>
-         * <li>Task.</li>
+         * <li>Task</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

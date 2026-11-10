@@ -106,7 +106,7 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of records retrieved in a single request.</p>
+         * <p>The maximum number of records returned per request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. An empty value indicates that no more pages are available.</p>
+         * <p>The pagination token for the next page. An empty value indicates that there are no more pages.</p>
          * 
          * <strong>example:</strong>
          * <p>rnD7wyAII+yDi0UGlV519J4dD+2BRJj42DLT6GrZysw=</p>
@@ -229,7 +229,7 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The publish time.</p>
+             * <p>The release time in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-24T05:06:51Z</p>

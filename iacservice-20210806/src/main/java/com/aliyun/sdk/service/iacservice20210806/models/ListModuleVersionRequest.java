@@ -115,7 +115,7 @@ public class ListModuleVersionRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. Fuzzy match on version names is supported.</p>
+         * <p>The search keyword, which supports fuzzy search for version names.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -139,7 +139,7 @@ public class ListModuleVersionRequest extends Request {
         }
 
         /**
-         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * <p>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

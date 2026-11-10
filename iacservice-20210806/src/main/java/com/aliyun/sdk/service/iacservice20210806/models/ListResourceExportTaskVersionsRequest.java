@@ -156,7 +156,7 @@ public class ListResourceExportTaskVersionsRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. Fuzzy search on export version names is supported.</p>
+         * <p>The search keyword. Fuzzy search is supported for export version names.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -180,7 +180,7 @@ public class ListResourceExportTaskVersionsRequest extends Request {
         }
 
         /**
-         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * <p>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -194,11 +194,11 @@ public class ListResourceExportTaskVersionsRequest extends Request {
         /**
          * <p>The export status. Valid values:</p>
          * <ul>
-         * <li>Queue: queued</li>
-         * <li>Pending: preparing to run</li>
-         * <li>Success: succeeded</li>
-         * <li>Errored: failed</li>
-         * <li>Canceled: canceled</li>
+         * <li>Queue: Queued.</li>
+         * <li>Pending: Ready to run.</li>
+         * <li>Success: Succeeded.</li>
+         * <li>Errored: Failed.</li>
+         * <li>Canceled: Canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

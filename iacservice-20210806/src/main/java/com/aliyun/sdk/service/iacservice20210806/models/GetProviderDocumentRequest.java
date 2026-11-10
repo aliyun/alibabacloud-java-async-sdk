@@ -74,7 +74,10 @@ public class GetProviderDocumentRequest extends Request {
         } 
 
         /**
-         * providerVersion.
+         * <p>The Terraform provider version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.248.0</p>
          */
         public Builder providerVersion(String providerVersion) {
             this.putQueryParameter("providerVersion", providerVersion);
@@ -83,7 +86,11 @@ public class GetProviderDocumentRequest extends Request {
         }
 
         /**
+         * <p>The Terraform resource type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud_route_table</p>
          */
         public Builder terraformResourceType(String terraformResourceType) {
             this.putQueryParameter("terraformResourceType", terraformResourceType);

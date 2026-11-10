@@ -214,7 +214,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+         * <p>The idempotency token. The format is [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The description of the task.</p>
+         * <p>The task description.</p>
          * 
          * <strong>example:</strong>
          * <p>this is description</p>
@@ -239,7 +239,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>Saves the exported template as a module. If this parameter is not set, the template is automatically saved in the registry.</p>
+         * <p>Saves the exported template as a module. If this parameter is not specified, the template is automatically saved in the registry.</p>
          */
         public Builder exportToModule(ExportToModule exportToModule) {
             this.putBodyParameter("exportToModule", exportToModule);
@@ -248,7 +248,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The list of include rules used when exporting resources.</p>
+         * <p>The list of inclusion rules used when exporting resources.</p>
          */
         public Builder includeRules(java.util.List<IncludeRules> includeRules) {
             this.putBodyParameter("includeRules", includeRules);
@@ -260,8 +260,8 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
          * <p>The name of the resource export task. The name must meet the following requirements:</p>
          * <ul>
          * <li>The name must be 2 to 128 characters in length.</li>
-         * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
-         * <li>The name must be unique among resource export tasks within the current account.</li>
+         * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</li>
+         * <li>The name must be unique among the resource export tasks within the current account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The Terraform provider version. Call <strong>ListTerraformProviderVersions</strong> to view the supported versions. Default value: the latest version.</p>
+         * <p>The Terraform provider version. You can call the <strong>ListTerraformProviderVersions</strong> operation to view the supported versions. Default value: the latest version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.183.0</p>
@@ -298,7 +298,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The Terraform version. Call <strong>ListAvailableTerraformVersions</strong> to view the supported versions. Default value: 1.5.7.</p>
+         * <p>The Terraform version. You can call the <strong>ListAvailableTerraformVersions</strong> operation to view the supported versions. Default value: 1.5.7.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5.7</p>
@@ -312,8 +312,8 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         /**
          * <p>The trigger strategy. Valid values:</p>
          * <ul>
-         * <li>Auto: triggered automatically when rules are modified or the trigger strategy is changed to Auto.</li>
-         * <li>Manual: triggered manually.</li>
+         * <li>Auto: Triggered when a rule is modified or the trigger strategy is changed to Auto.</li>
+         * <li>Manual: Manually triggered.</li>
          * </ul>
          * <p>Default value: Manual.</p>
          * 
@@ -327,7 +327,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
         }
 
         /**
-         * <p>The list of variables. Sets exported resource parameters as variables.</p>
+         * <p>The list of variables. Sets the parameters of the exported resources as variables.</p>
          */
         public Builder variables(java.util.List<Variables> variables) {
             this.putBodyParameter("variables", variables);
@@ -408,9 +408,9 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The module type in which the exported template is saved. Valid values:</p>
+             * <p>The module type for saving the exported template. Valid values:</p>
              * <ul>
-             * <li>OSS: OSS</li>
+             * <li>OSS: OSS.</li>
              * <li>Registry: Terraform Registry.</li>
              * </ul>
              * 
@@ -423,7 +423,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
             }
 
             /**
-             * <p>The path for saving the template content. Set this parameter when source is set to OSS. Format: oss::https://<bucket>.oss-<region>.aliyuncs.com/<path>.zip.</p>
+             * <p>The path for saving the template content. This parameter is required when source is set to OSS. Format: oss::https://<bucket>.oss-<region>.aliyuncs.com/<path>.zip.</p>
              * 
              * <strong>example:</strong>
              * <p>oss::<a href="https://iac-daily.oss-ap-southeast-1.aliyuncs.com/iacservice/vpc.zip">https://iac-daily.oss-ap-southeast-1.aliyuncs.com/iacservice/vpc.zip</a></p>
@@ -434,7 +434,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
             }
 
             /**
-             * <p>The path for saving the template state file. Set this parameter when source is set to OSS. Format: oss::https://<bucket>.oss-<region>.aliyuncs.com/<path>/terraform.tfstate.</p>
+             * <p>The path for saving the state file of the template. This parameter is required when source is set to OSS. Format: oss::https://<bucket>.oss-<region>.aliyuncs.com/<path>/terraform.tfstate.</p>
              * 
              * <strong>example:</strong>
              * <p>oss::<a href="https://iac-daily.oss-ap-southeast-1.aliyuncs.com/default/terraform.tfstate">https://iac-daily.oss-ap-southeast-1.aliyuncs.com/default/terraform.tfstate</a></p>
@@ -504,15 +504,15 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The name of the include rule for resource export. Valid values:</p>
+             * <p>The name of the inclusion rule for resource export. Valid values:</p>
              * <ul>
-             * <li>ResourceType: required. The resource type. Call <strong>ListResourceTypes</strong> to view the supported resources. Example: ALIYUN::VPC::VPC.</li>
-             * <li>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</li>
-             * <li><ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</li>
-             * <li>ResourceGroupId: the resource group ID. Example: rg-1234.</li>
-             * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: ap-southeast-1-h.</li>
+             * <li>ResourceType: Required. The resource type. You can call the <strong>ListResourceTypes</strong> operation to view the supported resources. Example: ALIYUN::VPC::VPC.</li>
+             * <li>RegionId: Required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</li>
+             * <li><ResourceType>:Id: The resource ID. Example: ALIYUN::VPC::VPC:Id.</li>
+             * <li>ResourceGroupId: The resource group ID. Example: rg-1234.</li>
+             * <li>ZoneId: The zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</li>
              * </ul>
-             * <p>Multiple filter conditions have an AND relationship by default. A resource must meet all filter conditions to be considered a match.</p>
+             * <p>By default, multiple filter conditions use the AND logical operator. A resource matches the filter only when it meets all the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>RegionId</p>
@@ -523,7 +523,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
             }
 
             /**
-             * <p>The values of an include rule for resource export.</p>
+             * <p>The values of the inclusion rule for a group of resources to be exported.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -590,7 +590,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The list of Terraform resource properties corresponding to the resource type.</p>
+             * <p>The list of properties for the Terraform resource that corresponds to the resource type.</p>
              */
             public Builder properties(java.util.List<String> properties) {
                 this.properties = properties;
@@ -598,7 +598,7 @@ public class UpdateResourceExportTaskAttributeRequest extends Request {
             }
 
             /**
-             * <p>The resource type. Call <strong>ListResourceTypes</strong> to view the supported resources.</p>
+             * <p>The resource type. You can call the <strong>ListResourceTypes</strong> operation to view the supported resources.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN::VPC::VSwitch</p>

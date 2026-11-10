@@ -233,7 +233,7 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-03-20T02:18:29Z</p>
@@ -266,7 +266,7 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of Registry templates in the workspace.</p>
+             * <p>The number of registry templates in the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>21</p>

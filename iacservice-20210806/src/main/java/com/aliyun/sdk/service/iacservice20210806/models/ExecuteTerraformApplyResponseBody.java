@@ -78,7 +78,7 @@ public class ExecuteTerraformApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state file ID.</p>
+         * <p>The ID of the state file.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxx</p>

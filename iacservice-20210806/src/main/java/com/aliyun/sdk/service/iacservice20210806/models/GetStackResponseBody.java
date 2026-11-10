@@ -197,6 +197,9 @@ public class GetStackResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ramRole")
         private String ramRole;
 
+        @com.aliyun.core.annotation.NameInMap("skipPropertyValidation")
+        private Boolean skipPropertyValidation;
+
         @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
@@ -222,6 +225,7 @@ public class GetStackResponseBody extends TeaModel {
             this.description = builder.description;
             this.name = builder.name;
             this.ramRole = builder.ramRole;
+            this.skipPropertyValidation = builder.skipPropertyValidation;
             this.source = builder.source;
             this.sourcePath = builder.sourcePath;
             this.stackId = builder.stackId;
@@ -281,6 +285,13 @@ public class GetStackResponseBody extends TeaModel {
         }
 
         /**
+         * @return skipPropertyValidation
+         */
+        public Boolean getSkipPropertyValidation() {
+            return this.skipPropertyValidation;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -329,6 +340,7 @@ public class GetStackResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String ramRole; 
+            private Boolean skipPropertyValidation; 
             private String source; 
             private String sourcePath; 
             private String stackId; 
@@ -346,6 +358,7 @@ public class GetStackResponseBody extends TeaModel {
                 this.description = model.description;
                 this.name = model.name;
                 this.ramRole = model.ramRole;
+                this.skipPropertyValidation = model.skipPropertyValidation;
                 this.source = model.source;
                 this.sourcePath = model.sourcePath;
                 this.stackId = model.stackId;
@@ -363,7 +376,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-24T02:58:53Z</p>
@@ -374,7 +387,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current configuration version number, such as v1. The initial value is v1. The version number increments each time the stack is updated or refreshed and the configuration changes.</p>
+             * <p>The current configuration version number, such as v1. The initial value is v1. The version number is incremented each time the stack is updated or refreshed and the configuration is changed.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -396,7 +409,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stack name.</p>
+             * <p>The name of the stack.</p>
              * 
              * <strong>example:</strong>
              * <p>stack-test</p>
@@ -418,10 +431,18 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Indicates whether to skip property constraint validation. Default value: false.</p>
+             */
+            public Builder skipPropertyValidation(Boolean skipPropertyValidation) {
+                this.skipPropertyValidation = skipPropertyValidation;
+                return this;
+            }
+
+            /**
              * <p>The configuration source of the stack. Valid values:</p>
              * <ul>
-             * <li>OSS: a template stored in Object Storage Service (OSS).</li>
-             * <li>IAC_SERVICE_MODULE: a template created in the automation service console.</li>
+             * <li>OSS: templates from OSS.</li>
+             * <li>IAC_SERVICE_MODULE: templates created in the IaC service module.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -433,10 +454,10 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path value of the configuration source. The value cannot exceed 1000 characters.</p>
+             * <p>The path value of the configuration source, which can be up to 1,000 characters in length.</p>
              * <ul>
-             * <li>If the source is OSS, the value is in the format of oss::<file link>. The file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
-             * <li>If the source is IAC_SERVICE_MODULE, the value is a template ID. Example: mod-xxxxx.</li>
+             * <li>If the source is OSS, the value is in the oss::<file URL> format and must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+             * <li>If the source is IAC_SERVICE_MODULE, the value is the template ID. Example: mod-xxxxx.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -448,7 +469,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the stack, which is generated after the stack is created.</p>
+             * <p>The unique identifier of the stack after creation.</p>
              * 
              * <strong>example:</strong>
              * <p>stack-as1d4vld898ppnqxxxxxx</p>
@@ -459,7 +480,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stack status.</p>
+             * <p>The status of the stack.</p>
              * <table>
              * <thead>
              * <tr>
@@ -469,43 +490,43 @@ public class GetStackResponseBody extends TeaModel {
              * </thead>
              * <tbody><tr>
              * <td>Creating</td>
-             * <td>The stack is being created.</td>
+             * <td>Creating</td>
              * </tr>
              * <tr>
              * <td>Created</td>
-             * <td>The stack is created.</td>
+             * <td>Created</td>
              * </tr>
              * <tr>
              * <td>Waiting</td>
-             * <td>The stack is waiting for deployment.</td>
+             * <td>Waiting for deployment</td>
              * </tr>
              * <tr>
              * <td>Deploying</td>
-             * <td>The stack is being deployed.</td>
+             * <td>Deploying</td>
              * </tr>
              * <tr>
              * <td>Deployed</td>
-             * <td>The stack is deployed.</td>
+             * <td>Deployed</td>
              * </tr>
              * <tr>
              * <td>Errored</td>
-             * <td>The deployment failed.</td>
+             * <td>Deployment failed</td>
              * </tr>
              * <tr>
              * <td>Deleting</td>
-             * <td>The stack is being deleted.</td>
+             * <td>Deleting</td>
              * </tr>
              * <tr>
              * <td>Deleted</td>
-             * <td>The stack is deleted.</td>
+             * <td>Deleted</td>
              * </tr>
              * <tr>
              * <td>DeleteFailed</td>
-             * <td>The deletion failed.</td>
+             * <td>Deletion failed</td>
              * </tr>
              * <tr>
              * <td>DetectTriggered</td>
-             * <td>Drift detection is triggered.</td>
+             * <td>Drift detection triggered successfully</td>
              * </tr>
              * </tbody></table>
              * 
@@ -518,7 +539,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment trigger method of the stack. This field is not publicly available.</p>
+             * <p>The trigger method for stack deployment. This field is not available to the public. Valid values:</p>
              * <ul>
              * <li>SetUpdated: triggered by file changes.</li>
              * </ul>
@@ -532,7 +553,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory where the deployment and component configuration files of the stack are located. Set this parameter to / for the root directory.</p>
+             * <p>The directory where the deployment and component configuration files of the stack are located. The value is / for the root directory.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>

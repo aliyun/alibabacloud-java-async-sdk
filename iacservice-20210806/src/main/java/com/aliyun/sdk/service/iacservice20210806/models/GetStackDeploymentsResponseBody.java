@@ -168,11 +168,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to automatically execute the task. Default value: false. Valid values:</p>
-             * <ul>
-             * <li><strong>false</strong>: No.</li>
-             * <li><strong>true</strong>: Yes.</li>
-             * </ul>
+             * <p>Specifies whether to automatically execute the task. Default value: <strong>false</strong>. Valid values: <strong>false</strong>: no. <strong>true</strong>: yes.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -183,7 +179,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this is a destroy job.</p>
+             * <p>Specifies whether the job is a destroy job.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -303,7 +299,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expression that can reference component outputs, in the format: component.{component name}.{component output name}.</p>
+             * <p>The expression. You can reference component outputs in the format of component.{Component name}.{Component output name}.</p>
              * 
              * <strong>example:</strong>
              * <p>component.sls.project_name</p>
@@ -491,10 +487,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the parameter is sensitive. Sensitive parameter values are not visible in the console or API. Valid values:</p>
+             * <p>Specifies whether the parameter is a sensitive parameter. The values of sensitive parameters are invisible in both the console and API responses. Valid values:</p>
              * <ul>
-             * <li>true: Sensitive.</li>
-             * <li>false: Not sensitive.</li>
+             * <li>true: The parameter is a sensitive parameter.</li>
+             * <li>false: The parameter is not a sensitive parameter.</li>
              * </ul>
              */
             public Builder sensitive(Boolean sensitive) {
@@ -597,7 +593,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of resources to be created.</p>
+             * <p>The number of newly created resources.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -608,7 +604,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resources to be changed.</p>
+             * <p>The number of changed resources.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -619,7 +615,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resources to be destroyed.</p>
+             * <p>The number of destroyed resources.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -702,7 +698,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The diff information of the resource change.</p>
+             * <p>The difference information of the resource change.</p>
              * 
              * <strong>example:</strong>
              * <p>~ resource \&quot;alicloud_log_store\&quot; \&quot;default\&quot; {\n        id                    = \&quot;alb-log-project-v1-ph-xxxxx:alb-log-store-ph\&quot;\n      ~ max_split_shard_count = 64 -&gt; 32\n        name                  = \&quot;alb-log-store-ph\&quot;\n\n        # (13 unchanged attributes hidden)\n    }</p>
@@ -713,7 +709,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The types of resource change actions included in this resource change.</p>
+             * <p>The types of specific resource change actions included in this resource change.</p>
              */
             public Builder resourceActions(java.util.List<String> resourceActions) {
                 this.resourceActions = resourceActions;
@@ -822,7 +818,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
              * <li>create: All resource changes in the component are creations.</li>
              * <li>delete: All resource changes in the component are deletions.</li>
              * <li>read: All resource changes in the component are reads.</li>
-             * <li>update: Resource changes in the component include two or more types among creation, deletion, and read.</li>
+             * <li>update: The resource changes in the component include two or more change types, such as creations, deletions, or reads.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1102,7 +1098,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration item.</p>
+             * <p>The configuration items.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -1121,7 +1117,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time in UTC, in the format of YYYY-MM-DDTHH:mm:ssZ (ISO 8601).</p>
+             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-01T12:10:18Z</p>
@@ -1132,7 +1128,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment name.</p>
+             * <p>The name of the deployment.</p>
              * 
              * <strong>example:</strong>
              * <p>production</p>
@@ -1143,7 +1139,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment number. The deployment number for each stack starts from 1 and increments each time a deployment is successfully triggered.</p>
+             * <p>The deployment number. The deployment number of each stack starts from 1 and increments each time a deployment is successfully triggered.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1154,7 +1150,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Deprecated field.</p>
+             * <p><strong>[Deprecated]</strong> This field is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -1165,7 +1161,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration, in milliseconds.</p>
+             * <p>The execution duration. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>38000</p>
@@ -1176,9 +1172,11 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution type.</p>
-             * <p>Manual: Manual execution (default).</p>
-             * <p>Auto: Automatic execution.</p>
+             * <p>The execution type. Valid values:</p>
+             * <ul>
+             * <li>Manual: manual execution. This is the default value.</li>
+             * <li>Auto: automatic execution.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Manual</p>
@@ -1189,7 +1187,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The failure reason.</p>
+             * <p>The cause of the failure.</p>
              * 
              * <strong>example:</strong>
              * <p>\n Error: Invalid value for input variable\n \n   on main.tf line 17, in module \&quot;alb\&quot;:\n   17:   log_project           = var.log_project.project_name\n \n The given value is not suitable for module.alb.var.log_project declared at\n modules/alb/main.tf:34,1-23: string required.\n╵\n</p>
@@ -1211,7 +1209,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS object key prefix for deployment logs</p>
+             * <p>The object key prefix of the deployment logs in OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123456/default/task/task-al1qqm8wpxb0ezntwsqwcz</p>
              */
             public Builder logOutputPath(String logOutputPath) {
                 this.logOutputPath = logOutputPath;
@@ -1227,7 +1228,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter set content.</p>
+             * <p>The content of the parameter set.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
@@ -1235,7 +1236,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state file output results.</p>
+             * <p>The output results of the state file.</p>
              */
             public Builder planOutputs(java.util.List<PlanOutputs> planOutputs) {
                 this.planOutputs = planOutputs;
@@ -1243,7 +1244,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment status.</p>
+             * <p>The deployment status. Valid values:</p>
              * <table>
              * <thead>
              * <tr>
@@ -1257,91 +1258,91 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
              * </tr>
              * <tr>
              * <td>PriorityQueued</td>
-             * <td>Priority queuing in progress.</td>
+             * <td>The deployment is queued with priority.</td>
              * </tr>
              * <tr>
              * <td>PlanQueued</td>
-             * <td>The deployment is queuing because no workflow is available after creation.</td>
+             * <td>The deployment is queued and waiting for an available workflow after it is created.</td>
              * </tr>
              * <tr>
              * <td>ApplyQueued</td>
-             * <td>The deployment is queuing because no workflow is available during execution.</td>
+             * <td>The deployment is queued and waiting for an available workflow during execution.</td>
              * </tr>
              * <tr>
              * <td>Planning</td>
-             * <td>The resource deployment is in the Plan phase.</td>
+             * <td>The deployment is in the plan phase.</td>
              * </tr>
              * <tr>
              * <td>Planned</td>
-             * <td>The resource deployment has completed the Plan phase.</td>
+             * <td>The deployment has completed the plan phase.</td>
              * </tr>
              * <tr>
              * <td>ConfigProactiveInProgress</td>
-             * <td>Compliance pre-check in progress.</td>
+             * <td>The compliance precheck is in progress.</td>
              * </tr>
              * <tr>
              * <td>ConfigProactiveSuccess</td>
-             * <td>Compliance pre-check succeeded.</td>
+             * <td>The compliance precheck is successful.</td>
              * </tr>
              * <tr>
              * <td>DetectInProgress</td>
-             * <td>Drift detection in progress.</td>
+             * <td>Drift detection is in progress.</td>
              * </tr>
              * <tr>
              * <td>ImportQueued</td>
-             * <td>The deployment is queuing because no workflow is available during Import execution.</td>
+             * <td>The deployment is queued and waiting for an available workflow during the import phase.</td>
              * </tr>
              * <tr>
              * <td>Importing</td>
-             * <td>The resource deployment is in the Import phase.</td>
+             * <td>The deployment is in the import phase.</td>
              * </tr>
              * <tr>
              * <td>Imported</td>
-             * <td>The resource deployment has completed the Import phase.</td>
+             * <td>The deployment has completed the import phase.</td>
              * </tr>
              * <tr>
              * <td>StateQueued</td>
-             * <td>The deployment is queuing because no workflow is available during state command execution.</td>
+             * <td>The deployment is queued and waiting for an available workflow during the state command execution.</td>
              * </tr>
              * <tr>
              * <td>Stating</td>
-             * <td>The resource deployment is executing the state command.</td>
+             * <td>The deployment is executing the state command.</td>
              * </tr>
              * <tr>
              * <td>Stated</td>
-             * <td>The resource deployment has completed the state command execution.</td>
+             * <td>The deployment has completed the execution of the state command.</td>
              * </tr>
              * <tr>
              * <td>Confirmed</td>
-             * <td>The resource deployment has been confirmed after the Plan phase.</td>
+             * <td>The deployment is confirmed after the plan phase.</td>
              * </tr>
              * <tr>
              * <td>PlannedAndFinished</td>
-             * <td>No diff was found after the Plan phase. The deployment is in a final status.</td>
+             * <td>The deployment is in the final state because no differences are found after the plan phase.</td>
              * </tr>
              * <tr>
              * <td>Applying</td>
-             * <td>The resource deployment is in the Apply phase.</td>
+             * <td>The deployment is in the apply phase.</td>
              * </tr>
              * <tr>
              * <td>Applied</td>
-             * <td>The resource deployment has completed the Apply phase.</td>
+             * <td>The deployment has completed the apply phase.</td>
              * </tr>
              * <tr>
              * <td>Discarded</td>
-             * <td>The resource deployment has been discarded and is in a final status.</td>
+             * <td>The deployment is discarded and enters the final state.</td>
              * </tr>
              * <tr>
              * <td>Errored</td>
-             * <td>The deployment execution encountered an error and is in a final status.</td>
+             * <td>An error occurred during the deployment execution, and the deployment enters the final state.</td>
              * </tr>
              * <tr>
              * <td>ConfigProactiveFailure</td>
-             * <td>Compliance pre-check failed.</td>
+             * <td>The compliance precheck failed.</td>
              * </tr>
              * <tr>
              * <td>Canceled</td>
-             * <td>The deployment execution has been canceled and is in a final status.</td>
+             * <td>The deployment execution is canceled, and the deployment enters the final state.</td>
              * </tr>
              * </tbody></table>
              * 

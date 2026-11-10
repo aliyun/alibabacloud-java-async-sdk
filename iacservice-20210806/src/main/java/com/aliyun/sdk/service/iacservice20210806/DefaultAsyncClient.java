@@ -44,7 +44,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Per-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of AddSharedAccounts  AddSharedAccountsRequest
      * @return AddSharedAccountsResponse
@@ -101,11 +101,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After creating a parameter set, you need to associate it with a resource. Valid values for the resource type:</p>
+     * <p>After you create a parameter set, you must associate it with a resource. Valid values for the resource type:</p>
      * <ul>
      * <li>Module: template</li>
      * <li>ModuleVersion: template version</li>
-     * <li>Task: node.</li>
+     * <li>Task: task.</li>
      * </ul>
      * 
      * @param request the request parameters of AssociateParameterSet  AssociateParameterSetRequest
@@ -127,7 +127,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of CancelResourceExportTask  CancelResourceExportTaskRequest
      * @return CancelResourceExportTaskResponse
@@ -193,7 +193,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of CreateJob  CreateJobRequest
      * @return CreateJobResponse
@@ -214,7 +214,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit for a single user is 100 calls per second.</p>
      * 
      * @param request the request parameters of CreateModule  CreateModuleRequest
      * @return CreateModuleResponse
@@ -235,9 +235,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use the <code>clientToken</code> parameter to ensure idempotence of the request and prevent duplicate submissions caused by network retries.</li>
+     * <li>Use the <code>clientToken</code> parameter to ensure the idempotence of the request and prevent duplicate submissions caused by network retries.</li>
      * <li>Use semantic versioning (such as <code>v1.0.0</code>).</li>
      * </ul>
      * 
@@ -306,7 +306,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Per-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of CreateRegistryModule  CreateRegistryModuleRequest
      * @return CreateRegistryModuleResponse
@@ -327,7 +327,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>Rate limit per user: 100 calls per second.</p>
      * 
      * @param request the request parameters of CreateRegistryNamespace  CreateRegistryNamespaceRequest
      * @return CreateRegistryNamespaceResponse
@@ -348,7 +348,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of CreateResourceExportTask  CreateResourceExportTaskRequest
      * @return CreateResourceExportTaskResponse
@@ -462,10 +462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li>This operation deletes a specified template.</li>
-     * <li>Deletion is irreversible. Proceed with caution.</li>
+     * <li>The deletion operation is irreversible. Proceed with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteModule  DeleteModuleRequest
@@ -487,7 +487,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified parameter set.</p>
+     * <p>Deletes a parameter set.</p>
      * 
      * @param request the request parameters of DeleteParameterSet  DeleteParameterSetRequest
      * @return DeleteParameterSetResponse
@@ -526,7 +526,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of DeleteRegistryModule  DeleteRegistryModuleRequest
      * @return DeleteRegistryModuleResponse
@@ -547,7 +547,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>Rate limit per user: 100 calls per second.</p>
      * 
      * @param request the request parameters of DeleteRegistryModuleVersion  DeleteRegistryModuleVersionRequest
      * @return DeleteRegistryModuleVersionResponse
@@ -568,7 +568,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of DeleteRegistryNamespace  DeleteRegistryNamespaceRequest
      * @return DeleteRegistryNamespaceResponse
@@ -589,7 +589,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The call frequency per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of DeleteResourceExportTask  DeleteResourceExportTaskRequest
      * @return DeleteResourceExportTaskResponse
@@ -628,8 +628,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.
-     * Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</p>
+     * <p>Rate limit per user: 100 calls per second.
+     * Deletes a task. If the task has unreleased resources, it cannot be deleted.</p>
      * 
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
@@ -650,7 +650,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API is used to perform drift detection on the state files of resource orchestration tasks and stack tasks in the automated service desk.</p>
+     * <p>This API is primarily used to perform drift detection on the state files of resource orchestration tasks and stack tasks on the automated service desk.</p>
      * 
      * @param request the request parameters of DetectTerraformState  DetectTerraformStateRequest
      * @return DetectTerraformStateResponse
@@ -725,7 +725,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is used to execute Terraform Module code to create or update cloud resources. Before using this API operation, make sure that all required authentication information is correctly configured and that the Terraform code corresponding to the Module meets the expected functional requirements.</p>
+     * <p>This API is primarily used to execute Terraform module code to create or update cloud resources. Before using this API, ensure that all necessary authentication information is correctly configured and that the Terraform code for the module meets the expected functional requirements.</p>
      * 
      * @param request the request parameters of ExecuteRegistryModule  ExecuteRegistryModuleRequest
      * @return ExecuteRegistryModuleResponse
@@ -746,7 +746,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of ExecuteResourceExportTask  ExecuteResourceExportTaskRequest
      * @return ExecuteResourceExportTaskResponse
@@ -767,8 +767,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Executes the Terraform Apply command to create or update cloud resources based on the provided Terraform code. This API can handle complex scenarios such as operations that depend on a previous state.
-     * Before calling this API, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</p>
+     * <p>This API executes the Terraform Apply command to create or update cloud resources by using the provided Terraform code. It handles complex scenarios, such as operations that depend on the previous state.
+     * Before you use this API, ensure that all required authentication information is correctly configured and the Terraform code meets your functional requirements.</p>
      * 
      * @param request the request parameters of ExecuteTerraformApply  ExecuteTerraformApplyRequest
      * @return ExecuteTerraformApplyResponse
@@ -789,7 +789,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Executes the Terraform Destroy command to destroy resources created by Terraform.</p>
+     * <p>Executes the Terraform destroy command to destroy resources created by using Terraform.</p>
      * 
      * @param request the request parameters of ExecuteTerraformDestroy  ExecuteTerraformDestroyRequest
      * @return ExecuteTerraformDestroyResponse
@@ -810,8 +810,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Executes a Terraform Plan command by using the provided Terraform code to create or update cloud resources. This API operation can handle complex scenarios such as operations that depend on a previous state.
-     * Before calling this API operation, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</p>
+     * <p>This API executes the Terraform plan command to create or update cloud resources based on the provided Terraform code. It can also handle complex scenarios, such as operations that depend on the previous state.
+     * Before you call this API, ensure that all required authentication information is correctly configured and that the Terraform code meets your functional requirements.</p>
      * 
      * @param request the request parameters of ExecuteTerraformPlan  ExecuteTerraformPlanRequest
      * @return ExecuteTerraformPlanResponse
@@ -886,7 +886,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the result of a Terraform run.</p>
+     * <p>Retrieves the Terraform execution results.</p>
      * 
      * @param request the request parameters of GetExecuteState  GetExecuteStateRequest
      * @return GetExecuteStateResponse
@@ -925,7 +925,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>Rate limit per user: 100 calls per second.</p>
      * 
      * @param request the request parameters of GetJob  GetJobRequest
      * @return GetJobResponse
@@ -946,8 +946,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to query the details of a specified template, including but not limited to the template name, description, source, status, and latest version. You must specify the template ID and include authentication information in the request.</p>
+     * <h2>Request description</h2>
+     * <p>This operation retrieves the details of a specified template, including but not limited to the template name, description, source, status, and latest version. The request must include the template ID and authentication information.</p>
      * 
      * @param request the request parameters of GetModule  GetModuleRequest
      * @return GetModuleResponse
@@ -968,8 +968,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to query the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the template ID and version number are correct.</p>
+     * <h2>Request description</h2>
+     * <p>This operation retrieves the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the provided template ID and version number are correct.</p>
      * 
      * @param request the request parameters of GetModuleVersion  GetModuleVersionRequest
      * @return GetModuleVersionResponse
@@ -1052,7 +1052,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 200 calls per second.</p>
+     * <p>The rate limit per user is 200 calls per second.</p>
      * 
      * @param request the request parameters of GetRegistryModule  GetRegistryModuleRequest
      * @return GetRegistryModuleResponse
@@ -1073,7 +1073,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 200 calls per second.</p>
+     * <p>The rate limit per user is 200 calls per second.</p>
      * 
      * @param request the request parameters of GetRegistryModuleVersion  GetRegistryModuleVersionRequest
      * @return GetRegistryModuleVersionResponse
@@ -1094,7 +1094,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 200 calls per second.</p>
+     * <p>The rate limit per user is 200 calls per second.</p>
      * 
      * @param request the request parameters of GetRegistryNamespace  GetRegistryNamespaceRequest
      * @return GetRegistryNamespaceResponse
@@ -1115,7 +1115,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of GetResourceExportTask  GetResourceExportTaskRequest
      * @return GetResourceExportTaskResponse
@@ -1156,6 +1156,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the results of a Terraform run.</p>
+     * 
      * @param request the request parameters of GetStack  GetStackRequest
      * @return GetStackResponse
      */
@@ -1232,7 +1235,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API is used to retrieve the detection results of state files for resource orchestration tasks and stack tasks on the automation service desk.</p>
+     * <p>Retrieves the detection results of state files for resource orchestration tasks and stack tasks on the automated service desk.</p>
      * 
      * @param request the request parameters of GetTerraformStateDetection  GetTerraformStateDetectionRequest
      * @return GetTerraformStateDetectionResponse
@@ -1289,17 +1292,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the example information of Terraform Modules officially provided by Alibaba Cloud.
-     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <p>This operation queries example information for Terraform modules officially provided by Alibaba Cloud.
+     * You can specify the maxResults parameter to adjust the maximum number of returned entries.</p>
      * <ul>
-     * <li>If <code>nextToken</code> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModuleExamples operation to the <code>nextToken</code> value returned in the previous response. If the <code>NextToken</code> parameter is not specified, the first page of data is returned by default.</li>
-     * <li>You can use keyword, namespaceName, moduleName, moduleVersion, and exampleName as conditional filter settings to narrow down the search scope. Multiple filter conditions have a logical <code>AND</code> relationship, and only resources that meet all filter conditions are returned.<ul>
-     * <li>keyword: optional. Searches by keyword and supports fuzzy match on exampleName. For example, if keyword is set to ecs, module examples whose names contain ecs are returned.</li>
-     * <li>namespaceName: optional. Filters module examples by a specific workspace. For example, if namespaceName is set to alibaba, module examples in the alibaba workspace are returned.</li>
-     * <li>moduleName: optional. Filters module examples by a specific module name. For example, if moduleName is set to ecs, module examples whose module name is ecs are returned.</li>
-     * <li>moduleVersion: optional. Filters module examples by a specific module version. For example, if moduleVersion is set to 1.0.0, module examples whose module version is 1.0.0 are returned.</li>
-     * <li>exampleName: optional. Filters module examples by a specific example name. For example, if exampleName is set to ecs, module examples whose example name is ecs are returned.
-     * The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates processing of query results.</li>
+     * <li>If nextToken is not present in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModuleExamples operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</li>
+     * <li>You can set keyword, namespaceName, moduleName, moduleVersion, and exampleName as filter conditions to narrow the search scope. Multiple filter conditions are connected by the logical AND operator. Only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: Optional. Keyword search. Supports fuzzy matching for exampleName. For example, if keyword is set to ecs, the system queries module examples whose names contain ecs.</li>
+     * <li>namespaceName: Optional. Filters module examples in a specific workspace. For example, if namespaceName is set to alibaba, the system queries module examples in the alibaba workspace.</li>
+     * <li>moduleName: Optional. Filters module examples with a specific name. For example, if moduleName is set to ecs, the system queries module examples named ecs.</li>
+     * <li>moduleVersion: Optional. Filters module examples of a specific version. For example, if moduleVersion is set to 1.0.0, the system queries module examples of version 1.0.0.</li>
+     * <li>exampleName: Optional. Filters module examples with a specific example name. For example, if exampleName is set to ecs, the system queries module examples named ecs.
+     * The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate processing the query results.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1323,16 +1326,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the version information of official Terraform modules provided by Alibaba Cloud.
-     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <p>This operation queries the version information of modules officially provided by Alibaba Cloud Terraform.
+     * You can specify the maxResults parameter to adjust the maximum number of returned entries.</p>
      * <ul>
-     * <li>If <code>nextToken</code> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModules operation to the <code>nextToken</code> value returned in the previous response. If the <code>NextToken</code> parameter is not specified, the first page of data is returned by default.</li>
-     * <li>You can use keyword, namespaceName, moduleName, and moduleVersion as conditional filter Settings to narrow the search scope. Multiple filter conditions have a logical <code>AND</code> relationship. Only resources that meet all filter conditions are returned.<ul>
-     * <li>keyword: optional. Performs a fuzzy match on the module name. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</li>
-     * <li>namespaceName: optional. Filters modules by a specific workspace. For example, if namespaceName is set to alibaba, modules whose workspace is alibaba are returned. When moduleName is specified, namespaceName must also be specified. You can call the ListExplorerRegistryModule operation to obtain the namespaceName information.</li>
-     * <li>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, modules whose name is ecs are returned.</li>
-     * <li>moduleVersion: optional. Filters modules by a specific version. For example, if moduleVersion is set to 1.0.0, modules whose version is 1.0.0 are returned.
-     * The response contains the request ID, total number of entries, data on the current page, and pagination information, which facilitates the processing of query results.</li>
+     * <li>If nextToken is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModules operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</li>
+     * <li>By using the Settings of keyword, namespaceName, moduleName, and moduleVersion as conditional filters, you can narrow down the search scope. Multiple conditional filters are connected by the logical AND operator. Only resources that meet all conditional filters are returned.<ul>
+     * <li>keyword: optional. The keyword for fuzzy matching against the module name. For example, if you set keyword to ecs, the system queries modules whose names contain ecs.</li>
+     * <li>namespaceName: optional. Supports filtering modules in a specific workspace. For example, if you set namespaceName to alibaba, the system queries modules whose workspace is alibaba. If you specify moduleName, you must also specify namespaceName. You can call the ListExplorerRegistryModule operation to obtain the namespaceName.</li>
+     * <li>moduleName: optional. Supports filtering modules with a specific name. For example, if you set keyword to ecs, the system queries the module named ecs.</li>
+     * <li>moduleVersion: optional. Supports filtering modules with a specific version. For example, if you set keyword to 1.0.0, the system queries modules whose version is 1.0.0.
+     * The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate result processing.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1356,14 +1359,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries information about official Terraform modules provided by Alibaba Cloud.
-     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <p>This operation queries the official Terraform modules provided by Alibaba Cloud.
+     * You can specify the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
      * <ul>
-     * <li>If the <code>nextToken</code> parameter is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModules operation to the <code>nextToken</code> value returned in the previous response. If you do not specify the <code>NextToken</code> parameter, the first page of data is returned by default.</li>
-     * <li>You can use keyword and moduleName as filter conditions to narrow the search scope. Multiple filter conditions are evaluated by using a logical <code>AND</code>. Only resources that meet all filter conditions are returned.<ul>
-     * <li>keyword: optional. Searches by keyword through fuzzy matching against ModuleName. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</li>
-     * <li>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, only the module whose name is exactly ecs is returned.
-     * The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates the processing of query results.</li>
+     * <li>If <code>nextToken</code> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModules operation to the <code>nextToken</code> value returned in the previous response. If you do not specify the <code>nextToken</code> parameter, the first page of data is returned by default.</li>
+     * <li>You can set <code>keyword</code> and <code>moduleName</code> as filter conditions to narrow down the search scope. Multiple filter conditions are connected by the logical <code>AND</code> operator. Only resources that meet all filter conditions are returned.<ul>
+     * <li><code>keyword</code>: optional. The keyword for search. The system performs a fuzzy match on the module name. For example, if you set this parameter to ecs, the system queries modules whose names contain ecs.</li>
+     * <li><code>moduleName</code>: optional. The name of the module. You can use this parameter to filter modules by a specific name. For example, if you set this parameter to ecs, the system queries the module whose name is ecs.
+     * The response structure includes the request ID, total number of entries, data on the current page, and pagination information to help you process the query results.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1426,7 +1429,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of ListModuleVersion  ListModuleVersionRequest
      * @return ListModuleVersionResponse
@@ -1522,12 +1525,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Keyword search</strong>: Use the <code>keyword</code> parameter for fuzzy matching.</li>
-     * <li><strong>Paged query</strong>: Use <code>nextToken</code> for pagination and <code>maxResults</code> to specify the maximum number of results per page (default: 100, maximum: 200).</li>
-     * <li><strong>Terraform Provider version</strong>: The optional <code>terraformProviderVersion</code> parameter filters products associated with a specific Provider version.</li>
-     * <li><strong>Response structure</strong>: The response contains the request ID, total number of entries, data of the current page, and pagination information for easy processing of query results.</li>
+     * <li><strong>Keyword search</strong>: Uses the <code>keyword</code> parameter for fuzzy matching.</li>
+     * <li><strong>Paged query</strong>: Uses <code>nextToken</code> for pagination and <code>maxResults</code> to specify the maximum number of results to return on each page. Default value: 100. Maximum value: 200.</li>
+     * <li><strong>Terraform provider version</strong>: The optional <code>terraformProviderVersion</code> parameter is used to filter products related to a specific provider version.</li>
+     * <li><strong>Response structure</strong>: Includes the request ID, total number of entries, data on the current page, and pagination information to facilitate the processing of query results.</li>
      * </ul>
      * 
      * @param request the request parameters of ListProducts  ListProductsRequest
@@ -1567,7 +1570,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 200 calls per second.</p>
+     * <p>Rate limit per user: 200 calls per second.</p>
      * 
      * @param request the request parameters of ListRegistryModuleVersions  ListRegistryModuleVersionsRequest
      * @return ListRegistryModuleVersionsResponse
@@ -1609,7 +1612,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 200 calls per second.</p>
+     * <p>The maximum call frequency per user is 200 calls per second.</p>
      * 
      * @param request the request parameters of ListRegistryNamespaces  ListRegistryNamespacesRequest
      * @return ListRegistryNamespacesResponse
@@ -1630,7 +1633,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit for a single user is 100 calls per second.</p>
      * 
      * @param request the request parameters of ListResourceExportTaskVersions  ListResourceExportTaskVersionsRequest
      * @return ListResourceExportTaskVersionsResponse
@@ -1651,7 +1654,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Rate limit per user: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of ListResourceExportTasks  ListResourceExportTasksRequest
      * @return ListResourceExportTasksResponse
@@ -1787,8 +1790,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API is used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
-     * Before using this API, make sure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</p>
+     * <p>This API is primarily used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
+     * Before you use this API, ensure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</p>
      * 
      * @param request the request parameters of ManageTerraformState  ManageTerraformStateRequest
      * @return ManageTerraformStateResponse
@@ -1809,7 +1812,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Per-user call frequency: 100 calls per second.</p>
+     * <p>The maximum call frequency for a single user is 100 calls per second.</p>
      * 
      * @param request the request parameters of OperateJob  OperateJobRequest
      * @return OperateJobResponse
@@ -1830,7 +1833,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>Rate limit for a single user: 100 calls per second.</p>
      * 
      * @param request the request parameters of PublishRegistryModuleVersion  PublishRegistryModuleVersionRequest
      * @return PublishRegistryModuleVersionResponse
@@ -1851,7 +1854,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of RemoveSharedAccounts  RemoveSharedAccountsRequest
      * @return RemoveSharedAccountsResponse
@@ -1935,7 +1938,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates an Explorer template.</p>
+     * <p>Updates the Explorer template.</p>
      * 
      * @param request the request parameters of UpdateExplorerModuleAttribute  UpdateExplorerModuleAttributeRequest
      * @return UpdateExplorerModuleAttributeResponse
@@ -1978,8 +1981,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>This operation allows you to modify the basic attributes of an existing template, including but not limited to the template name, description, and tags.</li>
      * <li>The update operation does not affect the content or version information of the template.</li>
-     * <li>To enable or disable deletion protection, use the deletionProtection parameter.</li>
-     * <li>Use clientToken to ensure the idempotence of the request and avoid duplicate submissions caused by network issues.</li>
+     * <li>To enable or disable deletion protection, set the <code>deletionProtection</code> parameter.</li>
+     * <li>Use <code>clientToken</code> to ensure the idempotence of the request and prevent duplicate submissions caused by network issues.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateModuleAttribute  UpdateModuleAttributeRequest
@@ -2047,7 +2050,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit per user is 100 calls per second.</p>
      * 
      * @param request the request parameters of UpdateRegistryModuleAttribute  UpdateRegistryModuleAttributeRequest
      * @return UpdateRegistryModuleAttributeResponse
@@ -2068,7 +2071,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit for a single user is 100 calls per second.</p>
      * 
      * @param request the request parameters of UpdateRegistryNamespaceAttribute  UpdateRegistryNamespaceAttributeRequest
      * @return UpdateRegistryNamespaceAttributeResponse
@@ -2089,7 +2092,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Single-user call frequency: 100 calls per second.</p>
+     * <p>The rate limit for a single user is 100 calls per second.</p>
      * 
      * @param request the request parameters of UpdateResourceExportTaskAttribute  UpdateResourceExportTaskAttributeRequest
      * @return UpdateResourceExportTaskAttributeResponse

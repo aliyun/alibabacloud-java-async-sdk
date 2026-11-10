@@ -155,8 +155,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The notification type. Valid values:
-             * DingDing.</p>
+             * <p>The notification type. Valid values:</p>
+             * <ul>
+             * <li>DingDing</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>DingDing</p>
@@ -228,8 +230,8 @@ public class GetGroupResponseBody extends TeaModel {
             /**
              * <p>The trigger strategy. Valid values:</p>
              * <ul>
-             * <li>ProviderNewVersion: triggered when a new provider version is released</li>
-             * <li>Cron: triggered on a schedule.</li>
+             * <li>ProviderNewVersion: Triggered when a new provider version is released.</li>
+             * <li>Cron: Triggered on a schedule.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -241,7 +243,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy value that must be maintained for scheduled triggering. This value is a cron expression.</p>
+             * <p>The policy value for scheduled triggers. Specify a cron expression.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 8 * * ?</p>
@@ -528,7 +530,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-21T10:57:11Z</p>
@@ -550,7 +552,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the group configuration is forcibly used.</p>
+             * <p>Indicates whether the group configuration is forcibly applied.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -610,7 +612,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The RAM role (1 to 128 characters). The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger mode is not manual.</p>
+             * <p>The Resource Access Management (RAM) role. Length: 1 to 128 characters. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job is not triggered manually.</p>
              * 
              * <strong>example:</strong>
              * <p>ramRoleName</p>
@@ -621,7 +623,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of report export field options.</p>
+             * <p>The list of report export fields.</p>
              */
             public Builder reportExportField(java.util.List<String> reportExportField) {
                 this.reportExportField = reportExportField;
@@ -629,7 +631,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The export address for the execution report. OSS addresses are supported. Format: https://<OSS bucket address>/<path>.</p>
+             * <p>The export path for execution reports. OSS paths are supported, such as https://<OSS bucket endpoint>/<path>.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -651,7 +653,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Terraform provider version. Select a Terraform provider version. Tasks in the group are executed based on the specified Terraform provider version. The version configured on a task takes higher priority. This version may conflict with the Terraform provider version specified in the module.</p>
+             * <p>The Terraform provider version. Select a Terraform provider version. Tasks in the group execute plans based on the specified Terraform provider version. The version configured on the task takes precedence. This setting may conflict with the Terraform provider version specified in the module.</p>
              * 
              * <strong>example:</strong>
              * <p>1.191.0</p>
@@ -670,10 +672,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type that triggers execution. Valid values:</p>
+             * <p>The resource type for triggered execution. Valid values:</p>
              * <ul>
-             * <li>Task: regular task</li>
-             * <li>SceneTestingTask: scenario-based testing task.</li>
+             * <li>Task: Regular task.</li>
+             * <li>SceneTestingTask: Scenario-based testing task.</li>
              * </ul>
              */
             public Builder triggerResourceType(java.util.List<String> triggerResourceType) {

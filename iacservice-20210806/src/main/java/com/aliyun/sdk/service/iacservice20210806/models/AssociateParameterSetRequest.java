@@ -90,7 +90,7 @@ public class AssociateParameterSetRequest extends Request {
         } 
 
         /**
-         * <p>The list of parameter set IDs to associate with the resource. Maximum length: 5.</p>
+         * <p>The IDs of the parameter sets to be associated with the resource. Maximum length: 5.</p>
          * <p>This parameter is required.</p>
          */
         public Builder parameterSetIds(java.util.List<String> parameterSetIds) {
@@ -100,7 +100,7 @@ public class AssociateParameterSetRequest extends Request {
         }
 
         /**
-         * <p>The resource ID. When the resource type is ModuleVersion, the value is a concatenation of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</p>
+         * <p>The resource ID. If the resource type is ModuleVersion, the ID is concatenated in the <moduleId>-<moduleversion> format, such as mod-34535345df123fr-v3.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,8 +117,8 @@ public class AssociateParameterSetRequest extends Request {
          * <ul>
          * <li>Module: template</li>
          * <li>ModuleVersion: template version</li>
-         * <li>Task: node</li>
-         * <li>Stack: resource stack.</li>
+         * <li>Task: task</li>
+         * <li>Stack: resource stack</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

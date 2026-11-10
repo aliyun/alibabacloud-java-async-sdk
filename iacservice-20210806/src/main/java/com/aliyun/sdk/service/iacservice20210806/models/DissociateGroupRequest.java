@@ -142,7 +142,7 @@ public class DissociateGroupRequest extends Request {
         }
 
         /**
-         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
          * 
          * <strong>example:</strong>
          * <p>2daf4227f747cbf11a5501f18cc5e004</p>

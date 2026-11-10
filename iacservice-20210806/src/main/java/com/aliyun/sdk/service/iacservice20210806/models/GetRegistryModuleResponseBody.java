@@ -67,7 +67,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Registry module.</p>
+         * <p>The Registry template.</p>
          */
         public Builder registryModule(RegistryModule registryModule) {
             this.registryModule = registryModule;
@@ -274,9 +274,9 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The permission. Valid values:</p>
+             * <p>The permissions. Valid values:</p>
              * <ul>
-             * <li>private: private.</li>
+             * <li>private: Private.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time in the YYYY-MM-DD HH:mm:ss format. The returned value does not include a time zone identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-28 13:39:05</p>
@@ -299,7 +299,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The module description.</p>
+             * <p>The template description.</p>
              * 
              * <strong>example:</strong>
              * <p>description</p>
@@ -321,7 +321,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The module name.</p>
+             * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs-cluster</p>
@@ -332,7 +332,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace name.</p>
+             * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>NamespaceName</p>
@@ -357,7 +357,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of accounts with which the Registry module is shared.</p>
+             * <p>The list of accounts that share the Registry template.</p>
              */
             public Builder sharedAccounts(java.util.List<Long> sharedAccounts) {
                 this.sharedAccounts = sharedAccounts;
@@ -365,7 +365,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The module source, which is a concatenation of <NamespaceName>/<ModuleName>.</p>
+             * <p>The template source, which is concatenated in the <NamespaceName>/<ModuleName> format.</p>
              * 
              * <strong>example:</strong>
              * <p>namespaceName/ModuleName</p>
@@ -376,7 +376,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The module source URL.</p>
+             * <p>The URL of the template source.</p>
              * 
              * <strong>example:</strong>
              * <p>URL</p>
@@ -389,10 +389,14 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             /**
              * <p>The workspace type. Valid values:</p>
              * <ul>
-             * <li>system: public module</li>
-             * <li>self: custom module</li>
-             * <li>shared: shared module</li>
-             * <li>community: community module.</li>
+             * <li><p>system: Public module.</p>
+             * </li>
+             * <li><p>self: Custom module.</p>
+             * </li>
+             * <li><p>shared: Shared module.</p>
+             * </li>
+             * <li><p>community: Community module.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -73,7 +73,7 @@ public class DeleteTaskRequest extends Request {
         } 
 
         /**
-         * <p>The node ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>task-123456</p>
@@ -85,7 +85,10 @@ public class DeleteTaskRequest extends Request {
         }
 
         /**
-         * <p>The data retention policy. If this parameter is not specified, the policy is unconfirmed. If the node has resources or the resource status is unknown, the operation returns a confirmation fault. Set this parameter to RETAIN to delete only the node management record and retain the cloud resources.</p>
+         * <p>The data retention policy for resources. If this parameter is not specified, it indicates that the deletion is not confirmed. If the node has resources or the resource status is unknown, the API returns a confirmation fault. If you set this parameter to RETAIN, only the node management record is deleted and the cloud resources are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RETAIN</p>
          */
         public Builder resourceRetentionPolicy(String resourceRetentionPolicy) {
             this.putQueryParameter("resourceRetentionPolicy", resourceRetentionPolicy);

@@ -93,7 +93,7 @@ public class ValidateModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The validation message.</p>
+         * <p>The check message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -104,7 +104,7 @@ public class ValidateModuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The validation ID.</p>
+         * <p>The check ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BF72A6FB-B07</p>
@@ -126,12 +126,12 @@ public class ValidateModuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The validation result. Valid values:</p>
+         * <p>The check result. Valid values:</p>
          * <ul>
-         * <li>Initializing: initialization in progress.</li>
-         * <li>Validating: validation in progress.</li>
-         * <li>Validated: validation succeeded.</li>
-         * <li>Errored: validation failed.</li>
+         * <li>Initializing: The check is being initialized.</li>
+         * <li>Validating: The check is in progress.</li>
+         * <li>Validated: The check succeeded.</li>
+         * <li>Errored: The check failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

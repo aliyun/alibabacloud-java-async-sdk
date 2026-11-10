@@ -117,7 +117,7 @@ public class ListModuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * <p>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -150,7 +150,7 @@ public class ListModuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of version information.</p>
+         * <p>The list of versions.</p>
          */
         public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
@@ -268,7 +268,7 @@ public class ListModuleVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the version was created.</p>
+             * <p>The time when the version was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-05-13T02:21:49Z</p>
@@ -323,7 +323,7 @@ public class ListModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source path of the version.</p>
+             * <p>The path value of the version source.</p>
              * 
              * <strong>example:</strong>
              * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></p>

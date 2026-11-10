@@ -93,7 +93,7 @@ public class GetProviderDocumentResponseBody extends TeaModel {
         } 
 
         /**
-         * document.
+         * <p>The Terraform provider resource document.</p>
          */
         public Builder document(String document) {
             this.document = document;
@@ -101,7 +101,10 @@ public class GetProviderDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * providerVersion.
+         * <p>The Terraform provider version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.206.0</p>
          */
         public Builder providerVersion(String providerVersion) {
             this.providerVersion = providerVersion;
@@ -109,7 +112,10 @@ public class GetProviderDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD478792-6952-5A1C-9F57-78932BF0FAC6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class GetProviderDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * terraformResourceType.
+         * <p>The Terraform resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud_route_table</p>
          */
         public Builder terraformResourceType(String terraformResourceType) {
             this.terraformResourceType = terraformResourceType;

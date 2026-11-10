@@ -282,7 +282,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic trigger policy. Valid values: - <strong>true</strong>: enabled. - <strong>false</strong>: disabled.</p>
+         * <p>Specifies whether to enable the automatic trigger policy. Valid values: - <strong>true</strong>: Enabled. - <strong>false</strong>: Disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -294,7 +294,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The group description.</p>
+         * <p>The description of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -319,7 +319,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcibly use the group configuration.</p>
+         * <p>Specifies whether to force the use of the group configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -331,7 +331,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The group name.</p>
+         * <p>The name of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -361,7 +361,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The RAM role (1-128 characters). The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</p>
+         * <p>The RAM role. Length: 1 to 128 characters. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -394,7 +394,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The Terraform Provider version. Select a Terraform Provider version. Nodes in the group execute plans based on the specified Terraform Provider version. The version configured on a node takes higher priority.</p>
+         * <p>The Terraform provider version. Select a Terraform provider version. Tasks in the group will execute plans based on this version. The version configured on the task takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>1.183.0</p>
@@ -406,7 +406,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The trigger policy. This parameter cannot be empty when autoTrigger is set to true.</p>
+         * <p>The trigger policy. This parameter is required when autoTrigger is set to true.</p>
          */
         public Builder triggerConfig(java.util.List<TriggerConfig> triggerConfig) {
             this.putBodyParameter("triggerConfig", triggerConfig);
@@ -415,10 +415,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource type that triggers execution. Valid values:</p>
+         * <p>The resource type for trigger execution. Valid values:</p>
          * <ul>
-         * <li>Task: regular node.</li>
-         * <li>SceneTestingTask: scenario-based testing node.</li>
+         * <li>Task: Regular task.</li>
+         * <li>SceneTestingTask: Scenario-based testing task.</li>
          * </ul>
          */
         public Builder triggerResourceType(java.util.List<String> triggerResourceType) {
@@ -570,8 +570,8 @@ public class UpdateGroupRequest extends Request {
             /**
              * <p>The trigger strategy. Valid values:</p>
              * <ul>
-             * <li>ProviderNewVersion: triggered when a new Provider version is released.</li>
-             * <li>Cron: triggered on a schedule.</li>
+             * <li>ProviderNewVersion: Triggered when a new provider version is released.</li>
+             * <li>Cron: Triggered on a schedule.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -583,7 +583,7 @@ public class UpdateGroupRequest extends Request {
             }
 
             /**
-             * <p>The policy value that must be maintained for scheduled triggers. This value is a cron expression.</p>
+             * <p>The policy value for scheduled triggers. Specify a cron expression.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 * * * ？</p>

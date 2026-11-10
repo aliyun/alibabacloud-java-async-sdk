@@ -114,7 +114,7 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of entries to return per page.</p>
          * <p>Valid values: 0 to 200.</p>
          * <p>Default value: 100.</p>
          * 
@@ -127,8 +127,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page of results.</p>
-         * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+         * <p>The token used to return the next page of query results.</p>
+         * <p>If the total number of entries exceeds the value of maxResults, the returned results are truncated. You can use nextToken to query the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>oIM6ssGyh00noi5zoDR1hJ4dD+2BRJj42DLT6GrZysw=</p>
@@ -306,7 +306,7 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The module name.</p>
+             * <p>The name of the module.</p>
              * 
              * <strong>example:</strong>
              * <p>eip-slb-ecs-polardb</p>
@@ -317,7 +317,7 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace name.</p>
+             * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>namespace-test</p>

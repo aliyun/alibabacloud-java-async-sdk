@@ -59,7 +59,7 @@ public class GetStackExecutionResultRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the trigger. Obtained through the TriggerStackExecution operation.</p>
+         * <p>The unique ID of the trigger. You can obtain this ID by calling the TriggerStackExecution operation.</p>
          * 
          * <strong>example:</strong>
          * <p>event-xxxx</p>

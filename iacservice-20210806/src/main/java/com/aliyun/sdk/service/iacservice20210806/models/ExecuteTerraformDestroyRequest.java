@@ -75,7 +75,7 @@ public class ExecuteTerraformDestroyRequest extends Request {
         } 
 
         /**
-         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+         * <p>The idempotency token. The format is [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ExecuteTerraformDestroyRequest extends Request {
         }
 
         /**
-         * <p>The state file ID.</p>
+         * <p>The ID of the state file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

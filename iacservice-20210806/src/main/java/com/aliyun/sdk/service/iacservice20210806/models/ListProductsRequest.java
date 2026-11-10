@@ -144,7 +144,7 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * <p>The keyword for searching products. Fuzzy match is supported.</p>
+         * <p>The keyword used to search for products. Fuzzy matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -156,7 +156,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of results per page. Valid values: 0 to 200. Default value: 100.</p>
+         * <p>The maximum number of entries to return on each page. Valid values: 0 to 200. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -180,10 +180,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Valid values:</p>
+         * <p>The sorting method. Valid values:</p>
          * <ul>
-         * <li>Normal: default sorting (default value)</li>
-         * <li>Top: sorted by popularity.</li>
+         * <li>Normal: Default sorting. This is the default value.</li>
+         * <li>Top: Sorting by popularity.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,11 +196,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The status. Valid values:</p>
-         * <ul>
-         * <li>Available</li>
-         * <li>Deprecated.</li>
-         * </ul>
+         * <p>The status. Valid values: Available and Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -224,7 +220,7 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * <p>The Terraform Provider version. If this parameter is left empty, the latest version is used by default.</p>
+         * <p>The Terraform provider version. If this parameter is left empty, the latest version is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1.227.0</p>

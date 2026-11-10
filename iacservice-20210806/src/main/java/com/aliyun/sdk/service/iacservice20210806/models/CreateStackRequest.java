@@ -39,6 +39,10 @@ public class CreateStackRequest extends Request {
     private String ramRole;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("skipPropertyValidation")
+    private Boolean skipPropertyValidation;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("source")
     @com.aliyun.core.annotation.Validation(required = true)
     private String source;
@@ -58,6 +62,7 @@ public class CreateStackRequest extends Request {
         this.name = builder.name;
         this.parameterSetIds = builder.parameterSetIds;
         this.ramRole = builder.ramRole;
+        this.skipPropertyValidation = builder.skipPropertyValidation;
         this.source = builder.source;
         this.sourcePath = builder.sourcePath;
         this.workingDirectory = builder.workingDirectory;
@@ -112,6 +117,13 @@ public class CreateStackRequest extends Request {
     }
 
     /**
+     * @return skipPropertyValidation
+     */
+    public Boolean getSkipPropertyValidation() {
+        return this.skipPropertyValidation;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -138,6 +150,7 @@ public class CreateStackRequest extends Request {
         private String name; 
         private java.util.List<String> parameterSetIds; 
         private String ramRole; 
+        private Boolean skipPropertyValidation; 
         private String source; 
         private String sourcePath; 
         private String workingDirectory; 
@@ -153,13 +166,14 @@ public class CreateStackRequest extends Request {
             this.name = request.name;
             this.parameterSetIds = request.parameterSetIds;
             this.ramRole = request.ramRole;
+            this.skipPropertyValidation = request.skipPropertyValidation;
             this.source = request.source;
             this.sourcePath = request.sourcePath;
             this.workingDirectory = request.workingDirectory;
         } 
 
         /**
-         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +186,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * <p>The description of the resource stack. The value cannot exceed 256 characters.</p>
+         * <p>The description of the stack. The description can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Stack to create ecs and related resource for multiple enviroments.</p>
@@ -184,7 +198,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * <p>The resource stack name. The name must be 2 to 128 characters in length and can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</p>
+         * <p>The name of the stack. The name must be 2 to 128 characters in length and can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</p>
          * 
          * <strong>example:</strong>
          * <p>stack-test</p>
@@ -196,7 +210,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * parameterSetIds.
+         * <p>The associated parameter sets.</p>
          */
         public Builder parameterSetIds(java.util.List<String> parameterSetIds) {
             this.putBodyParameter("parameterSetIds", parameterSetIds);
@@ -205,7 +219,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * <p>The RAM role to be assigned to the task. This role is used to automatically continue the execution of scheduled tasks during automatic triggers or offline scenarios.</p>
+         * <p>The RAM role authorized for the task. This role is used to automatically resume the execution of scheduled tasks in auto-triggered or offline scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>TestIacRole</p>
@@ -217,9 +231,18 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * <p>The creation source. Valid values:</p>
+         * <p>Specifies whether to skip resource property validation for the provider. Default value: false.</p>
+         */
+        public Builder skipPropertyValidation(Boolean skipPropertyValidation) {
+            this.putBodyParameter("skipPropertyValidation", skipPropertyValidation);
+            this.skipPropertyValidation = skipPropertyValidation;
+            return this;
+        }
+
+        /**
+         * <p>The source of the stack. Valid values:</p>
          * <ul>
-         * <li>OSS: a template from OSS.</li>
+         * <li>OSS: a template stored in Object Storage Service (OSS).</li>
          * <li>IAC_SERVICE_MODULE: a template created in the automation service console.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -234,10 +257,10 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * <p>The path of the configuration source. The value cannot exceed 1000 characters.</p>
+         * <p>The path of the source. The value can be up to 1,000 characters in length.</p>
          * <ul>
-         * <li>If the source is OSS, the value is in the format oss::<file link> and must be a zip file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></li>
-         * <li>If the source is IAC_SERVICE_MODULE, the value is a template ID. Example: mod-xxxxx</li>
+         * <li>If the source is OSS, the value must be in the oss::<file URL> format and the file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+         * <li>If the source is IAC_SERVICE_MODULE, the value must be the template ID. Example: mod-xxxxx.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,7 +273,7 @@ public class CreateStackRequest extends Request {
         }
 
         /**
-         * <p>The working directory where the configuration file is located. Enter / if it is in the root directory. Example: config/ or /</p>
+         * <p>The working directory where the configuration file is located. If the file is in the root directory, enter /. Examples: config/ or /.</p>
          * 
          * <strong>example:</strong>
          * <p>/stack</p>

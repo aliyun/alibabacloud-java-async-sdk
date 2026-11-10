@@ -117,7 +117,7 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+         * <p>The number of entries to return per page for paging in a paged query. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>IbuvZ8iOH447bhHWDavGTOMijI2Jep7c=</p>
@@ -281,7 +281,7 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss. The returned value does not include a time zone identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-28 11:15:57</p>
@@ -292,7 +292,7 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>The name of the template.</p>
              * 
              * <strong>example:</strong>
              * <p>ModuleName</p>
@@ -303,7 +303,7 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace name.</p>
+             * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>NamespaceName</p>
@@ -314,10 +314,7 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The provider type. Valid values:</p>
-             * <ul>
-             * <li>alicloud: Alibaba Cloud.</li>
-             * </ul>
+             * <p>The provider type. Valid value: alicloud: Alibaba Cloud.</p>
              * 
              * <strong>example:</strong>
              * <p>alicloud</p>
@@ -328,7 +325,7 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template source, in the format of namespaceName/ModuleName.</p>
+             * <p>The template source. Format: namespaceName/ModuleName.</p>
              * 
              * <strong>example:</strong>
              * <p>test_namespace/RegistryModule-test0e</p>
