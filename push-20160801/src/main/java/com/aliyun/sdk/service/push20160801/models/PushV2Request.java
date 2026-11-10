@@ -90,6 +90,7 @@ public class PushV2Request extends Request {
         } 
 
         /**
+         * <p>The AppKey information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +103,16 @@ public class PushV2Request extends Request {
         }
 
         /**
-         * IdempotentToken.
+         * <p>An idempotence parameter that prevents duplicate push notifications caused by retries from the API caller. If you use the same IdempotentToken within 15 minutes, only one push notification is sent, and subsequent calls return the result of the first successful push.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The parameter format is a standard 36-character UUID (8-4-4-4-12). Each valid character is a hexadecimal digit in the range 0-9 or a-f, case-insensitive.</li>
+         * <li>This parameter only prevents duplicate push notifications caused by retries. It cannot prevent duplicate push notifications caused by concurrent calls.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>c8016d13-6e76-****-9bda-769383d11787</p>
          */
         public Builder idempotentToken(String idempotentToken) {
             this.putQueryParameter("IdempotentToken", idempotentToken);
@@ -111,6 +121,7 @@ public class PushV2Request extends Request {
         }
 
         /**
+         * <p>The push task.</p>
          * <p>This parameter is required.</p>
          */
         public Builder pushTask(PushTask pushTask) {

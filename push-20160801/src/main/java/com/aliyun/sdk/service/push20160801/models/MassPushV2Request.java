@@ -90,7 +90,11 @@ public class MassPushV2Request extends Request {
         } 
 
         /**
+         * <p>The AppKey information.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267***</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -99,7 +103,16 @@ public class MassPushV2Request extends Request {
         }
 
         /**
-         * IdempotentToken.
+         * <p>An idempotent parameter used to prevent duplicate pushes caused by API call retries on the client side. If the same IdempotentToken is used for calls within 15 minutes, only one push is performed, and subsequent calls return the result of the first successful push.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The parameter format is a standard 36-character UUID (8-4-4-4-12). Each valid character is a hexadecimal digit in the range 0-9 or a-f, case-insensitive.</li>
+         * <li>This parameter only prevents duplicate pushes caused by retries. It cannot prevent duplicate pushes caused by concurrent calls.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>c8016d13-6e76-****-9bda-769383d11787</p>
          */
         public Builder idempotentToken(String idempotentToken) {
             this.putQueryParameter("IdempotentToken", idempotentToken);
@@ -108,6 +121,7 @@ public class MassPushV2Request extends Request {
         }
 
         /**
+         * <p>The batch push tasks.</p>
          * <p>This parameter is required.</p>
          */
         public Builder pushTasks(java.util.List<PushTask> pushTasks) {

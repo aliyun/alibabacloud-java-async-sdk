@@ -75,6 +75,7 @@ public class UnbindPhoneRequest extends Request {
         } 
 
         /**
+         * <p>AppKey information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class UnbindPhoneRequest extends Request {
         }
 
         /**
+         * <p>The unique identity of the device. It is 32 characters long and consists of digits and lowercase letters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

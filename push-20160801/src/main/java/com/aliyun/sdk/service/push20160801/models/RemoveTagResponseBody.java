@@ -54,7 +54,10 @@ public class RemoveTagResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23000F3C-0EFE-4C89-82EE-E04F42D37B3C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -119,7 +119,10 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i91D***********kXIh/dVBEQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -127,7 +130,10 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The current page number of the push records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -135,7 +141,10 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B24B396-249D-55E4-8CA1-66C9B50BB734</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>193</p>
          */
         public Builder total(Integer total) {
             this.total = total;

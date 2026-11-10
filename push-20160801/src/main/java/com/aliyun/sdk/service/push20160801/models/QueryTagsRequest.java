@@ -90,6 +90,7 @@ public class QueryTagsRequest extends Request {
         } 
 
         /**
+         * <p>The AppKey value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class QueryTagsRequest extends Request {
         }
 
         /**
+         * <p>The device, account, or alias. Query one ClientKey at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class QueryTagsRequest extends Request {
         }
 
         /**
+         * <p>The type of the ClientKey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

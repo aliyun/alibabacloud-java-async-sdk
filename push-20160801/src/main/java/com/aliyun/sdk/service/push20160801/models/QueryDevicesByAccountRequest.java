@@ -75,10 +75,11 @@ public class QueryDevicesByAccountRequest extends Request {
         } 
 
         /**
+         * <p>Account name. You can query only one account at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>accountName</p>
+         * <p>test_account</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -87,6 +88,7 @@ public class QueryDevicesByAccountRequest extends Request {
         }
 
         /**
+         * <p>AppKey information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

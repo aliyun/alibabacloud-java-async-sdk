@@ -75,6 +75,7 @@ public class QueryPushStatByMsgRequest extends Request {
         } 
 
         /**
+         * <p>The AppKey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,10 @@ public class QueryPushStatByMsgRequest extends Request {
         }
 
         /**
+         * <p>The ID of the pushed message. This ID is returned after a message is pushed.</p>
+         * <blockquote>
+         * <p>Push data is available the next day. You cannot query data for the current day.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

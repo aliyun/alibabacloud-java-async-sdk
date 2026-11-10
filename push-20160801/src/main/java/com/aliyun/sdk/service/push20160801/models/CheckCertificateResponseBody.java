@@ -106,7 +106,14 @@ public class CheckCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * Android.
+         * <p>Indicates whether the AppKey represents an Android app:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder android(Boolean android) {
             this.android = android;
@@ -114,7 +121,7 @@ public class CheckCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * DevelopmentCertInfo.
+         * <p>The certificate information for accessing the development or sandbox environment.</p>
          */
         public Builder developmentCertInfo(DevelopmentCertInfo developmentCertInfo) {
             this.developmentCertInfo = developmentCertInfo;
@@ -122,7 +129,14 @@ public class CheckCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * IOS.
+         * <p>Indicates whether the AppKey represents an iOS app:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder IOS(Boolean IOS) {
             this.IOS = IOS;
@@ -130,7 +144,7 @@ public class CheckCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ProductionCertInfo.
+         * <p>The certificate information for accessing the production environment.</p>
          */
         public Builder productionCertInfo(ProductionCertInfo productionCertInfo) {
             this.productionCertInfo = productionCertInfo;
@@ -138,7 +152,10 @@ public class CheckCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +221,10 @@ public class CheckCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * ExipreTime.
+             * <p>The expiration time of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1470024000000</p>
              */
             public Builder exipreTime(Long exipreTime) {
                 this.exipreTime = exipreTime;
@@ -212,7 +232,17 @@ public class CheckCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The certificate status. Valid values:</p>
+             * <ul>
+             * <li><strong>EXPIRED</strong>: The certificate has expired.</li>
+             * <li><strong>NOT_CONFIGURED</strong>: The certificate is not configured.</li>
+             * <li><strong>NO_PASSWORD</strong>: The password is not configured.</li>
+             * <li><strong>OK</strong>: The certificate is normal.</li>
+             * <li><strong>REVOKED</strong>: The certificate is revoked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXPIRED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -279,7 +309,10 @@ public class CheckCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * ExipreTime.
+             * <p>The expiration time of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764561600000</p>
              */
             public Builder exipreTime(Long exipreTime) {
                 this.exipreTime = exipreTime;
@@ -287,7 +320,17 @@ public class CheckCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The certificate status. Valid values:</p>
+             * <ul>
+             * <li><strong>EXPIRED</strong>: The certificate has expired.</li>
+             * <li><strong>NOT_CONFIGURED</strong>: The certificate is not configured.</li>
+             * <li><strong>NO_PASSWORD</strong>: The password is not configured.</li>
+             * <li><strong>OK</strong>: The certificate is normal.</li>
+             * <li><strong>REVOKED</strong>: The certificate is revoked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder status(String status) {
                 this.status = status;

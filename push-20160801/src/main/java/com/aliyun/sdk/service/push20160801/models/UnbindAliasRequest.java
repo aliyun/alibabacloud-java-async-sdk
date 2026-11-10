@@ -103,7 +103,11 @@ public class UnbindAliasRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * <p>The alias to detach.</p>
+         * <p>An alias supports up to 128 bytes (one Chinese character counts as 3 bytes). This field is required when UnbindAll is false. You can detach up to 10 aliases at once. Separate multiple aliases with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_alias</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -112,6 +116,7 @@ public class UnbindAliasRequest extends Request {
         }
 
         /**
+         * <p>The AppKey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +129,7 @@ public class UnbindAliasRequest extends Request {
         }
 
         /**
+         * <p>The unique device identifier for push notifications. It is 32 characters long and consists of digits and lowercase letters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +142,11 @@ public class UnbindAliasRequest extends Request {
         }
 
         /**
-         * UnbindAll.
+         * <p>Whether to detach all aliases. Default is false.</p>
+         * <p>If true, detaches all aliases currently bound to the device. If false, detaches only the aliases specified in AliasName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder unbindAll(Boolean unbindAll) {
             this.putQueryParameter("UnbindAll", unbindAll);

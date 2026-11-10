@@ -75,7 +75,10 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -190,6 +190,7 @@ public class QueryPushRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The AppKey information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +203,7 @@ public class QueryPushRecordsRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +216,10 @@ public class QueryPushRecordsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The query keyword. The query is performed based on the MessageId, Title, and Body fields. The system performs Chinese word segmentation on the title and body of the push, and uses the segmented words for the query instead of substring matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Statistics data test notification 805</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -223,7 +228,10 @@ public class QueryPushRecordsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFPpkmhCPm*****************xjk=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -232,7 +240,10 @@ public class QueryPushRecordsRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The current page number of the push records. Default value: 1. Maximum value: 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -241,7 +252,10 @@ public class QueryPushRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -250,7 +264,18 @@ public class QueryPushRecordsRequest extends Request {
         }
 
         /**
-         * PushType.
+         * <p>The push type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MESSAGE</strong>: message</p>
+         * </li>
+         * <li><p><strong>NOTICE</strong>: notification</p>
+         * </li>
+         * <li><p><strong>LIVE_ACTIVITY</strong>: live activity</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NOTICE</p>
          */
         public Builder pushType(String pushType) {
             this.putQueryParameter("PushType", pushType);
@@ -259,7 +284,15 @@ public class QueryPushRecordsRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The push source. Valid values:</p>
+         * <ul>
+         * <li><strong>API</strong>: push initiated by OpenAPI, including pushes initiated from the OpenAPI platform console</li>
+         * <li><strong>CONSOLE</strong>: push initiated from the Mobile Push console</li>
+         * <li><strong>OpenAPIExplorer</strong>: push initiated from the Alibaba Cloud OpenAPI Explorer platform</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -268,6 +301,7 @@ public class QueryPushRecordsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +314,24 @@ public class QueryPushRecordsRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>The push target. Valid values:</p>
+         * <ul>
+         * <li><p><strong>DEVICE</strong>: push by device</p>
+         * </li>
+         * <li><p><strong>ACCOUNT</strong>: push by account</p>
+         * </li>
+         * <li><p><strong>ALIAS</strong>: push by alias</p>
+         * </li>
+         * <li><p><strong>TAG</strong>: push by tag</p>
+         * </li>
+         * <li><p><strong>ALL</strong>: push to all devices</p>
+         * </li>
+         * <li><p><strong>TBD</strong>: initialize continuous push, where the push target is specified by the subsequent ContinuouslyPush operation</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DEVICE</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);

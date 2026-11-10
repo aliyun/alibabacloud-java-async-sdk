@@ -162,6 +162,13 @@ public class PushNoticeToiOSRequest extends Request {
         } 
 
         /**
+         * <p>iOS notifications use Apple’s APNs service. Specify the environment.</p>
+         * <ul>
+         * <li><p>DEV: Development environment.</p>
+         * </li>
+         * <li><p>PRODUCT: Production environment.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +181,7 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
+         * <p>Your AppKey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +194,7 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
+         * <p>The body text of the notification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +207,13 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * ExtParameters.
+         * <p>A custom key-value map for developer extensions.</p>
+         * <blockquote>
+         * <p>For iOS devices, pass this parameter as a JSON object. Otherwise, parsing fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;ios&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         public Builder extParameters(String extParameters) {
             this.putQueryParameter("ExtParameters", extParameters);
@@ -207,7 +222,10 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * JobKey.
+         * <p>A custom ID for the push task. If you specify a JobKey, the delivery log includes this field. For more information, see <a href="https://help.aliyun.com/document_detail/434651.html">Delivery logs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder jobKey(String jobKey) {
             this.putQueryParameter("JobKey", jobKey);
@@ -216,6 +234,19 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
+         * <p>The target of the push. Valid values:</p>
+         * <ul>
+         * <li><p><strong>DEVICE</strong>: Push to specific devices.</p>
+         * </li>
+         * <li><p><strong>ACCOUNT</strong>: Push to specific accounts.</p>
+         * </li>
+         * <li><p><strong>ALIAS</strong>: Push to users with specific aliases.</p>
+         * </li>
+         * <li><p><strong>TAG</strong>: Push to users with specific tags.</p>
+         * </li>
+         * <li><p><strong>ALL</strong>: Push to all devices.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,6 +259,19 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
+         * <p>Values depend on the Target value. Separate multiple values with commas. If you exceed the limit, send multiple requests.</p>
+         * <ul>
+         * <li><p>If Target=DEVICE, use values such as <code>deviceid111,deviceid1111</code>. Maximum: 1000.</p>
+         * </li>
+         * <li><p>If Target=ACCOUNT, use values such as <code>account111,account222</code>. Maximum: 1000.</p>
+         * </li>
+         * <li><p>If Target=ALIAS, use values such as <code>alias111,alias222</code>. Maximum: 1000.</p>
+         * </li>
+         * <li><p>If Target=TAG, support single or multiple tags. For format details, see <a href="https://help.aliyun.com/document_detail/434847.html">Tag format</a>.</p>
+         * </li>
+         * <li><p>If Target=ALL, set this to <strong>ALL</strong>.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +284,16 @@ public class PushNoticeToiOSRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The title of the notification.</p>
+         * <ul>
+         * <li><p>iOS 10 and later: Displays as the notification title.</p>
+         * </li>
+         * <li><p>iOS 8.2 through iOS 9.x: Replaces the app name in the notification.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

@@ -67,7 +67,10 @@ public class CheckDeviceResponseBody extends TeaModel {
         } 
 
         /**
-         * Available.
+         * <p>Indicates whether the device is active.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder available(Boolean available) {
             this.available = available;
@@ -75,7 +78,10 @@ public class CheckDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

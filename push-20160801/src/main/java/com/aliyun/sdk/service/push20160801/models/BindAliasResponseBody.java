@@ -54,7 +54,10 @@ public class BindAliasResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>159E4422-6624-4750-8943-DFD98D34858C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

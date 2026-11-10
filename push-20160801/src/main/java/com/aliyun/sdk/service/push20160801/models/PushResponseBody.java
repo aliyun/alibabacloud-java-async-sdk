@@ -67,7 +67,10 @@ public class PushResponseBody extends TeaModel {
         } 
 
         /**
-         * MessageId.
+         * <p>The message ID that identifies a push notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>501029</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -75,7 +78,10 @@ public class PushResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

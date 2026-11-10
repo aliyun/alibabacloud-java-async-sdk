@@ -67,7 +67,7 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * DeviceInfo.
+         * <p>Device details.</p>
          */
         public Builder deviceInfo(DeviceInfo deviceInfo) {
             this.deviceInfo = deviceInfo;
@@ -75,7 +75,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EEF262B-EA7D-41DC-89B9-20F3D1E28194</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Account.
+             * <p>Account attached to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -279,7 +285,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Alias.
+             * <p>Alias attached to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_alias,test_alias2</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -287,7 +296,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Brand.
+             * <p>Device brand.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HUAWEI</p>
              */
             public Builder brand(String brand) {
                 this.brand = brand;
@@ -295,7 +307,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a64ae296f3b04a58a05b30c95****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -303,7 +318,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceToken.
+             * <p>Device token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ecc7b4012aaa801b63******5543ccbda6b4930d09629e936e1ac4b762a7df</p>
              */
             public Builder deviceToken(String deviceToken) {
                 this.deviceToken = deviceToken;
@@ -311,7 +329,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * <p>Device type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iOS</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -319,7 +340,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LastOnlineTime.
+             * <p>Last online time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-03-27T02:19:40Z</p>
              */
             public Builder lastOnlineTime(String lastOnlineTime) {
                 this.lastOnlineTime = lastOnlineTime;
@@ -327,7 +351,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>Device model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VOG-AL00</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -335,7 +362,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Online.
+             * <p>Is online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -343,7 +373,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>Phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>133********</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -351,7 +384,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PushEnabled.
+             * <p>Is push feature enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder pushEnabled(Boolean pushEnabled) {
                 this.pushEnabled = pushEnabled;
@@ -359,7 +395,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>Tags attached to the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tag,test_tag2</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;

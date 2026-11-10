@@ -105,6 +105,7 @@ public class QueryPushStatByAppRequest extends Request {
         } 
 
         /**
+         * <p>The AppKey value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class QueryPushStatByAppRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. Specify the time in ISO 8601 format, YYYY-MM-DDThh:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,10 @@ public class QueryPushStatByAppRequest extends Request {
         }
 
         /**
+         * <p>The data granularity of the response. You can only query data for up to 31 days at daily granularity. Valid values:</p>
+         * <ul>
+         * <li><strong>DAY</strong>: Query data at daily granularity.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +147,7 @@ public class QueryPushStatByAppRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Specify the time in ISO 8601 format, YYYY-MM-DDThh:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

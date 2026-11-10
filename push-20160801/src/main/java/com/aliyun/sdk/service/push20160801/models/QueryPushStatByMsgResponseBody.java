@@ -75,7 +75,10 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF195C34-98FB-491A-98D7-19CBC1FA880B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

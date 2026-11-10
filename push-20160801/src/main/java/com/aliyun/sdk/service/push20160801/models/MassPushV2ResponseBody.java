@@ -67,7 +67,7 @@ public class MassPushV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * MessageIds.
+         * <p>The list of message IDs.</p>
          */
         public Builder messageIds(java.util.List<String> messageIds) {
             this.messageIds = messageIds;
@@ -75,7 +75,10 @@ public class MassPushV2ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>159E4422-6624-****-8943-DFD98D34858C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

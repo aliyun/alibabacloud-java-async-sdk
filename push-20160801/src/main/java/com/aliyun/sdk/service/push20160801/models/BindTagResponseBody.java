@@ -54,7 +54,10 @@ public class BindTagResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82FD0A09-5BB8-40FB-8221-9A11FE92D620</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

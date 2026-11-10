@@ -75,6 +75,7 @@ public class CancelPushRequest extends Request {
         } 
 
         /**
+         * <p>Your AppKey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CancelPushRequest extends Request {
         }
 
         /**
+         * <p>The message ID of the push task to cancel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

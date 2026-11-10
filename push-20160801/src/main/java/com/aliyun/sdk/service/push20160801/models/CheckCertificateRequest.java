@@ -60,6 +60,7 @@ public class CheckCertificateRequest extends Request {
         } 
 
         /**
+         * <p>The AppKey information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

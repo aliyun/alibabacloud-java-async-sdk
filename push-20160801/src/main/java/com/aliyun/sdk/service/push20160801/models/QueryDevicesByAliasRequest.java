@@ -75,10 +75,11 @@ public class QueryDevicesByAliasRequest extends Request {
         } 
 
         /**
+         * <p>The alias. You can query only one alias at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>aliasName</p>
+         * <p>test_alias</p>
          */
         public Builder alias(String alias) {
             this.putQueryParameter("Alias", alias);
@@ -87,6 +88,7 @@ public class QueryDevicesByAliasRequest extends Request {
         }
 
         /**
+         * <p>AppKey information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

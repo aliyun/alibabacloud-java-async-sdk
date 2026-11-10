@@ -67,7 +67,10 @@ public class QueryTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D68AE5C6-8AAF-46C9-B627-3FDACD1A4168</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

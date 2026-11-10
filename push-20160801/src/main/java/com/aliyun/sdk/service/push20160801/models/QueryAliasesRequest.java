@@ -75,6 +75,7 @@ public class QueryAliasesRequest extends Request {
         } 
 
         /**
+         * <p>The AppKey value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class QueryAliasesRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier for the device in Mobile Push. It is 32 characters long and contains only digits and lowercase letters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
