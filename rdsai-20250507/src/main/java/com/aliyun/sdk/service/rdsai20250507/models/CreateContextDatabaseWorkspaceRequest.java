@@ -18,8 +18,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateContextDatabaseWorkspaceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GenerateInitialKey")
+    private Boolean generateInitialKey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String memberName;
 
     @com.aliyun.core.annotation.Query
@@ -33,6 +40,8 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
 
     private CreateContextDatabaseWorkspaceRequest(Builder builder) {
         super(builder);
+        this.clusterId = builder.clusterId;
+        this.generateInitialKey = builder.generateInitialKey;
         this.memberName = builder.memberName;
         this.permissionMode = builder.permissionMode;
         this.workspaceName = builder.workspaceName;
@@ -49,6 +58,20 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
+     * @return generateInitialKey
+     */
+    public Boolean getGenerateInitialKey() {
+        return this.generateInitialKey;
     }
 
     /**
@@ -73,6 +96,8 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateContextDatabaseWorkspaceRequest, Builder> {
+        private String clusterId; 
+        private Boolean generateInitialKey; 
         private String memberName; 
         private String permissionMode; 
         private String workspaceName; 
@@ -83,14 +108,48 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
 
         private Builder(CreateContextDatabaseWorkspaceRequest request) {
             super(request);
+            this.clusterId = request.clusterId;
+            this.generateInitialKey = request.generateInitialKey;
             this.memberName = request.memberName;
             this.permissionMode = request.permissionMode;
             this.workspaceName = request.workspaceName;
         } 
 
         /**
-         * <p>The name of the first member.</p>
-         * <p>This parameter is required.</p>
+         * <p>The ID of the cluster to which the workspace belongs. This parameter is optional.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, the cluster selection logic that prioritizes account-exclusive storage is used.</li>
+         * <li><code>default</code>: The shared cluster is used.</li>
+         * <li>Cluster IDs starting with <code>acc-</code>: The associated dedicated cluster is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to generate an initial API key. This parameter is optional. Default value: <code>true</code>.</p>
+         * <ul>
+         * <li><code>true</code>: Generates the first API key and returns the key name and plaintext key.</li>
+         * <li><code>false</code>: Does not generate an initial API key. The ApiKeyName and ApiKey fields in the response are empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder generateInitialKey(Boolean generateInitialKey) {
+            this.putQueryParameter("GenerateInitialKey", generateInitialKey);
+            this.generateInitialKey = generateInitialKey;
+            return this;
+        }
+
+        /**
+         * <p>The name of the first member when the workspace is created. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>my-member</p>
@@ -102,12 +161,12 @@ public class CreateContextDatabaseWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The permission mode selected when creating the workspace. Valid values:</p>
+         * <p>The permission mode selected when the workspace is created. Valid values:</p>
          * <ul>
-         * <li><code>compatibility</code>: Compatibility mode. This mode is used if this parameter is not specified.</li>
-         * <li><code>advanced</code>: Advanced permission mode. Only the Alibaba Cloud account can select this mode. It takes effect immediately after the workspace is created and cannot be disabled after creation.</li>
+         * <li><code>compatibility</code>: The compatibility mode. This mode is used if you do not specify this parameter.</li>
+         * <li><code>advanced</code>: The advanced permission mode. Only the Alibaba Cloud account can select this mode. It takes effect immediately after the workspace is created and cannot be disabled.</li>
          * </ul>
-         * <p>This parameter is a string, not a Boolean switch. Valid values are case-insensitive and ignore leading and trailing whitespace. If an empty string, a string with only whitespace, or an invalid value is explicitly specified, <code>InvalidParameter</code> (HTTP 400) is returned. If a RAM user selects <code>advanced</code>, <code>NoPermission</code> (HTTP 403) is returned.</p>
+         * <p>This parameter is a string, not a Boolean switch. Valid values are case-insensitive and ignore leading and trailing whitespace. If you explicitly pass an empty string, pure whitespace, or other values, <code>InvalidParameter</code> (HTTP 400) is returned. If a RAM user selects <code>advanced</code>, <code>NoPermission</code> (HTTP 403) is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>advanced</p>

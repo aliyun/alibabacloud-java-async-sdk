@@ -134,7 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow, and returns the plaintext API key.</p>
+     * <p>Creates a ContextDB workspace and its first member.</p>
+     * <ul>
+     * <li>GenerateInitialKey defaults to <code>true</code>. An initial API key is generated during creation, and the plaintext key is returned only once. Save the returned key. If set to <code>false</code>, no initial API key is generated, and the ApiKeyName and ApiKey fields in the response are empty.</li>
+     * <li>You can use ClusterId to specify the cluster to which the workspace belongs.</li>
+     * <li>You can use PermissionMode to select the compatibility mode or the advanced permission mode. The advanced permission mode can only be selected by the Alibaba Cloud account. It takes effect immediately after the workspace is created and cannot be disabled.</li>
+     * </ul>
      * 
      * @param request the request parameters of CreateContextDatabaseWorkspace  CreateContextDatabaseWorkspaceRequest
      * @return CreateContextDatabaseWorkspaceResponse
@@ -260,7 +265,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After the workspace is deleted, the local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
+     * <p>Deletes a workspace. This is a hard deletion and cannot be undone. After the workspace is deleted, local metadata is synchronously soft deleted, and the deleted workspace is no longer counted towards the quota.</p>
      * 
      * @param request the request parameters of DeleteContextDatabaseWorkspace  DeleteContextDatabaseWorkspaceRequest
      * @return DeleteContextDatabaseWorkspaceResponse
@@ -688,8 +693,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
-     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * <p>By default, the list operation returns paginated results. The Page and PageSize parameters are optional.
+     * The Data field in the response is returned as an array, and Total indicates the total number of matching entries.</p>
      * 
      * @param request the request parameters of ListContextDatabaseSyncConnections  ListContextDatabaseSyncConnectionsRequest
      * @return ListContextDatabaseSyncConnectionsResponse
@@ -717,8 +722,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
-     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * <p>The list API returns paginated results by default. Page and PageSize are optional parameters.
+     * The Data list field in the response is returned as an array, and Total indicates the total number of matching entries.</p>
      * 
      * @param request the request parameters of ListContextDatabaseSyncJobs  ListContextDatabaseSyncJobsRequest
      * @return ListContextDatabaseSyncJobsResponse

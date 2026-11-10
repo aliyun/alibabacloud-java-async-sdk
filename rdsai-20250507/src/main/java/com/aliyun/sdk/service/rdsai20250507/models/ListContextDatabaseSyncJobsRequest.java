@@ -102,7 +102,7 @@ public class ListContextDatabaseSyncJobsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the target knowledge base.</p>
+         * <p>The destination knowledge base ID.</p>
          * 
          * <strong>example:</strong>
          * <p>kb-as1llqmkol****</p>
@@ -114,7 +114,7 @@ public class ListContextDatabaseSyncJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value starts from 1.</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
