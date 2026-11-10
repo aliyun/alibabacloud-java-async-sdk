@@ -863,6 +863,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserSetPropertiesModels")
         private java.util.List<UserSetPropertiesModels> userSetPropertiesModels;
 
+        @com.aliyun.core.annotation.NameInMap("UserSource")
+        private String userSource;
+
         private Users(Builder builder) {
             this.autoLockTime = builder.autoLockTime;
             this.desktopCount = builder.desktopCount;
@@ -885,6 +888,7 @@ public class FilterUsersResponseBody extends TeaModel {
             this.status = builder.status;
             this.supportLoginIdps = builder.supportLoginIdps;
             this.userSetPropertiesModels = builder.userSetPropertiesModels;
+            this.userSource = builder.userSource;
         }
 
         public static Builder builder() {
@@ -1042,6 +1046,13 @@ public class FilterUsersResponseBody extends TeaModel {
             return this.userSetPropertiesModels;
         }
 
+        /**
+         * @return userSource
+         */
+        public String getUserSource() {
+            return this.userSource;
+        }
+
         public static final class Builder {
             private String autoLockTime; 
             private Long desktopCount; 
@@ -1064,6 +1075,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private Long status; 
             private java.util.List<SupportLoginIdps> supportLoginIdps; 
             private java.util.List<UserSetPropertiesModels> userSetPropertiesModels; 
+            private String userSource; 
 
             private Builder() {
             } 
@@ -1090,6 +1102,7 @@ public class FilterUsersResponseBody extends TeaModel {
                 this.status = model.status;
                 this.supportLoginIdps = model.supportLoginIdps;
                 this.userSetPropertiesModels = model.userSetPropertiesModels;
+                this.userSource = model.userSource;
             } 
 
             /**
@@ -1305,6 +1318,17 @@ public class FilterUsersResponseBody extends TeaModel {
              */
             public Builder userSetPropertiesModels(java.util.List<UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;
+                return this;
+            }
+
+            /**
+             * <p>用户来源的企业身份源类型，由后端根据企业身份源自定义列的显隐配置决定是否查询。取值：DINGDING（钉钉）、FEISHU（飞书）、WECHAT（企业微信）、ENTRA_ID（Microsoft Entra ID）。列隐藏、未配置或无企业身份源关联时为空。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FEISHU</p>
+             */
+            public Builder userSource(String userSource) {
+                this.userSource = userSource;
                 return this;
             }
 

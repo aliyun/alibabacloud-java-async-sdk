@@ -157,7 +157,10 @@ public class CreateResourceGroupRequest extends Request {
         } 
 
         /**
-         * AgentType.
+         * <p>The agent subtype of the DesktopAgent resource group. Valid values: JVSClaw and HermesAgent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JVSClaw</p>
          */
         public Builder agentType(String agentType) {
             this.putQueryParameter("AgentType", agentType);
@@ -178,7 +181,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * EnableAliyunResourceGroup.
+         * <p>Specifies whether to create an Alibaba Cloud resource group at the same time. This is supported only for resource groups in the Default category.</p>
          */
         public Builder enableAliyunResourceGroup(Boolean enableAliyunResourceGroup) {
             this.putQueryParameter("EnableAliyunResourceGroup", enableAliyunResourceGroup);
@@ -201,7 +204,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>For Elastic Desktop Service (EDS) Enterprise Edition, set the value to <code>AliyunConsole</code>. Other platforms are not supported.</p>
+         * <p>For Elastic Desktop Service Enterprise Edition, set the value to <code>AliyunConsole</code>. Other platforms are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunConsole</p>
@@ -213,7 +216,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource category.</p>
+         * <p>The category of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>

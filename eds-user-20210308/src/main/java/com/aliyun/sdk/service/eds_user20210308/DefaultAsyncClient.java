@@ -175,6 +175,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The number of resource groups in each categorization is subject to the enterprise resource group quota limit. By default, a maximum of 20 resource groups are allowed for each categorization, but the quota limit configured for your enterprise may vary. If the quota limit is reached, the ExceedNumberQuota error is returned. You can invoke the DescribeResourceGroups operation to query the number of existing resource groups in the corresponding categorization.</p>
+     * 
      * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
      * @return CreateResourceGroupResponse
      */
@@ -374,6 +377,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeUserLoginPolicies  DescribeUserLoginPoliciesRequest
+     * @return DescribeUserLoginPoliciesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeUserLoginPoliciesResponse> describeUserLoginPolicies(DescribeUserLoginPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeUserLoginPolicies").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeUserLoginPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeUserLoginPoliciesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -635,6 +656,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyUserPolicyBasicInfo  ModifyUserPolicyBasicInfoRequest
+     * @return ModifyUserPolicyBasicInfoResponse
+     */
+    @Override
+    public CompletableFuture<ModifyUserPolicyBasicInfoResponse> modifyUserPolicyBasicInfo(ModifyUserPolicyBasicInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyUserPolicyBasicInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyUserPolicyBasicInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyUserPolicyBasicInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of MoveOrg  MoveOrgRequest
      * @return MoveOrgResponse
      */
@@ -758,6 +797,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemovePropertyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemoveUserLoginPolicies  RemoveUserLoginPoliciesRequest
+     * @return RemoveUserLoginPoliciesResponse
+     */
+    @Override
+    public CompletableFuture<RemoveUserLoginPoliciesResponse> removeUserLoginPolicies(RemoveUserLoginPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveUserLoginPolicies").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveUserLoginPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveUserLoginPoliciesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

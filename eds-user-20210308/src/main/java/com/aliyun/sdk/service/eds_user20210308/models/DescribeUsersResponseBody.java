@@ -629,6 +629,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
+        @com.aliyun.core.annotation.NameInMap("UserSource")
+        private String userSource;
+
         @com.aliyun.core.annotation.NameInMap("WyId")
         private String wyId;
 
@@ -655,6 +658,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             this.realNickName = builder.realNickName;
             this.remark = builder.remark;
             this.status = builder.status;
+            this.userSource = builder.userSource;
             this.wyId = builder.wyId;
         }
 
@@ -821,6 +825,13 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return userSource
+         */
+        public String getUserSource() {
+            return this.userSource;
+        }
+
+        /**
          * @return wyId
          */
         public String getWyId() {
@@ -850,6 +861,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String realNickName; 
             private String remark; 
             private Long status; 
+            private String userSource; 
             private String wyId; 
 
             private Builder() {
@@ -878,6 +890,7 @@ public class DescribeUsersResponseBody extends TeaModel {
                 this.realNickName = model.realNickName;
                 this.remark = model.remark;
                 this.status = model.status;
+                this.userSource = model.userSource;
                 this.wyId = model.wyId;
             } 
 
@@ -1120,6 +1133,17 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder status(Long status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>用户来源的企业身份源类型，由后端根据企业身份源自定义列的显隐配置决定是否查询。取值：DINGDING（钉钉）、FEISHU（飞书）、WECHAT（企业微信）、ENTRA_ID（Microsoft Entra ID）。列隐藏、未配置或无企业身份源关联时为空。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FEISHU</p>
+             */
+            public Builder userSource(String userSource) {
+                this.userSource = userSource;
                 return this;
             }
 

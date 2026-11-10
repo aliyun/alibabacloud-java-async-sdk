@@ -67,7 +67,7 @@ public class RemoveUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result of deleting the convenience users.</p>
+         * <p>The result of the convenience user deletion operation.</p>
          */
         public Builder removeUsersResult(RemoveUsersResult removeUsersResult) {
             this.removeUsersResult = removeUsersResult;
@@ -275,7 +275,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the users that failed to be deleted.</p>
+             * <p>The collection of information about users that failed to be deleted.</p>
              */
             public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
@@ -283,7 +283,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessingUsers.
+             * <p>The list of usernames of convenience users for which asynchronous deletion tasks already exist and have not finished. This request does not create duplicate deletion tasks for these users. The return of this field does not indicate that the users have been deleted.</p>
              */
             public Builder processingUsers(java.util.List<String> processingUsers) {
                 this.processingUsers = processingUsers;
@@ -291,7 +291,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The convenience users that are successfully deleted.</p>
+             * <p>The convenience users that were successfully deleted.</p>
              */
             public Builder removedUsers(java.util.List<String> removedUsers) {
                 this.removedUsers = removedUsers;
@@ -299,7 +299,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SubmittedUsers.
+             * <p>The list of usernames of convenience users for which asynchronous deletion tasks have been successfully accepted and created in this request. Asynchronous deletion is used when UnbindDesktops is set to true. Task acceptance does not mean that the convenience users have been deleted.</p>
              */
             public Builder submittedUsers(java.util.List<String> submittedUsers) {
                 this.submittedUsers = submittedUsers;

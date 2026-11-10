@@ -71,6 +71,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePropertyResponse> createProperty(CreatePropertyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The number of resource groups in each categorization is subject to the enterprise resource group quota limit. By default, a maximum of 20 resource groups are allowed for each categorization, but the quota limit configured for your enterprise may vary. If the quota limit is reached, the ExceedNumberQuota error is returned. You can invoke the DescribeResourceGroups operation to query the number of existing resource groups in the corresponding categorization.</p>
+     * 
      * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
      * @return CreateResourceGroupResponse
      */
@@ -142,6 +145,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeUserResponse
      */
     CompletableFuture<DescribeUserResponse> describeUser(DescribeUserRequest request);
+
+    /**
+     * @param request the request parameters of DescribeUserLoginPolicies  DescribeUserLoginPoliciesRequest
+     * @return DescribeUserLoginPoliciesResponse
+     */
+    CompletableFuture<DescribeUserLoginPoliciesResponse> describeUserLoginPolicies(DescribeUserLoginPoliciesRequest request);
 
     /**
      * @param request the request parameters of DescribeUsers  DescribeUsersRequest
@@ -243,6 +252,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyUserResponse> modifyUser(ModifyUserRequest request);
 
     /**
+     * @param request the request parameters of ModifyUserPolicyBasicInfo  ModifyUserPolicyBasicInfoRequest
+     * @return ModifyUserPolicyBasicInfoResponse
+     */
+    CompletableFuture<ModifyUserPolicyBasicInfoResponse> modifyUserPolicyBasicInfo(ModifyUserPolicyBasicInfoRequest request);
+
+    /**
      * @param request the request parameters of MoveOrg  MoveOrgRequest
      * @return MoveOrgResponse
      */
@@ -286,6 +301,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemovePropertyResponse
      */
     CompletableFuture<RemovePropertyResponse> removeProperty(RemovePropertyRequest request);
+
+    /**
+     * @param request the request parameters of RemoveUserLoginPolicies  RemoveUserLoginPoliciesRequest
+     * @return RemoveUserLoginPoliciesResponse
+     */
+    CompletableFuture<RemoveUserLoginPoliciesResponse> removeUserLoginPolicies(RemoveUserLoginPoliciesRequest request);
 
     /**
      * @param request the request parameters of RemoveUsers  RemoveUsersRequest
