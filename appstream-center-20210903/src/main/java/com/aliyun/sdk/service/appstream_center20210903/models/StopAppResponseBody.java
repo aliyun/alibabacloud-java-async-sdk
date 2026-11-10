@@ -54,7 +54,10 @@ public class StopAppResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A9075B-C646-59A9-8232-CAE41AF4B9E3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,7 @@ public class ListRunningAppsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2DC3521C-3820-5EA5-9A9A-00BB7AF4E8E5</p>
@@ -78,7 +78,7 @@ public class ListRunningAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RunningCloudApps.
+         * <p>The list of running cloud applications.</p>
          */
         public Builder runningCloudApps(java.util.List<RunningCloudApps> runningCloudApps) {
             this.runningCloudApps = runningCloudApps;
@@ -261,7 +261,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-dln05y44ze6esfl8x</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -269,7 +272,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceGroupId.
+             * <p>The app instance group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-dk8p95irk9xs5xi6a</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -277,7 +283,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceId.
+             * <p>The application instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai-gc1gemx6vpa6vlync</p>
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
@@ -285,7 +294,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alihealth-keeper</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -293,7 +305,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.1</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -301,7 +316,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersionName.
+             * <p>The application version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1.0</p>
              */
             public Builder appVersionName(String appVersionName) {
                 this.appVersionName = appVersionName;
@@ -309,7 +327,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The running duration of the cloud application instance. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -317,7 +338,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * IconUrl.
+             * <p>The URL of the application icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://app-icon-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/187465/18_bf1.jpg">https://app-icon-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/187465/18_bf1.jpg</a></p>
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -325,7 +349,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The operating system type of the instance platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -333,7 +360,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the cloud application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -341,7 +371,10 @@ public class ListRunningAppsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642748400</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

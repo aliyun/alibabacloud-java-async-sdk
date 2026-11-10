@@ -275,7 +275,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * AppInstanceGroupId.
+         * <p>The delivery group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-53fvrq1oa******</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.appInstanceGroupId = appInstanceGroupId;
@@ -283,7 +286,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * AppInstanceId.
+         * <p>The application instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai-gc1gemx6vp******</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.appInstanceId = appInstanceId;
@@ -291,7 +297,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * AppInstancePersistentId.
+         * <p>The persistent session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-0cdr5c9kl******</p>
          */
         public Builder appInstancePersistentId(String appInstancePersistentId) {
             this.appInstancePersistentId = appInstancePersistentId;
@@ -299,7 +308,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * AvatarId.
+         * <p>The user avatar ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder avatarId(String avatarId) {
             this.avatarId = avatarId;
@@ -307,7 +319,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * BindQueueInfo.
+         * <p>The queue information.</p>
+         * <blockquote>
+         * <p>This parameter is not available.</p>
+         * </blockquote>
          */
         public Builder bindQueueInfo(BindQueueInfo bindQueueInfo) {
             this.bindQueueInfo = bindQueueInfo;
@@ -315,7 +330,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError.TicketGenInternalError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -323,7 +341,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * LoginToken.
+         * <p>The logon token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2c4e2ef03d62******</p>
          */
         public Builder loginToken(String loginToken) {
             this.loginToken = loginToken;
@@ -331,7 +352,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reenter app instance failed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -339,7 +363,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * NextPollIntervalMs.
+         * <p>The next polling interval, in milliseconds. If this parameter is empty, the value is 1000 ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder nextPollIntervalMs(Integer nextPollIntervalMs) {
             this.nextPollIntervalMs = nextPollIntervalMs;
@@ -347,7 +374,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * OsType.
+         * <p>The operating system type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder osType(String osType) {
             this.osType = osType;
@@ -355,7 +385,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>The session policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -363,7 +393,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region to which the delivery group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -371,10 +404,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>AD2D0761-1FE5-549D-B169-D3F8D19C6CDD</p>
+         * <p>AD2D0761-1FE5-549D-B169******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -382,7 +415,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * RetryTimes.
+         * <p>The number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder retryTimes(Integer retryTimes) {
             this.retryTimes = retryTimes;
@@ -390,7 +426,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f3d1b31c-605e-******</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -398,7 +437,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -406,7 +448,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID, which is the Alibaba Cloud account UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1126819517******</p>
          */
         public Builder tenantId(Long tenantId) {
             this.tenantId = tenantId;
@@ -414,7 +459,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Ticket.
+         * <p>The connection ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n7n9bqZlPrvgUOPY0tOfVYGBBcdoPoH3******</p>
          */
         public Builder ticket(String ticket) {
             this.ticket = ticket;
@@ -545,7 +593,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             } 
 
             /**
-             * QueueStatus.
+             * <p>The queue task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Waiting</p>
              */
             public Builder queueStatus(String queueStatus) {
                 this.queueStatus = queueStatus;
@@ -553,7 +604,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * Rank.
+             * <p>The ranking information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rank(Integer rank) {
                 this.rank = rank;
@@ -561,7 +615,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * ReadyTimeout.
+             * <p>The timeout period for manual connection after the turn is reached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder readyTimeout(Long readyTimeout) {
                 this.readyTimeout = readyTimeout;
@@ -569,7 +626,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * RemainingTime.
+             * <p>The remaining wait time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder remainingTime(Long remainingTime) {
                 this.remainingTime = remainingTime;
@@ -577,7 +637,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * RequestKey.
+             * <p>The queue request key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice******</p>
              */
             public Builder requestKey(String requestKey) {
                 this.requestKey = requestKey;
@@ -585,7 +648,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * <p>The queue ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-53fvrq1oa******</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -593,7 +659,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * WaitTime.
+             * <p>The time already waited in the queue. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder waitTime(Long waitTime) {
                 this.waitTime = waitTime;
@@ -673,7 +742,16 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             } 
 
             /**
-             * ResolutionAdaptive.
+             * <p>Specifies whether to use adaptive resolution.</p>
+             * <blockquote>
+             * <ul>
+             * <li><code>true</code>: The session resolution changes with the terminal display area. In this case, <code>SessionResolutionWidth</code> and <code>SessionResolutionHeight</code> are the maximum values of the resolution change.</li>
+             * <li><code>false</code>: The session resolution does not change with the terminal display area. In this case, the resolution is fixed to the values of <code>SessionResolutionWidth</code> and <code>SessionResolutionHeight</code>.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder resolutionAdaptive(String resolutionAdaptive) {
                 this.resolutionAdaptive = resolutionAdaptive;
@@ -681,7 +759,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionHeight.
+             * <p>The resolution height, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder resolutionHeight(Integer resolutionHeight) {
                 this.resolutionHeight = resolutionHeight;
@@ -689,7 +770,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionWidth.
+             * <p>The resolution width, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder resolutionWidth(Integer resolutionWidth) {
                 this.resolutionWidth = resolutionWidth;

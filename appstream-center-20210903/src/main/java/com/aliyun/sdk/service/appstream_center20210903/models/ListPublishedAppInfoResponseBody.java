@@ -80,7 +80,7 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>appModels</p>
+         * <p>The list of published applications.</p>
          */
         public Builder appModels(java.util.List<AppModels> appModels) {
             this.appModels = appModels;
@@ -88,7 +88,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The starting token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2NVfhLfgy5b3J5iJyoLQ6x4EULMg1hbhgB9NfnvdK9oj5zwxd17j4TuQkZze3RvhEvBinZYjknujF3Q1M</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -96,7 +99,7 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DB70F8FE-63A3-587B-8560-CEC258E8B944</p>
@@ -295,7 +298,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AppCenterImageId.
+             * <p>The application image ID. You can obtain the ID from the Image Management page in the WUYING Cloud App console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>img-f37nddbjc1lje14st</p>
              */
             public Builder appCenterImageId(String appCenterImageId) {
                 this.appCenterImageId = appCenterImageId;
@@ -303,7 +309,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-fxwp4koyr5y2sp4mz</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -311,7 +320,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Microsoft Word</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -319,7 +331,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AppThemeColor.
+             * <p>The theme color of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#FFFFFF</p>
              */
             public Builder appThemeColor(String appThemeColor) {
                 this.appThemeColor = appThemeColor;
@@ -327,7 +342,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>The application version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R2021a</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -335,7 +353,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersionName.
+             * <p>The application version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0</p>
              */
             public Builder appVersionName(String appVersionName) {
                 this.appVersionName = appVersionName;
@@ -343,7 +364,11 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthTime.
+             * <p>The authorization time of the application.
+             * The return value is a serialized datetime string from the server in the format of <code>EEE MMM dd HH:mm:ss zzz yyyy</code>, which represents the day of the week, month, day, hour:minute:second, time zone abbreviation, and year in sequence. For example, <code>Wed Jan 14 20:47:02 CST 2026</code>, where <code>CST</code> is the time zone abbreviation of the server\&quot;s time zone (China Standard Time, UTC+08:00).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Wed Jan 14 20:47:02 CST 2026</p>
              */
             public Builder authTime(String authTime) {
                 this.authTime = authTime;
@@ -351,7 +376,21 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The specific category information of the application, which is the secondary category.
+             * Valid values:</p>
+             * <ul>
+             * <li>1: All applications</li>
+             * <li>2: Design software</li>
+             * <li>3: Programming and development</li>
+             * <li>4: Office essentials</li>
+             * <li>5: Input methods</li>
+             * <li>6: Image and video</li>
+             * <li>7: System tools</li>
+             * <li>8: Browsers</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -359,7 +398,14 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryType.
+             * <p>The primary category of the application. Valid values:</p>
+             * <ul>
+             * <li>0: Cloud application</li>
+             * <li>1: Cloud game</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder categoryType(Long categoryType) {
                 this.categoryType = categoryType;
@@ -367,7 +413,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IconUrl.
+             * <p>The URL of the application icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://app-streaming-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1973619010349344/1634523814270_Matlab.png">https://app-streaming-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1973619010349344/1634523814270_Matlab.png</a></p>
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -375,7 +424,11 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsAuth.
+             * <p>Indicates whether the user has permissions.
+             * The value is True.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isAuth(Boolean isAuth) {
                 this.isAuth = isAuth;
@@ -383,7 +436,10 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UsedInSession.
+             * <p>Indicates whether the application is in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder usedInSession(Boolean usedInSession) {
                 this.usedInSession = usedInSession;

@@ -233,6 +233,7 @@ public class StartAppResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The resource group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +246,10 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The business region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putBodyParameter("BizRegionId", bizRegionId);
@@ -254,6 +258,7 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
+         * <p>The client ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +271,10 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
-         * ClientIp.
+         * <p>The client IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.3.4</p>
          */
         public Builder clientIp(String clientIp) {
             this.putBodyParameter("ClientIp", clientIp);
@@ -275,7 +283,10 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
-         * ClientOS.
+         * <p>The client operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>windows_\&quot;Windows 10 Pro\&quot; 10.0 (Build 22631)</p>
          */
         public Builder clientOS(String clientOS) {
             this.putBodyParameter("ClientOS", clientOS);
@@ -284,7 +295,10 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
-         * ClientVersion.
+         * <p>The client version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.5.1-R-20240903.163046</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.putBodyParameter("ClientVersion", clientVersion);
@@ -293,7 +307,10 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser01</p>
          */
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
@@ -302,7 +319,10 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
-         * LoginRegionId.
+         * <p>The region ID at office network logon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder loginRegionId(String loginRegionId) {
             this.putBodyParameter("LoginRegionId", loginRegionId);
@@ -311,6 +331,7 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
+         * <p>The logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,6 +344,7 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,6 +357,7 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
+         * <p>The list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
@@ -344,6 +367,7 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,7 +380,10 @@ public class StartAppResourcesRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The client UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2943802884B27030B6759F9132B2****</p>
          */
         public Builder uuid(String uuid) {
             this.putBodyParameter("Uuid", uuid);
