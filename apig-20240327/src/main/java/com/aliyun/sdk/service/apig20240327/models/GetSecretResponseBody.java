@@ -104,7 +104,7 @@ public class GetSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The key information.</p>
+         * <p>The secret information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -296,8 +296,8 @@ public class GetSecretResponseBody extends TeaModel {
             /**
              * <p>The gateway type. Valid values:</p>
              * <ul>
-             * <li>API: API gateway.</li>
-             * <li>AI: AI gateway.</li>
+             * <li>API: API gateway</li>
+             * <li>AI: AI gateway</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -328,7 +328,7 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resources that reference the current key.</p>
+             * <p>The number of resources that reference the current secret.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -339,7 +339,7 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key ID.</p>
+             * <p>The ID of the secret.</p>
              * 
              * <strong>example:</strong>
              * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
@@ -350,7 +350,7 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key source.</p>
+             * <p>The source of the secret.</p>
              * 
              * <strong>example:</strong>
              * <p>KMS</p>
@@ -361,10 +361,10 @@ public class GetSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key status. Valid values:</p>
+             * <p>The secret status. Valid values:</p>
              * <ul>
              * <li>ENALBE: Enabled.</li>
-             * <li>DISABLE: Disabled.</li>
+             * <li>DISABLE: Unavailable.</li>
              * <li>DELETED: Deleted.</li>
              * </ul>
              * 

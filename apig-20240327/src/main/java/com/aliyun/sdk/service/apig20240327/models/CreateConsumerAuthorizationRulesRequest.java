@@ -59,7 +59,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
         } 
 
         /**
-         * <p>The consumer authentication rules.</p>
+         * <p>The consumer authorization rules.</p>
          */
         public Builder authorizationRules(java.util.List<AuthorizationRules> authorizationRules) {
             this.putBodyParameter("authorizationRules", authorizationRules);
@@ -175,7 +175,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The ID of the target resource for authorization. The required ID type is determined by resourceType, and the prefix must match.</p>
+             * <p>The ID of the target resource to be authorized. The required ID type is determined by resourceType, and the prefix must match.</p>
              * 
              * <strong>example:</strong>
              * <p>ha-cn-li942gy8p03</p>
@@ -362,7 +362,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The type of the principal.</p>
+             * <p>The type of the authorized principal.</p>
              * 
              * <strong>example:</strong>
              * <p>ConsumerGroup</p>
@@ -373,7 +373,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The resource identifier, which is provided to non-standard code sources as a unique identifier for space reuse.</p>
+             * <p>The resource identifier, which is provided to non-standard code sources as a unique identifier for namespace reuse.</p>
              */
             public Builder resourceIdentifier(ResourceIdentifier resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;
@@ -381,7 +381,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * <p>The resource type.</p>
+             * <p>The type of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>HttpApiRoute</p>

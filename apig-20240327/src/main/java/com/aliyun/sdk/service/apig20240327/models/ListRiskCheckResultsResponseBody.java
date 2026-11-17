@@ -138,7 +138,7 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries to return in this request.</p>
+         * <p>The maximum number of records to return in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -160,7 +160,7 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. This parameter is empty if no more pages are available.</p>
+         * <p>The pagination token. This parameter is empty if no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>token-xxx</p>
@@ -285,7 +285,7 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -296,7 +296,7 @@ public class ListRiskCheckResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries.</p>
+             * <p>The total count.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

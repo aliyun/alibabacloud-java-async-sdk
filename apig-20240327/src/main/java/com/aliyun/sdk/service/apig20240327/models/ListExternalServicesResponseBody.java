@@ -104,7 +104,7 @@ public class ListExternalServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of APIs.</p>
+         * <p>The list of operations.</p>
          */
         public Builder data(Data data) {
             this.data = data;

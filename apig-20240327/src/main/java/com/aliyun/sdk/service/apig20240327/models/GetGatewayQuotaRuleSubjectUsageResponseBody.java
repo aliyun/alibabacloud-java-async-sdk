@@ -167,6 +167,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("model")
         private String model;
 
+        @com.aliyun.core.annotation.NameInMap("modelCardId")
+        private String modelCardId;
+
+        @com.aliyun.core.annotation.NameInMap("modelSourceId")
+        private String modelSourceId;
+
+        @com.aliyun.core.annotation.NameInMap("modelSourceName")
+        private String modelSourceName;
+
         @com.aliyun.core.annotation.NameInMap("outputAmount")
         private Long outputAmount;
 
@@ -175,6 +184,9 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("requestId")
         private String requestId;
+
+        @com.aliyun.core.annotation.NameInMap("serviceId")
+        private String serviceId;
 
         @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
@@ -192,9 +204,13 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             this.inputAmount = builder.inputAmount;
             this.inputAmountDecimal = builder.inputAmountDecimal;
             this.model = builder.model;
+            this.modelCardId = builder.modelCardId;
+            this.modelSourceId = builder.modelSourceId;
+            this.modelSourceName = builder.modelSourceName;
             this.outputAmount = builder.outputAmount;
             this.outputAmountDecimal = builder.outputAmountDecimal;
             this.requestId = builder.requestId;
+            this.serviceId = builder.serviceId;
             this.startTime = builder.startTime;
             this.usedAmount = builder.usedAmount;
             this.usedAmountDecimal = builder.usedAmountDecimal;
@@ -251,6 +267,27 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelCardId
+         */
+        public String getModelCardId() {
+            return this.modelCardId;
+        }
+
+        /**
+         * @return modelSourceId
+         */
+        public String getModelSourceId() {
+            return this.modelSourceId;
+        }
+
+        /**
+         * @return modelSourceName
+         */
+        public String getModelSourceName() {
+            return this.modelSourceName;
+        }
+
+        /**
          * @return outputAmount
          */
         public Long getOutputAmount() {
@@ -269,6 +306,13 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
          */
         public String getRequestId() {
             return this.requestId;
+        }
+
+        /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
         }
 
         /**
@@ -299,9 +343,13 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             private Long inputAmount; 
             private Double inputAmountDecimal; 
             private String model; 
+            private String modelCardId; 
+            private String modelSourceId; 
+            private String modelSourceName; 
             private Long outputAmount; 
             private Double outputAmountDecimal; 
             private String requestId; 
+            private String serviceId; 
             private String startTime; 
             private Long usedAmount; 
             private Double usedAmountDecimal; 
@@ -316,16 +364,20 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
                 this.inputAmount = model.inputAmount;
                 this.inputAmountDecimal = model.inputAmountDecimal;
                 this.model = model.model;
+                this.modelCardId = model.modelCardId;
+                this.modelSourceId = model.modelSourceId;
+                this.modelSourceName = model.modelSourceName;
                 this.outputAmount = model.outputAmount;
                 this.outputAmountDecimal = model.outputAmountDecimal;
                 this.requestId = model.requestId;
+                this.serviceId = model.serviceId;
                 this.startTime = model.startTime;
                 this.usedAmount = model.usedAmount;
                 this.usedAmountDecimal = model.usedAmountDecimal;
             } 
 
             /**
-             * <p>The cached token consumption.</p>
+             * <p>The number of cached tokens consumed.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -358,7 +410,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The input token consumption.</p>
+             * <p>The number of input tokens consumed.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -391,7 +443,40 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output token consumption.</p>
+             * <p>The ID of the executed model card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>msc-d00000000000000000000</p>
+             */
+            public Builder modelCardId(String modelCardId) {
+                this.modelCardId = modelCardId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the model source at execution. This field is empty for legacy records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ms-d00000000000000000000</p>
+             */
+            public Builder modelSourceId(String modelSourceId) {
+                this.modelSourceId = modelSourceId;
+                return this;
+            }
+
+            /**
+             * <p>The snapshot of the model source name at execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Model Studio model source</p>
+             */
+            public Builder modelSourceName(String modelSourceName) {
+                this.modelSourceName = modelSourceName;
+                return this;
+            }
+
+            /**
+             * <p>The number of output tokens consumed.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -420,6 +505,17 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the executed service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-d00000000000000000000</p>
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
                 return this;
             }
 
@@ -788,7 +884,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total cached token consumption.</p>
+             * <p>The total number of cached tokens consumed.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -810,7 +906,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pagination of consumption details.</p>
+             * <p>The paginated consumption details.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;totalSize&quot;:100}</p>
@@ -821,7 +917,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total input token consumption.</p>
+             * <p>The total number of input tokens consumed.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -843,7 +939,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total output token consumption.</p>
+             * <p>The total number of output tokens consumed.</p>
              * 
              * <strong>example:</strong>
              * <p>180</p>
@@ -876,7 +972,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota dimension. Valid values: token and credit.</p>
+             * <p>The quota dimension. Valid values: token or credit.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -887,7 +983,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject type. Valid values: consumer and consumer_group.</p>
+             * <p>The subject type. Valid values: consumer or consumer_group.</p>
              * 
              * <strong>example:</strong>
              * <p>consumer_group</p>

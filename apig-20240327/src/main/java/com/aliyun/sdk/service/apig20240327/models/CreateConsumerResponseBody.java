@@ -123,7 +123,7 @@ public class CreateConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>479AE38F-A574-52F7-87EA-E91199999F9E</p>

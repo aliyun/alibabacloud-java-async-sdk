@@ -59,7 +59,7 @@ public class RevealServiceCredentialRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the service.</p>
+         * <p>The unique ID of the service. Only AI services with sourceType=AI are supported, and the service must have credentials configured in serviceConfigs[].aiServiceConfig through CreateService. Calling this operation for a service without configured credentials (such as sourceType=VIP) returns Conflict.ServiceCredentialNotConfigured(409).</p>
          * 
          * <strong>example:</strong>
          * <p>svc-xxxxxxxx</p>

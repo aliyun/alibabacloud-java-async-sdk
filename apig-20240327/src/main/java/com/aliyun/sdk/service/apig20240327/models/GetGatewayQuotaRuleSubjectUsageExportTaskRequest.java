@@ -101,7 +101,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskRequest extends Request {
         } 
 
         /**
-         * <p>The gateway ID. This parameter is required and must be the same as the gatewayId passed when the export task was created.</p>
+         * <p>The gateway ID. This parameter is required and must be the same as the gatewayId specified when the export task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-123456</p>
@@ -113,7 +113,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskRequest extends Request {
         }
 
         /**
-         * <p>The quota rule ID. This parameter is required and must be the same as the ruleId passed when the export task was created.</p>
+         * <p>The quota rule ID. This parameter is required and must be the same as the ruleId specified when the export task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>qr-123456</p>
@@ -125,7 +125,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskRequest extends Request {
         }
 
         /**
-         * <p>The consumption subject ID. This parameter is required and must be the same as the subjectId passed when the task was created. Consumers use IDs with the cs- prefix, and consumer groups use IDs with the csg- prefix.</p>
+         * <p>The consumption subject ID. This parameter is required and must be the same as the subjectId specified when the task was created. Use an ID with the cs- prefix for a consumer and an ID with the csg- prefix for a consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-123456</p>

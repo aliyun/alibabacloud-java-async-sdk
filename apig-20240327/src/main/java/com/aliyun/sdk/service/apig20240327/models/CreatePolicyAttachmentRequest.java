@@ -120,7 +120,7 @@ public class CreatePolicyAttachmentRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the attached resource.</p>
+         * <p>The attached resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

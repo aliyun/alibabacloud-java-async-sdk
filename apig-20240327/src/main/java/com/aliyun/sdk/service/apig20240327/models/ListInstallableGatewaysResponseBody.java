@@ -257,7 +257,7 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The database engine version of the gateway DPI engine.</p>
+             * <p>The gateway DPI engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>2.1.10</p>
@@ -279,7 +279,7 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway status. The value is passed through from the GatewayPhase enumeration, such as Running or Creating.</p>
+             * <p>The gateway status. This is a pass-through of the GatewayPhase enum, such as Running or Creating.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -290,7 +290,7 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the plugin can be installed on the gateway.</p>
+             * <p>Indicates whether the gateway is installable.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -301,7 +301,7 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the plugin cannot be installed.</p>
+             * <p>The reason why the gateway is not installable.</p>
              * 
              * <strong>example:</strong>
              * <p>VERSION_NOT_MATCH</p>
@@ -312,7 +312,7 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of another version of the same plugin class that is already installed on the gateway.</p>
+             * <p>The version number of another plug-in of the same class that is already installed on the gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -419,7 +419,7 @@ public class ListInstallableGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of gateways.</p>
+             * <p>The list.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

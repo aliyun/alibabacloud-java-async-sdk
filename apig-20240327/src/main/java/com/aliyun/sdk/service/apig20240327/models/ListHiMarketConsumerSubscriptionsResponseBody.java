@@ -119,7 +119,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -138,7 +138,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned on the current page.</p>
+         * <p>The maximum number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -160,7 +160,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. An empty value indicates that the last page has been reached.</p>
+         * <p>The pagination token for the next page. An empty value indicates that the last page is reached.</p>
          * 
          * <strong>example:</strong>
          * <p>token-xxxxxxxx</p>
@@ -305,7 +305,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the consumer to which the subscription belongs. This is the same as the consumerId path parameter of this operation.</p>
+             * <p>The ID of the consumer to which the subscription belongs. This is the same identifier as the consumerId path parameter of this API operation.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-xxxxxxxxxxxx</p>
@@ -327,7 +327,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the subscribed API product. This is the primary ID of the API product resource.</p>
+             * <p>The ID of the subscribed API product, which is the primary ID of the API product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>product-xxxxxxxx</p>
@@ -349,7 +349,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the subscribed API product. This response parameter does not have an enum annotation. For the response parameter with the same name in the related ListProductSubscriptions operation, the valid values are REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
+             * <p>The type of the subscribed API product. No enum is declared for this response parameter. For the response parameter with the same name in the related ListProductSubscriptions API operation, the valid values are REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
              * 
              * <strong>example:</strong>
              * <p>MCP_SERVER</p>
@@ -360,7 +360,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription status. Valid values: PENDING and APPROVED. These valid values are declared in the enum of the status request parameter. This response parameter does not have an enum annotation.</p>
+             * <p>The subscription status. Valid values: PENDING and APPROVED. The valid values are declared in the enum of the status request parameter, and no enum is attached to this response parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>APPROVED</p>
@@ -371,7 +371,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription ID. You can use this ID to cancel a subscription by calling UnsubscribeHiMarketProduct or approve a subscription by calling ApproveProductSubscription. Both operations use the /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId} path to locate the subscription.</p>
+             * <p>The subscription ID. You can use this ID to call UnsubscribeHiMarketProduct to cancel the subscription or ApproveProductSubscription to approve the subscription. Both operations locate the subscription by using the /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId} path.</p>
              * 
              * <strong>example:</strong>
              * <p>sub-xxxxxxxx</p>
@@ -467,7 +467,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API product subscriptions of the consumer. Each element in the list is named subscription and represents an API product subscription record.</p>
+             * <p>The API product subscription list of the consumer. The list element is named subscription, and each element represents an API product subscription record.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;

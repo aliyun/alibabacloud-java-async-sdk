@@ -203,10 +203,10 @@ public class ListMseNacosSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Nacos instance name.</p>
+             * <p>The name of the Nacos instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product Center Nacos Registry</p>
+             * <p>Product Center Nacos registry</p>
              */
             public Builder name(String name) {
                 this.name = name;

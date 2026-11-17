@@ -59,7 +59,7 @@ public class GetMigrationTaskRequest extends Request {
         } 
 
         /**
-         * <p>The migration task ID.</p>
+         * <p>The ID of the migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxxxxxx</p>

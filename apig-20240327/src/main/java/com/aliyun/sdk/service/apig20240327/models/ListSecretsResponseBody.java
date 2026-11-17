@@ -104,7 +104,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of key information.</p>
+         * <p>The list of secrets.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -305,7 +305,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The KMS configuration information.</p>
+             * <p>The KMS configuration.</p>
              */
             public Builder kmsConfig(KMSConfig kmsConfig) {
                 this.kmsConfig = kmsConfig;
@@ -313,7 +313,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key name.</p>
+             * <p>The secret name.</p>
              * 
              * <strong>example:</strong>
              * <p>my_secret</p>
@@ -324,7 +324,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource count of resources that reference the current key.</p>
+             * <p>The resource count of the resources that reference the current secret.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -335,7 +335,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key ID.</p>
+             * <p>The secret ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
@@ -346,7 +346,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key source.</p>
+             * <p>The secret source.</p>
              * 
              * <strong>example:</strong>
              * <p>KMS</p>
@@ -357,7 +357,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key status. Valid values:</p>
+             * <p>The secret status. Valid values:</p>
              * <ul>
              * <li>ENABLE: Enabled.</li>
              * <li>DISABLE: Disabled.</li>
@@ -469,7 +469,7 @@ public class ListSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of key details.</p>
+             * <p>The list of secret details.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

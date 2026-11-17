@@ -88,7 +88,7 @@ public class GetRiskNotificationRequest extends Request {
         }
 
         /**
-         * <p>The code of the risk item, such as the code for version risk or capacity risk.</p>
+         * <p>The code of the risk item, such as the code for version risks or capacity risks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

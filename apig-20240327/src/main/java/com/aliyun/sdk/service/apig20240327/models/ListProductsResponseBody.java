@@ -138,7 +138,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned in this request.</p>
+         * <p>The maximum number of entries returned in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -160,7 +160,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The cursor token for querying the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-xxxxxxxx</p>
@@ -383,7 +383,7 @@ public class ListProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</p>
+             * <p>The agent-related configurations of the API product. The agentAPIConfig member includes the list of protocols supported by the agent (agentProtocols) and the list of routes (routes).</p>
              */
             public Builder agentConfig(HiMarketAgentConfig agentConfig) {
                 this.agentConfig = agentConfig;
@@ -391,7 +391,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether subscription requests for the API product are automatically approved. This corresponds to the AutoApprove property of the API product resource.</p>
+             * <p>Indicates whether subscription requests for the API product are automatically approved. This corresponds to the AutoApprove property of the Product resource.</p>
              */
             public Builder autoApprove(Boolean autoApprove) {
                 this.autoApprove = autoApprove;
@@ -407,7 +407,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the API product, which corresponds to the Description property of the API product resource.</p>
+             * <p>The description of the API product. This corresponds to the Description property of the Product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>An API product that provides weather query capabilities</p>
@@ -418,7 +418,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The documentation of the API product, which corresponds to the Document property of the API product resource.</p>
+             * <p>The documentation of the API product. This corresponds to the Document property of the Product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>The invocation methods, parameters, and billing instructions for this product</p>
@@ -429,7 +429,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capability configurations of the API product. Currently, it only includes the modelFeature (model capabilities) member, which contains model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal.</p>
+             * <p>The capability configurations of the API product. Currently, this includes only the modelFeature member, which contains model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal.</p>
              */
             public Builder feature(HiMarketProductFeature feature) {
                 this.feature = feature;
@@ -437,7 +437,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The icon of the API product, which corresponds to the Icon property of the API product resource. It consists of two fields: the icon type (type) and the icon information (value).</p>
+             * <p>The icon of the API product. This corresponds to the Icon property of the Product resource and consists of two fields: icon type (type) and icon information (value).</p>
              */
             public Builder icon(HiMarketIcon icon) {
                 this.icon = icon;
@@ -445,7 +445,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP-related configurations of the API product. The members include mcpServerName (MCP server name), tools, mcpServerConfig (path and domains), and meta (protocol).</p>
+             * <p>The MCP-related configurations of the API product. The members include the MCP server name (mcpServerName), tools, MCP server configurations (mcpServerConfig, which includes path and domains), and metadata (meta, which includes protocol).</p>
              */
             public Builder mcpConfig(HiMarketMcpConfig mcpConfig) {
                 this.mcpConfig = mcpConfig;
@@ -453,7 +453,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory (AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</p>
+             * <p>The model API-related configurations of the API product. The modelAPIConfig member includes the AI model category (modelCategory), the list of AI API protocols (aiProtocols), and the list of routes (routes).</p>
              */
             public Builder modelConfig(HiMarketModelConfig modelConfig) {
                 this.modelConfig = modelConfig;
@@ -461,7 +461,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the API product, which corresponds to the Name property of the API product resource.</p>
+             * <p>The name of the API product. This corresponds to the Name property of the Product resource.</p>
              * 
              * <strong>example:</strong>
              * <p>weather-query-api</p>
@@ -472,7 +472,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the API product, which is the primary ID of the API product resource. You can use this ID to locate the product in operations such as GetProduct, UpdateProduct, DeleteProduct, PublishProduct, SetProductCategories, and ListProductPublications.</p>
+             * <p>The ID of the API product. This is the primary ID of the Product resource. You can use this ID to locate the product in operations such as GetProduct, UpdateProduct, DeleteProduct, PublishProduct, SetProductCategories, and ListProductPublications.</p>
              * 
              * <strong>example:</strong>
              * <p>product-xxxxxxxx</p>
@@ -483,7 +483,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the API product, which corresponds to the Status property of the API product resource. Valid values: Pending, Ready, and Published.</p>
+             * <p>The status of the API product. This corresponds to the Status property of the Product resource. Valid values: Pending, Ready, Published.</p>
              * 
              * <strong>example:</strong>
              * <p>Published</p>
@@ -494,7 +494,7 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the API product, which corresponds to the Type property of the API product resource. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
+             * <p>The type of the API product. This corresponds to the Type property of the Product resource. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
              * 
              * <strong>example:</strong>
              * <p>API</p>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAiModelProviderRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("defaultServiceId")
+    private String defaultServiceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
@@ -42,6 +46,7 @@ public class CreateAiModelProviderRequest extends Request {
 
     private CreateAiModelProviderRequest(Builder builder) {
         super(builder);
+        this.defaultServiceId = builder.defaultServiceId;
         this.displayName = builder.displayName;
         this.gatewayId = builder.gatewayId;
         this.provider = builder.provider;
@@ -60,6 +65,13 @@ public class CreateAiModelProviderRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return defaultServiceId
+     */
+    public String getDefaultServiceId() {
+        return this.defaultServiceId;
     }
 
     /**
@@ -98,6 +110,7 @@ public class CreateAiModelProviderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAiModelProviderRequest, Builder> {
+        private String defaultServiceId; 
         private String displayName; 
         private String gatewayId; 
         private String provider; 
@@ -110,12 +123,25 @@ public class CreateAiModelProviderRequest extends Request {
 
         private Builder(CreateAiModelProviderRequest request) {
             super(request);
+            this.defaultServiceId = request.defaultServiceId;
             this.displayName = request.displayName;
             this.gatewayId = request.gatewayId;
             this.provider = request.provider;
             this.serviceIds = request.serviceIds;
             this.clientToken = request.clientToken;
         } 
+
+        /**
+         * <p>The optional default AI service ID. If not empty, it must be a service in the current association set. Omitting this parameter indicates that no default is set. An explicit empty string clears the default. A non-empty value sets the default. The length cannot exceed 64 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-d00000000000000000000</p>
+         */
+        public Builder defaultServiceId(String defaultServiceId) {
+            this.putBodyParameter("defaultServiceId", defaultServiceId);
+            this.defaultServiceId = defaultServiceId;
+            return this;
+        }
 
         /**
          * <p>The display name of the model provider.</p>
@@ -157,7 +183,7 @@ public class CreateAiModelProviderRequest extends Request {
         }
 
         /**
-         * <p>The list of service IDs to bind to the provider.</p>
+         * <p>The list of service IDs to associate with the provider.</p>
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {
             this.putBodyParameter("serviceIds", serviceIds);
@@ -166,7 +192,7 @@ public class CreateAiModelProviderRequest extends Request {
         }
 
         /**
-         * <p>The client token that ensures the idempotence of the request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>

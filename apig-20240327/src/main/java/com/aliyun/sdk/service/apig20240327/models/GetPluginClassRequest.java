@@ -59,7 +59,7 @@ public class GetPluginClassRequest extends Request {
         } 
 
         /**
-         * <p>The plug-in class ID.</p>
+         * <p>The ID of the plugin class.</p>
          * 
          * <strong>example:</strong>
          * <p>pls-a1b2c3d4e5f6</p>

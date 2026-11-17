@@ -101,7 +101,7 @@ public class ListInstallableGatewaysRequest extends Request {
         } 
 
         /**
-         * <p>The plugin class ID. This is a path parameter and cannot be empty. The plugin class must exist.</p>
+         * <p>The ID of the plug-in class. This is a path parameter and cannot be empty. The specified plug-in class must exist.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-xxxx</p>
@@ -113,7 +113,7 @@ public class ListInstallableGatewaysRequest extends Request {
         }
 
         /**
-         * <p>The gateway type used for filtering.</p>
+         * <p>The gateway type filter.</p>
          * 
          * <strong>example:</strong>
          * <p>AI</p>

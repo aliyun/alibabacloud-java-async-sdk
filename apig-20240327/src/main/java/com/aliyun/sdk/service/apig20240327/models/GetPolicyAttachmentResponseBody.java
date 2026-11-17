@@ -257,7 +257,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the attached resource.</p>
+             * <p>The attached resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>op-csbkd9llhtgqhqua***</p>
@@ -268,7 +268,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the attached resource. Valid values: HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, and Domain.</p>
+             * <p>The attached resource type, such as HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, or Domain.</p>
              * 
              * <strong>example:</strong>
              * <p>Operation</p>
@@ -279,7 +279,7 @@ public class GetPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the attached policy.</p>
+             * <p>The policy attachment configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;unitNum&quot;:1,&quot;timeUnit&quot;:&quot;s&quot;,&quot;enable&quot;:true}</p>

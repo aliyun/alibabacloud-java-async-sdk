@@ -283,7 +283,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The allocation ID of the elastic IP address (EIP) corresponding to the public IP address.</p>
+             * <p>The EIP allocation ID corresponding to the public IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>eip-bp1xxxx</p>
@@ -653,7 +653,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listener protocol. No backend enumeration validation is performed. The actual value is obtained from the SLB or NLB API. Common values include tcp, udp, http, https, and tls.</p>
+             * <p>The listener protocol. No backend enum verification is performed. The actual value is retrieved from the SLB or NLB POP API. Common values include tcp, udp, http, https, and tls.</p>
              * 
              * <strong>example:</strong>
              * <p>https</p>
@@ -744,7 +744,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual server group. This is VServerGroupId for Classic Load Balancer (CLB) and ServerGroupId for Network Load Balancer (NLB).</p>
+             * <p>The ID of the virtual server group. For CLB, this is the VServerGroupId. For NLB, this is the ServerGroupId.</p>
              * 
              * <strong>example:</strong>
              * <p>rsp-xxxx</p>
@@ -1044,7 +1044,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the load balancer can be edited. This serves as an edit switch for load balancers during migration.</p>
+             * <p>Indicates whether the load balancer can be edited. This parameter serves as an edit switch for load balancers during migration.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1121,7 +1121,7 @@ public class ListGatewayLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The association mode.</p>
+             * <p>The binding mode.</p>
              * 
              * <strong>example:</strong>
              * <p>Managed</p>

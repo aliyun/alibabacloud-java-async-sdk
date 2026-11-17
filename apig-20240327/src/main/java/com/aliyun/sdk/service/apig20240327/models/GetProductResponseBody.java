@@ -335,7 +335,7 @@ public class GetProductResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</p>
+             * <p>The agent configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</p>
              */
             public Builder agentConfig(HiMarketAgentConfig agentConfig) {
                 this.agentConfig = agentConfig;
@@ -354,7 +354,7 @@ public class GetProductResponseBody extends TeaModel {
              * <p>The description of the API product.</p>
              * 
              * <strong>example:</strong>
-             * <p>API product that provides weather query capabilities</p>
+             * <p>An API product that provides weather query capabilities</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -365,7 +365,7 @@ public class GetProductResponseBody extends TeaModel {
              * <p>The documentation content of the API product.</p>
              * 
              * <strong>example:</strong>
-             * <p>Invocation methods, parameters, and billing instructions for this product</p>
+             * <p>The invocation methods, parameters, and billing instructions for this product</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -389,7 +389,7 @@ public class GetProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP-related configurations of the API product. The members include mcpServerName (the name of the MCP server), tools, mcpServerConfig (path and domains), and meta (protocol).</p>
+             * <p>The Model Context Protocol (MCP) configurations of the API product. The members include mcpServerName (the name of the MCP server), tools, mcpServerConfig (path and domains), and meta (protocol).</p>
              */
             public Builder mcpConfig(HiMarketMcpConfig mcpConfig) {
                 this.mcpConfig = mcpConfig;
@@ -397,7 +397,7 @@ public class GetProductResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</p>
+             * <p>The model API configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</p>
              */
             public Builder modelConfig(HiMarketModelConfig modelConfig) {
                 this.modelConfig = modelConfig;

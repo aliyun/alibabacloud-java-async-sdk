@@ -102,7 +102,7 @@ public class UnpublishProductResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>

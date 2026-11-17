@@ -181,7 +181,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>The basic information about the instance.</p>
+         * <p>The basic information of the instance.</p>
          */
         public Builder metadata(Metadata metadata) {
             this.metadata = metadata;
@@ -189,7 +189,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>The list of detailed risk items.</p>
+         * <p>The list of detailed risk item information.</p>
          */
         public Builder riskDetails(java.util.List<RiskDetails> riskDetails) {
             this.riskDetails = riskDetails;
@@ -197,13 +197,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>The overall risk level. Valid values:</p>
-         * <ul>
-         * <li>LOW: Low risk.</li>
-         * <li>MEDIUM: Medium risk.</li>
-         * <li>HIGH: High risk.</li>
-         * <li>CRITICAL: Critical risk.</li>
-         * </ul>
+         * <p>The overall risk level. Valid values: LOW (low risk), MEDIUM (medium risk), HIGH (high risk), and CRITICAL (critical risk).</p>
          * 
          * <strong>example:</strong>
          * <p>MEDIUM</p>
@@ -236,12 +230,7 @@ public class RiskCheckResults extends TeaModel {
         }
 
         /**
-         * <p>The risk detection status. Valid values:</p>
-         * <ul>
-         * <li>SUCCESS: The detection succeeded.</li>
-         * <li>FAIL: The detection failed.</li>
-         * <li>RUNNING: The detection is running.</li>
-         * </ul>
+         * <p>The risk check status. Valid values: SUCCESS, FAIL, and RUNNING.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -554,7 +543,7 @@ public class RiskCheckResults extends TeaModel {
             } 
 
             /**
-             * <p>The name of the module that performed the check.</p>
+             * <p>The name of the module that performs the check.</p>
              * 
              * <strong>example:</strong>
              * <p>BaseInfo</p>
@@ -565,7 +554,10 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>The detailed data related to the risk. The data structure varies by risk type.</p>
+             * <p>The detailed data related to the risk. The data structure varies based on the risk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;30010010001&quot;:&quot;[\&quot;\&quot;,\&quot;\&quot;]&quot;}</p>
              */
             public Builder data(java.util.Map<String, String> data) {
                 this.data = data;
@@ -576,7 +568,7 @@ public class RiskCheckResults extends TeaModel {
              * <p>The detailed description of the risk in JSON string format.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;desc&quot;:&quot;The single-node instance has an architecture risk. A single point of failure can cause service unavailability. Scale out to two or more nodes.&quot;}</p>
+             * <p>{&quot;desc&quot;:&quot;Single-node instances have architecture risks. A single point of failure causes service unavailability. Scale out to two or more nodes.&quot;}</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -584,7 +576,7 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert notification for the risk item is muted.</p>
+             * <p>Specifies whether the alert notification for the risk item is muted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -628,13 +620,7 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>The risk category. Valid values:</p>
-             * <ul>
-             * <li>SYSTEM: System risk.</li>
-             * <li>VERSION: Version risk.</li>
-             * <li>SAFE: Security risk.</li>
-             * <li>CAPACITY: Capacity risk.</li>
-             * </ul>
+             * <p>The risk categorization. Valid values: SYSTEM (system risk), VERSION (version risk), SAFE (security risk), and CAPACITY (capacity risk).</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -656,10 +642,10 @@ public class RiskCheckResults extends TeaModel {
             }
 
             /**
-             * <p>The optimization suggestions for the risk in JSON string format, including descriptions and action links.</p>
+             * <p>The optimization suggestions for the risk in JSON string format, including descriptions and operation links.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;desc&quot;:&quot;Scale out to two or more nodes.&quot;,&quot;links&quot;:[{&quot;descEn&quot;:&quot;click to upgrade specification&quot;,&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;Click to scale out&quot;}]}</p>
+             * <p>{&quot;desc&quot;:&quot;Scale out to two or more nodes&quot;,&quot;links&quot;:[{&quot;descEn&quot;:&quot;click to upgrade specification&quot;,&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;Click to scale out&quot;}]}</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;

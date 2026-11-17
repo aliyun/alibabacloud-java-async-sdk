@@ -47,27 +47,27 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p> Recommended call logic:</p>
      * <ul>
      * <li><ol>
-     * <li>Perform a dry run to check for rule conflicts.</li>
+     * <li>First, perform a dry run to check for rule conflicts.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>Set dryRun to true.</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains conflictHash.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>After confirmation, formally submit the request.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>If no conflicts exist: Set dryRun to false and overwrite to false.</li>
+     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If conflicts exist and you confirm to overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>Conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -103,6 +103,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AddGatewaySecurityGroupRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AuthorizeConsumerModelCardGrants  AuthorizeConsumerModelCardGrantsRequest
+     * @return AuthorizeConsumerModelCardGrantsResponse
+     */
+    @Override
+    public CompletableFuture<AuthorizeConsumerModelCardGrantsResponse> authorizeConsumerModelCardGrants(AuthorizeConsumerModelCardGrantsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AuthorizeConsumerModelCardGrants").setMethod(HttpMethod.POST).setPathRegex("/v1/model-apis/{httpApiId}/model-card-grants").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AuthorizeConsumerModelCardGrantsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AuthorizeConsumerModelCardGrantsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -254,7 +272,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a model card for model creation under an existing model provider of a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider parameter must reference an existing model provider in the gateway. The modelName must be unique within the same AI gateway instance and model provider. You can create up to 1,000 model cards per gateway instance. The credit parameter currently supports only the fixed type, and the billing unit is Credits per million tokens. If this parameter is not specified, the type defaults to fixed and all costs default to 0. Each item in availablePaths must include both path and type.</p>
+     * <p>Performs model creation for a model card under an existing model provider of a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider parameter must reference an existing model provider in the gateway. The modelName must be unique within the same AI gateway instance and the same model provider. You can create up to 1,000 model cards for a single gateway instance. The credit parameter currently supports only the fixed type, and the billing unit is Credits per million tokens. If this parameter is not specified, the type defaults to fixed and all costs default to 0. Each item in availablePaths must include both path and type.</p>
      * 
      * @param request the request parameters of CreateAiModelCard  CreateAiModelCardRequest
      * @return CreateAiModelCardResponse
@@ -286,6 +304,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateAiModelProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAiModelSource  CreateAiModelSourceRequest
+     * @return CreateAiModelSourceResponse
+     */
+    @Override
+    public CompletableFuture<CreateAiModelSourceResponse> createAiModelSource(CreateAiModelSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAiModelSource").setMethod(HttpMethod.POST).setPathRegex("/v1/ai-model-sources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAiModelSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAiModelSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAiModelSourceModel  CreateAiModelSourceModelRequest
+     * @return CreateAiModelSourceModelResponse
+     */
+    @Override
+    public CompletableFuture<CreateAiModelSourceModelResponse> createAiModelSourceModel(CreateAiModelSourceModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAiModelSourceModel").setMethod(HttpMethod.POST).setPathRegex("/v1/ai-model-source-models").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAiModelSourceModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAiModelSourceModelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -366,12 +420,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: Before creating a consumer authorization rule, prepare resources according to the following dependency chain (the corresponding creation APIs and ID passing relationships are in parentheses):
-     * Gateway instance (CreateGateway → gatewayId, with the gw- prefix)
-     * Environment (A default environment is automatically created after the gateway is created. You can also call CreateEnvironment → environmentId, with the env- prefix. The gatewayId from Step 1 is required.)
-     * HTTP API (CreateHttpApi → httpApiId, with the api- prefix)
-     * Route and publish (CreateHttpApiRoute → routeId, with the hr- prefix, which belongs to the API in Step 3. Then, call DeployHttpApi to publish it to the environment in Step 2. Unpublished routes cannot be authorized.)
-     * Consumer (CreateConsumer → consumerId, with the cs- prefix, or consumerGroupId, with the csg- prefix. Choose either consumerId or consumerGroupId.)</p>
+     * <p>Prerequisites: Before you create a consumer authorization rule, prepare resources based on the following dependency chain (the parentheses indicate the corresponding creation API and ID passing relationship):
+     * Gateway instance (CreateGateway → gatewayId, gw- prefix)
+     * Environment (A default environment is created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix, and associate it with the gatewayId from Step 1.)
+     * HTTP API (CreateHttpApi → httpApiId, api- prefix)
+     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belonging to the API in Step 3; then call DeployHttpApi to publish it to the environment in Step 2. Unpublished routes cannot be authorized.)
+     * Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Choose one of consumerId and consumerGroupId.)</p>
      * 
      * @param request the request parameters of CreateConsumerAuthorizationRules  CreateConsumerAuthorizationRulesRequest
      * @return CreateConsumerAuthorizationRulesResponse
@@ -483,21 +537,21 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>调用流程</h2>
-     * <p>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</p>
+     * <h2>Call procedure</h2>
+     * <p>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is derived from gateway access logs.</p>
      * <ol>
-     * <li>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</li>
-     * <li>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</li>
-     * <li>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</li>
+     * <li>Call this operation to obtain the taskId. A new task returns Pending, indicating that the task is submitted and the file is not yet generated.</li>
+     * <li>Use the same gatewayId, ruleId, subjectId, and the returned taskId to call GetGatewayQuotaRuleSubjectUsageExportTask and poll the task status.</li>
+     * <li>When the polled status is Success and the file has not expired, download the csv.gz file by using GetGatewayQuotaRuleSubjectUsageExportTask. If the status is Failed, troubleshoot the issue based on the errorMessage and recreate the task.</li>
      * </ol>
-     * <h2>使用条件与限制</h2>
+     * <h2>Prerequisites and limits</h2>
      * <ul>
-     * <li>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</li>
-     * <li>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</li>
-     * <li>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</li>
-     * <li>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</li>
-     * <li>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</li>
-     * <li>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</li>
+     * <li>When you create a task, the quota rule must exist, and the target subject must be bound to the rule. Use the consumer ID for consumer rules and the consumer group ID for consumer group rules.</li>
+     * <li>The details within the valid export time range depend on the delivery of gateway access logs. Enable log delivery first and ensure that the logs for the required time period are queryable.</li>
+     * <li>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed the limit, the task fails. Narrow the time range and try again.</li>
+     * <li>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches 3. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and identical parameters can reuse existing tasks.</li>
+     * <li>The processing timeout for a task is 10 minutes from the time of creation. After the timeout, the task is processed as Failed. This is not a guarantee that the task will definitely complete successfully within this time limit.</li>
+     * <li>The export time range, metering dimension, and subject name are determined at creation time, and subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link can be obtained within 24 hours. The signed link generated for each query is valid for 10 minutes, subject to the actual query result.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateGatewayQuotaRuleSubjectUsageExportTask  CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
@@ -573,7 +627,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of CreateHttpApiVersion  CreateHttpApiVersionRequest
      * @return CreateHttpApiVersionResponse
@@ -593,6 +647,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateLogicalModel  CreateLogicalModelRequest
+     * @return CreateLogicalModelResponse
+     */
+    @Override
+    public CompletableFuture<CreateLogicalModelResponse> createLogicalModel(CreateLogicalModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateLogicalModel").setMethod(HttpMethod.POST).setPathRegex("/v1/logical-models").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLogicalModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLogicalModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update Ingress listener configurations.</p>
+     * 
      * @param request the request parameters of CreateMcpServer  CreateMcpServerRequest
      * @return CreateMcpServerResponse
      */
@@ -623,6 +698,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateMigrationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateModelApi  CreateModelApiRequest
+     * @return CreateModelApiResponse
+     */
+    @Override
+    public CompletableFuture<CreateModelApiResponse> createModelApi(CreateModelApiRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateModelApi").setMethod(HttpMethod.POST).setPathRegex("/v1/model-apis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateModelApiResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateModelApiResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateModelGroup  CreateModelGroupRequest
+     * @return CreateModelGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateModelGroupResponse> createModelGroup(CreateModelGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateModelGroup").setMethod(HttpMethod.POST).setPathRegex("/v1/model-groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateModelGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateModelGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -737,6 +848,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an API product with a specified name and type.</p>
+     * 
      * @param request the request parameters of CreateProduct  CreateProductRequest
      * @return CreateProductResponse
      */
@@ -809,6 +923,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</p>
+     * <ul>
+     * <li>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as the kmsConfig.kmsInstanceId parameter.</li>
+     * <li>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as the kmsConfig.kmsKeyId parameter.
+     * When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateSecret  CreateSecretRequest
      * @return CreateSecretResponse
      */
@@ -917,6 +1040,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAiModelProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAiModelSource  DeleteAiModelSourceRequest
+     * @return DeleteAiModelSourceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAiModelSourceResponse> deleteAiModelSource(DeleteAiModelSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAiModelSource").setMethod(HttpMethod.DELETE).setPathRegex("/v1/ai-model-sources/{modelSourceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAiModelSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAiModelSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAiModelSourceModel  DeleteAiModelSourceModelRequest
+     * @return DeleteAiModelSourceModelResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAiModelSourceModelResponse> deleteAiModelSourceModel(DeleteAiModelSourceModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAiModelSourceModel").setMethod(HttpMethod.DELETE).setPathRegex("/v1/ai-model-source-models/{modelCardId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAiModelSourceModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAiModelSourceModelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1034,7 +1193,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a quota rule based on a consumer or consumer group for an AI gateway. Note that this operation takes effect only for AI gateways whose version is later than 2.1.19.</p>
+     * <p>Deletes a quota rule based on an API consumer or API consumer group for an AI gateway. Note that this operation applies only to AI gateways of a version later than 2.1.19.</p>
      * 
      * @param request the request parameters of DeleteGatewayQuotaRule  DeleteGatewayQuotaRuleRequest
      * @return DeleteGatewayQuotaRuleResponse
@@ -1126,6 +1285,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteLogicalModel  DeleteLogicalModelRequest
+     * @return DeleteLogicalModelResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLogicalModelResponse> deleteLogicalModel(DeleteLogicalModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteLogicalModel").setMethod(HttpMethod.DELETE).setPathRegex("/v1/logical-models/{logicalModelId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLogicalModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLogicalModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteMcpServer  DeleteMcpServerRequest
      * @return DeleteMcpServerResponse
      */
@@ -1156,6 +1333,45 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteMigrationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
+     * 
+     * @param request the request parameters of DeleteModelApi  DeleteModelApiRequest
+     * @return DeleteModelApiResponse
+     */
+    @Override
+    public CompletableFuture<DeleteModelApiResponse> deleteModelApi(DeleteModelApiRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteModelApi").setMethod(HttpMethod.DELETE).setPathRegex("/v1/model-apis/{httpApiId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteModelApiResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteModelApiResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteModelGroup  DeleteModelGroupRequest
+     * @return DeleteModelGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteModelGroupResponse> deleteModelGroup(DeleteModelGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteModelGroup").setMethod(HttpMethod.DELETE).setPathRegex("/v1/model-groups/{modelGroupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteModelGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteModelGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1252,6 +1468,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an API product by product ID.</p>
+     * 
      * @param request the request parameters of DeleteProduct  DeleteProductRequest
      * @return DeleteProductResponse
      */
@@ -1307,7 +1526,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of DeleteSecret  DeleteSecretRequest
      * @return DeleteSecretResponse
@@ -1403,7 +1622,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before deployment, ensure that domainIds have been configured for the MCP server by calling CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</p>
+     * <p>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to verify the domain binding status.</p>
      * 
      * @param request the request parameters of DeployMcpServer  DeployMcpServerRequest
      * @return DeployMcpServerResponse
@@ -1513,6 +1732,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAiModelSource  GetAiModelSourceRequest
+     * @return GetAiModelSourceResponse
+     */
+    @Override
+    public CompletableFuture<GetAiModelSourceResponse> getAiModelSource(GetAiModelSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAiModelSource").setMethod(HttpMethod.GET).setPathRegex("/v1/ai-model-sources/{modelSourceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAiModelSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAiModelSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAiModelSourceEditImpact  GetAiModelSourceEditImpactRequest
+     * @return GetAiModelSourceEditImpactResponse
+     */
+    @Override
+    public CompletableFuture<GetAiModelSourceEditImpactResponse> getAiModelSourceEditImpact(GetAiModelSourceEditImpactRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAiModelSourceEditImpact").setMethod(HttpMethod.GET).setPathRegex("/v1/ai-model-sources/{modelSourceId}/edit-impact").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAiModelSourceEditImpactResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAiModelSourceEditImpactResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAiModelSourceModel  GetAiModelSourceModelRequest
+     * @return GetAiModelSourceModelResponse
+     */
+    @Override
+    public CompletableFuture<GetAiModelSourceModelResponse> getAiModelSourceModel(GetAiModelSourceModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAiModelSourceModel").setMethod(HttpMethod.GET).setPathRegex("/v1/ai-model-source-models/{modelCardId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAiModelSourceModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAiModelSourceModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetApiPathFieldConfig  GetApiPathFieldConfigRequest
      * @return GetApiPathFieldConfigResponse
      */
@@ -1603,6 +1876,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetConsumerAccessOverview  GetConsumerAccessOverviewRequest
+     * @return GetConsumerAccessOverviewResponse
+     */
+    @Override
+    public CompletableFuture<GetConsumerAccessOverviewResponse> getConsumerAccessOverview(GetConsumerAccessOverviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetConsumerAccessOverview").setMethod(HttpMethod.GET).setPathRegex("/v1/consumer-access/consumers/{consumerId}/overview").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetConsumerAccessOverviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetConsumerAccessOverviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @deprecated OpenAPI GetConsumerAuthorizationRule is deprecated  * @param request  the request parameters of GetConsumerAuthorizationRule  GetConsumerAuthorizationRuleRequest
      * @return GetConsumerAuthorizationRuleResponse
      */
@@ -1658,6 +1949,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin and call sequence</h2>
+     * <p>This operation queries the account information of the currently logged-on developer. You must complete the following steps in order:</p>
+     * <ol>
+     * <li>Call CreatePortal to create a developer portal and obtain the portalId.</li>
+     * <li>Call CreateDeveloper to register a developer account under the portal.</li>
+     * <li>Call LoginDeveloper to log on to the developer account and obtain the accessToken.</li>
+     * <li>Call this operation with the accessToken obtained in the previous step.
+     * Related operations: CreatePortal, CreateDeveloper, and LoginDeveloper.</li>
+     * </ol>
+     * 
      * @param request the request parameters of GetDeveloper  GetDeveloperRequest
      * @return GetDeveloperResponse
      */
@@ -1670,6 +1972,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDeveloperResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDirectSupply  GetDirectSupplyRequest
+     * @return GetDirectSupplyResponse
+     */
+    @Override
+    public CompletableFuture<GetDirectSupplyResponse> getDirectSupply(GetDirectSupplyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDirectSupply").setMethod(HttpMethod.POST).setPathRegex("/v1/direct-supply").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDirectSupplyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDirectSupplyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1732,7 +2052,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the dynamic forwarding ExtProc gRPC service and port currently bound to the specified gateway. If no service is bound, bound=false is returned.</p>
+     * <p>Queries the dynamic forwarding ExtProc gRPC service and port currently bound to a specified gateway. If no service is bound, bound=false is returned.</p>
      * 
      * @param request the request parameters of GetGatewayDfpExtProcService  GetGatewayDfpExtProcServiceRequest
      * @return GetGatewayDfpExtProcServiceResponse
@@ -1771,7 +2091,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries a specific consumer quota rule on an AI gateway.</p>
+     * <p>Queries a specific consumer quota rule on an AI gateway.</p>
      * 
      * @param request the request parameters of GetGatewayQuotaRule  GetGatewayQuotaRuleRequest
      * @return GetGatewayQuotaRuleResponse
@@ -1792,7 +2112,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the usage details of a specific consumption subject under a quota rule. Note that this operation takes effect only for AI gateways of a version later than 2.1.19. Prerequisites: Before calling this operation, make sure that Simple Log Service (SLS) log delivery is enabled for the target gateway by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
+     * <p>This operation retrieves the usage details of a specific consumption subject under a quota rule. Note that this operation takes effect only for AI gateways of a version later than 2.1.19.
+     * Before you begin: Make sure that the target gateway has enabled the Simple Log Service (SLS) log delivery feature by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
      * 
      * @param request the request parameters of GetGatewayQuotaRuleSubjectUsage  GetGatewayQuotaRuleSubjectUsageRequest
      * @return GetGatewayQuotaRuleSubjectUsageResponse
@@ -1816,16 +2137,16 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h2>Call flow</h2>
      * <p>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</p>
      * <ul>
-     * <li>Pending or Running: The task is not completed. You can query again after a period of time.</li>
+     * <li>Pending or Running: The task is not completed. You can query the task again after a period of time.</li>
      * <li>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</li>
-     * <li>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</li>
+     * <li>Failed: Troubleshoot the issue based on errorMessage. To export the data again, call the create operation with a new clientToken.</li>
      * </ul>
      * <h2>Download link and file validity period</h2>
-     * <p>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
-     * After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</p>
+     * <p>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query the task again to obtain a new link. Querying the task again does not regenerate the file or extend the 24-hour validity period of the file.
+     * After the file reaches fileExpiredAt, this operation no longer issues new links. It returns fileExpired=true and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export the data again, create a new task.</p>
      * <h2>Query scope and task progress</h2>
      * <p>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
-     * If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</p>
+     * If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not only on totalCount or processedCount.</p>
      * 
      * @param request the request parameters of GetGatewayQuotaRuleSubjectUsageExportTask  GetGatewayQuotaRuleSubjectUsageExportTaskRequest
      * @return GetGatewayQuotaRuleSubjectUsageExportTaskResponse
@@ -1846,7 +2167,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quotas for a specified API gateway or AI gateway. This operation is read-only. A successful response includes all nine items. Quota values for custom plug-ins are not displayed. The result is a current observation read independently from various sources and does not guarantee the success of subsequent resource creation.</p>
+     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quotas for a specified API gateway or AI gateway. This operation is read-only, and a successful response includes all nine items. Quota values for custom plug-ins are not displayed. The result is a current observation read independently from various sources and does not guarantee the success of adding new resources.</p>
      * 
      * @param request the request parameters of GetGatewayResourceQuotaUsage  GetGatewayResourceQuotaUsageRequest
      * @return GetGatewayResourceQuotaUsageResponse
@@ -1956,6 +2277,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetLogicalModel  GetLogicalModelRequest
+     * @return GetLogicalModelResponse
+     */
+    @Override
+    public CompletableFuture<GetLogicalModelResponse> getLogicalModel(GetLogicalModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetLogicalModel").setMethod(HttpMethod.GET).setPathRegex("/v1/logical-models/{logicalModelId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLogicalModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLogicalModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetLogicalModelDeployment  GetLogicalModelDeploymentRequest
+     * @return GetLogicalModelDeploymentResponse
+     */
+    @Override
+    public CompletableFuture<GetLogicalModelDeploymentResponse> getLogicalModelDeployment(GetLogicalModelDeploymentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetLogicalModelDeployment").setMethod(HttpMethod.GET).setPathRegex("/v1/logical-model-deployments/{operationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLogicalModelDeploymentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLogicalModelDeploymentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation supports creating multiple services.</p>
      * 
@@ -2007,6 +2364,45 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetMigrationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>During deletion, check deleteStatus for Deleting or DeleteFailed, and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission issues, or storage errors do not indicate that the deletion is complete.</p>
+     * 
+     * @param request the request parameters of GetModelApi  GetModelApiRequest
+     * @return GetModelApiResponse
+     */
+    @Override
+    public CompletableFuture<GetModelApiResponse> getModelApi(GetModelApiRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetModelApi").setMethod(HttpMethod.GET).setPathRegex("/v1/model-apis/{httpApiId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelApiResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetModelApiResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetModelGroup  GetModelGroupRequest
+     * @return GetModelGroupResponse
+     */
+    @Override
+    public CompletableFuture<GetModelGroupResponse> getModelGroup(GetModelGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetModelGroup").setMethod(HttpMethod.GET).setPathRegex("/v1/model-groups/{modelGroupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetModelGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2212,7 +2608,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of GetSecret  GetSecretRequest
      * @return GetSecretResponse
@@ -2233,7 +2629,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>The API supports creating multiple services.</p>
      * 
      * @param request the request parameters of GetSecretValue  GetSecretValueRequest
      * @return GetSecretValueResponse
@@ -2443,6 +2839,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAiModelSourceModels  ListAiModelSourceModelsRequest
+     * @return ListAiModelSourceModelsResponse
+     */
+    @Override
+    public CompletableFuture<ListAiModelSourceModelsResponse> listAiModelSourceModels(ListAiModelSourceModelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAiModelSourceModels").setMethod(HttpMethod.GET).setPathRegex("/v1/ai-model-source-models").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAiModelSourceModelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAiModelSourceModelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAiModelSources  ListAiModelSourcesRequest
+     * @return ListAiModelSourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListAiModelSourcesResponse> listAiModelSources(ListAiModelSourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAiModelSources").setMethod(HttpMethod.GET).setPathRegex("/v1/ai-model-sources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAiModelSourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAiModelSourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListApiPathFieldTemplates  ListApiPathFieldTemplatesRequest
      * @return ListApiPathFieldTemplatesResponse
      */
@@ -2516,6 +2948,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListConsumerConsoleSummaries  ListConsumerConsoleSummariesRequest
+     * @return ListConsumerConsoleSummariesResponse
+     */
+    @Override
+    public CompletableFuture<ListConsumerConsoleSummariesResponse> listConsumerConsoleSummaries(ListConsumerConsoleSummariesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListConsumerConsoleSummaries").setMethod(HttpMethod.GET).setPathRegex("/v1/consumer-access/console-summaries").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConsumerConsoleSummariesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListConsumerConsoleSummariesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListConsumerGroupConsumers  ListConsumerGroupConsumersRequest
      * @return ListConsumerGroupConsumersResponse
      */
@@ -2535,7 +2985,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the quota rules directly bound to the specified consumer group without expanding the rules bound to individual consumers within the group. Returns an empty list if no direct binding exists.</p>
+     * <p>Queries the quota rules directly bound to a specified consumer group without expanding the rules bound to individual consumers within the group. Returns an empty list if no direct binding exists.</p>
      * 
      * @param request the request parameters of ListConsumerGroupQuotaRules  ListConsumerGroupQuotaRulesRequest
      * @return ListConsumerGroupQuotaRulesResponse
@@ -2567,6 +3017,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListConsumerGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListConsumerModelCardGrants  ListConsumerModelCardGrantsRequest
+     * @return ListConsumerModelCardGrantsResponse
+     */
+    @Override
+    public CompletableFuture<ListConsumerModelCardGrantsResponse> listConsumerModelCardGrants(ListConsumerModelCardGrantsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListConsumerModelCardGrants").setMethod(HttpMethod.GET).setPathRegex("/v1/model-apis/{httpApiId}/model-card-grants").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConsumerModelCardGrantsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListConsumerModelCardGrantsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2776,7 +3244,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the FinOps quota rules associated with a gateway.</p>
+     * <p>Queries the FinOps quota rules associated with a gateway.</p>
      * 
      * @param request the request parameters of ListGatewayQuotaRules  ListGatewayQuotaRulesRequest
      * @return ListGatewayQuotaRulesResponse
@@ -2958,6 +3426,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListLogicalModels  ListLogicalModelsRequest
+     * @return ListLogicalModelsResponse
+     */
+    @Override
+    public CompletableFuture<ListLogicalModelsResponse> listLogicalModels(ListLogicalModelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListLogicalModels").setMethod(HttpMethod.GET).setPathRegex("/v1/logical-models").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListLogicalModelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListLogicalModelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListMcpProductTools  ListMcpProductToolsRequest
      * @return ListMcpProductToolsResponse
      */
@@ -2977,7 +3463,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of ListMcpServers  ListMcpServersRequest
      * @return ListMcpServersResponse
@@ -3015,6 +3501,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListModelApis  ListModelApisRequest
+     * @return ListModelApisResponse
+     */
+    @Override
+    public CompletableFuture<ListModelApisResponse> listModelApis(ListModelApisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListModelApis").setMethod(HttpMethod.GET).setPathRegex("/v1/model-apis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListModelApisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListModelApisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListModelCards  ListModelCardsRequest
      * @return ListModelCardsResponse
      */
@@ -3027,6 +3531,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListModelCardsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListModelGroups  ListModelGroupsRequest
+     * @return ListModelGroupsResponse
+     */
+    @Override
+    public CompletableFuture<ListModelGroupsResponse> listModelGroups(ListModelGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListModelGroups").setMethod(HttpMethod.GET).setPathRegex("/v1/model-groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListModelGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListModelGroupsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3070,7 +3592,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of ListPluginClasses  ListPluginClassesRequest
      * @return ListPluginClassesResponse
@@ -3217,7 +3739,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports creating multiple services.</p>
+     * <p>The API supports creating multiple services.</p>
      * 
      * @param request the request parameters of ListPrivateLinkSecurityGroups  ListPrivateLinkSecurityGroupsRequest
      * @return ListPrivateLinkSecurityGroupsResponse
@@ -3367,7 +3889,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>The API operation supports creating multiple services.</p>
      * 
      * @param request the request parameters of ListSecrets  ListSecretsRequest
      * @return ListSecretsResponse
@@ -3531,6 +4053,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of PreviewLogicalModelUpdate  PreviewLogicalModelUpdateRequest
+     * @return PreviewLogicalModelUpdateResponse
+     */
+    @Override
+    public CompletableFuture<PreviewLogicalModelUpdateResponse> previewLogicalModelUpdate(PreviewLogicalModelUpdateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PreviewLogicalModelUpdate").setMethod(HttpMethod.POST).setPathRegex("/v1/logical-models/{logicalModelId}/preview").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreviewLogicalModelUpdateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PreviewLogicalModelUpdateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PublishProduct  PublishProductRequest
      * @return PublishProductResponse
      */
@@ -3604,7 +4144,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation resets a quota throttling rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The reset clears the historical usage of the consumption subjects on the rule.</p>
+     * <p>This operation resets a quota throttling rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The reset clears the historical usage of the consumption subjects associated with the rule.</p>
      * <blockquote>
      * <p>Recommended call logic:</p>
      * <ul>
@@ -3617,7 +4157,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview containing a conflictHash.</li>
+     * <li>The response returns a conflict preview that contains a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
@@ -3625,11 +4165,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ol>
      * </li>
      * <li><ul>
-     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
+     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflicts exist and overwrite is confirmed: Set dryRun=false, overwrite=true, and conflictHash=<value returned in the previous step>.</li>
+     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -3671,8 +4211,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RetryLogicalModelDeployment  RetryLogicalModelDeploymentRequest
+     * @return RetryLogicalModelDeploymentResponse
+     */
+    @Override
+    public CompletableFuture<RetryLogicalModelDeploymentResponse> retryLogicalModelDeployment(RetryLogicalModelDeploymentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RetryLogicalModelDeployment").setMethod(HttpMethod.POST).setPathRegex("/v1/logical-model-deployments/{operationId}/retry").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetryLogicalModelDeploymentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetryLogicalModelDeploymentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * @param request the request parameters of RevealServiceCredential  RevealServiceCredentialRequest
      * @return RevealServiceCredentialResponse
@@ -3686,6 +4244,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RevealServiceCredentialResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RevokeConsumerModelCardGrants  RevokeConsumerModelCardGrantsRequest
+     * @return RevokeConsumerModelCardGrantsResponse
+     */
+    @Override
+    public CompletableFuture<RevokeConsumerModelCardGrantsResponse> revokeConsumerModelCardGrants(RevokeConsumerModelCardGrantsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RevokeConsumerModelCardGrants").setMethod(HttpMethod.POST).setPathRegex("/v1/model-apis/{httpApiId}/model-card-grants/revoke").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeConsumerModelCardGrantsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeConsumerModelCardGrantsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3728,6 +4304,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, complete the following preparations:</p>
+     * <ol>
+     * <li>Create a Nacos instance in Microservices Engine (MSE) and register an MCP server in the instance.</li>
+     * <li>Call CreateSource to register a service source for the target gateway. Set the type parameter to MSE_NACOS and point it to the Nacos instance.</li>
+     * <li>Call ListGateways to obtain the system default domain name ID (subDomainInfos[].domainId) of the gateway for the domainIds parameter.
+     * After you complete the preceding steps, pass the gatewayId, domainIds, and namespace parameters to call this operation. This syncs the MCP servers in the specified namespace to the gateway.</li>
+     * </ol>
+     * 
      * @param request the request parameters of SyncMCPServers  SyncMCPServersRequest
      * @return SyncMCPServersResponse
      */
@@ -3884,6 +4470,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAiModelProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAiModelSource  UpdateAiModelSourceRequest
+     * @return UpdateAiModelSourceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAiModelSourceResponse> updateAiModelSource(UpdateAiModelSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAiModelSource").setMethod(HttpMethod.PUT).setPathRegex("/v1/ai-model-sources/{modelSourceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAiModelSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAiModelSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAiModelSourceModel  UpdateAiModelSourceModelRequest
+     * @return UpdateAiModelSourceModelResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAiModelSourceModelResponse> updateAiModelSourceModel(UpdateAiModelSourceModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAiModelSourceModel").setMethod(HttpMethod.PUT).setPathRegex("/v1/ai-model-source-models/{modelCardId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAiModelSourceModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAiModelSourceModelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4114,7 +4736,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</p>
+     * <p>Updates the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</p>
      * 
      * @param request the request parameters of UpdateGatewayMaintenancePeriod  UpdateGatewayMaintenancePeriodRequest
      * @return UpdateGatewayMaintenancePeriodResponse
@@ -4154,7 +4776,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation modifies a quota rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The modification retains the historical usage of the consumers associated with the rule.</p>
+     * <p>This operation updates a quota rule on a gateway. Note that this operation takes effect only on AI gateways of versions later than 2.1.21. The update retains the historical usage of the consumers associated with the rule.</p>
      * <blockquote>
      * <p>Recommended call logic:</p>
      * <ul>
@@ -4167,19 +4789,19 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains a conflictHash.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>Formally submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
+     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
+     * <li>Conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -4204,7 +4826,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation enables or disables a quota rule on a gateway. Note that this operation applies only to AI gateways of a version later than 2.1.21.</p>
+     * <p>This operation enables or disables a quota rule on a gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
      * 
      * @param request the request parameters of UpdateGatewayQuotaRuleStatus  UpdateGatewayQuotaRuleStatusRequest
      * @return UpdateGatewayQuotaRuleStatusResponse
@@ -4278,8 +4900,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateLogicalModel  UpdateLogicalModelRequest
+     * @return UpdateLogicalModelResponse
+     */
+    @Override
+    public CompletableFuture<UpdateLogicalModelResponse> updateLogicalModel(UpdateLogicalModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateLogicalModel").setMethod(HttpMethod.PUT).setPathRegex("/v1/logical-models/{logicalModelId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateLogicalModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateLogicalModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the Ingress listener configurations.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the configurations of listening Ingresses.</p>
      * 
      * @param request the request parameters of UpdateMcpServer  UpdateMcpServerRequest
      * @return UpdateMcpServerResponse
@@ -4311,6 +4951,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMigrationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateModelApi  UpdateModelApiRequest
+     * @return UpdateModelApiResponse
+     */
+    @Override
+    public CompletableFuture<UpdateModelApiResponse> updateModelApi(UpdateModelApiRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateModelApi").setMethod(HttpMethod.PUT).setPathRegex("/v1/model-apis/{httpApiId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateModelApiResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateModelApiResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateModelGroup  UpdateModelGroupRequest
+     * @return UpdateModelGroupResponse
+     */
+    @Override
+    public CompletableFuture<UpdateModelGroupResponse> updateModelGroup(UpdateModelGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateModelGroup").setMethod(HttpMethod.PUT).setPathRegex("/v1/model-groups/{modelGroupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateModelGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateModelGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4444,7 +5120,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>container service</strong> type allow you to update the listener Ingress configuration.</p>
+     * <p>Updates a secret. Only sources of the <strong>Container Service</strong> type are allowed to update Ingress listener configurations.</p>
      * 
      * @param request the request parameters of UpdateSecret  UpdateSecretRequest
      * @return UpdateSecretResponse

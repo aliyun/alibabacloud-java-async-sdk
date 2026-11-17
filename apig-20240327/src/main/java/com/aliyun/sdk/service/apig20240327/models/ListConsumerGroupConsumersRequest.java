@@ -113,7 +113,7 @@ public class ListConsumerGroupConsumersRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy match by consumer name.</p>
+         * <p>The fuzzy filter for consumer names.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer</p>
@@ -137,7 +137,7 @@ public class ListConsumerGroupConsumersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

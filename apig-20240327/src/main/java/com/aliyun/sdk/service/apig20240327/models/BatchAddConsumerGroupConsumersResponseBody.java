@@ -93,7 +93,7 @@ public class BatchAddConsumerGroupConsumersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response status code. The value is Ok if the request succeeds.</p>
+         * <p>The response status code. Ok is returned if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -213,7 +213,7 @@ public class BatchAddConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of consumer IDs that are already in the consumer group and are skipped in this operation.</p>
+             * <p>The list of consumer IDs that are skipped because they are already in the consumer group.</p>
              */
             public Builder skippedConsumerIds(java.util.List<String> skippedConsumerIds) {
                 this.skippedConsumerIds = skippedConsumerIds;
@@ -221,7 +221,7 @@ public class BatchAddConsumerGroupConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of consumer IDs successfully added to the consumer group.</p>
+             * <p>The list of consumer IDs that are successfully added to the consumer group.</p>
              */
             public Builder successConsumerIds(java.util.List<String> successConsumerIds) {
                 this.successConsumerIds = successConsumerIds;

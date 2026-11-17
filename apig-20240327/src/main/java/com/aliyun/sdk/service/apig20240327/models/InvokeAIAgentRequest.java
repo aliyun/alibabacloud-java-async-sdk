@@ -129,7 +129,7 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * <p>The business parameters. Each agent performs custom validation. For example, pass the Simple Log Service context for log diagnostics.</p>
+         * <p>The business parameters. Each agent performs custom validation. For example, pass the SLS context for log diagnosis.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;app&quot;:&quot;log-diagnosis&quot;,&quot;logStore&quot;:&quot;apig-logstore&quot;}</p>
@@ -150,7 +150,7 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * <p>The output language. If this parameter is set to en, the default error message is displayed in English.</p>
+         * <p>The output language. If set to en, the default error message is in English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh / en</p>
@@ -162,7 +162,7 @@ public class InvokeAIAgentRequest extends Request {
         }
 
         /**
-         * <p>The current user input. If this parameter is empty, a default value is used based on the scenario, such as Start.</p>
+         * <p>The user input for the current session. If empty, a default value is used based on the scenario, such as Start.</p>
          * 
          * <strong>example:</strong>
          * <p>Help me diagnose this error log</p>
@@ -233,7 +233,7 @@ public class InvokeAIAgentRequest extends Request {
             } 
 
             /**
-             * <p>The content. The returned data is in rich text format.</p>
+             * <p>The content of the message. The returned data is in rich text format.</p>
              * 
              * <strong>example:</strong>
              * <p>Previous question</p>

@@ -218,7 +218,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The product category ID. You can use this ID as the categoryId path parameter for GetProductCategory, UpdateProductCategory, and DeleteProductCategory. You can also use it as an element in the categories parameter (a set of category IDs) for SetProductCategories and CreateProduct.</p>
+             * <p>The product category ID. You can use this ID as the categoryId path parameter in the GetProductCategory, UpdateProductCategory, and DeleteProductCategory operations, or as an element in the categories parameter (a set of category IDs) in the SetProductCategories and CreateProduct operations.</p>
              * 
              * <strong>example:</strong>
              * <p>category-xxxxxxxx</p>
@@ -232,7 +232,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
              * <p>The product category description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product category containing AI-related capabilities</p>
+             * <p>Product category that includes AI-related capabilities</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,7 +240,7 @@ public class ListProductCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product category icon. It consists of two fields: icon type (type) and icon information (value).</p>
+             * <p>The product category icon. It consists of two fields: type (the icon type) and value (the icon information).</p>
              */
             public Builder icon(HiMarketIcon icon) {
                 this.icon = icon;

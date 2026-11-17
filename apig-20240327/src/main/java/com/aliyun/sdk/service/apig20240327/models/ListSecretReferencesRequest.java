@@ -87,7 +87,7 @@ public class ListSecretReferencesRequest extends Request {
         } 
 
         /**
-         * <p>The secret ID.</p>
+         * <p>The ID of the secret.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxx</p>

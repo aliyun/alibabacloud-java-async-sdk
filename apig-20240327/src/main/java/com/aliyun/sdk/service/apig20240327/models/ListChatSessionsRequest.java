@@ -113,7 +113,7 @@ public class ListChatSessionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Pass the nextToken returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</p>
+         * <p>The pagination cursor. Pass the nextToken returned in the previous response to retrieve the next page. Do not pass this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>token-xxxxxxxx</p>
@@ -137,7 +137,7 @@ public class ListChatSessionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

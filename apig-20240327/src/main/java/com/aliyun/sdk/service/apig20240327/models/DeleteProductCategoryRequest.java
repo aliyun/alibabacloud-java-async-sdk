@@ -59,7 +59,7 @@ public class DeleteProductCategoryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the product category. Specifies the product category to delete. You can obtain this ID from the categoryId field in the CreateProductCategory response. This parameter uses the same /himarket/v1/product-categories/{categoryId} path as GetProductCategory, UpdateProductCategory, and DeleteProductCategory to locate the product category. On the product resource side, it corresponds to the Category ID member in Categories (Product classification). Note: This parameter is a path parameter and is required. If it is not specified, the request URL cannot be constructed.</p>
+         * <p>The ID of the product category to delete. You can obtain this ID from the categoryId field in the response of the CreateProductCategory operation. This parameter uses the same /himarket/v1/product-categories/{categoryId} path as the GetProductCategory, UpdateProductCategory, and DeleteProductCategory operations to locate the product category. On the product resource side, it corresponds to the Category ID member in the Categories (Product classification) section. Note: This is a path parameter and is required. The request URL cannot be constructed without it.</p>
          * 
          * <strong>example:</strong>
          * <p>category-xxxxxxxx</p>

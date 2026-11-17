@@ -87,7 +87,7 @@ public class UpdateConsumerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The consumer group ID.</p>
+         * <p>The ID of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
@@ -99,10 +99,10 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The consumer group description.</p>
+         * <p>The description of the consumer group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Group for online API callers</p>
+         * <p>Used to group production API consumers</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -111,7 +111,7 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The consumer group name.</p>
+         * <p>The name of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>api-consumer-group</p>

@@ -231,7 +231,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether versioning is enabled.</p>
+             * <p>Specifies whether versioning is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -452,7 +452,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API versioning information.</p>
+             * <p>The versioning information of the API.</p>
              */
             public Builder versionInfo(VersionInfo versionInfo) {
                 this.versionInfo = versionInfo;
@@ -519,7 +519,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason why the dry run failed.</p>
+             * <p>The reason for the dry run failure.</p>
              * 
              * <strong>example:</strong>
              * <p>invalid schema</p>
@@ -613,7 +613,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason why the dry run failed.</p>
+             * <p>The reason for the dry run failure.</p>
              * 
              * <strong>example:</strong>
              * <p>unsupported operation</p>
@@ -705,7 +705,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason why the dry run failed.</p>
+             * <p>The reason for the dry run failure.</p>
              * 
              * <strong>example:</strong>
              * <p>domain not found</p>
@@ -786,7 +786,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action type to be performed after the dry run.</p>
+             * <p>The type of action to be performed after the dry run.</p>
              * 
              * <strong>example:</strong>
              * <p>Create</p>
@@ -893,7 +893,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action type to be performed after the dry run.</p>
+             * <p>The type of action to be performed after the dry run.</p>
              * 
              * <strong>example:</strong>
              * <p>Create</p>
@@ -996,7 +996,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action type to be performed after the dry run.</p>
+             * <p>The type of action to be performed after the dry run.</p>
              * 
              * <strong>example:</strong>
              * <p>Create</p>
@@ -1176,7 +1176,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic information about the existing HTTP API matched during import.</p>
+             * <p>The basic information of the existing HTTP API matched during import.</p>
              */
             public Builder existHttpApiInfo(ExistHttpApiInfo existHttpApiInfo) {
                 this.existHttpApiInfo = existHttpApiInfo;
@@ -1325,7 +1325,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API name. The value unknown is returned if the name cannot be identified.</p>
+             * <p>The name of the API. If the name cannot be identified, unknown is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>petstore</p>
@@ -1336,7 +1336,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dry run details, including the operations, routes, components, and error or warning messages planned for creation or update in this file.</p>
+             * <p>The dry run details, including the operations, routes, components, and error and warning messages to be created or updated by this file.</p>
              */
             public Builder dryRunInfo(DryRunInfo dryRunInfo) {
                 this.dryRunInfo = dryRunInfo;
@@ -1462,7 +1462,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API name. The value unknown is returned if the name cannot be identified.</p>
+             * <p>The name of the API. If the name cannot be identified, unknown is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>petstore</p>
@@ -1750,7 +1750,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to allow overwriting existing APIs.</p>
+             * <p>Specifies whether to allow overwriting and updating existing APIs.</p>
              */
             public Builder allowUpdate(Boolean allowUpdate) {
                 this.allowUpdate = allowUpdate;
@@ -1769,7 +1769,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the request is in dry run mode. This parameter is fixed to false in the formal import request body.</p>
+             * <p>Indicates whether the dry run mode is enabled. This parameter is fixed to false in the formal import request body.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1791,7 +1791,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-xxx</p>
@@ -1802,7 +1802,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download URL of the OAS ZIP file, which is consistent with the dry run request.</p>
+             * <p>The download URL of the OAS ZIP file, which is the same as that in the dry run request.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip">https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip</a></p>
@@ -1813,7 +1813,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS configuration of the OAS file, which is consistent with the dry run request.</p>
+             * <p>The OSS configuration of the OAS file, which is the same as that in the dry run request.</p>
              */
             public Builder specOssConfig(SpecOssConfig specOssConfig) {
                 this.specOssConfig = specOssConfig;
@@ -1832,7 +1832,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to import with gateway extension configurations.</p>
+             * <p>Specifies whether to import with the gateway extension configuration.</p>
              */
             public Builder withGatewayExtension(Boolean withGatewayExtension) {
                 this.withGatewayExtension = withGatewayExtension;
@@ -1936,7 +1936,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API name. The value unknown is returned if the name cannot be identified.</p>
+             * <p>The name of the API. If the name cannot be identified, unknown is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>petstore</p>
@@ -2104,7 +2104,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the task is in dry run mode.</p>
+             * <p>Indicates whether the dry run mode is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2142,7 +2142,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The formal import request body. This field is returned only for dry run tasks and can be resubmitted as the request body of BatchImportHttpApis. The dryRun parameter is fixed to false. Temporary specFileUrl values are still subject to URL expiration constraints.</p>
+             * <p>The formal import request body. Returned only for dry run tasks. Can be resubmitted as the BatchImportHttpApis request body with dryRun set to false. The temporary specFileUrl is still subject to the URL expiration period.</p>
              */
             public Builder importRequest(ImportRequest importRequest) {
                 this.importRequest = importRequest;
@@ -2295,7 +2295,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created. The time is in UTC and follows the RFC 3339 format.</p>
+             * <p>The time when the task was created. The time is in UTC and follows the RFC 3339 standard.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-15T10:00:00Z</p>
@@ -2317,7 +2317,7 @@ public class GetBatchImportTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of processed items.</p>
+             * <p>The processed count.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

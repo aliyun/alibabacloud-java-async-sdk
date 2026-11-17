@@ -603,7 +603,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The principal type. Valid values: Consumer and ConsumerGroup.</p>
+             * <p>The type of the authorized principal. Valid values: Consumer and ConsumerGroup.</p>
              * 
              * <strong>example:</strong>
              * <p>ConsumerGroup</p>

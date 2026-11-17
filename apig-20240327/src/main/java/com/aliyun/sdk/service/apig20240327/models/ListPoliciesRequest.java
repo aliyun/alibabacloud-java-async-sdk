@@ -34,6 +34,14 @@ public class ListPoliciesRequest extends Request {
     private String gatewayId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("withAttachments")
     private Boolean withAttachments;
 
@@ -47,6 +55,8 @@ public class ListPoliciesRequest extends Request {
         this.attachResourceType = builder.attachResourceType;
         this.environmentId = builder.environmentId;
         this.gatewayId = builder.gatewayId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.withAttachments = builder.withAttachments;
         this.withSystemPolicy = builder.withSystemPolicy;
     }
@@ -93,6 +103,20 @@ public class ListPoliciesRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return withAttachments
      */
     public Boolean getWithAttachments() {
@@ -111,6 +135,8 @@ public class ListPoliciesRequest extends Request {
         private String attachResourceType; 
         private String environmentId; 
         private String gatewayId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private Boolean withAttachments; 
         private Boolean withSystemPolicy; 
 
@@ -124,12 +150,14 @@ public class ListPoliciesRequest extends Request {
             this.attachResourceType = request.attachResourceType;
             this.environmentId = request.environmentId;
             this.gatewayId = request.gatewayId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.withAttachments = request.withAttachments;
             this.withSystemPolicy = request.withSystemPolicy;
         } 
 
         /**
-         * <p>The attachment point ID.</p>
+         * <p>The ID of the mount point.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cq7l5s5lhtgi6qasrdc0</p>
@@ -141,10 +169,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The type of attachment point supported by the policy.</p>
+         * <p>The type of mount points supported by the policy. Valid values:</p>
          * <ul>
          * <li>HttpApi: HTTP API.</li>
-         * <li>Operation: Operation of an HTTP API.</li>
+         * <li>Operation: The operation of the HTTP API.</li>
          * <li>GatewayRoute: Gateway route.</li>
          * <li>GatewayService: Gateway service.</li>
          * <li>GatewayServicePort: Gateway service port.</li>
@@ -162,7 +190,7 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The environment ID.</p>
+         * <p>The ID of the environment.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cq7l5s5lhtgi6qasrdc0</p>
@@ -174,7 +202,7 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The gateway ID.</p>
+         * <p>The ID of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2fm65lhtgm9nrrl7ag</p>
@@ -186,7 +214,31 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return attachment information.</p>
+         * <p>The page number. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("pageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to return mount information.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

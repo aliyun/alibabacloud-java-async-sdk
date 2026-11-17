@@ -299,7 +299,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>The API base path.</p>
+         * <p>The base path of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1</p>
@@ -310,7 +310,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>The API operation deployment status.</p>
+         * <p>The publish status of the API operation.</p>
          */
         public Builder deployCntMap(java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap) {
             this.deployCntMap = deployCntMap;
@@ -326,10 +326,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>The API description.</p>
+         * <p>The description of the API.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test-specific API</p>
+         * <p>Test API</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -367,7 +367,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>The HTTP API ID.</p>
+         * <p>The ID of the HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
@@ -378,7 +378,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>The HTTP ingress API information.</p>
+         * <p>The information of the HTTP Ingress API.</p>
          */
         public Builder ingressInfo(IngressInfo ingressInfo) {
             this.ingressInfo = ingressInfo;
@@ -438,7 +438,7 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * <p>The API versioning information.</p>
+         * <p>The versioning information of the API.</p>
          */
         public Builder versionInfo(HttpApiVersionInfo versionInfo) {
             this.versionInfo = versionInfo;
@@ -698,7 +698,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The match conditions.</p>
+             * <p>The match condition.</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -1105,7 +1105,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The API deployment status in the current environment.</p>
+             * <p>The deployment status of the API in the current environment.</p>
              * 
              * <strong>example:</strong>
              * <p>Deployed</p>
@@ -1146,7 +1146,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The existing service configurations.</p>
+             * <p>The existing service configuration.</p>
              */
             public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
                 this.serviceConfigs = serviceConfigs;
@@ -1154,7 +1154,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The list of default domain names for the environment.</p>
+             * <p>The default domain names for the environment.</p>
              */
             public Builder subDomains(java.util.List<SubDomains> subDomains) {
                 this.subDomains = subDomains;
@@ -1395,7 +1395,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The ingress class to listen on.</p>
+             * <p>The Ingress class to listen on.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -1414,7 +1414,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to update the address in the ingress status.</p>
+             * <p>Specifies whether to update the IP address in the Ingress status.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1436,7 +1436,7 @@ public class HttpApiApiInfo extends TeaModel {
             }
 
             /**
-             * <p>The watched namespace.</p>
+             * <p>The namespace to watch.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

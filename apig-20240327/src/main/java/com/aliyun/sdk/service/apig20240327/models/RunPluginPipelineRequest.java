@@ -59,7 +59,7 @@ public class RunPluginPipelineRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. The system queries the t_plugin_workspace table based on the current user and workspaceId. If no record is found, the ErrRecordNotFound error is returned.</p>
+         * <p>The workspace ID. The system queries the t_plugin_workspace table based on the current user and the workspace ID. If no record is found, the ErrRecordNotFound error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>plw-xxxxxxxx</p>

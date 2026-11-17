@@ -102,7 +102,7 @@ public class DetachAndDeletePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which is used to trace the API call chain.</p>
+         * <p>The request ID, used to trace the API call link.</p>
          * 
          * <strong>example:</strong>
          * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>

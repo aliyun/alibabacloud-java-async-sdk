@@ -59,7 +59,7 @@ public class DeleteConsumerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The consumer group ID.</p>
+         * <p>The ID of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>

@@ -59,7 +59,7 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response. Valid values: zh, en.</p>
+         * <p>The language of the response. Valid values: zh and en.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

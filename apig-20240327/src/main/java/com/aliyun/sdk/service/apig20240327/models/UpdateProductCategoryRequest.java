@@ -103,7 +103,7 @@ public class UpdateProductCategoryRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the product category to update. You can obtain this ID from the data.categoryId field in the response of the CreateProductCategory or GetProductCategory operation, or from the categoryId field of an item returned by the ListProductCategories operation.</p>
+         * <p>The ID of the product category, which specifies the product category to update. You can obtain the ID from the data.categoryId field in the CreateProductCategory response, the data.categoryId field in the GetProductCategory response, or the categoryId field of a list item in the ListProductCategories response.</p>
          * 
          * <strong>example:</strong>
          * <p>category-xxxxxxxx</p>
@@ -118,7 +118,7 @@ public class UpdateProductCategoryRequest extends Request {
          * <p>The description of the product category. The description can be up to 500 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product category for AI-related capabilities</p>
+         * <p>Product category that includes AI-related capabilities</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -127,7 +127,7 @@ public class UpdateProductCategoryRequest extends Request {
         }
 
         /**
-         * <p>The icon of the product category. It consists of two fields: icon type (type) and icon information (value).</p>
+         * <p>The icon of the product category, which consists of two fields: type and value.</p>
          */
         public Builder icon(HiMarketIcon icon) {
             this.putBodyParameter("icon", icon);

@@ -139,7 +139,7 @@ public class ListPortalsRequest extends Request {
         }
 
         /**
-         * <p>The cursor token for querying the next page.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-xxxxxxxx</p>

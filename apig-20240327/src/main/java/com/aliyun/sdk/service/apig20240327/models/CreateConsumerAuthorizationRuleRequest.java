@@ -150,11 +150,7 @@ public class CreateConsumerAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The expiration mode. Valid values:</p>
-         * <ul>
-         * <li>LongTerm: Long-term.</li>
-         * <li>ShortTerm: Short-term.</li>
-         * </ul>
+         * <p>The expiration mode. Valid values: LongTerm, ShortTerm.</p>
          * 
          * <strong>example:</strong>
          * <p>LongTerm</p>

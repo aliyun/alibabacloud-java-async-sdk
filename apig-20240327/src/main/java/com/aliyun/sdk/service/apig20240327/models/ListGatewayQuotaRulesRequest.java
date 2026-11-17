@@ -41,6 +41,14 @@ public class ListGatewayQuotaRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ruleStatus")
+    private String ruleStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("subjectNameLike")
+    private String subjectNameLike;
+
     private ListGatewayQuotaRulesRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
@@ -49,6 +57,8 @@ public class ListGatewayQuotaRulesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.ruleStatus = builder.ruleStatus;
+        this.subjectNameLike = builder.subjectNameLike;
     }
 
     public static Builder builder() {
@@ -106,6 +116,20 @@ public class ListGatewayQuotaRulesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return ruleStatus
+     */
+    public String getRuleStatus() {
+        return this.ruleStatus;
+    }
+
+    /**
+     * @return subjectNameLike
+     */
+    public String getSubjectNameLike() {
+        return this.subjectNameLike;
+    }
+
     public static final class Builder extends Request.Builder<ListGatewayQuotaRulesRequest, Builder> {
         private String gatewayId; 
         private String keyword; 
@@ -113,6 +137,8 @@ public class ListGatewayQuotaRulesRequest extends Request {
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String ruleStatus; 
+        private String subjectNameLike; 
 
         private Builder() {
             super();
@@ -126,6 +152,8 @@ public class ListGatewayQuotaRulesRequest extends Request {
             this.nextToken = request.nextToken;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.ruleStatus = request.ruleStatus;
+            this.subjectNameLike = request.subjectNameLike;
         } 
 
         /**
@@ -141,7 +169,7 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * <p>The keyword in the rule name for fuzzy match.</p>
+         * <p>The keyword in the rule name used for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>daily</p>
@@ -153,7 +181,7 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return in a single request. This parameter is not supported.</p>
+         * <p>The maximum number of entries to return in a single call. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -189,7 +217,7 @@ public class ListGatewayQuotaRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -197,6 +225,30 @@ public class ListGatewayQuotaRulesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The status of the rule. Valid values: enabled and disabled. If you do not specify this parameter, all rules are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        public Builder ruleStatus(String ruleStatus) {
+            this.putQueryParameter("ruleStatus", ruleStatus);
+            this.ruleStatus = ruleStatus;
+            return this;
+        }
+
+        /**
+         * <p>The keyword in the name of the associated subject for fuzzy matching based on the consumer or consumer group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alpha</p>
+         */
+        public Builder subjectNameLike(String subjectNameLike) {
+            this.putQueryParameter("subjectNameLike", subjectNameLike);
+            this.subjectNameLike = subjectNameLike;
             return this;
         }
 

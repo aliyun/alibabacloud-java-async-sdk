@@ -459,7 +459,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action to be performed after the dry run.</p>
+             * <p>The action to perform after the dry run.</p>
              * <ul>
              * <li>Create: Create.</li>
              * <li>Update: Update.</li>
@@ -570,7 +570,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The action to be performed after the dry run.</p>
+             * <p>The action to perform after the dry run.</p>
              * <ul>
              * <li>Create: Create.</li>
              * <li>Update: Update.</li>
@@ -937,7 +937,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The warning messages. If the warning messages are not empty, some operations or data structures may fail to be imported.</p>
+             * <p>The warning messages. If the warning messages are not empty, some operations or data structures may fail to import.</p>
              */
             public Builder warningMessages(java.util.List<String> warningMessages) {
                 this.warningMessages = warningMessages;
@@ -1017,7 +1017,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dry run results.</p>
+             * <p>The dry run result.</p>
              */
             public Builder dryRunInfo(DryRunInfo dryRunInfo) {
                 this.dryRunInfo = dryRunInfo;

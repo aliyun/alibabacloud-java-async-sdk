@@ -59,7 +59,7 @@ public class GetGatewayElasticPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The gateway ID. The gateway must exist.</p>
+         * <p>The ID of the gateway. The gateway must exist.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-xxxx</p>

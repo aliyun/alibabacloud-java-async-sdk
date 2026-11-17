@@ -101,7 +101,7 @@ public class ListConsumerAuthorizationRulesRequest extends Request {
         } 
 
         /**
-         * <p>The consumer ID.</p>
+         * <p>The ID of the consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-csgdi45lhtggrjcpriug</p>

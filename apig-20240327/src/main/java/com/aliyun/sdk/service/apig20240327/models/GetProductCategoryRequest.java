@@ -59,7 +59,7 @@ public class GetProductCategoryRequest extends Request {
         } 
 
         /**
-         * <p>The product category ID.</p>
+         * <p>The ID of the product category to query.</p>
          * 
          * <strong>example:</strong>
          * <p>category-xxxxxxxx</p>

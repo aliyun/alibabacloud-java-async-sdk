@@ -80,7 +80,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response status code. Ok is returned if the request is successful.</p>
+         * <p>The response status code. Returns Ok if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>

@@ -205,7 +205,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The plug-in name.</p>
+             * <p>The name of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>oauth</p>
@@ -216,7 +216,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in type ID.</p>
+             * <p>The ID of the plugin class.</p>
              * 
              * <strong>example:</strong>
              * <p>pls-xxxxxxxx</p>
@@ -227,7 +227,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plug-in ID.</p>
+             * <p>The ID of the plugin.</p>
              * 
              * <strong>example:</strong>
              * <p>pl-d4ijk56m1hkhxxxxxxxx</p>
@@ -308,7 +308,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service ID.</p>
+             * <p>The ID of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-cvgbtcmm1hkmxxxxxxxx</p>
@@ -378,7 +378,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The consumer ID.</p>
+             * <p>The ID of the consumer.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-d0iltnem1hkhxxxxxxxx</p>
@@ -389,7 +389,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer name.</p>
+             * <p>The name of the consumer.</p>
              * 
              * <strong>example:</strong>
              * <p>myconsumer</p>
@@ -472,7 +472,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>HTTP API ID。</p>
+             * <p>The HTTP API ID.</p>
              * 
              * <strong>example:</strong>
              * <p>api-d2vv43em201hxxxxxxxx</p>
@@ -483,7 +483,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route name.</p>
+             * <p>The name of the route.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp</p>
@@ -494,7 +494,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The route ID.</p>
+             * <p>The ID of the route.</p>
              * 
              * <strong>example:</strong>
              * <p>hr-cv0i5oum1hkhxxxxxxxx</p>
@@ -616,7 +616,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The plug-in information that references the current secret.</p>
+             * <p>The information about the plugin that references the current secret.</p>
              */
             public Builder pluginConfig(PluginConfig pluginConfig) {
                 this.pluginConfig = pluginConfig;
@@ -624,7 +624,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service information that references the current secret.</p>
+             * <p>The information about the service that references the current secret.</p>
              */
             public Builder serviceConfig(ServiceConfig serviceConfig) {
                 this.serviceConfig = serviceConfig;
@@ -632,7 +632,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumer information that references the current secret.</p>
+             * <p>The information about the consumer that references the current secret.</p>
              */
             public Builder consumerConfig(ConsumerConfig consumerConfig) {
                 this.consumerConfig = consumerConfig;
@@ -651,7 +651,7 @@ public class ListSecretReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP server information that references the current secret.</p>
+             * <p>The information about the MCP service that references the current secret.</p>
              */
             public Builder mcpServerConfig(McpServerConfig mcpServerConfig) {
                 this.mcpServerConfig = mcpServerConfig;

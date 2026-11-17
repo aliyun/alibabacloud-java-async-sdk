@@ -305,11 +305,15 @@ public class ApiKeyIdentityConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apikey")
         private String apikey;
 
+        @com.aliyun.core.annotation.NameInMap("createTimestamp")
+        private Long createTimestamp;
+
         @com.aliyun.core.annotation.NameInMap("generateMode")
         private String generateMode;
 
         private Credentials(Builder builder) {
             this.apikey = builder.apikey;
+            this.createTimestamp = builder.createTimestamp;
             this.generateMode = builder.generateMode;
         }
 
@@ -329,6 +333,13 @@ public class ApiKeyIdentityConfig extends TeaModel {
         }
 
         /**
+         * @return createTimestamp
+         */
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        /**
          * @return generateMode
          */
         public String getGenerateMode() {
@@ -337,6 +348,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
 
         public static final class Builder {
             private String apikey; 
+            private Long createTimestamp; 
             private String generateMode; 
 
             private Builder() {
@@ -344,6 +356,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
 
             private Builder(Credentials model) {
                 this.apikey = model.apikey;
+                this.createTimestamp = model.createTimestamp;
                 this.generateMode = model.generateMode;
             } 
 
@@ -355,6 +368,17 @@ public class ApiKeyIdentityConfig extends TeaModel {
              */
             public Builder apikey(String apikey) {
                 this.apikey = apikey;
+                return this;
+            }
+
+            /**
+             * <p>The creation time of this logical key saved by the server, in Unix milliseconds, for read-only purposes. When updated, the original key retains the saved time, and client input is not used as the time basis. A missing or null history indicates an unknown time, and the consumer creation time must not be used as a substitute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1792627200000</p>
+             */
+            public Builder createTimestamp(Long createTimestamp) {
+                this.createTimestamp = createTimestamp;
                 return this;
             }
 

@@ -101,7 +101,7 @@ public class ListConsumerGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The gateway type. Valid values: API or AI.</p>
+         * <p>The gateway type. Valid values: API and AI. Note: This parameter is actually required. If it is not provided, the API returns InvalidParameter.IsEmpty(400) &quot;Parameter gatewayType should not be empty.&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -137,7 +137,7 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

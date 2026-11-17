@@ -192,7 +192,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP API ID.</p>
+             * <p>The ID of the HTTP API.</p>
              * 
              * <strong>example:</strong>
              * <p>api-xxx</p>

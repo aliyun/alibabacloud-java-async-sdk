@@ -139,7 +139,7 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether version management is enabled.</p>
+         * <p>Specifies whether version management is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -150,7 +150,7 @@ public class HttpApiInfoByName extends TeaModel {
         }
 
         /**
-         * <p>The version information of the versioned APIs.</p>
+         * <p>The versioned API version information.</p>
          */
         public Builder versionedHttpApis(java.util.List<HttpApiApiInfo> versionedHttpApis) {
             this.versionedHttpApis = versionedHttpApis;

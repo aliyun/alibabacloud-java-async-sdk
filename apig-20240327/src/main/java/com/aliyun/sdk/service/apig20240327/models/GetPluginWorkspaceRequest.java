@@ -59,7 +59,7 @@ public class GetPluginWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. This parameter is included in the request path and must be provided when you invoke this operation. If this parameter is omitted, a valid request URL cannot be constructed.</p>
+         * <p>The workspace ID. This parameter is in the request path and must be provided when you call the API. A valid request URL cannot be constructed if this parameter is omitted.</p>
          * 
          * <strong>example:</strong>
          * <p>plw-xxxxxxxx</p>

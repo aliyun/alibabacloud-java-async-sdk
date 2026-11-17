@@ -50,6 +50,10 @@ public class UpdateMcpServerRequest extends Request {
     private java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instructions")
+    private String instructions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("match")
     private HttpRouteMatch match;
 
@@ -81,6 +85,7 @@ public class UpdateMcpServerRequest extends Request {
         this.domainIds = builder.domainIds;
         this.exposedUriPath = builder.exposedUriPath;
         this.grayMcpServerConfigs = builder.grayMcpServerConfigs;
+        this.instructions = builder.instructions;
         this.match = builder.match;
         this.mcpServerConfig = builder.mcpServerConfig;
         this.mcpStatisticsEnable = builder.mcpStatisticsEnable;
@@ -158,6 +163,13 @@ public class UpdateMcpServerRequest extends Request {
     }
 
     /**
+     * @return instructions
+     */
+    public String getInstructions() {
+        return this.instructions;
+    }
+
+    /**
      * @return match
      */
     public HttpRouteMatch getMatch() {
@@ -201,6 +213,7 @@ public class UpdateMcpServerRequest extends Request {
         private java.util.List<String> domainIds; 
         private String exposedUriPath; 
         private java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs; 
+        private String instructions; 
         private HttpRouteMatch match; 
         private McpServerConfig mcpServerConfig; 
         private Boolean mcpStatisticsEnable; 
@@ -221,6 +234,7 @@ public class UpdateMcpServerRequest extends Request {
             this.domainIds = request.domainIds;
             this.exposedUriPath = request.exposedUriPath;
             this.grayMcpServerConfigs = request.grayMcpServerConfigs;
+            this.instructions = request.instructions;
             this.match = request.match;
             this.mcpServerConfig = request.mcpServerConfig;
             this.mcpStatisticsEnable = request.mcpStatisticsEnable;
@@ -261,11 +275,11 @@ public class UpdateMcpServerRequest extends Request {
         /**
          * <p>The creation source type. Valid values:</p>
          * <ul>
-         * <li>ApiGatewayHttpToMCP: API gateway-hosted HTTP-to-MCP.</li>
-         * <li>ApiGatewayProxyMcpHosting: API gateway-hosted MCP direct proxy.</li>
-         * <li>ApiGatewayAssembly: API gateway MCP assembly.</li>
-         * <li>NacosHttpToMCP: API gateway-hosted Nacos-synchronized HTTP-to-MCP.</li>
-         * <li>NacosMcpHosting: API gateway-hosted Nacos-synchronized MCP direct proxy.</li>
+         * <li>ApiGatewayHttpToMCP: API Gateway-managed HTTP-to-MCP</li>
+         * <li>ApiGatewayProxyMcpHosting: API Gateway-managed direct MCP proxy</li>
+         * <li>ApiGatewayAssembly: API Gateway MCP assembly</li>
+         * <li>NacosHttpToMCP: API Gateway-managed Nacos-synchronized HTTP-to-MCP</li>
+         * <li>NacosMcpHosting: API Gateway-managed Nacos-synchronized direct MCP proxy</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,11 +325,23 @@ public class UpdateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The list of canary MCP server route configurations.</p>
+         * <p>The list of canary release MCP server route configurations.</p>
          */
         public Builder grayMcpServerConfigs(java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs) {
             this.putBodyParameter("grayMcpServerConfigs", grayMcpServerConfigs);
             this.grayMcpServerConfigs = grayMcpServerConfigs;
+            return this;
+        }
+
+        /**
+         * <p>The MCP service description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Used to query order status. An order number is required for the query</p>
+         */
+        public Builder instructions(String instructions) {
+            this.putBodyParameter("instructions", instructions);
+            this.instructions = instructions;
             return this;
         }
 
@@ -352,10 +378,10 @@ public class UpdateMcpServerRequest extends Request {
         /**
          * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li>HTTP: HTTP.</li>
-         * <li>HTTPS: HTTPS.</li>
-         * <li>SSE: Server-Sent Events.</li>
-         * <li>StreamableHTTP: Streaming HTTP.</li>
+         * <li>HTTP: HTTP</li>
+         * <li>HTTPS: HTTPS</li>
+         * <li>SSE: Server-Sent Events</li>
+         * <li>StreamableHTTP: Streamable HTTP</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -593,7 +619,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The service protocol. Valid values:</p>
+             * <p>The protocol. Valid values:</p>
              * <ul>
              * <li>TCP.</li>
              * <li>HTTP.</li>
@@ -829,7 +855,7 @@ public class UpdateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The service protocol.</p>
+             * <p>The protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -1109,7 +1135,7 @@ public class UpdateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>The MCP server configurations. This parameter is mutually exclusive with the swaggerConfig parameter.</p>
+             * <p>The MCP server configurations. This parameter is mutually exclusive with swaggerConfig.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-server-spec-yaml</p>

@@ -146,7 +146,7 @@ public class UpdateAiModelCardRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the model card to update. This ID is returned by the model creation operation and is in a format that starts with mc-.</p>
+         * <p>The ID of the model card to update. This ID is returned by the model creation card operation, and the format starts with mc-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The list of invocation paths supported by the model. Each item must include both path and type. The entire list is overwritten during an update.</p>
+         * <p>The list of invocation paths supported by the model. Each item must contain both path and type. During an update, the entire list is overwritten.</p>
          */
         public Builder availablePaths(java.util.List<AvailablePaths> availablePaths) {
             this.putBodyParameter("availablePaths", availablePaths);
@@ -168,7 +168,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The credit billing information of the model. Only the fixed type is supported. The unit is Credits per million tokens. If not specified, all cost values default to 0.</p>
+         * <p>The credit billing information of the model. Currently, only the fixed type is supported, and the fee unit is Credits per million tokens. If not specified, all fees default to 0.</p>
          */
         public Builder credit(Credit credit) {
             this.putBodyParameter("credit", credit);
@@ -177,7 +177,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The model capability switches. Keys must be model capability names supported by the API gateway. Values are Boolean.</p>
+         * <p>The model capability switches. The keys must be model capability names supported by the API gateway, and the values are Boolean values.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true,&quot;promptCaching&quot;:false}</p>
@@ -189,7 +189,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The token limits and input/output modality information of the model.</p>
+         * <p>The token limits and input and output modality information of the model.</p>
          */
         public Builder meta(Meta meta) {
             this.putBodyParameter("meta", meta);
@@ -198,7 +198,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The model name. The name must be unique within the same AI gateway instance and the same model provider. Maximum length: 256 characters.</p>
+         * <p>The model name. It must be unique within the same AI gateway instance and model provider, and be up to 256 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class UpdateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The model provider identifier. The value must reference an existing model provider in the target AI gateway instance. Maximum length: 128 characters.</p>
+         * <p>The model provider identifier. It must reference an existing model provider in the target AI gateway instance and be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class UpdateAiModelCardRequest extends Request {
             } 
 
             /**
-             * <p>The model invocation path. Maximum length: 2048 characters.</p>
+             * <p>The model invocation path, which is up to 2,048 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>/v1/chat/completions</p>
@@ -294,7 +294,7 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of the path. Maximum length: 64 characters.</p>
+             * <p>The protocol type corresponding to the path, which is up to 64 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAICompatible</p>
@@ -390,7 +390,7 @@ public class UpdateAiModelCardRequest extends Request {
             } 
 
             /**
-             * <p>The cost of cache-hit tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+             * <p>The cache hit token fee, in Credits per million tokens. The value must be greater than or equal to 0. If not specified, the default value is 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -401,7 +401,7 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The cost of input tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+             * <p>The input token fee, in Credits per million tokens. The value must be greater than or equal to 0. If not specified, the default value is 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1.5</p>
@@ -412,7 +412,7 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The cost of output tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+             * <p>The output token fee, in Credits per million tokens. The value must be greater than or equal to 0. If not specified, the default value is 0.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -423,7 +423,7 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The billing type. Only fixed is supported. Default value: fixed.</p>
+             * <p>The billing type. Currently, only fixed is supported. If not specified, the default value is fixed.</p>
              * 
              * <strong>example:</strong>
              * <p>fixed</p>
@@ -565,7 +565,7 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The list of input modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</p>
+             * <p>The list of input modalities supported by the model. It can contain up to 16 items, and each item cannot be empty.</p>
              */
             public Builder supportedInputModalities(java.util.List<String> supportedInputModalities) {
                 this.supportedInputModalities = supportedInputModalities;
@@ -573,7 +573,7 @@ public class UpdateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The list of output modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</p>
+             * <p>The list of output modalities supported by the model. It can contain up to 16 items, and each item cannot be empty.</p>
              */
             public Builder supportedOutputModalities(java.util.List<String> supportedOutputModalities) {
                 this.supportedOutputModalities = supportedOutputModalities;

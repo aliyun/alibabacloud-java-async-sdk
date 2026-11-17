@@ -182,7 +182,7 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * <p>The content mode. This parameter is specific to Quark.</p>
+         * <p>Quark-specific: the content mode.</p>
          * 
          * <strong>example:</strong>
          * <p>summary</p>
@@ -215,7 +215,7 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * <p>The industry filter. This parameter is specific to Quark.</p>
+         * <p>Quark-specific: the industry filter.</p>
          * 
          * <strong>example:</strong>
          * <p>Internet</p>
@@ -227,6 +227,9 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
 
         /**
          * <p>The search engine-specific parameters in key-value pair format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;market&quot;:&quot;zh-CN&quot;}</p>
          */
         public Builder optionArgs(java.util.Map<String, String> optionArgs) {
             this.optionArgs = optionArgs;
@@ -245,7 +248,7 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * <p>The time range filter. This parameter is specific to Quark.</p>
+         * <p>Quark-specific: the time range filter.</p>
          * 
          * <strong>example:</strong>
          * <p>7d</p>
@@ -256,7 +259,7 @@ public class AiNetworkConfigSearchEngine extends TeaModel {
         }
 
         /**
-         * <p>The timeout period for the API call, in milliseconds.</p>
+         * <p>The API call timeout in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>

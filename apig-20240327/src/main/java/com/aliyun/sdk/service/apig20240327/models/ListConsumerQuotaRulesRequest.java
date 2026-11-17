@@ -37,6 +37,10 @@ public class ListConsumerQuotaRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ruleStatus")
+    private String ruleStatus;
+
     private ListConsumerQuotaRulesRequest(Builder builder) {
         super(builder);
         this.consumerId = builder.consumerId;
@@ -44,6 +48,7 @@ public class ListConsumerQuotaRulesRequest extends Request {
         this.keyword = builder.keyword;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.ruleStatus = builder.ruleStatus;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class ListConsumerQuotaRulesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return ruleStatus
+     */
+    public String getRuleStatus() {
+        return this.ruleStatus;
+    }
+
     public static final class Builder extends Request.Builder<ListConsumerQuotaRulesRequest, Builder> {
         private String consumerId; 
         private String gatewayId; 
         private String keyword; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String ruleStatus; 
 
         private Builder() {
             super();
@@ -112,10 +125,11 @@ public class ListConsumerQuotaRulesRequest extends Request {
             this.keyword = request.keyword;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.ruleStatus = request.ruleStatus;
         } 
 
         /**
-         * <p>The consumer ID. This parameter is a path parameter and is required. If it is not provided, the SDK cannot construct the request URI. You can obtain the ID by calling the ListConsumers API to query existing consumers, or by calling the CreateConsumer API to create a new consumer.</p>
+         * <p>The consumer ID. This parameter is a path parameter and is required. If it is not provided, the SDK cannot build the request URI. You can obtain the ID by calling the ListConsumers API operation to query existing consumers, or by calling the CreateConsumer API operation to create a consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-d8kkaium1hks607xxxxx</p>
@@ -139,7 +153,7 @@ public class ListConsumerQuotaRulesRequest extends Request {
         }
 
         /**
-         * <p>The keyword in the rule name for fuzzy match.</p>
+         * <p>The keyword used to perform a fuzzy match on the rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>daily</p>
@@ -163,7 +177,7 @@ public class ListConsumerQuotaRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of items per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,6 +185,18 @@ public class ListConsumerQuotaRulesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The rule status. This parameter is optional. Valid values: enabled and disabled. If this parameter is not specified, all rules are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        public Builder ruleStatus(String ruleStatus) {
+            this.putQueryParameter("ruleStatus", ruleStatus);
+            this.ruleStatus = ruleStatus;
             return this;
         }
 

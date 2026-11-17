@@ -203,7 +203,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway type. Valid values: API or AI.</p>
+             * <p>The gateway type. Valid values: API and AI.</p>
              * 
              * <strong>example:</strong>
              * <p>API</p>

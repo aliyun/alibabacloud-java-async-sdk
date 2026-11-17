@@ -170,7 +170,7 @@ public class CreateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The model capability switches. The key must be the name of a model capability supported by the API gateway, and the value must be a Boolean value.</p>
+         * <p>The model capability switches. The key must be the name of a model capability supported by API Gateway, and the value must be a Boolean value.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true,&quot;promptCaching&quot;:false}</p>
@@ -207,7 +207,7 @@ public class CreateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The name of the model. The model name must be unique within the same AI gateway instance and model provider, and can be up to 256 characters in length.</p>
+         * <p>The name of the model. The model name must be unique within the same AI gateway instance and the same model provider, and be up to 256 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class CreateAiModelCardRequest extends Request {
         }
 
         /**
-         * <p>The identifier of the model provider. It must reference an existing model provider in the target AI gateway instance and can be up to 128 characters in length.</p>
+         * <p>The identifier of the model provider. It must reference an existing model provider in the target AI gateway instance and be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class CreateAiModelCardRequest extends Request {
             } 
 
             /**
-             * <p>The path. The model call path, which can be up to 2,048 characters in length.</p>
+             * <p>The path. The model call path, which is up to 2,048 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>/v1/chat/completions</p>
@@ -303,7 +303,7 @@ public class CreateAiModelCardRequest extends Request {
             }
 
             /**
-             * <p>The protocol type corresponding to the path, which can be up to 64 characters in length.</p>
+             * <p>The protocol type corresponding to the path, which is up to 64 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>OpenAICompatible</p>

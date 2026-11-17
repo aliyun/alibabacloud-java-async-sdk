@@ -88,7 +88,7 @@ public class AiPluginStatus extends TeaModel {
         }
 
         /**
-         * <p>The plug-in instance ID.</p>
+         * <p>The ID of the plug-in instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-xxx</p>
@@ -99,7 +99,7 @@ public class AiPluginStatus extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the backend service that the plugin depends on is healthy.</p>
+         * <p>Indicates whether the backend service on which the plug-in depends is healthy.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

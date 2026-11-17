@@ -221,7 +221,7 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
              * <p>The security group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product Center Cluster Security Group</p>
+             * <p>Product center cluster security group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -242,8 +242,8 @@ public class ListGatewayAuthorizableSecurityGroupsResponseBody extends TeaModel 
             /**
              * <p>The security group type. Valid values:</p>
              * <ul>
-             * <li>Normal: Custom security group.</li>
-             * <li>Enterprise: Advanced security group.</li>
+             * <li>Normal: basic security group.</li>
+             * <li>Enterprise: advanced security group.</li>
              * </ul>
              * 
              * <strong>example:</strong>

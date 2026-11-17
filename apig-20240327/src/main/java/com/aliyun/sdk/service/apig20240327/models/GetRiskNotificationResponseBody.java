@@ -216,7 +216,7 @@ public class GetRiskNotificationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the notification for the risk item is muted.</p>
+             * <p>Indicates whether notifications for the risk item are muted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -227,7 +227,7 @@ public class GetRiskNotificationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the risk item.</p>
+             * <p>The risk item code.</p>
              * 
              * <strong>example:</strong>
              * <p>GW_VERSION_EXPIRED</p>

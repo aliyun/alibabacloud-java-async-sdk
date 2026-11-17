@@ -203,7 +203,7 @@ public class CreateMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MCP server name.</p>
+             * <p>The name of the MCP server.</p>
              * 
              * <strong>example:</strong>
              * <p>test-mcp</p>

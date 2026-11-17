@@ -43,7 +43,12 @@ public class UpdateHttpApiRouteRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("environmentId")
+    @Deprecated
     private String environmentId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("match")
@@ -66,6 +71,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         this.dfpConfig = builder.dfpConfig;
         this.domainIds = builder.domainIds;
         this.environmentId = builder.environmentId;
+        this.gatewayId = builder.gatewayId;
         this.match = builder.match;
         this.mcpRouteConfig = builder.mcpRouteConfig;
         this.policyConfigs = builder.policyConfigs;
@@ -134,6 +140,13 @@ public class UpdateHttpApiRouteRequest extends Request {
     }
 
     /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
+    }
+
+    /**
      * @return match
      */
     public HttpRouteMatch getMatch() {
@@ -162,6 +175,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         private DfpConfig dfpConfig; 
         private java.util.List<String> domainIds; 
         private String environmentId; 
+        private String gatewayId; 
         private HttpRouteMatch match; 
         private McpRouteConfig mcpRouteConfig; 
         private java.util.List<HttpApiPolicyConfigs> policyConfigs; 
@@ -179,6 +193,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             this.dfpConfig = request.dfpConfig;
             this.domainIds = request.domainIds;
             this.environmentId = request.environmentId;
+            this.gatewayId = request.gatewayId;
             this.match = request.match;
             this.mcpRouteConfig = request.mcpRouteConfig;
             this.policyConfigs = request.policyConfigs;
@@ -230,7 +245,7 @@ public class UpdateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The current ExtProc service selection for fixed DFP routes. You can only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</p>
+         * <p>The ExtProc service selection for fixed DFP routes. You can only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</p>
          */
         public Builder dfpConfig(DfpConfig dfpConfig) {
             this.putBodyParameter("dfpConfig", dfpConfig);
@@ -256,6 +271,18 @@ public class UpdateHttpApiRouteRequest extends Request {
         public Builder environmentId(String environmentId) {
             this.putBodyParameter("environmentId", environmentId);
             this.environmentId = environmentId;
+            return this;
+        }
+
+        /**
+         * <p>The gateway ID. This parameter is used to replace the deprecated environment ID for verifying the gateway to which the route belongs. If the gateway ID does not match the gateway to which the route record belongs, the request is rejected. If the environment ID is omitted, the route ownership remains unchanged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-xxx</p>
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.putBodyParameter("gatewayId", gatewayId);
+            this.gatewayId = gatewayId;
             return this;
         }
 
@@ -450,7 +477,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>The service group. Used in HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service group. Used for HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -461,7 +488,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The HTTP-to-Dubbo protocol conversion configuration. This configuration is only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+             * <p>The HTTP-to-Dubbo protocol conversion configuration. Only SingleService MSE_NACOS DUBBO backends of HTTP APIs are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -472,7 +499,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The name of the target model. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
+             * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen-plus</p>
@@ -483,7 +510,7 @@ public class UpdateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</p>
+             * <p>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>public</p>
@@ -507,8 +534,8 @@ public class UpdateHttpApiRouteRequest extends Request {
             /**
              * <p>The service protocol. Valid values:</p>
              * <ul>
-             * <li>HTTP.</li>
-             * <li>HTTPS.</li>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
              * </ul>
              * 
              * <strong>example:</strong>

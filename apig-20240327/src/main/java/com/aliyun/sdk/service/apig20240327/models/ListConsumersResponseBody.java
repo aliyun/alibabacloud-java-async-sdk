@@ -145,6 +145,87 @@ public class ListConsumersResponseBody extends TeaModel {
      *
      * <p>ListConsumersResponseBody</p>
      */
+    public static class ExpirationSummary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aboutToExpire")
+        private Long aboutToExpire;
+
+        @com.aliyun.core.annotation.NameInMap("expired")
+        private Long expired;
+
+        private ExpirationSummary(Builder builder) {
+            this.aboutToExpire = builder.aboutToExpire;
+            this.expired = builder.expired;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpirationSummary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aboutToExpire
+         */
+        public Long getAboutToExpire() {
+            return this.aboutToExpire;
+        }
+
+        /**
+         * @return expired
+         */
+        public Long getExpired() {
+            return this.expired;
+        }
+
+        public static final class Builder {
+            private Long aboutToExpire; 
+            private Long expired; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpirationSummary model) {
+                this.aboutToExpire = model.aboutToExpire;
+                this.expired = model.expired;
+            } 
+
+            /**
+             * <p>The number of unexpired consumers with a remaining validity period of no more than seven days, including those that are manually disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder aboutToExpire(Long aboutToExpire) {
+                this.aboutToExpire = aboutToExpire;
+                return this;
+            }
+
+            /**
+             * <p>The number of expired consumers, including those that are manually disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder expired(Long expired) {
+                this.expired = expired;
+                return this;
+            }
+
+            public ExpirationSummary build() {
+                return new ExpirationSummary(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListConsumersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConsumersResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumerId")
         private String consumerId;
@@ -161,6 +242,12 @@ public class ListConsumersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
+        @com.aliyun.core.annotation.NameInMap("expireAt")
+        private Long expireAt;
+
+        @com.aliyun.core.annotation.NameInMap("expireStatus")
+        private String expireStatus;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -173,6 +260,8 @@ public class ListConsumersResponseBody extends TeaModel {
             this.deployStatus = builder.deployStatus;
             this.description = builder.description;
             this.enable = builder.enable;
+            this.expireAt = builder.expireAt;
+            this.expireStatus = builder.expireStatus;
             this.name = builder.name;
             this.updateTimestamp = builder.updateTimestamp;
         }
@@ -221,6 +310,20 @@ public class ListConsumersResponseBody extends TeaModel {
         }
 
         /**
+         * @return expireAt
+         */
+        public Long getExpireAt() {
+            return this.expireAt;
+        }
+
+        /**
+         * @return expireStatus
+         */
+        public String getExpireStatus() {
+            return this.expireStatus;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -240,6 +343,8 @@ public class ListConsumersResponseBody extends TeaModel {
             private String deployStatus; 
             private String description; 
             private Boolean enable; 
+            private Long expireAt; 
+            private String expireStatus; 
             private String name; 
             private Long updateTimestamp; 
 
@@ -252,12 +357,14 @@ public class ListConsumersResponseBody extends TeaModel {
                 this.deployStatus = model.deployStatus;
                 this.description = model.description;
                 this.enable = model.enable;
+                this.expireAt = model.expireAt;
+                this.expireStatus = model.expireStatus;
                 this.name = model.name;
                 this.updateTimestamp = model.updateTimestamp;
             } 
 
             /**
-             * <p>The API consumer ID.</p>
+             * <p>The consumer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -301,7 +408,7 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the API consumer is enabled.</p>
+             * <p>Specifies whether the consumer is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -312,7 +419,29 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API consumer name.</p>
+             * <p>The expiration time of the consumer, in UTC UNIX seconds. A null value indicates that the consumer is permanently valid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1893456000</p>
+             */
+            public Builder expireAt(Long expireAt) {
+                this.expireAt = expireAt;
+                return this;
+            }
+
+            /**
+             * <p>The validity status. Valid values: Permanent, InEffect, AboutToExpire, and Expired. The status is accurate to the second. A remaining time of exactly seven days is classified as AboutToExpire, and an exact expiration time is classified as Expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InEffect</p>
+             */
+            public Builder expireStatus(String expireStatus) {
+                this.expireStatus = expireStatus;
+                return this;
+            }
+
+            /**
+             * <p>The consumer name.</p>
              * 
              * <strong>example:</strong>
              * <p>user-service</p>
@@ -347,6 +476,9 @@ public class ListConsumersResponseBody extends TeaModel {
      * <p>ListConsumersResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expirationSummary")
+        private ExpirationSummary expirationSummary;
+
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List<Items> items;
 
@@ -360,6 +492,7 @@ public class ListConsumersResponseBody extends TeaModel {
         private Integer totalSize;
 
         private Data(Builder builder) {
+            this.expirationSummary = builder.expirationSummary;
             this.items = builder.items;
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
@@ -372,6 +505,13 @@ public class ListConsumersResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return expirationSummary
+         */
+        public ExpirationSummary getExpirationSummary() {
+            return this.expirationSummary;
         }
 
         /**
@@ -403,6 +543,7 @@ public class ListConsumersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ExpirationSummary expirationSummary; 
             private java.util.List<Items> items; 
             private Integer pageNumber; 
             private Integer pageSize; 
@@ -412,6 +553,7 @@ public class ListConsumersResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.expirationSummary = model.expirationSummary;
                 this.items = model.items;
                 this.pageNumber = model.pageNumber;
                 this.pageSize = model.pageSize;
@@ -419,7 +561,15 @@ public class ListConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of API consumer information.</p>
+             * <p>The expiration reminder count for all consumers under the same account and gateway type. This count is not affected by name filters, status filters, or pagination. This field is returned only when includeExpirationSummary is set to true.</p>
+             */
+            public Builder expirationSummary(ExpirationSummary expirationSummary) {
+                this.expirationSummary = expirationSummary;
+                return this;
+            }
+
+            /**
+             * <p>The list of consumer information.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -438,7 +588,7 @@ public class ListConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

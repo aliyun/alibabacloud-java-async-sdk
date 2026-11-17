@@ -181,7 +181,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the subject, which is a consumer or a consumer group.</p>
+         * <p>The ID of the subject, which can be a consumer or a consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-d8kkaium1xxxxxxxxxxx</p>
@@ -193,7 +193,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The end time for querying detailed consumption records. The time is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the start time based on the rule period.</p>
+         * <p>The end time for querying detailed consumption records. The value is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the start time based on the rule period.</p>
          * 
          * <strong>example:</strong>
          * <p>1788425220</p>
@@ -241,7 +241,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         }
 
         /**
-         * <p>The start time for querying detailed consumption records. The time is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the end time based on the rule period.</p>
+         * <p>The start time for querying detailed consumption records. The value is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the end time based on the rule period.</p>
          * 
          * <strong>example:</strong>
          * <p>1788338820</p>

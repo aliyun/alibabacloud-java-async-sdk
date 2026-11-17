@@ -104,7 +104,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The currently active credential data.</p>
+         * <p>The active credential data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;serviceId&quot;:&quot;svc-xxxxxxxx&quot;,&quot;provider&quot;:&quot;qwen&quot;,&quot;credentialType&quot;:&quot;apiKey&quot;,&quot;configRevision&quot;:&quot;1&quot;,&quot;credential&quot;:{&quot;apiKeyGenerateMode&quot;:&quot;Custom&quot;,&quot;apiKeys&quot;:[&quot;sk-xxxxxxxx&quot;]}}</p>
@@ -338,7 +338,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API key generation mode. Valid values: Custom and Reference. Historical null values are treated as Custom.</p>
+             * <p>The API key generation mode. Valid values: Custom and Reference. Historical null values are processed as Custom.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -349,7 +349,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of Key Management Service (KMS) reference names. This parameter is returned only in Reference mode. The reference values are not returned.</p>
+             * <p>The list of KMS reference names. This parameter is returned only in Reference mode. The reference values are not returned.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;my-kms-ref&quot;]</p>
@@ -360,7 +360,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of custom API keys. This parameter is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in the original order without deduplication.</p>
+             * <p>The list of custom API keys. This parameter is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in their original order without deduplication.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;sk-xxxxxxxx&quot;,&quot;sk-yyyyyyyy&quot;]</p>
@@ -371,7 +371,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AWS access key ID for Bedrock.</p>
+             * <p>The Bedrock AWS access key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>AKIAxxxxxxxx</p>
@@ -382,7 +382,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AWS region for Bedrock.</p>
+             * <p>The region where Bedrock AWS is located.</p>
              * 
              * <strong>example:</strong>
              * <p>us-east-1</p>
@@ -393,7 +393,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AWS secret access key for Bedrock.</p>
+             * <p>The Bedrock AWS secret access key.</p>
              * 
              * <strong>example:</strong>
              * <p>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</p>
@@ -404,7 +404,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the credential. The value is pai-eas when the credential is backfilled by the PAI-EAS system.</p>
+             * <p>The source of the credential. The value is pai-eas when backfilled by the PAI-EAS system.</p>
              * 
              * <strong>example:</strong>
              * <p>pai-eas</p>
@@ -415,7 +415,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Bedrock endpoint mode. The value is runtime for historical null values.</p>
+             * <p>The Bedrock endpoint mode. Historical null values return runtime.</p>
              * 
              * <strong>example:</strong>
              * <p>runtime</p>
@@ -426,7 +426,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access key ID for Kling.</p>
+             * <p>The Kling access key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>AKxxxxxxxx</p>
@@ -437,7 +437,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The secret access key for Kling.</p>
+             * <p>The Kling secret access key.</p>
              * 
              * <strong>example:</strong>
              * <p>sk-kling-9f2c1d7e</p>
@@ -448,7 +448,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original JSON text of the Vertex service account. The text is neither parsed nor reordered.</p>
+             * <p>The raw JSON text of the Vertex service account. The text is not parsed or reordered.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;type&quot;:&quot;service_account&quot;,&quot;private_key&quot;:&quot;********&quot;}</p>
@@ -470,7 +470,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region for Vertex.</p>
+             * <p>The region where Vertex is located.</p>
              * 
              * <strong>example:</strong>
              * <p>us-central1</p>
@@ -579,7 +579,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The current configuration revision. The value is legacy for historical objects.</p>
+             * <p>The current configuration version. The value is legacy for historical objects.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -590,7 +590,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential object of the currently active type. Only the fields corresponding to the credentialType are populated.</p>
+             * <p>The credential object for the active type. Only the fields corresponding to the credentialType are populated.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;apiKeyGenerateMode&quot;:&quot;Custom&quot;,&quot;apiKeys&quot;:[&quot;sk-xxxxxxxx&quot;]}</p>
@@ -601,7 +601,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currently active credential type. Valid values: apiKey, bedrock, vertex, and kling.</p>
+             * <p>The type of the active credential. Valid values: apiKey, bedrock, vertex, and kling.</p>
              * 
              * <strong>example:</strong>
              * <p>apiKey</p>

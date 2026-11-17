@@ -129,7 +129,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends Request {
         } 
 
         /**
-         * <p>The consumer ID. The API product subscriptions for this consumer are returned.</p>
+         * <p>The ID of the consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxxxxxxxxxxx</p>
@@ -141,7 +141,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. The default value and valid values are not declared in the API definition.</p>
+         * <p>The maximum number of entries per page. The default value and valid values are not specified in the API definition.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -153,7 +153,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Pass the token returned in the previous response to retrieve the next page. Do not specify this parameter for the first request.</p>
+         * <p>The pagination token. Pass the nextToken value returned in the previous response to retrieve the next page. Do not pass this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>token-xxxxxxxx</p>
@@ -189,7 +189,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends Request {
         }
 
         /**
-         * <p>The subscription status. Filters subscriptions by status. Valid values: PENDING and APPROVED.</p>
+         * <p>The subscription status used to filter subscriptions. Valid values: PENDING and APPROVED.</p>
          * 
          * <strong>example:</strong>
          * <p>APPROVED</p>

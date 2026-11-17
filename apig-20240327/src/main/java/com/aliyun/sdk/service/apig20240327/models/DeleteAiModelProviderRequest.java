@@ -60,7 +60,7 @@ public class DeleteAiModelProviderRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the model provider to delete. This ID is returned by the model creation operation and is in a format that starts with mp-.</p>
+         * <p>The ID of the model provider to delete. This ID is returned by the model creation provider operation, and the format starts with mp-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -38,6 +38,10 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ruleStatus")
+    private String ruleStatus;
+
     private ListConsumerGroupQuotaRulesRequest(Builder builder) {
         super(builder);
         this.consumerGroupId = builder.consumerGroupId;
@@ -45,6 +49,7 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
         this.keyword = builder.keyword;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.ruleStatus = builder.ruleStatus;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return ruleStatus
+     */
+    public String getRuleStatus() {
+        return this.ruleStatus;
+    }
+
     public static final class Builder extends Request.Builder<ListConsumerGroupQuotaRulesRequest, Builder> {
         private String consumerGroupId; 
         private String gatewayId; 
         private String keyword; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String ruleStatus; 
 
         private Builder() {
             super();
@@ -113,10 +126,11 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
             this.keyword = request.keyword;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.ruleStatus = request.ruleStatus;
         } 
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The consumer group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +155,7 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
         }
 
         /**
-         * <p>The keyword for the rule name. This parameter is optional. If specified, fuzzy matching is performed on the rule name.</p>
+         * <p>The keyword for the rule name. This parameter is optional. If specified, the results are filtered by a fuzzy match on the rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>daily</p>
@@ -173,6 +187,18 @@ public class ListConsumerGroupQuotaRulesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The rule status. This parameter is optional. Valid values: enabled and disabled. If not specified, all rules are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
+        public Builder ruleStatus(String ruleStatus) {
+            this.putQueryParameter("ruleStatus", ruleStatus);
+            this.ruleStatus = ruleStatus;
             return this;
         }
 

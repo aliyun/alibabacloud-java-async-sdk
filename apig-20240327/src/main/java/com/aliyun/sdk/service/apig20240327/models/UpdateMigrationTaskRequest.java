@@ -171,7 +171,7 @@ public class UpdateMigrationTaskRequest extends Request {
         } 
 
         /**
-         * <p>The task ID (path parameter). The task must belong to the current user.</p>
+         * <p>The ID of the task. This is a path parameter and must belong to the current user.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>
@@ -183,7 +183,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The namespace of the source cluster (for SLB traffic switching).</p>
+         * <p>The namespace of the source cluster for SLB traffic switching.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -195,7 +195,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The task description. For DNS-based Engine updates, only this field is modified.</p>
+         * <p>The description of the task. When the target is Engine and the switch type is DNS, only this field can be updated.</p>
          * 
          * <strong>example:</strong>
          * <p>Migration test</p>
@@ -207,7 +207,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The SLB service name.</p>
+         * <p>The name of the SLB service.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx-ingress-lb</p>
@@ -219,7 +219,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The SLB instance ID. Required when the task is in the Initial state with SLB traffic switching. The type is determined by the prefix (lb- or nlb-).</p>
+         * <p>The ID of the SLB instance. This parameter is required when the status is advanced to Initial and the switch type is SLB. The instance type is determined by the prefix lb- or nlb-.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp1xxxx</p>
@@ -231,7 +231,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The traffic switching method. Required when advancing from the Initial state.</p>
+         * <p>The traffic switching method. This parameter is required when the status is advanced to Initial.</p>
          * 
          * <strong>example:</strong>
          * <p>SLB</p>
@@ -243,7 +243,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>Required. The update target. Determines whether to advance the task status or perform an engine operation.</p>
+         * <p>Required. The update target, which determines whether to advance the status or perform an engine operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Task</p>
@@ -255,7 +255,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The list of backend server group bindings.</p>
+         * <p>The list of backend group bindings.</p>
          */
         public Builder virtualServices(java.util.List<VirtualServices> virtualServices) {
             this.putBodyParameter("virtualServices", virtualServices);
@@ -264,7 +264,7 @@ public class UpdateMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The traffic switching weight for the legacy flow. Valid values: 0 to 100. Takes effect when the target is set to Engine.</p>
+         * <p>The traffic switching weight for the legacy process. Valid values: 0 to 100. This parameter takes effect when the target is Engine.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -361,7 +361,7 @@ public class UpdateMigrationTaskRequest extends Request {
             } 
 
             /**
-             * <p>The port. Valid values: 1 to 65535.</p>
+             * <p>The port number. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -372,7 +372,7 @@ public class UpdateMigrationTaskRequest extends Request {
             }
 
             /**
-             * <p>The protocol. Required for CLB.</p>
+             * <p>The protocol. This parameter is required for CLB.</p>
              * 
              * <strong>example:</strong>
              * <p>tcp</p>
@@ -394,7 +394,7 @@ public class UpdateMigrationTaskRequest extends Request {
             }
 
             /**
-             * <p>The group name.</p>
+             * <p>The name of the group.</p>
              * 
              * <strong>example:</strong>
              * <p>80-tcp</p>

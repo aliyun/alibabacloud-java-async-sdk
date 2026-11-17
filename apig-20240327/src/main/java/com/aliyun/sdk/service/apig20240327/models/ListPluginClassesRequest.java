@@ -199,10 +199,10 @@ public class ListPluginClassesRequest extends Request {
         } 
 
         /**
-         * <p>The plug-in alias. Fuzzy match is supported.</p>
+         * <p>The plugin alias for fuzzy search.</p>
          * 
          * <strong>example:</strong>
-         * <p>OAuth2 Authentication</p>
+         * <p>OAuth2 authentication</p>
          */
         public Builder aliasLike(String aliasLike) {
             this.putQueryParameter("aliasLike", aliasLike);
@@ -211,11 +211,11 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * <p>The inbound or outbound direction. Valid values:</p>
+         * <p>The traffic direction. Valid values:</p>
          * <ul>
-         * <li>OutBound: outbound.</li>
-         * <li>InBound: inbound.</li>
-         * <li>Both: both directions.</li>
+         * <li>OutBound: Outbound.</li>
+         * <li>InBound: Inbound.</li>
+         * <li>Both: Both.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to exclude built-in plug-ins.</p>
+         * <p>Specifies whether to exclude built-in plugins.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -264,7 +264,7 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the plug-in is installed.</p>
+         * <p>Specifies whether the plugin is installed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -276,7 +276,7 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * <p>The plug-in name. Fuzzy match is supported.</p>
+         * <p>The plugin name for fuzzy search.</p>
          * 
          * <strong>example:</strong>
          * <p>oauth</p>
@@ -312,11 +312,11 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * <p>The plug-in source. Valid values:</p>
+         * <p>The plugin source. Valid values:</p>
          * <ul>
-         * <li>HigressOfficial: Higress official.</li>
-         * <li>HigressCommunity: Higress community.</li>
-         * <li>Custom: custom.</li>
+         * <li>Higress official: HigressOfficial.</li>
+         * <li>Higress community: HigressCommunity.</li>
+         * <li>Custom: Custom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,7 +329,7 @@ public class ListPluginClassesRequest extends Request {
         }
 
         /**
-         * <p>The plug-in type.</p>
+         * <p>The plugin type.</p>
          * 
          * <strong>example:</strong>
          * <p>Auth</p>

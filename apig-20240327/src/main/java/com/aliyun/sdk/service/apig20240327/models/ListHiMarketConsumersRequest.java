@@ -143,7 +143,7 @@ public class ListHiMarketConsumersRequest extends Request {
         } 
 
         /**
-         * <p>The developer ID used to filter consumers.</p>
+         * <p>The developer ID. This parameter is used to filter consumers by developer.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-xxxxxxxx</p>
@@ -179,7 +179,7 @@ public class ListHiMarketConsumersRequest extends Request {
         }
 
         /**
-         * <p>The pagination cursor. Pass the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</p>
+         * <p>The pagination token. To retrieve the next page, pass the nextToken value returned in the previous response. Do not pass this parameter for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>token-xxxxxxxx</p>
@@ -215,7 +215,7 @@ public class ListHiMarketConsumersRequest extends Request {
         }
 
         /**
-         * <p>The portal ID used to filter consumers.</p>
+         * <p>The portal ID. This parameter is used to filter consumers by portal.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>

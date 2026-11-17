@@ -59,7 +59,7 @@ public class DeleteMigrationTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the data migration task.</p>
+         * <p>The ID of the migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxxxxxx</p>

@@ -130,7 +130,7 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * <p>The description of the policy.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a gateway timeout policy</p>

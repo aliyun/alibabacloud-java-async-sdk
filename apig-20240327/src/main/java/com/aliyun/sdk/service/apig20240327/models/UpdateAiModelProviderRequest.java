@@ -23,6 +23,10 @@ public class UpdateAiModelProviderRequest extends Request {
     private String modelProviderId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("defaultServiceId")
+    private String defaultServiceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
@@ -34,6 +38,7 @@ public class UpdateAiModelProviderRequest extends Request {
     private UpdateAiModelProviderRequest(Builder builder) {
         super(builder);
         this.modelProviderId = builder.modelProviderId;
+        this.defaultServiceId = builder.defaultServiceId;
         this.displayName = builder.displayName;
         this.serviceIds = builder.serviceIds;
     }
@@ -59,6 +64,13 @@ public class UpdateAiModelProviderRequest extends Request {
     }
 
     /**
+     * @return defaultServiceId
+     */
+    public String getDefaultServiceId() {
+        return this.defaultServiceId;
+    }
+
+    /**
      * @return displayName
      */
     public String getDisplayName() {
@@ -74,6 +86,7 @@ public class UpdateAiModelProviderRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateAiModelProviderRequest, Builder> {
         private String modelProviderId; 
+        private String defaultServiceId; 
         private String displayName; 
         private java.util.List<String> serviceIds; 
 
@@ -84,12 +97,13 @@ public class UpdateAiModelProviderRequest extends Request {
         private Builder(UpdateAiModelProviderRequest request) {
             super(request);
             this.modelProviderId = request.modelProviderId;
+            this.defaultServiceId = request.defaultServiceId;
             this.displayName = request.displayName;
             this.serviceIds = request.serviceIds;
         } 
 
         /**
-         * <p>The ID of the model provider to update. This ID is returned by the model creation provider operation and is in a format that starts with mp-.</p>
+         * <p>The ID of the model provider to update. The ID is returned by the model creation provider operation, and the format starts with mp-.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,11 +116,23 @@ public class UpdateAiModelProviderRequest extends Request {
         }
 
         /**
-         * <p>The display name of the model provider. This parameter is required. The name can be up to 128 characters in length.</p>
+         * <p>The optional default AI service ID. If not empty, it must be a service in the updated association set. Omitting this parameter retains the saved default. An explicit empty string clears the default. A non-empty value sets the default. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-d00000000000000000000</p>
+         */
+        public Builder defaultServiceId(String defaultServiceId) {
+            this.putBodyParameter("defaultServiceId", defaultServiceId);
+            this.defaultServiceId = defaultServiceId;
+            return this;
+        }
+
+        /**
+         * <p>The display name of the model provider. This parameter is required and can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Qwen Cloud / Alibaba Cloud Bailian</p>
+         * <p>Qwen Cloud / Alibaba Cloud Model Studio</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -115,7 +141,7 @@ public class UpdateAiModelProviderRequest extends Request {
         }
 
         /**
-         * <p>The complete set of AI service IDs to bind to the model provider. If this parameter is not specified, the existing bindings are retained. If an empty array is passed, all bindings are cleared. Duplicate and empty values are normalized.</p>
+         * <p>The complete set of AI service IDs to associate with the model provider. If you do not specify this parameter, the existing associations are retained. If you pass an empty array, all associations are cleared. Duplicate and empty values are normalized.</p>
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {
             this.putBodyParameter("serviceIds", serviceIds);

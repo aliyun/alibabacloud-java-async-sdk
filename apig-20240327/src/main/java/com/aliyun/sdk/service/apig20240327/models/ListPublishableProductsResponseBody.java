@@ -208,7 +208,7 @@ public class ListPublishableProductsResponseBody extends TeaModel {
              * <p>The description of the API product, which is the Description property of the Product resource.</p>
              * 
              * <strong>example:</strong>
-             * <p>An API product that provides weather query capabilities</p>
+             * <p>API product that provides weather query capabilities</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -342,7 +342,7 @@ public class ListPublishableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -353,7 +353,7 @@ public class ListPublishableProductsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

@@ -186,7 +186,7 @@ public class UpdateProductRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the API product. This parameter specifies the API product to be updated, which is the primary ID of the API product resource. This parameter is required. You can obtain the value from the data.productId field in the response of CreateProduct or the productId field of an item in the ListProducts response. This parameter uses the same /himarket/v1/products/{productId} path as GetProduct, UpdateProduct, and DeleteProduct to locate the API product.</p>
+         * <p>The ID of the API product. Specifies the API product to update, which is the primary ID of the API product resource. This parameter is required. You can obtain the value from the data.productId field in the response of the CreateProduct operation or the productId field of an item in the ListProducts response. This parameter uses the same /himarket/v1/products/{productId} path as the GetProduct, UpdateProduct, and DeleteProduct operations to locate the API product.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class UpdateProductRequest extends Request {
         }
 
         /**
-         * <p>The capability configuration of the API product. Currently, this parameter only includes the modelFeature member, which contains the model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal fields.</p>
+         * <p>The capability configuration of the API product. Currently, this configuration only includes the modelFeature member, which contains the model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal fields.</p>
          */
         public Builder feature(HiMarketProductFeature feature) {
             this.putBodyParameter("feature", feature);

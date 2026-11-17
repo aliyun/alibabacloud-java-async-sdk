@@ -116,7 +116,7 @@ public class ListRiskCheckResultsRequest extends Request {
         } 
 
         /**
-         * <p>The gateway ID. The gateway must exist. Otherwise, an error is returned.</p>
+         * <p>The ID of the gateway. The gateway must exist. Otherwise, an error is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListRiskCheckResultsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return in this request.</p>
+         * <p>The maximum number of records to return in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -153,7 +153,7 @@ public class ListRiskCheckResultsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1 (DefaultPageNumber).</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListRiskCheckResultsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10 (DefaultPageSize).</p>
+         * <p>The page size. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

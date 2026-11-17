@@ -75,7 +75,7 @@ public class CreateDeveloperRequest extends Request {
         } 
 
         /**
-         * <p>The password of the developer account. The length must be 6 to 32 characters.</p>
+         * <p>The password of the developer account. The password must be 6 to 32 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd1234</p>
@@ -87,7 +87,7 @@ public class CreateDeveloperRequest extends Request {
         }
 
         /**
-         * <p>The logon username of the developer. The length cannot exceed 64 characters.</p>
+         * <p>The logon username of the developer. The username can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>developer-demo</p>

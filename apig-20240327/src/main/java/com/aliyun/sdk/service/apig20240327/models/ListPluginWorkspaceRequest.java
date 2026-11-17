@@ -59,7 +59,7 @@ public class ListPluginWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>The gateway type used to filter workspaces. Default value: API.</p>
+         * <p>The gateway type filter. Default value: API.</p>
          * 
          * <strong>example:</strong>
          * <p>AI</p>

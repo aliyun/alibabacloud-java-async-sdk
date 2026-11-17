@@ -59,7 +59,7 @@ public class GetMigrationNamespacedServicesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the migration task. This parameter is a URL path parameter. Although the metadata marks this parameter as not required, you must provide a valid migration task ID when you call this operation. You can call the ListMigrationTasks operation to obtain the ID.</p>
+         * <p>The ID of the migration task. This parameter is a URL path parameter. Although the documentation metadata sets required to false, you must provide a valid migration task ID when you call this operation. You can obtain the ID by calling ListMigrationTasks.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxxxxxx</p>

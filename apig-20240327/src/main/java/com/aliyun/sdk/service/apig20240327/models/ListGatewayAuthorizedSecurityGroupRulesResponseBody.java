@@ -283,7 +283,7 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
             } 
 
             /**
-             * <p>The list of authorized CIDR block addresses.</p>
+             * <p>The list of authorized CIDR blocks.</p>
              */
             public Builder authCidrs(java.util.List<String> authCidrs) {
                 this.authCidrs = authCidrs;
@@ -294,7 +294,7 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
              * <p>The rule description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Security group authorized by the staging gateway of the product center</p>
+             * <p>Product Center staging gateway authorized security group</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -302,7 +302,7 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
             }
 
             /**
-             * <p>The protocol:</p>
+             * <p>The protocol. Valid values:</p>
              * <ul>
              * <li>TCP</li>
              * </ul>
@@ -341,7 +341,7 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
              * <p>The security group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product center cluster security group</p>
+             * <p>Product Center cluster security group</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -349,7 +349,7 @@ public class ListGatewayAuthorizedSecurityGroupRulesResponseBody extends TeaMode
             }
 
             /**
-             * <p>The security rule ID of the cloud-native API gateway.</p>
+             * <p>The ID of the security rule for the cloud-native API gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>gsgr-cqadis5lhtgmv***</p>

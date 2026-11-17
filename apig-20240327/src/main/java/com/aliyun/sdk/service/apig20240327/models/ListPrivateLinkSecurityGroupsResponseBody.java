@@ -229,10 +229,10 @@ public class ListPrivateLinkSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group name.</p>
+             * <p>The name of the security group.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product Center Cluster Security Group</p>
+             * <p>Product Center cluster security group</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -343,7 +343,7 @@ public class ListPrivateLinkSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries returned in this query.</p>
+             * <p>The maximum number of results returned in this query.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -354,7 +354,7 @@ public class ListPrivateLinkSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next token.</p>
+             * <p>The token for the next page.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
