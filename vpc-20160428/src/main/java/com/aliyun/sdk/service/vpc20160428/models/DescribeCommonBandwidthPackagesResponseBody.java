@@ -114,7 +114,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -176,13 +176,25 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPackageIpRelationStatus")
         private String bandwidthPackageIpRelationStatus;
 
+        @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackageIpBandwidth")
+        private String commonBandwidthPackageIpBandwidth;
+
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
+
+        @com.aliyun.core.annotation.NameInMap("IpInstanceId")
+        private String ipInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("IpType")
+        private String ipType;
 
         private PublicIpAddresse(Builder builder) {
             this.allocationId = builder.allocationId;
             this.bandwidthPackageIpRelationStatus = builder.bandwidthPackageIpRelationStatus;
+            this.commonBandwidthPackageIpBandwidth = builder.commonBandwidthPackageIpBandwidth;
             this.ipAddress = builder.ipAddress;
+            this.ipInstanceId = builder.ipInstanceId;
+            this.ipType = builder.ipType;
         }
 
         public static Builder builder() {
@@ -208,16 +220,40 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return commonBandwidthPackageIpBandwidth
+         */
+        public String getCommonBandwidthPackageIpBandwidth() {
+            return this.commonBandwidthPackageIpBandwidth;
+        }
+
+        /**
          * @return ipAddress
          */
         public String getIpAddress() {
             return this.ipAddress;
         }
 
+        /**
+         * @return ipInstanceId
+         */
+        public String getIpInstanceId() {
+            return this.ipInstanceId;
+        }
+
+        /**
+         * @return ipType
+         */
+        public String getIpType() {
+            return this.ipType;
+        }
+
         public static final class Builder {
             private String allocationId; 
             private String bandwidthPackageIpRelationStatus; 
+            private String commonBandwidthPackageIpBandwidth; 
             private String ipAddress; 
+            private String ipInstanceId; 
+            private String ipType; 
 
             private Builder() {
             } 
@@ -225,7 +261,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private Builder(PublicIpAddresse model) {
                 this.allocationId = model.allocationId;
                 this.bandwidthPackageIpRelationStatus = model.bandwidthPackageIpRelationStatus;
+                this.commonBandwidthPackageIpBandwidth = model.commonBandwidthPackageIpBandwidth;
                 this.ipAddress = model.ipAddress;
+                this.ipInstanceId = model.ipInstanceId;
+                this.ipType = model.ipType;
             } 
 
             /**
@@ -245,10 +284,34 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
+             * CommonBandwidthPackageIpBandwidth.
+             */
+            public Builder commonBandwidthPackageIpBandwidth(String commonBandwidthPackageIpBandwidth) {
+                this.commonBandwidthPackageIpBandwidth = commonBandwidthPackageIpBandwidth;
+                return this;
+            }
+
+            /**
              * IpAddress.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
+                return this;
+            }
+
+            /**
+             * IpInstanceId.
+             */
+            public Builder ipInstanceId(String ipInstanceId) {
+                this.ipInstanceId = ipInstanceId;
+                return this;
+            }
+
+            /**
+             * IpType.
+             */
+            public Builder ipType(String ipType) {
+                this.ipType = ipType;
                 return this;
             }
 

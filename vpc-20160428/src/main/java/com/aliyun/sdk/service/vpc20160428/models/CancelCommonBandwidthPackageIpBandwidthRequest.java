@@ -24,8 +24,15 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EipId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String eipId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpInstanceId")
+    private String ipInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpType")
+    private String ipType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -52,6 +59,8 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
         super(builder);
         this.bandwidthPackageId = builder.bandwidthPackageId;
         this.eipId = builder.eipId;
+        this.ipInstanceId = builder.ipInstanceId;
+        this.ipType = builder.ipType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -84,6 +93,20 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
      */
     public String getEipId() {
         return this.eipId;
+    }
+
+    /**
+     * @return ipInstanceId
+     */
+    public String getIpInstanceId() {
+        return this.ipInstanceId;
+    }
+
+    /**
+     * @return ipType
+     */
+    public String getIpType() {
+        return this.ipType;
     }
 
     /**
@@ -124,6 +147,8 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
     public static final class Builder extends Request.Builder<CancelCommonBandwidthPackageIpBandwidthRequest, Builder> {
         private String bandwidthPackageId; 
         private String eipId; 
+        private String ipInstanceId; 
+        private String ipType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -138,6 +163,8 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
             super(request);
             this.bandwidthPackageId = request.bandwidthPackageId;
             this.eipId = request.eipId;
+            this.ipInstanceId = request.ipInstanceId;
+            this.ipType = request.ipType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -160,7 +187,6 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
 
         /**
          * <p>The ID of the EIP that is added to the Internet Shared Bandwidth instance. This parameter applies only to EIPs. For IPv6 addresses, use IpInstanceId.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-2zewysoansu0sxxxxxxxx</p>
@@ -168,6 +194,35 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
         public Builder eipId(String eipId) {
             this.putQueryParameter("EipId", eipId);
             this.eipId = eipId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the public IP address instance for which you want to cancel the maximum available bandwidth setting in the Internet Shared Bandwidth instance. This parameter and <code>EipId</code> are mutually exclusive. We recommend that you use this parameter for new workloads. If IpType is set to <strong>VpcIpv6</strong>, specify the IPv6 instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zewysoansu0svfbg****</p>
+         */
+        public Builder ipInstanceId(String ipInstanceId) {
+            this.putQueryParameter("IpInstanceId", ipInstanceId);
+            this.ipInstanceId = ipInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>The resource type of the public IP address for which you want to cancel the maximum available bandwidth setting in the Internet Shared Bandwidth instance. Valid values:</p>
+         * <ul>
+         * <li><strong>EIP</strong>: the public IP address of an EIP.</li>
+         * <li><strong>VpcIpv6</strong>: the IPv6 address of a VPC.</li>
+         * </ul>
+         * <p>If you do not specify this parameter, <strong>EIP</strong> is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP</p>
+         */
+        public Builder ipType(String ipType) {
+            this.putQueryParameter("IpType", ipType);
+            this.ipType = ipType;
             return this;
         }
 
@@ -190,7 +245,7 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the Internet Shared Bandwidth instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>The region ID of the Internet Shared Bandwidth instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

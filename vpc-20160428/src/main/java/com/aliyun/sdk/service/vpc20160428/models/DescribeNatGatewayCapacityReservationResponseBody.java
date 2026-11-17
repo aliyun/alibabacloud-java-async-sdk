@@ -132,7 +132,7 @@ public class DescribeNatGatewayCapacityReservationResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The capacity reservation status.</p>
+         * <p>The resource reservation status.</p>
          */
         public Builder capacityReservationStatus(CapacityReservationStatus capacityReservationStatus) {
             this.capacityReservationStatus = capacityReservationStatus;
@@ -140,7 +140,7 @@ public class DescribeNatGatewayCapacityReservationResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The remaining number of times that you can downgrade the configuration or cancel the capacity reservation.</p>
+         * <p>The remaining number of times that you can downgrade or cancel the resource reservation.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -151,7 +151,7 @@ public class DescribeNatGatewayCapacityReservationResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The time when the capacity reservation was last modified.</p>
+         * <p>The time when the resource reservation was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-02 10:07:51</p>
@@ -181,7 +181,7 @@ public class DescribeNatGatewayCapacityReservationResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The performance metrics of the NAT gateway capacity reservation.</p>
+         * <p>The performance metrics of the NAT gateway resource reservation.</p>
          */
         public Builder natGatewayPerformanceValues(NatGatewayPerformanceValues natGatewayPerformanceValues) {
             this.natGatewayPerformanceValues = natGatewayPerformanceValues;
@@ -269,13 +269,18 @@ public class DescribeNatGatewayCapacityReservationResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The capacity reservation status. Valid values:</p>
+             * <p>The resource reservation status. Valid values:</p>
              * <ul>
-             * <li>pending: The reservation is in progress.</li>
-             * <li>provisioned: The reservation is completed.</li>
-             * <li>failed: The reservation failed.</li>
-             * <li>deleting: The reservation is being deleted.</li>
-             * <li>deleted: The reservation is deleted.</li>
+             * <li><p>pending: The reservation is in progress.</p>
+             * </li>
+             * <li><p>provisioned: The reservation is completed.</p>
+             * </li>
+             * <li><p>failed: The reservation failed.</p>
+             * </li>
+             * <li><p>deleting: The reservation is being deleted.</p>
+             * </li>
+             * <li><p>deleted: The reservation is deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -440,7 +445,7 @@ public class DescribeNatGatewayCapacityReservationResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The number of new connections per second (CPS).</p>
+             * <p>The number of new connections per second.</p>
              * 
              * <strong>example:</strong>
              * <p>100000</p>
@@ -451,7 +456,7 @@ public class DescribeNatGatewayCapacityReservationResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The number of packets per second (PPS).</p>
+             * <p>The number of packets per second.</p>
              * 
              * <strong>example:</strong>
              * <p>3200000</p>

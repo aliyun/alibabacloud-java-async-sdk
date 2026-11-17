@@ -114,7 +114,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -163,6 +163,102 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpv6AddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6AddressesResponseBody</p>
+     */
+    public static class CommonBandwidthPackageInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageBandwidth")
+        private Long bandwidthPackageBandwidth;
+
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+        private String bandwidthPackageId;
+
+        @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackageIpBandwidth")
+        private Long commonBandwidthPackageIpBandwidth;
+
+        private CommonBandwidthPackageInfo(Builder builder) {
+            this.bandwidthPackageBandwidth = builder.bandwidthPackageBandwidth;
+            this.bandwidthPackageId = builder.bandwidthPackageId;
+            this.commonBandwidthPackageIpBandwidth = builder.commonBandwidthPackageIpBandwidth;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CommonBandwidthPackageInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bandwidthPackageBandwidth
+         */
+        public Long getBandwidthPackageBandwidth() {
+            return this.bandwidthPackageBandwidth;
+        }
+
+        /**
+         * @return bandwidthPackageId
+         */
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        /**
+         * @return commonBandwidthPackageIpBandwidth
+         */
+        public Long getCommonBandwidthPackageIpBandwidth() {
+            return this.commonBandwidthPackageIpBandwidth;
+        }
+
+        public static final class Builder {
+            private Long bandwidthPackageBandwidth; 
+            private String bandwidthPackageId; 
+            private Long commonBandwidthPackageIpBandwidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommonBandwidthPackageInfo model) {
+                this.bandwidthPackageBandwidth = model.bandwidthPackageBandwidth;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.commonBandwidthPackageIpBandwidth = model.commonBandwidthPackageIpBandwidth;
+            } 
+
+            /**
+             * BandwidthPackageBandwidth.
+             */
+            public Builder bandwidthPackageBandwidth(Long bandwidthPackageBandwidth) {
+                this.bandwidthPackageBandwidth = bandwidthPackageBandwidth;
+                return this;
+            }
+
+            /**
+             * BandwidthPackageId.
+             */
+            public Builder bandwidthPackageId(String bandwidthPackageId) {
+                this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * CommonBandwidthPackageIpBandwidth.
+             */
+            public Builder commonBandwidthPackageIpBandwidth(Long commonBandwidthPackageIpBandwidth) {
+                this.commonBandwidthPackageIpBandwidth = commonBandwidthPackageIpBandwidth;
+                return this;
+            }
+
+            public CommonBandwidthPackageInfo build() {
+                return new CommonBandwidthPackageInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeIpv6AddressesResponseBody} extends {@link TeaModel}
@@ -554,6 +650,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedInstanceType")
         private String associatedInstanceType;
 
+        @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackageInfo")
+        private CommonBandwidthPackageInfo commonBandwidthPackageInfo;
+
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
@@ -604,6 +703,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             this.allocationTime = builder.allocationTime;
             this.associatedInstanceId = builder.associatedInstanceId;
             this.associatedInstanceType = builder.associatedInstanceType;
+            this.commonBandwidthPackageInfo = builder.commonBandwidthPackageInfo;
             this.ipv6Address = builder.ipv6Address;
             this.ipv6AddressDescription = builder.ipv6AddressDescription;
             this.ipv6AddressId = builder.ipv6AddressId;
@@ -655,6 +755,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
          */
         public String getAssociatedInstanceType() {
             return this.associatedInstanceType;
+        }
+
+        /**
+         * @return commonBandwidthPackageInfo
+         */
+        public CommonBandwidthPackageInfo getCommonBandwidthPackageInfo() {
+            return this.commonBandwidthPackageInfo;
         }
 
         /**
@@ -767,6 +874,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String allocationTime; 
             private String associatedInstanceId; 
             private String associatedInstanceType; 
+            private CommonBandwidthPackageInfo commonBandwidthPackageInfo; 
             private String ipv6Address; 
             private String ipv6AddressDescription; 
             private String ipv6AddressId; 
@@ -791,6 +899,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
                 this.allocationTime = model.allocationTime;
                 this.associatedInstanceId = model.associatedInstanceId;
                 this.associatedInstanceType = model.associatedInstanceType;
+                this.commonBandwidthPackageInfo = model.commonBandwidthPackageInfo;
                 this.ipv6Address = model.ipv6Address;
                 this.ipv6AddressDescription = model.ipv6AddressDescription;
                 this.ipv6AddressId = model.ipv6AddressId;
@@ -837,6 +946,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
              */
             public Builder associatedInstanceType(String associatedInstanceType) {
                 this.associatedInstanceType = associatedInstanceType;
+                return this;
+            }
+
+            /**
+             * CommonBandwidthPackageInfo.
+             */
+            public Builder commonBandwidthPackageInfo(CommonBandwidthPackageInfo commonBandwidthPackageInfo) {
+                this.commonBandwidthPackageInfo = commonBandwidthPackageInfo;
                 return this;
             }
 

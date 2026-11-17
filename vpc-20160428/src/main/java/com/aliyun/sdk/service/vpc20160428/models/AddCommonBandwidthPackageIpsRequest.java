@@ -245,7 +245,7 @@ public class AddCommonBandwidthPackageIpsRequest extends Request {
 
         /**
          * <p>The region ID of the Internet Shared Bandwidth instance. </p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

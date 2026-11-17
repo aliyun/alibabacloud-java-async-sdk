@@ -202,9 +202,9 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run, without performing the actual request.</p>
+         * <p>Specifies whether to perform a dry run.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -229,8 +229,8 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * <p>The ID of the EIP instance. </p>
-         * <p>You can call <a href="https://www.alibabacloud.com/help/en/eip/developer-reference/api-vpc-2016-04-28-describeeipaddresses-eips">DescribeEipAddresses</a> to query the ID of the EIP instance.</p>
+         * <p>The ID of the EIP. </p>
+         * <p>You can call the <a href="https://www.alibabacloud.com/help/en/eip/developer-reference/api-vpc-2016-04-28-describeeipaddresses-eips">DescribeEipAddresses</a> operation to query the ID of the EIP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +243,7 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * <p>The IP type. Set the value to <strong>EIP</strong>, which specifies that an EIP is added to the Internet Shared Bandwidth instance.</p>
+         * <p>The IP address type. Valid value: <strong>EIP</strong>, which indicates that an EIP is added to the Internet Shared Bandwidth instance.</p>
          * 
          * <strong>example:</strong>
          * <p>EIP</p>
@@ -274,7 +274,7 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
 
         /**
          * <p>The region ID of the Internet Shared Bandwidth instance. </p>
-         * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

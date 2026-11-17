@@ -488,6 +488,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
+        @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackageIpBandwidth")
+        private String commonBandwidthPackageIpBandwidth;
+
         @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private Boolean deletionProtection;
 
@@ -597,6 +600,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             this.bizType = builder.bizType;
             this.businessStatus = builder.businessStatus;
             this.chargeType = builder.chargeType;
+            this.commonBandwidthPackageIpBandwidth = builder.commonBandwidthPackageIpBandwidth;
             this.deletionProtection = builder.deletionProtection;
             this.description = builder.description;
             this.eipBandwidth = builder.eipBandwidth;
@@ -701,6 +705,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
          */
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        /**
+         * @return commonBandwidthPackageIpBandwidth
+         */
+        public String getCommonBandwidthPackageIpBandwidth() {
+            return this.commonBandwidthPackageIpBandwidth;
         }
 
         /**
@@ -944,6 +955,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String bizType; 
             private String businessStatus; 
             private String chargeType; 
+            private String commonBandwidthPackageIpBandwidth; 
             private Boolean deletionProtection; 
             private String description; 
             private String eipBandwidth; 
@@ -991,6 +1003,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
                 this.bizType = model.bizType;
                 this.businessStatus = model.businessStatus;
                 this.chargeType = model.chargeType;
+                this.commonBandwidthPackageIpBandwidth = model.commonBandwidthPackageIpBandwidth;
                 this.deletionProtection = model.deletionProtection;
                 this.description = model.description;
                 this.eipBandwidth = model.eipBandwidth;
@@ -1095,6 +1108,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * CommonBandwidthPackageIpBandwidth.
+             */
+            public Builder commonBandwidthPackageIpBandwidth(String commonBandwidthPackageIpBandwidth) {
+                this.commonBandwidthPackageIpBandwidth = commonBandwidthPackageIpBandwidth;
                 return this;
             }
 

@@ -35,6 +35,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
     private String ipv6CidrBlock;
 
+    @com.aliyun.core.annotation.NameInMap("Ipv6Only")
+    private Boolean ipv6Only;
+
     @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
@@ -81,6 +84,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         this.description = builder.description;
         this.enabledIpv6 = builder.enabledIpv6;
         this.ipv6CidrBlock = builder.ipv6CidrBlock;
+        this.ipv6Only = builder.ipv6Only;
         this.isDefault = builder.isDefault;
         this.networkAclId = builder.networkAclId;
         this.ownerId = builder.ownerId;
@@ -148,6 +152,13 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
      */
     public String getIpv6CidrBlock() {
         return this.ipv6CidrBlock;
+    }
+
+    /**
+     * @return ipv6Only
+     */
+    public Boolean getIpv6Only() {
+        return this.ipv6Only;
     }
 
     /**
@@ -248,6 +259,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         private String description; 
         private Boolean enabledIpv6; 
         private String ipv6CidrBlock; 
+        private Boolean ipv6Only; 
         private Boolean isDefault; 
         private String networkAclId; 
         private Long ownerId; 
@@ -272,6 +284,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
             this.description = model.description;
             this.enabledIpv6 = model.enabledIpv6;
             this.ipv6CidrBlock = model.ipv6CidrBlock;
+            this.ipv6Only = model.ipv6Only;
             this.isDefault = model.isDefault;
             this.networkAclId = model.networkAclId;
             this.ownerId = model.ownerId;
@@ -299,7 +312,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private network address range of the vSwitch.</p>
+         * <p>The private endpoint range of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1/24</p>
@@ -332,10 +345,10 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the IPv6 CIDR block is enabled for the vSwitch. Valid values:</p>
+         * <p>Specifies whether the IPv6 CIDR block is enabled and configured for the vSwitch. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled.</li>
-         * <li><strong>false</strong>: not enabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -358,7 +371,22 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+         * <p>Indicates whether the vSwitch is an IPv6 single-stack vSwitch. Valid values:</p>
+         * <ul>
+         * <li>true: The vSwitch is an IPv6 single-stack vSwitch.</li>
+         * <li>false: The vSwitch is not an IPv6 single-stack vSwitch.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder ipv6Only(Boolean ipv6Only) {
+            this.ipv6Only = ipv6Only;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether the vSwitch is the default vSwitch. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The vSwitch is the default vSwitch.</li>
          * <li><strong>false</strong>: The vSwitch is not the default vSwitch.</li>
@@ -384,9 +412,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the resource ownership.</p>
+         * <p>The Alibaba Cloud account ID of the resource owner.</p>
          * <blockquote>
-         * <p>Notice: This value is of the Long type. Precision loss may occur in certain programming languages. Use this value with caution.</p>
+         * <p>Notice: This value is of the Long type and may cause precision loss in some programming languages. Use it with caution.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -398,7 +426,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7B48B4B9-1EAD-469F-B488-594DAB4B6A1A</p>
@@ -409,7 +437,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph****</p>
@@ -428,11 +456,11 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sharing type of the vSwitch.</p>
+         * <p>The share type of the vSwitch.</p>
          * <ul>
-         * <li>If the value is empty, the vSwitch is a private vSwitch.</li>
+         * <li>If the value is empty, the vSwitch is a standard vSwitch.</li>
          * <li>If the value is <strong>Shared</strong>, the vSwitch is a shared vSwitch.</li>
-         * <li>If the value is <strong>Sharing</strong>, the vSwitch is being shared with other accounts.</li>
+         * <li>If the value is <strong>Sharing</strong>, the vSwitch is being shared.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -446,9 +474,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         /**
          * <p>The status of the vSwitch. Valid values:</p>
          * <ul>
-         * <li><p><strong>Pending</strong>: being configured. </p>
+         * <li><p><strong>Pending</strong>: Configuring. </p>
          * </li>
-         * <li><p><strong>Available</strong>: active.</p>
+         * <li><p><strong>Available</strong>: Available.</p>
          * </li>
          * </ul>
          * 
@@ -584,9 +612,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
             /**
              * <p>The type of the route table. Valid values:</p>
              * <ul>
-             * <li><p><strong>System</strong>: system route table.</p>
+             * <li><p><strong>System</strong>: System route table.</p>
              * </li>
-             * <li><p><strong>Custom</strong>: custom route table.</p>
+             * <li><p><strong>Custom</strong>: Custom route table.</p>
              * </li>
              * </ul>
              * 

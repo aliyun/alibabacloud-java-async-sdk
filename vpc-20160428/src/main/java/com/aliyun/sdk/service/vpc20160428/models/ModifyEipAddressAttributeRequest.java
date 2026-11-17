@@ -187,9 +187,9 @@ public class ModifyEipAddressAttributeRequest extends Request {
         /**
          * <p>The peak bandwidth of the EIP. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong> to <strong>200</strong>: If the EIP is billed on a pay-by-data-transfer basis. Unit: Mbit/s. </p>
+         * <li><p><strong>1</strong> to <strong>200</strong> if the EIP is billed by data transfer. Unit: Mbit/s. </p>
          * </li>
-         * <li><p><strong>1</strong> to <strong>500</strong>: If the EIP is billed on a pay-by-bandwidth basis. Unit: Mbit/s.</p>
+         * <li><p><strong>1</strong> to <strong>500</strong> if the EIP is billed by bandwidth. Unit: Mbit/s.</p>
          * </li>
          * </ul>
          * 
@@ -203,7 +203,7 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * <p>The description of the EIP that you want to modify.  </p>
+         * <p>The description of the EIP.  </p>
          * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the EIP that you want to modify.  </p>
+         * <p>The name of the EIP.  </p>
          * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class ModifyEipAddressAttributeRequest extends Request {
 
         /**
          * <p>The region ID of the EIP.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

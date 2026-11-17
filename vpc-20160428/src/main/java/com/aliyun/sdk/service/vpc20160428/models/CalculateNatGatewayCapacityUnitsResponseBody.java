@@ -80,7 +80,7 @@ public class CalculateNatGatewayCapacityUnitsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the calculated equivalent resource reservation CUs.</p>
+         * <p>The details of the calculated equivalent reserved CUs.</p>
          */
         public Builder natGatewayCapacity(NatGatewayCapacity natGatewayCapacity) {
             this.natGatewayCapacity = natGatewayCapacity;
@@ -270,7 +270,7 @@ public class CalculateNatGatewayCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of packets. Unit: pps.</p>
+             * <p>The number of packets per second. Unit: pps.</p>
              * 
              * <strong>example:</strong>
              * <p>160000</p>

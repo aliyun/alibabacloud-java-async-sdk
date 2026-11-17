@@ -228,7 +228,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the LogStore.</p>
+         * <p>The name of the Logstore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,8 +259,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
