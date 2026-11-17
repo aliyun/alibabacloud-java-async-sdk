@@ -154,9 +154,9 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded content of the facial image.</p>
+         * <p>The Base64-encoded string of the face image.</p>
          * <blockquote>
-         * <p>Specify either FaceUrl or FaceBase64.</p>
+         * <p>You must specify either FaceUrl or FaceBase64.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * <p>Set the value to <strong>IMAGE</strong> to specify a facial image.</p>
+         * <p>The face input type. Valid value: <strong>IMAGE</strong>, which indicates a face image.</p>
          * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
@@ -181,9 +181,9 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * <p>The URL of the facial image.</p>
+         * <p>The URL of the face image.</p>
          * <blockquote>
-         * <p>Specify either FaceUrl or FaceBase64.</p>
+         * <p>You must specify either FaceUrl or FaceBase64.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the merchant request. The value is a 32-character combination of letters and digits. The first few characters are a custom merchant abbreviation, the middle part can contain a timestamp, and the last part can be a random or incremental sequence.</p>
+         * <p>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters consist of a custom merchant abbreviation, the middle part can contain a time period, and the latter part can be a random or incremental sequence.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * <p>The product solution to use. Set the value to <strong>FACE_DEEPFAKE</strong>.</p>
+         * <p>The product solution to access. Valid value: <strong>FACE_DEEPFAKE</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class DeepfakeDetectIntlRequest extends Request {
         }
 
         /**
-         * <p>The custom scene ID for authentication. You can use this scene ID to query related records in the console. The value can be up to 10 characters long and can contain letters, digits, and underscores.</p>
+         * <p>The custom authentication scene ID. You can use this ID to query related records in the console. The value can be up to 10 characters in length and can contain letters, digits, and underscores.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>

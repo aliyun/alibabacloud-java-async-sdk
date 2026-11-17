@@ -126,7 +126,7 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The verification result.</p>
+         * <p>The return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -183,7 +183,7 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
              * <ul>
              * <li>1: Consistent.</li>
              * <li>2: Inconsistent.</li>
-             * <li>3: No record found.</li>
+             * <li>3: Not found.</li>
              * </ul>
              * 
              * <strong>example:</strong>

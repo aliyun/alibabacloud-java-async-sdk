@@ -104,7 +104,7 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -309,23 +309,23 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             /**
              * <p>The last page where the authentication was interrupted. Valid values:</p>
              * <ul>
-             * <li>Page not started</li>
-             * <li>OCR guide page</li>
-             * <li>OCR camera authorization</li>
-             * <li>OCR document capture page</li>
-             * <li>OCR recognition loading</li>
-             * <li>OCR recognition result editing page</li>
-             * <li>OCR recognition result editing loading</li>
-             * <li>Liveness detection guide page</li>
-             * <li>Liveness detection camera authorization page</li>
-             * <li>Liveness detection page</li>
-             * <li>Liveness detection downgrade page</li>
-             * <li>Liveness detection retry</li>
-             * <li>Liveness detection loading.</li>
+             * <li>The page is not started.</li>
+             * <li>The OCR guide page.</li>
+             * <li>The OCR camera authorization page.</li>
+             * <li>The OCR document capture page.</li>
+             * <li>The OCR recognition loading page.</li>
+             * <li>The OCR recognition result editing page.</li>
+             * <li>The OCR recognition result editing loading page.</li>
+             * <li>The liveness detection guide page.</li>
+             * <li>The liveness detection camera authorization page.</li>
+             * <li>The liveness detection page.</li>
+             * <li>The liveness detection fallback page.</li>
+             * <li>The liveness detection retry page.</li>
+             * <li>The liveness detection loading page.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>OCR拍摄证件页面</p>
+             * <p>OCR document capture page</p>
              */
             public Builder interruptPage(String interruptPage) {
                 this.interruptPage = interruptPage;
@@ -347,7 +347,7 @@ public class CheckVerifyLogResponseBody extends TeaModel {
              * </li>
              * <li><p>NFC_INPUT</p>
              * </li>
-             * <li><p>NFC_READ.</p>
+             * <li><p>NFC_READ</p>
              * </li>
              * </ul>
              * 
@@ -360,7 +360,7 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SDK runtime log details.</p>
+             * <p>The details of the SDK runtime logs.</p>
              */
             public Builder logInfo(java.util.List<String> logInfo) {
                 this.logInfo = logInfo;
@@ -368,7 +368,7 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SDK runtime trace log details in English. The format of this field is the same as <strong>LogInfo</strong>.</p>
+             * <p>The details of the SDK runtime trace logs in English. The format of this field is the same as that of <strong>LogInfo</strong>.</p>
              */
             public Builder logInfoEn(java.util.List<String> logInfoEn) {
                 this.logInfoEn = logInfoEn;
@@ -376,7 +376,7 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SDK runtime log statistics details.</p>
+             * <p>The statistical details of the SDK runtime logs.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -432,21 +432,21 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             /**
              * <p>The error code for authentication interruption. Valid values:</p>
              * <ul>
-             * <li>1000: The user completed the face verification process, and the authentication result is passed.</li>
-             * <li>1001: The user completed the face verification process, and the authentication result is not passed.</li>
-             * <li>1002: System error.</li>
+             * <li>1000: The user completed the face scanning process, and the recommended authentication result is passed.</li>
+             * <li>1001: The user completed the face scanning process, and the recommended authentication result is not passed.</li>
+             * <li>1002: A system error occurred.</li>
              * <li>1003: SDK initialization failed. Check whether the client time is correct.</li>
-             * <li>1004: Camera permission error.</li>
-             * <li>1005: Network error.</li>
+             * <li>1004: A camera permission error occurred.</li>
+             * <li>1005: A network error occurred.</li>
              * <li>1006: The user exited.</li>
-             * <li>1007: Invalid TransactionId.</li>
-             * <li>1009: Client timestamp error.</li>
-             * <li>1011: Incorrect document type submitted.</li>
-             * <li>1012: Key information of the recognized document is missing or format validation failed.</li>
-             * <li>1013: Poor image quality.</li>
+             * <li>1007: The TransactionId is invalid.</li>
+             * <li>1009: The client timestamp is incorrect.</li>
+             * <li>1011: The submitted document type is incorrect.</li>
+             * <li>1012: The recognized key information of the document is missing or the format verification failed.</li>
+             * <li>1013: The image quality is poor.</li>
              * <li>1014: The number of errors exceeded the upper limit.</li>
              * <li>1015: The Android system version is too low.</li>
-             * <li>1016: Camera permission not obtained.</li>
+             * <li>1016: Camera permissions are not obtained.</li>
              * <li>9999: The authentication process is suspected to be interrupted.</li>
              * </ul>
              * 
@@ -461,9 +461,9 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             /**
              * <p>The authentication status. Valid values:</p>
              * <ul>
-             * <li>0: finished. The authentication is complete.</li>
+             * <li>0: finished. The authentication is completed.</li>
              * <li>1: unfinished. The authentication is interrupted.</li>
-             * <li>2: notstart. The authentication has not started.</li>
+             * <li>2: notstart. The authentication is not started.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -104,7 +104,7 @@ public class DeleteFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -115,7 +115,7 @@ public class DeleteFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

@@ -185,10 +185,10 @@ public class FaceLivenessRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to allow cropping. Default value: F. Valid values:</p>
+         * <p>Specifies whether to allow cropping. Valid values:</p>
          * <ul>
-         * <li>T: enabled.</li>
-         * <li>F: disabled. (Default)</li>
+         * <li>T: Cropping is allowed.</li>
+         * <li>F: Cropping is not allowed. Default value: F.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,10 @@ public class FaceLivenessRequest extends Request {
         }
 
         /**
-         * FaceAttributeCheck.
+         * <p>The face attribute check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder faceAttributeCheck(String faceAttributeCheck) {
             this.putQueryParameter("FaceAttributeCheck", faceAttributeCheck);
@@ -210,10 +213,10 @@ public class FaceLivenessRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded face photo.</p>
+         * <p>The Base64-encoded string of the photo.</p>
          * <p>Note:</p>
          * <ul>
-         * <li>If you use FacePictureBase64 (Base64-encoded photo) to pass in the face photo, check the photo size and do not pass in an excessively large photo.</li>
+         * <li>If you use the FacePictureBase64 parameter to pass the face photo, check the photo size and do not pass photos that are too large.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,10 +241,10 @@ public class FaceLivenessRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to output the face quality score. Default value: F. Valid values:</p>
+         * <p>Specifies whether to output the face quality score. Valid values:</p>
          * <ul>
-         * <li>T: enabled.</li>
-         * <li>F: disabled. (Default)</li>
+         * <li>T: The detection is required.</li>
+         * <li>F: The detection is not required. Default value: F.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,7 +269,7 @@ public class FaceLivenessRequest extends Request {
         }
 
         /**
-         * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
+         * <p>The custom unique business identifier on the merchant side, used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Ensure that the value is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -278,7 +281,7 @@ public class FaceLivenessRequest extends Request {
         }
 
         /**
-         * <p>The merchant user ID or another identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of the userId field before passing it in, for example, by hashing the value.</p>
+         * <p>The merchant user ID or another identifier used to identify a specific user, such as a phone number or email address. Desensitize the value of the userId field in advance, such as by hashing the value.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -290,10 +293,10 @@ public class FaceLivenessRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform occlusion detection. Default value: F. Valid values:</p>
+         * <p>Specifies whether to perform occlusion detection. Valid values:</p>
          * <ul>
-         * <li>T: enabled.</li>
-         * <li>F: disabled. (Default)</li>
+         * <li>T: Occlusion detection is required.</li>
+         * <li>F: Occlusion detection is not required. Default value: F.</li>
          * </ul>
          * 
          * <strong>example:</strong>

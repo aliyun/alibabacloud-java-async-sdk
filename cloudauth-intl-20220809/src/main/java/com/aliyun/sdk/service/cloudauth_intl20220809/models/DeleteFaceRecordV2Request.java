@@ -97,7 +97,7 @@ public class DeleteFaceRecordV2Request extends Request {
         }
 
         /**
-         * <p>The face group code. If this parameter is not specified, the face data of the user is deleted from all face groups.</p>
+         * <p>The code of the face group. If you do not specify this parameter, the face data of the user in all face groups is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>sgl****7uc</p>
@@ -109,7 +109,7 @@ public class DeleteFaceRecordV2Request extends Request {
         }
 
         /**
-         * <p>The unique user identifier, which must be consistent with the one used when calling AddFaceRecord. If this parameter was not specified during registration, you can use the default image name.</p>
+         * <p>The unique identifier of the user. This value must be the same as the one specified when the face record was added by using AddFaceRecord. If no user identifier was specified when the record was added, you can use the default image name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

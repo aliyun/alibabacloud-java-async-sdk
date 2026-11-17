@@ -205,7 +205,7 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The recognized key information, in JSON format.</p>
+             * <p>The recognized key information in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -232,8 +232,8 @@ public class CredentialRecognitionIntlResponseBody extends TeaModel {
             /**
              * <p>The extraction result. Valid values:</p>
              * <ul>
-             * <li>S: Succeeded.</li>
-             * <li>F: Failed.</li>
+             * <li>S: success.</li>
+             * <li>F: failure.</li>
              * </ul>
              * 
              * <strong>example:</strong>

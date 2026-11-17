@@ -193,7 +193,7 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of returned entries.</p>
+         * <p>The list of returned items.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -201,7 +201,7 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries per page during paging.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -212,7 +212,7 @@ public class QueryFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

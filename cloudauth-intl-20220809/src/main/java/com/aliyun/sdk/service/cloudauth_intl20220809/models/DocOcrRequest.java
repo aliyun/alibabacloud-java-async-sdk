@@ -199,12 +199,10 @@ public class DocOcrRequest extends Request {
         } 
 
         /**
-         * <p>Specifies the side of the certificate to distinguish between the national emblem side and the portrait side. If this parameter is not specified, the portrait side is used by default. Valid values:</p>
+         * <p>Specifies the side of the certificate, which can be the national emblem side or the portrait side. If you do not specify this parameter, the portrait side is used by default. Valid values:</p>
          * <ul>
-         * <li><p>OCR_ID_FACE (default): portrait side</p>
-         * </li>
-         * <li><p>OCR_ID_NATIONAL_EMBLEM: national emblem side.</p>
-         * </li>
+         * <li>OCR_ID_FACE: The portrait side. Default value.</li>
+         * <li>OCR_ID_NATIONAL_EMBLEM: The national emblem side.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,10 +227,10 @@ public class DocOcrRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform certificate face quality detection. Valid values:</p>
+         * <p>Specifies whether to perform face quality detection on the certificate. Valid values:</p>
          * <ul>
          * <li>T: Detection is required.</li>
-         * <li>F: Detection is not required. (Default value: F).</li>
+         * <li>F: Detection is not required. Default value: F.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,8 +243,8 @@ public class DocOcrRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded card or certificate image.</p>
-         * <p>If you use IdOcrPictureBase64 (Base64-encoded photo) to submit the certificate photo, check the photo size and do not submit an excessively large photo.</p>
+         * <p>The Base64-encoded image of the ID card or certificate.</p>
+         * <p>If you choose to pass the certificate photo by using the IdOcrPictureBase64 (Base64-encoded photo) method, check the photo size and do not pass oversized photos.</p>
          * 
          * <strong>example:</strong>
          * <p>base64</p>
@@ -258,7 +256,7 @@ public class DocOcrRequest extends Request {
         }
 
         /**
-         * <p>The URL of the front side of the certificate image.</p>
+         * <p>The URL of the front image of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
@@ -270,12 +268,12 @@ public class DocOcrRequest extends Request {
         }
 
         /**
-         * <p>The custom OCR quality detection threshold mode. Valid values:</p>
+         * <p>The custom threshold mode for OCR quality detection. Valid values:</p>
          * <ul>
-         * <li>0: system default</li>
-         * <li>1: strict mode</li>
-         * <li>2: loose mode</li>
-         * <li>3 (default): quality detection disabled.</li>
+         * <li>0: System default.</li>
+         * <li>1: Strict mode.</li>
+         * <li>2: Loose mode.</li>
+         * <li>3: Quality detection is disabled. Default value: 3.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +286,7 @@ public class DocOcrRequest extends Request {
         }
 
         /**
-         * <p>The custom business unique identifier on the merchant side, used for subsequent issue tracking and troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
+         * <p>The custom unique business identifier on the merchant side, which is used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Make sure that the identifier is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>dso9322***dsjsd22</p>
@@ -300,7 +298,7 @@ public class DocOcrRequest extends Request {
         }
 
         /**
-         * <p>The custom user ID in the business. Ensure that the value is unique.</p>
+         * <p>The custom user ID in the business. Make sure that the ID is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -312,7 +310,7 @@ public class DocOcrRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform certificate OCR. Valid values:</p>
+         * <p>Specifies whether to perform OCR on the certificate. Valid values:</p>
          * <ul>
          * <li>T: OCR is required.</li>
          * <li>F: OCR is not required.</li>
@@ -331,7 +329,7 @@ public class DocOcrRequest extends Request {
          * <p>The product code.</p>
          * 
          * <strong>example:</strong>
-         * <p>产品方案类型ID_OCR_MIN</p>
+         * <p>Product solution type ID_OCR_MIN</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

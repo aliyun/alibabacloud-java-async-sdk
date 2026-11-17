@@ -21,7 +21,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Compares two addresses for consistency by using address standardization.</p>
+     * <p>Standardizes and compares two addresses to check for consistency.</p>
      * 
      * @param request the request parameters of AddressCompareIntl  AddressCompareIntlRequest
      * @return AddressCompareIntlResponse
@@ -29,7 +29,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddressCompareIntlResponse> addressCompareIntl(AddressCompareIntlRequest request);
 
     /**
-     * @deprecated OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.  * @description Verifies whether a specified address belongs to a user\\"s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).
+     * @deprecated OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.  * @description Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.
      * 
      * @param request the request parameters of AddressVerifyIntl  AddressVerifyIntlRequest
      * @return AddressVerifyIntlResponse
@@ -45,7 +45,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Verifies bank card elements, including two-element verification (name + bank card number), three-element verification (name + ID card number + bank card number), and four-element verification (name + ID card number + phone number + bank card number) for consistency.</p>
+     * <p>Verifies bank card information, including two-element verification (name and bank card number), three-element verification (name, ID card number, and bank card number), and four-element verification (name, ID card number, mobile phone number, and bank card number).</p>
      * 
      * @param request the request parameters of BankMetaVerifyIntl  BankMetaVerifyIntlRequest
      * @return BankMetaVerifyIntlResponse
@@ -73,7 +73,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you obtain the TransactionId, you can call this operation on the server side to retrieve the corresponding authentication result.</p>
+     * <p>After you obtain the TransactionId, you can call this operation on the server to retrieve the corresponding authentication results.</p>
      * 
      * @param request the request parameters of CredentialGetResultIntl  CredentialGetResultIntlRequest
      * @return CredentialGetResultIntlResponse
@@ -82,7 +82,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</p>
+     * <p>Uses AI technology to detect whether credential documents, such as electronic utility bills and credit card statements, are forged, and extracts key information from the documents.</p>
      * 
      * @param request the request parameters of CredentialRecognitionIntl  CredentialRecognitionIntlRequest
      * @return CredentialRecognitionIntlResponse
@@ -91,7 +91,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</p>
+     * <p>Initializes the credential recognition OCR process and retrieves a transaction ID.</p>
      * 
      * @param request the request parameters of CredentialSubmitIntl  CredentialSubmitIntlRequest
      * @return CredentialSubmitIntlResponse
@@ -100,7 +100,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Submits a facial image and uses algorithms to detect potential deepfake risks. This operation covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and recaptured faces. It returns risk labels and confidence scores.</p>
+     * <p>Accepts face images and uses algorithms to detect deepfake risks. Covers risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence scores.</p>
      * 
      * @param request the request parameters of DeepfakeDetectIntl  DeepfakeDetectIntlRequest
      * @return DeepfakeDetectIntlResponse
@@ -212,7 +212,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Configures client connection keep-alive settings.</p>
+     * <p>Maintains client connections.</p>
      * 
      * @param request the request parameters of KeepaliveIntl  KeepaliveIntlRequest
      * @return KeepaliveIntlResponse
@@ -221,7 +221,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Pass in a phone number and name to verify their authenticity and consistency through an authoritative data source. Before using this operation, make sure that you fully understand the billing method and pricing of the two-factor phone number verification service.</p>
+     * <p>Verifies the authenticity and consistency of a mobile phone number and name against authoritative data sources. Before using this API operation, make sure that you fully understand the billing method and pricing of the mobile phone number and name verification service.</p>
      * 
      * @param request the request parameters of Mobile2MetaVerifyIntl  Mobile2MetaVerifyIntlRequest
      * @return Mobile2MetaVerifyIntlResponse

@@ -104,7 +104,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -244,7 +244,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AccessKeyId of the temporary credential for file upload.</p>
+             * <p>The AccessKey ID of the temporary credential for file upload.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -255,7 +255,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temporary authorization secret.</p>
+             * <p>The AccessKey Secret of the temporary credential.</p>
              * 
              * <strong>example:</strong>
              * <p>3hxuRpEJ3Jv2Rtzyg4HooFCYqps762XcNtzhn19wQymk</p>
@@ -266,7 +266,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bucket name.</p>
+             * <p>The name of the bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>liyi</p>
@@ -288,7 +288,7 @@ public class TempAccessTokenIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OssEndPoint。</p>
+             * <p>The OSS endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>ossEndPoint</p>

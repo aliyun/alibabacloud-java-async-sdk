@@ -118,7 +118,7 @@ public class DownloadVerifyRecordIntlRequest extends Request {
          * <p>The business type. Valid values:</p>
          * <ul>
          * <li>INVOKE_STATISTICS</li>
-         * <li>INVOKE_RECORD.</li>
+         * <li>INVOKE_RECORD</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,8 +145,8 @@ public class DownloadVerifyRecordIntlRequest extends Request {
         /**
          * <p>The download mode. Valid values:</p>
          * <ul>
-         * <li><strong>async</strong>: asynchronous</li>
-         * <li><strong>sync</strong>: synchronous.</li>
+         * <li><strong>async</strong>: Asynchronous.</li>
+         * <li><strong>sync</strong>: Synchronous.</li>
          * </ul>
          * 
          * <strong>example:</strong>

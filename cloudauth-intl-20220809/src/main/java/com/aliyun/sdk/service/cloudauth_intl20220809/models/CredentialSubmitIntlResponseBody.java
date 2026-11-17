@@ -104,7 +104,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;

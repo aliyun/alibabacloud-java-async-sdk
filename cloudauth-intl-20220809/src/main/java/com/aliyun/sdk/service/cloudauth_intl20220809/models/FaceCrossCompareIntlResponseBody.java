@@ -126,7 +126,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -231,7 +231,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The comparison score between A and B. Value range: 0 to 1.</p>
+             * <p>The comparison score between A and B. Valid values: 0 to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9999999999999999</p>
@@ -242,7 +242,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The comparison score between B and C. Value range: 0 to 1.</p>
+             * <p>The comparison score between B and C. Valid values: 0 to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9999999999999999</p>
@@ -253,7 +253,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The comparison score between C and A. Value range: 0 to 1.</p>
+             * <p>The comparison score between C and A. Valid values: 0 to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>0.9999999999999999</p>
@@ -267,7 +267,7 @@ public class FaceCrossCompareIntlResponseBody extends TeaModel {
              * <p>The final verification result. Valid values:</p>
              * <ul>
              * <li>Y: Passed.</li>
-             * <li>N: Not passed.</li>
+             * <li>N: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

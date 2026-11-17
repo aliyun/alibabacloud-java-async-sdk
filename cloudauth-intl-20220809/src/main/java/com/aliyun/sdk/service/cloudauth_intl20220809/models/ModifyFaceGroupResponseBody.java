@@ -104,7 +104,7 @@ public class ModifyFaceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The return result.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

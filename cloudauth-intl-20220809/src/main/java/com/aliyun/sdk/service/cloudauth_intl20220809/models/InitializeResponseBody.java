@@ -104,7 +104,7 @@ public class InitializeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return message.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class InitializeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The response result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -230,6 +230,9 @@ public class InitializeResponseBody extends TeaModel {
 
             /**
              * <p>The standard encryption protocol for authentication.</p>
+             * <blockquote>
+             * <p>This field is required for H5 web access when iframe embedded integration is selected.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>hksb7ba1b28130d24e015d*********</p>

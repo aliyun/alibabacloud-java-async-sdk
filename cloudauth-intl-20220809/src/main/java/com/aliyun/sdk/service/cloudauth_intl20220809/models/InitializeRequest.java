@@ -134,6 +134,10 @@ public class InitializeRequest extends Request {
     private String idThreshold;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsForceFaceCentered")
+    private String isForceFaceCentered;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LanguageConfig")
     private String languageConfig;
 
@@ -288,6 +292,7 @@ public class InitializeRequest extends Request {
         this.idFaceQuality = builder.idFaceQuality;
         this.idSpoof = builder.idSpoof;
         this.idThreshold = builder.idThreshold;
+        this.isForceFaceCentered = builder.isForceFaceCentered;
         this.languageConfig = builder.languageConfig;
         this.MRTDInput = builder.MRTDInput;
         this.merchantBizId = builder.merchantBizId;
@@ -538,6 +543,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return isForceFaceCentered
+     */
+    public String getIsForceFaceCentered() {
+        return this.isForceFaceCentered;
+    }
+
+    /**
      * @return languageConfig
      */
     public String getLanguageConfig() {
@@ -784,6 +796,7 @@ public class InitializeRequest extends Request {
         private String idFaceQuality; 
         private String idSpoof; 
         private String idThreshold; 
+        private String isForceFaceCentered; 
         private String languageConfig; 
         private String MRTDInput; 
         private String merchantBizId; 
@@ -851,6 +864,7 @@ public class InitializeRequest extends Request {
             this.idFaceQuality = request.idFaceQuality;
             this.idSpoof = request.idSpoof;
             this.idThreshold = request.idThreshold;
+            this.isForceFaceCentered = request.isForceFaceCentered;
             this.languageConfig = request.languageConfig;
             this.MRTDInput = request.MRTDInput;
             this.merchantBizId = request.merchantBizId;
@@ -885,11 +899,11 @@ public class InitializeRequest extends Request {
         } 
 
         /**
-         * <p><warning>This feature is not supported by the <strong>Web SDK</strong>. To use this feature, use the App SDK.</warning></p>
+         * <p><warning>This feature is not supported by the <strong>Web SDK</strong>. To use this feature, refer to the App SDK integration guide.</warning></p>
          * <p>Specifies whether to enable strict face quality detection. Valid values:</p>
          * <ul>
-         * <li>Y: Enabled. This is the default value.</li>
-         * <li>N: Not enabled.</li>
+         * <li>Y: Enable. This is the default value.</li>
+         * <li>N: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -902,7 +916,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable authoritative identity verification. Currently, this parameter applies only to second-generation ID cards in the Chinese mainland. This is an input parameter for the IDV product.</p>
+         * <p>Specifies whether to enable authoritative identity verification. This parameter is currently applicable only to second-generation ID cards in the Chinese mainland and is used for IDV products.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -914,7 +928,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The automatic document classification configuration.</p>
+         * <p>The automatic document page classification configuration. This parameter takes effect only when DocType is set to a country or region code. You can specify the pages to be captured based on the specific document type code. For documents that are not configured, only the front page is captured.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;BRA01001&quot;:&quot;01&quot;,&quot;BRA01002&quot;:&quot;01,02&quot;}</p>
@@ -938,7 +952,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The security token used for anti-replay and anti-tampering verification. If this parameter is specified, the CallbackToken field is displayed in the callback URL.</p>
+         * <p>The security token used for anti-replay and anti-tampering verification. If this parameter is passed, the CallbackToken field is displayed in the callback URL.</p>
          * 
          * <strong>example:</strong>
          * <p>7ca5c68d869344ea8eeb30cdfd544544-6358700</p>
@@ -950,7 +964,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The callback URL for the authentication result. The callback request method is GET by default, and the callback URL must start with https. After the authentication is complete, the platform calls back this URL and automatically adds the transactionId, passed, and subcode fields.</p>
+         * <p>The callback URL for authentication result notifications. The default callback request method is GET, and the callback URL must start with https. After the authentication is completed, the platform calls back this URL and automatically adds the transactionId, passed, and subcode fields.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com?callbackToken=1000004826&transactionId=shaxxxx&passed=Y&subCode=200">https://www.aliyun.com?callbackToken=1000004826&amp;transactionId=shaxxxx&amp;passed=Y&amp;subCode=200</a></p>
@@ -962,7 +976,11 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the adaptive color-changing window border.</p>
+         * <p>Specifies whether to enable the adaptive color-changing window border. Valid values:</p>
+         * <ul>
+         * <li><strong>Y</strong>: Enable.</li>
+         * <li><strong>N</strong>: Disable.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -974,7 +992,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cropping. This is an input parameter for the IDV product.</p>
+         * <p>Specifies whether to crop the image. This parameter is applicable to IDV products.</p>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -986,7 +1004,8 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The date of birth on the document.</p>
+         * <p>The date of birth on the document, in the format of YYMMDD (6 digits).</p>
+         * <p>This parameter is required when <strong>MRTDInput</strong> is set to <strong>2</strong>.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1000,7 +1019,8 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The expiration date on the document.</p>
+         * <p>The expiration date on the document, in the format of YYMMDD (6 digits).</p>
+         * <p>This parameter is required when <strong>MRTDInput</strong> is set to <strong>2</strong>.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1017,7 +1037,7 @@ public class InitializeRequest extends Request {
          * <p>The real name of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Smith</p>
+         * <p>John Doe</p>
          */
         public Builder docName(String docName) {
             this.putQueryParameter("DocName", docName);
@@ -1038,7 +1058,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The custom configuration for whether to collect additional pages.</p>
+         * <p>The custom configuration passed by the customer to specify whether to capture more pages.</p>
          */
         public Builder docPageConfig(java.util.List<String> docPageConfig) {
             String docPageConfigShrink = shrink(docPageConfig, "DocPageConfig", "json");
@@ -1048,7 +1068,11 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The document capture and photo mode.</p>
+         * <p>The photo capture mode for document collection. Valid values:</p>
+         * <ul>
+         * <li>manual: Manual capture.</li>
+         * <li>auto: Automatic capture. This is the default value.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>manual</p>
@@ -1060,12 +1084,12 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The document type.</p>
+         * <p>The type of the identity document.</p>
          * <blockquote>
-         * <p>For the eKYC_PRO and ID_OCR_MAX solutions, see the official documentation at <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr">https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr</a></p>
+         * <p>For the eKYC_PRO and ID_OCR_MAX solutions, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr">https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr</a></p>
          * </blockquote>
          * <blockquote>
-         * <p>For the ID_OCR, eKYC, and eKYC_MIN solutions, see the document type list in the official documentation at <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7">https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7</a></p>
+         * <p>For the ID_OCR, eKYC, and eYKC_MIN solutions, see the identity document type list in the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7">https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7</a></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1078,15 +1102,15 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to collect a verification video.</p>
+         * <p>Specifies whether to store a video for evidence. Valid values:</p>
          * <ul>
-         * <li><p>N: No (default).</p>
+         * <li><p>N: Not required. This is the default value.</p>
          * </li>
-         * <li><p>Y: A short video (1 to 2 seconds) of the user\&quot;s face verification process is collected and returned through the query operation.</p>
+         * <li><p>Y: A video of the user\&quot;s face scanning process (a 1 to 2-second video file) is captured during the authentication process and returned through the query API.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>Because video files are large, the system discards video files when the network is unstable to prioritize the transmission of images required for verification.</p>
+         * <p>Because video files are large, the system discards video files when the network is unstable to prioritize the transmission of images required for authentication.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1100,6 +1124,7 @@ public class InitializeRequest extends Request {
 
         /**
          * <p>The document number.</p>
+         * <p>This parameter is required when <strong>MRTDInput</strong> is set to <strong>2</strong>.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1113,7 +1138,13 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the recognition result page is editable during the document OCR recognition step:</p>
+         * <p>Specifies whether the recognition result page is editable during the document OCR recognition phase. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Not editable.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Editable. This is the default value.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1126,6 +1157,11 @@ public class InitializeRequest extends Request {
 
         /**
          * <p>The Indonesian email address. This field takes effect only when Authorize is set to T.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This field is required only when the Indonesian data source is enabled.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:evxxx@imigxxxxx.go.id">evxxx@imigxxxxx.go.id</a></p>
@@ -1149,7 +1185,11 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable face attribute check.</p>
+         * <p>Specifies whether to return additional face attribute information. Valid values:</p>
+         * <ul>
+         * <li>N: Do not return. This is the default value.</li>
+         * <li>Y: Return. The result is located in Result.ExtFaceInfo.FaceAttributeInfo.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -1161,7 +1201,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The face libraries to compare against.</p>
+         * <p>The face databases to be compared.</p>
          * 
          * <strong>example:</strong>
          * <p>0e0c34a77f</p>
@@ -1173,7 +1213,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded face photo. If you use FacePictureBase64 to pass in a face photo, check the photo size and do not pass in an excessively large photo.</p>
+         * <p>The Base64-encoded string of the photo. If you choose to pass the face photo by using the FacePictureBase64 parameter, check the photo size and do not pass an oversized photo.</p>
          * 
          * <strong>example:</strong>
          * <p>Base64</p>
@@ -1197,7 +1237,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The face registration library.</p>
+         * <p>The face database for registration.</p>
          * 
          * <strong>example:</strong>
          * <p>0e0c34a77f</p>
@@ -1209,7 +1249,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The face verification threshold.</p>
+         * <p>The threshold for face verification.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -1221,7 +1261,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The face image quality. This is an input parameter for the IDV product.</p>
+         * <p>The quality of the face image. This parameter is applicable to IDV products.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -1233,7 +1273,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable document anti-forgery detection. This is an input parameter for the IDV product.</p>
+         * <p>Specifies whether to enable document anti-spoofing detection. This parameter is applicable to IDV products.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -1245,12 +1285,12 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The custom OCR quality detection threshold mode. Valid values:</p>
+         * <p>The custom threshold mode for OCR quality detection. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: Standard mode.</li>
          * <li><strong>1</strong>: Strict mode.</li>
          * <li><strong>2</strong>: Loose mode.</li>
-         * <li><strong>3</strong> (default): Quality detection disabled.</li>
+         * <li><strong>3</strong>: Quality detection disabled. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1263,7 +1303,23 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The language configuration. This is an input parameter for the IDV product.</p>
+         * <p>The forced centering configuration. Specifies whether to intercept when an off-center face is detected on the client. Valid values:</p>
+         * <ul>
+         * <li>Y: Intercept. The client prompts the user to scan their face again.</li>
+         * <li>N: Do not intercept. This is the default value. The largest face in the scanning screen is sent to the server for security detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
+        public Builder isForceFaceCentered(String isForceFaceCentered) {
+            this.putQueryParameter("IsForceFaceCentered", isForceFaceCentered);
+            this.isForceFaceCentered = isForceFaceCentered;
+            return this;
+        }
+
+        /**
+         * <p>The language configuration. This parameter is applicable to IDV products.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -1275,13 +1331,13 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The input source of MRTD verification parameters. This parameter is required to decrypt information when reading document chip data via NFC.</p>
+         * <p>The input source of the MRTD verification parameter. This parameter is required to decrypt information when NFC reads the document chip information. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: user input</p>
+         * <li><p><strong>0</strong>: User input.</p>
          * </li>
-         * <li><p><strong>1</strong>: OCR reading</p>
+         * <li><p><strong>1</strong>: OCR reading.</p>
          * </li>
-         * <li><p><strong>2</strong>: API input</p>
+         * <li><p><strong>2</strong>: API input.</p>
          * </li>
          * </ul>
          * 
@@ -1295,7 +1351,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The merchant-defined unique business ID for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
+         * <p>The custom unique business identifier on the merchant side, used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Ensure that the value is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>e0c34a***353888</p>
@@ -1307,7 +1363,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Your custom user ID, or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize this field value in advance, for example, by hashing the value.</p>
+         * <p>The custom user ID or another identifier that can identify a specific user, such as a mobile phone number or email address. It is highly recommended to desensitize the value of this field in advance, for example, by hashing the value.</p>
          * 
          * <strong>example:</strong>
          * <p>1221****6543</p>
@@ -1319,7 +1375,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The Metainfo environment parameter, which must be obtained from the client SDK.</p>
+         * <p>The MetaInfo environment parameter, which must be obtained through the client SDK.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;bioMetaInfo\&quot;:\&quot;4.1.0:2916352,0\&quot;,\&quot;deviceType\&quot;:\&quot;web\&quot;,\&quot;ua\&quot;:\&quot;Mozilla/5.0 (Macintosh</p>
@@ -1331,7 +1387,12 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The Indonesian phone number. The format must be verified (starting with +62, followed by 9 to 11 digits). This field takes effect only when Authorize is set to T.</p>
+         * <p>The Indonesian phone number. The format must be verified, starting with +62 followed by 9 to 11 digits. This field takes effect only when Authorize is set to T.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This field is required only when the Indonesian data source is enabled.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>+6281293671234</p>
@@ -1343,17 +1404,17 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The type of liveness detection to perform.</p>
+         * <p>The type of liveness detection to be performed. Valid values:</p>
          * <ul>
-         * <li><p><strong>LIVENESS</strong> (default): Blink-based liveness detection.</p>
+         * <li><p><strong>LIVENESS</strong>: Blink liveness detection. This is the default value.</p>
          * </li>
-         * <li><p><strong>PHOTINUS_LIVENESS</strong>: Dual detection combining blink-based liveness detection and flash-based liveness detection.</p>
+         * <li><p><strong>PHOTINUS_LIVENESS</strong>: Dual detection of blink liveness and photinus liveness.</p>
          * </li>
          * </ul>
          * <blockquote>
          * <ul>
          * <li>For supported SDK versions, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/sdk-publishing-record?spm=a2c63.p38356.0.i99">SDK release notes</a>.</li>
-         * <li>Flash-based dual liveness detection is not supported on PCs.</li>
+         * <li>Dual detection of photinus liveness is not supported on the PC client.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1367,7 +1428,14 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * NeedMultiFaceCheck.
+         * <p>Specifies whether to intercept when multiple faces are detected on the client. Valid values:</p>
+         * <ul>
+         * <li>Y: Intercept. The client prompts the user to scan their face again.</li>
+         * <li>N: Do not intercept. This is the default value. The largest face in the scanning screen is sent to the server for security detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder needMultiFaceCheck(String needMultiFaceCheck) {
             this.putQueryParameter("NeedMultiFaceCheck", needMultiFaceCheck);
@@ -1376,7 +1444,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable OCR. This is an input parameter for the IDV product.</p>
+         * <p>Specifies whether to enable OCR. This parameter is applicable to IDV products.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -1388,7 +1456,13 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to additionally return OCR recognition results in standardized format fields:</p>
+         * <p>Specifies whether to return additional standardized format fields for OCR recognition. Valid values:</p>
+         * <ul>
+         * <li><p>0: No. This is the default value.</p>
+         * </li>
+         * <li><p>1: Yes.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1400,15 +1474,15 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The configuration for capture pages. Separate multiple pages with commas (,). Valid values:</p>
+         * <p>The configuration of the pages to be captured. Separate multiple pages with commas (,). Valid values:</p>
          * <ul>
-         * <li><p><strong>01</strong>: the portrait side of the identity document.</p>
+         * <li><p><strong>01</strong>: The portrait side of the identity document.</p>
          * </li>
-         * <li><p><strong>01,02</strong>: the portrait side and back side of the identity document.</p>
+         * <li><p><strong>01,02</strong>: The portrait side and the back side of the identity document.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>When this parameter is set to 01,02, only China identity cards and Vietnam identity cards are supported.</p>
+         * <p>When this value is set to 01,02, only Chinese ID cards and Vietnamese ID cards are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1421,7 +1495,19 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow a degraded processing method when compatibility issues occur during mobile H5 authentication.</p>
+         * <p>Specifies whether to allow degraded processing when compatibility issues occur during mobile H5 authentication. Valid values:</p>
+         * <ul>
+         * <li><p><strong>url</strong>: Degradation supported. This is the default value. The page displays the authentication URL, and the user can copy the URL to open it or switch browsers to continue the authentication flow.</p>
+         * </li>
+         * <li><p><strong>keep</strong>: Degradation not supported. The error cause is directly returned, and the authentication flow ends.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This switch is not supported on the PC client.</li>
+         * <li>If the business application scenario is to complete authentication in a web page embedded in an app, we recommend that you set this parameter to keep to disable URL degradation.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>url</p>
@@ -1433,7 +1519,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The product plan to use.</p>
+         * <p>The product solution to be integrated.</p>
          * <blockquote>
          * <p>For more information, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1">https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1</a></p>
          * </blockquote>
@@ -1448,14 +1534,12 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies the order of document and face verification steps. Valid values:</p>
+         * <p>The sequence of document and face verification. Valid values:</p>
          * <ul>
          * <li>DOC_FACE: Document first, then face. This is the default value.</li>
          * <li>FACE_DOC: Face first, then document.</li>
          * </ul>
-         * <blockquote>
-         * <p><strong>Note:</strong> This parameter is required only when ProductCode is set to KYC_GLOBAL.</p>
-         * </blockquote>
+         * <p>Note: This parameter is required only when ProductCode is set to KYC_GLOBAL.</p>
          * 
          * <strong>example:</strong>
          * <p>DOC_FACE</p>
@@ -1467,7 +1551,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The number of duplicate faces to return.</p>
+         * <p>The number of duplicate faces returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1491,7 +1575,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to save the face picture.</p>
+         * <p>Specifies whether to save the face photo.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1503,7 +1587,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The scene code. This is an input parameter for the IDV product.</p>
+         * <p>The scene code. This parameter is applicable to IDV products.</p>
          * 
          * <strong>example:</strong>
          * <p>123****123</p>
@@ -1515,7 +1599,11 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The mode that represents different security levels of the authentication process. Valid values:</p>
+         * <p>The pattern that represents different security levels of the authentication flow. Valid values:</p>
+         * <ul>
+         * <li>01: Normal pattern. This is the default value.</li>
+         * <li>02: safe mode. This is a relatively strict pattern and is active in high-risk scenarios. This parameter is applicable to IDV products.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>01</p>
@@ -1527,7 +1615,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the album upload entry during the document OCR recognition step. Valid values:</p>
+         * <p>Specifies whether to display the album upload entry during the document OCR recognition phase. Valid values:</p>
          * <ul>
          * <li><p><strong>1</strong>: Display. This is the default value.</p>
          * </li>
@@ -1545,7 +1633,13 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the guide page:</p>
+         * <p>Specifies whether to display the guide page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Display. This is the default value.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Do not display.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1557,7 +1651,13 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to display the recognition result page during the document OCR recognition step:</p>
+         * <p>Specifies whether to display the recognition result page during the document OCR recognition phase. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Display. This is the default value.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Do not display.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1569,7 +1669,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The custom UI configuration. Convert your custom UI configuration to a JSON string based on the configuration template, and pass it in through this parameter. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">IDV UI style customization</a>.</p>
+         * <p>The custom UI configuration. Convert your custom UI configuration into a JSON string based on the configuration template and pass it through this parameter. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">Customize IDV UI styles</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -1586,7 +1686,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded portrait photo.</p>
+         * <p>The Base64-encoded string of the portrait photo.</p>
          * 
          * <strong>example:</strong>
          * <p>base64</p>
@@ -1598,7 +1698,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The URL of the portrait image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+         * <p>The URL of the portrait photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.xxxxx.com/1.jpg">https://www.xxxxx.com/1.jpg</a></p>
@@ -1610,10 +1710,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The custom action pool configuration for liveness detection.
-         * This parameter is required when Model is set to TEMPLATE.
-         * Configuration rule: Separate multiple action codes with commas. Best practice: Include at least one frontal face action (such as blink), and use no more than 3 actions in total.
-         * Action code table:</p>
+         * <p>The custom action pool configuration for liveness detection. This parameter is required when Model is set to TEMPLATE. Configuration rules: Separate multiple action codes with commas (,). Best Practices: Include at least one frontal face action (such as blinking), and the total number of actions should not exceed 3. Action code lookup table:</p>
          * <ul>
          * <li>Blink: 01</li>
          * <li>Open Mouth: 02</li>
@@ -1634,7 +1731,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The number of actions to randomly select from TemplateConfig.</p>
+         * <p><strong>[Deprecated]</strong> The random mode is no longer recommended, and this field is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1646,7 +1743,10 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The execution order of liveness detection actions in TemplateConfig.</p>
+         * <p>The execution sequence of liveness detection actions in TemplateConfig. This parameter is required when Model is set to TEMPLATE. Valid values:</p>
+         * <ul>
+         * <li>Seq: Execute from left to right in the sequence configured in TemplateConfig.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Seq</p>
@@ -1658,7 +1758,11 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to overwrite the existing face with the current face when MerchantUserId already exists during automatic registration. Y: overwrite. N: do not overwrite and return a message indicating that the UserId already exists.</p>
+         * <p>Specifies whether to use the current face to overwrite the existing face when MerchantUserId already exists during automatic registration. Valid values:</p>
+         * <ul>
+         * <li>Y: Overwrite.</li>
+         * <li>N: Do not overwrite and return that the UserId already exists.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -1672,8 +1776,8 @@ public class InitializeRequest extends Request {
         /**
          * <p>Specifies whether to enable NFC verification when <strong>DocType</strong> is set to 01000000 (global passport). Valid values:</p>
          * <ul>
-         * <li><strong>Y</strong>: Enabled.</li>
-         * <li><strong>N</strong>: Not enabled.</li>
+         * <li><strong>Y</strong>: Enable.</li>
+         * <li><strong>N</strong>: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1686,7 +1790,7 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * <p>The verification type.</p>
+         * <p>The type of verification.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

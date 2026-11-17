@@ -171,7 +171,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -193,7 +193,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of returned records.</p>
+         * <p>The list of returned items.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -212,7 +212,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -223,7 +223,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARfZmVDe9NvRXloR5+8CK9nwqHyx44CQz3pa71+mmu0e</p>

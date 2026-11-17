@@ -129,8 +129,8 @@ public class CheckResultRequest extends Request {
         /**
          * <p>Specifies whether to return images. Valid values:</p>
          * <ul>
-         * <li>Y: Return images.</li>
-         * <li>N: Do not return images.</li>
+         * <li>Y: Returns images.</li>
+         * <li>N: Does not return images.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class CheckResultRequest extends Request {
         }
 
         /**
-         * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
+         * <p>The custom unique business identifier on the merchant side, which is used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Make sure that the identifier is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>djs20d***9-dsskc</p>
@@ -155,7 +155,7 @@ public class CheckResultRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the anti-spoofing detection result.</p>
+         * <p>Specifies whether to return the anti-spoofing detection results.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -167,7 +167,7 @@ public class CheckResultRequest extends Request {
         }
 
         /**
-         * <p>The verification ID.</p>
+         * <p>The authentication ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>

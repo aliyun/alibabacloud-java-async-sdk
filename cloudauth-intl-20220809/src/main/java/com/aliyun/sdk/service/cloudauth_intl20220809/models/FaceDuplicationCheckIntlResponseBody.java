@@ -93,7 +93,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The return code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The return message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response result.</p>
+         * <p>The return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -309,7 +309,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * FaceAttributeInfo.
+             * <p>The attribute detection result of the main face, returned as a string. The result includes information such as gender, glasses, hat, mask, tattoo, smoking, other people, environment, expression, and age.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;gender&quot;:1,&quot;glasses&quot;:0,&quot;hat&quot;:1,&quot;mask&quot;:1,&quot;tattoo&quot;:0,&quot;smoking&quot;:0,&quot;others&quot;:1,&quot;env&quot;:&quot;office&quot;,&quot;expression&quot;:1,&quot;age&quot;:16}</p>
              */
             public Builder faceAttributeInfo(String faceAttributeInfo) {
                 this.faceAttributeInfo = faceAttributeInfo;
@@ -372,7 +375,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * TargetFaceQualityScore.
+             * <p>The overall quality score of the retained face image. Valid values: 0 to 100. A higher score indicates better quality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.04</p>
              */
             public Builder targetFaceQualityScore(Double targetFaceQualityScore) {
                 this.targetFaceQualityScore = targetFaceQualityScore;
@@ -380,7 +386,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * TargetIlluminationScore.
+             * <p>The illumination score of the retained face image. Valid values: 0 to 100. A higher score indicates better quality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder targetIlluminationScore(Double targetIlluminationScore) {
                 this.targetIlluminationScore = targetIlluminationScore;
@@ -388,7 +397,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * TargetKaOcclusionScore.
+             * <p>The key area occlusion score of the retained face image. Valid values: 0 to 100. A higher score indicates better quality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder targetKaOcclusionScore(Double targetKaOcclusionScore) {
                 this.targetKaOcclusionScore = targetKaOcclusionScore;
@@ -396,7 +408,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * TargetOcclusionScore.
+             * <p>The occlusion score of the retained face image. Valid values: 0 to 100. A higher score indicates better quality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.26</p>
              */
             public Builder targetOcclusionScore(Double targetOcclusionScore) {
                 this.targetOcclusionScore = targetOcclusionScore;
@@ -404,7 +419,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * TargetSharpnessScore.
+             * <p>The sharpness score of the retained face image. Valid values: 0 to 100. A higher score indicates better quality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86.47</p>
              */
             public Builder targetSharpnessScore(Double targetSharpnessScore) {
                 this.targetSharpnessScore = targetSharpnessScore;
@@ -601,7 +619,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The face ID and UserID retrieved from the face library when a duplicate face is detected.</p>
+             * <p>The face ID and user ID retrieved from the face library when a duplicate face is detected.</p>
              * 
              * <strong>example:</strong>
              * <p>[
@@ -618,7 +636,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The related result information.</p>
+             * <p>The extended face information.</p>
              */
             public Builder extFaceInfo(ExtFaceInfo extFaceInfo) {
                 this.extFaceInfo = extFaceInfo;
@@ -626,7 +644,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The predicted reference age of the face. The prediction may fail and the value may not be returned.</p>
+             * <p>The predicted reference age of the face. This parameter may not be returned if the prediction fails.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -637,7 +655,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the captured face involves a liveness attack. Valid values: Y (attack detected) and N (no attack detected). This field is returned only when passive liveness detection is enabled.</p>
+             * <p>Specifies whether the collected face involves a liveness attack. Valid values: Y (attack) and N (no attack). This parameter is returned only when passive liveness detection is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>N</p>
@@ -648,7 +666,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The probability of a liveness attack on the face. The value ranges from 0 to 100. This field is returned only when passive liveness detection is enabled.</p>
+             * <p>The probability of a liveness attack detected by passive liveness detection. Valid values: 0 to 100. This parameter is returned only when passive liveness detection is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>99</p>
@@ -659,7 +677,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The 1:1 comparison score returned when the verification mode is 1 or 2. The score ranges from 0 to 100.</p>
+             * <p>The 1:1 verification comparison score returned when the verification mode is 1 or 2. The score ranges from 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>98</p>
@@ -670,10 +688,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The predicted gender of the face image. The prediction may fail and the value may not be returned. Valid values:</p>
+             * <p>The predicted gender of the face image. This parameter may not be returned if the prediction fails. Valid values:</p>
              * <ul>
-             * <li>M: male.</li>
-             * <li>F: female.</li>
+             * <li>M: Male.</li>
+             * <li>F: Female.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -685,10 +703,10 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final verification result. Valid values:</p>
+             * <p>The final authentication result. Valid values:</p>
              * <ul>
-             * <li>Y: passed.</li>
-             * <li>N: not passed.</li>
+             * <li>Y: Passed.</li>
+             * <li>N: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -700,7 +718,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The corresponding FACEID returned only when the customer has enabled automatic registration and the face is successfully registered.</p>
+             * <p>The face ID returned only when automatic registration is configured by the customer and the face is successfully registered.</p>
              * 
              * <strong>example:</strong>
              * <p>9e792ec84c8f0ca592a</p>
@@ -713,8 +731,8 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             /**
              * <p>The face registration result. Valid values: </p>
              * <ul>
-             * <li>0: failed. </li>
-             * <li>1: succeeded.</li>
+             * <li>0: Failed. </li>
+             * <li>1: Succeeded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -726,7 +744,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification result description. For more information, refer to the ResultObject.SubCode error code description.</p>
+             * <p>The description of the authentication result. For more information, see the ResultObject.SubCode error code description.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -737,7 +755,7 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the verification request.</p>
+             * <p>The unique identifier of the authentication request.</p>
              * 
              * <strong>example:</strong>
              * <p>4ab0b***cbde97</p>

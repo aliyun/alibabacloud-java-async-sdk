@@ -155,7 +155,7 @@ public class AddressVerifyV2IntlRequest extends Request {
         }
 
         /**
-         * <p>The device token, which is used for risk identification.</p>
+         * <p>The device token used for risk identification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class AddressVerifyV2IntlRequest extends Request {
         }
 
         /**
-         * <p>The China mobile phone number.</p>
+         * <p>The mobile phone number. Only mobile phone numbers in the Chinese mainland are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1872334****</p>
@@ -180,7 +180,7 @@ public class AddressVerifyV2IntlRequest extends Request {
         }
 
         /**
-         * <p>The product code. Set this parameter to ADD_VERIFY_PRO.</p>
+         * <p>The product code. Set the value to ADD_VERIFY_PRO.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class AddressVerifyV2IntlRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>目前仅支持：USA</p>
+         * <p>Currently supported: USA</p>
          */
         public Builder regCountry(String regCountry) {
             this.putQueryParameter("RegCountry", regCountry);
@@ -209,7 +209,7 @@ public class AddressVerifyV2IntlRequest extends Request {
          * <p>The detailed address text.</p>
          * 
          * <strong>example:</strong>
-         * <p>江苏省常州市*******小区</p>
+         * <p>Jiangsu Province, Changzhou City, ******* Community</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -220,8 +220,8 @@ public class AddressVerifyV2IntlRequest extends Request {
         /**
          * <p>The address verification method. Valid values:</p>
          * <ul>
-         * <li>HOME: home address verification.</li>
-         * <li>WORK: work address verification.</li>
+         * <li>HOME: Home address verification.</li>
+         * <li>WORK: Work address verification.</li>
          * </ul>
          * 
          * <strong>example:</strong>

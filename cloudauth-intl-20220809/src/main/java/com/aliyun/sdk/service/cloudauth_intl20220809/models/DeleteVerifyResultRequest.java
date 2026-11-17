@@ -87,7 +87,7 @@ public class DeleteVerifyResultRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether the deletion depends on the query operation.</p>
+         * <p>Specifies whether to rely on the query API when deleting data.</p>
          * 
          * <strong>example:</strong>
          * <p>Y / N</p>

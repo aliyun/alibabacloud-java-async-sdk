@@ -139,7 +139,7 @@ public class FaceGuardRiskRequest extends Request {
         }
 
         /**
-         * <p>The custom unique business identifier on the merchant side, used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Ensure that the value is unique.</p>
+         * <p>The custom unique business identifier on the merchant side, used for subsequent troubleshooting. It supports a combination of letters and digits and can be up to 32 characters in length. Ensure that the value is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>0c83ce0101d34eff886b1f7d1cdef67f</p>
@@ -151,10 +151,10 @@ public class FaceGuardRiskRequest extends Request {
         }
 
         /**
-         * <p>The product code. Set the value to FACE_GUARD.</p>
+         * <p>The product code. Valid values: FACE_GUARD and FACE_GUARD_PRO.</p>
          * 
          * <strong>example:</strong>
-         * <p>FACE_GUARD</p>
+         * <p>FACE_GUARD_PRO</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -163,7 +163,10 @@ public class FaceGuardRiskRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the risk scenario detected by Device Assistant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Face</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

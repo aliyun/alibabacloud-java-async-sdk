@@ -128,10 +128,10 @@ public class Mobile2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The phone number.</p>
+         * <p>The mobile phone number.</p>
          * <ul>
-         * <li>If ParamType is set to normal, pass in the phone number in plaintext.</li>
-         * <li>If ParamType is set to md5, pass in the phone number in ciphertext as a 32-character lowercase MD5 string.</li>
+         * <li>If paramType is set to normal, enter the plaintext mobile phone number.</li>
+         * <li>If paramType is set to md5, enter the ciphertext mobile phone number, which is a 32-character lowercase MD5 string.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -147,8 +147,8 @@ public class Mobile2MetaVerifyIntlRequest extends Request {
         /**
          * <p>The parameter type. Valid values:</p>
          * <ul>
-         * <li>normal: not encrypted</li>
-         * <li>md5: MD5-encrypted.</li>
+         * <li>normal: no encryption</li>
+         * <li>md5: MD5 encryption</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -162,7 +162,7 @@ public class Mobile2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The product code. Set this parameter to MOBILE_2META.</p>
+         * <p>The product code. Set the value to MOBILE_2META.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,15 +175,15 @@ public class Mobile2MetaVerifyIntlRequest extends Request {
         }
 
         /**
-         * <p>The name. Valid values:</p>
+         * <p>The name.</p>
          * <ul>
-         * <li>If ParamType is set to normal, pass in the name in plaintext.</li>
-         * <li>If ParamType is set to md5, pass in the name in ciphertext as a 32-character lowercase MD5 string.</li>
+         * <li>If paramType is set to normal, enter the plaintext name.</li>
+         * <li>If paramType is set to md5, enter the ciphertext name, which is a 32-character lowercase MD5 string.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>张*</p>
+         * <p>Zhang*</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

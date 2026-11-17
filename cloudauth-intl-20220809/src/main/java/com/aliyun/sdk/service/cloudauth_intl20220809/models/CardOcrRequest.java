@@ -171,7 +171,7 @@ public class CardOcrRequest extends Request {
         } 
 
         /**
-         * <p>The document type.</p>
+         * <p>The type of the ID card or certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>00000006</p>
@@ -183,10 +183,10 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform face quality detection on the ID document. Valid values:</p>
+         * <p>Specifies whether to perform face quality detection for the ID card or certificate. Valid values:</p>
          * <ul>
-         * <li>T: Perform face quality detection.</li>
-         * <li>F: Do not perform face quality detection. This is the default value.</li>
+         * <li>T: Performs face quality detection.</li>
+         * <li>F: Does not perform face quality detection. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded image of the front side of the ID document. The value is a Base64 encoding of the image.</p>
+         * <p>The Base64 encoding of the image of the front side of the ID card or certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>base64</p>
@@ -211,7 +211,7 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * <p>The URL of the front-side image of the ID document.</p>
+         * <p>The URL of the image of the front side of the ID card or certificate.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
@@ -223,7 +223,7 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
+         * <p>The custom unique business identifier on the merchant side, which is used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Make sure that the identifier is unique.</p>
          * 
          * <strong>example:</strong>
          * <p>dso9322***dsjsd22</p>
@@ -235,7 +235,7 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * <p>The merchant user ID or another identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you pre-desensitize the value of the userId field, for example, by hashing the value.</p>
+         * <p>The merchant user ID or another identifier that can be used to identify a specific user, such as a mobile phone number or an email address. Desensitize the value of the userId field in advance, such as by hashing the value.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -247,10 +247,10 @@ public class CardOcrRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform OCR on the ID document. Valid values:</p>
+         * <p>Specifies whether to perform OCR on the ID card or certificate. Valid values:</p>
          * <ul>
-         * <li>T: Perform OCR on the ID document. This is the default value.</li>
-         * <li>F: Do not perform OCR.</li>
+         * <li>T: Performs OCR on the ID card or certificate. This is the default value.</li>
+         * <li>F: Does not perform OCR.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,8 +277,8 @@ public class CardOcrRequest extends Request {
         /**
          * <p>Specifies whether to enable anti-spoofing detection. Valid values:</p>
          * <ul>
-         * <li>T: Enable anti-spoofing detection.</li>
-         * <li>F: Disable anti-spoofing detection. This is the default value.</li>
+         * <li>T: Enables anti-spoofing detection.</li>
+         * <li>F: Disables anti-spoofing detection. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -226,8 +226,8 @@ public class FaceCrossCompareIntlRequest extends Request {
         /**
          * <p>The comparison mode. Valid values:</p>
          * <ul>
-         * <li>0: chain comparison (default). A:B and B:C.</li>
-         * <li>1: circular comparison. A:B, B:C, and C:A.</li>
+         * <li>0: chained comparison (default). A to B and B to C.</li>
+         * <li>1: circular comparison. A to B, B to C, and C to A.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>The face matching threshold. This parameter is reserved by the system and does not support custom values.</p>
+         * <p>The face matching threshold. This parameter is reserved for the system and does not support custom values.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -254,7 +254,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>The custom unique business identifier, used for subsequent troubleshooting. The value is a combination of letters and digits with a length of 32 characters. Ensure that the value is unique.</p>
+         * <p>The custom unique business identifier used for subsequent troubleshooting. It supports a combination of up to 32 letters and digits. Make sure that the value is unique.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>The product solution to use. Valid values:
+         * <p>The product solution to integrate. Valid values:
          * FACE_CROSS_COMPARE.</p>
          * <p>This parameter is required.</p>
          * 
@@ -293,7 +293,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded face photo.</p>
+         * <p>The Base64-encoded facial photo.</p>
          * 
          * <strong>example:</strong>
          * <p>base64</p>
@@ -305,7 +305,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+         * <p>The URL of the facial image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></p>
@@ -317,7 +317,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded face photo.</p>
+         * <p>The Base64-encoded facial photo.</p>
          * 
          * <strong>example:</strong>
          * <p>base64</p>
@@ -329,7 +329,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+         * <p>The URL of the facial image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></p>
@@ -341,7 +341,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>The Base64-encoded face photo.</p>
+         * <p>The Base64-encoded facial photo.</p>
          * 
          * <strong>example:</strong>
          * <p>base64</p>
@@ -353,7 +353,7 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+         * <p>The URL of the facial image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.xxx.com/1.jpg">https://www.xxx.com/1.jpg</a></p>
