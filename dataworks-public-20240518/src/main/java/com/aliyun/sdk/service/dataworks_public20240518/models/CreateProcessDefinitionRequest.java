@@ -209,7 +209,7 @@ public class CreateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. We recommend that you use a UUID.</p>
+         * <p>The client token that is used to ensure idempotence. We recommend using a UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -221,7 +221,7 @@ public class CreateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * <p>The description of the process definition.</p>
+         * <p>The description of the flow definition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class CreateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the process definition.</p>
+         * <p>Specifies whether to enable the flow definition.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -243,11 +243,11 @@ public class CreateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * <p>The name of the process definition.</p>
+         * <p>The name of the flow definition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>My Approval Policy</p>
+         * <p>My approval policy</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -296,7 +296,7 @@ public class CreateProcessDefinitionRequest extends Request {
         }
 
         /**
-         * <p>The type of the process definition. Valid values:</p>
+         * <p>The type of the flow definition. Valid values:</p>
          * <ol>
          * <li>MaxCompute</li>
          * <li>DataService</li>
@@ -399,20 +399,20 @@ public class CreateProcessDefinitionRequest extends Request {
             } 
 
             /**
-             * <p>The type of approver for the node:</p>
+             * <p>The approver type for the node. Valid values:</p>
              * <ul>
-             * <li>DataWorksProjectRole: workspace role.</li>
-             * <li>DataWorksProjectMember: workspace member.</li>
-             * <li>TableAdministrator: table owner.</li>
-             * <li>TableOrProjectAdministrator: table or workspace administrator.</li>
-             * <li>AliyunResourceOwner: Alibaba Cloud account.</li>
-             * <li>MaxComputeRole: MaxCompute administrator.</li>
-             * <li>DLFAdmin: DLF Legacy administrator.</li>
-             * <li>DLFNextAdmin: DLF Next administrator.</li>
-             * <li>TenantRole: tenant role.</li>
-             * <li>EmrAdministrator: EMR administrator.</li>
-             * <li>LindormAdministrator: Lindorm administrator.</li>
-             * <li>AliyunRamUser: RAM user.</li>
+             * <li>DataWorksProjectRole: workspace role</li>
+             * <li>DataWorksProjectMember: workspace member</li>
+             * <li>TableAdministrator: table owner</li>
+             * <li>TableOrProjectAdministrator: table or workspace administrator</li>
+             * <li>AliyunResourceOwner: Alibaba Cloud account</li>
+             * <li>MaxComputeRole: MaxCompute administrator</li>
+             * <li>DLFAdmin: DLF legacy administrator</li>
+             * <li>DLFNextAdmin: DLFNext administrator</li>
+             * <li>TenantRole: tenant role</li>
+             * <li>EmrAdministrator: EMR administrator</li>
+             * <li>LindormAdministrator: Lindorm administrator</li>
+             * <li>AliyunRamUser: RAM user</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -424,13 +424,13 @@ public class CreateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * <p>The semantics of this parameter varies based on the value of <code>AccountType</code>:</p>
+             * <p>The assignees. The semantics vary based on the value of AccountType:</p>
              * <ul>
-             * <li>DataWorksProjectMember: the user ID of the workspace member.</li>
-             * <li>DataWorksProjectRole: the code of the workspace role. If a custom workspace role is required, set this parameter to &quot;custom-role&quot; and further configure the role in ExtensionProperties.</li>
-             * <li>MaxComputeRole: the MaxCompute role.</li>
-             * <li>TenantRole: the code of the tenant role.</li>
-             * <li>AliyunRamUser: the RAM user ID.</li>
+             * <li>DataWorksProjectMember: specifies the user ID of the workspace member.</li>
+             * <li>DataWorksProjectRole: specifies the code of the workspace role. If a custom workspace role is required, set this parameter to &quot;custom-role&quot; and further configure it in ExtensionProperties.</li>
+             * <li>MaxComputeRole: specifies the MaxCompute role.</li>
+             * <li>TenantRole: specifies the code of the tenant role.</li>
+             * <li>AliyunRamUser: specifies the RAM user ID.</li>
              * </ul>
              */
             public Builder assignees(java.util.List<String> assignees) {
@@ -439,15 +439,18 @@ public class CreateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * <p>The additional declarations required based on the value of <code>AccountType</code>:</p>
+             * <p>The extended properties. Different additional declarations are required based on the value of AccountType:</p>
              * <ul>
-             * <li><p>DataWorksProjectMember: specify different workspace member user IDs. The key is the workspace ID, and the value is the user ID of the workspace member. Separate multiple user IDs with commas (,).</p>
+             * <li><p>DataWorksProjectMember: You must set the user IDs of different workspace members. The key is the workspace ID, and the value is the user ID of the workspace member. Separate multiple values with commas (,).</p>
              * </li>
-             * <li><p>DataWorksProjectRole: specify different custom workspace role codes. The key is the workspace ID, and the value is the custom workspace role code. Separate multiple role codes with commas (,).</p>
+             * <li><p>DataWorksProjectRole: You must set the codes of different custom workspace roles. The key is the workspace ID, and the value is the code of the custom workspace role. Separate multiple values with commas (,).</p>
              * </li>
-             * <li><p>MaxComputeRole: specify the roles under a MaxCompute project. The key is the MaxCompute project name, and the value is the role name in MaxCompute. Separate multiple role names with commas (,).</p>
+             * <li><p>MaxComputeRole: You must set the roles under the MaxCompute project. The key is the MaxCompute project, and the value is the role name in MaxCompute. Separate multiple values with commas (,).</p>
              * </li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;449656&quot;: &quot;role_project_admin,role_project_pe&quot;}</p>
              */
             public Builder extensionProperties(java.util.Map<String, ?> extensionProperties) {
                 this.extensionProperties = extensionProperties;
@@ -555,7 +558,7 @@ public class CreateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * <p>The extension information in JSON format. Example: <code>{&quot;atAll&quot;:&quot;true&quot;}</code>, which specifies whether to mention all members.</p>
+             * <p>The extended information in JSON format. For example, <code>{&quot;atAll&quot;:&quot;true&quot;}</code> specifies whether to mention all users.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;atAll&quot;:&quot;true&quot;}</p>
@@ -566,7 +569,7 @@ public class CreateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * <p>The WebhookUrl that must be specified when Channel is set to DingRobot or Weixin.</p>
+             * <p>The receiver. When Channel is set to DingRobot or Weixin, you must specify WebhookUrl.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dingtalk.com">https://dingtalk.com</a></p>
@@ -649,7 +652,7 @@ public class CreateProcessDefinitionRequest extends Request {
             } 
 
             /**
-             * <p>The condition expression in the format of ((#type==\&quot;typeValue\&quot;)). Example: ((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;)).</p>
+             * <p>The conditional expression, in the format of ((#type==\&quot;typeValue\&quot;)). Example: ((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;)).</p>
              * 
              * <strong>example:</strong>
              * <p>((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;))</p>
@@ -660,10 +663,10 @@ public class CreateProcessDefinitionRequest extends Request {
             }
 
             /**
-             * <p>The stage at which the rule takes effect:</p>
+             * <p>The stage where the rule takes effect. Valid values:</p>
              * <ul>
-             * <li><code>Deployment</code>: used to determine whether the approval policy matches when a request is submitted.</li>
-             * <li><code>Running</code>: used to determine whether approval is exempted during the execution of the approval process. This value is supported only for the MaxCompute type.</li>
+             * <li><code>Deployment</code>: Used to determine whether the approval policy is matched when the application is submitted.</li>
+             * <li><code>Running</code>: Used to determine whether the approval process is exempt from approval during execution. This value is supported only for the MaxCompute type.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -677,10 +680,10 @@ public class CreateProcessDefinitionRequest extends Request {
             /**
              * <p>The condition type. Valid values:</p>
              * <ul>
-             * <li><code>odpsProject</code></li>
+             * <li><code>odpsProject</code> </li>
              * <li><code>hologresInstanceId</code></li>
-             * <li><code>sensibleLevel</code></li>
-             * <li><code>tableGuid</code></li>
+             * <li><code>sensibleLevel</code> </li>
+             * <li><code>tableGuid</code> </li>
              * <li><code>projectId</code></li>
              * </ul>
              * 

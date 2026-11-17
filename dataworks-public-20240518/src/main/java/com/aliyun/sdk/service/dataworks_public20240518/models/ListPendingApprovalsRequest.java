@@ -198,8 +198,8 @@ public class ListPendingApprovalsRequest extends Request {
 
         /**
          * <p>Filters by requested permissions.</p>
-         * <p>Note: Different resource levels support different permission types. All are uniformly constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
-         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
+         * <p>Note: The permission types supported for application vary across resource levels and are uniformly constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          */
         public Builder accessTypes(java.util.List<String> accessTypes) {
             String accessTypesShrink = shrink(accessTypes, "AccessTypes", "json");
@@ -210,8 +210,8 @@ public class ListPendingApprovalsRequest extends Request {
 
         /**
          * <p>Filters by resource type.</p>
-         * <p>Note: The supported resource types for requests are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
+         * <p>Note: The resource types for which permissions can be requested are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class ListPendingApprovalsRequest extends Request {
         }
 
         /**
-         * <p>End time of the application period (millisecond timestamp).</p>
+         * <p>The end of the time range for request submission, as a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1779724799999</p>
@@ -236,9 +236,9 @@ public class ListPendingApprovalsRequest extends Request {
         }
 
         /**
-         * <p>Filters by authorization principal.</p>
-         * <p>Note: The supported authorization principal types are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
-         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
+         * <p>Filters by authorization principal. </p>
+         * <p>Note: The authorization principal types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          */
         public Builder grantee(Grantee grantee) {
             String granteeShrink = shrink(grantee, "Grantee", "json");
@@ -248,7 +248,7 @@ public class ListPendingApprovalsRequest extends Request {
         }
 
         /**
-         * <p>Cursor.</p>
+         * <p>The cursor.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJpZCI6MTIzfQ==</p>
@@ -260,7 +260,7 @@ public class ListPendingApprovalsRequest extends Request {
         }
 
         /**
-         * <p>Page size (default: 10, maximum: 200).</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -272,8 +272,8 @@ public class ListPendingApprovalsRequest extends Request {
         }
 
         /**
-         * <p>Filters by resource with exact or generalized matching. Resource descriptions are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
-         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
+         * <p>Filters by exact or generalized resource. The resource description is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          */
         public Builder resource(Resource resource) {
             String resourceShrink = shrink(resource, "Resource", "json");
@@ -283,9 +283,9 @@ public class ListPendingApprovalsRequest extends Request {
         }
 
         /**
-         * <p>Filters by minimum permission resource type.</p>
-         * <p>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
-         * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
+         * <p>Filters by least privilege resource type.</p>
+         * <p>Note: The least privilege resource types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +299,7 @@ public class ListPendingApprovalsRequest extends Request {
         }
 
         /**
-         * <p>Start time of the application period (millisecond timestamp).</p>
+         * <p>The start of the time range for request submission, as a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1771948800000</p>
@@ -370,7 +370,7 @@ public class ListPendingApprovalsRequest extends Request {
             } 
 
             /**
-             * <p>Authorization principal ID.</p>
+             * <p>The ID of the authorization principal.</p>
              * 
              * <strong>example:</strong>
              * <p>ROLE_3133343434</p>
@@ -381,7 +381,7 @@ public class ListPendingApprovalsRequest extends Request {
             }
 
             /**
-             * <p>Authorization principal type.</p>
+             * <p>The type of the authorization principal.</p>
              * 
              * <strong>example:</strong>
              * <p>RamRole</p>
@@ -464,9 +464,9 @@ public class ListPendingApprovalsRequest extends Request {
             } 
 
             /**
-             * <p>Resource type.</p>
-             * <p>Note: The supported resource types for requests are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-             * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
+             * <p>The resource type.</p>
+             * <p>Note: The resource types for which permissions can be requested are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+             * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
              * 
              * <strong>example:</strong>
              * <p>MaxCompute</p>
@@ -477,8 +477,8 @@ public class ListPendingApprovalsRequest extends Request {
             }
 
             /**
-             * <p>Resource parsing version is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
-             * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
+             * <p>The resource parsing version is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+             * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
              * 
              * <strong>example:</strong>
              * <p>v1.0.0</p>
@@ -489,9 +489,12 @@ public class ListPendingApprovalsRequest extends Request {
             }
 
             /**
-             * <p>Resource metadata.</p>
-             * <p>Note: Metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full path metadata declaration from level 0 to the validLeaf level.</p>
-             * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></p>
+             * <p>The resource metadata.</p>
+             * <p>Note: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
+             * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;workspace&quot;: &quot;449056&quot;, &quot;project&quot;: &quot;sync_destination&quot;}</p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;

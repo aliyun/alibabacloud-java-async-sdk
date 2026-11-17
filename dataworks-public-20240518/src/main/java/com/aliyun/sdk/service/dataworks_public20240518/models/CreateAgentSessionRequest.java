@@ -473,7 +473,7 @@ public class CreateAgentSessionRequest extends Request {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>chat，cli</p>
+             * <p>chat</p>
              */
             public Builder executionLane(String executionLane) {
                 this.executionLane = executionLane;

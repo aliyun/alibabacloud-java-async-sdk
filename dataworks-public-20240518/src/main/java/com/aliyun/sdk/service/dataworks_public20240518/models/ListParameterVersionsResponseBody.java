@@ -399,7 +399,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
              * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
-             * <p>这是一个测试参数</p>
+             * <p>This is a test parameter.</p>
              */
             public Builder description(String description) {
                 this.description = description;

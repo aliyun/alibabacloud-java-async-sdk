@@ -99,8 +99,8 @@ public class GetWorkflowRequest extends Request {
         /**
          * <p>The project environment. Valid values:</p>
          * <ul>
-         * <li>Prod: Production environment.</li>
-         * <li>Dev: Development environment.</li>
+         * <li>Prod: production.</li>
+         * <li>Dev: development.</li>
          * </ul>
          * 
          * <strong>example:</strong>

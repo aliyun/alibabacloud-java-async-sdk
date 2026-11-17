@@ -82,7 +82,7 @@ public class GetDataQualityScanRunRequest extends Request {
         }
 
         /**
-         * <p>The data quality monitoring run record ID.</p>
+         * <p>The ID of the data quality monitor run record.</p>
          * 
          * <strong>example:</strong>
          * <p>1006059507</p>

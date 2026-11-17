@@ -151,7 +151,7 @@ public class ListCrossProjectPipelineRunItemsRequest extends Request {
         }
 
         /**
-         * <p>The cross-workspace deployment pipeline ID.</p>
+         * <p>The ID of the cross-workspace deployment pipeline.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

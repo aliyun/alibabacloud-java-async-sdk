@@ -112,7 +112,7 @@ public class ApplyResourceAccessPermissionRequest extends Request {
         }
 
         /**
-         * <p>The list of resource permission request entries.</p>
+         * <p>The list of resource permission applications.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applyContents(java.util.List<ApplyContents> applyContents) {
@@ -123,7 +123,7 @@ public class ApplyResourceAccessPermissionRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token. Used to prevent duplicate operations caused by multiple calls.</p>
+         * <p>The idempotency token used to prevent duplicate operations caused by multiple calls.</p>
          * 
          * <strong>example:</strong>
          * <p>ABFUOEUOTRTRJKE</p>
@@ -135,11 +135,11 @@ public class ApplyResourceAccessPermissionRequest extends Request {
         }
 
         /**
-         * <p>The reason for the request.</p>
+         * <p>The reason for the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Business development needs</p>
+         * <p>Business development requirements</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("Reason", reason);
@@ -209,14 +209,11 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             } 
 
             /**
-             * <p>The principal ID. The ID has different meanings depending on the principal type:</p>
+             * <p>The principal ID. The mapped IDs have different semantics for different principal types:</p>
              * <ul>
-             * <li><p>RamUser: DataWorks UserId</p>
-             * </li>
-             * <li><p>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;</p>
-             * </li>
-             * <li><p>DlfRole: DlfNext role name</p>
-             * </li>
+             * <li>RamUser: the DataWorks user ID.</li>
+             * <li>RamRole: the DataWorks user ID that starts with &quot;ROLE_&quot;.</li>
+             * <li>DlfRole: the DlfNext role name.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -320,8 +317,8 @@ public class ApplyResourceAccessPermissionRequest extends Request {
 
             /**
              * <p>The resource type.</p>
-             * <p><strong>Note</strong>: The resource types that can be requested are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
+             * <p><strong>Note</strong>: The resource types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+             * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation</a></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -333,8 +330,8 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
-             * <p>The resource parsing version, constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
-             * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
+             * <p>The resource parsing version is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+             * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation</a></p>
              * 
              * <strong>example:</strong>
              * <p>v1.0.0</p>
@@ -346,8 +343,11 @@ public class ApplyResourceAccessPermissionRequest extends Request {
 
             /**
              * <p>The resource metadata declaration.</p>
-             * <p><strong>Note</strong>: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
-             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
+             * <p><strong>Note</strong>: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include metadata for the full resource path from level 0 through the validLeaf level.</p>
+             * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;workspace&quot;: &quot;449656&quot;, &quot;project&quot;: &quot;sync_destination&quot;, &quot;table&quot;: &quot;order_table&quot;, &quot;threeTierModel&quot;: false}</p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;
@@ -455,9 +455,9 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             } 
 
             /**
-             * <p>The list of requested access types.</p>
-             * <p><strong>Note</strong>: Different resource levels support different access types. All access types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
-             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
+             * <p>The list of requested permissions.</p>
+             * <p><strong>Note</strong>: The types of permissions that can be applied for vary across resources at different levels. All are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
+             * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation</a></p>
              * <p>This parameter is required.</p>
              */
             public Builder accessTypes(java.util.List<String> accessTypes) {
@@ -466,9 +466,9 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
-             * <p>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying an authorization method: ranger or starrocksManager.</p>
-             * <p><strong>Note</strong>: Different resources support different authorization methods. All authorization methods are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</p>
-             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
+             * <p>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying the authorization method: ranger and starrocksManager.</p>
+             * <p><strong>Note</strong>: The authorization methods supported vary across resources. All are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</p>
+             * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation</a></p>
              * 
              * <strong>example:</strong>
              * <p>ranger</p>
@@ -479,7 +479,7 @@ public class ApplyResourceAccessPermissionRequest extends Request {
             }
 
             /**
-             * <p>The permission expiration time, in millisecond-level timestamp format.</p>
+             * <p>The expiration time of the permissions, specified as a millisecond timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1785835708000</p>
@@ -491,8 +491,8 @@ public class ApplyResourceAccessPermissionRequest extends Request {
 
             /**
              * <p>The grantee description.</p>
-             * <p><strong>Note</strong>: The supported principal types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
-             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></p>
+             * <p><strong>Note</strong>: The principal types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
+             * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation</a></p>
              * <p>This parameter is required.</p>
              */
             public Builder grantee(Grantee grantee) {

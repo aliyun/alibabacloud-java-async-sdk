@@ -254,7 +254,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -266,7 +266,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The account ID of the user that owns the instance.</p>
+         * <p>The account ID of the user who owns the instance. This parameter is used to filter instances.</p>
          * 
          * <strong>example:</strong>
          * <p>20933221576142****</p>
@@ -278,7 +278,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks resource group identifier. You can use the numeric ID of the resource group or the full identifier in the Serverless_res_group_{tenantId}_{resgId} format.</p>
+         * <p>The identifier of the DataWorks resource group. You can specify the numeric ID of the resource group or the full identifier in the Serverless_res_group_{tenantId}_{resgId} format.</p>
          * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_123456789012345_9876543210****</p>
@@ -290,7 +290,7 @@ public class ListServerIdeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance subtype. Valid values:</p>
+         * <p>The subtype of the instance. Valid values:</p>
          * <ul>
          * <li>PERSONAL_DEV: personal development environment</li>
          * <li>DATA_AGENT: Data Agent</li>

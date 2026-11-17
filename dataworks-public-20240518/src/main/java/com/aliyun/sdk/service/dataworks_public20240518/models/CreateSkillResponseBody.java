@@ -144,7 +144,7 @@ public class CreateSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the visible projects.</p>
+             * <p>The IDs of the projects in which the skill is visible.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -152,7 +152,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the visible users. This field is returned only when Visibility is set to USER.</p>
+             * <p>The IDs of the users who can see the skill. This field takes effect when Visibility is set to USER.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -310,12 +310,14 @@ public class CreateSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the SKILL.md file.</p>
+             * <p>The body of the SKILL.md file.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <hr>
+             * <h2>name: example-skill
+             * description: Sample skill.</h2>
+             * <h1>Sample skill</h1>
+             * <p>Summarize the text provided by the user</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -334,7 +336,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skill description.</p>
+             * <p>The description of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>Data analytics skill</p>
@@ -380,7 +382,7 @@ public class CreateSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The skill name.</p>
+             * <p>The name of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>my-skill</p>

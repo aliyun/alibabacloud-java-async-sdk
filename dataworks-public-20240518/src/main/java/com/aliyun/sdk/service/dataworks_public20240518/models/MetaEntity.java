@@ -171,7 +171,10 @@ public class MetaEntity extends TeaModel {
         } 
 
         /**
-         * <p>Entity attributes. Complex values are represented as JSON strings.</p>
+         * <p>The entity properties. Complex values are represented as JSON strings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;: &quot;v1&quot;}</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
@@ -179,7 +182,7 @@ public class MetaEntity extends TeaModel {
         }
 
         /**
-         * <p>Comment</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a comment</p>
@@ -190,7 +193,7 @@ public class MetaEntity extends TeaModel {
         }
 
         /**
-         * <p>Creation time as a millisecond-level timestamp</p>
+         * <p>The creation time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780553640613</p>
@@ -201,7 +204,10 @@ public class MetaEntity extends TeaModel {
         }
 
         /**
-         * <p>Custom attribute values. The key is the custom attribute identifier. The value is a list of attribute values.</p>
+         * <p>The custom attribute values. The key is the custom attribute identifier, and the value is a list of attribute values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;owner_name&quot;:[&quot;Zhang San&quot;]}</p>
          */
         public Builder customAttributes(java.util.Map<String, java.util.List<String>> customAttributes) {
             this.customAttributes = customAttributes;
@@ -209,7 +215,7 @@ public class MetaEntity extends TeaModel {
         }
 
         /**
-         * <p>Entity type</p>
+         * <p>The entity type.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_entity-customer_api</p>
@@ -220,7 +226,7 @@ public class MetaEntity extends TeaModel {
         }
 
         /**
-         * <p>Entity ID</p>
+         * <p>The entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_entity-customer_api:api_001</p>
@@ -231,10 +237,7 @@ public class MetaEntity extends TeaModel {
         }
 
         /**
-         * <p>Attribute definition of the custom entity.</p>
-         * <blockquote>
-         * <p>Notice: For historical reasons, this property is not returned and its value is empty. We recommend that you use the GetMetaEntityDef API to obtain the entity type definition.</p>
-         * </blockquote>
+         * <p>The property definition of the custom entity. <notice>This legacy property is not populated. To retrieve the entity type definition, call GetMetaEntityDef.</notice></p>
          */
         public Builder metaEntityDef(MetaEntityDef metaEntityDef) {
             this.metaEntityDef = metaEntityDef;
@@ -242,7 +245,7 @@ public class MetaEntity extends TeaModel {
         }
 
         /**
-         * <p>Modification time as a millisecond-level timestamp</p>
+         * <p>The modification time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1763380628000</p>
@@ -253,7 +256,7 @@ public class MetaEntity extends TeaModel {
         }
 
         /**
-         * <p>Entity name</p>
+         * <p>The entity name.</p>
          * 
          * <strong>example:</strong>
          * <p>api_001</p>
@@ -264,7 +267,7 @@ public class MetaEntity extends TeaModel {
         }
 
         /**
-         * <p>Owner ID. The default value is the Alibaba Cloud UID of the creator.</p>
+         * <p>The owner ID. Default value: the Alibaba Cloud UID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>207924799988354</p>

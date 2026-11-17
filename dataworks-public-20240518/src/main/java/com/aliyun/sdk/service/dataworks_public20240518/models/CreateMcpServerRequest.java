@@ -128,9 +128,7 @@ public class CreateMcpServerRequest extends Request {
          * <p>The connection configuration of the MCP server.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>{&quot;Transport&quot;:&quot;SSE&quot;,&quot;Url&quot;:&quot;<a href="https://example.com/mcp/sse%22,%22CustomHeaders%22:%7B%7D%7D">https://example.com/mcp/sse&quot;,&quot;CustomHeaders&quot;:{}}</a></p>
          */
         public Builder config(Config config) {
             String configShrink = shrink(config, "Config", "json");
@@ -140,7 +138,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The name of the MCP server. It must be unique at the tenant level. It must start with a lowercase letter and can contain only lowercase letters (<code>a-z</code>), digits (<code>0-9</code>), underscores (<code>_</code>), and hyphens (<code>-</code>).</p>
+         * <p>The name of the MCP server. The name must be unique at the tenant level. It must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +163,7 @@ public class CreateMcpServerRequest extends Request {
         }
 
         /**
-         * <p>The visibility scope. Specify the corresponding fields based on the value of Visibility.</p>
+         * <p>The visibility scope. Specify the corresponding field based on the value of Visibility.</p>
          */
         public Builder visibilityScope(VisibilityScope visibilityScope) {
             String visibilityScopeShrink = shrink(visibilityScope, "VisibilityScope", "json");
@@ -339,7 +337,7 @@ public class CreateMcpServerRequest extends Request {
             } 
 
             /**
-             * <p>The list of visible project IDs. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
+             * <p>The IDs of the projects in which the MCP server is visible. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -347,7 +345,7 @@ public class CreateMcpServerRequest extends Request {
             }
 
             /**
-             * <p>The list of visible user IDs. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
+             * <p>The IDs of the users who can see the MCP server. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

@@ -159,10 +159,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             /**
              * <p>The dependency type. Valid values:</p>
              * <ul>
-             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes</li>
-             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the node itself</li>
-             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
-             * <li>Normal: same-cycle dependency</li>
+             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes.</li>
+             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the node itself.</li>
+             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes.</li>
+             * <li>Normal: same-cycle dependency.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -517,7 +517,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CU consumption configured for task execution.</p>
+             * <p>The number of compute units (CUs) consumed during task execution.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -539,7 +539,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the resource group for scheduling configured for task execution.</p>
+             * <p>The identifier of the scheduling resource group configured for task execution.</p>
              * 
              * <strong>example:</strong>
              * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -880,7 +880,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client unique code of the task, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating the task, the system automatically generates a code and uniquely binds it to the resource ID. If you specify this parameter when updating or deleting the resource, it must be the same as the client unique code used during creation.</p>
+             * <p>The client unique code of the task, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating the task, the system automatically generates one and uniquely binds the code to the resource ID. If you specify this parameter when updating or deleting the resource, it must be the same as the client unique code used during creation.</p>
              * 
              * <strong>example:</strong>
              * <p>Task_0bc5213917368545132902xxxxxxxx</p>
@@ -935,8 +935,8 @@ public class GetWorkflowResponseBody extends TeaModel {
             /**
              * <p>The project environment. Valid values:</p>
              * <ul>
-             * <li>Prod: Production environment.</li>
-             * <li>Dev: Development environment.</li>
+             * <li>Prod: production.</li>
+             * <li>Dev: development.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -959,7 +959,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The modification time.</p>
              * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
@@ -971,7 +971,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the user who updated the task.</p>
+             * <p>The account ID of the user who modified the task.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1037,11 +1037,11 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration that specifies whether the task can be rerun. Valid values:</p>
+             * <p>Specifies whether the task can be rerun. Valid values:</p>
              * <ul>
              * <li>AllDenied: The task cannot be rerun regardless of whether it succeeds or fails.</li>
              * <li>FailureAllowed: The task can be rerun only when it fails.</li>
-             * <li>AllAllowed: The task can be rerun regardless of whether it succeeds or fails.</li>
+             * <li>AllAllowed: The task can be rerun after either success or failure.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1053,7 +1053,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of retries. This parameter takes effect only when the task is configured to be rerunnable.</p>
+             * <p>The number of retries. This parameter takes effect only when the task is configured to allow reruns.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1083,11 +1083,11 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running mode when the trigger is fired. Valid values:</p>
+             * <p>The running mode when the task is triggered. Valid values:</p>
              * <ul>
-             * <li>Pause: paused</li>
-             * <li>Skip: dry run</li>
-             * <li>Normal: normal execution</li>
+             * <li>Pause: paused.</li>
+             * <li>Skip: dry run.</li>
+             * <li>Normal: normal running.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1242,11 +1242,11 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running mode when the trigger is fired. This parameter takes effect only when Type is set to Scheduler. Valid values:</p>
+             * <p>The running mode when the workflow is triggered. This parameter takes effect only when Type is set to Scheduler. Valid values:</p>
              * <ul>
-             * <li>Pause: paused</li>
-             * <li>Skip: dry run</li>
-             * <li>Normal: normal execution</li>
+             * <li>Pause: paused.</li>
+             * <li>Skip: dry run.</li>
+             * <li>Normal: normal running.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1258,7 +1258,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when periodic triggering takes effect. This parameter takes effect only when Type is set to Scheduler.</p>
+             * <p>The start time for periodic triggers. This parameter takes effect only when Type is set to Scheduler.</p>
              * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>, such as <code>1970-01-01 00:00:00</code>. The example does not include a time zone identifier.</p>
              * 
              * <strong>example:</strong>
@@ -1270,10 +1270,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the trigger method. Valid values:</p>
+             * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: triggered by a scheduling cycle</li>
-             * <li>Manual: triggered manually</li>
+             * <li>Scheduler: triggered by a scheduling period.</li>
+             * <li>Manual: manually triggered.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1539,7 +1539,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client unique code of the workflow, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating the workflow, the system automatically generates a code and uniquely binds it to the resource ID. If you specify this parameter when updating or deleting the resource, it must be the same as the client unique code used during creation.</p>
+             * <p>The client unique code of the workflow, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating the workflow, the system automatically generates one and uniquely binds the code to the resource ID. If you specify this parameter when updating or deleting the resource, it must be the same as the client unique code used during creation.</p>
              * 
              * <strong>example:</strong>
              * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
@@ -1594,8 +1594,8 @@ public class GetWorkflowResponseBody extends TeaModel {
             /**
              * <p>The project environment. Valid values:</p>
              * <ul>
-             * <li>Prod: Production environment.</li>
-             * <li>Dev: Development environment.</li>
+             * <li>Prod: production.</li>
+             * <li>Dev: development.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1618,7 +1618,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The modification time.</p>
              * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
              * 
              * <strong>example:</strong>
@@ -1630,7 +1630,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the user who updated the workflow.</p>
+             * <p>The account ID of the user who modified the workflow.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1709,7 +1709,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger configuration.</p>
+             * <p>The trigger method.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;

@@ -233,7 +233,7 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * <p>The earliest time when the data quality evaluation result was generated.</p>
+         * <p>The earliest time when the data quality check results were generated.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -245,7 +245,7 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * <p>The latest time when the data quality evaluation result was generated.</p>
+         * <p>The latest time when the data quality check results were generated.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -293,7 +293,7 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * <p>The page number for the paging query. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -305,7 +305,7 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * <p>The page size for the paging query. Default value: 10.</p>
+         * <p>The number of results per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

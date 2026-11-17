@@ -119,7 +119,7 @@ public class Partition extends TeaModel {
         } 
 
         /**
-         * <p>The creation time, in millisecond-level timestamp.</p>
+         * <p>The creation time (millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1700192563000</p>
@@ -141,7 +141,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>The modification time, in millisecond-level timestamp.</p>
+         * <p>The modification time (millisecond timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1700192563000</p>
@@ -174,10 +174,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * <p>The resource ID of the data table to which the partition belongs.</p>
+         * <p>The ID of the parent data table. Refer to the <code>Table</code> object.</p>
          * 
          * <strong>example:</strong>
-         * <p>maxcompute-table:accountId::project::table</p>
+         * <p>maxcompute-table:::project_name:[schema_name]:table_name</p>
          */
         public Builder tableId(String tableId) {
             this.tableId = tableId;

@@ -186,8 +186,8 @@ public class ListMyApplicationsRequest extends Request {
 
         /**
          * <p>Filters by resource type.</p>
-         * <p>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
+         * <p>Note: The resource types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International site</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the application period (millisecond timestamp).</p>
+         * <p>The end of the request submission time range, as a timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The pagination cursor.</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJpZCI6MTIzfQ==</p>
@@ -237,8 +237,8 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Filters by resource with exact or generalized matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
+         * <p>Filters by exact or generalized resource. The resource description is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International site</a>.</p>
          */
         public Builder resource(Resource resource) {
             String resourceShrink = shrink(resource, "Resource", "json");
@@ -248,9 +248,9 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Filters by minimum permission resource type.</p>
-         * <p>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
+         * <p>Filters by least privilege resource type.</p>
+         * <p>Note: The least privilege resource types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International site</a>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceType(java.util.List<String> resourceType) {
@@ -261,7 +261,7 @@ public class ListMyApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the application period (millisecond timestamp).</p>
+         * <p>The start of the request submission time range, as a timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,13 +276,13 @@ public class ListMyApplicationsRequest extends Request {
         /**
          * <p>Filters by approval status. Valid values:</p>
          * <ul>
-         * <li>WaitApproval: pending approval.</li>
-         * <li>Confirmed: pending authorization.</li>
-         * <li>RejectApproval: approval rejected.</li>
-         * <li>AuthorizeSucceed: authorization succeeded.</li>
-         * <li>AuthorizeFailed: authorization failed.</li>
-         * <li>Deleted: deleted.</li>
-         * <li>Canceled: withdrawn.</li>
+         * <li>WaitApproval: pending approval</li>
+         * <li>Confirmed: pending authorization</li>
+         * <li>RejectApproval: approval rejected</li>
+         * <li>AuthorizeSucceed: authorization succeeded</li>
+         * <li>AuthorizeFailed: authorization failed</li>
+         * <li>Deleted: deleted</li>
+         * <li>Canceled: withdrawn</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -369,8 +369,8 @@ public class ListMyApplicationsRequest extends Request {
 
             /**
              * <p>The resource type.</p>
-             * <p>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
+             * <p>Note: The resource types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+             * <p>For more information, see <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International site</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>MaxCompute</p>
@@ -381,8 +381,8 @@ public class ListMyApplicationsRequest extends Request {
             }
 
             /**
-             * <p>The resource parsing version, which is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
-             * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
+             * <p>The resource parsing version is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+             * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International site</a></p>
              * 
              * <strong>example:</strong>
              * <p>v1.0.0</p>
@@ -394,8 +394,11 @@ public class ListMyApplicationsRequest extends Request {
 
             /**
              * <p>The resource metadata.</p>
-             * <p>Note: The metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declarations from level 0 to the validLeaf level.</p>
-             * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></p>
+             * <p>Note: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
+             * <p>For more information, see <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International site</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;workspace&quot;: &quot;449056&quot;, &quot;project&quot;: &quot;sync_destination&quot;}</p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;

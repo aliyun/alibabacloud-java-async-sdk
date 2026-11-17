@@ -80,7 +80,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The saved semantic job definition. Use Data.Name to call RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</p>
+         * <p>The saved semantic task definition. Use <code>Data.Name</code> to call RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
@@ -99,7 +99,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -295,7 +295,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The job creator identifier, equivalent to UserId, used to display creation ownership.</p>
+             * <p>The identifier of the task creator, which has the same value as <code>UserId</code> and identifies who created the task.</p>
              * 
              * <strong>example:</strong>
              * <p>user-demo</p>
@@ -306,7 +306,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the job definition, expressed as a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the task definition was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1700000000000</p>
@@ -317,7 +317,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the job definition, expressed as a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the task definition was last modified. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1700000000000</p>
@@ -328,7 +328,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal unique ID of the job definition, which identifies the job created by this call.</p>
+             * <p>The internal unique ID of the task definition, which is used to identify the created task.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -339,7 +339,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The saved job name. Use this value for subsequent operations such as running, deleting, querying run records, and downloading results.</p>
+             * <p>The saved task name. This value is used for subsequent operations such as running, deleting, querying run records, and downloading results.</p>
              * 
              * <strong>example:</strong>
              * <p>semantic-job-demo</p>
@@ -350,7 +350,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace ID to which the job belongs. Use this value as the ProjectId for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
+             * <p>The ID of the DataWorks workspace to which the task belongs. This ID is used as the <code>ProjectId</code> for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -361,7 +361,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of associated uploaded file IDs. For singleTableFile, the single file in this list is read at runtime.</p>
+             * <p>The list of IDs of associated uploaded files. If the source type is <code>singleTableFile</code>, the task reads the only file in the list at runtime.</p>
              */
             public Builder referenceFileIds(java.util.List<String> referenceFileIds) {
                 this.referenceFileIds = referenceFileIds;
@@ -369,7 +369,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of associated external reference file URIs. For singleTableFile, the single file in this list is read at runtime.</p>
+             * <p>The list of URIs of associated external reference files. If the source type is <code>singleTableFile</code>, the task reads the only file in the list at runtime.</p>
              */
             public Builder referenceFileUris(java.util.List<String> referenceFileUris) {
                 this.referenceFileUris = referenceFileUris;
@@ -377,7 +377,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group that is used when running this job.</p>
+             * <p>The identifier of the resource group to be used when running this task.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-demo</p>
@@ -388,7 +388,10 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The saved input datasource config, corresponding to the Source in the creation request. The data scope to be analyzed is determined based on this configuration at runtime.</p>
+             * <p>The saved input data source configuration, which corresponds to <code>Source</code> in the creation request. The data scope to be analyzed is selected based on this config during runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;maxcompute&quot;,&quot;domain&quot;:&quot;sales&quot;,&quot;pinnedScopeInfo&quot;:[{&quot;type&quot;:&quot;project&quot;,&quot;name&quot;:&quot;mc_project&quot;}]}</p>
              */
             public Builder source(java.util.Map<String, ?> source) {
                 this.source = source;
@@ -396,7 +399,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The saved Source.type data source type, used to quickly identify the job input type.</p>
+             * <p>The saved <code>Source.type</code> data source type, which is used to quickly identify the task input type.</p>
              * 
              * <strong>example:</strong>
              * <p>maxcompute</p>
@@ -407,7 +410,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the user who created the job.</p>
+             * <p>The identifier of the user who created the task.</p>
              * 
              * <strong>example:</strong>
              * <p>user-demo</p>

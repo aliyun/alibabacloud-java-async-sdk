@@ -97,7 +97,7 @@ public class StartWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a comment</p>

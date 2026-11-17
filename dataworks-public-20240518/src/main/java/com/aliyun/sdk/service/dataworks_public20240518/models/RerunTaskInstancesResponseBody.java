@@ -78,7 +78,10 @@ public class RerunTaskInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the batch operation. The structure is a map in which the key is the node instance ID and the value is the result information.</p>
+         * <p>The results of the batch operation. The structure is a map where the key is the task instance ID and the value is the result information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</p>
          */
         public Builder successInfo(java.util.Map<String, SuccessInfoValue> successInfo) {
             this.successInfo = successInfo;

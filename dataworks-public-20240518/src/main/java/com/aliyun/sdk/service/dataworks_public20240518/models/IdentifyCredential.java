@@ -101,7 +101,7 @@ public class IdentifyCredential extends TeaModel {
         }
 
         /**
-         * <p>The project ID. This parameter is optional.</p>
+         * <p>The workspace ID. This parameter is optional.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -112,7 +112,7 @@ public class IdentifyCredential extends TeaModel {
         }
 
         /**
-         * <p>The user UID. If the <code>UserType</code> is <code>Role</code>, you must prefix this value with <code>ROLE_</code>.</p>
+         * <p>The user ID. For a role, add the ROLE_ prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>ROLE_300888674340307309</p>
@@ -123,14 +123,11 @@ public class IdentifyCredential extends TeaModel {
         }
 
         /**
-         * <p>The user type. Supported values are:</p>
+         * <p>The user type. Valid values:</p>
          * <ul>
-         * <li><p>primary account: <code>PrimaryAccount</code></p>
-         * </li>
-         * <li><p>subaccount: <code>SubAccount</code></p>
-         * </li>
-         * <li><p>role: <code>Role</code></p>
-         * </li>
+         * <li>PrimaryAccount: Alibaba Cloud account.</li>
+         * <li>SubAccount: RAM user.</li>
+         * <li>Role: role.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,7 +274,7 @@ public class IdentifyCredential extends TeaModel {
              * <p>The data source password.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>ExamplePass***2026</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -285,12 +282,10 @@ public class IdentifyCredential extends TeaModel {
             }
 
             /**
-             * <p>The user role for the data source. Valid values are:</p>
+             * <p>The data source user type. Valid values:</p>
              * <ul>
-             * <li><p><code>Admin</code></p>
-             * </li>
-             * <li><p><code>RegularUser</code></p>
-             * </li>
+             * <li>Admin: administrator.</li>
+             * <li>RegularUser: regular user.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -302,14 +297,11 @@ public class IdentifyCredential extends TeaModel {
             }
 
             /**
-             * <p>The data source type. Supported values are:</p>
+             * <p>The data source type. Valid values:</p>
              * <ul>
-             * <li><p><code>hive</code></p>
-             * </li>
-             * <li><p><code>lindorm_for_engine</code></p>
-             * </li>
-             * <li><p><code>starrocks</code></p>
-             * </li>
+             * <li>hive</li>
+             * <li>lindorm_for_engine</li>
+             * <li>starrocks</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -321,7 +313,7 @@ public class IdentifyCredential extends TeaModel {
             }
 
             /**
-             * <p>The data source user name.</p>
+             * <p>The data source username.</p>
              * 
              * <strong>example:</strong>
              * <p>tom</p>

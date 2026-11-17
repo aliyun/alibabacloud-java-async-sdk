@@ -93,7 +93,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned in the current response.</p>
+         * <p>The maximum number of entries used for this response.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -123,7 +123,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
@@ -218,7 +218,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The temporary AccessKey ID used for credential injection.</p>
+             * <p>The temporary access key ID used for credential injection.</p>
              * 
              * <strong>example:</strong>
              * <p>STS.N*********7</p>
@@ -365,7 +365,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud account ID of the entity to which the assumed role belongs.</p>
+             * <p>The Alibaba Cloud account ID of the principal to which the assumed role belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789012****</p>
@@ -504,7 +504,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The roles in the credential configuration.</p>
+             * <p>The list of roles in the credential configuration.</p>
              */
             public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
@@ -512,7 +512,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential configuration type. Valid values:</p>
+             * <p>The type of the credential configuration. Valid values:</p>
              * <ul>
              * <li>Role: single role assumption</li>
              * <li>RoleChain: role chain assumption</li>
@@ -599,7 +599,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The environment variable role key.</p>
+             * <p>The environment variable key for the role.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -610,7 +610,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The credential configurations.</p>
+             * <p>The list of credential configurations.</p>
              */
             public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
@@ -737,7 +737,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The custom mount attributes of the dataset. The content is passed as mount options.</p>
+             * <p>The custom mount properties of the dataset. The content is passed as mount options.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;fs.oss.download.thread.concurrency&quot;:&quot;10&quot;}</p>
@@ -748,7 +748,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset identifier.</p>
+             * <p>The identifier of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>d-vsqjvs****rp5l206u</p>
@@ -789,7 +789,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dataset version number.</p>
+             * <p>The version number of the dataset.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1021,7 +1021,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAT gateway ID.</p>
+             * <p>The ID of the NAT gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>ngw-bp1****</p>
@@ -1136,7 +1136,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp1****</p>
@@ -1147,7 +1147,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1****</p>
@@ -1158,7 +1158,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1****</p>
@@ -1466,7 +1466,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The datasets mounted to the instance.</p>
+             * <p>The list of datasets mounted to the instance.</p>
              */
             public Builder datasets(java.util.List<Datasets> datasets) {
                 this.datasets = datasets;
@@ -1540,7 +1540,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID of the user that owns the instance.</p>
+             * <p>The account ID of the user who owns the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>20933221576142****</p>
@@ -1551,7 +1551,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace ID.</p>
+             * <p>The ID of the DataWorks workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -1729,7 +1729,7 @@ public class ListServerIdeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries returned per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

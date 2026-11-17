@@ -176,6 +176,9 @@ public class UpdateCrawlerRequest extends Request {
 
         /**
          * <p>The extension configurations for the crawler type. Only the specified configuration items are updated. Unspecified configuration items remain unchanged. The supported keys and values are determined by the SupportedOptionKeys returned by GetCrawlerTypeCapabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CollectRecyclebin&quot;:&quot;false&quot;}</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             String optionsShrink = shrink(options, "Options", "json");

@@ -168,17 +168,38 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <p>Adds an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of AddKnowledgeBaseAdministrator  AddKnowledgeBaseAdministratorRequest
+     * @return AddKnowledgeBaseAdministratorResponse
+     */
+    @Override
+    public CompletableFuture<AddKnowledgeBaseAdministratorResponse> addKnowledgeBaseAdministrator(AddKnowledgeBaseAdministratorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddKnowledgeBaseAdministrator").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddKnowledgeBaseAdministratorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddKnowledgeBaseAdministratorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Reason</strong>: The reason for the request. This parameter is required.</li>
-     * <li><strong>ApplyContents</strong>: Contains multiple resource permission request entries. Each entry includes a resource description (Resource), a grantee description (Grantee), access types (AccessTypes), and a permission expiration time (ExpirationTime). A maximum of 400 entries can be submitted in a single request.</li>
-     * <li><strong>Resource</strong>: The resource description. You must specify the ResourceSchema.name and version on which the resource parsing depends, as well as the resource metadata (MetaData).</li>
+     * <li><strong>Reason</strong>: The reason for the application. This parameter is required.</li>
+     * <li><strong>ApplyContents</strong>: The list of resource permission applications. Each item includes the resource description (Resource), grantee description (Grantee), access types (AccessTypes), and expiration time (ExpirationTime). The maximum number of items per request is 400.</li>
+     * <li><strong>Resource</strong>: The resource description. You must specify the ResourceSchema.name and version on which resource parsing depends, as well as the resource metadata (MetaData).</li>
      * <li><strong>Grantee</strong>: The grantee description. You must specify the principal type (PrincipalType) and principal ID (PrincipalId).</li>
-     * <li><strong>AccessTypes</strong>: The list of access types. Multiple access type combinations are supported.</li>
-     * <li><strong>ExpirationTime</strong>: The permission expiration time, provided as a millisecond-level timestamp.</li>
-     * <li><strong>AuthMethod</strong>: Optional. Specifies the authorization method. The system uses the built-in default authorization method if this parameter is not specified.</li>
+     * <li><strong>AccessTypes</strong>: The list of permission types. Multiple permission combinations are supported.</li>
+     * <li><strong>ExpirationTime</strong>: The expiration time of the permissions, provided as a millisecond timestamp.</li>
+     * <li><strong>AuthMethod</strong>: The authorization method. This parameter is optional. By default, the built-in default authorization method is used.</li>
      * <li><strong>ClientToken</strong>: The client token used to prevent duplicate requests. This parameter is optional.
-     * Make sure that all required fields are correctly specified and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</li>
+     * Make sure that all required fields are correctly filled in and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</li>
      * </ul>
      * 
      * @param request the request parameters of ApplyResourceAccessPermission  ApplyResourceAccessPermissionRequest
@@ -363,7 +384,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>DataWorks Basic Edition or later is required.</p>
      * 
      * @param request the request parameters of BatchUpdateTasks  BatchUpdateTasksRequest
      * @return BatchUpdateTasksResponse
@@ -385,7 +406,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>DataWorks Basic Edition or higher is required.</li>
      * <li><strong>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</strong></li>
      * </ol>
      * 
@@ -434,7 +455,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
      * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
      * </ol>
      * 
@@ -667,17 +688,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Creates a metadata crawler for a specified data source and configures the collection scope, resource group, scheduling method, and extended configurations.</p>
-     * <h2>Recommended workflow</h2>
+     * <p>Create a metadata crawler for a specified data source, and configure the collection scope, resource group, scheduling method, and extended configurations.</p>
+     * <h2>Recommended procedure</h2>
      * <ol>
-     * <li>Call <code>GetCrawlerTypeCapabilities</code> to query the crawler types and their configuration capabilities supported in the current region.</li>
-     * <li>Create a crawler by using a data source that matches the <code>Type</code> value. Before creating a crawler, ensure that the data source and the selected resource group pass the connectivity test by calling the <code>TestDataSourceConnectivity</code> API to avoid creating an invalid crawler.</li>
-     * <li>After the crawler is created, call <code>RunCrawler</code> to manually run it, or configure periodic scheduling for automatic execution.</li>
+     * <li>Call GetCrawlerTypeCapabilities to query the crawler types supported in the current region and their configuration capabilities.</li>
+     * <li>Create a crawler by using a data source that matches the Type. Before you create the crawler, make sure that the data source and the selected resource group pass the connectivity test by calling the TestDataSourceConnectivity API. This prevents you from creating an invalid crawler.</li>
+     * <li>After the crawler is created, call RunCrawler to manually run the crawler, or configure periodic scheduling to automatically run the crawler.</li>
      * </ol>
      * <h2>Edition requirements</h2>
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
      * <h2>Precautions</h2>
-     * <p>A successful creation only indicates that the crawler configuration has been generated. Metadata collection is not immediately executed.</p>
+     * <p>A successful creation only indicates that the crawler configuration is generated. The metadata collection is not immediately executed.</p>
      * 
      * @param request the request parameters of CreateCrawler  CreateCrawlerRequest
      * @return CreateCrawlerResponse
@@ -698,7 +719,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</p>
+     * <p>Creates and finalizes a cross-workspace deployment pipeline. The ObjectIds parameter must contain one and only one top-level object ID from the source workspace. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects. After creation, call ExecCrossProjectPipelineRun to execute the deployment, and call GetCrossProjectPipelineRun to query the status.</p>
      * 
      * @param request the request parameters of CreateCrossProjectPipelineRun  CreateCrossProjectPipelineRunRequest
      * @return CreateCrossProjectPipelineRunResponse
@@ -908,7 +929,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
      * 
      * @param request the request parameters of CreateDataQualityScan  CreateDataQualityScanRequest
      * @return CreateDataQualityScanResponse
@@ -1167,6 +1188,132 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Creates a knowledge base. The tenant and caller identity are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
+     * @return CreateKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<CreateKnowledgeBaseResponse> createKnowledgeBase(CreateKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of CreateKnowledgeBaseBuildTask  CreateKnowledgeBaseBuildTaskRequest
+     * @return CreateKnowledgeBaseBuildTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateKnowledgeBaseBuildTaskResponse> createKnowledgeBaseBuildTask(CreateKnowledgeBaseBuildTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateKnowledgeBaseBuildTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateKnowledgeBaseBuildTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateKnowledgeBaseBuildTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of CreateKnowledgeBaseBuildTaskInstance  CreateKnowledgeBaseBuildTaskInstanceRequest
+     * @return CreateKnowledgeBaseBuildTaskInstanceResponse
+     */
+    @Override
+    public CompletableFuture<CreateKnowledgeBaseBuildTaskInstanceResponse> createKnowledgeBaseBuildTaskInstance(CreateKnowledgeBaseBuildTaskInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateKnowledgeBaseBuildTaskInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateKnowledgeBaseBuildTaskInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateKnowledgeBaseBuildTaskInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of CreateKnowledgeObject  CreateKnowledgeObjectRequest
+     * @return CreateKnowledgeObjectResponse
+     */
+    @Override
+    public CompletableFuture<CreateKnowledgeObjectResponse> createKnowledgeObject(CreateKnowledgeObjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateKnowledgeObject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateKnowledgeObjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateKnowledgeObjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an upload session for a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of CreateKnowledgeObjectUpload  CreateKnowledgeObjectUploadRequest
+     * @return CreateKnowledgeObjectUploadResponse
+     */
+    @Override
+    public CompletableFuture<CreateKnowledgeObjectUploadResponse> createKnowledgeObjectUpload(CreateKnowledgeObjectUploadRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateKnowledgeObjectUpload").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateKnowledgeObjectUploadResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateKnowledgeObjectUploadResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in query responses.</p>
+     * 
+     * @param request the request parameters of CreateKnowledgeSource  CreateKnowledgeSourceRequest
+     * @return CreateKnowledgeSourceResponse
+     */
+    @Override
+    public CompletableFuture<CreateKnowledgeSourceResponse> createKnowledgeSource(CreateKnowledgeSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateKnowledgeSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateKnowledgeSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateKnowledgeSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <ol>
      * <li>DataWorks Professional Edition or a higher edition is required.</li>
      * </ol>
@@ -1192,10 +1339,10 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>After you submit the request, the system verifies the availability of the MCP server based on the connection information you provided.</li>
-     * <li>If the connection to the MCP server is unavailable, the API returns an error message.</li>
-     * <li>The <code>Name</code> field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). The name must be unique within the current account.</li>
-     * <li>The <code>Visibility</code> field defines the visibility level of the MCP server. Valid values: <code>TENANT</code> (visible within the account), <code>PROJECT</code> (visible to specified projects), and <code>USER</code> (visible to specified users). Specify the <code>VisibilityScope</code> parameter to further define the visibility scope based on the selected value.</li>
+     * <li>After submission, the system verifies the availability of the MCP server based on the provided connection information.</li>
+     * <li>If the MCP server connection is unavailable, the API returns the corresponding error message.</li>
+     * <li>The Name field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). It must be unique within the current account.</li>
+     * <li>The Visibility field defines the visibility level of the MCP server. Valid values: <code>TENANT</code> (visible within the account), <code>PROJECT</code> (visible to specified projects), and <code>USER</code> (visible to specified users). Depending on the selected value, you must provide the corresponding VisibilityScope parameter to further specify the visibility scope.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateMcpServer  CreateMcpServerRequest
@@ -1350,14 +1497,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation allows you to create a new approval process definition, including setting basic information such as the approval policy name, description, type, and subtype.</li>
-     * <li>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval process is triggered.</li>
-     * <li>Multiple notification services (NotificationServices) can be configured to send notifications to relevant personnel at different stages of the approval process.</li>
-     * <li>The approval node list (ApprovalNodes) defines the nodes that must be traversed during the approval process and the approver information for each node.</li>
-     * <li>You can choose whether to immediately enable the newly created approval process definition.</li>
-     * <li>Note: Certain fields such as Type have specific value constraints. Refer to the constraint descriptions in the documentation.</li>
+     * <li>This API allows you to create an approval flow definition, including setting basic information such as the policy name, description, type, and subtype.</li>
+     * <li>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval flow is triggered.</li>
+     * <li>You can configure multiple notification services (NotificationServices) to send notifications to relevant personnel at different stages of the approval flow.</li>
+     * <li>The list of approval nodes (ApprovalNodes) defines the nodes that the approval process must pass through and the approver information.</li>
+     * <li>You can choose whether to immediately enable the newly created approval flow definition.</li>
+     * <li>Note: Some fields, such as Type, have specific value limits. Refer to the constraint description section in the documentation.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateProcessDefinition  CreateProcessDefinitionRequest
@@ -1515,15 +1662,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</p>
-     * <h2>Recommended workflow</h2>
+     * <p>Creates and saves a reusable semantic task definition. This API operation only saves the configurations of the data source, resource group, and reference files, and does not execute the task immediately.</p>
+     * <h2>Recommended procedure</h2>
      * <ol>
-     * <li>When <code>Source.type=singleTableFile</code>, call <code>UploadSemanticFile</code> first, use the returned <code>Data.UploadUrl</code> to complete the PUT upload, and then specify <code>Data.FileId</code> in <code>ReferenceFileIds</code>. Alternatively, you can provide a single accessible URI.</li>
-     * <li>Configure <code>Source</code>, <code>ProjectId</code>, and <code>ResourceGroupId</code>, and then call this operation to save the job.</li>
-     * <li>Use <code>Data.Name</code> from the response to call <code>RunSemanticJob</code>. After the job is complete, use <code>DownloadSemanticResults</code> to retrieve the output.</li>
+     * <li>If <code>Source.type</code> is set to <code>singleTableFile</code>, call <code>UploadSemanticFile</code> first, use the returned <code>Data.UploadUrl</code> to complete the PUT upload, and then specify <code>Data.FileId</code> in <code>ReferenceFileIds</code>. Alternatively, you can provide a single accessible URI.</li>
+     * <li>Configure <code>Source</code>, <code>ProjectId</code>, and <code>ResourceGroupId</code>, and then call this operation to save the task.</li>
+     * <li>Call <code>RunSemanticJob</code> by using <code>Data.Name</code> in the response. After the task is completed, call <code>DownloadSemanticResults</code> to obtain the output.</li>
      * </ol>
-     * <h2>Before you begin</h2>
-     * <p><code>Name</code> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <code>ReferenceFileIds</code> and <code>ReferenceFileUris</code> fields.</p>
+     * <h2>Precautions</h2>
+     * <p><code>Name</code> must be unique within the current tenant. The rules for the number of reference files differ between single-file sources and other sources. For details, refer to the descriptions of the <code>ReferenceFileIds</code> and <code>ReferenceFileUris</code> fields.</p>
      * 
      * @param request the request parameters of CreateSemanticJob  CreateSemanticJobRequest
      * @return CreateSemanticJobResponse
@@ -1568,8 +1715,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h2>Request description</h2>
      * <ul>
      * <li>You must specify either the SkillMdOverride or BundleUrl parameter.</li>
-     * <li>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible to the entire tenant, specific projects, or specific users.</li>
-     * <li>If you set Visibility to PROJECT, you must use VisibilityScope.ProjectIds to specify the IDs of the visible projects. If you set Visibility to USER, you must use VisibilityScope.UserIds to specify the IDs of the visible users.</li>
+     * <li>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible within the account, visible to specified projects, or visible to specified users, respectively.</li>
+     * <li>If Visibility is set to PROJECT, you must specify the IDs of the projects in which the skill is visible by using VisibilityScope.ProjectIds. If Visibility is set to USER, you must specify the IDs of the users who can see the skill by using VisibilityScope.UserIds.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSkill  CreateSkillRequest
@@ -1633,7 +1780,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.</p>
      * 
      * @param request the request parameters of CreateWorkflowInstances  CreateWorkflowInstancesRequest
      * @return CreateWorkflowInstancesResponse
@@ -1981,6 +2128,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
+     * 
      * @param request the request parameters of DeleteDataQualityRule  DeleteDataQualityRuleRequest
      * @return DeleteDataQualityRuleResponse
      */
@@ -2235,6 +2385,90 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteImageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a knowledge base. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
+     * @return DeleteKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<DeleteKnowledgeBaseResponse> deleteKnowledgeBase(DeleteKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of DeleteKnowledgeBaseBuildTask  DeleteKnowledgeBaseBuildTaskRequest
+     * @return DeleteKnowledgeBaseBuildTaskResponse
+     */
+    @Override
+    public CompletableFuture<DeleteKnowledgeBaseBuildTaskResponse> deleteKnowledgeBaseBuildTask(DeleteKnowledgeBaseBuildTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteKnowledgeBaseBuildTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteKnowledgeBaseBuildTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteKnowledgeBaseBuildTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of DeleteKnowledgeObject  DeleteKnowledgeObjectRequest
+     * @return DeleteKnowledgeObjectResponse
+     */
+    @Override
+    public CompletableFuture<DeleteKnowledgeObjectResponse> deleteKnowledgeObject(DeleteKnowledgeObjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteKnowledgeObject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteKnowledgeObjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteKnowledgeObjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</p>
+     * 
+     * @param request the request parameters of DeleteKnowledgeSource  DeleteKnowledgeSourceRequest
+     * @return DeleteKnowledgeSourceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteKnowledgeSourceResponse> deleteKnowledgeSource(DeleteKnowledgeSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteKnowledgeSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteKnowledgeSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteKnowledgeSourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2663,7 +2897,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
      * 
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
@@ -3173,12 +3407,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to query the details of resource permission applications based on the provided <code>ProcessInstanceId</code>.</li>
-     * <li>A valid <code>ProcessInstanceId</code> parameter must be provided in the request.</li>
-     * <li>The response includes the basic information, status, and the list of specific application contents.</li>
-     * <li>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</li>
+     * <li>Specify a valid <code>ProcessInstanceId</code> to retrieve the corresponding resource access request.</li>
+     * <li>The response includes the basic details and status of the request, along with its items.</li>
+     * <li>Each item includes information about the resource, the grantee, and the requested operation permissions.</li>
      * </ul>
      * 
      * @param request the request parameters of GetApplicationContents  GetApplicationContentsRequest
@@ -3426,12 +3659,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>Queries the configuration, availability status, and latest run information of a specified metadata crawler.</p>
      * <h2>Recommended workflow</h2>
      * <ol>
-     * <li>Call <code>ListCrawlers</code> to query crawler IDs.</li>
-     * <li>Call this operation to retrieve crawler details.</li>
-     * <li>To query the complete run history, call <code>ListCrawlerRuns</code>.</li>
+     * <li>Call ListCrawlers to query the crawler ID.</li>
+     * <li>Call this operation to obtain the crawler details.</li>
+     * <li>To query the complete run history, call ListCrawlerRuns.</li>
      * </ol>
      * <h2>Edition requirements</h2>
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</p>
      * <h2>Precautions</h2>
      * <p>If the crawler has not been run, the latest run status and task instance ID may be empty.</p>
      * 
@@ -3710,7 +3943,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>DataWorks Basic Edition or higher is required.</p>
      * 
      * @param request the request parameters of GetDataQualityScanRun  GetDataQualityScanRunRequest
      * @return GetDataQualityScanRunResponse
@@ -3992,8 +4225,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or later is required.</li>
-     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * <li>DataWorks Basic Edition or higher is required.</li>
+     * <li><strong>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</strong></li>
      * </ol>
      * 
      * @param request the request parameters of GetImageTestResult  GetImageTestResultRequest
@@ -4026,6 +4259,153 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetJobStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a knowledge base. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of GetKnowledgeBase  GetKnowledgeBaseRequest
+     * @return GetKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<GetKnowledgeBaseResponse> getKnowledgeBase(GetKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads a knowledge base build task or instance. The tenant and caller identity are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of GetKnowledgeBaseBuildTask  GetKnowledgeBaseBuildTaskRequest
+     * @return GetKnowledgeBaseBuildTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetKnowledgeBaseBuildTaskResponse> getKnowledgeBaseBuildTask(GetKnowledgeBaseBuildTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetKnowledgeBaseBuildTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKnowledgeBaseBuildTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetKnowledgeBaseBuildTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a knowledge base build task or instance. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of GetKnowledgeBaseBuildTaskInstance  GetKnowledgeBaseBuildTaskInstanceRequest
+     * @return GetKnowledgeBaseBuildTaskInstanceResponse
+     */
+    @Override
+    public CompletableFuture<GetKnowledgeBaseBuildTaskInstanceResponse> getKnowledgeBaseBuildTaskInstance(GetKnowledgeBaseBuildTaskInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetKnowledgeBaseBuildTaskInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKnowledgeBaseBuildTaskInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetKnowledgeBaseBuildTaskInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the temporary download link for the original artifact package of a successful build instance. The model YAML is obtained through the knowledge object API and is not included in the TGZ result of this API.</p>
+     * 
+     * @param request the request parameters of GetKnowledgeBaseBuildTaskResult  GetKnowledgeBaseBuildTaskResultRequest
+     * @return GetKnowledgeBaseBuildTaskResultResponse
+     */
+    @Override
+    public CompletableFuture<GetKnowledgeBaseBuildTaskResultResponse> getKnowledgeBaseBuildTaskResult(GetKnowledgeBaseBuildTaskResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetKnowledgeBaseBuildTaskResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKnowledgeBaseBuildTaskResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetKnowledgeBaseBuildTaskResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of GetKnowledgeObject  GetKnowledgeObjectRequest
+     * @return GetKnowledgeObjectResponse
+     */
+    @Override
+    public CompletableFuture<GetKnowledgeObjectResponse> getKnowledgeObject(GetKnowledgeObjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetKnowledgeObject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKnowledgeObjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetKnowledgeObjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the current details of a knowledge point. GRAPH returns a one-hop local graph centered on the specified node. WIKI and KNOWLEDGE_CONTENT return readable content.</p>
+     * 
+     * @param request the request parameters of GetKnowledgePoint  GetKnowledgePointRequest
+     * @return GetKnowledgePointResponse
+     */
+    @Override
+    public CompletableFuture<GetKnowledgePointResponse> getKnowledgePoint(GetKnowledgePointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetKnowledgePoint").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKnowledgePointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetKnowledgePointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</p>
+     * 
+     * @param request the request parameters of GetKnowledgeSource  GetKnowledgeSourceRequest
+     * @return GetKnowledgeSourceResponse
+     */
+    @Override
+    public CompletableFuture<GetKnowledgeSourceResponse> getKnowledgeSource(GetKnowledgeSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetKnowledgeSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetKnowledgeSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetKnowledgeSourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4249,12 +4629,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the details of a specific approval process definition using the <code>ID</code> parameter.</li>
-     * <li>The <code>ID</code> parameter is required and must be a valid process definition ID.</li>
-     * <li>The response includes the basic properties of the approval process definition, rule conditions, notification service configurations, and approval nodes.</li>
-     * <li>A successful request returns the complete process definition object. A failed request returns an error code and message for troubleshooting.</li>
+     * <li>This operation queries all information about a specific approval process definition by using the specified <code>Id</code> parameter.</li>
+     * <li><code>Id</code> is required and must be a valid process definition ID.</li>
+     * <li>The returned information includes but is not limited to the basic attributes, rule conditions, notification service configurations, and approval nodes of the process definition.</li>
+     * <li>If the request is successful, the data containing the complete process definition object is returned. If the request fails, the corresponding error code and message are provided to help troubleshoot the issue.</li>
      * </ul>
      * 
      * @param request the request parameters of GetProcessDefinition  GetProcessDefinitionRequest
@@ -4722,7 +5102,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This feature requires DataWorks Basic Edition or a higher edition.</p>
+     * <p>DataWorks Basic Edition or higher is required to use this feature.</p>
      * 
      * @param request the request parameters of GetWorkflow  GetWorkflowRequest
      * @return GetWorkflowResponse
@@ -4775,6 +5155,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetWorkflowInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Grants retrieval permissions to a user. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of GrantKnowledgeBaseRetrieval  GrantKnowledgeBaseRetrievalRequest
+     * @return GrantKnowledgeBaseRetrievalResponse
+     */
+    @Override
+    public CompletableFuture<GrantKnowledgeBaseRetrievalResponse> grantKnowledgeBaseRetrieval(GrantKnowledgeBaseRetrievalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GrantKnowledgeBaseRetrieval").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GrantKnowledgeBaseRetrievalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GrantKnowledgeBaseRetrievalResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5309,9 +5710,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Search keyword</strong>: Use the <code>Q</code> parameter to perform a fuzzy match on agent names.</li>
-     * <li><strong>Visibility level filter</strong>: Use the <code>Visibility</code> parameter to filter results by visibility level, such as <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>.</li>
-     * <li><strong>Paging information</strong>: Use the <code>MaxResults</code> and <code>NextToken</code> parameters to implement a paged query. The <code>NextToken</code> parameter is used to retrieve the next page of data.</li>
+     * <li><strong>Search keyword</strong>: You can use the <code>Q</code> parameter to perform a fuzzy match by agent name.</li>
+     * <li><strong>Visibility level filter</strong>: You can use the <code>Visibility</code> parameter to filter results by visibility level, such as <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>.</li>
+     * <li><strong>Paging information</strong>: You can use the <code>MaxResults</code> and <code>NextToken</code> parameters to implement a paged query. The <code>NextToken</code> parameter is used to retrieve the next page of data.</li>
      * </ul>
      * 
      * @param request the request parameters of ListCustomAgents  ListCustomAgentsRequest
@@ -5560,7 +5961,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ListDataQualityResults is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @description 需要购买DataWorks基础版及以上版本才能使用
+     * @deprecated OpenAPI ListDataQualityResults is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @description You must purchase DataWorks Basic Edition or higher to use this API.
      * 
      * @param request the request parameters of ListDataQualityResults  ListDataQualityResultsRequest
      * @return ListDataQualityResultsResponse
@@ -6070,6 +6471,174 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Lists the administrators. Only the owner or administrators of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of ListKnowledgeBaseAdministrators  ListKnowledgeBaseAdministratorsRequest
+     * @return ListKnowledgeBaseAdministratorsResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgeBaseAdministratorsResponse> listKnowledgeBaseAdministrators(ListKnowledgeBaseAdministratorsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListKnowledgeBaseAdministrators").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgeBaseAdministratorsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgeBaseAdministratorsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of ListKnowledgeBaseBuildTaskInstances  ListKnowledgeBaseBuildTaskInstancesRequest
+     * @return ListKnowledgeBaseBuildTaskInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgeBaseBuildTaskInstancesResponse> listKnowledgeBaseBuildTaskInstances(ListKnowledgeBaseBuildTaskInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListKnowledgeBaseBuildTaskInstances").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgeBaseBuildTaskInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgeBaseBuildTaskInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of ListKnowledgeBaseBuildTasks  ListKnowledgeBaseBuildTasksRequest
+     * @return ListKnowledgeBaseBuildTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgeBaseBuildTasksResponse> listKnowledgeBaseBuildTasks(ListKnowledgeBaseBuildTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListKnowledgeBaseBuildTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgeBaseBuildTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgeBaseBuildTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists user retrieval authorizations. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of ListKnowledgeBaseRetrievalGrants  ListKnowledgeBaseRetrievalGrantsRequest
+     * @return ListKnowledgeBaseRetrievalGrantsResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgeBaseRetrievalGrantsResponse> listKnowledgeBaseRetrievalGrants(ListKnowledgeBaseRetrievalGrantsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListKnowledgeBaseRetrievalGrants").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgeBaseRetrievalGrantsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgeBaseRetrievalGrantsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists knowledge bases. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of ListKnowledgeBases  ListKnowledgeBasesRequest
+     * @return ListKnowledgeBasesResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgeBasesResponse> listKnowledgeBases(ListKnowledgeBasesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListKnowledgeBases").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgeBasesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgeBasesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists knowledge objects. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of ListKnowledgeObjects  ListKnowledgeObjectsRequest
+     * @return ListKnowledgeObjectsResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgeObjectsResponse> listKnowledgeObjects(ListKnowledgeObjectsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListKnowledgeObjects").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgeObjectsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgeObjectsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists the currently visible knowledge points in a knowledge base in a paginated manner. You can filter the knowledge points by type, such as GRAPH, WIKI, and KNOWLEDGE_CONTENT.</p>
+     * 
+     * @param request the request parameters of ListKnowledgePoints  ListKnowledgePointsRequest
+     * @return ListKnowledgePointsResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgePointsResponse> listKnowledgePoints(ListKnowledgePointsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListKnowledgePoints").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgePointsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgePointsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</p>
+     * 
+     * @param request the request parameters of ListKnowledgeSources  ListKnowledgeSourcesRequest
+     * @return ListKnowledgeSourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgeSourcesResponse> listKnowledgeSources(ListKnowledgeSourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListKnowledgeSources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgeSourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgeSourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <ol>
      * <li>DataWorks Standard Edition or later is required.</li>
      * </ol>
@@ -6206,12 +6775,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API supports paginated queries, controlled by the <code>NextToken</code> and <code>PageSize</code> parameters.</li>
-     * <li><code>DefSchema</code> is a required parameter that specifies the resource type.</li>
-     * <li>The <code>ResourceType</code> list can contain multiple resource types for more precise filtering of application orders.</li>
-     * <li>You can set <code>StartTime</code> and <code>EndTime</code> to limit the time range of the query.</li>
-     * <li><code>Statuses</code> allows you to filter application orders by specific statuses, such as pending approval and authorized.</li>
-     * <li>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <code>Resource</code> and <code>Grantee</code> fields.</li>
+     * <li>Use <code>NextToken</code> and <code>PageSize</code> to paginate the results.</li>
+     * <li><code>DefSchema</code> is required and specifies the resource type.</li>
+     * <li>Specify multiple resource types in <code>ResourceType</code> to narrow the results.</li>
+     * <li>Use <code>StartTime</code> and <code>EndTime</code> to restrict the query to a time range.</li>
+     * <li>Use <code>Statuses</code> to filter requests by status, such as pending approval or authorization succeeded.</li>
+     * <li>To filter by specific resources or grantees, specify the details in <code>Resource</code> and <code>Grantee</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of ListMyApplications  ListMyApplicationsRequest
@@ -6233,13 +6802,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</li>
-     * <li>You can use the <code>Statuses</code> parameter to filter application orders by specific status.</li>
-     * <li><code>NextToken</code> is used for paginated requests. It can be omitted or set to <code>null</code> for the first request. For subsequent requests, pass the <code>NextToken</code> value from the previous response.</li>
-     * <li><code>PageSize</code> defaults to 10, with a maximum of 200.</li>
-     * <li><code>DefSchema</code> and <code>ResourceType</code> are required fields. Other parameters can be filled in as needed.</li>
+     * <li>This operation lists permission requests for which the current user is an approver, including requests pending approval and requests that have already been reviewed.</li>
+     * <li>Use <code>Statuses</code> to filter requests by status.</li>
+     * <li>For the first page, omit <code>NextToken</code> or set it to <code>null</code>. For subsequent pages, pass the <code>NextToken</code> value returned in the previous response.</li>
+     * <li><code>PageSize</code> defaults to 10 and supports a maximum of 200.</li>
+     * <li><code>DefSchema</code> and <code>ResourceType</code> are required. Other parameters are optional.</li>
      * </ul>
      * 
      * @param request the request parameters of ListMyRelatedApprovals  ListMyRelatedApprovalsRequest
@@ -6385,27 +6954,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
-     * <p>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</p>
+     * <h2>Request description</h2>
+     * <p>This operation queries all pending permission requests for which the current logged-on user is the approver. You can filter the applications by using various conditions, such as resource type, time range, and approval status, to accurately locate specific applications.</p>
      * <ul>
-     * <li><strong>ResourceType</strong>: Specifies the resource type (such as table), which can have multiple values.</li>
-     * <li><strong>Resource</strong>: Provides specific resource search conditions, such as the project, database, or table name.</li>
-     * <li><strong>StartTime and EndTime</strong>: Define the time range during which the request was submitted.</li>
-     * <li><strong>Statuses</strong>: Allows filtering results by approval status, for example, to view only pending approval requests.</li>
-     * <li><strong>Grantee</strong>: Filters request orders based on the authorization principal information.</li>
-     * <li><strong>AccessTypes</strong>: Filters based on the specific permission types requested (such as read or update).</li>
-     * <li><strong>PageSize and NextToken</strong>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
-     * Notes:</li>
-     * <li>If no filtering conditions are provided, all matching records are returned by default.</li>
-     * <li>The <code>NextToken</code> parameter can be empty or omitted for the first call. Subsequent page requests must use the <code>NextToken</code> value provided in the previous response.</li>
+     * <li><strong>ResourceType</strong>: specifies the resource types, such as tables. Multiple values are supported.</li>
+     * <li><strong>Resource</strong>: specifies the exact resource search conditions, such as the project, database, or table name.</li>
+     * <li><strong>StartTime and EndTime</strong>: define the time range when the applications were initiated.</li>
+     * <li><strong>Statuses</strong>: filters the results by approval status, such as viewing only the pending approval status.</li>
+     * <li><strong>Grantee</strong>: filters the applications based on the grantee information.</li>
+     * <li><strong>AccessTypes</strong>: filters the applications based on the specific permission types requested, such as read or update.</li>
+     * <li><strong>PageSize and NextToken</strong>: are used for pagination control. PageSize specifies the number of entries to return per page, and NextToken specifies the cursor required to retrieve the next page.
+     * Precautions:</li>
+     * <li>If no filter conditions are provided, all matching records are returned by default.</li>
+     * <li>The <code>NextToken</code> parameter can be left empty or omitted in the first call. For subsequent page requests, you must use the <code>NextToken</code> value provided in the previous response.</li>
      * <li>The default value of <code>PageSize</code> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</li>
-     * <li>When there is no more data to return, the <code>HasMore</code> field is set to <code>false</code>, and <code>NextToken</code> will be empty or absent.</li>
+     * <li>When no more data is available, the <code>HasMore</code> field is set to <code>false</code>, and <code>NextToken</code> is empty or does not exist.</li>
      * </ul>
-     * <h2>Response Description</h2>
-     * <p>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</p>
+     * <h2>Response description</h2>
+     * <p>After a successful API call, the response body contains the paginated results and the details of each application, such as the application time, resource description, grantee, and requested permissions. In addition, the status of the approval process and other related metadata are provided.</p>
      * <ul>
-     * <li><strong>Data</strong>: The paginated result set, including page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and whether more data is available (<code>HasMore</code>).</li>
-     * <li><strong>ApplicationQueryResponse</strong>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</li>
+     * <li><strong>Data</strong>: the paginated result set, which includes information such as the page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and whether more data is available (<code>HasMore</code>).</li>
+     * <li><strong>ApplicationQueryResponse</strong>: the specific content of each application, including the application reason, initiation time, status, and the detailed list of application contents.</li>
      * </ul>
      * 
      * @param request the request parameters of ListPendingApprovals  ListPendingApprovalsRequest
@@ -6446,8 +7015,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: 
-     * Earlier SDK versions may not include this interface. If so, use the ListDeployments interface. It accepts the same parameters.</p>
+     * <p>Notice: This operation may not be available in earlier versions of the SDK. In this case, use the ListDeployments operation, which uses the same parameters as described in this document.</notice></p>
      * </blockquote>
      * 
      * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
@@ -6754,15 +7322,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</p>
-     * <h2>Invoke flow</h2>
+     * <p>List saved semantic job definitions for the current tenant to display available jobs, select a job to run, or find the workspace that owns a job.</p>
+     * <h2>Workflow</h2>
      * <ol>
-     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to read <code>Data.SemanticJobs</code> with paging.</li>
-     * <li>Use the <code>Name</code> field of a list item to invoke <code>RunSemanticJob</code>, <code>DeleteSemanticJob</code>, or <code>ListSemanticJobRuns</code>.</li>
-     * <li>Use the <code>ProjectId</code> field of a list item together with <code>ExecutorJobId</code> to invoke the details, log, and stop operations.</li>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to page through <code>Data.SemanticJobs</code>.</li>
+     * <li>Use the <code>Name</code> of a list item to invoke <code>RunSemanticJob</code>, <code>DeleteSemanticJob</code>, or <code>ListSemanticJobRuns</code>.</li>
+     * <li>Use the <code>ProjectId</code> of a list item together with <code>ExecutorJobId</code> to invoke the details, log, and stop operations.</li>
      * </ol>
-     * <h2>Notes</h2>
-     * <p>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <code>ListSemanticJobRuns</code>.</p>
+     * <h2>Precautions</h2>
+     * <p>This operation returns job definitions. For current run status, call <code>ListSemanticJobRuns</code>.</p>
      * 
      * @param request the request parameters of ListSemanticJobs  ListSemanticJobsRequest
      * @return ListSemanticJobsResponse
@@ -6825,7 +7393,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query of personal development environment (ServerIDE) instances. You can filter the instances by workspace, resource group, keyword, owner, and instance subtype.</p>
+     * <p>Lists personal development environment (ServerIDE) instances with pagination. You can filter by workspace, resource group, keyword, owner, and instance subtype.</p>
      * 
      * @param request the request parameters of ListServerIdeInstances  ListServerIdeInstancesRequest
      * @return ListServerIdeInstancesResponse
@@ -6847,12 +7415,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API performs a paging query to list the skills under the current account. It supports filtering by conditions such as search keywords and visibility levels.</p>
+     * <p>This operation returns a paginated list of skills for the current account. You can filter the results by search keywords and visibility levels.</p>
      * <ul>
-     * <li><strong>Q</strong>: Optional. Used for fuzzy match by skill name.</li>
-     * <li><strong>Visibility</strong>: Optional. Used to filter by visibility level. Multiple values can be passed.</li>
-     * <li><strong>MaxResults</strong>: Optional. Specifies the maximum number of entries to return in this request.</li>
-     * <li><strong>NextToken</strong>: Optional. Used to obtain the next page of data during paging. Do not pass this parameter for the first query. For subsequent queries, pass the NextToken returned in the previous response to obtain the next page of data.</li>
+     * <li><strong>Q</strong>: Optional. The search keyword used for fuzzy match by skill name.</li>
+     * <li><strong>Visibility</strong>: Optional. The visibility levels used to filter the results. You can specify multiple values.</li>
+     * <li><strong>MaxResults</strong>: Optional. The maximum number of entries to return in the current request.</li>
+     * <li><strong>NextToken</strong>: Optional. The paging token used to retrieve the next page of results. Do not specify this parameter in the first request. In subsequent requests, specify the NextToken value returned in the previous response to retrieve the next page.</li>
      * </ul>
      * 
      * @param request the request parameters of ListSkills  ListSkillsRequest
@@ -6980,7 +7548,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * @param request the request parameters of ListTasks  ListTasksRequest
      * @return ListTasksResponse
@@ -7082,7 +7650,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * @param request the request parameters of ListWorkflows  ListWorkflowsRequest
      * @return ListWorkflowsResponse
@@ -7306,8 +7874,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
-     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or later to use this operation.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
      * </ol>
      * 
      * @param request the request parameters of PublishImage  PublishImageRequest
@@ -7352,7 +7920,28 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>Removes an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of RemoveKnowledgeBaseAdministrator  RemoveKnowledgeBaseAdministratorRequest
+     * @return RemoveKnowledgeBaseAdministratorResponse
+     */
+    @Override
+    public CompletableFuture<RemoveKnowledgeBaseAdministratorResponse> removeKnowledgeBaseAdministrator(RemoveKnowledgeBaseAdministratorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveKnowledgeBaseAdministrator").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveKnowledgeBaseAdministratorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveKnowledgeBaseAdministratorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this operation.</p>
      * 
      * @param request the request parameters of RemoveTaskInstanceDependencies  RemoveTaskInstanceDependenciesRequest
      * @return RemoveTaskInstanceDependenciesResponse
@@ -7466,7 +8055,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</p>
+     * <p>Requires DataWorks Basic Edition or higher.</p>
      * 
      * @param request the request parameters of RerunTaskInstances  RerunTaskInstancesRequest
      * @return RerunTaskInstancesResponse
@@ -7519,6 +8108,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResumeTaskInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Searches one or more knowledge bases that the caller is authorized to access and returns knowledge point summaries, relationship paths, and candidates for ambiguous references.</p>
+     * 
+     * @param request the request parameters of RetrieveKnowledgePoints  RetrieveKnowledgePointsRequest
+     * @return RetrieveKnowledgePointsResponse
+     */
+    @Override
+    public CompletableFuture<RetrieveKnowledgePointsResponse> retrieveKnowledgePoints(RetrieveKnowledgePointsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RetrieveKnowledgePoints").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetrieveKnowledgePointsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetrieveKnowledgePointsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retries a knowledge base build task instance. The tenant and caller identity are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of RetryKnowledgeBaseBuildTaskInstance  RetryKnowledgeBaseBuildTaskInstanceRequest
+     * @return RetryKnowledgeBaseBuildTaskInstanceResponse
+     */
+    @Override
+    public CompletableFuture<RetryKnowledgeBaseBuildTaskInstanceResponse> retryKnowledgeBaseBuildTaskInstance(RetryKnowledgeBaseBuildTaskInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RetryKnowledgeBaseBuildTaskInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetryKnowledgeBaseBuildTaskInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetryKnowledgeBaseBuildTaskInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Revokes user retrieval permissions. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of RevokeKnowledgeBaseRetrieval  RevokeKnowledgeBaseRetrievalRequest
+     * @return RevokeKnowledgeBaseRetrievalResponse
+     */
+    @Override
+    public CompletableFuture<RevokeKnowledgeBaseRetrievalResponse> revokeKnowledgeBaseRetrieval(RevokeKnowledgeBaseRetrievalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RevokeKnowledgeBaseRetrieval").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeKnowledgeBaseRetrievalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeKnowledgeBaseRetrievalResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -7679,7 +8331,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * @param request the request parameters of SetSuccessTaskInstances  SetSuccessTaskInstancesRequest
      * @return SetSuccessTaskInstancesResponse
@@ -7742,7 +8394,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * @param request the request parameters of StartWorkflowInstances  StartWorkflowInstancesRequest
      * @return StartWorkflowInstancesResponse
@@ -7816,6 +8468,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Stops a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of StopKnowledgeBaseBuildTaskInstance  StopKnowledgeBaseBuildTaskInstanceRequest
+     * @return StopKnowledgeBaseBuildTaskInstanceResponse
+     */
+    @Override
+    public CompletableFuture<StopKnowledgeBaseBuildTaskInstanceResponse> stopKnowledgeBaseBuildTaskInstance(StopKnowledgeBaseBuildTaskInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopKnowledgeBaseBuildTaskInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopKnowledgeBaseBuildTaskInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopKnowledgeBaseBuildTaskInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Description</h2>
      * <ul>
      * <li>Requesters can use this operation to withdraw an approval process they initiated.</li>
@@ -7863,12 +8536,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.
      * Instance termination mechanism and precautions:</p>
      * <ol>
-     * <li>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</li>
-     * <li>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</li>
-     * <li>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</li>
+     * <li>Instance termination is an asynchronous operation. Sending a termination request does not mean that the instance stops immediately. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, you must also verify the actual status of the remote job.</li>
+     * <li>The DataWorks instance status may not be consistent with the remote job status. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, the DataWorks instance may be marked as failed while the remote job is still running. Therefore, you cannot determine that the remote job has terminated based only on the DataWorks instance status. Go to the corresponding computing platform to check the status and manually terminate the job if necessary to prevent the job from continuing to run or consuming additional resources.</li>
+     * <li>Pay special attention to MaxCompute tasks that run in public scheduling resource groups. DataWorks public scheduling resource groups will be taken offline soon. Due to component version and compatibility limitations, the termination commands for some MaxCompute tasks may not take effect on the remote end. In this case, go to MaxCompute to query the actual status of the corresponding instance. If it is still running, execute the kill operation in MaxCompute and confirm again that it has terminated.</li>
      * </ol>
      * 
      * @param request the request parameters of StopTaskInstances  StopTaskInstancesRequest
@@ -7890,7 +8563,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
      * 
      * @param request the request parameters of StopWorkflowInstances  StopWorkflowInstancesRequest
      * @return StopWorkflowInstancesResponse
@@ -7947,7 +8620,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.</p>
      * 
      * @param request the request parameters of SuspendTaskInstances  SuspendTaskInstancesRequest
      * @return SuspendTaskInstancesResponse
@@ -8056,11 +8729,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
-     * Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
-     * Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
-     * For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
-     * If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</p>
+     * <p>This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+     * Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and is not used for renaming. Call GetAgent first to read the current AgentVersion, and explicitly pass ExpectedVersion during the update. If a conflict occurs, re-read the version and verify the differences instead of blindly overwriting.
+     * Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. Tools already includes Kind and the corresponding tool configurations, using the same structure as CreateAgent. Specifying only Name is not a valid tool configuration.
+     * For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId, without mixing in name, version, or artifact fields. The integer Version and VersionSelector for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+     * If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved before requesting publication. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version before deciding whether to retry, to avoid generating duplicate versions.</p>
      * 
      * @param request the request parameters of UpdateAgent  UpdateAgentRequest
      * @return UpdateAgentResponse
@@ -8364,7 +9037,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or a later edition to use this feature.</p>
      * 
      * @param request the request parameters of UpdateDataAssetTag  UpdateDataAssetTagRequest
      * @return UpdateDataAssetTagResponse
@@ -8670,6 +9343,90 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Updates a knowledge base. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of UpdateKnowledgeBaseBuildTask  UpdateKnowledgeBaseBuildTaskRequest
+     * @return UpdateKnowledgeBaseBuildTaskResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKnowledgeBaseBuildTaskResponse> updateKnowledgeBaseBuildTask(UpdateKnowledgeBaseBuildTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateKnowledgeBaseBuildTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKnowledgeBaseBuildTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKnowledgeBaseBuildTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * @param request the request parameters of UpdateKnowledgeObject  UpdateKnowledgeObjectRequest
+     * @return UpdateKnowledgeObjectResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKnowledgeObjectResponse> updateKnowledgeObject(UpdateKnowledgeObjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateKnowledgeObject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKnowledgeObjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKnowledgeObjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</p>
+     * 
+     * @param request the request parameters of UpdateKnowledgeSource  UpdateKnowledgeSourceRequest
+     * @return UpdateKnowledgeSourceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKnowledgeSourceResponse> updateKnowledgeSource(UpdateKnowledgeSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateKnowledgeSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKnowledgeSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKnowledgeSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <p>Updates the configurations of a specified MCP server, including the service URL, transport protocol, custom request headers, and visibility settings. Fields that are not specified remain unchanged.
      * <strong>Note</strong>: When you modify the <code>Visibility</code> parameter, specify <code>ProjectIds</code> or <code>UserIds</code> in <code>VisibilityScope</code> based on the visibility setting to ensure that the correct access control scope is applied.</p>
@@ -8797,12 +9554,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to modify an existing approval process definition, including its name, description, rule conditions, notification service, and approval nodes.</li>
-     * <li>The required <code>Id</code> parameter identifies the approval process definition to update.</li>
+     * <li>This operation allows you to modify an existing approval process definition, including the name, description, rule conditions, notification services, and approval nodes.</li>
+     * <li><code>Id</code> is a required parameter used to specify the approval process definition to be updated.</li>
      * <li>To overwrite the existing configuration, set the <code>Overwrite</code> parameter to <code>true</code>.</li>
-     * <li>The optional <code>ClientToken</code> parameter ensures request idempotency.</li>
+     * <li><code>ClientToken</code> is optional and used to ensure the idempotency of the request.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateProcessDefinition  UpdateProcessDefinitionRequest
@@ -9017,12 +9774,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is asynchronous. Use the <code>GetUpdateTaskResult</code> operation to poll for the update result.</li>
-     * <li>This API updates the information of a specified node, including but not limited to the node name, description, and owner.</li>
-     * <li>Changes are synchronized to Data Studio, and Data Studio creates a new saved version.</li>
-     * <li>Supports settings for the node trigger method, runtime environment configuration, dependencies, and other detailed parameters.</li>
+     * <li>This API operation is asynchronous. You must call the <code>GetUpdateTaskResult</code> operation to poll the update result.</li>
+     * <li>This API operation is used to update the information of a specified node, including but not limited to the node name, description, and owner.</li>
+     * <li>The modifications are synced to Data Studio, and a new saved version is generated in Data Studio.</li>
+     * <li>You can set detailed parameters such as the trigger mode, runtime environment configuration, and dependencies of the node.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateTaskAsync  UpdateTaskAsyncRequest
@@ -9044,7 +9801,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
      * 
      * @param request the request parameters of UpdateTaskInstances  UpdateTaskInstancesRequest
      * @return UpdateTaskInstancesResponse
@@ -9083,7 +9840,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * @param request the request parameters of UpdateWorkflow  UpdateWorkflowRequest
      * @return UpdateWorkflowResponse
@@ -9121,6 +9878,39 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateWorkflowDefinitionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+     * Uploads a local file to an agent session that the current caller has access to, and references the file in the conversation. The size of a single file ranges from 1 byte to 10,485,760 bytes (10 MiB). The caller must have access permissions to the target session and the dataworks:UploadAgentSessionFile permission.
+     * Call sequence.</p>
+     * <ol>
+     * <li>Use the SessionId of an existing session, set UploadMode to prepare, and pass the original file name, the byte count Size, and the 32-character lowercase hexadecimal ContentMd5 of the original bytes. The prepare step returns UploadId and Signature, issuing only the upload URL without starting a cold session instance.</li>
+     * <li>Within the validity period of the signature, send an HTTP PUT request to Signature.Url with the original file bytes as the request body, using all the request headers returned in Signature.Headers. The URL and request headers must be used exactly as provided. The ContentMd5 parameter is in hexadecimal format, while the Content-MD5 signature header is Base64-encoded. The two are not interchangeable. The signature is valid for 5 minutes. For the exact expiration time, see ExpiresAt.</li>
+     * <li>After the PUT request succeeds, set UploadMode to complete, pass the UploadId returned by prepare, and keep SessionId, Name, Size, and ContentMd5 consistent. The server resumes the session, and the runtime within the instance downloads the staged object, verifies the size and MD5, writes it to the working directory, and returns Id, Name, RelativePath, and Size. Repeated complete calls use the same UploadId. The same attachment receipt is returned only when the existing file content is identical.</li>
+     * <li>Call PromptAgentSession, add a content block with Type set to resource_link, Name set to the original file name, and Uri set to dataagent-attachment: followed by RelativePath in Params.Prompt, and send it along with the text content block. The backend resolves the reference to the working directory of the session based on the current authenticated session.
+     * For the sample file sample.csv, the original bytes are hello followed by a line feed, Size is 6, and ContentMd5 is b1946ac92492d2347c6235b4d2611184. The SessionId example session and the upload identifier examples are used only to illustrate the parameter structure. Actual calls must use a created session and the values returned by prepare. The Signature.Url example is used only to illustrate the format. The actual PUT request must use the complete signed URL returned by the current prepare call.
+     * Error handling.
+     * You must check the outer POP/BFF failures, JsonRpcResponse.Error, and the expected result fields simultaneously. Missing upload stages or size limit exceedances may result in an HTTP 400 response from the gateway, such as MissingUploadMode or InvalidSize. Business rejections such as object not found or metadata mismatch return an HTTP 400 response with a general Code 400 in the public POP, and the Message retains the actual business code, such as SESSION_ATTACHMENT_OBJECT_MISMATCH. Dependency failures, HTTP 5xx errors, timeouts, and unknown execution results must not be treated as parameter rejections or successful uploads, and automatic write retries must not be performed. When the result is unknown, retain the original upload metadata and UploadId, and verify the result first.
+     * This API operation does not accept ContentBase64. Signature expiration only invalidates the upload authorization and does not indicate that the staged object has been deleted. This description does not guarantee an automatic cleanup cycle for the object.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of UploadAgentSessionFile  UploadAgentSessionFileRequest
+     * @return UploadAgentSessionFileResponse
+     */
+    @Override
+    public CompletableFuture<UploadAgentSessionFileResponse> uploadAgentSessionFile(UploadAgentSessionFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UploadAgentSessionFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadAgentSessionFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UploadAgentSessionFileResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

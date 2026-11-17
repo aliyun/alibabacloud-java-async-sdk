@@ -181,7 +181,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The <strong>download URL of the bundle.zip file</strong> (HTTP or HTTPS). This parameter and SkillMdOverride are mutually exclusive.</p>
+         * <p>The downloadable URL (HTTP or HTTPS) of the bundle.zip file. This parameter and SkillMdOverride are mutually exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/skill.zip">https://example.com/skill.zip</a></p>
@@ -193,7 +193,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The <strong>skill description</strong>.</p>
+         * <p>The description of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>Data analytics skill</p>
@@ -218,7 +218,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The <strong>skill name</strong>. The name must be unique within the current account.</p>
+         * <p>The name of the skill. The name must be unique within the current account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,12 +231,14 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The content of the SKILL.md file. This parameter and BundleUrl are mutually exclusive. If you do not provide a bundle, use this parameter to create a lightweight skill that contains only the SKILL.md file.</p>
+         * <p>The body of the SKILL.md file. This parameter and BundleUrl are mutually exclusive. If you do not provide a bundle, use this field to create a lightweight skill that contains only the SKILL.md file.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <hr>
+         * <h2>name: example-skill
+         * description: Sample skill.</h2>
+         * <h1>Sample skill</h1>
+         * <p>Summarize the text provided by the user</p>
          */
         public Builder skillMdOverride(String skillMdOverride) {
             this.putBodyParameter("SkillMdOverride", skillMdOverride);
@@ -245,7 +247,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The <strong>version note</strong>.</p>
+         * <p>The release notes of the version.</p>
          * 
          * <strong>example:</strong>
          * <p>Initial version</p>
@@ -257,7 +259,7 @@ public class CreateSkillRequest extends Request {
         }
 
         /**
-         * <p>The <strong>visibility level</strong>. Valid values: TENANT (visible to the entire tenant), PROJECT (visible to specific projects), and USER (visible to specific users).</p>
+         * <p>The visibility level. Valid values: TENANT: visible within the account. PROJECT: visible to specified projects. USER: visible to specified users.</p>
          * 
          * <strong>example:</strong>
          * <p>TENANT</p>
@@ -338,7 +340,7 @@ public class CreateSkillRequest extends Request {
             } 
 
             /**
-             * <p>The IDs of the visible projects. This parameter takes effect only when Visibility is set to PROJECT.</p>
+             * <p>The IDs of the projects in which the skill is visible. This field takes effect when Visibility is set to PROJECT.</p>
              */
             public Builder projectIds(java.util.List<String> projectIds) {
                 this.projectIds = projectIds;
@@ -346,7 +348,7 @@ public class CreateSkillRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the visible users. This parameter takes effect only when Visibility is set to USER.</p>
+             * <p>The IDs of the users who can see the skill. This field takes effect when Visibility is set to USER.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

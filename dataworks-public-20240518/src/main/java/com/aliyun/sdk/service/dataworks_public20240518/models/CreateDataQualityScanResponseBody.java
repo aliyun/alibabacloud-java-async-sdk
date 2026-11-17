@@ -67,7 +67,7 @@ public class CreateDataQualityScanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returns the ID of the created data source sharing rule, which uniquely identifies the rule.</p>
+         * <p>The ID of the created data source sharing rule, which is the unique identifier of the data source sharing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>676303114031776</p>
@@ -78,7 +78,7 @@ public class CreateDataQualityScanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>

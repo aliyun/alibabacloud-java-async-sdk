@@ -110,7 +110,7 @@ public class RerunTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a comment</p>
@@ -122,7 +122,7 @@ public class RerunTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The list of node instance IDs.</p>
+         * <p>The list of task instance IDs.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -132,7 +132,7 @@ public class RerunTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to rerun instances with the latest configuration.</p>
+         * <p>Specifies whether to rerun the task instance with the latest configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
