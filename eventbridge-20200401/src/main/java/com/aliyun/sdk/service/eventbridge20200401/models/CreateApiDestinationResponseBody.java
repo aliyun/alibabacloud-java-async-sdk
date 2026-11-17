@@ -93,7 +93,7 @@ public class CreateApiDestinationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API status code or POP error code. Valid values: Success: The operation is successful.</p>
+         * <p>The API status code or POP error code. Valid values: Success: The call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +104,7 @@ public class CreateApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data structure returned upon successful creation of the API destination.</p>
+         * <p>The data structure returned when the API destination is successfully created.</p>
          */
         public Builder date(Date date) {
             this.date = date;

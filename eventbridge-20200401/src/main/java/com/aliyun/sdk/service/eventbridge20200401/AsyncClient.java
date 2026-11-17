@@ -108,7 +108,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with a product.</p>
      * 
      * @param request the request parameters of CreateServiceLinkedRoleForProduct  CreateServiceLinkedRoleForProductRequest
      * @return CreateServiceLinkedRoleForProductResponse
@@ -201,7 +201,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event rule.</p>
+     * <p>Deletes an event rule.</p>
      * 
      * @param request the request parameters of DeleteRule  DeleteRuleRequest
      * @return DeleteRuleResponse
@@ -318,7 +318,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the detailed information about an event bus.</p>
+     * <p>Retrieves the details of an event bus.</p>
      * 
      * @param request the request parameters of GetEventBus  GetEventBusRequest
      * @return GetEventBusResponse
@@ -489,7 +489,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query all event buses.</p>
+     * <p>Queries all event buses.</p>
      * 
      * @param request the request parameters of ListEventBuses  ListEventBusesRequest
      * @return ListEventBusesResponse
@@ -789,7 +789,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Modifies an event bus.</p>
+     * <p>Updates an event bus.</p>
      * 
      * @param request the request parameters of UpdateEventBus  UpdateEventBusRequest
      * @return UpdateEventBusResponse
@@ -813,7 +813,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
+     * <p>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</p>
      * 
      * @param request the request parameters of UpdateEventStreaming  UpdateEventStreamingRequest
      * @return UpdateEventStreamingResponse

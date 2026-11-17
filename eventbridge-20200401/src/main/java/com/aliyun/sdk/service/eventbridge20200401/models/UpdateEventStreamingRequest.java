@@ -206,7 +206,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>The event filtering rule. If you do not specify this parameter, all events are matched. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns">https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns</a>.</p>
+         * <p>The event filter pattern. If you do not specify this parameter, all events are matched. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns">Event patterns</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -234,7 +234,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>The common JSON Configurations for event providers. This parameter is mutually exclusive with Source.</p>
+         * <p>The common JSON configurations for the event provider. This parameter is mutually exclusive with Source.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;:&quot;value&quot;}</p>
@@ -256,7 +256,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>The event target. You must select one sink, and you can configure only one sink.</p>
+         * <p>The event target. You must select exactly one sink.</p>
          */
         public Builder sink(Sink sink) {
             String sinkShrink = shrink(sink, "Sink", "json");
@@ -266,7 +266,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>The event provider. You must select exactly one source type and configure its parameters.</p>
+         * <p>The event provider. You must specify one and only one source type.</p>
          */
         public Builder source(Source source) {
             String sourceShrink = shrink(source, "Source", "json");
@@ -345,7 +345,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The maximum number of events that the window can accommodate. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, the push is triggered when the condition is met for any of the windows.</p>
+             * <p>The maximum number of events that the window can hold. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, the push is triggered when any window reaches its threshold.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -356,7 +356,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The maximum time window in seconds for accumulating events. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, the push is triggered when the condition is met for any of the windows.</p>
+             * <p>The maximum time window in seconds for batching events. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, the push is triggered when any window reaches its threshold.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -723,11 +723,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The retry policy. Valid values:</p>
-             * <ul>
-             * <li>BACKOFF_RETRY: Backoff retry.</li>
-             * <li>EXPONENTIAL_DECAY_RETRY: Exponential decay retry.</li>
-             * </ul>
+             * <p>The retry strategy. Valid values: BACKOFF_RETRY (backoff retry) and EXPONENTIAL_DECAY_RETRY (exponential decay retry).</p>
              * 
              * <strong>example:</strong>
              * <p>BACKOFF_RETRY</p>
@@ -862,7 +858,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The batch window.</p>
+             * <p>The batching window.</p>
              */
             public Builder batchWindow(BatchWindow batchWindow) {
                 this.batchWindow = batchWindow;
@@ -886,11 +882,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The error tolerance policy. Valid values:</p>
-             * <ul>
-             * <li>NONE: No tolerance for errors.</li>
-             * <li>ALL: Tolerance for all errors.</li>
-             * </ul>
+             * <p>The error tolerance policy. Valid values: NONE (no error tolerance) and ALL (tolerates all errors).</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -901,7 +893,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The number of concurrent tasks.</p>
+             * <p>The maximum number of concurrent tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -912,7 +904,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The retry policy used when an event fails to be pushed.</p>
+             * <p>The retry strategy used when event delivery fails.</p>
              */
             public Builder retryStrategy(RetryStrategy retryStrategy) {
                 this.retryStrategy = retryStrategy;
@@ -920,7 +912,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The throttling value.</p>
+             * <p>The throttling limit.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1003,10 +995,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion type. Valid values:</p>
+             * <p>The transformation type. Valid values:</p>
              * <ul>
-             * <li>CONSTANT: A fixed value.</li>
-             * <li>JSONPATH: Extracted from the upstream message based on the specified path.</li>
+             * <li>CONSTANT: a fixed value.</li>
+             * <li>JSONPATH: extracted from the upstream message based on the path.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1021,7 +1013,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1112,7 +1104,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -1126,7 +1118,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1217,7 +1209,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -1231,7 +1223,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1322,7 +1314,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -1336,7 +1328,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1427,7 +1419,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -1441,7 +1433,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1519,7 +1511,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>[Required] The ARN of the KMS resource that stores the SSL private key. This parameter is used to locate the KMS instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. To obtain the ARN, view the ARN information of the corresponding key in the KMS console.</p>
+             * <p>[Required] The KMS resource ARN for storing the SSL private key. This parameter is used to locate the KMS instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. To obtain the ARN, view the ARN information of the corresponding key in the KMS console.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;KmsArn&quot;</p>
@@ -1530,7 +1522,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[KMS KV mode] The key name in the KMS secret. If the secret stored in KMS is in a key-value pair (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS secret is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS secret is in plain text mode (directly storing the PEM content of the private key), leave this parameter empty.</p>
+             * <p>[KMS KV mode] The key name in the KMS secret. When the KMS secret is a key-value (KV) pair, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS secret is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS secret is in plaintext mode (directly storing the PEM content of the private key), leave this parameter empty.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;KmsSecretValueKey&quot;</p>
@@ -1613,7 +1605,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -1627,7 +1619,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1635,7 +1627,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The list of vSwitch IDs for the Kafka source.</p>
+             * <p>The vSwitch IDs of the Kafka event source.</p>
              * 
              * <strong>example:</strong>
              * <p>vbr-8vb835n3zf9shwl****mp</p>
@@ -1718,7 +1710,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -1732,7 +1724,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1823,7 +1815,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -1837,7 +1829,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1845,7 +1837,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>i-2ze7u5i17mbqtx1p****</p>
@@ -2149,11 +2141,11 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The acknowledgment mode for writing data to Kafka. Valid values:</p>
+             * <p>The Kafka write acknowledgment mode. Valid values:</p>
              * <ul>
-             * <li>acks=0: No response from the server is required. This mode delivers high performance but carries a high risk of data loss.</li>
-             * <li>acks=1: A response is returned after the primary node successfully writes the data. This mode delivers medium performance and carries a medium risk of data loss. Data may be lost if the primary node fails.</li>
-             * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes synchronize the data. This mode delivers lower performance but ensures higher data security. Data is lost only if both the primary and secondary nodes fail.</li>
+             * <li>acks=0: No response from the server is required. This mode provides high performance but has a high risk of data loss.</li>
+             * <li>acks=1: A response is returned after the primary node successfully writes the data. This mode provides medium performance and has a medium risk of data loss. Data may be lost if the primary node goes down.</li>
+             * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes successfully synchronize the data. This mode provides lower performance but higher data security. Data is lost only if both the primary and secondary nodes go down.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2187,11 +2179,9 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The target topic routing policy for messages. If both the Topic and DynamicTopic parameters are specified, the value of the DynamicTopic parameter takes precedence. The following configuration modes are supported:</p>
-             * <ol>
-             * <li><strong>Static constant mode</strong>: Enter a fixed topic name string, such as &quot;order_created&quot;. All messages are sent to this topic.</li>
-             * <li><strong>Dynamic extraction mode</strong>: Enter a standard JSONPath expression, such as &quot;$.user.id&quot; or &quot;$.metadata.category&quot;. The system parses the upstream message body and extracts the value of the matched field as the target topic name.</li>
-             * </ol>
+             * <p>Specifies the target topic routing policy for messages. If both the Topic and DynamicTopic parameters are specified, the value of the DynamicTopic parameter takes precedence. The following two configuration modes are supported:
+             *     1. <strong>Static constant mode</strong>: Enter a fixed topic name string (for example, &quot;order_created&quot;). All messages are sent to this topic.
+             *     2. <strong>Dynamic extraction mode</strong>: Enter a standard JSONPath expression (for example, &quot;$.user.id&quot; or &quot;$.metadata.category&quot;). The system parses the upstream message body and extracts the value of the matched field as the target topic name.</p>
              */
             public Builder dynamicTopic(DynamicTopic dynamicTopic) {
                 this.dynamicTopic = dynamicTopic;
@@ -2223,7 +2213,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SASL authentication mechanism of Kafka.</p>
+             * <p>The Kafka SASL authentication mechanism.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;SaslMechanism&quot;</p>
@@ -2234,7 +2224,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SASL authentication password of Kafka.</p>
+             * <p>The Kafka SASL authentication password.</p>
              * 
              * <strong>example:</strong>
              * <p>yourPassword</p>
@@ -2245,7 +2235,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SASL authentication username of Kafka.</p>
+             * <p>The Kafka SASL authentication username.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;SaslUser&quot;</p>
@@ -2264,7 +2254,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The security protocol type of Kafka. Valid values:</p>
+             * <p>The Kafka security protocol type. Valid values:</p>
              * <ul>
              * <li>SASL_SSL</li>
              * <li>PLAINTEXT</li>
@@ -2280,7 +2270,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for encrypted private keys] The password for the Kafka client private key. If the client private key is protected by password encryption (the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; tag), you must provide the decryption password. If the private key is not encrypted, leave this parameter empty. Note: This password is used only to decrypt the private key and is unrelated to Kafka authentication.</p>
+             * <p>[Required for encrypted private keys] The Kafka client private key password. This parameter is required when the client private key is encrypted (the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; tag). Leave this parameter empty if the private key is not encrypted. Note: This password is only used to decrypt the private key and is unrelated to Kafka authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>yourPassword</p>
@@ -2291,7 +2281,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for mutual authentication] The Kafka client certificate chain. If mutual SSL authentication (ssl.client.auth=required) is enabled on the Kafka server, you must provide this parameter. Format requirements: Base64-encoded PEM format, including the client certificate and the complete certificate chain (the client certificate first, followed by intermediate CA certificates, and the root CA certificate is optional). Note: Ensure that each PEM file starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot; before concatenating and Base64-encoding them.</p>
+             * <p>[Required for mutual authentication] The Kafka client certificate chain. This parameter is required when mutual SSL authentication is enabled on the Kafka server (ssl.client.auth=required). Format requirements: Base64-encoded PEM format, including the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, and root CA certificate optional). Note: Ensure that each PEM file starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot; before concatenation and Base64 encoding.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;SslKeystoreCertificateChain&quot;</p>
@@ -2302,7 +2292,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for bidirectional authentication] The SSL private key configuration object. When bidirectional SSL authentication is enabled on the Kafka server, you must provide the client private key. The key only supports the KMS mode: specify the Key Management Service (KMS) resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {&quot;KmsArn&quot;: &quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx&quot;, &quot;KmsSecretValueKey&quot;: &quot;keystore_private_key&quot;}.</p>
+             * <p>[Required for mutual authentication] The SSL private key configuration object. When mutual SSL authentication is enabled on the Kafka server, the client private key must be provided. The key only supports the KMS mode: specify the Key Management Service resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory to ensure higher security. Configuration example: {&quot;KmsArn&quot;: &quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx&quot;, &quot;KmsSecretValueKey&quot;: &quot;keystore_private_key&quot;}.</p>
              */
             public Builder sslKeystoreKey(SslKeystoreKey sslKeystoreKey) {
                 this.sslKeystoreKey = sslKeystoreKey;
@@ -2310,7 +2300,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required in SSL scenarios] The Kafka server trust certificate. It is used to authenticate the validity of the SSL certificate of the Kafka broker and prevent man-in-the-middle attacks. Format requirements: PEM format with Base64 encoding, which usually contains the CA certificate of the Kafka server or the server certificate itself. Example: Perform Base64 encoding on the PEM file content of the CA certificate (ensure that it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, you must provide the CA certificate that issued the certificate.</p>
+             * <p>[Required for SSL] The Kafka server trust certificate. It is used to verify the validity of the Kafka broker SSL certificate and prevent man-in-the-middle attacks. Format requirements: Base64-encoded PEM format, typically containing the Kafka server CA certificate or the server certificate itself. Example: Base64-encode the PEM file content of the CA certificate (ensure it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued it.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;SslTruststoreCertificates&quot;</p>
@@ -2321,7 +2311,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>The topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>LTC_CACHE_PRD</p>
@@ -2332,7 +2322,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The list of vSwitch IDs for the Kafka source.</p>
+             * <p>The vSwitch IDs of the Kafka event source.</p>
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -2348,7 +2338,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              */
             public Builder vpcId(VpcId vpcId) {
                 this.vpcId = vpcId;
@@ -2428,7 +2418,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -2442,7 +2432,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2533,7 +2523,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -2547,7 +2537,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2638,7 +2628,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -2652,7 +2642,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2660,7 +2650,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the topic in the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The name of the topic in the RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Mytopic</p>
@@ -2861,7 +2851,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The password.</p>
+             * <p>The password of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>yourPassword</p>
@@ -2909,7 +2899,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The topic of the RocketMQ instance.</p>
              */
             public Builder topic(Topic topic) {
                 this.topic = topic;
@@ -2928,7 +2918,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2zeccak5pb0j3ay******</p>
@@ -3107,7 +3097,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The properties file in the current ZIP package.</p>
+             * <p>Parses the properties file in the current ZIP package.</p>
              */
             public Builder connectorParameters(ConnectorParameters connectorParameters) {
                 this.connectorParameters = connectorParameters;
@@ -3262,7 +3252,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -3276,7 +3266,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3284,7 +3274,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The property name.</p>
+             * <p>The name of the property.</p>
              * 
              * <strong>example:</strong>
              * <p>content</p>
@@ -3367,7 +3357,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -3381,7 +3371,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3472,7 +3462,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>JSONPATH</p>
@@ -3494,7 +3484,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The property value.</p>
+             * <p>The value of the property.</p>
              * 
              * <strong>example:</strong>
              * <p>$.data.content</p>
@@ -3577,7 +3567,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The property name.</p>
+             * <p>The name of the property.</p>
              */
             public Builder name(Name name) {
                 this.name = name;
@@ -3593,7 +3583,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The property value.</p>
+             * <p>The value of the property.</p>
              */
             public Builder value(DashVectorSchemaParametersValue value) {
                 this.value = value;
@@ -3699,10 +3689,9 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value.</p>
              * <ul>
-             * <li>If Form is CONSTANT: the constant value.</li>
-             * <li>If Form is JSONPATH: the content extracted by using JSONPath.</li>
+             * <li>If Form is set to CONSTANT, this field specifies the constant value.</li>
+             * <li>If Form is set to JSONPATH, this field specifies the content extracted by JSONPath.</li>
              * </ul>
              * <blockquote>
              * <p>The Value field cannot exceed 10,240 characters.</p>
@@ -3815,11 +3804,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value.</p>
-             * <ul>
-             * <li>If Form is JSONPATH: the content extracted by using JSONPath.</li>
-             * <li>If Form is TEMPLATE: the template variable.</li>
-             * </ul>
+             * <p>If Form is set to JSONPATH, this field specifies the content extracted by JSONPath. If Form is set to TEMPLATE, this field specifies the template variable.</p>
              * <blockquote>
              * <p>The Value field cannot exceed 10,240 characters.</p>
              * </blockquote>
@@ -3927,7 +3912,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The content extracted by using JSONPath.</p>
+             * <p>The content extracted by JSONPath.</p>
              * <blockquote>
              * <p>The Value field cannot exceed 10,240 characters.</p>
              * </blockquote>
@@ -4113,7 +4098,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The schema field definition of the table item when inserting data into DashVector. The result after event content transformation must be in JSON format.</p>
+             * <p>The schema field definitions for the table entry when inserting data into DashVector. The transformed event content must be in JSON format.</p>
              */
             public Builder dashVectorSchemaParameters(java.util.List<DashVectorSchemaParameters> dashVectorSchemaParameters) {
                 this.dashVectorSchemaParameters = dashVectorSchemaParameters;
@@ -4147,7 +4132,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The DashVector database operation type. Valid values:</p>
+             * <p>The type of DashVector database operation. Valid values:</p>
              * <ul>
              * <li>Delete</li>
              * <li>Upsert</li>
@@ -4178,7 +4163,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The vector of the DashVector record to be inserted.</p>
+             * <p>The vector to be inserted into the DashVector record.</p>
              */
             public Builder vector(Vector vector) {
                 this.vector = vector;
@@ -4272,7 +4257,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4379,7 +4364,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4387,7 +4372,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Key_1&quot;:{&quot;form&quot;:&quot;CONSTANT&quot;,&quot;value&quot;:&quot;demoKey&quot;},&quot;Value_1&quot;:{&quot;form&quot;:&quot;JSONPATH&quot;,&quot;value&quot;:&quot;$.data.value&quot;}}</p>
@@ -4484,7 +4469,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4492,7 +4477,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>JSON</p>
@@ -4575,7 +4560,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -4589,7 +4574,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4597,7 +4582,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the DataHub project.</p>
+             * <p>The DataHub project name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-project</p>
@@ -4680,7 +4665,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -4694,7 +4679,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4785,7 +4770,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -4799,7 +4784,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4807,7 +4792,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the DataHub topic.</p>
+             * <p>The DataHub topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-topic</p>
@@ -4995,7 +4980,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -5009,7 +4994,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5185,7 +5170,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The data format. You can select the default format or specify key-value pairs. Valid values:</p>
+             * <p>The data format. You can select the default value or specify a key-value format. Valid values:</p>
              * <ul>
              * <li>JSON</li>
              * <li>KeyValue</li>
@@ -5197,7 +5182,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the DataHub project.</p>
+             * <p>The DataHub project name.</p>
              */
             public Builder project(Project project) {
                 this.project = project;
@@ -5213,7 +5198,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the DataHub topic.</p>
+             * <p>The DataHub topic name.</p>
              */
             public Builder topic(SinkDataHubParametersTopic topic) {
                 this.topic = topic;
@@ -5313,7 +5298,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -5327,7 +5312,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5335,7 +5320,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The public HTTP endpoint for BE.</p>
+             * <p>The BE public HTTP endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;BeHttpEndpoint&quot;</p>
@@ -5418,7 +5403,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -5432,7 +5417,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5525,7 +5510,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -5539,7 +5524,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5630,7 +5615,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -5644,7 +5629,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5652,7 +5637,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The HTTP endpoint for FE.</p>
+             * <p>The FE HTTP protocol endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;FeHttpEndpoint&quot;</p>
@@ -5735,7 +5720,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -5749,7 +5734,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5757,7 +5742,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network.</p>
              * 
              * <strong>example:</strong>
              * <p>PublicNetwork</p>
@@ -5840,7 +5825,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -5854,7 +5839,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5945,7 +5930,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -5959,7 +5944,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5967,7 +5952,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The MySQL endpoint.</p>
+             * <p>The MySQL protocol endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;QueryEndpoint&quot;</p>
@@ -6050,7 +6035,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -6064,7 +6049,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6072,7 +6057,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-mw43*****</p>
@@ -6155,7 +6140,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -6169,7 +6154,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6260,7 +6245,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -6274,7 +6259,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6365,7 +6350,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -6379,7 +6364,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6470,7 +6455,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -6484,7 +6469,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6492,7 +6477,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>i-2ze7u5i17mbqtx1p****</p>
@@ -6692,7 +6677,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The public HTTP endpoint for BE.</p>
+             * <p>The BE public HTTP endpoint.</p>
              */
             public Builder beHttpEndpoint(BeHttpEndpoint beHttpEndpoint) {
                 this.beHttpEndpoint = beHttpEndpoint;
@@ -6716,7 +6701,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The HTTP endpoint for FE.</p>
+             * <p>The FE HTTP protocol endpoint.</p>
              */
             public Builder feHttpEndpoint(FeHttpEndpoint feHttpEndpoint) {
                 this.feHttpEndpoint = feHttpEndpoint;
@@ -6724,7 +6709,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network.</p>
              */
             public Builder networkType(SinkDorisParametersNetworkType networkType) {
                 this.networkType = networkType;
@@ -6740,7 +6725,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The MySQL endpoint.</p>
+             * <p>The MySQL protocol endpoint.</p>
              */
             public Builder queryEndpoint(QueryEndpoint queryEndpoint) {
                 this.queryEndpoint = queryEndpoint;
@@ -6748,7 +6733,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The security group.</p>
              */
             public Builder securityGroupId(SinkDorisParametersSecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -6780,7 +6765,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              */
             public Builder vpcId(SinkDorisParametersVpcId vpcId) {
                 this.vpcId = vpcId;
@@ -6965,7 +6950,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The name of the column.</p>
+             * <p>The column name.</p>
              * 
              * <strong>example:</strong>
              * <p>age</p>
@@ -6976,7 +6961,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The type of the column.</p>
+             * <p>The column type.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -7080,7 +7065,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The name of the catalog.</p>
+             * <p>The catalog name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -7215,7 +7200,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -7300,7 +7285,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -7322,7 +7307,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The delivery concurrency. The minimum value is 1.</p>
+             * <p>The delivery concurrency. Minimum value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -7407,10 +7392,10 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The transformation format. Valid values:</p>
              * <ul>
-             * <li>ORIGINAL: complete event</li>
-             * <li>JSONPATH: partial event</li>
-             * <li>CONSTANT: constant</li>
-             * <li>TEMPLATE: template</li>
+             * <li>ORIGINAL: Complete event.</li>
+             * <li>JSONPATH: Partial event.</li>
+             * <li>CONSTANT: Constant.</li>
+             * <li>TEMPLATE: Template.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -7433,7 +7418,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -7518,7 +7503,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -7623,7 +7608,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -7728,7 +7713,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -7833,7 +7818,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -7990,7 +7975,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The body of the content sent to the function.</p>
+             * <p>The body sent to the function.</p>
              */
             public Builder body(SinkFcParametersBody body) {
                 this.body = body;
@@ -7998,7 +7983,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The delivery concurrency. The minimum value is 1.</p>
+             * <p>The delivery concurrency. Minimum value: 1.</p>
              */
             public Builder concurrency(Concurrency concurrency) {
                 this.concurrency = concurrency;
@@ -8024,8 +8009,8 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The invocation type. Valid values:</p>
              * <ul>
-             * <li>Sync: synchronous invocation</li>
-             * <li>Async: asynchronous invocation</li>
+             * <li>Sync: Synchronous.</li>
+             * <li>Async: Asynchronous.</li>
              * </ul>
              */
             public Builder invocationType(InvocationType invocationType) {
@@ -8122,7 +8107,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -8136,7 +8121,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -8227,7 +8212,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -8241,7 +8226,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -8332,7 +8317,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -8346,7 +8331,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -8354,7 +8339,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The input information for the execution.</p>
+             * <p>The input for the execution.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -8437,7 +8422,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -8451,7 +8436,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -8571,7 +8556,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The input information for the execution.</p>
+             * <p>The input for the execution.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -8659,7 +8644,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -8681,11 +8666,11 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The acknowledgment mode for writing data to Kafka. Valid values:</p>
+             * <p>The Kafka write acknowledgment mode. Valid values:</p>
              * <ul>
-             * <li>acks=0: No response from the server is required. This mode delivers high performance but carries a high risk of data loss.</li>
-             * <li>acks=1: A response is returned after the primary node successfully writes the data. This mode delivers medium performance and carries a medium risk of data loss. Data may be lost if the primary node fails.</li>
-             * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes synchronize the data. This mode delivers lower performance but ensures higher data security. Data is lost only if both the primary and secondary nodes fail.</li>
+             * <li>acks=0: No response from the server is required. This mode provides high performance but has a high risk of data loss.</li>
+             * <li>acks=1: A response is returned after the primary node successfully writes the data. This mode provides medium performance and has a medium risk of data loss. Data may be lost if the primary node goes down.</li>
+             * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes successfully synchronize the data. This mode provides lower performance but higher data security. Data is lost only if both the primary and secondary nodes go down.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -8769,10 +8754,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion type. Valid values:</p>
+             * <p>The transformation type. Valid values:</p>
              * <ul>
-             * <li>CONSTANT: A fixed value.</li>
-             * <li>JSONPATH: Extracted from the upstream message based on the specified path.</li>
+             * <li>CONSTANT: a fixed value.</li>
+             * <li>JSONPATH: extracted from the upstream message based on the path.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -8787,7 +8772,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -8880,10 +8865,10 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The transformation format. Valid values:</p>
              * <ul>
-             * <li>ORIGINAL: complete event</li>
-             * <li>JSONPATH: partial event</li>
-             * <li>CONSTANT: constant</li>
-             * <li>TEMPLATE: template</li>
+             * <li>ORIGINAL: Complete event.</li>
+             * <li>JSONPATH: Partial event.</li>
+             * <li>CONSTANT: Constant.</li>
+             * <li>TEMPLATE: Template.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -8906,7 +8891,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -8991,7 +8976,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -9096,7 +9081,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -9118,7 +9103,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the message.</p>
+             * <p>The message identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -9201,7 +9186,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -9223,7 +9208,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>The topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -9328,7 +9313,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -9478,11 +9463,11 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The acknowledgment mode for writing data to Kafka. Valid values:</p>
+             * <p>The Kafka write acknowledgment mode. Valid values:</p>
              * <ul>
-             * <li>acks=0: No response from the server is required. This mode delivers high performance but carries a high risk of data loss.</li>
-             * <li>acks=1: A response is returned after the primary node successfully writes the data. This mode delivers medium performance and carries a medium risk of data loss. Data may be lost if the primary node fails.</li>
-             * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes synchronize the data. This mode delivers lower performance but ensures higher data security. Data is lost only if both the primary and secondary nodes fail.</li>
+             * <li>acks=0: No response from the server is required. This mode provides high performance but has a high risk of data loss.</li>
+             * <li>acks=1: A response is returned after the primary node successfully writes the data. This mode provides medium performance and has a medium risk of data loss. Data may be lost if the primary node goes down.</li>
+             * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes successfully synchronize the data. This mode provides lower performance but higher data security. Data is lost only if both the primary and secondary nodes go down.</li>
              * </ul>
              */
             public Builder acks(Acks acks) {
@@ -9502,11 +9487,9 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The target topic routing policy for messages. If both the Topic and DynamicTopic parameters are specified, the value of the DynamicTopic parameter takes precedence. The following configuration modes are supported:</p>
-             * <ol>
-             * <li><strong>Static constant mode</strong>: Enter a fixed topic name string, such as &quot;order_created&quot;. All messages are sent to this topic.</li>
-             * <li><strong>Dynamic extraction mode</strong>: Enter a standard JSONPath expression, such as &quot;$.user.id&quot; or &quot;$.metadata.category&quot;. The system parses the upstream message body and extracts the value of the matched field as the target topic name.</li>
-             * </ol>
+             * <p>Specifies the target topic routing policy for messages. If both the Topic and DynamicTopic parameters are specified, the value of the DynamicTopic parameter takes precedence. The following two configuration modes are supported:
+             *     1. <strong>Static constant mode</strong>: Enter a fixed topic name string (for example, &quot;order_created&quot;). All messages are sent to this topic.
+             *     2. <strong>Dynamic extraction mode</strong>: Enter a standard JSONPath expression (for example, &quot;$.user.id&quot; or &quot;$.metadata.category&quot;). The system parses the upstream message body and extracts the value of the matched field as the target topic name.</p>
              */
             public Builder dynamicTopic(SinkKafkaParametersDynamicTopic dynamicTopic) {
                 this.dynamicTopic = dynamicTopic;
@@ -9514,7 +9497,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The additional metadata for Kafka messages.</p>
+             * <p>The additional metadata of the Kafka message.</p>
              */
             public Builder headers(SinkKafkaParametersHeaders headers) {
                 this.headers = headers;
@@ -9522,7 +9505,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The target service type is Message Queue for Apache Kafka. Specify the instance ID of the message queue (MSMQ).</p>
+             * <p>The target service type is MSMQ for Apache Kafka.</p>
              */
             public Builder instanceId(InstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -9530,7 +9513,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the message.</p>
+             * <p>The message identifier.</p>
              */
             public Builder key(SinkKafkaParametersKey key) {
                 this.key = key;
@@ -9538,7 +9521,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>The topic name.</p>
              */
             public Builder topic(SinkKafkaParametersTopic topic) {
                 this.topic = topic;
@@ -9546,7 +9529,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The content of the message body.</p>
+             * <p>The message body.</p>
              */
             public Builder value(SinkKafkaParametersValue value) {
                 this.value = value;
@@ -9648,7 +9631,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -9838,7 +9821,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -9860,7 +9843,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the queue in Simple Message Queue (formerly MNS), an MSMQ service.</p>
+             * <p>The name of the queue in Simple Message Queue (formerly MNS).</p>
              * 
              * <strong>example:</strong>
              * <p>MyQueue</p>
@@ -9959,7 +9942,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The target service type is Simple Message Queue (formerly MNS), an MSMQ service.</p>
+             * <p>The target service type is Simple Message Queue (formerly MNS).</p>
              */
             public Builder queueName(QueueName queueName) {
                 this.queueName = queueName;
@@ -10158,7 +10141,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10166,7 +10149,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The message ID value.</p>
+             * <p>The value of the message ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -10376,7 +10359,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The routing key value.</p>
+             * <p>The value of the routing key.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;Form&quot;: &quot;CONSTANT&quot;, &quot;Value&quot;: &quot;my-routing-key&quot;}</p>
@@ -10643,7 +10626,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The content of the message body.</p>
+             * <p>The message body.</p>
              */
             public Builder body(SinkOpenSourceRabbitMQParametersBody body) {
                 this.body = body;
@@ -10726,7 +10709,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The routing key of the message.</p>
+             * <p>The message routing key.</p>
              */
             public Builder routingKey(RoutingKey routingKey) {
                 this.routingKey = routingKey;
@@ -10747,10 +10730,8 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The target type for message delivery. Valid values:</p>
              * <ul>
-             * <li><p><strong>Exchange</strong>: Messages are routed through an exchange.</p>
-             * </li>
-             * <li><p><strong>Queue</strong>: Messages are delivered directly to a specified queue.</p>
-             * </li>
+             * <li><strong>Exchange</strong>: Messages are routed through an exchange.</li>
+             * <li><strong>Queue</strong>: Messages are delivered directly to a specified queue.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -10784,7 +10765,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the virtual host in RabbitMQ.</p>
+             * <p>The name of the RabbitMQ virtual host.</p>
              * 
              * <strong>example:</strong>
              * <p>Vhost1</p>
@@ -10878,7 +10859,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -10892,7 +10873,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10997,7 +10978,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11090,9 +11071,9 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The transformation format. Valid values:</p>
              * <ul>
-             * <li>JSONPATH: JSONPATH.</li>
-             * <li>CONSTANT: CONSTANT.</li>
-             * <li>TEMPLATE: TEMPLATE.</li>
+             * <li>JSONPATH: The JSONPath format.</li>
+             * <li>CONSTANT: The constant format.</li>
+             * <li>TEMPLATE: The template format.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -11104,7 +11085,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The HTTP request header template. This parameter is required when Form is set to TEMPLATE. The transformed event content must be in JSON format.</p>
+             * <p>The HTTP request header template style. This parameter is required when Form is set to TEMPLATE. The transformed event content must be in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -11117,12 +11098,13 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
+             * <p>The value.</p>
              * <ul>
-             * <li>CONSTANT: A constant value.</li>
-             * <li>JSONPATH: The content extracted by using JSONPath.</li>
-             * <li>TEMPLATE: A template variable.</li>
+             * <li>If Form is CONSTANT: the constant value.</li>
+             * <li>If Form is JSONPATH: the content extracted by JSONPath.</li>
+             * <li>If Form is TEMPLATE: the template variable.</li>
              * </ul>
-             * <p>Note: The Value field cannot exceed 10,240 characters in length.</p>
+             * <p>Note: The Value field cannot exceed 10,240 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -11205,7 +11187,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -11219,7 +11201,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11314,7 +11296,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -11328,7 +11310,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11419,7 +11401,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -11433,7 +11415,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11524,7 +11506,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -11538,7 +11520,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11626,7 +11608,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -11640,7 +11622,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11731,7 +11713,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -11745,7 +11727,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11836,7 +11818,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -11850,7 +11832,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11858,7 +11840,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-adw1awdw*****</p>
@@ -12104,7 +12086,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              */
             public Builder vpcId(SinkPrometheusParametersVpcId vpcId) {
                 this.vpcId = vpcId;
@@ -12206,7 +12188,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -12291,7 +12273,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -12313,7 +12295,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the exchange in the Message Queue for RabbitMQ instance.</p>
+             * <p>The name of the exchange in the ApsaraMQ for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>a_exchange</p>
@@ -12396,7 +12378,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -12418,7 +12400,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The instance ID of the Message Queue for RabbitMQ instance.</p>
+             * <p>The instance ID of the ApsaraMQ for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>amqp-cn-2r42e73o****</p>
@@ -12523,7 +12505,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -12619,7 +12601,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template content. This network parameter uses a fixed value configuration and does not perform template conversion. You do not need to specify this field.</p>
+             * <p>The template content. This network parameter uses a fixed value and does not require template conversion. You do not need to specify this field.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -12630,11 +12612,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type used to connect to the target ApsaraMQ for RabbitMQ instance. Valid values:</p>
-             * <ul>
-             * <li>PublicNetwork: the Internet.</li>
-             * <li>PrivateNetwork: a VPC.</li>
-             * </ul>
+             * <p>The network type used to connect to the target ApsaraMQ for RabbitMQ instance. Valid values: PublicNetwork, which indicates the Internet, and PrivateNetwork, which indicates a VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>PrivateNetwork</p>
@@ -12739,7 +12717,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -12824,7 +12802,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -12929,7 +12907,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -12951,7 +12929,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The routing rule of the message.</p>
+             * <p>The routing rule for messages.</p>
              * 
              * <strong>example:</strong>
              * <p>housekeeping</p>
@@ -13045,7 +13023,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template content. This network parameter uses a fixed value configuration and does not perform template conversion. You do not need to specify this field.</p>
+             * <p>The template content. This network parameter uses a fixed value and does not require template conversion. You do not need to specify this field.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -13056,7 +13034,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the security group used to connect to the target ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The security group ID used to connect to the target ApsaraMQ for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp1xxxxxxxxxxxx</p>
@@ -13139,7 +13117,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -13163,8 +13141,8 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The target type. Valid values:</p>
              * <ul>
-             * <li>Exchange: the exchange mode.</li>
-             * <li>Queue: the queue mode.</li>
+             * <li>Exchange: Exchange mode.</li>
+             * <li>Queue: Queue mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -13259,7 +13237,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template content. This network parameter uses a fixed value configuration and does not perform template conversion. You do not need to specify this field.</p>
+             * <p>The template content. This network parameter uses a fixed value and does not require template conversion. You do not need to specify this field.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -13270,7 +13248,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the vSwitches used to connect to the target ApsaraMQ for RabbitMQ instance. Separate multiple vSwitch IDs with commas (,).</p>
+             * <p>The vSwitch IDs used to connect to the target ApsaraMQ for RabbitMQ instance. Separate multiple vSwitch IDs with commas.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1xxxxxxxxxxxx,vsw-bp1yyyyyyyyyyyy</p>
@@ -13353,7 +13331,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -13367,7 +13345,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -13375,7 +13353,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the vhost in the Message Queue for RabbitMQ instance.</p>
+             * <p>The name of the vhost in the ApsaraMQ for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>rabbit-host</p>
@@ -13469,7 +13447,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template content. This network parameter uses a fixed value configuration and does not perform template conversion. You do not need to specify this field.</p>
+             * <p>The template content. This network parameter uses a fixed value and does not require template conversion. You do not need to specify this field.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -13480,7 +13458,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC where the target ApsaraMQ for RabbitMQ instance resides.</p>
+             * <p>The VPC ID of the target ApsaraMQ for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1xxxxxxxxxxxx</p>
@@ -13701,7 +13679,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The exchange mode. This parameter is required only when the TargetType parameter is set to Exchange.</p>
+             * <p>Exchange mode. This parameter is required only when the TargetType parameter is set to Exchange.</p>
              */
             public Builder exchange(Exchange exchange) {
                 this.exchange = exchange;
@@ -13709,7 +13687,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The target service type is Message Queue for RabbitMQ.</p>
+             * <p>The target service type is ApsaraMQ for RabbitMQ.</p>
              */
             public Builder instanceId(SinkRabbitMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -13725,7 +13703,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type used to connect to the target ApsaraMQ for RabbitMQ instance. If you set this parameter to PrivateNetwork, you must also configure the VpcId, VSwitchIds, and SecurityGroupId parameters. When you update an event stream and want to retain the original private network configuration, you must include these network parameters.</p>
+             * <p>The network type configuration used to connect to the target ApsaraMQ for RabbitMQ instance. If you set this parameter to PrivateNetwork, you must also configure VpcId, VSwitchIds, and SecurityGroupId. When you update an event stream and want to retain the original private network configuration, you must specify these network parameters together.</p>
              */
             public Builder networkType(SinkRabbitMQParametersNetworkType networkType) {
                 this.networkType = networkType;
@@ -13741,7 +13719,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The queue mode. This parameter is required only when the TargetType parameter is set to Queue.</p>
+             * <p>Queue mode. This parameter is required only when the TargetType parameter is set to Queue.</p>
              */
             public Builder queueName(SinkRabbitMQParametersQueueName queueName) {
                 this.queueName = queueName;
@@ -13749,7 +13727,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The routing rule of the message. This parameter is required only when the TargetType parameter is set to Exchange.</p>
+             * <p>The routing rule for messages. This parameter is required only when the TargetType parameter is set to Exchange.</p>
              */
             public Builder routingKey(SinkRabbitMQParametersRoutingKey routingKey) {
                 this.routingKey = routingKey;
@@ -13757,7 +13735,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The security group used to connect to the target ApsaraMQ for RabbitMQ instance. This parameter is required when the NetworkType.Value parameter is set to PrivateNetwork.</p>
+             * <p>The security group configuration used to connect to the target ApsaraMQ for RabbitMQ instance. This parameter is required when the value of NetworkType is set to PrivateNetwork.</p>
              */
             public Builder securityGroupId(SinkRabbitMQParametersSecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -13773,7 +13751,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The vSwitches used to connect to the target ApsaraMQ for RabbitMQ instance. This parameter is required when the NetworkType.Value parameter is set to PrivateNetwork.</p>
+             * <p>The vSwitch configuration used to connect to the target ApsaraMQ for RabbitMQ instance. This parameter is required when the value of NetworkType is set to PrivateNetwork.</p>
              */
             public Builder vSwitchIds(SinkRabbitMQParametersVSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -13781,7 +13759,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the vhost in the Message Queue for RabbitMQ instance.</p>
+             * <p>The name of the vhost in the ApsaraMQ for RabbitMQ instance.</p>
              */
             public Builder virtualHostName(VirtualHostName virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -13789,7 +13767,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC where the target ApsaraMQ for RabbitMQ instance resides. This parameter is required when the NetworkType.Value parameter is set to PrivateNetwork.</p>
+             * <p>The VPC configuration for the target ApsaraMQ for RabbitMQ instance. This parameter is required when the value of NetworkType is set to PrivateNetwork.</p>
              */
             public Builder vpcId(SinkRabbitMQParametersVpcId vpcId) {
                 this.vpcId = vpcId;
@@ -13869,7 +13847,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -13883,7 +13861,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -13974,7 +13952,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -13988,7 +13966,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -14079,7 +14057,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -14093,7 +14071,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -14101,7 +14079,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the topic in the Message Queue for RocketMQ instance.</p>
+             * <p>The name of the topic in the ApsaraMQ for RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Mytopic</p>
@@ -14239,8 +14217,8 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li>Cloud_4: an ApsaraMQ for RocketMQ 4.0 instance.</li>
-             * <li>Cloud_5: an ApsaraMQ for RocketMQ 5.0 instance.</li>
+             * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance.</li>
+             * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -14252,7 +14230,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic of the Message Queue for RocketMQ instance.</p>
+             * <p>The topic of the ApsaraMQ for RocketMQ instance.</p>
              */
             public Builder topic(SinkRocketMQCheckpointParametersTopic topic) {
                 this.topic = topic;
@@ -14354,7 +14332,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -14439,7 +14417,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -14453,7 +14431,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -14463,8 +14441,8 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The delivery order type. Valid values:</p>
              * <ul>
-             * <li><strong>Orderly</strong>: Orderly delivery.</li>
-             * <li><strong>Concurrently</strong>: Concurrent delivery.</li>
+             * <li><strong>Orderly:</strong> Orderly delivery.</li>
+             * <li><strong>Concurrently:</strong> Concurrent delivery.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -14548,7 +14526,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -14562,7 +14540,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -14653,7 +14631,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -14675,7 +14653,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The instance ID of the MSMQ RocketMQ message.</p>
+             * <p>The instance ID of the Message Queue for RocketMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>MQ_INST_164901546557****_BAAN****</p>
@@ -14758,7 +14736,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -14772,7 +14750,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -14863,7 +14841,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -14877,7 +14855,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -14887,7 +14865,7 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance. This is the default value.</li>
+             * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
              * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
              * <li>SelfBuilt: Self-managed Apache RocketMQ cluster.</li>
              * </ul>
@@ -14973,7 +14951,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -14987,7 +14965,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -15100,7 +15078,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -15185,7 +15163,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -15199,7 +15177,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -15316,7 +15294,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -15401,7 +15379,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -15415,7 +15393,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -15506,7 +15484,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -15520,7 +15498,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -15528,7 +15506,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value of the sharding key.</p>
+             * <p>The sharding key value.</p>
              * 
              * <strong>example:</strong>
              * <p>order_id</p>
@@ -15633,7 +15611,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -15718,7 +15696,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -15740,7 +15718,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic of the MSMQ RocketMQ message instance.</p>
+             * <p>The topic of the Message Queue for RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Mytopic</p>
@@ -15823,7 +15801,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -15837,7 +15815,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -15942,7 +15920,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -15950,7 +15928,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vbr-8vb835n3zf9shwlvb****</p>
@@ -16210,7 +16188,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The message delivery order type. Optional. Default value: Concurrently.</p>
+             * <p>The message delivery order type. This parameter is optional. Default value: Concurrent delivery.</p>
              */
             public Builder deliveryOrderType(DeliveryOrderType deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
@@ -16226,7 +16204,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The instance ID. The destination service type is MSMQ RocketMQ message.</p>
+             * <p>The destination service type is Message Queue for RocketMQ.</p>
              */
             public Builder instanceId(SinkRocketMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -16296,7 +16274,7 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The sharding key of the message.</p>
              * <blockquote>
-             * <p>When DeliveryOrderType is set to Orderly, this specifies the event content transformation rule for the ShardingKey property when writing messages to the downstream service. If the source is RocketMQ, ShardingKey can be empty. In this case, the sharding key of the message is generated by concatenating the upstream BrokerName and QueueId.</p>
+             * <p>When DeliveryOrderType is set to Orderly, this parameter specifies the event content transformation rule for the ShardingKey attribute when messages are written to the downstream service. When Source is set to RocketMQ, ShardingKey can be left empty. In this case, the message sharding key is generated by concatenating the upstream BrokerName and QueueId.</p>
              * </blockquote>
              */
             public Builder shardingKey(ShardingKey shardingKey) {
@@ -16313,7 +16291,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic of the MSMQ RocketMQ message instance.</p>
+             * <p>The topic of the Message Queue for RocketMQ instance.</p>
              */
             public Builder topic(SinkRocketMQParametersTopic topic) {
                 this.topic = topic;
@@ -16329,7 +16307,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              */
             public Builder vpcId(SinkRocketMQParametersVpcId vpcId) {
                 this.vpcId = vpcId;
@@ -16431,7 +16409,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before conversion.</p>
+             * <p>The value before transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -16530,7 +16508,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -16635,7 +16613,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -16643,7 +16621,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SLS data format.</p>
+             * <p>The Simple Log Service data format.</p>
              * 
              * <strong>example:</strong>
              * <p>JSON</p>
@@ -16726,7 +16704,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -16740,7 +16718,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -16748,7 +16726,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SLS Logstore.</p>
+             * <p>The Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>test-logstore</p>
@@ -16831,7 +16809,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -16845,7 +16823,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -16853,7 +16831,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SLS project.</p>
+             * <p>The Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>test-project</p>
@@ -16936,7 +16914,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -16950,7 +16928,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -16958,7 +16936,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>When granting authorization to the event bus EventBridge to use this role to read SLS log content, you must meet the following conditions: when creating the role for the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service and set the trusted service to the event bus.</p>
+             * <p>To authorize EventBridge to use this role to read Simple Log Service logs, the following condition must be met: when creating the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service, and set the trusted service to the event bus.</p>
              * 
              * <strong>example:</strong>
              * <p>testRole</p>
@@ -17041,7 +17019,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The conversion format. Default value: CONSTANT.</p>
+             * <p>The transformation format. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -17055,7 +17033,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The template style.</p>
              * 
              * <strong>example:</strong>
-             * <p>The template string, if any</p>
+             * <p>Template string (if any)</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -17063,7 +17041,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic of the log. This corresponds to the reserved field topic in SLS.</p>
+             * <p>The topic to which the logs belong, which corresponds to the reserved Simple Log Service field topic.</p>
              * 
              * <strong>example:</strong>
              * <p>testTopic</p>
@@ -17198,7 +17176,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The content sent to SLS.</p>
+             * <p>The content sent to Simple Log Service.</p>
              */
             public Builder body(SinkSLSParametersBody body) {
                 this.body = body;
@@ -17214,7 +17192,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SLS data format. Valid values:</p>
+             * <p>The Simple Log Service data format. Valid values:</p>
              * <ul>
              * <li>JSON</li>
              * <li>KeyValue</li>
@@ -17226,7 +17204,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SLS Logstore.</p>
+             * <p>The Simple Log Service Logstore.</p>
              */
             public Builder logStore(LogStore logStore) {
                 this.logStore = logStore;
@@ -17234,7 +17212,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SLS project.</p>
+             * <p>The Simple Log Service project.</p>
              */
             public Builder project(SinkSLSParametersProject project) {
                 this.project = project;
@@ -17242,7 +17220,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>When granting authorization to the event bus EventBridge to use this role to read SLS log content, you must meet the following conditions: when creating the role for the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service and set the trusted service to the event bus.</p>
+             * <p>To authorize EventBridge to use this role to read Simple Log Service logs, the following condition must be met: when creating the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service, and set the trusted service to the event bus.</p>
              */
             public Builder roleName(SinkSLSParametersRoleName roleName) {
                 this.roleName = roleName;
@@ -17250,7 +17228,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic of the log. This corresponds to the reserved field topic in SLS.</p>
+             * <p>The topic to which the logs belong, which corresponds to the reserved Simple Log Service field topic.</p>
              */
             public Builder topic(SinkSLSParametersTopic topic) {
                 this.topic = topic;
@@ -17271,6 +17249,9 @@ public class UpdateEventStreamingRequest extends Request {
      * <p>UpdateEventStreamingRequest</p>
      */
     public static class Sink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SinkAgentCoreKnowledgeBaseParameters")
+        private SinkAgentCoreKnowledgeBaseParameters sinkAgentCoreKnowledgeBaseParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkAgentRunParameters")
         private SinkAgentRunParameters sinkAgentRunParameters;
 
@@ -17356,6 +17337,7 @@ public class UpdateEventStreamingRequest extends Request {
         private SinkSLSParameters sinkSLSParameters;
 
         private Sink(Builder builder) {
+            this.sinkAgentCoreKnowledgeBaseParameters = builder.sinkAgentCoreKnowledgeBaseParameters;
             this.sinkAgentRunParameters = builder.sinkAgentRunParameters;
             this.sinkApacheKafkaParameters = builder.sinkApacheKafkaParameters;
             this.sinkApacheRocketMQCheckpointParameters = builder.sinkApacheRocketMQCheckpointParameters;
@@ -17392,6 +17374,13 @@ public class UpdateEventStreamingRequest extends Request {
 
         public static Sink create() {
             return builder().build();
+        }
+
+        /**
+         * @return sinkAgentCoreKnowledgeBaseParameters
+         */
+        public SinkAgentCoreKnowledgeBaseParameters getSinkAgentCoreKnowledgeBaseParameters() {
+            return this.sinkAgentCoreKnowledgeBaseParameters;
         }
 
         /**
@@ -17591,6 +17580,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         public static final class Builder {
+            private SinkAgentCoreKnowledgeBaseParameters sinkAgentCoreKnowledgeBaseParameters; 
             private SinkAgentRunParameters sinkAgentRunParameters; 
             private SinkApacheKafkaParameters sinkApacheKafkaParameters; 
             private SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters; 
@@ -17624,6 +17614,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             private Builder(Sink model) {
+                this.sinkAgentCoreKnowledgeBaseParameters = model.sinkAgentCoreKnowledgeBaseParameters;
                 this.sinkAgentRunParameters = model.sinkAgentRunParameters;
                 this.sinkApacheKafkaParameters = model.sinkApacheKafkaParameters;
                 this.sinkApacheRocketMQCheckpointParameters = model.sinkApacheRocketMQCheckpointParameters;
@@ -17655,6 +17646,14 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
+             * <p>The parameters for the AgentCore knowledge base.</p>
+             */
+            public Builder sinkAgentCoreKnowledgeBaseParameters(SinkAgentCoreKnowledgeBaseParameters sinkAgentCoreKnowledgeBaseParameters) {
+                this.sinkAgentCoreKnowledgeBaseParameters = sinkAgentCoreKnowledgeBaseParameters;
+                return this;
+            }
+
+            /**
              * <p>The delivery parameters for the agent runtime.</p>
              */
             public Builder sinkAgentRunParameters(SinkAgentRunParameters sinkAgentRunParameters) {
@@ -17679,7 +17678,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The API destination target parameters.</p>
+             * <p>The parameters for the API destination sink.</p>
              */
             public Builder sinkApiDestinationParameters(SinkApiDestinationParameters sinkApiDestinationParameters) {
                 this.sinkApiDestinationParameters = sinkApiDestinationParameters;
@@ -17687,7 +17686,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The Model Studio delivery parameters.</p>
+             * <p>The delivery parameters for Model Studio.</p>
              */
             public Builder sinkBaiLianParameters(SinkBaiLianParameters sinkBaiLianParameters) {
                 this.sinkBaiLianParameters = sinkBaiLianParameters;
@@ -17695,7 +17694,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The sink Kafka connector parameters.</p>
+             * <p>The Kafka sink connector parameters.</p>
              */
             public Builder sinkCustomizedKafkaConnectorParameters(SinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters) {
                 this.sinkCustomizedKafkaConnectorParameters = sinkCustomizedKafkaConnectorParameters;
@@ -17703,7 +17702,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The sink Kafka parameters.</p>
+             * <p>The Kafka sink parameters.</p>
              */
             public Builder sinkCustomizedKafkaParameters(SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters) {
                 this.sinkCustomizedKafkaParameters = sinkCustomizedKafkaParameters;
@@ -17711,7 +17710,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The sink DashVector parameters.</p>
+             * <p>The DashVector sink parameters.</p>
              */
             public Builder sinkDashVectorParameters(SinkDashVectorParameters sinkDashVectorParameters) {
                 this.sinkDashVectorParameters = sinkDashVectorParameters;
@@ -17743,7 +17742,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the event target.</p>
+             * <p>The event target name.</p>
              */
             public Builder sinkEventHouseParameters(SinkEventHouseParameters sinkEventHouseParameters) {
                 this.sinkEventHouseParameters = sinkEventHouseParameters;
@@ -17759,7 +17758,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The Sink Fnf parameters.</p>
+             * <p>The Sink FNF parameters.</p>
              */
             public Builder sinkFnfParameters(SinkFnfParameters sinkFnfParameters) {
                 this.sinkFnfParameters = sinkFnfParameters;
@@ -17767,7 +17766,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The HTTPS target parameters.</p>
+             * <p>The parameters for the HTTPS sink.</p>
              */
             public Builder sinkHttpsParameters(SinkHttpsParameters sinkHttpsParameters) {
                 this.sinkHttpsParameters = sinkHttpsParameters;
@@ -17775,7 +17774,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The sink Kafka parameters.</p>
+             * <p>The Sink Kafka parameters.</p>
              */
             public Builder sinkKafkaParameters(SinkKafkaParameters sinkKafkaParameters) {
                 this.sinkKafkaParameters = sinkKafkaParameters;
@@ -17783,7 +17782,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The knowledge base delivery parameters.</p>
+             * <p>The delivery parameters for the knowledge base.</p>
              */
             public Builder sinkKnowledgeBaseParameters(SinkKnowledgeBaseParameters sinkKnowledgeBaseParameters) {
                 this.sinkKnowledgeBaseParameters = sinkKnowledgeBaseParameters;
@@ -17791,7 +17790,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The Simple Message Queue (formerly MNS) event target, which is an MSMQ service.</p>
+             * <p>The Simple Message Queue (formerly MNS) event target.</p>
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
@@ -17799,7 +17798,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The MQTT delivery parameters.</p>
+             * <p>The delivery parameters for MQTT.</p>
              */
             public Builder sinkMQTTParameters(SinkMQTTParameters sinkMQTTParameters) {
                 this.sinkMQTTParameters = sinkMQTTParameters;
@@ -17807,7 +17806,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The Object Storage Service (OSS) delivery parameters.</p>
+             * <p>The delivery parameters for Object Storage Service (OSS).</p>
              */
             public Builder sinkOSSParameters(SinkOSSParameters sinkOSSParameters) {
                 this.sinkOSSParameters = sinkOSSParameters;
@@ -17823,7 +17822,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The parameters for the Prometheus sink.</p>
+             * <p>The Sink Prometheus parameters.</p>
              */
             public Builder sinkPrometheusParameters(SinkPrometheusParameters sinkPrometheusParameters) {
                 this.sinkPrometheusParameters = sinkPrometheusParameters;
@@ -17831,7 +17830,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The metadata delivery parameters for Message Queue for RabbitMQ.</p>
+             * <p>The metadata delivery parameters for the MSMQ RabbitMQ message queue.</p>
              */
             public Builder sinkRabbitMQMetaParameters(SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters) {
                 this.sinkRabbitMQMetaParameters = sinkRabbitMQMetaParameters;
@@ -17839,7 +17838,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The message synchronization delivery parameters for Message Queue for RabbitMQ.</p>
+             * <p>The message synchronization delivery parameters for MSMQ RabbitMQ.</p>
              */
             public Builder sinkRabbitMQMsgSyncParameters(SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters) {
                 this.sinkRabbitMQMsgSyncParameters = sinkRabbitMQMsgSyncParameters;
@@ -17863,7 +17862,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The destination parameters for the MSMQ RocketMQ message.</p>
+             * <p>The sink parameters for Message Queue for RocketMQ.</p>
              */
             public Builder sinkRocketMQParameters(SinkRocketMQParameters sinkRocketMQParameters) {
                 this.sinkRocketMQParameters = sinkRocketMQParameters;
@@ -17871,7 +17870,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The Simple Log Service (SLS) sink parameters.</p>
+             * <p>The Simple Log Service sink parameters.</p>
              */
             public Builder sinkSLSParameters(SinkSLSParameters sinkSLSParameters) {
                 this.sinkSLSParameters = sinkSLSParameters;
@@ -17938,7 +17937,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>[Required] The ARN of the KMS resource that stores the SSL private key. This parameter is used to locate the KMS instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. To obtain the ARN, view the ARN information of the corresponding key in the KMS console.</p>
+             * <p>[Required] The KMS resource ARN for storing the SSL private key. This parameter is used to locate the KMS instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. To obtain the ARN, view the ARN information of the corresponding key in the KMS console.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;KmsArn&quot;</p>
@@ -17949,7 +17948,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[KMS KV mode] The key name in the KMS secret. If the secret stored in KMS is in a key-value pair (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS secret is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS secret is in plain text mode (directly storing the PEM content of the private key), leave this parameter empty.</p>
+             * <p>[KMS KV mode] The key name in the KMS secret. When the KMS secret is a key-value (KV) pair, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS secret is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS secret is in plaintext mode (directly storing the PEM content of the private key), leave this parameter empty.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;KmsSecretValueKey&quot;</p>
@@ -18214,7 +18213,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The endpoint.</p>
+             * <p>The endpoints.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;Bootstraps&quot;</p>
@@ -18225,7 +18224,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the consumer group.</p>
+             * <p>The consumer group name.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -18236,7 +18235,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>Specifies the network type of the Kafka cluster.</p>
+             * <p>The Kafka network type.</p>
              * 
              * <strong>example:</strong>
              * <p>PrivateNetwork</p>
@@ -18247,10 +18246,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The consumption offset. Valid values:</p>
+             * <p>The consumption checkpoint. Valid values:</p>
              * <ul>
-             * <li>latest: The system reads data from the latest offset.</li>
-             * <li>earliest: The system reads data from the earliest offset. This value is supported only when an unused consumer group is initialized for the first time.</li>
+             * <li>latest: The system reads data from the latest checkpoint.</li>
+             * <li>earliest: The system reads data from the earliest checkpoint. This value is only supported for the first initialization of an unused consumer group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -18262,7 +18261,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SASL authentication mechanism of Kafka.</p>
+             * <p>The Kafka SASL authentication mechanism.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;SaslMechanism&quot;</p>
@@ -18273,7 +18272,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SASL authentication password of Kafka.</p>
+             * <p>The Kafka SASL authentication password.</p>
              * 
              * <strong>example:</strong>
              * <p>yourPassword</p>
@@ -18284,7 +18283,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The SASL authentication username of Kafka.</p>
+             * <p>The Kafka SASL authentication username.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;SaslUser&quot;</p>
@@ -18295,7 +18294,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the security group for the Kafka source.</p>
+             * <p>The security group ID of the Kafka event source.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp1iv19sp1msc7zot4****</p>
@@ -18306,7 +18305,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The security protocol type of Kafka. Valid values:</p>
+             * <p>The Kafka security protocol type. Valid values:</p>
              * <ul>
              * <li>SASL_SSL</li>
              * <li>PLAINTEXT</li>
@@ -18322,7 +18321,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for encrypted private keys] The password for the Kafka client private key. If the client private key is protected by password encryption (the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; tag), you must provide the decryption password. If the private key is not encrypted, leave this parameter empty. Note: This password is used only to decrypt the private key and is unrelated to Kafka authentication.</p>
+             * <p>[Required for encrypted private keys] The Kafka client private key password. This parameter is required when the client private key is encrypted (the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; tag). Leave this parameter empty if the private key is not encrypted. Note: This password is only used to decrypt the private key and is unrelated to Kafka authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>yourPassword</p>
@@ -18333,7 +18332,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for mutual authentication] The Kafka client certificate chain. If mutual SSL authentication (ssl.client.auth=required) is enabled on the Kafka server, you must provide this parameter. Format requirements: Base64-encoded PEM format, including the client certificate and the complete certificate chain (the client certificate first, followed by intermediate CA certificates, and the root CA certificate is optional). Note: Ensure that each PEM file starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot; before concatenating and Base64-encoding them.</p>
+             * <p>[Required for mutual authentication] The Kafka client certificate chain. This parameter is required when mutual SSL authentication is enabled on the Kafka server (ssl.client.auth=required). Format requirements: Base64-encoded PEM format, including the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, and root CA certificate optional). Note: Ensure that each PEM file starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot; before concatenation and Base64 encoding.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;SslKeystoreCertificateChain&quot;</p>
@@ -18344,7 +18343,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for bidirectional authentication] The SSL private key configuration object. If bidirectional SSL authentication is enabled on the Kafka server, you must provide the client private key. Only the KMS pattern is supported for the key: specify the EPS resource of the Key Management Service (KMS) that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}.</p>
+             * <p>[Required for bidirectional authentication] The SSL private key configuration object. This parameter is required when bidirectional SSL authentication is enabled on the Kafka server. Only the KMS mode is supported for keys: specify the Key Management Service (KMS) resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory for higher security. Configuration example: {&quot;KmsArn&quot;: &quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx&quot;, &quot;KmsSecretValueKey&quot;: &quot;keystore_private_key&quot;}.</p>
              */
             public Builder sslKeystoreKey(SourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey) {
                 this.sslKeystoreKey = sslKeystoreKey;
@@ -18352,7 +18351,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>[Required for SSL scenarios] The trusted certificate of the Kafka server. This parameter is used to authenticate the validity of the SSL certificate of the Kafka broker and prevent man-in-the-middle attacks. Format requirements: PEM format with Base64 encoding, which typically includes the CA certificate of the Kafka server or the server certificate itself. Example: Perform Base64 encoding on the PEM file content of the CA certificate (ensure that it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, you must provide the CA certificate that issued the certificate.</p>
+             * <p>[Required for SSL] The Kafka server trusted certificate. This parameter is used to authenticate the validity of the Kafka broker SSL certificate and prevent man-in-the-middle attacks. Format requirements: PEM format with Base64 encoding, typically containing the Kafka server CA certificate or the server certificate itself. Example: Perform Base64 encoding on the PEM file content of the CA certificate (ensure it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued it.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;SslTruststoreCertificates&quot;</p>
@@ -18363,7 +18362,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the topic.</p>
+             * <p>The topic name.</p>
              * 
              * <strong>example:</strong>
              * <p>LTC_CACHE_PRD</p>
@@ -18374,7 +18373,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The list of vSwitch IDs for the Kafka source.</p>
+             * <p>The vSwitch IDs of the Kafka event source.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp179l3llg3jjxwrq72****</p>
@@ -18401,7 +18400,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID of the Kafka source.</p>
+             * <p>The VPC ID of the Kafka event source.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-8vblalsi0vbhizr77****</p>
@@ -18632,7 +18631,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic of the Apache RocketMQ instance.</p>
+             * <p>The topics of the Apache RocketMQ instance.</p>
              */
             public Builder topics(java.util.List<String> topics) {
                 this.topics = topics;
@@ -18651,7 +18650,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-adw1awdw*****</p>
@@ -19048,7 +19047,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The consumption offset, which is the timestamp when the SDK client consumes the first piece of data. The value is a UNIX timestamp.</p>
+             * <p>The consumption checkpoint, which is the timestamp when the SDK client consumes the first piece of data. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1620962769</p>
@@ -19059,7 +19058,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The password of the consumer group account.</p>
+             * <p>The password of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -19070,7 +19069,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the consumer group.</p>
+             * <p>The consumer group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>hkprdb</p>
@@ -19103,7 +19102,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The account of the consumer group.</p>
+             * <p>The username of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -19358,7 +19357,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The group ID of the consumer that subscribes to the topic.</p>
+             * <p>The ID of the consumer group that subscribes to the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>DEFAULT_GROUP</p>
@@ -19380,7 +19379,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network configuration. Default value: Default. For VPC networks, set this parameter to PublicNetwork.</p>
+             * <p>The network configuration. Default value: Default. The value for a VPC is PublicNetwork.</p>
              * 
              * <strong>example:</strong>
              * <p>Default</p>
@@ -19424,7 +19423,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic name.</p>
+             * <p>The name of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>topic_empower_1641539400786</p>
@@ -19448,9 +19447,9 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The encoding and decoding parameter. Valid values:</p>
              * <ul>
-             * <li>Json: uses the existing logic. Bytes are decoded into strings by using UTF-8 and parsed as JSON.</li>
-             * <li>Text: bytes are decoded into strings by using UTF-8 and directly placed in the payload.</li>
-             * <li>Binary: bytes are encoded into strings by using Base64 encoding and placed in the payload.</li>
+             * <li>Json: The existing logic. Bytes are decoded into character strings by using UTF-8 and parsed as JSON.</li>
+             * <li>Text: Bytes are decoded into character strings by using UTF-8 and directly placed in the payload.</li>
+             * <li>Binary: Bytes are encoded into character strings by using Base64 encoding and placed in the payload.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -19462,7 +19461,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2ze6p0o345nykmekxt****</p>
@@ -19556,7 +19555,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The queue name.</p>
+             * <p>The name of the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>queue_api_1642474203601</p>
@@ -19775,7 +19774,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic name.</p>
+             * <p>The name of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>topic_empower_1642400400779</p>
@@ -19786,7 +19785,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch IDs.</p>
+             * <p>The IDs of the vSwitches.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp179l3llg3jjxwrq72****</p>
@@ -19797,7 +19796,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-8vblalsi0vbhizr77****</p>
@@ -19943,8 +19942,8 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The delimiter. In chunk loading mode, this delimiter is used as the chunk identifier for text. Default value: 
-             *  (line break).</p>
+             * <p>The delimiter used as the chunk identifier for text in chunk loading mode. Default value: 
+             * .</p>
              * 
              * <strong>example:</strong>
              * <p>\n</p>
@@ -19979,8 +19978,8 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The data loading mode. Valid values:</p>
              * <ul>
-             * <li>single: loads a single document.</li>
-             * <li>element: loads data in chunks.
+             * <li>single: Loads a single document.</li>
+             * <li>element: Loads data in chunks.
              * Default value: single.</li>
              * </ul>
              * 
@@ -20004,7 +20003,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the RAM role that authorizes EventBridge to read OSS files. The role must have at least read-only permissions on OSS.</p>
+             * <p>The name of the role that authorizes EventBridge to read OSS files. The role must have at least read-only permissions on OSS.</p>
              * 
              * <strong>example:</strong>
              * <p>eventbridge_oss_role</p>
@@ -20250,7 +20249,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The queue name of the open source RabbitMQ instance.</p>
+             * <p>The name of the queue for the open source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -20294,7 +20293,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The vhost name of the open source RabbitMQ instance.</p>
+             * <p>The name of the virtual host for the open source RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Vhost1</p>
@@ -20305,7 +20304,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-m5e3sv4b12345****</p>
@@ -20630,7 +20629,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The instance ID of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The instance ID of ApsaraMQ for RabbitMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>i-f8z9lqkldlb4oxsxwwub</p>
@@ -20643,9 +20642,9 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The network type used to connect to the source RabbitMQ instance. Valid values:</p>
              * <ul>
-             * <li>PublicNetwork: the Internet.</li>
-             * <li>PrivateNetwork: a VPC.
-             * If you set this parameter to PrivateNetwork, you must also configure VpcId, VSwitchIds, and SecurityGroupId. When you update an event stream and want to retain the original VPC configuration, you must pass these network parameters at the same time.</li>
+             * <li>PublicNetwork: Internet.</li>
+             * <li>PrivateNetwork: VPC.
+             * If you set this parameter to PrivateNetwork, you must also configure VpcId, VSwitchIds, and SecurityGroupId. When you update an event stream and want to retain the original VPC configurations, you must pass these network parameters at the same time.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -20657,7 +20656,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The queue name of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the queue in the ApsaraMQ for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -20690,7 +20689,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch IDs used to connect to the source RabbitMQ instance. Separate multiple vSwitch IDs with commas (,). This parameter is required when NetworkType is set to PrivateNetwork.</p>
+             * <p>The IDs of the vSwitches used to connect to the source RabbitMQ instance. Separate multiple vSwitch IDs with commas (,). This parameter is required when NetworkType is set to PrivateNetwork.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1xxxxxxxxxxxx,vsw-bp1yyyyyyyyyyyy</p>
@@ -20701,7 +20700,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The vhost name of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the vhost in the ApsaraMQ for RabbitMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>eb-connect</p>
@@ -20712,7 +20711,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID of the source RabbitMQ instance. This parameter is required when NetworkType is set to PrivateNetwork.</p>
+             * <p>The ID of the VPC where the source RabbitMQ instance resides. This parameter is required when NetworkType is set to PrivateNetwork.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1xxxxxxxxxxxx</p>
@@ -20841,7 +20840,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topics of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The topic of the ApsaraMQ for RocketMQ instance.</p>
              */
             public Builder topics(java.util.List<String> topics) {
                 this.topics = topics;
@@ -21219,7 +21218,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The message filtering type.</p>
+             * <p>The message filter type.</p>
              * 
              * <strong>example:</strong>
              * <p>Tag</p>
@@ -21230,7 +21229,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The group ID of the MSMQ message queue RocketMQ.</p>
+             * <p>The group ID of ApsaraMQ for RocketMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>GID_test</p>
@@ -21252,7 +21251,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The instance ID of the MSMQ message queue RocketMQ.</p>
+             * <p>The instance ID of ApsaraMQ for RocketMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>i-f8z9a9mcgwri1c1id****</p>
@@ -21263,7 +21262,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type of the instance. Valid values:</p>
+             * <p>The network information of the instance. Valid values:</p>
              * <ul>
              * <li>PublicNetwork</li>
              * <li>PrivateNetwork</li>
@@ -21289,7 +21288,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The security group ID of the instance.</p>
+             * <p>The security group information of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-m5edtu24f12345****</p>
@@ -21302,8 +21301,8 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li>Cloud_4 (default): ApsaraMQ for RocketMQ 4.0 instance.</li>
-             * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
+             * <li>Cloud_4 (default): Alibaba Cloud RocketMQ 4.0 instance.</li>
+             * <li>Cloud_5: Alibaba Cloud RocketMQ 5.0 instance.</li>
              * <li>SelfBuilt: Self-managed Apache RocketMQ instance.</li>
              * </ul>
              * 
@@ -21327,7 +21326,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch IDs of the instance.</p>
+             * <p>The vSwitch information of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-m5ev8asdc6h12****</p>
@@ -21338,7 +21337,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID of the instance.</p>
+             * <p>The VPC information of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-m5e3sv4b12345****</p>
@@ -21364,13 +21363,13 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The consumption offset of messages. Valid values:</p>
+             * <p>The consumption offset of the message. Valid values:</p>
              * <ul>
-             * <li>CONSUMEFROMLASTOFFSET: Consumes messages from the latest offset.</li>
-             * <li>CONSUMEFROMFIRSTOFFSET: Consumes messages from the earliest offset.</li>
-             * <li>CONSUMEFROMTIMESTAMP: Consumes messages from the offset at a specified point in time.</li>
+             * <li>CONSUMEFROMLASTOFFSET: Consumes from the latest offset.</li>
+             * <li>CONSUMEFROMFIRSTOFFSET: Consumes from the earliest offset.</li>
+             * <li>CONSUMEFROMTIMESTAMP: Consumes from the offset at a specified point in time.
+             * Default value: CONSUMEFROMLAST_OFFSET.</li>
              * </ul>
-             * <p>Default value: CONSUMEFROMLAST_OFFSET.</p>
              * 
              * <strong>example:</strong>
              * <p>CONSUMEFROMLASTOFFSET</p>
@@ -21381,7 +21380,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The region ID of the MSMQ message queue RocketMQ.</p>
+             * <p>The region ID of ApsaraMQ for RocketMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -21425,7 +21424,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic name.</p>
+             * <p>The name of the topic.</p>
              * 
              * <strong>example:</strong>
              * <p>TOPIC-cainiao-pcs-order-process-inBoundConditionCheck</p>
@@ -21504,7 +21503,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The name of the role. For the authorization of the event bus EventBridge to use this role to read SLS log content, the following conditions must be met: when creating the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service, and the trusted service must be the event bus.</p>
+             * <p>When granting authorization to the event bus EventBridge to use this role to read SLS log content, the following conditions must be met: when creating the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service and set the trusted service to the event bus.</p>
              * 
              * <strong>example:</strong>
              * <p>testRole</p>
@@ -21834,7 +21833,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The parameter settings for open source Kafka.</p>
+             * <p>The open-source Kafka parameter settings.</p>
              */
             public Builder sourceApacheKafkaParameters(SourceApacheKafkaParameters sourceApacheKafkaParameters) {
                 this.sourceApacheKafkaParameters = sourceApacheKafkaParameters;
@@ -21842,7 +21841,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The RocketMQ checkpoint source.</p>
+             * <p>The RocketMQ Checkpoint source.</p>
              */
             public Builder sourceApacheRocketMQCheckpointParameters(SourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters) {
                 this.sourceApacheRocketMQCheckpointParameters = sourceApacheRocketMQCheckpointParameters;
@@ -21850,7 +21849,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The custom connector Apache Kafka event source.</p>
+             * <p>The custom Apache Kafka connector event source.</p>
              */
             public Builder sourceCustomizedKafkaConnectorParameters(SourceCustomizedKafkaConnectorParameters sourceCustomizedKafkaConnectorParameters) {
                 this.sourceCustomizedKafkaConnectorParameters = sourceCustomizedKafkaConnectorParameters;
@@ -21866,7 +21865,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The DTS source.</p>
+             * <p>The DTS event source.</p>
              */
             public Builder sourceDTSParameters(SourceDTSParameters sourceDTSParameters) {
                 this.sourceDTSParameters = sourceDTSParameters;
@@ -21898,7 +21897,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source Kafka parameters.</p>
+             * <p>The Kafka source.</p>
              */
             public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
                 this.sourceKafkaParameters = sourceKafkaParameters;
@@ -21906,7 +21905,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source Simple Message Queue (formerly MNS) parameters.</p>
+             * <p>The parameters for Simple Message Queue (formerly MNS) as the source.</p>
              */
             public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
                 this.sourceMNSParameters = sourceMNSParameters;
@@ -21914,7 +21913,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source MQTT parameters.</p>
+             * <p>The MQTT event source.</p>
              */
             public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
                 this.sourceMQTTParameters = sourceMQTTParameters;
@@ -21922,7 +21921,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source MySQL parameters.</p>
+             * <p>The MySQL event source.</p>
              */
             public Builder sourceMySQLParameters(SourceMySQLParameters sourceMySQLParameters) {
                 this.sourceMySQLParameters = sourceMySQLParameters;
@@ -21930,7 +21929,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source OSS parameters.</p>
+             * <p>The OSS event source.</p>
              */
             public Builder sourceOSSParameters(SourceOSSParameters sourceOSSParameters) {
                 this.sourceOSSParameters = sourceOSSParameters;
@@ -21938,7 +21937,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source open source RabbitMQ parameters.</p>
+             * <p>The open source RabbitMQ event source.</p>
              */
             public Builder sourceOpenSourceRabbitMQParameters(SourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters) {
                 this.sourceOpenSourceRabbitMQParameters = sourceOpenSourceRabbitMQParameters;
@@ -21946,7 +21945,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source PostgreSQL parameters.</p>
+             * <p>The PostgreSQL data source parameters.</p>
              */
             public Builder sourcePostgreSQLParameters(SourcePostgreSQLParameters sourcePostgreSQLParameters) {
                 this.sourcePostgreSQLParameters = sourcePostgreSQLParameters;
@@ -21954,7 +21953,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source Prometheus event source parameters.</p>
+             * <p>The Prometheus event source.</p>
              */
             public Builder sourcePrometheusParameters(SourcePrometheusParameters sourcePrometheusParameters) {
                 this.sourcePrometheusParameters = sourcePrometheusParameters;
@@ -21962,7 +21961,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source ApsaraMQ for RabbitMQ metadata parameters.</p>
+             * <p>The ApsaraMQ for RabbitMQ metadata source parameters.</p>
              */
             public Builder sourceRabbitMQMetaParameters(SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters) {
                 this.sourceRabbitMQMetaParameters = sourceRabbitMQMetaParameters;
@@ -21970,7 +21969,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source ApsaraMQ for RabbitMQ message synchronization parameters.</p>
+             * <p>The ApsaraMQ for RabbitMQ message synchronization source parameters.</p>
              */
             public Builder sourceRabbitMQMsgSyncParameters(SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters) {
                 this.sourceRabbitMQMsgSyncParameters = sourceRabbitMQMsgSyncParameters;
@@ -21978,7 +21977,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The source RabbitMQ parameters.</p>
+             * <p>The RabbitMQ source.</p>
              */
             public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
                 this.sourceRabbitMQParameters = sourceRabbitMQParameters;
@@ -21986,7 +21985,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The RocketMQ checkpoint source.</p>
+             * <p>The RocketMQ Checkpoint source.</p>
              */
             public Builder sourceRocketMQCheckpointParameters(SourceRocketMQCheckpointParameters sourceRocketMQCheckpointParameters) {
                 this.sourceRocketMQCheckpointParameters = sourceRocketMQCheckpointParameters;
@@ -21994,7 +21993,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The RocketMQ source parameters.</p>
+             * <p>The RocketMQ source.</p>
              */
             public Builder sourceRocketMQParameters(SourceRocketMQParameters sourceRocketMQParameters) {
                 this.sourceRocketMQParameters = sourceRocketMQParameters;
@@ -22002,7 +22001,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The Simple Log Service (SLS) source parameters.</p>
+             * <p>The SLS event source.</p>
              */
             public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
                 this.sourceSLSParameters = sourceSLSParameters;

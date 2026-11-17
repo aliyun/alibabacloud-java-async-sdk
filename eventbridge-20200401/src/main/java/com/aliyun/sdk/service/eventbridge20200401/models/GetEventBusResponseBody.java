@@ -106,7 +106,7 @@ public class GetEventBusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value Success indicates that the request was successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+         * <p>The response code. A value of Success indicates that the request is successful. Other values indicate error codes. For more information, see Error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +117,7 @@ public class GetEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message that is returned if the request failed.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>EventBusNotExist</p>
@@ -147,7 +147,7 @@ public class GetEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -169,6 +169,87 @@ public class GetEventBusResponseBody extends TeaModel {
      *
      * <p>GetEventBusResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The key of the first tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the first tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R&amp;D</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEventBusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEventBusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
@@ -182,11 +263,19 @@ public class GetEventBusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private Data(Builder builder) {
             this.createTimestamp = builder.createTimestamp;
             this.description = builder.description;
             this.eventBusARN = builder.eventBusARN;
             this.eventBusName = builder.eventBusName;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -225,11 +314,27 @@ public class GetEventBusResponseBody extends TeaModel {
             return this.eventBusName;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private Long createTimestamp; 
             private String description; 
             private String eventBusARN; 
             private String eventBusName; 
+            private String resourceGroupId; 
+            private java.util.List<Tags> tags; 
 
             private Builder() {
             } 
@@ -239,10 +344,12 @@ public class GetEventBusResponseBody extends TeaModel {
                 this.description = model.description;
                 this.eventBusARN = model.eventBusARN;
                 this.eventBusName = model.eventBusName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
             } 
 
             /**
-             * <p>The timestamp that indicates when the event bus was created.</p>
+             * <p>The creation timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1641781825000</p>
@@ -282,6 +389,25 @@ public class GetEventBusResponseBody extends TeaModel {
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group to which the event bus belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph6aiy****</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The tag information.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

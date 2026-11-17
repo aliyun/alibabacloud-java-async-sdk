@@ -106,11 +106,11 @@ public class UpdateEventSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API response code:</p>
+         * <p>The API return code:</p>
          * <ul>
          * <li><p>Success: indicates success.</p>
          * </li>
-         * <li><p>Other values: indicate error codes. For more information, see Error codes.</p>
+         * <li><p>Other values: indicate an error code. For more information, see Error codes.</p>
          * </li>
          * </ul>
          * 
@@ -156,7 +156,7 @@ public class UpdateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

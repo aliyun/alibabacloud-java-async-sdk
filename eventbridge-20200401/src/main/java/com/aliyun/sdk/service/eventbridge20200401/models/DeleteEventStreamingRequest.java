@@ -110,7 +110,7 @@ public class DeleteEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to force delete the event stream. If set to true, system label-based deletion protection is bypassed. Default value: false.</p>
+         * <p>Specifies whether to force delete the event stream. If Settings is true, deletion interception based on system label is ignored. Default value: false.</p>
          */
         public Builder force(Boolean force) {
             this.putBodyParameter("Force", force);

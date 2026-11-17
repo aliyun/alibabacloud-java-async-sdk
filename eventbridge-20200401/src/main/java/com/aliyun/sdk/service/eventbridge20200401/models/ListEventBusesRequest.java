@@ -29,11 +29,16 @@ public class ListEventBusesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private ListEventBusesRequest(Builder builder) {
         super(builder);
         this.limit = builder.limit;
         this.namePrefix = builder.namePrefix;
         this.nextToken = builder.nextToken;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListEventBusesRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ListEventBusesRequest, Builder> {
         private Integer limit; 
         private String namePrefix; 
         private String nextToken; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -84,12 +97,13 @@ public class ListEventBusesRequest extends Request {
             this.limit = request.limit;
             this.namePrefix = request.namePrefix;
             this.nextToken = request.nextToken;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * <p>The maximum number of entries to return in a request. You can use this parameter and NextToken to implement paging.</p>
+         * <p>The maximum number of entries to return per page. You can use this parameter together with NextToken to implement pagination.</p>
          * <blockquote>
-         * <p> A maximum of 100 entries can be returned in a request.</p>
+         * <p>Notice: The maximum number of entries returned per request is 100.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,7 +116,7 @@ public class ListEventBusesRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the names of the event buses that you want to query.</p>
+         * <p>The name prefix of the event buses to retrieve.</p>
          * 
          * <strong>example:</strong>
          * <p>My</p>
@@ -114,7 +128,7 @@ public class ListEventBusesRequest extends Request {
         }
 
         /**
-         * <p>If you configure Limit and excess return values exist, this parameter is returned. You can use this parameter and Limit to implement paging.</p>
+         * <p>The pagination token. If the specified Limit is reached and more results are available, this token is returned. You can use this token together with Limit to implement pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -122,6 +136,18 @@ public class ListEventBusesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group, used to filter event buses in the specified resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

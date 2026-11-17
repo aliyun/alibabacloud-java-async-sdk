@@ -282,6 +282,9 @@ public class CreateEventSourceRequest extends Request {
 
         /**
          * <p>The external data source configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;IsBase64Decode&quot;:true,&quot;QueueName&quot;:&quot;queue-1&quot;}</p>
          */
         public Builder externalSourceConfig(java.util.Map<String, ?> externalSourceConfig) {
             String externalSourceConfigShrink = shrink(externalSourceConfig, "ExternalSourceConfig", "json");
@@ -335,7 +338,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * <p>The parameters for a Simple Message Queue (formerly MNS) event source. If you select Simple Message Queue (formerly MNS) as the event source, the RegionId, IsBase64Decode, and QueueName parameters are required.</p>
+         * <p>The Simple Message Queue (formerly MNS) event source parameters. When you select Simple Message Queue (formerly MNS) as the event source, the RegionId, IsBase64Decode, and QueueName parameters are required.</p>
          */
         public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
             String sourceMNSParametersShrink = shrink(sourceMNSParameters, "SourceMNSParameters", "json");
@@ -493,7 +496,7 @@ public class CreateEventSourceRequest extends Request {
             } 
 
             /**
-             * <p>The CIDR block for security configuration. This parameter is required only when the SecurityConfig parameter is set to ip. You can enter a CIDR block or an IP address.</p>
+             * <p>The CIDR block security configuration. This parameter is required only when the SecurityConfig parameter is set to ip. You can enter a CIDR block or an IP address.</p>
              */
             public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
@@ -520,7 +523,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * <p>The secure domain name for security configuration. This parameter is required only when the SecurityConfig parameter is set to referer. You can enter a domain name.</p>
+             * <p>The secure domain name configuration. This parameter is required only when the SecurityConfig parameter is set to referer. You can enter a domain name.</p>
              */
             public Builder referer(java.util.List<String> referer) {
                 this.referer = referer;
@@ -745,7 +748,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * <p>The concurrency quota, which is the number of consumers.</p>
+             * <p>The concurrency quota (number of consumers).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -756,7 +759,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * <p>The network configuration. Valid values: Default and PublicNetwork.</p>
+             * <p>The network configuration. Valid values: Default (default network) and PublicNetwork (self-managed network).</p>
              * 
              * <strong>example:</strong>
              * <p>Default</p>
@@ -927,8 +930,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * <p>The region where the Simple Message Queue (formerly MNS) queue resides.
-             * Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.</p>
+             * <p>The region where the Simple Message Queue (formerly MNS) queue resides. Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1260,7 +1262,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * <p>The queue name of the ApsaraMQ for RabbitMQ instance, such as eb-connect. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * <p>eb-connect: The queue name of the ApsaraMQ for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>demo</p>
@@ -1534,7 +1536,7 @@ public class CreateEventSourceRequest extends Request {
             } 
 
             /**
-             * <p>The authentication type. Valid values: ACL. You can also leave this parameter empty.</p>
+             * <p>The authentication type. Valid values: ACL or leave empty.</p>
              * 
              * <strong>example:</strong>
              * <p>ACL</p>
@@ -1545,7 +1547,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * <p>The group ID of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The group ID of ApsaraMQ for RocketMQ.</p>
              * 
              * <strong>example:</strong>
              * <p>GID-test</p>
@@ -1567,7 +1569,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * <p>The instance ID of the ApsaraMQ for RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * <p>The instance ID of ApsaraMQ for RocketMQ. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>MQ_INST_164901546557****_BAAN****</p>
@@ -1613,8 +1615,8 @@ public class CreateEventSourceRequest extends Request {
             /**
              * <p>The instance type. Valid values:</p>
              * <ul>
-             * <li>Cloud_4: Version 4.0 instance.</li>
-             * <li>Cloud_5: Version 5.0 instance.</li>
+             * <li>Cloud_4: 4.0 instance.</li>
+             * <li>Cloud_5: 5.0 instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1648,7 +1650,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC). Required for VPCs.</p>
+             * <p>The ID of the VPC. Required for VPCs.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1a4gmlk31hyg6pt****</p>
@@ -1661,9 +1663,9 @@ public class CreateEventSourceRequest extends Request {
             /**
              * <p>The consumption offset of the message. Valid values:</p>
              * <ul>
-             * <li>CONSUME_FROM_LAST_OFFSET: Consumes messages from the latest offset.</li>
-             * <li>CONSUME_FROM_FIRST_OFFSET: Consumes messages from the earliest offset.</li>
-             * <li>CONSUME_FROM_TIMESTAMP: Consumes messages from the offset at a specified point in time.
+             * <li>CONSUME_FROM_LAST_OFFSET: Consumes from the latest offset.</li>
+             * <li>CONSUME_FROM_FIRST_OFFSET: Consumes from the earliest offset.</li>
+             * <li>CONSUME_FROM_TIMESTAMP: Consumes from the offset at a specified point in time.
              * Default value: CONSUME_FROM_LAST_OFFSET.</li>
              * </ul>
              * 
@@ -1805,7 +1807,7 @@ public class CreateEventSourceRequest extends Request {
             } 
 
             /**
-             * <p>The start consumption offset. You can set this parameter to begin to consume from the earliest offset, end to consume from the latest offset, or a specific timestamp in seconds.</p>
+             * <p>The start consumption offset. You can select the earliest or latest offset, which corresponds to begin or end. You can also specify a point in time to start consumption, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>end</p>
@@ -1838,7 +1840,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * <p>When granting authorization to EventBridge to read Simple Log Service logs by using this role, the following conditions must be met: When you create the role in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service as the trusted entity and EventBridge as the trusted service. For more information about the access policy for this role, see Custom event source: Simple Log Service.</p>
+             * <p>When authorizing EventBridge to use this role to read Simple Log Service logs, the following conditions must be met: When creating the role in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service as the trusted entity and EventBridge as the trusted service. For the permission policy of this role, refer to the custom event source Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>testRole</p>

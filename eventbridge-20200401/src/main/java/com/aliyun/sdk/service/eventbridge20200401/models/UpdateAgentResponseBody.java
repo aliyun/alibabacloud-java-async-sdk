@@ -106,10 +106,10 @@ public class UpdateAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. Valid values:</p>
+         * <p>The response code returned by the API operation:</p>
          * <ul>
-         * <li>Success: The request was successful.                                 </li>
-         * <li>Other values: An error occurred. For more information, see Error codes.</li>
+         * <li>Success: The request is successful.                                 </li>
+         * <li>Other values: An error code. For more information, see Error codes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns true if the operation was successful.</p>
+         * <p>Indicates whether the operation is successful. A value of true indicates that the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

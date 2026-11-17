@@ -27,10 +27,20 @@ public class CreateEventBusRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 127, minLength = 2)
     private String eventBusName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private CreateEventBusRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.eventBusName = builder.eventBusName;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -60,9 +70,25 @@ public class CreateEventBusRequest extends Request {
         return this.eventBusName;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<CreateEventBusRequest, Builder> {
         private String description; 
         private String eventBusName; 
+        private String resourceGroupId; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -72,6 +98,8 @@ public class CreateEventBusRequest extends Request {
             super(request);
             this.description = request.description;
             this.eventBusName = request.eventBusName;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -99,6 +127,27 @@ public class CreateEventBusRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The ID of the resource group. If you do not specify this parameter, the event bus belongs to the default resource group of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The tag list.</p>
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public CreateEventBusRequest build() {
             return new CreateEventBusRequest(this);
@@ -106,4 +155,85 @@ public class CreateEventBusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEventBusRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventBusRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the first tag in the tag list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R&amp;D</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

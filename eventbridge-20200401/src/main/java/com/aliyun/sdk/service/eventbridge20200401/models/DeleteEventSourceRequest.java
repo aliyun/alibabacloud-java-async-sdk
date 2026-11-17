@@ -74,7 +74,7 @@ public class DeleteEventSourceRequest extends Request {
         } 
 
         /**
-         * <p>The event bus to which the event source is attached.</p>
+         * <p>The bound event bus.</p>
          * 
          * <strong>example:</strong>
          * <p>eEXaMPLEBUSNameAaAaAa</p>

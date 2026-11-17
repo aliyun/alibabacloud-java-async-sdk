@@ -106,10 +106,10 @@ public class ListEventBusesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. Valid values:</p>
+         * <p>The response code:</p>
          * <ul>
-         * <li>Success: The request was successful.</li>
-         * <li>Other codes: The request failed. For information about error codes, see Error codes.</li>
+         * <li>Success: indicates that the request is successful.                                 </li>
+         * <li>Other values: indicate error codes. For more information, see Error codes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListEventBusesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidArgument</p>
@@ -143,7 +143,7 @@ public class ListEventBusesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>D1DCF64A-3F2C-5323-ADCB-3F4DF30FAD2D</p>
+         * <p>D1DCF64A-3F2C-5323-ADCB-3F4DF30F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +151,7 @@ public class ListEventBusesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+         * <p>Indicates whether the operation is successful. A value of true indicates that the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -173,6 +173,87 @@ public class ListEventBusesResponseBody extends TeaModel {
      *
      * <p>ListEventBusesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The key of the event bus tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the event bus tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R&amp;D</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEventBusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEventBusesResponseBody</p>
+     */
     public static class EventBuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
@@ -186,11 +267,19 @@ public class ListEventBusesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private EventBuses(Builder builder) {
             this.createTimestamp = builder.createTimestamp;
             this.description = builder.description;
             this.eventBusARN = builder.eventBusARN;
             this.eventBusName = builder.eventBusName;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -229,11 +318,27 @@ public class ListEventBusesResponseBody extends TeaModel {
             return this.eventBusName;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private Long createTimestamp; 
             private String description; 
             private String eventBusARN; 
             private String eventBusName; 
+            private String resourceGroupId; 
+            private java.util.List<Tags> tags; 
 
             private Builder() {
             } 
@@ -243,10 +348,12 @@ public class ListEventBusesResponseBody extends TeaModel {
                 this.description = model.description;
                 this.eventBusARN = model.eventBusARN;
                 this.eventBusName = model.eventBusName;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
             } 
 
             /**
-             * <p>The timestamp that indicates when the event bus was created.</p>
+             * <p>The creation timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1607071602000</p>
@@ -271,7 +378,7 @@ public class ListEventBusesResponseBody extends TeaModel {
              * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
              * 
              * <strong>example:</strong>
-             * <p>acs:eventbridge:cn-hangzhou:123456789098***:eventbus/default</p>
+             * <p>acs:eventbridge:cn-hangzhou:12345678909****:eventbus/default</p>
              */
             public Builder eventBusARN(String eventBusARN) {
                 this.eventBusARN = eventBusARN;
@@ -286,6 +393,25 @@ public class ListEventBusesResponseBody extends TeaModel {
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group to which the event bus belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph6aiy****</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The tag information of the event bus.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -362,7 +488,7 @@ public class ListEventBusesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The event buses.</p>
+             * <p>The list of queried event buses.</p>
              */
             public Builder eventBuses(java.util.List<EventBuses> eventBuses) {
                 this.eventBuses = eventBuses;
@@ -370,7 +496,7 @@ public class ListEventBusesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If excess return values exist, this parameter is returned.</p>
+             * <p>The pagination token. This token is returned if more results are available.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

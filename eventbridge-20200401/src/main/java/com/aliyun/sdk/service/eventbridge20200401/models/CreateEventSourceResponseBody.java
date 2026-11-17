@@ -106,10 +106,10 @@ public class CreateEventSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API response code. Valid values:</p>
+         * <p>The API return code. Valid values:</p>
          * <ul>
          * <li>Success: The operation is successful.                                 </li>
-         * <li>Other values: An error code.
+         * <li>Other values: Error codes.
          * For more information, see Error codes.</li>
          * </ul>
          * 
@@ -152,7 +152,7 @@ public class CreateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -208,7 +208,7 @@ public class CreateEventSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource ARN.</p>
+             * <p>The ARN of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:eventbridge:cn-hangzhou:164901546557****:eventbus/my-event-bus/eventsource/mymns.source</p>

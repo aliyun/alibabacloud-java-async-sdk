@@ -176,7 +176,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateEventBusResponse> createEventBus(CreateEventBusRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateEventBus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateEventBus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEventBusResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -287,7 +287,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with a product.</p>
      * 
      * @param request the request parameters of CreateServiceLinkedRoleForProduct  CreateServiceLinkedRoleForProductRequest
      * @return CreateServiceLinkedRoleForProductResponse
@@ -524,7 +524,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event rule.</p>
+     * <p>Deletes an event rule.</p>
      * 
      * @param request the request parameters of DeleteRule  DeleteRuleRequest
      * @return DeleteRuleResponse
@@ -833,7 +833,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the detailed information about an event bus.</p>
+     * <p>Retrieves the details of an event bus.</p>
      * 
      * @param request the request parameters of GetEventBus  GetEventBusRequest
      * @return GetEventBusResponse
@@ -1268,7 +1268,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query all event buses.</p>
+     * <p>Queries all event buses.</p>
      * 
      * @param request the request parameters of ListEventBuses  ListEventBusesRequest
      * @return ListEventBusesResponse
@@ -2012,7 +2012,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Modifies an event bus.</p>
+     * <p>Updates an event bus.</p>
      * 
      * @param request the request parameters of UpdateEventBus  UpdateEventBusRequest
      * @return UpdateEventBusResponse
@@ -2021,7 +2021,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UpdateEventBusResponse> updateEventBus(UpdateEventBusRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateEventBus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateEventBus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEventBusResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -2072,7 +2072,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
+     * <p>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</p>
      * 
      * @param request the request parameters of UpdateEventStreaming  UpdateEventStreamingRequest
      * @return UpdateEventStreamingResponse

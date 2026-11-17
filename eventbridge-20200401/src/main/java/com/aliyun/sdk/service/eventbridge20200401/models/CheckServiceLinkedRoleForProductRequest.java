@@ -59,7 +59,7 @@ public class CheckServiceLinkedRoleForProductRequest extends Request {
         } 
 
         /**
-         * <p>The name of the service-linked role associated with the cloud service.</p>
+         * <p>The name of the service-linked role associated with the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunServiceRoleForEventBridgeConnectVPC</p>
