@@ -845,6 +845,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Idempotently disables session sharing owned by the current calling user. Existing share links become invalid immediately.</p>
+     * 
+     * @param request the request parameters of DisableConversationShare  DisableConversationShareRequest
+     * @return DisableConversationShareResponse
+     */
+    CompletableFuture<DisableConversationShareResponse> disableConversationShare(DisableConversationShareRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Idempotently disables sharing for output item details owned by the current calling user, and immediately invalidates previous sharing links. You can locate the target by outputItemId, or precisely by sessionId and outputItemName.</p>
+     * 
+     * @param request the request parameters of DisableOutputItemShare  DisableOutputItemShareRequest
+     * @return DisableOutputItemShareResponse
+     */
+    CompletableFuture<DisableOutputItemShareResponse> disableOutputItemShare(DisableOutputItemShareRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Disables the INSTANCE token of a user.
      *     Business logic:
      *     1. Retrieves user_id from identity (caller_type=user is enforced).
@@ -857,6 +875,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableTokenResponse
      */
     CompletableFuture<DisableTokenResponse> disableToken(DisableTokenRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Enables sharing for a session owned by the current calling user and returns the sharing link. The first time sharing is enabled, a snapshot of the currently shareable messages is taken. Subsequent enabling retains the original link.</p>
+     * 
+     * @param request the request parameters of EnableConversationShare  EnableConversationShareRequest
+     * @return EnableConversationShareResponse
+     */
+    CompletableFuture<EnableConversationShareResponse> enableConversationShare(EnableConversationShareRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Enables sharing for an output item owned by the current caller and returns the share link. You can locate the output item by outputItemId, or precisely locate it by sessionId and outputItemName. If both methods are provided, outputItemId takes precedence.</p>
+     * 
+     * @param request the request parameters of EnableOutputItemShare  EnableOutputItemShareRequest
+     * @return EnableOutputItemShareResponse
+     */
+    CompletableFuture<EnableOutputItemShareResponse> enableOutputItemShare(EnableOutputItemShareRequest request);
 
     /**
      * <b>description</b> :
@@ -1549,6 +1585,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Reads the connected DingTalk, AliDing, or WeCom group chat sources, and paginates the results in ascending order by send time and message record ID. Each message includes the original text, as well as document content, image descriptions, or audio and video transcriptions arranged in the order they appear in the message. The caller must have read permissions for the source. Reading does not trigger attachment parsing. Pagination provides a real-time view, and historical backfilling may change pagination positions. Attachment content is retrieved from the Document Agent. For unparsed items, the API returns found=false and the local processing status. Upstream failures return errors.</p>
+     * 
+     * @param request the request parameters of ListChatMessageContents  ListChatMessageContentsRequest
+     * @return ListChatMessageContentsResponse
+     */
+    CompletableFuture<ListChatMessageContentsResponse> listChatMessageContents(ListChatMessageContentsRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li>This API operation supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</li>
@@ -2032,6 +2077,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PreviewKnowledgeBaseSourceResponse
      */
     CompletableFuture<PreviewKnowledgeBaseSourceResponse> previewKnowledgeBaseSource(PreviewKnowledgeBaseSourceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Previews the output that the current calling user has permission to access based on the output item ID. This operation supports managed versions, archived history, unversioned history, and non-file outputs such as emails and slide decks. If a short-term preview or download URL is returned, you must call the operation again after the URL expires.</p>
+     * 
+     * @param request the request parameters of PreviewOutputFile  PreviewOutputFileRequest
+     * @return PreviewOutputFileResponse
+     */
+    CompletableFuture<PreviewOutputFileResponse> previewOutputFile(PreviewOutputFileRequest request);
 
     /**
      * <b>description</b> :
@@ -2878,6 +2932,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateScheduledTaskResponse
      */
     CompletableFuture<UpdateScheduledTaskResponse> updateScheduledTask(UpdateScheduledTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the sharing status and scope of a session or output item. Only output items support refreshing the sharing link. For session targets, use sessionId. For output targets, use outputItemId or a combination of sessionId and outputItemName.</p>
+     * 
+     * @param request the request parameters of UpdateShare  UpdateShareRequest
+     * @return UpdateShareResponse
+     */
+    CompletableFuture<UpdateShareResponse> updateShare(UpdateShareRequest request);
 
     /**
      * <b>description</b> :
