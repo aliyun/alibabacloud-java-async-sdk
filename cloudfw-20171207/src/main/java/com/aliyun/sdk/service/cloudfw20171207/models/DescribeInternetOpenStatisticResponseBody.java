@@ -171,7 +171,7 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of public IP addresses exposed to the Internet.</p>
+         * <p>The total number of open public IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -182,7 +182,7 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of ports exposed to the Internet.</p>
+         * <p>The total number of open ports.</p>
          * 
          * <strong>example:</strong>
          * <p>38</p>
@@ -193,7 +193,7 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of risky public IP addresses exposed to the Internet.</p>
+         * <p>The number of risky open public IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -226,7 +226,7 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of applications exposed to the Internet.</p>
+         * <p>The total number of open applications.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -237,7 +237,7 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of public IP addresses of Server Load Balancer (SLB) instances.</p>
+         * <p>The number of SLB public IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -248,7 +248,7 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of public ports of SLB instances.</p>
+         * <p>The number of SLB public ports.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -259,7 +259,7 @@ public class DescribeInternetOpenStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of ports that are not protected by an access control list (ACL).</p>
+         * <p>The number of ports that are not protected by access control lists (ACLs).</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

@@ -100,7 +100,7 @@ public class DescribeLocationInfoRequest extends Request {
         }
 
         /**
-         * <p>The tracing code.</p>
+         * <p>The source code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

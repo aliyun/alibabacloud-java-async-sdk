@@ -67,7 +67,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of instance threats.</p>
+         * <p>The list of instance risks.</p>
          */
         public Builder instanceRisks(java.util.List<InstanceRisks> instanceRisks) {
             this.instanceRisks = instanceRisks;
@@ -168,9 +168,9 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threat level. Valid value:</p>
+             * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>medium</strong>: medium</li>
+             * <li><strong>medium</strong>: Medium</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of threats for the ECS instances.</p>
+             * <p>The list of ECS instance risks.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -284,9 +284,9 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threat level. Valid value:</p>
+             * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>medium</strong>: medium</li>
+             * <li><strong>medium</strong>: Medium</li>
              * </ul>
              * 
              * <strong>example:</strong>

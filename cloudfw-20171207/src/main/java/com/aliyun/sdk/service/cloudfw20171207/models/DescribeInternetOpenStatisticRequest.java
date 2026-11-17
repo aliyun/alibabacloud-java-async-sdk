@@ -101,7 +101,7 @@ public class DescribeInternetOpenStatisticRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp in seconds.</p>
+         * <p>The end time of the query. The value is a timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736386501</p>
@@ -113,7 +113,7 @@ public class DescribeInternetOpenStatisticRequest extends Request {
         }
 
         /**
-         * <p>The language of the request and response.</p>
+         * <p>The language type for the request and response messages.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -125,7 +125,7 @@ public class DescribeInternetOpenStatisticRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the visitor.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>202.109.244.XX</p>
@@ -137,7 +137,7 @@ public class DescribeInternetOpenStatisticRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. This value is a UNIX timestamp in seconds.</p>
+         * <p>The start time of the query. The value is a timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1734386501</p>

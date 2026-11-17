@@ -393,7 +393,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The open port.</p>
+             * <p>The open ports.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -404,7 +404,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security threat.</p>
+             * <p>The security risk.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -415,7 +415,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the security threat.</p>
+             * <p>The description of the security risk.</p>
              * 
              * <strong>example:</strong>
              * <p>desc</p>
@@ -437,7 +437,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of public IP addresses that have the port open.</p>
+             * <p>The number of open public IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -459,7 +459,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the risk.</p>
+             * <p>The risk description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -500,7 +500,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of traffic in the last 24 hours. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+             * <p>The traffic proportion. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -511,7 +511,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of traffic in the last 30 days.</p>
+             * <p>The traffic proportion over the last 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>48</p>
@@ -522,7 +522,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of traffic in the last 7 days.</p>
+             * <p>The traffic proportion over the last 7 days.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -533,7 +533,7 @@ public class DescribeInternetOpenPortResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the protocol is not identified when the protocol is detected as Unknown.</p>
+             * <p>The reason why the protocol is not identified when the recognized protocol is Unknown.</p>
              */
             public Builder unknownReason(java.util.List<String> unknownReason) {
                 this.unknownReason = unknownReason;

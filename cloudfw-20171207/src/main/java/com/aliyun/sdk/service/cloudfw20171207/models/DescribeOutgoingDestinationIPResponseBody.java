@@ -80,7 +80,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of destination IP addresses for outgoing connections.</p>
+         * <p>The list of IP addresses for outbound connections.</p>
          */
         public Builder dstIPList(java.util.List<DstIPList> dstIPList) {
             this.dstIPList = dstIPList;
@@ -88,7 +88,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
@@ -99,7 +99,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of outgoing IPs.</p>
+         * <p>The total number of outbound IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -171,7 +171,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              * <p>The name of the address book.</p>
              * 
              * <strong>example:</strong>
-             * <p>IP地址簿</p>
+             * <p>IP address book</p>
              */
             public Builder addressGroupName(String addressGroupName) {
                 this.addressGroupName = addressGroupName;
@@ -262,40 +262,26 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application protocol detected for the connection. Valid values:</p>
+             * <p>The Protocol Type supported by the access control policy. Valid values:</p>
              * <ul>
-             * <li><p><strong>FTP</strong></p>
-             * </li>
-             * <li><p><strong>HTTP</strong></p>
-             * </li>
-             * <li><p><strong>HTTPS</strong></p>
-             * </li>
-             * <li><p><strong>Memcache</strong></p>
-             * </li>
-             * <li><p><strong>MongoDB</strong></p>
-             * </li>
-             * <li><p><strong>MQTT</strong></p>
-             * </li>
-             * <li><p><strong>MySQL</strong></p>
-             * </li>
-             * <li><p><strong>RDP</strong></p>
-             * </li>
-             * <li><p><strong>Redis</strong></p>
-             * </li>
-             * <li><p><strong>SMTP</strong></p>
-             * </li>
-             * <li><p><strong>SMTPS</strong></p>
-             * </li>
-             * <li><p><strong>SSH</strong></p>
-             * </li>
-             * <li><p><strong>SSL_No_Cert</strong></p>
-             * </li>
-             * <li><p><strong>SSL</strong></p>
-             * </li>
-             * <li><p><strong>VNC</strong></p>
-             * </li>
+             * <li><strong>FTP</strong></li>
+             * <li><strong>HTTP</strong></li>
+             * <li><strong>HTTPS</strong></li>
+             * <li><strong>Memcache</strong></li>
+             * <li><strong>MongoDB</strong></li>
+             * <li><strong>MQTT</strong></li>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>RDP</strong></li>
+             * <li><strong>Redis</strong></li>
+             * <li><strong>SMTP</strong></li>
+             * <li><strong>SMTPS</strong></li>
+             * <li><strong>SSH</strong></li>
+             * <li><strong>SSL_No_Cert</strong></li>
+             * <li><strong>SSL</strong></li>
+             * <li><strong>VNC</strong></li>
              * </ul>
              * <blockquote>
+             * <p>The valid values of this parameter depend on the value of the Proto parameter. If Proto is set to TCP, ApplicationNameList supports all the preceding Protocol Types. If both ApplicationNameList and ApplicationName are specified, ApplicationNameList takes precedence.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -307,7 +293,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application port.</p>
+             * <p>The port of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -318,7 +304,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of reasons why the application protocol was not identified.</p>
+             * <p>The list of reasons why the protocol is not analyzed when the identified protocol is Unknown.</p>
              */
             public Builder unknownReason(java.util.List<String> unknownReason) {
                 this.unknownReason = unknownReason;
@@ -424,14 +410,11 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the threat intelligence tag. Valid values:</p>
+             * <p>The categorization of the intelligence tags label. Valid values:</p>
              * <ul>
-             * <li><p><strong>Suspicious</strong></p>
-             * </li>
-             * <li><p><strong>Malicious</strong></p>
-             * </li>
-             * <li><p><strong>Trusted</strong></p>
-             * </li>
+             * <li><strong>Suspicious</strong>: Suspicious.</li>
+             * <li><strong>Malicious</strong>: Malicious.</li>
+             * <li><strong>Trusted</strong>: Trusted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -443,14 +426,11 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk level. Valid values:</p>
+             * <p>The risk assessment level. Valid values:</p>
              * <ul>
-             * <li><p><strong>1</strong>: Low</p>
-             * </li>
-             * <li><p><strong>2</strong>: Medium</p>
-             * </li>
-             * <li><p><strong>3</strong>: High</p>
-             * </li>
+             * <li><strong>1</strong>: Low risk.</li>
+             * <li><strong>2</strong>: Medium risk.</li>
+             * <li><strong>3</strong>: High risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -462,7 +442,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the threat intelligence tag.</p>
+             * <p>The description of the intelligence tags label.</p>
              * 
              * <strong>example:</strong>
              * <p>ReleaseLabel</p>
@@ -473,7 +453,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the threat intelligence tag.</p>
+             * <p>The ID of the intelligence tags label.</p>
              * 
              * <strong>example:</strong>
              * <p>ReleaseLabel</p>
@@ -484,7 +464,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the threat intelligence tag.</p>
+             * <p>The name of the intelligence label sign.</p>
              * 
              * <strong>example:</strong>
              * <p>ReleaseLabel</p>
@@ -853,11 +833,11 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether an access control policy is applied. Valid values:</p>
+             * <p>Specifies whether to overwrite the access control policy. Valid values:</p>
              * <ul>
-             * <li><p><strong>Uncovered</strong>: No policy is applied.</p>
+             * <li><p><strong>Uncovered</strong>: Not covered.</p>
              * </li>
-             * <li><p><strong>FullCoverage</strong>: A policy is applied.</p>
+             * <li><p><strong>FullCoverage</strong>: Covered.</p>
              * </li>
              * </ul>
              * 
@@ -870,10 +850,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the ACL recommendation.</p>
+             * <p>The recommendation information for the ACL.</p>
              * 
              * <strong>example:</strong>
-             * <p>建议放行</p>
+             * <p>Allow recommended</p>
              */
             public Builder aclRecommendDetail(String aclRecommendDetail) {
                 this.aclRecommendDetail = aclRecommendDetail;
@@ -883,10 +863,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             /**
              * <p>The health status of the access control policy. Valid values:</p>
              * <ul>
-             * <li><p><strong>Normal</strong>: Healthy.</p>
-             * </li>
-             * <li><p><strong>Abnormal</strong>: Unhealthy.</p>
-             * </li>
+             * <li><strong>Normal</strong>: Healthy.</li>
+             * <li><strong>Abnormal</strong>: Unhealthy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -898,7 +876,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of address books that contain this destination IP address.</p>
+             * <p>The address book information.</p>
              */
             public Builder addressGroupList(java.util.List<AddressGroupList> addressGroupList) {
                 this.addressGroupList = addressGroupList;
@@ -908,7 +886,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             /**
              * <p>The list of application ports.</p>
              * <blockquote>
-             * <p>This response returns a maximum of 99 application ports. If more than 99 ports exist, only the first 99 are returned.</p>
+             * <p>The list displays only the first 99 application ports. If the number of outbound application ports exceeds 99, only the first 99 entries are displayed.</p>
              * </blockquote>
              */
             public Builder applicationPortList(java.util.List<ApplicationPortList> applicationPortList) {
@@ -917,7 +895,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of assets that initiated outgoing connections to this destination IP.</p>
+             * <p>The total number of assets that initiate outbound connections.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -928,14 +906,11 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threat intelligence category of the destination IP address. Valid values:</p>
+             * <p>The categorization of the intelligence tags label. Valid values:</p>
              * <ul>
-             * <li><p><strong>Suspicious</strong></p>
-             * </li>
-             * <li><p><strong>Malicious</strong></p>
-             * </li>
-             * <li><p><strong>Trusted</strong></p>
-             * </li>
+             * <li><strong>Suspicious</strong>: Suspicious.</li>
+             * <li><strong>Malicious</strong>: Malicious.</li>
+             * <li><strong>Trusted</strong>: Trusted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -947,11 +922,11 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the service category. Valid values:</p>
+             * <p>The category ID of the product. Valid values:</p>
              * <ul>
-             * <li><p><strong>Aliyun</strong>: The destination is an Alibaba Cloud product.</p>
+             * <li><p><strong>Aliyun</strong>: Alibaba Cloud service.</p>
              * </li>
-             * <li><p><strong>NotAliyun</strong>: The destination is a non-Alibaba Cloud product.</p>
+             * <li><p><strong>NotAliyun</strong>: Non-Alibaba Cloud service.</p>
              * </li>
              * </ul>
              * 
@@ -964,16 +939,16 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service category of the destination IP address. Valid values:</p>
+             * <p>The category name of the product. Valid values:</p>
              * <ul>
-             * <li><p><strong>Alibaba Cloud product</strong></p>
+             * <li><p><strong>Alibaba Cloud service</strong></p>
              * </li>
-             * <li><p><strong>non-Alibaba Cloud product</strong></p>
+             * <li><p><strong>Non-Alibaba Cloud service</strong></p>
              * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>阿里云产品</p>
+             * <p>Alibaba Cloud service</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -981,7 +956,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination IP address of the outgoing connection.</p>
+             * <p>The destination IP address of the domain name for outbound connections.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX</p>
@@ -992,7 +967,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the rule group.</p>
+             * <p>The name of the group in the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>rules_test</p>
@@ -1005,10 +980,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             /**
              * <p>Indicates whether an access control rule exists. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: An access control rule exists.</p>
-             * </li>
-             * <li><p><strong>false</strong>: No access control rule exists.</p>
-             * </li>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1020,11 +993,11 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an ACL is recommended. Valid values:</p>
+             * <p>Indicates whether an ACL recommendation is available. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: An ACL is recommended.</p>
+             * <li><p><strong>true</strong>: Yes.</p>
              * </li>
-             * <li><p><strong>false</strong>: No ACL is recommended.</p>
+             * <li><p><strong>false</strong>: No.</p>
              * </li>
              * </ul>
              * 
@@ -1037,7 +1010,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total inbound traffic in bytes.</p>
+             * <p>The inbound traffic. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>472</p>
@@ -1048,11 +1021,11 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the destination IP address is added to the allowlist. Valid values:</p>
+             * <p>Indicates whether the IP address is added to the whitelist. Valid values:</p>
              * <ul>
-             * <li><p><strong>true</strong>: The destination IP address is on the allowlist.</p>
+             * <li><p><strong>true</strong>: Added.</p>
              * </li>
-             * <li><p><strong>false</strong>: The destination IP address is not on the allowlist.</p>
+             * <li><p><strong>false</strong>: Not added.</p>
              * </li>
              * </ul>
              * 
@@ -1065,10 +1038,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The geographical location of the destination IP address.</p>
+             * <p>The region name.</p>
              * 
              * <strong>example:</strong>
-             * <p>山东省青岛市</p>
+             * <p>Qingdao, Shandong Province</p>
              */
             public Builder locationName(String locationName) {
                 this.locationName = locationName;
@@ -1076,7 +1049,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total outbound traffic in bytes.</p>
+             * <p>The outbound traffic. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>965</p>
@@ -1087,7 +1060,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of private assets that initiated outgoing connections to this destination IP.</p>
+             * <p>The total number of private network assets that initiate outbound connections.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1112,7 +1085,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              * <p>The name of the ACL rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认规则</p>
+             * <p>Default rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1120,10 +1093,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the security recommendation.</p>
+             * <p>The security reason.</p>
              * 
              * <strong>example:</strong>
-             * <p>智能策略：该目的域名所属组织为阿里云计算有限公司，主要业务为阿里云，未发现安全风险，可用于配置外联白名单。</p>
+             * <p>Intelligent policy: The organization to which the destination domain name belongs is Alibaba Cloud Computing Ltd. Its main business is Alibaba Cloud. No security risks are found. It can be used to configure an outbound whitelist.</p>
              */
             public Builder securityReason(String securityReason) {
                 this.securityReason = securityReason;
@@ -1131,13 +1104,13 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended security action for the outgoing connection. Valid values:</p>
+             * <p>The security policy for the domain name for outbound connections. Valid values:</p>
              * <ul>
-             * <li><p><strong>pass</strong>: Allows the connection.</p>
+             * <li><p><strong>pass</strong>: Allow.</p>
              * </li>
-             * <li><p><strong>alert</strong>: Rejects the connection.</p>
+             * <li><p><strong>alert</strong>: Deny.</p>
              * </li>
-             * <li><p><strong>drop</strong>: Drops the connection.</p>
+             * <li><p><strong>drop</strong>: Monitor.</p>
              * </li>
              * </ul>
              * 
@@ -1161,7 +1134,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of tags associated with the destination IP.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
@@ -1169,7 +1142,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total traffic volume in bytes.</p>
+             * <p>The total traffic. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>800</p>

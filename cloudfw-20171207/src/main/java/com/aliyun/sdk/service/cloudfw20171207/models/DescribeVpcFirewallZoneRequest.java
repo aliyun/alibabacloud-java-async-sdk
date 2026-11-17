@@ -179,7 +179,7 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         }
 
         /**
-         * <p>The UID of the Cloud Firewall member accounts.</p>
+         * <p>The UID of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>135809047715****</p>
@@ -203,7 +203,7 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>222.212.86.7XXX</p>
@@ -215,7 +215,7 @@ public class DescribeVpcFirewallZoneRequest extends Request {
         }
 
         /**
-         * <p>The transit router instance ID.</p>
+         * <p>The ID of the transit router instance used for forward routing.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-m5etmb2q7e0mxcur****</p>

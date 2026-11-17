@@ -80,7 +80,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of data.</p>
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The paging information.</p>
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -401,7 +401,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security threat.</p>
+             * <p>The security risk.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -412,7 +412,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the security threat.</p>
+             * <p>The description of the security risk.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -434,7 +434,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of exposed public IP addresses.</p>
+             * <p>The number of open public IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -445,7 +445,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk level.</p>
+             * <p>The risk level. Valid values: -1: Evaluating. 0: None. 1: Low. 2: Medium. 3: High. If you do not specify this parameter, all risk levels are queried.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -456,7 +456,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the risk.</p>
+             * <p>The risk description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -500,7 +500,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic percentage over the last 24 hours.</p>
+             * <p>The traffic proportion in the last 1 day.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -511,7 +511,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic percentage over the last 30 days.</p>
+             * <p>The traffic proportion in the last 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -522,7 +522,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic percentage over the last 7 days.</p>
+             * <p>The traffic proportion in the last 7 days.</p>
              * 
              * <strong>example:</strong>
              * <p>77</p>
@@ -533,7 +533,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the protocol is not identified if the detected protocol is \<code>Unknown\\</code>.</p>
+             * <p>The reason why the protocol is not identified when the protocol is recognized as Unknown.</p>
              */
             public Builder unknownReason(java.util.List<String> unknownReason) {
                 this.unknownReason = unknownReason;
@@ -624,7 +624,7 @@ public class DescribeInternetOpenServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The score.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

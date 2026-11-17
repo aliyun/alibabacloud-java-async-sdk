@@ -104,7 +104,7 @@ public class DescribeAclCheckRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language in which messages are received.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

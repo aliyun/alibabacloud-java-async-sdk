@@ -101,6 +101,9 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationCidr")
         private String destinationCidr;
 
+        @com.aliyun.core.annotation.NameInMap("DivertStatus")
+        private String divertStatus;
+
         @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
@@ -112,6 +115,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
 
         private NatRouteEntryList(Builder builder) {
             this.destinationCidr = builder.destinationCidr;
+            this.divertStatus = builder.divertStatus;
             this.nextHopId = builder.nextHopId;
             this.nextHopType = builder.nextHopType;
             this.routeTableId = builder.routeTableId;
@@ -130,6 +134,13 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
          */
         public String getDestinationCidr() {
             return this.destinationCidr;
+        }
+
+        /**
+         * @return divertStatus
+         */
+        public String getDivertStatus() {
+            return this.divertStatus;
         }
 
         /**
@@ -155,6 +166,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String destinationCidr; 
+            private String divertStatus; 
             private String nextHopId; 
             private String nextHopType; 
             private String routeTableId; 
@@ -164,6 +176,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
 
             private Builder(NatRouteEntryList model) {
                 this.destinationCidr = model.destinationCidr;
+                this.divertStatus = model.divertStatus;
                 this.nextHopId = model.nextHopId;
                 this.nextHopType = model.nextHopType;
                 this.routeTableId = model.routeTableId;
@@ -181,6 +194,24 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The current traffic redirection status of the route entry. Valid values:</p>
+             * <ul>
+             * <li>diverted: Traffic is redirected to the firewall.</li>
+             * <li>undiverted: Traffic is not redirected and still points to the NAT gateway.</li>
+             * <li>diverting: Traffic redirection is in progress.</li>
+             * <li>undiverting: Traffic redirection cancellation is in progress.</li>
+             * <li>abnormal: Traffic redirection is abnormal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>diverted</p>
+             */
+            public Builder divertStatus(String divertStatus) {
+                this.divertStatus = divertStatus;
+                return this;
+            }
+
+            /**
              * <p>The next hop instance ID.</p>
              * 
              * <strong>example:</strong>
@@ -192,7 +223,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the next hop.</p>
+             * <p>The next hop network type.</p>
              * 
              * <strong>example:</strong>
              * <p>NatGateway</p>
@@ -203,7 +234,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the route table.</p>
+             * <p>The route table ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vtb-2ze409pp09d994a****</p>
@@ -473,7 +504,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the member accounts.</p>
+             * <p>The UID of member accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>157862808111****</p>
@@ -503,7 +534,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the VPC-connected instance.</p>
+             * <p>The VPC-connected instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-wz94a4q37rgl7g****</p>

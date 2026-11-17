@@ -91,7 +91,7 @@ public class DescribeCtrlInstanceMemberAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of member accounts supported by Cloud Firewall.</p>
+         * <p>The maximum quota for Cloud Firewall member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

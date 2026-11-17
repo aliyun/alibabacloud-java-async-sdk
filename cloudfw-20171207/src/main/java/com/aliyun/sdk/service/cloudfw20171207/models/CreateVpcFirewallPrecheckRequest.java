@@ -143,7 +143,7 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-iv8m2lj2fqg1xt****</p>
@@ -173,7 +173,7 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         }
 
         /**
-         * <p>The UID of the member account of Cloud Firewall.</p>
+         * <p>The UID of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>128599825273****</p>
@@ -217,7 +217,7 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         }
 
         /**
-         * <p>The ID of the transit router instance.</p>
+         * <p>The transit router instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-t4n16htuv1jalj9cq****</p>
@@ -229,7 +229,7 @@ public class CreateVpcFirewallPrecheckRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC instance.</p>
+         * <p>The VPC-connected instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp132e2wpu9o6qth****</p>

@@ -170,7 +170,7 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -182,7 +182,7 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of top entries to return. The default value is 200. Valid values: 1 to 500.</p>
+         * <p>The maximum number of top entries to return. Default value: 200. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -194,7 +194,7 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * <p>The ID of the NAT Gateway.</p>
+         * <p>The NAT gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-uf62zzi7000bca7zn****</p>
@@ -218,7 +218,7 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the NAT Gateway.</p>
+         * <p>The private IP address of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>10.100.134.XXX</p>
@@ -230,7 +230,7 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the NAT Gateway.</p>
+         * <p>The public IP address of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>47.93.47.XXX</p>
@@ -242,7 +242,7 @@ public class DescribeNatFirewallTimeTopRequest extends Request {
         }
 
         /**
-         * <p>The point in time to query the traffic data. This is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The point in time for the traffic. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

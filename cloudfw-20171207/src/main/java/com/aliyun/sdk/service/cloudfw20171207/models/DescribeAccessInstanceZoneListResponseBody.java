@@ -165,7 +165,7 @@ public class DescribeAccessInstanceZoneListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the zone in the local language.</p>
+             * <p>The local name of the zone.</p>
              * 
              * <strong>example:</strong>
              * <p>Beijing Area G</p>

@@ -67,7 +67,7 @@ public class CreateNatFirewallPreCheckResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The dry run ID.</p>
+         * <p>The precheck ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2122</p>

@@ -91,7 +91,7 @@ public class DescribeClearAuthInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of remaining clearances.</p>
+         * <p>The number of remaining clearance operations.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

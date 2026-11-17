@@ -431,7 +431,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time. The time is a UNIX timestamp accurate to seconds, representing a full hour or a full day.</p>
+             * <p>The end time. The time is a UNIX timestamp accurate to seconds, which represents an exact hour or day.</p>
              * 
              * <strong>example:</strong>
              * <p>1733710015</p>
@@ -478,7 +478,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage duration of Simple Log Service. Unit: TB × h.</p>
+             * <p>The usage duration of Simple Log Service. Unit: TB×h.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>
@@ -511,7 +511,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage duration of sensitive data leak detection. Unit: h.</p>
+             * <p>The usage duration of sensitive data leak detection. Unit: hours.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -533,7 +533,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time. The time is a UNIX timestamp accurate to seconds, representing a full hour or a full day.</p>
+             * <p>The start time. The time is a UNIX timestamp accurate to seconds, which represents an exact hour or day.</p>
              * 
              * <strong>example:</strong>
              * <p>1710206070000</p>
@@ -544,7 +544,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage duration of threat intelligence. Unit: h.</p>
+             * <p>The usage duration of threat intelligence. Unit: hours.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

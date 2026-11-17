@@ -67,7 +67,7 @@ public class DescribeAckClusterPodLabelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of ACK labels.</p>
+         * <p>The list of ACK tags.</p>
          */
         public Builder ackLabels(java.util.List<AckLabels> ackLabels) {
             this.ackLabels = ackLabels;

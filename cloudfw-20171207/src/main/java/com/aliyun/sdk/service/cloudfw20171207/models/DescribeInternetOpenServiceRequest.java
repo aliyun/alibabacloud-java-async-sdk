@@ -211,7 +211,7 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp in seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1753804800</p>
@@ -223,7 +223,7 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -271,7 +271,7 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * <p>The name of the application for an exact match. If you do not specify this parameter, all applications are queried.</p>
+         * <p>The application name for exact match. If you do not specify this parameter, all applications are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>SMB</p>
@@ -283,7 +283,7 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * <p>The name of the application for a fuzzy match. If you do not specify this parameter, all applications are queried.</p>
+         * <p>The application name for fuzzy match. If you do not specify this parameter, all applications are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>SMB</p>
@@ -295,7 +295,7 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the visitor.</p>
+         * <p>The originating IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>122.200.64.XXX</p>
@@ -307,7 +307,7 @@ public class DescribeInternetOpenServiceRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. The value is a UNIX timestamp in seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1755742107</p>

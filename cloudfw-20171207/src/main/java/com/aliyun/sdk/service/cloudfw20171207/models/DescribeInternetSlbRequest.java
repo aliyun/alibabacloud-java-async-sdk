@@ -199,7 +199,7 @@ public class DescribeInternetSlbRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +211,7 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * <p>The ID of the SLB instance. Fuzzy search is supported.</p>
+         * <p>The ID of the SLB instance. Fuzzy matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-2ze8v2x5kd9qyvp2****</p>
@@ -223,7 +223,7 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * <p>The name of the SLB instance. Fuzzy search is supported.</p>
+         * <p>The name of the SLB instance. Fuzzy matching is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -247,7 +247,7 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * <p>The language of the response message.</p>
+         * <p>The language in which messages are received.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -259,7 +259,7 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -283,7 +283,7 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * <p>The public IP address. Fuzzy search is supported. If you do not specify this parameter, all public IP addresses are queried.</p>
+         * <p>The public IP address. Fuzzy matching is supported. If not specified, all public IP addresses are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>47.108.60.XXX</p>
@@ -295,7 +295,7 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * <p>The region. If you do not specify this parameter, all regions are queried.</p>
+         * <p>The region. If not specified, all regions are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -307,7 +307,7 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the visitor.</p>
+         * <p>The source IP address of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>112.64.233.XXX</p>
@@ -319,7 +319,7 @@ public class DescribeInternetSlbRequest extends Request {
         }
 
         /**
-         * <p>The tag. If you do not specify this parameter, all tags are searched.</p>
+         * <p>The tag. If not specified, all tags are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

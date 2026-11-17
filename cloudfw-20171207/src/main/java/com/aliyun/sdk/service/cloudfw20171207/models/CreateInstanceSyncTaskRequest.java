@@ -85,7 +85,7 @@ public class CreateInstanceSyncTaskRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the visitor.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>60.182.79.XXX</p>

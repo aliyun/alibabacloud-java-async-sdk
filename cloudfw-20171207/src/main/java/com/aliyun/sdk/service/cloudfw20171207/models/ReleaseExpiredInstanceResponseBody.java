@@ -104,12 +104,10 @@ public class ReleaseExpiredInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the instance was released:</p>
+         * <p>Indicates whether the release is successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Successful.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Failed.</p>
-         * </li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +130,7 @@ public class ReleaseExpiredInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

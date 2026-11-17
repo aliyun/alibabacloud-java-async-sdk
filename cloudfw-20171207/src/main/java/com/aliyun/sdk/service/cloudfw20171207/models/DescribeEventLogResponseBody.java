@@ -80,7 +80,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of ISPs.</p>
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -483,7 +483,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
              * <li><strong>SSH</strong></li>
              * <li><strong>SSL</strong></li>
              * <li><strong>VNC</strong></li>
-             * <li><strong>ANY</strong> (all application types)</li>
+             * <li><strong>ANY</strong>: All application types.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -509,16 +509,16 @@ public class DescribeEventLogResponseBody extends TeaModel {
              * <p>The attack type of the intrusion prevention event. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: Abnormal connection.</li>
-             * <li><strong>2</strong>: Command execution.</li>
-             * <li><strong>3</strong>: Brute-force attack.</li>
-             * <li><strong>4</strong>: Scanning.</li>
+             * <li><strong>2</strong>: execute commands.</li>
+             * <li><strong>3</strong>: brute-force attacks.</li>
+             * <li><strong>4</strong>: Scan.</li>
              * <li><strong>5</strong>: Other.</li>
-             * <li><strong>6</strong>: Information leakage.</li>
+             * <li><strong>6</strong>: Information leak.</li>
              * <li><strong>7</strong>: DoS attack.</li>
              * <li><strong>8</strong>: Overflow attack.</li>
              * <li><strong>9</strong>: Web attack.</li>
              * <li><strong>10</strong>: Trojan backdoor.</li>
-             * <li><strong>11</strong>: Viruses and worms.</li>
+             * <li><strong>11</strong>: Virus and worm.</li>
              * <li><strong>12</strong>: Mining behavior.</li>
              * <li><strong>13</strong>: Reverse shell.</li>
              * </ul>
@@ -547,7 +547,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination IP address that is queried. This indicates that the intrusion prevention event involves this destination IP address.</p>
+             * <p>The destination IP address. This indicates that the intrusion prevention event involves this destination IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>2.2.2.2</p>
@@ -569,7 +569,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hit content.</p>
+             * <p>The matched content.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -580,7 +580,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hit type.</p>
+             * <p>The match type.</p>
              * 
              * <strong>example:</strong>
              * <p>domain</p>
@@ -602,7 +602,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the Cloud Firewall member account.</p>
+             * <p>The UID of the Cloud Firewall member accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>14151892****7022</p>
@@ -653,7 +653,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
              * <p>The source of the detection rule for the intrusion prevention event. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: Basic protection.</li>
-             * <li><strong>2</strong>: Virtual patches.</li>
+             * <li><strong>2</strong>: Virtual Patches.</li>
              * <li><strong>4</strong>: Threat intelligence.</li>
              * </ul>
              * 
@@ -666,7 +666,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SNI used when the TLS connection is established.</p>
+             * <p>The Server Name Indication (SNI) used when the TLS connection is established.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -677,7 +677,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source IP address that is queried. This indicates that the intrusion prevention event involves this source IP address.</p>
+             * <p>The source IP address. This indicates that the intrusion prevention event involves this source IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.0.XX.XX</p>
@@ -699,7 +699,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cipher suite used for TLS handshake negotiation, such as TLS_AES_128_GCM_SHA256.</p>
+             * <p>The cipher suite negotiated during the TLS handshake, such as TLS_AES_128_GCM_SHA256.</p>
              * 
              * <strong>example:</strong>
              * <p>TLS_AES_128_GCM_SHA256</p>
@@ -721,7 +721,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the TLS handshake fails, such as BAD_PACKET_LENGTH.</p>
+             * <p>The reason for the TLS handshake failure, such as BAD_PACKET_LENGTH.</p>
              * 
              * <strong>example:</strong>
              * <p>BAD_PACKET_LENGTH</p>
@@ -732,7 +732,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The TLS handshake result. For example, success indicates that the handshake is successful.</p>
+             * <p>The TLS handshake result. For example, success indicates a successful handshake.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -754,7 +754,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the data. The value is a timestamp in seconds.</p>
+             * <p>The start time of the data. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1751423362</p>
@@ -765,7 +765,7 @@ public class DescribeEventLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The document path.</p>
+             * <p>The URL path.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://example.com/task3%DF%5C%5C">http://example.com/task3%DF\\</a>&quot;</p>

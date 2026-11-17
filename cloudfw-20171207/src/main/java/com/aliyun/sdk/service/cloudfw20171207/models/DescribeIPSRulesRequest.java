@@ -64,6 +64,10 @@ public class DescribeIPSRulesRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyId")
+    private String proxyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryModify")
     private String queryModify;
 
@@ -117,6 +121,7 @@ public class DescribeIPSRulesRequest extends Request {
         this.order = builder.order;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.proxyId = builder.proxyId;
         this.queryModify = builder.queryModify;
         this.ruleAction = builder.ruleAction;
         this.ruleClass = builder.ruleClass;
@@ -220,6 +225,13 @@ public class DescribeIPSRulesRequest extends Request {
     }
 
     /**
+     * @return proxyId
+     */
+    public String getProxyId() {
+        return this.proxyId;
+    }
+
+    /**
      * @return queryModify
      */
     public String getQueryModify() {
@@ -301,6 +313,7 @@ public class DescribeIPSRulesRequest extends Request {
         private String order; 
         private Long pageNo; 
         private Long pageSize; 
+        private String proxyId; 
         private String queryModify; 
         private String ruleAction; 
         private String ruleClass; 
@@ -329,6 +342,7 @@ public class DescribeIPSRulesRequest extends Request {
             this.order = request.order;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.proxyId = request.proxyId;
             this.queryModify = request.queryModify;
             this.ruleAction = request.ruleAction;
             this.ruleClass = request.ruleClass;
@@ -342,7 +356,7 @@ public class DescribeIPSRulesRequest extends Request {
         } 
 
         /**
-         * <p>The attacked application.</p>
+         * <p>The attack application.</p>
          * 
          * <strong>example:</strong>
          * <p>SMB</p>
@@ -354,7 +368,7 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * <p>The list of categories of the attacked applications. Specify the value in the [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;] format.</p>
+         * <p>The list of categories of the attacked applications, in the format of [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;].</p>
          */
         public Builder attackAppCategory(java.util.List<String> attackAppCategory) {
             this.putQueryParameter("AttackAppCategory", attackAppCategory);
@@ -363,7 +377,7 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * <p>The list of attacked applications.</p>
+         * <p>The list of attack applications.</p>
          */
         public Builder attackApps(java.util.List<String> attackApps) {
             this.putQueryParameter("AttackApps", attackApps);
@@ -470,6 +484,18 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID of the NAT firewall. This parameter is required only when FirewallType is set to <strong>NatFirewall</strong> and is mutually exclusive with VpcFirewallId. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2879296.html">ListNatFirewallIpsConfigs</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-nat53f4bbc233234271a1d7</p>
+         */
+        public Builder proxyId(String proxyId) {
+            this.putQueryParameter("ProxyId", proxyId);
+            this.proxyId = proxyId;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether the rule has been modified.</p>
          * 
          * <strong>example:</strong>
@@ -567,7 +593,7 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the requester.</p>
+         * <p>The source IP address of the visitor.</p>
          * 
          * <strong>example:</strong>
          * <p>8.139.222.XXX</p>
@@ -579,7 +605,7 @@ public class DescribeIPSRulesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the virtual private cloud (VPC) firewalls.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) border firewalls.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-rnbkqx4a8er21a****</p>

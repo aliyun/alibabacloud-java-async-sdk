@@ -266,7 +266,7 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of ACL check.</p>
+             * <p>The ACL check type.</p>
              * 
              * <strong>example:</strong>
              * <p>AddressBookGather</p>
@@ -277,7 +277,7 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UNIX timestamp of the last check, in seconds.</p>
+             * <p>The timestamp of the latest check. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1724982259</p>
@@ -369,7 +369,7 @@ public class DescribeAclChecksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of ACL check.</p>
+             * <p>The ACL check type.</p>
              * 
              * <strong>example:</strong>
              * <p>Internet</p>

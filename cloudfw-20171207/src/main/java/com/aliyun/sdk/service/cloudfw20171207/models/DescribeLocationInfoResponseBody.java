@@ -146,7 +146,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of regions outside the Chinese mainland.</p>
+         * <p>The number of regions outside China.</p>
          * 
          * <strong>example:</strong>
          * <p>238</p>
@@ -157,7 +157,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of regions outside the Chinese mainland.</p>
+         * <p>The list of regions outside China.</p>
          */
         public Builder overseasList(java.util.List<OverseasList> overseasList) {
             this.overseasList = overseasList;

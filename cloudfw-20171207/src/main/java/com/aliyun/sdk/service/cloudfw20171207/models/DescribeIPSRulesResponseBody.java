@@ -158,7 +158,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total number of rules with the block action.</p>
+         * <p>The total number of block rules.</p>
          * 
          * <strong>example:</strong>
          * <p>976</p>
@@ -468,7 +468,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The attacked application.</p>
+             * <p>The attack application.</p>
              * 
              * <strong>example:</strong>
              * <p>SMB</p>
@@ -482,7 +482,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
              * <p>The attack type.</p>
              * 
              * <strong>example:</strong>
-             * <p>Exception connection</p>
+             * <p>Abnormal connection</p>
              */
             public Builder attackType(String attackType) {
                 this.attackType = attackType;
@@ -535,7 +535,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
 
             /**
              * <p>The supported engine mode.</p>
-             * <p>This value is valid only when DefaultMode is set to drop (Block). In other modes, this value is meaningless.</p>
+             * <p>This value takes effect only when DefaultMode is set to drop (Block). It is not applicable in other modes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -579,7 +579,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the rule.</p>
+             * <p>The rule UUID.</p>
              * 
              * <strong>example:</strong>
              * <p>d401b0cb-dc64-4bbe-bba0-3e7c744****</p>
@@ -590,7 +590,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the rule was modified.</p>
+             * <p>The timestamp when the rule was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1775101028</p>
@@ -601,7 +601,7 @@ public class DescribeIPSRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the rule is a custom rule.</p>
+             * <p>Indicates whether the rule is a custom rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

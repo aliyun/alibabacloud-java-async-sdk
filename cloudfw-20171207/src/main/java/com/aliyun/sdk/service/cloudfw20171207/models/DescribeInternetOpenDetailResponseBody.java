@@ -412,7 +412,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the asset instance.</p>
+             * <p>The asset instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp1ix9w22kv6aew9****</p>
@@ -445,7 +445,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the details.</p>
+             * <p>The detail ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1123</p>
@@ -478,7 +478,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port that is exposed to the Internet.</p>
+             * <p>The open public port.</p>
              * 
              * <strong>example:</strong>
              * <p>3389</p>
@@ -489,7 +489,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security threat.</p>
+             * <p>The security risk.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -500,7 +500,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the security threat.</p>
+             * <p>The description of the security risk.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -533,7 +533,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The ID of the region where the instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen</p>
@@ -599,7 +599,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of traffic in the last 24 hours.</p>
+             * <p>The traffic proportion over the last 1 day.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -610,7 +610,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of traffic in the last 30 days.</p>
+             * <p>The traffic proportion over the last 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>48</p>
@@ -621,7 +621,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of traffic in the last 7 days.</p>
+             * <p>The traffic proportion over the last 7 days.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -632,7 +632,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the protocol is not detected when the protocol is identified as Unknown.</p>
+             * <p>The reason why the protocol is not identified when the recognized protocol is Unknown.</p>
              */
             public Builder unknownReason(java.util.List<String> unknownReason) {
                 this.unknownReason = unknownReason;
@@ -712,7 +712,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -723,7 +723,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -734,7 +734,7 @@ public class DescribeInternetOpenDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

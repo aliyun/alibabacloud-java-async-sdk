@@ -93,7 +93,7 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data list.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -101,7 +101,7 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of total blocked sessions.</p>
+         * <p>The maximum number of blocked sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -112,7 +112,7 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the maximum number of total blocked sessions occurred. The value is a UNIX timestamp in seconds, such as 1672502400.</p>
+         * <p>The time when the maximum number of blocked sessions occurred. The value is a UNIX timestamp in seconds, such as 1672502400.</p>
          * 
          * <strong>example:</strong>
          * <p>1656837360</p>
@@ -253,8 +253,7 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the traffic occurred. The value is a UNIX timestamp in seconds.</p>
-             * <p>If the data at this point in time has not been processed, the values of all other fields are -1.</p>
+             * <p>The time when the traffic occurred. The value is a UNIX timestamp in seconds. If the data for this time point is not processed, the values of other fields are -1.</p>
              * 
              * <strong>example:</strong>
              * <p>1758474000</p>

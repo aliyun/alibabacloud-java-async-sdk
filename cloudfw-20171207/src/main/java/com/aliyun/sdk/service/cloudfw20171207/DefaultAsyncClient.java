@@ -113,7 +113,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h2>Quotas</h2>
      * <p>DNS firewall policies are counted independently in the DNS policy table (counted separately by IP version), but <strong>share the same quota limit</strong> with Internet access control policies (determined by the Cloud Firewall edition). If the number of address combinations expanded from a single policy exceeds the limit, or the total number of policies exceeds the limit, the system returns ErrorAclExtendedCountExceed (-200139).</p>
      * <blockquote>
-     * <p>The DescribeAclCheckQuota operation returns the quota for the number of ACL policy checks, which is unrelated to firewall policy count quota and cannot be used to predict whether the quota for this operation is sufficient. Check firewall policy count quota in the Cloud Firewall console.</p>
+     * <p>The DescribeAclCheckQuota operation returns the quota for the number of ACL policy checks, which is unrelated to firewall policy count quota. You cannot use it to predict whether the quota for this operation is sufficient. Check firewall policy count quota in the Cloud Firewall console.</p>
      * </blockquote>
      * 
      * @param request the request parameters of AddDnsFirewallPolicy  AddDnsFirewallPolicyRequest
@@ -134,6 +134,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation creates a real-time domain name resolution task for a specified domain name.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Before you call this operation, you must activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>, International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</li>
+     * <li>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If the returned value is false, the current account has not purchased or activated Cloud Firewall.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddDomainResolveRealtimeTask  AddDomainResolveRealtimeTaskRequest
      * @return AddDomainResolveRealtimeTaskResponse
      */
@@ -183,7 +191,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>This operation is typically used to retrieve the DNS resolution results of a domain name. Currently, only Alibaba Cloud DNS is supported for retrieving resolution results. The domain name to be queried must use Alibaba Cloud DNS to retrieve its resolution results.</p>
      * <h2>QPS limits</h2>
-     * <p>The QPS limit per user for this operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable frequency.</p>
+     * <p>The QPS limit per user for this operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of AddPrivateDnsDomainName  AddPrivateDnsDomainNameRequest
      * @return AddPrivateDnsDomainNameResponse
@@ -267,7 +275,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>QPS limits</h2>
-     * <p>The QPS limit for a single user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable frequency.</p>
      * 
      * @param request the request parameters of CreateAckClusterConnector  CreateAckClusterConnectorRequest
      * @return CreateAckClusterConnectorResponse
@@ -299,6 +307,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateAclCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateApplicationCustomRules  CreateApplicationCustomRulesRequest
+     * @return CreateApplicationCustomRulesResponse
+     */
+    @Override
+    public CompletableFuture<CreateApplicationCustomRulesResponse> createApplicationCustomRules(CreateApplicationCustomRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateApplicationCustomRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateApplicationCustomRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateApplicationCustomRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateApplicationTemplate  CreateApplicationTemplateRequest
+     * @return CreateApplicationTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateApplicationTemplateResponse> createApplicationTemplate(CreateApplicationTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateApplicationTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateApplicationTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateApplicationTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -346,7 +390,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <h2>Before you begin</h2>
      * <ul>
      * <li>The target NAT gateway must be managed by Cloud Firewall and asset synchronization must be completed. Asset synchronization is an asynchronous task. If you call this operation before the synchronization of a newly created NAT gateway is completed, the error code -103204 is returned.</li>
-     * <li>If SNAT is configured for the NAT gateway, you must enable session logging first. Otherwise, the error code -103583 is returned.</li>
+     * <li>If SNAT is configured for the NAT gateway, you must enable session logs first. Otherwise, the error code -103583 is returned.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateIpsPrivateAssoc  CreateIpsPrivateAssocRequest
@@ -389,7 +433,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a policy that allows, denies, or monitors traffic that passes through a NAT firewall.</p>
+     * <p>Creates a policy that allows, denies, or monitors traffic passing through a NAT firewall.</p>
      * 
      * @param request the request parameters of CreateNatFirewallPreCheck  CreateNatFirewallPreCheckRequest
      * @return CreateNatFirewallPreCheckResponse
@@ -409,6 +453,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a NAT firewall asset synchronization task.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Before calling this operation, ensure that you have purchased and activated a Cloud Firewall instance. Both subscription and pay-as-you-go billing methods are supported.</li>
+     * <li>You can activate Cloud Firewall on the buy page (Chinese site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a> and International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>). After activation, call the DescribeUserBuyVersion operation and check the UserStatus parameter to confirm the activation status.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateNatFirewallSyncTask  CreateNatFirewallSyncTaskRequest
      * @return CreateNatFirewallSyncTaskResponse
      */
@@ -428,7 +480,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a private DNS firewall endpoint. When you call this operation, you must specify PrimaryVSwitchId, and the region and zone of the primary and secondary vSwitches must support private DNS firewalls.</p>
+     * <p>Creates a private DNS firewall endpoint. When you call this operation, you must specify PrimaryVSwitchId. The region and zone of the primary and secondary vSwitches must support private DNS firewalls.</p>
      * 
      * @param request the request parameters of CreatePrivateDnsEndpoint  CreatePrivateDnsEndpointRequest
      * @return CreatePrivateDnsEndpointResponse
@@ -485,7 +537,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before calling this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the transit router to Cloud Firewall. Then, call this operation by using the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</p>
+     * <p>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before you call this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the TR to Cloud Firewall. Then, call this operation by specifying the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</p>
      * 
      * @param request the request parameters of CreateTrFirewallV2  CreateTrFirewallV2Request
      * @return CreateTrFirewallV2Response
@@ -546,9 +598,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreateVpcFirewallCenManualConfigure is deprecated  * @description This operation is generally used to create a VPC firewall for VPC-connected instances in a Cloud Enterprise Network (CEN). The virtual private cloud (VPC) firewalls protect the mutual access traffic between VPC-connected instances in the CEN and the specified VPC. VPC-connected instances include VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs). It does not protect traffic between VBRs, between CCNs, or between a VBR and a CCN. For more information, see [Limits on virtual private cloud (VPC) firewalls](https://help.aliyun.com/document_detail/172295.html).
+     * @deprecated OpenAPI CreateVpcFirewallCenManualConfigure is deprecated  * @description This operation is typically used to create a VPC firewall for VPC-connected instances in a Cloud Enterprise Network (CEN). The VPC firewall protects the traffic between network instances in the CEN and the specified VPC. The network instances include VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs). The VPC firewall does not protect the traffic between VBRs, between CCNs, or between a VBR and a CCN. For more information, see [Limits on VPC firewalls](https://help.aliyun.com/document_detail/172295.html).
      * ## QPS limits
-     * The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Invoke this operation at a reasonable frequency.
+     * The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Invoke the API at a reasonable frequency.
      * 
      * @param request the request parameters of CreateVpcFirewallCenManualConfigure  CreateVpcFirewallCenManualConfigureRequest
      * @return CreateVpcFirewallCenManualConfigureResponse
@@ -616,7 +668,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates a policy to accept, deny, or monitor traffic that passes through a NAT firewall.</p>
+     * <p>Creates a policy to allow, deny, or monitor traffic passing through a NAT firewall.</p>
      * 
      * @param request the request parameters of CreateVpcFirewallPrecheck  CreateVpcFirewallPrecheckRequest
      * @return CreateVpcFirewallPrecheckResponse
@@ -637,9 +689,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates a VPC firewall that protects traffic between two VPCs connected by an Express Connect circuit. The VPC firewall does not protect cross-region traffic, cross-account traffic, or traffic between a VPC and a Virtual Border Router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</p>
-     * <h3>QPS limits</h3>
-     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, your API calls will be throttled. Plan your calls accordingly.</p>
+     * <p>This operation is typically used to create a VPC firewall. The VPC firewall protects traffic between two VPCs that are connected by using Express Connect. The VPC firewall does not support protecting cross-region or cross-account traffic between VPCs, or traffic between a VPC and a virtual border router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit on this operation is 10 queries per second per account. API calls that exceed this limit are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of CreateVpcFirewallTask  CreateVpcFirewallTaskRequest
      * @return CreateVpcFirewallTaskResponse
@@ -659,9 +711,45 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateWebFilterRules  CreateWebFilterRulesRequest
+     * @return CreateWebFilterRulesResponse
+     */
+    @Override
+    public CompletableFuture<CreateWebFilterRulesResponse> createWebFilterRules(CreateWebFilterRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateWebFilterRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWebFilterRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWebFilterRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateWebFilterTemplate  CreateWebFilterTemplateRequest
+     * @return CreateWebFilterTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateWebFilterTemplateResponse> createWebFilterTemplate(CreateWebFilterTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateWebFilterTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWebFilterTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWebFilterTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DeleteAckClusterConnector  DeleteAckClusterConnectorRequest
      * @return DeleteAckClusterConnectorResponse
@@ -682,9 +770,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes a backup of an access control address book.</p>
-     * <h2>QPS limit</h2>
-     * <p>This operation is limited to 10 queries per second (QPS) per user. Calls that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</p>
+     * <p>This operation is typically used to delete address books in access control.</p>
+     * <h2>Rate limits</h2>
+     * <p>The rate limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DeleteAclBackupData  DeleteAclBackupDataRequest
      * @return DeleteAclBackupDataResponse
@@ -721,6 +809,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAddressBookResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteApplicationCustomRules  DeleteApplicationCustomRulesRequest
+     * @return DeleteApplicationCustomRulesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteApplicationCustomRulesResponse> deleteApplicationCustomRules(DeleteApplicationCustomRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteApplicationCustomRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteApplicationCustomRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteApplicationCustomRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteApplicationTemplate  DeleteApplicationTemplateRequest
+     * @return DeleteApplicationTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DeleteApplicationTemplateResponse> deleteApplicationTemplate(DeleteApplicationTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteApplicationTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteApplicationTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteApplicationTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -769,7 +893,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to delete a DNS firewall policy.</p>
+     * <p>Creates a policy to allow, deny, or monitor traffic that passes through a NAT firewall.</p>
      * 
      * @param request the request parameters of DeleteDnsFirewallPolicy  DeleteDnsFirewallPolicyRequest
      * @return DeleteDnsFirewallPolicyResponse
@@ -912,9 +1036,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API call is used to delete all private domain names.</p>
-     * <h2>QPS limit</h2>
-     * <p>Each user is limited to 10 queries per second (QPS) for this API call. If you exceed this limit, API calls are throttled, which may impact your business. We recommend that you plan your API calls accordingly.</p>
+     * <p>This API operation is typically used to retrieve the DNS resolution results of a domain name. Currently, resolution results can only be retrieved from Alibaba Cloud DNS. To retrieve the resolution results, the domain name to be queried must use Alibaba Cloud DNS.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DeletePrivateDnsAllDomainName  DeletePrivateDnsAllDomainNameRequest
      * @return DeletePrivateDnsAllDomainNameResponse
@@ -935,7 +1059,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Deletes domain names that require private DNS resolution.</p>
+     * <p>Deletes a domain name that requires private DNS resolution.</p>
      * 
      * @param request the request parameters of DeletePrivateDnsDomainName  DeletePrivateDnsDomainNameRequest
      * @return DeletePrivateDnsDomainNameResponse
@@ -956,7 +1080,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to create a policy that allows, denies, or monitors traffic that passes through a NAT firewall.</p>
+     * <p>Creates a policy to allow, deny, or monitor traffic that passes through a NAT firewall.</p>
      * 
      * @param request the request parameters of DeletePrivateDnsEndpoint  DeletePrivateDnsEndpointRequest
      * @return DeletePrivateDnsEndpointResponse
@@ -1084,6 +1208,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteWebFilterRules  DeleteWebFilterRulesRequest
+     * @return DeleteWebFilterRulesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWebFilterRulesResponse> deleteWebFilterRules(DeleteWebFilterRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteWebFilterRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWebFilterRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWebFilterRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteWebFilterTemplate  DeleteWebFilterTemplateRequest
+     * @return DeleteWebFilterTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWebFilterTemplateResponse> deleteWebFilterTemplate(DeleteWebFilterTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteWebFilterTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWebFilterTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWebFilterTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeACLProtectTrend  DescribeACLProtectTrendRequest
      * @return DescribeACLProtectTrendResponse
      */
@@ -1103,7 +1263,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The statistics apply to the current Cloud Firewall instance and include all data from the date of purchase.</p>
+     * <p>The statistical scope covers the current Cloud Firewall instance of the user, including all data since the purchase date.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Before you call this operation, the account must have purchased Purchase Cloud Firewall instance. If no instance is purchased, the operation returns the error code <code>202</code>.</li>
+     * <li>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the purchase status. The <code>UserStatus</code> field in the response indicates whether the Cloud Firewall instance is valid. A value of <code>false</code> indicates that the instance is invalid or not activated.</li>
+     * <li>Purchase Purchase Cloud Firewall instance:<ul>
+     * <li>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></li>
+     * <li>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeAITrafficAnalysisStatus  DescribeAITrafficAnalysisStatusRequest
      * @return DescribeAITrafficAnalysisStatusResponse
@@ -1233,7 +1403,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls properly.</p>
+     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeAckClusterConnectors  DescribeAckClusterConnectorsRequest
      * @return DescribeAckClusterConnectorsResponse
@@ -1308,8 +1478,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 requests per second. Calls that exceed this limit are throttled, which may impact your business.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeAclApps  DescribeAclAppsRequest
      * @return DescribeAclAppsResponse
@@ -1348,8 +1518,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>This API is limited to 10 queries per second (QPS) per user. Calls exceeding this limit are throttled.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit for a single user is 10 queries per second. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeAclCheck  DescribeAclCheckRequest
      * @return DescribeAclCheckResponse
@@ -1370,8 +1540,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>Each user can make up to 10 queries per second (QPS). If you exceed this limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit per user for this API operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Plan your API calls accordingly.</p>
      * 
      * @param request the request parameters of DescribeAclCheckQuota  DescribeAclCheckQuotaRequest
      * @return DescribeAclCheckQuotaResponse
@@ -1393,7 +1563,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If this limit is exceeded, your API calls are throttled. This may affect your business. We recommend that you plan your calls accordingly.</p>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeAclChecks  DescribeAclChecksRequest
      * @return DescribeAclChecksResponse
@@ -1414,8 +1584,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</p>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. Exceeding this limit triggers throttling, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeAclRuleCount  DescribeAclRuleCountRequest
      * @return DescribeAclRuleCountResponse
@@ -1436,8 +1606,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</p>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeAclWhitelist  DescribeAclWhitelistRequest
      * @return DescribeAclWhitelistResponse
@@ -1474,6 +1644,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeAddressBookResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeApplicationStatistics  DescribeApplicationStatisticsRequest
+     * @return DescribeApplicationStatisticsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeApplicationStatisticsResponse> describeApplicationStatistics(DescribeApplicationStatisticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeApplicationStatistics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeApplicationStatisticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeApplicationStatisticsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1540,9 +1728,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is typically used to perform a paged query for information about assets protected by Cloud Firewall by using paging.</p>
-     * <h2>QPS limits</h2>
-     * <p>The QPS limit per user for this operation is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Invoke the operation at a reasonable rate.</p>
+     * <p>This operation is typically used to perform paging queries on the information about assets protected by Cloud Firewall.</p>
+     * <h2>QPS limit</h2>
+     * <p>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Invoke the API at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeAttackAppCategory  DescribeAttackAppCategoryRequest
      * @return DescribeAttackAppCategoryResponse
@@ -1601,7 +1789,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>QPS limits</h3>
-     * <p>The QPS limit per user for this API operation is 10 calls per second. If you exceed the limit, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * <p>The QPS limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeClearAuthInfo  DescribeClearAuthInfoRequest
      * @return DescribeClearAuthInfoResponse
@@ -1717,9 +1905,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries information about the member accounts of Cloud Firewall.</p>
-     * <h2>QPS limits</h2>
-     * <p>This operation is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled. Throttling may affect your business. We recommend that you call this operation at a reasonable rate.</p>
+     * <p>This operation is generally used to query information about Cloud Firewall member accounts.</p>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Invoke this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeCtrlInstanceMemberAccounts  DescribeCtrlInstanceMemberAccountsRequest
      * @return DescribeCtrlInstanceMemberAccountsResponse
@@ -1835,9 +2023,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. Log details are returned in pages. StartTime and EndTime are UNIX timestamps in seconds. The time span of a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the VPC firewall, set FirewallType to VpcFirewall.</p>
-     * <h2>QPS limits</h2>
-     * <p>The QPS limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</p>
+     * <p>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. Log details are returned with paging. StartTime and EndTime are UNIX timestamps in seconds. The time span of a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the virtual private cloud (VPC) firewalls at the border, set FirewallType to VpcFirewall.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeEventLog  DescribeEventLogRequest
      * @return DescribeEventLogResponse
@@ -1857,8 +2045,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeFirewallDropStatistics is deprecated  * @description ### QPS limit
-     * The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, your API calls are throttled. This may affect your business operations. We recommend that you make API calls at a reasonable rate.
+     * @deprecated OpenAPI DescribeFirewallDropStatistics is deprecated  * @description ### Rate limit
+     * The rate limit for this API operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.
      * 
      * @param request the request parameters of DescribeFirewallDropStatistics  DescribeFirewallDropStatisticsRequest
      * @return DescribeFirewallDropStatisticsResponse
@@ -1899,7 +2087,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * <p>The rate limit for this API operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeFirewallTask  DescribeFirewallTaskRequest
      * @return DescribeFirewallTaskResponse
@@ -1938,8 +2126,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Rate limit</h3>
-     * <p>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed this limit, throttling is triggered, which may affect your services. Call this API operation at a reasonable frequency.</p>
+     * <h3>QPS limit</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeFirewallVSwitch  DescribeFirewallVSwitchRequest
      * @return DescribeFirewallVSwitchResponse
@@ -2056,7 +2244,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>This API is limited to 10 requests per second per user. Exceeding this limit triggers throttling, which can disrupt your service. Plan your API calls accordingly.</p>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeInternetDropTrafficTrend  DescribeInternetDropTrafficTrendRequest
      * @return DescribeInternetDropTrafficTrendResponse
@@ -2113,8 +2301,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</p>
+     * <h2>Rate limit</h2>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeInternetOpenPort  DescribeInternetOpenPortRequest
      * @return DescribeInternetOpenPortResponse
@@ -2136,7 +2324,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>QPS limits</h2>
-     * <p>You can make up to 10 queries per second (QPS). If you exceed this limit, API calls are throttled. This may affect your business. We recommend that you make API calls at a reasonable rate.</p>
+     * <p>The QPS limit for a single user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeInternetOpenService  DescribeInternetOpenServiceRequest
      * @return DescribeInternetOpenServiceResponse
@@ -2336,6 +2524,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the original packet payload of a specified intrusion event. You can locate a single event by using the event UUID (EventUuid) or filter events by public IP address, private IP address, asset instance ID, and time range. StartTime and EndTime are required and must be UNIX timestamps in seconds. The response includes the original payload, the payload length (PayloadLen), and the start and end positions of the matched content in the highlight interval (HighlightStart and HighlightEnd) to help restore alert details.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * 
+     * @param request the request parameters of DescribeInvadeEventPayload  DescribeInvadeEventPayloadRequest
+     * @return DescribeInvadeEventPayloadResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInvadeEventPayloadResponse> describeInvadeEventPayload(DescribeInvadeEventPayloadRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInvadeEventPayload").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInvadeEventPayloadResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInvadeEventPayloadResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeInvadeEventStatistic  DescribeInvadeEventStatisticRequest
      * @return DescribeInvadeEventStatisticResponse
      */
@@ -2355,9 +2566,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries information about assets that are protected by Cloud Firewall. The results are paginated.</p>
-     * <h2>Limits</h2>
-     * <p>This operation is limited to 10 queries per second (QPS) per user. If you exceed the limit, API calls are throttled. This may affect your business. Call this operation at a reasonable rate.</p>
+     * <p>This operation is generally used to perform paged queries on the information about assets protected by Cloud Firewall.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeIpsPrivateAssoc  DescribeIpsPrivateAssocRequest
      * @return DescribeIpsPrivateAssocResponse
@@ -2588,7 +2799,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DescribeNatFirewallQuotaResponse> describeNatFirewallQuota(DescribeNatFirewallQuotaRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNatFirewallQuota").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNatFirewallQuota").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNatFirewallQuotaResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -2761,6 +2972,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the destination IP addresses of outbound connections.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Make sure that Cloud Firewall is activated for your account. Both subscription and pay-as-you-go editions are supported.</li>
+     * <li>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. A value of false indicates that Cloud Firewall is not activated.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeOutgoingDestinationIP  DescribeOutgoingDestinationIPRequest
      * @return DescribeOutgoingDestinationIPResponse
      */
@@ -2851,6 +3070,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the trend of outbound connection risks.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Ensure that Cloud Firewall is activated before you call this operation.</li>
+     * <li>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If false is returned, the service is not activated.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeOutgoingRiskTrend  DescribeOutgoingRiskTrendRequest
      * @return DescribeOutgoingRiskTrendResponse
      */
@@ -2932,9 +3159,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the status of strict mode for access control policies.</p>
-     * <h2>QPS limits</h2>
-     * <p>This operation is limited to 10 queries per second (QPS) for each user. API calls that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</p>
+     * <p>This operation is typically used to query the enabling status of strict mode for access control policies.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Before calling this operation, you must purchase and activate Cloud Firewall. You can activate the service on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</li>
+     * </ul>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribePolicyAdvancedConfig  DescribePolicyAdvancedConfigRequest
      * @return DescribePolicyAdvancedConfigResponse
@@ -2978,7 +3209,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The details are accurate to the specific resource instance level for pay-as-you-go users. For subscription users, only overall queries are supported.</p>
+     * <p>For pay-as-you-go users, the billing details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</p>
      * 
      * @param request the request parameters of DescribePostpayBill  DescribePostpayBillRequest
      * @return DescribePostpayBillResponse
@@ -3230,8 +3461,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeRegionInfo  DescribeRegionInfoRequest
      * @return DescribeRegionInfoResponse
@@ -3300,7 +3531,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if IP geolocation information is not required.</p>
      * <h2>QPS limits</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable rate.</p>
+     * <p>The QPS limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</p>
      * 
      * @param request the request parameters of DescribeRiskEventGroup  DescribeRiskEventGroupRequest
      * @return DescribeRiskEventGroupResponse
@@ -3699,7 +3930,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is generally used to perform a paged query on the information about access control policies of NAT firewalls.</p>
+     * <p>This operation is typically used to perform paging queries on the information about NAT firewall access control policies.</p>
      * 
      * @param request the request parameters of DescribeThreatIntelligenceSwitch  DescribeThreatIntelligenceSwitchRequest
      * @return DescribeThreatIntelligenceSwitchResponse
@@ -3756,7 +3987,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a virtual private cloud (VPC) firewall for an Enterprise Edition transit router. You can call DescribeTrFirewallsV2List to obtain the FirewallId. If no firewall has been created, prepare an Enterprise Edition transit router in the Cloud Enterprise Network (CEN) console first, and then call CreateTrFirewallV2 to create a firewall and obtain the FirewallId.</p>
+     * <p>Queries the details of a VPC firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall has not been created, you must first prepare an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</p>
      * 
      * @param request the request parameters of DescribeTrFirewallsV2Detail  DescribeTrFirewallsV2DetailRequest
      * @return DescribeTrFirewallsV2DetailResponse
@@ -4142,7 +4373,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to query access control policies of virtual private cloud (VPC) firewalls. Virtual private cloud (VPC) firewalls use different access control policies when protecting traffic between two VPCs connected through Cloud Enterprise Network (CEN) or traffic between two VPCs connected through Express Connect.</p>
+     * <p>This operation is typically used to query the access control policies of virtual private cloud (VPC) firewalls. Virtual private cloud (VPC) firewalls use different access control policies when protecting traffic between two VPCs connected by Cloud Enterprise Network (CEN) and traffic between two VPCs connected by Express Connect.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * @param request the request parameters of DescribeVpcFirewallControlPolicy  DescribeVpcFirewallControlPolicyRequest
      * @return DescribeVpcFirewallControlPolicyResponse
@@ -4545,6 +4778,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetApplicationTemplate  GetApplicationTemplateRequest
+     * @return GetApplicationTemplateResponse
+     */
+    @Override
+    public CompletableFuture<GetApplicationTemplateResponse> getApplicationTemplate(GetApplicationTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetApplicationTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApplicationTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApplicationTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetFirewallFeature  GetFirewallFeatureRequest
+     * @return GetFirewallFeatureResponse
+     */
+    @Override
+    public CompletableFuture<GetFirewallFeatureResponse> getFirewallFeature(GetFirewallFeatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetFirewallFeature").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetFirewallFeatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetFirewallFeatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation returns a temporary download link for the Certificate Authority (CA) certificate. The link is valid for one minute. After the link expires, call this operation again to obtain a new download link.</p>
      * 
@@ -4566,6 +4835,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListApplicationCustomRules  ListApplicationCustomRulesRequest
+     * @return ListApplicationCustomRulesResponse
+     */
+    @Override
+    public CompletableFuture<ListApplicationCustomRulesResponse> listApplicationCustomRules(ListApplicationCustomRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListApplicationCustomRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApplicationCustomRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApplicationCustomRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListApplicationTemplate  ListApplicationTemplateRequest
+     * @return ListApplicationTemplateResponse
+     */
+    @Override
+    public CompletableFuture<ListApplicationTemplateResponse> listApplicationTemplate(ListApplicationTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListApplicationTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApplicationTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApplicationTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListApplicationUpdateDynamics  ListApplicationUpdateDynamicsRequest
+     * @return ListApplicationUpdateDynamicsResponse
+     */
+    @Override
+    public CompletableFuture<ListApplicationUpdateDynamicsResponse> listApplicationUpdateDynamics(ListApplicationUpdateDynamicsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListApplicationUpdateDynamics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApplicationUpdateDynamicsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApplicationUpdateDynamicsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListApplications  ListApplicationsRequest
+     * @return ListApplicationsResponse
+     */
+    @Override
+    public CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListApplications").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApplicationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApplicationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTlsInspectCACertificates  ListTlsInspectCACertificatesRequest
      * @return ListTlsInspectCACertificatesResponse
      */
@@ -4578,6 +4919,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListTlsInspectCACertificatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWebFilterRules  ListWebFilterRulesRequest
+     * @return ListWebFilterRulesResponse
+     */
+    @Override
+    public CompletableFuture<ListWebFilterRulesResponse> listWebFilterRules(ListWebFilterRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListWebFilterRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWebFilterRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWebFilterRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWebFilterTemplates  ListWebFilterTemplatesRequest
+     * @return ListWebFilterTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<ListWebFilterTemplatesResponse> listWebFilterTemplates(ListWebFilterTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListWebFilterTemplates").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWebFilterTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWebFilterTemplatesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4675,9 +5052,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to modify the priority of an access control policy. An access control policy determines whether to allow, deny, or monitor traffic that passes through Cloud Firewall.</p>
-     * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for this operation is 10 calls per second per user. Exceeding this limit triggers throttling, which may affect your business. We recommend that you plan your calls accordingly.</p>
+     * <p>This operation is typically used to modify the configuration of an access control policy that allows, denies, or monitors traffic passing through Cloud Firewall.</p>
+     * <h2>Before you begin</h2>
+     * <p>Before calling this operation, call DescribeControlPolicy and pass the same Direction parameter to obtain the current policy list and the number of policies. This helps you determine the valid value range of the Order parameter, which is from 1 to the number of policies.</p>
+     * <h2>Rate limit</h2>
+     * <p>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
      * 
      * @param request the request parameters of ModifyControlPolicyPriority  ModifyControlPolicyPriorityRequest
      * @return ModifyControlPolicyPriorityResponse
@@ -4736,6 +5115,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation modifies the route policy switch of the virtual private cloud (VPC) firewalls for a transit router (TR).</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>You have created virtual private cloud (VPC) firewalls for a transit router (TR) and obtained the FirewallId by calling CreateTrFirewallV2.</li>
+     * <li>You have created a route policy and obtained the TrFirewallRoutePolicyId by calling CreateTrFirewallV2RoutePolicy.</li>
+     * <li>You can call DescribeTrFirewallsV2List and DescribeTrFirewallV2RoutePolicyList to query and confirm the preceding resources.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyFirewallV2RoutePolicySwitch  ModifyFirewallV2RoutePolicySwitchRequest
      * @return ModifyFirewallV2RoutePolicySwitchResponse
      */
@@ -4795,6 +5183,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Restores user-defined intrusion prevention system (IPS) rules to the system defaults by deleting user override records. After restoration, the rules follow the default values of the rule library. This operation uses the FirewallType parameter to determine the scope and input constraints:\n- <strong>InternetFirewall / VpcFirewall</strong>: The scope is the entire account. RuleType is required. You must specify at least one of Rules or AttackApp.\n- <strong>NatFirewall</strong>: The scope is a single NAT firewall instance specified by ProxyId. RuleType is optional. Both Rules and AttackApp are optional.\nThe two branches handle an empty array for Rules differently. For the Internet or VPC firewall, passing [] is equivalent to restoring all rules of the specified RuleType. For the NAT firewall, passing [] returns a 400 ErrorParameters error. To restore all rules for a NAT firewall, do not pass the Rules parameter.</p>
+     * 
      * @param request the request parameters of ModifyIpsRulesToDefault  ModifyIpsRulesToDefaultRequest
      * @return ModifyIpsRulesToDefaultResponse
      */
@@ -4852,6 +5243,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>Before you call this operation, you must activate a Cloud Firewall instance.</li>
+     * <li>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the activation status. The UserStatus field in the response indicates whether the Cloud Firewall instance is valid. A value of false indicates that the instance is invalid or not activated.</li>
+     * <li>Activate a Cloud Firewall instance:<ul>
+     * <li>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></li>
+     * <li>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyObjectGroupOperation  ModifyObjectGroupOperationRequest
      * @return ModifyObjectGroupOperationResponse
      */
@@ -5587,8 +5990,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limit</h2>
-     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</p>
      * 
      * @param request the request parameters of UpdateAclCheckDetailStatus  UpdateAclCheckDetailStatusRequest
      * @return UpdateAclCheckDetailStatusResponse
@@ -5602,6 +6005,64 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAclCheckDetailStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateApplicationCustomRules  UpdateApplicationCustomRulesRequest
+     * @return UpdateApplicationCustomRulesResponse
+     */
+    @Override
+    public CompletableFuture<UpdateApplicationCustomRulesResponse> updateApplicationCustomRules(UpdateApplicationCustomRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateApplicationCustomRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateApplicationCustomRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateApplicationCustomRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>QPS limit</h2>
+     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
+     * 
+     * @param request the request parameters of UpdateApplicationTemplate  UpdateApplicationTemplateRequest
+     * @return UpdateApplicationTemplateResponse
+     */
+    @Override
+    public CompletableFuture<UpdateApplicationTemplateResponse> updateApplicationTemplate(UpdateApplicationTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateApplicationTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateApplicationTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateApplicationTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateFirewallFeature  UpdateFirewallFeatureRequest
+     * @return UpdateFirewallFeatureResponse
+     */
+    @Override
+    public CompletableFuture<UpdateFirewallFeatureResponse> updateFirewallFeature(UpdateFirewallFeatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateFirewallFeature").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFirewallFeatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateFirewallFeatureResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5674,6 +6135,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateSecurityProxyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWebFilterRules  UpdateWebFilterRulesRequest
+     * @return UpdateWebFilterRulesResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWebFilterRulesResponse> updateWebFilterRules(UpdateWebFilterRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateWebFilterRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWebFilterRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWebFilterRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWebFilterTemplate  UpdateWebFilterTemplateRequest
+     * @return UpdateWebFilterTemplateResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWebFilterTemplateResponse> updateWebFilterTemplate(UpdateWebFilterTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateWebFilterTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWebFilterTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWebFilterTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

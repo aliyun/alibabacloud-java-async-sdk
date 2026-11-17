@@ -93,7 +93,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of results.</p>
+         * <p>The number of returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -104,7 +104,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of data.</p>
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -112,7 +112,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C5DDD596-1191-5F36-A504-8733045A****</p>
@@ -123,7 +123,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The point in time when the traffic data was collected. This is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The point in time for the traffic. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1656923760</p>
@@ -335,7 +335,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The inbound bandwidth. Unit: bps.</p>
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>187</p>
@@ -379,7 +379,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the NAT Gateway.</p>
+             * <p>The ID of the NAT gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>ngw-uf6pnry5vpawb****</p>
@@ -390,7 +390,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the NAT Gateway.</p>
+             * <p>The name of the NAT gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>ngw-test</p>
@@ -412,7 +412,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound bandwidth. Unit: bps.</p>
+             * <p>The outbound bandwidth. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>45</p>
@@ -434,7 +434,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the asset instance.</p>
+             * <p>The asset instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp130nn8h6157dir****</p>
@@ -467,7 +467,7 @@ public class DescribeNatFirewallTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total bandwidth. Unit: bps.</p>
+             * <p>The total bandwidth. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>232</p>

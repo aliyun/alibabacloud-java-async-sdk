@@ -132,7 +132,7 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         } 
 
         /**
-         * <p>The traffic direction.</p>
+         * <p>The direction.</p>
          * 
          * <strong>example:</strong>
          * <p>out</p>
@@ -144,7 +144,7 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query, specified as a timestamp in seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -169,7 +169,7 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The traceability code.</p>
+         * <p>The tracing code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class DescribeInternetDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * <p>The start time, specified as a timestamp in seconds.</p>
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

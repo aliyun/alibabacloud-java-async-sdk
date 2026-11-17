@@ -80,7 +80,7 @@ public class DescribeInvadeEventNameListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of anomalous activity names.</p>
+         * <p>The list of abnormal event names.</p>
          */
         public Builder eventNameList(java.util.List<EventNameList> eventNameList) {
             this.eventNameList = eventNameList;
@@ -88,7 +88,7 @@ public class DescribeInvadeEventNameListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of vulnerability names.</p>
+         * <p>The list of vulnerability names.</p>
          */
         public Builder nameList(java.util.List<String> nameList) {
             this.nameList = nameList;

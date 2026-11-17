@@ -104,7 +104,7 @@ public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of risk domain names.</p>
+         * <p>The number of risky domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -115,7 +115,7 @@ public class DescribeOutgoingRiskDomainAndIpCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of risk IP addresses.</p>
+         * <p>The number of risky IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>47</p>

@@ -73,7 +73,7 @@ public class DescribeInternetServiceNameListRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -85,7 +85,7 @@ public class DescribeInternetServiceNameListRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the visitor.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>140.240.17.XXX</p>

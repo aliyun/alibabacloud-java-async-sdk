@@ -78,7 +78,7 @@ public class AddDnsFirewallPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>71209DFE-XXX-XXX-52B4A4E9DA3B</p>

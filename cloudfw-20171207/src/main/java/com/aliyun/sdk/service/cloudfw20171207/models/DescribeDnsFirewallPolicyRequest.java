@@ -201,17 +201,14 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The action that is performed on traffic that hits the DNS firewall policy. Valid values:</p>
+         * <p>The action that Cloud Firewall performs on the traffic in the access control policy of the DNS border firewall. Valid values:</p>
          * <ul>
-         * <li><p><strong>accept</strong>: allows the traffic.</p>
-         * </li>
-         * <li><p><strong>drop</strong>: denies the traffic.</p>
-         * </li>
-         * <li><p><strong>log</strong>: monitors the traffic.</p>
-         * </li>
+         * <li><strong>accept</strong>: Allow</li>
+         * <li><strong>drop</strong>: Deny</li>
+         * <li><strong>log</strong>: Monitor</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not specify this parameter, policies of all action types are queried.</p>
+         * <p>If you do not specify this parameter, all actions are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,7 +233,7 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * <p>The page number to return. Default value: 1.</p>
+         * <p>The page number of the current page for a paging query. Default value: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +246,7 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * <p>The description of the DNS firewall policy.</p>
+         * <p>The description of the DNS border firewall policy.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -261,9 +258,9 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * <p>The destination address in the DNS firewall policy. Fuzzy match is supported.</p>
+         * <p>The destination address in the access control policy of the DNS border firewall. Fuzzy match is supported.</p>
          * <blockquote>
-         * <p>The value of Destination can be a CIDR block, a domain name, or an address book.</p>
+         * <p>Destination can be a single CIDR block, a domain name, or an address book name.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -276,12 +273,10 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * <p>The IP version that is supported. Valid values:</p>
+         * <p>The IP address version. Valid values:</p>
          * <ul>
-         * <li><p><strong>4</strong>: IPv4</p>
-         * </li>
-         * <li><p><strong>6</strong>: IPv6</p>
-         * </li>
+         * <li><strong>4</strong>: IPv4</li>
+         * <li><strong>6</strong>: IPv6</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,7 +289,11 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * <p>The language of the response messages. Valid values: <strong>zh</strong> (Chinese) and <strong>en</strong> (English).</p>
+         * <p>The language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -306,7 +305,7 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries to return in the current query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,11 +318,11 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * <p>The status of the access control policy. The policy is enabled by default after it is created. Valid values:</p>
+         * <p>The status of the access control policy. By default, the policy is enabled after it is created. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: enables the access control policy.</p>
+         * <li><p><strong>true</strong>: Enabled</p>
          * </li>
-         * <li><p><strong>false</strong>: disables the access control policy.</p>
+         * <li><p><strong>false</strong>: Disabled</p>
          * </li>
          * </ul>
          * 
@@ -337,9 +336,9 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * <p>The source address in the DNS firewall policy. Fuzzy match is supported.</p>
+         * <p>The source address in the access control policy of the DNS border firewall. Fuzzy match is supported.</p>
          * <blockquote>
-         * <p>The value of Source can be a CIDR block or an address book.</p>
+         * <p>Source can be a single CIDR block or an address book name.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -352,7 +351,7 @@ public class DescribeDnsFirewallPolicyRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The source IP address of the requester.</p>
          * 
          * <strong>example:</strong>
          * <p>140.205.118.XXX</p>

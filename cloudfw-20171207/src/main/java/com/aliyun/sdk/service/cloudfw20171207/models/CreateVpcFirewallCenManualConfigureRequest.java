@@ -133,7 +133,7 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The ID of the CEN instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         }
 
         /**
-         * <p>The UID of the Cloud Firewall member accounts.</p>
+         * <p>The UID of the Cloud Firewall member account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -187,7 +187,7 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         }
 
         /**
-         * <p>The border instance name of the virtual private cloud (VPC) firewalls.</p>
+         * <p>The instance name of the VPC firewall.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class CreateVpcFirewallCenManualConfigureRequest extends Request {
         }
 
         /**
-         * <p>The VPC-connected instance ID.</p>
+         * <p>The ID of the VPC-connected instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

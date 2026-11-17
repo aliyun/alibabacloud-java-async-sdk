@@ -67,7 +67,7 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
@@ -181,7 +181,7 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of IP addresses.</p>
+             * <p>The IP address list.</p>
              */
             public Builder ipAddrList(java.util.List<String> ipAddrList) {
                 this.ipAddrList = ipAddrList;

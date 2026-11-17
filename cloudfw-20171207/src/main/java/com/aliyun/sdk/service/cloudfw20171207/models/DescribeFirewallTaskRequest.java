@@ -30,6 +30,10 @@ public class DescribeFirewallTaskRequest extends Request {
     private String taskId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    private String taskName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
@@ -38,6 +42,7 @@ public class DescribeFirewallTaskRequest extends Request {
         this.childInstanceId = builder.childInstanceId;
         this.lang = builder.lang;
         this.taskId = builder.taskId;
+        this.taskName = builder.taskName;
         this.taskType = builder.taskType;
     }
 
@@ -76,6 +81,13 @@ public class DescribeFirewallTaskRequest extends Request {
     }
 
     /**
+     * @return taskName
+     */
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    /**
      * @return taskType
      */
     public String getTaskType() {
@@ -86,6 +98,7 @@ public class DescribeFirewallTaskRequest extends Request {
         private String childInstanceId; 
         private String lang; 
         private String taskId; 
+        private String taskName; 
         private String taskType; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class DescribeFirewallTaskRequest extends Request {
             this.childInstanceId = request.childInstanceId;
             this.lang = request.lang;
             this.taskId = request.taskId;
+            this.taskName = request.taskName;
             this.taskType = request.taskType;
         } 
 
@@ -137,6 +151,18 @@ public class DescribeFirewallTaskRequest extends Request {
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * <p>The action of the task, which is used to filter tasks by action. Valid values: init, open, close, delete, and change_route. This parameter takes effect only when TaskType is set to NAT. If TaskId is specified, this parameter is ignored. If this parameter is not specified, the most recently started task of the instance is retrieved, regardless of the action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
+         */
+        public Builder taskName(String taskName) {
+            this.putQueryParameter("TaskName", taskName);
+            this.taskName = taskName;
             return this;
         }
 

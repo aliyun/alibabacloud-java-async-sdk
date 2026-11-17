@@ -181,7 +181,7 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the firewall instance.</p>
+             * <p>The firewall instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vfw-tr-37145c8f5ede45e9****</p>
@@ -399,7 +399,7 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the event.</p>
+             * <p>The event details.</p>
              * 
              * <strong>example:</strong>
              * <p>[]</p>
@@ -431,9 +431,9 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             /**
              * <p>The type of the route table. Valid values:</p>
              * <ul>
-             * <li><p><strong>Custom</strong>: a custom route table.</p>
+             * <li><p><strong>Custom</strong>: custom route table</p>
              * </li>
-             * <li><p><strong>System</strong>: a system route table.</p>
+             * <li><p><strong>System</strong>: system route table</p>
              * </li>
              * </ul>
              * 
@@ -479,7 +479,7 @@ public class DescribeFirewallVswitchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai-b</p>

@@ -434,7 +434,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>No recommended intelligent policies are available.</p>
+             * <p>当前无智能策略推荐</p>
              */
             public Builder aclRecommendDetail(String aclRecommendDetail) {
                 this.aclRecommendDetail = aclRecommendDetail;
@@ -584,7 +584,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
              * <p>The risk reason.</p>
              * 
              * <strong>example:</strong>
-             * <p>Previous traffic is all malicious traffic.</p>
+             * <p>历史流量均为黑流量</p>
              */
             public Builder riskReason(String riskReason) {
                 this.riskReason = riskReason;

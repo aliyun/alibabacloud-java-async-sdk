@@ -353,7 +353,7 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of available IP addresses.</p>
+             * <p>The available IP address count.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -394,7 +394,7 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the member account.</p>
+             * <p>The UID of the member accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>184480249330****</p>
@@ -427,7 +427,7 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp10qla9mgi42eo****</p>
@@ -438,7 +438,7 @@ public class DescribeFirewallVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vSwitch.</p>
+             * <p>The vSwitch name.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-test</p>

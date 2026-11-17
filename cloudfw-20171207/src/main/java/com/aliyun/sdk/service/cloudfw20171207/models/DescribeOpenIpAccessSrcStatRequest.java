@@ -115,7 +115,7 @@ public class DescribeOpenIpAccessSrcStatRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class DescribeOpenIpAccessSrcStatRequest extends Request {
         }
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -151,7 +151,7 @@ public class DescribeOpenIpAccessSrcStatRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -163,7 +163,7 @@ public class DescribeOpenIpAccessSrcStatRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the visitor.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX</p>

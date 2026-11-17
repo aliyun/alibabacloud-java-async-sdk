@@ -314,7 +314,7 @@ public class CreateTrFirewallV2Request extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance. Create a CEN instance in the CEN console and make sure that an Enterprise Edition transit router is created.</p>
+         * <p>The ID of the CEN instance. Create a CEN instance in the CEN console first and make sure that an Enterprise Edition transit router is created.</p>
          * <blockquote>
          * <p>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</p>
          * </blockquote>
@@ -371,7 +371,7 @@ public class CreateTrFirewallV2Request extends Request {
          * <li><strong>MultiPrimary</strong>: active-active mode</li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is not specified, the system automatically selects the deployment mode based on the capabilities of the transit router. If the value is invalid, ErrorFwServiceMode (-360437) is returned. The MultiPrimary mode does not support specifying zones.</p>
+         * <p>If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If the value is invalid, ErrorFwServiceMode (-360437) is returned. The MultiPrimary mode does not support specifying zones.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -495,7 +495,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The primary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</p>
+         * <p>The primary CIDR block of the subnet used to connect to the TR in the firewall VPC in automatic mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.3.0/24</p>
@@ -519,7 +519,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The secondary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</p>
+         * <p>The secondary CIDR block of the subnet used to connect to the TR in the firewall VPC in automatic mode.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.16/28</p>
@@ -543,7 +543,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * <p>The list of zone IDs used for the transit router connection.</p>
+         * <p>The list of zone IDs used for the TR connection.</p>
          */
         public Builder trAttachmentZones(java.util.List<String> trAttachmentZones) {
             this.putQueryParameter("TrAttachmentZones", trAttachmentZones);

@@ -184,7 +184,7 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
-         * <p>The specification of the ACK cluster.</p>
+         * <p>The specifications of the ACK cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ack.pro.small</p>
@@ -196,7 +196,7 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
-         * <p>The status of the ACK cluster connector.</p>
+         * <p>The instance status of the connector in the ACK cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ready</p>
@@ -208,7 +208,7 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud UID of the account to which the ACK cluster resources belong.</p>
+         * <p>The Alibaba Cloud account ID to which the ACK cluster resources belong.</p>
          * 
          * <strong>example:</strong>
          * <p>135809047715****</p>
@@ -233,7 +233,7 @@ public class DescribeAckClustersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

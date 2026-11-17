@@ -93,7 +93,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data list.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -101,7 +101,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp when the peak total traffic occurred. The value is a UNIX timestamp in seconds.</p>
+         * <p>The timestamp when the total traffic peaks. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758470400</p>
@@ -112,7 +112,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The traffic distribution at the time of peak total traffic.</p>
+         * <p>The traffic distribution at the time when the total traffic peaks.</p>
          */
         public Builder maxBandwidthTimeBps(MaxBandwidthTimeBps maxBandwidthTimeBps) {
             this.maxBandwidthTimeBps = maxBandwidthTimeBps;
@@ -228,7 +228,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Internet firewall traffic.</p>
+             * <p>The traffic of the Internet firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -239,7 +239,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAT firewall traffic.</p>
+             * <p>The traffic of the NAT firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -250,8 +250,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the traffic occurred. The value is a UNIX timestamp in seconds.</p>
-             * <p>If the data at this point in time has not been processed, the values of other fields are -1.</p>
+             * <p>The time when the traffic is generated. The value is a UNIX timestamp in seconds.</p>
+             * <p>If the data for this time point is not processed, the values of other fields are -1.</p>
              * 
              * <strong>example:</strong>
              * <p>1758470400</p>
@@ -262,7 +262,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total firewall traffic.</p>
+             * <p>The total traffic of the firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -273,7 +273,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC firewall traffic.</p>
+             * <p>The traffic of the VPC firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -369,7 +369,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Internet firewall traffic at the time of peak total traffic.</p>
+             * <p>The traffic of the Internet firewall at the time when the total traffic peaks.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -380,7 +380,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAT firewall traffic at the time of peak total traffic.</p>
+             * <p>The traffic of the NAT firewall at the time when the total traffic peaks.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -402,7 +402,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC firewall traffic at the time of peak total traffic.</p>
+             * <p>The traffic of the VPC firewall at the time when the total traffic peaks.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

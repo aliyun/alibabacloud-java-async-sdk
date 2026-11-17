@@ -384,7 +384,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         } 
 
         /**
-         * <p>The list of names of the attacked applications. Specify the value in the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
+         * <p>The names of the attacked applications. Specify the value in the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;MySql&quot;,&quot;DNS&quot;]</p>
@@ -396,7 +396,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>The list of categories of the attacked applications. Specify the value in the <code>[&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;]</code> format.</p>
+         * <p>The categories of the attacked applications. Specify the value in the <code>[&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;]</code> format.</p>
          */
         public Builder attackAppCategory(java.util.List<String> attackAppCategory) {
             this.putQueryParameter("AttackAppCategory", attackAppCategory);
@@ -414,15 +414,15 @@ public class DescribeRiskEventGroupRequest extends Request {
          * <li><strong>5</strong>: other.</li>
          * <li><strong>6</strong>: information leak.</li>
          * <li><strong>7</strong>: DoS attack.</li>
-         * <li><strong>8</strong>: overflow attack.</li>
+         * <li><strong>8</strong>: buffer overflow attack.</li>
          * <li><strong>9</strong>: web attack.</li>
-         * <li><strong>10</strong>: trojan backdoor.</li>
-         * <li><strong>11</strong>: virus worm.</li>
+         * <li><strong>10</strong>: trojan or backdoor.</li>
+         * <li><strong>11</strong>: virus or worm.</li>
          * <li><strong>12</strong>: mining behavior.</li>
          * <li><strong>13</strong>: reverse shell.</li>
          * </ul>
          * <blockquote>
-         * <p>If the Settings for this parameter are not specified, events of all attack types are queried.</p>
+         * <p>If you do not provide Settings for this parameter, events of all attack types are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -453,8 +453,8 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>The paging Settings for the page number to return in a paged query.
-         * Default value: <strong>1</strong>.</p>
+         * <p>Settings for the paging page number to return in a paged query.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -466,10 +466,8 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>The risk event type. Valid value:  </p>
-         * <ul>
-         * <li><strong>session</strong>: intrusion prevention event.</li>
-         * </ul>
+         * <p>The risk event type.</p>
+         * <p>Valid value: <strong>session</strong>, which indicates intrusion prevention events.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -482,13 +480,13 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>The traffic direction of the intrusion prevention events. Valid values:</p>
+         * <p>The direction of the traffic in the intrusion prevention events. Valid values:</p>
          * <ul>
          * <li><strong>in</strong>: inbound.</li>
          * <li><strong>out</strong>: outbound.</li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is not specified, events in all traffic directions are queried.</p>
+         * <p>If you do not specify this parameter, events in all traffic directions are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -515,7 +513,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         /**
          * <p>The instance ID of the destination VPC-connected instance.</p>
          * <blockquote>
-         * <p>This parameter is required only when the FirewallType Settings is VpcFirewall.</p>
+         * <p>Settings for this parameter are required only when FirewallType is set to VpcFirewall.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -528,7 +526,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds. The end time must not be earlier than the start time. Both NAT and VPC queries include the end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -553,7 +551,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud firewall. Valid values:</p>
+         * <p>The type of the Cloud Firewall. Valid values:</p>
          * <ul>
          * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewalls.</li>
          * <li><strong>InternetFirewall</strong> (default): the Internet Border firewall.</li>
@@ -569,7 +567,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only the data for which private IP tracing is completed.</p>
+         * <p>Specifies whether to query only the data for which private network tracing is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -597,10 +595,10 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query IP geolocation information. Valid values:</p>
+         * <p>Specifies whether to query the geolocation information of IP addresses. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: IP geolocation information is not queried.</li>
-         * <li><strong>false</strong> (default): IP geolocation information is queried.</li>
+         * <li><strong>true</strong>: does not query the IP geolocation information.</li>
+         * <li><strong>false</strong> (default): queries the IP geolocation information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -631,7 +629,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>The paging Settings for the number of entries to return on each page in a paged query.</p>
+         * <p>Settings for the paging size in a paged query.</p>
          * <p>Default value: <strong>6</strong>. Maximum value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -650,7 +648,7 @@ public class DescribeRiskEventGroupRequest extends Request {
          * <li><strong>2</strong>: block.</li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is not specified, events in all defense statuses are queried.</p>
+         * <p>If you do not specify this parameter, events in all defense statuses are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -670,7 +668,7 @@ public class DescribeRiskEventGroupRequest extends Request {
          * <li><strong>4</strong>: threat intelligence.</li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is not specified, events detected by rules from all sources are queried.</p>
+         * <p>If you do not specify this parameter, events from all rule sources are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -685,9 +683,9 @@ public class DescribeRiskEventGroupRequest extends Request {
         /**
          * <p>The field by which to sort the results. Valid values:</p>
          * <ul>
-         * <li><p><strong>VulLevel</strong> (default): sort by severity level.</p>
+         * <li><p><strong>VulLevel</strong> (default): sorts the results by risk level.</p>
          * </li>
-         * <li><p><strong>LastTime</strong>: sort by the most recent occurrence time.</p>
+         * <li><p><strong>LastTime</strong>: sorts the results by the most recent occurrence time.</p>
          * </li>
          * </ul>
          * 
@@ -715,7 +713,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         /**
          * <p>The instance ID of the source VPC-connected instance.</p>
          * <blockquote>
-         * <p>This parameter is required only when the FirewallType Settings is VpcFirewall.</p>
+         * <p>Settings for this parameter are required only when FirewallType is set to VpcFirewall.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -741,14 +739,14 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * <p>The severity level of the intrusion prevention events. Valid values:</p>
+         * <p>The security level of the intrusion prevention events. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: low.</li>
-         * <li><strong>2</strong>: medium.</li>
-         * <li><strong>3</strong>: high.</li>
+         * <li><strong>1</strong>: low-risk.</li>
+         * <li><strong>2</strong>: medium-risk.</li>
+         * <li><strong>3</strong>: high-risk.</li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is not specified, events at all severity levels are queried.</p>
+         * <p>If you do not specify this parameter, events at all security levels are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

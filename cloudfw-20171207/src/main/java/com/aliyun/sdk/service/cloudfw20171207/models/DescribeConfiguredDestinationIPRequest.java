@@ -188,7 +188,7 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -249,7 +249,7 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
-         * <p>The group name.</p>
+         * <p>The name of the group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
-         * <p>The language for receiving messages.</p>
+         * <p>The language type for receiving messages.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -286,7 +286,7 @@ public class DescribeConfiguredDestinationIPRequest extends Request {
         }
 
         /**
-         * <p>The tracing code.</p>
+         * <p>The source code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of data.</p>
+         * <p>The data list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -293,7 +293,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of access control.</p>
+             * <p>The access control status.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -472,7 +472,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -483,7 +483,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on the current page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

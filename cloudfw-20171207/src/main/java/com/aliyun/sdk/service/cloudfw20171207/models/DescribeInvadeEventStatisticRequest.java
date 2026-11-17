@@ -101,7 +101,7 @@ public class DescribeInvadeEventStatisticRequest extends Request {
         } 
 
         /**
-         * <p>The end time. This is a UNIX timestamp that is accurate to the second.</p>
+         * <p>The end time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1774713600</p>
@@ -113,7 +113,7 @@ public class DescribeInvadeEventStatisticRequest extends Request {
         }
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -125,7 +125,7 @@ public class DescribeInvadeEventStatisticRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the visitor.</p>
+         * <p>The source IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>52.130.200.XXX</p>
@@ -137,7 +137,7 @@ public class DescribeInvadeEventStatisticRequest extends Request {
         }
 
         /**
-         * <p>The start time. This is a UNIX timestamp that is accurate to the second.</p>
+         * <p>The start time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1746151757</p>

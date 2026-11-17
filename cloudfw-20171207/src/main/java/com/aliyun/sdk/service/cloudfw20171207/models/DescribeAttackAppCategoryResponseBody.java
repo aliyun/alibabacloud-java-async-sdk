@@ -67,7 +67,7 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of attack application categories.</p>
+         * <p>The attack application categories.</p>
          */
         public Builder appCategories(java.util.List<AppCategories> appCategories) {
             this.appCategories = appCategories;
@@ -144,7 +144,7 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of attack applications.</p>
+             * <p>The attack applications.</p>
              */
             public Builder attackApps(java.util.List<String> attackApps) {
                 this.attackApps = attackApps;

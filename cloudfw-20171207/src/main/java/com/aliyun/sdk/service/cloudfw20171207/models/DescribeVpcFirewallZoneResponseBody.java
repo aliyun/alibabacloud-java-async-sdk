@@ -80,11 +80,7 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The deployment mode of the virtual private cloud (VPC) firewall service. Valid values:</p>
-         * <ul>
-         * <li><strong>PrimaryStandby</strong>: active/standby mode.</li>
-         * <li><strong>MultiPrimary</strong>: active-active mode.</li>
-         * </ul>
+         * <p>The deployment mode of the VPC firewall service. Valid values: <strong>PrimaryStandby</strong> (primary/secondary mode) and <strong>MultiPrimary</strong> (active-active mode).</p>
          * 
          * <strong>example:</strong>
          * <p>PrimaryStandby</p>
@@ -95,7 +91,7 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>337A4DBA-8A01-5E9C-99CA-84293E13****</p>
@@ -126,15 +122,15 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
      * <p>DescribeVpcFirewallZoneResponseBody</p>
      */
     public static class ZoneList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ZoneId")
-        private String zoneId;
-
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private ZoneList(Builder builder) {
-            this.zoneId = builder.zoneId;
             this.localName = builder.localName;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -146,41 +142,30 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         }
 
         /**
-         * @return zoneId
-         */
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        /**
          * @return localName
          */
         public String getLocalName() {
             return this.localName;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
-            private String zoneId; 
             private String localName; 
+            private String zoneId; 
 
             private Builder() {
             } 
 
             private Builder(ZoneList model) {
-                this.zoneId = model.zoneId;
                 this.localName = model.localName;
+                this.zoneId = model.zoneId;
             } 
-
-            /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-c</p>
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
 
             /**
              * <p>The zone name.</p>
@@ -190,6 +175,17 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
              */
             public Builder localName(String localName) {
                 this.localName = localName;
+                return this;
+            }
+
+            /**
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-c</p>
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

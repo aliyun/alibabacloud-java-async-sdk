@@ -91,7 +91,7 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of statistics.</p>
+         * <p>The statistics list.</p>
          */
         public Builder statList(java.util.List<StatList> statList) {
             this.statList = statList;
@@ -194,7 +194,7 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of abnormal source IP addresses.</p>
+             * <p>The number of abnormal IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -216,7 +216,7 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of normal source IP addresses.</p>
+             * <p>The number of normal IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>21</p>

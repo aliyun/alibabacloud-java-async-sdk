@@ -221,7 +221,7 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
              * <p>The comment.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Office network domain name</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -240,10 +240,10 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the domain name is one of the malicious domain names. Valid values: 0: Not malicious. 1: Malicious.</p>
+             * <p>Specifies whether the domain name is malicious. Valid values: 0 (not malicious), 1 (malicious).</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>false</p>
              */
             public Builder isMalicious(Boolean isMalicious) {
                 this.isMalicious = isMalicious;

@@ -228,7 +228,15 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The action (settings) that Cloud Firewall performs on the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
+         * <p>The action that Cloud Firewall performs on the traffic in the access control policy of the virtual private cloud (VPC) firewalls. Valid values:</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows the traffic.</li>
+         * <li><strong>drop</strong>: denies the traffic.</li>
+         * <li><strong>log</strong>: monitors the traffic.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all actions are queried.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>accept</p>
@@ -240,7 +248,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The unique identity ID of the access control policy of the virtual private cloud (VPC) firewall.</p>
+         * <p>The unique identifier of the access control policy of the virtual private cloud (VPC) firewalls.</p>
          * 
          * <strong>example:</strong>
          * <p>4037fbf7-3e39-4634-92a4-d0155247****</p>
@@ -252,7 +260,10 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The page number in a paged query. Settings the current page number for paging.</p>
+         * <p>The page number of the current page for a paged query.</p>
+         * <blockquote>
+         * <p>You must specify both CurrentPage and PageSize or omit both. If you specify only one of them, the operation returns the ErrorParametersPageSizeOrNo (400) error.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -264,7 +275,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The description of the access control policy of the virtual private cloud (VPC) firewall. Fuzzy queries are supported.</p>
+         * <p>The description of the access control policy of the virtual private cloud (VPC) firewalls. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -276,7 +287,10 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The destination address in the access control policy of the virtual private cloud (VPC) firewall. Fuzzy queries are supported.</p>
+         * <p>The destination address in the access control policy of the virtual private cloud (VPC) firewalls. Fuzzy match is supported.</p>
+         * <blockquote>
+         * <p>Destination can be a single CIDR block, a domain name, or an address book name.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX/24</p>
@@ -288,7 +302,14 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The language type for requests and responses.</p>
+         * <p>The language of the request and response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong> (default): Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -300,7 +321,7 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The UID of a member account of the current Alibaba Cloud account.</p>
+         * <p>The UID of the member account of the current Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -312,7 +333,11 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The number of access control policies for the virtual private cloud (VPC) firewall on each page in a paged query. Settings the number of policies per page for paging.</p>
+         * <p>The number of access control policies of the virtual private cloud (VPC) firewalls to return on each page for a paged query.</p>
+         * <p>Maximum value: 50.</p>
+         * <blockquote>
+         * <p>You must specify both CurrentPage and PageSize or omit both. If you specify only one of them, the operation returns the ErrorParametersPageSizeOrNo (400) error.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -324,7 +349,16 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The protocol type of the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</p>
+         * <p>The protocol type of the traffic in the access control policy of the virtual private cloud (VPC) firewalls. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * <li><strong>ICMP</strong></li>
+         * <li><strong>ANY</strong>: all protocol types.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all protocol types are queried.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -336,7 +370,11 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The enabled status of the access control policy. Valid values:</p>
+         * <p>The enabling status of the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The access control policy is enabled.</li>
+         * <li><strong>false</strong>: The access control policy is disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -349,6 +387,13 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
 
         /**
          * <p>The recurrence type of the policy validity period for the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Permanent</strong> (default): always.</li>
+         * <li><strong>None</strong>: a specific single time.</li>
+         * <li><strong>Daily</strong>: every day.</li>
+         * <li><strong>Weekly</strong>: every week.</li>
+         * <li><strong>Monthly</strong>: every month.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Permanent</p>
@@ -360,7 +405,10 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The source address in the access control policy of the virtual private cloud (VPC) firewall. Fuzzy queries are supported.</p>
+         * <p>The source address in the access control policy of the virtual private cloud (VPC) firewalls. Fuzzy match is supported.</p>
+         * <blockquote>
+         * <p>Source can be a single CIDR block or an address book name.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>192.0.XX.XX/24</p>
@@ -372,7 +420,16 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the virtual private cloud (VPC) firewall. Valid values:</p>
+         * <p>The instance ID of the virtual private cloud (VPC) firewalls. Valid values:</p>
+         * <ul>
+         * <li><p>If the virtual private cloud (VPC) firewalls protect traffic between two VPCs connected by CEN, set this parameter to the instance ID of the CEN instance.</p>
+         * </li>
+         * <li><p>If the virtual private cloud (VPC) firewalls protect traffic between two VPCs connected by Express Connect, set this parameter to the instance ID of the virtual private cloud (VPC) firewalls.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the instance ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

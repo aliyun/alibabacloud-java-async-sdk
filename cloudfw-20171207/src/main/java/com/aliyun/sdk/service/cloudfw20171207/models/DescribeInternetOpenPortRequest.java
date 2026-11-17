@@ -199,7 +199,7 @@ public class DescribeInternetOpenPortRequest extends Request {
         } 
 
         /**
-         * <p>The page number for a paged query.</p>
+         * <p>The page number for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +211,7 @@ public class DescribeInternetOpenPortRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1748358644</p>
@@ -223,7 +223,7 @@ public class DescribeInternetOpenPortRequest extends Request {
         }
 
         /**
-         * <p>The language of the content.</p>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -235,7 +235,7 @@ public class DescribeInternetOpenPortRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query.</p>
+         * <p>The number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -271,7 +271,7 @@ public class DescribeInternetOpenPortRequest extends Request {
         }
 
         /**
-         * <p>The name of the application. This is an exact match. If you do not specify this parameter, all applications are queried.</p>
+         * <p>The application name. Exact match. If this parameter is not specified, all applications are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>SMB</p>
@@ -283,7 +283,7 @@ public class DescribeInternetOpenPortRequest extends Request {
         }
 
         /**
-         * <p>The name of the application. This is a fuzzy match. If you do not specify this parameter, all applications are queried.</p>
+         * <p>The application name. Fuzzy match. If this parameter is not specified, all applications are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>SMB</p>
@@ -307,7 +307,7 @@ public class DescribeInternetOpenPortRequest extends Request {
         }
 
         /**
-         * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1735264800</p>

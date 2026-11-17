@@ -109,7 +109,7 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
          * <p>Indicates whether the whitelist is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Not enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class DescribeAclWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7D45133B-DBC0-506B-9DF9-AB0735D3****</p>

@@ -78,7 +78,7 @@ public class DescribeInternetServiceNameListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of application names.</p>
+         * <p>The list of application names.</p>
          */
         public Builder serviceNameList(java.util.List<String> serviceNameList) {
             this.serviceNameList = serviceNameList;

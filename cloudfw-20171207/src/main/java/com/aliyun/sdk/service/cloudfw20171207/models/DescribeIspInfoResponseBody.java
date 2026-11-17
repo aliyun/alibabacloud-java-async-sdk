@@ -171,7 +171,7 @@ public class DescribeIspInfoResponseBody extends TeaModel {
              * <p>The ISP ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>isp-dhyw2lxfpc****</p>
+             * <p>1000323</p>
              */
             public Builder ispId(Integer ispId) {
                 this.ispId = ispId;

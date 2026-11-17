@@ -59,7 +59,7 @@ public class DescribeSlsAnalyzeOpenStatusRequest extends Request {
         } 
 
         /**
-         * <p>The language type for receiving messages. Valid values:</p>
+         * <p>The language in which messages are received. Valid values:</p>
          * <ul>
          * <li><p><strong>zh</strong> (default): Chinese.</p>
          * </li>

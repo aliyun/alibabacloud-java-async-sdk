@@ -67,7 +67,7 @@ public class DescribeAccessInstanceRegionListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of regions that support the current sync node type.</p>
+         * <p>The list of regions that support the current synchronization node type.</p>
          */
         public Builder regionNoList(java.util.List<String> regionNoList) {
             this.regionNoList = regionNoList;

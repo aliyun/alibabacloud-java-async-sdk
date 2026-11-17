@@ -117,7 +117,7 @@ public class DescribeFirewallVswitchResourcesRequest extends Request {
         }
 
         /**
-         * <p>The language of the response message.</p>
+         * <p>The language in which messages are received.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -142,7 +142,7 @@ public class DescribeFirewallVswitchResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC instance.</p>
+         * <p>The VPC instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

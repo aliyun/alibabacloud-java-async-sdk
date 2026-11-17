@@ -85,7 +85,7 @@ public class DescribeCreatedNatFirewallRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the requester.</p>
+         * <p>The source IP address of the visitor.</p>
          * 
          * <strong>example:</strong>
          * <p>121.225.255.XXX</p>

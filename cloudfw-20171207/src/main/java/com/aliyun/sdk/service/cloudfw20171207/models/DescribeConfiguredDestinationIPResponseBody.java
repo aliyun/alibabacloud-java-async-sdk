@@ -106,7 +106,7 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of destinations returned.</p>
+         * <p>The returned list of destinations.</p>
          */
         public Builder destinations(java.util.List<Destinations> destinations) {
             this.destinations = destinations;
@@ -299,7 +299,7 @@ public class DescribeConfiguredDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation time. The value is a UNIX timestamp accurate to seconds, such as 1672502400.</p>
+             * <p>The operation time. The value is a UNIX timestamp in seconds, such as 1672502400.</p>
              * 
              * <strong>example:</strong>
              * <p>1534408189</p>

@@ -75,7 +75,7 @@ public class ModifyControlPolicyPriorityRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the access control policy.</p>
+         * <p>The unique identifier of the access control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ModifyControlPolicyPriorityRequest extends Request {
         }
 
         /**
-         * <p>The priority of the access control policy.</p>
+         * <p>The priority of the access control policy. Valid values: 1 to the number of policies in the same direction and of the same IP version. You can call DescribeControlPolicy to query the number of policies in the same direction and determine the valid upper limit. If the value exceeds the range, the ErrorParametersNewOrder (-200119) error is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

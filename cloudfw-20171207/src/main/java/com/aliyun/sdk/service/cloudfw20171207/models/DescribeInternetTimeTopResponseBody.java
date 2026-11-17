@@ -93,7 +93,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>19</p>
@@ -104,7 +104,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of data entries.</p>
+         * <p>The list of returned data.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -112,7 +112,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7F2D5C04-731F-50B0-ADE1-01637B3C****</p>
@@ -123,7 +123,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp of the traffic data. Unit: seconds.</p>
+         * <p>The traffic time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1734399660</p>
@@ -400,7 +400,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The public IP address.</p>
+             * <p>The IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>183.60.164.XXX</p>
@@ -477,7 +477,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound traffic. Unit: bit/s.</p>
+             * <p>The outbound bandwidth. Unit: bit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>45</p>
@@ -521,7 +521,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the asset instance.</p>
+             * <p>The instance ID of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>lb-bp14ue2rgktunncq****</p>
@@ -532,7 +532,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the asset.</p>
+             * <p>The name of the asset instance.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -587,7 +587,7 @@ public class DescribeInternetTimeTopResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC) instance.</p>
+             * <p>The instance ID of the VPC-connected instance.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-wz9o0uzfjuj81fx7m****</p>

@@ -150,7 +150,7 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of zones.</p>
+         * <p>The zones.</p>
          */
         public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
@@ -290,7 +290,7 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the vSwitch is in a VPC that is managed by Cloud Firewall.</p>
+             * <p>Indicates whether the VPC is managed by a firewall.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -301,7 +301,7 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-qzeaol304m***</p>
@@ -393,7 +393,7 @@ public class DescribeAccessInstanceVSwitchListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of vSwitches.</p>
+             * <p>The vSwitches.</p>
              */
             public Builder vSwitchList(java.util.List<VSwitchList> vSwitchList) {
                 this.vSwitchList = vSwitchList;

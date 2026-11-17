@@ -192,7 +192,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time of the signature library version. The value is a UNIX timestamp accurate to seconds.</p>
+             * <p>The update time of the signature library version. The value is a UNIX timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1741067915</p>

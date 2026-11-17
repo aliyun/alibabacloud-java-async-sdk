@@ -144,7 +144,7 @@ public class DescribeAccessInstanceVSwitchListRequest extends Request {
         } 
 
         /**
-         * <p>The UID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The Alibaba Cloud UID to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>135809047715****</p>
@@ -193,7 +193,7 @@ public class DescribeAccessInstanceVSwitchListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-qzeaol304m***</p>
@@ -205,7 +205,7 @@ public class DescribeAccessInstanceVSwitchListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the VPC-connected instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6b5lyul0x******</p>

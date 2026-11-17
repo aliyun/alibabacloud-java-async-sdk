@@ -114,7 +114,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The peak number of dropped sessions in the specified period.</p>
+         * <p>The maximum number of dropped sessions in the corresponding period (peak value).</p>
          * 
          * <strong>example:</strong>
          * <p>8090</p>
@@ -125,7 +125,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The average drop ratio for the entire query period, expressed as a percentage.</p>
+         * <p>The traffic multiplication mode. Valid values: - <strong>0</strong>: priority mode. - <strong>1</strong>: load balancing mode.</p>
          * 
          * <strong>example:</strong>
          * <p>12.34</p>
@@ -147,7 +147,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The average drop ratio from the previous cycle, expressed as a percentage.</p>
+         * <p>The traffic rate. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>1.23</p>
@@ -333,7 +333,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of sessions dropped by access control list (ACL) rules.</p>
+             * <p>The number of corresponding intrusion prevention events.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -344,7 +344,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current time point. The time is in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+             * <p>The current time point. The time format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-25 12:00:00</p>
@@ -355,7 +355,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ratio of dropped sessions to total sessions for this data point.</p>
+             * <p>The list of queried traffic points.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -366,7 +366,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of dropped sessions for the corresponding data point in the previous cycle.</p>
+             * <p>The value range of the object: <strong>[0,10000\]</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -377,7 +377,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The drop ratio for the corresponding data point in the previous cycle.</p>
+             * <p>The rate of network traffic. Unit: kbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -388,7 +388,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of dropped sessions.</p>
+             * <p>The number of blocked sessions.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -399,7 +399,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sessions dropped by the intrusion prevention system (IPS).</p>
+             * <p>The number of queried IP addresses.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -410,7 +410,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The corresponding time point in the previous cycle. The time is in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+             * <p>The corresponding time point in the previous period. The time format is YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-08-25 12:00:00</p>
@@ -421,7 +421,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp for the corresponding data point in the previous cycle. This value is a Unix timestamp that represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+             * <p>The dynamic packet drop time. The value is a UNIX timestamp in seconds, which indicates the number of seconds that have elapsed since January 1, 1970 (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>1724982259</p>
@@ -443,7 +443,7 @@ public class DescribeInternetDropTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of sessions.</p>
+             * <p>The total number of requests.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

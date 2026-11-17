@@ -93,7 +93,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A list of details about private IP tracing for the intrusion prevention system (IPS).</p>
+         * <p>The IPS private IP tracing list.</p>
          */
         public Builder ipsPrivateAssoc(java.util.List<IpsPrivateAssoc> ipsPrivateAssoc) {
             this.ipsPrivateAssoc = ipsPrivateAssoc;
@@ -101,7 +101,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B2841452-CB8D-4F7D-B247-38E1CF7334F8</p>
@@ -112,7 +112,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -123,7 +123,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of assets that have private IP tracing for the IPS enabled.</p>
+         * <p>The total number of instances for which IPS private IP tracing is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -309,7 +309,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of private IP tracing.</p>
+             * <p>The private IP tracing status.</p>
              * 
              * <strong>example:</strong>
              * <p>close</p>
@@ -331,7 +331,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID of the resource owner.</p>
+             * <p>The Alibaba Cloud account ID to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>1507956024994407</p>
@@ -342,7 +342,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of protected IP addresses.</p>
+             * <p>The list of protected IP addresses.</p>
              */
             public Builder protectedIpList(java.util.List<String> protectedIpList) {
                 this.protectedIpList = protectedIpList;
@@ -350,7 +350,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -361,7 +361,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cba48ec510bb640559c6f5161cde58014</p>
@@ -372,7 +372,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>job-0000000061279FB000001BBB31F9D673</p>
@@ -383,7 +383,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the association.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>closed</p>
@@ -394,7 +394,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of unprotected IP addresses.</p>
+             * <p>The list of unprotected IP addresses.</p>
              */
             public Builder unprotectedIpList(java.util.List<String> unprotectedIpList) {
                 this.unprotectedIpList = unprotectedIpList;
@@ -402,7 +402,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-wz92dxepli2pgnut796tf</p>
@@ -413,7 +413,7 @@ public class DescribeIpsPrivateAssocResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the VPC.</p>
+             * <p>The VPC instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf62vdtifj7kffpxrydqd</p>

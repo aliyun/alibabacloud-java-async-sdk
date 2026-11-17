@@ -59,7 +59,7 @@ public class DescribeAclCheckQuotaRequest extends Request {
         } 
 
         /**
-         * <p>The language of the response.</p>
+         * <p>The language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

@@ -99,7 +99,7 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -221,8 +221,8 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
 
             /**
              * <p>The action of the rule. Valid values:</p>
-             * <p> <strong>alert</strong>: monitor mode.</p>
-             * <p> <strong>drop</strong>: Block Mode.</p>
+             * <p> <strong>alert</strong>: Monitor.</p>
+             * <p> <strong>drop</strong>: Block.</p>
              * 
              * <strong>example:</strong>
              * <p>alert</p>
@@ -233,7 +233,7 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category description.</p>
+             * <p>The description of the category.</p>
              * 
              * <strong>example:</strong>
              * <p>Tor Export Malicious IP</p>
@@ -255,7 +255,7 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category name.</p>
+             * <p>The name of the category.</p>
              * 
              * <strong>example:</strong>
              * <p>Tor Export Malicious IP</p>
@@ -277,9 +277,9 @@ public class DescribeThreatIntelligenceSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The enabling status. Valid values:</p>
-             * <p> <strong>1</strong>: enabled.</p>
-             * <p> <strong>0</strong>: disabled.</p>
+             * <p>The enable status. Valid values:</p>
+             * <p> <strong>1</strong>: Enabled.</p>
+             * <p> <strong>0</strong>: Disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

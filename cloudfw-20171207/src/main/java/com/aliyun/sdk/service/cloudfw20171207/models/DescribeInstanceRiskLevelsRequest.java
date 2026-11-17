@@ -82,12 +82,10 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values:</p>
+         * <p>The language in which messages are received. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh</strong> (default): Chinese</p>
-         * </li>
-         * <li><p><strong>en</strong>: English</p>
-         * </li>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>

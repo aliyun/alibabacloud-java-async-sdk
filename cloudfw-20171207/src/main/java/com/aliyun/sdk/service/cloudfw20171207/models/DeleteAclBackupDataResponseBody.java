@@ -54,7 +54,7 @@ public class DeleteAclBackupDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>75E60025-43C5-5635-B7B7-272C5246****</p>
