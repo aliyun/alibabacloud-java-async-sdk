@@ -171,7 +171,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -179,7 +182,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -187,7 +193,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -195,7 +201,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -203,7 +212,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,7 +223,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -219,7 +234,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -227,7 +245,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2103a30617045934095083027d88c5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +256,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +267,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -317,6 +344,9 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RamAccountForCustomerManagers")
         private java.util.List<String> ramAccountForCustomerManagers;
 
+        @com.aliyun.core.annotation.NameInMap("RebateType")
+        private Integer rebateType;
+
         private Data(Builder builder) {
             this.amountDiscount = builder.amountDiscount;
             this.amountDue = builder.amountDue;
@@ -336,6 +366,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             this.productName = builder.productName;
             this.projectId = builder.projectId;
             this.ramAccountForCustomerManagers = builder.ramAccountForCustomerManagers;
+            this.rebateType = builder.rebateType;
         }
 
         public static Builder builder() {
@@ -472,6 +503,13 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             return this.ramAccountForCustomerManagers;
         }
 
+        /**
+         * @return rebateType
+         */
+        public Integer getRebateType() {
+            return this.rebateType;
+        }
+
         public static final class Builder {
             private Double amountDiscount; 
             private Double amountDue; 
@@ -491,6 +529,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             private String productName; 
             private Long projectId; 
             private java.util.List<String> ramAccountForCustomerManagers; 
+            private Integer rebateType; 
 
             private Builder() {
             } 
@@ -514,10 +553,14 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
                 this.productName = model.productName;
                 this.projectId = model.projectId;
                 this.ramAccountForCustomerManagers = model.ramAccountForCustomerManagers;
+                this.rebateType = model.rebateType;
             } 
 
             /**
-             * AmountDiscount.
+             * <p>The order discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amountDiscount(Double amountDiscount) {
                 this.amountDiscount = amountDiscount;
@@ -525,7 +568,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * AmountDue.
+             * <p>The actual payment amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29137</p>
              */
             public Builder amountDue(Double amountDue) {
                 this.amountDue = amountDue;
@@ -533,7 +579,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-24 14:20:40</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -541,7 +590,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerAccount.
+             * <p>The customer account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_123</p>
              */
             public Builder customerAccount(String customerAccount) {
                 this.customerAccount = customerAccount;
@@ -549,7 +601,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerClassification.
+             * <p>The customer classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Type C</p>
              */
             public Builder customerClassification(String customerClassification) {
                 this.customerClassification = customerClassification;
@@ -557,7 +612,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerUid.
+             * <p>The customer UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder customerUid(Long customerUid) {
                 this.customerUid = customerUid;
@@ -565,7 +623,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedAmountByCoupons.
+             * <p>The coupon amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedAmountByCoupons(Double deductedAmountByCoupons) {
                 this.deductedAmountByCoupons = deductedAmountByCoupons;
@@ -573,7 +634,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountedPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29137</p>
              */
             public Builder discountedPrice(Double discountedPrice) {
                 this.discountedPrice = discountedPrice;
@@ -581,7 +645,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>236414227150922</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -589,7 +656,15 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderStatus.
+             * <p>The order status. Valid values:</p>
+             * <ul>
+             * <li>1: unpaid</li>
+             * <li>2: paid</li>
+             * <li>3: canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -597,7 +672,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The order type. Valid values: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -605,7 +683,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * PaidAt.
+             * <p>The payment time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-24 14:20:40</p>
              */
             public Builder paidAt(String paidAt) {
                 this.paidAt = paidAt;
@@ -613,7 +694,14 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The payment type. Valid values:</p>
+             * <ul>
+             * <li>1: non-delegated payment</li>
+             * <li>2: delegated payment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
@@ -621,7 +709,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The original price or list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29137</p>
              */
             public Builder price(Double price) {
                 this.price = price;
@@ -629,7 +720,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slb</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -637,7 +731,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slb</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -645,7 +742,10 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The opportunity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202502230421</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -653,10 +753,18 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * RamAccountForCustomerManagers.
+             * <p>The employee who follows up with the customer.</p>
              */
             public Builder ramAccountForCustomerManagers(java.util.List<String> ramAccountForCustomerManagers) {
                 this.ramAccountForCustomerManagers = ramAccountForCustomerManagers;
+                return this;
+            }
+
+            /**
+             * RebateType.
+             */
+            public Builder rebateType(Integer rebateType) {
+                this.rebateType = rebateType;
                 return this;
             }
 

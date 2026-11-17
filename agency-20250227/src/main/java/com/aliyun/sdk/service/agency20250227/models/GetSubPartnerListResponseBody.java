@@ -133,7 +133,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +144,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.pageNo = pageNo;
@@ -149,6 +155,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The number of secondary distributors returned per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +167,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -168,7 +178,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         }
 
         /**
-         * SubPartnerList.
+         * <p>The list of secondary distributors.</p>
          */
         public Builder subPartnerList(java.util.List<SubPartnerList> subPartnerList) {
             this.subPartnerList = subPartnerList;
@@ -176,7 +186,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -184,7 +197,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -380,7 +396,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The detailed registered address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx Street, No. xxx</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -388,7 +407,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * AgreementStatus.
+             * <p>The agreement status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE_PERIOD</p>
              */
             public Builder agreementStatus(String agreementStatus) {
                 this.agreementStatus = agreementStatus;
@@ -396,7 +418,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * AgreementStatusDesc.
+             * <p>The description of the agreement status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Effective period</p>
              */
             public Builder agreementStatusDesc(String agreementStatusDesc) {
                 this.agreementStatusDesc = agreementStatusDesc;
@@ -404,7 +429,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city of the registered address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -412,7 +440,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * CompanyName.
+             * <p>The name of the secondary distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx Co., Ltd.</p>
              */
             public Builder companyName(String companyName) {
                 this.companyName = companyName;
@@ -420,7 +451,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * Contact.
+             * <p>The name of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder contact(String contact) {
                 this.contact = contact;
@@ -428,7 +462,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * District.
+             * <p>The district or county of the registered address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Xihu District</p>
              */
             public Builder district(String district) {
                 this.district = district;
@@ -436,7 +473,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * JoinTime.
+             * <p>The time when the secondary distributor first joined.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000-01-01</p>
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -444,7 +484,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccount.
+             * <p>The name of the primary account of the secondary distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary account of xxxxxx Co., Ltd.</p>
              */
             public Builder masterAccount(String masterAccount) {
                 this.masterAccount = masterAccount;
@@ -452,7 +495,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUid.
+             * <p>The UID of the primary account of the secondary distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder masterUid(String masterUid) {
                 this.masterUid = masterUid;
@@ -460,7 +506,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * <p>The PID of the secondary distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P123456</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -468,7 +517,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province of the registered address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang Province</p>
              */
             public Builder province(String province) {
                 this.province = province;

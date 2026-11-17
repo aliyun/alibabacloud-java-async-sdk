@@ -86,8 +86,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("me-east-1", "agency.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "agency.aliyuncs.com"),
             new TeaPair("us-east-1", "agency.aliyuncs.com"),
-            new TeaPair("us-west-1", "agency.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "agency.ap-southeast-1.aliyuncs.com")
+            new TeaPair("us-west-1", "agency.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -224,6 +223,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Ensure that the current caller account is a T1 distribution partner. 
+     * <notice>Available only on the international site.</notice></p>
+     * 
      * @param request the request parameters of GetIntlCommissionDetailFileList  GetIntlCommissionDetailFileListRequest
      * @return GetIntlCommissionDetailFileListResponse
      */

@@ -129,7 +129,10 @@ public class CustomerNoteCreateRequest extends Request {
         } 
 
         /**
-         * ContactInformation.
+         * <p>The contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13833333333</p>
          */
         public Builder contactInformation(String contactInformation) {
             this.putBodyParameter("ContactInformation", contactInformation);
@@ -138,7 +141,10 @@ public class CustomerNoteCreateRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * <p>The contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhang San</p>
          */
         public Builder contactName(String contactName) {
             this.putBodyParameter("ContactName", contactName);
@@ -147,7 +153,10 @@ public class CustomerNoteCreateRequest extends Request {
         }
 
         /**
-         * CustomerName.
+         * <p>The customer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXXX Co., Ltd</p>
          */
         public Builder customerName(String customerName) {
             this.putBodyParameter("CustomerName", customerName);
@@ -156,7 +165,10 @@ public class CustomerNoteCreateRequest extends Request {
         }
 
         /**
-         * CustomerUid.
+         * <p>The customer UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647796581073291</p>
          */
         public Builder customerUid(String customerUid) {
             this.putBodyParameter("CustomerUid", customerUid);
@@ -165,7 +177,10 @@ public class CustomerNoteCreateRequest extends Request {
         }
 
         /**
-         * NoteContent.
+         * <p>The note content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Routine customer visit to discuss the agent implementation plan for the customer</p>
          */
         public Builder noteContent(String noteContent) {
             this.putBodyParameter("NoteContent", noteContent);
@@ -174,7 +189,10 @@ public class CustomerNoteCreateRequest extends Request {
         }
 
         /**
-         * TouchDate.
+         * <p>The contact time (timestamp, in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1784266662000</p>
          */
         public Builder touchDate(Long touchDate) {
             this.putBodyParameter("TouchDate", touchDate);

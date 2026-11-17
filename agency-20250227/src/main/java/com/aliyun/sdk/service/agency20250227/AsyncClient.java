@@ -62,6 +62,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCustomerOrderListResponse> getCustomerOrderList(GetCustomerOrderListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Ensure that the current caller account is a T1 distribution partner. 
+     * <notice>Available only on the international site.</notice></p>
+     * 
      * @param request the request parameters of GetIntlCommissionDetailFileList  GetIntlCommissionDetailFileListRequest
      * @return GetIntlCommissionDetailFileListResponse
      */

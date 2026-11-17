@@ -106,7 +106,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -519,7 +528,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomerAdjustedRenewalAmountDue.
+             * <p>The adjusted customer acquisition amount due for renewal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder customerAdjustedRenewalAmountDue(Double customerAdjustedRenewalAmountDue) {
                 this.customerAdjustedRenewalAmountDue = customerAdjustedRenewalAmountDue;
@@ -527,7 +539,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerOtherBillAmount.
+             * <p>The customer acquisition amount for new purchases, upgrades, and refunds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder customerOtherBillAmount(Double customerOtherBillAmount) {
                 this.customerOtherBillAmount = customerOtherBillAmount;
@@ -535,7 +550,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalCustomerRenewalAmountDue.
+             * <p>The customer acquisition amount due for renewal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder finalCustomerRenewalAmountDue(Double finalCustomerRenewalAmountDue) {
                 this.finalCustomerRenewalAmountDue = finalCustomerRenewalAmountDue;
@@ -543,7 +561,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalCustomerRenewalRate.
+             * <p>The customer acquisition commission renewal rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder finalCustomerRenewalRate(Double finalCustomerRenewalRate) {
                 this.finalCustomerRenewalRate = finalCustomerRenewalRate;
@@ -551,7 +572,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalCustomerRenewedAmount.
+             * <p>The customer acquisition renewed amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder finalCustomerRenewedAmount(Double finalCustomerRenewedAmount) {
                 this.finalCustomerRenewedAmount = finalCustomerRenewedAmount;
@@ -559,7 +583,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalOtherBillAmount.
+             * <p>The total amount for new purchases, upgrades, and refunds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder finalOtherBillAmount(Double finalOtherBillAmount) {
                 this.finalOtherBillAmount = finalOtherBillAmount;
@@ -567,7 +594,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalRenewalAmountDue.
+             * <p>The final amount due for renewal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder finalRenewalAmountDue(Double finalRenewalAmountDue) {
                 this.finalRenewalAmountDue = finalRenewalAmountDue;
@@ -575,7 +605,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalRenewalRate.
+             * <p>The final commission renewal rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder finalRenewalRate(Double finalRenewalRate) {
                 this.finalRenewalRate = finalRenewalRate;
@@ -583,7 +616,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalRenewedAmount.
+             * <p>The final renewed amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder finalRenewedAmount(Double finalRenewedAmount) {
                 this.finalRenewedAmount = finalRenewedAmount;
@@ -591,7 +627,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalSubPartnerRenewalAmountDue.
+             * <p>The sub-partner acquisition amount due for renewal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder finalSubPartnerRenewalAmountDue(Double finalSubPartnerRenewalAmountDue) {
                 this.finalSubPartnerRenewalAmountDue = finalSubPartnerRenewalAmountDue;
@@ -599,7 +638,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalSubPartnerRenewalRate.
+             * <p>The sub-partner acquisition commission renewal rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.85</p>
              */
             public Builder finalSubPartnerRenewalRate(Double finalSubPartnerRenewalRate) {
                 this.finalSubPartnerRenewalRate = finalSubPartnerRenewalRate;
@@ -607,7 +649,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalSubPartnerRenewedAmount.
+             * <p>The sub-partner acquisition renewed amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder finalSubPartnerRenewedAmount(Double finalSubPartnerRenewedAmount) {
                 this.finalSubPartnerRenewedAmount = finalSubPartnerRenewedAmount;
@@ -615,7 +660,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * FiscalYearAndQuarter.
+             * <p>The fiscal year and quarter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025Q4</p>
              */
             public Builder fiscalYearAndQuarter(String fiscalYearAndQuarter) {
                 this.fiscalYearAndQuarter = fiscalYearAndQuarter;
@@ -623,7 +671,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * MasterPid.
+             * <p>The partner PID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P123423453</p>
              */
             public Builder masterPid(String masterPid) {
                 this.masterPid = masterPid;
@@ -631,7 +682,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * MasterPidName.
+             * <p>The partner PID name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX Co., Ltd.</p>
              */
             public Builder masterPidName(String masterPidName) {
                 this.masterPidName = masterPidName;
@@ -639,7 +693,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialCustomerRenewRatio.
+             * <p>The customer acquisition commission renewal rate including special approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7</p>
              */
             public Builder specialCustomerRenewRatio(Double specialCustomerRenewRatio) {
                 this.specialCustomerRenewRatio = specialCustomerRenewRatio;
@@ -647,7 +704,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialCustomerRenewalAmountDue.
+             * <p>The customer acquisition amount due for renewal including special approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder specialCustomerRenewalAmountDue(Double specialCustomerRenewalAmountDue) {
                 this.specialCustomerRenewalAmountDue = specialCustomerRenewalAmountDue;
@@ -655,7 +715,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialCustomerRenewedAmount.
+             * <p>The customer acquisition renewed amount including special approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder specialCustomerRenewedAmount(Double specialCustomerRenewedAmount) {
                 this.specialCustomerRenewedAmount = specialCustomerRenewedAmount;
@@ -663,7 +726,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialFinalRenewRatio.
+             * <p>The final quarterly commission renewal rate including special approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7</p>
              */
             public Builder specialFinalRenewRatio(Double specialFinalRenewRatio) {
                 this.specialFinalRenewRatio = specialFinalRenewRatio;
@@ -671,7 +737,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialFinalRenewalAmountDue.
+             * <p>The final quarterly commission amount due for renewal including special approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder specialFinalRenewalAmountDue(Double specialFinalRenewalAmountDue) {
                 this.specialFinalRenewalAmountDue = specialFinalRenewalAmountDue;
@@ -679,7 +748,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialFinalRenewedAmount.
+             * <p>The final quarterly commission renewed amount including special approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder specialFinalRenewedAmount(Double specialFinalRenewedAmount) {
                 this.specialFinalRenewedAmount = specialFinalRenewedAmount;
@@ -687,7 +759,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialSubPartnerRenewRatio.
+             * <p>The sub-partner acquisition commission renewal rate including special approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder specialSubPartnerRenewRatio(Double specialSubPartnerRenewRatio) {
                 this.specialSubPartnerRenewRatio = specialSubPartnerRenewRatio;
@@ -695,7 +770,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialSubPartnerRenewalAmountDue.
+             * <p>The sub-partner acquisition amount due for renewal including special approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder specialSubPartnerRenewalAmountDue(Double specialSubPartnerRenewalAmountDue) {
                 this.specialSubPartnerRenewalAmountDue = specialSubPartnerRenewalAmountDue;
@@ -703,7 +781,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialSubPartnerRenewedAmount.
+             * <p>The sub-partner acquisition renewed amount including special approvals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder specialSubPartnerRenewedAmount(Double specialSubPartnerRenewedAmount) {
                 this.specialSubPartnerRenewedAmount = specialSubPartnerRenewedAmount;
@@ -711,7 +792,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SubPartnerAdjustedRenewalAmountDue.
+             * <p>The adjusted sub-partner acquisition amount due for renewal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder subPartnerAdjustedRenewalAmountDue(Double subPartnerAdjustedRenewalAmountDue) {
                 this.subPartnerAdjustedRenewalAmountDue = subPartnerAdjustedRenewalAmountDue;
@@ -719,7 +803,10 @@ public class GetRenewalRateListResponseBody extends TeaModel {
             }
 
             /**
-             * SubPartnerOtherBillAmount.
+             * <p>The sub-partner acquisition amount for new purchases, upgrades, and refunds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder subPartnerOtherBillAmount(Double subPartnerOtherBillAmount) {
                 this.subPartnerOtherBillAmount = subPartnerOtherBillAmount;

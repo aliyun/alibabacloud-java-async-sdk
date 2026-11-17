@@ -91,6 +91,10 @@ public class GetCustomerOrderListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RamAccountForCustomerManager")
     private String ramAccountForCustomerManager;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RebateType")
+    private Integer rebateType;
+
     private GetCustomerOrderListRequest(Builder builder) {
         super(builder);
         this.customerAccount = builder.customerAccount;
@@ -111,6 +115,7 @@ public class GetCustomerOrderListRequest extends Request {
         this.productName = builder.productName;
         this.projectId = builder.projectId;
         this.ramAccountForCustomerManager = builder.ramAccountForCustomerManager;
+        this.rebateType = builder.rebateType;
     }
 
     public static Builder builder() {
@@ -252,6 +257,13 @@ public class GetCustomerOrderListRequest extends Request {
         return this.ramAccountForCustomerManager;
     }
 
+    /**
+     * @return rebateType
+     */
+    public Integer getRebateType() {
+        return this.rebateType;
+    }
+
     public static final class Builder extends Request.Builder<GetCustomerOrderListRequest, Builder> {
         private String customerAccount; 
         private Long customerUid; 
@@ -271,6 +283,7 @@ public class GetCustomerOrderListRequest extends Request {
         private String productName; 
         private Long projectId; 
         private String ramAccountForCustomerManager; 
+        private Integer rebateType; 
 
         private Builder() {
             super();
@@ -296,10 +309,14 @@ public class GetCustomerOrderListRequest extends Request {
             this.productName = request.productName;
             this.projectId = request.projectId;
             this.ramAccountForCustomerManager = request.ramAccountForCustomerManager;
+            this.rebateType = request.rebateType;
         } 
 
         /**
-         * CustomerAccount.
+         * <p>The customer account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_123</p>
          */
         public Builder customerAccount(String customerAccount) {
             this.putQueryParameter("CustomerAccount", customerAccount);
@@ -308,7 +325,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * CustomerUid.
+         * <p>The customer UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder customerUid(Long customerUid) {
             this.putQueryParameter("CustomerUid", customerUid);
@@ -317,7 +337,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * OrderCreateAfter.
+         * <p>The start timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1727789348000</p>
          */
         public Builder orderCreateAfter(Long orderCreateAfter) {
             this.putQueryParameter("OrderCreateAfter", orderCreateAfter);
@@ -326,7 +349,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * OrderCreateBefore.
+         * <p>The end timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741008566000</p>
          */
         public Builder orderCreateBefore(Long orderCreateBefore) {
             this.putQueryParameter("OrderCreateBefore", orderCreateBefore);
@@ -335,7 +361,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13595216</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -344,7 +373,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * OrderPayAfter.
+         * <p>The start timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1727789348000</p>
          */
         public Builder orderPayAfter(Long orderPayAfter) {
             this.putQueryParameter("OrderPayAfter", orderPayAfter);
@@ -353,7 +385,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * OrderPayBefore.
+         * <p>The end timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741008566000</p>
          */
         public Builder orderPayBefore(Long orderPayBefore) {
             this.putQueryParameter("OrderPayBefore", orderPayBefore);
@@ -362,7 +397,15 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * OrderStatus.
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>1: unpaid</li>
+         * <li>2: canceled</li>
+         * <li>3: paid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder orderStatus(Integer orderStatus) {
             this.putQueryParameter("OrderStatus", orderStatus);
@@ -371,7 +414,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * OrderTypeList.
+         * <p>The list of order types.</p>
          */
         public Builder orderTypeList(java.util.List<String> orderTypeList) {
             String orderTypeListShrink = shrink(orderTypeList, "OrderTypeList", "json");
@@ -381,6 +424,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -393,6 +437,7 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -405,7 +450,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * PayAmountAfter.
+         * <p>The minimum actual payment amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder payAmountAfter(Double payAmountAfter) {
             this.putQueryParameter("PayAmountAfter", payAmountAfter);
@@ -414,7 +462,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * PayAmountBefore.
+         * <p>The maximum actual payment amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder payAmountBefore(Double payAmountBefore) {
             this.putQueryParameter("PayAmountBefore", payAmountBefore);
@@ -423,7 +474,14 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The payment type. Valid values:</p>
+         * <ul>
+         * <li>1: non-delegated payment</li>
+         * <li>2: delegated payment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder payType(Integer payType) {
             this.putQueryParameter("PayType", payType);
@@ -432,7 +490,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -441,7 +502,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * ProductName.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic computing</p>
          */
         public Builder productName(String productName) {
             this.putQueryParameter("ProductName", productName);
@@ -450,7 +514,10 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The opportunity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202502002231</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -459,11 +526,23 @@ public class GetCustomerOrderListRequest extends Request {
         }
 
         /**
-         * RamAccountForCustomerManager.
+         * <p>The employee who follows up with the customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234532</p>
          */
         public Builder ramAccountForCustomerManager(String ramAccountForCustomerManager) {
             this.putQueryParameter("RamAccountForCustomerManager", ramAccountForCustomerManager);
             this.ramAccountForCustomerManager = ramAccountForCustomerManager;
+            return this;
+        }
+
+        /**
+         * RebateType.
+         */
+        public Builder rebateType(Integer rebateType) {
+            this.putQueryParameter("RebateType", rebateType);
+            this.rebateType = rebateType;
             return this;
         }
 

@@ -60,6 +60,7 @@ public class GetRenewalRateListRequest extends Request {
         } 
 
         /**
+         * <p>The fiscal year and quarter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

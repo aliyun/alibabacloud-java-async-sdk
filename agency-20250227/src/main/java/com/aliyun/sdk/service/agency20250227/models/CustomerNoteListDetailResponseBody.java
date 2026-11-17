@@ -132,7 +132,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed information about the access denial returned in the POP API response when the RAM user lacks the required permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +154,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -156,7 +162,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code used in the POP API response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The prompt message, which is the same as Message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -180,7 +195,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +316,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * DownloadUrl.
+             * <p>The download URL of the attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4-inner/common/v1.20251010002216.dex?Expires=1760062445&OSSAccessKeyId=x6R87i97yKeKRggz&Signature=">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4-inner/common/v1.20251010002216.dex?Expires=1760062445&amp;OSSAccessKeyId=x6R87i97yKeKRggz&amp;Signature=</a>****</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -306,7 +327,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>307</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -314,7 +338,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Course training</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -322,7 +349,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>The signature of the attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hF2UrEMc4XWy990sh9LGM0+ScI8=</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -330,7 +360,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the attachment. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111222121</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -338,7 +371,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the attachment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image/png</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -561,7 +597,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AiResult.
+             * <p>The AI analysis result. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Contact date&quot;:&quot;2026-07-17 10:00:01&quot;}</p>
              */
             public Builder aiResult(String aiResult) {
                 this.aiResult = aiResult;
@@ -569,7 +608,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Attachment.
+             * <p>The list of attachments.</p>
              */
             public Builder attachment(java.util.List<Attachment> attachment) {
                 this.attachment = attachment;
@@ -577,7 +616,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ContactInformation.
+             * <p>The contact information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13833333333</p>
              */
             public Builder contactInformation(String contactInformation) {
                 this.contactInformation = contactInformation;
@@ -585,7 +627,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>The name of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -593,7 +638,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The UID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>291688841144601701</p>
              */
             public Builder creator(Long creator) {
                 this.creator = creator;
@@ -601,7 +649,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The logon name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -609,7 +660,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerName.
+             * <p>The name of the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXXX Co., Ltd</p>
              */
             public Builder customerName(String customerName) {
                 this.customerName = customerName;
@@ -617,7 +671,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerUid.
+             * <p>The UID of the customer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1271202085096245</p>
              */
             public Builder customerUid(Long customerUid) {
                 this.customerUid = customerUid;
@@ -625,7 +682,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the note was created. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07 10:27:46</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -633,7 +693,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NoteContent.
+             * <p>The content of the note.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Note content</p>
              */
             public Builder noteContent(String noteContent) {
                 this.noteContent = noteContent;
@@ -641,7 +704,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NoteId.
+             * <p>The ID of the note.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620737</p>
              */
             public Builder noteId(Long noteId) {
                 this.noteId = noteId;
@@ -649,7 +715,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NoteType.
+             * <p>The type of the note.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMER</p>
              */
             public Builder noteType(String noteType) {
                 this.noteType = noteType;
@@ -657,7 +726,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NoteTypeLabel.
+             * <p>The name of the note type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customer</p>
              */
             public Builder noteTypeLabel(String noteTypeLabel) {
                 this.noteTypeLabel = noteTypeLabel;
@@ -665,7 +737,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TouchDate.
+             * <p>The contact date. The value is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1784266662000</p>
              */
             public Builder touchDate(String touchDate) {
                 this.touchDate = touchDate;

@@ -150,6 +150,7 @@ public class GetIntlCommissionDetailFileListRequest extends Request {
         } 
 
         /**
+         * <p>The billing month.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +163,7 @@ public class GetIntlCommissionDetailFileListRequest extends Request {
         }
 
         /**
+         * <p>The AccessKey ID used to upload files to OSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +176,7 @@ public class GetIntlCommissionDetailFileListRequest extends Request {
         }
 
         /**
+         * <p>The AccessKey secret used to upload files to OSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +189,7 @@ public class GetIntlCommissionDetailFileListRequest extends Request {
         }
 
         /**
+         * <p>The OSS bucket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +202,7 @@ public class GetIntlCommissionDetailFileListRequest extends Request {
         }
 
         /**
+         * <p>The endpoint of the OSS bucket used for file sharing.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +215,7 @@ public class GetIntlCommissionDetailFileListRequest extends Request {
         }
 
         /**
+         * <p>The region where the current OSS bucket is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,6 +228,7 @@ public class GetIntlCommissionDetailFileListRequest extends Request {
         }
 
         /**
+         * <p>The STS token used to upload files to OSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

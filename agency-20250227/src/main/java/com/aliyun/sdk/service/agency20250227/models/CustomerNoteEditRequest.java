@@ -115,7 +115,10 @@ public class CustomerNoteEditRequest extends Request {
         } 
 
         /**
-         * ContactInformation.
+         * <p>The contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13833333333</p>
          */
         public Builder contactInformation(String contactInformation) {
             this.putBodyParameter("ContactInformation", contactInformation);
@@ -124,7 +127,10 @@ public class CustomerNoteEditRequest extends Request {
         }
 
         /**
-         * ContactName.
+         * <p>The name of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Smith</p>
          */
         public Builder contactName(String contactName) {
             this.putBodyParameter("ContactName", contactName);
@@ -133,7 +139,10 @@ public class CustomerNoteEditRequest extends Request {
         }
 
         /**
-         * NoteContent.
+         * <p>The content of the note.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Routine customer visit to discuss the agent development plan for the customer</p>
          */
         public Builder noteContent(String noteContent) {
             this.putBodyParameter("NoteContent", noteContent);
@@ -142,7 +151,10 @@ public class CustomerNoteEditRequest extends Request {
         }
 
         /**
-         * NoteId.
+         * <p>The ID of the note. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629862</p>
          */
         public Builder noteId(Long noteId) {
             this.putBodyParameter("NoteId", noteId);
@@ -151,7 +163,10 @@ public class CustomerNoteEditRequest extends Request {
         }
 
         /**
-         * TouchDate.
+         * <p>The time when the contact was made. The value is a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1784266662000</p>
          */
         public Builder touchDate(Long touchDate) {
             this.putBodyParameter("TouchDate", touchDate);

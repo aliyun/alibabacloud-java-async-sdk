@@ -87,7 +87,10 @@ public class CustomerNoteListRequest extends Request {
         } 
 
         /**
-         * CustomerUid.
+         * <p>The customer UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5625862916391497</p>
          */
         public Builder customerUid(String customerUid) {
             this.putBodyParameter("CustomerUid", customerUid);
@@ -96,7 +99,10 @@ public class CustomerNoteListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putBodyParameter("PageNum", pageNum);
@@ -105,7 +111,10 @@ public class CustomerNoteListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

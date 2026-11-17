@@ -287,7 +287,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         } 
 
         /**
-         * OrderCreateAfter.
+         * <p>The start timestamp of the order creation time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1727789348000</p>
          */
         public Builder orderCreateAfter(Long orderCreateAfter) {
             this.putQueryParameter("OrderCreateAfter", orderCreateAfter);
@@ -296,7 +299,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * OrderCreateBefore.
+         * <p>The end timestamp of the order creation time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741008566000</p>
          */
         public Builder orderCreateBefore(Long orderCreateBefore) {
             this.putQueryParameter("OrderCreateBefore", orderCreateBefore);
@@ -305,7 +311,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>209335720330622</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -314,7 +323,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * OrderPayAfter.
+         * <p>The start timestamp of the order payment time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1727789348000</p>
          */
         public Builder orderPayAfter(Long orderPayAfter) {
             this.putQueryParameter("OrderPayAfter", orderPayAfter);
@@ -323,7 +335,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * OrderPayBefore.
+         * <p>The end timestamp of the order payment time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741008566000</p>
          */
         public Builder orderPayBefore(Long orderPayBefore) {
             this.putQueryParameter("OrderPayBefore", orderPayBefore);
@@ -332,7 +347,15 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * OrderStatus.
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>1: unpaid</li>
+         * <li>2: paid</li>
+         * <li>3: voided.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder orderStatus(Long orderStatus) {
             this.putQueryParameter("OrderStatus", orderStatus);
@@ -341,7 +364,8 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * OrderTypeList.
+         * <p>The list of order types.
+         * Valid values: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, and OTHERS.</p>
          */
         public Builder orderTypeList(java.util.List<String> orderTypeList) {
             String orderTypeListShrink = shrink(orderTypeList, "OrderTypeList", "json");
@@ -351,6 +375,7 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -363,6 +388,7 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -375,7 +401,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * PayAmountAfter.
+         * <p>The minimum actual payment amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder payAmountAfter(Long payAmountAfter) {
             this.putQueryParameter("PayAmountAfter", payAmountAfter);
@@ -384,7 +413,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * PayAmountBefore.
+         * <p>The maximum actual payment amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder payAmountBefore(Long payAmountBefore) {
             this.putQueryParameter("PayAmountBefore", payAmountBefore);
@@ -393,7 +425,14 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The payment type. Valid values:</p>
+         * <ul>
+         * <li>1: non-delegated payment</li>
+         * <li>2: delegated payment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder payType(Long payType) {
             this.putQueryParameter("PayType", payType);
@@ -402,7 +441,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -411,7 +453,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * ProductName.
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic computing</p>
          */
         public Builder productName(String productName) {
             this.putQueryParameter("ProductName", productName);
@@ -420,7 +465,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The opportunity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202501101023</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -429,7 +477,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * SubPartnerName.
+         * <p>The name of the secondary partner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX Co., Ltd.</p>
          */
         public Builder subPartnerName(String subPartnerName) {
             this.putQueryParameter("SubPartnerName", subPartnerName);
@@ -438,7 +489,10 @@ public class GetSubPartnerOrderListRequest extends Request {
         }
 
         /**
-         * SubPartnerUid.
+         * <p>The UID of the secondary partner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123432311</p>
          */
         public Builder subPartnerUid(Long subPartnerUid) {
             this.putQueryParameter("SubPartnerUid", subPartnerUid);

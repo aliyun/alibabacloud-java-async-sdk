@@ -145,7 +145,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +175,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -177,7 +186,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -196,7 +208,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +219,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries that meet the query conditions. This is an optional parameter and is not returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -465,7 +483,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             } 
 
             /**
-             * AmountDiscount.
+             * <p>The order discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder amountDiscount(Double amountDiscount) {
                 this.amountDiscount = amountDiscount;
@@ -473,7 +494,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * AmountDue.
+             * <p>The actual payment amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3750</p>
              */
             public Builder amountDue(Double amountDue) {
                 this.amountDue = amountDue;
@@ -481,7 +505,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-07 07:52:22</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -489,7 +516,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerClassification.
+             * <p>The customer classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Type C</p>
              */
             public Builder customerClassification(String customerClassification) {
                 this.customerClassification = customerClassification;
@@ -497,7 +527,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedAmountByCoupons.
+             * <p>The coupon amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedAmountByCoupons(Double deductedAmountByCoupons) {
                 this.deductedAmountByCoupons = deductedAmountByCoupons;
@@ -505,7 +538,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountedPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3750</p>
              */
             public Builder discountedPrice(Double discountedPrice) {
                 this.discountedPrice = discountedPrice;
@@ -513,7 +549,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>236414227150922</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -521,7 +560,15 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderStatus.
+             * <p>The order status. Valid values:</p>
+             * <ul>
+             * <li>1: unpaid</li>
+             * <li>2: deprecated</li>
+             * <li>3: paid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -529,7 +576,18 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The order type. Valid values:</p>
+             * <ul>
+             * <li>BUY: new purchase</li>
+             * <li>UPGRADE: upgrade</li>
+             * <li>DOWNGRADE: downgrade</li>
+             * <li>RENEW: renewal</li>
+             * <li>REFUND: refund</li>
+             * <li>OTHERS: other.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -537,7 +595,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * PaidAt.
+             * <p>The payment time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-07 07:52:22</p>
              */
             public Builder paidAt(String paidAt) {
                 this.paidAt = paidAt;
@@ -545,7 +606,14 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The payment type. Valid values:</p>
+             * <ul>
+             * <li>1: non-delegated payment</li>
+             * <li>2: delegated payment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
@@ -553,7 +621,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The original price or list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3750</p>
              */
             public Builder price(Double price) {
                 this.price = price;
@@ -561,7 +632,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -569,7 +643,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic computing</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -577,7 +654,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The opportunity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202502233443</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -585,7 +665,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * SubPartnerName.
+             * <p>The name of the secondary partner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx Co., Ltd.</p>
              */
             public Builder subPartnerName(String subPartnerName) {
                 this.subPartnerName = subPartnerName;
@@ -593,7 +676,10 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * SubPartnerUid.
+             * <p>The UID of the secondary partner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1123132</p>
              */
             public Builder subPartnerUid(Long subPartnerUid) {
                 this.subPartnerUid = subPartnerUid;

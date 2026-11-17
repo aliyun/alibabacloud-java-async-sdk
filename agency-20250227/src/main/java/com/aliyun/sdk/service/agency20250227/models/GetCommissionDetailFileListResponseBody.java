@@ -117,7 +117,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -144,7 +147,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -249,7 +255,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             } 
 
             /**
-             * BucketSyncStatus.
+             * <p>The push status of the OSS file. Valid values: Processing, Succeeded, or Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Processing</p>
              */
             public Builder bucketSyncStatus(String bucketSyncStatus) {
                 this.bucketSyncStatus = bucketSyncStatus;
@@ -257,7 +266,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * CommissionPolicyName.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The policy name. For more information, see the APS commission query and download feature.</p>
              */
             public Builder commissionPolicyName(String commissionPolicyName) {
                 this.commissionPolicyName = commissionPolicyName;
@@ -265,7 +277,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Commission202502021112</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -273,7 +288,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Distributor policies are used to expand channels, and standard policies are used to acquire customers.</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -281,7 +299,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The file URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aps.ailyun.com/file/download?resourceId=1234&amp;type=1</p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -361,7 +382,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             } 
 
             /**
-             * BillMonth.
+             * <p>The billing month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202502</p>
              */
             public Builder billMonth(String billMonth) {
                 this.billMonth = billMonth;
@@ -369,7 +393,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * FileList.
+             * <p>The file list.</p>
              */
             public Builder fileList(java.util.List<FileList> fileList) {
                 this.fileList = fileList;
@@ -377,7 +401,10 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * PartnerUid.
+             * <p>The UID of the partner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1112332432</p>
              */
             public Builder partnerUid(String partnerUid) {
                 this.partnerUid = partnerUid;

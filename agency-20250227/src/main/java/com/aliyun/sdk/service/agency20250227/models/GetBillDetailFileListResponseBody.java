@@ -119,7 +119,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Same as Message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -162,7 +171,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +279,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
             } 
 
             /**
-             * BillMonth.
+             * <p>The billing month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202502</p>
              */
             public Builder billMonth(String billMonth) {
                 this.billMonth = billMonth;
@@ -275,7 +290,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bill202502021112</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -283,7 +301,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The file URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aps.ailyun.com/file/download?resourceId=1234&amp;type=1</p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -291,7 +312,15 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The OSS file push status. Valid values:</p>
+             * <ul>
+             * <li>1: Pending.</li>
+             * <li>2: Processing.</li>
+             * <li>3: Completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -299,7 +328,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type. Valid values: Customer Acquisition, Channel Expansion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Channel Expansion</p>
              */
             public Builder type(String type) {
                 this.type = type;

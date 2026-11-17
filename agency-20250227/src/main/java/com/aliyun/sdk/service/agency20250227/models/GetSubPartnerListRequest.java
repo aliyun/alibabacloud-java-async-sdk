@@ -103,6 +103,7 @@ public class GetSubPartnerListRequest extends Request {
         } 
 
         /**
+         * <p>The page number, starting from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class GetSubPartnerListRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class GetSubPartnerListRequest extends Request {
         }
 
         /**
-         * SubPartnerCompanyName.
+         * <p>The company name of the secondary partner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx Co., Ltd.</p>
          */
         public Builder subPartnerCompanyName(String subPartnerCompanyName) {
             this.putQueryParameter("SubPartnerCompanyName", subPartnerCompanyName);
@@ -136,7 +141,10 @@ public class GetSubPartnerListRequest extends Request {
         }
 
         /**
-         * SubPartnerPid.
+         * <p>The PID of the secondary partner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2323431211</p>
          */
         public Builder subPartnerPid(String subPartnerPid) {
             this.putQueryParameter("SubPartnerPid", subPartnerPid);

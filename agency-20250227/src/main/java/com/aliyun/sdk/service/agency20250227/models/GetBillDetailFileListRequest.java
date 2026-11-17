@@ -144,6 +144,7 @@ public class GetBillDetailFileListRequest extends Request {
         } 
 
         /**
+         * <p>The billing month.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class GetBillDetailFileListRequest extends Request {
         }
 
         /**
-         * OssAccessKeyId.
+         * <p>The AccessKey ID used to upload files to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAccessKeyID</p>
          */
         public Builder ossAccessKeyId(String ossAccessKeyId) {
             this.putQueryParameter("OssAccessKeyId", ossAccessKeyId);
@@ -165,7 +169,10 @@ public class GetBillDetailFileListRequest extends Request {
         }
 
         /**
-         * OssAccessKeySecret.
+         * <p>The AccessKey secret used to upload files to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAccessKeySecret</p>
          */
         public Builder ossAccessKeySecret(String ossAccessKeySecret) {
             this.putQueryParameter("OssAccessKeySecret", ossAccessKeySecret);
@@ -174,7 +181,10 @@ public class GetBillDetailFileListRequest extends Request {
         }
 
         /**
-         * OssBucketName.
+         * <p>The OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourBucketName</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putQueryParameter("OssBucketName", ossBucketName);
@@ -183,7 +193,10 @@ public class GetBillDetailFileListRequest extends Request {
         }
 
         /**
-         * OssEndpoint.
+         * <p>The endpoint of the region where the OSS bucket for file sharing is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss-cn-beijing.aliyuncs.com">http://oss-cn-beijing.aliyuncs.com</a></p>
          */
         public Builder ossEndpoint(String ossEndpoint) {
             this.putQueryParameter("OssEndpoint", ossEndpoint);
@@ -192,7 +205,10 @@ public class GetBillDetailFileListRequest extends Request {
         }
 
         /**
-         * OssRegion.
+         * <p>The region where the OSS bucket is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder ossRegion(String ossRegion) {
             this.putQueryParameter("OssRegion", ossRegion);
@@ -201,7 +217,10 @@ public class GetBillDetailFileListRequest extends Request {
         }
 
         /**
-         * OssSecurityToken.
+         * <p>The STS token used to upload files to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourSecurityToken</p>
          */
         public Builder ossSecurityToken(String ossSecurityToken) {
             this.putQueryParameter("OssSecurityToken", ossSecurityToken);

@@ -132,7 +132,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial returned by the POP API when the RAM user lacks the required permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -140,7 +143,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The result code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -148,7 +154,7 @@ public class CustomerNoteListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -156,7 +162,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the POP API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +184,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The prompt message. This parameter is the same as Message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -180,7 +195,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -337,7 +355,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             } 
 
             /**
-             * ContactName.
+             * <p>The name of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -345,7 +366,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The UID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757916424103619</p>
              */
             public Builder creator(Long creator) {
                 this.creator = creator;
@@ -353,7 +377,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The logon name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -361,7 +388,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-17 12:18:23</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -369,7 +399,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * NoteContent.
+             * <p>The content of the note.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Discuss technical solutions</p>
              */
             public Builder noteContent(String noteContent) {
                 this.noteContent = noteContent;
@@ -377,7 +410,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * NoteId.
+             * <p>The note ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2932252</p>
              */
             public Builder noteId(Long noteId) {
                 this.noteId = noteId;
@@ -385,7 +421,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * NoteType.
+             * <p>The note type. Valid value: CUSTOMER.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMER</p>
              */
             public Builder noteType(String noteType) {
                 this.noteType = noteType;
@@ -393,7 +432,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * NoteTypeLabel.
+             * <p>The name of the note type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Customer</p>
              */
             public Builder noteTypeLabel(String noteTypeLabel) {
                 this.noteTypeLabel = noteTypeLabel;
@@ -401,7 +443,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * TouchDate.
+             * <p>The contact date. The value is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1784266662000</p>
              */
             public Builder touchDate(String touchDate) {
                 this.touchDate = touchDate;
@@ -481,7 +526,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             } 
 
             /**
-             * Page.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -489,7 +537,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -497,7 +548,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -681,7 +735,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessDeniedDetail.
+             * <p>The details of the access denial returned by the POP API when the RAM user lacks the required permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder accessDeniedDetail(String accessDeniedDetail) {
                 this.accessDeniedDetail = accessDeniedDetail;
@@ -689,7 +746,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The result code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -697,7 +757,7 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The returned data.</p>
              */
             public Builder data(java.util.List<DataData> data) {
                 this.data = data;
@@ -705,7 +765,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * HttpStatusCode.
+             * <p>The HTTP status code returned by the POP API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder httpStatusCode(Integer httpStatusCode) {
                 this.httpStatusCode = httpStatusCode;
@@ -713,7 +776,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The prompt message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -721,7 +787,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The prompt message. This parameter is the same as Message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -729,7 +798,7 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfo.
+             * <p><strong>[Deprecated]</strong> The pagination information compatible with the legacy fenxiao-service API.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -737,7 +806,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -745,7 +817,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -753,7 +828,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -761,7 +839,10 @@ public class CustomerNoteListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

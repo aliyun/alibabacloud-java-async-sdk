@@ -59,7 +59,10 @@ public class CustomerNoteListDetailRequest extends Request {
         } 
 
         /**
-         * NoteId.
+         * <p>The ID of the note.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620737</p>
          */
         public Builder noteId(Long noteId) {
             this.putBodyParameter("NoteId", noteId);
