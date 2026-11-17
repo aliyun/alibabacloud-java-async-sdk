@@ -142,7 +142,7 @@ public class SetWorkflowTemplateEffectiveVersionRequest extends Request {
         }
 
         /**
-         * <p>The version number of the returned content.</p>
+         * <p>The version number to which the returned content belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

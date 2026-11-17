@@ -106,7 +106,7 @@ public class ImportWorkflowTemplateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2}</p>
+         * <p>{\&quot;name\&quot;:\&quot;Customer Complaint Handling Process\&quot;,\&quot;schemaVersion\&quot;:2}</p>
          */
         public Builder template(java.util.Map<String, ?> template) {
             String templateShrink = shrink(template, "template", "json");

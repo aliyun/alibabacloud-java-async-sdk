@@ -276,10 +276,10 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of system role codes. The list performs a full replacement and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
+         * <p>The list of new system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;SYSTEM_ADMIN&quot;]</p>
          */
         public Builder roleCodes(java.util.List<String> roleCodes) {
             this.roleCodes = roleCodes;
@@ -287,10 +287,10 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of user group IDs to which the user belongs.</p>
+         * <p>The list of IDs of the user groups to which the user belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;1023&quot;]</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.userGroupIds = userGroupIds;
@@ -298,7 +298,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The WINNEXO platform user ID.</p>
+         * <p>The user ID on the WINNEXO platform.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -295,7 +295,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>节点依赖边；每项包含from/to，引用稳定stepId</p>
+         * <p>The node dependency edges. Each item contains a from and to field, referencing a stable stepId.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -339,7 +339,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+         * <p>The optional canvas layout, indexed by stepId. This only affects the display and does not determine dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
@@ -361,7 +361,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The step name. This field can be empty for drafts but is required upon submission.</p>
+         * <p>The step name. This can be empty for drafts but is required upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>Customer complaint handling process</p>
@@ -383,7 +383,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+         * <p>The template structure version. The current value is 2, which is independent of the business version vN.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -397,7 +397,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
          * <p>The ordered steps.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;收集客户信息&quot;}]</p>
+         * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect customer information&quot;}]</p>
          */
         public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
@@ -416,7 +416,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the returned content.</p>
+         * <p>The version number to which the returned content belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -438,11 +438,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version status. Valid values:</p>
-         * <ul>
-         * <li>DRAFT: Draft.</li>
-         * <li>SUBMITTED: Submitted.</li>
-         * </ul>
+         * <p>The version status. Valid values: DRAFT (draft) and SUBMITTED (submitted).</p>
          * 
          * <strong>example:</strong>
          * <p>SUBMITTED</p>
@@ -639,7 +635,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The step name. This field can be empty for drafts but is required upon submission.</p>
+             * <p>The step name. This can be empty for drafts but is required upon submission.</p>
              * 
              * <strong>example:</strong>
              * <p>Collect customer information</p>
@@ -661,11 +657,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner type. Valid values:</p>
-             * <ul>
-             * <li>MEMBER: Human.</li>
-             * <li>AGENT: Agent.</li>
-             * </ul>
+             * <p>The owner type. Valid values: MEMBER (human) and AGENT (agent).</p>
              * 
              * <strong>example:</strong>
              * <p>MEMBER</p>
@@ -687,7 +679,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+             * <p>Specifies whether to manually review deliverables. This is disabled by default and can only be enabled for digital employees. Review tasks are automatically sent to the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -698,7 +690,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user IDs of the reviewers.</p>
+             * <p>The list of reviewer user IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -720,10 +712,10 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display text derived from ordered segments. Fixed titles are not added, and the text is not stored independently.</p>
+             * <p>The display text derived from ordered segments. Fixed titles are not added, and it is not stored independently.</p>
              * 
              * <strong>example:</strong>
-             * <p>Collect customer information and submit it to the person in charge for review</p>
+             * <p>Collect customer information and submit it to the owner for review</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -731,10 +723,10 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of ordered segments. Supports text, mention, skill, app, files, and web_search. Retains reference identities and order.</p>
+             * <p>The array of ordered segments. Supports text, mention, skill, app, files, and web_search. Preserves reference identities and order.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;收集客户信息&quot;}]</p>
+             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Collect customer information&quot;}]</p>
              */
             public Builder specificationJson(java.util.List<java.util.Map<String, ?>> specificationJson) {
                 this.specificationJson = specificationJson;

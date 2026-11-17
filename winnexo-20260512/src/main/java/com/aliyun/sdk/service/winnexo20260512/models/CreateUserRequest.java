@@ -132,7 +132,7 @@ public class CreateUserRequest extends Request {
         } 
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The display name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The base64-encoded password ciphertext encrypted by using RSA-OAEP-SHA256 (required).</p>
+         * <p>The Base64-encoded password ciphertext encrypted by using RSA-OAEP-SHA256. This parameter is required and cannot be empty.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,10 +158,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The list of new system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
+         * <p>The list of new system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;SYSTEM_ADMIN&quot;]</p>
          */
         public Builder roleCodes(java.util.List<String> roleCodes) {
             String roleCodesShrink = shrink(roleCodes, "roleCodes", "json");
@@ -171,7 +171,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The SSO provider type. This parameter is optional if the tenant has only one external logon method. This parameter is required if the tenant has multiple external logon methods. Currently, createUser supports BUILD_IN and AGENT_ONE.</p>
+         * <p>The type of the SSO provider. This parameter is optional if the tenant has only one external logon method, and is required if the tenant has multiple external logon methods. Currently, createUser supports BUILD_IN and AGENT_ONE.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT_ONE</p>
@@ -183,7 +183,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant on which the operation takes effect.</p>
+         * <p>The ID of the effective tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -195,7 +195,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The WINNEXO logon account (unique identifier, required).</p>
+         * <p>The WINNEXO logon account. This is a unique identifier and cannot be empty.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -116,7 +116,7 @@ public class ListCollaborationGroupMembersRequest extends Request {
         } 
 
         /**
-         * <p>协作空间ID，必填，长度1至64。调用者必须是该租户下该空间的有效成员。可从ListCollaborationGroups返回的items中获取。</p>
+         * <p>The collaboration workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,10 +129,10 @@ public class ListCollaborationGroupMembersRequest extends Request {
         }
 
         /**
-         * <p>成员显示名称搜索关键词，可选，最长256字符；忽略大小写，先筛选后分页。不传时查询全部有效成员。</p>
+         * <p>The search keyword. This parameter is optional and can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>销售</p>
+         * <p>Sales</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -141,7 +141,7 @@ public class ListCollaborationGroupMembersRequest extends Request {
         }
 
         /**
-         * <p>页码，从1开始；请求省略时默认为1。</p>
+         * <p>The page number. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class ListCollaborationGroupMembersRequest extends Request {
         }
 
         /**
-         * <p>每页记录数，取值1至100；请求省略时默认为20。</p>
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -165,7 +165,7 @@ public class ListCollaborationGroupMembersRequest extends Request {
         }
 
         /**
-         * <p>业务租户ID，可选。必须属于当前调用身份的可访问租户；无权访问时拒绝请求。未传时按现有鉴权规则解析租户，多租户用户无法唯一确定时需显式指定。</p>
+         * <p>The tenant ID. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>

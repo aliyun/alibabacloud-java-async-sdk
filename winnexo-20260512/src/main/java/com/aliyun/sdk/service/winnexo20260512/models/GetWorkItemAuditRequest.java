@@ -89,7 +89,7 @@ public class GetWorkItemAuditRequest extends Request {
         } 
 
         /**
-         * <p>协作空间ID</p>
+         * <p>The collaboration workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class GetWorkItemAuditRequest extends Request {
         }
 
         /**
-         * <p>租户ID；缺省使用调用方默认租户</p>
+         * <p>The tenant ID. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -114,7 +114,7 @@ public class GetWorkItemAuditRequest extends Request {
         }
 
         /**
-         * <p>工作项ID</p>
+         * <p>The work item ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

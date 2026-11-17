@@ -143,7 +143,7 @@ public class ListTenantDirectoryRequest extends Request {
         } 
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -179,11 +179,11 @@ public class ListTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The field by which the results are sorted. Valid values:</p>
+         * <p>The field by which to sort the returned results. Valid values:</p>
          * <ul>
-         * <li>event_time: the event creation time.</li>
-         * <li>event_execute_start_time: the event execution time.</li>
-         * <li>event_execute_finish_time: the event completion time.</li>
+         * <li>event_time: the time when the event was created.</li>
+         * <li>event_execute_start_time: the time when the event execution started.</li>
+         * <li>event_execute_finish_time: the time when the event execution finished.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class ListTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC (case-insensitive).</p>
+         * <p>The sort order. This parameter takes effect only when the sort field is specified. Valid values: ASC and DESC (case-insensitive).</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>
@@ -208,7 +208,7 @@ public class ListTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>The list of source types.</p>
+         * <p>The list of service source types.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

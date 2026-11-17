@@ -90,7 +90,7 @@ public class BatchCancelTodosRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>todo_abc123</p>
+         * <p>[&quot;todo_abc123&quot;]</p>
          */
         public Builder todoIds(java.util.List<String> todoIds) {
             String todoIdsShrink = shrink(todoIds, "todoIds", "json");

@@ -143,7 +143,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of output main records on the current page. By default, the latest published version is returned for file details.</p>
+         * <p>The list of output master records on the current page. File details return the latest published version by default.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -162,7 +162,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number, starting from 1. Pagination is based on primary output records.</p>
+         * <p>The current page number. The value starts from 1, and pagination is based on output master records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of primary output records per page. Default value: 20. Valid values: 1 to 100.</p>
+         * <p>The number of output master records per page. Default value: 20. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -195,7 +195,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of primary output records that meet the filter conditions. The count is deduplicated by outputId and does not include the number of files or historical versions.</p>
+         * <p>The total number of output master records that match the filter conditions. The count is deduplicated by outputId and does not include the number of files or historical versions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -293,7 +293,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
              * <p>The email content.</p>
              * 
              * <strong>example:</strong>
-             * <p>The quarterly business report has been generated. Please check your inbox</p>
+             * <p>The quarterly business report has been generated. Please check it</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -441,7 +441,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file download link. For versioned files, it is bound to the published version and content revision at the time of query. The link has a time-to-live. If it expires, query the list again to obtain a new link.</p>
+             * <p>The file download URL. For versioned files, it is bound to the published version and content revision at the time of query. The URL has a time-to-live (TTL). If it expires, query the list again to obtain a new URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://winnexo.agentone.console.aliyun.com/api/v1/output-preview/demo_download_ticket/download">https://winnexo.agentone.console.aliyun.com/api/v1/output-preview/demo_download_ticket/download</a></p>
@@ -559,7 +559,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PPT file ID.</p>
+             * <p>The ID of the PPT file.</p>
              * 
              * <strong>example:</strong>
              * <p>ppt_123e4567-e89b-42d3-a456-426614174015</p>
@@ -570,10 +570,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PPT name.</p>
+             * <p>The name of the PPT file.</p>
              * 
              * <strong>example:</strong>
-             * <p>Quarterly Business Analysis Presentation</p>
+             * <p>Quarterly Business Analysis Report</p>
              */
             public Builder pptName(String pptName) {
                 this.pptName = pptName;
@@ -820,7 +820,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time of the output detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
+             * <p>The creation time of the output detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-12T03:10:00+00:00</p>
@@ -831,7 +831,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email information. This field is present when the type is email.</p>
+             * <p>The email information. This field is present when the item type is email.</p>
              */
             public Builder emailInfo(EmailInfo emailInfo) {
                 this.emailInfo = emailInfo;
@@ -839,7 +839,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file information. This field is present when the type is file.</p>
+             * <p>The file information. This field is present when the item type is file.</p>
              */
             public Builder fileInfo(FileInfo fileInfo) {
                 this.fileInfo = fileInfo;
@@ -847,7 +847,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
+             * <p>The creation time of the output or detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-12T03:10:00+00:00</p>
@@ -858,7 +858,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
+             * <p>The update time of the output or detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-12T03:12:00+00:00</p>
@@ -891,7 +891,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internationalized display name of the output detail type.</p>
+             * <p>The localized display name of the output detail type.</p>
              * 
              * <strong>example:</strong>
              * <p>Document</p>
@@ -935,7 +935,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The share token. This field is present when sharing is enabled. You can use this token to access the public share preview API.</p>
+             * <p>The share token, which is present when sharing is enabled and can be used to access the public share preview API.</p>
              * 
              * <strong>example:</strong>
              * <p>demo_public_preview_token</p>
@@ -957,7 +957,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The slide deck information. This field is present when the type is slide deck.</p>
+             * <p>The slide deck information. This field is present when the output type is a slide deck.</p>
              */
             public Builder slidesInfo(SlidesInfo slidesInfo) {
                 this.slidesInfo = slidesInfo;
@@ -1163,7 +1163,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
+             * <p>The creation time of the output or detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-12T03:10:00+00:00</p>
@@ -1174,7 +1174,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
+             * <p>The update time of the output or detail. The backend datetime value is serialized into an ISO 8601 string, and the time zone information is returned with the original value.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-10-12T03:12:00+00:00</p>
@@ -1218,7 +1218,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of details under the current output main record. For versioned files, only the latest published version is returned, and historical versions are not expanded.</p>
+             * <p>The list of details under the current output master record. For versioned files, only the latest published version is returned, and historical versions are not expanded.</p>
              */
             public Builder outputItems(java.util.List<OutputItems> outputItems) {
                 this.outputItems = outputItems;

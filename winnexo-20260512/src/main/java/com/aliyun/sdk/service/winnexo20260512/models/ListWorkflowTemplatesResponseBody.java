@@ -196,7 +196,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
          * <p>The list of template summaries on the current page.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;id\&quot;:\&quot;item_9401\&quot;}]</p>
+         * <p>[{&quot;description&quot;:&quot;Standard process for handling customer complaints&quot;,&quot;effectiveVersion&quot;:&quot;v1&quot;,&quot;gmtModified&quot;:&quot;2026-11-05T08:00:00Z&quot;,&quot;latestVersion&quot;:&quot;v2&quot;,&quot;latestVersionStatus&quot;:&quot;DRAFT&quot;,&quot;name&quot;:&quot;Customer complaint handling process&quot;,&quot;ownerCount&quot;:1,&quot;reviewStepCount&quot;:1,&quot;stepCount&quot;:1,&quot;templateId&quot;:&quot;tpl_9401&quot;}]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -204,7 +204,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The effective maximum number of entries to return per page for the current request.</p>
+         * <p>The effective maximum number of entries to return per page in the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +226,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page. An empty string indicates that no more data exists.</p>
+         * <p>The pagination token for the next page. An empty string is returned if no more data exists.</p>
          * 
          * <strong>example:</strong>
          * <p>tok_9401</p>
@@ -259,7 +259,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request tracking ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -270,7 +270,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of visible items under the filter conditions.</p>
+         * <p>The total number of entries that match the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -465,7 +465,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of the last modification. The time follows the ISO 8601 standard.</p>
+             * <p>The last modification time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-05T08:00:00Z</p>
@@ -487,11 +487,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the latest version. Valid values:</p>
-             * <ul>
-             * <li>DRAFT: Draft. Unsubmitted edits exist.</li>
-             * <li>SUBMITTED: Submitted.</li>
-             * </ul>
+             * <p>The status of the latest version. Valid values: DRAFT (draft, indicating unsubmitted edits exist) and SUBMITTED (submitted).</p>
              * 
              * <strong>example:</strong>
              * <p>DRAFT</p>

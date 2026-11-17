@@ -103,7 +103,7 @@ public class ExportWorkflowTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The collaboration workspace ID.</p>
+         * <p>The ID of the collaboration workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

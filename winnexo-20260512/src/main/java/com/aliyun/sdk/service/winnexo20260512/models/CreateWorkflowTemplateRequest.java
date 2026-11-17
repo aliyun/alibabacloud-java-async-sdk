@@ -106,7 +106,7 @@ public class CreateWorkflowTemplateRequest extends Request {
          * <p>The write action. Valid values:</p>
          * <ul>
          * <li>SAVE: Saves the template as a draft. The draft does not take effect. Node names and assignees can be left empty.</li>
-         * <li>SUBMIT: Requires complete nodes. The template is saved and submitted as the only effective version.
+         * <li>SUBMIT: Requires complete nodes, and saves and submits the template as the only effective version.
          * Default value: SUBMIT.</li>
          * </ul>
          * 
@@ -147,7 +147,7 @@ public class CreateWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

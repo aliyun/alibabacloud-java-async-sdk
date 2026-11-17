@@ -132,7 +132,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>公共业务状态码，由后端Code字段映射；错误时用于识别失败原因。</p>
+         * <p>The common business status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERR.Robject.Auth.TenantAccessDenied</p>
@@ -143,10 +143,10 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页记录列表；没有匹配记录时返回空数组。</p>
+         * <p>The list of items on the current page.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;collaborationGroupId&quot;:&quot;cg_9401&quot;,&quot;name&quot;:&quot;产品协作空间&quot;,&quot;status&quot;:&quot;ACTIVE&quot;,&quot;currentUserRole&quot;:&quot;OWNER&quot;}]</p>
+         * <p>[{&quot;collaborationGroupId&quot;:&quot;cg_9401&quot;,&quot;name&quot;:&quot;Product Collaboration Space&quot;,&quot;status&quot;:&quot;ACTIVE&quot;,&quot;currentUserRole&quot;:&quot;OWNER&quot;}]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -154,10 +154,10 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>公共错误说明，由后端Message字段映射；错误时描述失败原因。</p>
+         * <p>The common error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>无权访问租户 2147483647，用户不属于该租户</p>
+         * <p>You do not have permissions to access tenant 2147483647 because the user does not belong to the tenant</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,7 +165,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前返回页的页码，从1开始。</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -176,7 +176,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前分页设置的每页记录数。</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -187,7 +187,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID，由后端RequestId字段映射，用于排查调用失败。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c9cf6cb3-3f5c-4994-a8a1-c93379a6f5cf</p>
@@ -198,7 +198,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>满足查询条件的有效空间总数，不是当前页记录数。</p>
+         * <p>The total number of filtered records.</p>
          * 
          * <strong>example:</strong>
          * <p>39</p>
@@ -293,7 +293,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>协作空间ID，可用于查询空间成员、查询节点详情及预览对话文件。</p>
+             * <p>The ID of the collaboration space.</p>
              * 
              * <strong>example:</strong>
              * <p>cg_9401</p>
@@ -304,7 +304,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前调用用户在空间内的角色：ADMIN为管理员，MEMBER为普通成员。</p>
+             * <p>The role of the current user in the space.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -315,10 +315,10 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>协作空间显示名称。</p>
+             * <p>The name of the space.</p>
              * 
              * <strong>example:</strong>
-             * <p>工作流待办测试</p>
+             * <p>Workflow To-Do Test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -326,7 +326,7 @@ public class ListCollaborationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>协作空间状态，当前接口只返回ACTIVE。</p>
+             * <p>The status of the space. Currently, only ACTIVE is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>

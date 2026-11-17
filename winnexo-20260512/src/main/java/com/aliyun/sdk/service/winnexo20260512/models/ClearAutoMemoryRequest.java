@@ -102,7 +102,7 @@ public class ClearAutoMemoryRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID. This parameter is required when ownerType is set to group.</p>
+         * <p>The collaboration workspace ID. This parameter is required when ownerType is set to group.</p>
          * 
          * <strong>example:</strong>
          * <p>cg_12345</p>
@@ -114,11 +114,7 @@ public class ClearAutoMemoryRequest extends Request {
         }
 
         /**
-         * <p>The owner type. Valid values:</p>
-         * <ul>
-         * <li>user: the personal memory of the authenticated user.</li>
-         * <li>group: the memory of a specified workspace.</li>
-         * </ul>
+         * <p>The owner type. Valid values: user: the personal memory of the authenticated user; group: the memory of the specified collaboration workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>group</p>
@@ -142,7 +138,7 @@ public class ClearAutoMemoryRequest extends Request {
         }
 
         /**
-         * <p>The memory type. Valid values: user, feedback, reference, project, and all. A value of all does not clear manual memory.</p>
+         * <p>The memory type. Valid values: user, feedback, reference, project, or all. The value all does not clear manual memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -163,8 +163,8 @@ public class UpdateWorkflowTemplateRequest extends Request {
         /**
          * <p>The write action. Valid values:</p>
          * <ul>
-         * <li>SAVE: Saves the template as a draft. The changes do not take effect. Node names and assignees can be left empty.</li>
-         * <li>SUBMIT: Requires complete nodes. Saves and submits the template as the only effective version.
+         * <li>SAVE: Saves the template as a draft without taking effect, allowing node names and executors to be left empty.</li>
+         * <li>SUBMIT: Requires complete nodes, and saves and submits the template as the only effective version.
          * Default value: SUBMIT.</li>
          * </ul>
          * 
@@ -178,7 +178,7 @@ public class UpdateWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the collaboration workspace.</p>
+         * <p>The collaboration workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class UpdateWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>The complete JSON definition of the template. This overwrites the existing definition.</p>
+         * <p>The complete JSON definition of the template for full overwriting.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +205,7 @@ public class UpdateWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If you do not specify this parameter, the current effective version is used.</p>
+         * <p>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If not specified, the system falls back to the current effective version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -217,7 +217,7 @@ public class UpdateWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class UpdateWorkflowTemplateRequest extends Request {
         }
 
         /**
-         * <p>The version number to which the content belongs.</p>
+         * <p>The version number to which the returned content belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -257,7 +257,7 @@ public class UpdateWorkflowTemplateRequest extends Request {
          * <p>The change description for this version. An empty value indicates that no description is provided.</p>
          * 
          * <strong>example:</strong>
-         * <p>Added a review step</p>
+         * <p>Added review step</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.putBodyParameter("versionDescription", versionDescription);

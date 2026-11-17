@@ -306,7 +306,7 @@ public class GetSkillRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task end time in ISO 8601 format. This parameter has a value only when the task is in a desired state (Succeeded, Failed, or Cancelled).</p>
+         * <p>The task end time in ISO 8601 format. This parameter has a value only when the task reaches a terminal state (Succeeded, Failed, or Cancelled).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -317,7 +317,7 @@ public class GetSkillRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution log list. This parameter is returned only when IncludeLogs is set to true.</p>
+         * <p>The list of execution logs. This parameter is returned only when IncludeLogs is set to true.</p>
          */
         public Builder logs(java.util.List<java.util.Map<String, ?>> logs) {
             this.logs = logs;
@@ -325,7 +325,7 @@ public class GetSkillRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -369,7 +369,10 @@ public class GetSkillRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution result. This parameter is returned only when the status is Succeeded. It contains a content list.</p>
+         * <p>The execution result. This parameter is returned only when the status is Succeeded and includes a list of content blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;content&quot;:[{&quot;type&quot;:&quot;Text&quot;,&quot;text&quot;:&quot;Execution completed&quot;}]}</p>
          */
         public Builder result(java.util.Map<String, ?> result) {
             this.result = result;
@@ -377,7 +380,7 @@ public class GetSkillRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The asynchronous task ID.</p>
+         * <p>The ID of the asynchronous task.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleRunId</p>
@@ -410,7 +413,7 @@ public class GetSkillRunResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task execution start time in ISO 8601 format.</p>
+         * <p>The task start time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -433,6 +436,9 @@ public class GetSkillRunResponseBody extends TeaModel {
 
         /**
          * <p>The LLM token usage statistics. This parameter is returned only when the status is Succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;inputTokens&quot;:100,&quot;outputTokens&quot;:20,&quot;totalTokens&quot;:120}</p>
          */
         public Builder usage(java.util.Map<String, ?> usage) {
             this.usage = usage;

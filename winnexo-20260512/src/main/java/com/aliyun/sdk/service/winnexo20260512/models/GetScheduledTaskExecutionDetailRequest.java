@@ -74,7 +74,7 @@ public class GetScheduledTaskExecutionDetailRequest extends Request {
         } 
 
         /**
-         * <p>The execution record ID.</p>
+         * <p>The ID of the execution record.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

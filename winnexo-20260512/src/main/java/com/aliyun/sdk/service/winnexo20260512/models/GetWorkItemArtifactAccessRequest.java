@@ -19,12 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetWorkItemArtifactAccessRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("artifactId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String artifactId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String collaborationGroupId;
 
     @com.aliyun.core.annotation.Query
@@ -33,7 +33,7 @@ public class GetWorkItemArtifactAccessRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workItemId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String workItemId;
 
     private GetWorkItemArtifactAccessRequest(Builder builder) {

@@ -93,7 +93,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>公共业务状态码</p>
+         * <p>The common business status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,10 +104,10 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前计划、当前轮次已经生成的运行总结；重跑受影响节点的新总结生成前不会返回旧总结</p>
+         * <p>The execution summaries generated for the current plan and current turn. Previous summaries are not returned until new summaries are generated for affected nodes that are re-run.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;attemptId&quot;:&quot;attempt_example&quot;,&quot;planId&quot;:&quot;plan_example&quot;,&quot;nodeKey&quot;:&quot;query.amount&quot;,&quot;nodeStatus&quot;:&quot;COMPLETED&quot;}]</p>
+         * <p>[{&quot;attemptId&quot;:&quot;attempt_1&quot;,&quot;planId&quot;:&quot;plan_v3&quot;,&quot;nodeKey&quot;:&quot;query.amount&quot;,&quot;nodeStatus&quot;:&quot;COMPLETED&quot;}]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -115,10 +115,10 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>公共错误描述</p>
+         * <p>The common error description.</p>
          * 
          * <strong>example:</strong>
-         * <p>请求的资源不存在</p>
+         * <p>The requested resource does not exist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -126,7 +126,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID</p>
+         * <p>The request tracking ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -195,10 +195,10 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>工具名称</p>
+             * <p>The name of the tool.</p>
              * 
              * <strong>example:</strong>
-             * <p>销售分析助手</p>
+             * <p>Sales Analysis Assistant</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -206,7 +206,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工具类型，如 SKILL、MCP</p>
+             * <p>The tool type, such as SKILL or MCP.</p>
              * 
              * <strong>example:</strong>
              * <p>AGENT</p>
@@ -497,7 +497,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>节点尝试 ID</p>
+             * <p>The ID of the node attempt.</p>
              * 
              * <strong>example:</strong>
              * <p>attempt_1</p>
@@ -508,7 +508,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点尝试序号，从 1 开始</p>
+             * <p>The sequence number of the node attempt, starting from 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -519,7 +519,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行器 ID</p>
+             * <p>The ID of the executor.</p>
              * 
              * <strong>example:</strong>
              * <p>agent_1001</p>
@@ -530,10 +530,10 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行器名称</p>
+             * <p>The name of the executor.</p>
              * 
              * <strong>example:</strong>
-             * <p>销售分析助手</p>
+             * <p>Sales Analysis Assistant</p>
              */
             public Builder executorName(String executorName) {
                 this.executorName = executorName;
@@ -541,7 +541,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行器类型，如 AGENT、HUMAN</p>
+             * <p>The executor type, such as AGENT or HUMAN.</p>
              * 
              * <strong>example:</strong>
              * <p>AGENT</p>
@@ -552,7 +552,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点结束时间，ISO8601 格式</p>
+             * <p>The end time of the node, in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-05T08:05:00Z</p>
@@ -563,7 +563,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点 key</p>
+             * <p>The node key.</p>
              * 
              * <strong>example:</strong>
              * <p>query.amount</p>
@@ -574,10 +574,10 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点名称</p>
+             * <p>The name of the node.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询销售金额</p>
+             * <p>Query sales amount</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -585,7 +585,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点状态，如 COMPLETED、FAILED</p>
+             * <p>The node status, such as COMPLETED or FAILED.</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETED</p>
@@ -596,7 +596,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>所属物理计划 ID</p>
+             * <p>The ID of the associated physical plan.</p>
              * 
              * <strong>example:</strong>
              * <p>plan_v3</p>
@@ -607,7 +607,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点执行结果，JSON 对象</p>
+             * <p>The execution result of the node, as a JSON object.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;rows&quot;:3}</p>
@@ -618,10 +618,10 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>运行总结正文；未生成时为空</p>
+             * <p>The content of the execution summary. This field is empty if the summary is not generated.</p>
              * 
              * <strong>example:</strong>
-             * <p>已完成销售金额查询，共返回 3 行数据</p>
+             * <p>Completed the sales amount query, returning a total of 3 rows of data</p>
              */
             public Builder runSummary(Object runSummary) {
                 this.runSummary = runSummary;
@@ -629,10 +629,10 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>运行总结失败原因；成功时为空</p>
+             * <p>The reason for the execution summary failure. This field is empty if the generation is successful.</p>
              * 
              * <strong>example:</strong>
-             * <p>模型调用超时</p>
+             * <p>Model invocation timed out</p>
              */
             public Builder runSummaryError(String runSummaryError) {
                 this.runSummaryError = runSummaryError;
@@ -640,7 +640,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>运行总结生成时间，ISO8601 格式</p>
+             * <p>The generation time of the execution summary, in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-05T08:06:00Z</p>
@@ -651,7 +651,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>运行总结引用的数据来源列表</p>
+             * <p>The list of data sources referenced in the execution summary.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;name&quot;:&quot;report.md&quot;}]</p>
@@ -662,7 +662,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>运行总结生成状态，如 COMPLETED、FAILED、PROCESSING</p>
+             * <p>The generation status of the execution summary, such as COMPLETED, FAILED, or PROCESSING.</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETED</p>
@@ -673,7 +673,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>运行总结使用的工具列表</p>
+             * <p>The list of tools used in the execution summary.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;type&quot;:&quot;SKILL&quot;,&quot;name&quot;:&quot;sql_query&quot;}]</p>
@@ -684,7 +684,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点开始时间，ISO8601 格式</p>
+             * <p>The start time of the node, in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-11-05T08:00:00Z</p>
@@ -695,7 +695,7 @@ public class GetWorkItemRunSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>节点轮次序号，从 1 开始</p>
+             * <p>The sequence number of the node turn, starting from 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

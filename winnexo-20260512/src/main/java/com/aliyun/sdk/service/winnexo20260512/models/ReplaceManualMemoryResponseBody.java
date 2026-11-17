@@ -104,7 +104,7 @@ public class ReplaceManualMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The complete content of the manual memory after it is saved. If the memory is successfully cleared, an empty string is returned.</p>
+         * <p>The complete content of the manual memory after it is saved. If the memory is cleared, this value is an empty string.</p>
          * 
          * <strong>example:</strong>
          * <p>Prefers concise answers</p>

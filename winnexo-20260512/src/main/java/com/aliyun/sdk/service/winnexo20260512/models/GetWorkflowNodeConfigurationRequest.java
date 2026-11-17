@@ -104,7 +104,7 @@ public class GetWorkflowNodeConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>协作空间ID</p>
+         * <p>The ID of the collaboration workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class GetWorkflowNodeConfigurationRequest extends Request {
         }
 
         /**
-         * <p>当前物理计划ID（planId）</p>
+         * <p>The ID of the current physical plan (planId).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class GetWorkflowNodeConfigurationRequest extends Request {
         }
 
         /**
-         * <p>业务节点key（nodeKey）</p>
+         * <p>The key of the business node (nodeKey).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class GetWorkflowNodeConfigurationRequest extends Request {
         }
 
         /**
-         * <p>租户ID；缺省使用调用方默认租户</p>
+         * <p>The tenant ID. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

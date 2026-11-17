@@ -101,10 +101,10 @@ public class ListCollaborationGroupsRequest extends Request {
         } 
 
         /**
-         * <p>空间名称搜索关键词，可选，最长256字符；不传或去除首尾空白后为空时不按名称过滤。</p>
+         * <p>The search keyword. This parameter is optional and can contain up to 256 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>工作流</p>
+         * <p>Workflow</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -113,7 +113,7 @@ public class ListCollaborationGroupsRequest extends Request {
         }
 
         /**
-         * <p>页码，从1开始；请求省略时默认为1。</p>
+         * <p>The page number. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListCollaborationGroupsRequest extends Request {
         }
 
         /**
-         * <p>每页记录数，取值1至100；请求省略时默认为20。</p>
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -137,7 +137,7 @@ public class ListCollaborationGroupsRequest extends Request {
         }
 
         /**
-         * <p>业务租户ID，可选。必须属于当前调用身份的可访问租户；无权访问时拒绝请求。未传时按现有鉴权规则解析租户，多租户用户无法唯一确定时需显式指定。</p>
+         * <p>The tenant ID. If you do not specify this parameter, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>

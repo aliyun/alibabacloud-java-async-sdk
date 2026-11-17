@@ -132,7 +132,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>公共业务状态码，由后端Code字段映射；错误时用于识别失败原因。</p>
+         * <p>The common business status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERR.Robject.Auth.TenantAccessDenied</p>
@@ -143,10 +143,10 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页记录列表；没有匹配记录时返回空数组。</p>
+         * <p>The list of entries on the current page.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;userId&quot;:&quot;5&quot;,&quot;displayName&quot;:&quot;张三&quot;,&quot;role&quot;:&quot;OWNER&quot;,&quot;isActive&quot;:true}]</p>
+         * <p>[{&quot;userId&quot;:&quot;5&quot;,&quot;displayName&quot;:&quot;Zhang San&quot;,&quot;role&quot;:&quot;OWNER&quot;,&quot;isActive&quot;:true}]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -154,10 +154,10 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>公共错误说明，由后端Message字段映射；错误时描述失败原因。</p>
+         * <p>The common error description.</p>
          * 
          * <strong>example:</strong>
-         * <p>无权访问租户 2147483647，用户不属于该租户</p>
+         * <p>You do not have permissions to access tenant 2147483647 because the user does not belong to the tenant</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -165,7 +165,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前返回页的页码，从1开始。</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -176,7 +176,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前分页设置的每页记录数。</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -187,7 +187,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪ID，由后端RequestId字段映射，用于排查调用失败。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c9cf6cb3-3f5c-4994-a8a1-c93379a6f5cf</p>
@@ -198,7 +198,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>满足查询条件的记录总数，不是当前页记录数。</p>
+         * <p>The total number of records after filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -293,7 +293,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>成员显示名称；未设置时为空。</p>
+             * <p>The display name. This field is empty if the display name is not set.</p>
              * 
              * <strong>example:</strong>
              * <p>TEST001</p>
@@ -304,7 +304,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户账号是否启用。本接口只返回有效且账号启用的成员，值为true；不代表HR在职状态。</p>
+             * <p>The enabling status of the tenant account. Only active members are returned, so this value is always true. This field does not indicate the HR employment status.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -315,7 +315,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成员在空间内的角色：ADMIN为管理员，MEMBER为普通成员。</p>
+             * <p>The role of the workspace member.</p>
              * 
              * <strong>example:</strong>
              * <p>ADMIN</p>
@@ -326,7 +326,7 @@ public class ListCollaborationGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>平台用户ID，字符串形式，可用作转交待办的目标用户ID。</p>
+             * <p>The platform user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

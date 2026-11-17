@@ -26,6 +26,9 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
+    @com.aliyun.core.annotation.NameInMap("conversationId")
+    private String conversationId;
+
     @com.aliyun.core.annotation.NameInMap("creator")
     private String creator;
 
@@ -46,6 +49,9 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
+
+    @com.aliyun.core.annotation.NameInMap("messageId")
+    private String messageId;
 
     @com.aliyun.core.annotation.NameInMap("metadata")
     private Metadata metadata;
@@ -87,6 +93,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         this.code = builder.code;
         this.completedAt = builder.completedAt;
         this.content = builder.content;
+        this.conversationId = builder.conversationId;
         this.creator = builder.creator;
         this.digitalEmployeeName = builder.digitalEmployeeName;
         this.errorMessage = builder.errorMessage;
@@ -94,6 +101,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         this.files = builder.files;
         this.gmtCreate = builder.gmtCreate;
         this.message = builder.message;
+        this.messageId = builder.messageId;
         this.metadata = builder.metadata;
         this.outputContent = builder.outputContent;
         this.pushResult = builder.pushResult;
@@ -139,6 +147,13 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
      */
     public String getContent() {
         return this.content;
+    }
+
+    /**
+     * @return conversationId
+     */
+    public String getConversationId() {
+        return this.conversationId;
     }
 
     /**
@@ -188,6 +203,13 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return messageId
+     */
+    public String getMessageId() {
+        return this.messageId;
     }
 
     /**
@@ -278,6 +300,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         private String code; 
         private String completedAt; 
         private String content; 
+        private String conversationId; 
         private String creator; 
         private java.util.List<String> digitalEmployeeName; 
         private String errorMessage; 
@@ -285,6 +308,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         private java.util.List<Files> files; 
         private String gmtCreate; 
         private String message; 
+        private String messageId; 
         private Metadata metadata; 
         private String outputContent; 
         private String pushResult; 
@@ -305,6 +329,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
             this.code = model.code;
             this.completedAt = model.completedAt;
             this.content = model.content;
+            this.conversationId = model.conversationId;
             this.creator = model.creator;
             this.digitalEmployeeName = model.digitalEmployeeName;
             this.errorMessage = model.errorMessage;
@@ -312,6 +337,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
             this.files = model.files;
             this.gmtCreate = model.gmtCreate;
             this.message = model.message;
+            this.messageId = model.messageId;
             this.metadata = model.metadata;
             this.outputContent = model.outputContent;
             this.pushResult = model.pushResult;
@@ -338,7 +364,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The completion time in ISO 8601 format.</p>
+         * <p>The completion time (ISO 8601).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -349,13 +375,24 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The full execution content.</p>
+         * <p>The complete execution content.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample content</p>
          */
         public Builder content(String content) {
             this.content = content;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the actual session used for this task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleConversationId</p>
+         */
+        public Builder conversationId(String conversationId) {
+            this.conversationId = conversationId;
             return this;
         }
 
@@ -374,7 +411,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
          * <p>The list of digital employee names.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;pcitc-magent&quot;]</p>
          */
         public Builder digitalEmployeeName(java.util.List<String> digitalEmployeeName) {
             this.digitalEmployeeName = digitalEmployeeName;
@@ -412,7 +449,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time in ISO 8601 format.</p>
+         * <p>The creation time (ISO 8601).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -430,6 +467,17 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the result message generated by this task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleMessageId</p>
+         */
+        public Builder messageId(String messageId) {
+            this.messageId = messageId;
             return this;
         }
 
@@ -464,7 +512,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -478,7 +526,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
          * <p>The list of associated skill codes.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;weather&quot;]</p>
          */
         public Builder skillCodes(java.util.List<String> skillCodes) {
             this.skillCodes = skillCodes;
@@ -486,7 +534,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time in ISO 8601 format.</p>
+         * <p>The start time (ISO 8601).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -519,7 +567,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution result title.</p>
+         * <p>The title of the execution result.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample title</p>
@@ -549,7 +597,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The visibility scope of the execution record, which is always the same as the visibility scope of the associated task. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC. This value is empty for personal task executions.</p>
+         * <p>The visibility scope of the execution record.</p>
          * 
          * <strong>example:</strong>
          * <p>COLLABORATIVE</p>
@@ -713,7 +761,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
              * <p>The token usage information.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>{&quot;input_tokens&quot;:100,&quot;output_tokens&quot;:20,&quot;cached_tokens&quot;:10}</p>
              */
             public Builder usage(java.util.Map<String, ?> usage) {
                 this.usage = usage;

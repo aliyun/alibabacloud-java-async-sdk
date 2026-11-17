@@ -284,7 +284,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the template.</p>
+         * <p>The template description.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard process for handling customer complaints</p>
@@ -295,7 +295,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>节点依赖边；每项包含from/to，引用稳定stepId</p>
+         * <p>The node dependency edges. Each item contains a from and to field, referencing stable step IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -306,7 +306,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current effective version number of the template. An empty value indicates that only a draft exists and the template cannot be used for work items.</p>
+         * <p>The current effective version number of the template. An empty value indicates that only a draft exists and it cannot be used for work items.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -339,7 +339,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+         * <p>The optional canvas layout, indexed by step ID. This field only affects the display and does not determine dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
@@ -361,7 +361,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the step. This parameter can be left empty for a draft, but is required when the template is submitted.</p>
+         * <p>The step name. This field can be left empty for a draft and is required upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>Customer complaint handling process</p>
@@ -383,7 +383,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+         * <p>The schema version of the template. The current value is 2, which is independent of the business version vN.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -397,7 +397,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
          * <p>The ordered steps.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
+         * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect customer information&quot;}]</p>
          */
         public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
@@ -405,7 +405,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tpl_9401</p>
@@ -427,10 +427,10 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The change description of the version. An empty value indicates that no description is provided.</p>
+         * <p>The change description for this version. An empty value indicates that no description is provided.</p>
          * 
          * <strong>example:</strong>
-         * <p>Added a review step</p>
+         * <p>Add a review step</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.versionDescription = versionDescription;
@@ -438,7 +438,11 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version status. Valid values: DRAFT (draft) and SUBMITTED (submitted).</p>
+         * <p>The version status. Valid values:</p>
+         * <ul>
+         * <li>DRAFT: Draft.</li>
+         * <li>SUBMITTED: Submitted.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DRAFT</p>
@@ -635,7 +639,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the step. This parameter can be left empty for a draft, but is required when the template is submitted.</p>
+             * <p>The step name. This field can be left empty for a draft and is required upon submission.</p>
              * 
              * <strong>example:</strong>
              * <p>Customer complaint handling process</p>
@@ -657,7 +661,11 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the owner. Valid values: MEMBER (manual) and AGENT (agent).</p>
+             * <p>The owner type. Valid values:</p>
+             * <ul>
+             * <li>MEMBER: Human.</li>
+             * <li>AGENT: Agent.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>MEMBER</p>
@@ -668,7 +676,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the manual owner.</p>
+             * <p>The user ID of the human owner.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -679,7 +687,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+             * <p>Specifies whether to manually review deliverables. By default, this feature is disabled. It can only be enabled for digital workers, and review tasks are automatically sent to the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -690,7 +698,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user IDs of the reviewers.</p>
+             * <p>The list of reviewer user IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -701,7 +709,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order of the step.</p>
+             * <p>The step order.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -715,7 +723,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
              * <p>The display text derived from ordered segments. Fixed titles are not added, and the text is not stored independently.</p>
              * 
              * <strong>example:</strong>
-             * <p>Collect customer information and forward it to the owner for review</p>
+             * <p>Collect customer information and submit it to the owner for review</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -723,10 +731,10 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of ordered segments. This parameter supports text, mention, skill, app, files, and web_search, and retains reference identities and order.</p>
+             * <p>The array of ordered segments. Supported types include text, mention, skill, app, files, and web_search. Reference identities and order are preserved.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;收集客户信息\&quot;}]</p>
+             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Collect customer information&quot;}]</p>
              */
             public Builder specificationJson(java.util.List<java.util.Map<String, ?>> specificationJson) {
                 this.specificationJson = specificationJson;
@@ -734,7 +742,7 @@ public class CreateWorkflowTemplateDraftVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the step.</p>
+             * <p>The step ID.</p>
              * 
              * <strong>example:</strong>
              * <p>collect</p>

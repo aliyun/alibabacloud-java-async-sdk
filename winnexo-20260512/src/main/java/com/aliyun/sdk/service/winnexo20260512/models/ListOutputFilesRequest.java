@@ -57,6 +57,10 @@ public class ListOutputFilesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<String> tags;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taskExecutionId")
+    private String taskExecutionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
@@ -73,6 +77,7 @@ public class ListOutputFilesRequest extends Request {
         this.sessionId = builder.sessionId;
         this.sharedOnly = builder.sharedOnly;
         this.tags = builder.tags;
+        this.taskExecutionId = builder.taskExecutionId;
         this.tenantId = builder.tenantId;
     }
 
@@ -160,6 +165,13 @@ public class ListOutputFilesRequest extends Request {
     }
 
     /**
+     * @return taskExecutionId
+     */
+    public String getTaskExecutionId() {
+        return this.taskExecutionId;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -177,6 +189,7 @@ public class ListOutputFilesRequest extends Request {
         private String sessionId; 
         private Boolean sharedOnly; 
         private java.util.List<String> tags; 
+        private String taskExecutionId; 
         private String tenantId; 
 
         private Builder() {
@@ -195,6 +208,7 @@ public class ListOutputFilesRequest extends Request {
             this.sessionId = request.sessionId;
             this.sharedOnly = request.sharedOnly;
             this.tags = request.tags;
+            this.taskExecutionId = request.taskExecutionId;
             this.tenantId = request.tenantId;
         } 
 
@@ -223,7 +237,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The output item type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
+         * <p>The output detail type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>document</p>
@@ -238,7 +252,7 @@ public class ListOutputFilesRequest extends Request {
          * <p>The keyword used to match the output title or detail name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Quarterly operations</p>
+         * <p>Quarterly business</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -271,7 +285,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of items per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -313,6 +327,18 @@ public class ListOutputFilesRequest extends Request {
             String tagsShrink = shrink(tags, "tags", "json");
             this.putBodyParameter("tags", tagsShrink);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the current execution used to exactly filter outputs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleExecutionId</p>
+         */
+        public Builder taskExecutionId(String taskExecutionId) {
+            this.putBodyParameter("taskExecutionId", taskExecutionId);
+            this.taskExecutionId = taskExecutionId;
             return this;
         }
 

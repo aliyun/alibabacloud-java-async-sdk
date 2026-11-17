@@ -162,7 +162,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * <p>The page number. Default value: 1. The pages start from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -329,7 +329,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Ray Job ID.</p>
+             * <p>The ID of the Ray job.</p>
              * 
              * <strong>example:</strong>
              * <p>submission_example</p>
@@ -340,7 +340,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the submitter.</p>
+             * <p>The user ID of the timesheet submitter.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -351,10 +351,10 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The submitter name.</p>
+             * <p>The name of the submitter.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Zhang San</p>
              */
             public Builder submitterName(String submitterName) {
                 this.submitterName = submitterName;
@@ -362,7 +362,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target directory ID.</p>
+             * <p>The ID of the target directory.</p>
              * 
              * <strong>example:</strong>
              * <p>dir_target</p>
@@ -373,7 +373,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target directory name.</p>
+             * <p>The name of the target directory.</p>
              * 
              * <strong>example:</strong>
              * <p>Shared directory</p>
@@ -384,7 +384,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The root directory ID of the target enterprise knowledge base.</p>
+             * <p>The ID of the root directory of the target enterprise knowledge base.</p>
              * 
              * <strong>example:</strong>
              * <p>dir_kb_root</p>
@@ -728,7 +728,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
              * <p>The name of the creator.</p>
              * 
              * <strong>example:</strong>
-             * <p>John</p>
+             * <p>Zhang San</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -739,7 +739,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
              * <p>The description of the to-do card type.</p>
              * 
              * <strong>example:</strong>
-             * <p>Product materials and user guide</p>
+             * <p>Product materials and user instructions</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -780,7 +780,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time.</p>
+             * <p>The last update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -827,7 +827,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
              * <p>The name of the modifier.</p>
              * 
              * <strong>example:</strong>
-             * <p>Jane</p>
+             * <p>Li Si</p>
              */
             public Builder modifierName(String modifierName) {
                 this.modifierName = modifierName;
@@ -854,7 +854,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The visibility mode of the knowledge base to digital employees.</p>
+             * <p>The visibility mode of the knowledge base for digital employees.</p>
              * 
              * <strong>example:</strong>
              * <p>PUBLIC</p>
@@ -895,7 +895,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resources in FAILED status. Returned only when listing top-level KB directories.</p>
+             * <p>The number of resources in the FAILED state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -906,7 +906,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The knowledge base affiliation type. Valid values: aliding_kb_doc (DingTalk knowledge base document), normal (common knowledge).</p>
+             * <p>The ownership type of the knowledge base. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
              * 
              * <strong>example:</strong>
              * <p>normal</p>
@@ -917,7 +917,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resources in READY status. Returned only when listing top-level KB directories.</p>
+             * <p>The number of resources in the READY state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -928,7 +928,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource status. This field has a value only when itemType is resource.</p>
+             * <p>The resource status. This parameter has a value only when itemType is set to resource.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -939,7 +939,7 @@ public class ListUserVisibleKnowledgeBaseContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of resources under the directory and its subdirectories. Returned only when listing top-level KB directories.</p>
+             * <p>The total number of resources in the directory and its subdirectories. This parameter is returned only when the top-level directory list of the knowledge base is queried.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

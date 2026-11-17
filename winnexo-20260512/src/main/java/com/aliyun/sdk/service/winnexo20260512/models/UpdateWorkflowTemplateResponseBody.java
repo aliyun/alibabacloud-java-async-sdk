@@ -284,7 +284,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the template.</p>
+         * <p>The template description.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard process for handling customer complaints</p>
@@ -295,7 +295,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>节点依赖边；每项包含from/to，引用稳定stepId；显式空数组表示没有依赖</p>
+         * <p>The node dependency edges. Each item contains from and to, referencing stable stepIds. An explicit empty array indicates no dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;from&quot;:&quot;collect&quot;,&quot;to&quot;:&quot;deliver&quot;}]</p>
@@ -306,7 +306,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current effective version number of the template. An empty value indicates that only a draft exists and the template cannot be used for work items.</p>
+         * <p>The current effective version number of the template. An empty value indicates that only a draft exists and it cannot be used for work items.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -339,7 +339,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+         * <p>The optional canvas layout, indexed by stepId. This only affects the display and does not determine dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
@@ -350,7 +350,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>
@@ -361,7 +361,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>Customer Complaint Handling Process</p>
@@ -383,7 +383,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+         * <p>The template structure version. The current value is 2, which is independent of the business version vN.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -397,7 +397,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
          * <p>The ordered steps.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
+         * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;}]</p>
          */
         public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
@@ -405,7 +405,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tpl_9401</p>
@@ -416,7 +416,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number to which the content belongs.</p>
+         * <p>The version number to which the returned content belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -430,7 +430,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
          * <p>The change description for this version. An empty value indicates that no description is provided.</p>
          * 
          * <strong>example:</strong>
-         * <p>Added a review step</p>
+         * <p>Added review step</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.versionDescription = versionDescription;
@@ -639,7 +639,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the step.</p>
+             * <p>The step name.</p>
              * 
              * <strong>example:</strong>
              * <p>Customer Complaint Handling Process</p>
@@ -650,7 +650,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the agent assignee.</p>
+             * <p>The name of the agent owner.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -661,9 +661,9 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the assignee. Valid values:</p>
+             * <p>The owner type. Valid values:</p>
              * <ul>
-             * <li>MEMBER: Human user.</li>
+             * <li>MEMBER: Human.</li>
              * <li>AGENT: Agent.</li>
              * </ul>
              * 
@@ -676,7 +676,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID of the human assignee.</p>
+             * <p>The user ID of the human owner.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -687,7 +687,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+             * <p>Specifies whether to manually review the output. Default value: false. This feature can only be enabled for digital workers, and review to-do items are automatically sent to the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -698,7 +698,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user IDs of the reviewers.</p>
+             * <p>The list of reviewer user IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -709,7 +709,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order of the step.</p>
+             * <p>The step order.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -720,10 +720,10 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing instructions for the step.</p>
+             * <p>The step processing instructions.</p>
              * 
              * <strong>example:</strong>
-             * <p>Collect customer information and forward it to the person in charge for review</p>
+             * <p>Collect customer information and submit it to the owner for review</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -731,10 +731,10 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ordered array of fragments. Supported types include text, mention, skill, app, files, and web_search. Referenced identities and order are preserved.</p>
+             * <p>The ordered fragment array. Supports text, mention, skill, app, files, and web_search. Preserves reference identities and order.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;收集客户信息\&quot;}]</p>
+             * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Collect customer information&quot;}]</p>
              */
             public Builder specificationJson(java.util.List<java.util.Map<String, ?>> specificationJson) {
                 this.specificationJson = specificationJson;
@@ -742,7 +742,7 @@ public class UpdateWorkflowTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the step.</p>
+             * <p>The step ID.</p>
              * 
              * <strong>example:</strong>
              * <p>collect</p>

@@ -132,7 +132,7 @@ public class CheckAppResourcePermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the target user has the permission on the resource.</p>
+         * <p>Indicates whether the target user has the specified permission on the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -154,7 +154,7 @@ public class CheckAppResourcePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error description. This field is empty if the request is successful.</p>
+         * <p>The error description. This field is empty when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>The requested resource does not exist</p>
@@ -176,7 +176,7 @@ public class CheckAppResourcePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request trace ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -187,7 +187,7 @@ public class CheckAppResourcePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dot-separated resource key. The first segment is the APP application key.</p>
+         * <p>The dot-separated resource key. The first segment is the application key.</p>
          * 
          * <strong>example:</strong>
          * <p>app.demo.resource_1</p>

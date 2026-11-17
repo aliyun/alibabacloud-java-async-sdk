@@ -156,7 +156,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether more data exists.</p>
+         * <p>Specifies whether more data exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,7 +167,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -189,7 +189,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the collaboration group, such as cg_101. If you specify this parameter, the data is returned by group dimension, and the caller must be a valid group member. If you do not specify this parameter, the data is returned by personal dimension, excluding group tasks.</p>
+         * <p>The collaboration group ID, such as cg_101. If you specify this parameter, the results are returned by group dimension, and the caller must be a valid group member. If you do not specify this parameter, the results are returned by personal dimension, excluding group tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -245,6 +245,9 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actualTime")
         private String actualTime;
 
+        @com.aliyun.core.annotation.NameInMap("conversationId")
+        private String conversationId;
+
         @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
@@ -257,6 +260,9 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("isExpired")
         private Boolean isExpired;
 
+        @com.aliyun.core.annotation.NameInMap("messageId")
+        private String messageId;
+
         @com.aliyun.core.annotation.NameInMap("outputContent")
         private String outputContent;
 
@@ -268,10 +274,12 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
         private Timeline(Builder builder) {
             this.actualTime = builder.actualTime;
+            this.conversationId = builder.conversationId;
             this.displayName = builder.displayName;
             this.errorMessage = builder.errorMessage;
             this.executionId = builder.executionId;
             this.isExpired = builder.isExpired;
+            this.messageId = builder.messageId;
             this.outputContent = builder.outputContent;
             this.scheduledTime = builder.scheduledTime;
             this.status = builder.status;
@@ -290,6 +298,13 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
          */
         public String getActualTime() {
             return this.actualTime;
+        }
+
+        /**
+         * @return conversationId
+         */
+        public String getConversationId() {
+            return this.conversationId;
         }
 
         /**
@@ -321,6 +336,13 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return messageId
+         */
+        public String getMessageId() {
+            return this.messageId;
+        }
+
+        /**
          * @return outputContent
          */
         public String getOutputContent() {
@@ -343,10 +365,12 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String actualTime; 
+            private String conversationId; 
             private String displayName; 
             private String errorMessage; 
             private String executionId; 
             private Boolean isExpired; 
+            private String messageId; 
             private String outputContent; 
             private String scheduledTime; 
             private String status; 
@@ -356,10 +380,12 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
             private Builder(Timeline model) {
                 this.actualTime = model.actualTime;
+                this.conversationId = model.conversationId;
                 this.displayName = model.displayName;
                 this.errorMessage = model.errorMessage;
                 this.executionId = model.executionId;
                 this.isExpired = model.isExpired;
+                this.messageId = model.messageId;
                 this.outputContent = model.outputContent;
                 this.scheduledTime = model.scheduledTime;
                 this.status = model.status;
@@ -373,6 +399,17 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
              */
             public Builder actualTime(String actualTime) {
                 this.actualTime = actualTime;
+                return this;
+            }
+
+            /**
+             * <p>The actual conversation ID used for this task execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleConversationId</p>
+             */
+            public Builder conversationId(String conversationId) {
+                this.conversationId = conversationId;
                 return this;
             }
 
@@ -421,7 +458,18 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution output content (history records only).</p>
+             * <p>The result message ID generated by this task execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleMessageId</p>
+             */
+            public Builder messageId(String messageId) {
+                this.messageId = messageId;
+                return this;
+            }
+
+            /**
+             * <p>The execution output content (historical records only).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -432,7 +480,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timed scheduling time.</p>
+             * <p>The scheduled time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -650,7 +698,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether public access is enabled.</p>
+             * <p>Specifies whether public access is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -675,7 +723,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
              * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Sample name.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -718,8 +766,8 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             /**
              * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Manual: manual execution.</li>
-             * <li>Cron: scheduled trigger.</li>
+             * <li>Manual: Manual execution.</li>
+             * <li>Cron: Scheduled trigger.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -88,7 +88,7 @@ public class GetSkillRunRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to include execution logs. Default value: false. Enable this parameter only for troubleshooting.</p>
+         * <p>Specifies whether to include execution logs. Default value: false. Enable this only when troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -113,7 +113,7 @@ public class GetSkillRunRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID to which the task belongs.</p>
+         * <p>The ID of the tenant to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

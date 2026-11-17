@@ -151,7 +151,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -195,7 +195,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of data entries in the project.</p>
+         * <p>The total number of data processing tasks in the project.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -362,7 +362,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the account is activated:</p>
+             * <p>Specifies whether the account is activated. Valid values:</p>
              * <ul>
              * <li>1: Activated.</li>
              * <li>0: Not activated.</li>
@@ -388,10 +388,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of new system role codes (full replacement, at least one role must be included). Valid values: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER.</p>
+             * <p>The list of new system role codes. This is a full replacement and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
              * 
              * <strong>example:</strong>
-             * <p>string_value</p>
+             * <p>[&quot;APPLICATION_USER&quot;]</p>
              */
             public Builder roleCodes(java.util.List<String> roleCodes) {
                 this.roleCodes = roleCodes;

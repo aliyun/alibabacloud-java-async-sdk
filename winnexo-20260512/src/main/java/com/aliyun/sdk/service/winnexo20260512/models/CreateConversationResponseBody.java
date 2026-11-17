@@ -177,6 +177,9 @@ public class CreateConversationResponseBody extends TeaModel {
 
         /**
          * <p>A reserved field for extension purposes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;source&quot;:&quot;openapi&quot;}</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;

@@ -153,7 +153,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Requires the APP/VIEW permission to check your own permissions and the APP/MANAGE permission to check permissions on behalf of others.</p>
+     * <p>Requires the APP/VIEW permission for checking your own permissions and the APP/MANAGE permission for checking permissions on behalf of others.</p>
      * 
      * @param request the request parameters of CheckAppResourcePermission  CheckAppResourcePermissionRequest
      * @return CheckAppResourcePermissionResponse
@@ -213,7 +213,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Manages personal or specified writing workspace memory based on the authenticated user. The workspace mode inherits the permissions of active members.</p>
+     * <p>Manages personal or specified writing collaboration workspace memory based on the authenticated user. The workspace mode inherits active member permissions.</p>
      * 
      * @param request the request parameters of ClearAutoMemory  ClearAutoMemoryRequest
      * @return ClearAutoMemoryResponse
@@ -269,6 +269,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CloseWorkflowTodosResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Freezes the currently valid and completed direct model history of the source session and performs replication into a new work session, while retaining the source session. For hybrid sessions, only the direct history is transformed, and ordinary work history or old history containing only display records is not included. The transform scope is not limited by directMaxHistoryRounds. The transform itself does not initiate a chat or run a skill. To query or continue the same transform, invoke the operation repeatedly for the same source session, producing at most one successful target. Upon success, the original target is always returned, and no automatic synchronization applies to subsequent messages in the source session. Only status=succeeded indicates that the target is ready for use. When the status is processing, continue querying with the same source sessionId. You cannot send messages to, fork, or share a target that is not yet ready. SourceBusy is returned if the source session is currently generating content. NoConvertibleHistory is returned if there is no valid model history. ConvertedTargetUnavailable is returned if a previously successful target is deleted or its history is unrecoverable, and the target is not rebuilt. Only ordinary sessions that the user can operate and that have work permissions are allowed. Access control rules deny restricted sources such as group_shared, task_follow_up, skill_follow_up, and skill_output_backfill. Background view permissions do not grant transform rights.</p>
+     * 
+     * @param request the request parameters of ConvertDirectConversationToWork  ConvertDirectConversationToWorkRequest
+     * @return ConvertDirectConversationToWorkResponse
+     */
+    @Override
+    public CompletableFuture<ConvertDirectConversationToWorkResponse> convertDirectConversationToWork(ConvertDirectConversationToWorkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ConvertDirectConversationToWork").setMethod(HttpMethod.POST).setPathRegex("/openapi/convertDirectConversationToWork").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConvertDirectConversationToWorkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConvertDirectConversationToWorkResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -369,7 +390,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>创建与页面一致的自由探索工作项及群话题，配置数字员工和可见范围；不发送消息，不自动执行；非幂等，超时先查询 queryWorkItemFeed</p>
+     * <p>Creates a free exploration work item and a group topic that match the page settings, and configures digital workers and the visibility scope. This operation does not send messages or execute automatically. It is not idempotent. If a timeout occurs, call queryWorkItemFeed first.</p>
      * 
      * @param request the request parameters of CreateFreeExplorationWorkItem  CreateFreeExplorationWorkItemRequest
      * @return CreateFreeExplorationWorkItemResponse
@@ -1208,15 +1229,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation is used to upload files to an enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this API operation.</li>
-     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
-     * <li>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</li>
-     * <li>You can add tags to resources by using <code>sourceTags</code> for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
+     * <li>This API is used to upload files to the enterprise knowledge base.</li>
+     * <li>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API.</li>
+     * <li>When uploading a file, you must provide the OSS persistence address of the file (filePath).</li>
+     * <li>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of the file information.</li>
+     * <li>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, it is bound to the default root directory of the current digital employee by default.</li>
+     * <li>You can add tags to resources by using sourceTags for subsequent management and retrieval.</li>
+     * <li>This operation triggers a billing bill (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateScheduledTask  CreateScheduledTaskRequest
@@ -1287,16 +1308,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Creates a user by using OpenAPI.
+     * <p>Creates a user by calling the API.
      *     Business orchestration:
-     *     1. Parses roleCodes into role_ids (validates against system role enumerations).
+     *     1. Parses roleCodes into role_ids (validates against system role enums).
      *     2. Checks whether the user already exists (used to return the isNewUser flag).
-     *     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed by the caller as an RSA ciphertext).
+     *     3. Calls UserManagementService.add_tenant_member to complete the creation or addition process (the password must be passed as an RSA ciphertext by the caller).
      *     4. Returns the creation result (including the isNewUser flag).
      *     Error codes:
-     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to restore the user.
+     *     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
      *     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
-     *     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</p>
+     *     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicated within the tenant.</p>
      * 
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
@@ -1317,7 +1338,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>WinNexo user management OpenAPI: Creates a user group. The tenant identity is derived from the authentication context.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API operation to create a new user group within a specified tenant. The user group name must be unique under the same parent node. If the <code>parentId</code> parameter is not provided, the user group is created under the root node by default. You can also add a description for the new user group.</p>
+     * <h3>Important notes</h3>
+     * <ul>
+     * <li>As a common parameter, <code>tenantId</code> can be explicitly passed by using the <code>--tenant-id</code> option in winnexo-cli.</li>
+     * <li>After the user group is created, the returned details include but are not limited to the user group ID, name, and level.</li>
+     * </ul>
      * 
      * @param request the request parameters of CreateUserGroup  CreateUserGroupRequest
      * @return CreateUserGroupResponse
@@ -1432,7 +1459,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Generates a draft version for editing a workflow template as a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content generation is performed to produce a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently call UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
+     * <p>Generates a draft version of a workflow template for storage management administrators. If the selected version is a draft, the original version is returned without creating a new version, ensuring idempotency. If the selected version is committed, content generation creates a v(maximum version number + 1) draft through replication of the original content. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
      * 
      * @param request the request parameters of CreateWorkflowTemplateDraftVersion  CreateWorkflowTemplateDraftVersionRequest
      * @return CreateWorkflowTemplateDraftVersionResponse
@@ -1675,7 +1702,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Exports a simplified template definition that can be re-imported.</p>
+     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
      * 
      * @param request the request parameters of ExportWorkflowTemplate  ExportWorkflowTemplateRequest
      * @return ExportWorkflowTemplateResponse
@@ -1696,7 +1723,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Generates a non-persistent template draft by calling a large language model (LLM) and consumes the LLM quota of the tenant.</p>
+     * <p>Generates a non-persistent template draft by calling a large language model (LLM). This operation consumes the LLM quota of the tenant and requires the caller to be a valid member.</p>
      * 
      * @param request the request parameters of GenerateWorkflowTemplateDraft  GenerateWorkflowTemplateDraftRequest
      * @return GenerateWorkflowTemplateDraftResponse
@@ -1793,7 +1820,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>获取数字员工对话生成文件的正文、预览地址或短期下载地址，支持工作流节点中的USER_OUTPUT_ITEM文件引用。调用者需通过租户、空间成员和文件来源权限校验。无需将文件登记为工作项产物；本接口不接受artifactId。</p>
+     * <p>Retrieves the content, preview URL, or short-term download URL of a file generated during a digital employee conversation. This operation supports USER_OUTPUT_ITEM file references in workflow nodes. The caller must pass permission checks for the tenant, space member, and file source. You do not need to register the file as a work item artifact. This operation does not accept artifactId.</p>
      * 
      * @param request the request parameters of GetCollaborationGroupOutputItemPreview  GetCollaborationGroupOutputItemPreviewRequest
      * @return GetCollaborationGroupOutputItemPreviewResponse
@@ -1969,7 +1996,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Manages personal or specified collaborative writing workspace memories based on the authenticated user. The workspace mode follows the permissions of active members.</p>
+     * <p>Manages the memory of a personal or specified writing collaboration workspace based on the authenticated user. The workspace mode inherits active member permissions.</p>
      * 
      * @param request the request parameters of GetMemoryAutoExtractionSwitch  GetMemoryAutoExtractionSwitchRequest
      * @return GetMemoryAutoExtractionSwitchResponse
@@ -2032,15 +2059,45 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation uploads a file to an enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this operation.</li>
-     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
-     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of file information.</li>
+     * <li>This operation uploads a file to the enterprise knowledge base.</li>
+     * <li>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API.</li>
+     * <li>You must provide the OSS persistence URL (filePath) of the file when uploading a file.</li>
+     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
+     * <li>If you specify directoryId, the file is placed in the specified enterprise knowledge base directory. Otherwise, the file is placed in the default root directory of the current digital employee.</li>
+     * <li>You can use sourceTags to add tags to resources for subsequent management and retrieval.</li>
+     * <li>This operation generates a bill for UNSTRUCTURED_PARSE. Make sure that your account balance is sufficient.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetScheduledTaskConversationRecords  GetScheduledTaskConversationRecordsRequest
+     * @return GetScheduledTaskConversationRecordsResponse
+     */
+    @Override
+    public CompletableFuture<GetScheduledTaskConversationRecordsResponse> getScheduledTaskConversationRecords(GetScheduledTaskConversationRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetScheduledTaskConversationRecords").setMethod(HttpMethod.GET).setPathRegex("/openapi/getScheduledTaskConversationRecords").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetScheduledTaskConversationRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetScheduledTaskConversationRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API is used to upload files to the enterprise knowledge base.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this API.</li>
+     * <li>When uploading a file, you must provide the OSS persistent address (<code>filePath</code>) of the file.</li>
+     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</li>
      * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</li>
      * <li>You can use <code>sourceTags</code> to add tags to resources for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
+     * <li>This operation triggers billing (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
      * @param request the request parameters of GetScheduledTaskExecutionDetail  GetScheduledTaskExecutionDetailRequest
@@ -2064,12 +2121,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation uploads files to the enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this API operation.</li>
-     * <li>When uploading a file, you must provide the OSS persistence address (<code>filePath</code>) of the file.</li>
-     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
-     * <li>You can use <code>sourceTags</code> to add tags to resources for subsequent management and retrieval.</li>
+     * <li>This operation uploads files to the enterprise knowledge base.</li>
+     * <li>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</li>
+     * <li>You must provide the OSS persistence address (filePath) of the file when uploading the file.</li>
+     * <li>Optional parameters include the public access URL and original file name to improve the completeness of the file information.</li>
+     * <li>If you specify directoryId, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
+     * <li>You can use sourceTags to add tags to resources for subsequent management and retrieval.</li>
      * <li>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
@@ -2141,14 +2198,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <p>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</p>
      * <ul>
-     * <li><strong>TenantId</strong>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</li>
-     * <li><strong>SkillCode</strong>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</li>
+     * <li><strong>TenantId</strong>: Optional common parameter passed through to the backend header by the gateway. If not specified, the default tenant of the current caller is used.</li>
+     * <li><strong>SkillCode</strong>: Mutually exclusive with SkillName. If both are provided, SkillCode takes precedence.</li>
      * <li><strong>SkillName</strong>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <code>ERR.SkillHub.SkillNameAmbiguous</code> is returned.</li>
-     * <li><strong>ViewMode</strong>: Optional. Set to <code>draft</code> (draft/editing view) or <code>published</code> (published view, default).</li>
-     * <li><strong>IncludeSkillFiles</strong>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <code>false</code>.</li>
+     * <li><strong>ViewMode</strong>: Optional. Valid values: <code>draft</code> (draft or edit view) and <code>published</code> (published view, default).</li>
+     * <li><strong>IncludeSkillFiles</strong>: Optional. Specifies whether to return the complete skill file tree (SKILL.md, scripts, and templates). Default value: <code>false</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of GetSkill  GetSkillRequest
@@ -2171,12 +2228,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>Queries the current status and result of an asynchronous task by <code>RunId</code>.</p>
+     * <p>Queries the current status and result of an asynchronous task by using RunId.</p>
      * <ul>
      * <li><strong>State machine</strong>: Running (PENDING/RUNNING) → Succeeded / Failed / Cancelled</li>
-     * <li><strong>TenantId</strong>: An optional common parameter passed through by the gateway. The backend verifies that the RunId belongs to the current tenant. Otherwise, <code>ERR.SkillHub.RunNotFound</code> is returned to avoid exposing existence information.</li>
-     * <li><strong>IncludeLogs</strong>: Optional. Specifies whether to return execution logs. Default value: <code>false</code>.
-     * When execution succeeds, <code>Result.Content[]</code> is an MCP-style Content block array (Text / File / Image).</li>
+     * <li><strong>TenantId</strong>: Optional common parameter passed through by the gateway. The backend verifies that RunId belongs to the current tenant. Otherwise, it uniformly returns ERR.SkillHub.RunNotFound to avoid leaking resource existence.</li>
+     * <li><strong>IncludeLogs</strong>: Optional. Specifies whether to return execution logs. Default value: false.
+     * If the execution is successful, Result.Content[] is an array of MCP-style content blocks (Text / File / Image).</li>
      * </ul>
      * 
      * @param request the request parameters of GetSkillRun  GetSkillRunRequest
@@ -2198,11 +2255,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>tenant_id</code> is derived from the authenticated identity only. Any value passed in the request body is ignored.</li>
-     * <li>Response elements do not expose audit fields such as <code>creator</code> or <code>modifier</code>. The <code>unstructured_docs[ ].content</code> field is not returned by default to avoid large responses.</li>
-     * <li>Set the <code>includeDetails</code> parameter to <code>True</code> to retrieve additional details, including <code>settings</code>, <code>notes</code>, <code>structuredTables</code>, and <code>unstructuredDocs</code>.</li>
+     * <li><code>tenant_id</code> is derived only from the authenticated identity. If the caller passes it in the request body, it is ignored.</li>
+     * <li>The response does not expose audit fields such as <code>creator</code> or <code>modifier</code>. The <code>unstructured_docs[ ].content</code> field is not returned by default to avoid large response payloads.</li>
+     * <li>You can obtain more detailed information, including <code>settings</code>, <code>notes</code>, <code>structuredTables</code>, and <code>unstructuredDocs</code>, by setting the <code>includeDetails</code> parameter to <code>true</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of GetSource  GetSourceRequest
@@ -2350,12 +2407,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries user details through OpenAPI.
+     * <p>Queries the details of a user.
      *     Business orchestration:
      *     1. Locate the user by wnUserId or accountId.
-     *     2. Query the mapping information of the user in the current tenant, including status, join time, and last logon time.
-     *     3. Query the role list of the user in the current tenant.
-     *     4. Query the user group list of the user in the current tenant.
+     *     2. Query the mapping information of the user in the current tenant, including the status, join time, and last logon time.
+     *     3. Query the roles of the user in the current tenant.
+     *     4. Query the user groups to which the user belongs in the current tenant.
      *     5. Assemble the response.
      *     Error codes:
      *     - ERR.User.NotFound: The user does not exist.
@@ -2436,14 +2493,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
      * <ul>
      * <li>This operation returns the detailed information of the current authenticated user.</li>
      * <li>If the tenant information is invalid, the corresponding error message is returned.</li>
-     * <li>tenantId is an optional parameter. If not provided, the default tenant ID of the caller is used.</li>
-     * <li>Multiple authentication methods are supported: AccessKey, BearerToken, and APP authentication.</li>
-     * <li>The returned data includes the user profile (such as username and profile picture URL), role preference settings, and details of all tenants to which the user belongs.</li>
-     * <li>Note that if the current logon tenant is a system tenant (tenantId=10000), this is explicitly indicated in the response.</li>
+     * <li>tenantId is an optional parameter. If it is not provided, the default tenant ID of the caller is used.</li>
+     * <li>The returned data includes the user profile (such as the username and avatar URL), role preference settings, and details of all affiliated tenants.</li>
+     * <li>Note that if the currently logged-on tenant is the system tenant (that is, tenantId=10000), it is explicitly identified in the response.</li>
      * </ul>
      * 
      * @param request the request parameters of GetUserInfo  GetUserInfoRequest
@@ -2545,6 +2600,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the execution summaries of all nodes in a work item.</p>
+     * 
      * @param request the request parameters of GetWorkItemRunSummaries  GetWorkItemRunSummariesRequest
      * @return GetWorkItemRunSummariesResponse
      */
@@ -2651,7 +2709,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Imports a portable template in JSON format and creates a new template regardless of the template name.</p>
+     * <p>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name exists.</p>
      * 
      * @param request the request parameters of ImportWorkflowTemplate  ImportWorkflowTemplateRequest
      * @return ImportWorkflowTemplateResponse
@@ -2978,7 +3036,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>分页查询指定空间的有效成员，支持按成员显示名称搜索。调用者必须是当前租户内该空间的有效成员。isActive表示租户账号启用状态，不表示人事在职状态。</p>
+     * <p>Performs a paged query with paging support on the active members of a specified workspace, and supports searching by member display name. To invoke this API, you must be an active member of the workspace in the current tenant. The isActive field indicates the enabling status of the tenant account, not the employment status.</p>
      * 
      * @param request the request parameters of ListCollaborationGroupMembers  ListCollaborationGroupMembersRequest
      * @return ListCollaborationGroupMembersResponse
@@ -2999,7 +3057,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>分页查询当前调用用户在当前租户中有效加入的协作空间，支持按空间名称搜索。仅返回ACTIVE空间；需要关联平台用户的调用身份，不支持无用户身份的部署凭证。</p>
+     * <p>Performs a paging query for the collaboration spaces that the invoking user has validly joined in the current tenant. You can search for spaces by name. Only ACTIVE spaces are returned. The identity used to invoke the operation must be associated with a platform user, and deployment credentials without a user identity are not supported.</p>
      * 
      * @param request the request parameters of ListCollaborationGroups  ListCollaborationGroupsRequest
      * @return ListCollaborationGroupsResponse
@@ -3210,10 +3268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
-     * The sessionId parameter performs an exact match on a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter performs an exact match on the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
-     * Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.
-     * For versioned files, the latest published version is returned by default without expanding historical versions. This API does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
-     * For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform an automatic switchover to other versions published later. Invoke this API again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</p>
+     * The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of a file registration or an associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+     * Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 entries per page, up to a maximum of 100 entries, sorted in descending order by update time. The response structure remains compatible with the original API operation.
+     * For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
+     * For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not trigger an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</p>
      * 
      * @param request the request parameters of ListOutputFiles  ListOutputFilesRequest
      * @return ListOutputFilesResponse
@@ -3290,15 +3348,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation is used to upload files to an enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> permission to call this operation.</li>
-     * <li>Provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
-     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
-     * <li>You can use <code>sourceTags</code> to add tags to resources for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</li>
+     * <li>This API is used to upload files to the enterprise knowledge base.</li>
+     * <li>The DEVELOPMENT_KB_MANAGE feature permission is required to call this API.</li>
+     * <li>The OSS persistence URL (filePath) of the file must be provided during file upload.</li>
+     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of file information.</li>
+     * <li>If directoryId is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, it is bound to the default root directory of the current digital employee by default.</li>
+     * <li>Tags can be added to resources through sourceTags to facilitate subsequent management and retrieval.</li>
+     * <li>This operation generates a bill (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</li>
      * </ul>
      * 
      * @param request the request parameters of ListScheduledTasks  ListScheduledTasksRequest
@@ -3355,13 +3413,34 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <p>Retrieves source retrieve and usage statistics through paged query and paging. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach settings. The three APIs do not guarantee the same snapshot across requests.</p>
+     * 
+     * @param request the request parameters of ListSourceUsageStatistics  ListSourceUsageStatisticsRequest
+     * @return ListSourceUsageStatisticsResponse
+     */
+    @Override
+    public CompletableFuture<ListSourceUsageStatisticsResponse> listSourceUsageStatistics(ListSourceUsageStatisticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSourceUsageStatistics").setMethod(HttpMethod.POST).setPathRegex("/openapi/listSourceUsageStatistics").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSourceUsageStatisticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSourceUsageStatisticsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used for paging query of folder content and resources in an enterprise knowledge base.</li>
-     * <li>Multiple parameters are supported for filtering and sorting, such as <code>directoryId</code>, <code>page</code>, <code>pageSize</code>, <code>sortField</code>, <code>sortOrder</code>, and more.</li>
-     * <li>The <code>sourceTypes</code> parameter allows you to filter by resource type. Separate multiple types with commas.</li>
-     * <li>If <code>directoryId</code> is not specified or is set to <code>root</code>, the root folder list of the knowledge base is queried by default.</li>
-     * <li>The default sort field is <code>name</code>, and the default sort order is ascending (<code>asc</code>).</li>
+     * <li>This API performs a paging query of folder contents and resources in an enterprise knowledge base.</li>
+     * <li>It supports filtering and sorting by various parameters, such as directoryId, page, pageSize, sortField, and sortOrder.</li>
+     * <li>The sourceTypes parameter allows you to filter by resource type. Separate multiple types with commas.</li>
+     * <li>If directoryId is not specified or is set to root, the root folder list of the knowledge base is queried by default.</li>
+     * <li>The default sort field is name, and the default sort order is ascending (asc).</li>
      * </ul>
      * 
      * @param request the request parameters of ListTenantDirectory  ListTenantDirectoryRequest
@@ -3431,11 +3510,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation returns subdirectories and READY resources under the specified directory based on the enterprise knowledge base frontend scope.</li>
+     * <li>This operation returns the subdirectories and READY resources of a specified directory based on the frontend specifications of the enterprise knowledge base.</li>
      * <li>The user identity and directory visibility scope are derived from the OpenAPI authentication context.</li>
-     * <li>When <code>sourceTypes</code> has a value, only resources are returned. <code>keyword</code> searches only the current directory level.</li>
+     * <li>If <code>sourceTypes</code> is specified, only resources are returned. The <code>keyword</code> parameter only searches the current directory level.</li>
      * </ul>
      * 
      * @param request the request parameters of ListUserVisibleKnowledgeBaseContents  ListUserVisibleKnowledgeBaseContentsRequest
@@ -3483,13 +3562,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries a paged list of tenant members by using OpenAPI.
-     *     Business orchestration:
-     *     1. Parse filter conditions (roleCodes → role_ids).
-     *     2. Call UserTenantMappingRepository.query_paged_tenant_members to perform a paged query.
-     *     3. Convert role_id in the results to roleCode and assemble the response.
+     * <p>Performs a paging query for the tenant member list by using OpenAPI.
+     *     Workflow:
+     *     1. Parse filter conditions (roleCodes to role_ids).
+     *     2. Invoke UserTenantMappingRepository.query_paged_tenant_members to perform a paging query.
+     *     3. Convert role_id in the result to roleCode and assemble the response.
      *     Error codes:
-     *     - An error is thrown when an invalid roleCode parameter is specified.</p>
+     *     - Throws an error when the roleCode parameter is invalid.</p>
      * 
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
@@ -3647,7 +3726,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries valid templates in the current collaboration space with pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</p>
+     * <p>Searches for valid templates in the current collaboration space by using pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</p>
      * 
      * @param request the request parameters of ListWorkflowTemplates  ListWorkflowTemplatesRequest
      * @return ListWorkflowTemplatesResponse
@@ -3947,6 +4026,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QuerySemanticKnowledgeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the overview of source retrieve and usage. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the attach configuration. The three APIs do not guarantee the same snapshot across requests.</p>
+     * 
+     * @param request the request parameters of QuerySourceUsageSummary  QuerySourceUsageSummaryRequest
+     * @return QuerySourceUsageSummaryResponse
+     */
+    @Override
+    public CompletableFuture<QuerySourceUsageSummaryResponse> querySourceUsageSummary(QuerySourceUsageSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QuerySourceUsageSummary").setMethod(HttpMethod.POST).setPathRegex("/openapi/querySourceUsageSummary").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuerySourceUsageSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuerySourceUsageSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the trends of source retrieval and usage over time. Returns only the data relevant to the current query and does not include other report sections. For enterprises, only knowledge base super administrators are authorized. For a single workspace, workspace administrators or the SUPER_ADMIN of the current tenant are authorized. For all workspaces, only the platform SUPER_ADMIN is authorized. This feature is unavailable for individual users, and group credentials cannot be used across workspaces. The time parameter refers to the time when data is reported and ingested. The time range is inclusive of the start time and exclusive of the end time, and can span up to 366 days. Knowledge bases are filtered based on current bindings. The three APIs do not guarantee data snapshot consistency across requests.</p>
+     * 
+     * @param request the request parameters of QuerySourceUsageTrend  QuerySourceUsageTrendRequest
+     * @return QuerySourceUsageTrendResponse
+     */
+    @Override
+    public CompletableFuture<QuerySourceUsageTrendResponse> querySourceUsageTrend(QuerySourceUsageTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QuerySourceUsageTrend").setMethod(HttpMethod.POST).setPathRegex("/openapi/querySourceUsageTrend").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuerySourceUsageTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuerySourceUsageTrendResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4259,7 +4380,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Manages personal memory or the memory of a specified writing workspace based on the authenticated user. Workspace mode inherits the permissions of active members.</p>
+     * <p>Manages personal or specified writing workspace memory based on the authenticated user. In workspace mode, the permissions of active members are inherited.</p>
      * 
      * @param request the request parameters of ReplaceManualMemory  ReplaceManualMemoryRequest
      * @return ReplaceManualMemoryResponse
@@ -4355,7 +4476,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>从工作项指定节点重跑；沿用业务权限和状态校验，命令接受不代表异步执行完成</p>
+     * <p>Reruns a workflow starting from a specified node of a work item. This operation retains business permissions and status checks. Acceptance of the command does not indicate that the asynchronous execution is complete.</p>
      * 
      * @param request the request parameters of RerunWorkflowNode  RerunWorkflowNodeRequest
      * @return RerunWorkflowNodeResponse
@@ -4433,6 +4554,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resets the workflow node configuration to the default values.</p>
+     * 
      * @param request the request parameters of ResetWorkflowNodeConfiguration  ResetWorkflowNodeConfigurationRequest
      * @return ResetWorkflowNodeConfigurationResponse
      */
@@ -4889,11 +5013,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to upload a file to My Resources of a specified digital employee.</li>
-     * <li>The source_type is fixed to FILE, the scope is fixed to PERSONAL, and the platform is fixed to LOCAL.</li>
-     * <li>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</li>
-     * <li>If the destination folder ID (directoryId) is not specified, the file is automatically attached to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the invoker.</li>
-     * <li>Multiple methods to authenticate (such as AK, BearerToken, and APP) are supported for security authentication.</li>
+     * <li>This API operation uploads a file to the My Resources section of a specified digital employee.</li>
+     * <li>The source_type parameter is fixed to FILE, the scope parameter is fixed to PERSONAL, and the platform parameter is fixed to LOCAL.</li>
+     * <li>You must provide an OSS persistence address (filePath) for the file. Other information, such as the public access URL and the original file name, is optional.</li>
+     * <li>If you do not specify a target folder ID (directoryId), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure that the folder belongs to the personal folder of the user who invokes the API.</li>
+     * <li>You can authenticate through multiple methods (such as AK, BearerToken, and APP) for security authentication.</li>
      * <li>The operation type is write, and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
@@ -4941,7 +5065,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>向当前租户、指定协作空间内的已有自由探索会话发送文本消息，立即返回消息提交回执，AI回复在后台异步生成。调用者需关联平台用户并具有话题发送权限。workItemId与conversationId至少传一个，同时传入时必须指向同一会话。不创建新会话，不支持工作流节点话题或Master话题。</p>
+     * <p>Sends a text message to an existing free exploration session within the current tenant and specified collaboration space. Returns a message submission receipt immediately, and the AI reply is generated asynchronously in the background. The caller must be associated with a platform user and have the permission to send messages to topics. You must specify at least one of workItemId and conversationId. If both are specified, they must point to the same session. This operation does not create a new session and does not support workflow node topics or Master topics.</p>
      * 
      * @param request the request parameters of SendWorkItemMessage  SendWorkItemMessageRequest
      * @return SendWorkItemMessageResponse
@@ -4983,7 +5107,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The storage management administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before the version takes effect, it is revalidated against the current workspace members, digital employees, and capabilities. Existing work items use their own execute snapshots and remain unaffected.</p>
+     * <p>The storage management administrator updates the Settings for the effective version of a workflow template. Only versions that you commit are allowed, and each template can have only one effective version. Before taking effect, the version is revalidated against the current workspace members, digital employees, and capabilities. Existing work items use their own snapshots to execute and remain unaffected.</p>
      * 
      * @param request the request parameters of SetWorkflowTemplateEffectiveVersion  SetWorkflowTemplateEffectiveVersionRequest
      * @return SetWorkflowTemplateEffectiveVersionResponse
@@ -5430,7 +5554,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Manages personal memories or memories of a specified collaborative writing workspace based on the authenticated user. In workspace mode, the permissions of active members are applied.</p>
+     * <p>Manages personal or specified writing collaboration workspace memory based on the authenticated user. The workspace mode inherits the permissions of active members.</p>
      * 
      * @param request the request parameters of UpdateMemoryAutoExtractionSwitch  UpdateMemoryAutoExtractionSwitchRequest
      * @return UpdateMemoryAutoExtractionSwitchResponse
@@ -5551,7 +5675,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>WinNexo user management OpenAPI: updates a user group. The tenant identity is obtained from the authentication context.</p>
+     * <h2>Request description</h2>
+     * <p>This operation supports atomic updates to user group information, including but not limited to the user group name, description, and its position in the organizational structure (by setting a new parent user group ID or moving to the root node). Note that when attempting to move a user group to the root node, you must not provide a non-null <code>parentId</code> value at the same time. Additionally, if you do not want to modify certain fields such as <code>userGroupName</code> or <code>description</code>, you can omit these parameters.</p>
      * 
      * @param request the request parameters of UpdateUserGroup  UpdateUserGroupRequest
      * @return UpdateUserGroupResponse
@@ -5640,7 +5765,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates a workflow template by overwriting it with valid members. The last save takes effect.</p>
+     * <p>Overwrites and updates a workflow template with valid members. The last save takes effect.</p>
      * 
      * @param request the request parameters of UpdateWorkflowTemplate  UpdateWorkflowTemplateRequest
      * @return UpdateWorkflowTemplateResponse
@@ -5654,6 +5779,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateWorkflowTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Submits a local attachment by using standard Base64 encoding (the maximum decoding limit on the application side is 50 MiB) and returns the session file record ID.</p>
+     * 
+     * @param request the request parameters of UploadChatFileByBase64  UploadChatFileByBase64Request
+     * @return UploadChatFileByBase64Response
+     */
+    @Override
+    public CompletableFuture<UploadChatFileByBase64Response> uploadChatFileByBase64(UploadChatFileByBase64Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UploadChatFileByBase64").setMethod(HttpMethod.POST).setPathRegex("/openapi/uploadChatFileByBase64").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadChatFileByBase64Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UploadChatFileByBase64Response> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
