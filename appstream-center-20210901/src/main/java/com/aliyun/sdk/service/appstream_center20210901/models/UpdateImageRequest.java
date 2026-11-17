@@ -180,7 +180,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The complete list of application adapter IDs for the selected image version. A maximum of 100 items are supported. <strong>When a non-empty list is passed, it must include the adapters that you still want to retain. Omitting this parameter or passing an empty list does not clear the existing associations.</strong></p>
+         * <p>The complete list of application adapter IDs for the selected image version. A maximum of 100 items are supported. <strong>When a non-empty list is passed, it must include the adapters that you want to retain. Omitting this parameter or passing an empty list does not clear the existing associations.</strong></p>
          */
         public Builder adaptorIdList(java.util.List<String> adaptorIdList) {
             this.putBodyParameter("AdaptorIdList", adaptorIdList);
@@ -189,7 +189,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The updated description of the image.</p>
+         * <p>The new description of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>Update office software and basic configurations</p>
@@ -201,7 +201,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The operating system distribution information of the image. This must be consistent with the actual operating system distribution of the image.</p>
+         * <p>The operating system distribution information of the image. It must be consistent with the actual operating system distribution of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>Ubuntu 22.04 64-bit</p>
@@ -259,7 +259,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image version to be modified. If this parameter is omitted, the current effective version of the image specified by ImageId is used. You must provide at least one of ImageId and VersionId.</p>
+         * <p>The ID of the image version to be modified. If this parameter is omitted, the current effective version of the image specified by ImageId is used. You must provide at least one of VersionId and ImageId.</p>
          * 
          * <strong>example:</strong>
          * <p>iv-bp1example****</p>

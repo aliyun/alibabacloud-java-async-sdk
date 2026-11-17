@@ -208,7 +208,7 @@ public class GetMqttTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of the MQTT connection password. It is returned as a string representing a UNIX timestamp in milliseconds.</p>
+         * <p>The expiration time of the MQTT connection password. It is a UNIX timestamp in milliseconds and is returned as a string.</p>
          * 
          * <strong>example:</strong>
          * <p>1794278400000</p>
@@ -219,7 +219,7 @@ public class GetMqttTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned when the request fails, which corresponds to the error code.</p>
+         * <p>The error message returned when the request fails. It corresponds to the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Client forbidden connect</p>
@@ -230,7 +230,7 @@ public class GetMqttTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The access endpoint for the MQTT client. Use the endpoint returned by this operation to establish a connection.</p>
+         * <p>The access endpoint for the MQTT client. Use the endpoint returned in this response to establish a connection.</p>
          * 
          * <strong>example:</strong>
          * <p>mqtt.example.com</p>
@@ -252,7 +252,7 @@ public class GetMqttTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The MQTT instance ID, used for token authentication.</p>
+         * <p>The ID of the MQTT instance, used for token authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>post-cn-7mz2****</p>
@@ -263,7 +263,7 @@ public class GetMqttTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The password used to establish an MQTT connection. It consists of publish and subscribe tokens in the format of <code>W|PublishToken|R|SubscribeToken</code>. Use the complete password returned by the operation. The desensitized examples in the documentation cannot be used for connections.</p>
+         * <p>The password used to establish an MQTT connection. It consists of publish and subscribe tokens in the format of <code>W|PublishToken|R|SubscribeToken</code>. Use the complete password returned in the response. The desensitized examples in the documentation cannot be used for connections.</p>
          * 
          * <strong>example:</strong>
          * <p>W|pubTokenExample****|R|subTokenExample****</p>
@@ -274,7 +274,7 @@ public class GetMqttTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The username used to establish an MQTT connection. The format is <code>Token|AccessKeyId|InstanceId</code>. AccessKeyId and InstanceId are identifiers used by the server to generate credentials. Use the complete username returned by the operation.</p>
+         * <p>The username used to establish an MQTT connection. The format is <code>Token|AccessKeyId|InstanceId</code>. AccessKeyId and InstanceId are identifiers used by the server to generate credentials. Use the complete username returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>Token|LTAI5tExample****|post-cn-7mz2****</p>
@@ -285,7 +285,7 @@ public class GetMqttTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The VPC access endpoint for MQTT, used by clients that meet the VPC network access requirements.</p>
+         * <p>The VPC access endpoint for MQTT. It is used by clients that meet the required VPC network access conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>mqtt-vpc.example.com</p>
@@ -307,7 +307,7 @@ public class GetMqttTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+         * <p>Indicates whether the request is successful. A value of <code>true</code> indicates success, and a value of <code>false</code> indicates failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -318,7 +318,7 @@ public class GetMqttTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The topic list. Each list element contains <code>topic</code> (the topic name), <code>type</code> (the topic type), and <code>permission</code> (the permission). The list returned by this operation includes topics for publishing, tenant subscription, device subscription, and system subscription. The publish permission is <code>W</code>, and the subscribe permission is <code>R</code>.</p>
+         * <p>The topic list. Each element in the list contains <code>topic</code> (the topic name), <code>type</code> (the topic type), and <code>permission</code> (the permission). The list returned by this operation includes topics for publishing, tenant subscription, device subscription, and system subscription. The publish permission is <code>W</code>, and the subscribe permission is <code>R</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;topic&quot;:&quot;pub/550e8400-e29b-41d4-a716-446655440000&quot;,&quot;type&quot;:&quot;pub&quot;,&quot;permission&quot;:&quot;W&quot;},{&quot;topic&quot;:&quot;sub/ten/123456789012****&quot;,&quot;type&quot;:&quot;sub-ten&quot;,&quot;permission&quot;:&quot;R&quot;},{&quot;topic&quot;:&quot;sub/uuid/550e8400-e29b-41d4-a716-446655440000&quot;,&quot;type&quot;:&quot;sub-uuid&quot;,&quot;permission&quot;:&quot;R&quot;},{&quot;topic&quot;:&quot;sub/sys&quot;,&quot;type&quot;:&quot;sub-sys&quot;,&quot;permission&quot;:&quot;R&quot;}]</p>

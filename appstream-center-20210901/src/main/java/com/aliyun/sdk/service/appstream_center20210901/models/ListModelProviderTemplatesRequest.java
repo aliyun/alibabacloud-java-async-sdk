@@ -159,7 +159,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The agent platform.</p>
+         * <p>The Agent platform.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -171,7 +171,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The name of the agent provider.</p>
+         * <p>The name of the Agent provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The business type. Not all business types are supported. Only business types within the supported range are valid. Refer to the listed enumeration values.</p>
+         * <p>The business type. Not all business types are supported. Only specific BizType values are supported. Refer to the valid values for the supported scope.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The model group ID to filter by.</p>
+         * <p>The model group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>
@@ -209,7 +209,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+         * <p>The page number. The value starts from 1. Entering 0 or 1 returns the same result.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -233,7 +233,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The model provider name to filter by.</p>
+         * <p>The model provider name.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian</p>
@@ -245,7 +245,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The model provider template IDs to filter by.</p>
+         * <p>The model provider template IDs.</p>
          */
         public Builder providerTemplateIds(java.util.List<String> providerTemplateIds) {
             String providerTemplateIdsShrink = shrink(providerTemplateIds, "ProviderTemplateIds", "json");

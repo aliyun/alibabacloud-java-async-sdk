@@ -452,7 +452,7 @@ public class CreateWuyingServerRequest extends Request {
         } 
 
         /**
-         * <p>The quantity.</p>
+         * <p>The number of workstations.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -512,7 +512,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The billing type.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -545,7 +545,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The GPU driver configuration version, such as grid19.</p>
+         * <p>The version of the GPU driver, such as grid19.</p>
          * 
          * <strong>example:</strong>
          * <p>grid19</p>
@@ -557,33 +557,33 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The hostname. The following limits apply:</p>
+         * <p>The hostname. The hostname must meet the following requirements:</p>
          * <ul>
-         * <li><p>A period (.) or hyphen (-) cannot be used as the first or last character, and consecutive use is not allowed.</p>
+         * <li><p>The hostname cannot start or end with a period (.) or a hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-).</p>
          * </li>
-         * <li><p>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.), consecutive hyphens, or consist entirely of digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
+         * <li><p>For a Windows workstation: The hostname must be 2 to 15 characters in length. It cannot contain periods (.) or consecutive hyphens (-), and cannot contain only digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
          * </li>
-         * <li><p>Linux workstations:</p>
+         * <li><p>For a Linux workstation:</p>
          * <ul>
-         * <li><p>The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment between periods can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
+         * <li><p>The hostname must be 2 to 64 characters in length. It can contain multiple periods (.). The string between two consecutive periods is a segment. Each segment can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
          * </li>
-         * <li><p>You can use the placeholder <code>${instance_id}</code> to include the instance ID in the HostName parameter. For example, if you set <code>HostName=k8s-${instance_id}</code> and the created ECS instance ID is <code>i-123abc****</code>, the hostname of the instance is <code>k8s-i-123abc****</code>.</p>
+         * <li><p>You can use the <code>${instance_id}</code> placeholder to pass the instance ID to the HostName parameter. For example, if you set HostName to <code>k8s-${instance_id}</code> and the created ECS instance ID is <code>i-123abc****</code>, the hostname of the instance is <code>k8s-i-123abc****</code>.</p>
          * </li>
          * </ul>
          * </li>
-         * <li><p>When creating multiple workstation instances at a time, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> naming format to uniformly name multiple workstations. For example, if you set Hostname to <code>ecd-[1,4]-test</code>, the hostname of the first workstation is <code>ecd-0001-test</code>, the hostname of the second workstation is <code>ecd-0002-test</code>, and so on.</p>
+         * <li><p>When you create multiple workstations at a time, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> naming format to name the workstations in a unified manner. For example, if you set HostName to <code>ecd-[1,4]-test</code>, the hostname of the first workstation is <code>ecd-0001-test</code>, the hostname of the second workstation is <code>ecd-0002-test</code>, and so on.</p>
          * <ul>
-         * <li><p><code>name_prefix</code>: The prefix of the hostname.</p>
+         * <li><p><code>name_prefix</code>: the prefix of the hostname.</p>
          * </li>
-         * <li><p><code>[begin_number,bits]</code>: The sequential number in the hostname.</p>
+         * <li><p><code>[begin_number,bits]</code>: the sequential number in the hostname.</p>
          * <ul>
-         * <li><p><code>begin_number</code>: The starting number. Valid values: 0 to 999999. Default value: 0. If an invalid value is specified, the value is set to 0.</p>
+         * <li><p><code>begin_number</code>: the start number. Valid values: 0 to 999999. Default value: 0. If the specified value is invalid, the default value 0 is used.</p>
          * </li>
-         * <li><p><code>bits</code>: The number of digits. Valid values: 1 to 6. Default value: 6. If an invalid value is specified, the value is set to 6.</p>
+         * <li><p><code>bits</code>: the number of digits. Valid values: 1 to 6. Default value: 6. If the specified value is invalid, the default value 6 is used.</p>
          * </li>
          * </ul>
          * </li>
-         * <li><p><code>name_suffix</code>: The suffix of the hostname.</p>
+         * <li><p><code>name_suffix</code>: the suffix of the hostname.</p>
          * </li>
          * </ul>
          * </li>
@@ -599,7 +599,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token that ensures operation uniqueness.</p>
+         * <p>The idempotence token that is used to ensure the uniqueness of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>6a1b8c3d</p>
@@ -635,7 +635,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The network policy type (invite-only preview).</p>
+         * <p>The network policy type. This feature is in invitational preview.</p>
          * 
          * <strong>example:</strong>
          * <p>DirectIp</p>
@@ -659,7 +659,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The workstation logon password.</p>
+         * <p>The logon password of the workstation.</p>
          * 
          * <strong>example:</strong>
          * <p>YourPassword123</p>
@@ -683,7 +683,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The time unit.</p>
+         * <p>The unit of the subscription duration.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -695,9 +695,9 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The discount ID.</p>
+         * <p>The promotion ID.</p>
          * <blockquote>
-         * <p>If PromotionId is specified, the corresponding discount is applied.</p>
+         * <p>If PromotionId is specified, the system attempts to apply the corresponding discount.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -722,7 +722,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The workstation instance type.</p>
+         * <p>The instance type of the workstation.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</p>
@@ -746,7 +746,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The sub-billing type.</p>
+         * <p>The sub-billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>postPaid</p>
@@ -758,7 +758,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The system cloud disk type.</p>
+         * <p>The category of the system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
@@ -770,7 +770,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The system cloud disk performance level.</p>
+         * <p>The performance level of the system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -782,7 +782,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The system cloud disk size. Unit: GB.</p>
+         * <p>The size of the system cloud disk. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -794,7 +794,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The list of office network vSwitches.</p>
+         * <p>The list of vSwitches in the office network.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putBodyParameter("VSwitchIds", vSwitchIds);
@@ -815,7 +815,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The workstation name. When creating multiple workstations, a numeric suffix is automatically appended.</p>
+         * <p>The name of the workstation. When you create multiple workstations, a numeric suffix is automatically added.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleServerName</p>
@@ -899,7 +899,7 @@ public class CreateWuyingServerRequest extends Request {
             } 
 
             /**
-             * <p>The data cloud disk type.</p>
+             * <p>The category of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_auto</p>
@@ -910,7 +910,7 @@ public class CreateWuyingServerRequest extends Request {
             }
 
             /**
-             * <p>The data cloud disk performance level.</p>
+             * <p>The performance level of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>PL0</p>
@@ -921,7 +921,7 @@ public class CreateWuyingServerRequest extends Request {
             }
 
             /**
-             * <p>The data cloud disk size.</p>
+             * <p>The size of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

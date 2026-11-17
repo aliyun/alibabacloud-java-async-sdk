@@ -109,7 +109,7 @@ public class BatchCreateLlmTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the model provider template to which the model templates belong.</p>
+         * <p>The ID of the model provider template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class BatchCreateLlmTemplatesRequest extends Request {
             } 
 
             /**
-             * <p>The JSON object for model configuration.</p>
+             * <p>The model configuration JSON object.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -258,7 +258,7 @@ public class BatchCreateLlmTemplatesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to set the model as the default model. Each model group can have at most one default model.</p>
+             * <p>Specifies whether to set the model as the default model. A model group can have at most one default model.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -269,7 +269,7 @@ public class BatchCreateLlmTemplatesRequest extends Request {
             }
 
             /**
-             * <p>The model code. It must be unique under the same provider.</p>
+             * <p>The model code. The code must be unique under the same provider.</p>
              * 
              * <strong>example:</strong>
              * <p>qwen3.6-plus</p>

@@ -228,7 +228,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * <p>The JSON configuration of the model provider, which includes connection information such as baseUrl, apiKey, and api. The apiKey is encrypted and stored after creation. When ProviderType is WuyingCredit, this parameter is not required and will be copied from the system template.</p>
+         * <p>The JSON configuration of the model provider, which includes connection information such as baseUrl, apiKey, and api. The apiKey is encrypted and stored after creation. When ProviderType is WuyingCredit, this parameter is not required and is copied from the system template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class CreateModelProviderTemplateRequest extends Request {
          * <p>The description of the model provider template.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Bailian provider</p>
+         * <p>Alibaba Cloud Model Studio provider</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -257,7 +257,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Wuying secure proxy. This parameter must be set to true when ProviderType is WuyingCredit.</p>
+         * <p>Specifies whether to enable the Wuying security proxy. This parameter must be set to true when ProviderType is WuyingCredit.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -285,7 +285,7 @@ public class CreateModelProviderTemplateRequest extends Request {
          * <p>The name of the model provider template.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Bailian</p>
+         * <p>Alibaba Cloud Model Studio</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -294,7 +294,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the model provider. The name must be unique within the same model template. The naming conventions vary based on the ProviderType. For more information, see the description of ProviderType.</p>
+         * <p>The name of the model provider. The name must be unique within the same model template. The naming rules vary based on the ProviderType. For more information, see the description of ProviderType.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

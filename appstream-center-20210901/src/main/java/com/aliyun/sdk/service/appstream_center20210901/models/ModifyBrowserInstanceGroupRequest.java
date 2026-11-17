@@ -172,7 +172,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to send notification emails for authorization and deauthorization.</p>
+         * <p>Specifies whether to send notification emails for authorization and revocation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -219,7 +219,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum resource count. This parameter takes effect only for the pay-as-you-go billing method based on monthly active users.</p>
+         * <p>The maximum resource count. This parameter takes effect for the pay-as-you-go billing method based on monthly active users.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -231,7 +231,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The network configurations.</p>
+         * <p>The network configuration.</p>
          */
         public Builder network(Network network) {
             String networkShrink = shrink(network, "Network", "json");
@@ -251,7 +251,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The storage-related policy.</p>
+         * <p>The storage-related policies.</p>
          */
         public Builder storagePolicy(StoragePolicy storagePolicy) {
             String storagePolicyShrink = shrink(storagePolicy, "StoragePolicy", "json");
@@ -261,7 +261,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The timer.</p>
+         * <p>The timers.</p>
          */
         public Builder timers(java.util.List<Timers> timers) {
             String timersShrink = shrink(timers, "Timers", "json");
@@ -369,7 +369,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The bookmark ID. This parameter is required only for modification scenarios.</p>
+             * <p>The bookmark ID. This parameter is required only for update scenarios.</p>
              * 
              * <strong>example:</strong>
              * <p>bm-12345</p>
@@ -631,7 +631,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the domain name configuration. This parameter is required only when you modify the configuration.</p>
+             * <p>The domain name configuration ID. Required only when modifying an existing configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>ru-12345</p>
@@ -738,7 +738,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The type of access restriction.</p>
+             * <p>The access restriction type.</p>
              * 
              * <strong>example:</strong>
              * <p>ALLOW_LIST</p>
@@ -757,7 +757,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The restricted domain name configurations.</p>
+             * <p>The restricted domain name configuration.</p>
              */
             public Builder restrictedURLs(java.util.List<RestrictedURLs> restrictedURLs) {
                 this.restrictedURLs = restrictedURLs;
@@ -765,10 +765,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The file path for network-restricted URLs.</p>
+             * <p>The network restricted URL file path.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_whitelist_template.csv</p>
+             * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_allowlist_template.csv</p>
              */
             public Builder restrictedURLsFilePath(String restrictedURLsFilePath) {
                 this.restrictedURLsFilePath = restrictedURLsFilePath;
@@ -916,7 +916,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The type of the client.</p>
+             * <p>The client type.</p>
              * 
              * <strong>example:</strong>
              * <p>windows</p>
@@ -1293,7 +1293,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The rich text clipboard read size.</p>
+             * <p>The rich text clipboard read limit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1326,7 +1326,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The rich text clipboard write size.</p>
+             * <p>The rich text clipboard write limit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1359,7 +1359,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The text clipboard read size.</p>
+             * <p>The text clipboard read limit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1381,7 +1381,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The text clipboard write size.</p>
+             * <p>The text clipboard write limit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1462,7 +1462,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The IPv4 address or CIDR block to be revoked.</p>
+             * <p>The IPv4 addresses or CIDR blocks to be revoked.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24</p>
@@ -1871,7 +1871,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The server-side access IP address whitelist.</p>
+             * <p>The server access IP address whitelist.</p>
              */
             public Builder authorizeAccessPolicyRules(java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules) {
                 this.authorizeAccessPolicyRules = authorizeAccessPolicyRules;
@@ -1879,7 +1879,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The logon client type control.</p>
+             * <p>The logon client type control settings.</p>
              */
             public Builder clientTypes(java.util.List<ClientTypes> clientTypes) {
                 this.clientTypes = clientTypes;
@@ -1895,7 +1895,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The data retention policy upon disconnection.</p>
+             * <p>The data retention policy after disconnection.</p>
              * 
              * <strong>example:</strong>
              * <p>customTime</p>
@@ -1906,7 +1906,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The session retention duration upon disconnection.</p>
+             * <p>The session retention duration after disconnection.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -1917,7 +1917,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The floating ball file manager switch.</p>
+             * <p>The floating button file manager switch.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -1928,7 +1928,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The file transfer policy for the web client.</p>
+             * <p>The web client file transfer policy.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -1940,6 +1940,10 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
 
             /**
              * <p>The cloud browser dual-screen switch.</p>
+             * <ul>
+             * <li><code>on</code>: Enables the dual-screen feature.</li>
+             * <li><code>off</code>: Disables the dual-screen feature.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -1950,7 +1954,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The no-operation disconnect policy.</p>
+             * <p>The disconnect on inactivity policy.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -1961,7 +1965,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The no-operation disconnect time in seconds.</p>
+             * <p>The inactivity disconnect time in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1994,7 +1998,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The server access IP address whitelist to be revoked.</p>
+             * <p>The server access IP address whitelists to be revoked.</p>
              */
             public Builder revokeAccessPolicyRules(java.util.List<RevokeAccessPolicyRules> revokeAccessPolicyRules) {
                 this.revokeAccessPolicyRules = revokeAccessPolicyRules;
@@ -2118,7 +2122,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The user roaming-related policy.</p>
+             * <p>The user roaming-related policies.</p>
              */
             public Builder userProfile(UserProfile userProfile) {
                 this.userProfile = userProfile;

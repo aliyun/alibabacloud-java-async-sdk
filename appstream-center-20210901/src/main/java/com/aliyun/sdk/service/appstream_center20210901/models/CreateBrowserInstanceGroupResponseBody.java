@@ -67,7 +67,7 @@ public class CreateBrowserInstanceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The creation result of the cloud browser group, including the resource ID and the order ID.</p>
+         * <p>The creation result of the cloud browser group, including the resource ID and order ID.</p>
          */
         public Builder browserInstanceGroupModel(BrowserInstanceGroupModel browserInstanceGroupModel) {
             this.browserInstanceGroupModel = browserInstanceGroupModel;

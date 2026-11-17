@@ -104,7 +104,7 @@ public class UnbindAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error or result message. This field describes the cause of a failed request and may not be included in a successful response.</p>
+         * <p>The error message or result prompt. This field describes the cause of a failure and may not be included in a successful response.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal error.</p>
@@ -126,7 +126,7 @@ public class UnbindAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, query the task status separately.</p>
+         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To determine whether the asynchronous task is completed, query the task status.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

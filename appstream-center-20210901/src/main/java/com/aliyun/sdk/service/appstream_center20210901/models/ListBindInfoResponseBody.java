@@ -106,7 +106,7 @@ public class ListBindInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of binding information returned.</p>
+         * <p>The list of returned binding information.</p>
          */
         public Builder bindInfoModels(java.util.List<BindInfoModels> bindInfoModels) {
             this.bindInfoModels = bindInfoModels;
@@ -114,7 +114,7 @@ public class ListBindInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the query results currently displayed.</p>
+         * <p>The current page number of the query results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListBindInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of query results per page.</p>
+         * <p>The number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

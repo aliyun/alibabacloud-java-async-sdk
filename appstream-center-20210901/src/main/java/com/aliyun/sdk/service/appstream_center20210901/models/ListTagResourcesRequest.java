@@ -117,7 +117,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The paged query token. You do not need to specify this parameter for the first request. If the previous invoke returned a non-empty NextToken value, pass it in as-is to retrieve subsequent paging results.</p>
+         * <p>The pagination token for paged queries. You do not need to specify this parameter when you call this operation for the first time. If a non-empty NextToken is returned in the previous call, pass it as is to obtain subsequent results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</p>
@@ -142,10 +142,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of resource IDs. A maximum of 50 resource IDs are supported.</p>
-         * <p>If the resource type is delivery group, specify the delivery group ID (prefixed with <code>aig-</code>). You can call the ListAppInstanceGroup operation to obtain the delivery group ID.</p>
+         * <p>The list of resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>If the resource type is delivery group, specify the delivery group ID, which starts with <code>aig-</code>. You can obtain the ID by calling the ListAppInstanceGroup operation.</p>
          * <blockquote>
-         * <p>Specify at least one of ResourceId.N and Tag.N. If only ResourceId.N is specified, all tags bound to the specified resources are returned.</p>
+         * <p>You must specify at least one of ResourceId.N and Tag.N. If only ResourceId.N is specified, all tags bound to these resources are returned.</p>
          * </blockquote>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -159,7 +159,7 @@ public class ListTagResourcesRequest extends Request {
          * <ul>
          * <li>APPINSTANCEGROUP: delivery group.</li>
          * </ul>
-         * <p>This parameter is case-insensitive. Only this value is supported. If you specify other values, the error code <code>InvalidResourceType.Invalid</code> is returned.</p>
+         * <p>The value is not case-sensitive. Only this value is supported. If you specify other values, the error code <code>InvalidResourceType.Invalid</code> is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,9 +172,9 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of tag conditions. A maximum of 20 tag conditions are supported.</p>
+         * <p>The list of tag conditions. You can specify up to 20 tag conditions.</p>
          * <blockquote>
-         * <p>Specify at least one of ResourceId.N and Tag.N. Multiple tags have an AND relationship. Only resources that have all specified tags bound are returned.</p>
+         * <p>You must specify at least one of ResourceId.N and Tag.N. Multiple tags have an AND relationship. Only resources bound to all specified tags are returned.</p>
          * </blockquote>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -245,7 +245,7 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. This parameter is required. The tag key is case-sensitive and must be 1 to 128 characters in length.</p>
+             * <p>The tag key. This parameter is required. The value is case-sensitive and must be 1 to 128 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The tag value is case-sensitive and can be up to 256 characters in length. If this parameter is not specified, the value of the tag key is not restricted, which means any tag value under the key is matched.</p>
+             * <p>The tag value. The value is case-sensitive and can be up to 256 characters in length. If this parameter is not specified, the value corresponding to the tag key is not limited, which means any tag value under the key is matched.</p>
              * 
              * <strong>example:</strong>
              * <p>720p</p>

@@ -106,7 +106,7 @@ public class CreateAndBindAppResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This field is returned when the request fails. A successful response may not contain this field.</p>
+         * <p>The error code. This field is returned when the request fails and may not be included in a successful response.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -117,7 +117,7 @@ public class CreateAndBindAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business data returned by the operation.</p>
+         * <p>The business data returned by this operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class CreateAndBindAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error or result message. This field describes the cause when the request fails. A successful response may not contain this field.</p>
+         * <p>The error or result message. This field is used to describe the cause when the request fails and may not be included in a successful response.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal error.</p>
@@ -136,7 +136,7 @@ public class CreateAndBindAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique identifier of the request. Provide this value when you troubleshoot issues.</p>
+         * <p>The unique identifier of the request, which can be provided for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>01A1A962-5503-107B-AC8F-EBA85DF905AC</p>
@@ -147,7 +147,7 @@ public class CreateAndBindAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is processed successfully. A value of true indicates that the request is processed successfully. To determine whether an asynchronous task is completed, query the task status separately.</p>
+         * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, you must query the task status separately.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -239,7 +239,7 @@ public class CreateAndBindAppResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The application ID, which is used to query the application or dissociate the image later.</p>
+             * <p>The application ID, which is used for subsequent application queries or to dissociate the application from the image.</p>
              * 
              * <strong>example:</strong>
              * <p>app-bp1example****</p>
@@ -261,7 +261,7 @@ public class CreateAndBindAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID, which is used to query or modify the image later.</p>
+             * <p>The image ID, which is used for subsequent image queries or modifications.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-bp1example****</p>
@@ -272,7 +272,7 @@ public class CreateAndBindAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image version ID, which is used to query or manage a specified version of the image.</p>
+             * <p>The image version ID, which is used to query or operate on a specified version of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>iv-bp1example****</p>

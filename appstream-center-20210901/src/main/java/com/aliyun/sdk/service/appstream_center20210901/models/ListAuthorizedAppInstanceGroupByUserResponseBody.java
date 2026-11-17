@@ -106,7 +106,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of authorized delivery groups on the current page. If the user does not have any authorized delivery groups that meet the conditions, an empty list is returned.</p>
+         * <p>The list of authorized app instance groups on the current page. If the user does not have any authorized app instance groups that meet the conditions, an empty list is returned.</p>
          */
         public Builder appInstanceGroupModels(java.util.List<AppInstanceGroupModels> appInstanceGroupModels) {
             this.appInstanceGroupModels = appInstanceGroupModels;
@@ -114,7 +114,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number. The value is the same as the PageNumber request parameter.</p>
+         * <p>The current page number, which is the same as the PageNumber request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of delivery groups returned per page. The value is the same as the PageSize request parameter.</p>
+         * <p>The number of app instance groups returned on each page, which is the same as the PageSize request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of authorized delivery groups that meet the filter conditions.</p>
+         * <p>The total number of authorized app instance groups that meet the filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -486,7 +486,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application image used by the delivery group.</p>
+             * <p>The ID of the application image used by the app instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>img-8z4nztpaqvay4****</p>
@@ -497,7 +497,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery group ID. When you call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation, you can specify this value to indicate the delivery group to connect to.</p>
+             * <p>The app instance group ID. When you call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation, you can specify this value to indicate the app instance group to connect to.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-9ciijz60n4xsv****</p>
@@ -508,7 +508,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery group name.</p>
+             * <p>The app instance group name.</p>
              * 
              * <strong>example:</strong>
              * <p>Office applications</p>
@@ -519,7 +519,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification type of the delivery group.</p>
+             * <p>The specification type of the app instance group.</p>
              * 
              * <strong>example:</strong>
              * <p><strong>dynamic</strong></p>
@@ -530,7 +530,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of applications deployed in the delivery group. This list includes all applications deployed in the delivery group image and is not affected by the AppId and AppName request parameters.</p>
+             * <p>The list of applications deployed in the app instance group. This list includes all applications deployed in the app instance group image and is not affected by the AppId and AppName request parameters.</p>
              */
             public Builder apps(java.util.List<Apps> apps) {
                 this.apps = apps;
@@ -538,7 +538,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the delivery group. The time is in ISO 8601 format with milliseconds and a time zone offset of +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
+             * <p>The expiration time of the app instance group. The time is displayed in the ISO 8601 standard format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-27T16:00:00.000+00:00</p>
@@ -549,7 +549,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the delivery group. The time is in ISO 8601 format with milliseconds and a time zone offset of +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
+             * <p>The creation time of the app instance group. The time is displayed in the ISO 8601 standard format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-26T15:06:16.000+00:00</p>
@@ -560,7 +560,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+             * <p>The region ID of the app instance group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -571,20 +571,20 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the delivery group. Valid values:</p>
+             * <p>The status of the app instance group. Valid values:</p>
              * <ul>
-             * <li>DEPLOYING: Deploying. The delivery group is creating or starting resources and cannot be connected to.</li>
-             * <li>DEPLOYED: Deployed. Resources are ready but the delivery group is not published for external services.</li>
-             * <li>PUBLISHED: Published. The delivery group is published and users can connect to it.</li>
-             * <li>STOPPING: Unpublishing. The delivery group is stopping services.</li>
-             * <li>STOPPED: Unpublished. The delivery group has stopped services and users cannot connect to it.</li>
-             * <li>MAINTAINING: Updating. The delivery group is undergoing maintenance or changes.</li>
+             * <li>DEPLOYING: Deploying. The app instance group is creating or starting resources and cannot be connected.</li>
+             * <li>DEPLOYED: Deployed. Resources are ready but the app instance group is not listed to provide external services.</li>
+             * <li>PUBLISHED: Published. The app instance group is listed and users can connect to it.</li>
+             * <li>STOPPING: Delisting. The app instance group is stopping services.</li>
+             * <li>STOPPED: Delisted. The app instance group has stopped services and users cannot connect to it.</li>
+             * <li>MAINTAINING: Updating. The app instance group is undergoing maintenance or changes.</li>
              * <li>FAILED: Publishing failed. Resource initialization failed.</li>
              * <li>MAINTAIN_FAILED: Update failed. Maintenance or changes were not successful.</li>
-             * <li>DELETING: Deleting. The delivery group is being deleted.</li>
+             * <li>DELETING: Deleting. The app instance group is being deleted.</li>
              * </ul>
              * <blockquote>
-             * <p>Deleted delivery groups are not returned.</p>
+             * <p>Deleted app instance groups are not returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -596,7 +596,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether mixed authorization of users and user groups is supported.</p>
+             * <p>Specifies whether mixed authorization for users and user groups is supported.</p>
              */
             public Builder supportUserGroupMixedAuth(Boolean supportUserGroupMixedAuth) {
                 this.supportUserGroupMixedAuth = supportUserGroupMixedAuth;

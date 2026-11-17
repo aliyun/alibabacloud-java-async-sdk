@@ -441,6 +441,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to send notification emails for authorization and deauthorization.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>true</code>: Sends notification emails.</li>
          * <li><code>false</code>: Does not send notification emails.</li>
@@ -486,7 +487,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The identifier of the business region. This parameter is required.</p>
+         * <p>The business region identifier. This parameter is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -509,8 +510,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource billing method.
-         * <strong>For MAU scenarios:</strong> Set this parameter to <code>AppInstance</code>, which indicates billing by instance resources.</p>
+         * <p>The resource billing method.</p>
+         * <p><strong>For MAU scenarios:</strong> Set this parameter to <code>AppInstance</code>, which indicates billing by instance resources.</p>
          * 
          * <strong>example:</strong>
          * <p>AppInstance</p>
@@ -523,7 +524,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
 
         /**
          * <p>The billing method.</p>
-         * <p><strong>For MAU scenarios:</strong> Set this parameter to PostPaid, which indicates pay-as-you-go.</p>
+         * <p><strong>For MAU scenarios:</strong> Set this parameter to <code>PostPaid</code>, which indicates pay-as-you-go.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -548,9 +549,9 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The image ID used by the cloud browser. The image must be compatible with the operating system.
-         * If this parameter is omitted, the default image available for the account is used. If no default image is available, the creation may fail.
-         * <strong>Usage conditions:</strong> When CookiesSync is enabled, explicitly specify an image that supports cookie synchronization.</p>
+         * <p>The image ID used by the cloud browser. The image must be compatible with the operating system.</p>
+         * <p>If this parameter is omitted, the default image available for the account is used. If no default image is available, the creation may fail.</p>
+         * <p><strong>Usage condition:</strong> When CookiesSync is enabled, explicitly specify an image that supports cookie synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>img-bp13mu****</p>
@@ -562,8 +563,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The instance type identifier. Select an instance type that matches the target region, operating system, and inventory conditions.
-         * If this parameter is omitted, the default instance type is used.</p>
+         * <p>The instance type identifier. Select an instance type that matches the target region, operating system, and inventory conditions.</p>
+         * <p>If this parameter is omitted, the default instance type is used.</p>
          * 
          * <strong>example:</strong>
          * <p>appstreaming.general.basic</p>
@@ -575,7 +576,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The capacity configuration in MAU billing scenarios.</p>
+         * <p>The capacity configuration for MAU billing scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -587,7 +588,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The configurations for the office network and website access restrictions. The selected office network must belong to the current account and reside in the region specified by BizRegionId.</p>
+         * <p>The configurations for the office network and website access restrictions. The selected office network must belong to the current account and be located in the region specified by <code>BizRegionId</code>.</p>
          */
         public Builder network(Network network) {
             String networkShrink = shrink(network, "Network", "json");
@@ -597,8 +598,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The node pool configuration.
-         * You do not need to specify this parameter.</p>
+         * <p>The node pool configuration.</p>
+         * <p>You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -613,8 +614,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The operating system type. This parameter is required.
-         * Only <code>Windows</code> is supported. Other operating systems are not supported.</p>
+         * <p>The operating system type. This parameter is required.</p>
+         * <p>Only Windows is supported. Other operating systems are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -656,7 +657,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Configures policies for the clipboard, video, watermark, session, and client access.</p>
+         * <p>The configurations for clipboard, video, watermark, session, and client access policies.</p>
          */
         public Builder policy(Policy policy) {
             String policyShrink = shrink(policy, "Policy", "json");
@@ -679,7 +680,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The connection security policy of the browser group.</p>
+         * <p>The connection security policy for the browser group.</p>
          */
         public Builder securityPolicy(SecurityPolicy securityPolicy) {
             String securityPolicyShrink = shrink(securityPolicy, "SecurityPolicy", "json");
@@ -689,7 +690,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The user data storage configuration of the browser group.</p>
+         * <p>The user data storage configuration for the browser group.</p>
          */
         public Builder storagePolicy(StoragePolicy storagePolicy) {
             String storagePolicyShrink = shrink(storagePolicy, "StoragePolicy", "json");
@@ -700,7 +701,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
 
         /**
          * <p>The billing sub-type.</p>
-         * <p><strong>You must explicitly set this parameter to mau, which indicates billing by monthly active users (MAUs).</strong> Omitting this parameter does not enable MAU billing.</p>
+         * <p><strong>You must explicitly set this parameter to <code>mau</code>, which indicates billing by monthly active users.</strong> Omitting this field does not enable MAU billing.</p>
          * 
          * <strong>example:</strong>
          * <p>mau</p>
@@ -712,7 +713,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not supported and does not need to be specified.</p>
+         * <p>Not supported. Leave this parameter empty.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -727,7 +728,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not supported and does not need to be specified.</p>
+         * <p>Not supported. Leave this parameter empty.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -742,8 +743,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The list of authorized user group IDs. You can specify up to 10 IDs. The user groups must belong to the current account and match the account type of the office network.
-         * <strong>Limits:</strong> This parameter cannot be specified together with a non-empty Users parameter.</p>
+         * <p>The list of authorized user group IDs. You can specify up to 10 user group IDs. The user groups must belong to the current account and match the office network account type.</p>
+         * <p><strong>Limits:</strong> This parameter cannot be specified together with a non-empty Users parameter.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -762,8 +763,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The list of authorized users. You can specify up to 200 users. The users must be created in advance and match the account type.</p>
-         * <p><strong>Limit:</strong> This parameter cannot be specified together with a non-empty UserGroupIds parameter.</p>
+         * <p>The list of authorized users. You can specify up to 200 users. Users must be created in advance and match the account type.</p>
+         * <p><strong>Limits:</strong> This parameter cannot be specified together with a non-empty <code>UserGroupIds</code> parameter.</p>
          */
         public Builder users(java.util.List<Users> users) {
             String usersShrink = shrink(users, "Users", "json");
@@ -870,7 +871,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The URL of the bookmark. This parameter is required when you create a bookmark. The length cannot exceed 1024 characters after leading and trailing spaces are removed.</p>
+             * <p>The URL of the bookmark. This parameter is required when you create a bookmark. The length cannot exceed 1,024 characters after leading and trailing spaces are removed.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -980,8 +981,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The list of browser bookmarks.
-             * <strong>Limits:</strong> This parameter cannot be specified together with a non-empty BookmarksFilePath parameter, and bookmark URLs cannot be duplicated.</p>
+             * <p>The list of browser bookmarks.</p>
+             * <p><strong>Limits:</strong> This parameter cannot be specified together with a non-empty BookmarksFilePath, and bookmark URLs cannot be duplicated.</p>
              */
             public Builder bookmarks(java.util.List<Bookmarks> bookmarks) {
                 this.bookmarks = bookmarks;
@@ -989,22 +990,22 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The path of the uploaded bookmark file. This parameter cannot be specified together with a non-empty Bookmarks parameter.
-             * <strong>File format:</strong> A CSV file without a header. Specify the following four columns in order:</p>
+             * <p>The path of the uploaded bookmark file. This parameter cannot be specified together with a non-empty Bookmarks parameter.</p>
+             * <p><strong>File format:</strong> A CSV file without a header. Specify the following four columns in order:</p>
              * <ol>
              * <li>Bookmark name.</li>
              * <li>URL.</li>
              * <li>Folder.</li>
-             * <li>Root directory type: <code>bookmark_bar</code> indicates the bookmarks bar, and <code>other</code> indicates other bookmarks.
-             * <strong>Limits:</strong></li>
+             * <li>Root directory type: <code>bookmark_bar</code> indicates the bookmarks bar, and <code>other</code> indicates other bookmarks.</li>
              * </ol>
+             * <p><strong>Limits:</strong></p>
              * <ul>
              * <li>Fields are separated by commas. Field content cannot contain commas or line breaks, and quote escaping is not supported.</li>
              * <li>The file path must belong to the upload directory specified for the current account and cannot contain <code>..</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/BrowserBookmarkTemplate.csv</p>
+             * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/BrowserBookmarksTemplate.csv</p>
              */
             public Builder bookmarksFilePath(String bookmarksFilePath) {
                 this.bookmarksFilePath = bookmarksFilePath;
@@ -1012,7 +1013,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The browser startup parameters. For example, --incognito indicates that an incognito window is used.</p>
+             * <p>The browser startup parameters. For example, <code>--incognito</code> specifies that an incognito window is used.</p>
              * 
              * <strong>example:</strong>
              * <p>--incognito</p>
@@ -1034,7 +1035,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The homepage URL opened when the browser starts. The URL must conform to the URI syntax.</p>
+             * <p>The homepage URL that opens when the browser starts. The URL must conform to the URI syntax.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
@@ -1202,8 +1203,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             /**
              * <p>The website access restriction mode.</p>
              * <ul>
-             * <li>ALLOW_ALL: Allows access to all domain names.</li>
-             * <li>ALLOW_LIST: Allows access only to websites in the whitelist.</li>
+             * <li><code>ALLOW_ALL</code>: allows access to all domain names.</li>
+             * <li><code>ALLOW_LIST</code>: allows access only to websites in the list.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1215,7 +1216,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The identifier of the created office network. The office network must belong to the current account and reside in the target region specified by BizRegionId. You can view the office network ID on the Network &amp; Storage &gt; Office Networks page in the Elastic Desktop Service Enterprise Edition console, or call the DescribeOfficeSites operation of Elastic Desktop Service Enterprise Edition to query the ID.</p>
+             * <p>The identifier of the created office network. The office network must belong to the current account and the target region specified by BizRegionId. You can view the office network ID on the Network &amp; Storage &gt; Office Networks page in the Wuying Workspace Enterprise Edition console, or call the DescribeOfficeSites operation of Wuying Workspace Enterprise Edition to query it.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-643067****</p>
@@ -1226,12 +1227,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The list of websites that are allowed for access. This parameter is used in ALLOW_LIST mode.</p>
+             * <p>The list of websites that are allowed for access. This parameter is used in <code>ALLOW_LIST</code> mode.</p>
              * <p><strong>Limits:</strong></p>
              * <ul>
-             * <li>You can specify up to 20 URLs directly. To specify more than 20 URLs, use RestrictedURLsFilePath to import them from a file.</li>
-             * <li>This parameter cannot be specified together with RestrictedURLsFilePath.</li>
-             * <li>The URLs in the list cannot be duplicated.</li>
+             * <li>You can specify up to 20 URLs directly. To specify more than 20 URLs, use <code>RestrictedURLsFilePath</code> to import them from a file.</li>
+             * <li>This parameter cannot be specified together with <code>RestrictedURLsFilePath</code>.</li>
+             * <li>URLs in the list cannot be duplicated.</li>
              * </ul>
              */
             public Builder restrictedURLs(java.util.List<RestrictedURLs> restrictedURLs) {
@@ -1240,12 +1241,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The path of the uploaded website whitelist file. This parameter is used in ALLOW_LIST mode.</p>
-             * <p>If you need to specify more than 20 URLs, import them from a file. By default, you can configure up to 1,000 URLs.</p>
-             * <p>This parameter cannot be specified together with RestrictedURLs.</p>
+             * <p>The path of the uploaded website allowlist file. This parameter is used in <code>ALLOW_LIST</code> mode.</p>
+             * <p>To specify more than 20 URLs, import them from a file. By default, you can configure up to 1,000 URLs.</p>
+             * <p>This parameter cannot be specified together with <code>RestrictedURLs</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_whitelist_template.csv</p>
+             * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_allowlist_template.csv</p>
              */
             public Builder restrictedURLsFilePath(String restrictedURLsFilePath) {
                 this.restrictedURLsFilePath = restrictedURLsFilePath;
@@ -1254,7 +1255,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
 
             /**
              * <p>The list of vSwitch identifiers.</p>
-             * <p><strong>Usage condition:</strong> This parameter is required only when you use a custom office network. Do not specify this parameter for other types of office networks.</p>
+             * <p><strong>Conditions:</strong> This parameter is required only when a custom office network is used. Do not specify this parameter for other types of office networks.</p>
              * <p>Select vSwitches that match the target business region and the custom office network.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
@@ -1335,8 +1336,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The number of nodes.
-             * You do not need to specify this parameter.</p>
+             * <p>The number of nodes.</p>
+             * <p>You do not need to specify this parameter.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1363,8 +1364,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The node scaling policy.
-             * You do not need to specify this parameter.</p>
+             * <p>The node scaling policy.</p>
+             * <p>You do not need to specify this parameter.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1519,11 +1520,11 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             /**
              * <p>The type of the client for which you want to configure an access policy.</p>
              * <ul>
-             * <li>windows: Windows client.</li>
-             * <li>macos: macOS client.</li>
-             * <li>html5: Web client.</li>
-             * <li>android: Android client.</li>
-             * <li>ios: iOS client.</li>
+             * <li><code>windows</code>: Windows client.</li>
+             * <li><code>macos</code>: macOS client.</li>
+             * <li><code>html5</code>: Web client.</li>
+             * <li><code>android</code>: Android client.</li>
+             * <li><code>ios</code>: iOS client.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1537,8 +1538,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             /**
              * <p>The access policy switch for the client type.</p>
              * <ul>
-             * <li>on: Allows access from this type of client.</li>
-             * <li>off: Denies access from this type of client.</li>
+             * <li><code>on</code>: allows access from this type of client.</li>
+             * <li><code>off</code>: denies access from this type of client.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1817,12 +1818,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies the clipboard transfer direction. The value is not case-sensitive.</p>
+             * <p>The clipboard transfer direction. The value is not case-sensitive. Valid values:</p>
              * <ul>
-             * <li><code>off</code>: Prohibits bidirectional transfer.</li>
+             * <li><code>off</code>: Bidirectional transfer is prohibited.</li>
              * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
              * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-             * <li><code>readwrite</code>: Allows bidirectional copy and paste.</li>
+             * <li><code>readwrite</code>: Bidirectional transfer is allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1834,9 +1835,9 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size limit for inbound transfer (from the local PC to the cloud browser).</p>
-             * <p><strong>Value range:</strong> 1 to 102400. The unit is specified by ClipboardSizeUnit.</p>
-             * <p>This value range does not change with unit conversion.</p>
+             * <p>The clipboard size limit for inbound transfer from the local PC to the cloud browser.</p>
+             * <p><strong>Value limits:</strong> The value ranges from 1 to 102400. The unit is specified by ClipboardSizeUnit.</p>
+             * <p>The value range remains unchanged regardless of the unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -1847,7 +1848,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard control granularity.</p>
+             * <p>The clipboard control granularity. Valid values:</p>
              * <ul>
              * <li><code>global</code>: Unified control.</li>
              * <li><code>grained</code>: Separate control for text, rich text, and files.</li>
@@ -1862,7 +1863,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size unit.</p>
+             * <p>The clipboard size unit. Valid values:</p>
              * <ul>
              * <li><code>B</code>: Bytes.</li>
              * <li><code>KB</code>: 1024 bytes.</li>
@@ -1877,9 +1878,9 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size limit for outbound transfer (from the cloud browser to the local PC).</p>
-             * <p><strong>Value range:</strong> 1 to 102400. The unit is specified by ClipboardSizeUnit.</p>
-             * <p>This value range does not change with unit conversion.</p>
+             * <p>The clipboard size limit for outbound transfer from the cloud browser to the local PC.</p>
+             * <p><strong>Value limits:</strong> The value ranges from 1 to 102400. The unit is specified by ClipboardSizeUnit.</p>
+             * <p>The value range remains unchanged regardless of the unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -1890,12 +1891,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard transfer direction. The value is not case-sensitive.</p>
+             * <p>The clipboard transfer direction. The value is not case-sensitive. Valid values:</p>
              * <ul>
-             * <li><code>off</code>: Prohibits bidirectional transfer.</li>
+             * <li><code>off</code>: Bidirectional transfer is prohibited.</li>
              * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
              * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-             * <li><code>readwrite</code>: Allows bidirectional copy and paste.</li>
+             * <li><code>readwrite</code>: Bidirectional transfer is allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1907,12 +1908,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard transfer direction. The value is not case-sensitive.</p>
+             * <p>The clipboard transfer direction. The value is not case-sensitive. Valid values:</p>
              * <ul>
-             * <li><code>off</code>: Prohibits bidirectional transfer.</li>
+             * <li><code>off</code>: Bidirectional transfer is prohibited.</li>
              * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
              * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-             * <li><code>readwrite</code>: Allows bidirectional copy and paste.</li>
+             * <li><code>readwrite</code>: Bidirectional transfer is allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1924,9 +1925,9 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size limit for rich text.</p>
-             * <p><strong>Value range:</strong> 1 to 204800. The unit is specified by RichTextClipboardSizeUnit.</p>
-             * <p>This value range does not change with unit conversion.</p>
+             * <p>The clipboard size limit for rich text.</p>
+             * <p><strong>Value limits:</strong> The value ranges from 1 to 204800. The unit is specified by RichTextClipboardSizeUnit.</p>
+             * <p>The value range remains unchanged regardless of the unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -1937,9 +1938,9 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size limit for inbound transfer (from the local PC to the cloud browser).</p>
-             * <p><strong>Value range:</strong> 1 to 204800. The unit is specified by RichTextClipboardReadSizeUnit.</p>
-             * <p>This value range does not change with unit conversion.</p>
+             * <p>The clipboard size limit for inbound rich text transfer from the local PC to the cloud browser.</p>
+             * <p><strong>Value limits:</strong> The value ranges from 1 to 204800. The unit is specified by RichTextClipboardReadSizeUnit.</p>
+             * <p>The value range remains unchanged regardless of the unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1950,7 +1951,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size unit.</p>
+             * <p>The clipboard size unit. Valid values:</p>
              * <ul>
              * <li><code>B</code>: Bytes.</li>
              * <li><code>KB</code>: 1024 bytes.</li>
@@ -1966,7 +1967,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size unit.</p>
+             * <p>The clipboard size unit. Valid values:</p>
              * <ul>
              * <li><code>B</code>: Bytes.</li>
              * <li><code>KB</code>: 1024 bytes.</li>
@@ -1981,9 +1982,9 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size limit for outbound transfer (from the cloud browser to the local PC).</p>
-             * <p><strong>Value range:</strong> 1 to 204800. The unit is specified by RichTextClipboardWriteSizeUnit.</p>
-             * <p>This value range does not change with unit conversion.</p>
+             * <p>The clipboard size limit for outbound rich text transfer from the cloud browser to the local PC.</p>
+             * <p><strong>Value limits:</strong> The value ranges from 1 to 204800. The unit is specified by RichTextClipboardWriteSizeUnit.</p>
+             * <p>The value range remains unchanged regardless of the unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1994,7 +1995,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size unit.</p>
+             * <p>The clipboard size unit. Valid values:</p>
              * <ul>
              * <li><code>B</code>: Bytes.</li>
              * <li><code>KB</code>: 1024 bytes.</li>
@@ -2010,12 +2011,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard transfer direction. The value is not case-sensitive.</p>
+             * <p>The clipboard transfer direction. The value is not case-sensitive. Valid values:</p>
              * <ul>
-             * <li><code>off</code>: Prohibits bidirectional transfer.</li>
+             * <li><code>off</code>: Bidirectional transfer is prohibited.</li>
              * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
              * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-             * <li><code>readwrite</code>: Allows bidirectional copy and paste.</li>
+             * <li><code>readwrite</code>: Bidirectional transfer is allowed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2027,9 +2028,9 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size limit for inbound transfer (from the local PC to the cloud browser).</p>
-             * <p><strong>Value range:</strong> 1 to 102400. The unit is specified by TextClipboardReadSizeUnit.</p>
-             * <p>This value range does not change with unit conversion.</p>
+             * <p>The clipboard size limit for inbound text transfer from the local PC to the cloud browser.</p>
+             * <p><strong>Value limits:</strong> The value ranges from 1 to 102400. The unit is specified by TextClipboardReadSizeUnit.</p>
+             * <p>The value range remains unchanged regardless of the unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2040,7 +2041,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size unit.</p>
+             * <p>The clipboard size unit. Valid values:</p>
              * <ul>
              * <li><code>B</code>: Bytes.</li>
              * <li><code>KB</code>: 1024 bytes.</li>
@@ -2056,9 +2057,9 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size limit for outbound transfer (from the cloud browser to the local PC).</p>
-             * <p><strong>Value range:</strong> 1 to 102400. The unit is specified by TextClipboardWriteSizeUnit.</p>
-             * <p>This value range does not change with unit conversion.</p>
+             * <p>The clipboard size limit for outbound text transfer from the cloud browser to the local PC.</p>
+             * <p><strong>Value limits:</strong> The value ranges from 1 to 102400. The unit is specified by TextClipboardWriteSizeUnit.</p>
+             * <p>The value range remains unchanged regardless of the unit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2069,7 +2070,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard size unit.</p>
+             * <p>The clipboard size unit. Valid values:</p>
              * <ul>
              * <li><code>B</code>: Bytes.</li>
              * <li><code>KB</code>: 1024 bytes.</li>
@@ -2131,7 +2132,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies the frame rate for the browser session.</p>
+             * <p>The frame rate for browser sessions.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -2202,11 +2203,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
 
             /**
              * <p>The watermark switch. The value is case-insensitive.</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li><code>ON</code>: Enables the watermark.</li>
-             * <li><code>OFF</code>: Disables the watermark.
-             * The watermark content type list is not used when the watermark is disabled.</li>
+             * <li><code>OFF</code>: Disables the watermark.</li>
              * </ul>
+             * <p>When the watermark is disabled, the watermark content type list is not used.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -2218,12 +2220,13 @@ public class CreateBrowserInstanceGroupRequest extends Request {
 
             /**
              * <p>The list of watermark content types.</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li><code>EndUserId</code>: The user identifier.</li>
              * <li><code>InstanceGroupId</code>: The delivery group identifier.</li>
-             * <li><code>ClientTime</code>: The current time of the client.
-             * Use the watermark types supported by the browser and the client.</li>
+             * <li><code>ClientTime</code>: The current client time.</li>
              * </ul>
+             * <p>Use the watermark types supported by the browser and the client.</p>
              */
             public Builder watermarkTypes(java.util.List<String> watermarkTypes) {
                 this.watermarkTypes = watermarkTypes;
@@ -2448,8 +2451,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             /**
              * <p>The screen capture prevention switch.</p>
              * <ul>
-             * <li>on: Enables screen capture prevention.</li>
-             * <li>off: Disables screen capture prevention.</li>
+             * <li><code>on</code>: enables screen capture prevention.</li>
+             * <li><code>off</code>: disables screen capture prevention.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2477,7 +2480,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the clipboard transfer direction, content types, and size limits. read indicates transfer from the local PC to the cloud browser, and write indicates transfer from the cloud browser to the local PC.</p>
+             * <p>Sets the clipboard transfer direction, content types, and size limits. The value <code>read</code> indicates transfer from the local PC to the cloud browser, and <code>write</code> indicates transfer from the cloud browser to the local PC.</p>
              */
             public Builder clipboardPolicy(ClipboardPolicy clipboardPolicy) {
                 this.clipboardPolicy = clipboardPolicy;
@@ -2485,12 +2488,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the data retention policy for sessions after disconnection.</p>
+             * <p>The session data retention policy after disconnection. Valid values:</p>
              * <ul>
-             * <li><code>customTime</code>: Retains the session according to the data retention policy. Custom duration through <code>DisconnectKeepSessionTime</code> is not supported.</li>
-             * <li><code>persistent</code>: The session is not subject to automatic release based on disconnection duration.</li>
+             * <li><code>customTime</code>: Retains the session based on the session data retention policy. Custom durations through <code>DisconnectKeepSessionTime</code> are not supported.</li>
+             * <li><code>persistent</code>: The session is not subject to automatic release based on the disconnection duration.</li>
              * </ul>
-             * <p><strong>Note:</strong> <code>persistent</code> is still subject to authorization and other release policies.</p>
+             * <p><strong>Note:</strong> The <code>persistent</code> value is still subject to authorization and other release policies.</p>
              * 
              * <strong>example:</strong>
              * <p>customTime</p>
@@ -2501,7 +2504,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>This parameter is not supported and does not need to be specified.</p>
+             * <p>Not supported. Leave this parameter empty.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -2514,7 +2517,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the file manager floating button.</p>
+             * <p>Specifies whether to enable the file manager floating button. Valid values:</p>
              * <ul>
              * <li><code>on</code>: Enabled.</li>
              * <li><code>off</code>: Disabled.</li>
@@ -2530,12 +2533,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the file transfer policy for the web client.</p>
+             * <p>The file transfer policy for the web client. Valid values:</p>
              * <ul>
              * <li><code>off</code>: Prohibits file transfer.</li>
-             * <li><code>upload</code>: Allows upload only.</li>
-             * <li><code>download</code>: Allows download only.</li>
-             * <li><code>full</code>: Allows both upload and download.</li>
+             * <li><code>upload</code>: Allows only uploads.</li>
+             * <li><code>download</code>: Allows only downloads.</li>
+             * <li><code>full</code>: Allows both uploads and downloads.</li>
              * </ul>
              * <p>Configure this parameter in conjunction with the clipboard policy.</p>
              * 
@@ -2548,7 +2551,11 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the dual-screen mode for the cloud browser.</p>
+             * <p>Specifies whether to enable the dual-screen mode for the cloud browser. Valid values:</p>
+             * <ul>
+             * <li><code>on</code>: Enables dual-screen mode.</li>
+             * <li><code>off</code>: Disables dual-screen mode.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -2559,7 +2566,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable automatic disconnection on inactivity. The value is not case-sensitive.</p>
+             * <p>Specifies whether to automatically disconnect the session after a period of inactivity. The value is not case-sensitive. Valid values:</p>
              * <ul>
              * <li><code>on</code>: Enabled.</li>
              * <li><code>off</code>: Disabled.</li>
@@ -2575,8 +2582,8 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the idle timeout in seconds before automatic disconnection is triggered.</p>
-             * <p><strong>Prerequisite:</strong> When <code>NoOperationDisconnect</code> is enabled, you must specify a value greater than 0.</p>
+             * <p>The idle timeout in seconds before the session is automatically disconnected.</p>
+             * <p><strong>Prerequisites:</strong> When <code>NoOperationDisconnect</code> is enabled, you must specify a value greater than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -2587,12 +2594,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the policy version. The value is not case-sensitive.</p>
+             * <p>The policy version. The value is not case-sensitive. Valid values:</p>
              * <ul>
              * <li><code>DEFAULT</code>: Legacy policy.</li>
              * <li><code>CENTER</code>: Centralized policy.</li>
              * </ul>
-             * <p><strong>Default value:</strong> <code>DEFAULT</code>. The effective policy version is subject to the policy configuration available for the account.</p>
+             * <p><strong>Default value:</strong> <code>DEFAULT</code>. The effective policy version is subject to the policy configurations available for the account.</p>
              * 
              * <strong>example:</strong>
              * <p>CENTER</p>
@@ -2603,7 +2610,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies the video display policy for the browser session.</p>
+             * <p>The video display policy for browser sessions.</p>
              */
             public Builder videoPolicy(VideoPolicy videoPolicy) {
                 this.videoPolicy = videoPolicy;
@@ -2666,12 +2673,13 @@ public class CreateBrowserInstanceGroupRequest extends Request {
 
             /**
              * <p>Specifies whether to skip the user authorization check when connecting to the application.</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li><code>true</code>: Skips the check.</li>
-             * <li><code>false</code>: Performs the check.
-             * If SecurityPolicy is configured but this field is omitted, the user authorization check is performed.
-             * <strong>Note:</strong> This field cannot be used to skip OpenAPI authentication and RAM permission verification.</li>
+             * <li><code>false</code>: Performs the check.</li>
              * </ul>
+             * <p>If you configure SecurityPolicy but omit this field, the user authorization check is performed.</p>
+             * <p><strong>Note:</strong> This field cannot be used to skip OpenAPI authentication and RAM permission verification.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2741,7 +2749,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The size of the user data roaming disk, in GB.</p>
+             * <p>The disk size for user data roaming, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -2753,11 +2761,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
 
             /**
              * <p>Specifies whether to enable user data roaming.</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li><code>true</code>: Enables user data roaming.</li>
-             * <li><code>false</code>: Disables user data roaming.
-             * In Windows scenarios, if this parameter is explicitly specified, the specified value is used. If this parameter is omitted, the user roaming configuration of the current account is used.</li>
+             * <li><code>false</code>: Disables user data roaming.</li>
              * </ul>
+             * <p>In Windows scenarios, if this parameter is explicitly specified, the specified value is used. If this parameter is omitted, the user roaming configuration of the current account is used.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2881,7 +2890,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is not supported and does not need to be specified.</p>
+             * <p>Not supported. Leave this parameter empty.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -2894,7 +2903,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>This parameter is not supported and does not need to be specified.</p>
+             * <p>Not supported. Leave this parameter empty.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -2966,7 +2975,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is not supported and does not need to be specified.</p>
+             * <p>Not supported. Leave this parameter empty.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -2979,7 +2988,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>This parameter is not supported and does not need to be specified.</p>
+             * <p>Not supported. Leave this parameter empty.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -3039,11 +3048,12 @@ public class CreateBrowserInstanceGroupRequest extends Request {
 
             /**
              * <p>The account type of the authorized user.</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li><code>simple</code>: Convenience account.</li>
-             * <li><code>ad</code>: AD domain account.
-             * The account type must match the account types of the user and the office network.</li>
+             * <li><code>ad</code>: AD domain account.</li>
              * </ul>
+             * <p>The account type must match the user and office network account types.</p>
              * 
              * <strong>example:</strong>
              * <p>simple</p>
@@ -3100,7 +3110,7 @@ public class CreateBrowserInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The identity of the authorized user for authorization.</p>
+             * <p>Authorized user identifier of authorized user to be authorized.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>

@@ -161,7 +161,7 @@ public class ListAuthorizedAppsByUserRequest extends Request {
         } 
 
         /**
-         * <p>The application ID used to filter results. Fuzzy match by containment is used. This parameter can be combined with other filter parameters. You can obtain the application ID from the Apps list returned by the <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation.</p>
+         * <p>The application ID, which is used to filter results. Fuzzy match based on inclusion is used. This parameter can be used in combination with other filter parameters. You can obtain the value from the Apps list returned by the <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-i87mycyn419nu****</p>
@@ -173,7 +173,7 @@ public class ListAuthorizedAppsByUserRequest extends Request {
         }
 
         /**
-         * <p>The delivery group ID used to filter results. Fuzzy match by containment is used. This parameter can be combined with other filter parameters. Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the delivery group ID.</p>
+         * <p>The app instance group ID, which is used to filter results. Fuzzy match based on inclusion is used. This parameter can be used in combination with other filter parameters. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the value.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -185,10 +185,10 @@ public class ListAuthorizedAppsByUserRequest extends Request {
         }
 
         /**
-         * <p>The delivery group name used to filter results. Fuzzy match by name is used. This parameter can be combined with other filter parameters.</p>
+         * <p>The app instance group name, which is used to filter results. Fuzzy match based on the name is used. This parameter can be used in combination with other filter parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>OfficeApp</p>
+         * <p>Office applications</p>
          */
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putQueryParameter("AppInstanceGroupName", appInstanceGroupName);
@@ -197,10 +197,10 @@ public class ListAuthorizedAppsByUserRequest extends Request {
         }
 
         /**
-         * <p>The application name used to filter results. Fuzzy match by name is used. This parameter can be combined with other filter parameters.</p>
+         * <p>The application name, which is used to filter results. Fuzzy match based on the name is used. This parameter can be used in combination with other filter parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>OfficeApp</p>
+         * <p>Office applications</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -209,7 +209,7 @@ public class ListAuthorizedAppsByUserRequest extends Request {
         }
 
         /**
-         * <p>The username to query. <strong>Required</strong>. The user must already exist under the current account. Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</p>
+         * <p>The username to query. <strong>Required</strong>. The user must exist in the current account. You can call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListAuthorizedAppsByUserRequest extends Request {
         }
 
         /**
-         * <p>The page number of the results. <strong>Required</strong>. The value starts from 1.</p>
+         * <p>The page number of the returned results. <strong>Required</strong>. The value starts from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +235,7 @@ public class ListAuthorizedAppsByUserRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. <strong>Required</strong>. Valid values: 1 to 100.</p>
+         * <p>The number of entries to return on each page. <strong>Required</strong>. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,10 +248,10 @@ public class ListAuthorizedAppsByUserRequest extends Request {
         }
 
         /**
-         * <p>The product type. <strong>Required</strong>. The value is case-insensitive.</p>
-         * <p>This operation queries per-application authorization records. This authorization method applies to WUYING Cloud Application delivery groups. Valid values:</p>
+         * <p>The product type. <strong>Required</strong>. The value is not case-sensitive.</p>
+         * <p>This operation queries application-level authorization records. This authorization method applies to WUYING Cloud App instance groups. Valid values:</p>
          * <ul>
-         * <li>CloudApp: WUYING Cloud Application.</li>
+         * <li>CloudApp: WUYING Cloud App.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

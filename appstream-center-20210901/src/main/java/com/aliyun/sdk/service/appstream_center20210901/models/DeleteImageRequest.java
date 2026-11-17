@@ -82,7 +82,7 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * <p>The WUYING image ID.</p>
+         * <p>The ID of the WUYING image.</p>
          * 
          * <strong>example:</strong>
          * <p>img-bp13mu****</p>

@@ -101,7 +101,7 @@ public class ListModelProviderEndpointsRequest extends Request {
         } 
 
         /**
-         * <p>The agent platform name. This parameter is not processed and is only passed through as a redundant field, such as ENTERPRISE.</p>
+         * <p>The name of the agent platform. This parameter is not processed and is only passed through for redundancy, such as ENTERPRISE.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
@@ -113,7 +113,7 @@ public class ListModelProviderEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The agent provider name, such as HermesAgent or OpenClaw. If this parameter is specified, the providerName in the returned endpoints is the alias from the perspective of the specified agent provider.</p>
+         * <p>The name of the agent provider, such as HermesAgent or OpenClaw. If this parameter is specified, the providerName of the returned endpoint is the alias from the perspective of the specified agent provider.</p>
          * 
          * <strong>example:</strong>
          * <p>AgenticComputer</p>
@@ -137,7 +137,7 @@ public class ListModelProviderEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The name of the model provider, such as bailian, moonshot, or siliconflow. If this parameter is not specified, the endpoint configurations of all managed providers are returned.</p>
+         * <p>The name of the model provider, such as bailian, moonshot, or siliconflow. If you do not specify this parameter, the endpoint configurations of all managed providers are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian</p>

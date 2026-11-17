@@ -131,7 +131,7 @@ public class ListTagCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>ptnJAAAAAAAxNzE5OTEwNQ==</p>
@@ -143,7 +143,7 @@ public class ListTagCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
+         * <p>The resource IDs. A maximum of 50 resource IDs are supported. This parameter is not required when the resource type is tenant ID.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);

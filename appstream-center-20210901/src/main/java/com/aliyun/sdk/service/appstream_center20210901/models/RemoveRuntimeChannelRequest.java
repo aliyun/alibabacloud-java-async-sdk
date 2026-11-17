@@ -119,7 +119,7 @@ public class RemoveRuntimeChannelRequest extends Request {
         } 
 
         /**
-         * <p>The Agent platform.</p>
+         * <p>The agent platform.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE</p>
@@ -131,7 +131,12 @@ public class RemoveRuntimeChannelRequest extends Request {
         }
 
         /**
-         * <p>The Agent provider.</p>
+         * <p>The agent provider. The mappings with the agent runtime type are as follows:</p>
+         * <ul>
+         * <li>JVS Computer: Set to OpenClaw.</li>
+         * <li>OpenClaw: Set to OpenClaw.</li>
+         * <li>Hermes Agent: Set to HermesAgent, and you must also set AgentPlatform to ENTERPRISE_JVS. If AgentPlatform is not specified, the default value is ENTERPRISE, and only OpenClaw is supported in this case.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +162,7 @@ public class RemoveRuntimeChannelRequest extends Request {
         }
 
         /**
-         * <p>The list of Agent runtime IDs.</p>
+         * <p>The list of agent runtime IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtimeIds(java.util.List<String> runtimeIds) {

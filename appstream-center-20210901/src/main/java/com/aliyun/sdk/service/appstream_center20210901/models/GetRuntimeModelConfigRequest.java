@@ -31,6 +31,10 @@ public class GetRuntimeModelConfigRequest extends Request {
     private Boolean includeRiskInfo;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuntimeId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String runtimeId;
@@ -49,6 +53,7 @@ public class GetRuntimeModelConfigRequest extends Request {
         this.agentPlatform = builder.agentPlatform;
         this.agentProvider = builder.agentProvider;
         this.includeRiskInfo = builder.includeRiskInfo;
+        this.language = builder.language;
         this.runtimeId = builder.runtimeId;
         this.runtimeType = builder.runtimeType;
         this.smartModel = builder.smartModel;
@@ -89,6 +94,13 @@ public class GetRuntimeModelConfigRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return runtimeId
      */
     public String getRuntimeId() {
@@ -113,6 +125,7 @@ public class GetRuntimeModelConfigRequest extends Request {
         private String agentPlatform; 
         private String agentProvider; 
         private Boolean includeRiskInfo; 
+        private String language; 
         private String runtimeId; 
         private String runtimeType; 
         private Boolean smartModel; 
@@ -126,6 +139,7 @@ public class GetRuntimeModelConfigRequest extends Request {
             this.agentPlatform = request.agentPlatform;
             this.agentProvider = request.agentProvider;
             this.includeRiskInfo = request.includeRiskInfo;
+            this.language = request.language;
             this.runtimeId = request.runtimeId;
             this.runtimeType = request.runtimeType;
             this.smartModel = request.smartModel;
@@ -169,7 +183,19 @@ public class GetRuntimeModelConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the agent runtime. The ID mappings are as follows:</p>
+         * <p>The model display language. Valid values: zh-CN, en-US, ja-JP, and zh-TW. The value is case-insensitive, and leading and trailing spaces are removed. If this parameter is not specified, left empty, or set to an unsupported value, the default value zh-CN is used. The model pool description mapping is returned based on the normalized interface language, and falls back to Chinese if a translation is missing. Bailian and existing dynamic configurations still use Chinese for zh-CN and zh-TW, and English for en-US and ja-JP. This parameter is used for the names and descriptions of system intelligence tiers, as well as general model descriptions. Template fallback text, custom names, and runtime configurations retain their original values. The values zh_CN, en_US, ja_JP, and zh_TW are also supported, and en and ja are compatible. The value is case-insensitive, and leading and trailing spaces are removed. An invalid language value falls back to Chinese and does not cause a parameter error to be returned for Language. The names and descriptions of the four system intelligence tiers (Auto, Standard, Advanced, and Ultimate) support all four languages, and Chinese is retained for missing Japanese and Traditional Chinese items. User template names retain their original values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
+            return this;
+        }
+
+        /**
+         * <p>The agent runtime ID. The ID mappings are as follows:</p>
          * <p>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</p>
          * <p>OpenClaw: Cloud desktop ID, in the format of ecd-xxxx.</p>
          * <p>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</p>
@@ -185,7 +211,7 @@ public class GetRuntimeModelConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the agent runtime.</p>
+         * <p>The agent runtime type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +228,7 @@ public class GetRuntimeModelConfigRequest extends Request {
          * <ul>
          * <li>true: Queries the system wuying-preset provider models based on the business type of the runtime.</li>
          * <li>false: Excludes wuying-preset from the effective configuration.</li>
-         * <li>Empty: Returns both smart and non-smart models in the effective configuration.
+         * <li>Not specified: Returns both smart and non-smart models in the effective configuration.
          * The business type is read by the server from runtime.biz_type, and the BizType input parameter is not required. Risk information is still independently controlled by IncludeRiskInfo.</li>
          * </ul>
          * 

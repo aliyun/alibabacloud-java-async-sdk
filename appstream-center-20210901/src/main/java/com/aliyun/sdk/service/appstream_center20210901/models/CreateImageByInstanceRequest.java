@@ -222,7 +222,7 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is currently applicable only to cloud desktop scenarios. Specifies whether to clear user personal data. If you set this parameter to true, the created image clears data in all directories under C:\Users except the Administrator and Public directories.</p>
+         * <p>This parameter is applicable only to cloud desktop instances. Specifies whether to clear personal user data. If you set this parameter to true, the created image clears the data in all directories under C:\Users except the Administrator and Public directories.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -246,7 +246,7 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to copy user profile data.</p>
+         * <p>Specifies whether to copy personal user data.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -258,7 +258,7 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The image description.</p>
+         * <p>The description of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>my test image v1.0</p>
@@ -270,7 +270,7 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of disk data included in the image. By default, the image includes both the system cloud disk and data cloud disk of the instance.</p>
+         * <p>The types of disk data included in the image. By default, the image includes the system cloud disk and data cloud disks of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -282,7 +282,7 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The image name.</p>
+         * <p>The name of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -306,7 +306,7 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance type.</p>
+         * <p>The type of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>WuyingServer</p>
@@ -330,7 +330,7 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The sub-instance ID. This parameter does not apply to cloud desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</p>
+         * <p>The sub-instance ID. This parameter is not applicable to cloud desktop scenarios. In workstation scenarios, you must specify the persistent session ID to locate a specific instance.</p>
          * 
          * <strong>example:</strong>
          * <p>p-0cc7s3n1l*****</p>
@@ -342,7 +342,7 @@ public class CreateImageByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The tag list.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tagList(java.util.List<TagList> tagList) {
             this.putQueryParameter("TagList", tagList);

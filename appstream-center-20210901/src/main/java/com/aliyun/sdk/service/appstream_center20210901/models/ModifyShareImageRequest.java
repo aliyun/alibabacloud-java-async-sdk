@@ -171,7 +171,7 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * <p>The product type, such as cloud desktop, cloud application, or workstation.</p>
+         * <p>The product type, such as cloud desktop, cloud application, and workstation.</p>
          * 
          * <strong>example:</strong>
          * <p>CloudDesktop</p>
@@ -183,7 +183,7 @@ public class ModifyShareImageRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account IDs to remove from the share list.</p>
+         * <p>The Alibaba Cloud account IDs to remove from sharing.</p>
          */
         public Builder removeAccount(java.util.List<Long> removeAccount) {
             this.putBodyParameter("RemoveAccount", removeAccount);

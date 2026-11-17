@@ -168,7 +168,7 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The URL of the application icon. Specify an accessible icon URL to display a custom icon.</p>
+         * <p>The URL of the application icon. Specify an accessible icon URL when a custom icon needs to be displayed.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/apps/business/icon.png">https://example.com/apps/business/icon.png</a></p>
@@ -193,7 +193,7 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image to which the application is bound. The image must be a custom image or community image that can be managed by the current account.</p>
+         * <p>The ID of the image to which the application is bound. The image must be a custom image or community image manageable by the current account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The application type. If omitted, the default value is CLIENT_BASE. Valid values:</p>
+         * <p>The application form. If omitted, the default value is CLIENT_BASE. Valid values:</p>
          * <ul>
          * <li><strong>CLIENT_BASE</strong>: Client application.</li>
          * <li><strong>WEB_BASE</strong>: Browser application.</li>
@@ -225,7 +225,7 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The application service port. For applications that require port-based access, specify the actual port number that the application listens on.</p>
+         * <p>The service port of the application. For applications that require port-based access, specify the actual port number that the application listens on.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -237,7 +237,7 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The path suffix of the application access URL, which is used together with the application service port to describe the access entry point.</p>
+         * <p>The path suffix of the application access URL, which together with the application service port describes the access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>/console</p>
@@ -249,7 +249,7 @@ public class CreateAndBindAppRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image version to which the application is bound. If omitted, the current active version of the image specified by ImageId is used. If specified, the version must belong to the image.</p>
+         * <p>The ID of the image version to which the application is bound. If omitted, the current active version of the image corresponding to ImageId is used. If specified, it must belong to the image.</p>
          * 
          * <strong>example:</strong>
          * <p>iv-bp1example****</p>

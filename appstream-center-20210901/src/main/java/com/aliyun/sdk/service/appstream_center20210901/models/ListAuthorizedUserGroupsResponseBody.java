@@ -128,7 +128,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -150,7 +150,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of user group information.</p>
+         * <p>The list of user groups.</p>
          */
         public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
@@ -255,7 +255,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the delivery group.</p>
+             * <p>The ID of the app instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-9ciijz60n4xsv****</p>
@@ -266,7 +266,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the delivery group set.</p>
+             * <p>The ID of the app instance group set.</p>
              * 
              * <strong>example:</strong>
              * <p>set-3jm9d0abc00example</p>

@@ -130,7 +130,7 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of app instance group report data.</p>
+         * <p>The list of delivery group report data.</p>
          */
         public Builder indexData(java.util.List<IndexData> indexData) {
             this.indexData = indexData;
@@ -253,7 +253,7 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the app instance group.</p>
+             * <p>The delivery group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-9ciijz60n4xsv****</p>
@@ -264,7 +264,7 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the app instance group.</p>
+             * <p>The delivery group name.</p>
              * 
              * <strong>example:</strong>
              * <p>R&amp;D workstation group</p>
@@ -275,19 +275,18 @@ public class QueryAppInstanceGroupReportListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current status of the app instance group.</p>
-             * <p>Valid values:</p>
+             * <p>The current status of the delivery group. Valid values:</p>
              * <ul>
-             * <li><code>DEPLOYING</code>: Deploying.</li>
-             * <li><code>DEPLOYED</code>: Deployed but not published.</li>
-             * <li><code>PUBLISHED</code>: Published and available to provide services based on the current configurations.</li>
-             * <li><code>STOPPING</code>: Stopping.</li>
-             * <li><code>STOPPED</code>: Stopped.</li>
-             * <li><code>MAINTAINING</code>: Maintaining.</li>
-             * <li><code>FAILED</code>: Deployment or running failed.</li>
-             * <li><code>MAINTAIN_FAILED</code>: Maintenance failed.</li>
-             * <li><code>DELETING</code>: Deleting.</li>
-             * <li><code>DELETED</code>: Deleted.</li>
+             * <li><code>DEPLOYING</code>: deploying</li>
+             * <li><code>DEPLOYED</code>: deployed but not published</li>
+             * <li><code>PUBLISHED</code>: published and available to provide services based on the current configuration</li>
+             * <li><code>STOPPING</code>: stopping</li>
+             * <li><code>STOPPED</code>: stopped</li>
+             * <li><code>MAINTAINING</code>: maintaining</li>
+             * <li><code>FAILED</code>: deployment or execution failed</li>
+             * <li><code>MAINTAIN_FAILED</code>: maintenance failed</li>
+             * <li><code>DELETING</code>: deleting</li>
+             * <li><code>DELETED</code>: deleted</li>
              * </ul>
              * 
              * <strong>example:</strong>

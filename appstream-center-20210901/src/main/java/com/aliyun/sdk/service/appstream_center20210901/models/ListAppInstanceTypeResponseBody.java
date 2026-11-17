@@ -106,7 +106,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of session instance types on the current page.</p>
+         * <p>The list of session specifications on the current page.</p>
          */
         public Builder appInstanceTypeModels(java.util.List<AppInstanceTypeModels> appInstanceTypeModels) {
             this.appInstanceTypeModels = appInstanceTypeModels;
@@ -147,7 +147,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of instance types that meet all filtering conditions, not the number of entries on the current page.</p>
+         * <p>The total number of specifications that meet all filtering conditions, not the number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +216,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The available quantity in the zone obtained in this query. Unit: instances. This value is an inventory snapshot and does not indicate that resources have been reserved for the current account.</p>
+             * <p>The available quantity in the zone obtained in this query. Unit: count. This value is an inventory snapshot and does not indicate that resources have been reserved for the current account.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -227,7 +227,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID, which can be queried by calling the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListZones">ListZones</a> operation.</p>
+             * <p>The zone ID, which can be queried by calling <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListZones">ListZones</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>
@@ -321,7 +321,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type inventory status obtained in the current query.</p>
+             * <p>The specification inventory status obtained in the current query.</p>
              * <ul>
              * <li><code>Available</code>: The total inventory of the queried zones is greater than 0.</li>
              * <li><code>SoldOut</code>: The total inventory of the queried zones is not greater than 0.</li>
@@ -546,7 +546,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The session instance type code, which can be used as the session instance type parameter for subsequent operations.</p>
+             * <p>The session specification code, which can be used as the session specification parameter for subsequent operations.</p>
              * 
              * <strong>example:</strong>
              * <p>appstreaming.vgpu.4c8g</p>
@@ -557,7 +557,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type family code to which the session instance type belongs.</p>
+             * <p>The specification family code to which the session specification belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g6</p>
@@ -568,7 +568,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores included in the instance type, represented by a numeric string. Unit: cores.</p>
+             * <p>The number of CPU cores included in the specification, represented by a numeric string. Unit: cores.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -579,7 +579,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data cloud disk capacity of the instance type. Unit: GB.</p>
+             * <p>The data cloud disk capacity of the specification. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -590,7 +590,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Not enabled yet. The example value is only used to demonstrate the format and does not represent the actual number of GPUs returned by this operation.</p>
+             * <p>Not enabled yet. The example value is only used to display the format and does not represent the actual number of GPUs returned by this operation.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -601,7 +601,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GPU memory capacity of the instance type. Unit: MB.</p>
+             * <p>The GPU memory capacity of the specification. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>4096</p>
@@ -612,7 +612,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display value or display range of the GPU memory. Display it as the returned text. Do not directly use it as a numeric value for capacity conversion.</p>
+             * <p>The display value or display range of the GPU memory. It should be displayed as the returned text and should not be directly used as a numerical value for capacity conversion.</p>
              * 
              * <strong>example:</strong>
              * <p>1~2</p>
@@ -623,7 +623,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the instance type record. When integrating with pricing or creation operations, use <code>AppInstanceType</code>. Do not use this field to replace the instance type code.</p>
+             * <p>The identifier of the specification record. When you connect to the price inquiry or creation operation, use <code>AppInstanceType</code>. Do not use this field to replace the specification code.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -634,7 +634,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the instance type. The Chinese name is used only when <code>Language</code> is set to <code>zh-CN</code>. For other values or when omitted, the instance type code is used.</p>
+             * <p>The display name of the specification. The Chinese name is used only when <code>Language=zh-CN</code>. For other values or when omitted, the specification code is used.</p>
              * 
              * <strong>example:</strong>
              * <p>appstreaming.vgpu.4c8g</p>
@@ -645,7 +645,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inventory information of the instance type. This parameter is returned only when the inventory is queried and the relevant information is obtained. If this parameter is not returned, it does not mean that the inventory is 0.</p>
+             * <p>The inventory information of the specification. It is returned only when the inventory is queried and relevant information is obtained. If it is not returned, it does not mean that the inventory is 0.</p>
              */
             public Builder inventoryInfo(InventoryInfo inventoryInfo) {
                 this.inventoryInfo = inventoryInfo;
@@ -653,7 +653,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory capacity of the instance type. Unit: MB.</p>
+             * <p>The memory capacity of the specification. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>8192</p>
@@ -664,7 +664,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the product to which the instance type belongs. The current document displays the following values:</p>
+             * <p>The type of the product to which the specification belongs. The current document displays the following value:</p>
              * <ul>
              * <li><code>CloudApp</code>: Wuying Cloud Application.</li>
              * </ul>
@@ -678,7 +678,7 @@ public class ListAppInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system cloud disk capacity of the instance type. Unit: GB.</p>
+             * <p>The system cloud disk capacity of the specification. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>

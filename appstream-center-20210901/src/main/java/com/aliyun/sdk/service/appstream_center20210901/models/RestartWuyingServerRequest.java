@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RestartWuyingServerRequest</p>
  */
 public class RestartWuyingServerRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRestartRetry")
+    private Boolean enableRestartRetry;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
@@ -27,6 +31,7 @@ public class RestartWuyingServerRequest extends Request {
 
     private RestartWuyingServerRequest(Builder builder) {
         super(builder);
+        this.enableRestartRetry = builder.enableRestartRetry;
         this.productType = builder.productType;
         this.wuyingServerIdList = builder.wuyingServerIdList;
     }
@@ -45,6 +50,13 @@ public class RestartWuyingServerRequest extends Request {
     }
 
     /**
+     * @return enableRestartRetry
+     */
+    public Boolean getEnableRestartRetry() {
+        return this.enableRestartRetry;
+    }
+
+    /**
      * @return productType
      */
     public String getProductType() {
@@ -59,6 +71,7 @@ public class RestartWuyingServerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RestartWuyingServerRequest, Builder> {
+        private Boolean enableRestartRetry; 
         private String productType; 
         private java.util.List<String> wuyingServerIdList; 
 
@@ -68,9 +81,19 @@ public class RestartWuyingServerRequest extends Request {
 
         private Builder(RestartWuyingServerRequest request) {
             super(request);
+            this.enableRestartRetry = request.enableRestartRetry;
             this.productType = request.productType;
             this.wuyingServerIdList = request.wuyingServerIdList;
         } 
+
+        /**
+         * <p>Specifies whether to enable the restart retry feature.</p>
+         */
+        public Builder enableRestartRetry(Boolean enableRestartRetry) {
+            this.putQueryParameter("EnableRestartRetry", enableRestartRetry);
+            this.enableRestartRetry = enableRestartRetry;
+            return this;
+        }
 
         /**
          * <p>The product type.</p>

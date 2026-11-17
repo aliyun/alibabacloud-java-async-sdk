@@ -144,7 +144,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The upper limit of the multiplier. If this parameter is empty, it indicates that there is no upper limit. For example, if Min is 1 and Max is empty, it is displayed as 1x and above.</p>
+             * <p>The upper limit of the multiplier. If this parameter is empty, it indicates no upper limit. For example, if Min=1 and Max is empty, it is displayed as starting from 1x.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -155,7 +155,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lower limit of the multiplier. When it is equal to Max, it is a fixed multiplier. For example, if Min and Max are both 2, it is displayed as 2x.</p>
+             * <p>The lower limit of the multiplier. When it is equal to Max, it is a fixed multiplier. For example, if Min=Max=2, it is displayed as 2x.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -389,7 +389,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
              * <p>The model description.</p>
              * 
              * <strong>example:</strong>
-             * <p>The Qwen3.6 native vision-language Plus model series demonstrates exceptional performance comparable to current top-tier frontier models, with significantly improved model effects compared to the 3.5 series. The model shows significant enhancements in coding capabilities such as agentic coding, front-end programming, and vibe coding, as well as in multimodal universal recognition, OCR, and object localization</p>
+             * <p>The Qwen3.6 native vision-language Plus series models demonstrate exceptional performance comparable to current top-tier frontier models, with significantly improved model effects compared to the 3.5 series. The models show significant enhancements in coding capabilities such as agentic coding, front-end programming, and vibe coding, as well as multimodal universal recognition, OCR, and object localization</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -446,7 +446,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model risk type. This parameter is returned only when the IncludeRiskInfo request parameter is set to true.</p>
+             * <p>The model risk type. This parameter is returned only when the request parameter IncludeRiskInfo is set to true.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>
@@ -550,7 +550,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the model provider template.</p>
+             * <p>The ID of the model service provider template.</p>
              * 
              * <strong>example:</strong>
              * <p>mpt-xxxx</p>
@@ -561,10 +561,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the model provider template.</p>
+             * <p>The name of the model service provider template.</p>
              * 
              * <strong>example:</strong>
-             * <p>Model Studio</p>
+             * <p>Bailian</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -572,7 +572,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the model provider.</p>
+             * <p>The name of the model service provider.</p>
              * 
              * <strong>example:</strong>
              * <p>bailian</p>
@@ -705,7 +705,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of model providers.</p>
+             * <p>The list of model service providers.</p>
              */
             public Builder modelProviderList(java.util.List<ModelProviderList> modelProviderList) {
                 this.modelProviderList = modelProviderList;
@@ -746,7 +746,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the runtime belongs. If the runtime does not belong to any resource group, the value is null.</p>
+             * <p>The ID of the resource group to which the runtime belongs. This value is null if the runtime does not belong to a resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-xxxxx</p>

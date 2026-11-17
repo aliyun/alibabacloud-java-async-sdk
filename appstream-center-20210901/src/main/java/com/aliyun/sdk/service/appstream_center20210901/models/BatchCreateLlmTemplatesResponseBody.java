@@ -155,7 +155,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the model configuration item was skipped.</p>
+             * <p>The reason why the item is skipped.</p>
              * 
              * <strong>example:</strong>
              * <p>LLM template already exists with same providerTemplateId and llmCode.</p>
@@ -267,7 +267,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successfully created model templates.</p>
+             * <p>The number of successfully created items.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -278,7 +278,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of requested model templates.</p>
+             * <p>The total number of requested items.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>

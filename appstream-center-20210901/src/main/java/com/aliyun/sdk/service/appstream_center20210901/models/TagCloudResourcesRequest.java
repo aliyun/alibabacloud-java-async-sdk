@@ -89,7 +89,7 @@ public class TagCloudResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
+         * <p>The list of resource IDs. A maximum of 50 resource IDs are supported. This parameter is not required when the resource type is tenant ID.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
@@ -113,13 +113,13 @@ public class TagCloudResourcesRequest extends Request {
         /**
          * <p>The list of tags. System tags and custom tags are supported.</p>
          * <ul>
-         * <li><p>Valid values for system tags:</p>
+         * <li><p>System tag enum values:</p>
          * <ul>
-         * <li><code>System/Scheduler/GRAYSCALE</code>: canary release tag</li>
-         * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents newly bound users from connecting to the app instance group</li>
+         * <li><code>System/Scheduler/GRAYSCALE</code>: grayscale tag.</li>
+         * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents new users bound to the app instance group from establishing connections.</li>
          * </ul>
          * </li>
-         * <li><p>Custom tags: You can create up to 20 custom tags.</p>
+         * <li><p>Custom tags: A maximum of 20 custom tags can be created.</p>
          * </li>
          * </ul>
          * <blockquote>

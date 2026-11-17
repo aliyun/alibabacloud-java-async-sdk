@@ -114,7 +114,7 @@ public class ListBrowserRestrictedURLsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The actual page number used in this query. This is the echoed value of the PageNumber request parameter.</p>
+         * <p>The actual page number used for this query, which is the echoed value of the PageNumber request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListBrowserRestrictedURLsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The actual number of entries returned per page in this query. This is the echoed value of the PageSize request parameter.</p>
+         * <p>The actual number of entries returned per page for this query, which is the echoed value of the PageSize request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListBrowserRestrictedURLsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. You can use the ID to locate call records and troubleshoot issues. The example value is partially masked.</p>
+         * <p>The ID of the request, which is used to locate call records and troubleshoot issues. The example value is partially masked.</p>
          * 
          * <strong>example:</strong>
          * <p>D4A13D91-****</p>

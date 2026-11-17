@@ -93,7 +93,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token that indicates whether more results exist.</p>
+         * <p>Indicates whether a token for the next query is available based on NextToken.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</p>
@@ -115,7 +115,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of tags bound to resources.</p>
+         * <p>The tags bound to the resource.</p>
          */
         public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
             this.resourceTags = resourceTags;
@@ -123,7 +123,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -332,7 +332,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tags.</p>
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

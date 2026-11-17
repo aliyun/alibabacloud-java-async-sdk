@@ -39,6 +39,10 @@ public class DescribeEventsRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
+    private java.util.List<String> endUserIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EventId")
     private String eventId;
 
@@ -90,6 +94,7 @@ public class DescribeEventsRequest extends Request {
         this.appInstanceId = builder.appInstanceId;
         this.bizRegionId = builder.bizRegionId;
         this.endTime = builder.endTime;
+        this.endUserIds = builder.endUserIds;
         this.eventId = builder.eventId;
         this.eventType = builder.eventType;
         this.maxResults = builder.maxResults;
@@ -149,6 +154,13 @@ public class DescribeEventsRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return endUserIds
+     */
+    public java.util.List<String> getEndUserIds() {
+        return this.endUserIds;
     }
 
     /**
@@ -234,6 +246,7 @@ public class DescribeEventsRequest extends Request {
         private String appInstanceId; 
         private String bizRegionId; 
         private String endTime; 
+        private java.util.List<String> endUserIds; 
         private String eventId; 
         private String eventType; 
         private Integer maxResults; 
@@ -257,6 +270,7 @@ public class DescribeEventsRequest extends Request {
             this.appInstanceId = request.appInstanceId;
             this.bizRegionId = request.bizRegionId;
             this.endTime = request.endTime;
+            this.endUserIds = request.endUserIds;
             this.eventId = request.eventId;
             this.eventType = request.eventType;
             this.maxResults = request.maxResults;
@@ -271,7 +285,7 @@ public class DescribeEventsRequest extends Request {
         } 
 
         /**
-         * <p>The delivery group ID, used to filter events of a specific delivery group. If you do not specify this parameter, events are not filtered by delivery group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
+         * <p>The app instance group ID. This parameter is used to filter app instance group events. If this parameter is not specified, events are not filtered by app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -283,7 +297,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The delivery group name. If the name contains only letters, digits, underscores, or hyphens, events are filtered by name prefix. If the name contains spaces or other special characters, events are filtered by the exact name. If you do not specify this parameter, events are not filtered by name.</p>
+         * <p>The delivery group name. If the name contains only letters, digits, underscores, or hyphens, events are filtered by name prefix. If the name contains spaces or other special characters, events are filtered by the exact value. If you do not specify this parameter, events are not filtered by name.</p>
          * 
          * <strong>example:</strong>
          * <p>R&amp;D workstation group</p>
@@ -295,7 +309,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The application instance ID, used to filter events associated with a specific instance. If you do not specify this parameter, events are not filtered by application instance. To obtain this value, first call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then use the ID as <code>AppInstanceGroupId</code> to call the <a href="~~ListAppInstances~~">ListAppInstances</a> operation.</p>
+         * <p>The ID of the application instance. This parameter is used to filter events associated with the instance. If this parameter is not specified, events are not filtered by application instance. To obtain this value, call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance group ID, and then specify the ID as <code>AppInstanceGroupId</code> when calling <a href="~~ListAppInstances~~">ListAppInstances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-azn3kmwruh1vl****</p>
@@ -307,7 +321,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The business region ID of the event, used for exact filtering. If you do not specify this parameter, events are not filtered by business region. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
+         * <p>The business region ID of the event, which is used for exact filtering. If you do not specify this parameter, events are not filtered by business region. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -319,7 +333,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. <strong>Required</strong>. The format is the same as that of <code>StartTime</code>. We recommend that you always include the time zone offset. The query includes this time, and the end time cannot be earlier than the <code>StartTime</code>. A time range later than the call time does not generate future events.</p>
+         * <p>The end time of the query. <strong>Required</strong>. The format is the same as <code>StartTime</code>. We recommend that you always include the time zone offset. The query includes this time, and the end time cannot be earlier than <code>StartTime</code>. A time range later than the call time does not generate future events.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +346,19 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The event ID, used to query a specific event. If you do not specify this parameter, events are not filtered by event ID.</p>
+         * <p>The optional list of user IDs. If you specify multiple user IDs, events are filtered by using the OR logic. If you specify both <code>EndUserIds</code> and <code>UserId</code>, the intersection is used. If you do not specify this parameter, the original query is retained. If you specify an empty list or a list that contains only blank user IDs, an empty result is returned. The caller must convert usernames or display names to user IDs before calling this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;user-1&quot;,&quot;user-2&quot;]</p>
+         */
+        public Builder endUserIds(java.util.List<String> endUserIds) {
+            this.putBodyParameter("EndUserIds", endUserIds);
+            this.endUserIds = endUserIds;
+            return this;
+        }
+
+        /**
+         * <p>The event ID, which is used to query a single event. If you do not specify this parameter, events are not filtered by event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>evt-9ciijz60n4xsv****</p>
@@ -344,7 +370,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The event type identifier, used to filter events. Different products may generate different event types. This operation does not restrict the value to a fixed enumeration. You should use the EventType values retrieved from EventList as filter values.</p>
+         * <p>The event type identifier, which is used to filter events. Different products may generate different event types. This operation does not restrict the values to a fixed enumeration. You should use the <code>EventList.EventType</code> values obtained from previous queries as filter values.</p>
          * 
          * <strong>example:</strong>
          * <p>SessionDisconnected</p>
@@ -356,7 +382,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>A compatibility field. The current version does not read this parameter. Use <code>PageSize</code> to control the number of records on each page.</p>
+         * <p>The compatibility field. The current version does not read this parameter. Use <code>PageSize</code> to control the number of records on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -368,7 +394,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the member elastic network interface (ENI) of the cloud resource, used to filter related events. If you do not specify this parameter, events are not filtered by IP address.</p>
+         * <p>The private IP address of the member elastic network interface (ENI) of the cloud resource, which is used to filter related events. If you do not specify this parameter, events are not filtered by IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.10</p>
@@ -380,7 +406,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>A compatibility field. The current version does not read this parameter and does not support token-based pagination. Use <code>PageNumber</code>.</p>
+         * <p>The compatibility field. The current version does not read this parameter and does not support token-based pagination. Use <code>PageNumber</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>unused</p>
@@ -392,7 +418,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The office network ID, used to filter events generated within a specific office network. If you do not specify this parameter, events are not filtered by office network.</p>
+         * <p>The office network ID, which is used to filter events generated within the office network. If you do not specify this parameter, events are not filtered by office network.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai+dir-123456****</p>
@@ -404,7 +430,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The page number to query. Pages start from 1. Default value: 1. This parameter is used together with <code>PageSize</code>.</p>
+         * <p>The page number to query. Pages start from <code>1</code>. Default value: 1. This parameter is used together with <code>PageSize</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -416,7 +442,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of events to return on each page. Default value: 10. This operation does not declare a fixed upper limit. We recommend that you set this parameter to a reasonable positive integer based on your actual needs.</p>
+         * <p>The number of events to return on each page. Default value: 10. The current operation does not declare a fixed upper limit. We recommend that you set this parameter to a reasonable positive integer based on your actual needs.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -428,14 +454,14 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The product type. The value is case-insensitive. If you specify an invalid value, the request fails. If you do not specify this parameter, events are not filtered by product type. Only the following public product values are supported:</p>
+         * <p>The product type. Values are not case-sensitive. If you specify an unsupported value, the request fails. If you do not specify this parameter, events are not filtered by product type. Valid values:</p>
          * <ul>
-         * <li><code>CloudApp</code>: Wuying Cloud Application.</li>
+         * <li><code>CloudApp</code>: Wuying Cloud App.</li>
          * <li><code>CloudBrowser</code>: Cloud Browser.</li>
-         * <li><code>WuyingServer</code>: Enterprise Edition Workstation.</li>
-         * <li><code>WuyingWorkstation</code>: Personal Edition Linggou Container Workstation.</li>
-         * <li><code>WuyingWorkstationTeam</code>: Linggou Team Edition Container Workstation.</li>
-         * <li><code>WuyingWorkstationBusiness</code>: Linggou Dedicated Edition Container Workstation.</li>
+         * <li><code>WuyingServer</code>: Enterprise Edition workstation.</li>
+         * <li><code>WuyingWorkstation</code>: Personal Edition Linggou container workstation.</li>
+         * <li><code>WuyingWorkstationTeam</code>: Linggou Team Edition container workstation.</li>
+         * <li><code>WuyingWorkstationBusiness</code>: Linggou Dedicated Edition container workstation.</li>
          * <li><code>AndroidCloud</code>: Cloud Phone.</li>
          * <li><code>AIAgent</code>: AgentBay (AI agent).</li>
          * </ul>
@@ -450,7 +476,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The start time of the query. <strong>Required</strong>. Use the ISO 8601 format: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss</code>. You can include three-digit milliseconds and use <code>Z</code> or <code>±HH:mm</code> to specify the time zone. We recommend that you always include the time zone offset. The query includes this time, and the start time must be earlier than or equal to the <code>EndTime</code>. The service only retains and retrieves events that occurred within 30 days before the call time.</p>
+         * <p>The start time of the query. <strong>Required</strong>. Specify the time in the ISO 8601 format: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss</code>. You can include three-digit milliseconds and use <code>Z</code> or <code>±HH:mm</code> to specify the time zone. We recommend that you always include the time zone offset. The query includes this time, and the start time must be earlier than or equal to <code>EndTime</code>. The service only retains and retrieves events that occurred within 30 days before the call time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -463,7 +489,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The end user ID, used to filter events generated by a specific user. If you do not specify this parameter, events are not filtered by user.</p>
+         * <p>The end user ID, which is used to filter events generated by the user. If you do not specify this parameter, events are not filtered by user.</p>
          * 
          * <strong>example:</strong>
          * <p>user01</p>

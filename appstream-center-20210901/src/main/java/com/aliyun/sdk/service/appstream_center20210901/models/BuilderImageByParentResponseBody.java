@@ -117,7 +117,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business data returned by this operation.</p>
+         * <p>The business data returned by the operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error or result message. This parameter describes the cause when the request fails. A successful response may not contain this parameter.</p>
+         * <p>The error message or result prompt. This parameter describes the cause of a failed request. A successful response may not contain this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>The maximum number of builders is reached.</p>
@@ -147,7 +147,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is processed successfully. A value of true indicates that the request is processed successfully. To check whether the asynchronous task is completed, you must query the task status separately.</p>
+         * <p>Indicates whether the request is successful. A value of true indicates that the request is successful. To check whether the asynchronous task is complete, you must query the task status separately.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -226,7 +226,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The image ID, which is used for subsequent queries or modifications of the image.</p>
+             * <p>The ID of the image. You can use this ID to query or modify the image later.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-bp1example****</p>
@@ -237,7 +237,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID, which can be used to call GetTask to query the task status.</p>
+             * <p>The ID of the task. You can use this ID to call GetTask to query the task status.</p>
              * 
              * <strong>example:</strong>
              * <p>tid-bp1example****</p>
@@ -248,7 +248,7 @@ public class BuilderImageByParentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image version ID, which is used to query or manage the specified version of the image.</p>
+             * <p>The ID of the image version. You can use this ID to query or manage the specified version of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>iv-bp1example****</p>

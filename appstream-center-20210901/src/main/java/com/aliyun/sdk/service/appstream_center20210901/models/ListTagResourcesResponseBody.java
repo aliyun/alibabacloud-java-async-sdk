@@ -93,7 +93,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token for the next query. An empty value indicates that no more data is available. This operation returns all matching results at a time, so this field is typically empty.</p>
+         * <p>The pagination token for the next query. An empty value indicates that no more data is available. This operation returns all matched results at once, so this field is usually empty.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</p>
@@ -115,7 +115,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of resource-tag binding records. Each record corresponds to a tag key-value pair on a resource.</p>
+         * <p>The list of binding records between resources and tags. Each record corresponds to a tag key-value pair on a resource.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -123,7 +123,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of tag records returned. If a resource has multiple tags bound, each tag key-value pair counts as one record.</p>
+         * <p>The number of tag records returned in the current request. If a resource is bound to multiple tags, each tag key-value pair is counted as one record.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -218,7 +218,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource ID. If the resource type is delivery group, this is the delivery group ID.</p>
+             * <p>The resource ID. If the resource type is delivery group, this parameter specifies the delivery group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-9ciijz60n4xsv****</p>
