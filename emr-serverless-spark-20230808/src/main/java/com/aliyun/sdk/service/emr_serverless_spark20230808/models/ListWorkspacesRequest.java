@@ -143,7 +143,7 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of records to return in a single request.</p>
+         * <p>The maximum number of results to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -155,7 +155,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The name of the workspace. Fuzzy search by workspace name is supported.</p>
+         * <p>The name of the workspace. Fuzzy search is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test_workspace</p>
@@ -167,7 +167,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>The token that indicates the position from which to start reading.</p>
+         * <p>The pagination token that specifies the starting position for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,11 +205,11 @@ public class ListWorkspacesRequest extends Request {
         /**
          * <p>The state of the workspace. Valid values:</p>
          * <ul>
-         * <li>Starting: The workspace is starting.</li>
-         * <li>Running: The workspace is running.</li>
-         * <li>Stopping: The workspace is stopping.</li>
-         * <li>Stopped: The workspace is stopped.</li>
-         * <li>Error: The workspace failed.</li>
+         * <li>Starting: Starting.</li>
+         * <li>Running: Running.</li>
+         * <li>Stopping: Stopping.</li>
+         * <li>Stopped: Stopped.</li>
+         * <li>Error: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class ListWorkspacesRequest extends Request {
              * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>iPhone remaining disk space percentage</p>
+             * <p>iPhone disk space remaining percentage</p>
              */
             public Builder value(String value) {
                 this.value = value;

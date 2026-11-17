@@ -102,7 +102,7 @@ public class ListMembersRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return per request.</p>
+         * <p>The maximum number of records to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -127,7 +127,7 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that specifies the starting position for the query.</p>
+         * <p>The token that specifies the starting position for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

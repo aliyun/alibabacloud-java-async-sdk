@@ -132,7 +132,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code from the API backend.</p>
+         * <p>The return code of the API backend.</p>
          * 
          * <strong>example:</strong>
          * <p>1400009</p>
@@ -143,7 +143,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -173,7 +173,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed description corresponding to the request code.</p>
+         * <p>The detailed description for the request code.</p>
          * 
          * <strong>example:</strong>
          * <p>No permission for resource action</p>
@@ -485,7 +485,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The email address for alert notifications.</p>
+             * <p>The alert email address.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
@@ -507,7 +507,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workflow definition ID.</p>
+             * <p>The ID of the workflow definition.</p>
              * 
              * <strong>example:</strong>
              * <p>12***********</p>
@@ -518,7 +518,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the workflow definition. The time is in UTC and follows the ISO 8601 standard.</p>
+             * <p>The creation time of the workflow definition. The time is in UTC and follows the ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-05T02:03:19Z</p>
@@ -529,7 +529,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cron expression for scheduling.</p>
+             * <p>The cron expression for the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 0 * * ?</p>
@@ -540,7 +540,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node definition description.</p>
+             * <p>The task definition description.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -551,7 +551,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the task time range. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The end time of the task time range. The time is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1710432000000</p>
@@ -562,7 +562,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution policy.</p>
+             * <p>The execution strategy.</p>
              * 
              * <strong>example:</strong>
              * <p>SERIAL</p>
@@ -617,7 +617,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the scheduling.</p>
+             * <p>The start time of the schedule.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -639,7 +639,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time of the workflow definition. The time is in UTC and follows the ISO 8601 standard.</p>
+             * <p>The update time of the workflow definition. The time is in UTC and follows the ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-05T06:24:27Z</p>

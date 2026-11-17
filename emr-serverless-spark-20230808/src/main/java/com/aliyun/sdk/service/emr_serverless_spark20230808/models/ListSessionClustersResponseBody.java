@@ -851,6 +851,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
             /**
              * <p>The token used to connect to the session cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>session-connection-****</p>
              */
             public Builder connectionToken(String connectionToken) {
                 this.connectionToken = connectionToken;

@@ -131,7 +131,7 @@ public class GetJobRunResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration list.</p>
+             * <p>The list of configurations.</p>
              */
             public Builder configurations(java.util.List<Configuration> configurations) {
                 this.configurations = configurations;
@@ -377,7 +377,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token source. Valid values: input and output.</p>
+             * <p>The source of the tokens, such as input or output.</p>
              * 
              * <strong>example:</strong>
              * <p>input</p>
@@ -430,6 +430,9 @@ public class GetJobRunResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("executionTimeoutSeconds")
         private Integer executionTimeoutSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("firstReportTime")
+        private Long firstReportTime;
+
         @com.aliyun.core.annotation.NameInMap("fusion")
         private Boolean fusion;
 
@@ -459,6 +462,12 @@ public class GetJobRunResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("resourceQueueId")
         private String resourceQueueId;
+
+        @com.aliyun.core.annotation.NameInMap("resourceStartupDurationMs")
+        private Long resourceStartupDurationMs;
+
+        @com.aliyun.core.annotation.NameInMap("runDurationMs")
+        private Long runDurationMs;
 
         @com.aliyun.core.annotation.NameInMap("state")
         private String state;
@@ -491,6 +500,7 @@ public class GetJobRunResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.environmentId = builder.environmentId;
             this.executionTimeoutSeconds = builder.executionTimeoutSeconds;
+            this.firstReportTime = builder.firstReportTime;
             this.fusion = builder.fusion;
             this.jobDriver = builder.jobDriver;
             this.jobRunId = builder.jobRunId;
@@ -501,6 +511,8 @@ public class GetJobRunResponseBody extends TeaModel {
             this.releaseVersion = builder.releaseVersion;
             this.resourceOwnerId = builder.resourceOwnerId;
             this.resourceQueueId = builder.resourceQueueId;
+            this.resourceStartupDurationMs = builder.resourceStartupDurationMs;
+            this.runDurationMs = builder.runDurationMs;
             this.state = builder.state;
             this.stateChangeReason = builder.stateChangeReason;
             this.submitTime = builder.submitTime;
@@ -559,6 +571,13 @@ public class GetJobRunResponseBody extends TeaModel {
          */
         public Integer getExecutionTimeoutSeconds() {
             return this.executionTimeoutSeconds;
+        }
+
+        /**
+         * @return firstReportTime
+         */
+        public Long getFirstReportTime() {
+            return this.firstReportTime;
         }
 
         /**
@@ -632,6 +651,20 @@ public class GetJobRunResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceStartupDurationMs
+         */
+        public Long getResourceStartupDurationMs() {
+            return this.resourceStartupDurationMs;
+        }
+
+        /**
+         * @return runDurationMs
+         */
+        public Long getRunDurationMs() {
+            return this.runDurationMs;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -694,6 +727,7 @@ public class GetJobRunResponseBody extends TeaModel {
             private Long endTime; 
             private String environmentId; 
             private Integer executionTimeoutSeconds; 
+            private Long firstReportTime; 
             private Boolean fusion; 
             private JobDriver jobDriver; 
             private String jobRunId; 
@@ -704,6 +738,8 @@ public class GetJobRunResponseBody extends TeaModel {
             private String releaseVersion; 
             private String resourceOwnerId; 
             private String resourceQueueId; 
+            private Long resourceStartupDurationMs; 
+            private Long runDurationMs; 
             private String state; 
             private StateChangeReason stateChangeReason; 
             private Long submitTime; 
@@ -723,6 +759,7 @@ public class GetJobRunResponseBody extends TeaModel {
                 this.endTime = model.endTime;
                 this.environmentId = model.environmentId;
                 this.executionTimeoutSeconds = model.executionTimeoutSeconds;
+                this.firstReportTime = model.firstReportTime;
                 this.fusion = model.fusion;
                 this.jobDriver = model.jobDriver;
                 this.jobRunId = model.jobRunId;
@@ -733,6 +770,8 @@ public class GetJobRunResponseBody extends TeaModel {
                 this.releaseVersion = model.releaseVersion;
                 this.resourceOwnerId = model.resourceOwnerId;
                 this.resourceQueueId = model.resourceQueueId;
+                this.resourceStartupDurationMs = model.resourceStartupDurationMs;
+                this.runDurationMs = model.runDurationMs;
                 this.state = model.state;
                 this.stateChangeReason = model.stateChangeReason;
                 this.submitTime = model.submitTime;
@@ -744,7 +783,7 @@ public class GetJobRunResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The job code type. Valid values:</p>
+             * <p>The code type of the job run. Valid values:</p>
              * <ul>
              * <li><p>SQL</p>
              * </li>
@@ -763,7 +802,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Spark job configuration.</p>
+             * <p>The configuration overrides for the Spark job run.</p>
              */
             public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
                 this.configurationOverrides = configurationOverrides;
@@ -782,7 +821,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job end time. The value is a Unix timestamp in milliseconds.</p>
+             * <p>The end time of the job run. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1684122914000</p>
@@ -815,6 +854,17 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The timestamp in milliseconds when the resources become ready, indicating the first report time. The first report time takes precedence. If it is empty, the job report time is used as a fallback. If neither has a value, null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684119314000</p>
+             */
+            public Builder firstReportTime(Long firstReportTime) {
+                this.firstReportTime = firstReportTime;
+                return this;
+            }
+
+            /**
              * <p>Specifies whether the Fusion engine acceleration is enabled.</p>
              * 
              * <strong>example:</strong>
@@ -826,7 +876,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Spark Driver information.</p>
+             * <p>The information about the Spark driver.</p>
              */
             public Builder jobDriver(JobDriver jobDriver) {
                 this.jobDriver = jobDriver;
@@ -845,7 +895,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the run log.</p>
+             * <p>The execution log path.</p>
              */
             public Builder log(RunLog log) {
                 this.log = log;
@@ -853,7 +903,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job name.</p>
+             * <p>The job run name.</p>
              * 
              * <strong>example:</strong>
              * <p>jobName</p>
@@ -864,7 +914,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download URL of the NOTEBOOK file. This parameter is returned only if the job type is NOTEBOOK.</p>
+             * <p>The download URL of the notebook file. This parameter is returned only when the job type is NOTEBOOK.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx">http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx</a></p>
@@ -875,7 +925,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job priority.</p>
+             * <p>The priority of the job run.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -886,7 +936,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Spark DPI engine version used to run the node.</p>
+             * <p>The database engine version of the Spark DPI engine for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-3.3.1</p>
@@ -897,7 +947,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the user who created the job.</p>
+             * <p>The UID of the user who created the job run.</p>
              * 
              * <strong>example:</strong>
              * <p>150978934701****</p>
@@ -908,7 +958,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the queue used to run the job.</p>
+             * <p>The name of the resource queue for the job run.</p>
              * 
              * <strong>example:</strong>
              * <p>root_queue</p>
@@ -919,7 +969,29 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job status.</p>
+             * <p>The resource startup duration in milliseconds, which is calculated by subtracting the first submission time from the resource ready time. If the first submission time or the resource ready time is missing, or if the calculation result is negative, null is returned instead of 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60000</p>
+             */
+            public Builder resourceStartupDurationMs(Long resourceStartupDurationMs) {
+                this.resourceStartupDurationMs = resourceStartupDurationMs;
+                return this;
+            }
+
+            /**
+             * <p>The job run duration in milliseconds, which is calculated by subtracting the resource ready time from the job end time. If the job has not ended, the current time is used. If the resource ready time is missing or the calculation result is negative, null is returned instead of 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120000</p>
+             */
+            public Builder runDurationMs(Long runDurationMs) {
+                this.runDurationMs = runDurationMs;
+                return this;
+            }
+
+            /**
+             * <p>The state of the job run.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -930,7 +1002,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the status change.</p>
+             * <p>The reason for the state change.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -938,7 +1010,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job submission time. The value is a Unix timestamp in milliseconds.</p>
+             * <p>The submission time of the job run. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1684119314000</p>
@@ -949,7 +1021,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag list.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
@@ -957,7 +1029,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of token consumption.</p>
+             * <p>The details of the tokens consumed.</p>
              */
             public Builder tokenDetails(java.util.List<TokenDetails> tokenDetails) {
                 this.tokenDetails = tokenDetails;
@@ -976,7 +1048,7 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The web UI of the job.</p>
+             * <p>The Web UI of the job run.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://spark-ui">http://spark-ui</a></p>

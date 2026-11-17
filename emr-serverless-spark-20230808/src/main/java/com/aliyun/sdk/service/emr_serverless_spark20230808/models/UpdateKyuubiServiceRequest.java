@@ -30,6 +30,10 @@ public class UpdateKyuubiServiceRequest extends Request {
     private String computeInstance;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expectedReplica")
+    private Integer expectedReplica;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("kyuubiConfigs")
     private String kyuubiConfigs;
 
@@ -50,6 +54,10 @@ public class UpdateKyuubiServiceRequest extends Request {
     private String queue;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("refresh")
+    private Boolean refresh;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("releaseVersion")
     private String releaseVersion;
 
@@ -62,6 +70,10 @@ public class UpdateKyuubiServiceRequest extends Request {
     private Boolean restart;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scale")
+    private Boolean scale;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sparkConfigs")
     private String sparkConfigs;
 
@@ -70,14 +82,17 @@ public class UpdateKyuubiServiceRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.kyuubiServiceId = builder.kyuubiServiceId;
         this.computeInstance = builder.computeInstance;
+        this.expectedReplica = builder.expectedReplica;
         this.kyuubiConfigs = builder.kyuubiConfigs;
         this.kyuubiReleaseVersion = builder.kyuubiReleaseVersion;
         this.name = builder.name;
         this.publicEndpointEnabled = builder.publicEndpointEnabled;
         this.queue = builder.queue;
+        this.refresh = builder.refresh;
         this.releaseVersion = builder.releaseVersion;
         this.replica = builder.replica;
         this.restart = builder.restart;
+        this.scale = builder.scale;
         this.sparkConfigs = builder.sparkConfigs;
     }
 
@@ -116,6 +131,13 @@ public class UpdateKyuubiServiceRequest extends Request {
     }
 
     /**
+     * @return expectedReplica
+     */
+    public Integer getExpectedReplica() {
+        return this.expectedReplica;
+    }
+
+    /**
      * @return kyuubiConfigs
      */
     public String getKyuubiConfigs() {
@@ -151,6 +173,13 @@ public class UpdateKyuubiServiceRequest extends Request {
     }
 
     /**
+     * @return refresh
+     */
+    public Boolean getRefresh() {
+        return this.refresh;
+    }
+
+    /**
      * @return releaseVersion
      */
     public String getReleaseVersion() {
@@ -172,6 +201,13 @@ public class UpdateKyuubiServiceRequest extends Request {
     }
 
     /**
+     * @return scale
+     */
+    public Boolean getScale() {
+        return this.scale;
+    }
+
+    /**
      * @return sparkConfigs
      */
     public String getSparkConfigs() {
@@ -182,14 +218,17 @@ public class UpdateKyuubiServiceRequest extends Request {
         private String workspaceId; 
         private String kyuubiServiceId; 
         private String computeInstance; 
+        private Integer expectedReplica; 
         private String kyuubiConfigs; 
         private String kyuubiReleaseVersion; 
         private String name; 
         private Boolean publicEndpointEnabled; 
         private String queue; 
+        private Boolean refresh; 
         private String releaseVersion; 
         private Integer replica; 
         private Boolean restart; 
+        private Boolean scale; 
         private String sparkConfigs; 
 
         private Builder() {
@@ -201,14 +240,17 @@ public class UpdateKyuubiServiceRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.kyuubiServiceId = request.kyuubiServiceId;
             this.computeInstance = request.computeInstance;
+            this.expectedReplica = request.expectedReplica;
             this.kyuubiConfigs = request.kyuubiConfigs;
             this.kyuubiReleaseVersion = request.kyuubiReleaseVersion;
             this.name = request.name;
             this.publicEndpointEnabled = request.publicEndpointEnabled;
             this.queue = request.queue;
+            this.refresh = request.refresh;
             this.releaseVersion = request.releaseVersion;
             this.replica = request.replica;
             this.restart = request.restart;
+            this.scale = request.scale;
             this.sparkConfigs = request.sparkConfigs;
         } 
 
@@ -249,7 +291,19 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * <p>The Kyuubi service configuration.</p>
+         * <p>The expected number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        public Builder expectedReplica(Integer expectedReplica) {
+            this.putBodyParameter("expectedReplica", expectedReplica);
+            this.expectedReplica = expectedReplica;
+            return this;
+        }
+
+        /**
+         * <p>The Kyuubi service configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -261,7 +315,7 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * <p>The Kyuubi service engine version.</p>
+         * <p>The Kyuubi service DPI engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.9.2-0.0.2</p>
@@ -297,7 +351,7 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * <p>The queue in which the Kyuubi service runs.</p>
+         * <p>The running queue for the Kyuubi service.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -309,7 +363,19 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * <p>The version of the Spark engine.</p>
+         * <p>Specifies whether to update the configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder refresh(Boolean refresh) {
+            this.putBodyParameter("refresh", refresh);
+            this.refresh = refresh;
+            return this;
+        }
+
+        /**
+         * <p>The Spark DPI engine version number.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -321,7 +387,7 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * <p>The number of replicas for high availability (HA).</p>
+         * <p>The number of replicas enabled for high availability.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -333,7 +399,7 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restart the service.</p>
+         * <p>Specifies whether to restart.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -345,7 +411,19 @@ public class UpdateKyuubiServiceRequest extends Request {
         }
 
         /**
-         * <p>The Spark configuration.</p>
+         * <p>Specifies whether to update the number of replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder scale(Boolean scale) {
+            this.putBodyParameter("scale", scale);
+            this.scale = scale;
+            return this;
+        }
+
+        /**
+         * <p>The Spark configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>

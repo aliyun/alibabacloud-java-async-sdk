@@ -73,7 +73,7 @@ public class StartCacheClusterRequest extends Request {
         } 
 
         /**
-         * <p>Cache cluster ID.</p>
+         * <p>The ID of the cache cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>spc-xxxxxxxx</p>
@@ -85,7 +85,7 @@ public class StartCacheClusterRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

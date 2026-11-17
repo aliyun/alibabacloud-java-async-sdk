@@ -78,7 +78,7 @@ public class CancelRayJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the cancellation is successfully triggered.</p>
+         * <p>Indicates whether the cancellation was successfully triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

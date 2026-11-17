@@ -157,7 +157,7 @@ public class CreateNetworkServiceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-d2d82aa09155****</p>
@@ -169,7 +169,7 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * <p>A token to ensure the idempotency of the request.</p>
+         * <p>The idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>acaf8f54-d40e-4c33-a900-f6c1b345cb47</p>
@@ -181,7 +181,7 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * <p>The name of the network service.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -193,7 +193,7 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>securityGroupId</p>
@@ -205,7 +205,7 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * <p>The type of the network service.</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>type</p>
@@ -217,7 +217,7 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1g14f566kbk8jex****</p>
@@ -229,7 +229,7 @@ public class CreateNetworkServiceRequest extends Request {
         }
 
         /**
-         * <p>A list of vSwitch IDs.</p>
+         * <p>The list of vSwitch IDs.</p>
          */
         public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitchIds", vswitchIds);

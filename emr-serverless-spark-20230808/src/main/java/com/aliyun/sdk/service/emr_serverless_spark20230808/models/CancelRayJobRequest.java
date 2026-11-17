@@ -85,7 +85,7 @@ public class CancelRayJobRequest extends Request {
         }
 
         /**
-         * <p>rayjob ID。</p>
+         * <p>The RayJob ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rj-k7nm8ahl5te4tg91</p>

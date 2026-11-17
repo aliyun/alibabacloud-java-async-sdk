@@ -197,7 +197,7 @@ public class CreateWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>The list of GPU models.</p>
+         * <p>The list of GPU instance types.</p>
          */
         public Builder gpuSpec(java.util.List<String> gpuSpec) {
             this.putBodyParameter("gpuSpec", gpuSpec);
@@ -206,7 +206,7 @@ public class CreateWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>The Ray cluster instance ID.</p>
+         * <p>The instance ID of the Ray cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ray-k7nm8ahl5te4tg91-ey7blpbg</p>
@@ -220,8 +220,8 @@ public class CreateWorkspaceQueueRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>PayAsYouGo: pay-as-you-go</li>
-         * <li>Pre: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go.</li>
+         * <li>Pre: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class CreateWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether resource prefetch is enabled.</p>
+         * <p>Specifies whether resource prefetch is enabled.</p>
          */
         public Builder preheat(Boolean preheat) {
             this.putBodyParameter("preheat", preheat);
@@ -243,7 +243,7 @@ public class CreateWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>The queue type. Valid values: CPU and GPU.</p>
+         * <p>The queue type, such as CPU or GPU.</p>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>
@@ -264,7 +264,7 @@ public class CreateWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>w-975bcfda9625****</p>
@@ -276,7 +276,7 @@ public class CreateWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>The workspace queue name.</p>
+         * <p>The name of the workspace queue.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -385,7 +385,7 @@ public class CreateWorkspaceQueueRequest extends Request {
             } 
 
             /**
-             * <p>The maximum workspace resource capacity.</p>
+             * <p>The resource limit of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -407,7 +407,7 @@ public class CreateWorkspaceQueueRequest extends Request {
             }
 
             /**
-             * <p>The number of GPU machines. This parameter is valid only for subscription instances.</p>
+             * <p>The number of GPU machines. This parameter is valid only when the billing method is set to subscription.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>

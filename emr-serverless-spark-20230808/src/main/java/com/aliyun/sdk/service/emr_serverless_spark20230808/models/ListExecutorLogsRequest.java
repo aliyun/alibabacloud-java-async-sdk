@@ -197,7 +197,7 @@ public class ListExecutorLogsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return in a single request.</p>
+         * <p>The maximum number of records to retrieve at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -67,7 +67,7 @@ public class ListRayClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of Ray clusters.</p>
+         * <p>The Ray clusters.</p>
          */
         public Builder rayClusters(java.util.List<RayClusters> rayClusters) {
             this.rayClusters = rayClusters;
@@ -220,7 +220,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether auto scaling is enabled for worker nodes.</p>
+             * <p>Specifies whether auto-scaling is enabled for worker nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -242,7 +242,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The idle timeout for worker nodes, in seconds.</p>
+             * <p>The idle timeout for worker nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -253,7 +253,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size, in GiB.</p>
+             * <p>The memory size. Unit: Gi.</p>
              * 
              * <strong>example:</strong>
              * <p>8Gi</p>
@@ -264,7 +264,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the queue.</p>
+             * <p>The queue name.</p>
              * 
              * <strong>example:</strong>
              * <p>root_queue</p>
@@ -469,7 +469,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of workers when auto scaling is enabled.</p>
+             * <p>The maximum number of worker nodes when auto-scaling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -480,7 +480,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size, in GiB.</p>
+             * <p>The memory size. Unit: Gi.</p>
              * 
              * <strong>example:</strong>
              * <p>8Gi</p>
@@ -491,7 +491,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of workers when auto scaling is enabled.</p>
+             * <p>The minimum number of worker nodes when auto-scaling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -502,7 +502,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the queue.</p>
+             * <p>The queue name.</p>
              * 
              * <strong>example:</strong>
              * <p>root_queue</p>
@@ -524,7 +524,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the worker.</p>
+             * <p>The worker type.</p>
              * 
              * <strong>example:</strong>
              * <p>CPU</p>
@@ -907,7 +907,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Ray DPI engine version.</p>
+             * <p>The Ray engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
@@ -918,7 +918,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal gRPC endpoint. You can also use the domain name to submit Ray jobs.</p>
+             * <p>The gRPC endpoint on the internal network. The domain name can also be used to submit Ray jobs.</p>
              * 
              * <strong>example:</strong>
              * <p>ray://emr-spark-ray-gateway-cn-hanghzou-internal.emr.aliyuncs.com:80</p>
@@ -1014,7 +1014,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network connectivity name.</p>
+             * <p>The network connection name.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc</p>
@@ -1065,7 +1065,7 @@ public class ListRayClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The worker information of the Ray cluster.</p>
+             * <p>The worker node information of the Ray cluster.</p>
              */
             public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
                 this.workerSpec = workerSpec;

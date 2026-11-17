@@ -118,7 +118,7 @@ public class GetCuHoursRequest extends Request {
         }
 
         /**
-         * <p>The name of the queue.</p>
+         * <p>The queue name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -113,7 +113,7 @@ public class StopSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The queue name.</p>
+         * <p>The name of the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>root_queue</p>

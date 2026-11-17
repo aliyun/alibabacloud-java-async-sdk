@@ -125,7 +125,7 @@ public class GetLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lctk-xxxxxxxx</p>

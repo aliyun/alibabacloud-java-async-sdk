@@ -132,7 +132,7 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -173,7 +173,7 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The detailed description corresponding to the request error code.</p>
          * 
          * <strong>example:</strong>
          * <p>No permission for resource action</p>
@@ -195,7 +195,7 @@ public class GenerateTaskCodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

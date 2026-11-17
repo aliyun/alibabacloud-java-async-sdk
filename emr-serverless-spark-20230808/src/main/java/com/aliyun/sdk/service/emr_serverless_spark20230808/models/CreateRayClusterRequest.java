@@ -30,6 +30,10 @@ public class CreateRayClusterRequest extends Request {
     private String displayReleaseVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableMetricsUpload")
+    private Boolean enableMetricsUpload;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extraParam")
     private String extraParam;
 
@@ -46,6 +50,14 @@ public class CreateRayClusterRequest extends Request {
     private String networkServiceName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("slsLogStore")
+    private String slsLogStore;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("slsProject")
+    private String slsProject;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("volumeIds")
     private java.util.List<String> volumeIds;
 
@@ -58,10 +70,13 @@ public class CreateRayClusterRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.description = builder.description;
         this.displayReleaseVersion = builder.displayReleaseVersion;
+        this.enableMetricsUpload = builder.enableMetricsUpload;
         this.extraParam = builder.extraParam;
         this.headSpec = builder.headSpec;
         this.name = builder.name;
         this.networkServiceName = builder.networkServiceName;
+        this.slsLogStore = builder.slsLogStore;
+        this.slsProject = builder.slsProject;
         this.volumeIds = builder.volumeIds;
         this.workerSpec = builder.workerSpec;
     }
@@ -101,6 +116,13 @@ public class CreateRayClusterRequest extends Request {
     }
 
     /**
+     * @return enableMetricsUpload
+     */
+    public Boolean getEnableMetricsUpload() {
+        return this.enableMetricsUpload;
+    }
+
+    /**
      * @return extraParam
      */
     public String getExtraParam() {
@@ -129,6 +151,20 @@ public class CreateRayClusterRequest extends Request {
     }
 
     /**
+     * @return slsLogStore
+     */
+    public String getSlsLogStore() {
+        return this.slsLogStore;
+    }
+
+    /**
+     * @return slsProject
+     */
+    public String getSlsProject() {
+        return this.slsProject;
+    }
+
+    /**
      * @return volumeIds
      */
     public java.util.List<String> getVolumeIds() {
@@ -146,10 +182,13 @@ public class CreateRayClusterRequest extends Request {
         private String workspaceId; 
         private String description; 
         private String displayReleaseVersion; 
+        private Boolean enableMetricsUpload; 
         private String extraParam; 
         private HeadSpec headSpec; 
         private String name; 
         private String networkServiceName; 
+        private String slsLogStore; 
+        private String slsProject; 
         private java.util.List<String> volumeIds; 
         private java.util.List<WorkerSpec> workerSpec; 
 
@@ -162,10 +201,13 @@ public class CreateRayClusterRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.description = request.description;
             this.displayReleaseVersion = request.displayReleaseVersion;
+            this.enableMetricsUpload = request.enableMetricsUpload;
             this.extraParam = request.extraParam;
             this.headSpec = request.headSpec;
             this.name = request.name;
             this.networkServiceName = request.networkServiceName;
+            this.slsLogStore = request.slsLogStore;
+            this.slsProject = request.slsProject;
             this.volumeIds = request.volumeIds;
             this.workerSpec = request.workerSpec;
         } 
@@ -195,7 +237,7 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The Ray DPI engine version.</p>
+         * <p>The Ray database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>ray-1.0.0 (Ray 2.47.1, Python 3.12)</p>
@@ -203,6 +245,15 @@ public class CreateRayClusterRequest extends Request {
         public Builder displayReleaseVersion(String displayReleaseVersion) {
             this.putBodyParameter("displayReleaseVersion", displayReleaseVersion);
             this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to upload metrics.</p>
+         */
+        public Builder enableMetricsUpload(Boolean enableMetricsUpload) {
+            this.putBodyParameter("enableMetricsUpload", enableMetricsUpload);
+            this.enableMetricsUpload = enableMetricsUpload;
             return this;
         }
 
@@ -219,7 +270,7 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the Ray cluster head node.</p>
+         * <p>The head node parameters of the Ray cluster.</p>
          */
         public Builder headSpec(HeadSpec headSpec) {
             this.putBodyParameter("headSpec", headSpec);
@@ -240,7 +291,7 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The network connectivity name.</p>
+         * <p>The name of the network connectivity.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -252,7 +303,31 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of managed directory IDs to mount.</p>
+         * <p>The SLS Logstore for uploading metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myLogStore</p>
+         */
+        public Builder slsLogStore(String slsLogStore) {
+            this.putBodyParameter("slsLogStore", slsLogStore);
+            this.slsLogStore = slsLogStore;
+            return this;
+        }
+
+        /**
+         * <p>The SLS project for uploading metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mySLSProject</p>
+         */
+        public Builder slsProject(String slsProject) {
+            this.putBodyParameter("slsProject", slsProject);
+            this.slsProject = slsProject;
+            return this;
+        }
+
+        /**
+         * <p>The IDs of the managed directories to mount.</p>
          */
         public Builder volumeIds(java.util.List<String> volumeIds) {
             this.putBodyParameter("volumeIds", volumeIds);
@@ -261,7 +336,7 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the Ray cluster worker nodes. A maximum of 50 groups are supported.</p>
+         * <p>The worker node parameters of the Ray cluster. You can configure up to 50 groups.</p>
          */
         public Builder workerSpec(java.util.List<WorkerSpec> workerSpec) {
             this.putBodyParameter("workerSpec", workerSpec);
@@ -406,6 +481,9 @@ public class CreateRayClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("gftEnabled")
         private Boolean gftEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("gpuDriverVersion")
+        private String gpuDriverVersion;
+
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
 
@@ -428,6 +506,7 @@ public class CreateRayClusterRequest extends Request {
             this.env = builder.env;
             this.gftConfig = builder.gftConfig;
             this.gftEnabled = builder.gftEnabled;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.gpuSpec = builder.gpuSpec;
             this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
             this.memory = builder.memory;
@@ -486,6 +565,13 @@ public class CreateRayClusterRequest extends Request {
         }
 
         /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
+        /**
          * @return gpuSpec
          */
         public String getGpuSpec() {
@@ -527,6 +613,7 @@ public class CreateRayClusterRequest extends Request {
             private String env; 
             private GftConfig gftConfig; 
             private Boolean gftEnabled; 
+            private String gpuDriverVersion; 
             private String gpuSpec; 
             private Integer idleTimeoutSeconds; 
             private String memory; 
@@ -543,6 +630,7 @@ public class CreateRayClusterRequest extends Request {
                 this.env = model.env;
                 this.gftConfig = model.gftConfig;
                 this.gftEnabled = model.gftEnabled;
+                this.gpuDriverVersion = model.gpuDriverVersion;
                 this.gpuSpec = model.gpuSpec;
                 this.idleTimeoutSeconds = model.idleTimeoutSeconds;
                 this.memory = model.memory;
@@ -562,7 +650,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The Ray DPI engine version.</p>
+             * <p>The Ray database engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
@@ -573,7 +661,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable automatic scaling for workers.</p>
+             * <p>Specifies whether to enable auto-scaling for worker nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -595,7 +683,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The GCS Fault Tolerance configuration.</p>
+             * <p>The GCS fault tolerance configuration.</p>
              */
             public Builder gftConfig(GftConfig gftConfig) {
                 this.gftConfig = gftConfig;
@@ -603,7 +691,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable GCS Fault Tolerance.</p>
+             * <p>Specifies whether to enable Global Control Store (GCS) fault tolerance.</p>
              */
             public Builder gftEnabled(Boolean gftEnabled) {
                 this.gftEnabled = gftEnabled;
@@ -611,7 +699,18 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The GPU model.</p>
+             * <p>The GPU driver version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550</p>
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
+                return this;
+            }
+
+            /**
+             * <p>The GPU instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.gn6i-c4g1.xlarge</p>
@@ -622,7 +721,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The idle timeout period of workers after automatic scaling is enabled.</p>
+             * <p>The idle timeout for worker nodes after auto-scaling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -633,7 +732,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The memory size. Unit: Gi.</p>
+             * <p>The memory size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>8Gi</p>
@@ -644,7 +743,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The queue name.</p>
+             * <p>The name of the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>root_queue</p>
@@ -655,7 +754,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The Ray node startup parameters.</p>
+             * <p>The startup parameters for the Ray node.</p>
              * 
              * <strong>example:</strong>
              * <p>--num-cpus=0 --num-gpus=0</p>
@@ -688,6 +787,9 @@ public class CreateRayClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("env")
         private String env;
 
+        @com.aliyun.core.annotation.NameInMap("gpuDriverVersion")
+        private String gpuDriverVersion;
+
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
 
@@ -719,6 +821,7 @@ public class CreateRayClusterRequest extends Request {
             this.cpu = builder.cpu;
             this.displayReleaseVersion = builder.displayReleaseVersion;
             this.env = builder.env;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.gpuSpec = builder.gpuSpec;
             this.groupName = builder.groupName;
             this.maxReplica = builder.maxReplica;
@@ -757,6 +860,13 @@ public class CreateRayClusterRequest extends Request {
          */
         public String getEnv() {
             return this.env;
+        }
+
+        /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
         }
 
         /**
@@ -826,6 +936,7 @@ public class CreateRayClusterRequest extends Request {
             private String cpu; 
             private String displayReleaseVersion; 
             private String env; 
+            private String gpuDriverVersion; 
             private String gpuSpec; 
             private String groupName; 
             private Integer maxReplica; 
@@ -843,6 +954,7 @@ public class CreateRayClusterRequest extends Request {
                 this.cpu = model.cpu;
                 this.displayReleaseVersion = model.displayReleaseVersion;
                 this.env = model.env;
+                this.gpuDriverVersion = model.gpuDriverVersion;
                 this.gpuSpec = model.gpuSpec;
                 this.groupName = model.groupName;
                 this.maxReplica = model.maxReplica;
@@ -866,7 +978,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The engine version. If this parameter is not specified, the value is the same as that of the head node.</p>
+             * <p>The engine name. If you do not specify this parameter, it is the same as that of the head node.</p>
              * 
              * <strong>example:</strong>
              * <p>ray-1.2.0 (Ray 2.55.1, Python 3.12)</p>
@@ -888,7 +1000,18 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The GPU model.</p>
+             * <p>The GPU driver version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550</p>
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
+                return this;
+            }
+
+            /**
+             * <p>The GPU instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.gn6i-c4g1.xlarge</p>
@@ -899,7 +1022,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The worker group name.</p>
+             * <p>The name of the worker group.</p>
              * 
              * <strong>example:</strong>
              * <p>WorkerGroup1</p>
@@ -910,7 +1033,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of workers after automatic scaling is enabled. Minimum value: 1.</p>
+             * <p>The maximum number of workers after auto-scaling is enabled. Minimum value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -921,7 +1044,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The memory size. Unit: Gi.</p>
+             * <p>The memory size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>16Gi</p>
@@ -932,7 +1055,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of workers after automatic scaling is enabled. Minimum value: 1. The value must be less than or equal to maxReplica.</p>
+             * <p>The minimum number of workers after auto-scaling is enabled. Minimum value: 1. The value must be less than or equal to maxReplica.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -943,7 +1066,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The queue name.</p>
+             * <p>The name of the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>root_queue</p>
@@ -954,7 +1077,7 @@ public class CreateRayClusterRequest extends Request {
             }
 
             /**
-             * <p>The Ray node startup parameters.</p>
+             * <p>The startup parameters for the Ray node.</p>
              * 
              * <strong>example:</strong>
              * <p>--num-cpus=0 --num-gpus=0</p>

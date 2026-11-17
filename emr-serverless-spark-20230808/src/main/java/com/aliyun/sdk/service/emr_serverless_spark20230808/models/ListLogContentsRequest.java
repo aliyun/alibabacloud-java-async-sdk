@@ -115,7 +115,7 @@ public class ListLogContentsRequest extends Request {
         } 
 
         /**
-         * <p>Workspace ID.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-72704d9fb0******</p>
@@ -127,7 +127,7 @@ public class ListLogContentsRequest extends Request {
         }
 
         /**
-         * <p>Full path of the file.</p>
+         * <p>The full path of the file.</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);
@@ -136,7 +136,7 @@ public class ListLogContentsRequest extends Request {
         }
 
         /**
-         * <p>Length of the log.</p>
+         * <p>The length of the log.</p>
          * 
          * <strong>example:</strong>
          * <p>9999</p>
@@ -148,7 +148,7 @@ public class ListLogContentsRequest extends Request {
         }
 
         /**
-         * <p>Start line for query.</p>
+         * <p>The starting line of the query.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -160,7 +160,7 @@ public class ListLogContentsRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

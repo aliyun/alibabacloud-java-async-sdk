@@ -106,7 +106,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The retrieved logs, sorted in contextual order. This parameter is empty if no contextual logs are found in the log query based on the specified starting log.</p>
+         * <p>The retrieved logs, sorted in contextual order. This parameter is empty if no contextual logs are found based on the specified starting log query.</p>
          */
         public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
@@ -114,7 +114,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records to return in a single request.</p>
+         * <p>The maximum number of records to retrieve at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -255,7 +255,7 @@ public class ListExecutorLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The full file path.</p>
+             * <p>The full path of the file.</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;

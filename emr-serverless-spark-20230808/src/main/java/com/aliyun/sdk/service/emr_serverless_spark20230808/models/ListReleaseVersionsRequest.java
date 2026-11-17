@@ -141,7 +141,7 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * <p>The version type.</p>
+         * <p>The release type.</p>
          * 
          * <strong>example:</strong>
          * <p>stable</p>
@@ -177,7 +177,10 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * serviceFilter.
+         * <p>Filters available versions by service type. Valid values: kyuubi and ray.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kyuubi</p>
          */
         public Builder serviceFilter(String serviceFilter) {
             this.putQueryParameter("serviceFilter", serviceFilter);

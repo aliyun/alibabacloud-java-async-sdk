@@ -73,6 +73,10 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("states")
     private String states;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("userName")
+    private String userName;
+
     private ListKyuubiSparkApplicationsRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -89,6 +93,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         this.sort = builder.sort;
         this.startTime = builder.startTime;
         this.states = builder.states;
+        this.userName = builder.userName;
     }
 
     public static Builder builder() {
@@ -202,6 +207,13 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         return this.states;
     }
 
+    /**
+     * @return userName
+     */
+    public String getUserName() {
+        return this.userName;
+    }
+
     public static final class Builder extends Request.Builder<ListKyuubiSparkApplicationsRequest, Builder> {
         private String workspaceId; 
         private String kyuubiServiceId; 
@@ -217,6 +229,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         private String sort; 
         private StartTime startTime; 
         private String states; 
+        private String userName; 
 
         private Builder() {
             super();
@@ -238,6 +251,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             this.sort = request.sort;
             this.startTime = request.startTime;
             this.states = request.states;
+            this.userName = request.userName;
         } 
 
         /**
@@ -299,7 +313,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The list of statuses of the latest SQL statement used for filtering.</p>
+         * <p>The list of statuses of the most recent SQL statement used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;SUCCESS&quot;]</p>
@@ -311,7 +325,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to retrieve at a time.</p>
+         * <p>The maximum number of records to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -369,7 +383,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The sort order. A value of asc indicates ascending order, and desc indicates descending order.</p>
+         * <p>The sort order. asc indicates ascending order, and desc indicates descending order.</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>
@@ -391,7 +405,7 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The list of Spark application states used for filtering.</p>
+         * <p>The list of Spark application statuses used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ERROR&quot;]</p>
@@ -399,6 +413,18 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         public Builder states(String states) {
             this.putQueryParameter("states", states);
             this.states = states;
+            return this;
+        }
+
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-a</p>
+         */
+        public Builder userName(String userName) {
+            this.putQueryParameter("userName", userName);
+            this.userName = userName;
             return this;
         }
 

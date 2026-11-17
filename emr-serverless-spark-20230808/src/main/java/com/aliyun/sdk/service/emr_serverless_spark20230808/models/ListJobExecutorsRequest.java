@@ -195,7 +195,7 @@ public class ListJobExecutorsRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page of results.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

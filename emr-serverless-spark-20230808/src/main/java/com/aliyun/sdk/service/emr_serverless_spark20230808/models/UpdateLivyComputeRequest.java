@@ -58,6 +58,10 @@ public class UpdateLivyComputeRequest extends Request {
     private Boolean fusion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("livyReleaseVersion")
+    private String livyReleaseVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("livyServerConf")
     private String livyServerConf;
 
@@ -101,6 +105,7 @@ public class UpdateLivyComputeRequest extends Request {
         this.enablePublic = builder.enablePublic;
         this.environmentId = builder.environmentId;
         this.fusion = builder.fusion;
+        this.livyReleaseVersion = builder.livyReleaseVersion;
         this.livyServerConf = builder.livyServerConf;
         this.livyVersion = builder.livyVersion;
         this.memoryLimit = builder.memoryLimit;
@@ -195,6 +200,13 @@ public class UpdateLivyComputeRequest extends Request {
     }
 
     /**
+     * @return livyReleaseVersion
+     */
+    public String getLivyReleaseVersion() {
+        return this.livyReleaseVersion;
+    }
+
+    /**
      * @return livyServerConf
      */
     public String getLivyServerConf() {
@@ -261,6 +273,7 @@ public class UpdateLivyComputeRequest extends Request {
         private Boolean enablePublic; 
         private String environmentId; 
         private Boolean fusion; 
+        private String livyReleaseVersion; 
         private String livyServerConf; 
         private String livyVersion; 
         private String memoryLimit; 
@@ -286,6 +299,7 @@ public class UpdateLivyComputeRequest extends Request {
             this.enablePublic = request.enablePublic;
             this.environmentId = request.environmentId;
             this.fusion = request.fusion;
+            this.livyReleaseVersion = request.livyReleaseVersion;
             this.livyServerConf = request.livyServerConf;
             this.livyVersion = request.livyVersion;
             this.memoryLimit = request.memoryLimit;
@@ -309,7 +323,7 @@ public class UpdateLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Livy Gateway.</p>
+         * <p>The ID of the Livy gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>lc-i8xogcdfa4fk3yn1</p>
@@ -351,14 +365,11 @@ public class UpdateLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>The number of vCPUs for the Livy server.</p>
+         * <p>The number of CPU cores for the Livy server.</p>
          * <ul>
-         * <li><p>1</p>
-         * </li>
-         * <li><p>2</p>
-         * </li>
-         * <li><p>4</p>
-         * </li>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>4</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -371,7 +382,7 @@ public class UpdateLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>The version number of the Spark engine.</p>
+         * <p>The Spark DPI engine database engine version number.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -383,7 +394,7 @@ public class UpdateLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>The status of the switch for the Internet endpoint.</p>
+         * <p>The status of the public endpoint switch.</p>
          */
         public Builder enablePublic(Boolean enablePublic) {
             this.putBodyParameter("enablePublic", enablePublic);
@@ -392,7 +403,7 @@ public class UpdateLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>The environment ID.</p>
+         * <p>The runtime environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ev-cq146allhtgkulp5smk0</p>
@@ -404,7 +415,7 @@ public class UpdateLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the Fusion engine for acceleration.</p>
+         * <p>Specifies whether to enable Fusion engine acceleration.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -416,16 +427,21 @@ public class UpdateLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the Livy Gateway. This parameter is in JSON format and supports the following files:</p>
+         * livyReleaseVersion.
+         */
+        public Builder livyReleaseVersion(String livyReleaseVersion) {
+            this.putBodyParameter("livyReleaseVersion", livyReleaseVersion);
+            this.livyReleaseVersion = livyReleaseVersion;
+            return this;
+        }
+
+        /**
+         * <p>The Livy gateway configuration in JSON format. The following files are supported:</p>
          * <ul>
-         * <li><p>sparkDefaultsConf</p>
-         * </li>
-         * <li><p>sparkBlackListConf</p>
-         * </li>
-         * <li><p>livyConf</p>
-         * </li>
-         * <li><p>livyClientConf</p>
-         * </li>
+         * <li>sparkDefaultsConf</li>
+         * <li>sparkBlackListConf</li>
+         * <li>livyConf</li>
+         * <li>livyClientConf</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -456,6 +472,11 @@ public class UpdateLivyComputeRequest extends Request {
 
         /**
          * <p>The memory size of the Livy server.</p>
+         * <ul>
+         * <li>4Gi</li>
+         * <li>8Gi</li>
+         * <li>16Gi</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>4Gi</p>
@@ -479,7 +500,7 @@ public class UpdateLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>The name of the network connection.</p>
+         * <p>The network connectivity name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -503,7 +524,7 @@ public class UpdateLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>The version number of the Spark engine. This parameter is deprecated. Use displayReleaseVersion instead.</p>
+         * <p><strong>[Deprecated]</strong> The Spark DPI engine database engine version number. Use displayReleaseVersion instead.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12, Java Runtime)</p>
@@ -573,12 +594,10 @@ public class UpdateLivyComputeRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to automatically start the Livy Gateway after it is created.</p>
+             * <p>Specifies whether to automatically start the gateway after creation.</p>
              * <ul>
-             * <li><p>true: Yes.</p>
-             * </li>
-             * <li><p>false: No.</p>
-             * </li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -649,12 +668,10 @@ public class UpdateLivyComputeRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable auto-stop for the Livy Gateway.</p>
+             * <p>Specifies whether to allow automatic stopping.</p>
              * <ul>
-             * <li><p>true: Yes.</p>
-             * </li>
-             * <li><p>false: No.</p>
-             * </li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -666,7 +683,7 @@ public class UpdateLivyComputeRequest extends Request {
             }
 
             /**
-             * <p>The number of minutes after which the Livy Gateway is automatically stopped if it is idle.</p>
+             * <p>The number of idle minutes after which the Livy gateway is automatically stopped.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>

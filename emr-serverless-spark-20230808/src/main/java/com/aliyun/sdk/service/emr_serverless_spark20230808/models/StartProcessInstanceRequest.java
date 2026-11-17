@@ -391,7 +391,7 @@ public class StartProcessInstanceRequest extends Request {
         }
 
         /**
-         * <p>The workflow definition version number.</p>
+         * <p>The version number of the workflow definition.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

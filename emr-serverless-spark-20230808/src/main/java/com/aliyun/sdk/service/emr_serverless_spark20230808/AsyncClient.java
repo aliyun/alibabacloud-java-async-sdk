@@ -380,6 +380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRayLogsResponse> listRayLogs(ListRayLogsRequest request);
 
     /**
+     * @param request the request parameters of ListRegions  ListRegionsRequest
+     * @return ListRegionsResponse
+     */
+    CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
+
+    /**
      * @param request the request parameters of ListReleaseVersions  ListReleaseVersionsRequest
      * @return ListReleaseVersionsResponse
      */

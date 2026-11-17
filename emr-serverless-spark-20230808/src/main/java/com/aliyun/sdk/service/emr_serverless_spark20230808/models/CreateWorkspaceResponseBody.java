@@ -80,7 +80,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The operation ID.</p>
+         * <p>The ID of the operation flow.</p>
          * 
          * <strong>example:</strong>
          * <p>op-******</p>
@@ -102,7 +102,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>w-******</p>

@@ -67,7 +67,7 @@ public class ListLogContentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Log content.</p>
+         * <p>The log content.</p>
          */
         public Builder listLogContent(ListLogContent listLogContent) {
             this.listLogContent = listLogContent;
@@ -131,7 +131,7 @@ public class ListLogContentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Log line content.</p>
+             * <p>The content of the log line.</p>
              * 
              * <strong>example:</strong>
              * <p>spark pi is 3.14\n</p>
@@ -201,7 +201,7 @@ public class ListLogContentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of log line contents.</p>
+             * <p>The list of log lines.</p>
              */
             public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
@@ -209,7 +209,7 @@ public class ListLogContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of log lines.</p>
+             * <p>The total number of log lines.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

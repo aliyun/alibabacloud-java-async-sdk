@@ -73,7 +73,7 @@ public class StopCacheClusterRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cache cluster.</p>
+         * <p>The ID of the cache cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>spc-xxxxxxxxx</p>

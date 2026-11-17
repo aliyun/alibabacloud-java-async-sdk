@@ -169,7 +169,7 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>The environment type of the queue.</p>
+         * <p>The queue environment type.</p>
          */
         public Builder environments(java.util.List<String> environments) {
             this.putBodyParameter("environments", environments);
@@ -178,7 +178,7 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>The list of GPU models.</p>
+         * <p>The list of GPU instance types.</p>
          */
         public Builder gpuSpec(java.util.List<String> gpuSpec) {
             this.putBodyParameter("gpuSpec", gpuSpec);
@@ -196,7 +196,7 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>The resource quota.</p>
+         * <p>The resource specifications.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
             this.putBodyParameter("resourceSpec", resourceSpec);
@@ -327,7 +327,7 @@ public class EditWorkspaceQueueRequest extends Request {
             } 
 
             /**
-             * <p>The resource upper limit of the workspace queue.</p>
+             * <p>The resource limit for the workspace queue.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -338,7 +338,7 @@ public class EditWorkspaceQueueRequest extends Request {
             }
 
             /**
-             * <p>The number of GPU cards.</p>
+             * <p>The number of GPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

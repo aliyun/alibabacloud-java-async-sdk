@@ -67,7 +67,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -91,6 +91,60 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkspaceResponseBody</p>
+     */
+    public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("fineGrainedAuthz")
+        private Boolean fineGrainedAuthz;
+
+        private Features(Builder builder) {
+            this.fineGrainedAuthz = builder.fineGrainedAuthz;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Features create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fineGrainedAuthz
+         */
+        public Boolean getFineGrainedAuthz() {
+            return this.fineGrainedAuthz;
+        }
+
+        public static final class Builder {
+            private Boolean fineGrainedAuthz; 
+
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.fineGrainedAuthz = model.fineGrainedAuthz;
+            } 
+
+            /**
+             * <p>Specifies whether fine-grained permissions are enabled for the workspace.</p>
+             */
+            public Builder fineGrainedAuthz(Boolean fineGrainedAuthz) {
+                this.fineGrainedAuthz = fineGrainedAuthz;
+                return this;
+            }
+
+            public Features build() {
+                return new Features(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetWorkspaceResponseBody} extends {@link TeaModel}
@@ -246,7 +300,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether auto-renewal is enabled for the resource.</p>
+             * <p>Specifies whether auto-renewal is enabled for the resource. Valid values:</p>
              * <ul>
              * <li>true: Auto-renewal is enabled. The resource is automatically renewed upon expiration.</li>
              * <li>false: Auto-renewal is disabled. The resource is stopped upon expiration.</li>
@@ -654,7 +708,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GPU instance type.</p>
+             * <p>The GPU model.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.gn7i-c8g1.2xlarge</p>
@@ -871,7 +925,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag keys.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>[\&quot;COST\&quot;]</p>
@@ -932,6 +986,9 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("failReason")
         private String failReason;
+
+        @com.aliyun.core.annotation.NameInMap("features")
+        private Features features;
 
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private java.util.List<String> gpuSpec;
@@ -1000,6 +1057,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             this.duration = builder.duration;
             this.endTime = builder.endTime;
             this.failReason = builder.failReason;
+            this.features = builder.features;
             this.gpuSpec = builder.gpuSpec;
             this.ipWhiteList = builder.ipWhiteList;
             this.paymentDurationUnit = builder.paymentDurationUnit;
@@ -1090,6 +1148,13 @@ public class GetWorkspaceResponseBody extends TeaModel {
          */
         public String getFailReason() {
             return this.failReason;
+        }
+
+        /**
+         * @return features
+         */
+        public Features getFeatures() {
+            return this.features;
         }
 
         /**
@@ -1235,6 +1300,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             private Integer duration; 
             private Long endTime; 
             private String failReason; 
+            private Features features; 
             private java.util.List<String> gpuSpec; 
             private java.util.List<String> ipWhiteList; 
             private String paymentDurationUnit; 
@@ -1268,6 +1334,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
                 this.duration = model.duration;
                 this.endTime = model.endTime;
                 this.failReason = model.failReason;
+                this.features = model.features;
                 this.gpuSpec = model.gpuSpec;
                 this.ipWhiteList = model.ipWhiteList;
                 this.paymentDurationUnit = model.paymentDurationUnit;
@@ -1290,7 +1357,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether auto-renewal is enabled. This parameter is required for subscription workspaces.</p>
+             * <p>Specifies whether to enable auto-renewal. This parameter is required for subscription resources.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1301,7 +1368,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto-renewal period. This parameter is required for subscription workspaces.</p>
+             * <p>The auto-renewal duration. This parameter is required for subscription resources.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1312,7 +1379,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto-renewal cycle. This parameter is required for subscription workspaces.</p>
+             * <p>The auto-renewal cycle. This parameter is required for subscription resources.</p>
              * 
              * <strong>example:</strong>
              * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -1345,7 +1412,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bound DLF type.</p>
+             * <p>The type of the associated DLF.</p>
              * 
              * <strong>example:</strong>
              * <p>DLF-NEXT</p>
@@ -1356,7 +1423,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription duration. This parameter is required for subscription workspaces.</p>
+             * <p>The duration of the subscription period. This parameter is required for subscription resources.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1367,7 +1434,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the workspace is released.</p>
+             * <p>The time when the workspace was released.</p>
              * 
              * <strong>example:</strong>
              * <p>1786586477000</p>
@@ -1389,6 +1456,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The features of the workspace.</p>
+             */
+            public Builder features(Features features) {
+                this.features = features;
+                return this;
+            }
+
+            /**
              * <p>The list of GPU instance types.</p>
              */
             public Builder gpuSpec(java.util.List<String> gpuSpec) {
@@ -1405,7 +1480,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the subscription period. This parameter is required for subscription workspaces.</p>
+             * <p>The unit of the subscription period. This parameter is required for subscription resources.</p>
              * 
              * <strong>example:</strong>
              * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -1446,7 +1521,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of GPU subscription quotas.</p>
+             * <p>The list of GPU subscriptions.</p>
              */
             public Builder prePaidQuotaGpu(java.util.List<PrePaidQuotaGpu> prePaidQuotaGpu) {
                 this.prePaidQuotaGpu = prePaidQuotaGpu;
@@ -1476,7 +1551,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the workspace is released.</p>
+             * <p>The reason for the workspace release.</p>
              * 
              * <strong>example:</strong>
              * <p>stable</p>
@@ -1487,7 +1562,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aek4f7uj74wdthi</p>
@@ -1498,7 +1573,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the user who created the workspace.</p>
+             * <p>The UID of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>13*************</p>
@@ -1509,7 +1584,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource specifications.</p>
+             * <p>The resource specification.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;cu&quot;: 100}</p>
@@ -1539,7 +1614,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag keys.</p>
+             * <p>The tag key.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1558,7 +1633,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace name.</p>
+             * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>Spark batch job workspace-1</p>
@@ -1569,7 +1644,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace status.</p>
+             * <p>The status of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>STARTING,RUNNING,TERMINATED</p>

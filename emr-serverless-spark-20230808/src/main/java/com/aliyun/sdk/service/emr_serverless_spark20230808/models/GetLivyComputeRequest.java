@@ -99,7 +99,7 @@ public class GetLivyComputeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Livy Gateway.</p>
+         * <p>The ID of the Livy gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>lc-i8xogcdfa4fk3yn1</p>

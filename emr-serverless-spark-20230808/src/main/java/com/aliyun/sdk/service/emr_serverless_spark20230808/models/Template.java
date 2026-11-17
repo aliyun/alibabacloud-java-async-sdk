@@ -286,7 +286,10 @@ public class Template extends TeaModel {
         } 
 
         /**
-         * bizId.
+         * <p>The business ID of the Spark task template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template-example-****</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -294,7 +297,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Creator UID.</p>
+         * <p>The creator UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +309,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Spark engine display version.</p>
+         * <p>The display version of the Spark engine.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.1.1</p>
@@ -317,7 +320,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Whether to enable the fusion switch.</p>
+         * <p>Specifies whether Fusion is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -328,7 +331,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +343,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Last modified time.</p>
+         * <p>The last updated time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +355,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * isDefault.
+         * <p>Specifies whether the template is the default template.</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = isDefault;
@@ -360,7 +363,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Last modifier UID.</p>
+         * <p>The last updater UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -372,7 +375,10 @@ public class Template extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark-task-template</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -388,7 +394,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Spark Driver cores.</p>
+         * <p>The number of Spark driver cores.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -400,7 +406,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Spark Driver memory.</p>
+         * <p>The Spark driver memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -412,7 +418,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Spark Executor cores.</p>
+         * <p>The number of Spark executor cores.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -424,7 +430,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Spark Executor memory.</p>
+         * <p>The Spark executor memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -436,7 +442,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Spark log level.</p>
+         * <p>The Spark log level.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -448,7 +454,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Spark log path.</p>
+         * <p>The Spark log path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -460,7 +466,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Spark internal release version.</p>
+         * <p>The Spark internal release version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -472,7 +478,7 @@ public class Template extends TeaModel {
         }
 
         /**
-         * <p>Template type.</p>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>TASK</p>

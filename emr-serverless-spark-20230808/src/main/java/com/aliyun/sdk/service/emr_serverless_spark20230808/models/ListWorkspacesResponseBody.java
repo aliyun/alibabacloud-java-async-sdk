@@ -106,7 +106,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of records to return in a single request.</p>
+         * <p>The maximum number of results to return in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The next token.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,6 +163,60 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesResponseBody</p>
+     */
+    public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("fineGrainedAuthz")
+        private Boolean fineGrainedAuthz;
+
+        private Features(Builder builder) {
+            this.fineGrainedAuthz = builder.fineGrainedAuthz;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Features create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fineGrainedAuthz
+         */
+        public Boolean getFineGrainedAuthz() {
+            return this.fineGrainedAuthz;
+        }
+
+        public static final class Builder {
+            private Boolean fineGrainedAuthz; 
+
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.fineGrainedAuthz = model.fineGrainedAuthz;
+            } 
+
+            /**
+             * <p>Indicates whether fine-grained access control is enabled for the workspace.</p>
+             */
+            public Builder fineGrainedAuthz(Boolean fineGrainedAuthz) {
+                this.fineGrainedAuthz = fineGrainedAuthz;
+                return this;
+            }
+
+            public Features build() {
+                return new Features(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
@@ -655,6 +709,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
             /**
              * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuCoreCount(String cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -751,6 +808,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
             /**
              * <p>The instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -759,6 +819,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
             /**
              * <p>The instance type ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.small</p>
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -767,6 +830,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
             /**
              * <p>The memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
@@ -937,6 +1003,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
             /**
              * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[\&quot;COST\&quot;]</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -945,6 +1014,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
             /**
              * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3d775731-9ec1-4fe2-a00d-061d51fce677</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -991,6 +1063,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("failReason")
         private String failReason;
+
+        @com.aliyun.core.annotation.NameInMap("features")
+        private Features features;
 
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private java.util.List<String> gpuSpec;
@@ -1053,6 +1128,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             this.duration = builder.duration;
             this.endTime = builder.endTime;
             this.failReason = builder.failReason;
+            this.features = builder.features;
             this.gpuSpec = builder.gpuSpec;
             this.ipWhiteList = builder.ipWhiteList;
             this.paymentDurationUnit = builder.paymentDurationUnit;
@@ -1141,6 +1217,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
          */
         public String getFailReason() {
             return this.failReason;
+        }
+
+        /**
+         * @return features
+         */
+        public Features getFeatures() {
+            return this.features;
         }
 
         /**
@@ -1272,6 +1355,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private Integer duration; 
             private Long endTime; 
             private String failReason; 
+            private Features features; 
             private java.util.List<String> gpuSpec; 
             private java.util.List<String> ipWhiteList; 
             private String paymentDurationUnit; 
@@ -1303,6 +1387,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
                 this.duration = model.duration;
                 this.endTime = model.endTime;
                 this.failReason = model.failReason;
+                this.features = model.features;
                 this.gpuSpec = model.gpuSpec;
                 this.ipWhiteList = model.ipWhiteList;
                 this.paymentDurationUnit = model.paymentDurationUnit;
@@ -1323,7 +1408,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether to enable auto-renewal. This parameter is required for subscription resources.</p>
+             * <p>Specifies whether to enable auto-renewal. This parameter is required for the subscription billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1334,7 +1419,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto-renewal duration. This parameter is required for subscription resources.</p>
+             * <p>The auto-renewal duration. This parameter is required for the subscription billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1345,7 +1430,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto-renewal epoch. This parameter is required for subscription resources.</p>
+             * <p>The auto-renewal epoch. This parameter is required for the subscription billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -1389,7 +1474,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the subscription. This parameter is required for subscription resources.</p>
+             * <p>The duration of the subscription period. This parameter is required for the subscription billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1422,7 +1507,15 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of GPU models.</p>
+             * <p>The workspace features.</p>
+             */
+            public Builder features(Features features) {
+                this.features = features;
+                return this;
+            }
+
+            /**
+             * <p>The list of GPU instance types.</p>
              */
             public Builder gpuSpec(java.util.List<String> gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -1430,7 +1523,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP whitelist of the workspace.</p>
+             * <p>The workspace IP whitelist.</p>
              */
             public Builder ipWhiteList(java.util.List<String> ipWhiteList) {
                 this.ipWhiteList = ipWhiteList;
@@ -1438,7 +1531,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the subscription period. This parameter is required for subscription resources.</p>
+             * <p>The unit of the subscription period. This parameter is required for the subscription billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -1572,7 +1665,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
              * <p>The name of the workspace.</p>
              * 
              * <strong>example:</strong>
-             * <p>spark-batch-job-workspace-1</p>
+             * <p>Spark batch job workspace-1</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

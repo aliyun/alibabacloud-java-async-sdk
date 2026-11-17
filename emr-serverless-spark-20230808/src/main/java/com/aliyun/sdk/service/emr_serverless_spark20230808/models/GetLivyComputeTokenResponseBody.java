@@ -93,7 +93,7 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code of the request. A value of 1000000 indicates that the request succeeded. Other values indicate that the request failed. For details about the error, see the message field.</p>
+         * <p>The response code. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. For details about the error, see the message.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -192,7 +192,7 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether the token expires automatically. Valid values:</p>
+             * <p>Indicates whether the token automatically expires. Valid values:</p>
              * <ul>
              * <li>true: Yes.</li>
              * <li>false: No.</li>
@@ -207,7 +207,7 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration period in days.</p>
+             * <p>The expiration time in days.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -355,7 +355,7 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The token expiration configuration struct.</p>
+             * <p>The token expiration information struct.</p>
              */
             public Builder autoExpireConfiguration(AutoExpireConfiguration autoExpireConfiguration) {
                 this.autoExpireConfiguration = autoExpireConfiguration;
@@ -396,7 +396,7 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the token was last used. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1749456098000</p>
@@ -429,7 +429,7 @@ public class GetLivyComputeTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Token ID。</p>
+             * <p>The token ID.</p>
              * 
              * <strong>example:</strong>
              * <p>lctk-xxxxxxxxxx</p>

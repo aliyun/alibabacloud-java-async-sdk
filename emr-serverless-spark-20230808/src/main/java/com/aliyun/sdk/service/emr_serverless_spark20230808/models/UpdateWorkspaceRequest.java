@@ -185,7 +185,7 @@ public class UpdateWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>The resource limit of the workspace.</p>
+         * <p>The resource limit for the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -227,7 +227,7 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The workspace IP address whitelist.</p>
+         * <p>The IP address whitelist of the workspace.</p>
          */
         public Builder ipWhiteList(java.util.List<String> ipWhiteList) {
             this.putBodyParameter("ipWhiteList", ipWhiteList);
@@ -327,6 +327,9 @@ public class UpdateWorkspaceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("paymentDurationUnit")
         private String paymentDurationUnit;
 
+        @com.aliyun.core.annotation.NameInMap("promotionOptionNo")
+        private String promotionOptionNo;
+
         private GpuSubscription(Builder builder) {
             this.autoRenew = builder.autoRenew;
             this.duration = builder.duration;
@@ -335,6 +338,7 @@ public class UpdateWorkspaceRequest extends Request {
             this.instanceTypeId = builder.instanceTypeId;
             this.operation = builder.operation;
             this.paymentDurationUnit = builder.paymentDurationUnit;
+            this.promotionOptionNo = builder.promotionOptionNo;
         }
 
         public static Builder builder() {
@@ -394,6 +398,13 @@ public class UpdateWorkspaceRequest extends Request {
             return this.paymentDurationUnit;
         }
 
+        /**
+         * @return promotionOptionNo
+         */
+        public String getPromotionOptionNo() {
+            return this.promotionOptionNo;
+        }
+
         public static final class Builder {
             private Boolean autoRenew; 
             private Integer duration; 
@@ -402,6 +413,7 @@ public class UpdateWorkspaceRequest extends Request {
             private String instanceTypeId; 
             private String operation; 
             private String paymentDurationUnit; 
+            private String promotionOptionNo; 
 
             private Builder() {
             } 
@@ -414,6 +426,7 @@ public class UpdateWorkspaceRequest extends Request {
                 this.instanceTypeId = model.instanceTypeId;
                 this.operation = model.operation;
                 this.paymentDurationUnit = model.paymentDurationUnit;
+                this.promotionOptionNo = model.promotionOptionNo;
             } 
 
             /**
@@ -426,6 +439,9 @@ public class UpdateWorkspaceRequest extends Request {
 
             /**
              * <p>The number of subscription periods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -445,6 +461,9 @@ public class UpdateWorkspaceRequest extends Request {
 
             /**
              * <p>The ID of the GPU quota instance to be upgraded. This parameter is required when the operation parameter is set to UPGRADE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-xxxxxx-quota-gpu-xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -463,7 +482,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The operation type. Valid values: BUY and UPGRADE. BUY indicates a new purchase, and UPGRADE indicates an upgrade. If you set this parameter to UPGRADE, you must specify the orderId parameter. Default value: BUY.</p>
+             * <p>The operation type. Valid values: BUY and UPGRADE. BUY indicates a new purchase. UPGRADE indicates an upgrade. If you set this parameter to UPGRADE, you must specify the orderId parameter. Default value: BUY.</p>
              * 
              * <strong>example:</strong>
              * <p>BUY</p>
@@ -481,6 +500,17 @@ public class UpdateWorkspaceRequest extends Request {
              */
             public Builder paymentDurationUnit(String paymentDurationUnit) {
                 this.paymentDurationUnit = paymentDurationUnit;
+                return this;
+            }
+
+            /**
+             * <p>Supported only for new GPU subscription purchases (BUY). Not supported for upgrades (UPGRADE). Use the voucher option ID returned by the price inquiry API. To not use a voucher, set this parameter to youhuiquan_promotion_option_id_for_blank. If you omit this parameter, the previous call behavior is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_promotion_option_id_for_blank</p>
+             */
+            public Builder promotionOptionNo(String promotionOptionNo) {
+                this.promotionOptionNo = promotionOptionNo;
                 return this;
             }
 
@@ -516,6 +546,9 @@ public class UpdateWorkspaceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("paymentDurationUnit")
         private String paymentDurationUnit;
 
+        @com.aliyun.core.annotation.NameInMap("promotionOptionNo")
+        private String promotionOptionNo;
+
         @com.aliyun.core.annotation.NameInMap("queue")
         private java.util.List<String> queue;
 
@@ -526,6 +559,7 @@ public class UpdateWorkspaceRequest extends Request {
             this.clientToken = builder.clientToken;
             this.duration = builder.duration;
             this.paymentDurationUnit = builder.paymentDurationUnit;
+            this.promotionOptionNo = builder.promotionOptionNo;
             this.queue = builder.queue;
         }
 
@@ -580,6 +614,13 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
+         * @return promotionOptionNo
+         */
+        public String getPromotionOptionNo() {
+            return this.promotionOptionNo;
+        }
+
+        /**
          * @return queue
          */
         public java.util.List<String> getQueue() {
@@ -593,6 +634,7 @@ public class UpdateWorkspaceRequest extends Request {
             private String clientToken; 
             private String duration; 
             private String paymentDurationUnit; 
+            private String promotionOptionNo; 
             private java.util.List<String> queue; 
 
             private Builder() {
@@ -605,6 +647,7 @@ public class UpdateWorkspaceRequest extends Request {
                 this.clientToken = model.clientToken;
                 this.duration = model.duration;
                 this.paymentDurationUnit = model.paymentDurationUnit;
+                this.promotionOptionNo = model.promotionOptionNo;
                 this.queue = model.queue;
             } 
 
@@ -631,7 +674,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The auto-renewal cycle. This parameter is required for the subscription billing method.</p>
+             * <p>The auto-renewal epoch. This parameter is required for the subscription billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>MONTH</p>
@@ -642,7 +685,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The client token for idempotency verification.</p>
+             * <p>The client token for idempotence verification.</p>
              * 
              * <strong>example:</strong>
              * <p>my-token-asxkxxxxxxx</p>
@@ -675,7 +718,18 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The list of running queues to be switched.</p>
+             * <p>Supported only when you switch the billing method of CUs from pay-as-you-go to subscription. Use the voucher option ID returned by the price inquiry API. To not use a voucher, set this parameter to youhuiquan_promotion_option_id_for_blank. If you omit this parameter, the previous call behavior is retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_promotion_option_id_for_blank</p>
+             */
+            public Builder promotionOptionNo(String promotionOptionNo) {
+                this.promotionOptionNo = promotionOptionNo;
+                return this;
+            }
+
+            /**
+             * <p>The list of running queues to be converted.</p>
              */
             public Builder queue(java.util.List<String> queue) {
                 this.queue = queue;

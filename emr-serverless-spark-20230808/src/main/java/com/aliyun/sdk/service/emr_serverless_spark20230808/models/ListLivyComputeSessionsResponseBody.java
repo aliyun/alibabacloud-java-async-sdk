@@ -311,7 +311,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Livy Gateway.</p>
+             * <p>The ID of the Livy gateway.</p>
              * 
              * <strong>example:</strong>
              * <p>lc-xxxxxx</p>
@@ -366,7 +366,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total amount of memory allocated to the job multiplied by the number of seconds the job has run.</p>
+             * <p>The total amount of memory allocated to the job multiplied by the running time of the job in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1098888</p>
@@ -399,7 +399,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Livy Gateway session.</p>
+             * <p>The ID of the Livy gateway session.</p>
              * 
              * <strong>example:</strong>
              * <p>livy-xxxxxx</p>
@@ -432,7 +432,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
              * <li>running: Running.</li>
              * <li>terminating: Terminating.</li>
              * <li>terminated: Terminated.</li>
-             * <li>error: Error.</li>
+             * <li>error: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -444,7 +444,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of vcores allocated to the job multiplied by the number of seconds the job has run.</p>
+             * <p>The total number of vcores allocated to the job multiplied by the running time of the job in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>343</p>
@@ -455,7 +455,7 @@ public class ListLivyComputeSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The web UI address of the session.</p>
+             * <p>The web UI URL of the session.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://emr-spark-ui-cn-hangzhou.data.aliyun.com">http://emr-spark-ui-cn-hangzhou.data.aliyun.com</a></p>

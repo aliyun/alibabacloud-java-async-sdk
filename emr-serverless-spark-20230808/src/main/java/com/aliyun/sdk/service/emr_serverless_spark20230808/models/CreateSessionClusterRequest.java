@@ -241,7 +241,7 @@ public class CreateSessionClusterRequest extends Request {
         } 
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>w-790b443d72394bfc</p>
@@ -262,10 +262,10 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic startup. Valid values:</p>
+         * <p>Specifies whether to enable auto-start. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Disabled.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          */
         public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
@@ -275,7 +275,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The automatic stop configuration.</p>
+         * <p>The auto-stop configuration.</p>
          */
         public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
             this.putBodyParameter("autoStopConfiguration", autoStopConfiguration);
@@ -284,7 +284,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>The client token used to ensure request idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>my-token-asxkxxxxxxx</p>
@@ -308,7 +308,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The Python environment ID. This parameter takes effect only for Notebook sessions.</p>
+         * <p>The ID of the Python environment. This parameter takes effect only for Notebook sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cpv569tlhtgndjl86t40</p>
@@ -335,7 +335,7 @@ public class CreateSessionClusterRequest extends Request {
          * <p>The session type. Valid values:</p>
          * <ul>
          * <li>SQL: SQL session.</li>
-         * <li>NOTEBOOK: NOTEBOOK session.</li>
+         * <li>NOTEBOOK: Notebook session.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,7 +348,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The node name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>spark_job_name</p>
@@ -360,7 +360,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the public network access endpoint.</p>
+         * <p>Specifies whether public network access is enabled for the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -372,7 +372,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The queue name.</p>
+         * <p>The name of the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>root_queue</p>
@@ -384,7 +384,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The Spark DPI engine version number.</p>
+         * <p>The version number of the Spark DPI engine.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.3.1</p>
@@ -480,7 +480,7 @@ public class CreateSessionClusterRequest extends Request {
             } 
 
             /**
-             * <p>The configuration file name.</p>
+             * <p>The name of the configuration file.</p>
              * 
              * <strong>example:</strong>
              * <p>spark-defaults.conf</p>
@@ -559,10 +559,10 @@ public class CreateSessionClusterRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable automatic startup. Valid values:</p>
+             * <p>Specifies whether to enable auto-start. Valid values:</p>
              * <ul>
-             * <li>true: Enabled.</li>
-             * <li>false: Disabled.</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -635,8 +635,8 @@ public class CreateSessionClusterRequest extends Request {
             /**
              * <p>Specifies whether to allow automatic stop. Valid values:</p>
              * <ul>
-             * <li>true: Allowed.</li>
-             * <li>false: Not allowed.</li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -648,7 +648,7 @@ public class CreateSessionClusterRequest extends Request {
             }
 
             /**
-             * <p>The number of idle minutes after which the session is automatically stopped.</p>
+             * <p>The number of idle minutes before the session is automatically stopped.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>

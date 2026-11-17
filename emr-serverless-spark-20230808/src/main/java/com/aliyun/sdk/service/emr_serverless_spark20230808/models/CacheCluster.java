@@ -340,7 +340,7 @@ public class CacheCluster extends TeaModel {
         } 
 
         /**
-         * bindedWorkspaces.
+         * <p>The associated workspaces.</p>
          */
         public Builder bindedWorkspaces(java.util.List<String> bindedWorkspaces) {
             this.bindedWorkspaces = bindedWorkspaces;
@@ -348,7 +348,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * cacheClusterId.
+         * <p>The cache cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spc-xxxxxxx</p>
          */
         public Builder cacheClusterId(String cacheClusterId) {
             this.cacheClusterId = cacheClusterId;
@@ -356,7 +359,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * cacheClusterName.
+         * <p>The cache cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-cache-cluster</p>
          */
         public Builder cacheClusterName(String cacheClusterName) {
             this.cacheClusterName = cacheClusterName;
@@ -364,7 +370,7 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * cachesets.
+         * <p>The list of cache sets associated with the cache cluster.</p>
          */
         public Builder cachesets(java.util.List<Cachesets> cachesets) {
             this.cachesets = cachesets;
@@ -372,7 +378,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * clusterId.
+         * <p>The cache cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spc-xxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -388,7 +397,7 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * configurations.
+         * <p>The list of configuration files for the cache cluster.</p>
          */
         public Builder configurations(java.util.List<Configurations> configurations) {
             this.configurations = configurations;
@@ -396,7 +405,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Fri May 31 12:18:51 CST 2024</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -404,7 +416,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * creator.
+         * <p>The creator UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -420,7 +435,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * gmtCreated.
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717138731701</p>
          */
         public Builder gmtCreated(Long gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -428,7 +446,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The modification time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717138731701</p>
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -436,7 +457,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * modifier.
+         * <p>The modifier UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder modifier(String modifier) {
             this.modifier = modifier;
@@ -444,7 +468,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The cache cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-cache-cluster</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -452,7 +479,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * paymentType.
+         * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -460,7 +490,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -468,7 +501,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek4f7uj74wdthi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -476,7 +512,7 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * resourceSpec.
+         * <p>The cache cluster specifications.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
             this.resourceSpec = resourceSpec;
@@ -484,7 +520,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * state.
+         * <p>The cache cluster status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -492,7 +531,7 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * tables.
+         * <p>The list of data tables associated with the cache cluster.</p>
          */
         public Builder tables(java.util.List<Tables> tables) {
             this.tables = tables;
@@ -500,7 +539,7 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The list of tags for the cache cluster.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -508,7 +547,7 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * usedResourceSpec.
+         * <p>The resource specifications used by the cache cluster.</p>
          */
         public Builder usedResourceSpec(UsedResourceSpec usedResourceSpec) {
             this.usedResourceSpec = usedResourceSpec;
@@ -516,7 +555,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The cache cluster version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2.0</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -582,7 +624,10 @@ public class CacheCluster extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the cache set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cache1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -590,7 +635,10 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The path of the cache set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/path1</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -657,7 +705,10 @@ public class CacheCluster extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>The content of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><cachesets><cacheset><name>cache1</name><path>/path1</path><cacheStrategy>DISTRIBUTED</cacheStrategy><metaPolicy><type>ALWAYS</type></metaPolicy><readPolicy>CACHE_ASIDE</readPolicy><preadPolicy>ALL_DYNAMIC</preadPolicy><writePolicy>WRITE_THROUGH</writePolicy></cacheset></cachesets></p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -665,7 +716,10 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cacheset.xml</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -745,7 +799,10 @@ public class CacheCluster extends TeaModel {
             } 
 
             /**
-             * bandWidth.
+             * <p>The bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bandWidth(Long bandWidth) {
                 this.bandWidth = bandWidth;
@@ -753,7 +810,7 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * ha.
+             * <p>Specifies whether high availability is enabled.</p>
              */
             public Builder ha(Boolean ha) {
                 this.ha = ha;
@@ -761,7 +818,10 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * storage.
+             * <p>The physical storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storage(Long storage) {
                 this.storage = storage;
@@ -867,7 +927,10 @@ public class CacheCluster extends TeaModel {
             } 
 
             /**
-             * catalogId.
+             * <p>The data catalog ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15097**********</p>
              */
             public Builder catalogId(String catalogId) {
                 this.catalogId = catalogId;
@@ -875,7 +938,10 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * catalogProvider.
+             * <p>The data catalog provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HMS</p>
              */
             public Builder catalogProvider(String catalogProvider) {
                 this.catalogProvider = catalogProvider;
@@ -883,7 +949,10 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -891,7 +960,10 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * table.
+             * <p>The data table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -899,7 +971,10 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w-d2d82aa09155****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -966,7 +1041,10 @@ public class CacheCluster extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -974,7 +1052,10 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1041,7 +1122,7 @@ public class CacheCluster extends TeaModel {
             } 
 
             /**
-             * bandWidth.
+             * <p>The used bandwidth.</p>
              */
             public Builder bandWidth(Long bandWidth) {
                 this.bandWidth = bandWidth;
@@ -1049,7 +1130,7 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * storage.
+             * <p>The used storage capacity.</p>
              */
             public Builder storage(Long storage) {
                 this.storage = storage;

@@ -99,7 +99,7 @@ public class DeleteWorkspaceQueueRequest extends Request {
         }
 
         /**
-         * <p>The workspace queue name.</p>
+         * <p>The name of the workspace queue.</p>
          * 
          * <strong>example:</strong>
          * <p>test-workspace</p>

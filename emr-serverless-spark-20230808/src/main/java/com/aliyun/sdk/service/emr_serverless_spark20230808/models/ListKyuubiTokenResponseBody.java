@@ -248,7 +248,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of RAM user names of authorized users.</p>
+             * <p>The list of names of Resource Access Management (RAM) users of authorized users.</p>
              */
             public Builder accountNames(java.util.List<String> accountNames) {
                 this.accountNames = accountNames;
@@ -289,7 +289,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last usage time. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1760366232121</p>
@@ -319,7 +319,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
             }
 
             /**
-             * sparkRole.
+             * <p>The list of Spark roles associated with the token.</p>
              */
             public Builder sparkRole(java.util.List<String> sparkRole) {
                 this.sparkRole = sparkRole;

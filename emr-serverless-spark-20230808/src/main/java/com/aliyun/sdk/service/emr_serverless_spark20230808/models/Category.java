@@ -152,7 +152,7 @@ public class Category extends TeaModel {
         } 
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The ID of the folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * <p>The ID of the user who creates the folder.</p>
+         * <p>The UID of the creator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * <p>The time when the folder was created.</p>
+         * <p>The creation time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * <p>The time when the folder was last updated.</p>
+         * <p>The last updated time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * <p>The ID of the user who last modifies the folder.</p>
+         * <p>The UID of the last updater.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class Category extends TeaModel {
         }
 
         /**
-         * <p>The parent folder ID.</p>
+         * <p>The ID of the parent folder.</p>
          * 
          * <strong>example:</strong>
          * <p>w-d6********</p>

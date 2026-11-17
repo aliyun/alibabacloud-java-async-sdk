@@ -132,7 +132,7 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The return code of the API request backend.</p>
+         * <p>The backend return code for the API request.</p>
          * 
          * <strong>example:</strong>
          * <p>1400009</p>
@@ -154,7 +154,7 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the manual workflow run failed.</p>
+         * <p>Specifies whether the manual workflow run failed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -176,7 +176,7 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed description corresponding to the request code.</p>
+         * <p>The detailed description corresponding to the return code.</p>
          * 
          * <strong>example:</strong>
          * <p>No permission for resource action</p>
@@ -198,7 +198,7 @@ public class StartProcessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

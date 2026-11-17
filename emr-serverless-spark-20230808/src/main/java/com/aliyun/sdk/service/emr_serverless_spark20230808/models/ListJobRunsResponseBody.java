@@ -120,6 +120,9 @@ public class ListJobRunsResponseBody extends TeaModel {
 
         /**
          * <p>The statistical results aggregated by job state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Success&quot;:&quot;2&quot;}</p>
          */
         public Builder aggregations(java.util.Map<String, String> aggregations) {
             this.aggregations = aggregations;
@@ -135,7 +138,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records returned for the request.</p>
+         * <p>The maximum number of records returned for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -347,6 +350,9 @@ public class ListJobRunsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("executionTimeoutSeconds")
         private Integer executionTimeoutSeconds;
 
+        @com.aliyun.core.annotation.NameInMap("firstReportTime")
+        private Long firstReportTime;
+
         @com.aliyun.core.annotation.NameInMap("fusion")
         private Boolean fusion;
 
@@ -373,6 +379,12 @@ public class ListJobRunsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("resourceQueueId")
         private String resourceQueueId;
+
+        @com.aliyun.core.annotation.NameInMap("resourceStartupDurationMs")
+        private Long resourceStartupDurationMs;
+
+        @com.aliyun.core.annotation.NameInMap("runDurationMs")
+        private Long runDurationMs;
 
         @com.aliyun.core.annotation.NameInMap("state")
         private String state;
@@ -403,6 +415,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             this.displayReleaseVersion = builder.displayReleaseVersion;
             this.endTime = builder.endTime;
             this.executionTimeoutSeconds = builder.executionTimeoutSeconds;
+            this.firstReportTime = builder.firstReportTime;
             this.fusion = builder.fusion;
             this.jobDriver = builder.jobDriver;
             this.jobRunId = builder.jobRunId;
@@ -412,6 +425,8 @@ public class ListJobRunsResponseBody extends TeaModel {
             this.priority = builder.priority;
             this.releaseVersion = builder.releaseVersion;
             this.resourceQueueId = builder.resourceQueueId;
+            this.resourceStartupDurationMs = builder.resourceStartupDurationMs;
+            this.runDurationMs = builder.runDurationMs;
             this.state = builder.state;
             this.stateChangeReason = builder.stateChangeReason;
             this.submitTime = builder.submitTime;
@@ -479,6 +494,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
+         * @return firstReportTime
+         */
+        public Long getFirstReportTime() {
+            return this.firstReportTime;
+        }
+
+        /**
          * @return fusion
          */
         public Boolean getFusion() {
@@ -542,6 +564,20 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceStartupDurationMs
+         */
+        public Long getResourceStartupDurationMs() {
+            return this.resourceStartupDurationMs;
+        }
+
+        /**
+         * @return runDurationMs
+         */
+        public Long getRunDurationMs() {
+            return this.runDurationMs;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -598,6 +634,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String displayReleaseVersion; 
             private Long endTime; 
             private Integer executionTimeoutSeconds; 
+            private Long firstReportTime; 
             private Boolean fusion; 
             private JobDriver jobDriver; 
             private String jobRunId; 
@@ -607,6 +644,8 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String priority; 
             private String releaseVersion; 
             private String resourceQueueId; 
+            private Long resourceStartupDurationMs; 
+            private Long runDurationMs; 
             private String state; 
             private StateChangeReason stateChangeReason; 
             private Long submitTime; 
@@ -626,6 +665,7 @@ public class ListJobRunsResponseBody extends TeaModel {
                 this.displayReleaseVersion = model.displayReleaseVersion;
                 this.endTime = model.endTime;
                 this.executionTimeoutSeconds = model.executionTimeoutSeconds;
+                this.firstReportTime = model.firstReportTime;
                 this.fusion = model.fusion;
                 this.jobDriver = model.jobDriver;
                 this.jobRunId = model.jobRunId;
@@ -635,6 +675,8 @@ public class ListJobRunsResponseBody extends TeaModel {
                 this.priority = model.priority;
                 this.releaseVersion = model.releaseVersion;
                 this.resourceQueueId = model.resourceQueueId;
+                this.resourceStartupDurationMs = model.resourceStartupDurationMs;
+                this.runDurationMs = model.runDurationMs;
                 this.state = model.state;
                 this.stateChangeReason = model.stateChangeReason;
                 this.submitTime = model.submitTime;
@@ -659,7 +701,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advanced Spark configurations. This parameter is not returned by the List operation.</p>
+             * <p>The advanced Spark configurations. This parameter is not returned by the list operation.</p>
              */
             public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
                 this.configurationOverrides = configurationOverrides;
@@ -678,7 +720,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of compute units (CUs) consumed during the job run. This value is an estimate and the final value is subject to the bill.</p>
+             * <p>The number of compute units (CUs) consumed during the job run. This value is an estimate. The actual value is subject to the bill.</p>
              * 
              * <strong>example:</strong>
              * <p>2.059</p>
@@ -689,7 +731,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Spark DPI engine version of the running job.</p>
+             * <p>The Spark engine version used to run the node.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</p>
@@ -722,6 +764,17 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The timestamp in milliseconds when the resources are ready, which is the first report time. If the first report time is empty, the job report time is used. If both are empty, null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684119314000</p>
+             */
+            public Builder firstReportTime(Long firstReportTime) {
+                this.firstReportTime = firstReportTime;
+                return this;
+            }
+
+            /**
              * <p>Specifies whether Fusion engine acceleration is enabled.</p>
              * 
              * <strong>example:</strong>
@@ -733,7 +786,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the Spark driver. This parameter is not returned by the List operation.</p>
+             * <p>The information about the Spark driver. This parameter is not returned by the list operation.</p>
              */
             public Builder jobDriver(JobDriver jobDriver) {
                 this.jobDriver = jobDriver;
@@ -793,7 +846,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Spark DPI engine version of the running job.</p>
+             * <p>The Spark engine version used to run the node.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12, Native Runtime)</p>
@@ -811,6 +864,28 @@ public class ListJobRunsResponseBody extends TeaModel {
              */
             public Builder resourceQueueId(String resourceQueueId) {
                 this.resourceQueueId = resourceQueueId;
+                return this;
+            }
+
+            /**
+             * <p>The resource startup duration in milliseconds. It is calculated by subtracting the first submission time from the resource ready time. If the first submission time or the resource ready time is missing, or if the calculation result is negative, null is returned instead of 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60000</p>
+             */
+            public Builder resourceStartupDurationMs(Long resourceStartupDurationMs) {
+                this.resourceStartupDurationMs = resourceStartupDurationMs;
+                return this;
+            }
+
+            /**
+             * <p>The job run duration in milliseconds. It is calculated by subtracting the resource ready time from the job end time. If the job has not ended, the current time is used. If the resource ready time is missing, or if the calculation result is negative, null is returned instead of 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120000</p>
+             */
+            public Builder runDurationMs(Long runDurationMs) {
+                this.runDurationMs = runDurationMs;
                 return this;
             }
 

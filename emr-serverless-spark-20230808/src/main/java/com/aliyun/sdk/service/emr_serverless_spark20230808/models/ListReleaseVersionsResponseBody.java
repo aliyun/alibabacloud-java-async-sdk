@@ -117,7 +117,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next page.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of versions.</p>
+         * <p>The list of release versions.</p>
          */
         public Builder releaseVersions(java.util.List<ReleaseVersions> releaseVersions) {
             this.releaseVersions = releaseVersions;
@@ -179,6 +179,9 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
         private String displayReleaseVersion;
 
+        @com.aliyun.core.annotation.NameInMap("flameGraphEnabled")
+        private Boolean flameGraphEnabled;
+
         @com.aliyun.core.annotation.NameInMap("fusion")
         private Boolean fusion;
 
@@ -207,6 +210,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             this.communityVersion = builder.communityVersion;
             this.cpuArchitectures = builder.cpuArchitectures;
             this.displayReleaseVersion = builder.displayReleaseVersion;
+            this.flameGraphEnabled = builder.flameGraphEnabled;
             this.fusion = builder.fusion;
             this.gmtCreate = builder.gmtCreate;
             this.iaasType = builder.iaasType;
@@ -244,6 +248,13 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
          */
         public String getDisplayReleaseVersion() {
             return this.displayReleaseVersion;
+        }
+
+        /**
+         * @return flameGraphEnabled
+         */
+        public Boolean getFlameGraphEnabled() {
+            return this.flameGraphEnabled;
         }
 
         /**
@@ -306,6 +317,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             private String communityVersion; 
             private java.util.List<String> cpuArchitectures; 
             private String displayReleaseVersion; 
+            private Boolean flameGraphEnabled; 
             private Boolean fusion; 
             private Long gmtCreate; 
             private String iaasType; 
@@ -322,6 +334,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
                 this.communityVersion = model.communityVersion;
                 this.cpuArchitectures = model.cpuArchitectures;
                 this.displayReleaseVersion = model.displayReleaseVersion;
+                this.flameGraphEnabled = model.flameGraphEnabled;
                 this.fusion = model.fusion;
                 this.gmtCreate = model.gmtCreate;
                 this.iaasType = model.iaasType;
@@ -363,6 +376,17 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Indicates whether the release version supports flame graphs. This is determined by checking if the fenix version metadata contains flame-graph.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder flameGraphEnabled(Boolean flameGraphEnabled) {
+                this.flameGraphEnabled = flameGraphEnabled;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether Fusion engine acceleration is enabled.</p>
              * 
              * <strong>example:</strong>
@@ -396,7 +420,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the version is a custom image.</p>
+             * <p>Indicates whether the image is a custom image.</p>
              */
             public Builder isCustom(Boolean isCustom) {
                 this.isCustom = isCustom;
@@ -437,7 +461,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version type.</p>
+             * <p>The release type.</p>
              * 
              * <strong>example:</strong>
              * <p>stable</p>

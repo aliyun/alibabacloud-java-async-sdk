@@ -102,7 +102,7 @@ public class GetRunConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The job instance ID.</p>
+         * <p>The run instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

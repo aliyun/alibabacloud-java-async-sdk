@@ -102,7 +102,7 @@ public class CancelJobRunRequest extends Request {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>The job run ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

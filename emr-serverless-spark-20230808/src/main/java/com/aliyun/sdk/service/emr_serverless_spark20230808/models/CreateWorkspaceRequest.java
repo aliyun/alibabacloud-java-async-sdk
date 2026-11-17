@@ -66,6 +66,10 @@ public class CreateWorkspaceRequest extends Request {
     private String paymentType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("promotionOptionNo")
+    private String promotionOptionNo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ramRoleName")
     private String ramRoleName;
 
@@ -107,6 +111,7 @@ public class CreateWorkspaceRequest extends Request {
         this.ossBucket = builder.ossBucket;
         this.paymentDurationUnit = builder.paymentDurationUnit;
         this.paymentType = builder.paymentType;
+        this.promotionOptionNo = builder.promotionOptionNo;
         this.ramRoleName = builder.ramRoleName;
         this.releaseType = builder.releaseType;
         this.resourceGroupId = builder.resourceGroupId;
@@ -214,6 +219,13 @@ public class CreateWorkspaceRequest extends Request {
     }
 
     /**
+     * @return promotionOptionNo
+     */
+    public String getPromotionOptionNo() {
+        return this.promotionOptionNo;
+    }
+
+    /**
      * @return ramRoleName
      */
     public String getRamRoleName() {
@@ -275,6 +287,7 @@ public class CreateWorkspaceRequest extends Request {
         private String ossBucket; 
         private String paymentDurationUnit; 
         private String paymentType; 
+        private String promotionOptionNo; 
         private String ramRoleName; 
         private String releaseType; 
         private String resourceGroupId; 
@@ -301,6 +314,7 @@ public class CreateWorkspaceRequest extends Request {
             this.ossBucket = request.ossBucket;
             this.paymentDurationUnit = request.paymentDurationUnit;
             this.paymentType = request.paymentType;
+            this.promotionOptionNo = request.promotionOptionNo;
             this.ramRoleName = request.ramRoleName;
             this.releaseType = request.releaseType;
             this.resourceGroupId = request.resourceGroupId;
@@ -311,7 +325,7 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable auto-renewal. This parameter is required if you set <code>paymentType</code> to <code>Pre</code>.</p>
+         * <p>Specifies whether to enable auto-renewal. This parameter is required when the paymentType parameter is set to Pre.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -323,7 +337,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal duration. This parameter is required if <code>autoRenew</code> is set to <code>true</code>.</p>
+         * <p>The auto-renewal duration. This parameter is required when the paymentType parameter is set to Pre.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -335,7 +349,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the auto-renewal duration. This parameter is required if <code>autoRenew</code> is set to <code>true</code>.</p>
+         * <p>The auto-renewal cycle. This parameter is required when the paymentType parameter is set to Pre.</p>
          * 
          * <strong>example:</strong>
          * <p>month</p>
@@ -347,7 +361,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically start a session cluster when the workspace is created.</p>
+         * <p>Specifies whether to automatically start a session.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -359,7 +373,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>A token that ensures the idempotency of the request.</p>
+         * <p>The client token used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>8e6aae2810c8f67229ca70bb31cd****</p>
@@ -371,7 +385,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The DLF Catalog ID.</p>
+         * <p>The DLF catalog information.</p>
          * 
          * <strong>example:</strong>
          * <p>123xxxxx</p>
@@ -383,7 +397,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The DLF type.</p>
+         * <p>The DLF binding type.</p>
          * 
          * <strong>example:</strong>
          * <p>dlf1.0</p>
@@ -395,7 +409,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. This parameter is required if you set <code>paymentType</code> to <code>Pre</code>.</p>
+         * <p>The number of subscription periods. This parameter is required when the paymentType parameter is set to Pre.</p>
          * 
          * <strong>example:</strong>
          * <p>12452</p>
@@ -407,7 +421,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The specifications for the GPU resources.</p>
+         * <p>The list of GPU instance types.</p>
          */
         public Builder gpuSpec(java.util.List<String> gpuSpec) {
             this.putBodyParameter("gpuSpec", gpuSpec);
@@ -416,7 +430,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The OSS bucket for the workspace. The path must be in the <code>oss://&lt;bucket-name&gt;/</code> format.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/</p>
@@ -428,7 +442,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration. This parameter is required if you set <code>paymentType</code> to <code>Pre</code>.</p>
+         * <p>The unit of the subscription period.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -440,12 +454,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><p><code>PayAsYouGo</code>: pay-as-you-go</p>
-         * </li>
-         * <li><p><code>Pre</code>: subscription</p>
-         * </li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Pre: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -458,7 +470,19 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role used to run Spark jobs.</p>
+         * <p>Supported only for subscription instances. Use the voucher option ID returned by the price inquiry API. To not use a voucher, pass youhuiquan_promotion_option_id_for_blank. If this parameter is omitted, the previous calling behavior is maintained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
+         */
+        public Builder promotionOptionNo(String promotionOptionNo) {
+            this.putBodyParameter("promotionOptionNo", promotionOptionNo);
+            this.promotionOptionNo = promotionOptionNo;
+            return this;
+        }
+
+        /**
+         * <p>The name of the RAM role used to execute Spark jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunEMRSparkJobRunDefaultRole</p>
@@ -482,7 +506,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmwpi66knkxny</p>
@@ -503,7 +527,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the workspace.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("tag", tag);
@@ -512,7 +536,7 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -595,7 +619,7 @@ public class CreateWorkspaceRequest extends Request {
             } 
 
             /**
-             * <p>The resource quota for the workspace.</p>
+             * <p>The maximum resource limit for the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -606,7 +630,7 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * <p>The GPU resource quota for the workspace.</p>
+             * <p>The number of GPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

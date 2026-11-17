@@ -207,7 +207,7 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * <p>The auto-expiration settings.</p>
+         * <p>The auto-expiration configuration struct.</p>
          */
         public Builder autoExpireConfiguration(AutoExpireConfiguration autoExpireConfiguration) {
             this.putBodyParameter("autoExpireConfiguration", autoExpireConfiguration);
@@ -216,7 +216,7 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * <p>The ARNs of authorized users.</p>
+         * <p>The list of ARNs of authorized users.</p>
          */
         public Builder memberArns(java.util.List<String> memberArns) {
             this.putBodyParameter("memberArns", memberArns);
@@ -237,7 +237,7 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * sparkRole.
+         * <p>The list of Spark roles associated with the token.</p>
          */
         public Builder sparkRole(java.util.List<String> sparkRole) {
             this.putBodyParameter("sparkRole", sparkRole);
@@ -246,7 +246,7 @@ public class UpdateKyuubiTokenRequest extends Request {
         }
 
         /**
-         * <p>The token. It must be 32 characters long and contain only lowercase letters and digits.</p>
+         * <p>The token content, which must be 32 characters in length and contain only lowercase letters and digits.</p>
          * 
          * <strong>example:</strong>
          * <p>rjy7ejhej9gkzjjuun49jnx2xk8if2cu</p>
@@ -329,7 +329,7 @@ public class UpdateKyuubiTokenRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable automatic expiration for the token.</p>
+             * <p>Specifies whether automatic expiration is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -340,7 +340,7 @@ public class UpdateKyuubiTokenRequest extends Request {
             }
 
             /**
-             * <p>The expiration period, in days.</p>
+             * <p>The expiration time in days.</p>
              * 
              * <strong>example:</strong>
              * <p>365</p>

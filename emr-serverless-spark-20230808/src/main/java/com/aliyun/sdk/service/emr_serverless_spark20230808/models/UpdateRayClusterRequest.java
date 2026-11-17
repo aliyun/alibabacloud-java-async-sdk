@@ -34,6 +34,10 @@ public class UpdateRayClusterRequest extends Request {
     private String displayReleaseVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableMetricsUpload")
+    private Boolean enableMetricsUpload;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extraParam")
     private String extraParam;
 
@@ -50,6 +54,14 @@ public class UpdateRayClusterRequest extends Request {
     private String networkServiceName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("slsLogStore")
+    private String slsLogStore;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("slsProject")
+    private String slsProject;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("volumeIds")
     private java.util.List<String> volumeIds;
 
@@ -63,10 +75,13 @@ public class UpdateRayClusterRequest extends Request {
         this.clusterId = builder.clusterId;
         this.description = builder.description;
         this.displayReleaseVersion = builder.displayReleaseVersion;
+        this.enableMetricsUpload = builder.enableMetricsUpload;
         this.extraParam = builder.extraParam;
         this.headSpec = builder.headSpec;
         this.name = builder.name;
         this.networkServiceName = builder.networkServiceName;
+        this.slsLogStore = builder.slsLogStore;
+        this.slsProject = builder.slsProject;
         this.volumeIds = builder.volumeIds;
         this.workerSpec = builder.workerSpec;
     }
@@ -113,6 +128,13 @@ public class UpdateRayClusterRequest extends Request {
     }
 
     /**
+     * @return enableMetricsUpload
+     */
+    public Boolean getEnableMetricsUpload() {
+        return this.enableMetricsUpload;
+    }
+
+    /**
      * @return extraParam
      */
     public String getExtraParam() {
@@ -141,6 +163,20 @@ public class UpdateRayClusterRequest extends Request {
     }
 
     /**
+     * @return slsLogStore
+     */
+    public String getSlsLogStore() {
+        return this.slsLogStore;
+    }
+
+    /**
+     * @return slsProject
+     */
+    public String getSlsProject() {
+        return this.slsProject;
+    }
+
+    /**
      * @return volumeIds
      */
     public java.util.List<String> getVolumeIds() {
@@ -159,10 +195,13 @@ public class UpdateRayClusterRequest extends Request {
         private String clusterId; 
         private String description; 
         private String displayReleaseVersion; 
+        private Boolean enableMetricsUpload; 
         private String extraParam; 
         private HeadSpec headSpec; 
         private String name; 
         private String networkServiceName; 
+        private String slsLogStore; 
+        private String slsProject; 
         private java.util.List<String> volumeIds; 
         private java.util.List<WorkerSpec> workerSpec; 
 
@@ -176,10 +215,13 @@ public class UpdateRayClusterRequest extends Request {
             this.clusterId = request.clusterId;
             this.description = request.description;
             this.displayReleaseVersion = request.displayReleaseVersion;
+            this.enableMetricsUpload = request.enableMetricsUpload;
             this.extraParam = request.extraParam;
             this.headSpec = request.headSpec;
             this.name = request.name;
             this.networkServiceName = request.networkServiceName;
+            this.slsLogStore = request.slsLogStore;
+            this.slsProject = request.slsProject;
             this.volumeIds = request.volumeIds;
             this.workerSpec = request.workerSpec;
         } 
@@ -233,6 +275,15 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
+         * enableMetricsUpload.
+         */
+        public Builder enableMetricsUpload(Boolean enableMetricsUpload) {
+            this.putBodyParameter("enableMetricsUpload", enableMetricsUpload);
+            this.enableMetricsUpload = enableMetricsUpload;
+            return this;
+        }
+
+        /**
          * <p>The extra parameters. The value must be in JSON format.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +325,24 @@ public class UpdateRayClusterRequest extends Request {
         public Builder networkServiceName(String networkServiceName) {
             this.putBodyParameter("networkServiceName", networkServiceName);
             this.networkServiceName = networkServiceName;
+            return this;
+        }
+
+        /**
+         * slsLogStore.
+         */
+        public Builder slsLogStore(String slsLogStore) {
+            this.putBodyParameter("slsLogStore", slsLogStore);
+            this.slsLogStore = slsLogStore;
+            return this;
+        }
+
+        /**
+         * slsProject.
+         */
+        public Builder slsProject(String slsProject) {
+            this.putBodyParameter("slsProject", slsProject);
+            this.slsProject = slsProject;
             return this;
         }
 
@@ -432,6 +501,9 @@ public class UpdateRayClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("gftEnabled")
         private Boolean gftEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("gpuDriverVersion")
+        private String gpuDriverVersion;
+
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
 
@@ -454,6 +526,7 @@ public class UpdateRayClusterRequest extends Request {
             this.env = builder.env;
             this.gftConfig = builder.gftConfig;
             this.gftEnabled = builder.gftEnabled;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.gpuSpec = builder.gpuSpec;
             this.idleTimeoutSeconds = builder.idleTimeoutSeconds;
             this.memory = builder.memory;
@@ -512,6 +585,13 @@ public class UpdateRayClusterRequest extends Request {
         }
 
         /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
+        /**
          * @return gpuSpec
          */
         public String getGpuSpec() {
@@ -553,6 +633,7 @@ public class UpdateRayClusterRequest extends Request {
             private String env; 
             private GftConfig gftConfig; 
             private Boolean gftEnabled; 
+            private String gpuDriverVersion; 
             private String gpuSpec; 
             private Integer idleTimeoutSeconds; 
             private String memory; 
@@ -569,6 +650,7 @@ public class UpdateRayClusterRequest extends Request {
                 this.env = model.env;
                 this.gftConfig = model.gftConfig;
                 this.gftEnabled = model.gftEnabled;
+                this.gpuDriverVersion = model.gpuDriverVersion;
                 this.gpuSpec = model.gpuSpec;
                 this.idleTimeoutSeconds = model.idleTimeoutSeconds;
                 this.memory = model.memory;
@@ -633,6 +715,14 @@ public class UpdateRayClusterRequest extends Request {
              */
             public Builder gftEnabled(Boolean gftEnabled) {
                 this.gftEnabled = gftEnabled;
+                return this;
+            }
+
+            /**
+             * gpuDriverVersion.
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
                 return this;
             }
 
@@ -714,6 +804,9 @@ public class UpdateRayClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("env")
         private String env;
 
+        @com.aliyun.core.annotation.NameInMap("gpuDriverVersion")
+        private String gpuDriverVersion;
+
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private String gpuSpec;
 
@@ -745,6 +838,7 @@ public class UpdateRayClusterRequest extends Request {
             this.cpu = builder.cpu;
             this.displayReleaseVersion = builder.displayReleaseVersion;
             this.env = builder.env;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.gpuSpec = builder.gpuSpec;
             this.groupName = builder.groupName;
             this.maxReplica = builder.maxReplica;
@@ -783,6 +877,13 @@ public class UpdateRayClusterRequest extends Request {
          */
         public String getEnv() {
             return this.env;
+        }
+
+        /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
         }
 
         /**
@@ -852,6 +953,7 @@ public class UpdateRayClusterRequest extends Request {
             private String cpu; 
             private String displayReleaseVersion; 
             private String env; 
+            private String gpuDriverVersion; 
             private String gpuSpec; 
             private String groupName; 
             private Integer maxReplica; 
@@ -869,6 +971,7 @@ public class UpdateRayClusterRequest extends Request {
                 this.cpu = model.cpu;
                 this.displayReleaseVersion = model.displayReleaseVersion;
                 this.env = model.env;
+                this.gpuDriverVersion = model.gpuDriverVersion;
                 this.gpuSpec = model.gpuSpec;
                 this.groupName = model.groupName;
                 this.maxReplica = model.maxReplica;
@@ -910,6 +1013,14 @@ public class UpdateRayClusterRequest extends Request {
              */
             public Builder env(String env) {
                 this.env = env;
+                return this;
+            }
+
+            /**
+             * gpuDriverVersion.
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
                 return this;
             }
 

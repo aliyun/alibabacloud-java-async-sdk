@@ -685,6 +685,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the resource instance associated with the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-resource-****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

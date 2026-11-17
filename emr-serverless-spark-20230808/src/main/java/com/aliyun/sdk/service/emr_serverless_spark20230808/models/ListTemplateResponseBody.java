@@ -128,9 +128,9 @@ public class ListTemplateResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li><p>If the value of success is false, an error code is returned.</p>
+         * <li><p>If success is false, the business error code is returned.</p>
          * </li>
-         * <li><p>If the value of success is true, this parameter is empty.</p>
+         * <li><p>If success is true, null is returned.</p>
          * </li>
          * </ul>
          * 
@@ -144,9 +144,9 @@ public class ListTemplateResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li><p>If the value of success is false, an error message is returned.</p>
+         * <li><p>If success is false, the business error message is returned.</p>
          * </li>
-         * <li><p>If the value of success is true, this parameter is empty.</p>
+         * <li><p>If success is true, null is returned.</p>
          * </li>
          * </ul>
          * 
@@ -181,11 +181,11 @@ public class ListTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * <ul>
-         * <li><p>true: The request was successful.</p>
+         * <li><p>true: Successful.</p>
          * </li>
-         * <li><p>false: The request failed.</p>
+         * <li><p>false: Failed.</p>
          * </li>
          * </ul>
          * 

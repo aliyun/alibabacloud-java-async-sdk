@@ -194,7 +194,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CUs consumed by the job.</p>
+             * <p>The CUs consumed by the job.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -227,7 +227,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of memory requested by the job.</p>
+             * <p>The memory requested by the job.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -336,7 +336,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of jobs.</p>
+             * <p>The job list.</p>
              */
             public Builder jobs(java.util.List<Jobs> jobs) {
                 this.jobs = jobs;
@@ -355,7 +355,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the queue.</p>
+             * <p>The queue name.</p>
              * 
              * <strong>example:</strong>
              * <p>dev_queue</p>
@@ -366,7 +366,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of CUs consumed by the queue.</p>
+             * <p>The total CUs consumed by the queue.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>

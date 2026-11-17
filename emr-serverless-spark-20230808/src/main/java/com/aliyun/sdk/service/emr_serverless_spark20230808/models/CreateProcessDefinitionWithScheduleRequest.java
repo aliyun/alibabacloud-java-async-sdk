@@ -355,7 +355,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * globalParams.
+         * <p>The list of global parameters for the workflow.</p>
          */
         public Builder globalParams(java.util.List<GlobalParams> globalParams) {
             String globalParamsShrink = shrink(globalParams, "globalParams", "json");
@@ -451,7 +451,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
         }
 
         /**
-         * <p>The scheduling structure.</p>
+         * <p>The schedule structure.</p>
          */
         public Builder schedule(Schedule schedule) {
             String scheduleShrink = shrink(schedule, "schedule", "json");
@@ -462,6 +462,9 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -602,7 +605,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             } 
 
             /**
-             * direct.
+             * <p>The parameter direction. Valid values: IN (input) and OUT (output).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder direct(String direct) {
                 this.direct = direct;
@@ -610,7 +616,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * prop.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGlobalParam</p>
              */
             public Builder prop(String prop) {
                 this.prop = prop;
@@ -618,7 +627,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The data type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VARCHAR</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -626,7 +638,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGlobalParam</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -848,7 +863,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             } 
 
             /**
-             * direct.
+             * <p>The parameter direction. Valid values: IN (input) and OUT (output).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder direct(String direct) {
                 this.direct = direct;
@@ -856,7 +874,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * prop.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGlobalParam</p>
              */
             public Builder prop(String prop) {
                 this.prop = prop;
@@ -864,7 +885,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The data type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VARCHAR</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -872,7 +896,10 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGlobalParam</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1238,7 +1265,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * localParams.
+             * <p>The list of local parameters for the task.</p>
              */
             public Builder localParams(java.util.List<LocalParams> localParams) {
                 this.localParams = localParams;
@@ -1321,7 +1348,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The path to the task logs of the Spark node.</p>
+             * <p>The task logs path for the Spark node.</p>
              */
             public Builder sparkLogPath(String sparkLogPath) {
                 this.sparkLogPath = sparkLogPath;
@@ -1329,7 +1356,7 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
             }
 
             /**
-             * <p>The database engine version of the Spark DPI engine.</p>
+             * <p>The Spark DPI engine database engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -1635,6 +1662,9 @@ public class CreateProcessDefinitionWithScheduleRequest extends Request {
 
             /**
              * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</p>
              */
             public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;

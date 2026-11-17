@@ -93,7 +93,7 @@ public class RunLog extends TeaModel {
         } 
 
         /**
-         * <p>The path of the startup file.</p>
+         * <p>The path to the startup file.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/startup</p>
@@ -104,7 +104,7 @@ public class RunLog extends TeaModel {
         }
 
         /**
-         * <p>The path of the stderr file.</p>
+         * <p>The path to the stderr file.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/stderr</p>
@@ -115,7 +115,7 @@ public class RunLog extends TeaModel {
         }
 
         /**
-         * <p>The path of the stdout file.</p>
+         * <p>The path to the stdout file.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/stdout</p>
@@ -126,7 +126,7 @@ public class RunLog extends TeaModel {
         }
 
         /**
-         * <p>The path of the syslog file.</p>
+         * <p>The path to the syslog file.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/syslog</p>

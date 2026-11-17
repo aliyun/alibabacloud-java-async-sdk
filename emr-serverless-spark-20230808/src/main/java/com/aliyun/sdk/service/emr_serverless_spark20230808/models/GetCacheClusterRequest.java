@@ -73,7 +73,7 @@ public class GetCacheClusterRequest extends Request {
         } 
 
         /**
-         * <p>The Cache cluster ID.</p>
+         * <p>The ID of the cache cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>spc-xxxxxxx</p>

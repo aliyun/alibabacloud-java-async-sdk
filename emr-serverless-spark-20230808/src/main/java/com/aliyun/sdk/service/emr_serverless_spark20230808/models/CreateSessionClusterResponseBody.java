@@ -78,7 +78,7 @@ public class CreateSessionClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The session ID.</p>
+         * <p>The ID of the session.</p>
          * 
          * <strong>example:</strong>
          * <p>w-******</p>

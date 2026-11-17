@@ -116,7 +116,7 @@ public class ListQueueTopJobsRequest extends Request {
         }
 
         /**
-         * <p>The name of the queue.</p>
+         * <p>The queue name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class ListQueueTopJobsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of jobs to return. The maximum value is 10.</p>
+         * <p>The maximum number of jobs to return. Maximum value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

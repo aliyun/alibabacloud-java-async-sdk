@@ -139,6 +139,7 @@ public class Credential extends TeaModel {
         } 
 
         /**
+         * <p>sts ak</p>
          * <p>This parameter is required.</p>
          */
         public Builder accessId(String accessId) {
@@ -147,6 +148,7 @@ public class Credential extends TeaModel {
         }
 
         /**
+         * <p>The OSS path.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dir(String dir) {
@@ -155,6 +157,7 @@ public class Credential extends TeaModel {
         }
 
         /**
+         * <p>The timeout period.</p>
          * <p>This parameter is required.</p>
          */
         public Builder expire(String expire) {
@@ -163,6 +166,7 @@ public class Credential extends TeaModel {
         }
 
         /**
+         * <p>The OSS domain name.</p>
          * <p>This parameter is required.</p>
          */
         public Builder host(String host) {
@@ -171,6 +175,7 @@ public class Credential extends TeaModel {
         }
 
         /**
+         * <p>The OSS access policy.</p>
          * <p>This parameter is required.</p>
          */
         public Builder policy(String policy) {
@@ -179,6 +184,7 @@ public class Credential extends TeaModel {
         }
 
         /**
+         * <p>sts token</p>
          * <p>This parameter is required.</p>
          */
         public Builder securityToken(String securityToken) {
@@ -187,6 +193,7 @@ public class Credential extends TeaModel {
         }
 
         /**
+         * <p>The OSS access signature.</p>
          * <p>This parameter is required.</p>
          */
         public Builder signature(String signature) {

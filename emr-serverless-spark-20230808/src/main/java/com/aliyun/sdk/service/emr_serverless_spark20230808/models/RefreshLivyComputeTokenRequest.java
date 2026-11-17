@@ -155,7 +155,7 @@ public class RefreshLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Livy Gateway.</p>
+         * <p>The ID of the Livy gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>lc-i8xogcdfa4fk3yn1</p>
@@ -179,7 +179,7 @@ public class RefreshLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * <p>The information about token expiration.</p>
+         * <p>The token expiration information struct.</p>
          */
         public Builder autoExpireConfiguration(AutoExpireConfiguration autoExpireConfiguration) {
             this.putBodyParameter("autoExpireConfiguration", autoExpireConfiguration);
@@ -200,7 +200,7 @@ public class RefreshLivyComputeTokenRequest extends Request {
         }
 
         /**
-         * <p>The token must be 16 or more characters in length.</p>
+         * <p>The token content. The length must be at least 16.</p>
          * 
          * <strong>example:</strong>
          * <p>fe86812667f04v343</p>
@@ -283,12 +283,10 @@ public class RefreshLivyComputeTokenRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether the token automatically expires.</p>
+             * <p>Specifies whether the token automatically expires. Valid values:</p>
              * <ul>
-             * <li><p>true: The token automatically expires.</p>
-             * </li>
-             * <li><p>false: The token does not automatically expire.</p>
-             * </li>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -300,7 +298,7 @@ public class RefreshLivyComputeTokenRequest extends Request {
             }
 
             /**
-             * <p>The expiration period in days.</p>
+             * <p>The expiration time in days.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>

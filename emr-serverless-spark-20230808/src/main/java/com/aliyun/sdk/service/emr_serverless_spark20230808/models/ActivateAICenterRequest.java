@@ -59,7 +59,7 @@ public class ActivateAICenterRequest extends Request {
         } 
 
         /**
-         * <p>Workspace ID.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-d2d82aa09155****</p>
