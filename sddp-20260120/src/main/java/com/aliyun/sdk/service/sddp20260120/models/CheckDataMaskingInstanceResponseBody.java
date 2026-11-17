@@ -80,7 +80,7 @@ public class CheckDataMaskingInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance check result code. A value of Success indicates that the check is passed. For other values, refer to ErrorMessage for troubleshooting.</p>
+         * <p>The instance check result code. A value of Success indicates that the check is passed. For other values, handle them based on ErrorMessage.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -91,7 +91,7 @@ public class CheckDataMaskingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance check result message. If the check fails, the specific cause is returned.</p>
+         * <p>The instance check result description. If the check fails, the specific cause is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>The instance is not in the running state</p>
@@ -102,7 +102,7 @@ public class CheckDataMaskingInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to locate this API call.</p>
+         * <p>The request ID. You can use this ID to locate the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>

@@ -75,7 +75,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to locate the API call.</p>
+         * <p>The request ID, which can be used to locate this API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -170,7 +170,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of accounts with plaintext access (fullAccess).</p>
+             * <p>The number of accounts with fullAccess plaintext access.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -181,7 +181,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of accounts prohibited from decryption (noneAccess).</p>
+             * <p>The number of accounts with noneAccess decryption prohibition.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -192,7 +192,7 @@ public class GetDataMaskingAccountCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of accounts with restricted access (restrictedAccess).</p>
+             * <p>The number of accounts with restrictedAccess restricted access.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>

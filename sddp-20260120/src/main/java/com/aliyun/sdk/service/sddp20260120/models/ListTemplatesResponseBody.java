@@ -117,7 +117,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of records returned for the current query.</p>
+         * <p>The list of records returned for this query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records per page for the current query.</p>
+         * <p>The number of entries returned per page for this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to trace the current API call.</p>
+         * <p>The request ID, which can be used to locate this API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -147,7 +147,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that match the current query conditions.</p>
+         * <p>The total number of entries that meet the current statistics or query scope.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -355,7 +355,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the template. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+             * <p>The time when the template was created. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1788566400000</p>
@@ -366,7 +366,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modification time of the template. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+             * <p>The time when the template was last modified. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1788566400000</p>
@@ -377,7 +377,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the classification and grading template.</p>
+             * <p>The ID of the classification and grading template.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -421,7 +421,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the template. Valid values: 0: Disabled. 1: Enabled primary template. 2: Active template. 3: General detection model.</p>
+             * <p>The template status. Valid values: 0: Disabled. 1: Enabled primary template. 2: Active template. 3: General detection model.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -443,7 +443,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the template. Valid values: 1: Alibaba Cloud template. 2: Finance template. 3: Energy template. 4: Personal information security template. 5: Travel template. 65: General template. 66: Custom template. 67: Template from other cloud services.</p>
+             * <p>The template category. Valid values: 1: Alibaba Cloud template. 2: Finance template. 3: Energy template. 4: Personal information security template. 5: Travel template. 65: General template. 66: Custom template. 67: Template from other cloud services.</p>
              * 
              * <strong>example:</strong>
              * <p>65</p>

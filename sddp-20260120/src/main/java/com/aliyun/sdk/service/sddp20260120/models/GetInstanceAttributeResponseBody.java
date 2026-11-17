@@ -204,7 +204,7 @@ public class GetInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business error code for the record or operation. This parameter can be empty when no error occurs. You should evaluate this parameter together with ErrorMessage.</p>
+         * <p>The business error code of the record or operation. This parameter can be empty when no error occurs. You should evaluate this parameter together with ErrorMessage.</p>
          * 
          * <strong>example:</strong>
          * <p>data_masking_not_running</p>
@@ -215,7 +215,7 @@ public class GetInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The business error message for the record or operation.</p>
+         * <p>The business error message of the record or operation.</p>
          * 
          * <strong>example:</strong>
          * <p>The instance is not in the running state</p>
@@ -234,7 +234,7 @@ public class GetInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The returned value combines the UTC time of the maintenance window with the date of the query day.</p>
+         * <p>The end time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The UTC time of the maintenance window is combined with the date of the query day and returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1788570000000</p>
@@ -245,7 +245,7 @@ public class GetInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The returned value combines the UTC time of the maintenance window with the date of the query day.</p>
+         * <p>The start time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The UTC time of the maintenance window is combined with the date of the query day and returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1788566400000</p>
@@ -256,7 +256,7 @@ public class GetInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to locate this API call.</p>
+         * <p>The request ID, which can be used to locate the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>

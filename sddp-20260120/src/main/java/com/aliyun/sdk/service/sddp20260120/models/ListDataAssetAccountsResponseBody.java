@@ -117,7 +117,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of records returned in the current query.</p>
+         * <p>The list of records returned in this query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page in the current query.</p>
+         * <p>The number of entries returned per page in this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to trace the current API call.</p>
+         * <p>The request ID. You can use it to locate this API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -147,7 +147,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that meet the current statistics or query conditions.</p>
+         * <p>The total number of entries that meet the current statistics or query scope.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -182,6 +182,9 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthRole")
         private String authRole;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("EncryptionKeyMode")
         private String encryptionKeyMode;
 
@@ -214,6 +217,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             this.aliUid = builder.aliUid;
             this.authDb = builder.authDb;
             this.authRole = builder.authRole;
+            this.description = builder.description;
             this.encryptionKeyMode = builder.encryptionKeyMode;
             this.engineType = builder.engineType;
             this.expireTime = builder.expireTime;
@@ -259,6 +263,13 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
          */
         public String getAuthRole() {
             return this.authRole;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -329,6 +340,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             private Long aliUid; 
             private String authDb; 
             private String authRole; 
+            private String description; 
             private String encryptionKeyMode; 
             private String engineType; 
             private Long expireTime; 
@@ -347,6 +359,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
                 this.aliUid = model.aliUid;
                 this.authDb = model.authDb;
                 this.authRole = model.authRole;
+                this.description = model.description;
                 this.encryptionKeyMode = model.encryptionKeyMode;
                 this.engineType = model.engineType;
                 this.expireTime = model.expireTime;
@@ -359,7 +372,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The database account name.</p>
+             * <p>The database account name. When creating a column encryption rule or modifying account permissions, use this field as-is for UserList[].AccountId and combine it with the InstanceId of this record to select the target account.</p>
              * 
              * <strong>example:</strong>
              * <p>app_reader</p>
@@ -370,7 +383,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the asset belongs.</p>
+             * <p>The identifier of the Alibaba Cloud account to which the asset belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789012****</p>
@@ -381,7 +394,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authentication database of the MongoDB account. This parameter must be passed together with AccountName when modifying permissions.</p>
+             * <p>The authentication database for MongoDB accounts. This field must be passed together with AccountName when modifying permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -394,9 +407,10 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             /**
              * <p>The column encryption access permissions. Valid values:</p>
              * <ul>
-             * <li>fullAccess: plaintext access</li>
-             * <li>restrictedAccess: restricted access</li>
-             * <li>noneAccess: decryption prohibited. This value applies only to ApsaraDB RDS for MySQL instances whose current effective key mode is client_key.</li>
+             * <li>fullAccess: plaintext access.</li>
+             * <li>restrictedAccess: restricted access.</li>
+             * <li>noneAccess: decryption prohibited.
+             * The noneAccess value applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -408,11 +422,22 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
              * <p>The current effective column encryption key mode. Valid values:</p>
              * <ul>
-             * <li>client_key: local key</li>
-             * <li>kms_key: KMS key
-             * This parameter is not returned if no effective configuration exists.</li>
+             * <li>client_key: local key.</li>
+             * <li>kms_key: KMS key.
+             * This field is not returned if no effective configuration exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -435,7 +460,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the plaintext access permissions. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. This parameter is not returned if no validity period is set.</p>
+             * <p>The expiration time of the plaintext access permissions. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. This field is not returned if the validity period Settings are not configured.</p>
              * 
              * <strong>example:</strong>
              * <p>2145953410000</p>
@@ -446,7 +471,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database account ID. This ID is used as AccountId when configuring permissions.</p>
+             * <p>The ID of the Data Security Center (DSC) data asset account record. This is not the database account name. When creating a column encryption rule or modifying account permissions, set AccountId to the AccountName of this record instead of this Id.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -457,7 +482,7 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database instance ID.</p>
+             * <p>The database instance identity.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-2ze1abcdefgh****</p>
@@ -479,7 +504,12 @@ public class ListDataAssetAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud service type ID. Valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+             * <p>The cloud service type identifier. Valid values:</p>
+             * <ul>
+             * <li>5: RDS.</li>
+             * <li>8: POLARDB.</li>
+             * <li>27: PolarDBX2.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>5</p>

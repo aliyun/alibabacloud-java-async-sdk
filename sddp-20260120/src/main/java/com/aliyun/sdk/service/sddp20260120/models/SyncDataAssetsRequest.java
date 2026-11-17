@@ -96,7 +96,7 @@ public class SyncDataAssetsRequest extends Request {
         }
 
         /**
-         * <p>The language of the response. Valid values: zh: Chinese. en: English.</p>
+         * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>

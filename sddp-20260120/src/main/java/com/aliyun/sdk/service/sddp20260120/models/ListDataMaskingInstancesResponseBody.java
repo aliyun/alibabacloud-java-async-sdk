@@ -117,7 +117,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of records returned by the current query.</p>
+         * <p>The list of records returned in this query.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page in the current query.</p>
+         * <p>The number of entries returned per page in this query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -136,7 +136,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to locate the current API call.</p>
+         * <p>The request ID. You can use the ID to locate this API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -170,6 +170,9 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
      * <p>ListDataMaskingInstancesResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("EncryptionAlgorithm")
         private String encryptionAlgorithm;
 
@@ -198,6 +201,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         private String regionName;
 
         private Items(Builder builder) {
+            this.description = builder.description;
             this.encryptionAlgorithm = builder.encryptionAlgorithm;
             this.encryptionKeyId = builder.encryptionKeyId;
             this.engineType = builder.engineType;
@@ -215,6 +219,13 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -281,6 +292,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String description; 
             private String encryptionAlgorithm; 
             private String encryptionKeyId; 
             private String engineType; 
@@ -295,6 +307,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.description = model.description;
                 this.encryptionAlgorithm = model.encryptionAlgorithm;
                 this.encryptionKeyId = model.encryptionKeyId;
                 this.engineType = model.engineType;
@@ -305,6 +318,17 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
                 this.regionId = model.regionId;
                 this.regionName = model.regionName;
             } 
+
+            /**
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
 
             /**
              * <p>The current column encryption algorithm of the instance.</p>
@@ -373,7 +397,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud service type. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2.</p>
+             * <p>The ID of the cloud service type. Valid values: 5 (RDS), 8 (PolarDB), and 27 (PolarDB-X 2.0).</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

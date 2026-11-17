@@ -162,7 +162,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A compatible pagination cursor field. The ListDataSources operation uses page number-based pagination and does not rely on this field to determine whether more pages exist.</p>
+         * <p>A compatible pagination cursor field. The ListDataSources operation uses page number-based pagination and does not rely on this field to determine whether a next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>token-example</p>
@@ -173,7 +173,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records returned on each page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request identity, which is active when you invoke this API call.</p>
+         * <p>The ID of the request. You can use the ID to locate the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -511,13 +511,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The connection status of the data source. Valid values:</p>
-             * <ul>
-             * <li>UnConnected: Not connected.</li>
-             * <li>Processing: Connecting.</li>
-             * <li>Success: Connected.</li>
-             * <li>Failed: Connection failed.</li>
-             * </ul>
+             * <p>The connection status of the data source. Valid values: UnConnected: not connected. Processing: connecting. Success: connected. Failed: connection failed.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -594,7 +588,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business error code of the record or operation. This field can be empty if no error occurs. Evaluate this field together with ErrorMessage.</p>
+             * <p>The business error code for the record or operation. This parameter may be empty if no error occurs. Evaluate this parameter together with ErrorMessage.</p>
              * 
              * <strong>example:</strong>
              * <p>data_masking_not_running</p>
@@ -605,7 +599,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The business error message of the record or operation.</p>
+             * <p>The business error message for the record or operation.</p>
              * 
              * <strong>example:</strong>
              * <p>The instance is not in the running state</p>
@@ -616,7 +610,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the record.</p>
+             * <p>The ID of the record.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -627,17 +621,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the data source detection switch. Valid values:</p>
-             * <ul>
-             * <li>Enable: Submitted for enabling.</li>
-             * <li>Enabling: Enabling.</li>
-             * <li>Enabled: Enabled.</li>
-             * <li>EnableFailed: Enabling failed.</li>
-             * <li>Disable: Submitted for disabling.</li>
-             * <li>Disabling: Disabling.</li>
-             * <li>Disabled: Disabled.</li>
-             * <li>DisableFailed: Disabling failed.</li>
-             * </ul>
+             * <p>The status of the data source detection switch. Valid values: Enable: submitted for enabling. Enabling: enabling. Enabled: enabled. EnableFailed: enabling failed. Disable: submitted for disabling. Disabling: disabling. Disabled: disabled. DisableFailed: disabling failed.</p>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -670,7 +654,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port for the database connection.</p>
+             * <p>The database connection port.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -692,7 +676,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the cloud service type. 5: ApsaraDB RDS; 8: PolarDB; 27: PolarDB-X 2.0.</p>
+             * <p>The identifier of the cloud service type. 5: ApsaraDB RDS. 8: PolarDB. 27: PolarDB-X 2.0.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -703,7 +687,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the asset resides.</p>
+             * <p>The ID of the region where the asset is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-zhangjiakou</p>
@@ -714,7 +698,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region where the asset resides.</p>
+             * <p>The name of the region where the asset is located.</p>
              * 
              * <strong>example:</strong>
              * <p>China (Zhangjiakou)</p>
@@ -725,7 +709,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the asset belongs.</p>
+             * <p>The identifier of the resource group to which the asset belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfmexample****</p>

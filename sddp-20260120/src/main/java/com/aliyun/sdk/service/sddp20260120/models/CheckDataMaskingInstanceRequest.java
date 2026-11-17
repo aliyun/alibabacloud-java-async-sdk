@@ -124,7 +124,7 @@ public class CheckDataMaskingInstanceRequest extends Request {
         }
 
         /**
-         * <p>The database instance identity. You can obtain the value from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
+         * <p>The database instance identity. You can obtain this value from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
@@ -138,8 +138,8 @@ public class CheckDataMaskingInstanceRequest extends Request {
         /**
          * <p>The language of the response description. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class CheckDataMaskingInstanceRequest extends Request {
         }
 
         /**
-         * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
+         * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -164,11 +164,11 @@ public class CheckDataMaskingInstanceRequest extends Request {
         }
 
         /**
-         * <p>The cloud service type identifier. Valid values:</p>
+         * <p>The cloud product type identifier. Valid values:</p>
          * <ul>
-         * <li>5: RDS</li>
-         * <li>8: POLARDB</li>
-         * <li>27: PolarDBX2
+         * <li>5: RDS.</li>
+         * <li>8: POLARDB.</li>
+         * <li>27: PolarDBX2.
          * If this parameter is specified together with ProductCode, the values must match.</li>
          * </ul>
          * 

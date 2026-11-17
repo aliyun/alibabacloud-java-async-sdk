@@ -101,7 +101,7 @@ public class ListIdentifyModelsRequest extends Request {
         } 
 
         /**
-         * <p>The reserved feature type parameter. This parameter is not used to filter results in the current query and does not need to be specified for column encryption calls.</p>
+         * <p>The reserved feature type parameter. This parameter is not used to filter results in the current query and is not required for column encryption calls.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -113,7 +113,7 @@ public class ListIdentifyModelsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restrict the results to recognition models supported in audit scenarios. If you set this parameter to true, models supported for auditing, such as mobile phone numbers, ID cards, and bank cards, are filtered. This parameter is optional for column encryption scenarios.</p>
+         * <p>Specifies whether to restrict the results to detection models supported in audit scenarios. If you set this parameter to true, only models supported for auditing, such as mobile phone numbers, ID cards, and bank cards, are returned. This parameter is optional for column encryption scenarios.</p>
          */
         public Builder filterAuditModel(Boolean filterAuditModel) {
             this.putQueryParameter("FilterAuditModel", filterAuditModel);
@@ -134,7 +134,7 @@ public class ListIdentifyModelsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data classification template. You can obtain the ID from Items[].Id in the response of the ListTemplates operation. The ID must be consistent with the selected sensitivity level and recognition model.</p>
+         * <p>The ID of the data classification template. You can obtain the ID from Items[].Id returned by ListTemplates. The template must be consistent with the selected sensitivity level and detection model.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -152,7 +152,7 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * <p>The database engine type. The value must be the same as the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
+         * <p>The database engine type. This value must be consistent with the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -164,7 +164,7 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * <p>The database instance identifier. You can obtain this value from the Items[].InstanceId field in the response of the ListDataMaskingInstances operation.</p>
+         * <p>The database instance identity. You can obtain this value from the Items[].InstanceId field in the response of the ListDataMaskingInstances operation.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
@@ -176,7 +176,11 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * <p>The language of the response message. Valid values: zh: Chinese. en: English.</p>
+         * <p>The language of the response message. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -188,7 +192,7 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
+         * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two parameters must match.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -200,7 +204,13 @@ public class DeleteDataMaskingRuleRequest extends Request {
         }
 
         /**
-         * <p>The cloud service type identifier. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If this parameter is specified together with ProductCode, the values must match.</p>
+         * <p>The cloud service type identifier. Valid values:</p>
+         * <ul>
+         * <li>5: RDS.</li>
+         * <li>8: POLARDB.</li>
+         * <li>27: PolarDBX2.
+         * If specified together with ProductCode, the values must correspond to each other.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>5</p>

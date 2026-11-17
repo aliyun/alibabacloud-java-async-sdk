@@ -124,7 +124,7 @@ public class ListRegionsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter regions by assets with auditing enabled. Valid values: true: Enabled. false: Disabled. If you do not specify this parameter, this filter condition is not applied.</p>
+         * <p>Specifies whether to filter regions based on assets for which auditing is enabled. Valid values: true: Auditing is enabled. false: Auditing is not enabled. If you do not specify this parameter, this condition is not used.</p>
          */
         public Builder audited(Boolean audited) {
             this.putQueryParameter("Audited", audited);
@@ -133,7 +133,7 @@ public class ListRegionsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter regions by assets with detection enabled. Valid values: true: Enabled. false: Disabled. If you do not specify this parameter, this filter condition is not applied.</p>
+         * <p>Specifies whether to filter regions based on assets for which detection is enabled. Valid values: true: Detection is enabled. false: Detection is not enabled. If you do not specify this parameter, this condition is not used.</p>
          */
         public Builder identified(Boolean identified) {
             this.putQueryParameter("Identified", identified);
