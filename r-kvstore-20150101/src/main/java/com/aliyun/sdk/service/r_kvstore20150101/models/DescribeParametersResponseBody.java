@@ -114,7 +114,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database type.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>redis</p>

@@ -184,7 +184,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Alibaba Cloud account ID of the key creator.</p>
+         * <p>The ID of the Alibaba Cloud account that created the key.</p>
          * 
          * <strong>example:</strong>
          * <p>17649847********</p>
@@ -195,9 +195,9 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The estimated time when the key is to be deleted. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The scheduled deletion time of the key for the instance. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * <blockquote>
-         * <p>If this parameter is empty, the key will not be automatically deleted.</p>
+         * <p>If this parameter is empty, the key is not automatically deleted.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the key. By default, this parameter is empty.</p>
+         * <p>The description of the key. Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>testkey</p>
@@ -220,7 +220,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The key ID of the instance.</p>
+         * <p>The ID of the key for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ad463061-992d-4195-8a94-ed63********</p>
@@ -231,10 +231,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the key. Valid values:</p>
+         * <p>The status of the key for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: The key is available.</li>
-         * <li><strong>Disabled</strong>: The key is unavailable.</li>
+         * <li><strong>Enabled</strong>: Available.</li>
+         * <li><strong>Disabled</strong>: Unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The purpose of the key. The return value <code>ENCRYPT/DECRYPT</code> indicates that the key is used for encryption and decryption.</p>
+         * <p>The purpose of the key for the instance. A value of <code>ENCRYPT/DECRYPT</code> indicates encryption and decryption.</p>
          * 
          * <strong>example:</strong>
          * <p>ENCRYPT/DECRYPT</p>
@@ -268,7 +268,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of the key. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The expiration time of the key. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * <blockquote>
          * <p>If this parameter is empty, the key does not expire.</p>
          * </blockquote>
@@ -282,7 +282,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The source of the key material. The return value is <strong>Aliyun_KMS</strong>, which indicates Alibaba Cloud <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a>.</p>
+         * <p>The source of the key material. A value of <strong>Aliyun_KMS</strong> indicates Alibaba Cloud <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Aliyun_KMS</p>
@@ -293,7 +293,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9A931CE5-C926-5E09-B0EC-6299C4A6****</p>
@@ -304,7 +304,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the role to be granted authorization.</p>
+         * <p>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the role pending authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</p>

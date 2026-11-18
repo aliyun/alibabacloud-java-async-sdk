@@ -114,7 +114,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order parameters. This parameter is returned when OrderParamOut is set to <code>true</code>.</p>
+         * <p>The order parameters. Returned when OrderParamOut is set to <code>true</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>String</p>
@@ -164,11 +164,17 @@ public class DescribePriceResponseBody extends TeaModel {
      * <p>DescribePriceResponseBody</p>
      */
     public static class Coupon extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActivityExtInfo")
+        private java.util.Map<String, ?> activityExtInfo;
+
         @com.aliyun.core.annotation.NameInMap("CouponNo")
         private String couponNo;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Effective")
+        private Boolean effective;
 
         @com.aliyun.core.annotation.NameInMap("IsSelected")
         private String isSelected;
@@ -177,8 +183,10 @@ public class DescribePriceResponseBody extends TeaModel {
         private String name;
 
         private Coupon(Builder builder) {
+            this.activityExtInfo = builder.activityExtInfo;
             this.couponNo = builder.couponNo;
             this.description = builder.description;
+            this.effective = builder.effective;
             this.isSelected = builder.isSelected;
             this.name = builder.name;
         }
@@ -189,6 +197,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static Coupon create() {
             return builder().build();
+        }
+
+        /**
+         * @return activityExtInfo
+         */
+        public java.util.Map<String, ?> getActivityExtInfo() {
+            return this.activityExtInfo;
         }
 
         /**
@@ -206,6 +221,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return effective
+         */
+        public Boolean getEffective() {
+            return this.effective;
+        }
+
+        /**
          * @return isSelected
          */
         public String getIsSelected() {
@@ -220,8 +242,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map<String, ?> activityExtInfo; 
             private String couponNo; 
             private String description; 
+            private Boolean effective; 
             private String isSelected; 
             private String name; 
 
@@ -229,11 +253,21 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             private Builder(Coupon model) {
+                this.activityExtInfo = model.activityExtInfo;
                 this.couponNo = model.couponNo;
                 this.description = model.description;
+                this.effective = model.effective;
                 this.isSelected = model.isSelected;
                 this.name = model.name;
             } 
+
+            /**
+             * ActivityExtInfo.
+             */
+            public Builder activityExtInfo(java.util.Map<String, ?> activityExtInfo) {
+                this.activityExtInfo = activityExtInfo;
+                return this;
+            }
 
             /**
              * CouponNo.
@@ -248,6 +282,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Effective.
+             */
+            public Builder effective(Boolean effective) {
+                this.effective = effective;
                 return this;
             }
 
@@ -514,7 +556,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * <p>The promotion name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Contract_Discount_Order_xxxOff</p>
+             * <p>Contract discount_Entire order_xxx% off</p>
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -522,7 +564,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price after the discount.</p>
+             * <p>The final price after the discount.</p>
              */
             public Builder finalFee(Double finalFee) {
                 this.finalFee = finalFee;
@@ -731,7 +773,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The price reduction ratio.</p>
+             * <p>The price reduction rate.</p>
              * 
              * <strong>example:</strong>
              * <p>30%</p>
@@ -761,7 +803,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price difference discount, displayed in the order total.</p>
+             * <p>The price difference discount (displayed in the total order price).</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -783,7 +825,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a contract-based discount is applied.</p>
+             * <p>Indicates whether a contract discount is applied.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -794,7 +836,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the price reduction is displayed.</p>
+             * <p>Indicates whether to display the price reduction extent.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1126,7 +1168,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The currency. The value is CNY (Chinese Yuan) for the China site and USD (US Dollar) for the international site.</p>
+             * <p>The currency. CNY for the China site and USD for the international site.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -1167,7 +1209,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a contract-based discount is applied.</p>
+             * <p>Indicates whether a contract discount is applied.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1208,7 +1250,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether discount information is displayed.</p>
+             * <p>Indicates whether to display the discount information.</p>
              */
             public Builder showDiscountInfo(Boolean showDiscountInfo) {
                 this.showDiscountInfo = showDiscountInfo;
@@ -1591,7 +1633,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * <p>The promotion name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Contract_Discount_Order_xxxOff</p>
+             * <p>Contract discount_Entire order_xxx% off</p>
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -1599,7 +1641,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price after the discount.</p>
+             * <p>The final price after the discount.</p>
              */
             public Builder finalFee(Double finalFee) {
                 this.finalFee = finalFee;
@@ -1808,7 +1850,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The price reduction ratio.</p>
+             * <p>The price reduction rate.</p>
              * 
              * <strong>example:</strong>
              * <p>30%</p>
@@ -1838,7 +1880,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price difference discount, displayed in the order total.</p>
+             * <p>The price difference discount (displayed in the total order price).</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -1860,7 +1902,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a contract-based discount is applied.</p>
+             * <p>Indicates whether a contract discount is applied.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2075,7 +2117,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The price reduction ratio.</p>
+             * <p>The price reduction rate.</p>
              * 
              * <strong>example:</strong>
              * <p>30%</p>
@@ -2097,7 +2139,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price difference discount, displayed in the order total.</p>
+             * <p>The price difference discount (displayed in the total order price).</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -2119,7 +2161,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a contract-based discount is applied.</p>
+             * <p>Indicates whether a contract discount is applied.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2130,7 +2172,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the price reduction is displayed.</p>
+             * <p>Indicates whether to display the price reduction extent.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2723,6 +2765,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("Effective")
+        private Boolean effective;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -2746,6 +2791,7 @@ public class DescribePriceResponseBody extends TeaModel {
             this.canPromFee = builder.canPromFee;
             this.couponNo = builder.couponNo;
             this.description = builder.description;
+            this.effective = builder.effective;
             this.name = builder.name;
             this.optionCode = builder.optionCode;
             this.promotionName = builder.promotionName;
@@ -2788,6 +2834,13 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return effective
+         */
+        public Boolean getEffective() {
+            return this.effective;
         }
 
         /**
@@ -2837,6 +2890,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String canPromFee; 
             private String couponNo; 
             private String description; 
+            private Boolean effective; 
             private String name; 
             private String optionCode; 
             private String promotionName; 
@@ -2852,6 +2906,7 @@ public class DescribePriceResponseBody extends TeaModel {
                 this.canPromFee = model.canPromFee;
                 this.couponNo = model.couponNo;
                 this.description = model.description;
+                this.effective = model.effective;
                 this.name = model.name;
                 this.optionCode = model.optionCode;
                 this.promotionName = model.promotionName;
@@ -2889,6 +2944,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Effective.
+             */
+            public Builder effective(Boolean effective) {
+                this.effective = effective;
                 return this;
             }
 
@@ -3547,7 +3610,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a contract-based discount is applied.</p>
+             * <p>Indicates whether a contract discount is applied.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

@@ -133,6 +133,9 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
 
         /**
          * <p>The list of big keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;db&quot;:&quot;0&quot;,&quot;qps&quot;:0,&quot;keyType&quot;:&quot;list&quot;,&quot;isExpired&quot;:&quot;no&quot;,&quot;analysisType&quot;:&quot;BIGKEY&quot;,&quot;key&quot;:&quot;mylist&quot;,&quot;memory&quot;:1005377,&quot;size&quot;:200000}]</p>
          */
         public Builder bigKeys(java.util.List<java.util.Map<String, ?>> bigKeys) {
             this.bigKeys = bigKeys;

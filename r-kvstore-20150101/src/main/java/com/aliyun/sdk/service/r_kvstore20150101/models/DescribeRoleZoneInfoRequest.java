@@ -195,7 +195,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
          * <ul>
          * <li><p><strong>0</strong>: proxy node.</p>
          * <blockquote>
-         * <p>This parameter is supported only by instances that use the cluster or read/write splitting architecture.</p>
+         * <p>This value is supported only for instances of the cluster or read/write splitting architecture.</p>
          * </blockquote>
          * </li>
          * <li><p><strong>1</strong>: data node. This is the default value.</p>

@@ -295,7 +295,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>The fuzzy match string for the account name.</p>
+         * <p>The keyword for fuzzy search of the account name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

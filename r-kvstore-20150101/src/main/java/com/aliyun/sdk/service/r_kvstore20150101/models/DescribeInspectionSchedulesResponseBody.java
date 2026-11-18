@@ -311,8 +311,7 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the scheduled task configuration was created.</p>
-             * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * <p>The time when the scheduled task configuration was created. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-04-21T02:26:18Z</p>
@@ -348,7 +347,7 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
              * <p>The inspection items.</p>
              * <blockquote>
              * <ul>
-             * <li>Supported inspection items include RESOURCE_USAGE, BIGKEY, HOTKEY, PERFORMANCE_METRICS, and SLOWLOG.</li>
+             * <li>Currently, the supported inspection items are RESOURCE_USAGE, BIGKEY, HOTKEY, PERFORMANCE_METRICS, and SLOWLOG.</li>
              * </ul>
              * </blockquote>
              * 
@@ -383,8 +382,7 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The next time the task is scheduled to run.</p>
-             * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * <p>The next time the task is scheduled to run. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-29T10:00:00Z</p>
@@ -450,8 +448,7 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
-             * <p>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
+             * <p>The update time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-29T06:50:04Z</p>
@@ -566,7 +563,7 @@ public class DescribeInspectionSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

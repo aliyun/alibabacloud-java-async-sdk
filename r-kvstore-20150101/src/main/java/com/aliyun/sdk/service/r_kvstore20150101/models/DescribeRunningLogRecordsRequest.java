@@ -312,9 +312,9 @@ public class DescribeRunningLogRecordsRequest extends Request {
         /**
          * <p>The shard type of the cluster instance. Valid values:</p>
          * <ul>
-         * <li><strong>proxy</strong>: proxy node</li>
-         * <li><strong>db</strong>: data node</li>
-         * <li><strong>cs</strong>: config server node</li>
+         * <li><strong>proxy</strong>: proxy node.</li>
+         * <li><strong>db</strong>: data node.</li>
+         * <li><strong>cs</strong>: config server node.</li>
          * </ul>
          * <blockquote>
          * <p>If you specify this parameter, you must also specify the <strong>NodeId</strong> parameter.</p>
@@ -342,7 +342,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The end time of the query. The end time must be later than the start time, and the time span between the start time and end time cannot exceed one day. We recommend that you set the time span to one hour. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
+         * <p>The end time of the query. The end time must be later than the start time. The time range between the start time and the end time cannot exceed one day. We recommend that you set the time range to one hour. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -388,8 +388,8 @@ public class DescribeRunningLogRecordsRequest extends Request {
         /**
          * <p>The sort order of the query results. Valid values:</p>
          * <ul>
-         * <li><strong>asc</strong>: ascending order</li>
-         * <li><strong>desc</strong>: descending order</li>
+         * <li><strong>asc</strong>: ascending order.</li>
+         * <li><strong>desc</strong>: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -420,7 +420,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -488,8 +488,8 @@ public class DescribeRunningLogRecordsRequest extends Request {
         /**
          * <p>The role type of the data shard. Valid values:</p>
          * <ul>
-         * <li><strong>master</strong> (default): primary node</li>
-         * <li><strong>slave</strong>: secondary node</li>
+         * <li><strong>master</strong> (default): primary node.</li>
+         * <li><strong>slave</strong>: secondary node.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -23,6 +23,10 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LevelSummary")
+    private String levelSummary;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
@@ -41,6 +45,7 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
     private DescribeInspectionScheduleReportsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.levelSummary = builder.levelSummary;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.scheduleId = builder.scheduleId;
@@ -65,6 +70,13 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return levelSummary
+     */
+    public String getLevelSummary() {
+        return this.levelSummary;
     }
 
     /**
@@ -97,6 +109,7 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeInspectionScheduleReportsRequest, Builder> {
         private String instanceId; 
+        private String levelSummary; 
         private Long pageNum; 
         private Long pageSize; 
         private String scheduleId; 
@@ -109,6 +122,7 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
         private Builder(DescribeInspectionScheduleReportsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.levelSummary = request.levelSummary;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.scheduleId = request.scheduleId;
@@ -116,7 +130,7 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +139,24 @@ public class DescribeInspectionScheduleReportsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>The summary of risk levels in the inspection results. You can specify multiple values. Valid values:</p>
+         * <ul>
+         * <li>Normal: Normal.</li>
+         * <li>Warning: Alert.</li>
+         * <li>Error: High-risk.</li>
+         * <li>Failed: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Error</p>
+         */
+        public Builder levelSummary(String levelSummary) {
+            this.putQueryParameter("LevelSummary", levelSummary);
+            this.levelSummary = levelSummary;
             return this;
         }
 

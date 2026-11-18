@@ -125,7 +125,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

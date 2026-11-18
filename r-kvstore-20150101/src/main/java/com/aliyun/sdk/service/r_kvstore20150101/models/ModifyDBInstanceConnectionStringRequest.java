@@ -239,7 +239,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         /**
          * <p>The network type of the endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>Private</strong>: virtual private cloud (VPC).</li>
+         * <li><strong>Private</strong>: VPC.</li>
          * <li><strong>Public</strong>: Internet.</li>
          * </ul>
          * 
@@ -253,9 +253,9 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the new endpoint. The endpoint of the instance is in the format of <code>&lt;prefix&gt;.redis.rds.aliyuncs.com</code>. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.</p>
+         * <p>The prefix of the new endpoint. The endpoint format is <code>&lt;prefix&gt;.redis.rds.aliyuncs.com</code>. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</p>
          * <blockquote>
-         * <p>You must specify at least one of the request parameters <strong>NewConnectionString</strong> and <strong>Port</strong>.</p>
+         * <p>You must specify at least one of the <strong>NewConnectionString</strong> and <strong>Port</strong> request parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         /**
          * <p>The service port number of the instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <blockquote>
-         * <p>You must specify at least one of the request parameters <strong>NewConnectionString</strong> and <strong>Port</strong>.</p>
+         * <p>You must specify at least one of the <strong>NewConnectionString</strong> and <strong>Port</strong> request parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

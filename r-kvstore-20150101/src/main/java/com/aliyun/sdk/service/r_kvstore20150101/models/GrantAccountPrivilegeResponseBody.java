@@ -54,7 +54,7 @@ public class GrantAccountPrivilegeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3845BDF5-15A6-4444-B770-78501819****</p>

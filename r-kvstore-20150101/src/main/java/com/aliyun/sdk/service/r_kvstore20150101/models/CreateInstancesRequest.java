@@ -268,10 +268,10 @@ public class CreateInstancesRequest extends Request {
          * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: enables automatic payment. This is the default value.</li>
-         * <li><strong>false</strong>: disables automatic payment. You must manually pay for the order. In the top navigation bar of the console, choose <strong>Billing</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; <strong>My Orders</strong>, find the order, and then complete the payment.</li>
+         * <li><strong>false</strong>: disables automatic payment. You must manually pay for the order. To pay for the order, log on to the console, choose <strong>Expenses and Costs</strong> &gt; <strong>Renewal Management</strong> in the top navigation bar, and then choose <strong>Order Management</strong> &gt; <strong>My Orders</strong> in the left-side navigation pane to find the order.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available only when the <strong>ChargeType</strong> parameter in the <strong>Instances</strong> array is set to <strong>PrePaid</strong>.</p>
+         * <p>This parameter is available only when the <strong>ChargeType</strong> parameter in the <strong>Instances</strong> field is set to <strong>PrePaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class CreateInstancesRequest extends Request {
          * <li><strong>false</strong>: disables auto-renewal. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available only when the <strong>ChargeType</strong> parameter in the <strong>Instances</strong> array is set to <strong>PrePaid</strong>.</p>
+         * <p>This parameter is available only when the <strong>ChargeType</strong> parameter in the <strong>Instances</strong> field is set to <strong>PrePaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * <p>The configuration information of the new instances. The value must be in JSON format. For more information, see the supplementary description of the Instances parameter.</p>
+         * <p>The configuration information of the new instances. The value is in JSON format. For more information, see the supplementary description of the Instances parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -391,7 +391,7 @@ public class CreateInstancesRequest extends Request {
          * <li><strong>false</strong>: no. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available only when the <strong>SrcDBInstanceId</strong> parameter is specified in the <strong>Instances</strong> array.</p>
+         * <p>This parameter is available only when the <strong>SrcDBInstanceId</strong> parameter is specified in the <strong>Instances</strong> field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

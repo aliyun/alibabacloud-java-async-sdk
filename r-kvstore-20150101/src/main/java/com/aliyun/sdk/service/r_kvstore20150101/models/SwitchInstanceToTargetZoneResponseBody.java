@@ -79,6 +79,9 @@ public class SwitchInstanceToTargetZoneResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62****07</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

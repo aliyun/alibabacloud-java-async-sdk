@@ -125,7 +125,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -346,7 +346,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the O&amp;M task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * <p>The time when the O&amp;M task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-24T06:00:11Z</p>
@@ -357,7 +357,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database type. Return value: <strong>redis</strong>.</p>
+             * <p>The database type. Valid value: <strong>redis</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>redis</p>
@@ -368,7 +368,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest time within the adjustable range for the O&amp;M task execution time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * <p>The latest time to which the execution time of the O&amp;M task can be adjusted. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-29T13:59:59Z</p>
@@ -401,7 +401,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the O&amp;M task was modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * <p>The time when the O&amp;M task was modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-24T08:18:53Z</p>
@@ -412,7 +412,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The preparation time required between the O&amp;M task start time and the switchover time. The time is in the <i>HH:mm:ss</i> format.</p>
+             * <p>The preparation time required between the start time and the switchover time of the O&amp;M task. The time is in the <i>HH:mm:ss</i> format.</p>
              * 
              * <strong>example:</strong>
              * <p>14:00:00</p>
@@ -434,7 +434,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution time of the O&amp;M task. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * <p>The execution time of the O&amp;M task. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-20T02:40:00Z</p>
@@ -447,12 +447,12 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             /**
              * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>2</strong>: Waiting for the user to specify a time.</li>
-             * <li><strong>3</strong>: Waiting to be processed.</li>
-             * <li><strong>4</strong>: Being processed. After the task enters this state, you cannot call <strong>ModifyActiveOperationTask</strong> to modify the scheduled switchover time.</li>
-             * <li><strong>5</strong>: Succeeded.</li>
-             * <li><strong>6</strong>: Failed.</li>
-             * <li><strong>7</strong>: Canceled.</li>
+             * <li><strong>2</strong>: waiting for the user to specify a time.</li>
+             * <li><strong>3</strong>: waiting to be processed.</li>
+             * <li><strong>4</strong>: processing. After the task enters this state, you cannot call <strong>ModifyActiveOperationTask</strong> to modify the scheduled switchover time.</li>
+             * <li><strong>5</strong>: successful.</li>
+             * <li><strong>6</strong>: failed.</li>
+             * <li><strong>7</strong>: canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -464,7 +464,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the system-initiated switchover operation is performed. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * <p>The time when the system initiates the switchover. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-20T03:10:00Z</p>
@@ -477,9 +477,9 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             /**
              * <p>The task type. Valid values:</p>
              * <ul>
-             * <li><strong>rds_apsaradb_ha</strong>: node failover.</li>
+             * <li><strong>rds_apsaradb_ha</strong>: switch of primary and secondary nodes.</li>
              * <li><strong>rds_apsaradb_transfer</strong>: instance migration.</li>
-             * <li><strong>rds_apsaradb_upgrade</strong>: minor engine version update.</li>
+             * <li><strong>rds_apsaradb_upgrade</strong>: minor version update.</li>
              * <li><strong>all</strong>: all task types.</li>
              * </ul>
              * 

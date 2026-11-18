@@ -249,8 +249,8 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription.</li>
-         * <li>PostPaid: pay-as-you-go.</li>
+         * <li><code>PrePaid</code>: subscription.</li>
+         * <li><code>PostPaid</code>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed configuration of the instance in JSON format. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/43885.html">Parameter settings</a>.</p>
+         * <p>The detailed configurations of the instance. The value is a JSON string. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/43885.html">Parameter settings</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</p>
@@ -273,7 +273,7 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal endpoint of the Redis instance.</p>
+         * <p>The internal network connection endpoint of the ApsaraDB for Redis instance.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx**.redis.rds.aliyuncs.com</p>
@@ -284,7 +284,7 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of connections supported by the instance.</p>
+         * <p>The maximum number of connections to the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -295,7 +295,7 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The globally unique instance ID.</p>
+         * <p>The instance ID. The ID is globally unique.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx*</p>
@@ -328,7 +328,7 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Redis service port.</p>
+         * <p>The ApsaraDB for Redis service port.</p>
          * 
          * <strong>example:</strong>
          * <p>6379</p>
@@ -339,7 +339,7 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queries per second (QPS). This value is the theoretical value for the current instance specification.</p>
+         * <p>The queries per second (QPS). This value is the theoretical QPS of the current instance specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -383,7 +383,7 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task flow that is executed for the creation.</p>
+         * <p>The ID of the task flow created and executed.</p>
          * 
          * <strong>example:</strong>
          * <p>11111****</p>

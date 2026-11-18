@@ -158,7 +158,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database engine.</p>
+         * <p>The database type.</p>
          * 
          * <strong>example:</strong>
          * <p>Redis</p>
@@ -232,8 +232,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query.</p>
-         * <p>The time is in the YYYY-MM-DDTHH:mmZ format and displayed in UTC.</p>
+         * <p>The start time of the query. The time is in the YYYY-MM-DDTHH:mmZ format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-03-10T14:00Z</p>

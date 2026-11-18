@@ -97,7 +97,7 @@ public class DescribeTairSkvDdbTableRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance to query.</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

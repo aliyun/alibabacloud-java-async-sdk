@@ -160,9 +160,9 @@ public class DescribeParameterGroupsRequest extends Request {
         /**
          * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><strong>redis</strong>: open-source Redis or Tair (Memory-optimized).</li>
-         * <li><strong>tair_pena</strong>: Tair (Persistent Memory-optimized).</li>
-         * <li><strong>tair_pdb</strong>: Tair (Disk-optimized, ESSD/SSD).</li>
+         * <li><strong>redis</strong>: open-source Redis or Tair (memory-optimized).</li>
+         * <li><strong>tair_pena</strong>: Tair (persistent memory-optimized).</li>
+         * <li><strong>tair_pdb</strong>: Tair (disk-optimized, ESSD/SSD).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,6 +176,9 @@ public class DescribeParameterGroupsRequest extends Request {
 
         /**
          * <p>The compatible engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);

@@ -54,6 +54,10 @@ public class DescribePriceRequest extends Request {
     private String instances;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedUnavailableCoupon")
+    private Boolean needUnavailableCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
@@ -121,6 +125,7 @@ public class DescribePriceRequest extends Request {
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
         this.instances = builder.instances;
+        this.needUnavailableCoupon = builder.needUnavailableCoupon;
         this.nodeType = builder.nodeType;
         this.orderParamOut = builder.orderParamOut;
         this.orderType = builder.orderType;
@@ -211,6 +216,13 @@ public class DescribePriceRequest extends Request {
      */
     public String getInstances() {
         return this.instances;
+    }
+
+    /**
+     * @return needUnavailableCoupon
+     */
+    public Boolean getNeedUnavailableCoupon() {
+        return this.needUnavailableCoupon;
     }
 
     /**
@@ -321,6 +333,7 @@ public class DescribePriceRequest extends Request {
         private String instanceClass; 
         private String instanceId; 
         private String instances; 
+        private Boolean needUnavailableCoupon; 
         private String nodeType; 
         private String orderParamOut; 
         private String orderType; 
@@ -351,6 +364,7 @@ public class DescribePriceRequest extends Request {
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
             this.instances = request.instances;
+            this.needUnavailableCoupon = request.needUnavailableCoupon;
             this.nodeType = request.nodeType;
             this.orderParamOut = request.orderParamOut;
             this.orderType = request.orderType;
@@ -368,7 +382,7 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * <p>The extended information such as the promotional event ID and business information.</p>
+         * <p>The extended information, such as the promotion ID and business information.</p>
          * 
          * <strong>example:</strong>
          * <p>000000000000</p>
@@ -380,9 +394,9 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The storage capacity used to specify the instance type, in MB. This parameter is used only to query Redis Community Edition instances in classic deployment mode. We recommend that you use the <strong>InstanceClass</strong> parameter to specify an exact instance type.</p>
+         * <p>Specifies the instance type by using the storage capacity of the instance. Unit: MB. This parameter applies only to instances of ApsaraDB for Redis Community Edition in the classic deployment mode. We recommend that you use the <strong>InstanceClass</strong> parameter to specify an exact instance type.</p>
          * <blockquote>
-         * <p>After you specify the <strong>InstanceClass</strong> parameter, you do not need to specify this parameter.</p>
+         * <p>If you specify the <strong>InstanceClass</strong> parameter, you do not need to specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -437,10 +451,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcibly change the configuration. Valid values:</p>
+         * <p>Specifies whether to forcibly upgrade or downgrade the instance. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: yes.</li>
-         * <li><strong>true</strong> (default): no.</li>
+         * <li><strong>false</strong>: Yes.</li>
+         * <li><strong>true</strong> (default): No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -453,19 +467,19 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The instance type specified by using the <strong>InstanceClass</strong> code. To find the <strong>InstanceClass</strong> code:</p>
+         * <p>Specifies the instance type by using the <strong>InstanceClass</strong> code. To query the <strong>InstanceClass</strong> code, perform the following steps:</p>
          * <ol>
-         * <li>In the <a href="https://help.aliyun.com/document_detail/26350.html">instance type navigation</a>, select the desired instance type and click the value in the <strong>Architecture</strong> column to open the specification document.</li>
-         * <li>In the instance type table of the specification document, find the desired instance type and locate the code in the <strong>InstanceClass</strong> column.</li>
+         * <li>On the <a href="https://help.aliyun.com/document_detail/26350.html">Instance type query</a> page, select the instance type as needed and click the value in the <strong>Architecture Type</strong> column to open the instance type documentation.</li>
+         * <li>In the instance type table of the documentation, select the required instance type and find the code in the <strong>InstanceClass</strong> column.</li>
          * </ol>
          * <blockquote>
-         * <p>The following example describes the parameters required for querying the price of a new instance. In addition to other key parameters, specify at least the following parameters:</p>
+         * <p>For example, to query pricing for a new purchase, you must specify at least the following parameters in addition to other key parameters:</p>
          * <ul>
-         * <li>Classic Edition instance: specify this parameter.</li>
-         * <li>Cloud-native Edition standard architecture instance: specify this parameter.</li>
-         * <li>Cloud-native Edition cluster architecture instance: specify this parameter and the <strong>ShardCount</strong> parameter.</li>
-         * <li>Cloud-native Edition read/write splitting architecture instance: specify this parameter and the <strong>Instances</strong> parameter.</li>
-         * <li>Multiple instances of different types, or Tair ESSD-based instances (custom storage type and storage capacity): specify the Instances parameter (this parameter is not required).</li>
+         * <li>To query a classic instance: specify this parameter.</li>
+         * <li>To query a cloud-native standard architecture instance: specify this parameter.</li>
+         * <li>To query a cloud-native cluster architecture instance: specify this parameter and the <strong>ShardCount</strong> parameter.</li>
+         * <li>To query a cloud-native read/write splitting architecture instance: specify this parameter and the <strong>Instances</strong> parameter.</li>
+         * <li>To query multiple instances of different types, or to query Tair ESSD instances (with custom storage types and storage space): specify the Instances parameter. You do not need to specify this parameter.</li>
          * </ul>
          * </blockquote>
          * 
@@ -494,7 +508,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>If you want to query the price of cloud-native read/write splitting architecture instances, Tair ESSD-based instances, or multiple instances of different types, specify this parameter. The value is a JSON-formatted string. For more information, see <strong>Additional description of the Instances parameter</strong> below.</p>
+         * <p>The instances to query. This parameter is required when you query cloud-native read/write splitting architecture instances, Tair ESSD instances, or multiple instances of different types. The value is a JSON string. For more information, see <strong>Supplementary description of the Instances parameter</strong> below.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,&quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,&quot;ShardClass&quot;: &quot;tair.scm.with.proxy.standard.2m.8d&quot;,&quot;ShardCount&quot;: &quot;3&quot;,&quot;Period&quot;: &quot;1&quot;,&quot;Quantity&quot;: &quot;1&quot;}]</p>
@@ -506,10 +520,19 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to return unavailable coupons.</p>
+         */
+        public Builder needUnavailableCoupon(Boolean needUnavailableCoupon) {
+            this.putQueryParameter("NeedUnavailableCoupon", needUnavailableCoupon);
+            this.needUnavailableCoupon = needUnavailableCoupon;
+            return this;
+        }
+
+        /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>STAND_ALONE</strong>: standalone (single replica).</li>
-         * <li><strong>MASTER_SLAVE</strong> (default): high availability (dual replicas).</li>
+         * <li><strong>STAND_ALONE</strong>: Single-replica.</li>
+         * <li><strong>MASTER_SLAVE</strong> (default): High-availability (dual-replica).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -522,10 +545,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return order parameters. Valid values:</p>
+         * <p>Specifies whether to return the order parameters. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): does not return order parameters.</li>
-         * <li><strong>true</strong>: returns order parameters.</li>
+         * <li><strong>false</strong> (default): Not returned.</li>
+         * <li><strong>true</strong>: Returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -540,10 +563,10 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>The order type. Valid values:</p>
          * <ul>
-         * <li><strong>BUY</strong>: new purchase.</li>
-         * <li><strong>UPGRADE</strong>: configuration change.</li>
-         * <li><strong>RENEW</strong>: renewal.</li>
-         * <li><strong>CONVERT</strong>: billing method conversion.</li>
+         * <li><strong>BUY</strong>: New purchase.</li>
+         * <li><strong>UPGRADE</strong>: Upgrade or downgrade.</li>
+         * <li><strong>RENEW</strong>: Renewal.</li>
+         * <li><strong>CONVERT</strong>: Billing method conversion.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -575,7 +598,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration, in months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+         * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -599,7 +622,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query available regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -629,9 +652,9 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The secondary zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</p>
+         * <p>The secondary zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query available zones.</p>
          * <blockquote>
-         * <p>The value of this parameter must be different from the value of the ZoneId parameter.</p>
+         * <p>The value of this parameter cannot be the same as the value of the ZoneId parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -653,7 +676,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The number of data shard nodes in a cloud-native cluster instance.</p>
+         * <p>The number of data shard nodes in the cloud-native cluster instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -665,7 +688,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</p>
+         * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query available zones.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>

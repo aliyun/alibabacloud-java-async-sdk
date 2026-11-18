@@ -251,9 +251,9 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The instance parameters to modify, in JSON format. The new values overwrite the existing values. For example, if you want to set only the <strong>maxmemory-policy</strong> parameter to <strong>noeviction</strong>, pass in <code>{&quot;maxmemory-policy&quot;:&quot;noeviction&quot;}</code>.</p>
+         * <p>The instance parameters to be modified in JSON format. The modified values overwrite the original values. For example, to modify only the <strong>maxmemory-policy</strong> parameter to <strong>noeviction</strong>, you can pass <code>{&quot;maxmemory-policy&quot;:&quot;noeviction&quot;}</code>.</p>
          * <blockquote>
-         * <p>For more information about each parameter, see <a href="https://help.aliyun.com/document_detail/259681.html">Metric description</a>.</p>
+         * <p>For more information about each parameter, see <a href="https://help.aliyun.com/document_detail/259681.html">Parameter description</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -297,7 +297,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The Sentinel compatibility mode, which applies to non-cluster instances. Valid values:</p>
+         * <p>Specifies whether to enable Sentinel compatibility mode for non-cluster instances. Valid values:</p>
          * <ul>
          * <li><strong>no</strong> (default): disabled.</li>
          * <li><strong>yes</strong>: enabled.<blockquote>
@@ -319,11 +319,11 @@ public class ModifyInstanceConfigRequest extends Request {
          * <p>Specifies whether to allow password-free execution of Sentinel-related commands when Sentinel mode is enabled. Valid values:</p>
          * <ul>
          * <li><strong>no</strong> (default): disabled.</li>
-         * <li><strong>yes</strong>: enabled. After this parameter is enabled, you can run Sentinel commands without a password on any connection and use the SENTINEL command to listen on the +switch-master channel.</li>
+         * <li><strong>yes</strong>: enabled. After this feature is enabled, you can execute Sentinel commands without a password on any connection and use the SENTINEL command to monitor the +switch-master channel.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>no</p>
          */
         public Builder paramNoLooseSentinelPasswordFreeAccess(String paramNoLooseSentinelPasswordFreeAccess) {
             this.putQueryParameter("ParamNoLooseSentinelPasswordFreeAccess", paramNoLooseSentinelPasswordFreeAccess);
@@ -332,10 +332,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>After Sentinel mode and the ParamNoLooseSentinelPasswordFreeAccess parameter are enabled, you can use this parameter to add additional password-free commands (empty by default).</p>
+         * <p>The list of additional password-free commands. This parameter takes effect only after Sentinel mode and the ParamNoLooseSentinelPasswordFreeAccess parameter are enabled. Default value: empty.</p>
          * <blockquote>
          * <ul>
-         * <li>After this parameter is set, the specified commands can be run without a password on any connection. Proceed with caution.</li>
+         * <li>After this parameter is set, the specified commands can be executed without a password on any connection. Proceed with caution.</li>
          * <li>Commands must be in lowercase letters. Separate multiple commands with commas (,).</li>
          * </ul>
          * </blockquote>
@@ -352,8 +352,8 @@ public class ModifyInstanceConfigRequest extends Request {
         /**
          * <p>The synchronization mode. Valid values:</p>
          * <ul>
-         * <li><strong>async</strong> (default): asynchronous</li>
-         * <li><strong>semisync</strong>: semi-synchronous</li>
+         * <li><strong>async</strong> (default): asynchronous.</li>
+         * <li><strong>semisync</strong>: semi-synchronous.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -366,11 +366,11 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The degradation threshold for semi-synchronous mode. This parameter can be configured only for semi-synchronous mode. Unit: ms. Valid values: 10 to 60000. Default value: 500.</p>
+         * <p>The degradation threshold for the semi-synchronous mode. This parameter is supported only in the semi-synchronous mode. Unit: milliseconds. Valid values: 10 to 60000. Default value: 500.</p>
          * <blockquote>
          * <ul>
          * <li>When the synchronization latency exceeds this threshold, the synchronization mode automatically switches to asynchronous. When the synchronization latency is eliminated, the synchronization mode automatically switches back to semi-synchronous.</li>
-         * <li>Only Tair Enterprise instances are supported. This feature is in public preview.</li>
+         * <li>This feature is supported only by Tair Enterprise instances and is in public preview.</li>
          * </ul>
          * </blockquote>
          * 
@@ -384,7 +384,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>The Sentinel compatibility mode, which applies to instances in cluster architecture with proxy connection mode or read/write splitting architecture. Valid values:</p>
+         * <p>Specifies whether to enable Sentinel compatibility mode for instances in cluster architecture proxy connection mode or read/write splitting architecture. Valid values:</p>
          * <ul>
          * <li><strong>0</strong> (default): disabled.</li>
          * <li><strong>1</strong>: enabled.<blockquote>

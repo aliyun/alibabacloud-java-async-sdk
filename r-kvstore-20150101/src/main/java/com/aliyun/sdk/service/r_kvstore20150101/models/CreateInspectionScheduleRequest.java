@@ -172,7 +172,7 @@ public class CreateInspectionScheduleRequest extends Request {
         } 
 
         /**
-         * <p>The cron expression for the periodic scheduling.</p>
+         * <p>The cron expression for the periodic schedule.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 2 * * ?</p>
@@ -184,7 +184,7 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
-         * <p>The specified inspection items. The following inspection items are supported:</p>
+         * <p>The specified inspection items. Valid values:</p>
          * <ul>
          * <li>RESOURCE_USAGE</li>
          * <li>BIGKEY</li>
@@ -215,7 +215,7 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
-         * <p>The O&amp;M Assistant instance ID.</p>
+         * <p>The ID of the assistant instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class CreateInspectionScheduleRequest extends Request {
          * <p>The list of associated instance IDs.</p>
          * <blockquote>
          * <ul>
-         * <li>Separate multiple instances with commas (,).</li>
+         * <li>Separate multiple instance IDs with commas (,).</li>
          * </ul>
          * </blockquote>
          * 
@@ -245,7 +245,7 @@ public class CreateInspectionScheduleRequest extends Request {
         }
 
         /**
-         * <p>The report language.</p>
+         * <p>The language of the report.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>

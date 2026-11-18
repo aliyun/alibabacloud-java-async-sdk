@@ -88,7 +88,7 @@ public class DeleteInspectionScheduleRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID of the AI assistant.</p>
+         * <p>The ID of the AI assistant instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class DeleteInspectionScheduleRequest extends Request {
         }
 
         /**
-         * <p>The scheduling ID of the timed scheduling.</p>
+         * <p>The ID of the schedule.</p>
          * 
          * <strong>example:</strong>
          * <p>scheduleId-202604141xxxx</p>

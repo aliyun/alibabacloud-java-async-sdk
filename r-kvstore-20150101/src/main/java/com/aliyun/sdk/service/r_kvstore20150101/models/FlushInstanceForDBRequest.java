@@ -131,7 +131,7 @@ public class FlushInstanceForDBRequest extends Request {
         } 
 
         /**
-         * <p>The index number of the specified DB. Valid values: 0 to 255.</p>
+         * <p>The index of the specified database. Valid values: 0 to 255.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class FlushInstanceForDBRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

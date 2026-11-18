@@ -153,7 +153,7 @@ public class DestroyInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the instance to revoke from the recycle bin.</p>
+         * <p>The ID of the revoked instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

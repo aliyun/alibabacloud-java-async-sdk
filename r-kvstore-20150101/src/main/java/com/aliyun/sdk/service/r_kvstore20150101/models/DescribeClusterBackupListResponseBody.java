@@ -145,7 +145,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of cluster backup sets. A cluster backup set contains the backup sets of all nodes in the cluster.</p>
+         * <p>The list of cluster backup sets. A cluster backup contains the backup sets of all nodes in the cluster.</p>
          */
         public Builder clusterBackups(java.util.List<ClusterBackups> clusterBackups) {
             this.clusterBackups = clusterBackups;
@@ -153,7 +153,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The free backup quota of the instance. Unit: bytes. The free quota is equal to the default memory capacity of the instance type. For more information, see the notice on backup commercialization. Full backups and log backups share this free quota. When you change the instance type, the free quota of the instance changes accordingly.
+         * <p>&lt;props=&quot;china&quot;&gt;The free backup quota of the instance. Unit: bytes. The free quota is equal to the default memory capacity of the instance type. For more information, see the notice on the commercialization of backups. Full backups and log backups share this free quota. When you change the instance type, the free quota of the instance changes accordingly.
          * &lt;props=&quot;intl&quot;&gt;This parameter is not in effect. Ignore this parameter.</p>
          * 
          * <strong>example:</strong>
@@ -179,9 +179,9 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of the instance log backup files for the current instance. Unit: bytes. This value is valid only when the flashback feature is enabled.</p>
+         * <p>The size of instance log backup files for the current instance. Unit: bytes. This value is valid only when the flashback feature is enabled.</p>
          * <blockquote>
-         * <p>This value is independent of the number and size of backup sets in the current response. It represents the total size of all valid instance log backups for the current instance.</p>
+         * <p>This value is independent of the number and size of backup sets in the response to the current request. It represents the total size of all valid instance log backups for the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records returned by the current request.</p>
+         * <p>The maximum number of entries returned for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -215,7 +215,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per page, which is the same as the request parameter.</p>
+         * <p>The maximum number of entries per page, which is the same as the request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -282,7 +282,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The database engine version.</p>
+             * <p>The database version.</p>
              * 
              * <strong>example:</strong>
              * <p>5.0</p>
@@ -530,7 +530,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             /**
              * <p>The internal download URL of the backup file.</p>
              * <blockquote>
-             * <p>You can use this URL to download the backup file from an ECS instance that is connected to the current instance. Both instances must reside in the same VPC.</p>
+             * <p>You can use this URL to download the backup file from an ECS instance that is connected to the current instance. Both instances must belong to the same VPC.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -577,8 +577,8 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             /**
              * <p>The backup status. Valid values:</p>
              * <ul>
-             * <li><strong>OK</strong>: The backup is successful.</li>
-             * <li><strong>ERROR</strong>: The backup failed.</li>
+             * <li><strong>OK</strong>: Successful.</li>
+             * <li><strong>ERROR</strong>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -622,8 +622,8 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the backup set is available. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: unavailable.</li>
-             * <li><strong>1</strong>: available.</li>
+             * <li><strong>0</strong>: Unavailable.</li>
+             * <li><strong>1</strong>: Available.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -887,9 +887,9 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             /**
              * <p>The status of the cluster backup set. Valid values:</p>
              * <ul>
-             * <li>OK: The backup is successful.</li>
-             * <li>RUNNING: The backup is in progress.</li>
-             * <li>Other values: The backup failed.</li>
+             * <li>OK: Successful.</li>
+             * <li>RUNNING: Running.</li>
+             * <li>Other values: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -934,7 +934,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size of a single DB node when the full backup is created. Unit: MB.</p>
+             * <p>The memory size of a single database node when the full backup was created. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>

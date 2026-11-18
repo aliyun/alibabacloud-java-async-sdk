@@ -67,7 +67,7 @@ public class SwitchInstanceHAResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
@@ -78,7 +78,7 @@ public class SwitchInstanceHAResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>674546459</p>

@@ -270,7 +270,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter has taken effect. Valid values:</p>
+             * <p>Specifies whether the parameter takes effect. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: No.</li>
              * <li><strong>1</strong>: Yes.</li>
@@ -285,7 +285,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The divisor factor. For integer and byte type parameters, the parameter value must not only fall within the valid range but also be a multiple of Factor (when Factor is not 0).</p>
+             * <p>The divisibility factor. For integer and byte parameters, the parameter value must not only fall within the valid value range but also be a multiple of the factor (which cannot be 0).</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -296,10 +296,10 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter description.</p>
+             * <p>The description of the parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>Enable AOF persistence mode</p>
+             * <p>Enable the AOF persistence mode</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -307,7 +307,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter name.</p>
+             * <p>The name of the parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>appendonly</p>
@@ -329,7 +329,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter can be modified. Valid values:</p>
+             * <p>Specifies whether the parameter can be modified. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: The parameter cannot be modified.</li>
              * <li><strong>1</strong>: The parameter can be modified.</li>
@@ -344,7 +344,7 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether modification for minor versions is supported. Valid values:</p>
+             * <p>Specifies whether the minor version can be modified. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Supported.</li>
              * <li><strong>false</strong>: Not supported.</li>
@@ -361,9 +361,9 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
             /**
              * <p>The unit of the parameter value. Valid values:</p>
              * <ul>
-             * <li><strong>INT</strong>: a common integer.</li>
-             * <li><strong>STRING</strong>: a fixed string.</li>
-             * <li><strong>B</strong>: bytes.</li>
+             * <li><strong>INT</strong>: Standard integer.</li>
+             * <li><strong>STRING</strong>: Fixed string.</li>
+             * <li><strong>B</strong>: Byte.</li>
              * </ul>
              * 
              * <strong>example:</strong>

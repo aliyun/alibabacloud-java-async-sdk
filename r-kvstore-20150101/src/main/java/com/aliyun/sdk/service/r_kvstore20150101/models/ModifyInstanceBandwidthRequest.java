@@ -168,7 +168,7 @@ public class ModifyInstanceBandwidthRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</p>
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,9 +226,9 @@ public class ModifyInstanceBandwidthRequest extends Request {
         }
 
         /**
-         * <p>The total target bandwidth value of the instance.</p>
+         * <p>The total target bandwidth of the instance.</p>
          * <blockquote>
-         * <p>Notice:  If the instance is a Cluster Edition instance, the total target bandwidth value must be evenly divisible by the number of shards. This operation is not supported for new-architecture read/write splitting instances.</p>
+         * <p>Notice:  If the instance is a Cluster Edition instance, the total target bandwidth must be divisible by the number of shards in the instance. This operation is not supported for read/write splitting instances of the new architecture.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

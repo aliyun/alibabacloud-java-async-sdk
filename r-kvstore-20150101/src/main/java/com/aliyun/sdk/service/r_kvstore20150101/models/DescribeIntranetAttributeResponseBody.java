@@ -145,13 +145,13 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether auto-renewal is enabled for the purchased bandwidth. Valid values:</p>
+         * <p>Specifies whether auto-renewal is enabled for the purchased bandwidth. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is not returned if no bandwidth has been purchased.</p>
+         * <p>This parameter is not returned if no bandwidth is purchased.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -163,9 +163,9 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of the purchased bandwidth, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</p>
+         * <p>The expiration time of the purchased bandwidth. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</p>
          * <blockquote>
-         * <p>This parameter is not returned if no additional bandwidth has been purchased for the instance.</p>
+         * <p>This parameter is not returned if no additional bandwidth is purchased for the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -179,8 +179,8 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         /**
          * <p>The billing method of the bandwidth plan. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: pay-as-you-go.</li>
-         * <li><strong>1</strong>: subscription.</li>
+         * <li><strong>0</strong>: Pay-as-you-go.</li>
+         * <li><strong>1</strong>: Subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of the temporary bandwidth, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</p>
+         * <p>The expiration time of the temporary bandwidth. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</p>
          * <blockquote>
          * <p>If no temporary bandwidth adjustment has been performed on the instance or the temporary bandwidth has expired, this parameter returns <strong>0</strong>.</p>
          * </blockquote>
@@ -206,14 +206,14 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the instance has an unexpired bandwidth plan. Valid values:</p>
+         * <p>Specifies whether the instance has unexpired bandwidth plans. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: An unexpired bandwidth plan exists.</li>
-         * <li><strong>false</strong>: No unexpired bandwidth plan exists.<blockquote>
-         * <p>This parameter is not returned if no additional bandwidth has been purchased for the instance.</p>
-         * </blockquote>
-         * </li>
+         * <li><strong>true</strong>: The instance has unexpired bandwidth plans.</li>
+         * <li><strong>false</strong>: The instance does not have unexpired bandwidth plans.</li>
          * </ul>
+         * <blockquote>
+         * <p>This parameter is not returned if no additional bandwidth is purchased for the instance.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -224,7 +224,10 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetBandWidthBurst.
+         * <p>The burst quota for the internal network bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder intranetBandWidthBurst(Integer intranetBandWidthBurst) {
             this.intranetBandWidthBurst = intranetBandWidthBurst;
@@ -232,7 +235,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current internal network bandwidth of the instance. This parameter indicates the total bandwidth of all shards in the instance. Unit: MB/s.</p>
+         * <p>The current internal network bandwidth of the instance. This value is the sum of the bandwidth of all shards in the instance. Unit: MB/s.</p>
          * 
          * <strong>example:</strong>
          * <p>102</p>

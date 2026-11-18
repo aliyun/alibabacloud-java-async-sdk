@@ -197,7 +197,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * <p>The account name. You can call <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> to obtain the account name.</p>
+         * <p>The name of the account. You can call the <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> operation to query the account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

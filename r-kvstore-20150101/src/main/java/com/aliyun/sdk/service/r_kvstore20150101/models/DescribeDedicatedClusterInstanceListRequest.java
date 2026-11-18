@@ -270,7 +270,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         } 
 
         /**
-         * <p>The dedicated cluster ID. You can obtain the ID on the dedicated cluster information page in the ApsaraDB for MyBase console.</p>
+         * <p>The dedicated cluster ID. You can obtain the ID on the Dedicated Cluster Information page in the ApsaraDB MyBase console.</p>
          * <blockquote>
          * <p>To specify multiple IDs, separate them with commas (,).</p>
          * </blockquote>
@@ -300,7 +300,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The database engine. Set the value to <strong>Redis</strong>.</p>
+         * <p>The database engine type. Set the value to <strong>Redis</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Redis</p>
@@ -326,7 +326,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p>The instance must be created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB for MyBase</a>.</p>
+         * <p>The instance must be created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB MyBase</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
          * <ul>
          * <li><strong>0</strong>: Internet.</li>
          * <li><strong>1</strong>: Classic network.</li>
-         * <li><strong>2</strong>: Virtual Private Cloud (VPC).</li>
+         * <li><strong>2</strong>: VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -396,7 +396,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be greater than <strong>0</strong> and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -420,7 +420,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query region IDs.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -460,7 +460,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * <p>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query zone IDs.</p>
+         * <p>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-e</p>

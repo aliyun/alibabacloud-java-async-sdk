@@ -173,13 +173,13 @@ public class DeleteGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+         * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
          * <ul>
-         * <li><p>The name can contain lowercase letters, digits, and underscores (_).</p>
+         * <li><p>It can contain only lowercase letters, digits, and underscores (_).</p>
          * </li>
-         * <li><p>The name must start with a letter and end with a letter or digit.</p>
+         * <li><p>It must start with a letter and end with a letter or a digit.</p>
          * </li>
-         * <li><p>The name must be 2 to 120 characters in length.</p>
+         * <li><p>It must be 2 to 120 characters in length.</p>
          * </li>
          * </ul>
          * 
@@ -193,7 +193,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the IP whitelist template.</p>
+         * <p>The ID of the IP address whitelist template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyiu4e******</p>

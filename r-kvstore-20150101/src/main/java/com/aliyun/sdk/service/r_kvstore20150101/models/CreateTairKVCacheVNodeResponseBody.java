@@ -145,7 +145,7 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID of the virtual node.</p>
+         * <p>The virtual node instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tv-2zeb1ce76fee****</p>
@@ -211,7 +211,7 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID of the virtual cluster.</p>
+         * <p>The virtual cluster instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tk-2ze4bba3c8fe****</p>

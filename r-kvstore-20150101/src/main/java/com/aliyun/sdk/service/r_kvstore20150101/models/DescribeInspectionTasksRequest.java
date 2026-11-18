@@ -23,6 +23,10 @@ public class DescribeInspectionTasksRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LevelSummary")
+    private String levelSummary;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNum")
     private String pageNum;
 
@@ -41,6 +45,7 @@ public class DescribeInspectionTasksRequest extends Request {
     private DescribeInspectionTasksRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.levelSummary = builder.levelSummary;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.securityToken = builder.securityToken;
@@ -65,6 +70,13 @@ public class DescribeInspectionTasksRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return levelSummary
+     */
+    public String getLevelSummary() {
+        return this.levelSummary;
     }
 
     /**
@@ -97,6 +109,7 @@ public class DescribeInspectionTasksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeInspectionTasksRequest, Builder> {
         private String instanceId; 
+        private String levelSummary; 
         private String pageNum; 
         private String pageSize; 
         private String securityToken; 
@@ -109,6 +122,7 @@ public class DescribeInspectionTasksRequest extends Request {
         private Builder(DescribeInspectionTasksRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.levelSummary = request.levelSummary;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.securityToken = request.securityToken;
@@ -116,7 +130,7 @@ public class DescribeInspectionTasksRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the assistant instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +139,24 @@ public class DescribeInspectionTasksRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>The summary of risk levels for inspection results. You can specify multiple values. Valid values:</p>
+         * <ul>
+         * <li>Normal: Normal.</li>
+         * <li>Warning: Warning.</li>
+         * <li>Error: High-risk.</li>
+         * <li>Failed: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Error</p>
+         */
+        public Builder levelSummary(String levelSummary) {
+            this.putQueryParameter("LevelSummary", levelSummary);
+            this.levelSummary = levelSummary;
             return this;
         }
 
@@ -162,10 +194,10 @@ public class DescribeInspectionTasksRequest extends Request {
         }
 
         /**
-         * <p>The task type.</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>1: manual task</li>
-         * <li>2: scheduled task</li>
+         * <li>1: Manual task.</li>
+         * <li>2: Scheduled task.</li>
          * </ul>
          * 
          * <strong>example:</strong>

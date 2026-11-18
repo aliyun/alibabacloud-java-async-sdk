@@ -67,7 +67,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IP whitelist template information.</p>
+         * <p>The information about the IP whitelist templates.</p>
          */
         public Builder globalSecurityIPGroup(java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;

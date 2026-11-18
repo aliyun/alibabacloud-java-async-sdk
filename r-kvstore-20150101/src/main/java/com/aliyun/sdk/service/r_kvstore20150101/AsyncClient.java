@@ -27,13 +27,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Clients can use the direct connection endpoint to bypass the proxy and connect to the cluster instance in the same way as they connect to a native Redis cluster. This reduces link overhead and further improves the response speed of the ApsaraDB Tair (Redis® OSS-Compatible) database service.
-     * The instance for which you invoke this operation must meet the following conditions:</p>
+     * <p>Clients can use the direct connection endpoint to bypass the proxy and connect to the cluster instance in the same way as they connect to a native Redis cluster. This reduces link overhead and further improves the response speed of the Tair (Redis® OSS-Compatible) database service.
+     * To call this operation, the instance must meet the following conditions:</p>
      * <ul>
      * <li>The instance uses the cluster architecture.</li>
-     * <li>The deployment pattern is classic.</li>
-     * <li>The network type of the instance is VPC. If the instance is connected to the classic network, you can invoke the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to switch the network type to VPC.</li>
-     * <li>The Secure Sockets Layer (SSL) encryption feature is disabled for the instance. If the Secure Sockets Layer (SSL) encryption feature is enabled, you can invoke the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation for shutdown.</li>
+     * <li>The deployment mode is classic.</li>
+     * <li>The network type of the instance is VPC. If the instance is connected to the classic network, you can call the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to switch the network type to VPC.</li>
+     * <li>The Secure Sockets Layer (SSL) encryption feature is disabled for the instance. If the Secure Sockets Layer (SSL) encryption feature is enabled, you can call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation to shut down the feature.</li>
      * </ul>
      * 
      * @param request the request parameters of AllocateDirectConnection  AllocateDirectConnectionRequest
@@ -52,11 +52,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Scenarios in which O&amp;M events cannot be canceled</p>
+     * <p>Scenarios where O&amp;M events cannot be canceled:</p>
      * <ul>
      * <li>allowCancel is 0.</li>
      * <li>The current time is later than the start time of the O&amp;M event.</li>
-     * <li>The status of the O&amp;M event is not 3 (waiting for execution).</li>
+     * <li>The status of the O&amp;M event is not 3 (Pending execution).</li>
      * </ul>
      * 
      * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
@@ -72,9 +72,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For more information about Transparent Data Encryption (TDE) and related precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For more information about Transparent Data Encryption (TDE) and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * <ul>
-     * <li>After you call this operation to confirm that the authorization is complete, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</li>
+     * <li>After you call this operation to confirm the authorization, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</li>
      * </ul>
      * 
      * @param request the request parameters of CheckCloudResourceAuthorized  CheckCloudResourceAuthorizedRequest
@@ -84,11 +84,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only instances that are compatible with Redis 4.0 or later.</p>
+     * <p>This API operation is supported only by instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>The instance status must be Running when you call this operation. </li>
+     * <li>This API operation requires the instance to be in the Running state. </li>
      * <li>You can create up to 18 accounts for each instance.<blockquote>
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/92665.html">Account management</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -100,7 +100,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</p>
+     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</p>
      * 
      * @param request the request parameters of CreateBackup  CreateBackupRequest
      * @return CreateBackupResponse
@@ -109,7 +109,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer recommended. Use the new operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time Top Key Statistics and Offline Full Key Analysis</a> instead.</p>
+     * <p>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a> operation instead.</p>
      * 
      * @param request the request parameters of CreateCacheAnalysisTask  CreateCacheAnalysisTaskRequest
      * @return CreateCacheAnalysisTaskResponse
@@ -121,9 +121,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>You can call this operation to convert an existing instance into the first child instance of a distributed instance. After the conversion, the distributed instance to which the instance belongs is created.
      * The instance to be converted must meet the following requirements:</p>
      * <ul>
-     * <li>The instance is a Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-optimized</a> (Classic Edition) instance.</li>
-     * <li>If the instance uses a cluster architecture, you must disable the direct connection mode. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a direct connection endpoint</a>.<blockquote>
-     * <p>You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which it belongs is created.</p>
+     * <li>The instance to be converted is a Tair <a href="https://help.aliyun.com/document_detail/126164.html">memory-optimized</a> (Classic Edition) instance.</li>
+     * <li>If the instance to be converted uses the cluster architecture, the direct connection mode must be disabled. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a direct connection endpoint</a>.<blockquote>
+     * <p>You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to purchase a new instance as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -153,10 +153,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
-     * This operation can be used to create an ApsaraDB for Redis Community Edition instance or a Tair in-memory instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis (Tair) before you call this operation.
+     * This operation allows you to create a Redis Community Edition instance or a Tair memory-optimized instance with the classic architecture. To create a Tair instance with the cloud-native architecture, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
      * <blockquote>
-     * <p>For information about how to create an ApsaraDB for Redis instance in the console and how to select an instance type, see <a href="https://help.aliyun.com/document_detail/26351.html">Create an ApsaraDB for Redis instance</a>.</p>
+     * <p>For information about how to create a Redis instance and select instance types in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
@@ -172,13 +172,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB for Tair (Redis OSS-compatible) database before you call this API operation.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB for Tair (Redis-compatible) database.</p>
      * <blockquote>
-     * <p>This API operation only supports creating Classic Edition instances.
-     * Use the following operations to create a single instance:</p>
+     * <p>This operation only supports creating Classic Edition instances.
+     * Use the following API operations to create a single instance:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates an open-source Redis instance or a Tair memory-optimized Classic Edition instance.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair cloud-native instance (including memory-optimized, persistent memory-optimized, and disk-optimized instances).</li>
+     * <li><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: Creates an open-source Redis instance or a Tair memory-optimized Classic Edition instance.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: Creates a Tair cloud-native instance (including memory-optimized, persistent memory-optimized, and disk-optimized instances).</li>
      * </ul>
      * </blockquote>
      * 
@@ -189,7 +189,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Parameter templates are applicable only to instances deployed in cloud-native deployment mode (formerly cloud disk instances).</p>
+     * <p>Parameter templates apply only to instances in cloud-native deployment mode (formerly cloud disk instances).</p>
      * 
      * @param request the request parameters of CreateParameterGroup  CreateParameterGroupRequest
      * @return CreateParameterGroupResponse
@@ -203,13 +203,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTCInstanceResponse> createTCInstance(CreateTCInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateTairAIGatewayInstance  CreateTairAIGatewayInstanceRequest
+     * @return CreateTairAIGatewayInstanceResponse
+     */
+    CompletableFuture<CreateTairAIGatewayInstanceResponse> createTairAIGatewayInstance(CreateTairAIGatewayInstanceRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>For selection reference, see <a href="https://help.aliyun.com/document_detail/223808.html">Must-read for selecting Tair database (Redis OSS-Compatible)</a>.
-     * Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair database (Redis OSS-Compatible) before you invoke this operation.</p>
+     * <p>For selection reference, see <a href="https://help.aliyun.com/document_detail/223808.html">Must-read for selecting the ApsaraDB Tair database (Redis OSS-compatible)</a>.
+     * Make sure you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the ApsaraDB Tair database (Redis OSS-compatible) before you invoke this operation.</p>
      * <blockquote>
      * <ul>
-     * <li>For instructions on how to perform this operation in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</li>
-     * <li>To create other types of instances, such as open-source instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-optimized</a> classic instances, you can invoke the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</li>
+     * <li>For console operations, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Tair instance</a>.</li>
+     * <li>To create other types of instances, such as open-source or <a href="https://help.aliyun.com/document_detail/126164.html">Tair memory-optimized</a> classic edition instances, you can invoke the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</li>
      * </ul>
      * </blockquote>
      * 
@@ -226,9 +232,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
+     * <li>Before calling this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing details</a> of ApsaraDB for Redis.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateTairSkvDdbTable  CreateTairSkvDdbTableRequest
@@ -241,7 +247,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <h2>Request description</h2>
      * <ul>
      * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing details</a> of ApsaraDB for Redis.</li>
-     * <li>To create a Tair Serverless KV table instance, call the <code>CreateTairSkvDdbTable</code> operation.</li>
+     * <li>To create a Tair Serverless KV table instance, use the <code>CreateTairSkvDdbTable</code> operation.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateTairSkvDdbWorkspace  CreateTairSkvDdbWorkspaceRequest
@@ -251,9 +257,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API operation supports only instances that are compatible with Redis 4.0 or later.</p>
+     * <p>This operation is supported only for instances that are compatible with Redis 4.0 or later.</p>
      * <ul>
-     * <li>You can call this API operation only when the instance is in the Running state.</li>
+     * <li>You can call this operation only when the instance is in the Running state.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
@@ -263,7 +269,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports only cloud-native edition instances.</p>
+     * <p>This operation is supported only for cloud-native instances.</p>
      * 
      * @param request the request parameters of DeleteBackup  DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -272,7 +278,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you delete an IP whitelist template, dissociate all instances that are associated with the template.</p>
+     * <p>Before deleting an IP address whitelist template, disassociate the instances that are associated with the template.</p>
      * 
      * @param request the request parameters of DeleteGlobalSecurityIPGroup  DeleteGlobalSecurityIPGroupRequest
      * @return DeleteGlobalSecurityIPGroupResponse
@@ -281,12 +287,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
      * When you invoke this operation, the instance must meet the following conditions:</p>
      * <ul>
      * <li>The instance status is Running.</li>
-     * <li>The payer of the instance is pay-as-you-go.<blockquote>
-     * <p>Upfront (subscription) instances cannot be deleted by invoking this operation. They will undergo automatic release when they expire. To release a subscription instance in advance, perform the operation in the console.</p>
+     * <li>The payer of the instance uses the pay-as-you-go billing method.<blockquote>
+     * <p>You cannot invoke this operation to delete an upfront (subscription) instance. An upfront instance is subject to automatic release upon expiration. To delete an upfront instance in advance, use the console.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -298,12 +304,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/43882.html">Release an instance</a>.
      * When you invoke this operation, the instance must meet the following conditions:</p>
      * <ul>
      * <li>The instance status is Running.</li>
-     * <li>The payer uses the pay-as-you-go billing method.<blockquote>
-     * <p>Upfront (subscription) instances cannot be deleted by invoking this operation. They will undergo automatic release after they expire. To release a subscription instance in advance, perform the operation in the console.</p>
+     * <li>The payer of the instance uses the pay-as-you-go billing method.<blockquote>
+     * <p>You cannot invoke this operation to manually delete an upfront (subscription) instance. Such instances undergo automatic release upon expiration. To release an upfront instance in advance, use the console.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -339,7 +345,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to check whether O&amp;M tasks exist, you can call <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> to modify the scheduled switchover time of an O&amp;M task.</p>
+     * <p>After you call this operation to query existing O&amp;M tasks, you can call <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> to modify the scheduled switchover time of an O&amp;M task.</p>
      * 
      * @param request the request parameters of DescribeActiveOperationTask  DescribeActiveOperationTaskRequest
      * @return DescribeActiveOperationTaskResponse
@@ -360,7 +366,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, audit logging must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Audit logs</a>.</p>
+     * <p>When you call this operation, the audit log feature must be enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Audit logs</a>.</p>
      * 
      * @param request the request parameters of DescribeAuditLogConfig  DescribeAuditLogConfigRequest
      * @return DescribeAuditLogConfigResponse
@@ -396,7 +402,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is not applicable to cloud-native cluster architecture instances. If needed, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</p>
+     * <p>This operation is not applicable to cloud-native cluster architecture instances. To query the backup sets of such instances, use the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</p>
      * 
      * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -414,7 +420,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer recommended. Use the new operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a>.</p>
+     * <p>This API operation is deprecated. Use the new API operation <a href="https://help.aliyun.com/document_detail/184226.html">Real-time top key statistics and offline full key analysis</a>.</p>
      * 
      * @param request the request parameters of DescribeCacheAnalysisReportList  DescribeCacheAnalysisReportListRequest
      * @return DescribeCacheAnalysisReportListResponse
@@ -481,7 +487,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that TDE (Transparent Data Encryption) has been enabled for the instance by using a custom key. For more information about the related operation, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</p>
+     * <p>When you call this operation, the instance must have Transparent Data Encryption (TDE) enabled by using a custom key. For more information about the related operation, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</p>
      * <blockquote>
      * <p>For more information about TDE and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * </blockquote>
@@ -493,9 +499,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable transparent data encryption (TDE), you can use a custom key. This operation helps you query the custom keys used by an instance. To create a custom key, invoke the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service.</p>
+     * <p>When you invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable transparent data encryption (TDE), you can use custom keys. This operation helps you query the custom keys used by the instance. To create a custom key, invoke the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</p>
      * <ul>
-     * <li>For more information about transparent data encryption (TDE) and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</li>
+     * <li>For more information and precautions about transparent data encryption (TDE), see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption (TDE)</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeEncryptionKeyList  DescribeEncryptionKeyListRequest
@@ -604,7 +610,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For more information about multiple LBs, see.</p>
+     * <p>For more information about multiple load balancers, see.</p>
      * 
      * @param request the request parameters of DescribeInstanceMultiVIP  DescribeInstanceMultiVIPRequest
      * @return DescribeInstanceMultiVIPResponse
@@ -619,9 +625,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For more information about the transparent data encryption (TDE) feature and precautions, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable transparent data encryption TDE</a>.</p>
+     * <p>For detailed information and precautions about Transparent Data Encryption (TDE), see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * <blockquote>
-     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or shutdown the TDE encrypt feature.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or disable TDE.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeInstanceTDEStatus  DescribeInstanceTDEStatusRequest
@@ -637,9 +643,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you do not specify any request parameters, the overview information of all instances is returned.</p>
+     * <p>If you do not specify request parameters, the overview information of all instances is returned.</p>
      * <blockquote>
-     * <p>This operation does not support pagination for the returned results.</p>
+     * <p>The response of this operation is not paginated.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeInstancesOverview  DescribeInstancesOverviewRequest
@@ -658,7 +664,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for cluster and read/write splitting instances.</p>
+     * <p>This operation is supported only by instances that use the cluster or read/write splitting architecture.</p>
      * 
      * @param request the request parameters of DescribeLogicInstanceTopology  DescribeLogicInstanceTopologyRequest
      * @return DescribeLogicInstanceTopologyResponse
@@ -668,8 +674,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To improve user experience, Tair (Redis® OSS-Compatible) has upgraded its performance monitoring. This operation will be taken offline. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">Notice: Tair (Redis® OSS-Compatible) DescribeMonitorItems operation offline</a>.
-     * After you call this operation to obtain the list of monitoring items, you can call the <a href="https://help.aliyun.com/document_detail/473827.html">DescribeHistoryMonitorValues</a> operation to query the historical monitoring information of an instance.</p>
+     * <p>To improve user experience, the ApsaraDB for Tair (Redis® OSS-Compatible) database has upgraded its performance monitoring feature, and this API operation will be taken offline. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">Notice: The DescribeMonitorItems API operation for ApsaraDB for Tair (Redis® OSS-Compatible) is taken offline</a>.
+     * After you invoke this API operation to obtain the list of monitoring metrics, you can invoke the <a href="https://help.aliyun.com/document_detail/473827.html">DescribeHistoryMonitorValues</a> API operation to query the historical monitoring information of the instance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeMonitorItems  DescribeMonitorItemsRequest
@@ -709,7 +715,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation to retrieve the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of a Redis instance as needed.</p>
+     * <p>After you call this operation to query the parameter list and default values, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameters of the instance based on your business requirements.</p>
      * 
      * @param request the request parameters of DescribeParameterTemplates  DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
@@ -742,7 +748,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation of this API, see <a href="https://help.aliyun.com/document_detail/101713.html">Query running logs</a>. The maximum call frequency of DescribeRunningLogRecords is 100 calls per minute.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/101713.html">Query running logs</a>.
+     * The maximum number of calls to the DescribeRunningLogRecords operation is 100 per minute.</p>
      * 
      * @param request the request parameters of DescribeRunningLogRecords  DescribeRunningLogRecordsRequest
      * @return DescribeRunningLogRecordsResponse
@@ -763,7 +770,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation to query whether the associated role named AliyunServiceRoleForKvstore has been authorized for use by Tair (Redis® OSS-Compatible) database under the current account. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for Tair (Redis® OSS-Compatible) database</a>.</p>
+     * <p>You can invoke this operation to query whether the authorization of the service-linked role named AliyunServiceRoleForKvstore is associated with the ApsaraDB Tair (Redis® OSS-Compatible) database within the current account. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role associated with ApsaraDB Tair (Redis® OSS-Compatible)</a>.</p>
      * 
      * @param request the request parameters of DescribeServiceLinkedRoleExists  DescribeServiceLinkedRoleExistsRequest
      * @return DescribeServiceLinkedRoleExistsResponse
@@ -772,8 +779,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow query logs</a>.
-     * The maximum number of calls to DescribeSlowLogRecords is 100 per minute.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs</a>.
+     * The rate limit for the DescribeSlowLogRecords operation is 100 calls per minute.</p>
      * 
      * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -785,6 +792,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeTagsResponse
      */
     CompletableFuture<DescribeTagsResponse> describeTags(DescribeTagsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTairAIGatewayInstances  DescribeTairAIGatewayInstancesRequest
+     * @return DescribeTairAIGatewayInstancesResponse
+     */
+    CompletableFuture<DescribeTairAIGatewayInstancesResponse> describeTairAIGatewayInstances(DescribeTairAIGatewayInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTairAIGatewayParameters  DescribeTairAIGatewayParametersRequest
+     * @return DescribeTairAIGatewayParametersResponse
+     */
+    CompletableFuture<DescribeTairAIGatewayParametersResponse> describeTairAIGatewayParameters(DescribeTairAIGatewayParametersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTairAIGatewayPluginSwitch  DescribeTairAIGatewayPluginSwitchRequest
+     * @return DescribeTairAIGatewayPluginSwitchResponse
+     */
+    CompletableFuture<DescribeTairAIGatewayPluginSwitchResponse> describeTairAIGatewayPluginSwitch(DescribeTairAIGatewayPluginSwitchRequest request);
 
     /**
      * @param request the request parameters of DescribeTairKVCacheCustomInstanceAttribute  DescribeTairKVCacheCustomInstanceAttributeRequest
@@ -823,8 +848,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>You must specify the <code>InstanceId</code> parameter when you call this operation.</li>
-     * <li>The response includes basic information about each table, such as the table ID, name, bandwidth, and maximum number of connections.</li>
+     * <li>When you call this operation, you must specify the <code>InstanceId</code> parameter.</li>
+     * <li>The response includes the basic information of each table, such as the table ID, name, bandwidth, and maximum number of connections.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeTairSkvDdbTable  DescribeTairSkvDdbTableRequest
@@ -834,12 +859,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation queries the table schema configuration of a Tair Serverless KV table instance.</li>
-     * <li>When you invoke this operation, you must specify the InstanceId parameter. The value of this parameter is the instance ID of the instance that you want to query.</li>
-     * <li>The BackupId parameter specifies the backup set of the table to query.</li>
-     * <li>The response packet includes the time-to-live (TTL) specifications and detailed table structure definition.</li>
+     * <li>This operation queries the table schema and configuration information of a Tair Serverless KV table instance.</li>
+     * <li>You must specify the <code>InstanceId</code> parameter when you call this operation, and set it to the ID of the instance that you want to query.</li>
+     * <li>The <code>BackupId</code> parameter specifies the backup set of the table to query.</li>
+     * <li>The returned data includes the time-to-live (TTL) specifications and detailed table schema definitions.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeTairSkvDdbTableSchema  DescribeTairSkvDdbTableSchemaRequest
@@ -861,10 +886,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, the instance must exist in the recycle bin. For more information, see <a href="https://help.aliyun.com/document_detail/86114.html">Cluster recycle bin</a>.</p>
+     * <p>When you call this operation, the instances must exist in the recycle bin. For more information, see <a href="https://help.aliyun.com/document_detail/86114.html">Instance recycle bin</a>.</p>
      * <blockquote>
-     * <p>After you call this operation, the instance and its data backups in the recycle bin are permanently deleted.
-     * <danger>After this operation is performed, the data of the instance is permanently deleted and cannot be recovered. Proceed with caution.</p>
+     * <p>After you call this operation, the instances and their data backups in the recycle bin are permanently deleted.
+     * <danger>After this operation is performed, the data of the instances is permanently deleted and cannot be recovered. Proceed with caution.</danger></p>
      * </blockquote>
      * 
      * @param request the request parameters of DestroyInstance  DestroyInstanceRequest
@@ -874,9 +899,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you enable the elastic elastic scaling feature for the instance while calling this operation, the instance preferentially uses the elastic elastic scaling feature. When the bandwidth is elastically scaled down, it is scaled down to the default bandwidth of the instance specifications. For more information about the limits, billing, and FAQ of this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</p>
+     * <p>If you enable the elastic bandwidth scaling feature for the instance when calling this operation, the elastic bandwidth scaling feature takes precedence. During an elastic bandwidth scale-down, the bandwidth reverts to the default bandwidth of the instance type. For more information about the limits, billing, and FAQs of this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>.</p>
      * <blockquote>
-     * <p>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> to query the current bandwidth of each data node in the instance.</p>
+     * <p>Before calling this operation, you can call <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> to query the current bandwidth of each data node in the instance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of EnableAdditionalBandwidth  EnableAdditionalBandwidthRequest
@@ -898,9 +923,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/43881.html">Purge data</a>.</p>
+     * <p>For the corresponding operation in the console, refer to <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</p>
      * <blockquote>
-     * <p>Before calling this API to delete data, back up your data or confirm that a backup is not required.</p>
+     * <p>Before calling this API to delete data, back up your data or confirm that no backup is required.</p>
      * </blockquote>
      * 
      * @param request the request parameters of FlushInstance  FlushInstanceRequest
@@ -910,9 +935,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraDB for Tair (Redis® OSS-Compatible) instances support 256 databases, from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity available to a database is subject to the total memory limit of the instance. You can run the <code>SELECT</code> command to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">Tair DB</a>.</p>
+     * <p>An ApsaraDB Tair (Redis® OSS-Compatible) instance supports 256 databases, from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity available for a database is constrained by the total memory of the instance. You can use the <code>SELECT</code> command to switch databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">Tair DB</a>.</p>
      * <blockquote>
-     * <p>This operation supports only cloud-native instances (formerly cloud disk-based instances) in cluster architecture.</p>
+     * <p>This operation is supported only by cloud-native instances (formerly cloud disk instances) in a cluster architecture.</p>
      * </blockquote>
      * 
      * @param request the request parameters of FlushInstanceForDB  FlushInstanceForDBRequest
@@ -928,7 +953,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The Log Management feature of Tair (Redis® OSS-Compatible) database requires resources from <a href="https://help.aliyun.com/document_detail/48869.html">Simple Log Service</a>. Before using the Log Management feature, call this operation to associate the service-linked role named AliyunServiceRoleForKvstore with Tair (Redis® OSS-Compatible) database. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for Tair (Redis® OSS-Compatible) database</a>.</p>
+     * <p>The log management feature of the ApsaraDB for Tair (Redis® OSS-Compatible) database requires resources from <a href="https://help.aliyun.com/document_detail/48869.html">Simple Log Service</a>. Before using the log management feature, invoke this operation to associate the service-linked role named AliyunServiceRoleForKvstore with the ApsaraDB for Tair (Redis® OSS-Compatible) database and grant the required authorization. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role for ApsaraDB for Tair (Redis® OSS-Compatible)</a>.</p>
      * 
      * @param request the request parameters of InitializeKvstorePermission  InitializeKvstorePermissionRequest
      * @return InitializeKvstorePermissionResponse
@@ -968,7 +993,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>Before you call this operation, you must release the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/106272.html">Migrate an instance across zones</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>If the instance was switched from the classic network to a VPC and retains the classic network endpoint, you must wait until the classic network endpoint expires and is released before you can migrate the instance across zones.</li>
+     * <li>If the instance was switched from the classic network to a VPC and the classic network endpoint is retained, you must wait until the classic network endpoint expires and is released before you can migrate the instance across zones.</li>
      * <li>After the migration, the endpoint of the instance remains unchanged, but the virtual IP address (VIP) changes. Use the endpoint instead of the VIP to connect to the instance in your business applications.</li>
      * </ul>
      * </blockquote>
@@ -989,7 +1014,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only Tair Serverless KV instances are supported.</p>
+     * <p>This operation is supported only for Tair Serverless KV instances.</p>
      * 
      * @param request the request parameters of ModifyAccountParameter  ModifyAccountParameterRequest
      * @return ModifyAccountParameterResponse
@@ -1010,7 +1035,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>O&amp;M events of Tair (Redis® OSS-Compatible) instances, such as instance migration and version upgrades, are notified through text messages, phone calls, emails, or internal messages, and are also displayed in the console. In addition to invoking this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</p>
+     * <p>O&amp;M events for ApsaraDB for Tair (Redis® OSS-Compatible) database instances, such as instance migration and version upgrades, are notified through SMS, voice calls, emails, or internal messages, as well as in the console. You can invoke this operation to modify the scheduled switchover time. Alternatively, you can modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</p>
      * 
      * @param request the request parameters of ModifyActiveOperationTask  ModifyActiveOperationTaskRequest
      * @return ModifyActiveOperationTaskResponse
@@ -1025,7 +1050,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of audit logs.</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of audit logs.</p>
      * 
      * @param request the request parameters of ModifyAuditLogConfig  ModifyAuditLogConfigRequest
      * @return ModifyAuditLogConfigResponse
@@ -1052,7 +1077,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/85683.html">Modify an endpoint</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/85683.html">Modify endpoints</a>.</p>
      * 
      * @param request the request parameters of ModifyDBInstanceConnectionString  ModifyDBInstanceConnectionStringRequest
      * @return ModifyDBInstanceConnectionStringResponse
@@ -1115,8 +1140,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before calling this operation, make sure that you fully understand the bandwidth billing method and pricing of the instance. Tair (Redis® OSS-Compatible) charges fees on an hourly basis based on the increased bandwidth and usage duration. The pricing varies by region. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</li>
-     * <li>The bandwidth of an instance (or a single shard) can be increased by up to 6 times the default bandwidth of the instance, with a maximum increase of 192 MB/s. For example, the default bandwidth of a Tair memory-optimized 2 GB standard architecture instance is 96 MB/s. The bandwidth of this instance type can be increased by up to 192 MB/s, resulting in a maximum bandwidth of 288 MB/s. The default bandwidth of a Redis Community Edition 256 MB standard architecture instance is 10 MB/s. The bandwidth of this instance type can be increased by up to 60 MB/s, resulting in a maximum bandwidth of 70 MB/s.</li>
+     * <li>Before calling this operation, make sure that you fully understand the bandwidth billing method and pricing of the instance. Tair (Redis® OSS-Compatible) charges hourly fees based on the increased bandwidth and usage duration. Billing standards vary by region. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</li>
+     * <li>An instance or a single shard supports an additional bandwidth increase of up to 6 times the default bandwidth of the original instance, with a maximum increase limit of 192 MB/s. For example, the default bandwidth of a 2 GB standard-architecture Tair memory-optimized instance is 96 MB/s. The bandwidth for this specification can be increased by up to 192 MB/s, resulting in a maximum instance bandwidth of 288 MB/s. The default bandwidth of a 256 MB standard-architecture open-source Redis instance is 10 MB/s. The bandwidth for this specification can be increased by up to 60 MB/s, resulting in a maximum instance bandwidth of 70 MB/s.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyInstanceBandwidth  ModifyInstanceBandwidthRequest
@@ -1132,7 +1157,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/55252.html">Set the maintenance window</a>.</p>
      * 
      * @param request the request parameters of ModifyInstanceMaintainTime  ModifyInstanceMaintainTimeRequest
      * @return ModifyInstanceMaintainTimeResponse
@@ -1141,7 +1166,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the precautions and impacts of this API operation, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</p>
+     * <p>For precautions and impacts of this API operation, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</p>
      * 
      * @param request the request parameters of ModifyInstanceMajorVersion  ModifyInstanceMajorVersionRequest
      * @return ModifyInstanceMajorVersionResponse
@@ -1150,11 +1175,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The upgrade process varies by architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">How minor version upgrades work</a>.</p>
+     * <p>The upgrade process varies based on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version upgrade principles</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the instance.</li>
-     * <li>During an instance switchover or primary/secondary switchover, the instance enters a read-only state for up to 60 seconds to wait for full data synchronization. Transient disconnections that last for a few seconds may also occur. Perform the upgrade during off-peak hours and ensure that your application has a reconnection mechanism.</li>
+     * <li>Before calling this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor engine version of the instance.</li>
+     * <li>During an instance switchover or primary/secondary switchover, the instance remains in a read-only state for up to 60 seconds while waiting for data to be fully synchronized. Transient disconnections that last for a few seconds may also occur. Perform the upgrade during off-peak hours and ensure that your application is configured with a reconnection mechanism.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1165,7 +1190,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation of this API, refer to <a href="https://help.aliyun.com/document_detail/60062.html">Modify the retention period of the original classic network endpoint</a>.</p>
+     * <p>For the corresponding console operation of this API operation, refer to <a href="https://help.aliyun.com/document_detail/60062.html">Modify the validity period of the original classic network endpoint</a>.</p>
      * <blockquote>
      * <p>For information about how to switch an instance from the classic network to a VPC, refer to <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a>.</p>
      * </blockquote>
@@ -1183,9 +1208,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/84898.html">Secure Sockets Layer (SSL) encryption settings</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/84898.html">Settings for Secure Sockets Layer (SSL) encryption</a>.</p>
      * <blockquote>
-     * <p>To specify the minimum SSL version, you can invoke the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the relevant parameter.</p>
+     * <p>To specify the minimum SSL version, you can invoke the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the parameter.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceSSL  ModifyInstanceSSLRequest
@@ -1196,7 +1221,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For information about the execution process, impacts, feature limits, and billing of modifying instance specifications, refer to <a href="https://help.aliyun.com/document_detail/26353.html">Change instance configurations</a>.</p>
+     * <p>For information about the execution process, impacts, feature limits, and billing of changing instance specifications, see <a href="https://help.aliyun.com/document_detail/26353.html">Change the configurations of an instance</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceSpec  ModifyInstanceSpecRequest
@@ -1207,7 +1232,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about Transparent Data Encryption (TDE) and the impacts of enabling TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * <p>For detailed information about Transparent Data Encryption (TDE) and the impacts of enabling it, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable Transparent Data Encryption (TDE)</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceTDE  ModifyInstanceTDERequest
@@ -1228,7 +1253,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>This operation applies only to instances created in dedicated clusters&lt;props=&quot;china&quot;&gt;. For information about the related console operations and limits, see <a href="https://help.aliyun.com/document_detail/206257.html">Modify bandwidth policy</a>. To adjust the bandwidth of a regular instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</li>
+     * <li>This operation applies only to instances created in dedicated clusters&lt;props=&quot;china&quot;&gt;. For information about the related console operations and limits, see <a href="https://help.aliyun.com/document_detail/206257.html">Modify bandwidth policies</a>. To adjust the bandwidth of a regular instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1245,9 +1270,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Move resources across resource groups</a>.</p>
+     * <p>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a>.</p>
      * <blockquote>
-     * <p>A resource group is a mechanism for managing resources in groups within an Alibaba Cloud account. Resource groups help you address the complexity of resource grouping and authorization management within a single Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * <p>A resource group is a mechanism for grouping and managing resources within an Alibaba Cloud account. Resource groups help you simplify resource grouping and authorization management within a single Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyResourceGroup  ModifyResourceGroupRequest
@@ -1257,7 +1282,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation overwrites the existing security groups in the instance whitelist and adds the security groups specified by the <strong>SecurityGroupId</strong> parameter to the whitelist. For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/148267.html">Add a security group</a>.</p>
+     * <p>Calling this operation overwrites the existing security groups in the instance whitelist and adds the security groups specified in the <strong>SecurityGroupId</strong> parameter to the whitelist. For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/148267.html">Add security groups</a>.</p>
      * 
      * @param request the request parameters of ModifySecurityGroupConfiguration  ModifySecurityGroupConfigurationRequest
      * @return ModifySecurityGroupConfigurationResponse
@@ -1266,12 +1291,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the console operation that corresponds to this API operation, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure an IP whitelist</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure the IP whitelist</a>.</p>
      * 
      * @param request the request parameters of ModifySecurityIps  ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
      */
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
+
+    /**
+     * @param request the request parameters of ModifyTairAIGatewayParameter  ModifyTairAIGatewayParameterRequest
+     * @return ModifyTairAIGatewayParameterResponse
+     */
+    CompletableFuture<ModifyTairAIGatewayParameterResponse> modifyTairAIGatewayParameter(ModifyTairAIGatewayParameterRequest request);
+
+    /**
+     * @param request the request parameters of ModifyTairAIGatewayPluginSwitch  ModifyTairAIGatewayPluginSwitchRequest
+     * @return ModifyTairAIGatewayPluginSwitchResponse
+     */
+    CompletableFuture<ModifyTairAIGatewayPluginSwitchResponse> modifyTairAIGatewayPluginSwitch(ModifyTairAIGatewayPluginSwitchRequest request);
 
     /**
      * @param request the request parameters of ModifyTairKVCacheCustomInstanceAttribute  ModifyTairKVCacheCustomInstanceAttributeRequest
@@ -1296,7 +1333,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A client can use the direct connection address to bypass the proxy and connect to a Tair (Redis® OSS-Compatible) database cluster in the same way as connecting to a native Redis cluster. This reduces link overhead and further improves the response speed of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable direct connection access</a>.</p>
+     * <p>Clients can use the direct connection endpoint to bypass proxies and connect to an ApsaraDB for Tair (Redis® OSS-Compatible) database cluster in the same way as connecting to a native Redis cluster. This reduces link overhead and further improves the response speed of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable direct connection access</a>.</p>
      * 
      * @param request the request parameters of ReleaseDirectConnection  ReleaseDirectConnectionRequest
      * @return ReleaseDirectConnectionResponse
@@ -1305,7 +1342,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/125424.html">Release a public endpoint</a>.</p>
+     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/125424.html">Release a public endpoint</a>.</p>
      * 
      * @param request the request parameters of ReleaseInstancePublicConnection  ReleaseInstancePublicConnectionRequest
      * @return ReleaseInstancePublicConnectionResponse
@@ -1315,7 +1352,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After the conversion is complete, the child instance becomes a standard instance. You can find and manage the instance in the instance list of the corresponding region.</p>
+     * <p>After the conversion is complete, the child instance becomes a regular instance. You can find and manage the instance in the instance list of the corresponding region.</p>
      * </blockquote>
      * 
      * @param request the request parameters of RemoveSubInstance  RemoveSubInstanceRequest
@@ -1325,7 +1362,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer recommended. You can adjust instance bandwidth through the console (<a href="https://help.aliyun.com/document_detail/102588.html">Modify instance bandwidth</a>) or by calling <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a>.</p>
+     * <p>This operation is deprecated. You can purchase bandwidth for an instance by using the console (<a href="https://help.aliyun.com/document_detail/102588.html">Adjust instance bandwidth</a>) or by calling the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</p>
      * 
      * @param request the request parameters of RenewAdditionalBandwidth  RenewAdditionalBandwidthRequest
      * @return RenewAdditionalBandwidthResponse
@@ -1341,7 +1378,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is supported only for Redis instances that run version 4.0 or later.</p>
+     * <p>This operation is supported only by Redis instances of version 4.0 or later.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
@@ -1375,9 +1412,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If your instance is a Tair (Enterprise Edition) memory-optimized instance of the classic architecture, you can call this operation to restore specified keys in the current instance to a specific point in time accurate to seconds. This enables more fine-grained data restoration.</p>
+     * <p>If your instance is a Tair (Enterprise Edition) memory-optimized instance with the classic architecture, you can call this operation to restore specified keys in the current instance to a specific point in time accurate to seconds. This enables more fine-grained data restoration.</p>
      * <ul>
-     * <li>For instances other than the preceding type, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</li>
+     * <li>For other types of instances, call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore backup data to a new instance.</li>
      * </ul>
      * 
      * @param request the request parameters of RestoreInstance  RestoreInstanceRequest
@@ -1406,13 +1443,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>For more information about nearest access for applications in multi-zone deployment scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
+     * <p>For more information about nearest access for applications in multi-zone scenarios, see <a href="https://help.aliyun.com/document_detail/164222.html">Scenario examples</a>.
      * When you call this operation, the instance must be of the high-availability or dual-replica type.
      * Calling this operation has the following impacts:</p>
      * </blockquote>
      * <ul>
      * <li>After the node role switchover is triggered, the data node on which the switchover is performed will enter a read-only state for a few seconds and experience transient disconnections. Make sure that your application has a reconnection mechanism.</li>
-     * <li>While the instance is in the switching state, you cannot perform instance-level operations, such as changing configurations or migrating zones.</li>
+     * <li>While the instance is in the switching state, you cannot perform instance-level operations, such as modifying configurations or migrating zones.</li>
      * </ul>
      * 
      * @param request the request parameters of SwitchInstanceHA  SwitchInstanceHARequest
@@ -1423,11 +1460,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Proxy features</a>.
-     * Before calling this operation, ensure that the following conditions are met:</p>
+     * To call this operation, the following conditions must be met:</p>
      * <ul>
-     * <li>The instance is created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB MyBase dedicated cluster</a>.</li>
+     * <li>The instance is created in a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">ApsaraDB MyBase</a>.</li>
      * <li>The instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.<blockquote>
-     * <p>Before calling this operation, call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and check the value of the <strong>ProxyCount</strong> response parameter to determine whether the proxy mode is enabled for the instance. For example, a value of 0 indicates that the proxy mode is disabled. A value greater than 0 indicates that the proxy mode is enabled.</p>
+     * <p>Before calling this operation, call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and check the value of the <strong>ProxyCount</strong> response parameter to determine whether the proxy mode is enabled for the instance. For example, a value of 0 indicates that the proxy mode is disabled, and a value greater than 0 indicates that the proxy mode is enabled.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1439,7 +1476,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for cloud-native architecture instances.</p>
+     * <p>This operation supports only cloud-native architecture instances.</p>
      * 
      * @param request the request parameters of SwitchInstanceToTargetZone  SwitchInstanceToTargetZoneRequest
      * @return SwitchInstanceToTargetZoneResponse
@@ -1449,8 +1486,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation applies only to active multi-zone (dual-zone) cluster architecture instances.</li>
-     * <li>The node subjected to failure impersonation automatically recovers later. However, the primary node is located in the secondary zone and the secondary node is located in the primary zone. This may cause cross-data-center access between the instance and other services. To resolve this issue, you can perform a manual switchover of zones on the Service Availability page in the console.</li>
+     * <li>This operation is applicable only to multi-zone (dual-zone) cluster architecture instances.</li>
+     * <li>The node where the failure is simulated automatically recovers later. However, the primary node is located in the secondary zone and the secondary node is located in the primary zone, which may result in cross-data center access between the instance and other workloads. To resolve this issue, you can manually switch zones on the Service Availability page in the console.</li>
      * </ul>
      * 
      * @param request the request parameters of SwitchInstanceZoneFailOver  SwitchInstanceZoneFailOverRequest
@@ -1478,11 +1515,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you have a large number of instances, you can create multiple labels and attach different labels to the instances for categorization. You can then filter instances by label.</p>
+     * <p>If you manage a large number of instances, you can create multiple labels and attach different labels to instances for categorization. You can then filter instances by label.</p>
      * <ul>
-     * <li>A label consists of a key-value pair. The key must be unique within the same account and region, while the value has no such restriction.</li>
-     * <li>If the label in Settings does not exist, automatic creation of the label is performed and it is attached to the target instance.</li>
-     * <li>If the instance is already attached to a label with the same key, the new label overwrites the existing one.</li>
+     * <li>A label consists of a key-value pair. Keys must be unique within the same account and region, whereas values have no such restriction.</li>
+     * <li>If the label in Settings does not exist, automatic creation of the label is performed and it is attached to the target instances.</li>
+     * <li>If an instance already has a label with the same key attached, the new label overwrites the existing one.</li>
      * <li>You can attach up to 20 labels to each instance.</li>
      * <li>You can attach labels to up to 50 instances each time you invoke the API.
      * For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a label</a>.</li>
@@ -1497,8 +1534,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the precautions and billing instructions. For more information, see:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/54542.html">Switch from pay-as-you-go to subscription</a>.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/211549.html">Switch from subscription to pay-as-you-go</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method from pay-as-you-go to subscription</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/211549.html">Change the billing method from subscription to pay-as-you-go</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of TransformInstanceChargeType  TransformInstanceChargeTypeRequest
@@ -1514,7 +1551,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</p>
+     * <p>For the corresponding console operation, refer to <a href="https://help.aliyun.com/document_detail/54542.html">Change the billing method to subscription</a>.</p>
      * 
      * @param request the request parameters of TransformToPrePaid  TransformToPrePaidRequest
      * @return TransformToPrePaidResponse
@@ -1529,7 +1566,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can remove up to 20 tags at a time.</p>
+     * <p>You can remove a maximum of 20 tags at a time.</p>
      * <ul>
      * <li>If a tag is removed from an instance and is not attached to any other instances, the tag is automatically deleted.
      * For the corresponding console operation, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove tags</a>.</li>
@@ -1542,11 +1579,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The upgrade process and impact vary depending on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version update</a>.</p>
+     * <p>The upgrade process and impact vary based on the architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Principles of minor version updates</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the proxy nodes.</li>
-     * <li>The upgrade causes connection interruptions. Perform the upgrade during off-peak hours and make sure that your application has a reconnection mechanism. For more information about the impact, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor engine version update</a>.</li>
+     * <li>Before you call this operation, you can call <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> to query the current minor version of the proxy node.</li>
+     * <li>Upgrades cause connection interruptions. Perform upgrades during off-peak hours and ensure that your applications have a reconnection mechanism. For more information about the impact, see <a href="https://help.aliyun.com/document_detail/56450.html">Principles of minor version updates</a>.</li>
      * </ul>
      * </blockquote>
      * 

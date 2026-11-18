@@ -197,11 +197,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The account description to set.</p>
+         * <p>The description of the account.</p>
          * <ul>
-         * <li>The description must start with a Chinese character or an English letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The description can contain Chinese characters, English letters, digits, underscores (_), and hyphens (-).</li>
-         * <li>The description must be 2 to 256 characters in length.</li>
+         * <li>It must start with a Chinese character or a letter, and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It can contain Chinese characters, letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>It must be 2 to 256 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -215,7 +215,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The account name. You can call <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> to obtain the account name.</p>
+         * <p>The account name. You can call the <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> operation to query the account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
+         * <p>This parameter is used only for internal maintenance and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>SDK</p>

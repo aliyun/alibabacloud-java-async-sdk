@@ -80,7 +80,7 @@ public class DescribeTaskDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the node started. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The start time of the task, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-12T07:18:57Z</p>
@@ -102,7 +102,7 @@ public class DescribeTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The node status.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>

@@ -99,7 +99,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -285,8 +285,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created.</p>
-             * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The creation time of the task. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-01T02:06:34Z</p>
@@ -297,8 +296,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the task.</p>
-             * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The end time of the task. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-23T00:00:00Z</p>
@@ -309,8 +307,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The completion time of the task.</p>
-             * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The completion time of the task. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-09T02:13:01Z</p>
@@ -321,7 +318,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specified inspection items. The following inspection items are supported:</p>
+             * <p>The specified inspection items. Supported inspection items:</p>
              * <ul>
              * <li>RESOURCE_USAGE</li>
              * <li>BIGKEY</li>
@@ -361,7 +358,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scheduled task.</p>
+             * <p>The ID of the timed scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>sch-4dfb08ddf9f84855bacca35axxx</p>
@@ -383,8 +380,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the task.</p>
-             * <p>The time is displayed in UTC time in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+             * <p>The start time of the task. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-05-30T02:11:01Z</p>
@@ -395,7 +391,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>SUCCEEDED</p>
@@ -502,7 +498,7 @@ public class DescribeInspectionTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of tasks.</p>
+             * <p>The list of task data.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

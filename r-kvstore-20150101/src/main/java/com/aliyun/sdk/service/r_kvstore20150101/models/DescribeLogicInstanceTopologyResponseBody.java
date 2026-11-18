@@ -93,7 +93,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1zxszhcgatnx****</p>

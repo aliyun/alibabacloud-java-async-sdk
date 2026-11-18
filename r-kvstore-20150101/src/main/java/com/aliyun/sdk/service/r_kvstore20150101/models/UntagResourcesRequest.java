@@ -174,13 +174,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to remove all tags from the instance. Valid values:</p>
+         * <p>Specifies whether to remove all tags from the instances. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: removes all tags from the instance.</li>
-         * <li><strong>false</strong>: does not remove all tags from the instance. This is the default value.</li>
+         * <li><strong>true</strong>: Removes all tags from the instances.</li>
+         * <li><strong>false</strong>: Does not remove all tags from the instances. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p>If both <strong>TagKey.N</strong> and this parameter are specified, this parameter does not take effect.</p>
+         * <p>If you specify both <strong>TagKey.N</strong> and this parameter, this parameter does not take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query the region ID.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,11 +224,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of instance IDs.</p>
+         * <p>The instance IDs.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -268,10 +265,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of tag keys.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>demokey</p>
+         * <p>The tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

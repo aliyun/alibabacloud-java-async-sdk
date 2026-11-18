@@ -75,7 +75,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>963C20F0-7CE1-4591-AAF3-6F3CD1CE****</p>

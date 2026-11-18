@@ -426,9 +426,9 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The architecture type. Valid values:</p>
          * <ul>
-         * <li><strong>cluster</strong>: cluster edition</li>
-         * <li><strong>standard</strong>: standard edition</li>
-         * <li><strong>rwsplit</strong>: read/write splitting edition</li>
+         * <li><strong>cluster</strong>: Cluster Edition</li>
+         * <li><strong>standard</strong>: Standard Edition</li>
+         * <li><strong>rwsplit</strong>: Read/Write Splitting Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -459,7 +459,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The edition type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Community</strong>: open-source Redis</li>
+         * <li><strong>Community</strong>: Redis Community Edition</li>
          * <li><strong>Enterprise</strong>: Tair Enterprise Edition</li>
          * </ul>
          * 
@@ -487,8 +487,8 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The expiration status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instance has expired.</li>
-         * <li><strong>false</strong>: The instance has not expired.</li>
+         * <li><strong>true</strong>: The instance is expired.</li>
+         * <li><strong>false</strong>: The instance is not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -501,10 +501,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter child instances of distributed instances in the returned instance list. Valid values:</p>
+         * <p>Specifies whether to filter out child instances of distributed instances in the returned instance list. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Only child instance information is returned.</li>
-         * <li><strong>false</strong>: Child instance information is not returned.</li>
+         * <li><strong>true</strong>: Only child instances are returned.</li>
+         * <li><strong>false</strong>: Child instances are not returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -517,7 +517,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance specifications. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance specifications</a>.</p>
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>redis.master.small.default</p>
@@ -529,7 +529,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instances to be queried.</p>
+         * <p>The IDs of the instances to query.</p>
          * <blockquote>
          * <p>To specify multiple instance IDs, separate the IDs with commas (,). You can specify up to 30 instance IDs in a single request.</p>
          * </blockquote>
@@ -554,11 +554,11 @@ public class DescribeInstancesRequest extends Request {
          * <li><strong>Released</strong>: released</li>
          * <li><strong>Transforming</strong>: transforming</li>
          * <li><strong>Migrating</strong>: migrating</li>
-         * <li><strong>BackupRecovering</strong>: recovering from backup</li>
+         * <li><strong>BackupRecovering</strong>: recovering from a backup</li>
          * <li><strong>MinorVersionUpgrading</strong>: minor version upgrade in progress</li>
          * <li><strong>NetworkModifying</strong>: changing the network type</li>
-         * <li><strong>SSLModifying</strong>: changing SSL configurations</li>
-         * <li><strong>MajorVersionUpgrading</strong>: major engine version upgrade in progress, during which the instance remains accessible</li>
+         * <li><strong>SSLModifying</strong>: changing SSL settings</li>
+         * <li><strong>MajorVersionUpgrading</strong>: major engine version upgrade in progress. The instance remains accessible.</li>
          * </ul>
          * <blockquote>
          * <p>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance statuses and impacts</a>.</p>
@@ -613,7 +613,7 @@ public class DescribeInstancesRequest extends Request {
          * <li><strong>STAND_ALONE</strong>: single-replica</li>
          * <li><strong>double</strong>: dual-replica</li>
          * <li><strong>single</strong>: single-replica<blockquote>
-         * <p>For cloud-native instances, select <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. For classic instances, select <strong>double</strong> or <strong>single</strong>.</p>
+         * <p>Select <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong> for Cloud-native Edition instances, and select <strong>double</strong> or <strong>single</strong> for Classic Edition instances.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -684,7 +684,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The region ID of the instance.</p>
          * <blockquote>
-         * <p>When you call this operation, if the <strong>Tag</strong> parameter is specified, this parameter is required.</p>
+         * <p>If you specify the <strong>Tag</strong> parameter when you call this operation, you must also specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -699,7 +699,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The resource group ID.</p>
          * <blockquote>
-         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the list of resource group IDs. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID list. Related operations: <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -730,7 +730,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. Fuzzy match is supported for instance names and instance IDs.</p>
+         * <p>The keyword used for fuzzy search by instance name or instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>apitest</p>
@@ -855,13 +855,13 @@ public class DescribeInstancesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. It forms a key-value pair with the tag value.</p>
+             * <p>The tag key. The tag key and value form a key-value pair.</p>
              * <blockquote>
              * <p>You can specify up to 5 tag key-value pairs in a single request.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>Storage type</p>
+             * <p>StorageType</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -869,7 +869,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * <p>The tag value. It forms a key-value pair with the tag key.</p>
+             * <p>The value of the tag key. The tag key and value form a key-value pair.</p>
              * 
              * <strong>example:</strong>
              * <p>Development</p>

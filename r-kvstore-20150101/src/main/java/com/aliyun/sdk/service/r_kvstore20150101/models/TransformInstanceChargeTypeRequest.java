@@ -241,7 +241,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
          * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: enables automatic payment. This is the default value.</li>
-         * <li><strong>false</strong>: disables automatic payment. You must manually pay for the order. To pay for the order, choose <strong>Billing</strong> &gt; <strong>Renewals</strong> in the top navigation bar of the console, and then choose <strong>Order Management</strong> &gt; <strong>My Orders</strong> in the left-side navigation pane to find and pay for the order.</li>
+         * <li><strong>false</strong>: disables automatic payment. You must manually pay for the order. To pay for the order, choose <strong>Billing</strong> &gt; <strong>Renewal Management</strong> in the top navigation bar of the console. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; <strong>My Orders</strong>, find the order, and then complete the payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal epoch. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+         * <p>The auto-renewal cycle. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
          * <blockquote>
          * <p>This parameter is required only when the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
          * </blockquote>
@@ -285,7 +285,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The billing method to which you want to switch. Valid values:</p>
+         * <p>The new billing method. Valid values:</p>
          * <ul>
          * <li><strong>PrePaid</strong>: subscription. If you set this parameter to PrePaid, you must also specify the <strong>Period</strong> parameter.</li>
          * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
@@ -311,7 +311,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</p>
+         * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

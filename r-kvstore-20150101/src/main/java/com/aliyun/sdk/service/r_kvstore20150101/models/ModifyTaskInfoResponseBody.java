@@ -104,7 +104,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the failed node. The first failed node ID is returned.</p>
+         * <p>The ID of the failed task. This parameter is returned when a failure occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>t-0mqaj5hnyofczv****</p>
@@ -126,7 +126,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of successful nodes.</p>
+         * <p>The number of successful tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

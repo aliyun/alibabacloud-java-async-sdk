@@ -80,7 +80,7 @@ public class DescribeTairSkvDdbTableSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID. For more information, see common parameters.</p>
+         * <p>See common parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>A1604E1B-6825-1577-BBDA-2A64E8D5F126</p>
@@ -102,7 +102,7 @@ public class DescribeTairSkvDdbTableSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The TTL property. The parameter settings toggle in JSON format.</p>
+         * <p>The TTL property and parameter setting switches in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;attributeName&quot;:&quot;Expiretime&quot;,&quot;enabled&quot;:true}</p>

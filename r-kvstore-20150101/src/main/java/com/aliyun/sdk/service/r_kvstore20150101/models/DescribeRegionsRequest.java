@@ -152,7 +152,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * <p>The language of the value returned for the <strong>LocalName</strong> parameter. Valid values:</p>
+         * <p>Specifies the language of the value returned for the <strong>LocalName</strong> parameter. Valid values:</p>
          * <ul>
          * <li><strong>zh-CN</strong>: Chinese.</li>
          * <li><strong>en-US</strong>: English.</li>

@@ -117,7 +117,7 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of IP addresses corresponding to all LBs of the current instance.</p>
+         * <p>The list of IP addresses for all load balancers of the instance.</p>
          */
         public Builder masterDnsRecord(java.util.List<String> masterDnsRecord) {
             this.masterDnsRecord = masterDnsRecord;
@@ -136,7 +136,7 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of multiple LB VIPs.</p>
+         * <p>The list of virtual IP addresses (VIPs) for multiple load balancers.</p>
          */
         public Builder multiVIPList(java.util.List<MultiVIPList> multiVIPList) {
             this.multiVIPList = multiVIPList;

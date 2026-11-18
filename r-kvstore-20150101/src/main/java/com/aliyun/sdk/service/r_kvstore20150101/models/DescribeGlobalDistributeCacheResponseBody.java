@@ -106,7 +106,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the distributed instance.</p>
+         * <p>The list of distributed instances.</p>
          */
         public Builder globalDistributeCaches(java.util.List<GlobalDistributeCaches> globalDistributeCaches) {
             this.globalDistributeCaches = globalDistributeCaches;
@@ -125,7 +125,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries that can be displayed per page.</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -147,7 +147,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,7 +255,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The distributed instance ID.</p>
+             * <p>The instance ID of the distributed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>gr-bp14rkqrhac****</p>
@@ -268,9 +268,9 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             /**
              * <p>The instance type of the child instance. For more information, see:</p>
              * <ul>
-             * <li><a href="https://help.aliyun.com/document_detail/145228.html">Memory-optimized Standard Edition instance types</a>.</li>
-             * <li><a href="https://help.aliyun.com/document_detail/150458.html">Memory-optimized Cluster Edition instance types</a>.</li>
-             * <li><a href="https://help.aliyun.com/document_detail/150459.html">Memory-optimized read/write splitting instance types</a>.</li>
+             * <li><a href="https://help.aliyun.com/document_detail/145228.html">Standard memory-optimized instance types</a>.</li>
+             * <li><a href="https://help.aliyun.com/document_detail/150458.html">Cluster memory-optimized instance types</a>.</li>
+             * <li><a href="https://help.aliyun.com/document_detail/150459.html">Read/write splitting memory-optimized instance types</a>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The child instance ID.</p>
+             * <p>The instance ID of the child instance.</p>
              * 
              * <strong>example:</strong>
              * <p>r-bp1zxszhcgatnx****</p>
@@ -295,24 +295,24 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             /**
              * <p>The instance status of the child instance. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: Normal.</li>
-             * <li><strong>Creating</strong>: Being created.</li>
-             * <li><strong>Changing</strong>: Being modified.</li>
-             * <li><strong>Inactive</strong>: Disabled.</li>
-             * <li><strong>Flushing</strong>: Being purged.</li>
-             * <li><strong>Released</strong>: Released.</li>
-             * <li><strong>Transforming</strong>: Being transformed.</li>
-             * <li><strong>Unavailable</strong>: Service stopped.</li>
-             * <li><strong>Error</strong>: Failed to create.</li>
-             * <li><strong>Migrating</strong>: Being migrated.</li>
-             * <li><strong>BackupRecovering</strong>: Being restored from a backup.</li>
-             * <li><strong>MinorVersionUpgrading</strong>: Minor version being upgraded.</li>
-             * <li><strong>NetworkModifying</strong>: Network being modified.</li>
-             * <li><strong>SSLModifying</strong>: SSL being modified.</li>
-             * <li><strong>MajorVersionUpgrading</strong>: Major engine version upgrade in progress. The instance can be accessed normally.</li>
+             * <li><strong>Normal</strong>: The instance is in a normal state.</li>
+             * <li><strong>Creating</strong>: The instance is being created.</li>
+             * <li><strong>Changing</strong>: The instance is being modified.</li>
+             * <li><strong>Inactive</strong>: The instance is disabled.</li>
+             * <li><strong>Flushing</strong>: The instance is being purged.</li>
+             * <li><strong>Released</strong>: The instance is released.</li>
+             * <li><strong>Transforming</strong>: The instance is being transformed.</li>
+             * <li><strong>Unavailable</strong>: The service is stopped.</li>
+             * <li><strong>Error</strong>: The instance failed to be created.</li>
+             * <li><strong>Migrating</strong>: The instance is being migrated.</li>
+             * <li><strong>BackupRecovering</strong>: The instance is recovering from a backup.</li>
+             * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being upgraded.</li>
+             * <li><strong>NetworkModifying</strong>: The network of the instance is being modified.</li>
+             * <li><strong>SSLModifying</strong>: The SSL certificate of the instance is being modified.</li>
+             * <li><strong>MajorVersionUpgrading</strong>: A major engine version upgrade is in progress. The instance remains accessible.</li>
              * </ul>
              * <blockquote>
-             * <p>For more information about instance status and details, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+             * <p>For more information about instance statuses and their impacts, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance statuses and impacts</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -407,7 +407,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The distributed instance ID.</p>
+             * <p>The instance ID of the distributed instance.</p>
              * 
              * <strong>example:</strong>
              * <p>gr-bp14rkqrhac****</p>
@@ -420,9 +420,9 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             /**
              * <p>The instance status of the distributed instance. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: Running.</li>
-             * <li><strong>Changing</strong>: Being modified.</li>
-             * <li><strong>Creating</strong>: Being created.</li>
+             * <li><strong>Normal</strong>: The instance is running.</li>
+             * <li><strong>Changing</strong>: The instance is being modified.</li>
+             * <li><strong>Creating</strong>: The instance is being created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the child instances.</p>
+             * <p>The list of child instances.</p>
              */
             public Builder subInstances(java.util.List<SubInstances> subInstances) {
                 this.subInstances = subInstances;

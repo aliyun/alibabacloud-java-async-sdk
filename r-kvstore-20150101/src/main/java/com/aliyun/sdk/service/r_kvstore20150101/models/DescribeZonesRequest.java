@@ -143,7 +143,7 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * <p>The language of the zone names in the response. Valid values:</p>
+         * <p>Specifies the language of the returned zone names. Valid values:</p>
          * <ul>
          * <li><strong>zh-CN</strong> (default): Chinese.</li>
          * <li><strong>en-US</strong>: English.</li>

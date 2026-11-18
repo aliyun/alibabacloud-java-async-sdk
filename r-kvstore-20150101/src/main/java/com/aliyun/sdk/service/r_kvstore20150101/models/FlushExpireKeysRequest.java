@@ -169,7 +169,7 @@ public class FlushExpireKeysRequest extends Request {
         /**
          * <p>The execution time. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong>: Executes the operation immediately. This is the default value.</li>
+         * <li><strong>Immediately</strong>: Executes the operation immediately. Default value.</li>
          * <li><strong>MaintainTime</strong>: Executes the operation during the maintenance window.</li>
          * </ul>
          * <blockquote>

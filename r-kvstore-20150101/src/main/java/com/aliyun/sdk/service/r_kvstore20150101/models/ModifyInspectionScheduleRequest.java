@@ -221,7 +221,7 @@ public class ModifyInspectionScheduleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to start the scheduled task. Default value: true.</p>
+         * <p>Specifies whether to enable the scheduled task. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -233,7 +233,7 @@ public class ModifyInspectionScheduleRequest extends Request {
         }
 
         /**
-         * <p>The specified inspection items. The following inspection items are supported:</p>
+         * <p>The specified inspection items. Supported inspection items:</p>
          * <ul>
          * <li>RESOURCE_USAGE</li>
          * <li>BIGKEY</li>
@@ -289,7 +289,7 @@ public class ModifyInspectionScheduleRequest extends Request {
         }
 
         /**
-         * <p>The report language.</p>
+         * <p>The language of the report.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>

@@ -67,7 +67,7 @@ public class ModifyActiveOperationTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The O&amp;M task IDs, separated by commas (,).</p>
+         * <p>The IDs of the O&amp;M tasks. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>11111,22222</p>

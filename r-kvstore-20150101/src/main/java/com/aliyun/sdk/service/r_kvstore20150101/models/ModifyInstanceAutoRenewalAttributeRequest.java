@@ -230,9 +230,9 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal cycle. Valid values: <strong>1</strong> to <strong>12</strong>. Unit: months. When the instance is about to expire, the system automatically renews the instance for the specified duration.</p>
+         * <p>The auto-renewal period. Valid values: <strong>1</strong> to <strong>12</strong>. Unit: months. When the instance is about to expire, the system automatically renews the instance for the specified duration.</p>
          * <blockquote>
-         * <p>This parameter is available and required only when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
+         * <p>This parameter is valid and required only when the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -263,7 +263,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * <p>The product. Set the value to kvstore.</p>
+         * <p>The product type. Set the value to kvstore.</p>
          * 
          * <strong>example:</strong>
          * <p>kvstore</p>

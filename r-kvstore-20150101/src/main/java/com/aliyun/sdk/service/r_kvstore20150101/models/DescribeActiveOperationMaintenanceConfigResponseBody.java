@@ -88,7 +88,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         }
 
         /**
-         * <p>Indicates whether the configuration exists. Valid values:</p>
+         * <p>Indicates whether the O&amp;M task is configured. Valid values:</p>
          * <ul>
          * <li>1: Configured.</li>
          * <li>0: Not configured.</li>
@@ -237,7 +237,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             } 
 
             /**
-             * <p>The time when the O&amp;M task configuration was created. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</p>
+             * <p>The time when the O&amp;M task configuration was created. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2018-05-30T14:30:00Z</p>
@@ -250,8 +250,8 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             /**
              * <p>The cycle time.</p>
              * <ul>
-             * <li>If CycleType is set to Month, a number from 1 to 28 is returned, indicating the day of the month. Multiple values are separated by commas (,). The value is 0 if the configuration is inactive.</li>
-             * <li>If CycleType is set to Week, a number from 1 to 7 is returned, indicating the day of the week. Multiple values are separated by commas (,). The value is 0 if the configuration is inactive.</li>
+             * <li>If CycleType is set to Month, a number from 1 to 28 is returned, indicating the day of the month. Multiple days are separated by commas (,). If the configuration does not take effect, 0 is returned.</li>
+             * <li>If CycleType is set to Week, a number from 1 to 7 is returned, indicating the day of the week. Multiple days are separated by commas (,). If the configuration does not take effect, 0 is returned.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -265,8 +265,8 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             /**
              * <p>The cycle type. Valid values:</p>
              * <ul>
-             * <li>Month: monthly</li>
-             * <li>Week: weekly</li>
+             * <li>Month: Monthly.</li>
+             * <li>Week: Weekly.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>The end time of the O&amp;M time window. The time is in the <i>hh:mm:ss</i>Z format (UTC).</p>
+             * <p>The end time of the O&amp;M time window. The time follows the <i>hh:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>20:00:00Z</p>
@@ -289,7 +289,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>The start time of the O&amp;M time window. The time is in the <i>hh:mm:ss</i>Z format (UTC).</p>
+             * <p>The start time of the O&amp;M time window. The time follows the <i>hh:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>18:00:00Z</p>
@@ -300,7 +300,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>The time when the O&amp;M task configuration was last modified. The time is in the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</p>
+             * <p>The time when the O&amp;M task configuration was last modified. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-30T14:30:00Z</p>
@@ -311,10 +311,10 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
             }
 
             /**
-             * <p>Indicates whether the configuration is active. Valid values:</p>
+             * <p>Indicates whether the configuration takes effect. Valid values:</p>
              * <ul>
-             * <li>1: Active.</li>
-             * <li>2: Inactive.</li>
+             * <li>1: Effective.</li>
+             * <li>2: Invalid.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -27,6 +27,10 @@ public class DescribeInspectionTaskReportRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LevelSummary")
+    private String levelSummary;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -39,6 +43,7 @@ public class DescribeInspectionTaskReportRequest extends Request {
         super(builder);
         this.inspectionInsId = builder.inspectionInsId;
         this.instanceId = builder.instanceId;
+        this.levelSummary = builder.levelSummary;
         this.securityToken = builder.securityToken;
         this.taskId = builder.taskId;
     }
@@ -71,6 +76,13 @@ public class DescribeInspectionTaskReportRequest extends Request {
     }
 
     /**
+     * @return levelSummary
+     */
+    public String getLevelSummary() {
+        return this.levelSummary;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -87,6 +99,7 @@ public class DescribeInspectionTaskReportRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInspectionTaskReportRequest, Builder> {
         private String inspectionInsId; 
         private String instanceId; 
+        private String levelSummary; 
         private String securityToken; 
         private String taskId; 
 
@@ -98,12 +111,13 @@ public class DescribeInspectionTaskReportRequest extends Request {
             super(request);
             this.inspectionInsId = request.inspectionInsId;
             this.instanceId = request.instanceId;
+            this.levelSummary = request.levelSummary;
             this.securityToken = request.securityToken;
             this.taskId = request.taskId;
         } 
 
         /**
-         * <p>The ID of the inspection instance.</p>
+         * <p>The inspection instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp19f4f6994813xxx</p>
@@ -124,6 +138,24 @@ public class DescribeInspectionTaskReportRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>The summary of risk levels for inspection results. You can specify multiple values. Valid values:</p>
+         * <ul>
+         * <li>Normal: normal</li>
+         * <li>Warning: warning</li>
+         * <li>Error: high-risk</li>
+         * <li>Failed: failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Error,Warning</p>
+         */
+        public Builder levelSummary(String levelSummary) {
+            this.putQueryParameter("LevelSummary", levelSummary);
+            this.levelSummary = levelSummary;
             return this;
         }
 

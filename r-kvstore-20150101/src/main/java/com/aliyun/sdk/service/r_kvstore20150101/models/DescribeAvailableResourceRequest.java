@@ -288,8 +288,8 @@ public class DescribeAvailableResourceRequest extends Request {
         /**
          * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><strong>Redis</strong>: Redis engine</li>
-         * <li><strong>Memcache</strong>: Memcache engine</li>
+         * <li><strong>Redis</strong>.</li>
+         * <li><strong>Memcache</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,8 +304,8 @@ public class DescribeAvailableResourceRequest extends Request {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>PrePaid</strong> (default): subscription</li>
-         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * <li><strong>PrePaid</strong> (default): subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,9 +335,9 @@ public class DescribeAvailableResourceRequest extends Request {
         /**
          * <p>The product series. Valid values:</p>
          * <ul>
-         * <li><strong>professional</strong>: Professional Edition. This edition supports the standalone, primary/secondary, read/write splitting, and cluster architectures, and provides high scalability.
+         * <li><strong>professional</strong>: Standard Edition. This edition supports the single-replica, primary/secondary, read/write splitting, and cluster architectures, and provides high scalability.
          *  &lt;props=&quot;china&quot;&gt;</li>
-         * <li><strong>economical</strong>: Economical Edition. This edition supports only the primary/secondary architecture and is cost-effective. For more information, see <a href="https://help.aliyun.com/document_detail/2489678.html">YiTian RDS instances</a>.</li>
+         * <li><strong>economical</strong>: This edition supports only the primary/secondary architecture and is cost-effective. For more information, see <a href="https://help.aliyun.com/document_detail/2489678.html">YiTian RDS instance</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * <p>The data node ID. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to obtain the data node ID. For the obtained data node ID, you must remove the number sign (<code>#</code>) and the content that follows it. For example, retain only r-bp10noxlhcoim2****-db-0.</p>
+         * <p>The data node ID. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to obtain the data node ID. For the obtained data node ID, you must remove the number sign (<code>#</code>) and the content after it. For example, retain only r-bp10noxlhcoim2****-db-0.</p>
          * <blockquote>
          * <p>Before you specify this parameter, you must also specify the <strong>InstanceId</strong> parameter, and the instance must use the cluster or read/write splitting architecture.</p>
          * </blockquote>
@@ -367,9 +367,9 @@ public class DescribeAvailableResourceRequest extends Request {
         /**
          * <p>The order type. Valid values:</p>
          * <ul>
-         * <li><strong>BUY</strong> (default): new purchase</li>
-         * <li><strong>UPGRADE</strong>: upgrade instance type</li>
-         * <li><strong>DOWNGRADE</strong>: downgrade instance type</li>
+         * <li><strong>BUY</strong> (default): new purchase.</li>
+         * <li><strong>UPGRADE</strong>: upgrade the instance type.</li>
+         * <li><strong>DOWNGRADE</strong>: downgrade the instance type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -400,14 +400,14 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * <p>The product type. Valid values:</p>
+         * <p>The product type. Default value: Local. Valid values:</p>
          * <ul>
-         * <li><strong>Local</strong> (default): Redis Community Edition instance (classic architecture) or memory-optimized instance (classic architecture).</li>
-         * <li><strong>Tair_rdb</strong>: memory-optimized instance (cloud-native architecture).</li>
+         * <li><strong>Local</strong>: Redis Community Edition instance (Classic Edition) or memory-optimized instance (Classic Edition).</li>
+         * <li><strong>Tair_rdb</strong>: memory-optimized instance (Cloud-native Edition).</li>
          * <li><strong>Tair_scm</strong>: persistent memory-optimized instance.</li>
          * <li><strong>Tair_essd</strong>: disk-optimized instance.</li>
-         * <li><strong>OnECS</strong>: Redis Community Edition instance (cloud-native architecture).<blockquote>
-         * <p>The default value is Local. If you want to query cloud disk resources, you must specify the product type that corresponds to the required cloud disk resources.</p>
+         * <li><strong>OnECS</strong>: Redis Community Edition instance (Cloud-native Edition).<blockquote>
+         * <p>The default value of this parameter is Local. If you want to query cloud disk resources, you must specify the product type corresponding to the required cloud disk resources.</p>
          * </blockquote>
          * </li>
          * </ul>

@@ -171,7 +171,7 @@ public class DeleteParameterGroupRequest extends Request {
         }
 
         /**
-         * <p>The parameter template ID.</p>
+         * <p>The ID of the parameter template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
