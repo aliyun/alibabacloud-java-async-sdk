@@ -75,7 +75,7 @@ public class GetConsumerAccessOverviewRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the consumer. Use the identifier returned by the API operation that creates or queries consumers.</p>
+         * <p>The consumer ID, which is the identifier returned by the API operation for creating or querying consumers.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

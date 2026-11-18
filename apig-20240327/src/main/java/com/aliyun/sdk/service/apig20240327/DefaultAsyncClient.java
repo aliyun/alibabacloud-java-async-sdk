@@ -2187,6 +2187,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</p>
+     * 
+     * @param request the request parameters of GetGatewayWebsocketUsage  GetGatewayWebsocketUsageRequest
+     * @return GetGatewayWebsocketUsageResponse
+     */
+    @Override
+    public CompletableFuture<GetGatewayWebsocketUsageResponse> getGatewayWebsocketUsage(GetGatewayWebsocketUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGatewayWebsocketUsage").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/websocket-observability/usage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGatewayWebsocketUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGatewayWebsocketUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetHiMarketConsumer  GetHiMarketConsumerRequest
      * @return GetHiMarketConsumerResponse
      */
@@ -3258,6 +3279,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListGatewayQuotaRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</p>
+     * 
+     * @param request the request parameters of ListGatewayWebsocketEvents  ListGatewayWebsocketEventsRequest
+     * @return ListGatewayWebsocketEventsResponse
+     */
+    @Override
+    public CompletableFuture<ListGatewayWebsocketEventsResponse> listGatewayWebsocketEvents(ListGatewayWebsocketEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListGatewayWebsocketEvents").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/websocket-observability/events").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListGatewayWebsocketEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListGatewayWebsocketEventsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
