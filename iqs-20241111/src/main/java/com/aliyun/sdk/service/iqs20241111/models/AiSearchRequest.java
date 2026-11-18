@@ -116,7 +116,10 @@ public class AiSearchRequest extends Request {
         } 
 
         /**
-         * industry.
+         * <p>The industry. If specified, only site content restricted to the specified industry is recalled. Separate multiple industries with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>finance</p>
          */
         public Builder industry(String industry) {
             this.putQueryParameter("industry", industry);
@@ -125,7 +128,10 @@ public class AiSearchRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number. Starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -134,7 +140,11 @@ public class AiSearchRequest extends Request {
         }
 
         /**
+         * <p>The search query.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iPhone</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -143,7 +153,10 @@ public class AiSearchRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The query range for the web page publish time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17dc8bcd-f34a-46d1-a7a3-0fa3d1ce3824</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("sessionId", sessionId);
@@ -152,7 +165,10 @@ public class AiSearchRequest extends Request {
         }
 
         /**
-         * timeRange.
+         * <p>The session ID for multi-turn interaction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OneWeek</p>
          */
         public Builder timeRange(String timeRange) {
             this.putQueryParameter("timeRange", timeRange);

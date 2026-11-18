@@ -102,7 +102,10 @@ public class GenericAdvancedSearchRequest extends Request {
         } 
 
         /**
-         * industry.
+         * <p>The industry. If you specify this parameter, only website content specific to the specified industry is recalled. Separate multiple industries with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medical</p>
          */
         public Builder industry(String industry) {
             this.putQueryParameter("industry", industry);
@@ -111,7 +114,11 @@ public class GenericAdvancedSearchRequest extends Request {
         }
 
         /**
+         * <p>The search query.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iPhone</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -120,7 +127,10 @@ public class GenericAdvancedSearchRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The session ID for multi-turn interactions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-4065bee3-e7aa-49fc-aad2-a8e3a7fd6acd</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("sessionId", sessionId);
@@ -129,7 +139,10 @@ public class GenericAdvancedSearchRequest extends Request {
         }
 
         /**
-         * timeRange.
+         * <p>The relative query range for the web page publication time. Valid values: OneDay, OneWeek, OneMonth, OneYear, and NoLimit. A value of NoLimit indicates that no time limit is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OneWeek</p>
          */
         public Builder timeRange(String timeRange) {
             this.putQueryParameter("timeRange", timeRange);

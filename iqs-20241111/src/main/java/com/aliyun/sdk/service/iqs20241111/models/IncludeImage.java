@@ -80,7 +80,10 @@ public class IncludeImage extends TeaModel {
         } 
 
         /**
-         * height.
+         * <p>The image height in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324</p>
          */
         public Builder height(Integer height) {
             this.height = height;
@@ -88,7 +91,10 @@ public class IncludeImage extends TeaModel {
         }
 
         /**
-         * imageLink.
+         * <p>The image link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://k.sinaimg.cn/n/sinakd20121/594/w2048h946/20240328/74cf-32c0d62e843df76567d760b4459d57c1.jpg/w700d1q75cms.jpg">http://k.sinaimg.cn/n/sinakd20121/594/w2048h946/20240328/74cf-32c0d62e843df76567d760b4459d57c1.jpg/w700d1q75cms.jpg</a></p>
          */
         public Builder imageLink(String imageLink) {
             this.imageLink = imageLink;
@@ -96,7 +102,10 @@ public class IncludeImage extends TeaModel {
         }
 
         /**
-         * width.
+         * <p>The image width in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700</p>
          */
         public Builder width(Integer width) {
             this.width = width;

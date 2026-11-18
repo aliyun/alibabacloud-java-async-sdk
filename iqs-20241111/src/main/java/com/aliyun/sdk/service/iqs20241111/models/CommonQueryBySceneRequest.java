@@ -59,7 +59,7 @@ public class CommonQueryBySceneRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(CommonAgentQuery body) {
             this.putBodyParameter("body", body);

@@ -106,7 +106,7 @@ public class GlobalSearchResult extends TeaModel {
         } 
 
         /**
-         * pageItems.
+         * <p>The web page content list.</p>
          */
         public Builder pageItems(java.util.List<GlobalPageItem> pageItems) {
             this.pageItems = pageItems;
@@ -114,7 +114,7 @@ public class GlobalSearchResult extends TeaModel {
         }
 
         /**
-         * queryContext.
+         * <p>The query context.</p>
          */
         public Builder queryContext(GlobalQueryContext queryContext) {
             this.queryContext = queryContext;
@@ -122,7 +122,10 @@ public class GlobalSearchResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +133,7 @@ public class GlobalSearchResult extends TeaModel {
         }
 
         /**
-         * sceneItems.
+         * <p>The scenario-specific vertical API recall.</p>
          */
         public Builder sceneItems(java.util.List<GlobalSceneItem> sceneItems) {
             this.sceneItems = sceneItems;
@@ -138,7 +141,7 @@ public class GlobalSearchResult extends TeaModel {
         }
 
         /**
-         * searchInformation.
+         * <p>The search information.</p>
          */
         public Builder searchInformation(GlobalSearchInformation searchInformation) {
             this.searchInformation = searchInformation;

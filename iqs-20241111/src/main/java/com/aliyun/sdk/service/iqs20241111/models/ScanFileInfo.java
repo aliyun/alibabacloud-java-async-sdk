@@ -93,7 +93,10 @@ public class ScanFileInfo extends TeaModel {
         } 
 
         /**
-         * angle.
+         * <p>The image rotation angle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder angle(Integer angle) {
             this.angle = angle;
@@ -101,7 +104,10 @@ public class ScanFileInfo extends TeaModel {
         }
 
         /**
-         * height.
+         * <p>The image height.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder height(Integer height) {
             this.height = height;
@@ -109,7 +115,10 @@ public class ScanFileInfo extends TeaModel {
         }
 
         /**
-         * imageBase64.
+         * <p>The Base64 encoding of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>erwre</p>
          */
         public Builder imageBase64(String imageBase64) {
             this.imageBase64 = imageBase64;
@@ -117,7 +126,10 @@ public class ScanFileInfo extends TeaModel {
         }
 
         /**
-         * width.
+         * <p>The image width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder width(Integer width) {
             this.width = width;

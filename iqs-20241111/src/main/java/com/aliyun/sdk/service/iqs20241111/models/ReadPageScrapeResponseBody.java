@@ -93,7 +93,7 @@ public class ReadPageScrapeResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The parsing result of the target URL.</p>
          */
         public Builder data(ReadPageItem data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class ReadPageScrapeResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -109,7 +112,10 @@ public class ReadPageScrapeResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -117,7 +123,10 @@ public class ReadPageScrapeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID. You can provide this ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7cd43c86-731a-4d4c-8385-d070cfc509a4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

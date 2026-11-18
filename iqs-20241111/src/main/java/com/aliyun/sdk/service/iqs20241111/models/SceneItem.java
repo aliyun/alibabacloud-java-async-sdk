@@ -67,7 +67,10 @@ public class SceneItem extends TeaModel {
         } 
 
         /**
-         * detail.
+         * <p>The result details for vertical scenarios. Different scenarios return different JSON string structures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;title&quot;:&quot;London time&quot;,&quot;targetTimeZone&quot;:&quot;Europe/London&quot;}</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -75,7 +78,10 @@ public class SceneItem extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The result type for vertical scenarios, such as weather or time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>time</p>
          */
         public Builder type(String type) {
             this.type = type;

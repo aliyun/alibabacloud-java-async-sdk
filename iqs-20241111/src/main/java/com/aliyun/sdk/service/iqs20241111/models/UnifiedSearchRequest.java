@@ -59,7 +59,7 @@ public class UnifiedSearchRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The search request parameters.</p>
          */
         public Builder body(UnifiedSearchInput body) {
             this.putBodyParameter("body", body);

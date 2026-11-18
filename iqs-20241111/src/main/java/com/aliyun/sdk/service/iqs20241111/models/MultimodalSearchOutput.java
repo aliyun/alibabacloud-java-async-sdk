@@ -93,7 +93,7 @@ public class MultimodalSearchOutput extends TeaModel {
         } 
 
         /**
-         * imageItems.
+         * <p>Image List</p>
          */
         public Builder imageItems(java.util.List<UnifiedImageItem> imageItems) {
             this.imageItems = imageItems;
@@ -101,7 +101,7 @@ public class MultimodalSearchOutput extends TeaModel {
         }
 
         /**
-         * queryContext.
+         * <p>Query context information</p>
          */
         public Builder queryContext(MultimodalQueryContext queryContext) {
             this.queryContext = queryContext;
@@ -109,7 +109,10 @@ public class MultimodalSearchOutput extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdfsd234-2vxcg345-345vc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,7 @@ public class MultimodalSearchOutput extends TeaModel {
         }
 
         /**
-         * searchInformation.
+         * <p>Search basic information</p>
          */
         public Builder searchInformation(SearchInformation searchInformation) {
             this.searchInformation = searchInformation;

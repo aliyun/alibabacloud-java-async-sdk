@@ -80,7 +80,12 @@ public class MultimodalSearchBody extends TeaModel {
         } 
 
         /**
-         * advancedParams.
+         * <p>The additional query items, such as blocked sites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;excludeSites&quot;: &quot;<a href="http://www.360doc.com,weibo.com">www.360doc.com,weibo.com</a>&quot;
+         *   }</p>
          */
         public Builder advancedParams(java.util.Map<String, ?> advancedParams) {
             this.advancedParams = advancedParams;
@@ -88,7 +93,10 @@ public class MultimodalSearchBody extends TeaModel {
         }
 
         /**
-         * engineType.
+         * <p>The search engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Generic</p>
          */
         public Builder engineType(String engineType) {
             this.engineType = engineType;
@@ -96,7 +104,10 @@ public class MultimodalSearchBody extends TeaModel {
         }
 
         /**
-         * query.
+         * <p>The query content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         public Builder query(String query) {
             this.query = query;

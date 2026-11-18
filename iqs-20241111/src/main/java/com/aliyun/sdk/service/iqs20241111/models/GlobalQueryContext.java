@@ -54,7 +54,7 @@ public class GlobalQueryContext extends TeaModel {
         } 
 
         /**
-         * originalQuery.
+         * <p>The initial query condition.</p>
          */
         public Builder originalQuery(OriginalQuery originalQuery) {
             this.originalQuery = originalQuery;
@@ -133,7 +133,10 @@ public class GlobalQueryContext extends TeaModel {
             } 
 
             /**
-             * page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(String page) {
                 this.page = page;
@@ -141,7 +144,10 @@ public class GlobalQueryContext extends TeaModel {
             }
 
             /**
-             * query.
+             * <p>The query keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Latest news on Trump tariffs</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -149,7 +155,10 @@ public class GlobalQueryContext extends TeaModel {
             }
 
             /**
-             * timeRange.
+             * <p>The time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NoLimit</p>
              */
             public Builder timeRange(String timeRange) {
                 this.timeRange = timeRange;

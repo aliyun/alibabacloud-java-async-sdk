@@ -59,7 +59,7 @@ public class MultimodalSearchRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The query parameters and blocked site parameters.</p>
          */
         public Builder body(MultimodalSearchBody body) {
             this.putBodyParameter("body", body);

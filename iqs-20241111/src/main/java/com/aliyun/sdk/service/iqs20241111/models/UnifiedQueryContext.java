@@ -80,7 +80,10 @@ public class UnifiedQueryContext extends TeaModel {
         } 
 
         /**
-         * engineType.
+         * <p>The search engine used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Generic</p>
          */
         public Builder engineType(String engineType) {
             this.engineType = engineType;
@@ -88,7 +91,7 @@ public class UnifiedQueryContext extends TeaModel {
         }
 
         /**
-         * originalQuery.
+         * <p>The initial request.</p>
          */
         public Builder originalQuery(UnifiedOriginalQuery originalQuery) {
             this.originalQuery = originalQuery;
@@ -96,7 +99,7 @@ public class UnifiedQueryContext extends TeaModel {
         }
 
         /**
-         * rewrite.
+         * <p>The rewritten result.</p>
          */
         public Builder rewrite(UnifiedRewrite rewrite) {
             this.rewrite = rewrite;

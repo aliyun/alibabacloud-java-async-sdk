@@ -67,7 +67,10 @@ public class ScanFileInputConfig extends TeaModel {
         } 
 
         /**
-         * autoCrop.
+         * <p>The automatic trim.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoCrop(String autoCrop) {
             this.autoCrop = autoCrop;
@@ -75,7 +78,10 @@ public class ScanFileInputConfig extends TeaModel {
         }
 
         /**
-         * autoRotate.
+         * <p>The automatic rotation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRotate(String autoRotate) {
             this.autoRotate = autoRotate;

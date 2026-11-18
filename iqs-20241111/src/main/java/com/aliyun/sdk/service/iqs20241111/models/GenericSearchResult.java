@@ -119,7 +119,7 @@ public class GenericSearchResult extends TeaModel {
         } 
 
         /**
-         * pageItems.
+         * <p>The web content list.</p>
          */
         public Builder pageItems(java.util.List<ScorePageItem> pageItems) {
             this.pageItems = pageItems;
@@ -127,7 +127,7 @@ public class GenericSearchResult extends TeaModel {
         }
 
         /**
-         * queryContext.
+         * <p>The query context information.</p>
          */
         public Builder queryContext(QueryContext queryContext) {
             this.queryContext = queryContext;
@@ -135,7 +135,10 @@ public class GenericSearchResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +146,7 @@ public class GenericSearchResult extends TeaModel {
         }
 
         /**
-         * sceneItems.
+         * <p>The list of scenario-specific query results, such as structured results for time and weather.</p>
          */
         public Builder sceneItems(java.util.List<SceneItem> sceneItems) {
             this.sceneItems = sceneItems;
@@ -151,7 +154,7 @@ public class GenericSearchResult extends TeaModel {
         }
 
         /**
-         * searchInformation.
+         * <p>The search information.</p>
          */
         public Builder searchInformation(SearchInformation searchInformation) {
             this.searchInformation = searchInformation;
@@ -159,7 +162,7 @@ public class GenericSearchResult extends TeaModel {
         }
 
         /**
-         * weiboItems.
+         * <p>The Weibo list.</p>
          */
         public Builder weiboItems(java.util.List<WeiboItem> weiboItems) {
             this.weiboItems = weiboItems;

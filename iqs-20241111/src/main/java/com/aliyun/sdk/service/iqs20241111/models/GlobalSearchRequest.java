@@ -102,7 +102,10 @@ public class GlobalSearchRequest extends Request {
         } 
 
         /**
-         * page.
+         * <p>The page number. The value starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -111,7 +114,10 @@ public class GlobalSearchRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -120,7 +126,11 @@ public class GlobalSearchRequest extends Request {
         }
 
         /**
+         * <p>The search query.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Latest Trump tariff news</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -129,7 +139,10 @@ public class GlobalSearchRequest extends Request {
         }
 
         /**
-         * timeRange.
+         * <p>The relative time range of the webpage publication time. Specify a value based on the relative time options.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OneWeek</p>
          */
         public Builder timeRange(String timeRange) {
             this.putQueryParameter("timeRange", timeRange);

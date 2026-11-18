@@ -67,7 +67,10 @@ public class SearchCredits extends TeaModel {
         } 
 
         /**
-         * genericTextSearch.
+         * <p>The number of basic edition text searches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder genericTextSearch(Integer genericTextSearch) {
             this.genericTextSearch = genericTextSearch;
@@ -75,7 +78,10 @@ public class SearchCredits extends TeaModel {
         }
 
         /**
-         * liteAdvancedTextSearch.
+         * <p>The number of LiteAdvanced searches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder liteAdvancedTextSearch(Integer liteAdvancedTextSearch) {
             this.liteAdvancedTextSearch = liteAdvancedTextSearch;

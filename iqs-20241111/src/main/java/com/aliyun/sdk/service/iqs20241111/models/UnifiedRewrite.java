@@ -67,7 +67,10 @@ public class UnifiedRewrite extends TeaModel {
         } 
 
         /**
-         * enabled.
+         * <p>Indicates whether rewriting is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -75,7 +78,10 @@ public class UnifiedRewrite extends TeaModel {
         }
 
         /**
-         * timeRange.
+         * <p>The rewritten timeRange.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OneYear</p>
          */
         public Builder timeRange(String timeRange) {
             this.timeRange = timeRange;

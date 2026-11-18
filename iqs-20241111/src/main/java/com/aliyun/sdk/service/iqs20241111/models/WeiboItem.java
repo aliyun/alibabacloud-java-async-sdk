@@ -136,6 +136,7 @@ public class WeiboItem extends TeaModel {
         } 
 
         /**
+         * <p>The search result template. Fixed as weibo_strong for Weibo scenarios.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +148,10 @@ public class WeiboItem extends TeaModel {
         }
 
         /**
-         * homepageLink.
+         * <p>The Weibo homepage of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://m.weibo.cn/u/7761793874?luicode=20000061&lfid=5024099350350075">https://m.weibo.cn/u/7761793874?luicode=20000061&amp;lfid=5024099350350075</a></p>
          */
         public Builder homepageLink(String homepageLink) {
             this.homepageLink = homepageLink;
@@ -155,10 +159,13 @@ public class WeiboItem extends TeaModel {
         }
 
         /**
+         * <p>The content of the Weibo post.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>【小调查：你会买<em>小米SU7</em>吗？】#小米SU7路测覆盖300多城市#4月17日，@小米汽车 发文称SU7道路测试覆盖全国300多个城市，涵盖极寒，极热天气，总里程数高达540万公里，目前仍在进行中。  网页链接</p>
+         * <p>[Quick poll: Would you buy the Xiaomi SU7?]
+         * #Xiaomi SU7 road tests now cover more than 300 cities#
+         * On April 17, @Xiaomi Auto posted that SU7 road testing now covers over 300 cities nationwide, including tests in extremely cold and extremely hot weather. The total test mileage has reached 5.4 million kilometers and is still ongoing. Web link</p>
          */
         public Builder htmlSnippet(String htmlSnippet) {
             this.htmlSnippet = htmlSnippet;
@@ -166,7 +173,7 @@ public class WeiboItem extends TeaModel {
         }
 
         /**
-         * images.
+         * <p>The image information.</p>
          */
         public Builder images(java.util.List<String> images) {
             this.images = images;
@@ -174,6 +181,7 @@ public class WeiboItem extends TeaModel {
         }
 
         /**
+         * <p>The Weibo URL of the search result.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,10 +193,11 @@ public class WeiboItem extends TeaModel {
         }
 
         /**
+         * <p>The publish time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1小时前</p>
+         * <p>An hour ago</p>
          */
         public Builder publishDisplayTime(String publishDisplayTime) {
             this.publishDisplayTime = publishDisplayTime;
@@ -196,7 +205,10 @@ public class WeiboItem extends TeaModel {
         }
 
         /**
-         * username.
+         * <p>The Weibo username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bailu Tech</p>
          */
         public Builder username(String username) {
             this.username = username;

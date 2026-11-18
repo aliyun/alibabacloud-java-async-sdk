@@ -54,7 +54,7 @@ public class MultimodalQueryContext extends TeaModel {
         } 
 
         /**
-         * originalQuery.
+         * <p>Alibaba</p>
          */
         public Builder originalQuery(MultimodalOriginalQuery originalQuery) {
             this.originalQuery = originalQuery;

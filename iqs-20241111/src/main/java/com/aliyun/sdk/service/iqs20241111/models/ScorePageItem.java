@@ -334,6 +334,7 @@ public class ScorePageItem extends TeaModel {
         } 
 
         /**
+         * <p>The search result template. Different templates return different fields.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,7 +346,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * correlationTag.
+         * <p>The relevance tag. A value of 0 indicates low relevance, and 1 indicates non-low relevance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder correlationTag(Integer correlationTag) {
             this.correlationTag = correlationTag;
@@ -353,6 +357,7 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
+         * <p>The abbreviated URL of this search result.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -364,7 +369,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * hostAuthorityScore.
+         * <p>The dynamic authority score, which ranges from 0 to 2 and is calculated based on the relevance of the query content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.923339</p>
          */
         public Builder hostAuthorityScore(Double hostAuthorityScore) {
             this.hostAuthorityScore = hostAuthorityScore;
@@ -372,7 +380,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * hostLogo.
+         * <p>The site logo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://s2.zimgs.cn/ims?kt=url&at=smstruct&key=aHR0cHM6Ly9ndy5hbGljZG4uY29tL0wxLzcyMy8xNTY1MjU2NjAwLzJhL2YwL2I0LzJhZjBiNDQxMGI5YmVlMDVjOGVlNGJmODk3MTNkNTFjLnBuZw==&sign=yx:CUlNNQVJQjFrk3Kxt2F3KWhTOFU=&tv=400_400">https://s2.zimgs.cn/ims?kt=url&amp;at=smstruct&amp;key=aHR0cHM6Ly9ndy5hbGljZG4uY29tL0wxLzcyMy8xNTY1MjU2NjAwLzJhL2YwL2I0LzJhZjBiNDQxMGI5YmVlMDVjOGVlNGJmODk3MTNkNTFjLnBuZw==&amp;sign=yx:CUlNNQVJQjFrk3Kxt2F3KWhTOFU=&amp;tv=400_400</a></p>
          */
         public Builder hostLogo(String hostLogo) {
             this.hostLogo = hostLogo;
@@ -380,7 +391,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * hostname.
+         * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Xinhua News</p>
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -388,10 +402,11 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
+         * <p>The description snippet of the search result in HTML format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>100km/h-0制动能力上，仅有33.3m，不黑不吹，单看这个，<em>小米SU7</em>确实表现不错。而续航方面，101kWh电池容量，实现CLTC续航800km，还有现5分钟补能220km，15分钟补能510km的800V高压平台。而在...</p>
+         * <p>In terms of 100 km/h-0 braking capability, it is only 33.3m. Without bias, just looking at this, the <em>Xiaomi SU7</em> indeed performs well. As for range, with a 101 kWh battery capacity, it achieves a CLTC range of 800 km, and features an 800V high-voltage platform that can add 220 km of range in 5 minutes and 510 km in 15 minutes. And..</p>
          */
         public Builder htmlSnippet(String htmlSnippet) {
             this.htmlSnippet = htmlSnippet;
@@ -399,10 +414,11 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
+         * <p>The search result title in HTML format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><em>小米</em>SU7售价22.99万元起 高管亲自辟谣：发布前不会有<em>价格</em>-百家号</p>
+         * <p><em>Xiaomi</em> SU7 priced from 229,900 yuan, executive personally dispels rumors: no <em>price</em> before launch - Baijiahao</p>
          */
         public Builder htmlTitle(String htmlTitle) {
             this.htmlTitle = htmlTitle;
@@ -410,7 +426,7 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * images.
+         * <p>The image information.</p>
          */
         public Builder images(java.util.List<IncludeImage> images) {
             this.images = images;
@@ -418,6 +434,7 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
+         * <p>The full URL that the search result points to.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -429,7 +446,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * mainText.
+         * <p>The full text of the search result, which is available in some scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Yesterday, Xiaomi Auto was not launched, but related information has been mostly revealed. At the launch event, Lei Jun directly stated that Xiaomi SU7 benchmarks Tesla and Porsche, with 100 industry-leading features. It seems that &quot;far ahead&quot; is no longer a Huawei patent? When introducing the technology, Lei Jun also expanded on five major aspects: motor, battery, mega casting, autonomous driving, and smart cockpit, fully demonstrating Xiaomi Auto\&quot;s technology and technical reserves. All the materials that can be stacked are stacked... Regarding the performance that everyone is interested in, 0-100 km/h acceleration in 2.78s, and a top speed of 265 km/h</p>
          */
         public Builder mainText(String mainText) {
             this.mainText = mainText;
@@ -437,7 +457,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * markdownText.
+         * <p>The web page body in Markdown format.</p>
+         * 
+         * <strong>example:</strong>
+         * <h1>2022 Apsara Conference Homepage</h1>
          */
         public Builder markdownText(String markdownText) {
             this.markdownText = markdownText;
@@ -445,7 +468,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * mime.
+         * <p>The MIME type of the search result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/html</p>
          */
         public Builder mime(String mime) {
             this.mime = mime;
@@ -453,7 +479,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * pageMap.
+         * <p>The supplementary page information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder pageMap(java.util.Map<String, String> pageMap) {
             this.pageMap = pageMap;
@@ -461,6 +490,7 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
+         * <p>The publish time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -472,7 +502,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * richMainBody.
+         * <p>The full rich text body, which preserves the order of text, images, audio, video, tables, and code in the web page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><quark-ocr> 24 hx 3 </quark-ocr></p>
          */
         public Builder richMainBody(String richMainBody) {
             this.richMainBody = richMainBody;
@@ -480,7 +513,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * score.
+         * <p>The score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.234325235</p>
          */
         public Builder score(Double score) {
             this.score = score;
@@ -488,7 +524,14 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * siteLabel.
+         * <p>The site label. Two types are currently supported:</p>
+         * <ul>
+         * <li>Authoritative media</li>
+         * <li>Party and government organs</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Authoritative media</p>
          */
         public Builder siteLabel(String siteLabel) {
             this.siteLabel = siteLabel;
@@ -496,7 +539,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * snippet.
+         * <p>The description snippet of the search result in text format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>In terms of 100 km/h-0 braking capability, it is only 33.3m. Without bias, just looking at this, the Xiaomi SU7 indeed performs well. As for range, with a 101 kWh battery capacity, it achieves a CLTC range of 800 km, and features an 800V high-voltage platform that can add 220 km of range in 5 minutes and 510 km in 15 minutes. And..</p>
          */
         public Builder snippet(String snippet) {
             this.snippet = snippet;
@@ -504,7 +550,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * summary.
+         * <p>The enhanced summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tomorrow</p>
          */
         public Builder summary(String summary) {
             this.summary = summary;
@@ -512,10 +561,11 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
+         * <p>The search result title in plain text.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>小米SU7售价22.99万元起 高管亲自辟谣：发布前不会有价格</p>
+         * <p>Xiaomi SU7 priced from 229,900 yuan, executive personally dispels rumors: no price before launch</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -523,7 +573,10 @@ public class ScorePageItem extends TeaModel {
         }
 
         /**
-         * websiteAuthorityScore.
+         * <p>The static authority score, which is determined solely by the authority of the website itself and is independent of the query content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder websiteAuthorityScore(Integer websiteAuthorityScore) {
             this.websiteAuthorityScore = websiteAuthorityScore;

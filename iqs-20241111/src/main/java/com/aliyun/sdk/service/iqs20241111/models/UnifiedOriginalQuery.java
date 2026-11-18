@@ -67,7 +67,10 @@ public class UnifiedOriginalQuery extends TeaModel {
         } 
 
         /**
-         * query.
+         * <p>The request query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou cuisine</p>
          */
         public Builder query(String query) {
             this.query = query;
@@ -75,7 +78,10 @@ public class UnifiedOriginalQuery extends TeaModel {
         }
 
         /**
-         * timeRange.
+         * <p>The publish time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoLimit</p>
          */
         public Builder timeRange(String timeRange) {
             this.timeRange = timeRange;

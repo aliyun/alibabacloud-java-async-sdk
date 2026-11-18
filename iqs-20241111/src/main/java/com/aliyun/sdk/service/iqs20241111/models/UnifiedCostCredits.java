@@ -67,7 +67,7 @@ public class UnifiedCostCredits extends TeaModel {
         } 
 
         /**
-         * search.
+         * <p>The basic search service metering.</p>
          */
         public Builder search(SearchCredits search) {
             this.search = search;
@@ -75,7 +75,7 @@ public class UnifiedCostCredits extends TeaModel {
         }
 
         /**
-         * valueAdded.
+         * <p>The value-added service metering.</p>
          */
         public Builder valueAdded(ValueAddedCredits valueAdded) {
             this.valueAdded = valueAdded;

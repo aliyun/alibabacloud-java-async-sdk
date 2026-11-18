@@ -67,7 +67,14 @@ public class GlobalSceneItem extends TeaModel {
         } 
 
         /**
-         * detail.
+         * <p>The detailed information in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;snippet&quot;: &quot;As of March 7, 2025, SpaceX Starship has been launched 8 times, with 4 successes and 4 failures.&quot;,
+         * &quot;snippetHighlighted&quot;: [&quot;8 times&quot;],
+         * &quot;title&quot;: &quot;List of Starship launch missions&quot;
+         * }</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -75,7 +82,10 @@ public class GlobalSceneItem extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type of vertical data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>answerBox</p>
          */
         public Builder type(String type) {
             this.type = type;

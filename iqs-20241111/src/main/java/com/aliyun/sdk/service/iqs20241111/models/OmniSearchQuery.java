@@ -94,10 +94,11 @@ public class OmniSearchQuery extends TeaModel {
         } 
 
         /**
+         * <p>The request parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>今天杭州天气</p>
+         * <p>What is the weather in Hangzhou today?</p>
          */
         public Builder query(String query) {
             this.query = query;
@@ -105,7 +106,10 @@ public class OmniSearchQuery extends TeaModel {
         }
 
         /**
-         * sessionId.
+         * <p>The session ID. This is a reserved field and is not currently supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session_id_123</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -113,7 +117,10 @@ public class OmniSearchQuery extends TeaModel {
         }
 
         /**
-         * useCot.
+         * <p>Specifies whether to use CoT. This is a reserved field and is not currently supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useCot(Boolean useCot) {
             this.useCot = useCot;
@@ -121,7 +128,10 @@ public class OmniSearchQuery extends TeaModel {
         }
 
         /**
-         * useModel.
+         * <p>The model version to use. Valid values: pro for the deep version, and lite for the fast version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pro</p>
          */
         public Builder useModel(String useModel) {
             this.useModel = useModel;

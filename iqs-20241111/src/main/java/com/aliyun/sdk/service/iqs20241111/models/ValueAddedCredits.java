@@ -67,7 +67,10 @@ public class ValueAddedCredits extends TeaModel {
         } 
 
         /**
-         * advanced.
+         * <p>The value-added package - enhanced search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder advanced(Integer advanced) {
             this.advanced = advanced;
@@ -75,7 +78,10 @@ public class ValueAddedCredits extends TeaModel {
         }
 
         /**
-         * summary.
+         * <p>The value-added package - enhanced summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder summary(Integer summary) {
             this.summary = summary;

@@ -67,7 +67,7 @@ public class QueryContext extends TeaModel {
         } 
 
         /**
-         * originalQuery.
+         * <p>The initial query condition.</p>
          */
         public Builder originalQuery(OriginalQuery originalQuery) {
             this.originalQuery = originalQuery;
@@ -75,7 +75,7 @@ public class QueryContext extends TeaModel {
         }
 
         /**
-         * rewrite.
+         * <p>The query rewrite information.</p>
          */
         public Builder rewrite(Rewrite rewrite) {
             this.rewrite = rewrite;
@@ -167,7 +167,10 @@ public class QueryContext extends TeaModel {
             } 
 
             /**
-             * industry.
+             * <p>The industry classification of the original request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medical</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -175,7 +178,10 @@ public class QueryContext extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>The page number of the original request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(String page) {
                 this.page = page;
@@ -183,7 +189,10 @@ public class QueryContext extends TeaModel {
             }
 
             /**
-             * query.
+             * <p>The query content of the original request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apsara Conference</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -191,7 +200,10 @@ public class QueryContext extends TeaModel {
             }
 
             /**
-             * timeRange.
+             * <p>The time range of the original request. Valid values: OneDay, OneWeek, OneMonth, OneYear, and NoLimit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NoLimit</p>
              */
             public Builder timeRange(String timeRange) {
                 this.timeRange = timeRange;
@@ -258,7 +270,7 @@ public class QueryContext extends TeaModel {
             } 
 
             /**
-             * enabled.
+             * <p>Specifies whether query rewrite is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -266,7 +278,10 @@ public class QueryContext extends TeaModel {
             }
 
             /**
-             * timeRange.
+             * <p>The rewritten time range. An empty value indicates that no rewrite is performed or the rewrite result is the same as the original result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OneYear</p>
              */
             public Builder timeRange(String timeRange) {
                 this.timeRange = timeRange;

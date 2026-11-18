@@ -119,7 +119,7 @@ public class UnifiedSearchOutput extends TeaModel {
         } 
 
         /**
-         * costCredits.
+         * <p>The consumed credits information.</p>
          */
         public Builder costCredits(UnifiedCostCredits costCredits) {
             this.costCredits = costCredits;
@@ -127,7 +127,7 @@ public class UnifiedSearchOutput extends TeaModel {
         }
 
         /**
-         * pageItems.
+         * <p>The web page search results.</p>
          */
         public Builder pageItems(java.util.List<UnifiedPageItem> pageItems) {
             this.pageItems = pageItems;
@@ -135,7 +135,7 @@ public class UnifiedSearchOutput extends TeaModel {
         }
 
         /**
-         * queryContext.
+         * <p>The search context information.</p>
          */
         public Builder queryContext(UnifiedQueryContext queryContext) {
             this.queryContext = queryContext;
@@ -143,7 +143,10 @@ public class UnifiedSearchOutput extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The web page results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35E5608A-A737-2038-****-D9D34C6BFD9E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +154,7 @@ public class UnifiedSearchOutput extends TeaModel {
         }
 
         /**
-         * sceneItems.
+         * <p>The vertical API scenario-based results.</p>
          */
         public Builder sceneItems(java.util.List<UnifiedSceneItem> sceneItems) {
             this.sceneItems = sceneItems;
@@ -159,7 +162,7 @@ public class UnifiedSearchOutput extends TeaModel {
         }
 
         /**
-         * searchInformation.
+         * <p>The basic search information.</p>
          */
         public Builder searchInformation(UnifiedSearchInformation searchInformation) {
             this.searchInformation = searchInformation;

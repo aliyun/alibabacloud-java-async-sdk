@@ -106,7 +106,7 @@ public class RequestContents extends TeaModel {
         } 
 
         /**
-         * mainText.
+         * <p>Specifies whether to return the main text. Default value: false.</p>
          */
         public Builder mainText(Boolean mainText) {
             this.mainText = mainText;
@@ -114,7 +114,7 @@ public class RequestContents extends TeaModel {
         }
 
         /**
-         * markdownText.
+         * <p>Specifies whether to return Markdown. Default value: false.</p>
          */
         public Builder markdownText(Boolean markdownText) {
             this.markdownText = markdownText;
@@ -122,7 +122,7 @@ public class RequestContents extends TeaModel {
         }
 
         /**
-         * rerankScore.
+         * <p>Specifies whether to enable reranking and return the rerank score. Default value: true.</p>
          */
         public Builder rerankScore(Boolean rerankScore) {
             this.rerankScore = rerankScore;
@@ -130,7 +130,7 @@ public class RequestContents extends TeaModel {
         }
 
         /**
-         * richMainBody.
+         * <p>Specifies whether to return the full rich text content.</p>
          */
         public Builder richMainBody(Boolean richMainBody) {
             this.richMainBody = richMainBody;
@@ -138,7 +138,7 @@ public class RequestContents extends TeaModel {
         }
 
         /**
-         * summary.
+         * <p>Specifies whether to return the enhanced summary. Default value: false. The summary feature is billed separately.</p>
          */
         public Builder summary(Boolean summary) {
             this.summary = summary;

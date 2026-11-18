@@ -93,7 +93,7 @@ public class MedicalAnswerResult extends TeaModel {
         } 
 
         /**
-         * messages.
+         * <p>The list of medical Q&amp;A answers. An empty array is returned if the question is empty or no content is matched.</p>
          */
         public Builder messages(java.util.List<MedicalAnswerMessage> messages) {
             this.messages = messages;
@@ -101,7 +101,7 @@ public class MedicalAnswerResult extends TeaModel {
         }
 
         /**
-         * queryContext.
+         * <p>The query context information, such as the original query content.</p>
          */
         public Builder queryContext(MultimodalQueryContext queryContext) {
             this.queryContext = queryContext;
@@ -109,7 +109,10 @@ public class MedicalAnswerResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request. You can provide this ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35E5608A-A737-2038-AFB6-D9D34C6BFD9E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,7 @@ public class MedicalAnswerResult extends TeaModel {
         }
 
         /**
-         * searchInformation.
+         * <p>The search information, such as the execution duration.</p>
          */
         public Builder searchInformation(UnifiedSearchInformation searchInformation) {
             this.searchInformation = searchInformation;

@@ -54,7 +54,10 @@ public class MultimodalOriginalQuery extends TeaModel {
         } 
 
         /**
-         * query.
+         * <p>The query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         public Builder query(String query) {
             this.query = query;

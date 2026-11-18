@@ -145,7 +145,10 @@ public class UnifiedSearchInput extends TeaModel {
         } 
 
         /**
-         * advancedParams.
+         * <p>The advanced search parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;numResults&quot;:&quot;10&quot;}</p>
          */
         public Builder advancedParams(java.util.Map<String, ?> advancedParams) {
             this.advancedParams = advancedParams;
@@ -153,7 +156,10 @@ public class UnifiedSearchInput extends TeaModel {
         }
 
         /**
-         * category.
+         * <p>The query category. If specified, only search results from sites of the corresponding category are returned. Separate multiple categories with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medical</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -161,7 +167,7 @@ public class UnifiedSearchInput extends TeaModel {
         }
 
         /**
-         * contents.
+         * <p>The options for controlling the returned content.</p>
          */
         public Builder contents(RequestContents contents) {
             this.contents = contents;
@@ -169,7 +175,10 @@ public class UnifiedSearchInput extends TeaModel {
         }
 
         /**
-         * engineType.
+         * <p>The engine type. Default value: Generic. Valid values: Generic, GenericAdvanced. GenericAdvanced is billed separately and returns more records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Generic</p>
          */
         public Builder engineType(String engineType) {
             this.engineType = engineType;
@@ -177,7 +186,10 @@ public class UnifiedSearchInput extends TeaModel {
         }
 
         /**
-         * location.
+         * <p><strong>[Deprecated]</strong> The location parameter. Use locationInfo to specify a city or IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.194.214.228</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -185,7 +197,7 @@ public class UnifiedSearchInput extends TeaModel {
         }
 
         /**
-         * locationInfo.
+         * <p>The location information, used for scenario-based searches such as weather.</p>
          */
         public Builder locationInfo(LocationInfo locationInfo) {
             this.locationInfo = locationInfo;
@@ -193,7 +205,10 @@ public class UnifiedSearchInput extends TeaModel {
         }
 
         /**
-         * query.
+         * <p>The query content. The length limit is 1 to 100 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apsara Conference</p>
          */
         public Builder query(String query) {
             this.query = query;
@@ -201,7 +216,10 @@ public class UnifiedSearchInput extends TeaModel {
         }
 
         /**
-         * timeRange.
+         * <p>The publication time range for the content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoLimit</p>
          */
         public Builder timeRange(String timeRange) {
             this.timeRange = timeRange;

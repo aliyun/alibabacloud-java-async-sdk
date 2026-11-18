@@ -54,7 +54,7 @@ public class GetIqsUsageResult extends TeaModel {
         } 
 
         /**
-         * records.
+         * <p>The daily call volume records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -263,7 +263,10 @@ public class GetIqsUsageResult extends TeaModel {
             } 
 
             /**
-             * api.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UnifiedSearch</p>
              */
             public Builder api(String api) {
                 this.api = api;
@@ -271,7 +274,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * billingQps.
+             * <p>The queries per second (QPS) for tiered billing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder billingQps(Integer billingQps) {
                 this.billingQps = billingQps;
@@ -279,7 +285,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * date.
+             * <p>The metering date in the YYYYMMDD format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250716</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -287,7 +296,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * engineType.
+             * <p>The search engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Generic</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -295,7 +307,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * failedCalls.
+             * <p>The number of failed calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedCalls(Integer failedCalls) {
                 this.failedCalls = failedCalls;
@@ -303,7 +318,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * ladderType.
+             * <p>The matched metering tier. Valid values: 1001, 1002, 1003, and 1004.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder ladderType(String ladderType) {
                 this.ladderType = ladderType;
@@ -311,7 +329,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * mainAccountId.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138608930******0</p>
              */
             public Builder mainAccountId(String mainAccountId) {
                 this.mainAccountId = mainAccountId;
@@ -319,7 +340,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * subAccountId.
+             * <p>The sub-account that initiates the call (RAM user or API key identifier).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2193843763***9272</p>
              */
             public Builder subAccountId(String subAccountId) {
                 this.subAccountId = subAccountId;
@@ -327,7 +351,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * successCalls.
+             * <p>The number of successful calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder successCalls(Integer successCalls) {
                 this.successCalls = successCalls;
@@ -335,7 +362,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * totalBillStatCalls.
+             * <p>The total number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalBillStatCalls(Integer totalBillStatCalls) {
                 this.totalBillStatCalls = totalBillStatCalls;
@@ -343,7 +373,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * totalCalls.
+             * <p>The total number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCalls(Integer totalCalls) {
                 this.totalCalls = totalCalls;
@@ -351,7 +384,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * valueAddedAdvanced.
+             * <p>The value-added package usage for calling enhanced APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder valueAddedAdvanced(Integer valueAddedAdvanced) {
                 this.valueAddedAdvanced = valueAddedAdvanced;
@@ -359,7 +395,10 @@ public class GetIqsUsageResult extends TeaModel {
             }
 
             /**
-             * valueAddedSummary.
+             * <p>The number of value-added package calls used for the summarization feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder valueAddedSummary(Integer valueAddedSummary) {
                 this.valueAddedSummary = valueAddedSummary;

@@ -59,7 +59,7 @@ public class OmniAnswerRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The search information.</p>
          */
         public Builder body(OmniSearchQuery body) {
             this.putBodyParameter("body", body);

@@ -67,7 +67,7 @@ public class QueryResult extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The list of returned locations.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class QueryResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15A85F99-408F-5BFA-B617-0C7D3E732ABD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class QueryResult extends TeaModel {
             } 
 
             /**
-             * title.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lobby</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -149,7 +155,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The image URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://store.example.com/showpic/e76beb3bedca3fe0375cef12742ea23e">http://store.example.com/showpic/e76beb3bedca3fe0375cef12742ea23e</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -281,7 +290,10 @@ public class QueryResult extends TeaModel {
             } 
 
             /**
-             * averageSpend.
+             * <p>The average spend in CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder averageSpend(String averageSpend) {
                 this.averageSpend = averageSpend;
@@ -289,7 +301,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * businessArea.
+             * <p>The business area.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Central Area of West Lake Tourist Zone</p>
              */
             public Builder businessArea(String businessArea) {
                 this.businessArea = businessArea;
@@ -297,7 +312,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * dailyOpeningHours.
+             * <p>The business hours for today.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00-18:00</p>
              */
             public Builder dailyOpeningHours(String dailyOpeningHours) {
                 this.dailyOpeningHours = dailyOpeningHours;
@@ -305,7 +323,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * mainTag.
+             * <p>The main tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Luxury</p>
              */
             public Builder mainTag(String mainTag) {
                 this.mainTag = mainTag;
@@ -313,7 +334,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * phone.
+             * <p>The contact phone numbers. Multiple numbers are separated by vertical bars.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571-8732****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -321,7 +345,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>The rating.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.7</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -329,7 +356,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * weeklyOpeningDays.
+             * <p>The weekly opening days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Monday to Sunday</p>
              */
             public Builder weeklyOpeningDays(String weeklyOpeningDays) {
                 this.weeklyOpeningDays = weeklyOpeningDays;
@@ -578,7 +608,10 @@ public class QueryResult extends TeaModel {
             } 
 
             /**
-             * address.
+             * <p>The detailed address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No. 22 Fayun Lane, West Lake Scenic Area</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -586,7 +619,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * cityCode.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -594,7 +630,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * cityName.
+             * <p>The city name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -602,7 +641,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * distanceMeter.
+             * <p>The distance from the center point in meters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>815</p>
              */
             public Builder distanceMeter(String distanceMeter) {
                 this.distanceMeter = distanceMeter;
@@ -610,7 +652,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * districtCode.
+             * <p>The district code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>330106</p>
              */
             public Builder districtCode(String districtCode) {
                 this.districtCode = districtCode;
@@ -618,7 +663,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * districtName.
+             * <p>The district name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Xihu District</p>
              */
             public Builder districtName(String districtName) {
                 this.districtName = districtName;
@@ -626,7 +674,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The internal identifier of the location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B023B0BI3J</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -634,7 +685,7 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * images.
+             * <p>The list of images.</p>
              */
             public Builder images(java.util.List<Images> images) {
                 this.images = images;
@@ -642,7 +693,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * latitude.
+             * <p>The latitude of the location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.234403</p>
              */
             public Builder latitude(String latitude) {
                 this.latitude = latitude;
@@ -650,7 +704,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * longitude.
+             * <p>The longitude of the location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.097327</p>
              */
             public Builder longitude(String longitude) {
                 this.longitude = longitude;
@@ -658,7 +715,7 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * metadata.
+             * <p>The related business information.</p>
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -666,7 +723,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The location name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Amanfayun Hangzhou</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -674,7 +734,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * provinceCode.
+             * <p>The province code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>330000</p>
              */
             public Builder provinceCode(String provinceCode) {
                 this.provinceCode = provinceCode;
@@ -682,7 +745,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * provinceName.
+             * <p>The province name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang Province</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -690,7 +756,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * typeCode.
+             * <p>The location type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100102</p>
              */
             public Builder typeCode(String typeCode) {
                 this.typeCode = typeCode;
@@ -698,7 +767,10 @@ public class QueryResult extends TeaModel {
             }
 
             /**
-             * types.
+             * <p>The location types. Multiple types are separated by vertical bars.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Accommodation|Hotel|Five-star hotel</p>
              */
             public Builder types(String types) {
                 this.types = types;

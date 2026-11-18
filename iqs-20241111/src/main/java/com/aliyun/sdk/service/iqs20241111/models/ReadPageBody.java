@@ -133,7 +133,13 @@ public class ReadPageBody extends TeaModel {
         } 
 
         /**
-         * formats.
+         * <p>The format of the parsing result.</p>
+         * <ul>
+         * <li>rawHtml: the HTML of the target website.</li>
+         * <li>html: the page content processed based on readabilityMode.</li>
+         * <li>markdown: the Markdown content converted from HTML.</li>
+         * <li>text: the text content extracted from HTML.</li>
+         * </ul>
          */
         public Builder formats(java.util.List<String> formats) {
             this.formats = formats;
@@ -141,7 +147,10 @@ public class ReadPageBody extends TeaModel {
         }
 
         /**
-         * location.
+         * <p>You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -149,7 +158,16 @@ public class ReadPageBody extends TeaModel {
         }
 
         /**
-         * maxAge.
+         * <p>The maximum cache validity period. Unit: seconds. Default value: 1296000.</p>
+         * <ul>
+         * <li><p>If the cache duration is less than the value of maxAge, cached content is returned.</p>
+         * </li>
+         * <li><p>If the value of maxAge is 0, caching is not used.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1296000</p>
          */
         public Builder maxAge(Integer maxAge) {
             this.maxAge = maxAge;
@@ -157,7 +175,11 @@ public class ReadPageBody extends TeaModel {
         }
 
         /**
-         * pageTimeout.
+         * <p>The URL read timeout period. The value of pageTimeout must be less than the value of timeout.</p>
+         * <p>Default value: 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder pageTimeout(Integer pageTimeout) {
             this.pageTimeout = pageTimeout;
@@ -165,7 +187,7 @@ public class ReadPageBody extends TeaModel {
         }
 
         /**
-         * readability.
+         * <p>The readability configuration for the parsing result.</p>
          */
         public Builder readability(Readability readability) {
             this.readability = readability;
@@ -173,7 +195,12 @@ public class ReadPageBody extends TeaModel {
         }
 
         /**
-         * timeout.
+         * <p>The end-to-end processing timeout period. Unit: ms.</p>
+         * <p>Valid values: [0, 180000].</p>
+         * <p>Default value: 60000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60000</p>
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;
@@ -181,7 +208,11 @@ public class ReadPageBody extends TeaModel {
         }
 
         /**
+         * <p>The target URL to parse. The value must start with http:// or https://.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://help.aliyun.com/document_detail/2837301.html?spm=a2c4g.11186623.help-menu-2837261.d_0_0_0.59ed3e95CppOt2&scm=20140722.H_2837301._.OR_help-T_cn~zh-V_1">https://help.aliyun.com/document_detail/2837301.html?spm=a2c4g.11186623.help-menu-2837261.d_0_0_0.59ed3e95CppOt2&amp;scm=20140722.H_2837301._.OR_help-T_cn~zh-V_1</a></p>
          */
         public Builder url(String url) {
             this.url = url;
@@ -273,7 +304,11 @@ public class ReadPageBody extends TeaModel {
             } 
 
             /**
-             * excludeAllImages.
+             * <p>Specifies whether to exclude all images.</p>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder excludeAllImages(Boolean excludeAllImages) {
                 this.excludeAllImages = excludeAllImages;
@@ -281,7 +316,11 @@ public class ReadPageBody extends TeaModel {
             }
 
             /**
-             * excludeAllLinks.
+             * <p>Specifies whether to exclude all links.</p>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder excludeAllLinks(Boolean excludeAllLinks) {
                 this.excludeAllLinks = excludeAllLinks;
@@ -289,7 +328,7 @@ public class ReadPageBody extends TeaModel {
             }
 
             /**
-             * excludedTags.
+             * <p>The tags to exclude.</p>
              */
             public Builder excludedTags(java.util.List<String> excludedTags) {
                 this.excludedTags = excludedTags;
@@ -297,7 +336,18 @@ public class ReadPageBody extends TeaModel {
             }
 
             /**
-             * readabilityMode.
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>none: does not remove any information. Default value: none.</p>
+             * </li>
+             * <li><p>normal: removes irrelevant information from the target page, such as headers, footers, and navigation elements, based on a proprietary algorithm.</p>
+             * </li>
+             * <li><p>article: extracts the main body content of the website based on a proprietary algorithm. This mode is suitable for blogs and news websites, but not for directory or navigation pages.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder readabilityMode(String readabilityMode) {
                 this.readabilityMode = readabilityMode;

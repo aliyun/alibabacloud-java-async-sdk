@@ -93,7 +93,10 @@ public class CommonAgentQuery extends TeaModel {
         } 
 
         /**
-         * limit.
+         * <p>The maximum number of place results to return. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.limit = limit;
@@ -101,7 +104,10 @@ public class CommonAgentQuery extends TeaModel {
         }
 
         /**
-         * query.
+         * <p>The natural language question used to retrieve nearby places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>High-end hotels within 5 km of Lingyin Temple in Hangzhou</p>
          */
         public Builder query(String query) {
             this.query = query;
@@ -109,7 +115,10 @@ public class CommonAgentQuery extends TeaModel {
         }
 
         /**
-         * querySceneEnumCode.
+         * <p>The search scenario code. Valid values: hotels (hotel), attractions (attraction), restaurants (restaurant), and entertainment (leisure and entertainment). If you do not specify this parameter, the model identifies the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hotels</p>
          */
         public Builder querySceneEnumCode(String querySceneEnumCode) {
             this.querySceneEnumCode = querySceneEnumCode;
@@ -117,7 +126,10 @@ public class CommonAgentQuery extends TeaModel {
         }
 
         /**
-         * searchModel.
+         * <p>The search result mode. Valid values: single (returns simplified fields) and normal (returns all fields). Default value: normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder searchModel(String searchModel) {
             this.searchModel = searchModel;

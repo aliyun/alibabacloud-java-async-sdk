@@ -59,7 +59,7 @@ public class MedicalKnowledgeRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The query conditions for the health graph.</p>
          */
         public Builder body(MedicalKnowInput body) {
             this.putBodyParameter("body", body);

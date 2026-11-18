@@ -93,7 +93,10 @@ public class MedicalAnswerRaDoc extends TeaModel {
         } 
 
         /**
-         * content.
+         * <p>The content summary of the reference source. Summaries can be returned for medical web pages and drug instructions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stomach pain can be caused by various factors, including gastrointestinal spasms, inflammation, urinary tract stones, and menstrual pain. It can be relieved by applying a warm compress to the abdomen or treated by taking pain-relieving medication</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -101,7 +104,10 @@ public class MedicalAnswerRaDoc extends TeaModel {
         }
 
         /**
-         * rawUrl.
+         * <p>The URL of the reference source. This can be an empty string for sources such as papers, clinical guidelines, and books.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/article/4CD364Mm8hh.html">https://www.example.com/article/4CD364Mm8hh.html</a></p>
          */
         public Builder rawUrl(String rawUrl) {
             this.rawUrl = rawUrl;
@@ -109,7 +115,10 @@ public class MedicalAnswerRaDoc extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The title of the reference source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>How to quickly and easily relieve stomach pain</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -117,7 +126,10 @@ public class MedicalAnswerRaDoc extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type of the reference source, such as medical web pages, medical books, papers, or clinical guidelines.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>med_web_source</p>
          */
         public Builder type(String type) {
             this.type = type;

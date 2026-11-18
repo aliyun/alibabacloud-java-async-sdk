@@ -80,7 +80,10 @@ public class ScanFileOutput extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECB2144C-E277-5434-80E6-12D26678D364</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ScanFileOutput extends TeaModel {
         }
 
         /**
-         * scanFileInfoList.
+         * <p>The list of scan result objects.</p>
          */
         public Builder scanFileInfoList(java.util.List<ScanFileInfo> scanFileInfoList) {
             this.scanFileInfoList = scanFileInfoList;
@@ -96,7 +99,7 @@ public class ScanFileOutput extends TeaModel {
         }
 
         /**
-         * searchInformation.
+         * <p>The search execution information.</p>
          */
         public Builder searchInformation(UnifiedSearchInformation searchInformation) {
             this.searchInformation = searchInformation;

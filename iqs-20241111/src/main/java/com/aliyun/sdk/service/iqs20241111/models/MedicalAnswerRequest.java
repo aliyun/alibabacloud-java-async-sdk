@@ -59,7 +59,7 @@ public class MedicalAnswerRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The search information.</p>
          */
         public Builder body(MedicalAnswerInput body) {
             this.putBodyParameter("body", body);

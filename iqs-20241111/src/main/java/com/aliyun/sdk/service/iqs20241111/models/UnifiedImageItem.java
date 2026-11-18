@@ -119,7 +119,10 @@ public class UnifiedImageItem extends TeaModel {
         } 
 
         /**
-         * height.
+         * <p>Height</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1330</p>
          */
         public Builder height(Integer height) {
             this.height = height;
@@ -127,7 +130,10 @@ public class UnifiedImageItem extends TeaModel {
         }
 
         /**
-         * hostPageUrl.
+         * <p>URL of the web page to which the image belongs</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4541580238898912926">http://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4541580238898912926</a></p>
          */
         public Builder hostPageUrl(String hostPageUrl) {
             this.hostPageUrl = hostPageUrl;
@@ -135,7 +141,10 @@ public class UnifiedImageItem extends TeaModel {
         }
 
         /**
-         * imageUrl.
+         * <p>Image URL</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://pic.rmb.bdstatic.com/bjh/bb87f566c0c/241218/f7936f25837b20211e5ef88d7980c143.jpeg">http://pic.rmb.bdstatic.com/bjh/bb87f566c0c/241218/f7936f25837b20211e5ef88d7980c143.jpeg</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -143,7 +152,10 @@ public class UnifiedImageItem extends TeaModel {
         }
 
         /**
-         * publishedTime.
+         * <p>Web page published time, in ISO time format</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-05T00:54:42+08:00</p>
          */
         public Builder publishedTime(String publishedTime) {
             this.publishedTime = publishedTime;
@@ -151,7 +163,10 @@ public class UnifiedImageItem extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>Image title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里巴巴现在以主业上为主,以电商为主,以能够盈利的业务为主</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -159,7 +174,10 @@ public class UnifiedImageItem extends TeaModel {
         }
 
         /**
-         * width.
+         * <p>Image width</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder width(Integer width) {
             this.width = width;

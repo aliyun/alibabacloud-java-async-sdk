@@ -54,7 +54,10 @@ public class UnifiedSearchInformation extends TeaModel {
         } 
 
         /**
-         * searchTime.
+         * <p>The search duration, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1028</p>
          */
         public Builder searchTime(Long searchTime) {
             this.searchTime = searchTime;

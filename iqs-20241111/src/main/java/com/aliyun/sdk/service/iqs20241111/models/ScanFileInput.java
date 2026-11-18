@@ -80,7 +80,10 @@ public class ScanFileInput extends TeaModel {
         } 
 
         /**
-         * imageBase64.
+         * <p>The Base64 encoding of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wrwqr</p>
          */
         public Builder imageBase64(String imageBase64) {
             this.imageBase64 = imageBase64;
@@ -88,7 +91,10 @@ public class ScanFileInput extends TeaModel {
         }
 
         /**
-         * imageUrl.
+         * <p>The URL of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.1241.png">https://www.1241.png</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -96,7 +102,7 @@ public class ScanFileInput extends TeaModel {
         }
 
         /**
-         * scanFileInputConfig.
+         * <p>The scan parameters.</p>
          */
         public Builder scanFileInputConfig(ScanFileInputConfig scanFileInputConfig) {
             this.scanFileInputConfig = scanFileInputConfig;

@@ -54,7 +54,10 @@ public class MedicalAnswerInput extends TeaModel {
         } 
 
         /**
-         * query.
+         * <p>The medical question to be answered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>What should I do for a stomachache?</p>
          */
         public Builder query(String query) {
             this.query = query;

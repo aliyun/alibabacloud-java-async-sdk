@@ -54,7 +54,10 @@ public class AgentBaseQuery extends TeaModel {
         } 
 
         /**
-         * query.
+         * <p>The natural language question used to retrieve nearby locations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Luxury hotels within 5 km of Lingyin Temple in Hangzhou</p>
          */
         public Builder query(String query) {
             this.query = query;

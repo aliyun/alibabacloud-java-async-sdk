@@ -67,7 +67,10 @@ public class GlobalSearchInformation extends TeaModel {
         } 
 
         /**
-         * searchTime.
+         * <p>The search time, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         public Builder searchTime(Long searchTime) {
             this.searchTime = searchTime;
@@ -75,7 +78,10 @@ public class GlobalSearchInformation extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10339</p>
          */
         public Builder total(Long total) {
             this.total = total;

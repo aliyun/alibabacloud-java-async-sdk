@@ -87,7 +87,10 @@ public class GetIqsUsageRequest extends Request {
         } 
 
         /**
-         * callerId.
+         * <p>The ID of the Alibaba Cloud RAM user or the API key caller identifier to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138608930460****</p>
          */
         public Builder callerId(String callerId) {
             this.putQueryParameter("callerId", callerId);
@@ -96,7 +99,10 @@ public class GetIqsUsageRequest extends Request {
         }
 
         /**
-         * endDate.
+         * <p>The end date for the usage query, inclusive. The format is YYYYMMDD. The date must be within the last 60 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20241017</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);
@@ -105,7 +111,10 @@ public class GetIqsUsageRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>The start date for the usage query, inclusive. The format is YYYYMMDD. The date must be within the last 60 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20241011</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("startDate", startDate);

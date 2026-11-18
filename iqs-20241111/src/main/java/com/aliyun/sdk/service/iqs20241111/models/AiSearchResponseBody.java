@@ -80,7 +80,7 @@ public class AiSearchResponseBody extends TeaModel {
         } 
 
         /**
-         * header.
+         * <p>The header of the returned result.</p>
          */
         public Builder header(AiSearchResponseBodyHeader header) {
             this.header = header;
@@ -88,7 +88,10 @@ public class AiSearchResponseBody extends TeaModel {
         }
 
         /**
-         * payload.
+         * <p>The payload of the returned result in JSON format. The structure varies based on the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;header&quot;:{&quot;eventId&quot;:&quot;6f617de0-204f-406f-a9be-34779c06d498&quot;,&quot;event&quot;:&quot;on_common_search_start&quot;,&quot;responseTime&quot;:120},&quot;payload&quot;:&quot;&quot;,&quot;requestId&quot;:&quot;715d01a0-de7e-42c3-abca-b901fcd79b39&quot;}</p>
          */
         public Builder payload(String payload) {
             this.payload = payload;
@@ -191,7 +194,10 @@ public class AiSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * industry.
+             * <p>The industry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medical</p>
              */
             public Builder industry(String industry) {
                 this.industry = industry;
@@ -199,7 +205,10 @@ public class AiSearchResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -207,7 +216,10 @@ public class AiSearchResponseBody extends TeaModel {
             }
 
             /**
-             * query.
+             * <p>The query conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou cuisine</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -215,7 +227,10 @@ public class AiSearchResponseBody extends TeaModel {
             }
 
             /**
-             * timeRange.
+             * <p>The time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NoLimit</p>
              */
             public Builder timeRange(String timeRange) {
                 this.timeRange = timeRange;
@@ -282,7 +297,7 @@ public class AiSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * enabled.
+             * <p>Specifies whether query rewrite is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -290,7 +305,10 @@ public class AiSearchResponseBody extends TeaModel {
             }
 
             /**
-             * timeRange.
+             * <p>The rewritten time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OneMonth</p>
              */
             public Builder timeRange(String timeRange) {
                 this.timeRange = timeRange;
@@ -357,7 +375,7 @@ public class AiSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * originalQuery.
+             * <p>The original query.</p>
              */
             public Builder originalQuery(OriginalQuery originalQuery) {
                 this.originalQuery = originalQuery;
@@ -365,7 +383,7 @@ public class AiSearchResponseBody extends TeaModel {
             }
 
             /**
-             * rewrite.
+             * <p>The rewritten query.</p>
              */
             public Builder rewrite(Rewrite rewrite) {
                 this.rewrite = rewrite;
@@ -458,7 +476,10 @@ public class AiSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * event.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on_common_search_end</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -466,7 +487,10 @@ public class AiSearchResponseBody extends TeaModel {
             }
 
             /**
-             * eventId.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>988021f0-951a-43d0-ba4d-785359e7e7be</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -474,7 +498,7 @@ public class AiSearchResponseBody extends TeaModel {
             }
 
             /**
-             * queryContext.
+             * <p>The query context.</p>
              */
             public Builder queryContext(QueryContext queryContext) {
                 this.queryContext = queryContext;
@@ -482,7 +506,10 @@ public class AiSearchResponseBody extends TeaModel {
             }
 
             /**
-             * responseTime.
+             * <p>The time taken (ms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1293</p>
              */
             public Builder responseTime(Long responseTime) {
                 this.responseTime = responseTime;

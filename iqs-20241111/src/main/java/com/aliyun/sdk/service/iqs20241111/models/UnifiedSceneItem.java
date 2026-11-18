@@ -67,7 +67,10 @@ public class UnifiedSceneItem extends TeaModel {
         } 
 
         /**
-         * detail.
+         * <p>The JSON structured result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;title&quot;: &quot;London time&quot;, &quot;targetTimeZone&quot;: &quot;Europe/London&quot;, &quot;targetTimeMillisecond&quot;: &quot;1745820817178&quot;, &quot;targetTime&quot;: &quot;2025-04-28 14:13:37&quot;, &quot;beijingTimeZone&quot;: &quot;PRC&quot;, &quot;beijingTimeMillisecond&quot;: &quot;1745846017178&quot;}</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -75,7 +78,10 @@ public class UnifiedSceneItem extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>time</p>
          */
         public Builder type(String type) {
             this.type = type;

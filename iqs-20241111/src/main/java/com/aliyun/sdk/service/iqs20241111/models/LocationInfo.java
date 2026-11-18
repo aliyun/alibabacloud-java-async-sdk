@@ -67,7 +67,10 @@ public class LocationInfo extends TeaModel {
         } 
 
         /**
-         * city.
+         * <p>The city associated with the search. It is used to return information about the corresponding region in scenarios such as weather.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         public Builder city(String city) {
             this.city = city;
@@ -75,7 +78,10 @@ public class LocationInfo extends TeaModel {
         }
 
         /**
-         * ip.
+         * <p>The IP address associated with the search. It is used to identify the region in supported scenarios and has a lower priority than city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117.136.110.23</p>
          */
         public Builder ip(String ip) {
             this.ip = ip;

@@ -200,7 +200,10 @@ public class GenericSearchRequest extends Request {
         } 
 
         /**
-         * advancedParams.
+         * <p>The advanced search parameters. Filters search results by the start and end dates of the webpage publication time. The date format is YYYY-MM-DD. This parameter takes precedence over timeRange.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;startPublishedDate&quot;:&quot;2025-07-01&quot;,&quot;endPublishedDate&quot;:&quot;2025-07-31&quot;}</p>
          */
         public Builder advancedParams(java.util.Map<String, ?> advancedParams) {
             String advancedParamsShrink = shrink(advancedParams, "advancedParams", "json");
@@ -210,7 +213,7 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
-         * enableRerank.
+         * <p>Specifies whether to rerank the search results. Default value: true.</p>
          */
         public Builder enableRerank(Boolean enableRerank) {
             this.putQueryParameter("enableRerank", enableRerank);
@@ -219,7 +222,10 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
-         * industry.
+         * <p>The industry. If specified, only site content restricted to the specified industries is recalled. Separate multiple industries with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>finance,law</p>
          */
         public Builder industry(String industry) {
             this.putQueryParameter("industry", industry);
@@ -228,7 +234,10 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number. The value starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -237,7 +246,11 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
+         * <p>The search keywords.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iPhone</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -246,7 +259,7 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
-         * returnMainText.
+         * <p>Specifies whether to return the main text of the webpage. Default value: true.</p>
          */
         public Builder returnMainText(Boolean returnMainText) {
             this.putQueryParameter("returnMainText", returnMainText);
@@ -255,7 +268,7 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
-         * returnMarkdownText.
+         * <p>Specifies whether to return the webpage content in Markdown format. Default value: true.</p>
          */
         public Builder returnMarkdownText(Boolean returnMarkdownText) {
             this.putQueryParameter("returnMarkdownText", returnMarkdownText);
@@ -264,7 +277,7 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
-         * returnRichMainBody.
+         * <p>Specifies whether to return the full rich text body. Default value: false.</p>
          */
         public Builder returnRichMainBody(Boolean returnRichMainBody) {
             this.putQueryParameter("returnRichMainBody", returnRichMainBody);
@@ -273,7 +286,7 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
-         * returnSummary.
+         * <p>Specifies whether to return the enhanced summary. Default value: true.</p>
          */
         public Builder returnSummary(Boolean returnSummary) {
             this.putQueryParameter("returnSummary", returnSummary);
@@ -282,7 +295,10 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The session ID for multi-turn interactions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>282j3h3434j23hdw9sd72j3</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("sessionId", sessionId);
@@ -291,7 +307,10 @@ public class GenericSearchRequest extends Request {
         }
 
         /**
-         * timeRange.
+         * <p>The time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OneWeek</p>
          */
         public Builder timeRange(String timeRange) {
             this.putQueryParameter("timeRange", timeRange);
