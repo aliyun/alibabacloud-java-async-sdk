@@ -180,6 +180,9 @@ public class Permission extends TeaModel {
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例安全组规则</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -188,6 +191,9 @@ public class Permission extends TeaModel {
 
         /**
          * <p>The destination CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>198.51.100.0/24</p>
          */
         public Builder destCidrIp(String destCidrIp) {
             this.destCidrIp = destCidrIp;
@@ -236,6 +242,9 @@ public class Permission extends TeaModel {
 
         /**
          * <p>The source CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0/24</p>
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.sourceCidrIp = sourceCidrIp;

@@ -147,7 +147,7 @@ public class CreateDriveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -409,7 +409,7 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage resource description.</p>
+             * <p>The description of the storage resource.</p>
              * 
              * <strong>example:</strong>
              * <p>test****</p>
@@ -431,7 +431,7 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-level storage resource ID.</p>
+             * <p>The ID of the user-level storage resource.</p>
              * 
              * <strong>example:</strong>
              * <p>dri-aaaa****</p>
@@ -442,9 +442,9 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external user-level storage resource ID.</p>
+             * <p>The ID of the external user-level storage resource.</p>
              * <blockquote>
-             * <p>This parameter is returned only when the storage resource type is PDS.</p>
+             * <p>This parameter is returned only when the storage resource is PDS.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -489,7 +489,7 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID。</p>
+             * <p>The ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -500,7 +500,7 @@ public class CreateDriveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage resource name.</p>
+             * <p>The name of the storage resource.</p>
              * 
              * <strong>example:</strong>
              * <p>test****</p>
@@ -512,7 +512,7 @@ public class CreateDriveResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p>This parameter is deprecated.</p>
+             * <p><strong>[Deprecated]</strong></p>
              * </blockquote>
              * 
              * <strong>example:</strong>

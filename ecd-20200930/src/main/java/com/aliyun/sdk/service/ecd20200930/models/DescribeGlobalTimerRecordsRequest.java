@@ -253,7 +253,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud computer IDs.</p>
+         * <p>The list of cloud desktop IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCEED</p>
@@ -265,7 +265,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The display result name.</p>
+         * <p>The display name of the result.</p>
          * 
          * <strong>example:</strong>
          * <p>FAILED</p>
@@ -289,7 +289,9 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -301,7 +303,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the next query.</p>
+         * <p>The token that is used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -313,7 +315,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -325,7 +327,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The list of resource types. If empty, all resource types are queried.</p>
+         * <p>The list of resource types. If this parameter is left empty, all resource types are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -337,7 +339,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>Filters results by execution result.</p>
+         * <p>Filters the results by execution result.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCEED</p>
@@ -361,7 +363,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The region ID used to filter cloud computer information for a specified region.</p>
+         * <p>The search region ID. This parameter is used to filter cloud desktop information in a specified region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -385,7 +387,7 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         }
 
         /**
-         * <p>The list of scheduled tasks.</p>
+         * <p>The list of scheduled task types.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>

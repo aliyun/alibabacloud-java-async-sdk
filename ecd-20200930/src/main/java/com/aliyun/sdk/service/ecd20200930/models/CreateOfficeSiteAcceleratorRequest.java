@@ -118,7 +118,7 @@ public class CreateOfficeSiteAcceleratorRequest extends Request {
         } 
 
         /**
-         * <p>The list of acceleration region information for the access points.</p>
+         * <p>The list of acceleration regions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder accelerateRegion(java.util.List<AccelerateRegion> accelerateRegion) {
@@ -128,7 +128,7 @@ public class CreateOfficeSiteAcceleratorRequest extends Request {
         }
 
         /**
-         * <p>The name of the GA instance.</p>
+         * <p>The name of the Alibaba Cloud Global Accelerator (GA) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>testGA</p>
@@ -290,9 +290,9 @@ public class CreateOfficeSiteAcceleratorRequest extends Request {
             }
 
             /**
-             * <p>The IP address protocol used to connect to the GA service.</p>
+             * <p>The IP address protocol used to access the Global Accelerator (GA) service.</p>
              * <blockquote>
-             * <p>The <code>DUAL_STACK</code> type is supported only by standard pay-as-you-go GA instances.</p>
+             * <p>The <code>DUAL_STACK</code> type is supported only by standard Alibaba Cloud Global Accelerator (GA) instances that use the pay-as-you-go billing method.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -304,11 +304,11 @@ public class CreateOfficeSiteAcceleratorRequest extends Request {
             }
 
             /**
-             * <p>The public network line type of the acceleration region.</p>
+             * <p>The Internet line type of the acceleration region.</p>
              * <blockquote>
              * <ul>
-             * <li>Configure this parameter for GA instances that use the <strong>pay-by-data-transfer</strong> billing method.</li>
-             * <li>The supported public network line types vary by acceleration region.</li>
+             * <li>This parameter is required for Alibaba Cloud Global Accelerator (GA) instances that use the <strong>pay-by-traffic</strong> Billable methods.</li>
+             * <li>The supported Internet line types vary based on the acceleration region.</li>
              * </ul>
              * </blockquote>
              * <p>This parameter is required.</p>

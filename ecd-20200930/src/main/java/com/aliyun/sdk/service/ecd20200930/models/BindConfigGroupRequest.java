@@ -114,7 +114,7 @@ public class BindConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource information to associate.</p>
+         * <p>The information about the resources to be associated.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceInfos(java.util.List<ResourceInfos> resourceInfos) {

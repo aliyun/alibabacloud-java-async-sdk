@@ -146,7 +146,7 @@ public class CloneCenterPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer policy to clone.</p>
+         * <p>The ID of the cloud desktop policy to be cloned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
+         * <p>The pagination token for the next query. An empty NextToken indicates that no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL23as</p>
@@ -102,7 +102,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about virtual MFA devices.</p>
+         * <p>The virtual MFA device information.</p>
          */
         public Builder virtualMFADevices(java.util.List<VirtualMFADevices> virtualMFADevices) {
             this.virtualMFADevices = virtualMFADevices;
@@ -208,7 +208,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
              * <p>The new display name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder displayNameNew(String displayNameNew) {
                 this.displayNameNew = displayNameNew;
@@ -408,7 +408,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p>This parameter is in invitational preview and is not publicly available.</p>
+             * <p>This parameter is in invitational preview and is not yet available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -431,7 +431,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the virtual MFA device was enabled. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the virtual MFA device is enabled. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format and is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-20T14:52:28Z</p>
@@ -442,7 +442,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The automatic unlock time after the virtual MFA device is locked. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the virtual MFA device is automatically unlocked after being locked. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format and is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-21T15:21:28Z</p>
@@ -453,7 +453,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office network ID.</p>
+             * <p>The ID of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-269345****</p>

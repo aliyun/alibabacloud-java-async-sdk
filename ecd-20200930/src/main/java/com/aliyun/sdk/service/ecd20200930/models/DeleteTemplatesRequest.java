@@ -110,7 +110,7 @@ public class DeleteTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The list of template IDs to delete.</p>
+         * <p>The IDs of the templates to delete.</p>
          */
         public Builder templateIds(java.util.List<String> templateIds) {
             this.putBodyParameter("TemplateIds", templateIds);

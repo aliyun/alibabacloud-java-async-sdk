@@ -844,7 +844,10 @@ public class CreatePolicyGroupRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether users have administrator permissions after logging on to the cloud desktop.</p>
+         * <p>Specifies whether the user has administrator permissions after logging on to the cloud computer.</p>
+         * <blockquote>
+         * <p>This feature is in targeted invitation-only testing and is not yet publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -856,7 +859,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the anti-screenshot feature.</p>
+         * <p>Specifies whether to enable the screen capture prevention feature.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -868,7 +871,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The list of client IP whitelist rules. After you configure this parameter, only IP addresses within the whitelisted CIDR blocks can access the cloud computer.</p>
+         * <p>The client IP address whitelist. After you configure this parameter, only IP addresses in the whitelisted CIDR blocks can access the cloud desktop.</p>
          */
         public Builder authorizeAccessPolicyRule(java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
             this.putQueryParameter("AuthorizeAccessPolicyRule", authorizeAccessPolicyRule);
@@ -877,7 +880,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The list of security group rules.</p>
+         * <p>The security group control rules.</p>
          */
         public Builder authorizeSecurityPolicyRule(java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
             this.putQueryParameter("AuthorizeSecurityPolicyRule", authorizeSecurityPolicyRule);
@@ -898,7 +901,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The list of logon method control rules. Specifies which client types are allowed to access cloud desktops.</p>
+         * <p>The list of logon method control rules. Specifies which clients can access the cloud computer.</p>
          */
         public Builder clientType(java.util.List<ClientType> clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -907,7 +910,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The clipboard permission.</p>
+         * <p>The clipboard permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -937,7 +940,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The domain name access control setting. Domain names support wildcards (\*). Separate multiple domain names with commas (,).</p>
+         * <p>The domain name access control settings. Domain names support wildcards (*). Separate multiple domain names with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -970,7 +973,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the feature that allows users to request administrator assistance.</p>
+         * <p>Specifies whether regular users can request administrator assistance.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -982,7 +985,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable stream collaboration between users.</p>
+         * <p>Specifies whether stream collaboration between users is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -994,7 +997,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the image quality policy for graphics-type cloud desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
+         * <p>Specifies whether to enable the image quality policy for cloud computers with graphics-optimized specifications. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1007,6 +1010,9 @@ public class CreatePolicyGroupRequest extends Request {
 
         /**
          * <p>The web client access policy.</p>
+         * <blockquote>
+         * <p>Use the <code>ClientType</code> parameter to manage logon methods in a unified manner.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1042,7 +1048,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The local disk mapping permission.</p>
+         * <p>The local disk mapping permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1054,7 +1060,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The maximum reconnection retry time when the cloud desktop is disconnected due to objective reasons. Valid values: 30 to 7200. Unit: seconds.</p>
+         * <p>The maximum retry time for reconnecting to a cloud computer after it is disconnected due to objective reasons. Valid values: 30 to 7200. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -1066,7 +1072,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The policy name.</p>
+         * <p>The Policy Name.</p>
          * 
          * <strong>example:</strong>
          * <p>testPolicyGroupName</p>
@@ -1079,6 +1085,9 @@ public class CreatePolicyGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to enable network redirection.</p>
+         * <blockquote>
+         * <p>This feature is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1090,9 +1099,9 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The preemption policy for the cloud desktop.</p>
+         * <p>The cloud desktop preemption policy.</p>
          * <blockquote>
-         * <p>To ensure the user experience and data security of end users who are using the cloud desktop, preemption between multiple users is not allowed. This parameter is set to <code>off</code> by default and cannot be modified.</p>
+         * <p>To ensure the user experience and data security of the end user who is using the cloud desktop, preemption among multiple users is not allowed. This configuration defaults to <code>off</code> and cannot be modified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1105,9 +1114,9 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The usernames of users who are allowed to preempt the cloud desktop. You can specify up to 5 usernames.</p>
+         * <p>The usernames of the users who are allowed to preempt the cloud desktop. You can specify up to five usernames.</p>
          * <blockquote>
-         * <p>To ensure the user experience and data security of end users who are using the cloud desktop, mutual preemption among multiple users is not supported.</p>
+         * <p>To ensure the user experience and data security of the end user who is using the cloud desktop, preemption among multiple users is not allowed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1168,7 +1177,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The option for recording cloud desktop audio.</p>
+         * <p>The option for recording the audio of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1180,7 +1189,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The duration of each screen recording file segment. Unit: minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB.</p>
+         * <p>The viewing duration of screen recording files. Unit: minutes. Recorded files are automatically split and uploaded to the storage space based on the specified duration. When a file reaches 300 MB, it is rotated.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1192,7 +1201,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The end time of screen recording in the format of HH:MM:SS. This parameter takes effect only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
+         * <p>The end time for screen recording. Format: HH:MM:SS. This parameter takes effect only when Recording is set to PERIOD.</p>
          * 
          * <strong>example:</strong>
          * <p>08:59:00</p>
@@ -1216,7 +1225,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The frame rate of screen recording. Unit: FPS (frames per second).</p>
+         * <p>The frame rate for screen recording. Unit: FPS (frames per second).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1228,7 +1237,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The start time of screen recording in the format of HH:MM:SS. This parameter takes effect only when <code>Recording</code> is set to <code>PERIOD</code>.</p>
+         * <p>The start time for screen recording. Format: HH:MM:SS. This parameter takes effect only when Recording is set to PERIOD.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00:00</p>
@@ -1240,7 +1249,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The screen recording client notification feature.</p>
+         * <p>The screen recording notification feature for the client.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1252,10 +1261,10 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The notification content for the screen recording client. Leave this parameter empty by default.</p>
+         * <p>The content of the screen recording notification displayed on the client. You do not need to specify this parameter by default.</p>
          * 
          * <strong>example:</strong>
-         * <p>Your cloud desktop is being recorded</p>
+         * <p>Your cloud computer is being recorded</p>
          */
         public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
             this.putQueryParameter("RecordingUserNotifyMessage", recordingUserNotifyMessage);
@@ -1264,7 +1273,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1289,7 +1298,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The scope of the policy.</p>
+         * <p>The effective scope of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>GLOBAL</p>
@@ -1301,7 +1310,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The scope value. This parameter is required when <code>Scope</code> is set to <code>IP</code>. This parameter takes effect only when <code>Scope</code> is set to <code>IP</code>.</p>
+         * <p>This parameter is required when Scope is set to IP. This parameter takes effect only when Scope is set to IP.</p>
          */
         public Builder scopeValue(java.util.List<String> scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -1310,7 +1319,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The USB redirection setting.</p>
+         * <p>The USB redirection settings.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1322,7 +1331,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The USB redirection rules.</p>
+         * <p>The USB redirection rule.</p>
          */
         public Builder usbSupplyRedirectRule(java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule) {
             this.putQueryParameter("UsbSupplyRedirectRule", usbSupplyRedirectRule);
@@ -1331,7 +1340,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Multimedia redirection.</p>
+         * <p>The multimedia redirection setting.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1355,7 +1364,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark setting.</p>
+         * <p>The watermark settings.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1367,7 +1376,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The anti-camera capture feature for invisible watermarks.</p>
+         * <p>The anti-camera capture feature for blind watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1379,7 +1388,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark font color. Valid values: 0 to 16777215.</p>
+         * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1391,7 +1400,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark tilt angle. Valid values: -10 to -30.</p>
+         * <p>The tilt angle of the watermark. Valid values: -10 to -30.</p>
          * 
          * <strong>example:</strong>
          * <p>-10</p>
@@ -1403,7 +1412,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark font size. Valid values: 10 to 20.</p>
+         * <p>The font size of the watermark. Valid values: 10 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1415,7 +1424,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark font style.</p>
+         * <p>The font style of the watermark.</p>
          * 
          * <strong>example:</strong>
          * <p>plain</p>
@@ -1427,7 +1436,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The enhancement level for invisible watermarks.</p>
+         * <p>The enhancement feature for blind watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>medium</p>
@@ -1440,6 +1449,9 @@ public class CreatePolicyGroupRequest extends Request {
 
         /**
          * <p>The number of watermark rows.</p>
+         * <blockquote>
+         * <p>This parameter is not yet available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1451,7 +1463,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The security-first rule for invisible watermarks.</p>
+         * <p>The security priority rule for blind watermarks.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1463,7 +1475,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The transparency level of the watermark.</p>
+         * <p>The transparency of the watermark.</p>
          * 
          * <strong>example:</strong>
          * <p>LIGHT</p>
@@ -1487,7 +1499,10 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The watermark type. You can select up to three types, separated by commas (,).</p>
+         * <p>The watermark types. You can select up to three types and separate them with commas (,).</p>
+         * <blockquote>
+         * <p>If you specify <code>custom</code>, you must also use the <code>WatermarkCustomText</code> parameter to specify the custom text.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>EndUserId</p>
@@ -1499,9 +1514,9 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to provide the WUYING AI Assistant entry in the floating ball when connecting to a cloud computer through a desktop client (including Windows and macOS clients).</p>
+         * <p>Specifies whether to provide the entry point for the WUYING AI Assistant in the floating ball when connecting to the cloud computer through a desktop client, including Windows and macOS clients.</p>
          * <blockquote>
-         * <p>Applicable only to desktop clients of V7.7 or later.</p>
+         * <p>This feature applies only to desktop clients of V7.7 or later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1573,7 +1588,7 @@ public class CreatePolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The client access IP CIDR block. The value is an IPv4 CIDR block in CIDR notation.</p>
+             * <p>The client access CIDR block. The value must be an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -1584,10 +1599,10 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The description of the client IP whitelist rule.</p>
+             * <p>The description of the client IP address whitelist.</p>
              * 
              * <strong>example:</strong>
-             * <p>North China branch office</p>
+             * <p>North China branch</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1719,7 +1734,7 @@ public class CreatePolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The object of the security group rule. The value is an IPv4 CIDR block in CIDR notation.</p>
+             * <p>The destination of the security group control rule, which is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -1730,7 +1745,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The description of the security group rule.</p>
+             * <p>The description of the security group control rule.</p>
              * 
              * <strong>example:</strong>
              * <p>Allow access to the internal R&amp;D environment</p>
@@ -1741,7 +1756,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of the security group rule.</p>
+             * <p>The protocol type of the security group control rule.</p>
              * 
              * <strong>example:</strong>
              * <p>tcp</p>
@@ -1752,7 +1767,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The authorization policy of the security group rule.</p>
+             * <p>The authorization policy of the security group control rule.</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -1763,14 +1778,14 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The port range of the security group rule. The valid values of this parameter are determined by the value of IpProtocol:</p>
+             * <p>The port range of the security group control rule. The valid port range depends on the value of the IpProtocol parameter:</p>
              * <ul>
-             * <li>TCP or UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
-             * <li>ICMP: -1/-1.</li>
-             * <li>GRE: -1/-1.</li>
-             * <li>If IpProtocol is set to all: -1/-1.</li>
+             * <li>TCP or UDP: The port range is 1 to 65535. Use a forward slash (/) to separate the start port and the end port. Example: 1/200.</li>
+             * <li>ICMP: Set the value to -1/-1.</li>
+             * <li>GRE: Set the value to -1/-1.</li>
+             * <li>If IpProtocol is set to all: Set the value to -1/-1.</li>
              * </ul>
-             * <p>For more information about the common ports of typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
+             * <p>For more information about common ports used by typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>
@@ -1781,9 +1796,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The priority of the security group access control rule. A smaller value indicates a higher priority.</p>
-             * <p>Valid values: 1 to 60.</p>
-             * <p>Default value: 1.</p>
+             * <p>The priority of the security group control rule. A smaller value indicates a higher priority.<br>Valid values: 1 to 60.<br>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1794,7 +1807,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The direction of the security group rule.</p>
+             * <p>The direction of the security group control rule.</p>
              * 
              * <strong>example:</strong>
              * <p>inflow</p>
@@ -1865,6 +1878,9 @@ public class CreatePolicyGroupRequest extends Request {
 
             /**
              * <p>The client type for logon method control.</p>
+             * <blockquote>
+             * <p>If you do not specify the ClientType parameters, all types of clients are allowed to log on to the cloud computer by default.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>windows</p>
@@ -1875,9 +1891,9 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow users to log on to cloud desktops by using a specific type of client.</p>
+             * <p>Specifies whether to allow a specific type of client to log on to the cloud computer.</p>
              * <blockquote>
-             * <p>If you do not set <code>ClientType</code>-related parameters, all types of clients are allowed to log on to cloud desktops by default.</p>
+             * <p>If you do not specify the ClientType parameters, all types of clients are allowed to log on to the cloud computer by default.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1948,7 +1964,7 @@ public class CreatePolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The peripheral type.</p>
+             * <p>The type of the peripheral.</p>
              * 
              * <strong>example:</strong>
              * <p>camera</p>
@@ -2094,7 +2110,7 @@ public class CreatePolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>The device name.</p>
+             * <p>The name of the device.</p>
              * 
              * <strong>example:</strong>
              * <p>sandisk</p>
@@ -2116,7 +2132,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The peripheral type.</p>
+             * <p>The type of the peripheral.</p>
              * 
              * <strong>example:</strong>
              * <p>storage</p>
@@ -2127,7 +2143,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+             * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>0x0781</p>
@@ -2138,7 +2154,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The link optimization instruction.</p>
+             * <p>The link optimization command.</p>
              * 
              * <strong>example:</strong>
              * <p>2:0</p>
@@ -2411,7 +2427,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The device class. This parameter is required when <code>usbRuleType</code> is set to 1. See <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
+             * <p>The device class. This parameter is required when usbRuleType is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>0Eh</p>
@@ -2422,7 +2438,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The device subclass. This parameter is required when <code>usbRuleType</code> is set to 1. See <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
+             * <p>The device subclass. This parameter is required when usbRuleType is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>xxh</p>
@@ -2466,7 +2482,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+             * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>04**</p>

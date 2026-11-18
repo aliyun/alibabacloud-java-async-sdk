@@ -23,7 +23,6 @@ public class CreateAndBindNasFileSystemRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
 
     @com.aliyun.core.annotation.Query
@@ -50,6 +49,10 @@ public class CreateAndBindNasFileSystemRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SizeQuota")
+    private Long sizeQuota;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String storageType;
@@ -63,6 +66,7 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         this.fileSystemName = builder.fileSystemName;
         this.officeSiteId = builder.officeSiteId;
         this.regionId = builder.regionId;
+        this.sizeQuota = builder.sizeQuota;
         this.storageType = builder.storageType;
     }
 
@@ -129,6 +133,13 @@ public class CreateAndBindNasFileSystemRequest extends Request {
     }
 
     /**
+     * @return sizeQuota
+     */
+    public Long getSizeQuota() {
+        return this.sizeQuota;
+    }
+
+    /**
      * @return storageType
      */
     public String getStorageType() {
@@ -143,6 +154,7 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         private String fileSystemName; 
         private String officeSiteId; 
         private String regionId; 
+        private Long sizeQuota; 
         private String storageType; 
 
         private Builder() {
@@ -158,6 +170,7 @@ public class CreateAndBindNasFileSystemRequest extends Request {
             this.fileSystemName = request.fileSystemName;
             this.officeSiteId = request.officeSiteId;
             this.regionId = request.regionId;
+            this.sizeQuota = request.sizeQuota;
             this.storageType = request.storageType;
         } 
 
@@ -174,8 +187,7 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the shared cloud computer.</p>
-         * <p>This parameter is required.</p>
+         * <p>The ID of the shared cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-fh0vdzyh6rdc*****</p>
@@ -187,9 +199,9 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the file system uses a KMS-managed key to encrypt data at rest. Encrypted data does not need to be decrypted during read and write operations.</p>
+         * <p>Specifies whether the file system uses Key Management Service (KMS) managed keys to encrypt data at rest. No decryption is required when reading or writing encrypted data.</p>
          * <blockquote>
-         * <p>NAS-managed keys are supported when <code>FileSystemType</code> is set to <code>standard</code> or <code>extreme</code>. User-managed keys are supported when <code>FileSystemType</code> is set to <code>extreme</code>.</p>
+         * <p>When <code>FileSystemType</code> is set to <code>standard</code> or <code>extreme</code>, NAS-managed keys are supported. When <code>FileSystemType</code> is set to <code>extreme</code>, user-managed keys are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -237,7 +249,7 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +262,19 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * <p>The storage specification type of the NAS file system.</p>
+         * <p>The user VHD capacity tier in GiB. Valid values: 5, 20, 50, 100, and 500. Default value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        public Builder sizeQuota(Long sizeQuota) {
+            this.putQueryParameter("SizeQuota", sizeQuota);
+            this.sizeQuota = sizeQuota;
+            return this;
+        }
+
+        /**
+         * <p>The storage type of the NAS file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

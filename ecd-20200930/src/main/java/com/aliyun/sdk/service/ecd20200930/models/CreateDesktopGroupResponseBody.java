@@ -93,7 +93,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the shared cloud computer.</p>
+         * <p>The ID of the shared cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -104,7 +104,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of shared cloud computer IDs.</p>
+         * <p>The IDs of the shared cloud desktops.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.desktopGroupIds = desktopGroupIds;

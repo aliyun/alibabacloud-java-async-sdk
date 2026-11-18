@@ -80,7 +80,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of cloud computer templates.</p>
+         * <p>The list of cloud desktop templates.</p>
          */
         public Builder bundles(java.util.List<Bundles> bundles) {
             this.bundles = bundles;
@@ -88,7 +88,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
+         * <p>The token used to start the next query. An empty NextToken indicates that no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lu3PTF6h3zE8egwlYuv8M8</p>
@@ -310,7 +310,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The disk performance level.</p>
+             * <p>The performance level of the disk.</p>
              * 
              * <strong>example:</strong>
              * <p>PL0</p>
@@ -321,7 +321,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size. Unit: GiB.</p>
+             * <p>The size of the disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>
@@ -332,7 +332,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk type.</p>
+             * <p>The type of the disk.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -662,7 +662,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cloud computer template ID.</p>
+             * <p>The cloud desktop template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
@@ -673,7 +673,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cloud computer template.</p>
+             * <p>The name of the cloud desktop template.</p>
              * 
              * <strong>example:</strong>
              * <p>Advanced graphics with Windows 2019</p>
@@ -684,7 +684,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer templatetype.</p>
+             * <p>The cloud desktop templatetype.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -695,7 +695,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cloud computer template was created. The time is in the ISO 8601 standard in UTC.</p>
+             * <p>The creation time of the cloud desktop template. The time follows the ISO 8601 standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-09-30T06:09Z</p>
@@ -706,7 +706,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data cloud disk type.</p>
+             * <p>The category of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_efficiency</p>
@@ -717,7 +717,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the cloud computer template.</p>
+             * <p>The description of the cloud desktop template.</p>
              * 
              * <strong>example:</strong>
              * <p>Template for daily office use</p>
@@ -728,7 +728,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer specifications.</p>
+             * <p>The cloud desktop specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd.graphics.2xlarge</p>
@@ -739,7 +739,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the cloud computer specifications.</p>
+             * <p>The details of the cloud desktop specifications.</p>
              */
             public Builder desktopTypeAttribute(DesktopTypeAttribute desktopTypeAttribute) {
                 this.desktopTypeAttribute = desktopTypeAttribute;
@@ -747,7 +747,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud computer instance family.</p>
+             * <p>The cloud desktop instance family.</p>
              * 
              * <strong>example:</strong>
              * <p>eds.general</p>
@@ -777,7 +777,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image name.</p>
+             * <p>The name of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows server 2019 Chinese</p>
@@ -788,7 +788,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image status.</p>
+             * <p>The status of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -799,7 +799,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the image operating system.</p>
+             * <p>The operating system language of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>en-US</p>
@@ -854,7 +854,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stock status. This parameter is returned when <code>CheckStock</code> is set to <code>True</code>.</p>
+             * <p>The stock status. This parameter is returned when CheckStock is set to True.</p>
              * 
              * <strong>example:</strong>
              * <p>Sufficient</p>
@@ -865,7 +865,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system cloud disk type.</p>
+             * <p>The category of the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_efficiency</p>
@@ -876,7 +876,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable disk encryption.</p>
+             * <p>Specifies whether disk encryption is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

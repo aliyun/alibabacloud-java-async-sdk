@@ -80,7 +80,7 @@ public class CreateConfigGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the configuration group.</p>
+         * <p>The configuration group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ccg-0ctwi5zbswtql****</p>

@@ -119,7 +119,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -130,7 +130,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
+         * <p>The operation result. A value of <code>success</code> indicates that the operation was successful. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,7 +152,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
+         * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

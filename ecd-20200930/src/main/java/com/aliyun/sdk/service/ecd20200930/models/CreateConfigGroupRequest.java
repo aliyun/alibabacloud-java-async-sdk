@@ -133,7 +133,7 @@ public class CreateConfigGroupRequest extends Request {
         } 
 
         /**
-         * <p>The configuration information of the scheduled tasks. This is a list.</p>
+         * <p>The configuration information of the scheduled tasks. The value is a list.</p>
          */
         public Builder configTimers(java.util.List<ConfigTimers> configTimers) {
             this.putQueryParameter("ConfigTimers", configTimers);
@@ -167,7 +167,7 @@ public class CreateConfigGroupRequest extends Request {
         }
 
         /**
-         * <p>The product type of the configuration group.</p>
+         * <p>The product type used by the configuration group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -485,7 +485,7 @@ public class CreateConfigGroupRequest extends Request {
             } 
 
             /**
-             * <p>Used for executing scheduled tasks at a specific time. After this parameter is specified, the scheduled task is executed at the specified time.</p>
+             * <p>Used for executing scheduled tasks at a specified time. After you specify this parameter, the scheduled task is executed at the specified time.</p>
              * 
              * <strong>example:</strong>
              * <p>1764660600967</p>
@@ -504,7 +504,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The cron expression for ending the execution of the scheduled task.</p>
+             * <p>The cron expression for the end time of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 18 ? * 1-5</p>
@@ -515,7 +515,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to forcibly execute the task. A value of true indicates that the desktop and connection status checks are ignored, and the scheduled task is forcibly executed.</p>
+             * <p>Specifies whether to forcibly execute the task. A value of true indicates that the system ignores the desktop and connection status checks and forcibly executes the scheduled task.</p>
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -553,7 +553,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>Used for the no-operation lock screen feature. Specifies the duration of inactivity before the screen is locked. Unit: minutes. Only AD cloud desktops are supported.</p>
+             * <p>Used for the inactivity lock screen feature to specify the duration of inactivity before the screen is locked. Unit: minutes. Only AD cloud desktops are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -575,7 +575,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The operation type of the scheduled task. Currently, only disconnection scheduled tasks are supported.</p>
+             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Shutdown</p>
@@ -597,7 +597,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not executed.</p>
+             * <p>The process whitelist for intelligent detection of inactivity scheduled tasks. If a specified process is running, the inactivity scheduled task is not triggered.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -605,7 +605,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The reset type. Specifies whether to reset the cloud desktop and the scope of cloud disks to be reset.</p>
+             * <p>The reset type, which determines whether to perform a reset and the scope of cloud disks to be reset.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -616,7 +616,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The cron expression for starting the execution of the scheduled task.</p>
+             * <p>The cron expression for the start time of the scheduled task.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 8 ? * 1-5</p>
@@ -649,7 +649,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The trigger configuration type for no-operation scheduled tasks.</p>
+             * <p>The trigger configuration type for inactivity scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>
@@ -872,7 +872,7 @@ public class CreateConfigGroupRequest extends Request {
             /**
              * <p>The cron expression of the scheduled task.</p>
              * <blockquote>
-             * <p>Notice: You must specify the time in UTC. For example, to specify 00:00:00 every day in UTC+8, pass 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
+             * <p>Notice: You must specify the time in UTC. For example, to specify 00:00:00 every day in UTC+8 (Beijing time), set this parameter to 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -917,7 +917,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The operation type of the scheduled task. Currently, only disconnection scheduled tasks are supported.</p>
+             * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Shutdown</p>
@@ -928,7 +928,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not executed.</p>
+             * <p>The process whitelist for intelligent detection of inactivity scheduled tasks. If a specified process is running, the inactivity scheduled task is not triggered.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -967,7 +967,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * <p>The trigger configuration type for no-operation scheduled tasks.</p>
+             * <p>The trigger configuration type for inactivity scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>Standard</p>

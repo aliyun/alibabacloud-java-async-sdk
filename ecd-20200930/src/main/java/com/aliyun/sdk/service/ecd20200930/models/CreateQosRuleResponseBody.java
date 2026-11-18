@@ -67,7 +67,7 @@ public class CreateQosRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The rate limiting rule ID.</p>
+         * <p>The ID of the bandwidth throttling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-5605u0gelk200****</p>

@@ -256,7 +256,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         } 
 
         /**
-         * <p>The time when the cloud computer was created. The time is in UTC and follows the format:
+         * <p>The time when the cloud desktop was created. Specify the time in the UTC format:
          * <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +269,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud computer IDs.</p>
+         * <p>The list of cloud desktop IDs.</p>
          */
         public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
@@ -290,7 +290,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * <p>The shared cloud computer ID.</p>
+         * <p>The ID of the shared cloud desktop group.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-i1ruuudp92qpj****</p>
@@ -326,7 +326,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the response includes cloud computers in shared cloud computer groups.</p>
+         * <p>Specifies whether the response includes cloud desktops in shared cloud desktop groups.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -339,7 +339,7 @@ public class DescribeDesktopMetadataRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is not yet available for use.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -352,7 +352,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+         * <p>The number of entries to return per page in a paged query. This parameter is used for paging. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -376,7 +376,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. An empty value indicates that there are no more results.</p>
+         * <p>The pagination token for the next query. If NextToken is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -400,7 +400,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         }
 
         /**
-         * <p>The start time of operations performed on the cloud computer. The time is in UTC and follows the format:
+         * <p>The start time of the operation on the cloud desktop. Time format:
          * <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
          * 
          * <strong>example:</strong>

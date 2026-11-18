@@ -80,7 +80,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+         * <p>The token for the next query. An empty NextToken indicates that no subsequent query is required.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -102,7 +102,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array of AD account usernames. If the enterprise AD contains only the Administrator and Guest users and no other users, an empty Users array is returned.</p>
+         * <p>The array of AD account usernames.<br>If the enterprise AD domain contains only the Administrator and Guest users and no other users, an empty Users array is returned.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -233,7 +233,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of assigned cloud computers.</p>
+             * <p>The number of assigned cloud desktops.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -258,7 +258,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
              * <p>The new display name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>Zhang San</p>
              */
             public Builder displayNameNew(String displayNameNew) {
                 this.displayNameNew = displayNameNew;

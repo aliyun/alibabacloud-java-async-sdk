@@ -18,8 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteDriveRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainId")
+    private String domainId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DriveId")
     private String driveId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    private String endUserId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    private String officeSiteId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -27,7 +39,10 @@ public class DeleteDriveRequest extends Request {
 
     private DeleteDriveRequest(Builder builder) {
         super(builder);
+        this.domainId = builder.domainId;
         this.driveId = builder.driveId;
+        this.endUserId = builder.endUserId;
+        this.officeSiteId = builder.officeSiteId;
         this.regionId = builder.regionId;
     }
 
@@ -45,10 +60,31 @@ public class DeleteDriveRequest extends Request {
     }
 
     /**
+     * @return domainId
+     */
+    public String getDomainId() {
+        return this.domainId;
+    }
+
+    /**
      * @return driveId
      */
     public String getDriveId() {
         return this.driveId;
+    }
+
+    /**
+     * @return endUserId
+     */
+    public String getEndUserId() {
+        return this.endUserId;
+    }
+
+    /**
+     * @return officeSiteId
+     */
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     /**
@@ -59,7 +95,10 @@ public class DeleteDriveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDriveRequest, Builder> {
+        private String domainId; 
         private String driveId; 
+        private String endUserId; 
+        private String officeSiteId; 
         private String regionId; 
 
         private Builder() {
@@ -68,9 +107,24 @@ public class DeleteDriveRequest extends Request {
 
         private Builder(DeleteDriveRequest request) {
             super(request);
+            this.domainId = request.domainId;
             this.driveId = request.driveId;
+            this.endUserId = request.endUserId;
+            this.officeSiteId = request.officeSiteId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dom-aaaa****</p>
+         */
+        public Builder domainId(String domainId) {
+            this.putQueryParameter("DomainId", domainId);
+            this.domainId = domainId;
+            return this;
+        }
 
         /**
          * <p>The ID of the user-level storage resource.</p>
@@ -81,6 +135,30 @@ public class DeleteDriveRequest extends Request {
         public Builder driveId(String driveId) {
             this.putQueryParameter("DriveId", driveId);
             this.driveId = driveId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the end user. This parameter is used when locating the UPM drive by using DomainId or OfficeSiteId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc****</p>
+         */
+        public Builder endUserId(String endUserId) {
+            this.putQueryParameter("EndUserId", endUserId);
+            this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-467671****</p>
+         */
+        public Builder officeSiteId(String officeSiteId) {
+            this.putQueryParameter("OfficeSiteId", officeSiteId);
+            this.officeSiteId = officeSiteId;
             return this;
         }
 

@@ -80,7 +80,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token for the next query. If the value is empty, no more results are available.</p>
+         * <p>The token for the next query. An empty NextToken indicates that no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -102,7 +102,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The snapshots.</p>
+         * <p>The list of snapshots.</p>
          */
         public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -467,7 +467,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the snapshot was created. The time is displayed in UTC and follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format.</p>
+             * <p>The time when the snapshot was created. The time is displayed in the <code>yyyy-mm-ddthh:mm:ssz</code> format based on the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-20T14:52:28Z</p>
@@ -489,7 +489,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the snapshot was created. The time is displayed in UTC+0 in the <code>yyyy-mm-ddthh:mm:ssz</code> format in accordance with the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</p>
+             * <p>The time when the snapshot was created. The time is displayed in the <code>yyyy-mm-ddthh:mm:ssz</code> format based on the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-20T14:52:28Z</p>
@@ -500,7 +500,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the snapshot.</p>
+             * <p>The snapshot description.</p>
              * 
              * <strong>example:</strong>
              * <p>testDescription</p>
@@ -533,7 +533,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cloud desktop.</p>
+             * <p>The cloud desktop status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -590,7 +590,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation progress of the snapshot. Unit: percentage.</p>
+             * <p>The progress of snapshot creation. Unit: %.</p>
              * 
              * <strong>example:</strong>
              * <p>100%</p>
@@ -614,7 +614,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             /**
              * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
              * <blockquote>
-             * <p>If <code>Status</code> is <code>PROGRESSING</code>, the value of <code>RemainTime</code> is <code>-1</code>, which indicates that the remaining time is being calculated.</p>
+             * <p>If <code>Status</code> is <code>PROGRESSING</code>, a <code>RemainTime</code> value of <code>-1</code> indicates that the remaining time is being calculated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -659,7 +659,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the snapshot.</p>
+             * <p>The snapshot name.</p>
              * 
              * <strong>example:</strong>
              * <p>testSnapshotName</p>
@@ -681,7 +681,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the source disk. Unit: GiB.</p>
+             * <p>The size of the source disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>150</p>
@@ -692,7 +692,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source disk.</p>
+             * <p>The source disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>

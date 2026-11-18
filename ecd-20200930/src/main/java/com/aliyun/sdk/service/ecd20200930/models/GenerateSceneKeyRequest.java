@@ -103,7 +103,7 @@ public class GenerateSceneKeyRequest extends Request {
         } 
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The Cloud Desktop ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GenerateSceneKeyRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the key, in hours. A value of 0 indicates that the key never expires. If this parameter is not specified, the default server value is used.</p>
+         * <p>The validity period of the key, in hours. A value of 0 indicates that the key never expires. If this parameter is not specified, the default value on the server is used.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

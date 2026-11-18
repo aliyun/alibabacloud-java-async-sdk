@@ -341,7 +341,7 @@ public class DescribeBundlesRequest extends Request {
         } 
 
         /**
-         * <p>The list of cloud computer template IDs. You can specify 1 to 100 IDs.</p>
+         * <p>The list of cloud desktop template IDs. You can specify 1 to 100 IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
@@ -353,7 +353,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer templatetype.</p>
+         * <p>The cloud desktop templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -365,7 +365,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the stock status of the cloud computer instance type.</p>
+         * <p>Specifies whether to query the inventory status of the cloud desktop instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -377,7 +377,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The number of vCPUs included in the cloud computer instance type.</p>
+         * <p>The number of vCPUs in the cloud desktop instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -389,7 +389,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer instance family.</p>
+         * <p>The cloud desktop instance family.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.general</p>
@@ -415,7 +415,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the template belongs to a cloud computer pool.</p>
+         * <p>Specifies whether the template belongs to a cloud desktop pool.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -427,7 +427,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The number of GPUs included in the cloud computer instance type.</p>
+         * <p>The number of GPUs in the cloud desktop instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -460,7 +460,11 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The maximum number of entries to return per page when paging in a paged query.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -472,7 +476,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The memory size included in the cloud computer instance type. Unit: GiB.</p>
+         * <p>The memory size of the cloud desktop instance type. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -484,7 +488,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query.</p>
+         * <p>The token that is used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -533,7 +537,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>Scenarios.</p>
+         * <p>The Scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>FastBuy</p>
@@ -545,7 +549,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>The selected template.</p>
+         * <p>The featured template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -569,7 +573,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return multi-session cloud computer templates when querying the cloud computer list. Multi-session templates are not returned by default.</p>
+         * <p>Specifies whether to return multi-session cloud desktop templates when you query the cloud desktop list. By default, multi-session templates are not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -581,7 +585,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable disk encryption.</p>
+         * <p>Specifies whether disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

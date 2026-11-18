@@ -147,7 +147,7 @@ public class CreateQosRuleRequest extends Request {
         } 
 
         /**
-         * <p>The list of cloud phones to associate.</p>
+         * <p>The IDs of the cloud phones to associate.</p>
          */
         public Builder authAndroidId(java.util.List<String> authAndroidId) {
             this.putQueryParameter("AuthAndroidId", authAndroidId);
@@ -156,7 +156,7 @@ public class CreateQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer pool for which the authorization takes effect.</p>
+         * <p>The ID of the cloud computer pool where the authorization takes effect.</p>
          */
         public Builder authDesktopGroupId(java.util.List<String> authDesktopGroupId) {
             this.putQueryParameter("AuthDesktopGroupId", authDesktopGroupId);
@@ -165,7 +165,7 @@ public class CreateQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud computer IDs to associate.</p>
+         * <p>The IDs of the cloud computers to associate.</p>
          */
         public Builder authDesktopId(java.util.List<String> authDesktopId) {
             this.putQueryParameter("AuthDesktopId", authDesktopId);
@@ -187,7 +187,7 @@ public class CreateQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The premium bandwidth ID.</p>
+         * <p>The ID of the premium bandwidth.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,11 +200,11 @@ public class CreateQosRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the rate limiting rule.</p>
+         * <p>The name of the bandwidth throttling rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Office network rate limiting rule</p>
+         * <p>Office network bandwidth throttling rule</p>
          */
         public Builder qosRuleName(String qosRuleName) {
             this.putQueryParameter("QosRuleName", qosRuleName);

@@ -38,6 +38,10 @@ public class CreateDriveRequest extends Request {
     private String externalDomainId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platforms")
+    private java.util.List<String> platforms;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProfileRoaming")
     private Boolean profileRoaming;
 
@@ -64,6 +68,7 @@ public class CreateDriveRequest extends Request {
         this.domainId = builder.domainId;
         this.driveName = builder.driveName;
         this.externalDomainId = builder.externalDomainId;
+        this.platforms = builder.platforms;
         this.profileRoaming = builder.profileRoaming;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
@@ -120,6 +125,13 @@ public class CreateDriveRequest extends Request {
     }
 
     /**
+     * @return platforms
+     */
+    public java.util.List<String> getPlatforms() {
+        return this.platforms;
+    }
+
+    /**
      * @return profileRoaming
      */
     public Boolean getProfileRoaming() {
@@ -160,6 +172,7 @@ public class CreateDriveRequest extends Request {
         private String domainId; 
         private String driveName; 
         private String externalDomainId; 
+        private java.util.List<String> platforms; 
         private Boolean profileRoaming; 
         private String regionId; 
         private String resourceType; 
@@ -177,6 +190,7 @@ public class CreateDriveRequest extends Request {
             this.domainId = request.domainId;
             this.driveName = request.driveName;
             this.externalDomainId = request.externalDomainId;
+            this.platforms = request.platforms;
             this.profileRoaming = request.profileRoaming;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
@@ -211,7 +225,7 @@ public class CreateDriveRequest extends Request {
         /**
          * <p>The storage resource ID.</p>
          * <blockquote>
-         * <p>You can call the DescribeDrives operation to obtain this value.</p>
+         * <p>You can obtain this ID by calling the DescribeDrives operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -238,7 +252,7 @@ public class CreateDriveRequest extends Request {
         /**
          * <p>The external storage resource ID.</p>
          * <blockquote>
-         * <p>You can call the DescribeDrives operation to obtain this value.</p>
+         * <p>You can obtain this ID by calling the DescribeDrives operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -251,8 +265,20 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
+         * <p>The list of image platforms for which to initialize VHDs, such as WINDOWS_SERVER_2025. This parameter applies to UPM binding scenarios such as workspaces, desktop pools, and cloud application delivery groups. If you specify this parameter, the VHDs are initialized based on the specified platforms. If you do not specify this parameter, the original platform derivation rules for each scenario are used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;WINDOWS_11&quot;,&quot;WINDOWS_SERVER_2025&quot;]</p>
+         */
+        public Builder platforms(java.util.List<String> platforms) {
+            this.putQueryParameter("Platforms", platforms);
+            this.platforms = platforms;
+            return this;
+        }
+
+        /**
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * </blockquote>
          * 
          * <strong>example:</strong>

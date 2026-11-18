@@ -334,7 +334,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For information about the features, common scenarios, limits, and scaling policies of shared cloud computers, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared cloud computers (formerly cloud computer pools) overview</a>.</li>
+     * <li>For information about the features, common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</li>
+     * <li>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policies are created.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDesktopGroup  CreateDesktopGroupRequest
@@ -503,7 +504,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</p>
      * 
      * @param request the request parameters of CreateOfficeSiteAccelerator  CreateOfficeSiteAcceleratorRequest
      * @return CreateOfficeSiteAcceleratorResponse
@@ -512,7 +513,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A cloud computer policy is a collection of rules that primarily includes configurations for cloud computer performance and security, such as basic policies like disk mapping, USB redirection, and watermarks, as well as rules like DNS management. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
+     * <p>A cloud desktop policy is a collection of rules that mainly includes performance and security configurations for cloud desktops, such as basic policies for disk mapping, USB redirection, and watermarks, as well as rules for DNS control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * @param request the request parameters of CreatePolicyGroup  CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
@@ -521,7 +522,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Cloud computer templates include system templates and custom templates. System templates are default templates provided by Alibaba Cloud. Call this operation to create a custom template.</p>
+     * <p>Cloud computer templates are divided into system templates and custom templates. System templates are default templates provided by Alibaba Cloud. You can call this operation to create a custom template.</p>
      * 
      * @param request the request parameters of CreateQosRule  CreateQosRuleRequest
      * @return CreateQosRuleResponse
@@ -584,8 +585,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following items:</p>
      * <ul>
-     * <li>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</li>
-     * <li>For region-specific parameters in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</li>
+     * <li>Most parameters in an instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence and validity of the parameter values in the template. The validity of the parameter values is verified only when an instance is actually created.</li>
+     * <li>For parameters with region attributes in the template, if the region does not match when you use the template to create a cloud desktop, these parameters do not take effect.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
@@ -595,7 +596,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding Active Directory (AD) user must bind a new MFA device when logging on to a cloud desktop.</p>
+     * <p>Deleting an MFA device dissociates the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a Cloud Desktop.</p>
      * 
      * @param request the request parameters of CreateVirtualBridge  CreateVirtualBridgeRequest
      * @return CreateVirtualBridgeResponse
@@ -631,6 +632,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCloudDriveGroupsResponse
      */
     CompletableFuture<DeleteCloudDriveGroupsResponse> deleteCloudDriveGroups(DeleteCloudDriveGroupsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCloudDriveServices  DeleteCloudDriveServicesRequest
+     * @return DeleteCloudDriveServicesResponse
+     */
+    CompletableFuture<DeleteCloudDriveServicesResponse> deleteCloudDriveServices(DeleteCloudDriveServicesRequest request);
 
     /**
      * @param request the request parameters of DeleteCloudDriveUsers  DeleteCloudDriveUsersRequest
@@ -811,7 +818,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After a template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</p>
+     * <p>After a template is deleted, cloud desktops created based on the template and resources associated with the template are not affected.</p>
      * 
      * @param request the request parameters of DeleteTemplates  DeleteTemplatesRequest
      * @return DeleteTemplatesResponse
@@ -820,7 +827,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting and disabling the MFA device. The corresponding Active Directory (AD) user must bind a new MFA device when logging on to a Cloud Desktop.</p>
+     * <p>Deleting an MFA device unbinds the device, which is equivalent to resetting and disabling it. The corresponding Active Directory (AD) user must bind a new MFA device when logging on to a Cloud Desktop.</p>
      * 
      * @param request the request parameters of DeleteVirtualBridge  DeleteVirtualBridgeRequest
      * @return DeleteVirtualBridgeResponse
@@ -962,7 +969,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</p>
+     * <p>This operation is centralized and supports queries only in the Shanghai and Singapore sites.</p>
      * 
      * @param request the request parameters of DescribeDesktopMetadata  DescribeDesktopMetadataRequest
      * @return DescribeDesktopMetadataResponse
@@ -1610,6 +1617,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HibernateDesktopsResponse> hibernateDesktops(HibernateDesktopsRequest request);
 
     /**
+     * @param request the request parameters of ImportDrive  ImportDriveRequest
+     * @return ImportDriveResponse
+     */
+    CompletableFuture<ImportDriveResponse> importDrive(ImportDriveRequest request);
+
+    /**
      * @param request the request parameters of ListCdsFiles  ListCdsFilesRequest
      * @return ListCdsFilesResponse
      */
@@ -1797,10 +1810,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you invoke this operation, make sure that you fully understand the billing methods of cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</li>
-     * <li>When you invoke this operation, make sure that the cloud desktops are in the Running or Stopped state and that no overdue payments exist.</li>
-     * <li>After the order is paid, the system starts to convert the billing method of the cloud desktops. During the conversion, the cloud desktops are in the Upgrade/Downgrade state and do not support other operations such as starting, stopping, or changing specifications.
-     * &lt;props=&quot;china&quot;&gt;When you convert the billing method from subscription to pay-as-you-go, refund quota limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Switch from subscription to pay-as-you-go</a>.</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing methods of cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</li>
+     * <li>When you call this operation, make sure that the target cloud desktop is in the Running or Stopped state and has no overdue payments.</li>
+     * <li>After the order is paid, the system starts to change the billing method of the cloud desktop. During the change, the cloud desktop is in the Upgrade/Downgrade state and does not support other operations, such as starting, stopping, or changing configurations.
+     * &lt;props=&quot;china&quot;&gt;When you change the billing method from subscription to pay-as-you-go, a refund quota limit applies. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Change the billing method from subscription to pay-as-you-go</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDesktopChargeType  ModifyDesktopChargeTypeRequest
