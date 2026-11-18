@@ -244,7 +244,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv4 CIDR blocks of the network zone.</p>
+             * <p>The IPv4 network zone.</p>
              */
             public Builder ipv4Cidrs(java.util.List<String> ipv4Cidrs) {
                 this.ipv4Cidrs = ipv4Cidrs;
@@ -252,7 +252,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv6 CIDR blocks of the network zone.</p>
+             * <p>The IPv6 network zone.</p>
              */
             public Builder ipv6Cidrs(java.util.List<String> ipv6Cidrs) {
                 this.ipv6Cidrs = ipv6Cidrs;

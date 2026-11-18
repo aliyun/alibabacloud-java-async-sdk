@@ -127,7 +127,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The number of rows per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -138,7 +138,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token (Token) value returned by this call.</p>
+         * <p>The pagination token returned by the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -149,7 +149,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token (Token) value returned by this call.</p>
+         * <p>The pagination token returned by the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -171,7 +171,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -404,7 +404,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token issuer identifier (Issuer).</p>
+             * <p>The token issuer identifier.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com">https://example.com</a></p>
@@ -795,7 +795,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signature effective time. The value indicates the duration for which the signature is valid, in seconds.</p>
+             * <p>The signature validity period. The value indicates the duration for which the signature is valid, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -1096,7 +1096,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The root certificates.</p>
+             * <p>The root certificate.</p>
              */
             public Builder certificates(java.util.List<PrivateCaProviderConfigCertificates> certificates) {
                 this.certificates = certificates;
@@ -1104,7 +1104,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method used to retrieve the root certificate.</p>
+             * <p>The method used to obtain the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>

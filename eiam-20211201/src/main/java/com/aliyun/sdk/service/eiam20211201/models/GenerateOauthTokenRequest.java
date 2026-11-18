@@ -247,7 +247,7 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
-         * <p>The permission scope.</p>
+         * <p>The permission scopes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder scopeValues(java.util.List<String> scopeValues) {

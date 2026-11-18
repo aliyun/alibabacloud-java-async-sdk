@@ -152,7 +152,7 @@ public class ListClientPublicKeysRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -164,7 +164,7 @@ public class ListClientPublicKeysRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</p>
+         * <p>The pagination token for the next page. Set the value to the NextToken value returned from the previous API call. Leave this parameter empty for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>

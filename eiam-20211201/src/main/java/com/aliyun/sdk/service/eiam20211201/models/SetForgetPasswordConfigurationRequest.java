@@ -120,7 +120,7 @@ public class SetForgetPasswordConfigurationRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>email</p>
+         * <p>[&quot;email&quot;]</p>
          */
         public Builder authenticationChannels(java.util.List<String> authenticationChannels) {
             this.putQueryParameter("AuthenticationChannels", authenticationChannels);

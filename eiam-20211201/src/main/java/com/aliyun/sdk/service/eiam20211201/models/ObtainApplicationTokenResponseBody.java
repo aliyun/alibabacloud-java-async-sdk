@@ -279,7 +279,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application token was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The creation time of the application token. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1735610930000</p>
@@ -290,7 +290,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1735610950000</p>
@@ -312,7 +312,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last used time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1735610930000</p>

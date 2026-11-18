@@ -128,7 +128,7 @@ public class RevokeResourceServerScopesFromOrganizationalUnitRequest extends Req
         }
 
         /**
-         * <p>The ResourceServer application ID.</p>
+         * <p>The resource server application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class RevokeResourceServerScopesFromOrganizationalUnitRequest extends Req
         }
 
         /**
-         * <p>The list of Scope permission IDs under the ResourceServer.</p>
+         * <p>The list of scope permission IDs under the resource server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of applications authorized for access.</p>
+         * <p>The list of applications that the group is authorized to access.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -88,7 +88,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -99,7 +99,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -155,7 +155,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Application role ID.</p>
+             * <p>The application role ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -251,7 +251,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Application ID.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -262,7 +262,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application role list.</p>
+             * <p>The list of application roles. No roles are returned for SAML applications.</p>
              */
             public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
                 this.applicationRoles = applicationRoles;
@@ -270,10 +270,10 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether direct authorization exists. Valid values:</p>
+             * <p>Indicates whether direct authorization exists. Valid values:</p>
              * <ul>
-             * <li>true: A direct authorization relationship record exists between the application and the group.</li>
-             * <li>false: No direct authorization relationship record exists between the application and the group.</li>
+             * <li>true: A direct authorization record exists between the application and the group.</li>
+             * <li>false: No direct authorization record exists between the application and the group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether inherited authorization exists.</p>
+             * <p>Indicates whether inherited authorization exists.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

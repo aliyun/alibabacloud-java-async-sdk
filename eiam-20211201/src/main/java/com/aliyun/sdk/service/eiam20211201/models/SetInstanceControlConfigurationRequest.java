@@ -165,7 +165,7 @@ public class SetInstanceControlConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The CAPTCHA type.</p>
+             * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) check type.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:humanverification:alibaba-cloud-slider-verification</p>
@@ -261,7 +261,7 @@ public class SetInstanceControlConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The CAPTCHA authenticate configuration.</p>
+             * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) configuration.</p>
              */
             public Builder humanVerificationConfig(HumanVerificationConfig humanVerificationConfig) {
                 this.humanVerificationConfig = humanVerificationConfig;

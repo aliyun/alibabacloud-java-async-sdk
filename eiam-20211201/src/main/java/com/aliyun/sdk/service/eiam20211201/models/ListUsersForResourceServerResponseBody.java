@@ -106,7 +106,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -139,7 +139,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -216,7 +216,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The scope permission ID.</p>
+             * <p>The scope ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -227,7 +227,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope permission name.</p>
+             * <p>The scope name.</p>
              * 
              * <strong>example:</strong>
              * <p>Read All User</p>
@@ -321,7 +321,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of granted scope permissions.</p>
+             * <p>The list of authorized scopes.</p>
              */
             public Builder resourceServerScopes(java.util.List<ResourceServerScopes> resourceServerScopes) {
                 this.resourceServerScopes = resourceServerScopes;

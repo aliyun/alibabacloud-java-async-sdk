@@ -131,7 +131,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The identity provider ID.</p>
+             * <p>The ID of the identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>idp_1234567890</p>
@@ -279,7 +279,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The audience list of the OIDC credential.</p>
+             * <p>The list of audiences for the OIDC credential.</p>
              */
             public Builder audiences(java.util.List<String> audiences) {
                 this.audiences = audiences;
@@ -298,7 +298,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token issuer identifier (Issuer).</p>
+             * <p>The issuer identifier of the token.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://test.idaas.com/v2/oauth">http://test.idaas.com/v2/oauth</a></p>
@@ -535,7 +535,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The root certificate content.</p>
+             * <p>The content of the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>-----BEGIN CERTIFICATE-----
@@ -548,7 +548,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The root certificate fingerprint.</p>
+             * <p>The fingerprint of the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>2b18947a6a9fc7764fd8b5fb18a863b0c6daxxx</p>
@@ -670,7 +670,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The PKCS7 certificate list.</p>
+             * <p>The list of PKCS7 certificates.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -689,7 +689,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signature effective time. The value indicates the duration for which the signature is valid. Unit: seconds.</p>
+             * <p>The signature validity period. The value indicates the validity duration of the signature in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -711,7 +711,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate trust anchor source.</p>
+             * <p>The source of the certificate trust anchor.</p>
              * 
              * <strong>example:</strong>
              * <p>alibaba_cloud</p>
@@ -894,7 +894,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The root certificate content.</p>
+             * <p>The content of the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>-----BEGIN CERTIFICATE-----
@@ -907,7 +907,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The root certificate fingerprint.</p>
+             * <p>The fingerprint of the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>2b18947a6a9fc7764fd8b5fb18a863b0c6daxxx</p>
@@ -998,7 +998,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method used to retrieve the root certificate.</p>
+             * <p>The method to obtain the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -1009,7 +1009,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trust condition of the root certificate.</p>
+             * <p>The trust conditions for the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;certNo&quot;)</p>
@@ -1252,7 +1252,7 @@ public class GetFederatedCredentialProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The federated trust source ID.</p>
+             * <p>The ID of the federated trust source.</p>
              * 
              * <strong>example:</strong>
              * <p>fcp_asd123XXX</p>

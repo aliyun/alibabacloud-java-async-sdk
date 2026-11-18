@@ -99,7 +99,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -253,7 +253,7 @@ public class ListApplicationAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account was created. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1754359439000</p>

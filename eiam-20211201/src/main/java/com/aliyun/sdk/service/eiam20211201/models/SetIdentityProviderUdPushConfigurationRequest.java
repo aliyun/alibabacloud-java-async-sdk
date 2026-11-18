@@ -169,7 +169,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the identity provider.</p>
+         * <p>The identity provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The configurations for LDAP push synchronization.</p>
+         * <p>The configuration for LDAP synchronization.</p>
          */
         public Builder ldapUdPushConfig(LdapUdPushConfig ldapUdPushConfig) {
             this.putQueryParameter("LdapUdPushConfig", ldapUdPushConfig);
@@ -217,7 +217,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The configuration for periodic synchronization.</p>
+         * <p>The periodic check configuration.</p>
          */
         public Builder periodicSyncConfig(PeriodicSyncConfig periodicSyncConfig) {
             this.putQueryParameter("PeriodicSyncConfig", periodicSyncConfig);
@@ -226,7 +226,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The status of periodic synchronization.</p>
+         * <p>The periodic check status.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -238,7 +238,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The push synchronization configurations.</p>
+         * <p>The outbound synchronization configuration.</p>
          */
         public Builder udSyncScopeConfigs(java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs) {
             this.putQueryParameter("UdSyncScopeConfigs", udSyncScopeConfigs);
@@ -345,7 +345,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The object class for organizations.</p>
+             * <p>The organization object class.</p>
              * 
              * <strong>example:</strong>
              * <p>ou,top</p>
@@ -356,7 +356,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The RDN for organizations.</p>
+             * <p>The organization RDN.</p>
              * 
              * <strong>example:</strong>
              * <p>ou</p>
@@ -378,7 +378,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The object class for users.</p>
+             * <p>The user object class.</p>
              * 
              * <strong>example:</strong>
              * <p>user,top</p>
@@ -389,7 +389,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The Relative Distinguished Name (RDN) for users.</p>
+             * <p>The user RDN.</p>
              * 
              * <strong>example:</strong>
              * <p>cn</p>
@@ -483,7 +483,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * <p>A collection of time points.</p>
+             * <p>The collection of time points.</p>
              */
             public Builder periodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
                 this.periodicSyncTimes = periodicSyncTimes;
@@ -491,7 +491,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The type of periodic synchronization.</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>cron</p>
@@ -561,7 +561,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The source nodes for synchronization.</p>
+             * <p>The source node for synchronization.</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;

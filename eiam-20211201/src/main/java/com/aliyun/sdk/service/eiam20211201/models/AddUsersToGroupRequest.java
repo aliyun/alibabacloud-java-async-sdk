@@ -139,11 +139,11 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * <p>The list of account IDs. The list can contain up to 100 elements.</p>
+         * <p>The list of account IDs. The list can contain a maximum of 100 elements.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[ou_001]</p>
+         * <p>[&quot;ou_001&quot;]</p>
          */
         public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);

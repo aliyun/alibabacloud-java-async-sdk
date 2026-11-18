@@ -127,7 +127,7 @@ public class ListActionTrackEventTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -138,7 +138,7 @@ public class ListActionTrackEventTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token to retrieve the next page of results.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -149,7 +149,7 @@ public class ListActionTrackEventTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token to retrieve the previous page of results.</p>
+         * <p>The previous token.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -171,7 +171,7 @@ public class ListActionTrackEventTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

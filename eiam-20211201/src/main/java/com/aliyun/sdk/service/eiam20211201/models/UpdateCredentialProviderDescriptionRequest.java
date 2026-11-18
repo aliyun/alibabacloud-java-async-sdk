@@ -113,7 +113,7 @@ public class UpdateCredentialProviderDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the credential provider.</p>
+         * <p>The credential provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,9 +126,9 @@ public class UpdateCredentialProviderDescriptionRequest extends Request {
         }
 
         /**
-         * <p>A description of the credential provider.</p>
+         * <p>The description.</p>
          * <blockquote>
-         * <p>The description can be up to 128 characters long.</p>
+         * <p>The length cannot exceed 128 characters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class UpdateCredentialProviderDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

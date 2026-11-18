@@ -198,8 +198,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
-     * &lt;props=&quot;intl&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method of IDaaS EIAM.</strong></p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
      * 
      * @param request the request parameters of CreateCloudAccount  CreateCloudAccountRequest
      * @return CreateCloudAccountResponse
@@ -406,7 +406,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must disable the cloud role before you delete it. After you delete the role, all related data is also deleted and cannot be recovered.</p>
+     * <p>Before deleting a specified cloud role, ensure that the cloud role is disabled. After the cloud role is deleted, all data related to the cloud role is deleted and cannot be recovered.</p>
      * 
      * @param request the request parameters of DeleteCloudAccountRole  DeleteCloudAccountRoleRequest
      * @return DeleteCloudAccountRoleResponse
@@ -601,7 +601,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you disable an application, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the risks associated with this operation.</p>
+     * <p>When an application is disabled, all its features such as SSO and account synchronization become unavailable. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * @param request the request parameters of DisableApplicationToken  DisableApplicationTokenRequest
      * @return DisableApplicationTokenResponse
@@ -697,7 +697,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</p>
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * @param request the request parameters of DisableIdentityProviderAuthn  DisableIdentityProviderAuthnRequest
      * @return DisableIdentityProviderAuthnResponse
@@ -856,8 +856,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
-     * &lt;props=&quot;intl&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
      * 
      * @param request the request parameters of EnableCustomField  EnableCustomFieldRequest
      * @return EnableCustomFieldResponse
@@ -890,7 +890,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</p>
+     * <p>When a conditional access policy is changed from the enabled state to the disabled state, the policy no longer blocks requests. Confirm that you are aware of the potential risks of this operation.</p>
      * 
      * @param request the request parameters of EnableIdentityProviderAuthn  EnableIdentityProviderAuthnRequest
      * @return EnableIdentityProviderAuthnResponse
@@ -1078,6 +1078,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCloudAccountResponse> getCloudAccount(GetCloudAccountRequest request);
 
     /**
+     * @param request the request parameters of GetCloudAccountResource  GetCloudAccountResourceRequest
+     * @return GetCloudAccountResourceResponse
+     */
+    CompletableFuture<GetCloudAccountResourceResponse> getCloudAccountResource(GetCloudAccountResourceRequest request);
+
+    /**
      * @param request the request parameters of GetCloudAccountRole  GetCloudAccountRoleRequest
      * @return GetCloudAccountRoleResponse
      */
@@ -1208,7 +1214,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
+     * <p>Ensure that your current instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * @param request the request parameters of GetInstanceLicense  GetInstanceLicenseRequest
      * @return GetInstanceLicenseResponse
@@ -1232,6 +1238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetInstanceTrialStatusResponse
      */
     CompletableFuture<GetInstanceTrialStatusResponse> getInstanceTrialStatus(GetInstanceTrialStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetInventorySynchronizationJob  GetInventorySynchronizationJobRequest
+     * @return GetInventorySynchronizationJobResponse
+     */
+    CompletableFuture<GetInventorySynchronizationJobResponse> getInventorySynchronizationJob(GetInventorySynchronizationJobRequest request);
 
     /**
      * @param request the request parameters of GetLoginRedirectApplicationForBrand  GetLoginRedirectApplicationForBrandRequest
@@ -1307,7 +1319,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries a trusted origin in a specified EIAM instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * @param request the request parameters of GetTrustedOrigin  GetTrustedOriginRequest
      * @return GetTrustedOriginResponse
@@ -1334,7 +1346,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of the organization, which are the applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * @param request the request parameters of ListApplicationAccountsForUser  ListApplicationAccountsForUserRequest
      * @return ListApplicationAccountsForUserResponse
@@ -1409,7 +1421,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of the organization, which are applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
+     * <p>This operation queries only the direct permissions of the organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * @param request the request parameters of ListApplicationsForOrganizationalUnit  ListApplicationsForOrganizationalUnitRequest
      * @return ListApplicationsForOrganizationalUnitResponse
@@ -1472,6 +1484,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListClientPublicKeysResponse
      */
     CompletableFuture<ListClientPublicKeysResponse> listClientPublicKeys(ListClientPublicKeysRequest request);
+
+    /**
+     * @param request the request parameters of ListCloudAccountResources  ListCloudAccountResourcesRequest
+     * @return ListCloudAccountResourcesResponse
+     */
+    CompletableFuture<ListCloudAccountResourcesResponse> listCloudAccountResources(ListCloudAccountResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListCloudAccountResourcesForCloudPermissionTemplate  ListCloudAccountResourcesForCloudPermissionTemplateRequest
+     * @return ListCloudAccountResourcesForCloudPermissionTemplateResponse
+     */
+    CompletableFuture<ListCloudAccountResourcesForCloudPermissionTemplateResponse> listCloudAccountResourcesForCloudPermissionTemplate(ListCloudAccountResourcesForCloudPermissionTemplateRequest request);
 
     /**
      * @param request the request parameters of ListCloudAccountRoles  ListCloudAccountRolesRequest
@@ -1630,6 +1654,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can use one of the following two methods to view the returned data:</p>
+     * <ul>
+     * <li>Method 1: When querying the first page during paging in a paged query, you only need to apply the Settings for MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and apply the Settings for MaxResults to limit the number of returned entries. If there are no more pages, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Use the PageSize Settings to specify the number of entries returned per page during paging, and use the PageNumber Settings to specify the page number.
+     * You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If the Settings for MaxResults or NextToken are applied, the PageSize and PageNumber request parameters become invalid.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListInventorySynchronizationJobs  ListInventorySynchronizationJobsRequest
+     * @return ListInventorySynchronizationJobsResponse
+     */
+    CompletableFuture<ListInventorySynchronizationJobsResponse> listInventorySynchronizationJobs(ListInventorySynchronizationJobsRequest request);
+
+    /**
      * @param request the request parameters of ListNetworkAccessEndpointAvailableRegions  ListNetworkAccessEndpointAvailableRegionsRequest
      * @return ListNetworkAccessEndpointAvailableRegionsResponse
      */
@@ -1703,11 +1741,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can view the returned data in one of the following ways:</p>
+     * <p>You can use one of the following methods to view the returned data:</p>
      * <ul>
-     * <li>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</li>
-     * <li>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
-     * You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</li>
+     * <li>Method 1: When using paging in a paged query for the first page, you only need to configure the Settings for MaxResults to limit the number of returned entries. The NextToken in the response is used as the token for querying the next page. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query token, and configure the Settings for MaxResults to limit the number of returned entries. If there is no next page, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Specify the Settings for PageSize to determine the number of entries returned per page during paging, and specify the Settings for PageNumber to determine the page number.
+     * You can use only one of the two methods. When a large number of entries are returned, Method 1 is recommended. If the Settings for MaxResults or NextToken are configured, the PageSize and PageNumber request parameters become invalid.</li>
      * </ul>
      * 
      * @param request the request parameters of ListSynchronizationJobs  ListSynchronizationJobsRequest
@@ -1717,7 +1755,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of trusted origins in a specified EIAM instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * @param request the request parameters of ListTrustedOrigins  ListTrustedOriginsRequest
      * @return ListTrustedOriginsResponse
@@ -1735,7 +1773,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
+     * <p>This operation queries only the direct permissions of the organization, which are the applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
@@ -1774,7 +1812,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may be caused by this operation.</p>
+     * <p>When an application is changed from the enabled state to the disabled state, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * @param request the request parameters of ObtainApplicationToken  ObtainApplicationTokenRequest
      * @return ObtainApplicationTokenResponse
@@ -1795,7 +1833,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation only queries the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation retrieves only the direct permissions of the organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * @param request the request parameters of RemoveApplicationAccountFromUser  RemoveApplicationAccountFromUserRequest
      * @return RemoveApplicationAccountFromUserResponse
@@ -1893,6 +1931,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeResourceServerScopesFromUserResponse> revokeResourceServerScopesFromUser(RevokeResourceServerScopesFromUserRequest request);
 
     /**
+     * @param request the request parameters of RunInventorySynchronizationJob  RunInventorySynchronizationJobRequest
+     * @return RunInventorySynchronizationJobResponse
+     */
+    CompletableFuture<RunInventorySynchronizationJobResponse> runInventorySynchronizationJob(RunInventorySynchronizationJobRequest request);
+
+    /**
      * @param request the request parameters of RunSynchronizationJob  RunSynchronizationJobRequest
      * @return RunSynchronizationJobResponse
      */
@@ -1930,7 +1974,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>In EIAM, application management supports adding applications that use multiple single sign-on (SSO) protocols (SAML 2.0 and OIDC). However, each application supports only one SSO protocol, which is specified during creation and cannot be changed afterward. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the current application.</p>
+     * <p>In EIAM, application management supports adding applications with various single sign-on (SSO) logon protocols (SAML 2.0 and OIDC). However, an application can support only one SSO protocol, which cannot be changed after it is specified during creation. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the current application.</p>
      * 
      * @param request the request parameters of SetApplicationSsoConfig  SetApplicationSsoConfigRequest
      * @return SetApplicationSsoConfigResponse
@@ -2101,7 +2145,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Updates the single sign-on (SSO) parameters for an application template from the marketplace.</p>
+     * <p>Updates the single sign-on (SSO) parameters of an application template created in the marketplace.</p>
      * 
      * @param request the request parameters of UpdateApplicationSsoFormParams  UpdateApplicationSsoFormParamsRequest
      * @return UpdateApplicationSsoFormParamsResponse

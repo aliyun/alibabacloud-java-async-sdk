@@ -156,7 +156,7 @@ public class UpdateApplicationRoleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application role.</p>
+         * <p>The application role ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class UpdateApplicationRoleRequest extends Request {
         }
 
         /**
-         * <p>The name of the application role.</p>
+         * <p>The application role name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class UpdateApplicationRoleRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You must make sure that the token is unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

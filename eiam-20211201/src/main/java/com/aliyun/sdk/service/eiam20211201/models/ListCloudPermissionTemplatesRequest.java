@@ -199,7 +199,7 @@ public class ListCloudPermissionTemplatesRequest extends Request {
         }
 
         /**
-         * <p>Filters the results by the prefix of the template name.</p>
+         * <p>Filters the results by template name prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>AdminAccess</p>
@@ -223,7 +223,7 @@ public class ListCloudPermissionTemplatesRequest extends Request {
         }
 
         /**
-         * <p>Filters the results by permission template usage type. Valid values: user (privilege escalation for human users) and application (privilege escalation for machine-to-machine applications).</p>
+         * <p>Filters the results by permission template usage type. Valid values: user (privilege escalation for human users) and application (privilege escalation for M2M applications).</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -260,7 +260,7 @@ public class ListCloudPermissionTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page in a paging query. Default value: 20. Maximum value: 100.</p>
+         * <p>The maximum number of entries to return per page in a paged query. This parameter is used for paging. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -272,7 +272,7 @@ public class ListCloudPermissionTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set the value to the NextToken value returned from the previous call.</p>
+         * <p>The query token, which is the value of the NextToken parameter returned by the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>

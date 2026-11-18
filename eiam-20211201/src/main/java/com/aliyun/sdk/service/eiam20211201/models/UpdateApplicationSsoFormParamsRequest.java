@@ -113,7 +113,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
         }
 
         /**
-         * <p>The parameters for creating the application template.</p>
+         * <p>The application template creation parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applicationTemplateParams(java.util.List<ApplicationTemplateParams> applicationTemplateParams) {
@@ -136,7 +136,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
             } 
 
             /**
-             * <p>The name of a parameter for creating the application template.</p>
+             * <p>The name of the application template creation parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyunUid</p>
@@ -219,7 +219,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
             }
 
             /**
-             * <p>The value of the parameter for creating the application template.</p>
+             * <p>The value of the application template creation parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>

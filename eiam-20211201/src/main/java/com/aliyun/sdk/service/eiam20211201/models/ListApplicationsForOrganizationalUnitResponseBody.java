@@ -80,7 +80,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The list of applications that the organization is authorized to access.</p>
+         * <p>The list of authorized applications.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -155,7 +155,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The application role identifier.</p>
+             * <p>The application role ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>

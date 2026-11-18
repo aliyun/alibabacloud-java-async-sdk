@@ -93,7 +93,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         } 
 
         /**
-         * <p>The IdPs under the network access endpoint.</p>
+         * <p>The collection of identity providers (IdPs) for the network access endpoint.</p>
          */
         public Builder identityProvidersForNetworkAccessEndpoint(java.util.List<IdentityProvidersForNetworkAccessEndpoint> identityProvidersForNetworkAccessEndpoint) {
             this.identityProvidersForNetworkAccessEndpoint = identityProvidersForNetworkAccessEndpoint;
@@ -101,7 +101,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The next token returned in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -123,7 +123,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

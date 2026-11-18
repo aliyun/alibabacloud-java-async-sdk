@@ -128,7 +128,7 @@ public class UpdateAuthorizationServerDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The authorization server ID.</p>
+         * <p>The ID of the authorization server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class UpdateAuthorizationServerDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, refer to References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure idempotence. You can generate a client token on your client and make sure that the token is unique across different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class UpdateAuthorizationServerDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

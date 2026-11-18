@@ -346,7 +346,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource entity ID associated with the authorization resource.</p>
+             * <p>The ID of the resource entity associated with the authorization resource.</p>
              * 
              * <strong>example:</strong>
              * <p>carole_01kmek49aqxxxx</p>
@@ -357,9 +357,9 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource entity type associated with the authorization resource. Valid values:</p>
+             * <p>The type of the resource entity associated with the authorization resource. Valid values:</p>
              * <ul>
-             * <li>cloud_account_role: cloud role.</li>
+             * <li>cloud_account_role: Cloud role.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -393,7 +393,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud account ID to which the resource entity associated with the authorization resource belongs.</p>
+             * <p>The ID of the cloud account to which the resource entity associated with the authorization resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -404,7 +404,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The condition restriction.</p>
+             * <p>The condition restrictions.</p>
              */
             public Builder condition(Condition condition) {
                 this.condition = condition;
@@ -412,7 +412,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787023451494</p>
@@ -434,7 +434,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787023451494</p>

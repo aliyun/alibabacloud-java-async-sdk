@@ -154,7 +154,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Automatic account creation rule configuration.</p>
+         * <p>The automatic creation rule configuration for accounts.</p>
          */
         public Builder autoCreateUserConfig(AutoCreateUserConfig autoCreateUserConfig) {
             this.putQueryParameter("AutoCreateUserConfig", autoCreateUserConfig);
@@ -163,7 +163,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Automatic account update configuration.</p>
+         * <p>The automatic account update configuration.</p>
          */
         public Builder autoUpdateUserConfig(AutoUpdateUserConfig autoUpdateUserConfig) {
             this.putQueryParameter("AutoUpdateUserConfig", autoUpdateUserConfig);
@@ -172,7 +172,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Account binding rule configuration.</p>
+         * <p>The account binding rule configuration.</p>
          */
         public Builder bindingConfig(BindingConfig bindingConfig) {
             this.putQueryParameter("BindingConfig", bindingConfig);
@@ -181,7 +181,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Identity provider ID.</p>
+         * <p>The identity provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>AD/LDAP authentication configuration.</p>
+         * <p>The AD/LDAP authentication configuration.</p>
          */
         public Builder ldapAuthnConfig(LdapAuthnConfig ldapAuthnConfig) {
             this.putQueryParameter("LdapAuthnConfig", ldapAuthnConfig);
@@ -275,7 +275,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>Indicates whether automatic account creation is enabled.</p>
+             * <p>Specifies whether automatic creation of accounts is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -286,7 +286,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The organizational unit IDs.</p>
+             * <p>The organization IDs.</p>
              */
             public Builder targetOrganizationalUnitIds(java.util.List<String> targetOrganizationalUnitIds) {
                 this.targetOrganizationalUnitIds = targetOrganizationalUnitIds;
@@ -340,7 +340,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>Indicates whether automatic account update is enabled.</p>
+             * <p>Specifies whether automatic account updates are enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -451,7 +451,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The value expression of the mapping attribute.</p>
+             * <p>The expression for the source attribute value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -463,7 +463,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the mapping target attribute.</p>
+             * <p>The name of the target attribute for mapping.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -475,7 +475,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The description of the mapping target attribute.</p>
+             * <p>The name of the target attribute for mapping.</p>
              * 
              * <strong>example:</strong>
              * <p>username</p>
@@ -558,7 +558,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>Rules for automatic account matching.</p>
+             * <p>The rules for automatic account matching.</p>
              */
             public Builder autoMatchUserProfileExpressions(java.util.List<AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions) {
                 this.autoMatchUserProfileExpressions = autoMatchUserProfileExpressions;
@@ -566,7 +566,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether automatic account matching is enabled.</p>
+             * <p>Specifies whether automatic account matching is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -577,7 +577,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the manual account binding feature is enabled.</p>
+             * <p>Specifies whether manual account binding is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -660,7 +660,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>Indicates whether automatic password update is supported.</p>
+             * <p>Specifies whether automatic password updates are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -671,7 +671,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The user login identifier.</p>
+             * <p>The user logon identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>email</p>
@@ -682,7 +682,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The user ObjectClass.</p>
+             * <p>The user object class.</p>
              * 
              * <strong>example:</strong>
              * <p>posixAccount</p>

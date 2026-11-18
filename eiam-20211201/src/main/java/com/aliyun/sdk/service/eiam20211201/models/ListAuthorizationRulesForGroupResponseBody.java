@@ -114,7 +114,7 @@ public class ListAuthorizationRulesForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page for paging.</p>
+         * <p>The maximum number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListAuthorizationRulesForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by the current call for the next query.</p>
+         * <p>The token returned in the current response, which is used to query the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -216,7 +216,7 @@ public class ListAuthorizationRulesForGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time when the authorization expires. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The end time of the validity period. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1704042061000</p>
@@ -227,7 +227,7 @@ public class ListAuthorizationRulesForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time when the authorization takes effect. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The start time of the validity period. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1704042061000</p>

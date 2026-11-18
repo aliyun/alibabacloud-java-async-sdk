@@ -170,7 +170,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>The federated trust source ID.</p>
+         * <p>The ID of the federated trust source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>The federated trust source name.</p>
+         * <p>The name of the federated trust source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>The network access endpoint ID.</p>
+         * <p>The ID of the network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_public</p>
@@ -357,7 +357,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The JWKS source.</p>
+             * <p>The source of the JWKS.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -380,7 +380,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The statically retrieved JWKS.</p>
+             * <p>The statically obtained JWKS.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -401,7 +401,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The trust condition.</p>
+             * <p>The trust conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -615,7 +615,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The expression used to retrieve the signing time.</p>
+             * <p>The expression used to obtain the signing time.</p>
              * 
              * <strong>example:</strong>
              * <p>pkcs7.signingTime</p>
@@ -638,7 +638,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The trust condition.</p>
+             * <p>The trust conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -790,7 +790,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The method used to retrieve the root certificate.</p>
+             * <p>The method used to obtain the root certificate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -802,7 +802,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The trust condition of the root certificate.</p>
+             * <p>The trust conditions for the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>

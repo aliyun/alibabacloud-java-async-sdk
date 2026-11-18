@@ -144,7 +144,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The level-2 module identifier.</p>
+             * <p>The identifier of the level-2 module.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:license:module:application:standard:oidc</p>
@@ -155,7 +155,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level-2 module status.</p>
+             * <p>The status of the level-2 module.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -246,7 +246,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level-1 module identifier.</p>
+             * <p>The identifier of the level-1 module.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:license:module:application</p>
@@ -257,7 +257,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level-1 module status.</p>
+             * <p>The status of the level-1 module.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>

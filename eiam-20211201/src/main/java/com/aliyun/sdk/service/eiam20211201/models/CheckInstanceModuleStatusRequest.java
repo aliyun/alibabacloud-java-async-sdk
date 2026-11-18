@@ -206,7 +206,7 @@ public class CheckInstanceModuleStatusRequest extends Request {
         }
 
         /**
-         * <p>The name of the resource label.</p>
+         * <p>The resource label name.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_ram_user_sso</p>

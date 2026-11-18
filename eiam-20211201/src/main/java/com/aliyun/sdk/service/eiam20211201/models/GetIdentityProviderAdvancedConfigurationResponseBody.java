@@ -67,7 +67,7 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
         } 
 
         /**
-         * <p>Advanced configuration information</p>
+         * <p>The advanced configuration information.</p>
          */
         public Builder advancedConfiguration(AdvancedConfiguration advancedConfiguration) {
             this.advancedConfiguration = advancedConfiguration;
@@ -75,7 +75,7 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -144,7 +144,7 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
             } 
 
             /**
-             * <p>AppKey of the DingTalk first-party application</p>
+             * <p>The AppKey of the DingTalk first-party application.</p>
              * 
              * <strong>example:</strong>
              * <p>ding5xo9rg0csw3f6xxx</p>
@@ -155,10 +155,10 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
             }
 
             /**
-             * <p>App secret of the DingTalk first-party application</p>
+             * <p>The app_secret of the DingTalk first-party application.</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>REOQ6Cl55kriOd8NOBeqWYLKpHR4p6fdZxxxx</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
@@ -238,7 +238,7 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
             } 
 
             /**
-             * <p>DingTalk advanced configuration</p>
+             * <p>The DingTalk advanced configuration.</p>
              */
             public Builder dingtalkAdvancedConfig(DingtalkAdvancedConfig dingtalkAdvancedConfig) {
                 this.dingtalkAdvancedConfig = dingtalkAdvancedConfig;
@@ -246,7 +246,7 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
             }
 
             /**
-             * <p>Identity provider ID</p>
+             * <p>The identity provider ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idp_na2rzpyc67zr7ixdfy35zgrxxx</p>
@@ -257,7 +257,7 @@ public class GetIdentityProviderAdvancedConfigurationResponseBody extends TeaMod
             }
 
             /**
-             * <p>Instance ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_kpvmhktvun6u66dgpjh3l4wxxx</p>

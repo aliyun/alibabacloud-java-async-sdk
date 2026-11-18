@@ -97,7 +97,7 @@ public class GetInstanceControlConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance control item.</p>
+         * <p>The name of the instance control element.</p>
          * 
          * <strong>example:</strong>
          * <p>representative-value-2026</p>

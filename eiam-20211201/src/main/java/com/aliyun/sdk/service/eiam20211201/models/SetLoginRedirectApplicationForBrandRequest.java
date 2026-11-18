@@ -113,7 +113,7 @@ public class SetLoginRedirectApplicationForBrandRequest extends Request {
         }
 
         /**
-         * <p>Application ID.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class SetLoginRedirectApplicationForBrandRequest extends Request {
         }
 
         /**
-         * <p>Brand ID.</p>
+         * <p>The brand ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class SetLoginRedirectApplicationForBrandRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

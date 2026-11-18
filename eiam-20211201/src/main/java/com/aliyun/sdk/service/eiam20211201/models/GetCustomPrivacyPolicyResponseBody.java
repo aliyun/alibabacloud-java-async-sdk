@@ -411,7 +411,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom privacy policy name.</p>
+             * <p>The name of the custom privacy policy.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom Privacy Policy Name</p>

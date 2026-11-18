@@ -106,7 +106,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of cloud permission templates.</p>
+         * <p>The list of permission templates.</p>
          */
         public Builder cloudPermissionTemplates(java.util.List<CloudPermissionTemplates> cloudPermissionTemplates) {
             this.cloudPermissionTemplates = cloudPermissionTemplates;
@@ -114,7 +114,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of items per page for a paged query.</p>
+         * <p>The maximum number of entries per page during paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by the current call for the next query.</p>
+         * <p>The pagination token returned by the current request for subsequent queries.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -242,7 +242,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of specified group IDs. This parameter has a value only when ScopeType is set to custom.</p>
+             * <p>The list of specified group IDs. This parameter is returned only when ScopeType is set to custom.</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -250,7 +250,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of specified organizational unit IDs. This parameter has a value only when ScopeType is set to custom.</p>
+             * <p>The list of specified organizational unit IDs. This parameter is returned only when ScopeType is set to custom.</p>
              */
             public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
                 this.organizationalUnitIds = organizationalUnitIds;
@@ -258,7 +258,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the applicable scope. Valid values: global and custom.</p>
+             * <p>The type of the application scope. Valid values: global and custom.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -269,7 +269,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of specified user IDs. This parameter has a value only when ScopeType is set to custom.</p>
+             * <p>The list of specified user IDs. This parameter is returned only when ScopeType is set to custom.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -767,7 +767,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether users are allowed to apply for the permission template.</p>
+             * <p>Specifies whether users are allowed to apply.</p>
              */
             public Builder allowRequest(Boolean allowRequest) {
                 this.allowRequest = allowRequest;
@@ -775,7 +775,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The applicable scope of the permission template.</p>
+             * <p>The application scope of the permission template.</p>
              */
             public Builder applicableScope(ApplicableScope applicableScope) {
                 this.applicableScope = applicableScope;
@@ -783,7 +783,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud account to which the template belongs.</p>
+             * <p>The ID of the associated cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -865,7 +865,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage type of the permission template. Valid values: user (privilege escalation for human users) and application (privilege escalation for M2M applications).</p>
+             * <p>The usage type of the permission template. Valid values: user (privilege elevation for human users) and application (privilege elevation for M2M applications).</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -931,7 +931,7 @@ public class ListCloudPermissionTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the permission entity. Fixed value: cloud_account_role.</p>
+             * <p>The type of the permission entity. Valid value: cloud_account_role.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_account_role</p>

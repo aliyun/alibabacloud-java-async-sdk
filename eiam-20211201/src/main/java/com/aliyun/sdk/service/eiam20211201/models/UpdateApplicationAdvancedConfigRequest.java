@@ -138,7 +138,7 @@ public class UpdateApplicationAdvancedConfigRequest extends Request {
         }
 
         /**
-         * <p>The advanced configurations of the SCIM server.</p>
+         * <p>The advanced configuration of the SCIM server.</p>
          */
         public Builder scimServerAdvancedConfig(ScimServerAdvancedConfig scimServerAdvancedConfig) {
             this.putQueryParameter("ScimServerAdvancedConfig", scimServerAdvancedConfig);
@@ -214,7 +214,7 @@ public class UpdateApplicationAdvancedConfigRequest extends Request {
             }
 
             /**
-             * <p>The namespace of user extension fields.</p>
+             * <p>The namespace of user custom fields.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:ietf:params:scim:schemas:extension:customfield:2.0:User</p>

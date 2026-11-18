@@ -251,7 +251,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The identity identifier.</p>
+             * <p>The principal ID.</p>
              * 
              * <strong>example:</strong>
              * <p>5dee234a-1b4c-4ad7-a19f-fxxxxx</p>
@@ -262,7 +262,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Azure resource group name.</p>
+             * <p>The name of the Azure resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>user_default</p>
@@ -372,7 +372,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GCP project ID to which the resource belongs.</p>
+             * <p>The GCP project ID.</p>
              * 
              * <strong>example:</strong>
              * <p>turnkey-axiom-475109-xx</p>
@@ -383,7 +383,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub claim that corresponds to the service account.</p>
+             * <p>The sub claim corresponding to the service account.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>
@@ -523,7 +523,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The K8s namespace.</p>
+             * <p>The Kubernetes namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -545,7 +545,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The K8s service account name.</p>
+             * <p>The Kubernetes service account name.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

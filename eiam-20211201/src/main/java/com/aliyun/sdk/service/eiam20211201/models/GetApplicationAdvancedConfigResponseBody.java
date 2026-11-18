@@ -67,7 +67,7 @@ public class GetApplicationAdvancedConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The advanced configuration of the application.</p>
+         * <p>The advanced application configurations.</p>
          */
         public Builder applicationAdvancedConfig(ApplicationAdvancedConfig applicationAdvancedConfig) {
             this.applicationAdvancedConfig = applicationAdvancedConfig;
@@ -144,7 +144,7 @@ public class GetApplicationAdvancedConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of IDs of the supported custom user fields.</p>
+             * <p>The list of supported user-defined field IDs.</p>
              */
             public Builder supportedUserCustomFieldIds(java.util.List<String> supportedUserCustomFieldIds) {
                 this.supportedUserCustomFieldIds = supportedUserCustomFieldIds;
@@ -152,7 +152,7 @@ public class GetApplicationAdvancedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the user extension fields.</p>
+             * <p>The namespace for user extension fields.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:ietf:params:scim:schemas:extension:customfield:2.0:User</p>
@@ -246,7 +246,7 @@ public class GetApplicationAdvancedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IDaaS EIAM instance.</p>
+             * <p>The IDaaS EIAM instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -257,7 +257,7 @@ public class GetApplicationAdvancedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advanced configuration of the SCIM server.</p>
+             * <p>The SCIM server advanced configurations.</p>
              */
             public Builder scimServerAdvancedConfig(ScimServerAdvancedConfig scimServerAdvancedConfig) {
                 this.scimServerAdvancedConfig = scimServerAdvancedConfig;

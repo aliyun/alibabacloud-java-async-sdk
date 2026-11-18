@@ -137,7 +137,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlRequest extends Request
         }
 
         /**
-         * <p>UserID</p>
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

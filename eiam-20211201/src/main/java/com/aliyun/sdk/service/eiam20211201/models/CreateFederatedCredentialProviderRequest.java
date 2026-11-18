@@ -479,7 +479,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The token issuer identifier (Issuer).</p>
+             * <p>The identifier of the token issuer.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com">https://example.com</a></p>
@@ -490,7 +490,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The source of the JWKS.</p>
+             * <p>The JWKS source.</p>
              * 
              * <strong>example:</strong>
              * <p>static</p>
@@ -533,7 +533,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The trust condition.</p>
+             * <p>The trust conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -769,7 +769,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The trust condition.</p>
+             * <p>The trust conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -921,7 +921,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The method used to retrieve the root certificate.</p>
+             * <p>The method to retrieve the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -932,7 +932,7 @@ public class CreateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The trust condition of the root certificate.</p>
+             * <p>The trust conditions for the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>

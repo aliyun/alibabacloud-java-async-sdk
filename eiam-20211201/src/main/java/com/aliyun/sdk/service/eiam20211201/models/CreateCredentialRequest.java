@@ -262,7 +262,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The content of the credential.</p>
+         * <p>The credential content.</p>
          * <p>This parameter is required.</p>
          */
         public Builder credentialContent(CredentialContent credentialContent) {
@@ -323,7 +323,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The Scenarios label of the credential. Valid values:</p>
+         * <p>The scenarios label of the credential. Valid values:</p>
          * <ul>
          * <li>llm: large language model.</li>
          * <li>saas: third-party SaaS service.</li>
@@ -339,7 +339,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The sharing scope of the credential.</p>
+         * <p>The credential sharing scope.</p>
          * 
          * <strong>example:</strong>
          * <p>user_exclusive</p>
@@ -351,7 +351,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The subject ID to which the credential belongs.</p>
+         * <p>The subject ID of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_werthgfdsasffxxxxx</p>
@@ -363,7 +363,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The subject type to which the credential belongs. Valid values:</p>
+         * <p>The subject type of the credential. Valid values:</p>
          * <ul>
          * <li>authentication_token_provider: authentication token provider.</li>
          * </ul>
@@ -395,7 +395,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The description of the credential.</p>
+         * <p>The credential description.</p>
          * 
          * <strong>example:</strong>
          * <p>credential_description</p>
@@ -407,7 +407,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>The exclusive user ID of the credential.</p>
+         * <p>The exclusive account ID of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>user_xxxx</p>
@@ -478,7 +478,7 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
-             * <p>The content of the API key.</p>
+             * <p>The API key content.</p>
              * 
              * <strong>example:</strong>
              * <p>nsklnertyt5ddwizncxxxx</p>
@@ -548,7 +548,7 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
-             * <p>The client_id of the OAuth protocol.</p>
+             * <p>The client_id in the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>dmvncmxersdxxxxxx</p>
@@ -559,7 +559,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>The client_secret of the OAuth protocol.</p>
+             * <p>The client_secret in the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>nsklncmwizncxxxx</p>
@@ -629,7 +629,7 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
-             * <p>The credential content of the API key credential type.</p>
+             * <p>The credential content for the API key credential type.</p>
              */
             public Builder apiKeyContent(ApiKeyContent apiKeyContent) {
                 this.apiKeyContent = apiKeyContent;
@@ -637,7 +637,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>The credential content of the OAuth client authentication credential type.</p>
+             * <p>The credential content for the OAuth client authentication credential type.</p>
              */
             public Builder oAuthClientContent(OAuthClientContent oAuthClientContent) {
                 this.oAuthClientContent = oAuthClientContent;

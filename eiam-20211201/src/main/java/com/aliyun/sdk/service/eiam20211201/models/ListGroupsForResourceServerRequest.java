@@ -155,7 +155,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource server application.</p>
+         * <p>The application ID of the resource server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions.</p>
+         * <p>The list of filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -177,7 +177,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page.</p>
+         * <p>The number of entries to return on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -202,7 +202,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page of results. You do not need to provide this parameter for the first request. For subsequent requests, set this to the <code>NextToken</code> value from the previous response.</p>
+         * <p>The next token. Set the value to the NextToken value returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -214,7 +214,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scope.</p>
+         * <p>The scope ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -285,7 +285,7 @@ public class ListGroupsForResourceServerRequest extends Request {
             } 
 
             /**
-             * <p>The name of the filter condition. The only valid value is GroupIds.</p>
+             * <p>The name of the filter condition.</p>
              * 
              * <strong>example:</strong>
              * <p>GroupIds</p>
@@ -296,7 +296,7 @@ public class ListGroupsForResourceServerRequest extends Request {
             }
 
             /**
-             * <p>The values for the filter condition.</p>
+             * <p>The list of filter condition values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

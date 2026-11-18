@@ -67,7 +67,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The network access endpoint information.</p>
+         * <p>The network access endpoint details.</p>
          */
         public Builder networkAccessEndpoint(NetworkAccessEndpoint networkAccessEndpoint) {
             this.networkAccessEndpoint = networkAccessEndpoint;
@@ -196,7 +196,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of private egress IP addresses of the backup network access endpoint.</p>
+             * <p>The egress private IP addresses of the backup network access endpoint.</p>
              */
             public Builder backupEgressPrivateIpAddresses(java.util.List<String> backupEgressPrivateIpAddresses) {
                 this.backupEgressPrivateIpAddresses = backupEgressPrivateIpAddresses;
@@ -204,7 +204,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public egress IP address ranges of the backup network access endpoint.</p>
+             * <p>The egress public IP CIDR blocks of the backup network access endpoint.</p>
              */
             public Builder backupEgressPublicIpAddresses(java.util.List<String> backupEgressPublicIpAddresses) {
                 this.backupEgressPublicIpAddresses = backupEgressPublicIpAddresses;
@@ -223,7 +223,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of backup vSwitches.</p>
+             * <p>The backup vSwitches.</p>
              */
             public Builder backupVSwitchIds(java.util.List<String> backupVSwitchIds) {
                 this.backupVSwitchIds = backupVSwitchIds;
@@ -242,7 +242,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region of the backup VPC.</p>
+             * <p>The region ID of the backup VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -476,7 +476,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the network access endpoint was created. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the network access endpoint was created. The time is displayed as a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -487,10 +487,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private egress IP address ranges of the dedicated network access endpoint. A value is returned only when NetworkEndpointType is set to private.</p>
+             * <p>The egress private IP CIDR blocks of the private network access endpoint. This parameter is returned only when the network access endpoint type is private.</p>
              * 
              * <strong>example:</strong>
-             * <p>172.168.x.x</p>
+             * <p>[&quot;172.168.x.x&quot;]</p>
              */
             public Builder egressPrivateIpAddresses(java.util.List<String> egressPrivateIpAddresses) {
                 this.egressPrivateIpAddresses = egressPrivateIpAddresses;
@@ -498,10 +498,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public egress IP address ranges of the shared network access endpoint. A value is returned only when NetworkEndpointType is set to shared.</p>
+             * <p>The egress public IP CIDR blocks of the shared network access endpoint. This parameter is returned only when the network access endpoint type is shared.</p>
              * 
              * <strong>example:</strong>
-             * <p>8.xx.xx.xxx/27</p>
+             * <p>[&quot;8.xx.xx.xxx/27&quot;]</p>
              */
             public Builder egressPublicIpAddresses(java.util.List<String> egressPublicIpAddresses) {
                 this.egressPublicIpAddresses = egressPublicIpAddresses;
@@ -520,7 +520,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dedicated network access endpoint ID.</p>
+             * <p>The network access endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>nae_examplexxx</p>
@@ -545,7 +545,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
              * <p>The type of the network access endpoint. Valid values:</p>
              * <ul>
              * <li>shared: Shared network access endpoint.</li>
-             * <li>private: Dedicated network access endpoint.</li>
+             * <li>private: Private network access endpoint.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -585,7 +585,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the network access endpoint was last updated. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The time when the network access endpoint was last updated. The time is displayed as a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -596,10 +596,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of specified vSwitches to which the network access endpoint is connected.</p>
+             * <p>The specified vSwitches to which the network access endpoint is connected.</p>
              * 
              * <strong>example:</strong>
-             * <p>vsw-examplexxx</p>
+             * <p>[&quot;vsw-examplexxx&quot;]</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -618,7 +618,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region of the VPC to which the network access endpoint is connected.</p>
+             * <p>The region ID of the VPC to which the network access endpoint is connected.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

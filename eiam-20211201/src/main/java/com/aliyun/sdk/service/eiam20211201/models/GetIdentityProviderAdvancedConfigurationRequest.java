@@ -98,7 +98,7 @@ public class GetIdentityProviderAdvancedConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Identity provider ID</p>
+         * <p>The identity provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetIdentityProviderAdvancedConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

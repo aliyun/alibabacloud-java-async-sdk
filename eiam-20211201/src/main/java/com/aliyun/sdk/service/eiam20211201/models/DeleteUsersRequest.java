@@ -115,7 +115,7 @@ public class DeleteUsersRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>u_001</p>
+         * <p>[&quot;u_001&quot;]</p>
          */
         public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);

@@ -154,7 +154,7 @@ public class ListApplicationRolesRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions.</p>
+         * <p>The list of filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -176,7 +176,7 @@ public class ListApplicationRolesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -188,7 +188,7 @@ public class ListApplicationRolesRequest extends Request {
         }
 
         /**
-         * <p>The token used to start the next query. Set this parameter to the value of NextToken that is returned in the last API call. Leave this parameter empty for the first query.</p>
+         * <p>The pagination token for the next page. Set this parameter to the NextToken value returned from the previous API call. Leave this parameter empty for the first call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxexample</p>
@@ -270,7 +270,7 @@ public class ListApplicationRolesRequest extends Request {
             }
 
             /**
-             * <p>The values of the filter condition.</p>
+             * <p>The list of filter condition values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

@@ -154,7 +154,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The details of the custom privacy policy content.</p>
+         * <p>The details of the custom terms.</p>
          */
         public Builder customPrivacyPolicyContents(java.util.List<CustomPrivacyPolicyContents> customPrivacyPolicyContents) {
             this.putQueryParameter("CustomPrivacyPolicyContents", customPrivacyPolicyContents);
@@ -163,7 +163,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom privacy policy.</p>
+         * <p>The ID of the custom terms.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the custom privacy policy.</p>
+         * <p>The name of the custom terms.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom Privacy Policy Name</p>
@@ -188,7 +188,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The default language code for the privacy policy items. The value is the LanguageCode returned by the ListLanguages API operation.</p>
+         * <p>The default language code for the terms. The value is returned by the LanguageCode parameter in the response of the ListLanguages operation.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>
@@ -213,7 +213,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The consent type for the custom privacy policy.</p>
+         * <p>The consent type for the custom terms.</p>
          * 
          * <strong>example:</strong>
          * <p>implied_consent</p>
@@ -284,7 +284,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The name of the custom privacy policy item.</p>
+             * <p>The name of the custom terms item.</p>
              * 
              * <strong>example:</strong>
              * <p>Item Name</p>
@@ -295,7 +295,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
             }
 
             /**
-             * <p>The access URL of the custom privacy policy item. The URL must start with https://.</p>
+             * <p>The URL of the custom terms item. The URL must start with https://.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com">https://example.com</a></p>
@@ -378,7 +378,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
             } 
 
             /**
-             * <p>The items of the custom privacy policy.</p>
+             * <p>The items of the custom terms.</p>
              */
             public Builder customPrivacyPolicyItems(java.util.List<CustomPrivacyPolicyItems> customPrivacyPolicyItems) {
                 this.customPrivacyPolicyItems = customPrivacyPolicyItems;
@@ -386,7 +386,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
             }
 
             /**
-             * <p>The tip for the custom privacy policy content.</p>
+             * <p>The prompt for the custom terms.</p>
              * 
              * <strong>example:</strong>
              * <p>Please read and agree：</p>
@@ -397,7 +397,7 @@ public class UpdateCustomPrivacyPolicyRequest extends Request {
             }
 
             /**
-             * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages API operation.</p>
+             * <p>The language of the custom terms. The value is returned by the LanguageCode parameter in the response of the ListLanguages operation.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-Hans-CN</p>

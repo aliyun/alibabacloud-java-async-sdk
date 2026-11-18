@@ -198,7 +198,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>NT_example</p>
@@ -222,11 +222,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>The status filter. Valid values:</p>
-         * <ul>
-         * <li>Enabled: Enabled.</li>
-         * <li>Disabled: Disabled.</li>
-         * </ul>
+         * <p>The status filter.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -241,7 +237,7 @@ public class ListTrustedOriginsRequest extends Request {
          * <p>The name filter.</p>
          * 
          * <strong>example:</strong>
-         * <p>Qoder Production Console</p>
+         * <p>Qoder production console</p>
          */
         public Builder trustOriginName(String trustOriginName) {
             this.putQueryParameter("TrustOriginName", trustOriginName);
@@ -253,7 +249,7 @@ public class ListTrustedOriginsRequest extends Request {
          * <p>The trusted origin scene filter.</p>
          * 
          * <strong>example:</strong>
-         * <p>iframe_embed</p>
+         * <p>[&quot;iframe_embed&quot;]</p>
          */
         public Builder trustedOriginScene(java.util.List<String> trustedOriginScene) {
             this.putQueryParameter("TrustedOriginScene", trustedOriginScene);

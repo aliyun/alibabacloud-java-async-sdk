@@ -126,7 +126,7 @@ public class GenerateFileImportTemplateRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether field selection mode is enabled.</p>
+         * <p>Specifies whether the field selection mode is enabled.</p>
          */
         public Builder fieldSelectionEnabled(Boolean fieldSelectionEnabled) {
             this.putQueryParameter("FieldSelectionEnabled", fieldSelectionEnabled);

@@ -114,7 +114,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned by this call.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -147,7 +147,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -329,7 +329,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application ClientPublicKey.</p>
+             * <p>The ID of the ClientPublicKey.</p>
              * 
              * <strong>example:</strong>
              * <p>KEYEqDnDJhztiEAwSin7MZoxGcihzCAuxxxx</p>
@@ -373,7 +373,7 @@ public class ListClientPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether this key is used with priority.</p>
+             * <p>Specifies whether the ClientPublicKey is prioritized.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

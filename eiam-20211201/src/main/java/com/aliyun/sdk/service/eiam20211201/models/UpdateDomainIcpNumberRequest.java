@@ -113,7 +113,7 @@ public class UpdateDomainIcpNumberRequest extends Request {
         }
 
         /**
-         * <p>Domain ID.</p>
+         * <p>The domain name ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class UpdateDomainIcpNumberRequest extends Request {
         }
 
         /**
-         * <p>The ICP filing number associated with the domain.</p>
+         * <p>The ICP filing number associated with the domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class UpdateDomainIcpNumberRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

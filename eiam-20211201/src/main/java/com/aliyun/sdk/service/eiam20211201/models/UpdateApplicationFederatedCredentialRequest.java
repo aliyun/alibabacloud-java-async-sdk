@@ -427,7 +427,7 @@ public class UpdateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>The Azure resource group name.</p>
+             * <p>The name of the Azure resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>user_default</p>
@@ -550,7 +550,7 @@ public class UpdateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>The sub claim corresponding to the service account.</p>
+             * <p>The sub corresponding to the service account.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>
@@ -694,7 +694,7 @@ public class UpdateApplicationFederatedCredentialRequest extends Request {
             } 
 
             /**
-             * <p>The K8s namespace.</p>
+             * <p>The Kubernetes namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -716,7 +716,7 @@ public class UpdateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>The K8s service account name.</p>
+             * <p>The Kubernetes service account name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-sa</p>

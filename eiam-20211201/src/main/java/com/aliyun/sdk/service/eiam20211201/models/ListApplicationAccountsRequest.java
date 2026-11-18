@@ -164,7 +164,7 @@ public class ListApplicationAccountsRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

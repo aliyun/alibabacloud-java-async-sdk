@@ -113,7 +113,7 @@ public class DeleteAuthorizationResourceRequest extends Request {
         }
 
         /**
-         * <p>The authorized resource ID.</p>
+         * <p>The authorization resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

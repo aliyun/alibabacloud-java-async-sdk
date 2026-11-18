@@ -98,7 +98,7 @@ public class DeleteBrandRequest extends Request {
         }
 
         /**
-         * <p>Brand ID.</p>
+         * <p>The brand ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DeleteBrandRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

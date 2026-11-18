@@ -303,7 +303,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the display name. A left-match query is performed.</p>
+         * <p>The display name prefix for a left-match query.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -340,7 +340,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page for a paging query.</p>
+         * <p>The number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -400,7 +400,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The phone number of the account.</p>
+         * <p>The mobile phone number of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>156xxxxxxx</p>
@@ -412,7 +412,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The phone region code. Example: 86 for the Chinese mainland, without 00 or +.</p>
+         * <p>The region code of the mobile phone number. Example: 86 for the Chinese mainland, without 00 or +.</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -426,8 +426,8 @@ public class ListUsersRequest extends Request {
         /**
          * <p>The status of the account. Valid values:</p>
          * <ul>
-         * <li>enabled: Enabled.</li>
-         * <li>disabled: Disabled.</li>
+         * <li>enabled: enabled.</li>
+         * <li>disabled: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -456,7 +456,7 @@ public class ListUsersRequest extends Request {
          * <p>The list of account IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>[&quot;user_d6sbsuumeta4h66ec3il7yxxxx&quot;]</p>
          */
         public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);
@@ -466,7 +466,7 @@ public class ListUsersRequest extends Request {
 
         /**
          * <p>The source ID of the account.</p>
-         * <p>For the build-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, for the DingTalk source, the value is the corpId of the DingTalk enterprise.</p>
+         * <p>For the built-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, the DingTalk source corresponds to the corpId of the DingTalk enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -480,11 +480,11 @@ public class ListUsersRequest extends Request {
         /**
          * <p>The source type of the account. Valid values:</p>
          * <ul>
-         * <li>build_in: Built-in.</li>
-         * <li>ding_talk: Imported from DingTalk.</li>
-         * <li>ad: Imported from AD.</li>
-         * <li>ldap: Imported from LDAP.</li>
-         * <li>we_com: Imported from WeCom.</li>
+         * <li>build_in: built-in.</li>
+         * <li>ding_talk: imported from DingTalk.</li>
+         * <li>ad: imported from AD.</li>
+         * <li>ldap: imported from LDAP.</li>
+         * <li>we_com: imported from WeCom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -497,7 +497,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the username. A left-match query is performed.</p>
+         * <p>The username prefix for a left-match query.</p>
          * 
          * <strong>example:</strong>
          * <p>name_001</p>

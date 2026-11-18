@@ -106,7 +106,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of entries per page in a paged query. This is the paging size.</p>
+         * <p>The maximum number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token returned for the next page of results. Use this token in the next request to retrieve the next page.</p>
+         * <p>The token returned by this call for the next pagination query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -139,7 +139,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries in the list.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -150,7 +150,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of account data.</p>
+         * <p>The list of accounts.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -216,7 +216,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the validity period, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The end time of the validity period. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1704042061000</p>
@@ -227,7 +227,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the validity period, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The start time of the validity period. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1704042061000</p>
@@ -345,7 +345,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time range of the validity period. This parameter takes effect only when ValidityType is set to time_bound.</p>
+             * <p>The time range of the validity period. This parameter takes effect only when <strong>ValidityType</strong> is set to <strong>time_bound</strong>.</p>
              */
             public Builder validityPeriod(ValidityPeriod validityPeriod) {
                 this.validityPeriod = validityPeriod;
@@ -356,7 +356,7 @@ public class ListUsersForAuthorizationRuleResponseBody extends TeaModel {
              * <p>The validity type of the relationship. Valid values:</p>
              * <ul>
              * <li>permanent: permanent</li>
-             * <li>time_bound: custom time range.</li>
+             * <li>time_bound: custom time range</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -780,7 +780,7 @@ public class GetUserResponseBody extends TeaModel {
              * <p>The description of the account.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test account</p>
+             * <p>测试账户</p>
              */
             public Builder description(String description) {
                 this.description = description;

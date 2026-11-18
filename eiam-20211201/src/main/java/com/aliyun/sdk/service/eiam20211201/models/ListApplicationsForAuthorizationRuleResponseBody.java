@@ -114,7 +114,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in a paging query.</p>
+         * <p>The maximum number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in the response, which is used to query the next page.</p>
+         * <p>The token returned in the current response for querying the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>

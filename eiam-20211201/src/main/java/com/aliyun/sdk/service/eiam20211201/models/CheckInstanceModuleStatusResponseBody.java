@@ -67,7 +67,7 @@ public class CheckInstanceModuleStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The modification status information.</p>
+         * <p>The module status information.</p>
          */
         public Builder module(Module module) {
             this.module = module;

@@ -172,8 +172,8 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>The idempotency token that ensures the idempotence of the request.</p>
-         * <p>Generate a unique parameter value from your client to ensure that different requests have unique values. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the credential provider.</p>
+         * <p>The credential provider configuration.</p>
          */
         public Builder credentialProviderConfig(CredentialProviderConfig credentialProviderConfig) {
             this.putQueryParameter("CredentialProviderConfig", credentialProviderConfig);
@@ -195,9 +195,9 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>The business identifier of the credential provider.</p>
+         * <p>The credential provider identifier.</p>
          * <blockquote>
-         * <p>Allowed characters include uppercase and lowercase letters, digits, and the special characters <code>.-_</code>. The length cannot exceed 64 characters.</p>
+         * <p>Valid characters: uppercase and lowercase letters, digits, and the following special characters: <code>.-_</code>. The identifier can be up to 64 characters in length.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -211,9 +211,9 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>The name of the credential provider.</p>
+         * <p>The credential provider name.</p>
          * <blockquote>
-         * <p>The length cannot exceed 64 characters.</p>
+         * <p>The name can be up to 64 characters in length.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -227,10 +227,10 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>The type of the credential provider. Valid values:</p>
+         * <p>The credential provider type. Valid values:</p>
          * <ul>
-         * <li>oauth: OAuth credential provider.</li>
-         * <li>jwt: JWT credential provider.</li>
+         * <li>oauth: OAuth credential provider</li>
+         * <li>jwt: JWT credential provider</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -246,7 +246,7 @@ public class CreateCredentialProviderRequest extends Request {
         /**
          * <p>The description.</p>
          * <blockquote>
-         * <p>The length cannot exceed 128 characters.</p>
+         * <p>The description can be up to 128 characters in length.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -359,7 +359,7 @@ public class CreateCredentialProviderRequest extends Request {
             /**
              * <p>The list of allowed JWT issuers.</p>
              * <blockquote>
-             * <p>The list cannot contain more than 200 entries.</p>
+             * <p>The list can contain up to 200 items.</p>
              * </blockquote>
              */
             public Builder allowedTokenIssuers(java.util.List<String> allowedTokenIssuers) {
@@ -368,7 +368,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the JWT derived short token feature.</p>
+             * <p>Specifies whether to enable the capability to derive short tokens from JWTs.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -390,7 +390,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable JWT expiration cleanup.</p>
+             * <p>Specifies whether to enable cleanup of expired JWTs.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -579,7 +579,7 @@ public class CreateCredentialProviderRequest extends Request {
             } 
 
             /**
-             * <p>The authorization endpoint of the OAuth protocol.</p>
+             * <p>The authorization endpoint in the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/authorize">https://example.com/authorize</a></p>
@@ -592,8 +592,8 @@ public class CreateCredentialProviderRequest extends Request {
             /**
              * <p>The OAuth authorization flow type. Valid values:</p>
              * <ul>
-             * <li>m2m: Machine-to-machine.</li>
-             * <li>user_federation: User federation.</li>
+             * <li>m2m: Machine-to-machine</li>
+             * <li>user_federation: User federation</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -605,9 +605,9 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The client_id in the OAuth protocol, which is the client ID.</p>
+             * <p>The client ID in the OAuth protocol.</p>
              * <blockquote>
-             * <p>The length cannot exceed 128 characters.</p>
+             * <p>The client ID can be up to 128 characters in length.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -620,9 +620,9 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The client_secret in the OAuth protocol, which is the client secret.</p>
+             * <p>The client secret in the OAuth protocol.</p>
              * <blockquote>
-             * <p>The length cannot exceed 1024 characters.</p>
+             * <p>The client secret can be up to 1,024 characters in length.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -635,7 +635,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The URL of the OAuth Discovery document.</p>
+             * <p>The URL of the OAuth discovery document.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/.well-known/openid-configuration">https://example.com/.well-known/openid-configuration</a></p>
@@ -646,7 +646,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The Issuer endpoint of the OAuth protocol.</p>
+             * <p>The issuer endpoint in the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/issuer">https://example.com/issuer</a></p>
@@ -657,10 +657,10 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The algorithm used to calculate the Code Challenge in PKCE. Valid values:</p>
+             * <p>The algorithm used to calculate the code challenge in PKCE. Valid values:</p>
              * <ul>
-             * <li>S256.</li>
-             * <li>plain.</li>
+             * <li>S256</li>
+             * <li>plain</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -672,7 +672,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable PKCE.</p>
+             * <p>Specifies whether to enable Proof Key for Code Exchange (PKCE).</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -685,12 +685,12 @@ public class CreateCredentialProviderRequest extends Request {
             /**
              * <p>The OAuth provider vendor type. Valid values:</p>
              * <ul>
-             * <li>custom: Custom.</li>
-             * <li>dingtalk: DingTalk.</li>
-             * <li>feishu: Lark.</li>
-             * <li>github: GitHub.</li>
-             * <li>microsoft: Microsoft.</li>
-             * <li>google: Google.</li>
+             * <li>custom: Custom</li>
+             * <li>dingtalk: DingTalk</li>
+             * <li>feishu: Lark</li>
+             * <li>github: GitHub</li>
+             * <li>microsoft: Microsoft</li>
+             * <li>google: Google</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -702,19 +702,17 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The scope in the OAuth protocol, which specifies the permission scope.</p>
+             * <p>The scope in the OAuth protocol.</p>
              * <blockquote>
-             * <p>The Scope configuration on the credential provider serves as the default value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</p>
+             * <p>The scope configuration of the OAuth credential provider serves as a fallback value. If the scope parameter is not specified when you call the Developer API to obtain an OAuth access token, the scope configuration of the credential provider is used to issue the token.
+             * Notice: Separate multiple scope values with spaces.</notice>
+             * Limits on a single scope value:</p>
              * </blockquote>
-             * <blockquote>
-             * <p>Notice: Separate multiple Scope values with spaces.</p>
-             * </blockquote>
-             * <p>The following restrictions apply to each individual Scope value:</p>
              * <ol>
-             * <li>Allowed characters: lowercase letters, digits, and the special characters <code>|/:_-.</code>.</li>
-             * <li>Must contain at least one lowercase letter or digit.</li>
-             * <li>Must start with the special character <code>.</code>, a lowercase letter, or a digit.</li>
-             * <li>The length cannot exceed 1024 characters.</li>
+             * <li>Valid characters: lowercase letters, digits, and the following special characters: <code>|/:_-.</code>.</li>
+             * <li>The value must contain lowercase letters or digits.</li>
+             * <li>The value must start with a period (<code>.</code>), a lowercase letter, or a digit.</li>
+             * <li>The value can be up to 1,024 characters in length.</li>
              * </ol>
              * 
              * <strong>example:</strong>
@@ -726,9 +724,9 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>The token endpoint of the OAuth protocol.</p>
+             * <p>The token endpoint in the OAuth protocol.</p>
              * <blockquote>
-             * <p>The value must start with <code>http://</code> or <code>https://</code>, and the length cannot exceed 1024 characters.</p>
+             * <p>The endpoint must start with <code>http://</code> or <code>https://</code> and can be up to 1,024 characters in length.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

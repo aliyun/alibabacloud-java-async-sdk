@@ -80,7 +80,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The list of organizational unit IDs.</p>
+         * <p>The organizational units.</p>
          */
         public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -225,7 +225,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The application roles.</p>
+             * <p>The application roles. No roles are returned for SAML applications.</p>
              */
             public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
                 this.applicationRoles = applicationRoles;

@@ -93,7 +93,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The query token returned by this call.</p>
+         * <p>The pagination token returned by the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -123,7 +123,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries in the list.</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -218,7 +218,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -240,7 +240,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -251,7 +251,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -347,7 +347,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -369,7 +369,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -380,7 +380,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -476,7 +476,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -498,7 +498,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -509,7 +509,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -605,7 +605,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -627,7 +627,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -638,7 +638,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -734,7 +734,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -756,7 +756,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -767,7 +767,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -863,7 +863,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -885,7 +885,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -896,7 +896,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1018,7 +1018,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistics of the binding result.</p>
+             * <p>The binding result statistics.</p>
              */
             public Builder binded(Binded binded) {
                 this.binded = binded;
@@ -1026,7 +1026,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the creation result.</p>
+             * <p>The creation result statistics.</p>
              */
             public Builder created(Created created) {
                 this.created = created;
@@ -1034,7 +1034,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the deletion result.</p>
+             * <p>The deletion result statistics.</p>
              */
             public Builder deleted(Deleted deleted) {
                 this.deleted = deleted;
@@ -1042,7 +1042,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the push result.</p>
+             * <p>The push result statistics.</p>
              */
             public Builder pushed(Pushed pushed) {
                 this.pushed = pushed;
@@ -1050,7 +1050,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of identical results.</p>
+             * <p>The unchanged result statistics.</p>
              */
             public Builder same(Same same) {
                 this.same = same;
@@ -1058,7 +1058,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the update result.</p>
+             * <p>The update result statistics.</p>
              */
             public Builder updated(Updated updated) {
                 this.updated = updated;
@@ -1151,7 +1151,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1173,7 +1173,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1184,7 +1184,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1280,7 +1280,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1302,7 +1302,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1313,7 +1313,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1409,7 +1409,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1431,7 +1431,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1442,7 +1442,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1538,7 +1538,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1560,7 +1560,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1571,7 +1571,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1667,7 +1667,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1689,7 +1689,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1700,7 +1700,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1796,7 +1796,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1818,7 +1818,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1829,7 +1829,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1951,7 +1951,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistics of the binding result.</p>
+             * <p>The binding result statistics.</p>
              */
             public Builder binded(GroupStatisticsBinded binded) {
                 this.binded = binded;
@@ -1959,7 +1959,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the creation result.</p>
+             * <p>The creation result statistics.</p>
              */
             public Builder created(GroupStatisticsCreated created) {
                 this.created = created;
@@ -1967,7 +1967,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the deletion result.</p>
+             * <p>The deletion result statistics.</p>
              */
             public Builder deleted(GroupStatisticsDeleted deleted) {
                 this.deleted = deleted;
@@ -1975,7 +1975,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the push result.</p>
+             * <p>The push result statistics.</p>
              */
             public Builder pushed(GroupStatisticsPushed pushed) {
                 this.pushed = pushed;
@@ -1983,7 +1983,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of identical results.</p>
+             * <p>The unchanged result statistics.</p>
              */
             public Builder same(GroupStatisticsSame same) {
                 this.same = same;
@@ -1991,7 +1991,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the update result.</p>
+             * <p>The update result statistics.</p>
              */
             public Builder updated(GroupStatisticsUpdated updated) {
                 this.updated = updated;
@@ -2084,7 +2084,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2106,7 +2106,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2117,7 +2117,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -2213,7 +2213,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2235,7 +2235,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2246,7 +2246,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -2342,7 +2342,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2364,7 +2364,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2375,7 +2375,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -2471,7 +2471,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2493,7 +2493,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2504,7 +2504,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -2600,7 +2600,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2622,7 +2622,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2633,7 +2633,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -2729,7 +2729,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2751,7 +2751,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2762,7 +2762,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -2858,7 +2858,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2880,7 +2880,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2891,7 +2891,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -3026,7 +3026,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistics of the binding result.</p>
+             * <p>The binding result statistics.</p>
              */
             public Builder binded(OrganizationalUnitStatisticsBinded binded) {
                 this.binded = binded;
@@ -3034,7 +3034,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the creation result.</p>
+             * <p>The creation result statistics.</p>
              */
             public Builder created(OrganizationalUnitStatisticsCreated created) {
                 this.created = created;
@@ -3042,7 +3042,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the deletion result.</p>
+             * <p>The deletion result statistics.</p>
              */
             public Builder deleted(OrganizationalUnitStatisticsDeleted deleted) {
                 this.deleted = deleted;
@@ -3058,7 +3058,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the push result.</p>
+             * <p>The push result statistics.</p>
              */
             public Builder pushed(OrganizationalUnitStatisticsPushed pushed) {
                 this.pushed = pushed;
@@ -3066,7 +3066,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of identical results.</p>
+             * <p>The unchanged result statistics.</p>
              */
             public Builder same(OrganizationalUnitStatisticsSame same) {
                 this.same = same;
@@ -3074,7 +3074,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the update result.</p>
+             * <p>The update result statistics.</p>
              */
             public Builder updated(OrganizationalUnitStatisticsUpdated updated) {
                 this.updated = updated;
@@ -3167,7 +3167,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3189,7 +3189,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3200,7 +3200,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -3296,7 +3296,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3318,7 +3318,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3329,7 +3329,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -3425,7 +3425,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3447,7 +3447,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3458,7 +3458,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -3554,7 +3554,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -3576,7 +3576,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -3587,7 +3587,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -3683,7 +3683,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3705,7 +3705,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3716,7 +3716,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -3812,7 +3812,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3834,7 +3834,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3845,7 +3845,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -3941,7 +3941,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of failures.</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3963,7 +3963,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of successes.</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3974,7 +3974,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -4109,7 +4109,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The statistics of the binding result.</p>
+             * <p>The binding result statistics.</p>
              */
             public Builder binded(UserStatisticsBinded binded) {
                 this.binded = binded;
@@ -4117,7 +4117,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the creation result.</p>
+             * <p>The creation result statistics.</p>
              */
             public Builder created(UserStatisticsCreated created) {
                 this.created = created;
@@ -4125,7 +4125,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the deletion result.</p>
+             * <p>The deletion result statistics.</p>
              */
             public Builder deleted(UserStatisticsDeleted deleted) {
                 this.deleted = deleted;
@@ -4141,7 +4141,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the push result.</p>
+             * <p>The push result statistics.</p>
              */
             public Builder pushed(UserStatisticsPushed pushed) {
                 this.pushed = pushed;
@@ -4149,7 +4149,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of identical results.</p>
+             * <p>The unchanged result statistics.</p>
              */
             public Builder same(UserStatisticsSame same) {
                 this.same = same;
@@ -4157,7 +4157,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the update result.</p>
+             * <p>The update result statistics.</p>
              */
             public Builder updated(UserStatisticsUpdated updated) {
                 this.updated = updated;
@@ -4298,7 +4298,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistics of the group member synchronization result.</p>
+             * <p>The group member synchronization result statistics.</p>
              */
             public Builder groupMemberStatistics(GroupMemberStatistics groupMemberStatistics) {
                 this.groupMemberStatistics = groupMemberStatistics;
@@ -4597,7 +4597,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the synchronization target. Valid values:</p>
+             * <p>The synchronization target type. Valid values:</p>
              * <ul>
              * <li><p>identity_provider: identity provider</p>
              * </li>
@@ -4614,7 +4614,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger type of the synchronization job. Valid values:</p>
+             * <p>The synchronization trigger type. Valid values:</p>
              * <ul>
              * <li><p>auto: Automatically triggered.</p>
              * </li>

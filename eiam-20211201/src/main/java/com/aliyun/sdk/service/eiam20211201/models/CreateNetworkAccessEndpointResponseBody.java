@@ -67,7 +67,7 @@ public class CreateNetworkAccessEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Network access endpoint ID.</p>
+         * <p>The network endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxxx</p>
@@ -78,7 +78,7 @@ public class CreateNetworkAccessEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>

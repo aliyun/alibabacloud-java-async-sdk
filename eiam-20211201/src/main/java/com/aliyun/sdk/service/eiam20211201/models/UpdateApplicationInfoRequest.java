@@ -209,7 +209,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * <p>The application owner.</p>
+         * <p>The owner of the application.</p>
          */
         public Builder applicationOwner(ApplicationOwner applicationOwner) {
             this.putQueryParameter("ApplicationOwner", applicationOwner);
@@ -218,7 +218,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * <p>The application visibility settings.</p>
+         * <p>The application visibility collection.</p>
          */
         public Builder applicationVisibility(java.util.List<String> applicationVisibility) {
             this.putQueryParameter("ApplicationVisibility", applicationVisibility);
@@ -239,7 +239,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * <p>The list of application extension fields.</p>
+         * <p>The list of extended fields for the application.</p>
          */
         public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
@@ -332,7 +332,7 @@ public class UpdateApplicationInfoRequest extends Request {
             } 
 
             /**
-             * <p>The list of group IDs.</p>
+             * <p>The list of user group IDs.</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -422,7 +422,7 @@ public class UpdateApplicationInfoRequest extends Request {
             } 
 
             /**
-             * <p>The name of the application extension field.</p>
+             * <p>The name of the extended field for the application.</p>
              * 
              * <strong>example:</strong>
              * <p>agent_type</p>
@@ -433,7 +433,7 @@ public class UpdateApplicationInfoRequest extends Request {
             }
 
             /**
-             * <p>The value of the application extension field. If FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. If FieldName is set to agentExternalId, enter the relevant value.</p>
+             * <p>The value of the extended field for the application. If FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. If FieldName is set to agentExternalId, enter the relevant value.</p>
              * 
              * <strong>example:</strong>
              * <p>bailian</p>
@@ -444,7 +444,7 @@ public class UpdateApplicationInfoRequest extends Request {
             }
 
             /**
-             * <p>The operation type for the application extension field.</p>
+             * <p>The operation type for the extended field of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>add</p>

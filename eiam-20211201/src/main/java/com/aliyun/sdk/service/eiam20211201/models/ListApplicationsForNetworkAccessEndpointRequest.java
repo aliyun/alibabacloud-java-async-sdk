@@ -139,7 +139,7 @@ public class ListApplicationsForNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The maximum number of entries to return per page for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -164,7 +164,7 @@ public class ListApplicationsForNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>

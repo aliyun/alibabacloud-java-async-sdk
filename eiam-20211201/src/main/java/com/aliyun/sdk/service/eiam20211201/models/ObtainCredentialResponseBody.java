@@ -131,7 +131,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API key value.</p>
+             * <p>The content of the API key.</p>
              * 
              * <strong>example:</strong>
              * <p>nsklncmwizncxxxx</p>
@@ -282,7 +282,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of the API key credential.</p>
+             * <p>The credential content for the API key credential type.</p>
              */
             public Builder apiKeyContent(ApiKeyContent apiKeyContent) {
                 this.apiKeyContent = apiKeyContent;
@@ -290,7 +290,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the OAuth client credential.</p>
+             * <p>The credential content for the OAuth client authentication credential type.</p>
              */
             public Builder oAuthClientContent(OAuthClientContent oAuthClientContent) {
                 this.oAuthClientContent = oAuthClientContent;
@@ -552,7 +552,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830225000</p>
@@ -563,7 +563,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The content of the credential.</p>
+             * <p>The credential content.</p>
              */
             public Builder credentialContent(CredentialContent credentialContent) {
                 this.credentialContent = credentialContent;
@@ -574,7 +574,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
              * <p>The creation type of the credential. Valid values:</p>
              * <ul>
              * <li>system_init: Created by the system.</li>
-             * <li>user_custom: Created by the user.</li>
+             * <li>user_custom: Created by a user.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -667,7 +667,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the subject to which the credential belongs. Valid values:</p>
+             * <p>The subject type to which the credential belongs. Valid values:</p>
              * <ul>
              * <li>authentication_token_provider: Authentication token provider.</li>
              * </ul>
@@ -683,8 +683,8 @@ public class ObtainCredentialResponseBody extends TeaModel {
             /**
              * <p>The credential type. Valid values:</p>
              * <ul>
-             * <li>api_key: API key credential.</li>
-             * <li>oauth_client: OAuth client credential.</li>
+             * <li>api_key: API key authentication credential.</li>
+             * <li>oauth_client: OAuth client authentication credential.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -707,7 +707,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account to which the credential is exclusively assigned.</p>
+             * <p>The ID of the exclusive user for the credential.</p>
              * 
              * <strong>example:</strong>
              * <p>user_1234567890</p>
@@ -744,7 +744,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830227000</p>

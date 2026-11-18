@@ -139,7 +139,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointRequest extends Reques
         }
 
         /**
-         * <p>The maximum number of entries per page in a paging query.</p>
+         * <p>The maximum number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -164,7 +164,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointRequest extends Reques
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>

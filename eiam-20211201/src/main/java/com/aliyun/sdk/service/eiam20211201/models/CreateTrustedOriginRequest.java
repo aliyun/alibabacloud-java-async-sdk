@@ -145,7 +145,7 @@ public class CreateTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>Ensures the idempotence of the request. Generate a value on your client and make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>
@@ -170,7 +170,7 @@ public class CreateTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>The browser origin in the format of scheme://host[:port]. This value cannot be modified after creation.</p>
+         * <p>The browser origin in the format of scheme://host[:port]. It cannot be modified after creation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class CreateTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>The name of the trusted origin used for management, display, and auditing. If this parameter is not specified, the value is empty.</p>
+         * <p>The name of the trusted origin used for management, display, and auditing. If you do not specify this parameter, it is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>Qoder Production Console</p>
@@ -195,11 +195,11 @@ public class CreateTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>The trusted origin scenes. Only iframe_embed and cors are supported. At least one value is required.</p>
+         * <p>The trusted origin scenarios. Only iframe_embed and cors are supported. Specify at least one value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>iframe_embed</p>
+         * <p>[&quot;iframe_embed&quot;]</p>
          */
         public Builder trustedOriginScene(java.util.List<String> trustedOriginScene) {
             this.putQueryParameter("TrustedOriginScene", trustedOriginScene);

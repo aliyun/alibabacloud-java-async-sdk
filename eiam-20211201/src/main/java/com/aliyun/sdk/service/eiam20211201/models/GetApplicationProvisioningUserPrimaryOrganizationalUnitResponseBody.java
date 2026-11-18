@@ -78,7 +78,7 @@ public class GetApplicationProvisioningUserPrimaryOrganizationalUnitResponseBody
         }
 
         /**
-         * <p>The user primary organizational unit for application synchronization.</p>
+         * <p>The primary organizational unit of the user for application synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_12121xxxxxx</p>

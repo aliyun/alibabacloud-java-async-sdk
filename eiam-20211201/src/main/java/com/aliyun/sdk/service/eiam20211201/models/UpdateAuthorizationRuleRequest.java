@@ -143,14 +143,13 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The authorization resource scope. Valid values:</p>
+         * <p>The scope of authorized resources. Valid values:</p>
          * <ul>
-         * <li>global: global resources under the project</li>
-         * <li>custom: resources under a specified project scope</li>
+         * <li>custom: Resources within the specified project scope.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>global</p>
+         * <p>custom</p>
          */
         public Builder authorizationResourceScope(String authorizationResourceScope) {
             this.putQueryParameter("AuthorizationResourceScope", authorizationResourceScope);
@@ -184,7 +183,7 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. You can generate a parameter value on the client side to ensure that the parameter value is unique across different requests. ClientToken supports only ASCII characters and can be up to 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

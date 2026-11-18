@@ -185,7 +185,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>The list of filter conditions.</p>
+         * <p>The list of filters.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -207,7 +207,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The maximum number of rows per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -219,7 +219,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -299,10 +299,10 @@ public class ListCredentialProvidersRequest extends Request {
             } 
 
             /**
-             * <p>The filter condition name. Valid values:</p>
+             * <p>The filter name. Valid values:</p>
              * <ul>
-             * <li>CredentialProviderName: the credential provider name.</li>
-             * <li>CredentialProviderIdentifier: the credential provider identifier.</li>
+             * <li>CredentialProviderName: the credential provider name</li>
+             * <li>CredentialProviderIdentifier: the credential provider identifier</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -314,7 +314,7 @@ public class ListCredentialProvidersRequest extends Request {
             }
 
             /**
-             * <p>The list of filter condition values.</p>
+             * <p>The list of filter values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

@@ -131,10 +131,10 @@ public class ListApplicationSupportedProvisionProtocolTypesResponseBody extends 
             } 
 
             /**
-             * <p>The account synchronization type supported by the application. Valid values:</p>
+             * <p>The account synchronization protocol type supported by the application. Valid values:</p>
              * <ul>
-             * <li>idaas_callback: Event callback type.</li>
-             * <li>scim2: System for Cross-domain Identity Management protocol type.</li>
+             * <li>idaas_callback: Event callback.</li>
+             * <li>scim2: System for Cross-domain Identity Management protocol.</li>
              * </ul>
              */
             public Builder provisionProtocolType(java.util.List<String> provisionProtocolType) {

@@ -67,7 +67,7 @@ public class CreateClientPublicKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the application ClientPublicKey.</p>
+         * <p>The ID of the ClientPublicKey for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>KEYCKmEYW9byWTdjuRbmCjd2Bhg6VpkAxxxx</p>

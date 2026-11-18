@@ -175,7 +175,13 @@ public class ListApplicationsForAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * <p>The maximum number of records per page.</p>
+         * <ul>
+         * <li><p>If this parameter is not specified, the default value is 20.</p>
+         * </li>
+         * <li><p>The maximum value is 100.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -187,7 +193,10 @@ public class ListApplicationsForAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that specifies the starting position for the next page. If you do not specify this parameter, the query starts from the first page by default.</p>
+         * <p>The token that specifies the starting position of the next page.</p>
+         * <ul>
+         * <li>If this parameter is not specified, the query starts from the first page by default.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -272,7 +281,7 @@ public class ListApplicationsForAuthorizationRuleRequest extends Request {
             }
 
             /**
-             * <p>The list of filter field values.</p>
+             * <p>The list of values for the filter field.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

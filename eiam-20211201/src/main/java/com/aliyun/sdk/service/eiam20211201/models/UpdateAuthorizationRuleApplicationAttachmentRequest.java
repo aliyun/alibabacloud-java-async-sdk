@@ -183,7 +183,7 @@ public class UpdateAuthorizationRuleApplicationAttachmentRequest extends Request
         }
 
         /**
-         * <p>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the parameter value is unique among different requests. The ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+         * <p>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the parameter is unique among different requests. The ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class UpdateAuthorizationRuleApplicationAttachmentRequest extends Request
         }
 
         /**
-         * <p>The time range of the validity period. This parameter takes effect only when <strong>ValidityType</strong> is set to <strong>time_bound</strong>.</p>
+         * <p>The time range of the validity period. This parameter takes effect when <strong>ValidityType</strong> is set to <strong>time_bound</strong>.</p>
          */
         public Builder validityPeriod(ValidityPeriod validityPeriod) {
             this.putQueryParameter("ValidityPeriod", validityPeriod);
@@ -220,8 +220,8 @@ public class UpdateAuthorizationRuleApplicationAttachmentRequest extends Request
         /**
          * <p>The validity type of the relationship. Valid values:</p>
          * <ul>
-         * <li>permanent: permanent</li>
-         * <li>time_bound: custom time range</li>
+         * <li>permanent: Permanent.</li>
+         * <li>time_bound: Custom time range.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

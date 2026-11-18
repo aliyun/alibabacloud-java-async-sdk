@@ -196,7 +196,7 @@ public class ListUserAuthnSourceMappingsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return per page in a paging query.</p>
+         * <p>The maximum number of entries to return per page when paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -208,7 +208,7 @@ public class ListUserAuthnSourceMappingsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -220,7 +220,7 @@ public class ListUserAuthnSourceMappingsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the previous page.</p>
+         * <p>The previous token.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>

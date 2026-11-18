@@ -156,7 +156,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The ResourceServer application ID.</p>
+         * <p>The ID of the resource server application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The number of rows per page in a paged query.</p>
+         * <p>The number of entries to return per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -203,7 +203,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * <p>The query token for the next page. Set the value to the NextToken value returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -215,7 +215,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The permission ID.</p>
+         * <p>The scope ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>

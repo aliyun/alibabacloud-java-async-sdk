@@ -180,7 +180,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page in a paging query. Maximum value: 100.</p>
+         * <p>The number of entries per page for paging in a paged query. The maximum value is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -194,12 +194,12 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         /**
          * <p>The status of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li>pending: pending initialization.</li>
-         * <li>creating: being created.</li>
-         * <li>running: running.</li>
-         * <li>deleting: being deleted.</li>
+         * <li>pending: pending initialization</li>
+         * <li>creating: being created</li>
+         * <li>running: running</li>
+         * <li>deleting: being deleted</li>
          * </ul>
-         * <p>This filter parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
+         * <p>This filter does not take effect when NetworkAccessEndpointType is set to shared.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -213,8 +213,8 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         /**
          * <p>The type of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li>shared: shared network access endpoint.</li>
-         * <li>private: private network access endpoint.</li>
+         * <li>shared: shared network access endpoint</li>
+         * <li>private: private network access endpoint</li>
          * </ul>
          * <p>Default value: private.</p>
          * 
@@ -228,7 +228,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set the value to the NextToken value returned from the previous API call. Leave this parameter empty for the first call.</p>
+         * <p>The pagination token. Set this parameter to the value of NextToken returned from the previous API call. Leave this parameter empty for the first call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>

@@ -54,7 +54,7 @@ public class DisableTrustedOriginResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-example</p>

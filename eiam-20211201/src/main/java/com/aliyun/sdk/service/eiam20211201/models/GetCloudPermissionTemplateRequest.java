@@ -126,7 +126,7 @@ public class GetCloudPermissionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the permission template.</p>
+         * <p>The permission template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

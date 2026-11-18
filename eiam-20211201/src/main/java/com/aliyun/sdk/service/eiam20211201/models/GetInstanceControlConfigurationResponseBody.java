@@ -67,7 +67,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance control configuration.</p>
+         * <p>The instance control configuration items.</p>
          */
         public Builder instanceControlConfiguration(InstanceControlConfiguration instanceControlConfiguration) {
             this.instanceControlConfiguration = instanceControlConfiguration;
@@ -214,7 +214,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the instance control item.</p>
+             * <p>The name of the instance control element.</p>
              * 
              * <strong>example:</strong>
              * <p>human_verification</p>
@@ -225,7 +225,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authentication configuration.</p>
+             * <p>The human-machine authentication configuration.</p>
              */
             public Builder humanVerificationConfig(HumanVerificationConfig humanVerificationConfig) {
                 this.humanVerificationConfig = humanVerificationConfig;
@@ -233,7 +233,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance control item.</p>
+             * <p>The status of the instance control element.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -290,7 +290,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance control configuration.</p>
+             * <p>The instance control configuration items.</p>
              */
             public Builder controlElements(java.util.List<ControlElements> controlElements) {
                 this.controlElements = controlElements;

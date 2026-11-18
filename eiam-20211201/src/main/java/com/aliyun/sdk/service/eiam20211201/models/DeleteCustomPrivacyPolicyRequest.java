@@ -98,7 +98,7 @@ public class DeleteCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>The custom clause ID.</p>
+         * <p>The custom terms ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

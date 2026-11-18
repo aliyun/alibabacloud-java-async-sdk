@@ -93,7 +93,7 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
         } 
 
         /**
-         * <p>The collection of applications under the network access endpoint.</p>
+         * <p>The applications associated with the network access endpoint.</p>
          */
         public Builder applicationsForNetworkAccessEndpoint(java.util.List<ApplicationsForNetworkAccessEndpoint> applicationsForNetworkAccessEndpoint) {
             this.applicationsForNetworkAccessEndpoint = applicationsForNetworkAccessEndpoint;
@@ -101,7 +101,7 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
         }
 
         /**
-         * <p>The pagination token returned in this call.</p>
+         * <p>The next token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -123,7 +123,7 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

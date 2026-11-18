@@ -114,7 +114,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page for paging in a paged query.</p>
+         * <p>The maximum number of entries per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -203,7 +203,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The client ID of the OAuth protocol.</p>
+             * <p>The client ID in the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>dmvncmxersdxxxxxx</p>
@@ -260,7 +260,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The content of an OAuth client credential.</p>
+             * <p>The content of an OAuth client authentication credential.</p>
              */
             public Builder oAuthClientContent(OAuthClientContent oAuthClientContent) {
                 this.oAuthClientContent = oAuthClientContent;
@@ -602,7 +602,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             /**
              * <p>The Scenarios label of the credential. Valid values:</p>
              * <ul>
-             * <li>llm: Large model.</li>
+             * <li>llm: Large language model.</li>
              * <li>saas: Third-party SaaS service.</li>
              * </ul>
              * 
@@ -617,8 +617,8 @@ public class ListCredentialsResponseBody extends TeaModel {
             /**
              * <p>The credential sharing scope. Valid values:</p>
              * <ul>
-             * <li>common: General.</li>
-             * <li>user_exclusive: Account-specific.</li>
+             * <li>common: Common.</li>
+             * <li>user_exclusive: Account-exclusive.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -641,7 +641,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subject type to which the credential belongs. Valid values:</p>
+             * <p>The subject type of the credential. Valid values:</p>
              * <ul>
              * <li>authentication_token_provider: Authentication token provider.</li>
              * </ul>
@@ -657,8 +657,8 @@ public class ListCredentialsResponseBody extends TeaModel {
             /**
              * <p>The credential type. Valid values:</p>
              * <ul>
-             * <li>api_key: API key credential.</li>
-             * <li>oauth_client: OAuth client credential.</li>
+             * <li>api_key: API key authentication credential.</li>
+             * <li>oauth_client: OAuth client authentication credential.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -681,7 +681,7 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the exclusive user for the credential.</p>
+             * <p>The ID of the exclusive account for the credential.</p>
              * 
              * <strong>example:</strong>
              * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

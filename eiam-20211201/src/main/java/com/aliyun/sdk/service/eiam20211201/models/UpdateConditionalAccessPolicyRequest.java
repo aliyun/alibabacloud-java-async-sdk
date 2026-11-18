@@ -213,7 +213,7 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>My conditional access policy</p>
+         * <p>我的条件访问策略</p>
          */
         public Builder conditionalAccessPolicyName(String conditionalAccessPolicyName) {
             this.putQueryParameter("ConditionalAccessPolicyName", conditionalAccessPolicyName);

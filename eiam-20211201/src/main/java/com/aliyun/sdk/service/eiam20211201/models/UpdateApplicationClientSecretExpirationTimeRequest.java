@@ -167,7 +167,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends Request 
         }
 
         /**
-         * <p>The client secret ID.</p>
+         * <p>The client secret.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

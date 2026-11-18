@@ -101,7 +101,7 @@ public class UpdateInstanceDescriptionRequest extends Request {
          * <p>The new description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>For production use.</p>
+         * <p>生产环境使用。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -114,7 +114,7 @@ public class UpdateInstanceDescriptionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
+         * <p>eiam-111ccc1111</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -124,7 +124,7 @@ public class ListAuthorizationServersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page in a paging query.</p>
+         * <p>The maximum number of entries to return per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

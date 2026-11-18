@@ -166,11 +166,11 @@ public class RevokeApplicationFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>The list of organizational unit IDs. You can specify up to 100 organizational unit IDs in a single request.</p>
+         * <p>The list of organizational unit IDs. You can specify up to 100 organizational unit IDs in a single operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
+         * <p>[&quot;ou_wovwffm62xifdziem7an7xxxxx&quot;]</p>
          */
         public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);

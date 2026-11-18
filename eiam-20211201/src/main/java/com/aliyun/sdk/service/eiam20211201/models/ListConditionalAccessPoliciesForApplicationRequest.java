@@ -98,7 +98,7 @@ public class ListConditionalAccessPoliciesForApplicationRequest extends Request 
         }
 
         /**
-         * <p>The ID of the application associated with the conditional access policies.</p>
+         * <p>The ID of the application associated with the conditional access policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

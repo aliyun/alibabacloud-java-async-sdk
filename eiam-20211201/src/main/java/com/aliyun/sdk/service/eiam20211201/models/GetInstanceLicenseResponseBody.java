@@ -113,6 +113,15 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointQuota")
         private Long networkAccessEndpointQuota;
 
+        @com.aliyun.core.annotation.NameInMap("PamActiveUserBaseQuota")
+        private Long pamActiveUserBaseQuota;
+
+        @com.aliyun.core.annotation.NameInMap("PamActiveUserPurchasedQuota")
+        private Long pamActiveUserPurchasedQuota;
+
+        @com.aliyun.core.annotation.NameInMap("PamElasticBillingEnabled")
+        private Boolean pamElasticBillingEnabled;
+
         @com.aliyun.core.annotation.NameInMap("PamLicenseStatus")
         private String pamLicenseStatus;
 
@@ -128,6 +137,9 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             this.m2mApplicationQuota = builder.m2mApplicationQuota;
             this.mimApplicationLicenseStatus = builder.mimApplicationLicenseStatus;
             this.networkAccessEndpointQuota = builder.networkAccessEndpointQuota;
+            this.pamActiveUserBaseQuota = builder.pamActiveUserBaseQuota;
+            this.pamActiveUserPurchasedQuota = builder.pamActiveUserPurchasedQuota;
+            this.pamElasticBillingEnabled = builder.pamElasticBillingEnabled;
             this.pamLicenseStatus = builder.pamLicenseStatus;
             this.prepaidActiveUserNumber = builder.prepaidActiveUserNumber;
             this.userQuota = builder.userQuota;
@@ -177,6 +189,27 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         }
 
         /**
+         * @return pamActiveUserBaseQuota
+         */
+        public Long getPamActiveUserBaseQuota() {
+            return this.pamActiveUserBaseQuota;
+        }
+
+        /**
+         * @return pamActiveUserPurchasedQuota
+         */
+        public Long getPamActiveUserPurchasedQuota() {
+            return this.pamActiveUserPurchasedQuota;
+        }
+
+        /**
+         * @return pamElasticBillingEnabled
+         */
+        public Boolean getPamElasticBillingEnabled() {
+            return this.pamElasticBillingEnabled;
+        }
+
+        /**
          * @return pamLicenseStatus
          */
         public String getPamLicenseStatus() {
@@ -203,6 +236,9 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             private Long m2mApplicationQuota; 
             private String mimApplicationLicenseStatus; 
             private Long networkAccessEndpointQuota; 
+            private Long pamActiveUserBaseQuota; 
+            private Long pamActiveUserPurchasedQuota; 
+            private Boolean pamElasticBillingEnabled; 
             private String pamLicenseStatus; 
             private Long prepaidActiveUserNumber; 
             private Long userQuota; 
@@ -216,6 +252,9 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
                 this.m2mApplicationQuota = model.m2mApplicationQuota;
                 this.mimApplicationLicenseStatus = model.mimApplicationLicenseStatus;
                 this.networkAccessEndpointQuota = model.networkAccessEndpointQuota;
+                this.pamActiveUserBaseQuota = model.pamActiveUserBaseQuota;
+                this.pamActiveUserPurchasedQuota = model.pamActiveUserPurchasedQuota;
+                this.pamElasticBillingEnabled = model.pamElasticBillingEnabled;
                 this.pamLicenseStatus = model.pamLicenseStatus;
                 this.prepaidActiveUserNumber = model.prepaidActiveUserNumber;
                 this.userQuota = model.userQuota;
@@ -255,7 +294,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The machine identity license status.</p>
+             * <p>The machine identity status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -277,7 +316,40 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PAM privileged access management license status.</p>
+             * <p>The base quota of monthly active PAM users included in the plan, excluding additional purchases. The value is 0 if PAM is not activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
+             */
+            public Builder pamActiveUserBaseQuota(Long pamActiveUserBaseQuota) {
+                this.pamActiveUserBaseQuota = pamActiveUserBaseQuota;
+                return this;
+            }
+
+            /**
+             * <p>The number of additionally purchased monthly active PAM users. The value is 0 if no additional users are purchased or PAM is not activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder pamActiveUserPurchasedQuota(Long pamActiveUserPurchasedQuota) {
+                this.pamActiveUserPurchasedQuota = pamActiveUserPurchasedQuota;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether pay-as-you-go billing for monthly PAM overages is enabled. Returns false if PAM is not activated or elastic billing is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder pamElasticBillingEnabled(Boolean pamElasticBillingEnabled) {
+                this.pamElasticBillingEnabled = pamElasticBillingEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The Privileged Access Management (PAM) license status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -288,7 +360,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of prepaid active users.</p>
+             * <p>The number of active subscription users.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -510,7 +582,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end date of the license validity period, in timestamp format.</p>
+             * <p>The end date of the license validity period. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1723996800000</p>
@@ -529,7 +601,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing type of the license.</p>
+             * <p>The billing method of the license.</p>
              * 
              * <strong>example:</strong>
              * <p>prepay</p>
@@ -540,7 +612,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed license configuration as a JSON string.</p>
+             * <p>The JSON string of the detailed license configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;modules&quot;:[{&quot;features&quot;:[{&quot;name&quot;:&quot;urn:alibaba:idaas:license:module:ud:customField&quot;,&quot;status&quot;:&quot;enabled&quot;}]……{&quot;name&quot;:&quot;urn:alibaba:idaas:license:tag:enterprise&quot;,&quot;status&quot;:&quot;enabled&quot;}],&quot;version&quot;:&quot;1.0&quot;}</p>
@@ -551,7 +623,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the license, in timestamp format.</p>
+             * <p>The creation time of the license. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1720509699000</p>
@@ -573,7 +645,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the license.</p>
+             * <p>The license status.</p>
              * 
              * <strong>example:</strong>
              * <p>valid</p>
@@ -595,7 +667,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the external commodity associated with the license.</p>
+             * <p>The unique identifier of the external product corresponding to the license.</p>
              * 
              * <strong>example:</strong>
              * <p>eiam-cn-xxxxx</p>
@@ -606,7 +678,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start date of the license validity period, in timestamp format.</p>
+             * <p>The start date of the license validity period. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1720509699000</p>

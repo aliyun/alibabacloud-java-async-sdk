@@ -128,7 +128,7 @@ public class UnbindUserAuthnSourceMappingRequest extends Request {
         }
 
         /**
-         * <p>The source IdP ID.</p>
+         * <p>The identity provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class UnbindUserAuthnSourceMappingRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>user_123131xxasasa</p>
          */
         public Builder userExternalId(String userExternalId) {
             this.putQueryParameter("UserExternalId", userExternalId);

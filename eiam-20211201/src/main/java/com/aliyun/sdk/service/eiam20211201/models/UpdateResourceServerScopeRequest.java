@@ -128,7 +128,7 @@ public class UpdateResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ResourceServer application.</p>
+         * <p>The application ID of the resource server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class UpdateResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the scope permission for the resource server.</p>
+         * <p>The scope permission ID of the resource server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

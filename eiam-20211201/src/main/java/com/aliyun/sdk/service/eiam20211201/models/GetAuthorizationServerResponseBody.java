@@ -144,7 +144,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The token endpoint of the authorization server.</p>
+             * <p>The OAuth2 token endpoint of the authorization server.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token</a></p>
@@ -155,7 +155,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JWKS endpoint of the authorization server.</p>
+             * <p>The OIDC JWKS endpoint of the authorization server.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks</a></p>
@@ -377,7 +377,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the authorization server was created. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time of the authorization server. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1754620108295</p>
@@ -399,7 +399,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization server description.</p>
+             * <p>The description of the authorization server.</p>
              * 
              * <strong>example:</strong>
              * <p>description of authorization server</p>
@@ -421,7 +421,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization token issuer.</p>
+             * <p>The issuer of the authorization token.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></p>
@@ -454,7 +454,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the authorization server was last updated. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The last update time of the authorization server. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1781608572164</p>
@@ -465,7 +465,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization server endpoint configuration.</p>
+             * <p>The protocol endpoint configuration of the authorization server.</p>
              */
             public Builder protocolEndpoint(ProtocolEndpoint protocolEndpoint) {
                 this.protocolEndpoint = protocolEndpoint;
@@ -473,7 +473,7 @@ public class GetAuthorizationServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization server status.</p>
+             * <p>The status of the authorization server.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLE</p>

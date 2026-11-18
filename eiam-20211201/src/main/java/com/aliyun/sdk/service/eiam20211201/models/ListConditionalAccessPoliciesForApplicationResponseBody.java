@@ -67,7 +67,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         } 
 
         /**
-         * <p>The collection of conditional access policies.</p>
+         * <p>The conditional access policies.</p>
          */
         public Builder conditionalAccessPolicies(java.util.List<ConditionalAccessPolicies> conditionalAccessPolicies) {
             this.conditionalAccessPolicies = conditionalAccessPolicies;
@@ -346,7 +346,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             } 
 
             /**
-             * <p>The excluded user groups.</p>
+             * <p>The excluded groups.</p>
              */
             public Builder excludeGroups(java.util.List<String> excludeGroups) {
                 this.excludeGroups = excludeGroups;
@@ -370,7 +370,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The included user groups.</p>
+             * <p>The included groups.</p>
              */
             public Builder includeGroups(java.util.List<String> includeGroups) {
                 this.includeGroups = includeGroups;
@@ -466,7 +466,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             } 
 
             /**
-             * <p>The target applications of the conditional access policy.</p>
+             * <p>The target applications for the conditional access policy.</p>
              */
             public Builder applications(Applications applications) {
                 this.applications = applications;
@@ -474,7 +474,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The network zones of the conditional access policy.</p>
+             * <p>The network zones for the conditional access policy.</p>
              */
             public Builder networkZones(NetworkZones networkZones) {
                 this.networkZones = networkZones;
@@ -482,7 +482,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The target users of the conditional access policy.</p>
+             * <p>The target users for the conditional access policy.</p>
              */
             public Builder users(Users users) {
                 this.users = users;
@@ -588,7 +588,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             } 
 
             /**
-             * <p>Indicates whether session reuse is enabled.</p>
+             * <p>Specifies whether session reuse is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -599,7 +599,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The decision action of the conditional access policy.</p>
+             * <p>The decision effect of the conditional access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>allow</p>
@@ -610,7 +610,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The re-authentication interval of the conditional access policy, in seconds.</p>
+             * <p>The re-authentication interval for the conditional access policy, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -621,7 +621,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The collection of MFA types allowed by the conditional access policy.</p>
+             * <p>The collection of allowed MFA types for the conditional access policy.</p>
              */
             public Builder mfaAuthenticationMethods(java.util.List<String> mfaAuthenticationMethods) {
                 this.mfaAuthenticationMethods = mfaAuthenticationMethods;
@@ -883,7 +883,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The time when the policy was created. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>
@@ -902,7 +902,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The decision type of the conditional access policy.</p>
+             * <p>The enforcement type of the conditional access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>enforcement</p>
@@ -946,7 +946,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The time when the policy was last updated. The value is a UNIX timestamp in milliseconds.</p>
+             * <p>The last updated time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>
@@ -968,7 +968,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>The enabled or disabled status of the conditional access policy.</p>
+             * <p>The enablement status of the conditional access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>

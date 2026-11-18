@@ -367,7 +367,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The IdP certificate list.</p>
+             * <p>The list of IdP certificates.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -386,7 +386,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>The IdP logon URL.</p>
+             * <p>The IdP SSO URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>

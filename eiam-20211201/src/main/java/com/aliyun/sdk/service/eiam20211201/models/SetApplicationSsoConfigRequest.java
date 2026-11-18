@@ -181,7 +181,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+         * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the parameter value is unique across different requests. The value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>client-examplexxx</p>
@@ -193,10 +193,10 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * <p>The initial single sign-on (SSO) logon method. Valid values:</p>
+         * <p>The initial single sign-on (SSO) method. Valid values:</p>
          * <ul>
-         * <li>only_app_init_sso: Only application-initiated SSO is supported. This is the default value for OIDC protocol applications. When a SAML application uses this method, InitLoginUrl must be specified.</li>
-         * <li>idaas_or_app_init_sso: Both IDaaS portal-initiated and application-initiated SSO are supported. This is the default value for SAML protocol applications. When an OIDC protocol application uses this method, InitLoginUrl must be specified.</li>
+         * <li>only_app_init_sso: SSO is initiated only by the application. This is the default value for OIDC applications. If this method is specified for a SAML application, InitLoginUrl must be specified.</li>
+         * <li>idaas_or_app_init_sso: SSO can be initiated by the IDaaS portal or the application. This is the default value for SAML applications. If this method is specified for an OIDC application, InitLoginUrl must be specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,9 +209,9 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * <p>The initial single sign-on (SSO) logon trigger URL.
-         * This parameter is required when an OIDC protocol application sets InitLoginType to idaas_or_app_init_sso.
-         * This parameter is required when a SAML protocol application sets InitLoginType to only_app_init_sso.</p>
+         * <p>The trigger URL for the initialization of single sign-on (SSO) logon.
+         * This parameter is required when the InitLoginType Settings for an OIDC protocol (Protocol Type) application are set to idaas_or_app_init_sso.
+         * This parameter is required when the InitLoginType Settings for a SAML protocol (Protocol Type) application are set to only_app_init_sso.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF">http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF</a></p>
@@ -236,7 +236,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * <p>The SSO configuration parameters for an OIDC-based application.</p>
+         * <p>The SSO attribute configuration parameters for the OIDC protocol.</p>
          */
         public Builder oidcSsoConfig(OidcSsoConfig oidcSsoConfig) {
             this.putQueryParameter("OidcSsoConfig", oidcSsoConfig);
@@ -245,7 +245,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * <p>The SSO configuration parameters for a SAML-based application.</p>
+         * <p>The SSO attribute configuration parameters for the SAML protocol.</p>
          */
         public Builder samlSsoConfig(SamlSsoConfig samlSsoConfig) {
             this.putQueryParameter("SamlSsoConfig", samlSsoConfig);
@@ -577,7 +577,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             } 
 
             /**
-             * <p>The validity period of the issued access token. Unit: seconds. Default value: 1200 (20 minutes).</p>
+             * <p>The validity period of the issued access token, in seconds. Default value: 1200 (20 minutes).</p>
              * 
              * <strong>example:</strong>
              * <p>1200</p>
@@ -588,7 +588,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the application is allowed to act as a public client to request the IDaaS EIAM authorization server. This parameter can be enabled only in authorization code mode and device mode. Default value: false.</p>
+             * <p>Specifies whether the application is allowed to request the IDaaS EIAM authorization server as a public client. This feature can be enabled only for the authorization code mode and device mode. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -599,7 +599,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The validity period of the issued code. Unit: seconds. Default value: 60 (1 minute).</p>
+             * <p>The validity period of the issued code, in seconds. Default value: 60 (1 minute).</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -618,10 +618,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The OIDC standard parameter scope, which specifies the range of user attributes that can be returned by the userinfo endpoint or the id_token.</p>
+             * <p>The standard OIDC scope parameter, which specifies the range of user attributes that can be returned by the userinfo endpoint or the ID token.</p>
              * 
              * <strong>example:</strong>
-             * <p>profile，email</p>
+             * <p>[&quot;profile&quot;,&quot;email&quot;]</p>
              */
             public Builder grantScopes(java.util.List<String> grantScopes) {
                 this.grantScopes = grantScopes;
@@ -632,7 +632,7 @@ public class SetApplicationSsoConfigRequest extends Request {
              * <p>The list of supported OIDC grant types.</p>
              * 
              * <strong>example:</strong>
-             * <p>authorization_code</p>
+             * <p>[&quot;authorization_code&quot;]</p>
              */
             public Builder grantTypes(java.util.List<String> grantTypes) {
                 this.grantTypes = grantTypes;
@@ -640,7 +640,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The validity period of the issued ID token. Unit: seconds. Default value: 300 (5 minutes).</p>
+             * <p>The validity period of the issued ID token, in seconds. Default value: 300 seconds (5 minutes).</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -651,7 +651,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The ID of the authentication source used in password mode. This parameter takes effect only when the GrantTypes specified for the OIDC application include the password mode.</p>
+             * <p>The ID of the authentication source used for the password mode. This parameter takes effect only when the GrantTypes specified for the OIDC application includes the password mode.</p>
              * 
              * <strong>example:</strong>
              * <p>ia_password</p>
@@ -662,7 +662,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether TOTP-based secondary authentication is required for password mode. This parameter takes effect only when the GrantTypes specified for the OIDC application include the password mode.</p>
+             * <p>Specifies whether time-based one-time password (TOTP) multi-factor authentication (MFA) is mandatory for the password mode. This parameter takes effect only when the GrantTypes specified for the OIDC application includes the password mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -673,10 +673,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The algorithm used to calculate the Code Challenge in PKCE.</p>
+             * <p>The algorithm used to calculate the code challenge in PKCE.</p>
              * 
              * <strong>example:</strong>
-             * <p>S256</p>
+             * <p>[&quot;S256&quot;]</p>
              */
             public Builder pkceChallengeMethods(java.util.List<String> pkceChallengeMethods) {
                 this.pkceChallengeMethods = pkceChallengeMethods;
@@ -684,7 +684,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether Proof Key for Code Exchange (PKCE) (RFC 7636) is required for application SSO.</p>
+             * <p>Specifies whether Proof Key for Code Exchange (PKCE) (RFC 7636) is mandatory for application SSO.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -695,7 +695,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The list of logout callback URIs supported by the application.</p>
+             * <p>The list of logout callback URLs supported by the application.</p>
              */
             public Builder postLogoutRedirectUris(java.util.List<String> postLogoutRedirectUris) {
                 this.postLogoutRedirectUris = postLogoutRedirectUris;
@@ -711,7 +711,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The validity period of the issued refresh token. Unit: seconds. Default value: 86400 (1 day).</p>
+             * <p>The validity period of the issued refresh token, in seconds. Default value: 86400 seconds (1 day).</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -722,10 +722,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The response types supported by the application when OidcSsoConfig.GrantTypes includes the implicit grant type.</p>
+             * <p>The response types supported by the application when OidcSsoConfig.GrantTypes includes the implicit mode.</p>
              * 
              * <strong>example:</strong>
-             * <p>token id_token</p>
+             * <p>[&quot;token id_token&quot;]</p>
              */
             public Builder responseTypes(java.util.List<String> responseTypes) {
                 this.responseTypes = responseTypes;
@@ -733,7 +733,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The custom expression for the sub claim value returned in the ID token.</p>
+             * <p>The custom value expression for the sub claim returned in the ID token.</p>
              * 
              * <strong>example:</strong>
              * <p>user.userid</p>
@@ -1123,10 +1123,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether the assertion needs to be signed. ResponseSigned and AssertionSigned cannot both be set to false.</p>
+             * <p>Specifies whether the assertion must be signed. ResponseSigned and AssertionSigned cannot both be set to false. Valid values:</p>
              * <ul>
-             * <li>true: The assertion is signed.</li>
-             * <li>false: The assertion is not signed.</li>
+             * <li>true: The assertion must be signed.</li>
+             * <li>false: The assertion does not need to be signed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1138,7 +1138,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The additional user attribute configurations included in the SAML assertion.</p>
+             * <p>The configuration of additional user attributes included in the SAML assertion.</p>
              */
             public Builder attributeStatements(java.util.List<AttributeStatements> attributeStatements) {
                 this.attributeStatements = attributeStatements;
@@ -1146,7 +1146,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The default RelayState value. When a single sign-on (SSO) logon request is initiated by EIAM, the SAML Response provided by EIAM specifies the RelayState as this value.</p>
+             * <p>The default RelayState value. When a user\&quot;s single sign-on (SSO) logon request is initiated by EIAM, the SAML response provided by EIAM specifies the RelayState as this value.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></p>
@@ -1157,7 +1157,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The Entity ID that represents the IdP identity in the SAML protocol. URL format and URN format are supported.</p>
+             * <p>The entity ID that represents the identity provider (IdP) in the SAML protocol. Both URL and URN formats are supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/">https://example.com/</a></p>
@@ -1168,7 +1168,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The NameID format defined by the SAML protocol standard. Valid values:</p>
+             * <p>The standard NameID format for the SAML protocol. Valid values:</p>
              * <ul>
              * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: Unspecified. The application determines how to parse the NameID.</li>
              * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: Email address format.</li>
@@ -1185,7 +1185,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The expression used to generate the actual NameID value in the SAML protocol.</p>
+             * <p>The expression used to generate the actual value of the NameID for the SAML protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>user.email</p>
@@ -1204,7 +1204,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether SSO AuthnRequest signature verification is enabled. Default value: false. If set to true, spSigningCertificates must be configured (the array must not be empty).</p>
+             * <p>Specifies whether to enable signature verification for SSO AuthnRequest. Default value: false. If this parameter is set to true, spSigningCertificates must be configured and the array cannot be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1215,10 +1215,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the response needs to be signed. ResponseSigned and AssertionSigned cannot both be set to false.</p>
+             * <p>Specifies whether the response must be signed. ResponseSigned and AssertionSigned cannot both be set to false. Valid values:</p>
              * <ul>
-             * <li>true: The response is signed.</li>
-             * <li>false: The response is not signed.</li>
+             * <li>true: The response must be signed.</li>
+             * <li>false: The response does not need to be signed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1241,7 +1241,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The SAML EntityId of the application (SP).</p>
+             * <p>The SAML entity ID of the application (SP).</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:cloudcomputing</p>
@@ -1252,10 +1252,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The array of SP signature verification certificates in PEM format. A maximum of two certificates are allowed and are shared by SSO and SLO. Each certificate is validated for format and validity upon write. Requests with more than two certificates are rejected.</p>
+             * <p>The array of SP signature verification certificates in PEM format. A maximum of two certificates are allowed, and they are shared by SSO and single logout (SLO). The format and validity of each certificate are verified during writing. If more than two certificates are provided, the request is rejected.</p>
              * 
              * <strong>example:</strong>
-             * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX -----END CERTIFICATE-----</p>
+             * <p>[&quot;-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX -----END CERTIFICATE-----&quot;]</p>
              */
             public Builder spSigningCertificates(java.util.List<String> spSigningCertificates) {
                 this.spSigningCertificates = spSigningCertificates;
@@ -1263,7 +1263,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The URL on the SP side that receives the LogoutResponse. This parameter is optional.</p>
+             * <p>The callback URL used by the SP to receive the LogoutResponse. This parameter is optional.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/api/slo/response">https://example.com/api/slo/response</a></p>
@@ -1274,7 +1274,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The SAML assertion consumer service URL of the application (SP).</p>
+             * <p>The SAML assertion consumer URL of the application (SP).</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://signin.aliyun.com/saml-role/sso">https://signin.aliyun.com/saml-role/sso</a></p>

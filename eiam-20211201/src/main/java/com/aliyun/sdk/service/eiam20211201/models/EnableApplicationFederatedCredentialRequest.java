@@ -113,7 +113,7 @@ public class EnableApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application federated credential.</p>
+         * <p>The application federated credential ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class EnableApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class EnableApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

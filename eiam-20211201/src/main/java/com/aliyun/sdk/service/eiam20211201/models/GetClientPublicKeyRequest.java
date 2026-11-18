@@ -126,7 +126,7 @@ public class GetClientPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application ClientPublicKey.</p>
+         * <p>The ID of the client public key for the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

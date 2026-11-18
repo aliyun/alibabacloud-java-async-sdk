@@ -193,10 +193,10 @@ public class ListOrganizationalUnitsForApplicationRequest extends Request {
         }
 
         /**
-         * <p>The organizational unit IDs. A maximum of 100 organizational unit IDs can be specified in a single operation.</p>
+         * <p>The organizational unit IDs. You can specify up to 100 organizational unit IDs in a single request.</p>
          * 
          * <strong>example:</strong>
-         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
+         * <p>[&quot;ou_wovwffm62xifdziem7an7xxxxx&quot;]</p>
          */
         public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);

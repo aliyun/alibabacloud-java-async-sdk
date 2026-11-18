@@ -230,7 +230,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>My conditional access policy</p>
+         * <p>我的条件访问策略</p>
          */
         public Builder conditionalAccessPolicyName(String conditionalAccessPolicyName) {
             this.putQueryParameter("ConditionalAccessPolicyName", conditionalAccessPolicyName);
@@ -288,7 +288,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
          * <p>Conditional access policy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test description</p>
+         * <p>测试描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

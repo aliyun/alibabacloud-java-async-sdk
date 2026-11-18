@@ -128,7 +128,7 @@ public class RevokeResourceServerScopesFromUserRequest extends Request {
         }
 
         /**
-         * <p>The application ID of the ResourceServer.</p>
+         * <p>The application ID of the resource server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class RevokeResourceServerScopesFromUserRequest extends Request {
         }
 
         /**
-         * <p>The list of Scope permission IDs under the ResourceServer.</p>
+         * <p>The IDs of the scope permissions under the resource server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -115,7 +115,7 @@ public class DeleteTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>The idempotence token.</p>
+         * <p>The client token.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>

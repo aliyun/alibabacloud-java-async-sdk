@@ -67,7 +67,7 @@ public class CreateInstanceTrialLicenseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The unique identifier of the License.</p>
+         * <p>The unique identifier of the license.</p>
          * 
          * <strong>example:</strong>
          * <p>license_463hfmewi2njxxxx</p>

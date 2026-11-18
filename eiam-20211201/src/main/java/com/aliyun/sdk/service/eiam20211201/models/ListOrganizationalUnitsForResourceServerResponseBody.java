@@ -106,7 +106,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         } 
 
         /**
-         * <p>The number of rows per page in a paged query.</p>
+         * <p>The number of entries to return per page for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The query token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -128,7 +128,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         }
 
         /**
-         * <p>The list of organizational units.</p>
+         * <p>The list of organizations.</p>
          */
         public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -216,7 +216,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             } 
 
             /**
-             * <p>The scope permission ID.</p>
+             * <p>The scope ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -227,7 +227,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             }
 
             /**
-             * <p>The scope permission name.</p>
+             * <p>The scope name.</p>
              * 
              * <strong>example:</strong>
              * <p>Read User Info</p>
@@ -332,7 +332,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             }
 
             /**
-             * <p>The list of scope permissions.</p>
+             * <p>The list of scopes.</p>
              */
             public Builder resourceServerScopes(java.util.List<ResourceServerScopes> resourceServerScopes) {
                 this.resourceServerScopes = resourceServerScopes;

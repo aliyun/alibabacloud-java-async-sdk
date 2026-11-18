@@ -170,7 +170,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The status of forced password update. Valid values:</p>
+             * <p>The password forced update status. Valid values:</p>
              * <ul>
              * <li>enabled: Enabled.</li>
              * <li>disabled: Disabled.</li>
@@ -188,7 +188,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
              * <p>The list of password initialization notification channels.</p>
              * 
              * <strong>example:</strong>
-             * <p>email</p>
+             * <p>[&quot;email&quot;]</p>
              */
             public Builder passwordInitializationNotificationChannels(java.util.List<String> passwordInitializationNotificationChannels) {
                 this.passwordInitializationNotificationChannels = passwordInitializationNotificationChannels;
@@ -196,7 +196,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>The status of the password initialization configuration. Valid values:</p>
+             * <p>The password initialization configuration status. Valid values:</p>
              * <ul>
              * <li>enabled: Enabled.</li>
              * <li>disabled: Disabled.</li>

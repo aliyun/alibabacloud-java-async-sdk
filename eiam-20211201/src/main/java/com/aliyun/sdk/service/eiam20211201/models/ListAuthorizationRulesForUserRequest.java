@@ -139,11 +139,11 @@ public class ListAuthorizationRulesForUserRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of records per page.</p>
          * <ul>
-         * <li><p>Default value: 20.</p>
+         * <li><p>If this parameter is not specified, the default value is 20.</p>
          * </li>
-         * <li><p>Maximum value: 100.</p>
+         * <li><p>The maximum value is 100.</p>
          * </li>
          * </ul>
          * 
@@ -157,9 +157,9 @@ public class ListAuthorizationRulesForUserRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that indicates the start position of the next page.</p>
+         * <p>The token that specifies the starting position of the next page.</p>
          * <ul>
-         * <li>If this parameter is not specified, the query starts from the first page.</li>
+         * <li>If this parameter is not specified, the query starts from the first page by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>

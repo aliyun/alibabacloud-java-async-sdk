@@ -113,7 +113,7 @@ public class DeleteCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The cloud account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class DeleteCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud role.</p>
+         * <p>The cloud role ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

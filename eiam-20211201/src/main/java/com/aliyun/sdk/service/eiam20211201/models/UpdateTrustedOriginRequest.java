@@ -172,7 +172,7 @@ public class UpdateTrustedOriginRequest extends Request {
          * <p>The trusted origin name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Qoder Production Console</p>
+         * <p>Qoder production console</p>
          */
         public Builder trustOriginName(String trustOriginName) {
             this.putQueryParameter("TrustOriginName", trustOriginName);
@@ -197,7 +197,7 @@ public class UpdateTrustedOriginRequest extends Request {
          * <p>The trusted origin scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>iframe_embed</p>
+         * <p>[&quot;iframe_embed&quot;]</p>
          */
         public Builder trustedOriginScene(java.util.List<String> trustedOriginScene) {
             this.putQueryParameter("TrustedOriginScene", trustedOriginScene);

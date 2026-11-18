@@ -155,7 +155,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The ResourceServer application ID.</p>
+         * <p>The ID of the resource server application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -202,7 +202,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * <p>The token for the next page. Set the value to the NextToken value returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -214,7 +214,7 @@ public class ListUsersForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>The permission ID.</p>
+         * <p>The scope ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -296,7 +296,7 @@ public class ListUsersForResourceServerRequest extends Request {
             }
 
             /**
-             * <p>The list of filter condition values.</p>
+             * <p>The list of filter values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

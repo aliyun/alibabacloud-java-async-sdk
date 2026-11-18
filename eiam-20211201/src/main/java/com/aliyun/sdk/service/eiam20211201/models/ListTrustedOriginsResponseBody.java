@@ -106,7 +106,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of results per page that takes effect for this request.</p>
+         * <p>The actual maximum number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token for the next page.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>NT_example</p>
@@ -139,7 +139,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -294,7 +294,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time. The time is in RFC 3339 format and in the UTC time zone.</p>
+             * <p>The creation time. The time follows the RFC 3339 standard and is in the UTC time zone.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
              * <p>The trusted origin name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Qoder Production Console</p>
+             * <p>Qoder production console</p>
              */
             public Builder trustOriginName(String trustOriginName) {
                 this.trustOriginName = trustOriginName;
@@ -369,7 +369,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The time is in RFC 3339 format and in the UTC time zone.</p>
+             * <p>The update time. The time follows the RFC 3339 standard and is in the UTC time zone.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>

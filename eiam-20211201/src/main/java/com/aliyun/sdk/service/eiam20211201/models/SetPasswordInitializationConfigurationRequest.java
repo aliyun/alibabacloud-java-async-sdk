@@ -175,7 +175,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
          * <p>The list of password initialization notification channels.</p>
          * 
          * <strong>example:</strong>
-         * <p>email</p>
+         * <p>[&quot;email&quot;]</p>
          */
         public Builder passwordInitializationNotificationChannels(java.util.List<String> passwordInitializationNotificationChannels) {
             this.putQueryParameter("PasswordInitializationNotificationChannels", passwordInitializationNotificationChannels);

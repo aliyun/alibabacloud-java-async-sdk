@@ -143,7 +143,7 @@ public class RemoveUsersFromGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>[ou_001]</p>
+         * <p>[&quot;ou_001&quot;]</p>
          */
         public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);

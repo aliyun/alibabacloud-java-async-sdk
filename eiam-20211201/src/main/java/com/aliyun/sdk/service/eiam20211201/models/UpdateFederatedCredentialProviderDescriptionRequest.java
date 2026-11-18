@@ -125,7 +125,7 @@ public class UpdateFederatedCredentialProviderDescriptionRequest extends Request
         }
 
         /**
-         * <p>The federated trust source ID.</p>
+         * <p>The ID of the federated trust source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

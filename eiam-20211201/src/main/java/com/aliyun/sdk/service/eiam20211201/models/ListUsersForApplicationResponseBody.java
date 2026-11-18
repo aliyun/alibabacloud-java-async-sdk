@@ -102,7 +102,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of account IDs.</p>
+         * <p>The list of users.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -233,7 +233,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

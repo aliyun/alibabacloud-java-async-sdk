@@ -140,7 +140,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>List of AAGUIDs and their names.</p>
+         * <p>The list of AAGUIDs and their names.</p>
          */
         public Builder aaguids(java.util.List<Aaguids> aaguids) {
             this.putQueryParameter("Aaguids", aaguids);
@@ -149,7 +149,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Enable AAGUID verification.</p>
+         * <p>Specifies whether AAGUID verification is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -161,7 +161,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Enable WebAuthn authenticator MDS verification.</p>
+         * <p>Specifies whether MDS verification is enabled for WebAuthn authenticators.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -173,7 +173,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Allow user self-registration of WebAuthn authenticators.</p>
+         * <p>Specifies whether users are allowed to self-register WebAuthn authenticators.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>AAGUID.</p>
+             * <p>AAGUID</p>
              * 
              * <strong>example:</strong>
              * <p>adce0002-35bc-c60a-648b-0b25f1f05503</p>
@@ -269,7 +269,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>AAGUID name.</p>
+             * <p>The AAGUID name.</p>
              * 
              * <strong>example:</strong>
              * <p>Touch ID</p>

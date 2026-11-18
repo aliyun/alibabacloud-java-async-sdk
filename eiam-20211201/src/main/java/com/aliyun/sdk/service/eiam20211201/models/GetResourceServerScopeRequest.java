@@ -139,7 +139,7 @@ public class GetResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>The scope permission ID.</p>
+         * <p>The ID of the scope permission.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

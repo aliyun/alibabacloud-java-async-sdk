@@ -140,10 +140,10 @@ public class ListApplicationsForGroupRequest extends Request {
         }
 
         /**
-         * <p>Application ID list. A maximum of 100 application IDs are supported.</p>
+         * <p>The list of application IDs. You can specify up to 100 application IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
+         * <p>[&quot;app_mkv7rgt4d7i4u7zqtzev2mxxxx&quot;]</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -152,7 +152,7 @@ public class ListApplicationsForGroupRequest extends Request {
         }
 
         /**
-         * <p>Group ID.</p>
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class ListApplicationsForGroupRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class ListApplicationsForGroupRequest extends Request {
         }
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,7 +190,7 @@ public class ListApplicationsForGroupRequest extends Request {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

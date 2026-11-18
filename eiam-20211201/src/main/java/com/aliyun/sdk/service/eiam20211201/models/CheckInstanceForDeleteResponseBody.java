@@ -67,7 +67,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The check result.</p>
+         * <p>The returned result.</p>
          */
         public Builder checkInstanceResult(CheckInstanceResult checkInstanceResult) {
             this.checkInstanceResult = checkInstanceResult;
@@ -157,7 +157,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The console URL that provides helpful information.</p>
+             * <p>The helpful console URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://console-rpa.aliyun.com/">https://console-rpa.aliyun.com/</a></p>
@@ -179,7 +179,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The restriction reason.</p>
+             * <p>The reason for the restriction.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_product_dependency</p>
@@ -260,7 +260,7 @@ public class CheckInstanceForDeleteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The restriction information for instances that cannot be deleted.</p>
+             * <p>The restriction information that prevents deletion.</p>
              */
             public Builder restrictScenarios(java.util.List<RestrictScenarios> restrictScenarios) {
                 this.restrictScenarios = restrictScenarios;

@@ -671,7 +671,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permissions on the user portal side.</p>
+             * <p>The user portal permissions.</p>
              * 
              * <strong>example:</strong>
              * <p>read_only</p>

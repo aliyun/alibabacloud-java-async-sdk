@@ -98,7 +98,7 @@ public class UnbindTotpAuthenticatorRequest extends Request {
         }
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class UnbindTotpAuthenticatorRequest extends Request {
         }
 
         /**
-         * <p>User ID</p>
+         * <p>UserID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

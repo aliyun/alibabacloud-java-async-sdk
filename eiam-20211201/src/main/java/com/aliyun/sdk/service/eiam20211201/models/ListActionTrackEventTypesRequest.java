@@ -138,7 +138,7 @@ public class ListActionTrackEventTypesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The maximum number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -150,7 +150,7 @@ public class ListActionTrackEventTypesRequest extends Request {
         }
 
         /**
-         * <p>You can use this parameter to specify the query token.</p>
+         * <p>The next token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -162,7 +162,7 @@ public class ListActionTrackEventTypesRequest extends Request {
         }
 
         /**
-         * <p>The token that is used to retrieve the previous page of results.</p>
+         * <p>The previous token.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>

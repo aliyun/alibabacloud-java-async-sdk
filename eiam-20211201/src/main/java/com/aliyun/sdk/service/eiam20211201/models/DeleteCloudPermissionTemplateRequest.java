@@ -113,7 +113,7 @@ public class DeleteCloudPermissionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The cloud account ID.</p>
+         * <p>The ID of the cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IdP status check job information.</p>
+         * <p>The IdP status check information.</p>
          */
         public Builder identityProviderStatusCheckJob(IdentityProviderStatusCheckJob identityProviderStatusCheckJob) {
             this.identityProviderStatusCheckJob = identityProviderStatusCheckJob;
@@ -275,7 +275,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error reason.</p>
+             * <p>The error cause.</p>
              */
             public Builder errorReason(ErrorReason errorReason) {
                 this.errorReason = errorReason;
@@ -453,7 +453,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The job check result.</p>
+             * <p>The check result of the job.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -508,7 +508,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status check sub-item task result information.</p>
+             * <p>The status check subkey node task result information.</p>
              */
             public Builder jobCheckItems(java.util.List<JobCheckItems> jobCheckItems) {
                 this.jobCheckItems = jobCheckItems;
@@ -527,7 +527,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job check status.</p>
+             * <p>The check status of the job.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>

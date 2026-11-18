@@ -251,7 +251,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page in a paged query.</p>
+         * <p>The maximum number of entries to return per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -263,7 +263,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token (NextToken) used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</p>
+         * <p>The pagination token for the next page. Set this parameter to the value of the NextToken parameter returned from the previous API call. Leave this parameter empty for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -275,7 +275,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the previous page. Set this parameter to the PreviousToken value returned in the previous API call.</p>
+         * <p>The pagination token for the previous page. Set this parameter to the value of the PreviousToken parameter returned from the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>
@@ -296,10 +296,10 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>The scope permission name.</p>
+         * <p>The name of the scope permission.</p>
          * 
          * <strong>example:</strong>
-         * <p>读取全部用户</p>
+         * <p>Read all users</p>
          */
         public Builder resourceServerScopeName(String resourceServerScopeName) {
             this.putQueryParameter("ResourceServerScopeName", resourceServerScopeName);
@@ -308,7 +308,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>The scope permission type.</p>
+         * <p>The type of the scope permission.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:resourceserver:scope:delegated</p>
@@ -320,7 +320,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>The scope permission value.</p>
+         * <p>The value of the scope permission.</p>
          * 
          * <strong>example:</strong>
          * <p>User:Write:ALL</p>

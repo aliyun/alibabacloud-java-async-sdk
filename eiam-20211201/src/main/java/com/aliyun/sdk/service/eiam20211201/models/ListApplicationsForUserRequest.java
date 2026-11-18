@@ -155,10 +155,10 @@ public class ListApplicationsForUserRequest extends Request {
         }
 
         /**
-         * <p>The list of application IDs. You can specify up to 100 application IDs in a single request.</p>
+         * <p>The list of application IDs. A single request supports up to 100 application IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
+         * <p>[&quot;app_mkv7rgt4d7i4u7zqtzev2mxxxx&quot;]</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -192,7 +192,7 @@ public class ListApplicationsForUserRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -206,10 +206,8 @@ public class ListApplicationsForUserRequest extends Request {
         /**
          * <p>The query mode. Default value: <strong>OnlyDirect</strong>. Valid values:</p>
          * <ul>
-         * <li><p>OnlyDirect: Queries only the direct permissions of the account. Direct permissions are granted for applications that are directly assigned to the account.</p>
-         * </li>
-         * <li><p>IncludeInherit: Queries both the direct and inherited permissions of the account. Inherited permissions are granted from the parent organizations or groups to which the account belongs.</p>
-         * </li>
+         * <li>OnlyDirect: Queries only the direct permissions of the account, which are the applications directly assigned to the account.</li>
+         * <li>IncludeInherit: Queries both the direct permissions and inherited permissions of the account. Inherited permissions refer to the permissions that the account inherits from its parent organizations or the groups to which it belongs.</li>
          * </ul>
          * 
          * <strong>example:</strong>

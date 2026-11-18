@@ -220,7 +220,7 @@ public class CreateCloudPermissionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>Ensures the idempotence of the request. You can generate a client token on your client to ensure that the value is unique across different requests. The client token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>
@@ -267,12 +267,7 @@ public class CreateCloudPermissionTemplateRequest extends Request {
         }
 
         /**
-         * <p>The usage type of the permission template. Valid values:</p>
-         * <ul>
-         * <li>user: Privilege escalation for human users.</li>
-         * <li>application: Privilege escalation for M2M applications.
-         * Default value: user.</li>
-         * </ul>
+         * <p>The usage type of the permission template. Valid values: user (privilege escalation for human users) and application (privilege escalation for M2M applications). Default value: user.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -397,7 +392,7 @@ public class CreateCloudPermissionTemplateRequest extends Request {
              * <p>The list of group IDs.</p>
              * 
              * <strong>example:</strong>
-             * <p>group_d6sbsusdfa4h66ec3il7yxxxx</p>
+             * <p>[&quot;group_d6sbsusdfa4h66ec3il7yxxxx&quot;]</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -408,7 +403,7 @@ public class CreateCloudPermissionTemplateRequest extends Request {
              * <p>The list of organizational unit IDs.</p>
              * 
              * <strong>example:</strong>
-             * <p>ou_d6sbsuudfgf4h66ec3il7yxxxx</p>
+             * <p>[&quot;ou_d6sbsuudfgf4h66ec3il7yxxxx&quot;]</p>
              */
             public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
                 this.organizationalUnitIds = organizationalUnitIds;
@@ -430,7 +425,7 @@ public class CreateCloudPermissionTemplateRequest extends Request {
              * <p>The list of user IDs.</p>
              * 
              * <strong>example:</strong>
-             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
+             * <p>[&quot;user_d6sbsuumeta4h66ec3il7yxxxx&quot;]</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
