@@ -379,6 +379,81 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
      *
      * <p>ReadOutboundTaskCallListResponseBody</p>
      */
+    public static class StructuredLabelTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private java.util.List<String> value;
+
+        private StructuredLabelTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StructuredLabelTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public java.util.List<String> getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructuredLabelTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(java.util.List<String> value) {
+                this.value = value;
+                return this;
+            }
+
+            public StructuredLabelTags build() {
+                return new StructuredLabelTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ReadOutboundTaskCallListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ReadOutboundTaskCallListResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillingDuration")
         private Long billingDuration;
@@ -425,6 +500,9 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
+        @com.aliyun.core.annotation.NameInMap("HangupDirection")
+        private String hangupDirection;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
@@ -451,6 +529,9 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StructuredLabelTags")
+        private java.util.List<StructuredLabelTags> structuredLabelTags;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -483,6 +564,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
             this.extInfo = builder.extInfo;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.hangupDirection = builder.hangupDirection;
             this.id = builder.id;
             this.instanceId = builder.instanceId;
             this.labelTags = builder.labelTags;
@@ -492,6 +574,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
             this.retryCount = builder.retryCount;
             this.sceneId = builder.sceneId;
             this.status = builder.status;
+            this.structuredLabelTags = builder.structuredLabelTags;
             this.taskId = builder.taskId;
             this.tenantId = builder.tenantId;
             this.ttsVoiceCode = builder.ttsVoiceCode;
@@ -613,6 +696,13 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         }
 
         /**
+         * @return hangupDirection
+         */
+        public String getHangupDirection() {
+            return this.hangupDirection;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -676,6 +766,13 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         }
 
         /**
+         * @return structuredLabelTags
+         */
+        public java.util.List<StructuredLabelTags> getStructuredLabelTags() {
+            return this.structuredLabelTags;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -726,6 +823,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
             private String extInfo; 
             private String gmtCreate; 
             private String gmtModified; 
+            private String hangupDirection; 
             private Long id; 
             private String instanceId; 
             private java.util.List<String> labelTags; 
@@ -735,6 +833,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
             private Integer retryCount; 
             private String sceneId; 
             private String status; 
+            private java.util.List<StructuredLabelTags> structuredLabelTags; 
             private String taskId; 
             private String tenantId; 
             private String ttsVoiceCode; 
@@ -760,6 +859,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
                 this.extInfo = model.extInfo;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
+                this.hangupDirection = model.hangupDirection;
                 this.id = model.id;
                 this.instanceId = model.instanceId;
                 this.labelTags = model.labelTags;
@@ -769,6 +869,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
                 this.retryCount = model.retryCount;
                 this.sceneId = model.sceneId;
                 this.status = model.status;
+                this.structuredLabelTags = model.structuredLabelTags;
                 this.taskId = model.taskId;
                 this.tenantId = model.tenantId;
                 this.ttsVoiceCode = model.ttsVoiceCode;
@@ -897,6 +998,14 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
             }
 
             /**
+             * HangupDirection.
+             */
+            public Builder hangupDirection(String hangupDirection) {
+                this.hangupDirection = hangupDirection;
+                return this;
+            }
+
+            /**
              * Id.
              */
             public Builder id(Long id) {
@@ -965,6 +1074,14 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StructuredLabelTags.
+             */
+            public Builder structuredLabelTags(java.util.List<StructuredLabelTags> structuredLabelTags) {
+                this.structuredLabelTags = structuredLabelTags;
                 return this;
             }
 

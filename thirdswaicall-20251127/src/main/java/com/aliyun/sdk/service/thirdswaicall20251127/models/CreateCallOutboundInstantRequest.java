@@ -30,6 +30,10 @@ public class CreateCallOutboundInstantRequest extends Request {
     private String callerUacAccountId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentWorkspaceCode")
+    private String currentWorkspaceCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CurrentWorkspaceId")
     private String currentWorkspaceId;
 
@@ -58,6 +62,7 @@ public class CreateCallOutboundInstantRequest extends Request {
         this.calledNumber = builder.calledNumber;
         this.callerNumber = builder.callerNumber;
         this.callerUacAccountId = builder.callerUacAccountId;
+        this.currentWorkspaceCode = builder.currentWorkspaceCode;
         this.currentWorkspaceId = builder.currentWorkspaceId;
         this.customerLineCode = builder.customerLineCode;
         this.customerName = builder.customerName;
@@ -98,6 +103,13 @@ public class CreateCallOutboundInstantRequest extends Request {
      */
     public String getCallerUacAccountId() {
         return this.callerUacAccountId;
+    }
+
+    /**
+     * @return currentWorkspaceCode
+     */
+    public String getCurrentWorkspaceCode() {
+        return this.currentWorkspaceCode;
     }
 
     /**
@@ -146,6 +158,7 @@ public class CreateCallOutboundInstantRequest extends Request {
         private String calledNumber; 
         private String callerNumber; 
         private String callerUacAccountId; 
+        private String currentWorkspaceCode; 
         private String currentWorkspaceId; 
         private String customerLineCode; 
         private String customerName; 
@@ -162,6 +175,7 @@ public class CreateCallOutboundInstantRequest extends Request {
             this.calledNumber = request.calledNumber;
             this.callerNumber = request.callerNumber;
             this.callerUacAccountId = request.callerUacAccountId;
+            this.currentWorkspaceCode = request.currentWorkspaceCode;
             this.currentWorkspaceId = request.currentWorkspaceId;
             this.customerLineCode = request.customerLineCode;
             this.customerName = request.customerName;
@@ -194,6 +208,15 @@ public class CreateCallOutboundInstantRequest extends Request {
         public Builder callerUacAccountId(String callerUacAccountId) {
             this.putBodyParameter("CallerUacAccountId", callerUacAccountId);
             this.callerUacAccountId = callerUacAccountId;
+            return this;
+        }
+
+        /**
+         * CurrentWorkspaceCode.
+         */
+        public Builder currentWorkspaceCode(String currentWorkspaceCode) {
+            this.putBodyParameter("CurrentWorkspaceCode", currentWorkspaceCode);
+            this.currentWorkspaceCode = currentWorkspaceCode;
             return this;
         }
 

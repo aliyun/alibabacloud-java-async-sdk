@@ -26,6 +26,10 @@ public class QueryTaskConcurrencyRequest extends Request {
     private String callerUacAccountId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentWorkspaceCode")
+    private String currentWorkspaceCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CurrentWorkspaceId")
     private String currentWorkspaceId;
 
@@ -37,6 +41,7 @@ public class QueryTaskConcurrencyRequest extends Request {
         super(builder);
         this.applicationCode = builder.applicationCode;
         this.callerUacAccountId = builder.callerUacAccountId;
+        this.currentWorkspaceCode = builder.currentWorkspaceCode;
         this.currentWorkspaceId = builder.currentWorkspaceId;
         this.taskId = builder.taskId;
     }
@@ -69,6 +74,13 @@ public class QueryTaskConcurrencyRequest extends Request {
     }
 
     /**
+     * @return currentWorkspaceCode
+     */
+    public String getCurrentWorkspaceCode() {
+        return this.currentWorkspaceCode;
+    }
+
+    /**
      * @return currentWorkspaceId
      */
     public String getCurrentWorkspaceId() {
@@ -85,6 +97,7 @@ public class QueryTaskConcurrencyRequest extends Request {
     public static final class Builder extends Request.Builder<QueryTaskConcurrencyRequest, Builder> {
         private String applicationCode; 
         private String callerUacAccountId; 
+        private String currentWorkspaceCode; 
         private String currentWorkspaceId; 
         private Long taskId; 
 
@@ -96,6 +109,7 @@ public class QueryTaskConcurrencyRequest extends Request {
             super(request);
             this.applicationCode = request.applicationCode;
             this.callerUacAccountId = request.callerUacAccountId;
+            this.currentWorkspaceCode = request.currentWorkspaceCode;
             this.currentWorkspaceId = request.currentWorkspaceId;
             this.taskId = request.taskId;
         } 
@@ -115,6 +129,15 @@ public class QueryTaskConcurrencyRequest extends Request {
         public Builder callerUacAccountId(String callerUacAccountId) {
             this.putBodyParameter("CallerUacAccountId", callerUacAccountId);
             this.callerUacAccountId = callerUacAccountId;
+            return this;
+        }
+
+        /**
+         * CurrentWorkspaceCode.
+         */
+        public Builder currentWorkspaceCode(String currentWorkspaceCode) {
+            this.putBodyParameter("CurrentWorkspaceCode", currentWorkspaceCode);
+            this.currentWorkspaceCode = currentWorkspaceCode;
             return this;
         }
 

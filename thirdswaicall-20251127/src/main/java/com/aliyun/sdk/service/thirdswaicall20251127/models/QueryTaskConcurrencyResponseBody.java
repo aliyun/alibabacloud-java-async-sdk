@@ -180,10 +180,7 @@ public class QueryTaskConcurrencyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Trace ID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>F47D4976-FC5A-5687-A890-B7923D3B429B</p>
+         * TraceId.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

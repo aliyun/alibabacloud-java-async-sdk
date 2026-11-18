@@ -42,6 +42,10 @@ public class ReadOutboundTaskCallListRequest extends Request {
     private Integer current;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentWorkspaceCode")
+    private String currentWorkspaceCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CurrentWorkspaceId")
     private String currentWorkspaceId;
 
@@ -74,6 +78,10 @@ public class ReadOutboundTaskCallListRequest extends Request {
     private Integer size;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StructuredLabelTags")
+    private java.util.List<StructuredLabelTags> structuredLabelTags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
@@ -89,6 +97,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
         this.callStartTimeEnd = builder.callStartTimeEnd;
         this.callerUacAccountId = builder.callerUacAccountId;
         this.current = builder.current;
+        this.currentWorkspaceCode = builder.currentWorkspaceCode;
         this.currentWorkspaceId = builder.currentWorkspaceId;
         this.customerNameOrPhone = builder.customerNameOrPhone;
         this.displayStatusList = builder.displayStatusList;
@@ -97,6 +106,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.size = builder.size;
+        this.structuredLabelTags = builder.structuredLabelTags;
         this.taskId = builder.taskId;
         this.userId = builder.userId;
     }
@@ -157,6 +167,13 @@ public class ReadOutboundTaskCallListRequest extends Request {
     }
 
     /**
+     * @return currentWorkspaceCode
+     */
+    public String getCurrentWorkspaceCode() {
+        return this.currentWorkspaceCode;
+    }
+
+    /**
      * @return currentWorkspaceId
      */
     public String getCurrentWorkspaceId() {
@@ -213,6 +230,13 @@ public class ReadOutboundTaskCallListRequest extends Request {
     }
 
     /**
+     * @return structuredLabelTags
+     */
+    public java.util.List<StructuredLabelTags> getStructuredLabelTags() {
+        return this.structuredLabelTags;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -233,6 +257,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
         private Long callStartTimeEnd; 
         private String callerUacAccountId; 
         private Integer current; 
+        private String currentWorkspaceCode; 
         private String currentWorkspaceId; 
         private String customerNameOrPhone; 
         private java.util.List<String> displayStatusList; 
@@ -241,6 +266,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private Integer size; 
+        private java.util.List<StructuredLabelTags> structuredLabelTags; 
         private String taskId; 
         private String userId; 
 
@@ -256,6 +282,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
             this.callStartTimeEnd = request.callStartTimeEnd;
             this.callerUacAccountId = request.callerUacAccountId;
             this.current = request.current;
+            this.currentWorkspaceCode = request.currentWorkspaceCode;
             this.currentWorkspaceId = request.currentWorkspaceId;
             this.customerNameOrPhone = request.customerNameOrPhone;
             this.displayStatusList = request.displayStatusList;
@@ -264,6 +291,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.size = request.size;
+            this.structuredLabelTags = request.structuredLabelTags;
             this.taskId = request.taskId;
             this.userId = request.userId;
         } 
@@ -319,6 +347,15 @@ public class ReadOutboundTaskCallListRequest extends Request {
         public Builder current(Integer current) {
             this.putBodyParameter("Current", current);
             this.current = current;
+            return this;
+        }
+
+        /**
+         * CurrentWorkspaceCode.
+         */
+        public Builder currentWorkspaceCode(String currentWorkspaceCode) {
+            this.putBodyParameter("CurrentWorkspaceCode", currentWorkspaceCode);
+            this.currentWorkspaceCode = currentWorkspaceCode;
             return this;
         }
 
@@ -380,10 +417,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
         }
 
         /**
-         * <p>nextToken</p>
-         * 
-         * <strong>example:</strong>
-         * <p>51CC272E-D879-1B23-B98E-FCFB072D362B</p>
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -397,6 +431,16 @@ public class ReadOutboundTaskCallListRequest extends Request {
         public Builder size(Integer size) {
             this.putBodyParameter("Size", size);
             this.size = size;
+            return this;
+        }
+
+        /**
+         * StructuredLabelTags.
+         */
+        public Builder structuredLabelTags(java.util.List<StructuredLabelTags> structuredLabelTags) {
+            String structuredLabelTagsShrink = shrink(structuredLabelTags, "StructuredLabelTags", "json");
+            this.putBodyParameter("StructuredLabelTags", structuredLabelTagsShrink);
+            this.structuredLabelTags = structuredLabelTags;
             return this;
         }
 
@@ -425,4 +469,79 @@ public class ReadOutboundTaskCallListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ReadOutboundTaskCallListRequest} extends {@link TeaModel}
+     *
+     * <p>ReadOutboundTaskCallListRequest</p>
+     */
+    public static class StructuredLabelTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private java.util.List<String> value;
+
+        private StructuredLabelTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StructuredLabelTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public java.util.List<String> getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private java.util.List<String> value; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructuredLabelTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(java.util.List<String> value) {
+                this.value = value;
+                return this;
+            }
+
+            public StructuredLabelTags build() {
+                return new StructuredLabelTags(this);
+            } 
+
+        } 
+
+    }
 }
