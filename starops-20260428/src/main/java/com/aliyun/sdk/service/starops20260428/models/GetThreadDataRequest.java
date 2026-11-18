@@ -144,7 +144,7 @@ public class GetThreadDataRequest extends Request {
          * <p>The pagination cursor.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxxxx</p>
+         * <p>XStO-ooc0Y-_8IoNRmC-3YFgg8ITG5****tOSoocIYrcmio15m653yfgGCITgz7T</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

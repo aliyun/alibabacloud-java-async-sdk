@@ -287,7 +287,7 @@ public class ConnectorInfo extends TeaModel {
         }
 
         /**
-         * <p>The list of capabilities granted to the Connector.</p>
+         * <p>The list of capabilities granted to the connector.</p>
          * <p>This parameter is required.</p>
          */
         public Builder capabilityGrants(java.util.List<java.util.Map<String, ?>> capabilityGrants) {
@@ -352,7 +352,7 @@ public class ConnectorInfo extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the Connector is enabled.</p>
+         * <p>Specifies whether the connector is enabled.</p>
          * <p>This parameter is required.</p>
          */
         public Builder enabled(Boolean enabled) {
@@ -385,7 +385,7 @@ public class ConnectorInfo extends TeaModel {
         }
 
         /**
-         * <p>The execution policy of the Connector.</p>
+         * <p>The execution policy of the connector.</p>
          * <p>This parameter is required.</p>
          */
         public Builder policy(java.util.Map<String, ?> policy) {
@@ -418,7 +418,7 @@ public class ConnectorInfo extends TeaModel {
         }
 
         /**
-         * <p>The runtime configuration of the Connector.</p>
+         * <p>The runtime configuration of the connector.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtime(ConnectorRuntime runtime) {

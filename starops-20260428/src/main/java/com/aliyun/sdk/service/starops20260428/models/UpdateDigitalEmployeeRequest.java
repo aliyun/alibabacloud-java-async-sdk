@@ -218,7 +218,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The default rule of the digital employee.</p>
+         * <p>The default rules for the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -254,7 +254,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The knowledge base list.</p>
+         * <p>The list of knowledge bases.</p>
          */
         public Builder knowledges(Knowledges knowledges) {
             this.putBodyParameter("knowledges", knowledges);
@@ -275,7 +275,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The list of CIDRs or IP addresses that are allowed to be accessed.</p>
+         * <p>The list of allowed CIDR blocks or IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
@@ -287,7 +287,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The security policy configuration for tool calling of the digital employee.</p>
+         * <p>The security policy configuration for tool calling by the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
@@ -384,7 +384,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The knowledge base attributes.</p>
+             * <p>The attributes of the knowledge base.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -395,7 +395,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The Bailian index ID.</p>
+             * <p>The ID of the Model Studio index.</p>
              * 
              * <strong>example:</strong>
              * <p>index-xxxx</p>
@@ -417,7 +417,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The Bailian workspace ID.</p>
+             * <p>The ID of the Model Studio workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>llm-xxxx</p>
@@ -487,7 +487,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The Bailian knowledge base list.</p>
+             * <p>The list of Model Studio knowledge bases.</p>
              */
             public Builder bailian(java.util.List<Bailian> bailian) {
                 this.bailian = bailian;
@@ -495,7 +495,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The SOP knowledge base list.</p>
+             * <p>The list of SOP knowledge bases.</p>
              */
             public Builder sop(java.util.List<java.util.Map<String, ?>> sop) {
                 this.sop = sop;
@@ -575,7 +575,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The list of CIDRs or IP addresses that are allowed to be accessed.</p>
+             * <p>The list of allowed CIDR blocks or IP addresses.</p>
              */
             public Builder allowCidrs(java.util.List<String> allowCidrs) {
                 this.allowCidrs = allowCidrs;
@@ -583,7 +583,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The list of FQDNs that are allowed to be accessed.</p>
+             * <p>The list of allowed FQDNs.</p>
              */
             public Builder allowFqdns(java.util.List<String> allowFqdns) {
                 this.allowFqdns = allowFqdns;
@@ -710,12 +710,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The execution policy. Valid values:</p>
-             * <ul>
-             * <li>allow: Allowed.</li>
-             * <li>deny: Denied.</li>
-             * <li>user_ack: Requires user confirmation before execution.</li>
-             * </ul>
+             * <p>The execution policy.</p>
              * 
              * <strong>example:</strong>
              * <p>user_ack</p>
@@ -726,7 +721,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The cloud service code.</p>
+             * <p>The code of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>Cms</p>
@@ -823,7 +818,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The list of auto-approved RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</p>
+             * <p>The list of auto-approved RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -834,7 +829,7 @@ public class UpdateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The list of denied RAM actions in the format of <em>, product:ApiName, or product:Prefix</em>.</p>
+             * <p>The list of denied RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -879,12 +874,77 @@ public class UpdateDigitalEmployeeRequest extends Request {
      *
      * <p>UpdateDigitalEmployeeRequest</p>
      */
+    public static class Global extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("autoPassPolicy")
+        private java.util.List<AutoPassPolicy> autoPassPolicy;
+
+        private Global(Builder builder) {
+            this.autoPassPolicy = builder.autoPassPolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Global create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoPassPolicy
+         */
+        public java.util.List<AutoPassPolicy> getAutoPassPolicy() {
+            return this.autoPassPolicy;
+        }
+
+        public static final class Builder {
+            private java.util.List<AutoPassPolicy> autoPassPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Global model) {
+                this.autoPassPolicy = model.autoPassPolicy;
+            } 
+
+            /**
+             * <p>The array of auto-approval policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;fullCommand&quot;:&quot;starops tool list&quot;},{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;commandPrefix&quot;:[&quot;starops sls&quot;]}]</p>
+             */
+            public Builder autoPassPolicy(java.util.List<AutoPassPolicy> autoPassPolicy) {
+                this.autoPassPolicy = autoPassPolicy;
+                return this;
+            }
+
+            public Global build() {
+                return new Global(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateDigitalEmployeeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDigitalEmployeeRequest</p>
+     */
     public static class ToolPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyun")
         private Aliyun aliyun;
 
+        @com.aliyun.core.annotation.NameInMap("global")
+        private Global global;
+
+        @com.aliyun.core.annotation.NameInMap("hooks")
+        private java.util.List<Hook> hooks;
+
         private ToolPolicy(Builder builder) {
             this.aliyun = builder.aliyun;
+            this.global = builder.global;
+            this.hooks = builder.hooks;
         }
 
         public static Builder builder() {
@@ -902,14 +962,32 @@ public class UpdateDigitalEmployeeRequest extends Request {
             return this.aliyun;
         }
 
+        /**
+         * @return global
+         */
+        public Global getGlobal() {
+            return this.global;
+        }
+
+        /**
+         * @return hooks
+         */
+        public java.util.List<Hook> getHooks() {
+            return this.hooks;
+        }
+
         public static final class Builder {
             private Aliyun aliyun; 
+            private Global global; 
+            private java.util.List<Hook> hooks; 
 
             private Builder() {
             } 
 
             private Builder(ToolPolicy model) {
                 this.aliyun = model.aliyun;
+                this.global = model.global;
+                this.hooks = model.hooks;
             } 
 
             /**
@@ -920,6 +998,22 @@ public class UpdateDigitalEmployeeRequest extends Request {
              */
             public Builder aliyun(Aliyun aliyun) {
                 this.aliyun = aliyun;
+                return this;
+            }
+
+            /**
+             * <p>The global auto-approval rules for tool calling.</p>
+             */
+            public Builder global(Global global) {
+                this.global = global;
+                return this;
+            }
+
+            /**
+             * <p>The hook configuration.</p>
+             */
+            public Builder hooks(java.util.List<Hook> hooks) {
+                this.hooks = hooks;
                 return this;
             }
 

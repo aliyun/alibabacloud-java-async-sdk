@@ -295,7 +295,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation time in UTC, which follows the RFC 3339 format.</p>
+         * <p>The creation time in RFC 3339 format. The time zone is UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -370,7 +370,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -414,7 +414,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The sandbox network ACL policy configuration of the digital employee.</p>
+         * <p>The sandbox network ACL policy configuration for the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
@@ -455,7 +455,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The update time in UTC, which follows the RFC 3339 format.</p>
+         * <p>The update time in RFC 3339 format. The time zone is UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -562,7 +562,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Model Studio index.</p>
+             * <p>The index ID of Model Studio.</p>
              * 
              * <strong>example:</strong>
              * <p>index-xxxx</p>
@@ -584,7 +584,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Model Studio workspace.</p>
+             * <p>The workspace ID of Model Studio.</p>
              * 
              * <strong>example:</strong>
              * <p>llm-xxxxx</p>
@@ -793,7 +793,6 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         private String decision;
 
         @com.aliyun.core.annotation.NameInMap("product")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String product;
 
         private Statements(Builder builder) {
@@ -890,7 +889,6 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
             /**
              * <p>The code of the cloud service.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>Sls</p>
@@ -987,7 +985,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The automatic allow policy. Each entry is a RAM action string in the format of product:ApiName, product:Prefix*, or product:<em>. If an action matches an entry, the action is automatically allowed without manual confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, and Describe*) are automatically allowed. Unmatched actions require human-in-the-loop (HIL) confirmation.</p>
+             * <p>The auto-pass policy. Each entry is a RAM action string in the format of product:ApiName, product:Prefix*, or product:<em>. If an operation matches the policy, it is automatically allowed without manual confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, and Describe*) are automatically allowed. Unmatched operations require manual confirmation (HIL).</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -998,7 +996,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The explicit deny policy, which has the highest priority. Each entry is a RAM action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are actively denied. If an action matches a STAROps entry, the action is directly denied. The POP layer provides a secondary fallback check.</p>
+             * <p>The explicit deny policy, which has the highest priority. Each entry is a RAM action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are explicitly denied. If a STAROps operation matches the policy, it is directly denied. The POP side provides a secondary fallback.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -1020,7 +1018,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of Aliyun CLI tool policy statements.</p>
+             * <p>The list of policy statements for Alibaba Cloud CLI tools.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -1043,12 +1041,77 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
      *
      * <p>GetDigitalEmployeeResponseBody</p>
      */
+    public static class Global extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("autoPassPolicy")
+        private java.util.List<AutoPassPolicy> autoPassPolicy;
+
+        private Global(Builder builder) {
+            this.autoPassPolicy = builder.autoPassPolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Global create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoPassPolicy
+         */
+        public java.util.List<AutoPassPolicy> getAutoPassPolicy() {
+            return this.autoPassPolicy;
+        }
+
+        public static final class Builder {
+            private java.util.List<AutoPassPolicy> autoPassPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Global model) {
+                this.autoPassPolicy = model.autoPassPolicy;
+            } 
+
+            /**
+             * <p>The auto-pass policy for CLI commands.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;fullCommand&quot;:&quot;starops tool list&quot;},{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;commandPrefix&quot;:[&quot;starops sls&quot;]}]</p>
+             */
+            public Builder autoPassPolicy(java.util.List<AutoPassPolicy> autoPassPolicy) {
+                this.autoPassPolicy = autoPassPolicy;
+                return this;
+            }
+
+            public Global build() {
+                return new Global(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDigitalEmployeeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDigitalEmployeeResponseBody</p>
+     */
     public static class ToolPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyun")
         private Aliyun aliyun;
 
+        @com.aliyun.core.annotation.NameInMap("global")
+        private Global global;
+
+        @com.aliyun.core.annotation.NameInMap("hooks")
+        private java.util.List<Hook> hooks;
+
         private ToolPolicy(Builder builder) {
             this.aliyun = builder.aliyun;
+            this.global = builder.global;
+            this.hooks = builder.hooks;
         }
 
         public static Builder builder() {
@@ -1066,24 +1129,58 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             return this.aliyun;
         }
 
+        /**
+         * @return global
+         */
+        public Global getGlobal() {
+            return this.global;
+        }
+
+        /**
+         * @return hooks
+         */
+        public java.util.List<Hook> getHooks() {
+            return this.hooks;
+        }
+
         public static final class Builder {
             private Aliyun aliyun; 
+            private Global global; 
+            private java.util.List<Hook> hooks; 
 
             private Builder() {
             } 
 
             private Builder(ToolPolicy model) {
                 this.aliyun = model.aliyun;
+                this.global = model.global;
+                this.hooks = model.hooks;
             } 
 
             /**
-             * <p>The security policy configuration to invoke Aliyun CLI tools.</p>
+             * <p>The security policy configuration for Alibaba Cloud CLI tool invocation.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
              */
             public Builder aliyun(Aliyun aliyun) {
                 this.aliyun = aliyun;
+                return this;
+            }
+
+            /**
+             * <p>The global auto-pass configuration for the digital employee.</p>
+             */
+            public Builder global(Global global) {
+                this.global = global;
+                return this;
+            }
+
+            /**
+             * <p>The hook configuration.</p>
+             */
+            public Builder hooks(java.util.List<Hook> hooks) {
+                this.hooks = hooks;
                 return this;
             }
 

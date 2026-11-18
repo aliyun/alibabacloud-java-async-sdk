@@ -239,7 +239,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The digital employee properties.</p>
+         * <p>The attributes of the digital employee.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.putBodyParameter("attributes", attributes);
@@ -318,7 +318,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ae******ey</p>
@@ -330,7 +330,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The RAM role ARN.</p>
+         * <p>The ARN of the RAM role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +343,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>The sandbox network ACL policy configuration of the digital employee.</p>
+         * <p>The sandbox network ACL policy configuration for the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
@@ -461,7 +461,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The knowledge base properties.</p>
+             * <p>The attributes of the knowledge base.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -472,7 +472,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The Bailian index ID.</p>
+             * <p>The ID of the Bailian index.</p>
              * 
              * <strong>example:</strong>
              * <p>index-xxxx</p>
@@ -494,7 +494,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The Bailian workspace ID.</p>
+             * <p>The ID of the Bailian workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>llm-xxxxx</p>
@@ -652,7 +652,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The list of allowed CIDRs or IP addresses.</p>
+             * <p>The list of allowed CIDR blocks or IP addresses.</p>
              */
             public Builder allowCidrs(java.util.List<String> allowCidrs) {
                 this.allowCidrs = allowCidrs;
@@ -776,7 +776,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The Aliyun OpenAPI version that this statement applies to.</p>
+             * <p>The Aliyun OpenAPI version corresponding to this statement.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-30</p>
@@ -787,7 +787,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The execution policy when the API is matched.</p>
+             * <p>The execution policy after the API is matched.</p>
              * 
              * <strong>example:</strong>
              * <p>user_ack</p>
@@ -798,7 +798,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The Aliyun OpenAPI product name that this statement applies to.</p>
+             * <p>The Aliyun OpenAPI product name corresponding to this statement.</p>
              * 
              * <strong>example:</strong>
              * <p>Sls</p>
@@ -895,7 +895,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>The RAM actions that are automatically allowed. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
+             * <p>The auto-passed RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -906,7 +906,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>The RAM actions that are denied. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
+             * <p>The denied RAM actions. The format is <em>, product:ApiName, or product:Prefix</em>.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -928,7 +928,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p><strong>[Deprecated]</strong> Use denyPolicy and autoPassPolicy instead. This field is still returned during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</p>
+             * <p><strong>[Deprecated]</strong> Use denyPolicy and autoPassPolicy instead. This field is still read during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -951,12 +951,77 @@ public class CreateDigitalEmployeeRequest extends Request {
      *
      * <p>CreateDigitalEmployeeRequest</p>
      */
+    public static class Global extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("autoPassPolicy")
+        private java.util.List<AutoPassPolicy> autoPassPolicy;
+
+        private Global(Builder builder) {
+            this.autoPassPolicy = builder.autoPassPolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Global create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoPassPolicy
+         */
+        public java.util.List<AutoPassPolicy> getAutoPassPolicy() {
+            return this.autoPassPolicy;
+        }
+
+        public static final class Builder {
+            private java.util.List<AutoPassPolicy> autoPassPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Global model) {
+                this.autoPassPolicy = model.autoPassPolicy;
+            } 
+
+            /**
+             * <p>The array of auto-pass policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;fullCommand&quot;:&quot;starops tool list&quot;},{&quot;version&quot;:&quot;v1.0.0&quot;,&quot;commandPrefix&quot;:[&quot;starops sls&quot;]}]</p>
+             */
+            public Builder autoPassPolicy(java.util.List<AutoPassPolicy> autoPassPolicy) {
+                this.autoPassPolicy = autoPassPolicy;
+                return this;
+            }
+
+            public Global build() {
+                return new Global(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDigitalEmployeeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDigitalEmployeeRequest</p>
+     */
     public static class ToolPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyun")
         private Aliyun aliyun;
 
+        @com.aliyun.core.annotation.NameInMap("global")
+        private Global global;
+
+        @com.aliyun.core.annotation.NameInMap("hooks")
+        private java.util.List<Hook> hooks;
+
         private ToolPolicy(Builder builder) {
             this.aliyun = builder.aliyun;
+            this.global = builder.global;
+            this.hooks = builder.hooks;
         }
 
         public static Builder builder() {
@@ -974,14 +1039,32 @@ public class CreateDigitalEmployeeRequest extends Request {
             return this.aliyun;
         }
 
+        /**
+         * @return global
+         */
+        public Global getGlobal() {
+            return this.global;
+        }
+
+        /**
+         * @return hooks
+         */
+        public java.util.List<Hook> getHooks() {
+            return this.hooks;
+        }
+
         public static final class Builder {
             private Aliyun aliyun; 
+            private Global global; 
+            private java.util.List<Hook> hooks; 
 
             private Builder() {
             } 
 
             private Builder(ToolPolicy model) {
                 this.aliyun = model.aliyun;
+                this.global = model.global;
+                this.hooks = model.hooks;
             } 
 
             /**
@@ -992,6 +1075,22 @@ public class CreateDigitalEmployeeRequest extends Request {
              */
             public Builder aliyun(Aliyun aliyun) {
                 this.aliyun = aliyun;
+                return this;
+            }
+
+            /**
+             * <p>The global auto-pass rules for tool invocation.</p>
+             */
+            public Builder global(Global global) {
+                this.global = global;
+                return this;
+            }
+
+            /**
+             * <p>The hook configuration.</p>
+             */
+            public Builder hooks(java.util.List<Hook> hooks) {
+                this.hooks = hooks;
                 return this;
             }
 
